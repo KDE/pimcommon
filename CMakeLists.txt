@@ -20,9 +20,10 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 include(ECMInstallIcons)
 
+set(PIMCOMMON_LIB_VERSION "5.1.42")
 set(KF5_VERSION "5.16.0")
 set(KDEPIMLIBS_LIB_VERSION "5.1.42")
-set(KDEPIM_LIB_VERSION "5.1.42")
+set(LIBKDEPIM_LIB_VERSION "5.1.42")
 set(QT_REQUIRED_VERSION "5.4.0")
 set(KMIME_LIB_VERSION "4.87.0")
 set(KIMAP_LIB_VERSION "4.78.0")
@@ -47,11 +48,11 @@ find_package(KF5Archive ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5NewStuff ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5TextWidgets ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Libkdepim ${KDEPIM_LIB_VERSION} CONFIG REQUIRED)
+find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 
 
-ecm_setup_version(${KDEPIM_LIB_VERSION} VARIABLE_PREFIX PIMCOMMON
+ecm_setup_version(${PIMCOMMON_LIB_VERSION} VARIABLE_PREFIX PIMCOMMON
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
                         SOVERSION 5
