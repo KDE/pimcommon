@@ -65,6 +65,12 @@ QString GenericPluginInfo::saveName() const
     return QFileInfo(metaData.fileName()).baseName();
 }
 
+namespace {
+QString pluginVersion() {
+    return QStringLiteral("1.0");
+}
+}
+
 class PimCommon::GenericPluginManagerPrivate
 {
 public:
@@ -101,14 +107,15 @@ bool GenericPluginManagerPrivate::initializePlugins()
     while (i.hasPrevious()) {
         GenericPluginInfo info;
         info.metaData = i.previous();
-
-        // only load plugins once, even if found multiple times!
-        if (unique.contains(info.saveName())) {
-            continue;
+        if (pluginVersion() == info.metaData.version()) {
+            // only load plugins once, even if found multiple times!
+            if (unique.contains(info.saveName())) {
+                continue;
+            }
+            info.plugin = Q_NULLPTR;
+            mPluginList.push_back(info);
+            unique.insert(info.saveName());
         }
-        info.plugin = Q_NULLPTR;
-        mPluginList.push_back(info);
-        unique.insert(info.saveName());
     }
     QVector<GenericPluginInfo>::iterator end(mPluginList.end());
     for (QVector<GenericPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
