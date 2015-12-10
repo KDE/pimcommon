@@ -59,9 +59,10 @@ public:
 
     enum RequireType {
         None = 0,
-        Items = 1,
-        CurrentCollection = 2,
-        Collections = 3
+        CurrentItems = 1,
+        Items = 2,
+        CurrentCollection = 3,
+        Collections = 4
     };
     Q_ENUMS(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
@@ -73,6 +74,7 @@ public:
     ActionType actionType() const;
     virtual void createAction(KActionCollection *ac) = 0;
     virtual void exec() = 0;
+    virtual void setCurrentItems(const Akonadi::Item::List &items);
     virtual void setItems(const Akonadi::Item::List &items);
     virtual void setCurrentCollection(const Akonadi::Collection &col);
     virtual void setCollections(const Akonadi::Collection::List &cols);
