@@ -56,7 +56,6 @@ public:
     explicit GenericPluginInterface(QObject *parent = Q_NULLPTR);
     ~GenericPluginInterface();
 
-
     void setParentWidget(QWidget *parent);
     QWidget *parentWidget() const;
 
@@ -66,6 +65,7 @@ public:
     virtual void exec() = 0;
     virtual void setItems(const Akonadi::Item::List &items);
     virtual void setCurrentCollection(const Akonadi::Collection &col);
+    virtual void setCollections(const Akonadi::Collection::List &cols);
 
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::GenericPluginInterface *interface);

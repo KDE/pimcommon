@@ -73,6 +73,11 @@ void GenericPluginInterface::setCurrentCollection(const Akonadi::Collection &col
     Q_UNUSED(col);
 }
 
+void GenericPluginInterface::setCollections(const Akonadi::Collection::List &cols)
+{
+    Q_UNUSED(cols);
+}
+
 ActionType::ActionType(QAction *action, ActionType::Type type)
     : mAction(action),
       mType(type)
