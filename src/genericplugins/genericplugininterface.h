@@ -30,7 +30,8 @@ public:
     enum Type {
         Tools = 0,
         Edit = 1,
-        File = 2
+        File = 2,
+        Action = 3
     };
     ActionType()
         : mAction(Q_NULLPTR),
