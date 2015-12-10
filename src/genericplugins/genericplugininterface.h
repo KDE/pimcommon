@@ -56,6 +56,15 @@ public:
     explicit GenericPluginInterface(QObject *parent = Q_NULLPTR);
     ~GenericPluginInterface();
 
+    enum RequireType {
+        None = 0,
+        Items = 1,
+        CurrentCollection = 2,
+        Collections = 3
+    };
+    Q_ENUMS(RequireType)
+    Q_DECLARE_FLAGS(RequireTypes, RequireType)
+
     void setParentWidget(QWidget *parent);
     QWidget *parentWidget() const;
 
@@ -66,6 +75,8 @@ public:
     virtual void setItems(const Akonadi::Item::List &items);
     virtual void setCurrentCollection(const Akonadi::Collection &col);
     virtual void setCollections(const Akonadi::Collection::List &cols);
+
+    virtual GenericPluginInterface::RequireTypes requires() const;
 
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::GenericPluginInterface *interface);

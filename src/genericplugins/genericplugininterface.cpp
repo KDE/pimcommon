@@ -78,6 +78,11 @@ void GenericPluginInterface::setCollections(const Akonadi::Collection::List &col
     Q_UNUSED(cols);
 }
 
+PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires() const
+{
+    return None;
+}
+
 ActionType::ActionType(QAction *action, ActionType::Type type)
     : mAction(action),
       mType(type)
