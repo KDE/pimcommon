@@ -177,6 +177,7 @@ set(libpimcommon_generericplugin_SRCS
    genericplugins/genericpluginmanager.cpp
    genericplugins/genericplugin.cpp
    genericplugins/genericplugininterface.cpp
+   genericplugins/plugininterface.cpp
 )
 
 set(libpimcommon_SRCS
@@ -314,6 +315,7 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
   GenericPluginManager
   GenericPlugin
   GenericPluginInterface
+  PluginInterface
   REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
   PREFIX PimCommon
   RELATIVE genericplugins
@@ -620,4 +622,3 @@ endif()
 
 add_subdirectory(designer)
 
-add_subdirectory(storageservice)
