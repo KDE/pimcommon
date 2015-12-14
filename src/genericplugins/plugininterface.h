@@ -21,12 +21,12 @@
 #include <QObject>
 #include <QVector>
 #include <pimcommon/genericplugininterface.h>
-
+#include "pimcommon_export.h"
 class KActionCollection;
 class QAction;
 namespace PimCommon {
 class PluginInterfacePrivate;
-class PluginInterface : public QObject
+class PIMCOMMON_EXPORT PluginInterface : public QObject
 {
     Q_OBJECT
 public:
