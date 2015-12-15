@@ -88,6 +88,11 @@ PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires
     return None;
 }
 
+bool GenericPluginInterface::hasPopupMenuSupport() const
+{
+    return false;
+}
+
 ActionType::ActionType(QAction *action, ActionType::Type type)
     : mAction(action),
       mType(type)
