@@ -31,7 +31,8 @@ public:
         Tools = 0,
         Edit = 1,
         File = 2,
-        Action = 3
+        Action = 3,
+        PopupMenu = 4
     };
     ActionType()
         : mAction(Q_NULLPTR),

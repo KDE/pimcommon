@@ -118,13 +118,23 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
     Q_FOREACH(PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
         PimCommon::ActionType actionType = interface->actionType();
-        const PimCommon::ActionType::Type type = actionType.type();
+        PimCommon::ActionType::Type type = actionType.type();
         if (listType.contains(type)) {
             QList<QAction *> lst = listType.value(type);
             lst << actionType.action();
             listType.insert(type, lst);
         } else {
             listType.insert(type, QList<QAction *>() << actionType.action());
+        }
+        if (interface->hasPopupMenuSupport()) {
+            type = PimCommon::ActionType::PopupMenu;
+            if (listType.contains(type)) {
+                QList<QAction *> lst = listType.value(type);
+                lst << actionType.action();
+                listType.insert(type, lst);
+            } else {
+                listType.insert(type, QList<QAction *>() << actionType.action());
+            }
         }
     }
 
