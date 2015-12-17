@@ -51,6 +51,7 @@ class QVBoxLayout;
 //
 namespace PimCommon
 {
+class SimpleStringListEditorPrivate;
 class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
 {
     Q_OBJECT
@@ -74,6 +75,7 @@ public:
                                     const QString &modifyLabel = QString(),
                                     const QString &addDialogLabel = QString());
 
+    ~SimpleStringListEditor();
     /** Sets the list of strings displayed to @p strings */
     void setStringList(const QStringList &strings);
 
@@ -117,14 +119,7 @@ private Q_SLOTS:
 private:
     bool containsString(const QString &str);
     QList<QListWidgetItem *> selectedItems() const;
-    QListWidget   *mListBox;
-    QPushButton   *mAddButton;
-    QPushButton   *mRemoveButton;
-    QPushButton   *mModifyButton;
-    QPushButton   *mUpButton;
-    QPushButton   *mDownButton;
-    QVBoxLayout   *mButtonLayout;
-    QString mAddDialogLabel;
+    SimpleStringListEditorPrivate *const d;
 };
 
 }

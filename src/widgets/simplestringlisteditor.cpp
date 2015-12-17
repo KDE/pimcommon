@@ -50,6 +50,32 @@
 // SimpleStringListEditor
 //********************************************************
 using namespace PimCommon;
+
+class PimCommon::SimpleStringListEditorPrivate
+{
+public:
+    SimpleStringListEditorPrivate()
+        : mListBox(Q_NULLPTR),
+          mAddButton(Q_NULLPTR),
+          mRemoveButton(Q_NULLPTR),
+          mModifyButton(Q_NULLPTR),
+          mUpButton(Q_NULLPTR),
+          mDownButton(Q_NULLPTR),
+          mButtonLayout(Q_NULLPTR)
+    {
+
+    }
+
+    QListWidget   *mListBox;
+    QPushButton   *mAddButton;
+    QPushButton   *mRemoveButton;
+    QPushButton   *mModifyButton;
+    QPushButton   *mUpButton;
+    QPushButton   *mDownButton;
+    QVBoxLayout   *mButtonLayout;
+    QString mAddDialogLabel;
+};
+
 SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
         ButtonCode buttons,
         const QString &addLabel,
@@ -57,64 +83,63 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
         const QString &modifyLabel,
         const QString &addDialogLabel)
     : QWidget(parent),
-      mAddButton(Q_NULLPTR), mRemoveButton(Q_NULLPTR), mModifyButton(Q_NULLPTR),
-      mUpButton(Q_NULLPTR), mDownButton(Q_NULLPTR)
+      d(new SimpleStringListEditorPrivate)
 {
     setAddDialogLabel(addDialogLabel);
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
     QHBoxLayout *hlay = new QHBoxLayout(this);
     hlay->setMargin(0);
 
-    mListBox = new QListWidget(this);
+    d->mListBox = new QListWidget(this);
 
-    mListBox->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(mListBox, &QListWidget::customContextMenuRequested, this, &SimpleStringListEditor::slotContextMenu);
+    d->mListBox->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(d->mListBox, &QListWidget::customContextMenuRequested, this, &SimpleStringListEditor::slotContextMenu);
 
-    mListBox->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    hlay->addWidget(mListBox, 1);
+    d->mListBox->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    hlay->addWidget(d->mListBox, 1);
 
     if (buttons == None) {
         qCDebug(PIMCOMMON_LOG) << "SimpleStringListBox called with no buttons."
                                "Consider using a plain QListBox instead!";
     }
 
-    mButtonLayout = new QVBoxLayout(); // inherits spacing
-    hlay->addLayout(mButtonLayout);
+    d->mButtonLayout = new QVBoxLayout(); // inherits spacing
+    hlay->addLayout(d->mButtonLayout);
 
     if (buttons & Add) {
         if (addLabel.isEmpty()) {
-            mAddButton = new QPushButton(i18n("&Add..."), this);
+            d->mAddButton = new QPushButton(i18n("&Add..."), this);
         } else {
-            mAddButton = new QPushButton(addLabel, this);
+            d->mAddButton = new QPushButton(addLabel, this);
         }
-        mAddButton->setAutoDefault(false);
-        mButtonLayout->addWidget(mAddButton);
-        connect(mAddButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotAdd);
+        d->mAddButton->setAutoDefault(false);
+        d->mButtonLayout->addWidget(d->mAddButton);
+        connect(d->mAddButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotAdd);
     }
 
     if (buttons & Modify) {
         if (modifyLabel.isEmpty()) {
-            mModifyButton = new QPushButton(i18n("&Modify..."), this);
+            d->mModifyButton = new QPushButton(i18n("&Modify..."), this);
         } else {
-            mModifyButton = new QPushButton(modifyLabel, this);
+            d->mModifyButton = new QPushButton(modifyLabel, this);
         }
-        mModifyButton->setAutoDefault(false);
-        mModifyButton->setEnabled(false);   // no selection yet
-        mButtonLayout->addWidget(mModifyButton);
-        connect(mModifyButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotModify);
-        connect(mListBox, &QListWidget::itemDoubleClicked, this, &SimpleStringListEditor::slotModify);
+        d->mModifyButton->setAutoDefault(false);
+        d->mModifyButton->setEnabled(false);   // no selection yet
+        d->mButtonLayout->addWidget(d->mModifyButton);
+        connect(d->mModifyButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotModify);
+        connect(d->mListBox, &QListWidget::itemDoubleClicked, this, &SimpleStringListEditor::slotModify);
     }
 
     if (buttons & Remove) {
         if (removeLabel.isEmpty()) {
-            mRemoveButton = new QPushButton(i18n("&Remove"), this);
+            d->mRemoveButton = new QPushButton(i18n("&Remove"), this);
         } else {
-            mRemoveButton = new QPushButton(removeLabel, this);
+            d->mRemoveButton = new QPushButton(removeLabel, this);
         }
-        mRemoveButton->setAutoDefault(false);
-        mRemoveButton->setEnabled(false);   // no selection yet
-        mButtonLayout->addWidget(mRemoveButton);
-        connect(mRemoveButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotRemove);
+        d->mRemoveButton->setAutoDefault(false);
+        d->mRemoveButton->setEnabled(false);   // no selection yet
+        d->mButtonLayout->addWidget(d->mRemoveButton);
+        connect(d->mRemoveButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotRemove);
     }
 
     if (buttons & Up) {
@@ -122,13 +147,13 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
             qCDebug(PIMCOMMON_LOG) << "Are you sure you want to use an Up button"
                                    "without a Down button??";
         }
-        mUpButton = new QPushButton(QString(), this);
-        mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
-        mUpButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
-        mUpButton->setAutoDefault(false);
-        mUpButton->setEnabled(false);   // no selection yet
-        mButtonLayout->addWidget(mUpButton);
-        connect(mUpButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotUp);
+        d->mUpButton = new QPushButton(QString(), this);
+        d->mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
+        d->mUpButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
+        d->mUpButton->setAutoDefault(false);
+        d->mUpButton->setEnabled(false);   // no selection yet
+        d->mButtonLayout->addWidget(d->mUpButton);
+        connect(d->mUpButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotUp);
     }
 
     if (buttons & Down) {
@@ -136,58 +161,63 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
             qCDebug(PIMCOMMON_LOG) << "Are you sure you want to use a Down button"
                                    "without an Up button??";
         }
-        mDownButton = new QPushButton(QString(), this);
-        mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
-        mDownButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
-        mDownButton->setAutoDefault(false);
-        mDownButton->setEnabled(false);   // no selection yet
-        mButtonLayout->addWidget(mDownButton);
-        connect(mDownButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotDown);
+        d->mDownButton = new QPushButton(QString(), this);
+        d->mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
+        d->mDownButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
+        d->mDownButton->setAutoDefault(false);
+        d->mDownButton->setEnabled(false);   // no selection yet
+        d->mButtonLayout->addWidget(d->mDownButton);
+        connect(d->mDownButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotDown);
     }
 
-    mButtonLayout->addStretch(1);   // spacer
+    d->mButtonLayout->addStretch(1);   // spacer
 
-    connect(mListBox, &QListWidget::currentItemChanged, this, &SimpleStringListEditor::slotSelectionChanged);
-    connect(mListBox, &QListWidget::itemSelectionChanged, this, &SimpleStringListEditor::slotSelectionChanged);
+    connect(d->mListBox, &QListWidget::currentItemChanged, this, &SimpleStringListEditor::slotSelectionChanged);
+    connect(d->mListBox, &QListWidget::itemSelectionChanged, this, &SimpleStringListEditor::slotSelectionChanged);
+}
+
+SimpleStringListEditor::~SimpleStringListEditor()
+{
+    delete d;
 }
 
 void SimpleStringListEditor::setUpDownAutoRepeat(bool b)
 {
-    if (mUpButton) {
-        mUpButton->setAutoRepeat(b);
+    if (d->mUpButton) {
+        d->mUpButton->setAutoRepeat(b);
     }
-    if (mDownButton) {
-        mDownButton->setAutoRepeat(b);
+    if (d->mDownButton) {
+        d->mDownButton->setAutoRepeat(b);
     }
 }
 
 void SimpleStringListEditor::setStringList(const QStringList &strings)
 {
-    mListBox->clear();
-    mListBox->addItems(strings);
+    d->mListBox->clear();
+    d->mListBox->addItems(strings);
 }
 
 void SimpleStringListEditor::appendStringList(const QStringList &strings)
 {
-    mListBox->addItems(strings);
+    d->mListBox->addItems(strings);
 }
 
 QStringList SimpleStringListEditor::stringList() const
 {
     QStringList result;
-    const int numberOfItem(mListBox->count());
+    const int numberOfItem(d->mListBox->count());
     result.reserve(numberOfItem);
     for (int i = 0; i < numberOfItem; ++i) {
-        result << (mListBox->item(i)->text());
+        result << (d->mListBox->item(i)->text());
     }
     return result;
 }
 
 bool SimpleStringListEditor::containsString(const QString &str)
 {
-    const int numberOfItem(mListBox->count());
+    const int numberOfItem(d->mListBox->count());
     for (int i = 0; i < numberOfItem; ++i) {
-        if (mListBox->item(i)->text() == str) {
+        if (d->mListBox->item(i)->text() == str) {
             return true;
         }
     }
@@ -198,22 +228,22 @@ void SimpleStringListEditor::setButtonText(ButtonCode button, const QString &tex
 {
     switch (button) {
     case Add:
-        if (!mAddButton) {
+        if (!d->mAddButton) {
             break;
         }
-        mAddButton->setText(text);
+        d->mAddButton->setText(text);
         return;
     case Remove:
-        if (!mRemoveButton) {
+        if (!d->mRemoveButton) {
             break;
         }
-        mRemoveButton->setText(text);
+        d->mRemoveButton->setText(text);
         return;
     case Modify:
-        if (!mModifyButton) {
+        if (!d->mModifyButton) {
             break;
         }
-        mModifyButton->setText(text);
+        d->mModifyButton->setText(text);
         return;
     case Up:
     case Down:
@@ -236,7 +266,7 @@ void SimpleStringListEditor::addNewEntry()
 {
     bool ok = false;
     const QString newEntry = QInputDialog::getText(this, i18n("New Value"),
-                             mAddDialogLabel, QLineEdit::Normal, QString(),
+                             d->mAddDialogLabel, QLineEdit::Normal, QString(),
                              &ok);
     if (ok && !newEntry.trimmed().isEmpty()) {
         insertNewEntry(newEntry);
@@ -249,7 +279,7 @@ void SimpleStringListEditor::insertNewEntry(const QString &entry)
     // let the user verify the string before adding
     Q_EMIT aboutToAdd(newEntry);
     if (!newEntry.isEmpty() && !containsString(newEntry)) {
-        mListBox->addItem(newEntry);
+        d->mListBox->addItem(newEntry);
         slotSelectionChanged();
         Q_EMIT changed();
     }
@@ -262,12 +292,12 @@ void SimpleStringListEditor::slotAdd()
 
 void SimpleStringListEditor::slotRemove()
 {
-    QList<QListWidgetItem *> selectedItems = mListBox->selectedItems();
+    QList<QListWidgetItem *> selectedItems = d->mListBox->selectedItems();
     if (selectedItems.isEmpty()) {
         return;
     }
     Q_FOREACH (QListWidgetItem *item, selectedItems) {
-        delete mListBox->takeItem(mListBox->row(item));
+        delete d->mListBox->takeItem(d->mListBox->row(item));
     }
     slotSelectionChanged();
     Q_EMIT changed();
@@ -277,7 +307,7 @@ QString SimpleStringListEditor::modifyEntry(const QString &text)
 {
     bool ok = false;
     QString newText = QInputDialog::getText(this, i18n("Change Value"),
-                                            mAddDialogLabel, QLineEdit::Normal, text,
+                                            d->mAddDialogLabel, QLineEdit::Normal, text,
                                             &ok);
     Q_EMIT aboutToAdd(newText);
 
@@ -290,7 +320,7 @@ QString SimpleStringListEditor::modifyEntry(const QString &text)
 
 void SimpleStringListEditor::slotModify()
 {
-    QListWidgetItem *item = mListBox->currentItem();
+    QListWidgetItem *item = d->mListBox->currentItem();
     if (!item) {
         return;
     }
@@ -304,10 +334,10 @@ void SimpleStringListEditor::slotModify()
 QList<QListWidgetItem *> SimpleStringListEditor::selectedItems() const
 {
     QList<QListWidgetItem *> listWidgetItem;
-    const int numberOfFilters = mListBox->count();
+    const int numberOfFilters = d->mListBox->count();
     for (int i = 0; i < numberOfFilters; ++i) {
-        if (mListBox->item(i)->isSelected()) {
-            listWidgetItem << mListBox->item(i);
+        if (d->mListBox->item(i)->isSelected()) {
+            listWidgetItem << d->mListBox->item(i);
         }
     }
     return listWidgetItem;
@@ -315,7 +345,7 @@ QList<QListWidgetItem *> SimpleStringListEditor::selectedItems() const
 
 void SimpleStringListEditor::setAddDialogLabel(const QString &addDialogLabel)
 {
-    mAddDialogLabel = addDialogLabel.isEmpty() ? i18n("New entry:") : addDialogLabel;
+    d->mAddDialogLabel = addDialogLabel.isEmpty() ? i18n("New entry:") : addDialogLabel;
 }
 
 void SimpleStringListEditor::slotUp()
@@ -326,7 +356,7 @@ void SimpleStringListEditor::slotUp()
     }
 
     const int numberOfItem(listWidgetItem.count());
-    const int currentRow = mListBox->currentRow();
+    const int currentRow = d->mListBox->currentRow();
     if ((numberOfItem == 1) && (currentRow == 0)) {
         qCDebug(PIMCOMMON_LOG) << "Called while the _topmost_ filter is selected, ignoring.";
         return;
@@ -334,18 +364,18 @@ void SimpleStringListEditor::slotUp()
     bool wasMoved = false;
 
     for (int i = 0; i < numberOfItem; ++i) {
-        const int posItem = mListBox->row(listWidgetItem.at(i));
+        const int posItem = d->mListBox->row(listWidgetItem.at(i));
         if (posItem == i) {
             continue;
         }
-        QListWidgetItem *item = mListBox->takeItem(posItem);
-        mListBox->insertItem(posItem - 1, item);
+        QListWidgetItem *item = d->mListBox->takeItem(posItem);
+        d->mListBox->insertItem(posItem - 1, item);
 
         wasMoved = true;
     }
     if (wasMoved) {
         Q_EMIT changed();
-        mListBox->setCurrentRow(currentRow - 1);
+        d->mListBox->setCurrentRow(currentRow - 1);
     }
 }
 
@@ -356,9 +386,9 @@ void SimpleStringListEditor::slotDown()
         return;
     }
 
-    const int numberOfElement(mListBox->count());
+    const int numberOfElement(d->mListBox->count());
     const int numberOfItem(listWidgetItem.count());
-    const int currentRow = mListBox->currentRow();
+    const int currentRow = d->mListBox->currentRow();
     if ((numberOfItem == 1) && (currentRow == numberOfElement - 1)) {
         qCDebug(PIMCOMMON_LOG) << "Called while the _last_ filter is selected, ignoring.";
         return;
@@ -367,49 +397,49 @@ void SimpleStringListEditor::slotDown()
     int j = 0;
     bool wasMoved = false;
     for (int i = numberOfItem - 1; i >= 0; --i, j++) {
-        const int posItem = mListBox->row(listWidgetItem.at(i));
+        const int posItem = d->mListBox->row(listWidgetItem.at(i));
         if (posItem == (numberOfElement - 1 - j)) {
             continue;
         }
-        QListWidgetItem *item = mListBox->takeItem(posItem);
-        mListBox->insertItem(posItem + 1, item);
+        QListWidgetItem *item = d->mListBox->takeItem(posItem);
+        d->mListBox->insertItem(posItem + 1, item);
         wasMoved = true;
     }
     if (wasMoved) {
         Q_EMIT changed();
-        mListBox->setCurrentRow(currentRow + 1);
+        d->mListBox->setCurrentRow(currentRow + 1);
     }
 }
 
 void SimpleStringListEditor::slotSelectionChanged()
 {
 
-    QList<QListWidgetItem *> lstSelectedItems = mListBox->selectedItems();
+    QList<QListWidgetItem *> lstSelectedItems = d->mListBox->selectedItems();
     const int numberOfItemSelected(lstSelectedItems.count());
     const bool uniqItemSelected = (numberOfItemSelected == 1);
     // if there is one, item will be non-null (ie. true), else 0
     // (ie. false):
-    if (mRemoveButton) {
-        mRemoveButton->setEnabled(!lstSelectedItems.isEmpty());
+    if (d->mRemoveButton) {
+        d->mRemoveButton->setEnabled(!lstSelectedItems.isEmpty());
     }
 
-    if (mModifyButton) {
-        mModifyButton->setEnabled(uniqItemSelected);
+    if (d->mModifyButton) {
+        d->mModifyButton->setEnabled(uniqItemSelected);
     }
 
-    const int currentIndex = mListBox->currentRow();
+    const int currentIndex = d->mListBox->currentRow();
 
     const bool aItemIsSelected = !lstSelectedItems.isEmpty();
-    const bool allItemSelected = (mListBox->count() == numberOfItemSelected);
-    const bool theLast = (currentIndex >= mListBox->count() - 1);
+    const bool allItemSelected = (d->mListBox->count() == numberOfItemSelected);
+    const bool theLast = (currentIndex >= d->mListBox->count() - 1);
     const bool theFirst = (currentIndex == 0);
 
-    if (mUpButton) {
-        mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst) ||
+    if (d->mUpButton) {
+        d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst) ||
                               (!uniqItemSelected)) && !allItemSelected);
     }
-    if (mDownButton) {
-        mDownButton->setEnabled(aItemIsSelected &&
+    if (d->mDownButton) {
+        d->mDownButton->setEnabled(aItemIsSelected &&
                                 ((uniqItemSelected && !theLast) ||
                                  (!uniqItemSelected)) && !allItemSelected);
     }
@@ -417,20 +447,20 @@ void SimpleStringListEditor::slotSelectionChanged()
 
 void SimpleStringListEditor::slotContextMenu(const QPoint &pos)
 {
-    QList<QListWidgetItem *> lstSelectedItems = mListBox->selectedItems();
+    QList<QListWidgetItem *> lstSelectedItems = d->mListBox->selectedItems();
     const bool hasItemsSelected = !lstSelectedItems.isEmpty();
     QMenu *menu = new QMenu(this);
-    if (mAddButton) {
-        menu->addAction(mAddButton->text(), this, SLOT(slotAdd()));
+    if (d->mAddButton) {
+        menu->addAction(d->mAddButton->text(), this, SLOT(slotAdd()));
     }
-    if (mModifyButton && (lstSelectedItems.count() == 1)) {
-        menu->addAction(mModifyButton->text(), this, SLOT(slotModify()));
+    if (d->mModifyButton && (lstSelectedItems.count() == 1)) {
+        menu->addAction(d->mModifyButton->text(), this, SLOT(slotModify()));
     }
-    if (mRemoveButton && hasItemsSelected) {
+    if (d->mRemoveButton && hasItemsSelected) {
         menu->addSeparator();
-        menu->addAction(mRemoveButton->text(), this, SLOT(slotRemove()));
+        menu->addAction(d->mRemoveButton->text(), this, SLOT(slotRemove()));
     }
-    menu->exec(mListBox->mapToGlobal(pos));
+    menu->exec(d->mListBox->mapToGlobal(pos));
     delete menu;
 }
 
@@ -440,7 +470,7 @@ QSize SimpleStringListEditor::sizeHint() const
     // button columns, but we want to allow it to be made smaller than list
     // sizeHint().height()
     QSize sh = QWidget::sizeHint();
-    sh.setHeight(mButtonLayout->minimumSize().height());
+    sh.setHeight(d->mButtonLayout->minimumSize().height());
     return sh;
 }
 
