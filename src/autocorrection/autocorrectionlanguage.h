@@ -18,13 +18,12 @@
 #ifndef AutoCorrectionLanguage_H
 #define AutoCorrectionLanguage_H
 
-#include "pimcommon_export.h"
 #include <KComboBox>
 
 namespace PimCommon
 {
 
-class PIMCOMMON_EXPORT AutoCorrectionLanguage : public KComboBox
+class AutoCorrectionLanguage : public KComboBox
 {
 public:
     explicit AutoCorrectionLanguage(QWidget *parent);
