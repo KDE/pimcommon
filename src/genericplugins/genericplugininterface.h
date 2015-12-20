@@ -83,6 +83,10 @@ public:
     virtual GenericPluginInterface::RequireTypes requires() const;
 
     virtual bool hasPopupMenuSupport() const;
+    virtual bool hasConfigureDialog() const;
+
+    virtual void showConfigureDialog();
+
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::GenericPluginInterface *interface);
 

@@ -93,6 +93,16 @@ bool GenericPluginInterface::hasPopupMenuSupport() const
     return false;
 }
 
+bool GenericPluginInterface::hasConfigureDialog() const
+{
+    return false;
+}
+
+void GenericPluginInterface::showConfigureDialog()
+{
+
+}
+
 ActionType::ActionType(QAction *action, ActionType::Type type)
     : mAction(action),
       mType(type)
