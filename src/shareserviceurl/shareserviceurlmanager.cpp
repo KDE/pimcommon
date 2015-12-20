@@ -118,6 +118,7 @@ QString ShareServiceUrlManagerPrivate::typeToI18n(ShareServiceUrlManager::Servic
         str = i18n("LiveJournal");
         break;
     case ShareServiceUrlManager::ServiceEndType:
+        qCWarning(PIMCOMMON_LOG) << "text for unknow type requested. It's a bug.";
         break;
     }
     return str;
