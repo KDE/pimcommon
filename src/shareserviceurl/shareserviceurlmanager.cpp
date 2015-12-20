@@ -230,5 +230,7 @@ void ShareServiceUrlManager::openUrl(const QUrl &url)
 {
     if (url.isValid()) {
         QDesktopServices::openUrl(url);
+    } else {
+        qCDebug(PIMCOMMON_LOG) << "url is invalid.";
     }
 }
