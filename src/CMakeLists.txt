@@ -137,6 +137,7 @@ set(libpimcommon_widgets_SRCS
   widgets/kactionmenuchangecase.cpp
   widgets/lineeditwithcompleter.cpp
   widgets/spellchecklineedit.cpp
+  widgets/kpimprintpreviewdialog.cpp
 )
 
 set(libpimcommon_customtools_SRCS
@@ -531,6 +532,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
   SimpleStringlistEditor
   KActionMenuChangeCase
   AnnotationDialog
+  KPimPrintPreviewDialog
   REQUIRED_HEADERS PimCommon_widgets_HEADERS
   PREFIX PimCommon
   RELATIVE widgets
