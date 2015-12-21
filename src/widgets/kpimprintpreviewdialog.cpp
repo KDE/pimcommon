@@ -28,6 +28,12 @@ KPimPrintPreviewDialog::KPimPrintPreviewDialog(QWidget *parent)
     readConfig();
 }
 
+KPimPrintPreviewDialog::KPimPrintPreviewDialog(QPrinter *printer, QWidget *parent)
+    : QPrintPreviewDialog(printer, parent)
+{
+    readConfig();
+}
+
 KPimPrintPreviewDialog::~KPimPrintPreviewDialog()
 {
     writeConfig();
