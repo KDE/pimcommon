@@ -85,7 +85,7 @@ public:
     virtual bool hasPopupMenuSupport() const;
     virtual bool hasConfigureDialog() const;
 
-    virtual void showConfigureDialog();
+    virtual void showConfigureDialog(QWidget *parentWidget = Q_NULLPTR);
 
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::GenericPluginInterface *interface);

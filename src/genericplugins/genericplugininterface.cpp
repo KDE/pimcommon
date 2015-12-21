@@ -98,9 +98,9 @@ bool GenericPluginInterface::hasConfigureDialog() const
     return false;
 }
 
-void GenericPluginInterface::showConfigureDialog()
+void GenericPluginInterface::showConfigureDialog(QWidget *parentWidget)
 {
-
+    Q_UNUSED(parentWidget);
 }
 
 ActionType::ActionType(QAction *action, ActionType::Type type)
