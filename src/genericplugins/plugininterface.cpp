@@ -88,21 +88,6 @@ void PluginInterface::initializeInterfaceRequires(PimCommon::GenericPluginInterf
 void PluginInterface::slotPluginActivated(PimCommon::GenericPluginInterface *interface)
 {
     initializeInterfaceRequires(interface);
-#if 0
-    PimCommon::GenericPluginInterface::RequireTypes requires = interface->requires();
-    if (requires & PimCommon::GenericPluginInterface::CurrentItems) {
-        //TOOD
-    }
-    if (requires & PimCommon::GenericPluginInterface::Items) {
-        //TODO
-    }
-    if (requires & PimCommon::GenericPluginInterface::CurrentCollection) {
-        //TODO
-    }
-    if (requires & PimCommon::GenericPluginInterface::Collections) {
-        //TODO
-    }
-#endif
     if (interface) {
         interface->exec();
     }
