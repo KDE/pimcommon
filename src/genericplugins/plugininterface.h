@@ -41,6 +41,8 @@ public:
     void setServiceTypeName(const QString &name);
     void initializePlugins();
     virtual void initializeInterfaceRequires(PimCommon::GenericPluginInterface *interface);
+    static QString actionXmlExtension(PimCommon::ActionType::Type type);
+
 
 private Q_SLOTS:
     void slotPluginActivated(PimCommon::GenericPluginInterface *interface);

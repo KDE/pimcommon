@@ -85,6 +85,25 @@ void PluginInterface::initializeInterfaceRequires(PimCommon::GenericPluginInterf
     Q_UNUSED(interface)
 }
 
+QString PluginInterface::actionXmlExtension(ActionType::Type type)
+{
+    switch(type) {
+    case PimCommon::ActionType::Tools:
+        return QStringLiteral("_plugins_tools");
+    case PimCommon::ActionType::Edit:
+        return QStringLiteral("_plugins_edit");
+    case PimCommon::ActionType::File:
+        return QStringLiteral("_plugins_file");
+    case PimCommon::ActionType::Action:
+        return QStringLiteral("_plugins_actions");
+    case PimCommon::ActionType::PopupMenu:
+        return QStringLiteral("_popupmenu_actions");
+    case PimCommon::ActionType::ToolBar:
+        return QStringLiteral("_toolbar_actions");
+    }
+    return {};
+}
+
 void PluginInterface::slotPluginActivated(PimCommon::GenericPluginInterface *interface)
 {
     initializeInterfaceRequires(interface);
@@ -113,6 +132,16 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
         }
         if (interface->hasPopupMenuSupport()) {
             type = PimCommon::ActionType::PopupMenu;
+            if (listType.contains(type)) {
+                QList<QAction *> lst = listType.value(type);
+                lst << actionType.action();
+                listType.insert(type, lst);
+            } else {
+                listType.insert(type, QList<QAction *>() << actionType.action());
+            }
+        }
+        if (interface->hasToolBarSupport()) {
+            type = PimCommon::ActionType::ToolBar;
             if (listType.contains(type)) {
                 QList<QAction *> lst = listType.value(type);
                 lst << actionType.action();

@@ -93,6 +93,11 @@ bool GenericPluginInterface::hasPopupMenuSupport() const
     return false;
 }
 
+bool GenericPluginInterface::hasToolBarSupport() const
+{
+    return false;
+}
+
 bool GenericPluginInterface::hasConfigureDialog() const
 {
     return false;

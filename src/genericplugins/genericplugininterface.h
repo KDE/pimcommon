@@ -32,7 +32,8 @@ public:
         Edit = 1,
         File = 2,
         Action = 3,
-        PopupMenu = 4
+        PopupMenu = 4,
+        ToolBar = 5
     };
     ActionType()
         : mAction(Q_NULLPTR),
@@ -83,6 +84,7 @@ public:
     virtual GenericPluginInterface::RequireTypes requires() const;
 
     virtual bool hasPopupMenuSupport() const;
+    virtual bool hasToolBarSupport() const;
     virtual bool hasConfigureDialog() const;
 
     virtual void showConfigureDialog(QWidget *parentWidget = Q_NULLPTR);
