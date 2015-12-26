@@ -24,6 +24,7 @@
 #include "pimcommon_export.h"
 class KActionCollection;
 class QAction;
+class KXMLGUIClient;
 namespace PimCommon {
 class PluginInterfacePrivate;
 class PIMCOMMON_EXPORT PluginInterface : public QObject
@@ -43,6 +44,7 @@ public:
     virtual void initializeInterfaceRequires(PimCommon::GenericPluginInterface *interface);
     static QString actionXmlExtension(PimCommon::ActionType::Type type);
 
+    void initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient);
 
 private Q_SLOTS:
     void slotPluginActivated(PimCommon::GenericPluginInterface *interface);

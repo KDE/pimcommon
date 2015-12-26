@@ -20,6 +20,7 @@
 #include "pimcommon_debug.h"
 
 #include <KActionCollection>
+#include <KXMLGUIClient>
 
 #include "genericplugin.h"
 
@@ -115,6 +116,22 @@ void PluginInterface::slotPluginActivated(PimCommon::GenericPluginInterface *int
 void PluginInterface::setParentWidget(QWidget *widget)
 {
     d->mParentWidget = widget;
+}
+
+void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient)
+{
+    if (guiClient->factory()) {
+        QHashIterator<PimCommon::ActionType::Type, QList<QAction *> > localActionsType(actionsType());
+        while (localActionsType.hasNext()) {
+            localActionsType.next();
+            QList<QAction *> lst = localActionsType.value();
+            if (!lst.isEmpty()) {
+                const QString actionlistname = prefix + PimCommon::PluginInterface::actionXmlExtension(localActionsType.key());
+                guiClient->unplugActionList(actionlistname);
+                guiClient->plugActionList(actionlistname, lst);
+            }
+        }
+    }
 }
 
 QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType() const
