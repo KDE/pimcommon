@@ -544,7 +544,6 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 )
 
 
-if(${CMAKE_SOURCE_DIR} STREQUAL ${pimcommon_SOURCE_DIR})
 install(FILES
     ${PimCommon_Camelcustomtools_HEADERS}
     ${PimCommon_Camelcasestorageservicesettings_HEADERS}
@@ -619,8 +618,6 @@ install(FILES
 install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
-
-endif()
 
 add_subdirectory(designer)
 
