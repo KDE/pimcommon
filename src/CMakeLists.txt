@@ -181,6 +181,11 @@ set(libpimcommon_generericplugin_SRCS
    genericplugins/plugininterface.cpp
 )
 
+set(libpimcommon_generericscripts_SRCS
+   genericscripts/genericscriptsmanager.cpp
+   genericscripts/genericscriptaction.cpp
+)
+
 set(libpimcommon_SRCS
   settings/pimcommonsettings.cpp
   ${libpimcommon_manageserversidesubscription_SRCS}
@@ -199,6 +204,7 @@ set(libpimcommon_SRCS
   ${libpimcommon_temporary_SRCS}
   ${libpimcommon_customtools_SRCS}
   ${libpimcommon_generericplugin_SRCS}
+  ${libpimcommon_generericscripts_SRCS}
 )
 
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME log_pimcommon)
