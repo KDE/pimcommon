@@ -21,14 +21,20 @@
 #include <QAction>
 #include "pimcommon_export.h"
 
+class KActionCollection;
+
 namespace PimCommon {
 class GenericScriptActionPrivate;
 class PIMCOMMON_EXPORT GenericScriptAction : public QAction
 {
     Q_OBJECT
 public:
-    explicit GenericScriptAction(QObject *parent);
+    explicit GenericScriptAction(KActionCollection *ac, QObject *parent);
     ~GenericScriptAction();
+
+public Q_SLOTS:
+    void exec();
+
 private:
     GenericScriptActionPrivate *const d;
 };

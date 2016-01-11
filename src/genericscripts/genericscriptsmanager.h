@@ -21,8 +21,10 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
+class KActionCollection;
 
 namespace PimCommon {
+class GenericScriptAction;
 class GenericScriptsManagerPrivate;
 class PIMCOMMON_EXPORT GenericScriptsManager : public QObject
 {
@@ -32,7 +34,11 @@ public:
     ~GenericScriptsManager();
 
     static GenericScriptsManager *self();
+
+    void setActionCollection(KActionCollection *ac);
     void initializeScripts();
+
+    QVector<PimCommon::GenericScriptAction *> listScriptActions() const;
 private:
     GenericScriptsManagerPrivate *const d;
 };

@@ -32,7 +32,7 @@ set(KPIMTEXTEDIT_LIB_VERSION "5.1.42")
 
 find_package(KF5AkonadiContact ${KDEPIMLIBS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${KDEPIMLIBS_LIB_VERSION} CONFIG REQUIRED)
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test UiTools Network WebKitWidgets)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test UiTools Network WebKitWidgets Script)
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${KDEPIMLIBS_LIB_VERSION} CONFIG REQUIRED)

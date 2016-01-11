@@ -184,6 +184,7 @@ set(libpimcommon_generericplugin_SRCS
 set(libpimcommon_generericscripts_SRCS
    genericscripts/genericscriptsmanager.cpp
    genericscripts/genericscriptaction.cpp
+   genericscripts/genericscript.cpp
 )
 
 set(libpimcommon_SRCS
@@ -268,6 +269,7 @@ PRIVATE
     KF5::KDELibs4Support
     KF5::XmlGui
     KF5::PimTextEdit
+    Qt5::Script
 )
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon>")

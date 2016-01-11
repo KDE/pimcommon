@@ -15,34 +15,27 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "genericscriptaction.h"
-#include <KLocalizedString>
-#include <KActionCollection>
+#ifndef GENERICSCRIPT_H
+#define GENERICSCRIPT_H
 
-using namespace PimCommon;
+#include "pimcommon_export.h"
 
-class PimCommon::GenericScriptActionPrivate
+class QScriptEngine;
+
+namespace PimCommon
+{
+class GenericScriptPrivate;
+class PIMCOMMON_EXPORT GenericScript
 {
 public:
-    GenericScriptActionPrivate()
-    {
+    GenericScript();
+    ~GenericScript();
 
-    }
+    QScriptEngine *engine() const;
+
+private:
+    GenericScriptPrivate *const d;
 };
-
-GenericScriptAction::GenericScriptAction(KActionCollection *ac, QObject *parent)
-    : QAction(parent),
-      d(new PimCommon::GenericScriptActionPrivate)
-{
-    connect(this, &QAction::triggered, this, &GenericScriptAction::exec);
 }
 
-GenericScriptAction::~GenericScriptAction()
-{
-    delete d;
-}
-
-void GenericScriptAction::exec()
-{
-    //TODO
-}
+#endif // GENERICSCRIPT_H

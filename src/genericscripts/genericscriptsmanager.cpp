@@ -17,6 +17,7 @@
 
 
 #include "genericscriptsmanager.h"
+#include "genericscriptaction.h"
 
 using namespace PimCommon;
 
@@ -42,9 +43,12 @@ class PimCommon::GenericScriptsManagerPrivate
 {
 public:
     GenericScriptsManagerPrivate()
+        : actionCollection(Q_NULLPTR)
     {
 
     }
+    QVector<PimCommon::GenericScriptAction *> listScriptActions;
+    KActionCollection *actionCollection;
 };
 
 GenericScriptsManager::GenericScriptsManager(QObject *parent)
@@ -64,7 +68,17 @@ GenericScriptsManager *GenericScriptsManager::self()
     return sInstance->genericScriptsManager;
 }
 
+void GenericScriptsManager::setActionCollection(KActionCollection *ac)
+{
+    d->actionCollection = ac;
+}
+
 void GenericScriptsManager::initializeScripts()
 {
     //TODO
+}
+
+QVector<PimCommon::GenericScriptAction *> GenericScriptsManager::listScriptActions() const
+{
+    return d->listScriptActions;
 }
