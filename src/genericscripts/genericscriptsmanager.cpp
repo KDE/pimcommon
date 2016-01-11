@@ -20,6 +20,24 @@
 
 using namespace PimCommon;
 
+class GenericScriptsManagerInstancePrivate
+{
+public:
+    GenericScriptsManagerInstancePrivate()
+        : genericScriptsManager(new GenericScriptsManager)
+    {
+    }
+
+    ~GenericScriptsManagerInstancePrivate()
+    {
+        delete genericScriptsManager;
+    }
+
+    GenericScriptsManager *genericScriptsManager;
+};
+
+Q_GLOBAL_STATIC(GenericScriptsManagerInstancePrivate, sInstance)
+
 class PimCommon::GenericScriptsManagerPrivate
 {
 public:
@@ -39,4 +57,14 @@ GenericScriptsManager::GenericScriptsManager(QObject *parent)
 GenericScriptsManager::~GenericScriptsManager()
 {
     delete d;
+}
+
+GenericScriptsManager *GenericScriptsManager::self()
+{
+    return sInstance->genericScriptsManager;
+}
+
+void GenericScriptsManager::initializeScripts()
+{
+    //TODO
 }

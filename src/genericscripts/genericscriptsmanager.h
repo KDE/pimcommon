@@ -31,6 +31,8 @@ public:
     explicit GenericScriptsManager(QObject *parent = Q_NULLPTR);
     ~GenericScriptsManager();
 
+    static GenericScriptsManager *self();
+    void initializeScripts();
 private:
     GenericScriptsManagerPrivate *const d;
 };
