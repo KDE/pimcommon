@@ -53,17 +53,17 @@ find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(Qt5Designer CONFIG)
 set_package_properties(Qt5Designer PROPERTIES
-   PURPOSE "Required to build the Qt Designer plugins"
-   TYPE OPTIONAL
-)
+    PURPOSE "Required to build the Qt Designer plugins"
+    TYPE OPTIONAL
+    )
 
 
 
 ecm_setup_version(${PIMCOMMON_LIB_VERSION} VARIABLE_PREFIX PIMCOMMON
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
-                        SOVERSION 5
-)
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
+    SOVERSION 5
+    )
 
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
@@ -77,24 +77,24 @@ remove_definitions( -DQT_NO_CAST_FROM_BYTEARRAY )
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommon")
 
 ecm_configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-)
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
-  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-  COMPONENT Devel
-)
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
 
 install(EXPORT KF5PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
-  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
-)
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    )
 
 
 add_subdirectory(src)
