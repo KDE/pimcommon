@@ -528,6 +528,16 @@ ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
   RELATIVE templatewidgets
 )
 
+ecm_generate_headers(PimCommon_Camelcasescript_HEADERS
+  HEADER_NAMES
+  GenericScript
+  GenericScriptsManager
+  GenericScriptAction
+  REQUIRED_HEADERS PimCommon_script_HEADERS
+  PREFIX PimCommon
+  RELATIVE genericscripts
+)
+
 
 ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
   HEADER_NAMES
@@ -553,6 +563,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_Camelcasescript_HEADERS}
     ${PimCommon_Camelcustomtools_HEADERS}
     ${PimCommon_Camelcasestorageservicesettings_HEADERS}
     ${PimCommon_Camelcasestorageservice_dialog_HEADERS}
@@ -591,6 +602,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_debug.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
+    ${PimCommon_script_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_storageservicesettings_HEADERS}
     ${PimCommon_storageservice_dialog_HEADERS}
