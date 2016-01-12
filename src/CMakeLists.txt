@@ -187,8 +187,13 @@ set(libpimcommon_generericscripts_SRCS
     genericscripts/genericscript.cpp
     )
 
+set(libpimcommon_genericgrantlee_SRCS
+    genericgrantlee/genericgrantleeformatter.cpp
+    )
+
 set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
+    ${libpimcommon_genericgrantlee_SRCS}
     ${libpimcommon_manageserversidesubscription_SRCS}
     ${libpimcommon_shareserviceurl_SRCS}
     ${libpimcommon_migrate_SRCS}
@@ -270,6 +275,7 @@ target_link_libraries(KF5PimCommon
     KF5::XmlGui
     KF5::PimTextEdit
     Qt5::Script
+    Grantlee5::Templates
     )
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon>")
@@ -318,6 +324,15 @@ if( LibKGAPI2_FOUND )
     add_subdirectory(storageservice/gdrive/tests/)
     add_subdirectory(storageservice/gdrive/icons/)
 endif()
+
+ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
+    HEADER_NAMES
+    GenericGrantleeFormatter
+    REQUIRED_HEADERS PimCommon_genericgrantlee_HEADERS
+    PREFIX PimCommon
+    RELATIVE genericgrantlee
+    )
+
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     HEADER_NAMES
@@ -563,6 +578,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_CamelCasegenericgrantlee_HEADERS}
     ${PimCommon_Camelcasescript_HEADERS}
     ${PimCommon_Camelcustomtools_HEADERS}
     ${PimCommon_Camelcasestorageservicesettings_HEADERS}
@@ -603,6 +619,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
     ${PimCommon_script_HEADERS}
+    ${PimCommon_genericgrantlee_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_storageservicesettings_HEADERS}
     ${PimCommon_storageservice_dialog_HEADERS}

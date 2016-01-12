@@ -20,7 +20,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 include(ECMInstallIcons)
 
-set(PIMCOMMON_LIB_VERSION "5.1.49")
+set(PIMCOMMON_LIB_VERSION "5.1.50")
 set(KF5_VERSION "5.17.0")
 set(KDEPIMLIBS_LIB_VERSION "5.1.42")
 set(LIBKDEPIM_LIB_VERSION "5.1.42")
@@ -50,6 +50,7 @@ find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5TextWidgets ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
+find_package(Grantlee5 "5.0" CONFIG REQUIRED)
 
 find_package(Qt5Designer CONFIG)
 set_package_properties(Qt5Designer PROPERTIES
