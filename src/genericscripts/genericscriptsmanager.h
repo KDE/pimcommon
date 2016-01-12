@@ -35,6 +35,8 @@ public:
 
     static GenericScriptsManager *self();
 
+    void setScriptPath(const QString &path);
+
     void setActionCollection(KActionCollection *ac);
     void initializeScripts();
 

@@ -18,6 +18,7 @@
 
 #include "genericscriptsmanager.h"
 #include "genericscriptaction.h"
+#include "pimcommon_debug.h"
 
 using namespace PimCommon;
 
@@ -47,6 +48,7 @@ public:
     {
 
     }
+    QString scriptPath;
     QVector<PimCommon::GenericScriptAction *> listScriptActions;
     KActionCollection *actionCollection;
 };
@@ -68,6 +70,11 @@ GenericScriptsManager *GenericScriptsManager::self()
     return sInstance->genericScriptsManager;
 }
 
+void GenericScriptsManager::setScriptPath(const QString &path)
+{
+    d->scriptPath = path;
+}
+
 void GenericScriptsManager::setActionCollection(KActionCollection *ac)
 {
     d->actionCollection = ac;
@@ -75,6 +82,11 @@ void GenericScriptsManager::setActionCollection(KActionCollection *ac)
 
 void GenericScriptsManager::initializeScripts()
 {
+    if (d->scriptPath.isEmpty()) {
+        qCWarning(PIMCOMMON_LOG) << "Script path is not defined";
+    } else {
+
+    }
     //TODO
 }
 
