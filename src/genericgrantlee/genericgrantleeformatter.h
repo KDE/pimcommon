@@ -29,6 +29,7 @@ class PIMCOMMON_EXPORT GenericGrantleeFormatter : public QObject
 {
     Q_OBJECT
 public:
+    explicit GenericGrantleeFormatter(QObject *parent = Q_NULLPTR);
     explicit GenericGrantleeFormatter(const QString &defaultHtmlMain, const QString &themePath, QObject *parent = Q_NULLPTR);
     ~GenericGrantleeFormatter();
 
@@ -39,6 +40,8 @@ public:
 
     QString render(const QVariantHash &mapping) const;
 
+    //For debug
+    void setContent(const QString &content);
 private:
     GenericGrantleeFormatterPrivate *const d;
 };
