@@ -139,7 +139,7 @@ QString GenericGrantleeFormatter::errorMessage() const
 
 QString GenericGrantleeFormatter::render(const QVariantHash &mapping) const
 {
-    return render(mapping);
+    return d->render(mapping);
 }
 
 void GenericGrantleeFormatter::setContent(const QString &content)
