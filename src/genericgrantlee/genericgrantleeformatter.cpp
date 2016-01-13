@@ -24,6 +24,11 @@ using namespace PimCommon;
 class PimCommon::GenericGrantleeFormatterPrivate
 {
 public:
+    GenericGrantleeFormatterPrivate()
+    {
+        mEngine = new Grantlee::Engine;
+    }
+
     GenericGrantleeFormatterPrivate(const QString &defaultHtmlMain, const QString &themePath)
         : mThemePath(themePath),
           mDefaultMainFile(defaultHtmlMain),
@@ -112,7 +117,7 @@ GenericGrantleeFormatter::GenericGrantleeFormatter(const QString &defaultHtmlMai
 
 GenericGrantleeFormatter::GenericGrantleeFormatter(QObject *parent)
     : QObject(parent),
-      d(new PimCommon::GenericGrantleeFormatterPrivate(QString(), QString()))
+      d(new PimCommon::GenericGrantleeFormatterPrivate)
 {
 
 }
