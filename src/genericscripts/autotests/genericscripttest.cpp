@@ -16,6 +16,7 @@
 */
 
 #include "genericscripttest.h"
+#include "../genericscript.h"
 #include <QTest>
 
 GenericScriptTest::GenericScriptTest(QObject *parent)
@@ -27,6 +28,12 @@ GenericScriptTest::GenericScriptTest(QObject *parent)
 GenericScriptTest::~GenericScriptTest()
 {
 
+}
+
+void GenericScriptTest::shouldHaveDefaultValue()
+{
+    PimCommon::GenericScript script;
+    QVERIFY(script.engine());
 }
 
 QTEST_MAIN(GenericScriptTest)

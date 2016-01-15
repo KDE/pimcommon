@@ -25,7 +25,7 @@ public:
     GenericScriptPrivate()
         : engine(Q_NULLPTR)
     {
-
+        engine = new QScriptEngine;
     }
 
     ~GenericScriptPrivate()

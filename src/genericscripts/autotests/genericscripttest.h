@@ -26,6 +26,8 @@ class GenericScriptTest : public QObject
 public:
     explicit GenericScriptTest(QObject *parent = Q_NULLPTR);
     ~GenericScriptTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // GENERICSCRIPTTEST_H
