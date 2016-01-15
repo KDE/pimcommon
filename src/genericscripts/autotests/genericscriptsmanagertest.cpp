@@ -16,6 +16,7 @@
 */
 
 #include "genericscriptsmanagertest.h"
+#include "../genericscriptsmanager.h"
 #include <QTest>
 
 GenericScriptsManagerTest::GenericScriptsManagerTest(QObject *parent)
@@ -27,6 +28,13 @@ GenericScriptsManagerTest::GenericScriptsManagerTest(QObject *parent)
 GenericScriptsManagerTest::~GenericScriptsManagerTest()
 {
 
+}
+
+void GenericScriptsManagerTest::shouldHaveDefaultValue()
+{
+    PimCommon::GenericScriptsManager manager;
+    manager.initializeScripts();
+    QVERIFY(manager.listScriptActions().isEmpty());
 }
 
 QTEST_MAIN(GenericScriptsManagerTest)
