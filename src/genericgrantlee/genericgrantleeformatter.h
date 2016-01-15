@@ -42,6 +42,7 @@ public:
 
     //For debug
     void setContent(const QString &content);
+    void refreshTemplate();
 private:
     GenericGrantleeFormatterPrivate *const d;
 };

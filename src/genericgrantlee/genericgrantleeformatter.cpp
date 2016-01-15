@@ -152,3 +152,7 @@ void GenericGrantleeFormatter::setContent(const QString &content)
     d->setContent(content);
 }
 
+void GenericGrantleeFormatter::refreshTemplate()
+{
+    d->refreshTemplate();
+}
