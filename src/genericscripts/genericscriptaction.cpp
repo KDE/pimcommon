@@ -42,7 +42,8 @@ GenericScriptAction::GenericScriptAction(const QJsonObject &action, KActionColle
     : QAction(parent),
       d(new PimCommon::GenericScriptActionPrivate(this, action))
 {
-    connect(this, &QAction::triggered, this, &GenericScriptAction::exec);
+    //ac->addAction(, this);
+    connect(this, &QAction::triggered, this, &GenericScriptAction::slotActivateAction);
 }
 
 GenericScriptAction::~GenericScriptAction()
@@ -50,8 +51,14 @@ GenericScriptAction::~GenericScriptAction()
     delete d;
 }
 
+void GenericScriptAction::slotActivateAction()
+{
+    Q_EMIT activateAction(this);
+}
+
 void GenericScriptAction::exec()
 {
+
     //TODO
 }
 

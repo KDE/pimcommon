@@ -33,8 +33,15 @@ public:
     explicit GenericScriptAction(const QJsonObject &action, KActionCollection *ac, QObject *parent);
     ~GenericScriptAction();
 
+
 public Q_SLOTS:
     void exec();
+
+private Q_SLOTS:
+    void slotActivateAction();
+
+Q_SIGNALS:
+    void activateAction(PimCommon::GenericScriptAction *action);
 
 private:
     GenericScriptActionPrivate *const d;
