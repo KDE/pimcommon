@@ -24,15 +24,23 @@ using namespace PimCommon;
 class PimCommon::GenericScriptActionPrivate
 {
 public:
-    GenericScriptActionPrivate()
+    GenericScriptActionPrivate(GenericScriptAction *qq, const QJsonObject &action)
+        : q(qq)
     {
-
+        initializeAction(action);
     }
+    void initializeAction(const QJsonObject &action);
+    GenericScriptAction *q;
 };
 
-GenericScriptAction::GenericScriptAction(KActionCollection *ac, QObject *parent)
+void GenericScriptActionPrivate::initializeAction(const QJsonObject &action)
+{
+    //TODO
+}
+
+GenericScriptAction::GenericScriptAction(const QJsonObject &action, KActionCollection *ac, QObject *parent)
     : QAction(parent),
-      d(new PimCommon::GenericScriptActionPrivate)
+      d(new PimCommon::GenericScriptActionPrivate(this, action))
 {
     connect(this, &QAction::triggered, this, &GenericScriptAction::exec);
 }
@@ -46,3 +54,4 @@ void GenericScriptAction::exec()
 {
     //TODO
 }
+

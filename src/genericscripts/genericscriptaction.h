@@ -19,6 +19,7 @@
 #define GENERICSCRIPTACTION_H
 
 #include <QAction>
+#include <QJsonObject>
 #include "pimcommon_export.h"
 
 class KActionCollection;
@@ -29,7 +30,7 @@ class PIMCOMMON_EXPORT GenericScriptAction : public QAction
 {
     Q_OBJECT
 public:
-    explicit GenericScriptAction(KActionCollection *ac, QObject *parent);
+    explicit GenericScriptAction(const QJsonObject &action, KActionCollection *ac, QObject *parent);
     ~GenericScriptAction();
 
 public Q_SLOTS:
