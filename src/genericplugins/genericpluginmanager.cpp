@@ -65,8 +65,10 @@ QString GenericPluginInfo::saveName() const
     return QFileInfo(metaData.fileName()).baseName();
 }
 
-namespace {
-QString pluginVersion() {
+namespace
+{
+QString pluginVersion()
+{
     return QStringLiteral("1.0");
 }
 }

@@ -24,7 +24,8 @@
 
 class KActionCollection;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class GenericScriptActionPrivate;
 class PIMCOMMON_EXPORT GenericScriptAction : public QAction
 {
@@ -32,7 +33,6 @@ class PIMCOMMON_EXPORT GenericScriptAction : public QAction
 public:
     explicit GenericScriptAction(const QJsonObject &action, KActionCollection *ac, QObject *parent);
     ~GenericScriptAction();
-
 
 public Q_SLOTS:
     void exec();

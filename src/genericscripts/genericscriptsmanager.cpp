@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "genericscriptsmanager.h"
 #include "genericscriptaction.h"
 #include "pimcommon_debug.h"
@@ -108,8 +107,9 @@ void GenericScriptsManager::initializeScripts()
         QSet<QString> unique;
         foreach (const QString &fileName, list) {
             const QString baseName = QFileInfo(fileName).baseName();
-            if (unique.contains(baseName))
+            if (unique.contains(baseName)) {
                 continue;
+            }
             unique.insert(baseName);
             QFile file(fileName);
             if (!file.open(QIODevice::ReadOnly)) {
@@ -121,7 +121,7 @@ void GenericScriptsManager::initializeScripts()
              * search json header or skip this file
              */
             QByteArray fileContent = file.readAll();
-            const int startOfJson = fileContent.indexOf ('{');
+            const int startOfJson = fileContent.indexOf('{');
             if (startOfJson < 0) {
                 qCDebug(PIMCOMMON_LOG) << "Script parse error: Cannot find start of json header at start of file " << fileName;
                 continue;
@@ -141,10 +141,10 @@ void GenericScriptsManager::initializeScripts()
              * parse json header or skip this file
              */
             QJsonParseError error;
-            const QJsonDocument metaInfo (QJsonDocument::fromJson(fileContent.mid(startOfJson, endOfJson-startOfJson), &error));
+            const QJsonDocument metaInfo(QJsonDocument::fromJson(fileContent.mid(startOfJson, endOfJson - startOfJson), &error));
             if (error.error || !metaInfo.isObject()) {
                 qCDebug(PIMCOMMON_LOG) << "Script parse error: Cannot parse json header at start of file " << fileName
-                                       << error.errorString() << endOfJson << fileContent.mid(endOfJson-25, 25).replace('\n', ' ');
+                                       << error.errorString() << endOfJson << fileContent.mid(endOfJson - 25, 25).replace('\n', ' ');
                 continue;
             }
         }

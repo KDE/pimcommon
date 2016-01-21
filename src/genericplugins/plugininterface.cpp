@@ -74,7 +74,7 @@ void PluginInterface::setServiceTypeName(const QString &name)
 
 void PluginInterface::createPluginInterface()
 {
-    Q_FOREACH(PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {
+    Q_FOREACH (PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {
         PimCommon::GenericPluginInterface *interface = plugin->createInterface(d->mActionCollection, d->mParentWidget);
         connect(interface, &PimCommon::GenericPluginInterface::emitPluginActivated, this, &PluginInterface::slotPluginActivated);
         d->mListGenericInterface.append(interface);
@@ -88,7 +88,7 @@ void PluginInterface::initializeInterfaceRequires(PimCommon::GenericPluginInterf
 
 QString PluginInterface::actionXmlExtension(ActionType::Type type)
 {
-    switch(type) {
+    switch (type) {
     case PimCommon::ActionType::Tools:
         return QStringLiteral("_plugins_tools");
     case PimCommon::ActionType::Edit:
@@ -137,7 +137,7 @@ void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClie
 QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType() const
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
-    Q_FOREACH(PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
+    Q_FOREACH (PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
         PimCommon::ActionType actionType = interface->actionType();
         PimCommon::ActionType::Type type = actionType.type();
         if (listType.contains(type)) {

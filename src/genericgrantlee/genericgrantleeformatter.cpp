@@ -107,7 +107,6 @@ QString GenericGrantleeFormatterPrivate::render(const QVariantHash &mapping) con
     return contentHtml;
 }
 
-
 GenericGrantleeFormatter::GenericGrantleeFormatter(const QString &defaultHtmlMain, const QString &themePath, QObject *parent)
     : QObject(parent),
       d(new PimCommon::GenericGrantleeFormatterPrivate(defaultHtmlMain, themePath))

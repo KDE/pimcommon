@@ -20,7 +20,6 @@
 
 #include <QObject>
 
-
 class GenericScriptsManagerTest : public QObject
 {
     Q_OBJECT

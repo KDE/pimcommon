@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #ifndef GENERICSCRIPTSMANAGER_H
 #define GENERICSCRIPTSMANAGER_H
 
@@ -23,7 +22,8 @@
 #include <QObject>
 class KActionCollection;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class GenericScriptAction;
 class GenericScriptsManagerPrivate;
 class PIMCOMMON_EXPORT GenericScriptsManager : public QObject

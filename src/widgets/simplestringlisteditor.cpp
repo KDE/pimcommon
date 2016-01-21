@@ -436,12 +436,12 @@ void SimpleStringListEditor::slotSelectionChanged()
 
     if (d->mUpButton) {
         d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst) ||
-                              (!uniqItemSelected)) && !allItemSelected);
+                                 (!uniqItemSelected)) && !allItemSelected);
     }
     if (d->mDownButton) {
         d->mDownButton->setEnabled(aItemIsSelected &&
-                                ((uniqItemSelected && !theLast) ||
-                                 (!uniqItemSelected)) && !allItemSelected);
+                                   ((uniqItemSelected && !theLast) ||
+                                    (!uniqItemSelected)) && !allItemSelected);
     }
 }
 

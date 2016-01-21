@@ -62,7 +62,8 @@ QString CustomToolsPluginInfo::saveName() const
     return QFileInfo(metaData.fileName()).baseName();
 }
 
-namespace {
+namespace
+{
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
