@@ -63,6 +63,12 @@ ActionType GenericPluginInterface::actionType() const
     return d->actionType;
 }
 
+void GenericPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+{
+    Q_UNUSED(numberOfSelectedItems);
+    Q_UNUSED(numberOfSelectedCollections);
+}
+
 void GenericPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
 {
     Q_UNUSED(items);

@@ -89,6 +89,8 @@ public:
 
     virtual void showConfigureDialog(QWidget *parentWidget = Q_NULLPTR);
 
+    virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
+
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::GenericPluginInterface *interface);
 
