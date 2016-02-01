@@ -134,6 +134,13 @@ void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClie
     }
 }
 
+void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+{
+    Q_FOREACH (PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
+        interface->updateActions(numberOfSelectedItems, numberOfSelectedCollections);
+    }
+}
+
 QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType() const
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;

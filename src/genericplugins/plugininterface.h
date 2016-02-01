@@ -46,6 +46,7 @@ public:
     static QString actionXmlExtension(PimCommon::ActionType::Type type);
 
     void initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient);
+    void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
 private Q_SLOTS:
     void slotPluginActivated(PimCommon::GenericPluginInterface *interface);
