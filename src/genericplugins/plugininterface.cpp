@@ -21,6 +21,7 @@
 
 #include <KActionCollection>
 #include <KXMLGUIClient>
+#include <QAction>
 
 #include "genericplugin.h"
 
@@ -141,7 +142,7 @@ void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelec
     }
 }
 
-QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType() const
+QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType()
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
     Q_FOREACH (PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
@@ -149,7 +150,9 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
         PimCommon::ActionType::Type type = actionType.type();
         if (listType.contains(type)) {
             QList<QAction *> lst = listType.value(type);
-            lst << actionType.action();
+            QAction *act = new QAction(this);
+            act->setSeparator(true);
+            lst << act << actionType.action();
             listType.insert(type, lst);
         } else {
             listType.insert(type, QList<QAction *>() << actionType.action());
@@ -158,7 +161,9 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
             type = PimCommon::ActionType::PopupMenu;
             if (listType.contains(type)) {
                 QList<QAction *> lst = listType.value(type);
-                lst << actionType.action();
+                QAction *act = new QAction(this);
+                act->setSeparator(true);
+                lst << act << actionType.action();
                 listType.insert(type, lst);
             } else {
                 listType.insert(type, QList<QAction *>() << actionType.action());
@@ -168,7 +173,9 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
             type = PimCommon::ActionType::ToolBar;
             if (listType.contains(type)) {
                 QList<QAction *> lst = listType.value(type);
-                lst << actionType.action();
+                QAction *act = new QAction(this);
+                act->setSeparator(true);
+                lst << act << actionType.action();
                 listType.insert(type, lst);
             } else {
                 listType.insert(type, QList<QAction *>() << actionType.action());

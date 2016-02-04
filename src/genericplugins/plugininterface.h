@@ -36,7 +36,7 @@ public:
     ~PluginInterface();
 
     void setParentWidget(QWidget *widget);
-    QHash<PimCommon::ActionType::Type, QList<QAction *> > actionsType() const;
+    QHash<PimCommon::ActionType::Type, QList<QAction *> > actionsType();
     void createPluginInterface();
 
     void setPluginName(const QString &name);
