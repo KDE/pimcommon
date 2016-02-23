@@ -191,13 +191,10 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
         Q_EMIT translateFailed(false);
         return;
     }
-
     const QVariantList json = jsonDoc.toVariant().toList();
-    //qCDebug(PIMCOMMON_LOG)<<" json"<<json;
-    //qDebug()<<" json "<<json;
-    //bool oldVersion = true;
-    //QMultiMap<int, QPair<QString, double> > sentences;
-
+#if !defined(NDEBUG)
+    mJsonDebug = QString::fromUtf8(jsonDoc.toJson(QJsonDocument::Indented));
+#endif
     Q_FOREACH (const QVariant &level0, json) {
         const QVariantList listLevel0 = level0.toList();
         if (listLevel0.isEmpty()) {
@@ -211,85 +208,13 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
         }
     }
     Q_EMIT translateDone();
-#if 0
-    // we are going recursively through the nested json-array
-    // level0 contains the data of the outer array, level1 of the next one and so on
-    Q_FOREACH (const QVariant &level0, json) {
-        const QVariantList listLevel0 = level0.toList();
-        if (listLevel0.isEmpty()) {
-            continue;
-        }
-        Q_FOREACH (const QVariant &level1, listLevel0) {
-            qDebug()<<" 11111111111111111111"<<listLevel0 << "level1.toList().size()"<<level1.toList().size();
-            if (level1.toList().size() <= 2 /*|| level1.toList().at(2).toList().isEmpty()*/) {
-                continue;
-            }
-            const int indexLevel1 = listLevel0.indexOf(level1);
-            const QVariantList listLevel1 = level1.toList().at(2).toList();
-            qDebug()<<" listLevel1 ***************"<<listLevel1;
-            foreach (const QVariant &level2, listLevel1) {
-                const QVariantList listLevel2 = level2.toList();
-
-                // The JSON we get from Google has not always the same structure.
-                // There is a version with additional information like synonyms and frequency,
-                // this is called newVersion oldVersion doesn't cointain something like this.
-
-                const bool foundWordNew = (listLevel2.size() > 1) && (!listLevel2.at(1).toList().isEmpty());
-                const bool foundWordOld = (listLevel2.size() == 4) && (oldVersion == true) && (listLevel2.at(1).toDouble() > 0);
-
-                if (foundWordNew || foundWordOld) {
-                    if (!level1.toList().at(0).toString().isEmpty() && foundWordOld) {
-                        // sentences are translated phrase by phrase
-                        // first we have to add all phrases to sentences and then rebuild them
-                        sentences.insert(indexLevel1, qMakePair(listLevel2.at(0).toString(), listLevel2.at(1).toDouble() / 1000));
-                    } else {
-                        if (foundWordNew) {
-                            oldVersion = false;
-                            mResult = listLevel2.at(0).toString();
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    if (!sentences.isEmpty()) {
-        qDebug()<<" sentence is not empty";
-        QPair<QString, double> pair;
-        QMapIterator<int, QPair<QString, double> > it(sentences);
-        int currentKey = -1;
-        double currentRel = 1;
-        QString currentString;
-
-        while (it.hasNext()) {
-            pair = it.next().value();
-
-            // we're on to another key, process previous results, if any
-            if (currentKey != it.key()) {
-                currentKey = it.key();
-                currentRel = 1;
-                currentString.append(QLatin1Char(' ')).append(pair.first);
-                currentRel *= pair.second;
-            }
-        }
-        if (!currentString.isEmpty()) {
-            mResult = currentString;
-            Q_EMIT translateDone();
-        }
-    } else {
-        qDebug()<<" same result";
-        //Same value
-        mResult = mInputText;
-        Q_EMIT translateDone();
-    }
-#endif
 }
 
 void GoogleTranslator::debug()
 {
 #if !defined(NDEBUG)
     QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog;
-    dlg->setDebug(mJsonData);
+    dlg->setDebug(mJsonDebug);
     dlg->exec();
     delete dlg;
 #endif
