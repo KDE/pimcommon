@@ -20,6 +20,8 @@
 #include "translatordebugdialog.h"
 
 #include "pimcommon_debug.h"
+#include <QEventLoop>
+#include <QJsonArray>
 #include <QJsonParseError>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -150,16 +152,21 @@ void GoogleTranslator::translate()
 
     mResult.clear();
 
-    QNetworkRequest request(QUrl(QStringLiteral("http://www.google.com/translate_a/t")));
-    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+    QUrlQuery urlQuery;
+    urlQuery.addQueryItem(QStringLiteral("client"), QStringLiteral("gtx"));
+    urlQuery.addQueryItem(QStringLiteral("sl"), mFrom);
+    urlQuery.addQueryItem(QStringLiteral("tl"), mTo);
+    urlQuery.addQueryItem(QStringLiteral("dt"), QStringLiteral("t"));
+    urlQuery.addQueryItem(QStringLiteral("q"), mInputText);
 
-    QUrl postData;
-    postData.addQueryItem(QStringLiteral("client"), QStringLiteral("t"));
-    postData.addQueryItem(QStringLiteral("sl"), mFrom);
-    postData.addQueryItem(QStringLiteral("tl"), mTo);
-    postData.addQueryItem(QStringLiteral("text"), mInputText);
+    QUrl url;
+    url.setQuery(urlQuery);
+    url.setScheme(QStringLiteral("http"));
+    url.setHost(QStringLiteral("translate.googleapis.com"));
+    url.setPath(QStringLiteral("/translate_a/single"));
+    const QNetworkRequest request(url);
 
-    QNetworkReply *reply = mNetworkAccessManager->post(request, postData.encodedQuery());
+    QNetworkReply *reply = mNetworkAccessManager->get(request);
     connect(reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), this, &GoogleTranslator::slotError);
 }
 
@@ -184,11 +191,27 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
         Q_EMIT translateFailed(false);
         return;
     }
+
     const QVariantList json = jsonDoc.toVariant().toList();
     //qCDebug(PIMCOMMON_LOG)<<" json"<<json;
-    bool oldVersion = true;
-    QMultiMap<int, QPair<QString, double> > sentences;
+    //qDebug()<<" json "<<json;
+    //bool oldVersion = true;
+    //QMultiMap<int, QPair<QString, double> > sentences;
 
+    Q_FOREACH (const QVariant &level0, json) {
+        const QVariantList listLevel0 = level0.toList();
+        if (listLevel0.isEmpty()) {
+            continue;
+        }
+        Q_FOREACH (const QVariant &level1, listLevel0) {
+            if (level1.toList().size() <= 2) {
+                continue;
+            }
+            mResult += level1.toList().at(0).toString();
+        }
+    }
+    Q_EMIT translateDone();
+#if 0
     // we are going recursively through the nested json-array
     // level0 contains the data of the outer array, level1 of the next one and so on
     Q_FOREACH (const QVariant &level0, json) {
@@ -197,11 +220,13 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
             continue;
         }
         Q_FOREACH (const QVariant &level1, listLevel0) {
-            if (level1.toList().size() <= 2 || level1.toList().at(2).toList().isEmpty()) {
+            qDebug()<<" 11111111111111111111"<<listLevel0 << "level1.toList().size()"<<level1.toList().size();
+            if (level1.toList().size() <= 2 /*|| level1.toList().at(2).toList().isEmpty()*/) {
                 continue;
             }
             const int indexLevel1 = listLevel0.indexOf(level1);
             const QVariantList listLevel1 = level1.toList().at(2).toList();
+            qDebug()<<" listLevel1 ***************"<<listLevel1;
             foreach (const QVariant &level2, listLevel1) {
                 const QVariantList listLevel2 = level2.toList();
 
@@ -229,6 +254,7 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
     }
 
     if (!sentences.isEmpty()) {
+        qDebug()<<" sentence is not empty";
         QPair<QString, double> pair;
         QMapIterator<int, QPair<QString, double> > it(sentences);
         int currentKey = -1;
@@ -251,10 +277,12 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
             Q_EMIT translateDone();
         }
     } else {
+        qDebug()<<" same result";
         //Same value
         mResult = mInputText;
         Q_EMIT translateDone();
     }
+#endif
 }
 
 void GoogleTranslator::debug()
