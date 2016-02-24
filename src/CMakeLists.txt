@@ -116,6 +116,10 @@ set(libpimcommon_folderdialog_SRCS
     folderdialog/checkedcollectionwidget.cpp
     )
 
+set(libpimcommon_job_SRCS
+   job/fetchrecursivecollectionsjob.cpp
+   )
+
 set(libpimcommon_acl_SRCS
     acl/aclentrydialog.cpp
     acl/aclmanager.cpp
@@ -193,6 +197,7 @@ set(libpimcommon_genericgrantlee_SRCS
 
 set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
+    ${libpimcommon_job_SRCS}
     ${libpimcommon_genericgrantlee_SRCS}
     ${libpimcommon_manageserversidesubscription_SRCS}
     ${libpimcommon_shareserviceurl_SRCS}
@@ -332,6 +337,14 @@ ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
     REQUIRED_HEADERS PimCommon_genericgrantlee_HEADERS
     PREFIX PimCommon
     RELATIVE genericgrantlee
+    )
+
+ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
+    HEADER_NAMES
+    FetchRecursiveCollectionsJob
+    REQUIRED_HEADERS PimCommon_job_HEADERS
+    PREFIX PimCommon
+    RELATIVE job
     )
 
 
@@ -579,6 +592,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_CamelCasegenericgrantlee_HEADERS}
     ${PimCommon_Camelcasescript_HEADERS}
     ${PimCommon_Camelcustomtools_HEADERS}
@@ -615,6 +629,7 @@ install(FILES
 
 install(FILES
     ${PimCommon_HEADERS}
+    ${PimCommon_job_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_debug.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
