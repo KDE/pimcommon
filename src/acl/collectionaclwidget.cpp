@@ -26,6 +26,7 @@
 #include <QHBoxLayout>
 #include <QListView>
 #include <QPushButton>
+#include <QCheckBox>
 
 using namespace PimCommon;
 /**
@@ -81,10 +82,14 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
       mAclManager(new PimCommon::AclManager(this))
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
+    QVBoxLayout *listViewLayout = new QVBoxLayout;
+    layout->addLayout(listViewLayout);
 
     AclListView *view = new AclListView;
     view->setObjectName(QStringLiteral("list_view"));
-    layout->addWidget(view);
+    listViewLayout->addWidget(view);
+    mRecursiveChk = new QCheckBox(i18n("Apply permissions on all &subfolders."), this);
+    listViewLayout->addWidget( mRecursiveChk );
 
     view->setAlternatingRowColors(true);
     view->setModel(mAclManager->model());
@@ -125,4 +130,17 @@ CollectionAclWidget::~CollectionAclWidget()
 AclManager *CollectionAclWidget::aclManager() const
 {
     return mAclManager;
+}
+
+bool CollectionAclWidget::recursive() const
+{
+    return mRecursiveChk->isChecked();
+}
+
+void CollectionAclWidget::setEnableRecursiveCheckBox(bool enable)
+{
+    if (!enable) {
+        mRecursiveChk->setChecked(false);
+    }
+    mRecursiveChk->setEnabled(enable);
 }

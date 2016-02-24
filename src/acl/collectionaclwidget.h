@@ -19,6 +19,7 @@
 #define COLLECTIONACLWIDGET_H
 
 #include <QWidget>
+class QCheckBox;
 namespace PimCommon
 {
 class AclManager;
@@ -30,9 +31,12 @@ public:
     ~CollectionAclWidget();
 
     PimCommon::AclManager *aclManager() const;
+    bool recursive() const;
+    void setEnableRecursiveCheckBox(bool enable);
 
 private:
     PimCommon::AclManager *mAclManager;
+    QCheckBox *mRecursiveChk;
 };
 }
 

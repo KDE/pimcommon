@@ -97,7 +97,7 @@ public Q_SLOTS:
     /**
      * Saves the changes of the ACL back to the collection.
      */
-    void save();
+    void save(bool recursive);
 
 Q_SIGNALS:
     /**

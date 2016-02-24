@@ -29,7 +29,7 @@
 #include <CollectionModifyJob>
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
-
+#include "aclmodifyjob.h"
 #include <KEmailAddress>
 
 #include <KLocalizedString>
@@ -289,34 +289,6 @@ public:
         mChanged = true;
     }
 
-    /**
-     * We call this method if our first try to get the ACLs for the user fails.
-     * That's the case if the ACLs use a different user id than the login name.
-     *
-     * Examples:
-     *   login: testuser                acls: testuser@mydomain.org
-     *   login: testuser@mydomain.org   acls: testuser
-     */
-    static QString guessUserName(const QString &loginName, const QString &serverName)
-    {
-        if (loginName.contains(QLatin1Char('@'))) {
-            // strip of the domain part and use user name only
-            return loginName.left(loginName.indexOf(QLatin1Char('@')));
-        } else {
-            int pos = serverName.lastIndexOf(QLatin1Char('.'));
-            if (pos == -1) {   // no qualified domain name, only hostname
-                return QStringLiteral("%1@%2").arg(loginName, serverName);
-            }
-
-            pos = serverName.lastIndexOf(QLatin1Char('.'), pos - 1);
-            if (pos == -1) {   // a simple domain name e.g. mydomain.org
-                return QStringLiteral("%1@%2").arg(loginName, serverName);
-            } else {
-                return QStringLiteral("%1@%2").arg(loginName, serverName.mid(pos + 1));
-            }
-        }
-    }
-
     void setCollection(const Akonadi::Collection &collection)
     {
         mCollection = collection;
@@ -358,7 +330,7 @@ public:
 
         mImapUserName = loginName;
         if (!rights.contains(loginName.toUtf8())) {
-            const QString guessedUserName = guessUserName(loginName, serverName);
+            const QString guessedUserName = AclUtils::guessUserName(loginName, serverName);
             if (rights.contains(guessedUserName.toUtf8())) {
                 mImapUserName = guessedUserName;
             }
@@ -430,7 +402,7 @@ QAction *AclManager::deleteAction() const
     return d->mDeleteAction;
 }
 
-void AclManager::save()
+void AclManager::save(bool recursive)
 {
     if (!d->mCollection.isValid() || !d->mChanged) {
         return;
@@ -453,10 +425,9 @@ void AclManager::save()
 
     d->mChanged = false;
 
-    PimCommon::ImapAclAttribute *attribute =
-        d->mCollection.attribute<PimCommon::ImapAclAttribute>();
-
     QMap<QByteArray, KIMAP::Acl::Rights> newRights;
+    PimCommon::ImapAclAttribute *attribute =
+            d->mCollection.attribute<PimCommon::ImapAclAttribute>();
 
     const QMap<QByteArray, KIMAP::Acl::Rights> rights = d->mModel->rights();
     QMapIterator<QByteArray, KIMAP::Acl::Rights> it(rights);
@@ -490,10 +461,18 @@ void AclManager::save()
             }
         }
     }
-
+#if 0
     attribute->setRights(newRights);
 
     new Akonadi::CollectionModifyJob(d->mCollection);
+#else
+    PimCommon::AclModifyJob *modifyAclJob = new PimCommon::AclModifyJob;
+    modifyAclJob->setNewRights(newRights);
+    modifyAclJob->setTopLevelCollection(d->mCollection);
+    modifyAclJob->setRecursive(recursive);
+    modifyAclJob->start();
+#endif
 }
 
+#include "aclmodifyjob.h"
 #include "moc_aclmanager.cpp"

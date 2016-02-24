@@ -128,6 +128,7 @@ set(libpimcommon_acl_SRCS
     acl/imapaclattribute.cpp
     acl/collectionaclwidget.cpp
     acl/acllistview.cpp
+    acl/aclmodifyjob.cpp
     )
 
 
