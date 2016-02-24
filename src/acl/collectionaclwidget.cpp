@@ -119,12 +119,21 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     buttonBoxVBoxLayout->addWidget(spacer);
     spacer->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
     connect(view, SIGNAL(doubleClicked(QModelIndex)), mAclManager->editAction(), SIGNAL(triggered()));
+    connect(mAclManager, &AclManager::collectionCanBeAdministrated, this, &CollectionAclWidget::slotCollectionCanBeAdministrated);
     connect(mAclManager, &AclManager::collectionCanBeAdministrated, view, &AclListView::slotCollectionCanBeAdministrated);
 }
 
 CollectionAclWidget::~CollectionAclWidget()
 {
 
+}
+
+void CollectionAclWidget::slotCollectionCanBeAdministrated(bool b)
+{
+    if (!b) {
+        mRecursiveChk->setChecked(false);
+    }
+    mRecursiveChk->setEnabled(b);
 }
 
 AclManager *CollectionAclWidget::aclManager() const

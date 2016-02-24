@@ -34,6 +34,9 @@ public:
     bool recursive() const;
     void setEnableRecursiveCheckBox(bool enable);
 
+private Q_SLOTS:
+    void slotCollectionCanBeAdministrated(bool b);
+
 private:
     PimCommon::AclManager *mAclManager;
     QCheckBox *mRecursiveChk;

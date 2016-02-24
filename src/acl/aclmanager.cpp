@@ -426,8 +426,6 @@ void AclManager::save(bool recursive)
     d->mChanged = false;
 
     QMap<QByteArray, KIMAP::Acl::Rights> newRights;
-    PimCommon::ImapAclAttribute *attribute =
-            d->mCollection.attribute<PimCommon::ImapAclAttribute>();
 
     const QMap<QByteArray, KIMAP::Acl::Rights> rights = d->mModel->rights();
     QMapIterator<QByteArray, KIMAP::Acl::Rights> it(rights);
@@ -461,17 +459,11 @@ void AclManager::save(bool recursive)
             }
         }
     }
-#if 0
-    attribute->setRights(newRights);
-
-    new Akonadi::CollectionModifyJob(d->mCollection);
-#else
     PimCommon::AclModifyJob *modifyAclJob = new PimCommon::AclModifyJob;
     modifyAclJob->setNewRights(newRights);
     modifyAclJob->setTopLevelCollection(d->mCollection);
     modifyAclJob->setRecursive(recursive);
     modifyAclJob->start();
-#endif
 }
 
 #include "aclmodifyjob.h"
