@@ -48,7 +48,6 @@ AclModifyJob::~AclModifyJob()
 
 void AclModifyJob::start()
 {
-    qDebug()<<" void AclModifyJob::start()";
     if (!mTopLevelCollection.isValid()) {
         deleteLater();
         return;
