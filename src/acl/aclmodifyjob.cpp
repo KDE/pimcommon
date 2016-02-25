@@ -155,11 +155,12 @@ void AclModifyJob::slotModifyDone(KJob *job)
 void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &collectionList)
 {
     mRecursiveCollection = collectionList;
+    changeAcl(mTopLevelCollection);
 }
 
 void AclModifyJob::slotFetchCollectionFailed()
 {
-    qDebug(PIMCOMMON_LOG) << "fetch collection failed";
+    qCDebug(PIMCOMMON_LOG) << "fetch collection failed";
     deleteLater();
 }
 
