@@ -466,5 +466,10 @@ void AclManager::save(bool recursive)
     modifyAclJob->start();
 }
 
+void AclManager::setChanged(bool b)
+{
+    d->mChanged = b;
+}
+
 #include "aclmodifyjob.h"
 #include "moc_aclmanager.cpp"

@@ -35,6 +35,7 @@ public:
     void setEnableRecursiveCheckBox(bool enable);
 
 private Q_SLOTS:
+    void slotRecursivePermissionChanged();
     void slotCollectionCanBeAdministrated(bool b);
 
 private:

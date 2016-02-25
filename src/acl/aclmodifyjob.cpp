@@ -44,7 +44,6 @@ AclModifyJob::AclModifyJob(QObject *parent)
 
 AclModifyJob::~AclModifyJob()
 {
-
 }
 
 void AclModifyJob::start()
@@ -64,8 +63,8 @@ void AclModifyJob::start()
         }
         PimCommon::FetchRecursiveCollectionsJob *fetchJob = new PimCommon::FetchRecursiveCollectionsJob(this);
         fetchJob->setTopCollection(mTopLevelCollection);
-        connect(fetchJob, SIGNAL(fetchCollectionFailed()), this, SLOT(slotFetchCollectionFailed()));
-        connect(fetchJob, SIGNAL(fetchCollectionFinished(Akonadi::Collection::List)), this, SLOT(slotFetchCollectionFinished(Akonadi::Collection::List)));
+        connect(fetchJob, &FetchRecursiveCollectionsJob::fetchCollectionFailed, this, &AclModifyJob::slotFetchCollectionFailed);
+        connect(fetchJob, &FetchRecursiveCollectionsJob::fetchCollectionFinished, this, &AclModifyJob::slotFetchCollectionFinished);
         fetchJob->start();
     } else {
         changeAcl(mTopLevelCollection);
@@ -116,7 +115,6 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
             imapUserName = guessedUserName;
         }
     }
-
     return rights[ imapUserName.toUtf8() ] & KIMAP::Acl::Admin;
 }
 

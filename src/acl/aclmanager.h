@@ -93,6 +93,7 @@ public:
      */
     QAction *deleteAction() const;
 
+    void setChanged(bool b);
 public Q_SLOTS:
     /**
      * Saves the changes of the ACL back to the collection.
