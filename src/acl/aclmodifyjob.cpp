@@ -55,7 +55,7 @@ void AclModifyJob::start()
     mCurrentIndex = 0;
     if (mRecursive) {
         if ( KMessageBox::No == KMessageBox::warningYesNo(0,
-                                                              i18n( "Do you really want to apply this folder's permissions on the subdirectories:" ),
+                                                              i18n( "Do you really want to apply this folder's permissions on the subfolders:" ),
                                                               i18n( "Apply Permissions" ) ) ) {
             deleteLater();
             return;
