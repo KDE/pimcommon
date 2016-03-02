@@ -20,7 +20,6 @@
 #include "translatordebugdialog.h"
 
 #include "pimcommon_debug.h"
-#include <QEventLoop>
 #include <QJsonArray>
 #include <QJsonParseError>
 #include <QNetworkAccessManager>
