@@ -41,8 +41,6 @@
 
 class QListWidget;
 class QListWidgetItem;
-class QPushButton;
-class QVBoxLayout;
 
 //
 //
