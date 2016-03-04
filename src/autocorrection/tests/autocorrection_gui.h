@@ -23,7 +23,6 @@
 #include <QDialog>
 
 #include <QTextEdit>
-#include <KConfigGroup>
 
 namespace PimCommon
 {

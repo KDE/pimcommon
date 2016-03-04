@@ -17,7 +17,6 @@
 #ifndef ADDSERVICESTORAGEDIALOG_H
 #define ADDSERVICESTORAGEDIALOG_H
 #include <QDialog>
-#include <KConfigGroup>
 #include "storageservice/storageservicemanager.h"
 class QStackedWidget;
 namespace PimCommon

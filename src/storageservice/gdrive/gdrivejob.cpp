@@ -32,11 +32,9 @@
 #include <kgapi/drive/childreference.h>
 #include <kgapi/drive/file.h>
 #include <kgapi/drive/filecopyjob.h>
-#include <KGAPI/Drive/ParentReference>
 
 #include "pimcommon_debug.h"
 #include <QNetworkReply>
-#include <QPointer>
 
 #include <QFile>
 

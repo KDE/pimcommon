@@ -19,7 +19,7 @@
 #include "customtools/customtoolswidgetng.h"
 #include <QStackedWidget>
 #include <QTest>
-#include <KXmlGui/KActionCollection>
+#include <KActionCollection>
 
 CustomToolsWidgetNgTest::CustomToolsWidgetNgTest(QObject *parent)
     : QObject(parent)

@@ -20,7 +20,6 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
-#include <QStringList>
 #include "pimcommon_debug.h"
 
 namespace PimCommon

@@ -18,7 +18,6 @@
 #ifndef TRANSLATORUTIL_H
 #define TRANSLATORUTIL_H
 
-#include <KLocalizedString>
 #include <QMap>
 #include <QPair>
 #include <QString>

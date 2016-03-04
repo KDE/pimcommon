@@ -33,7 +33,6 @@
 #include <QIcon>
 
 #include <QLabel>
-#include <QGridLayout>
 #include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>

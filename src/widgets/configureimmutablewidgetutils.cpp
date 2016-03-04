@@ -19,7 +19,6 @@
 #include "simplestringlisteditor.h"
 
 #include <KLocalizedString>
-#include <QDialog>
 #include <KUrlRequester>
 
 #include <QWidget>
@@ -32,7 +31,6 @@
 #include <QRadioButton>
 #include <QSpinBox>
 #include <QComboBox>
-#include <KConfigGroup>
 
 using namespace PimCommon;
 

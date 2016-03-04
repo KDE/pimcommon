@@ -29,11 +29,9 @@
 #include <KConfigGroup>
 #include <KSeparator>
 #include <KMessageBox>
-#include <KToggleAction>
 
-#include <KActionCollection>
-#include <QIcon>
 #include <QMimeData>
+#include <QIcon>
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>

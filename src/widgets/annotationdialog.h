@@ -23,7 +23,6 @@
 #include "pimcommon_export.h"
 
 #include <QDialog>
-#include <KConfigGroup>
 
 namespace Akonadi
 {

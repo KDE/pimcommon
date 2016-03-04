@@ -39,12 +39,10 @@
 #include <KLocalizedString>
 #include "pimcommon_debug.h"
 #include <QPushButton>
-#include <QDialog>
 #include <QMenu>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
 #include <QListWidget>
-#include <KConfigGroup>
 
 //********************************************************
 // SimpleStringListEditor

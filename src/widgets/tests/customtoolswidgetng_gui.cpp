@@ -23,12 +23,9 @@
 #include <KToggleAction>
 
 #include <QVBoxLayout>
-#include <QLabel>
-#include <QComboBox>
 #include <QApplication>
 #include <KAboutData>
 #include <QCommandLineParser>
-#include <QMenu>
 #include <QToolBar>
 
 #include <KXmlGui/kactioncollection.h>

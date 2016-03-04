@@ -19,7 +19,6 @@
 #define STORAGESERVICECHECKNAMEDIALOG_H
 
 #include <QDialog>
-#include <KConfigGroup>
 #include "pimcommon_export.h"
 class QLineEdit;
 class QLabel;

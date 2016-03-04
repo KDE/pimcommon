@@ -23,7 +23,6 @@
 
 #include <QHBoxLayout>
 #include <QStackedWidget>
-#include <QDebug>
 
 using namespace PimCommon;
 

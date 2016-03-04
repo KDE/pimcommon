@@ -27,12 +27,10 @@
 #include <KLocalizedString>
 
 #include <QMenu>
-#include <QDateTime>
 
 #include <QTreeWidgetItem>
 #include <QHeaderView>
 #include <QTimer>
-#include <KFormat>
 #include <QMimeDatabase>
 #include <QMimeType>
 

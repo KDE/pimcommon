@@ -33,7 +33,6 @@
 #include <QPushButton>
 #include <QRadioButton>
 #include <QVBoxLayout>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 
 using namespace PimCommon;

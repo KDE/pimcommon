@@ -24,7 +24,6 @@
 #include <QAction>
 #include <QActionEvent>
 #include <QHBoxLayout>
-#include <QListView>
 #include <QPushButton>
 #include <QCheckBox>
 

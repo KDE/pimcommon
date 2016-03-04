@@ -19,16 +19,14 @@
 #include "autocorrection.h"
 #include "settings/pimcommonsettings.h"
 #include "import/importkmailautocorrection.h"
-#include <KGlobal>
 #include <KColorScheme>
-
+#include <KLocale>
 #include "pimcommon_debug.h"
 #include <QTextBlock>
 #include <QTextDocument>
 #include <QDomDocument>
 #include <QFile>
 #include <QDir>
-#include <KLocalizedString>
 #include <QStandardPaths>
 #include <QFileInfo>
 #include <QRegularExpression>

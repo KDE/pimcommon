@@ -20,7 +20,6 @@
 #include <qtest.h>
 #include <kactionmenu.h>
 #include <QMenu>
-
 ShareServiceUrlManagerTest::ShareServiceUrlManagerTest(QObject *parent)
     : QObject(parent)
 {

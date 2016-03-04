@@ -16,6 +16,7 @@
 */
 
 #include "translatorutil.h"
+#include <KLocalizedString>
 #include <KComboBox>
 using namespace PimCommon;
 

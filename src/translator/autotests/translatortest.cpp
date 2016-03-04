@@ -27,7 +27,6 @@
 #include <QComboBox>
 #include <QSignalSpy>
 
-#include <KXmlGui/KActionCollection>
 
 TranslatorTest::TranslatorTest()
 {

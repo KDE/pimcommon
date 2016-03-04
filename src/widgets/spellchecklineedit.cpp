@@ -31,11 +31,9 @@
 #include <QKeyEvent>
 #include <QStyle>
 #include <QApplication>
-#include <QMenu>
 #include <QStyleOptionFrameV2>
 #include <QMimeData>
 
-#include <KLocalizedString>
 
 using namespace PimCommon;
 

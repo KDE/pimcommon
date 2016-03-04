@@ -20,7 +20,6 @@
 #include "pimcommon_export.h"
 #include <QDialog>
 #include <Collection>
-#include <KConfigGroup>
 
 namespace PimCommon
 {

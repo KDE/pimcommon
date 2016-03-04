@@ -23,7 +23,6 @@
 #include "sievesyntaxhighlighterrules.h"
 #include <KPIMTextEdit/SyntaxHighlighterBase>
 
-#include <QList>
 
 class QTextDocument;
 

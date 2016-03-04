@@ -19,7 +19,6 @@
 #define PLUGININTERFACE_H
 
 #include <QObject>
-#include <QVector>
 #include <pimcommon/genericplugininterface.h>
 #include "pimcommon_export.h"
 class KActionCollection;

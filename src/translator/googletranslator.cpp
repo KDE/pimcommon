@@ -18,9 +18,8 @@
 #include "googletranslator.h"
 #include "translatorutil.h"
 #include "translatordebugdialog.h"
-
+#include <KLocalizedString>
 #include "pimcommon_debug.h"
-#include <QJsonArray>
 #include <QJsonParseError>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>

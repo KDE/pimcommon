@@ -19,7 +19,6 @@
 #define MIGRATEAPPLICATIONFILE_H
 
 #include <QObject>
-#include <QVector>
 #include <kdelibs4migration.h>
 #include "migratefileinfo.h"
 #include "pimcommon_export.h"

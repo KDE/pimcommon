@@ -29,7 +29,6 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <QUrl>
 
 #include <QTreeWidgetItem>
 #include <QMenu>

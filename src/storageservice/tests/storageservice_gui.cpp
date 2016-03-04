@@ -23,11 +23,11 @@
 #include <QWidget>
 #include <QStandardPaths>
 
+#include <KActionMenu>
 #include "pimcommon_debug.h"
 
 #include <KLocalizedString>
 #include <QDialog>
-#include <KActionMenu>
 
 #include <QVBoxLayout>
 #include <QToolBar>
@@ -37,7 +37,6 @@
 #include <QApplication>
 #include <KAboutData>
 #include <QCommandLineParser>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 

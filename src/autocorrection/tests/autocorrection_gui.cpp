@@ -35,7 +35,6 @@
 #include <QApplication>
 #include <KAboutData>
 #include <QCommandLineParser>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 
 ConfigureTestDialog::ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrection, QWidget *parent)

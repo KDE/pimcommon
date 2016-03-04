@@ -16,7 +16,6 @@
 */
 
 #include "customtoolsviewinterface.h"
-#include <QObject>
 using namespace PimCommon;
 CustomToolsViewInterface::CustomToolsViewInterface(QWidget *parent)
     : QWidget(parent)

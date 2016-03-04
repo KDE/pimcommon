@@ -19,7 +19,6 @@
 #define STORAGEAUTHVIEWDIALOG_H
 
 #include <QDialog>
-#include <KConfigGroup>
 namespace PimCommon
 {
 class StorageAuthViewWidget;

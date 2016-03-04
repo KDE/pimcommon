@@ -24,7 +24,6 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QCommandLineOption>
 
 #include "../src/widgets/spellchecklineedit.h"
 

@@ -16,7 +16,6 @@
 */
 
 #include "genericscriptaction.h"
-#include <KLocalizedString>
 #include <KActionCollection>
 
 using namespace PimCommon;
