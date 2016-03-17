@@ -58,7 +58,7 @@ QString permissionsToUserString(KIMAP::Acl::Rights permissions);
  *   login: testuser                acls: testuser@mydomain.org
  *   login: testuser@mydomain.org   acls: testuser
  */
-QString guessUserName( const QString &loginName, const QString &serverName );
+QString guessUserName(const QString &loginName, const QString &serverName);
 
 }
 

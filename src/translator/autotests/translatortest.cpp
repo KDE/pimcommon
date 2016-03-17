@@ -27,7 +27,6 @@
 #include <QComboBox>
 #include <QSignalSpy>
 
-
 TranslatorTest::TranslatorTest()
 {
 

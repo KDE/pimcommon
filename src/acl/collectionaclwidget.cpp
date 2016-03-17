@@ -88,7 +88,7 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     view->setObjectName(QStringLiteral("list_view"));
     listViewLayout->addWidget(view);
     mRecursiveChk = new QCheckBox(i18n("Apply permissions on all &subfolders."), this);
-    listViewLayout->addWidget( mRecursiveChk );
+    listViewLayout->addWidget(mRecursiveChk);
     connect(mRecursiveChk, &QCheckBox::clicked, this, &CollectionAclWidget::slotRecursivePermissionChanged);
 
     view->setAlternatingRowColors(true);

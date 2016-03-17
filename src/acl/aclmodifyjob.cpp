@@ -54,9 +54,9 @@ void AclModifyJob::start()
     }
     mCurrentIndex = 0;
     if (mRecursive) {
-        if ( KMessageBox::No == KMessageBox::warningYesNo(0,
-                                                              i18n( "Do you really want to apply this folder's permissions on the subfolders:" ),
-                                                              i18n( "Apply Permissions" ) ) ) {
+        if (KMessageBox::No == KMessageBox::warningYesNo(0,
+                i18n("Do you really want to apply this folder's permissions on the subfolders:"),
+                i18n("Apply Permissions"))) {
             deleteLater();
             return;
         }
@@ -79,7 +79,7 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
 
     QString resource = collection.resource();
     if (resource.contains(QLatin1String("akonadi_kolabproxy_resource"))) {
-        QDBusInterface interface( QLatin1String("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"), QLatin1String("/KolabProxy") );
+        QDBusInterface interface(QLatin1String("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"), QLatin1String("/KolabProxy"));
         if (interface.isValid()) {
             QDBusReply<QString> reply = interface.call(QLatin1String("imapResourceForCollection"), collection.remoteId().toLongLong());
             if (reply.isValid()) {
@@ -88,29 +88,29 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
         }
     }
     OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface =
-            PimCommon::Util::createImapSettingsInterface( resource );
+        PimCommon::Util::createImapSettingsInterface(resource);
 
     QString loginName;
     QString serverName;
-    if ( imapSettingsInterface->isValid() ) {
+    if (imapSettingsInterface->isValid()) {
         QDBusReply<QString> reply = imapSettingsInterface->userName();
-        if ( reply.isValid() ) {
+        if (reply.isValid()) {
             loginName = reply;
         }
 
         reply = imapSettingsInterface->imapServer();
-        if ( reply.isValid() ) {
+        if (reply.isValid()) {
             serverName = reply;
         }
     } else {
-        qCDebug(PIMCOMMON_LOG)<<" collection has not imap as resources: "<<collection.resource();
+        qCDebug(PIMCOMMON_LOG) << " collection has not imap as resources: " << collection.resource();
     }
     delete imapSettingsInterface;
 
     QString imapUserName = loginName;
-    if ( !rights.contains( loginName.toUtf8() ) ) {
-        const QString guessedUserName = AclUtils::guessUserName( loginName, serverName );
-        if ( rights.contains( guessedUserName.toUtf8() ) ) {
+    if (!rights.contains(loginName.toUtf8())) {
+        const QString guessedUserName = AclUtils::guessUserName(loginName, serverName);
+        if (rights.contains(guessedUserName.toUtf8())) {
             imapUserName = guessedUserName;
         }
     }
@@ -122,8 +122,8 @@ void AclModifyJob::changeAcl(Akonadi::Collection collection)
     if (collection.hasAttribute<PimCommon::ImapAclAttribute>()) {
         PimCommon::ImapAclAttribute *attribute = collection.attribute<PimCommon::ImapAclAttribute>();
         if (canAdministrate(attribute, collection)) {
-            attribute->setRights( mNewRight );
-            Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob( collection );
+            attribute->setRights(mNewRight);
+            Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(collection);
             connect(modifyJob, SIGNAL(result(KJob*)), this, SLOT(slotModifyDone(KJob*)));
         }
     } else {

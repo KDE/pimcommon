@@ -34,7 +34,6 @@
 #include <QStyleOptionFrameV2>
 #include <QMimeData>
 
-
 using namespace PimCommon;
 
 SpellCheckLineEdit::SpellCheckLineEdit(QWidget *parent, const QString &configFile)
