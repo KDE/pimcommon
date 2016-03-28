@@ -22,6 +22,7 @@
 #include <kpluginmetadata.h>
 #include <QFileInfo>
 #include <QSet>
+#include <QDebug>
 
 using namespace PimCommon;
 
@@ -105,6 +106,8 @@ void CustomToolsPluginManagerPrivate::initializePluginList()
             info.plugin = Q_NULLPTR;
             mPluginList.push_back(info);
             unique.insert(info.saveName());
+        } else {
+            qWarning() << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<CustomToolsPluginInfo>::iterator end(mPluginList.end());

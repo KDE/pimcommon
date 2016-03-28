@@ -25,6 +25,7 @@
 #include <QVariant>
 #include <QSet>
 #include <QVariantList>
+#include <QDebug>
 
 using namespace PimCommon;
 
@@ -117,6 +118,8 @@ bool GenericPluginManagerPrivate::initializePlugins()
             info.plugin = Q_NULLPTR;
             mPluginList.push_back(info);
             unique.insert(info.saveName());
+        } else {
+            qWarning() << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<GenericPluginInfo>::iterator end(mPluginList.end());
