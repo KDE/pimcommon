@@ -16,20 +16,22 @@
 */
 
 #include "autocorrectionlanguage.h"
-#include <KLocale>
+#include <QLocale>
 using namespace PimCommon;
 
 AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
     : KComboBox(parent)
 {
-    KLocale *locale = KLocale::global();
-    const QStringList lstLang = locale->allLanguagesList();
-    Q_FOREACH (const QString &lang, lstLang) {
-        if (lang != QLatin1String("x-test")) {
-            addItem(locale->languageCodeToName(lang), lang);
-        }
+    for (int i = QLocale::Abkhazian; i <= QLocale::LastLanguage; ++i) {
+        const auto lang = static_cast<QLocale::Language>(i);
+        QLocale locale(lang);
+        if (locale.name() == QLatin1String("C"))
+            continue;
+        addItem(QLocale::system().languageToString(lang), locale.name());
     }
-    const QString defaultLang = locale->languageList().at(0);
+    auto defaultLang = QLocale::system().uiLanguages().at(0);
+    if (defaultLang == QLatin1String("C"))
+        defaultLang = QStringLiteral("en_US");
     const int index = findData(defaultLang);
     setCurrentIndex(index);
     model()->sort(0);
