@@ -26,7 +26,6 @@
 
 #include "imapaclattribute.h"
 #include "job/fetchrecursivecollectionsjob.h"
-#include <kdebug.h>
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <QDBusInterface>
