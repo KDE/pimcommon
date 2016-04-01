@@ -277,10 +277,13 @@ target_link_libraries(KF5PimCommon
     KF5::SonnetCore
     KF5::Wallet
     KF5::DBusAddons
-    KF5::KDELibs4Support
     KF5::XmlGui
     KF5::PimTextEdit
+    KF5::IconThemes
+    KF5::Completion
+    KF5::KIOWidgets
     Qt5::Script
+    Qt5::PrintSupport
     Grantlee5::Templates
     )
 
