@@ -186,11 +186,6 @@ set(libpimcommon_generericplugin_SRCS
     genericplugins/plugininterface.cpp
     )
 
-set(libpimcommon_generericscripts_SRCS
-    genericscripts/genericscriptsmanager.cpp
-    genericscripts/genericscriptaction.cpp
-    genericscripts/genericscript.cpp
-    )
 
 set(libpimcommon_genericgrantlee_SRCS
     genericgrantlee/genericgrantleeformatter.cpp
@@ -216,7 +211,6 @@ set(libpimcommon_SRCS
     ${libpimcommon_temporary_SRCS}
     ${libpimcommon_customtools_SRCS}
     ${libpimcommon_generericplugin_SRCS}
-    ${libpimcommon_generericscripts_SRCS}
     )
 
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME log_pimcommon)
@@ -280,7 +274,6 @@ target_link_libraries(KF5PimCommon
     KF5::KDELibs4Support
     KF5::XmlGui
     KF5::PimTextEdit
-    Qt5::Script
     Grantlee5::Templates
     )
 
@@ -324,7 +317,6 @@ if (BUILD_TESTING)
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
     add_subdirectory(genericplugins/autotests)
-    add_subdirectory(genericscripts/autotests/)
 endif()
 
 if( LibKGAPI2_FOUND )
@@ -558,17 +550,6 @@ ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     RELATIVE templatewidgets
     )
 
-ecm_generate_headers(PimCommon_Camelcasescript_HEADERS
-    HEADER_NAMES
-    GenericScript
-    GenericScriptsManager
-    GenericScriptAction
-    REQUIRED_HEADERS PimCommon_script_HEADERS
-    PREFIX PimCommon
-    RELATIVE genericscripts
-    )
-
-
 ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     HEADER_NAMES
     CustomTreeView
@@ -635,7 +616,6 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_debug.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
-    ${PimCommon_script_HEADERS}
     ${PimCommon_genericgrantlee_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_storageservicesettings_HEADERS}
