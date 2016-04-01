@@ -20,7 +20,7 @@
 #include "settings/pimcommonsettings.h"
 #include "import/importkmailautocorrection.h"
 #include <KColorScheme>
-#include <KLocale>
+#include <QLocale>
 #include "pimcommon_debug.h"
 #include <QTextBlock>
 #include <QTextDocument>
@@ -925,8 +925,9 @@ void AutoCorrection::replaceTypographicQuotes()
 
 void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
 {
-    KLocale *locale = KLocale::global();
-    QString kdelang = locale->languageList().at(0);
+    auto kdelang = QLocale::system().uiLanguages().at(0);
+    if (kdelang == QLatin1String("C"))
+        kdelang = QStringLiteral("en_US");
     kdelang.remove(QRegularExpression(QStringLiteral("@.*")));
 
     mUpperCaseExceptions.clear();
