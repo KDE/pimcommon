@@ -1,6 +1,5 @@
 @PACKAGE_INIT@
 
-find_dependency(KF5TextWidgets "@KF5_VERSION@")
 find_dependency(KF5Akonadi "@KDEPIMLIBS_LIB_VERSION@")
 find_dependency(KF5Contacts "@KCONTACTS_LIB_VERSION@")
 find_dependency(KF5AkonadiContact "@KDEPIMLIBS_LIB_VERSION@")
