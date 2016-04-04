@@ -3,5 +3,6 @@ add_executable(storageservice_gui ${storageservice_gui_SRCS})
 target_link_libraries(storageservice_gui
   KF5::PimCommon
   KF5::XmlGui
+  KF5::I18n
 )
 

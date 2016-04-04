@@ -3,5 +3,6 @@ add_executable(dropboxtoken_gui ${dropboxtoken_gui_SRCS})
 target_link_libraries(dropboxtoken_gui
   KF5::KIOCore
   KF5::PimCommon
+  KF5::I18n
 )
 

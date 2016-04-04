@@ -3,5 +3,6 @@ add_executable(box_gui ${box_gui_SRCS})
 target_link_libraries(box_gui
   KF5::KIOCore
   KF5::PimCommon
+  KF5::I18n
 )
 
