@@ -1,0 +1,1 @@
+#cmakedefine QTWEBENGINE_SUPPORT_OPTION 1

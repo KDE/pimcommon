@@ -20,7 +20,11 @@
 using namespace PimCommon;
 
 StorageAuthWebView::StorageAuthWebView(QWidget *parent)
+#ifdef QTWEBENGINE_SUPPORT_OPTION
+    : QWebEngineView(parent)
+#else
     : QWebView(parent)
+#endif
 {
 }
 
