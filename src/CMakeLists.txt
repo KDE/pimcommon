@@ -161,11 +161,6 @@ set(libpimcommon_util_SRCS
     )
 
 
-set(libpimcommon_temporary_SRCS
-    temporaryfile/attachmenttemporaryfilesdirs.cpp
-    )
-
-
 set(libpimcommon_migrate_SRCS
     migration/migrateapplicationfiles.cpp
     migration/migratefileinfo.cpp
@@ -208,7 +203,6 @@ set(libpimcommon_SRCS
     ${libpimcommon_acl_SRCS}
     ${libpimcommon_sieve_SRCS}
     ${libpimcommon_widgets_SRCS}
-    ${libpimcommon_temporary_SRCS}
     ${libpimcommon_customtools_SRCS}
     ${libpimcommon_generericplugin_SRCS}
     )
@@ -301,7 +295,6 @@ if (BUILD_TESTING)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(widgets/autotests)
     add_subdirectory(acl/autotests)
-    add_subdirectory(temporaryfile/autotests)
     add_subdirectory(migration/autotests)
     add_subdirectory(util/autotests)
     add_subdirectory(shareserviceurl/autotests)
@@ -470,14 +463,6 @@ ecm_generate_headers(PimCommon_Camelcasestorageserviceinterface_HEADERS
     RELATIVE storageservice/interface
     )
 
-ecm_generate_headers(PimCommon_Camelcasetemporaryfile_HEADERS
-    HEADER_NAMES
-    AttachmentTemporaryFilesDirs
-    REQUIRED_HEADERS PimCommon_temporaryfile_HEADERS
-    PREFIX PimCommon
-    RELATIVE temporaryfile
-    )
-
 ecm_generate_headers(PimCommon_Camelcasesievehighlighter_HEADERS
     HEADER_NAMES
     SieveSyntaxHighlighterUtil
@@ -593,7 +578,6 @@ install(FILES
     ${PimCommon_Camelcasetranslator_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
     ${PimCommon_Camelcasestorageserviceinterface_HEADERS}
-    ${PimCommon_Camelcasetemporaryfile_HEADERS}
     ${PimCommon_Camelcasesievehighlighter_HEADERS}
     ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcasemigrate_HEADERS}
@@ -633,7 +617,6 @@ install(FILES
     ${PimCommon_translator_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_storageserviceinterface_HEADERS}
-    ${PimCommon_temporaryfile_HEADERS}
     ${PimCommon_sievehighlighter_HEADERS}
     ${PimCommon_acl_HEADERS}
     ${PimCommon_migrate_HEADERS}
