@@ -36,9 +36,11 @@ public:
     {
         initializeEngine();
     }
+
     ~GenericGrantleeFormatterPrivate()
     {
         delete mEngine;
+        mTemplateLoader.clear();
     }
 
     void setContent(const QString &content);
