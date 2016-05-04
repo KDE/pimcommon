@@ -5,8 +5,6 @@ add_definitions( -DQT_NO_CAST_TO_ASCII )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libpimcommon\")
 
-configure_file(config-pimcommon.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-pimcommon.h )
-
 set(libpimcommon_sieve_SRCS
     sievehighlighter/sievesyntaxhighlighter.cpp
     sievehighlighter/sievesyntaxhighlighterrules.cpp
@@ -246,11 +244,7 @@ if ( Qt5TextToSpeech_FOUND )
         )
 endif()
 
-if (QTWEBENGINE_SUPPORT_OPTION)
-    set(pimcommon_webengine_libs Qt5::WebEngineWidgets)
-else()
-    set(pimcommon_webengine_libs Qt5::WebKitWidgets)
-endif()
+set(pimcommon_webengine_libs Qt5::WebEngineWidgets)
 
 target_link_libraries(KF5PimCommon
     PUBLIC

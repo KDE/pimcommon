@@ -18,19 +18,10 @@
 #ifndef STORAGEAUTHWEBVIEW_H
 #define STORAGEAUTHWEBVIEW_H
 
-#include "config-pimcommon.h"
-#ifdef QTWEBENGINE_SUPPORT_OPTION
 #include <QWebEngineView>
-#else
-#include <QWebView>
-#endif
 namespace PimCommon
 {
-#ifdef QTWEBENGINE_SUPPORT_OPTION
 class StorageAuthWebView : public QWebEngineView
-#else
-class StorageAuthWebView : public QWebView
-#endif
 {
     Q_OBJECT
 public:
