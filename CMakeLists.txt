@@ -33,22 +33,35 @@ set(KCONTACTS_LIB_VERSION "5.2.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.2.40")
 set(AKONADI_VERSION "5.2.40")
 
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test WebEngineWidgets Xml)
+
+find_package(KF5Archive ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5ConfigWidgets ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5CoreAddons ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5ItemModels ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5ItemViews ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5JobWidgets ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5NewStuff ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Service ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5WidgetsAddons ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5WindowSystem ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5XmlGui ${KF5_VERSION} CONFIG REQUIRED)
+
 find_package(KF5Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiContact ${KDEPIMLIBS_LIB_VERSION} CONFIG REQUIRED)
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test Network WebEngineWidgets)
-find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${KDEPIMLIBS_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Contacts ${KCONTACTS_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5XmlGui ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5Archive ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5NewStuff ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
+find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(Grantlee5 "5.0" CONFIG REQUIRED)
 
@@ -58,7 +71,9 @@ set_package_properties(Qt5Designer PROPERTIES
     TYPE OPTIONAL
     )
 
-
+if (Qt5Designer_FOUND)
+    find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG REQUIRED)
+endif()
 
 ecm_setup_version(${PIMCOMMON_LIB_VERSION} VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
