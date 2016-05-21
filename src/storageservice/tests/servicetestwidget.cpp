@@ -154,6 +154,7 @@ void ServiceTestWidget::slotUploadFileDone(const QString &serviceName, const QSt
 
 void ServiceTestWidget::slotListFolderDone(const QString &serviceName, const QVariant &listFolder)
 {
+    Q_UNUSED(listFolder);
     mEdit->insertPlainText(serviceName + QLatin1String(" list folder done \n")/*.arg(listFolder)*/);
 }
 

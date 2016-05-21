@@ -416,6 +416,7 @@ QString WebDavStorageService::fileIdentifier(const QVariantMap &variantMap)
 
 QString WebDavStorageService::fileShareRoot(const QVariantMap &variantMap)
 {
+    Q_UNUSED(variantMap);
     return QString();
 }
 
@@ -552,4 +553,3 @@ bool WebDavStorageService::hasValidSettings() const
 {
     return true;
 }
-

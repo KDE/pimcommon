@@ -35,10 +35,10 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include <QUrl>
+#include "webdav_url_info.h"
 #include "pimcommon_debug.h"
 
-#include "webdav_url_info.h"
+#include <QUrl>
 
 using namespace PimCommon;
 
@@ -212,6 +212,8 @@ void QWebdavUrlInfo::davParsePropstats(const QString &path, const QDomNodeList &
     } else {
         setPermissions(0600);
     }
+#else
+    Q_UNUSED(foundExecutable);
 #endif
     if (!isDirectory && !mimeType.isEmpty()) {
         setMimeType(mimeType);

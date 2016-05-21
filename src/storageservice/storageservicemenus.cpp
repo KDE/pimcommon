@@ -29,10 +29,11 @@ class PimCommon::StorageServiceMenusPrivate
 public:
     StorageServiceMenusPrivate()
     {
-
     }
     KActionMenu *menuWithCapability(PimCommon::StorageServicePlugin::Capability mainCapability, const QList<PimCommon::StorageServicePlugin::Capability> &lstCapability, QWidget *parent) const
     {
+        Q_UNUSED(mainCapability);
+        Q_UNUSED(lstCapability);
         KActionMenu *menuService = new KActionMenu(i18n("Storage service"), parent);
         if (PimCommon::StorageServicePluginManager::self()->pluginsList().isEmpty()) {
             QAction *act = new QAction(i18n("No Storage service configured"), menuService);
@@ -79,4 +80,3 @@ KActionMenu *StorageServiceMenus::uploadServices(QWidget *parent) const
     lstCapability << PimCommon::StorageServicePlugin::UploadFileCapability;
     return d->menuWithCapability(PimCommon::StorageServicePlugin::UploadFileCapability, lstCapability, parent);
 }
-

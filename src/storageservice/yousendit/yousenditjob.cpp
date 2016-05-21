@@ -77,6 +77,10 @@ void YouSendItJob::createServiceFolder()
 
 QNetworkReply *YouSendItJob::downloadFile(const QString &name, const QString &fileId, const QString &destination)
 {
+    Q_UNUSED(name);
+    Q_UNUSED(fileId);
+    Q_UNUSED(destination);
+
     qCDebug(PIMCOMMON_LOG) << " not implemented";
     Q_EMIT actionFailed(QStringLiteral("Not Implemented"));
     deleteLater();
@@ -205,7 +209,10 @@ void YouSendItJob::requestTokenAccess()
 
 QNetworkReply *YouSendItJob::uploadFile(const QString &filename, const QString &uploadAsName, const QString &destination)
 {
-    //FIXME filename
+    Q_UNUSED(uploadAsName);
+    Q_UNUSED(destination);
+    //FIXME use filename
+    Q_UNUSED(filename);
     mActionType = PimCommon::StorageServiceAbstract::UploadFileAction;
     mError = false;
     QUrl url(mDefaultUrl + QLatin1String("/dpi/v1/folder/file/initUpload"));
@@ -519,6 +526,7 @@ void YouSendItJob::parseDownloadFile(const QString &data)
 
 void YouSendItJob::parseDeleteFile(const QString &data)
 {
+    Q_UNUSED(data);
     Q_EMIT deleteFileDone(QString());
     deleteLater();
 }
@@ -534,6 +542,7 @@ void YouSendItJob::parseDeleteFolder(const QString &data)
 
 void YouSendItJob::parseCreateServiceFolder(const QString &data)
 {
+    Q_UNUSED(data);
     qCDebug(PIMCOMMON_LOG) << " create service folder not implmented";
     Q_EMIT actionFailed(QStringLiteral("Not Implemented"));
     deleteLater();
@@ -651,10 +660,12 @@ void YouSendItJob::startUploadFile(const QString &fileId)
 
 void YouSendItJob::shareLink(const QString &root, const QString &path)
 {
+    Q_UNUSED(root);
+    Q_UNUSED(path);
+
     mError = false;
     mActionType = PimCommon::StorageServiceAbstract::ShareLinkAction;
     Q_EMIT actionFailed(QStringLiteral("Not Implemented"));
     qCDebug(PIMCOMMON_LOG) << " not implemented";
     deleteLater();
 }
-

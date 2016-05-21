@@ -522,25 +522,29 @@ void BoxJob::shareLink(const QString &root, const QString &fileId)
 
 void BoxJob::parseDeleteFolder(const QString &data)
 {
-    /*
+#if 0
     QJson::Parser parser;
     bool ok;
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
     qCDebug(PIMCOMMON_LOG)<<" info"<<info;
-    */
+#else
+    Q_UNUSED(data);
+#endif
     Q_EMIT deleteFolderDone(QString());
 }
 
 void BoxJob::parseDeleteFile(const QString &data)
 {
-    /*
+#if 0
     QJson::Parser parser;
     bool ok;
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
     qCDebug(PIMCOMMON_LOG)<<" info"<<info;
-    */
+#else
+    Q_UNUSED(data);
+#endif
     Q_EMIT deleteFileDone(QString());
 }
 
@@ -552,6 +556,8 @@ void BoxJob::parseCreateServiceFolder(const QString &data)
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
     qCDebug(PIMCOMMON_LOG) << " info" << info;
+#else
+    Q_UNUSED(data);
 #endif
     Q_EMIT actionFailed(QStringLiteral("Not Implemented"));
     deleteLater();

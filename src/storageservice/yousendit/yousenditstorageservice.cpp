@@ -453,11 +453,13 @@ QMap<QString, QString> YouSendItStorageService::itemInformation(const QVariantMa
 QString YouSendItStorageService::fileIdentifier(const QVariantMap &variantMap)
 {
     //TODO
+    Q_UNUSED(variantMap);
     return QString();
 }
 
 QString YouSendItStorageService::fileShareRoot(const QVariantMap &variantMap)
 {
+    Q_UNUSED(variantMap);
     return QString();
 }
 
@@ -468,6 +470,7 @@ StorageServiceAbstract::Capabilities YouSendItStorageService::capabilities() con
 
 QString YouSendItStorageService::fillListWidget(StorageServiceTreeWidget *listWidget, const QVariant &data, const QString &currentFolder)
 {
+    Q_UNUSED(data);
     Q_UNUSED(currentFolder);
     listWidget->clear();
     listWidget->createMoveUpItem();
@@ -537,4 +540,3 @@ QIcon YouSendItStorageService::icon() const
 {
     return QIcon();
 }
-

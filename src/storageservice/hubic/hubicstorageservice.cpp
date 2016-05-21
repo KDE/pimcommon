@@ -522,6 +522,7 @@ StorageServiceAbstract::Capabilities HubicStorageService::capabilities() const
 
 QString HubicStorageService::fillListWidget(StorageServiceTreeWidget *listWidget, const QVariant &data, const QString &currentFolder)
 {
+    Q_UNUSED(data);
     Q_UNUSED(currentFolder);
     listWidget->clear();
     listWidget->createMoveUpItem();
@@ -530,16 +531,18 @@ QString HubicStorageService::fillListWidget(StorageServiceTreeWidget *listWidget
 
 QMap<QString, QString> HubicStorageService::itemInformation(const QVariantMap &variantMap)
 {
+    Q_UNUSED(variantMap);
     return QMap<QString, QString>();
 }
 
 QString HubicStorageService::fileIdentifier(const QVariantMap &variantMap)
 {
+    Q_UNUSED(variantMap);
     return QString();
 }
 
 QString HubicStorageService::fileShareRoot(const QVariantMap &variantMap)
 {
+    Q_UNUSED(variantMap);
     return QString();
 }
-

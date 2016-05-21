@@ -42,7 +42,6 @@ StorageAuthViewWidget::StorageAuthViewWidget(QWidget *parent)
 
 StorageAuthViewWidget::~StorageAuthViewWidget()
 {
-
 }
 
 void StorageAuthViewWidget::setUrl(const QUrl &url)
@@ -57,5 +56,6 @@ void StorageAuthViewWidget::slotLoadStarted()
 
 void StorageAuthViewWidget::slotLoadFinished(bool success)
 {
+    Q_UNUSED(success);
     mProgressBar->hide();
 }

@@ -306,54 +306,70 @@ void HubicJob::refreshToken()
 
 void HubicJob::deleteFile(const QString &filename)
 {
+    Q_UNUSED(filename);
     mActionType = PimCommon::StorageServiceAbstract::DeleteFileAction;
     mError = false;
 }
 
 void HubicJob::deleteFolder(const QString &foldername)
 {
+    Q_UNUSED(foldername);
     mActionType = PimCommon::StorageServiceAbstract::DeleteFolderAction;
     mError = false;
 }
 
 void HubicJob::renameFolder(const QString &source, const QString &destination)
 {
+    Q_UNUSED(source);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::RenameFolderAction;
     mError = false;
 }
 
 void HubicJob::renameFile(const QString &oldName, const QString &newName)
 {
+    Q_UNUSED(oldName);
+    Q_UNUSED(newName);
     mActionType = PimCommon::StorageServiceAbstract::RenameFileAction;
     mError = false;
 }
 
 void HubicJob::moveFolder(const QString &source, const QString &destination)
 {
+    Q_UNUSED(source);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::MoveFolderAction;
     mError = false;
 }
 
 void HubicJob::moveFile(const QString &source, const QString &destination)
 {
+    Q_UNUSED(source);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::MoveFileAction;
     mError = false;
 }
 
 void HubicJob::copyFile(const QString &source, const QString &destination)
 {
+    Q_UNUSED(source);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::CopyFileAction;
     mError = false;
 }
 
 void HubicJob::copyFolder(const QString &source, const QString &destination)
 {
+    Q_UNUSED(source);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::CopyFolderAction;
     mError = false;
 }
 
 QNetworkReply *HubicJob::uploadFile(const QString &filename, const QString &uploadAsName, const QString &destination)
 {
+    Q_UNUSED(uploadAsName);
+    Q_UNUSED(destination);
     QFile *file = new QFile(filename);
     if (file->exists()) {
         mActionType = PimCommon::StorageServiceAbstract::UploadFileAction;
@@ -402,6 +418,8 @@ void HubicJob::listFolder(const QString &folder)
     request.setRawHeader("Authorization", "Bearer " + mToken.toLatin1());
     QNetworkReply *reply = mNetworkAccessManager->get(request);
     connect(reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), this, &HubicJob::slotError);
+#else
+    Q_UNUSED(folder);
 #endif
 }
 
@@ -420,6 +438,8 @@ void HubicJob::accountInfo()
 
 void HubicJob::createFolder(const QString &foldername, const QString &destination)
 {
+    Q_UNUSED(foldername);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::CreateFolderAction;
     mError = false;
 }
@@ -427,31 +447,36 @@ void HubicJob::createFolder(const QString &foldername, const QString &destinatio
 void HubicJob::shareLink(const QString &root, const QString &fileId)
 {
     Q_UNUSED(root);
+    Q_UNUSED(fileId);
     mActionType = PimCommon::StorageServiceAbstract::ShareLinkAction;
     mError = false;
 }
 
 void HubicJob::parseDeleteFolder(const QString &data)
 {
-    /*
+#if 0
     QJson::Parser parser;
     bool ok;
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
     qCDebug(PIMCOMMON_LOG)<<" info"<<info;
-    */
+#else
+    Q_UNUSED(data);
+#endif
     Q_EMIT deleteFolderDone(QString());
 }
 
 void HubicJob::parseDeleteFile(const QString &data)
 {
-    /*
+#if 0
     QJson::Parser parser;
     bool ok;
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
     qCDebug(PIMCOMMON_LOG)<<" info"<<info;
-    */
+#else
+    Q_UNUSED(data);
+#endif
     Q_EMIT deleteFileDone(QString());
 }
 
@@ -463,6 +488,8 @@ void HubicJob::parseCreateServiceFolder(const QString &data)
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
     qCDebug(PIMCOMMON_LOG) << " info" << info;
+#else
+    Q_UNUSED(data);
 #endif
     Q_EMIT actionFailed(QStringLiteral("Not Implemented"));
     deleteLater();
@@ -576,6 +603,9 @@ void HubicJob::parseDownloadFile(const QString &data)
 
 QNetworkReply *HubicJob::downloadFile(const QString &name, const QString &fileId, const QString &destination)
 {
+    Q_UNUSED(name);
+    Q_UNUSED(fileId);
+    Q_UNUSED(destination);
     mActionType = PimCommon::StorageServiceAbstract::DownLoadFileAction;
     mError = false;
 #if 0
@@ -629,4 +659,3 @@ void HubicJob::parseAccessToken(const QString &data)
     Q_EMIT authorizationDone(mRefreshToken, mToken, expireInTime);
     deleteLater();
 }
-

@@ -707,6 +707,7 @@ void DropBoxJob::parseListFolder(const QString &data)
 
 void DropBoxJob::parseDownLoadFile(const QString &data)
 {
+    Q_UNUSED(data);
     //qCDebug(PIMCOMMON_LOG)<<" data "<<data;
     Q_EMIT downLoadFileDone(QString());
     deleteLater();
