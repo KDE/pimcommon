@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 2.8.12)
 
 project(pimcommon)
 
-find_package(ECM 5.19.0 CONFIG REQUIRED)
+set(KF5_VERSION "5.22.0")
+find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(LIBRARY_NAMELINK)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
 
@@ -23,7 +24,6 @@ include(ECMInstallIcons)
 set(PIM_VERSION "5.2.41")
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
-set(KF5_VERSION "5.19.0")
 set(KDEPIMLIBS_LIB_VERSION "5.2.40")
 set(LIBKDEPIM_LIB_VERSION "5.2.40")
 set(QT_REQUIRED_VERSION "5.6.0")
