@@ -602,6 +602,44 @@
    <header>autocorrection/autocorrectionlanguage.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>enabledAutocorrection</tabstop>
+  <tabstop>autocorrectionLanguage</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>upperCase</tabstop>
+  <tabstop>upperUpper</tabstop>
+  <tabstop>ignoreDoubleSpace</tabstop>
+  <tabstop>autoReplaceNumber</tabstop>
+  <tabstop>capitalizeDaysName</tabstop>
+  <tabstop>autoFormatUrl</tabstop>
+  <tabstop>autoChangeFormat</tabstop>
+  <tabstop>autoSuperScript</tabstop>
+  <tabstop>typographicDoubleQuotes</tabstop>
+  <tabstop>doubleQuote1</tabstop>
+  <tabstop>doubleQuote2</tabstop>
+  <tabstop>doubleDefault</tabstop>
+  <tabstop>typographicSingleQuotes</tabstop>
+  <tabstop>singleQuote1</tabstop>
+  <tabstop>singleQuote2</tabstop>
+  <tabstop>singleDefault</tabstop>
+  <tabstop>addNonBreakingSpaceInFrench</tabstop>
+  <tabstop>advancedAutocorrection</tabstop>
+  <tabstop>find</tabstop>
+  <tabstop>replace</tabstop>
+  <tabstop>addButton</tabstop>
+  <tabstop>removeButton</tabstop>
+  <tabstop>treeWidget</tabstop>
+  <tabstop>abbreviation</tabstop>
+  <tabstop>add1</tabstop>
+  <tabstop>remove1</tabstop>
+  <tabstop>abbreviationList</tabstop>
+  <tabstop>twoUpperLetter</tabstop>
+  <tabstop>add2</tabstop>
+  <tabstop>remove2</tabstop>
+  <tabstop>twoUpperLetterList</tabstop>
+  <tabstop>exportAutoCorrection</tabstop>
+  <tabstop>importAutoCorrection</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
