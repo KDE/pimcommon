@@ -67,7 +67,7 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
         return QVariant::Invalid;
     }
 
-    return QVariant::nameToType(argTypes.first());
+    return QVariant::nameToType(argTypes.first().constData());
 }
 
 QString CreateResource::createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings, bool synchronizeTree)
