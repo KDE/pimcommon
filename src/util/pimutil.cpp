@@ -49,6 +49,7 @@
 #include <QPointer>
 #include <AgentInstance>
 #include <AkonadiCore/AgentManager>
+#include <AkonadiCore/ServerManager>
 
 #include <errno.h>
 
@@ -135,4 +136,14 @@ bool PimCommon::Util::isImapFolder(const Akonadi::Collection &col, bool &isOnlin
     isOnline = agentInstance.isOnline();
 
     return PimCommon::Util::isImapResource(agentInstance.type().identifier());
+}
+
+QString PimCommon::Util::indexerServiceName()
+{
+    QLatin1String basename("org.freedesktop.Akonadi.Agent.akonadi_indexing_agent");
+    if (Akonadi::ServerManager::hasInstanceIdentifier()) {
+        return basename + QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
+    } else {
+        return basename;
+    }
 }

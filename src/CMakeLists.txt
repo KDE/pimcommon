@@ -118,7 +118,6 @@ set(libpimcommon_folderdialog_SRCS
 
 set(libpimcommon_job_SRCS
    job/fetchrecursivecollectionsjob.cpp
-   job/collectionindexstatusjob.cpp
    )
 
 set(libpimcommon_acl_SRCS
@@ -333,7 +332,6 @@ ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
 ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
     HEADER_NAMES
     FetchRecursiveCollectionsJob
-    CollectionIndexStatusJob
     REQUIRED_HEADERS PimCommon_job_HEADERS
     PREFIX PimCommon
     RELATIVE job
