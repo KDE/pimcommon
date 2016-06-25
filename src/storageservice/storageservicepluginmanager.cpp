@@ -120,7 +120,10 @@ QVector<PimCommon::StorageServicePlugin *> StorageServicePluginManagerPrivate::p
 
 void StorageServicePluginManagerPrivate::loadPlugin(StorageServicePluginInfo *item)
 {
-    item->plugin = KPluginLoader(item->metaData.fileName()).factory()->create<PimCommon::StorageServicePlugin>(q, QVariantList() << item->saveName());
+    KPluginLoader pluginLoader(item->metaData.fileName());
+    if (pluginLoader.factory()) {
+        item->plugin = pluginLoader.factory()->create<PimCommon::StorageServicePlugin>(q, QVariantList() << item->saveName());
+    }
 }
 
 StorageServicePluginManager::StorageServicePluginManager(QObject *parent)

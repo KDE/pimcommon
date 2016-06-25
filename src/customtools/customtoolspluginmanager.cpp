@@ -130,7 +130,10 @@ QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::plugins
 
 void CustomToolsPluginManagerPrivate::loadPlugin(CustomToolsPluginInfo *item)
 {
-    item->plugin = KPluginLoader(item->metaData.fileName()).factory()->create<PimCommon::CustomToolsPlugin>(q, QVariantList() << item->saveName());
+    KPluginLoader pluginLoader(item->metaData.fileName());
+    if (pluginLoader.factory()) {
+        item->plugin = pluginLoader.factory()->create<PimCommon::CustomToolsPlugin>(q, QVariantList() << item->saveName());
+    }
 }
 
 CustomToolsPluginManager *CustomToolsPluginManager::self()

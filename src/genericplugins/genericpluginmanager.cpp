@@ -143,7 +143,10 @@ QVector<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
 
 void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
 {
-    item->plugin = KPluginLoader(item->metaData.fileName()).factory()->create<PimCommon::GenericPlugin>(q, QVariantList() << item->saveName());
+    KPluginLoader pluginLoader(item->metaData.fileName());
+    if (pluginLoader.factory()) {
+        item->plugin = pluginLoader.factory()->create<PimCommon::GenericPlugin>(q, QVariantList() << item->saveName());
+    }
 }
 
 GenericPluginManager::GenericPluginManager(QObject *parent)
