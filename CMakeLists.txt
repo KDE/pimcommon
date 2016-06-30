@@ -21,7 +21,7 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 include(ECMInstallIcons)
 
-set(PIM_VERSION "5.2.43")
+set(PIM_VERSION "5.2.80")
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(KDEPIMLIBS_LIB_VERSION "5.2.40")
