@@ -65,6 +65,7 @@ PIMCOMMON_EXPORT bool saveToFile(const QString &filename, const QString &text);
 PIMCOMMON_EXPORT QString loadToFile(const QString &filter, QWidget *parent, const QUrl &url = QUrl(), const QString &caption = QString());
 PIMCOMMON_EXPORT bool isImapResource(const QString &identifier);
 PIMCOMMON_EXPORT bool isImapFolder(const Akonadi::Collection &col, bool &isOnline);
+PIMCOMMON_EXPORT void invokeHelp(const QString &docfile, const QString &anchor = QString());
 }
 
 }

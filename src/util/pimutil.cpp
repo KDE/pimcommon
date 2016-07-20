@@ -41,6 +41,7 @@
 #include "imapresourcesettings.h"
 
 #include <QFileDialog>
+#include <QDesktopServices>
 #include <KMessageBox>
 #include <KLocalizedString>
 
@@ -145,5 +146,20 @@ QString PimCommon::Util::indexerServiceName()
         return basename + QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
     } else {
         return basename;
+    }
+}
+
+void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
+{
+    if (!docfile.isEmpty()) {
+        QUrl url;
+        url = QUrl(QStringLiteral("help:/")).resolved(QUrl(docfile));
+        if (!anchor.isEmpty()) {
+            QUrlQuery query(url);
+            query.addQueryItem(QStringLiteral("anchor"), anchor);
+            url.setQuery(query);
+        }
+        // launch khelpcenter, or a browser for URIs not handled by khelpcenter
+        QDesktopServices::openUrl(url);
     }
 }
