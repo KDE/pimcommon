@@ -1,0 +1,14 @@
+maintainer: mlaurent
+description: PimCommon Library 
+tier: 3
+type: functional
+platforms:
+    - name: All
+portingAid: false
+deprecated: false
+release: false
+libraries:
+ - qmake: PimCommon
+   cmake: "KF5::PimCommon"
+cmakename: KF5PimCommon
+
