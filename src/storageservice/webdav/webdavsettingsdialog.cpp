@@ -31,36 +31,31 @@ WebDavSettingsDialog::WebDavSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("WebDav Settings"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
+    QLabel *lab = new QLabel(i18n("Service Location (e.g. https://dav.example.com/)"), this);
+    mainLayout->addWidget(lab);
+
+    mServiceLocation = new QLineEdit(this);
+    mServiceLocation->setClearButtonEnabled(true);
+    mainLayout->addWidget(mServiceLocation);
+
+    //Hide for the moment not implemented.
+    lab = new QLabel(i18n("Public location (Optional)"), this);
+    lab->hide();
+    mainLayout->addWidget(lab);
+
+    mPublicLocation = new QLineEdit(this);
+    mPublicLocation->hide();
+    mainLayout->addWidget(mPublicLocation);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &WebDavSettingsDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &WebDavSettingsDialog::reject);
-    QWidget *w = new QWidget;
 
-    QVBoxLayout *lay = new QVBoxLayout;
-
-    QLabel *lab = new QLabel(i18n("Service Location (e.g. https://dav.example.com/)"));
-    lay->addWidget(lab);
-
-    mServiceLocation = new QLineEdit;
-    mServiceLocation->setClearButtonEnabled(true);
-    lay->addWidget(mServiceLocation);
-
-    //Hide for the moment not implemented.
-    lab = new QLabel(i18n("Public location (Optional)"));
-    lab->hide();
-    lay->addWidget(lab);
-
-    mPublicLocation = new QLineEdit;
-    mPublicLocation->hide();
-    lay->addWidget(mPublicLocation);
-
-    w->setLayout(lay);
-    mainLayout->addWidget(w);
     mainLayout->addWidget(buttonBox);
     connect(mServiceLocation, &QLineEdit::textChanged, this, &WebDavSettingsDialog::slotServiceLocationChanged);
     mOkButton->setEnabled(false);
