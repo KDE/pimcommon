@@ -34,16 +34,17 @@ AddServiceStorageDialog::AddServiceStorageDialog(const QList<StorageServiceAbstr
     : QDialog(parent)
 {
     setWindowTitle(i18n("Add Service"));
-    mService = new StorageServiceComboBox(lstCap, excludeService);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
+    mService = new StorageServiceComboBox(lstCap, excludeService, this);
     mStackedWidget = new QStackedWidget;
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
     mainLayout->addWidget(mStackedWidget);
     QLabel *label = new QLabel(i18n("All services were added."));
     mStackedWidget->addWidget(label);
     mComboboxWidget = new QWidget;
     QHBoxLayout *hbox = new QHBoxLayout;
     mComboboxWidget->setLayout(hbox);
+    hbox->setMargin(0);
     hbox->addWidget(mService);
     mStackedWidget->addWidget(mComboboxWidget);
     if (mService->count() > 0) {
