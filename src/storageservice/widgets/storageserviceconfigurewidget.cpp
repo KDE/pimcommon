@@ -33,8 +33,8 @@ using namespace PimCommon;
 StorageServiceConfigureWidget::StorageServiceConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
-    setLayout(lay);
+    QVBoxLayout *lay = new QVBoxLayout(this);
+    lay->setMargin(0);
     mStorageSettings = new PimCommon::StorageServiceSettingsWidget;
     connect(mStorageSettings, &PimCommon::StorageServiceSettingsWidget::serviceRemoved, this, &StorageServiceConfigureWidget::serviceRemoved);
     connect(mStorageSettings, &PimCommon::StorageServiceSettingsWidget::changed, this, &StorageServiceConfigureWidget::changed);

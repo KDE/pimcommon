@@ -44,32 +44,28 @@ StorageServicePropertiesDialog::~StorageServicePropertiesDialog()
 
 void StorageServicePropertiesDialog::createInformationWidget(const QMap<QString, QString> &information)
 {
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &StorageServicePropertiesDialog::reject);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    QWidget *parent = new QWidget;
     QFormLayout *layout = new QFormLayout;
-    parent->setLayout(layout);
+    mainLayout->addLayout(layout);
 
     QMapIterator<QString, QString> i(information);
     while (i.hasNext()) {
         i.next();
-        QLabel *type = new QLabel;
+        QLabel *type = new QLabel(this);
         QFont font = type->font();
         font.setBold(true);
         type->setFont(font);
         type->setAlignment(Qt::AlignRight);
         type->setText(i.key());
 
-        QLabel *info = new QLabel;
+        QLabel *info = new QLabel(this);
         info->setTextInteractionFlags(Qt::TextBrowserInteraction);
         info->setAlignment(Qt::AlignLeft);
         info->setText(i.value());
         layout->addRow(type, info);
     }
-    mainLayout->addWidget(parent);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &StorageServicePropertiesDialog::reject);
     mainLayout->addWidget(buttonBox);
-
 }
