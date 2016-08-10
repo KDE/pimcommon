@@ -44,6 +44,8 @@ private Q_SLOTS:
     void shouldAutocorrectMultiWord_data();
     void shouldAutocorrectMultiWord();
 
+    void shouldAddNonBreakingSpace();
+
 private:
     KSharedConfig::Ptr mConfig;
 };
