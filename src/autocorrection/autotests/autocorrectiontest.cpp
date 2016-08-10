@@ -432,10 +432,23 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     mapAutoCorrect map;
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
     QTest::newRow("simpleReplace") << QStringLiteral("boo") << QStringLiteral("bla") << map;
+
     map.clear();
     map.insert(QStringLiteral("a boo"), QStringLiteral("b bla"));
-    //FIX me it failed for the moment. We don't support multi word
-    //QTest::newRow("simpleReplace") << QStringLiteral("a boo") << QStringLiteral("b bla") << map;
+    QTest::newRow("multiword") << QStringLiteral("a boo") << QStringLiteral("b bla") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("a boo"), QStringLiteral("b bla"));
+    map.insert(QStringLiteral("a booeeeeeeeeeeeeeeeeeee"), QStringLiteral("b blaeee"));
+    QTest::newRow("multiword-2") << QStringLiteral("toto. a boo") << QStringLiteral("toto. b bla") << map;
+
+    map.clear();
+    QTest::newRow("multiword-2 without replace") << QStringLiteral("toto. a boo") << QStringLiteral("toto. a boo") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("a boo1111111111"), QStringLiteral("b bla"));
+    QTest::newRow("multiword-3") << QStringLiteral("a boo") << QStringLiteral("a boo") << map;
+
 
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
@@ -472,6 +485,15 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord()
     int position = originalString.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), convertedString);
+}
+
+void AutoCorrectionTest::shouldAddNonBreakingSpace()
+{
+    PimCommon::AutoCorrection autocorrection;
+    autocorrection.setEnabledAutoCorrection(true);
+    autocorrection.setLanguage(QStringLiteral("fr"));
+    autocorrection.setAddNonBreakingSpace(true);
+    //TODO
 }
 
 QTEST_MAIN(AutoCorrectionTest)
