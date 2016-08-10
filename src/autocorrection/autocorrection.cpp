@@ -931,18 +931,18 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     mTwoUpperLetterExceptions.clear();
     mSuperScriptEntries.clear();
 
-    QString LocalFile;
+    QString localFileName;
     //Look at local file:
     if (!forceGlobal) {
         if (!mAutoCorrectLang.isEmpty()) {
-            LocalFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
+            localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
         } else {
             if (!kdelang.isEmpty()) {
-                LocalFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+                localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
             }
-            if (LocalFile.isEmpty() && kdelang.contains(QStringLiteral("_"))) {
+            if (localFileName.isEmpty() && kdelang.contains(QStringLiteral("_"))) {
                 kdelang.remove(QRegularExpression(QStringLiteral("_.*")));
-                LocalFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+                localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
             }
         }
     }
@@ -973,7 +973,7 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     //qCDebug(PIMCOMMON_LOG)<<" fname :"<<fname;
     //qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
 
-    if (LocalFile.isEmpty()) {
+    if (localFileName.isEmpty()) {
         if (fname.isEmpty()) {
             mTypographicSingleQuotes = typographicDefaultSingleQuotes();
             mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
