@@ -69,6 +69,16 @@ AutoCorrection::~AutoCorrection()
 {
 }
 
+void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition)
+{
+    cursor.setPosition(cursorPosition);
+
+    QTextBlock block = cursor.block();
+    const int pos = qMax(block.position(), cursorPosition - mMaxFindStringLenght);
+    cursor.setPosition(pos);
+    cursor.setPosition(cursorPosition, QTextCursor::KeepAnchor);
+}
+
 void AutoCorrection::selectPreviousWord(QTextCursor &cursor, int cursorPosition)
 {
     cursor.setPosition(cursorPosition);
@@ -137,22 +147,31 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             }
         }
         if (!done) {
-            const int newPos = advancedAutocorrect();
-            if (newPos != -1) {
-                oldPosition = newPos;
-            }
-        }
-        if (!done) {
             uppercaseFirstCharOfSentence();
             fixTwoUppercaseChars();
             capitalizeWeekDays();
             replaceTypographicQuotes();
+            addNonBreakingSpace();
         }
 
         if (mCursor.selectedText() != mWord) {
             mCursor.insertText(mWord);
         }
         position = oldPosition;
+
+        if (!done) {
+            selectStringOnMaximumSearchString(mCursor, oldPosition);
+            mWord = mCursor.selectedText();
+            const int newPos = advancedAutocorrect();
+
+            if (newPos != -1) {
+                if (mCursor.selectedText() != mWord) {
+                    mCursor.insertText(mWord);
+                }
+                position = newPos;
+            }
+        }
+
         mCursor.endEditBlock();
     }
     return true;
@@ -400,6 +419,14 @@ void AutoCorrection::superscriptAppendix()
         QTextCharFormat format;
         format.setVerticalAlignment(QTextCharFormat::AlignSuperScript);
         cursor.mergeCharFormat(format);
+    }
+}
+
+void AutoCorrection::addNonBreakingSpace()
+{
+    if (mAddNonBreakingSpace && isFrenchLanguage()) {
+        if (mWord.length() == 1) {
+        }
     }
 }
 
@@ -774,7 +801,6 @@ int AutoCorrection::advancedAutocorrect()
         return -1;
     }
 
-
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
     QChar lastChar = actualWord.at(actualWord.length() - 1);
@@ -786,47 +812,51 @@ int AutoCorrection::advancedAutocorrect()
 
     QString actualWordWithFirstUpperCase = actualWord;
     actualWordWithFirstUpperCase[0] = actualWordWithFirstUpperCase[0].toUpper();
-    if (mAutocorrectEntries.contains(actualWord) ||
-            mAutocorrectEntries.contains(actualWord.toLower()) ||
-            mAutocorrectEntries.contains(actualWordWithFirstUpperCase)) {
-        int pos = mWord.indexOf(trimmedWord);
-        QString replacement = mAutocorrectEntries.value(actualWord, QString());
-        if (replacement.isEmpty()) {
-            replacement = mAutocorrectEntries.value(actualWord.toLower());
-            if (replacement.isEmpty()) {
-                replacement = mAutocorrectEntries.value(actualWordWithFirstUpperCase);
+    QHashIterator<QString, QString> i(mAutocorrectEntries);
+    while (i.hasNext()) {
+        i.next();
+        if (actualWord.endsWith(i.key()) ||
+                actualWord.toLower().endsWith(i.key()) ||
+                actualWordWithFirstUpperCase.endsWith(i.key())) {
+            int pos = mWord.lastIndexOf(i.key());
+            if (pos == -1) {
+                pos = actualWord.toLower().lastIndexOf(i.key());
             }
-        }
+            if (pos == -1) {
+                pos = actualWordWithFirstUpperCase.lastIndexOf(i.key());
+            }
+            QString replacement = i.value();
 
-        // Keep capitalized words capitalized.
-        // (Necessary to make sure the first letters match???)
-        if (actualWord.at(0) == replacement.at(0).toLower()) {
-            if (mWord.at(0).isUpper()) {
-                replacement[0] = replacement[0].toUpper();
-            } else {
-                //Don't replace toUpper letter
-                if (replacement.at(0).isLower()) {
-                    replacement[0] = replacement[0].toLower();
+            // Keep capitalized words capitalized.
+            // (Necessary to make sure the first letters match???)
+            if (actualWord.at(0) == replacement.at(0).toLower()) {
+                if (mWord.at(0).isUpper()) {
+                    replacement[0] = replacement[0].toUpper();
+                } else {
+                    //Don't replace toUpper letter
+                    if (replacement.at(0).isLower()) {
+                        replacement[0] = replacement[0].toLower();
+                    }
                 }
             }
+
+            // If a punctuation mark was on the end originally, add it back on
+            if (hasPunctuation) {
+                replacement.append(lastChar);
+            }
+
+            mWord.replace(pos, pos + trimmedWord.length(), replacement);
+
+            // We do replacement here, since the length of new word might be different from length of
+            // the old world. Length difference might affect other type of autocorrection
+            mCursor.setPosition(startPos);
+            mCursor.setPosition(startPos + length, QTextCursor::KeepAnchor);
+            mCursor.insertText(mWord);
+            mCursor.setPosition(startPos); // also restore the selection
+            const int newPosition = startPos + mWord.length();
+            mCursor.setPosition(newPosition, QTextCursor::KeepAnchor);
+            return newPosition;
         }
-
-        // If a punctuation mark was on the end originally, add it back on
-        if (hasPunctuation) {
-            replacement.append(lastChar);
-        }
-
-        mWord.replace(pos, pos + trimmedWord.length(), replacement);
-
-        // We do replacement here, since the length of new word might be different from length of
-        // the old world. Length difference might affect other type of autocorrection
-        mCursor.setPosition(startPos);
-        mCursor.setPosition(startPos + length, QTextCursor::KeepAnchor);
-        mCursor.insertText(mWord);
-        mCursor.setPosition(startPos); // also restore the selection
-        const int newPosition = startPos + mWord.length();
-        mCursor.setPosition(newPosition, QTextCursor::KeepAnchor);
-        return newPosition;
     }
     return -1;
 }
