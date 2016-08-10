@@ -142,14 +142,8 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         }
         if (!done) {
             uppercaseFirstCharOfSentence();
-        }
-        if (!done) {
             fixTwoUppercaseChars();
-        }
-        if (!done) {
             capitalizeWeekDays();
-        }
-        if (!done) {
             replaceTypographicQuotes();
         }
 
@@ -464,7 +458,7 @@ bool AutoCorrection::autoFormatURLs()
     }
 
     const QString trimmed = mWord.trimmed();
-    int startPos = mCursor.selectionStart();
+    const int startPos = mCursor.selectionStart();
     mCursor.setPosition(startPos);
     mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
 
@@ -745,6 +739,9 @@ bool AutoCorrection::autoFractions()
 int AutoCorrection::advancedAutocorrect()
 {
     if (!mAdvancedAutocorrect) {
+        return -1;
+    }
+    if (mAutocorrectEntries.isEmpty()) {
         return -1;
     }
 
