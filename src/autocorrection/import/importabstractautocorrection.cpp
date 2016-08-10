@@ -20,7 +20,9 @@
 using namespace PimCommon;
 
 ImportAbstractAutocorrection::ImportAbstractAutocorrection(QWidget *parent)
-    : mParent(parent)
+    : mMaxFindStringLenght(0),
+      mMinFindStringLenght(0),
+      mParent(parent)
 {
 }
 
@@ -51,6 +53,16 @@ AutoCorrection::TypographicQuotes ImportAbstractAutocorrection::typographicSingl
 AutoCorrection::TypographicQuotes ImportAbstractAutocorrection::typographicDoubleQuotes() const
 {
     return mTypographicDoubleQuotes;
+}
+
+int ImportAbstractAutocorrection::maxFindStringLenght() const
+{
+    return mMaxFindStringLenght;
+}
+
+int ImportAbstractAutocorrection::minFindStringLenght() const
+{
+    return mMinFindStringLenght;
 }
 
 QHash<QString, QString> ImportAbstractAutocorrection::superScriptEntries() const

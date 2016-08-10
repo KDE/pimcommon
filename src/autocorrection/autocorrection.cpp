@@ -43,7 +43,9 @@ AutoCorrection::AutoCorrection()
       mReplaceSingleQuotes(false),
       mEnabled(false),
       mSuperScriptAppendix(false),
-      mAddNonBreakingSpace(false)
+      mAddNonBreakingSpace(false),
+      mMaxFindStringLenght(0),
+      mMinFindStringLenght(0)
 {
     // default double quote open 0x201c
     // default double quote close 0x201d
@@ -216,6 +218,15 @@ void AutoCorrection::setTwoUpperLetterExceptions(const QSet<QString> &exceptions
 
 void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entries)
 {
+    mMaxFindStringLenght = 0;
+    mMinFindStringLenght = 0;
+    QHashIterator<QString, QString> i(entries);
+    while (i.hasNext()) {
+        i.next();
+        const int findStringLenght(i.key().length());
+        mMaxFindStringLenght = qMax(mMaxFindStringLenght, findStringLenght);
+        mMinFindStringLenght = qMin(mMinFindStringLenght, findStringLenght);
+    }
     mAutocorrectEntries = entries;
 }
 
@@ -755,6 +766,15 @@ int AutoCorrection::advancedAutocorrect()
         return -1;
     }
 
+    const int actualWordLength(actualWord.length());
+    if (actualWordLength < mMinFindStringLenght) {
+        return -1;
+    }
+    if (actualWordLength > mMaxFindStringLenght) {
+        return -1;
+    }
+
+
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
     QChar lastChar = actualWord.at(actualWord.length() - 1);
@@ -990,11 +1010,13 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
                     mTypographicSingleQuotes = typographicDefaultSingleQuotes();
                     mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
                 }
+                mMaxFindStringLenght = import.maxFindStringLenght();
+                mMinFindStringLenght = import.minFindStringLenght();
             }
         }
     } else {
         ImportKMailAutocorrection import;
-        if (import.import(LocalFile, ImportAbstractAutocorrection::All)) {
+        if (import.import(localFileName, ImportAbstractAutocorrection::All)) {
             mUpperCaseExceptions = import.upperCaseExceptions();
             mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
             mAutocorrectEntries = import.autocorrectEntries();
@@ -1006,6 +1028,8 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
         if (!fname.isEmpty() && import.import(fname, ImportAbstractAutocorrection::SuperScript)) {
             mSuperScriptEntries = import.superScriptEntries();
         }
+        mMaxFindStringLenght = import.maxFindStringLenght();
+        mMinFindStringLenght = import.minFindStringLenght();
     }
 }
 

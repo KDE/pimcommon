@@ -47,7 +47,13 @@ public:
     AutoCorrection::TypographicQuotes typographicSingleQuotes() const;
     AutoCorrection::TypographicQuotes typographicDoubleQuotes() const;
 
+    int maxFindStringLenght() const;
+
+    int minFindStringLenght() const;
+
 protected:
+    int mMaxFindStringLenght;
+    int mMinFindStringLenght;
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;
