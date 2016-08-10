@@ -97,69 +97,68 @@ void AutoCorrection::selectPreviousWord(QTextCursor &cursor, int cursorPosition)
 
 bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &position)
 {
-    if (!mEnabled) {
-        return true;
-    }
-    mCursor =  QTextCursor(&document);
-    mCursor.setPosition(position);
+    if (mEnabled) {
+        mCursor =  QTextCursor(&document);
+        mCursor.setPosition(position);
 
-    //If we already have a space not necessary to look at other autocorrect feature.
-    if (!singleSpaces()) {
-        return false;
-    }
+        //If we already have a space not necessary to look at other autocorrect feature.
+        if (!singleSpaces()) {
+            return false;
+        }
 
-    int oldPosition = position;
-    selectPreviousWord(mCursor, position);
-    mWord = mCursor.selectedText();
-    if (mWord.isEmpty()) {
-        return true;
-    }
-    mCursor.beginEditBlock();
-    bool done = false;
-    if (htmlMode) {
-        done = autoFormatURLs();
+        int oldPosition = position;
+        selectPreviousWord(mCursor, position);
+        mWord = mCursor.selectedText();
+        if (mWord.isEmpty()) {
+            return true;
+        }
+        mCursor.beginEditBlock();
+        bool done = false;
+        if (htmlMode) {
+            done = autoFormatURLs();
+            if (!done) {
+                done = autoBoldUnderline();
+                //We replace */- by format => remove cursor position by 2
+                if (done) {
+                    oldPosition -= 2;
+                }
+            }
+            if (!done) {
+                superscriptAppendix();
+            }
+        }
         if (!done) {
-            done = autoBoldUnderline();
-            //We replace */- by format => remove cursor position by 2
+            done = autoFractions();
+            //We replace three characters with 1
             if (done) {
                 oldPosition -= 2;
             }
         }
         if (!done) {
-            superscriptAppendix();
+            const int newPos = advancedAutocorrect();
+            if (newPos != -1) {
+                oldPosition = newPos;
+            }
         }
-    }
-    if (!done) {
-        done = autoFractions();
-        //We replace three characters with 1
-        if (done) {
-            oldPosition -= 2;
+        if (!done) {
+            uppercaseFirstCharOfSentence();
         }
-    }
-    if (!done) {
-        const int newPos = advancedAutocorrect();
-        if (newPos != -1) {
-            oldPosition = newPos;
+        if (!done) {
+            fixTwoUppercaseChars();
         }
-    }
-    if (!done) {
-        uppercaseFirstCharOfSentence();
-    }
-    if (!done) {
-        fixTwoUppercaseChars();
-    }
-    if (!done) {
-        capitalizeWeekDays();
-    }
-    if (!done) {
-        replaceTypographicQuotes();
-    }
+        if (!done) {
+            capitalizeWeekDays();
+        }
+        if (!done) {
+            replaceTypographicQuotes();
+        }
 
-    if (mCursor.selectedText() != mWord) {
-        mCursor.insertText(mWord);
+        if (mCursor.selectedText() != mWord) {
+            mCursor.insertText(mWord);
+        }
+        position = oldPosition;
+        mCursor.endEditBlock();
     }
-    position = oldPosition;
-    mCursor.endEditBlock();
     return true;
 }
 
