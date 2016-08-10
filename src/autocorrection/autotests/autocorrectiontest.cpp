@@ -420,5 +420,58 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     QCOMPARE(doc.toPlainText(), result);
 
 }
+typedef QHash<QString, QString> mapAutoCorrect;
+Q_DECLARE_METATYPE(mapAutoCorrect)
+
+void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
+{
+    QTest::addColumn<QString>("originalString");
+    QTest::addColumn<QString>("convertedString");
+    QTest::addColumn<mapAutoCorrect>("convertStringHash");
+
+    mapAutoCorrect map;
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    QTest::newRow("simpleReplace") << QStringLiteral("boo") << QStringLiteral("bla") << map;
+    map.clear();
+    map.insert(QStringLiteral("a boo"), QStringLiteral("b bla"));
+    //FIX me it failed for the moment. We don't support multi word
+    //QTest::newRow("simpleReplace") << QStringLiteral("a boo") << QStringLiteral("b bla") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
+    QTest::newRow("withuppercase") << QStringLiteral("Boo") << QStringLiteral("Bla") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    QTest::newRow("withuppercase-2") << QStringLiteral("Boo") << QStringLiteral("bla") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
+    QTest::newRow("withuppercase-3") << QStringLiteral("Boo") << QStringLiteral("Bla") << map;
+
+
+    map.clear();
+    map.insert(QStringLiteral("booooo"), QStringLiteral("bla"));
+    QTest::newRow("nofindtext") << QStringLiteral("boo") << QStringLiteral("boo") << map;
+
+}
+
+void AutoCorrectionTest::shouldAutocorrectMultiWord()
+{
+    QFETCH(QString, originalString);
+    QFETCH(QString, convertedString);
+    QFETCH(mapAutoCorrect, convertStringHash);
+
+    PimCommon::AutoCorrection autocorrection;
+    autocorrection.setEnabledAutoCorrection(true);
+    autocorrection.setAdvancedAutocorrect(true);
+    autocorrection.setAutocorrectEntries(convertStringHash);
+
+    QTextDocument doc;
+    doc.setPlainText(originalString);
+    int position = originalString.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), convertedString);
+}
 
 QTEST_MAIN(AutoCorrectionTest)

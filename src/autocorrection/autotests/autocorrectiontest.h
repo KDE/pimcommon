@@ -41,6 +41,9 @@ private Q_SLOTS:
     void shouldAutocorrectWord();
     void shouldNotUpperCaseFirstCharOfSentence();
 
+    void shouldAutocorrectMultiWord_data();
+    void shouldAutocorrectMultiWord();
+
 private:
     KSharedConfig::Ptr mConfig;
 };

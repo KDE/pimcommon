@@ -126,7 +126,8 @@ private:
     bool mSuperScriptAppendix;
 
     bool mAddNonBreakingSpace;
-
+    int mMaxFindStringLenght;
+    int mMinFindStringLenght;
     QString mWord;
     QTextCursor mCursor;
 

@@ -69,6 +69,8 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
 
         /* Load advanced autocorrect entry, including the format */
         const QDomElement item = de.namedItem(QStringLiteral("items")).toElement();
+        mMaxFindStringLenght = 0;
+        mMinFindStringLenght = 0;
         if (!item.isNull()) {
             const QDomNodeList nl = item.childNodes();
             const int numberOfElement(nl.count());
@@ -76,6 +78,9 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                 const QDomElement element = nl.item(i).toElement();
                 const QString find = element.attribute(QStringLiteral("find"));
                 const QString replace = element.attribute(QStringLiteral("replace"));
+                const int findLenght(find.length());
+                mMaxFindStringLenght = qMax(findLenght, mMaxFindStringLenght);
+                mMinFindStringLenght = qMin(findLenght, mMinFindStringLenght);
                 mAutocorrectEntries.insert(find, replace);
             }
         }

@@ -43,7 +43,9 @@ AutoCorrection::AutoCorrection()
       mReplaceSingleQuotes(false),
       mEnabled(false),
       mSuperScriptAppendix(false),
-      mAddNonBreakingSpace(false)
+      mAddNonBreakingSpace(false),
+      mMaxFindStringLenght(0),
+      mMinFindStringLenght(0)
 {
     // default double quote open 0x201c
     // default double quote close 0x201d
@@ -97,69 +99,62 @@ void AutoCorrection::selectPreviousWord(QTextCursor &cursor, int cursorPosition)
 
 bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &position)
 {
-    if (!mEnabled) {
-        return true;
-    }
-    mCursor =  QTextCursor(&document);
-    mCursor.setPosition(position);
+    if (mEnabled) {
+        mCursor =  QTextCursor(&document);
+        mCursor.setPosition(position);
 
-    //If we already have a space not necessary to look at other autocorrect feature.
-    if (!singleSpaces()) {
-        return false;
-    }
+        //If we already have a space not necessary to look at other autocorrect feature.
+        if (!singleSpaces()) {
+            return false;
+        }
 
-    int oldPosition = position;
-    selectPreviousWord(mCursor, position);
-    mWord = mCursor.selectedText();
-    if (mWord.isEmpty()) {
-        return true;
-    }
-    mCursor.beginEditBlock();
-    bool done = false;
-    if (htmlMode) {
-        done = autoFormatURLs();
+        int oldPosition = position;
+        selectPreviousWord(mCursor, position);
+        mWord = mCursor.selectedText();
+        if (mWord.isEmpty()) {
+            return true;
+        }
+        mCursor.beginEditBlock();
+        bool done = false;
+        if (htmlMode) {
+            done = autoFormatURLs();
+            if (!done) {
+                done = autoBoldUnderline();
+                //We replace */- by format => remove cursor position by 2
+                if (done) {
+                    oldPosition -= 2;
+                }
+            }
+            if (!done) {
+                superscriptAppendix();
+            }
+        }
         if (!done) {
-            done = autoBoldUnderline();
-            //We replace */- by format => remove cursor position by 2
+            done = autoFractions();
+            //We replace three characters with 1
             if (done) {
                 oldPosition -= 2;
             }
         }
         if (!done) {
-            superscriptAppendix();
+            const int newPos = advancedAutocorrect();
+            if (newPos != -1) {
+                oldPosition = newPos;
+            }
         }
-    }
-    if (!done) {
-        done = autoFractions();
-        //We replace three characters with 1
-        if (done) {
-            oldPosition -= 2;
+        if (!done) {
+            uppercaseFirstCharOfSentence();
+            fixTwoUppercaseChars();
+            capitalizeWeekDays();
+            replaceTypographicQuotes();
         }
-    }
-    if (!done) {
-        const int newPos = advancedAutocorrect();
-        if (newPos != -1) {
-            oldPosition = newPos;
-        }
-    }
-    if (!done) {
-        uppercaseFirstCharOfSentence();
-    }
-    if (!done) {
-        fixTwoUppercaseChars();
-    }
-    if (!done) {
-        capitalizeWeekDays();
-    }
-    if (!done) {
-        replaceTypographicQuotes();
-    }
 
-    if (mCursor.selectedText() != mWord) {
-        mCursor.insertText(mWord);
+        if (mCursor.selectedText() != mWord) {
+            mCursor.insertText(mWord);
+        }
+        position = oldPosition;
+        mCursor.endEditBlock();
     }
-    position = oldPosition;
-    mCursor.endEditBlock();
     return true;
 }
 
@@ -223,6 +218,15 @@ void AutoCorrection::setTwoUpperLetterExceptions(const QSet<QString> &exceptions
 
 void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entries)
 {
+    mMaxFindStringLenght = 0;
+    mMinFindStringLenght = 0;
+    QHashIterator<QString, QString> i(entries);
+    while (i.hasNext()) {
+        i.next();
+        const int findStringLenght(i.key().length());
+        mMaxFindStringLenght = qMax(mMaxFindStringLenght, findStringLenght);
+        mMinFindStringLenght = qMin(mMinFindStringLenght, findStringLenght);
+    }
     mAutocorrectEntries = entries;
 }
 
@@ -465,7 +469,7 @@ bool AutoCorrection::autoFormatURLs()
     }
 
     const QString trimmed = mWord.trimmed();
-    int startPos = mCursor.selectionStart();
+    const int startPos = mCursor.selectionStart();
     mCursor.setPosition(startPos);
     mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
 
@@ -748,6 +752,9 @@ int AutoCorrection::advancedAutocorrect()
     if (!mAdvancedAutocorrect) {
         return -1;
     }
+    if (mAutocorrectEntries.isEmpty()) {
+        return -1;
+    }
 
     const int startPos = mCursor.selectionStart();
     const int length = mWord.length();
@@ -758,6 +765,15 @@ int AutoCorrection::advancedAutocorrect()
     if (actualWord.isEmpty()) {
         return -1;
     }
+
+    const int actualWordLength(actualWord.length());
+    if (actualWordLength < mMinFindStringLenght) {
+        return -1;
+    }
+    if (actualWordLength > mMaxFindStringLenght) {
+        return -1;
+    }
+
 
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
@@ -935,18 +951,18 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     mTwoUpperLetterExceptions.clear();
     mSuperScriptEntries.clear();
 
-    QString LocalFile;
+    QString localFileName;
     //Look at local file:
     if (!forceGlobal) {
         if (!mAutoCorrectLang.isEmpty()) {
-            LocalFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
+            localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
         } else {
             if (!kdelang.isEmpty()) {
-                LocalFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+                localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
             }
-            if (LocalFile.isEmpty() && kdelang.contains(QStringLiteral("_"))) {
+            if (localFileName.isEmpty() && kdelang.contains(QStringLiteral("_"))) {
                 kdelang.remove(QRegularExpression(QStringLiteral("_.*")));
-                LocalFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+                localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
             }
         }
     }
@@ -977,7 +993,7 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     //qCDebug(PIMCOMMON_LOG)<<" fname :"<<fname;
     //qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
 
-    if (LocalFile.isEmpty()) {
+    if (localFileName.isEmpty()) {
         if (fname.isEmpty()) {
             mTypographicSingleQuotes = typographicDefaultSingleQuotes();
             mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
@@ -994,11 +1010,13 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
                     mTypographicSingleQuotes = typographicDefaultSingleQuotes();
                     mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
                 }
+                mMaxFindStringLenght = import.maxFindStringLenght();
+                mMinFindStringLenght = import.minFindStringLenght();
             }
         }
     } else {
         ImportKMailAutocorrection import;
-        if (import.import(LocalFile, ImportAbstractAutocorrection::All)) {
+        if (import.import(localFileName, ImportAbstractAutocorrection::All)) {
             mUpperCaseExceptions = import.upperCaseExceptions();
             mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
             mAutocorrectEntries = import.autocorrectEntries();
@@ -1010,6 +1028,8 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
         if (!fname.isEmpty() && import.import(fname, ImportAbstractAutocorrection::SuperScript)) {
             mSuperScriptEntries = import.superScriptEntries();
         }
+        mMaxFindStringLenght = import.maxFindStringLenght();
+        mMinFindStringLenght = import.minFindStringLenght();
     }
 }
 
