@@ -486,6 +486,15 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
     QTest::newRow("withponct-2") << QStringLiteral("lolo. boo!") << QStringLiteral("lolo. bla!") << map;
 
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    QTest::newRow("dontreplaceinpieceofword") << QStringLiteral("voitureboo") << QStringLiteral("voitureboo") << map;
+
+
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    map.insert(QStringLiteral("booOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo"), QStringLiteral("bla"));
+    QTest::newRow("dontreplaceall") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map;
 }
 
 void AutoCorrectionTest::shouldAutocorrectMultiWord()

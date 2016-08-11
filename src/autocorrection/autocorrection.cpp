@@ -74,7 +74,35 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
     cursor.setPosition(cursorPosition);
 
     QTextBlock block = cursor.block();
-    const int pos = qMax(block.position(), cursorPosition - mMaxFindStringLenght);
+    int pos = qMax(block.position(), cursorPosition - mMaxFindStringLenght);
+
+    //TODO verify that pos == block.position() => it's a full line => not a piece of word
+    //TODO if not => check if pos -1 is a space => not a piece of word
+    //TODO otherwise move cursor until we detect a space
+    //TODO otherwise we must not autoconvert it.
+    if (pos == block.position()) {
+        //it's ok
+    } else {
+        const QString text = block.text();
+        const int currentPos = (pos - block.position());
+        if (!text.at(currentPos - 1).isSpace()) {
+            //qDebug() << " current Text " << text << " currentPos "<< currentPos << " pos " << pos;
+            //qDebug() << "selected text " << text.right(text.length() - currentPos);
+            //qDebug() << "  text after " << text.at(currentPos - 1);
+            bool foundWord = false;
+            const int textLength(text.length());
+            for (int i = currentPos; i < textLength; ++i) {
+                if (text.at(i).isSpace()) {
+                    pos = qMin(cursorPosition, pos + 1 + block.position());
+                    foundWord = true;
+                    break;
+                }
+            }
+            if (!foundWord) {
+                pos = cursorPosition;
+            }
+        }
+    }
     cursor.setPosition(pos);
     cursor.setPosition(cursorPosition, QTextCursor::KeepAnchor);
 }
@@ -162,16 +190,16 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         if (!done) {
             selectStringOnMaximumSearchString(mCursor, oldPosition);
             mWord = mCursor.selectedText();
-            const int newPos = advancedAutocorrect();
-
-            if (newPos != -1) {
-                if (mCursor.selectedText() != mWord) {
-                    mCursor.insertText(mWord);
+            if (!mWord.isEmpty()) {
+                const int newPos = advancedAutocorrect();
+                if (newPos != -1) {
+                    if (mCursor.selectedText() != mWord) {
+                        mCursor.insertText(mWord);
+                    }
+                    position = newPos;
                 }
-                position = newPos;
             }
         }
-
         mCursor.endEditBlock();
     }
     return true;
@@ -837,7 +865,7 @@ int AutoCorrection::advancedAutocorrect()
 
             // Keep capitalized words capitalized.
             // (Necessary to make sure the first letters match???)
-            const QChar actualWordFirstChar = actualWord.at(0);
+            const QChar actualWordFirstChar = actualWord.at(pos);
             const QChar replacementFirstChar = replacement[0];
             if (actualWordFirstChar.isUpper() && replacementFirstChar.isLower()) {
                 replacement[0] = replacementFirstChar.toUpper();
