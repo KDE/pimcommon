@@ -803,9 +803,10 @@ int AutoCorrection::advancedAutocorrect()
 
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
-    QChar lastChar = actualWord.at(actualWord.length() - 1);
-    if (lastChar.unicode() == '.' || lastChar.unicode() == ',' || lastChar.unicode() == '?' ||
-            lastChar.unicode() == '!' || lastChar.unicode() == ':' || lastChar.unicode() == ';') {
+    const QChar lastChar = actualWord.at(actualWord.length() - 1);
+    const ushort charUnicode = lastChar.unicode();
+    if (charUnicode == '.' || charUnicode == ',' || charUnicode == '?' ||
+            charUnicode == '!' || charUnicode == ':' || charUnicode == ';') {
         hasPunctuation = true;
         actualWord.chop(1);
     }
