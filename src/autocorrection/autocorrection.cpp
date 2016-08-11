@@ -755,8 +755,9 @@ bool AutoCorrection::autoFractions()
     const QString trimmed = mWord.trimmed();
     if (trimmed.length() > 3) {
         const QChar x = trimmed.at(3);
-        if (!(x.unicode() == '.' || x.unicode() == ',' || x.unicode() == '?' || x.unicode() == '!'
-                || x.unicode() == ':' || x.unicode() == ';')) {
+        const uchar xunicode = x.unicode();
+        if (!(xunicode == '.' || xunicode == ',' || xunicode == '?' || xunicode == '!'
+                || xunicode == ':' || xunicode == ';')) {
             return false;
         }
     } else if (trimmed.length() < 3) {
