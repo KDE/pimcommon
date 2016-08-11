@@ -832,6 +832,8 @@ int AutoCorrection::advancedAutocorrect()
             // (Necessary to make sure the first letters match???)
             if (actualWord.at(0).isUpper() && replacement.at(0).isLower()) {
                 replacement[0] = replacement[0].toUpper();
+            } else if (actualWord.at(0).isLower() && replacement.at(0).isUpper()) {
+                replacement[0] = replacement[0].toLower();
             }
 
             // If a punctuation mark was on the end originally, add it back on

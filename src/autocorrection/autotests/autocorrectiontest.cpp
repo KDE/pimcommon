@@ -467,10 +467,24 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
     QTest::newRow("withuppercase-3") << QStringLiteral("Boo") << QStringLiteral("Bla") << map;
 
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
+    QTest::newRow("withuppercase-4") << QStringLiteral("boo") << QStringLiteral("bla") << map;
+
 
     map.clear();
     map.insert(QStringLiteral("booooo"), QStringLiteral("bla"));
     QTest::newRow("nofindtext") << QStringLiteral("boo") << QStringLiteral("boo") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("boosss"), QStringLiteral("Blasss"));
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    QTest::newRow("withponct") << QStringLiteral("boo!") << QStringLiteral("bla!") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("boosss"), QStringLiteral("Blasss"));
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    QTest::newRow("withponct-2") << QStringLiteral("lolo. boo!") << QStringLiteral("lolo. bla!") << map;
 
 }
 
