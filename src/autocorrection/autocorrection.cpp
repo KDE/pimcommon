@@ -816,6 +816,9 @@ int AutoCorrection::advancedAutocorrect()
     QHashIterator<QString, QString> i(mAutocorrectEntries);
     while (i.hasNext()) {
         i.next();
+        if (i.key().length() > actualWordLength) {
+            continue;
+        }
         if (actualWord.endsWith(i.key()) ||
                 actualWord.toLower().endsWith(i.key()) ||
                 actualWordWithFirstUpperCase.endsWith(i.key())) {
