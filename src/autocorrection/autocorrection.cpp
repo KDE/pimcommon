@@ -830,15 +830,8 @@ int AutoCorrection::advancedAutocorrect()
 
             // Keep capitalized words capitalized.
             // (Necessary to make sure the first letters match???)
-            if (actualWord.at(0) == replacement.at(0).toLower()) {
-                if (mWord.at(0).isUpper()) {
-                    replacement[0] = replacement[0].toUpper();
-                } else {
-                    //Don't replace toUpper letter
-                    if (replacement.at(0).isLower()) {
-                        replacement[0] = replacement[0].toLower();
-                    }
-                }
+            if (actualWord.at(0).isUpper() && replacement.at(0).isLower()) {
+                replacement[0] = replacement[0].toUpper();
             }
 
             // If a punctuation mark was on the end originally, add it back on

@@ -446,6 +446,11 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     QTest::newRow("multiword-2 without replace") << QStringLiteral("toto. a boo") << QStringLiteral("toto. a boo") << map;
 
     map.clear();
+    map.insert(QStringLiteral("a boo"), QStringLiteral("b bla"));
+    QTest::newRow("multiword-2 with uppercase") << QStringLiteral("toto. A boo") << QStringLiteral("toto. B bla") << map;
+
+
+    map.clear();
     map.insert(QStringLiteral("a boo1111111111"), QStringLiteral("b bla"));
     QTest::newRow("multiword-3") << QStringLiteral("a boo") << QStringLiteral("a boo") << map;
 
@@ -456,7 +461,7 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
 
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
-    QTest::newRow("withuppercase-2") << QStringLiteral("Boo") << QStringLiteral("bla") << map;
+    QTest::newRow("withuppercase-2") << QStringLiteral("Boo") << QStringLiteral("Bla") << map;
 
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
