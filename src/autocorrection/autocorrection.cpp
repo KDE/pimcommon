@@ -830,10 +830,12 @@ int AutoCorrection::advancedAutocorrect()
 
             // Keep capitalized words capitalized.
             // (Necessary to make sure the first letters match???)
-            if (actualWord.at(0).isUpper() && replacement.at(0).isLower()) {
-                replacement[0] = replacement[0].toUpper();
-            } else if (actualWord.at(0).isLower() && replacement.at(0).isUpper()) {
-                replacement[0] = replacement[0].toLower();
+            const QChar actualWordFirstChar = actualWord.at(0);
+            const QChar replacementFirstChar = replacement[0];
+            if (actualWordFirstChar.isUpper() && replacementFirstChar.isLower()) {
+                replacement[0] = replacementFirstChar.toUpper();
+            } else if (actualWordFirstChar.isLower() && replacementFirstChar.isUpper()) {
+                replacement[0] = replacementFirstChar.toLower();
             }
 
             // If a punctuation mark was on the end originally, add it back on
