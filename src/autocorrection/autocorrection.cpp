@@ -441,11 +441,13 @@ bool AutoCorrection::autoBoldUnderline()
         return false;
     }
 
-    const bool underline = (trimmed.at(0) == QLatin1Char('_') && trimmed.at(trimmed.length() - 1) == QLatin1Char('_'));
-    const bool bold = (trimmed.at(0) == QLatin1Char('*') && trimmed.at(trimmed.length() - 1) == QLatin1Char('*'));
-    const bool strikeOut = (trimmed.at(0) == QLatin1Char('-') && trimmed.at(trimmed.length() - 1) == QLatin1Char('-'));
+    const QChar trimmedFirstChar(trimmed.at(0));
+    const QChar trimmedLastChar(trimmed.at(trimmed.length() - 1));
+    const bool underline = (trimmedFirstChar == QLatin1Char('_') && trimmedLastChar == QLatin1Char('_'));
+    const bool bold = (trimmedFirstChar == QLatin1Char('*') && trimmedLastChar == QLatin1Char('*'));
+    const bool strikeOut = (trimmedFirstChar == QLatin1Char('-') && trimmedLastChar == QLatin1Char('-'));
     if (underline || bold || strikeOut) {
-        int startPos = mCursor.selectionStart();
+        const int startPos = mCursor.selectionStart();
         const QString replacement = trimmed.mid(1, trimmed.length() - 2);
         bool foundLetterNumber = false;
 
@@ -753,8 +755,9 @@ bool AutoCorrection::autoFractions()
     const QString trimmed = mWord.trimmed();
     if (trimmed.length() > 3) {
         const QChar x = trimmed.at(3);
-        if (!(x.unicode() == '.' || x.unicode() == ',' || x.unicode() == '?' || x.unicode() == '!'
-                || x.unicode() == ':' || x.unicode() == ';')) {
+        const uchar xunicode = x.unicode();
+        if (!(xunicode == '.' || xunicode == ',' || xunicode == '?' || xunicode == '!'
+                || xunicode == ':' || xunicode == ';')) {
             return false;
         }
     } else if (trimmed.length() < 3) {
@@ -803,9 +806,10 @@ int AutoCorrection::advancedAutocorrect()
 
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
-    QChar lastChar = actualWord.at(actualWord.length() - 1);
-    if (lastChar.unicode() == '.' || lastChar.unicode() == ',' || lastChar.unicode() == '?' ||
-            lastChar.unicode() == '!' || lastChar.unicode() == ':' || lastChar.unicode() == ';') {
+    const QChar lastChar = actualWord.at(actualWord.length() - 1);
+    const ushort charUnicode = lastChar.unicode();
+    if (charUnicode == '.' || charUnicode == ',' || charUnicode == '?' ||
+            charUnicode == '!' || charUnicode == ':' || charUnicode == ';') {
         hasPunctuation = true;
         actualWord.chop(1);
     }
@@ -815,6 +819,9 @@ int AutoCorrection::advancedAutocorrect()
     QHashIterator<QString, QString> i(mAutocorrectEntries);
     while (i.hasNext()) {
         i.next();
+        if (i.key().length() > actualWordLength) {
+            continue;
+        }
         if (actualWord.endsWith(i.key()) ||
                 actualWord.toLower().endsWith(i.key()) ||
                 actualWordWithFirstUpperCase.endsWith(i.key())) {
@@ -829,15 +836,12 @@ int AutoCorrection::advancedAutocorrect()
 
             // Keep capitalized words capitalized.
             // (Necessary to make sure the first letters match???)
-            if (actualWord.at(0) == replacement.at(0).toLower()) {
-                if (mWord.at(0).isUpper()) {
-                    replacement[0] = replacement[0].toUpper();
-                } else {
-                    //Don't replace toUpper letter
-                    if (replacement.at(0).isLower()) {
-                        replacement[0] = replacement[0].toLower();
-                    }
-                }
+            const QChar actualWordFirstChar = actualWord.at(0);
+            const QChar replacementFirstChar = replacement[0];
+            if (actualWordFirstChar.isUpper() && replacementFirstChar.isLower()) {
+                replacement[0] = replacementFirstChar.toUpper();
+            } else if (actualWordFirstChar.isLower() && replacementFirstChar.isUpper()) {
+                replacement[0] = replacementFirstChar.toLower();
             }
 
             // If a punctuation mark was on the end originally, add it back on
