@@ -374,12 +374,13 @@ void AutoCorrection::superscriptAppendix()
     const QString trimmed = mWord.trimmed();
     int startPos = -1;
     int endPos = -1;
+    const int trimmedLenght(trimmed.length());
 
     QHash<QString, QString>::const_iterator i = mSuperScriptEntries.constBegin();
     while (i != mSuperScriptEntries.constEnd()) {
         if (i.key() == trimmed) {
             startPos = mCursor.selectionStart() + 1;
-            endPos = startPos - 1 + trimmed.length();
+            endPos = startPos - 1 + trimmedLenght;
             break;
         } else if (i.key() == QLatin1String("othernb")) {
             const int pos = trimmed.indexOf(i.value());
@@ -401,9 +402,9 @@ void AutoCorrection::superscriptAppendix()
                         ++constIter;
                     }
                 }
-                if (found && number.length() + i.value().length() == trimmed.length()) {
+                if (found && number.length() + i.value().length() == trimmedLenght) {
                     startPos = mCursor.selectionStart() + pos;
-                    endPos = startPos - pos + trimmed.length();
+                    endPos = startPos - pos + trimmedLenght;
                     break;
                 }
             }
