@@ -53,7 +53,8 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
         const QDomElement upper = de.namedItem(QStringLiteral("UpperCaseExceptions")).toElement();
         if (!upper.isNull()) {
             const QDomNodeList nl = upper.childNodes();
-            for (int i = 0; i < nl.count(); ++i) {
+            const int nlCount(nl.count());
+            for (int i = 0; i < nlCount; ++i) {
                 mUpperCaseExceptions += nl.item(i).toElement().attribute(QStringLiteral("exception"));
             }
         }
