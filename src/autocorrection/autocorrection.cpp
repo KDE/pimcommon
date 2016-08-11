@@ -441,11 +441,13 @@ bool AutoCorrection::autoBoldUnderline()
         return false;
     }
 
-    const bool underline = (trimmed.at(0) == QLatin1Char('_') && trimmed.at(trimmed.length() - 1) == QLatin1Char('_'));
-    const bool bold = (trimmed.at(0) == QLatin1Char('*') && trimmed.at(trimmed.length() - 1) == QLatin1Char('*'));
-    const bool strikeOut = (trimmed.at(0) == QLatin1Char('-') && trimmed.at(trimmed.length() - 1) == QLatin1Char('-'));
+    const QChar trimmedFirstChar(trimmed.at(0));
+    const QChar trimmedLastChar(trimmed.at(trimmed.length() - 1));
+    const bool underline = (trimmedFirstChar == QLatin1Char('_') && trimmedLastChar == QLatin1Char('_'));
+    const bool bold = (trimmedFirstChar == QLatin1Char('*') && trimmedLastChar == QLatin1Char('*'));
+    const bool strikeOut = (trimmedFirstChar == QLatin1Char('-') && trimmedLastChar == QLatin1Char('-'));
     if (underline || bold || strikeOut) {
-        int startPos = mCursor.selectionStart();
+        const int startPos = mCursor.selectionStart();
         const QString replacement = trimmed.mid(1, trimmed.length() - 2);
         bool foundLetterNumber = false;
 
