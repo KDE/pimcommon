@@ -46,6 +46,10 @@ private Q_SLOTS:
 
     void shouldAddNonBreakingSpace();
 
+
+    void shouldReplaceWithMultiOption_data();
+    void shouldReplaceWithMultiOption();
+
 private:
     KSharedConfig::Ptr mConfig;
 };
