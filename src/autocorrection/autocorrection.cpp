@@ -80,9 +80,7 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
     //TODO if not => check if pos -1 is a space => not a piece of word
     //TODO otherwise move cursor until we detect a space
     //TODO otherwise we must not autoconvert it.
-    if (pos == block.position()) {
-        //it's ok
-    } else {
+    if (pos != block.position()) {
         const QString text = block.text();
         const int currentPos = (pos - block.position());
         if (!text.at(currentPos - 1).isSpace()) {
@@ -188,7 +186,7 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         position = oldPosition;
 
         if (!done) {
-            selectStringOnMaximumSearchString(mCursor, oldPosition);
+            selectStringOnMaximumSearchString(mCursor, position);
             mWord = mCursor.selectedText();
             if (!mWord.isEmpty()) {
                 const int newPos = advancedAutocorrect();
@@ -418,7 +416,9 @@ void AutoCorrection::superscriptAppendix()
                 bool found = true;
                 // don't apply superscript to 1th, 2th and 3th
                 if (number.length() == 1 &&
-                        (*constIter == QLatin1Char('1') || *constIter == QLatin1Char('2') || *constIter == QLatin1Char('3'))) {
+                        (*constIter == QLatin1Char('1') ||
+                         *constIter == QLatin1Char('2') ||
+                         *constIter == QLatin1Char('3'))) {
                     found = false;
                 }
                 if (found) {
