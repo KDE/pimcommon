@@ -416,7 +416,9 @@ void AutoCorrection::superscriptAppendix()
                 bool found = true;
                 // don't apply superscript to 1th, 2th and 3th
                 if (number.length() == 1 &&
-                        (*constIter == QLatin1Char('1') || *constIter == QLatin1Char('2') || *constIter == QLatin1Char('3'))) {
+                        (*constIter == QLatin1Char('1') ||
+                         *constIter == QLatin1Char('2') ||
+                         *constIter == QLatin1Char('3'))) {
                     found = false;
                 }
                 if (found) {
