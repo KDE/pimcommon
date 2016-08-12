@@ -80,9 +80,7 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
     //TODO if not => check if pos -1 is a space => not a piece of word
     //TODO otherwise move cursor until we detect a space
     //TODO otherwise we must not autoconvert it.
-    if (pos == block.position()) {
-        //it's ok
-    } else {
+    if (pos != block.position()) {
         const QString text = block.text();
         const int currentPos = (pos - block.position());
         if (!text.at(currentPos - 1).isSpace()) {
