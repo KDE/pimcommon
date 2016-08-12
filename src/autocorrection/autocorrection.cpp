@@ -186,7 +186,7 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         position = oldPosition;
 
         if (!done) {
-            selectStringOnMaximumSearchString(mCursor, oldPosition);
+            selectStringOnMaximumSearchString(mCursor, position);
             mWord = mCursor.selectedText();
             if (!mWord.isEmpty()) {
                 const int newPos = advancedAutocorrect();
