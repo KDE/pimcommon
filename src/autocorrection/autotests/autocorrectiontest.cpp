@@ -524,4 +524,48 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace()
     //TODO
 }
 
+void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
+{
+    QTest::addColumn<QString>("originalString");
+    QTest::addColumn<QString>("convertedString");
+    QTest::addColumn<mapAutoCorrect>("convertStringHash");
+
+    QTest::addColumn<bool>("enable");
+    QTest::addColumn<bool>("uppercaseFirstCharOfSentence");
+    QTest::addColumn<bool>("advancedAutocorrect");
+    mapAutoCorrect map;
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+
+    QTest::newRow("disable") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << false << false << false;
+    QTest::newRow("enablebutdisablealloptions") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << false << false;
+    QTest::newRow("enableandenableuppercase") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true;
+
+    QTest::newRow("enableandenableuppercaseandadvanced-2") << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true;
+
+    //TODO add more
+}
+
+void AutoCorrectionTest::shouldReplaceWithMultiOption()
+{
+    QFETCH(QString, originalString);
+    QFETCH(QString, convertedString);
+    QFETCH(mapAutoCorrect, convertStringHash);
+    QFETCH(bool, enable);
+    QFETCH(bool, uppercaseFirstCharOfSentence);
+    QFETCH(bool, advancedAutocorrect);
+
+    PimCommon::AutoCorrection autocorrection;
+    autocorrection.setEnabledAutoCorrection(enable);
+    autocorrection.setAdvancedAutocorrect(advancedAutocorrect);
+    autocorrection.setAutocorrectEntries(convertStringHash);
+    autocorrection.setUppercaseFirstCharOfSentence(uppercaseFirstCharOfSentence);
+
+    QTextDocument doc;
+    doc.setPlainText(originalString);
+    int position = originalString.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), convertedString);
+}
+
 QTEST_MAIN(AutoCorrectionTest)
