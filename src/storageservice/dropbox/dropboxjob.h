@@ -19,6 +19,9 @@
 #define DROPBOXJOB_H
 #include "storageservice/job/storageserviceabstractjob.h"
 #include <QNetworkReply>
+
+class QUrlQuery;
+
 namespace PimCommon
 {
 class AccountInfo;
@@ -56,7 +59,7 @@ Q_SIGNALS:
 private:
     QString extractPathFromData(const QString &data);
     void createFolderJob(const QString &foldername, const QString &destination);
-    void addDefaultUrlItem(QUrl &url);
+    QUrlQuery defaultUrlQuery() const;
     void getTokenAccess();
     void parseRequestToken(const QString &result);
     void doAuthentication();
