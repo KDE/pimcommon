@@ -48,7 +48,7 @@ StorageServiceTreeWidget::StorageServiceTreeWidget(StorageServiceAbstract *stora
     QStringList lst;
     lst << i18n("Name") << i18n("Size") << i18n("Created") << i18n("Last Modified");
     setHeaderLabels(lst);
-    header()->setMovable(false);
+    header()->setSectionsMovable(false);
     connect(this, &StorageServiceTreeWidget::itemDoubleClicked, this, &StorageServiceTreeWidget::slotItemDoubleClicked);
 }
 
