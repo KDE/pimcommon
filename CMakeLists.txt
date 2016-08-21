@@ -34,7 +34,7 @@ set(KCONTACTS_LIB_VERSION "5.3.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.3.40")
 set(AKONADI_VERSION "5.3.40")
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test WebEngineWidgets Xml)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test WebEngineWidgets Xml PrintSupport)
 
 find_package(KF5Archive ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
