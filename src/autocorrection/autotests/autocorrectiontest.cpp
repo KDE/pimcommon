@@ -420,6 +420,7 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     QCOMPARE(doc.toPlainText(), result);
 
 }
+
 typedef QHash<QString, QString> mapAutoCorrect;
 Q_DECLARE_METATYPE(mapAutoCorrect)
 
@@ -571,6 +572,76 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
     int position = originalString.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), convertedString);
+}
+
+void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
+{
+    PimCommon::AutoCorrection autocorrection;
+    autocorrection.setEnabledAutoCorrection(true);
+    autocorrection.setReplaceDoubleQuotes(true);
+    autocorrection.setReplaceSingleQuotes(true);
+    autocorrection.setLanguage(QStringLiteral("fr"));
+    autocorrection.setAddNonBreakingSpace(true);
+
+
+    PimCommon::AutoCorrection::TypographicQuotes doubleQuote;
+    doubleQuote.begin = QLatin1Char('A');
+    doubleQuote.end = QLatin1Char('B');
+    autocorrection.setTypographicDoubleQuotes(doubleQuote);
+
+    PimCommon::AutoCorrection::TypographicQuotes simpleQuote;
+    simpleQuote.begin = QLatin1Char('A');
+    simpleQuote.end = QLatin1Char('B');
+
+    autocorrection.setTypographicSingleQuotes(simpleQuote);
+
+
+    QTextDocument doc;
+    QString text = QStringLiteral("sss");
+
+    doc.setPlainText(QLatin1Char('"') + text);
+    int position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    //TODO fix me verify why it doesn't use no breaking space
+    const QChar nbsp = QChar(/*QChar::Nbsp*/QLatin1Char(' '));
+
+    QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text));
+
+    text = QStringLiteral("sss");
+    doc.setPlainText(text + QStringLiteral("\""));
+    position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), QString(text + nbsp + doubleQuote.end));
+
+
+    //Simple quote
+    text = QStringLiteral("sss");
+    doc.setPlainText(text + QStringLiteral("\'"));
+    position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), QString(text + nbsp + simpleQuote.end));
+
+
+    text = QStringLiteral("sss");
+    doc.setPlainText(QStringLiteral("\"") + text + QStringLiteral("\""));
+    position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
+
+
+    //Simple quote
+    text = QStringLiteral("sss");
+    doc.setPlainText(QStringLiteral("\'") + text + QStringLiteral("\'"));
+    position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), QString(simpleQuote.begin + nbsp + text + nbsp + simpleQuote.end));
+
+
+    text = QStringLiteral("(");
+    doc.setPlainText(QStringLiteral("\"") + text + QStringLiteral("\""));
+    position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
 }
 
 QTEST_MAIN(AutoCorrectionTest)

@@ -50,6 +50,8 @@ private Q_SLOTS:
     void shouldReplaceWithMultiOption_data();
     void shouldReplaceWithMultiOption();
 
+    void shouldAddNonBreakingSpaceBeforeAfterQuote();
+
 private:
     KSharedConfig::Ptr mConfig;
 };

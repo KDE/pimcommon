@@ -29,9 +29,12 @@ AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
             continue;
         addItem(QLocale::system().languageToString(lang), locale.name());
     }
-    auto defaultLang = QLocale::system().uiLanguages().at(0);
-    if (defaultLang == QLatin1String("C"))
-        defaultLang = QStringLiteral("en_US");
+    QString defaultLang;
+    if (!QLocale::system().uiLanguages().isEmpty()) {
+        defaultLang = QLocale::system().uiLanguages().at(0);
+        if (defaultLang == QLatin1String("C"))
+            defaultLang = QStringLiteral("en_US");
+    }
     const int index = findData(defaultLang);
     setCurrentIndex(index);
     model()->sort(0);

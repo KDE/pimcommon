@@ -815,15 +815,12 @@ int AutoCorrection::advancedAutocorrect()
         return -1;
     }
 
-    const int startPos = mCursor.selectionStart();
-    const int length = mWord.length();
-
     const QString trimmedWord = mWord.trimmed();
-    QString actualWord = trimmedWord;
-
-    if (actualWord.isEmpty()) {
+    if (trimmedWord.isEmpty()) {
         return -1;
     }
+
+    QString actualWord = trimmedWord;
 
     const int actualWordLength(actualWord.length());
     if (actualWordLength < mMinFindStringLenght) {
@@ -833,6 +830,8 @@ int AutoCorrection::advancedAutocorrect()
         return -1;
     }
 
+    const int startPos = mCursor.selectionStart();
+    const int length = mWord.length();
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
     const QChar lastChar = actualWord.at(actualWord.length() - 1);
@@ -955,31 +954,31 @@ void AutoCorrection::replaceTypographicQuotes()
             }
 
             if (doubleQuotes && mReplaceDoubleQuotes) {
-                if (!ending) {
-                    if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicDoubleQuotes.begin));
-                    } else {
-                        mWord[i - 1] = mTypographicDoubleQuotes.begin;
-                    }
-                } else {
+                if (ending) {
                     if (addNonBreakingSpace) {
                         mWord.replace(i - 1, 2, QString(nbsp + mTypographicDoubleQuotes.end));
                     } else {
                         mWord[i - 1] = mTypographicDoubleQuotes.end;
                     }
+                } else {
+                    if (addNonBreakingSpace) {
+                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicDoubleQuotes.begin));
+                    } else {
+                        mWord[i - 1] = mTypographicDoubleQuotes.begin;
+                    }
                 }
             } else if (mReplaceSingleQuotes) {
-                if (!ending) {
-                    if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicSingleQuotes.begin));
-                    } else {
-                        mWord[i - 1] = mTypographicSingleQuotes.begin;
-                    }
-                } else {
+                if (ending) {
                     if (addNonBreakingSpace) {
                         mWord.replace(i - 1, 2, QString(nbsp + mTypographicSingleQuotes.end));
                     } else {
                         mWord[i - 1] = mTypographicSingleQuotes.end;
+                    }
+                } else {
+                    if (addNonBreakingSpace) {
+                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicSingleQuotes.begin));
+                    } else {
+                        mWord[i - 1] = mTypographicSingleQuotes.begin;
                     }
                 }
             }
@@ -988,16 +987,14 @@ void AutoCorrection::replaceTypographicQuotes()
 
     // first character
     if (mWord.at(0) == QLatin1Char('"') && mReplaceDoubleQuotes) {
+        mWord[0] = mTypographicDoubleQuotes.begin;
         if (addNonBreakingSpace) {
-            mWord.replace(0, 2, QString(mTypographicDoubleQuotes.begin + nbsp));
-        } else {
-            mWord[0] = mTypographicDoubleQuotes.begin;
+            mWord.insert(1, nbsp);
         }
     } else if (mWord.at(0) == QLatin1Char('\'') && mReplaceSingleQuotes) {
+        mWord[0] = mTypographicSingleQuotes.begin;
         if (addNonBreakingSpace) {
-            mWord.replace(0, 2, QString(mTypographicSingleQuotes.begin + nbsp));
-        } else {
-            mWord[0] = mTypographicSingleQuotes.begin;
+            mWord.insert(1, nbsp);
         }
     }
 }
