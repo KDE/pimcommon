@@ -177,7 +177,9 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             fixTwoUppercaseChars();
             capitalizeWeekDays();
             replaceTypographicQuotes();
-            addNonBreakingSpace();
+            if (mWord.length() == 1) {
+                addNonBreakingSpace();
+            }
         }
 
         if (mCursor.selectedText() != mWord) {
@@ -454,10 +456,30 @@ void AutoCorrection::superscriptAppendix()
 void AutoCorrection::addNonBreakingSpace()
 {
     if (mAddNonBreakingSpace && isFrenchLanguage()) {
-        if (mWord.length() == 1) {
+        if (mWord.at(0) == QLatin1Char(':') ||
+                mWord.at(0) == QLatin1Char(';') ||
+                mWord.at(0) == QLatin1Char('!') ||
+                mWord.at(0) == QLatin1Char('?')) {
+            //QTextCursor cursor(mCursor);
+            //if (previousCharacterIsSpace(cursor, cursorPosition)) {
+
+            //}
+
+            //TODO add more if necessary
         }
     }
 }
+
+bool AutoCorrection::previousCharacterIsSpace(QTextCursor &cursor, int cursorPosition)
+{
+    cursor.setPosition(cursorPosition);
+    cursor.movePosition(QTextCursor::PreviousCharacter);
+    cursorPosition = qMax(cursorPosition - 2, 0);
+    cursor.setPosition(cursorPosition, QTextCursor::KeepAnchor);
+    const QString selectedText(cursor.selectedText());
+    return selectedText.isEmpty() ? false : selectedText.at(0).isSpace();
+ }
+
 
 bool AutoCorrection::autoBoldUnderline()
 {

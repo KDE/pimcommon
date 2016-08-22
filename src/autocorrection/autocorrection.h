@@ -104,6 +104,7 @@ private:
 
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
     void selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition);
+    bool previousCharacterIsSpace(QTextCursor &cursor, int cursorPosition);
 
     bool autoFormatURLs();
     bool autoBoldUnderline();

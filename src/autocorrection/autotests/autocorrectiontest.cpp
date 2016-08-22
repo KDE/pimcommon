@@ -544,6 +544,8 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
     QTest::newRow("enableandenableuppercaseandadvanced") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true << false;
 
     QTest::newRow("enableandenableuppercaseandadvanced-2") << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced-3") << QStringLiteral("blablobli") << QStringLiteral("Blablobli") << map << true << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced-4") << QStringLiteral("blablobli. foo") << QStringLiteral("blablobli. Foo") << map << true << true << true << false;
 
     QTest::newRow("enableandenablefixtouppercase") << QStringLiteral("Boo boo. BOo") << QStringLiteral("Boo boo. Boo") << map << true << true << false << true;
     QTest::newRow("enableandenablefixtouppercase-2") << QStringLiteral("Boo BOo") << QStringLiteral("Boo Boo") << map << true << true << false << true;
