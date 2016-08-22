@@ -533,16 +533,19 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
     QTest::addColumn<bool>("enable");
     QTest::addColumn<bool>("uppercaseFirstCharOfSentence");
     QTest::addColumn<bool>("advancedAutocorrect");
+    QTest::addColumn<bool>("fixtoouppercase");
     mapAutoCorrect map;
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
 
-    QTest::newRow("disable") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << false << false << false;
-    QTest::newRow("enablebutdisablealloptions") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << false << false;
-    QTest::newRow("enableandenableuppercase") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << true << false;
-    QTest::newRow("enableandenableuppercaseandadvanced") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true;
+    QTest::newRow("disable") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << false << false << false << false;
+    QTest::newRow("enablebutdisablealloptions") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << false << false << false;
+    QTest::newRow("enableandenableuppercase") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << true << false << false;
+    QTest::newRow("enableandenableuppercaseandadvanced") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true << false;
 
-    QTest::newRow("enableandenableuppercaseandadvanced-2") << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true;
+    QTest::newRow("enableandenableuppercaseandadvanced-2") << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true << false;
 
+    QTest::newRow("enableandenablefixtouppercase") << QStringLiteral("Boo boo. BOo") << QStringLiteral("Boo boo. Boo") << map << true << true << false << true;
+    QTest::newRow("enableandenablefixtouppercase-2") << QStringLiteral("Boo BOo") << QStringLiteral("Boo Boo") << map << true << true << false << true;
     //TODO add more
 }
 
@@ -554,12 +557,14 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
     QFETCH(bool, enable);
     QFETCH(bool, uppercaseFirstCharOfSentence);
     QFETCH(bool, advancedAutocorrect);
+    QFETCH(bool, fixtoouppercase);
 
     PimCommon::AutoCorrection autocorrection;
     autocorrection.setEnabledAutoCorrection(enable);
     autocorrection.setAdvancedAutocorrect(advancedAutocorrect);
     autocorrection.setAutocorrectEntries(convertStringHash);
     autocorrection.setUppercaseFirstCharOfSentence(uppercaseFirstCharOfSentence);
+    autocorrection.setFixTwoUppercaseChars(fixtoouppercase);
 
     QTextDocument doc;
     doc.setPlainText(originalString);
