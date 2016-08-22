@@ -48,6 +48,7 @@
 #include <QTextStream>
 #include <QWidget>
 #include <QPointer>
+#include <QUrlQuery>
 #include <AgentInstance>
 #include <AkonadiCore/AgentManager>
 #include <AkonadiCore/ServerManager>

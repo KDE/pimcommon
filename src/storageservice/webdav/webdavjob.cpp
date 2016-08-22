@@ -32,6 +32,7 @@
 #include <QFile>
 #include <QDomDocument>
 #include <QDomNodeList>
+#include <QUrlQuery>
 
 using namespace PimCommon;
 
@@ -586,10 +587,10 @@ void WebDavJob::shareLink(const QString &/*root*/, const QString &path)
     qCDebug(PIMCOMMON_LOG) << " filePath" << filePath;
     qCDebug(PIMCOMMON_LOG) << " url" << (path2.scheme() + QLatin1String("://") + path2.host() + mShareApi);
     request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
-    QUrl postData;
+    QUrlQuery postData;
     postData.addQueryItem(QStringLiteral("path"), filePath);
     postData.addQueryItem(QStringLiteral("shareType"), QString::number(3)); //public link
-    QNetworkReply *reply = mNetworkAccessManager->post(request, postData.encodedQuery());
+    QNetworkReply *reply = mNetworkAccessManager->post(request, postData.query(QUrl::FullyEncoded).toUtf8());
     connect(reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), this, &WebDavJob::slotError);
 }
 

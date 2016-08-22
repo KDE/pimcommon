@@ -116,6 +116,8 @@ public:
 
     void setRights(const QMap<QByteArray, KIMAP::Acl::Rights> &rights)
     {
+        beginResetModel();
+
         mRights.clear();
 
         QMapIterator<QByteArray, KIMAP::Acl::Rights> it(rights);
@@ -124,7 +126,7 @@ public:
             mRights.append(qMakePair(it.key(), it.value()));
         }
 
-        reset();
+        endResetModel();
     }
 
     QMap<QByteArray, KIMAP::Acl::Rights> rights() const

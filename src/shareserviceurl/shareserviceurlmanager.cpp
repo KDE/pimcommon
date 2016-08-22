@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QMenu>
 #include <QDesktopServices>
+#include <QUrlQuery>
 
 using namespace PimCommon;
 

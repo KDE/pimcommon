@@ -24,6 +24,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 #include <QPointer>
+#include <QUrlQuery>
 
 using namespace PimCommon;
 
