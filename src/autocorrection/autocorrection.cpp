@@ -815,15 +815,12 @@ int AutoCorrection::advancedAutocorrect()
         return -1;
     }
 
-    const int startPos = mCursor.selectionStart();
-    const int length = mWord.length();
-
     const QString trimmedWord = mWord.trimmed();
-    QString actualWord = trimmedWord;
-
-    if (actualWord.isEmpty()) {
+    if (trimmedWord.isEmpty()) {
         return -1;
     }
+
+    QString actualWord = trimmedWord;
 
     const int actualWordLength(actualWord.length());
     if (actualWordLength < mMinFindStringLenght) {
@@ -833,6 +830,8 @@ int AutoCorrection::advancedAutocorrect()
         return -1;
     }
 
+    const int startPos = mCursor.selectionStart();
+    const int length = mWord.length();
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
     const QChar lastChar = actualWord.at(actualWord.length() - 1);
