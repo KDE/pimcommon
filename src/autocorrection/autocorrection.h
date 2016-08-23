@@ -88,6 +88,8 @@ public:
 
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
 
+    void setNonBreakingSpace(const QChar &nonBreakingSpace);
+
 private:
     bool isFrenchLanguage() const;
     void readConfig();
@@ -104,7 +106,6 @@ private:
 
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
     void selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition);
-    bool previousCharacterIsSpace(QTextCursor &cursor, int cursorPosition);
 
     bool autoFormatURLs();
     bool autoBoldUnderline();
@@ -133,6 +134,7 @@ private:
     int mMinFindStringLenght;
     QString mWord;
     QTextCursor mCursor;
+    QChar mNonBreakingSpace;
 
     QString mAutoCorrectLang;
     QStringList mCacheNameOfDays;

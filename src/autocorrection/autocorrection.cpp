@@ -47,6 +47,7 @@ AutoCorrection::AutoCorrection()
       mMaxFindStringLenght(0),
       mMinFindStringLenght(0)
 {
+    mNonBreakingSpace = QChar(QChar::Nbsp);
     // default double quote open 0x201c
     // default double quote close 0x201d
     // default single quote open 0x2018
@@ -454,32 +455,30 @@ void AutoCorrection::superscriptAppendix()
 }
 
 void AutoCorrection::addNonBreakingSpace()
-{
+{    
     if (mAddNonBreakingSpace && isFrenchLanguage()) {
-        if (mWord.at(0) == QLatin1Char(':') ||
-                mWord.at(0) == QLatin1Char(';') ||
-                mWord.at(0) == QLatin1Char('!') ||
-                mWord.at(0) == QLatin1Char('?')) {
-            //QTextCursor cursor(mCursor);
-            //if (previousCharacterIsSpace(cursor, cursorPosition)) {
+        const QTextBlock block = mCursor.block();
+        const QString text = block.text();
+        const QChar lastChar = text.at(mCursor.position() - 1 - block.position());
 
-            //}
-
-            //TODO add more if necessary
+        if (lastChar == QLatin1Char(':') ||
+                lastChar == QLatin1Char(';') ||
+                lastChar == QLatin1Char('!') ||
+                lastChar == QLatin1Char('?')) {
+            const int pos = mCursor.position() - 2 - block.position();
+            if (pos >= 0) {
+                const QChar previousChar = text.at(pos);
+                if (previousChar.isSpace()) {
+                    QTextCursor cursor(mCursor);
+                    cursor.setPosition(pos);
+                    cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
+                    cursor.deleteChar();
+                    mCursor.insertText(mNonBreakingSpace);
+                }
+            }
         }
     }
 }
-
-bool AutoCorrection::previousCharacterIsSpace(QTextCursor &cursor, int cursorPosition)
-{
-    cursor.setPosition(cursorPosition);
-    cursor.movePosition(QTextCursor::PreviousCharacter);
-    cursorPosition = qMax(cursorPosition - 2, 0);
-    cursor.setPosition(cursorPosition, QTextCursor::KeepAnchor);
-    const QString selectedText(cursor.selectedText());
-    return selectedText.isEmpty() ? false : selectedText.at(0).isSpace();
- }
-
 
 bool AutoCorrection::autoBoldUnderline()
 {
@@ -738,6 +737,11 @@ bool AutoCorrection::excludeToUppercase(const QString &word) const
     return false;
 }
 
+void AutoCorrection::setNonBreakingSpace(const QChar &nonBreakingSpace)
+{
+    mNonBreakingSpace = nonBreakingSpace;
+}
+
 void AutoCorrection::uppercaseFirstCharOfSentence()
 {
     if (!mUppercaseFirstCharOfSentence) {
@@ -939,7 +943,6 @@ void AutoCorrection::replaceTypographicQuotes()
     //     b. and the previous quote of a different kind (so that we get empty quotations right)
 
     bool ending = true;
-    const QChar nbsp = QChar(QChar::Nbsp);
     for (int i = mWord.length(); i > 1; --i) {
         const QChar c = mWord.at(i - 1);
         if (c == QLatin1Char('"') || c == QLatin1Char('\'')) {
@@ -978,13 +981,13 @@ void AutoCorrection::replaceTypographicQuotes()
             if (doubleQuotes && mReplaceDoubleQuotes) {
                 if (ending) {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicDoubleQuotes.end));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicDoubleQuotes.end));
                     } else {
                         mWord[i - 1] = mTypographicDoubleQuotes.end;
                     }
                 } else {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicDoubleQuotes.begin));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicDoubleQuotes.begin));
                     } else {
                         mWord[i - 1] = mTypographicDoubleQuotes.begin;
                     }
@@ -992,13 +995,13 @@ void AutoCorrection::replaceTypographicQuotes()
             } else if (mReplaceSingleQuotes) {
                 if (ending) {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicSingleQuotes.end));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicSingleQuotes.end));
                     } else {
                         mWord[i - 1] = mTypographicSingleQuotes.end;
                     }
                 } else {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(nbsp + mTypographicSingleQuotes.begin));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicSingleQuotes.begin));
                     } else {
                         mWord[i - 1] = mTypographicSingleQuotes.begin;
                     }
@@ -1011,12 +1014,12 @@ void AutoCorrection::replaceTypographicQuotes()
     if (mWord.at(0) == QLatin1Char('"') && mReplaceDoubleQuotes) {
         mWord[0] = mTypographicDoubleQuotes.begin;
         if (addNonBreakingSpace) {
-            mWord.insert(1, nbsp);
+            mWord.insert(1, mNonBreakingSpace);
         }
     } else if (mWord.at(0) == QLatin1Char('\'') && mReplaceSingleQuotes) {
         mWord[0] = mTypographicSingleQuotes.begin;
         if (addNonBreakingSpace) {
-            mWord.insert(1, nbsp);
+            mWord.insert(1, mNonBreakingSpace);
         }
     }
 }

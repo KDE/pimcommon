@@ -44,6 +44,7 @@ private Q_SLOTS:
     void shouldAutocorrectMultiWord_data();
     void shouldAutocorrectMultiWord();
 
+    void shouldAddNonBreakingSpace_data();
     void shouldAddNonBreakingSpace();
 
 
