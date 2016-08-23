@@ -454,32 +454,33 @@ void AutoCorrection::superscriptAppendix()
 }
 
 void AutoCorrection::addNonBreakingSpace()
-{
+{    
     if (mAddNonBreakingSpace && isFrenchLanguage()) {
-        if (mWord.at(0) == QLatin1Char(':') ||
-                mWord.at(0) == QLatin1Char(';') ||
-                mWord.at(0) == QLatin1Char('!') ||
-                mWord.at(0) == QLatin1Char('?')) {
-            //QTextCursor cursor(mCursor);
-            //if (previousCharacterIsSpace(cursor, cursorPosition)) {
+        const QTextBlock block = mCursor.block();
+        const QString text = block.text();
+        const QChar lastChar = text.at(mCursor.position() - 1 - block.position());
 
-            //}
-
-            //TODO add more if necessary
+        if (lastChar == QLatin1Char(':') ||
+                lastChar == QLatin1Char(';') ||
+                lastChar == QLatin1Char('!') ||
+                lastChar == QLatin1Char('?')) {
+            const int pos = mCursor.position() - 2 - block.position();
+            if (pos >= 0) {
+                if (mCursor.position() - 2 - block.position()) {
+                    const QChar previousChar = text.at(pos);
+                    if (previousChar.isSpace()) {
+                        QTextCursor cursor(mCursor);
+                        cursor.setPosition(pos);
+                        cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
+                        const QChar nbsp = QChar(QChar::Nbsp);
+                        cursor.deleteChar();
+                        mCursor.insertText(nbsp);
+                    }
+                }
+            }
         }
     }
 }
-
-bool AutoCorrection::previousCharacterIsSpace(QTextCursor &cursor, int cursorPosition)
-{
-    cursor.setPosition(cursorPosition);
-    cursor.movePosition(QTextCursor::PreviousCharacter);
-    cursorPosition = qMax(cursorPosition - 2, 0);
-    cursor.setPosition(cursorPosition, QTextCursor::KeepAnchor);
-    const QString selectedText(cursor.selectedText());
-    return selectedText.isEmpty() ? false : selectedText.at(0).isSpace();
- }
-
 
 bool AutoCorrection::autoBoldUnderline()
 {

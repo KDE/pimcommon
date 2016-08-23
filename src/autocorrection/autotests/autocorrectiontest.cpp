@@ -522,7 +522,13 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace()
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setLanguage(QStringLiteral("fr"));
     autocorrection.setAddNonBreakingSpace(true);
-    //TODO
+
+    QTextDocument doc;
+    QString text = QStringLiteral("boo !");
+    doc.setPlainText(text);
+    int position = text.length();
+    autocorrection.autocorrect(false, doc, position);
+    QCOMPARE(doc.toPlainText(), text);
 }
 
 void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
