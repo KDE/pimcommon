@@ -12,3 +12,6 @@ libraries:
    cmake: "KF5::PimCommon"
 cmakename: KF5PimCommon
 
+public_lib: true
+group: kdepim
+
