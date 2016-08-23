@@ -464,7 +464,8 @@ void AutoCorrection::addNonBreakingSpace()
         if (lastChar == QLatin1Char(':') ||
                 lastChar == QLatin1Char(';') ||
                 lastChar == QLatin1Char('!') ||
-                lastChar == QLatin1Char('?')) {
+                lastChar == QLatin1Char('?') ||
+                lastChar == QLatin1Char('%')) {
             const int pos = mCursor.position() - 2 - block.position();
             if (pos >= 0) {
                 const QChar previousChar = text.at(pos);
@@ -477,6 +478,12 @@ void AutoCorrection::addNonBreakingSpace()
                 }
             }
         }
+#if 0
+        else if (lastChar == QLatin1Char('C') && text.at(mCursor.position() - 2 - block.position()) == QLatin1Char('°')) {
+            //TODO
+        }
+#endif
+        //TODO look at °C too
     }
 }
 
