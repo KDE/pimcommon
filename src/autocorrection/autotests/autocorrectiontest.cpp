@@ -531,6 +531,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace_data()
     QTest::newRow("nonfrenchlanguage") << QStringLiteral("boo :") << QStringLiteral("boo :") << QStringLiteral("ge") << true;
     QTest::newRow("onecharacter") << QStringLiteral(":") << QStringLiteral(":") << QStringLiteral("fr") << true;
     QTest::newRow("onecharacter2") << QStringLiteral(" ") << QStringLiteral(" ") << QStringLiteral("fr") << true;
+    QTest::newRow("percentage") << QStringLiteral("50 %") << QStringLiteral("50b%") << QStringLiteral("fr") << true;
 }
 
 void AutoCorrectionTest::shouldAddNonBreakingSpace()
