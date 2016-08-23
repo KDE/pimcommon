@@ -522,13 +522,15 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace()
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setLanguage(QStringLiteral("fr"));
     autocorrection.setAddNonBreakingSpace(true);
+    autocorrection.setNonBreakingSpace(QChar(QLatin1Char('b')));
 
     QTextDocument doc;
     QString text = QStringLiteral("boo !");
     doc.setPlainText(text);
     int position = text.length();
+    const QString expected = QStringLiteral("boob!");
     autocorrection.autocorrect(false, doc, position);
-    QCOMPARE(doc.toPlainText(), text);
+    QCOMPARE(doc.toPlainText(), expected);
 }
 
 void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
@@ -590,6 +592,9 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.setReplaceSingleQuotes(true);
     autocorrection.setLanguage(QStringLiteral("fr"));
     autocorrection.setAddNonBreakingSpace(true);
+    //TODO fix me verify why it doesn't use no breaking space
+    const QChar nbsp = QChar(/*QChar::Nbsp*/QLatin1Char('b'));
+    autocorrection.setNonBreakingSpace(nbsp);
 
 
     PimCommon::AutoCorrection::TypographicQuotes doubleQuote;
@@ -610,8 +615,6 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     doc.setPlainText(QLatin1Char('"') + text);
     int position = text.length();
     autocorrection.autocorrect(false, doc, position);
-    //TODO fix me verify why it doesn't use no breaking space
-    const QChar nbsp = QChar(/*QChar::Nbsp*/QLatin1Char(' '));
 
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text));
 

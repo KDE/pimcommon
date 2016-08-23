@@ -88,6 +88,8 @@ public:
 
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
 
+    void setNonBreakingSpace(const QChar &nonBreakingSpace);
+
 private:
     bool isFrenchLanguage() const;
     void readConfig();
@@ -132,6 +134,7 @@ private:
     int mMinFindStringLenght;
     QString mWord;
     QTextCursor mCursor;
+    QChar mNonBreakingSpace;
 
     QString mAutoCorrectLang;
     QStringList mCacheNameOfDays;
