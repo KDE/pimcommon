@@ -516,21 +516,41 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord()
     QCOMPARE(doc.toPlainText(), convertedString);
 }
 
+void AutoCorrectionTest::shouldAddNonBreakingSpace_data()
+{
+    QTest::addColumn<QString>("originalString");
+    QTest::addColumn<QString>("convertedString");
+    QTest::addColumn<QString>("language");
+    QTest::addColumn<bool>("enableAddNonBreakingSpace");
+    QTest::newRow("convert1") << QStringLiteral("boo !") << QStringLiteral("boob!") << QStringLiteral("fr") << true;
+    QTest::newRow("disable") << QStringLiteral("boo !") << QStringLiteral("boo !") << QStringLiteral("fr") << false;
+    QTest::newRow("nonchanges") << QStringLiteral("boo") << QStringLiteral("boo") << QStringLiteral("fr") << true;
+    QTest::newRow("convert2") << QStringLiteral("boo ;") << QStringLiteral("boob;") << QStringLiteral("fr") << true;
+    QTest::newRow("convert3") << QStringLiteral("boo ?") << QStringLiteral("boob?") << QStringLiteral("fr") << true;
+    QTest::newRow("convert4") << QStringLiteral("boo :") << QStringLiteral("boob:") << QStringLiteral("fr") << true;
+    QTest::newRow("nonfrenchlanguage") << QStringLiteral("boo :") << QStringLiteral("boo :") << QStringLiteral("ge") << true;
+    QTest::newRow("onecharacter") << QStringLiteral(":") << QStringLiteral(":") << QStringLiteral("fr") << true;
+    QTest::newRow("onecharacter2") << QStringLiteral(" ") << QStringLiteral(" ") << QStringLiteral("fr") << true;
+}
+
 void AutoCorrectionTest::shouldAddNonBreakingSpace()
 {
+    QFETCH(QString, originalString);
+    QFETCH(QString, convertedString);
+    QFETCH(QString, language);
+    QFETCH(bool, enableAddNonBreakingSpace);
+
     PimCommon::AutoCorrection autocorrection;
     autocorrection.setEnabledAutoCorrection(true);
-    autocorrection.setLanguage(QStringLiteral("fr"));
-    autocorrection.setAddNonBreakingSpace(true);
+    autocorrection.setAddNonBreakingSpace(enableAddNonBreakingSpace);
+    autocorrection.setLanguage(language);
     autocorrection.setNonBreakingSpace(QChar(QLatin1Char('b')));
 
     QTextDocument doc;
-    QString text = QStringLiteral("boo !");
-    doc.setPlainText(text);
-    int position = text.length();
-    const QString expected = QStringLiteral("boob!");
+    doc.setPlainText(originalString);
+    int position = originalString.length();
     autocorrection.autocorrect(false, doc, position);
-    QCOMPARE(doc.toPlainText(), expected);
+    QCOMPARE(doc.toPlainText(), convertedString);
 }
 
 void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
