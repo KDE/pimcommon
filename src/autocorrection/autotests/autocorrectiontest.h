@@ -47,7 +47,6 @@ private Q_SLOTS:
     void shouldAddNonBreakingSpace_data();
     void shouldAddNonBreakingSpace();
 
-
     void shouldReplaceWithMultiOption_data();
     void shouldReplaceWithMultiOption();
 
