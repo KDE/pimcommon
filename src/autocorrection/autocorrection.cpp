@@ -178,7 +178,7 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             fixTwoUppercaseChars();
             capitalizeWeekDays();
             replaceTypographicQuotes();
-            if (mWord.length() == 1) {
+            if (mWord.length() <= 2) {
                 addNonBreakingSpace();
             }
         }
@@ -478,12 +478,23 @@ void AutoCorrection::addNonBreakingSpace()
                 }
             }
         }
-#if 0
-        else if (lastChar == QLatin1Char('C') && text.at(mCursor.position() - 2 - block.position()) == QLatin1Char('°')) {
-            //TODO
+        else {
+            //°C (degres)
+            const QChar previousChar = text.at(mCursor.position() - 2 - block.position());
+            if (lastChar == QLatin1Char('C') && previousChar == QChar(0x000B0)) {
+                const int pos = mCursor.position() - 3 - block.position();
+                if (pos >= 0) {
+                    const QChar previousChar = text.at(pos);
+                    if (previousChar.isSpace()) {
+                        QTextCursor cursor(mCursor);
+                        cursor.setPosition(pos);
+                        cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
+                        cursor.deleteChar();
+                        mCursor.insertText(mNonBreakingSpace);
+                    }
+                }
+            }
         }
-#endif
-        //TODO look at °C too
     }
 }
 
