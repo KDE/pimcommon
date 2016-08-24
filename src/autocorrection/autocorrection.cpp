@@ -455,7 +455,7 @@ void AutoCorrection::superscriptAppendix()
 }
 
 void AutoCorrection::addNonBreakingSpace()
-{    
+{
     if (mAddNonBreakingSpace && isFrenchLanguage()) {
         const QTextBlock block = mCursor.block();
         const QString text = block.text();
@@ -477,8 +477,7 @@ void AutoCorrection::addNonBreakingSpace()
                     mCursor.insertText(mNonBreakingSpace);
                 }
             }
-        }
-        else {
+        } else {
             //°C (degres)
             const QChar previousChar = text.at(mCursor.position() - 2 - block.position());
             if (lastChar == QLatin1Char('C') && previousChar == QChar(0x000B0)) {
@@ -1045,8 +1044,9 @@ void AutoCorrection::replaceTypographicQuotes()
 void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
 {
     auto kdelang = QLocale::system().uiLanguages().at(0);
-    if (kdelang == QLatin1String("C"))
+    if (kdelang == QLatin1String("C")) {
         kdelang = QStringLiteral("en_US");
+    }
     kdelang.remove(QRegularExpression(QStringLiteral("@.*")));
 
     mUpperCaseExceptions.clear();

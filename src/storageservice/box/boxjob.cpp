@@ -532,7 +532,7 @@ void BoxJob::parseDeleteFolder(const QString &data)
     bool ok;
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
-    qCDebug(PIMCOMMON_LOG)<<" info"<<info;
+    qCDebug(PIMCOMMON_LOG) << " info" << info;
 #else
     Q_UNUSED(data);
 #endif
@@ -546,7 +546,7 @@ void BoxJob::parseDeleteFile(const QString &data)
     bool ok;
 
     const QMap<QString, QVariant> info = parser.parse(data.toUtf8(), &ok).toMap();
-    qCDebug(PIMCOMMON_LOG)<<" info"<<info;
+    qCDebug(PIMCOMMON_LOG) << " info" << info;
 #else
     Q_UNUSED(data);
 #endif

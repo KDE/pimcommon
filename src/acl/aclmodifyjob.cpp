@@ -81,7 +81,7 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
         }
     }
     OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface =
-            PimCommon::Util::createImapSettingsInterface(resource);
+        PimCommon::Util::createImapSettingsInterface(resource);
 
     QString loginName;
     QString serverName;
@@ -176,10 +176,10 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
         }
     }
     folderNames.sort();
-    if ( KMessageBox::Continue != KMessageBox::warningContinueCancelList(0,
-                                                                         i18n( "Do you really want to apply this folders permissions on the subdirectories:" ),
-                                                                         folderNames,
-                                                                         i18n( "Apply Permissions" ) ) ) {
+    if (KMessageBox::Continue != KMessageBox::warningContinueCancelList(0,
+            i18n("Do you really want to apply this folders permissions on the subdirectories:"),
+            folderNames,
+            i18n("Apply Permissions"))) {
         deleteLater();
         qCDebug(PIMCOMMON_LOG) << "AclModifyJob: User canceled .";
         return;

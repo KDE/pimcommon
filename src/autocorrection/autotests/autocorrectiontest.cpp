@@ -450,11 +450,9 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     map.insert(QStringLiteral("a boo"), QStringLiteral("b bla"));
     QTest::newRow("multiword-2 with uppercase") << QStringLiteral("toto. A boo") << QStringLiteral("toto. B bla") << map;
 
-
     map.clear();
     map.insert(QStringLiteral("a boo1111111111"), QStringLiteral("b bla"));
     QTest::newRow("multiword-3") << QStringLiteral("a boo") << QStringLiteral("a boo") << map;
-
 
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
@@ -471,7 +469,6 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("Bla"));
     QTest::newRow("withuppercase-4") << QStringLiteral("boo") << QStringLiteral("bla") << map;
-
 
     map.clear();
     map.insert(QStringLiteral("booooo"), QStringLiteral("bla"));
@@ -490,7 +487,6 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
     QTest::newRow("dontreplaceinpieceofword") << QStringLiteral("voitureboo") << QStringLiteral("voitureboo") << map;
-
 
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
@@ -618,7 +614,6 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     const QChar nbsp = QChar(/*QChar::Nbsp*/QLatin1Char('b'));
     autocorrection.setNonBreakingSpace(nbsp);
 
-
     PimCommon::AutoCorrection::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
@@ -629,7 +624,6 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     simpleQuote.end = QLatin1Char('B');
 
     autocorrection.setTypographicSingleQuotes(simpleQuote);
-
 
     QTextDocument doc;
     QString text = QStringLiteral("sss");
@@ -646,7 +640,6 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(text + nbsp + doubleQuote.end));
 
-
     //Simple quote
     text = QStringLiteral("sss");
     doc.setPlainText(text + QStringLiteral("\'"));
@@ -654,13 +647,11 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(text + nbsp + simpleQuote.end));
 
-
     text = QStringLiteral("sss");
     doc.setPlainText(QStringLiteral("\"") + text + QStringLiteral("\""));
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
-
 
     //Simple quote
     text = QStringLiteral("sss");
@@ -668,7 +659,6 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(simpleQuote.begin + nbsp + text + nbsp + simpleQuote.end));
-
 
     text = QStringLiteral("(");
     doc.setPlainText(QStringLiteral("\"") + text + QStringLiteral("\""));

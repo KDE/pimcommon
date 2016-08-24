@@ -25,15 +25,17 @@ AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
     for (int i = QLocale::Abkhazian; i <= QLocale::LastLanguage; ++i) {
         const auto lang = static_cast<QLocale::Language>(i);
         QLocale locale(lang);
-        if (locale.name() == QLatin1String("C"))
+        if (locale.name() == QLatin1String("C")) {
             continue;
+        }
         addItem(QLocale::system().languageToString(lang), locale.name());
     }
     QString defaultLang;
     if (!QLocale::system().uiLanguages().isEmpty()) {
         defaultLang = QLocale::system().uiLanguages().at(0);
-        if (defaultLang == QLatin1String("C"))
+        if (defaultLang == QLatin1String("C")) {
             defaultLang = QStringLiteral("en_US");
+        }
     }
     const int index = findData(defaultLang);
     setCurrentIndex(index);
