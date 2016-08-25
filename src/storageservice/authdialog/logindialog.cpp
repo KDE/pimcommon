@@ -32,15 +32,13 @@ LoginDialog::LoginDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Authorize"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &LoginDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LoginDialog::reject);
-    mOkButton->setDefault(true);
 
     QWidget *w = new QWidget;
     mainLayout->addWidget(w);
@@ -49,16 +47,16 @@ LoginDialog::LoginDialog(QWidget *parent)
     QGridLayout *grid = new QGridLayout;
     w->setLayout(grid);
 
-    mLabUsername = new QLabel(i18n("Username:"));
+    mLabUsername = new QLabel(i18n("Username:"), this);
     grid->addWidget(mLabUsername, 0, 0);
 
-    mUsername = new QLineEdit;
+    mUsername = new QLineEdit(this);
     mUsername->setClearButtonEnabled(true);
     grid->addWidget(mUsername, 0, 1);
 
-    QLabel *lab = new QLabel(i18n("Password:"));
+    QLabel *lab = new QLabel(i18n("Password:"), this);
     grid->addWidget(lab, 1, 0);
-    mPassword = new QLineEdit;
+    mPassword = new QLineEdit(this);
     grid->addWidget(mPassword, 1, 1);
     mPassword->setEchoMode(QLineEdit::Password);
 
