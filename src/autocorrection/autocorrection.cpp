@@ -418,7 +418,8 @@ void AutoCorrection::superscriptAppendix()
                 QString::ConstIterator constIter = number.constBegin();
                 bool found = true;
                 // don't apply superscript to 1th, 2th and 3th
-                if (number.length() == 1 &&
+                const int numberLength(number.length());
+                if (numberLength == 1 &&
                         (*constIter == QLatin1Char('1') ||
                          *constIter == QLatin1Char('2') ||
                          *constIter == QLatin1Char('3'))) {
@@ -433,7 +434,7 @@ void AutoCorrection::superscriptAppendix()
                         ++constIter;
                     }
                 }
-                if (found && number.length() + i.value().length() == trimmedLenght) {
+                if (found && numberLength + i.value().length() == trimmedLenght) {
                     startPos = mCursor.selectionStart() + pos;
                     endPos = startPos - pos + trimmedLenght;
                     break;
