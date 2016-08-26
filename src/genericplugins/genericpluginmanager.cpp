@@ -17,6 +17,7 @@
 
 #include "genericplugin.h"
 #include "genericpluginmanager.h"
+#include "pimcommon_debug.h"
 
 #include <kpluginmetadata.h>
 #include <KPluginLoader>
@@ -119,7 +120,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
             mPluginList.push_back(info);
             unique.insert(info.saveName());
         } else {
-            qWarning() << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
+            qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<GenericPluginInfo>::iterator end(mPluginList.end());
