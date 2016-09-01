@@ -36,8 +36,7 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent), mOkButton(Q_NULLPTR)
 {
     setWindowTitle(defaultTemplate ? i18n("Default template") : i18n("Template"));
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = Q_NULLPTR;
     if (defaultTemplate) {
         buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);

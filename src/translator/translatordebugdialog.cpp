@@ -30,17 +30,17 @@ TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Translator Debug"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    mUser1Button = new QPushButton;
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    mUser1Button = new QPushButton(this);
     buttonBox->addButton(mUser1Button, QDialogButtonBox::ActionRole);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &TranslatorDebugDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TranslatorDebugDialog::reject);
     mUser1Button->setText(i18n("Save As..."));
     connect(mUser1Button, &QPushButton::clicked, this, &TranslatorDebugDialog::slotSaveAs);
 
-    mEdit = new KPIMTextEdit::PlainTextEditorWidget;
+    mEdit = new KPIMTextEdit::PlainTextEditorWidget(this);
     mEdit->setReadOnly(true);
     mainLayout->addWidget(mEdit);
     mainLayout->addWidget(buttonBox);

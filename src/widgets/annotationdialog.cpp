@@ -64,8 +64,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     d->mHasAnnotation = item.hasAttribute<Akonadi::EntityAnnotationsAttribute>();
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QWidget *mainWidget = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(mainWidget);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);

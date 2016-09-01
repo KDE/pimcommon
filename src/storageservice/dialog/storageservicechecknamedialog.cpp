@@ -34,8 +34,7 @@ StorageServiceCheckNameDialog::StorageServiceCheckNameDialog(QWidget *parent)
 {
     setWindowTitle(i18n("New name"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

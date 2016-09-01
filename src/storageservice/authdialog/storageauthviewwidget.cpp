@@ -26,7 +26,7 @@ using namespace PimCommon;
 StorageAuthViewWidget::StorageAuthViewWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(this);
     lay->setMargin(0);
     mWebView = new StorageAuthWebView;
     mProgressBar = new QProgressBar;
@@ -37,7 +37,6 @@ StorageAuthViewWidget::StorageAuthViewWidget(QWidget *parent)
     connect(mWebView, &StorageAuthWebView::loadFinished, this, &StorageAuthViewWidget::slotLoadFinished);
     lay->addWidget(mWebView);
     lay->addWidget(mProgressBar);
-    setLayout(lay);
 }
 
 StorageAuthViewWidget::~StorageAuthViewWidget()

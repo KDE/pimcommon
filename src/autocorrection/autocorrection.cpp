@@ -775,6 +775,7 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
     int position = mCursor.selectionEnd();
 
     const QString text = mCursor.selectedText();
+    qDebug()<<" text :"<< text << "position " << position << " block.position()" << block.position() << " startPos "<<startPos << mCursor.atStart();
 
     if (text.isEmpty()) {// start of a paragraph
         if (!excludeToUppercase(mWord)) {

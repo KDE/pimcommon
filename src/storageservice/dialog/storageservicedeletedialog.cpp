@@ -93,8 +93,7 @@ StorageServiceDeleteDialog::StorageServiceDeleteDialog(DeleteType type, PimCommo
     connect(mStorageServiceProgressIndicator, &PimCommon::StorageServiceProgressIndicator::updatePixmap, this, &StorageServiceDeleteDialog::slotUpdatePixmap);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mUser1Button = new QPushButton;
     buttonBox->addButton(mUser1Button, QDialogButtonBox::ActionRole);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &StorageServiceDeleteDialog::reject);
