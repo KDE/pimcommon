@@ -104,23 +104,24 @@ bool GenericPluginManagerPrivate::initializePlugins()
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData & md) {
         return md.serviceTypes().contains(s_serviceTypeName);
     });
-
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
     QSet<QString> unique;
     while (i.hasPrevious()) {
         GenericPluginInfo info;
         info.metaData = i.previous();
-        if (pluginVersion() == info.metaData.version()) {
-            // only load plugins once, even if found multiple times!
-            if (unique.contains(info.saveName())) {
-                continue;
+        if (info.metaData.isEnabledByDefault()) {
+            if (pluginVersion() == info.metaData.version()) {
+                // only load plugins once, even if found multiple times!
+                if (unique.contains(info.saveName())) {
+                    continue;
+                }
+                info.plugin = Q_NULLPTR;
+                mPluginList.push_back(info);
+                unique.insert(info.saveName());
+            } else {
+                qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
             }
-            info.plugin = Q_NULLPTR;
-            mPluginList.push_back(info);
-            unique.insert(info.saveName());
-        } else {
-            qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<GenericPluginInfo>::iterator end(mPluginList.end());
