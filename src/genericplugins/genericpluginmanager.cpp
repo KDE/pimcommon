@@ -22,6 +22,8 @@
 #include <kpluginmetadata.h>
 #include <KPluginLoader>
 #include <KPluginFactory>
+#include <KSharedConfig>
+#include <KConfigGroup>
 #include <qfileinfo.h>
 #include <QVariant>
 #include <QSet>
@@ -104,13 +106,27 @@ bool GenericPluginManagerPrivate::initializePlugins()
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData & md) {
         return md.serviceTypes().contains(s_serviceTypeName);
     });
+
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
+    QStringList enabledPlugins;
+    QStringList disabledPlugins;
+    const QString groupPluginName = QStringLiteral("GenericPlugin%1").arg(pluginName);
+    if (config->hasGroup(groupPluginName)) {
+        KConfigGroup grp = config->group(groupPluginName);
+        enabledPlugins = grp.readEntry(QStringLiteral("PluginsEnabled"), QStringList());
+        disabledPlugins = grp.readEntry(QStringLiteral("PluginsDisabled"), QStringList());
+    }
+
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
     QSet<QString> unique;
     while (i.hasPrevious()) {
         GenericPluginInfo info;
         info.metaData = i.previous();
-        if (info.metaData.isEnabledByDefault()) {
+        const bool pluginEnabledByUser = enabledPlugins.contains(info.metaData.name());
+        const bool pluginDisabledByUser = disabledPlugins.contains(info.metaData.name());
+        if ((info.metaData.isEnabledByDefault() && !pluginDisabledByUser)
+                || (!info.metaData.isEnabledByDefault() && pluginEnabledByUser)) {
             if (pluginVersion() == info.metaData.version()) {
                 // only load plugins once, even if found multiple times!
                 if (unique.contains(info.saveName())) {
