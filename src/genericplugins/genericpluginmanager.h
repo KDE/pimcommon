@@ -40,6 +40,7 @@ public:
         }
         QString mDescription;
         QString mName;
+        QString mIdentifier;
         bool mEnableByDefault;
     };
 
