@@ -30,6 +30,19 @@ class PIMCOMMON_EXPORT GenericPluginManager : public QObject
 {
     Q_OBJECT
 public:
+    class GenericPluginData
+    {
+    public:
+        GenericPluginData()
+            : mEnableByDefault(false)
+        {
+
+        }
+        QString mDescription;
+        QString mName;
+        bool mEnableByDefault;
+    };
+
     explicit GenericPluginManager(QObject *parent = Q_NULLPTR);
     ~GenericPluginManager();
 
@@ -44,6 +57,7 @@ public:
     static GenericPluginManager *self();
 
     QVector<PimCommon::GenericPlugin *> pluginsList() const;
+    QVector<PimCommon::GenericPluginManager::GenericPluginData> pluginsDataList() const;
 private:
     GenericPluginManagerPrivate *const d;
 };

@@ -91,6 +91,10 @@ public:
     QString serviceTypeName;
     QString pluginName;
     QVector<GenericPluginInfo> mPluginList;
+
+    QVector<GenericPluginManager::GenericPluginData> pluginsDataList() const;
+private:
+    QVector<GenericPluginManager::GenericPluginData> mPluginDataList;
     GenericPluginManager *q;
 };
 
@@ -106,6 +110,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData & md) {
         return md.serviceTypes().contains(s_serviceTypeName);
     });
+
 
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
     QStringList enabledPlugins;
@@ -123,6 +128,13 @@ bool GenericPluginManagerPrivate::initializePlugins()
     while (i.hasPrevious()) {
         GenericPluginInfo info;
         info.metaData = i.previous();
+
+        GenericPluginManager::GenericPluginData pluginData;
+        pluginData.mDescription = info.metaData.description();
+        pluginData.mName = info.metaData.name();
+        pluginData.mEnableByDefault = info.metaData.isEnabledByDefault();
+        mPluginDataList.append(pluginData);
+
         const bool pluginEnabledByUser = enabledPlugins.contains(info.metaData.name());
         const bool pluginDisabledByUser = disabledPlugins.contains(info.metaData.name());
         if ((info.metaData.isEnabledByDefault() && !pluginDisabledByUser)
@@ -145,6 +157,11 @@ bool GenericPluginManagerPrivate::initializePlugins()
         loadPlugin(&(*it));
     }
     return true;
+}
+
+QVector<GenericPluginManager::GenericPluginData> GenericPluginManagerPrivate::pluginsDataList() const
+{
+    return mPluginDataList;
 }
 
 QVector<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
@@ -212,5 +229,10 @@ GenericPluginManager *GenericPluginManager::self()
 QVector<GenericPlugin *> GenericPluginManager::pluginsList() const
 {
     return d->pluginsList();
+}
+
+QVector<GenericPluginManager::GenericPluginData> GenericPluginManager::pluginsDataList() const
+{
+    return d->pluginsDataList();
 }
 
