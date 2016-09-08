@@ -56,5 +56,5 @@ void PimCommon::PluginUtil::savePluginSettings(const QString &groupName, const Q
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
     KConfigGroup grp = config->group(groupName);
     grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
-    grp.writeEntry(QStringLiteral("1Disabled").arg(prefixSettingKey), disabledPluginsList);
+    grp.writeEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), disabledPluginsList);
 }
