@@ -27,6 +27,21 @@
 
 namespace PimCommon
 {
+
+class PIMCOMMON_EXPORT PluginUtilData
+{
+public:
+    PluginUtilData()
+        : mEnableByDefault(false)
+    {
+
+    }
+    QString mDescription;
+    QString mIdentifier;
+    QString mName;
+    bool mEnableByDefault;
+};
+
 namespace PluginUtil
 {
 PIMCOMMON_EXPORT bool isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
