@@ -182,6 +182,12 @@ set(libpimcommon_generericplugin_SRCS
     genericplugins/pluginutil.cpp
     )
 
+set(libpimcommon_configure_plugins_SRCS
+    configureplugins/configurepluginslistwidget.cpp
+    configureplugins/configurepluginswidget.cpp
+    )
+ 
+
 
 set(libpimcommon_genericgrantlee_SRCS
     genericgrantlee/genericgrantleeformatter.cpp
@@ -189,6 +195,7 @@ set(libpimcommon_genericgrantlee_SRCS
 
 set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
+    ${libpimcommon_configure_plugins_SRCS}
     ${libpimcommon_job_SRCS}
     ${libpimcommon_genericgrantlee_SRCS}
     ${libpimcommon_manageserversidesubscription_SRCS}
