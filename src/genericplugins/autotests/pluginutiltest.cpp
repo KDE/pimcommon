@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "pluginutiltest.h"
 #include "../pluginutil.h"
 #include <QTest>
@@ -30,7 +29,6 @@ PluginUtilTest::~PluginUtilTest()
 {
 
 }
-
 
 void PluginUtilTest::shouldTestIsEnabled_data()
 {
@@ -52,7 +50,6 @@ void PluginUtilTest::shouldTestIsEnabled_data()
     QStringList disabled{ QStringLiteral("foo") };
     QTest::newRow("usersettingdisabled") << QStringList() << disabled << true << QStringLiteral("foo") << false;
     QTest::newRow("usersettingdisabled-2") << QStringList() << disabled << false << QStringLiteral("foo") << false;
-
 
     QStringList enabled{ QStringLiteral("foo") };
     QTest::newRow("usersettingenabled") << enabled << QStringList() << true << QStringLiteral("foo") << true;

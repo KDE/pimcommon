@@ -111,7 +111,6 @@ QString GenericPluginManagerPrivate::configPrefixSettingKey() const
     return QStringLiteral("%1Plugin").arg(pluginName);
 }
 
-
 bool GenericPluginManagerPrivate::initializePlugins()
 {
     if (serviceTypeName.isEmpty() || pluginName.isEmpty()) {
