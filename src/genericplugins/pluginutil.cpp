@@ -50,3 +50,11 @@ QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const Q
     pair.second = disabledPlugins;
     return pair;
 }
+
+void PimCommon::PluginUtil::savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList)
+{
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
+    KConfigGroup grp = config->group(groupName);
+    grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
+    grp.writeEntry(QStringLiteral("1Disabled").arg(prefixSettingKey), disabledPluginsList);
+}
