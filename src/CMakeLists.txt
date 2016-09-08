@@ -179,6 +179,7 @@ set(libpimcommon_generericplugin_SRCS
     genericplugins/genericplugin.cpp
     genericplugins/genericplugininterface.cpp
     genericplugins/plugininterface.cpp
+    genericplugins/pluginutil.cpp
     )
 
 
@@ -343,6 +344,7 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     GenericPluginManager
     GenericPlugin
     GenericPluginInterface
+    PluginUtil
     PluginInterface
     REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
     PREFIX PimCommon
