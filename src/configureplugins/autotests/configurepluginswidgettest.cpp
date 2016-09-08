@@ -37,7 +37,7 @@ ConfigurePluginsWidgetTest::~ConfigurePluginsWidgetTest()
 
 void ConfigurePluginsWidgetTest::shouldHaveDefaultValue()
 {
-    ConfigurePluginsWidget w;
+    PimCommon::ConfigurePluginsWidget w;
 
     KMessageWidget *messageWidget = w.findChild<KMessageWidget *>(QStringLiteral("messagewidget"));
     QVERIFY(messageWidget);
@@ -48,10 +48,10 @@ void ConfigurePluginsWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mSplitter);
     QCOMPARE(mSplitter->count(), 2);
 
-    ConfigurePluginsListWidget *mConfigureListWidget = mSplitter->findChild<ConfigurePluginsListWidget *>(QStringLiteral("configureListWidget"));
+    PimCommon::ConfigurePluginsListWidget *mConfigureListWidget = mSplitter->findChild<PimCommon::ConfigurePluginsListWidget *>(QStringLiteral("configureListWidget"));
     QVERIFY(mConfigureListWidget);
 
-    KTextEdit *mDescription = mSplitter->findChild<KTextEdit *>(QStringLiteral("description"));
+    QTextEdit *mDescription = mSplitter->findChild<QTextEdit *>(QStringLiteral("description"));
     QVERIFY(mDescription);
     QVERIFY(mDescription->isReadOnly());
     QVERIFY(mDescription->document()->isEmpty());

@@ -34,7 +34,7 @@ ConfigurePluginsListWidgetTest::~ConfigurePluginsListWidgetTest()
 
 void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()
 {
-    ConfigurePluginsListWidget w;
+    PimCommon::ConfigurePluginsListWidget w;
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
