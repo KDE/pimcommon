@@ -103,7 +103,7 @@ private:
 
 QString GenericPluginManagerPrivate::configGroupName() const
 {
-    return QStringLiteral("GenericPlugin").arg(pluginName);
+    return QStringLiteral("GenericPlugin-%1").arg(pluginName);
 }
 
 QString GenericPluginManagerPrivate::configPrefixSettingKey() const
