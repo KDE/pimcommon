@@ -17,6 +17,8 @@
 
 
 #include "pluginutil.h"
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId)
 {
@@ -30,4 +32,21 @@ bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsL
         return true;
     }
     return false;
+}
+
+QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const QString &groupName, const QString &prefixSettingKey)
+{
+    QPair<QStringList, QStringList> pair;
+    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
+    QStringList enabledPlugins;
+    QStringList disabledPlugins;
+    if (config->hasGroup(groupName)) {
+        KConfigGroup grp = config->group(groupName);
+        enabledPlugins = grp.readEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), QStringList());
+        disabledPlugins = grp.readEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), QStringList());
+    }
+
+    pair.first = enabledPlugins;
+    pair.second = disabledPlugins;
+    return pair;
 }

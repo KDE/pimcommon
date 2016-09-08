@@ -23,12 +23,14 @@
 
 #include <QString>
 #include <QStringList>
+#include <QPair>
 
 namespace PimCommon
 {
 namespace PluginUtil
 {
 PIMCOMMON_EXPORT bool isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
+PIMCOMMON_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
 }
 }
 
