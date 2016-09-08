@@ -548,6 +548,15 @@ ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     RELATIVE templatewidgets
     )
 
+ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
+    HEADER_NAMES
+    ConfigurePluginsListWidget
+    ConfigurePluginsWidget
+    REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
+    PREFIX PimCommon
+    RELATIVE configureplugins
+    )
+
 ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     HEADER_NAMES
     CustomTreeView
@@ -572,6 +581,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_CamelCasegenericgrantlee_HEADERS}
     ${PimCommon_Camelcasescript_HEADERS}
@@ -640,6 +650,7 @@ install(FILES
     ${PimCommon_texteditor_commonwidget_HEADERS}
     ${PimCommon_widgets_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
+    ${PimCommon_configureplugins_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon
     COMPONENT Devel
