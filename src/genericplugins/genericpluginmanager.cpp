@@ -18,6 +18,7 @@
 #include "genericplugin.h"
 #include "genericpluginmanager.h"
 #include "pimcommon_debug.h"
+#include "pluginutil.h"
 
 #include <kpluginmetadata.h>
 #include <KPluginLoader>
@@ -136,10 +137,8 @@ bool GenericPluginManagerPrivate::initializePlugins()
         pluginData.mEnableByDefault = info.metaData.isEnabledByDefault();
         mPluginDataList.append(pluginData);
 
-        const bool pluginEnabledByUser = enabledPlugins.contains(info.metaData.pluginId());
-        const bool pluginDisabledByUser = disabledPlugins.contains(info.metaData.pluginId());
-        if ((info.metaData.isEnabledByDefault() && !pluginDisabledByUser)
-                || (!info.metaData.isEnabledByDefault() && pluginEnabledByUser)) {
+        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(enabledPlugins, disabledPlugins, pluginData.mEnableByDefault, pluginData.mIdentifier);
+        if (isPluginActivated) {
             if (pluginVersion() == info.metaData.version()) {
                 // only load plugins once, even if found multiple times!
                 if (unique.contains(info.saveName())) {
