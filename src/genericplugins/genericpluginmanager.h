@@ -21,6 +21,7 @@
 #include <QObject>
 #include <QVector>
 #include "pimcommon_export.h"
+#include "pluginutil.h"
 
 namespace PimCommon
 {
@@ -58,7 +59,11 @@ public:
     static GenericPluginManager *self();
 
     QVector<PimCommon::GenericPlugin *> pluginsList() const;
-    QVector<PimCommon::GenericPluginManager::GenericPluginData> pluginsDataList() const;
+    QVector<PimCommon::PluginUtilData> pluginsDataList() const;
+
+    QString configGroupName() const;
+    QString configPrefixSettingKey() const;
+
 private:
     GenericPluginManagerPrivate *const d;
 };

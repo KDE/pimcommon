@@ -93,11 +93,24 @@ public:
     QString pluginName;
     QVector<GenericPluginInfo> mPluginList;
 
-    QVector<GenericPluginManager::GenericPluginData> pluginsDataList() const;
+    QVector<PluginUtilData> pluginsDataList() const;
+    QString configGroupName() const;
+    QString configPrefixSettingKey() const;
 private:
-    QVector<GenericPluginManager::GenericPluginData> mPluginDataList;
+    QVector<PluginUtilData> mPluginDataList;
     GenericPluginManager *q;
 };
+
+QString GenericPluginManagerPrivate::configGroupName() const
+{
+    return QStringLiteral("GenericPlugin").arg(pluginName);
+}
+
+QString GenericPluginManagerPrivate::configPrefixSettingKey() const
+{
+    return QStringLiteral("%1Plugin").arg(pluginName);
+}
+
 
 bool GenericPluginManagerPrivate::initializePlugins()
 {
@@ -112,17 +125,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
         return md.serviceTypes().contains(s_serviceTypeName);
     });
 
-
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
-    QStringList enabledPlugins;
-    QStringList disabledPlugins;
-    const QString groupPluginName = QStringLiteral("GenericPlugin%1").arg(pluginName);
-    if (config->hasGroup(groupPluginName)) {
-        KConfigGroup grp = config->group(groupPluginName);
-        enabledPlugins = grp.readEntry(QStringLiteral("PluginsEnabled"), QStringList());
-        disabledPlugins = grp.readEntry(QStringLiteral("PluginsDisabled"), QStringList());
-    }
-
+    const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
     QSet<QString> unique;
@@ -130,14 +133,14 @@ bool GenericPluginManagerPrivate::initializePlugins()
         GenericPluginInfo info;
         info.metaData = i.previous();
 
-        GenericPluginManager::GenericPluginData pluginData;
+        PluginUtilData pluginData;
         pluginData.mDescription = info.metaData.description();
         pluginData.mName = info.metaData.name();
         pluginData.mIdentifier = info.metaData.pluginId();
         pluginData.mEnableByDefault = info.metaData.isEnabledByDefault();
         mPluginDataList.append(pluginData);
 
-        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(enabledPlugins, disabledPlugins, pluginData.mEnableByDefault, pluginData.mIdentifier);
+        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, pluginData.mEnableByDefault, pluginData.mIdentifier);
         if (isPluginActivated) {
             if (pluginVersion() == info.metaData.version()) {
                 // only load plugins once, even if found multiple times!
@@ -159,7 +162,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
     return true;
 }
 
-QVector<GenericPluginManager::GenericPluginData> GenericPluginManagerPrivate::pluginsDataList() const
+QVector<PluginUtilData> GenericPluginManagerPrivate::pluginsDataList() const
 {
     return mPluginDataList;
 }
@@ -231,8 +234,17 @@ QVector<GenericPlugin *> GenericPluginManager::pluginsList() const
     return d->pluginsList();
 }
 
-QVector<GenericPluginManager::GenericPluginData> GenericPluginManager::pluginsDataList() const
+QVector<PluginUtilData> GenericPluginManager::pluginsDataList() const
 {
     return d->pluginsDataList();
 }
 
+QString GenericPluginManager::configGroupName() const
+{
+    return d->configGroupName();
+}
+
+QString GenericPluginManager::configPrefixSettingKey() const
+{
+    return d->configPrefixSettingKey();
+}
