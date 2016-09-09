@@ -20,6 +20,7 @@
 
 #include <QWidget>
 #include "pimcommon_export.h"
+#include "pimcommon/pluginutil.h"
 
 #include <QTreeWidgetItem>
 class QTreeWidget;
@@ -58,6 +59,8 @@ protected:
         QString mDescription;
         bool mEnableByDefault;
     };
+    void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
+    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList);
     QTreeWidget *mListWidget;
 };
 }

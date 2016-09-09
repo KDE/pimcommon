@@ -81,3 +81,44 @@ void ConfigurePluginsListWidget::doResetToDefaultsOther()
 void ConfigurePluginsListWidget::initialize()
 {
 }
+
+void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems)
+{
+    if (listItems.isEmpty()) {
+        return;
+    }
+    QStringList enabledPlugins;
+    QStringList disabledPlugins;
+    Q_FOREACH (PluginItem *item, listItems) {
+        if (item->checkState(0) == Qt::Checked) {
+            enabledPlugins << item->mIdentifier;
+        } else {
+            disabledPlugins << item->mIdentifier;
+        }
+    }
+    PimCommon::PluginUtil::savePluginSettings(groupName,
+            prefixSettingKey,
+            enabledPlugins, disabledPlugins);
+}
+
+void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
+                                              const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList)
+{
+    itemsList.clear();
+    if (!lst.isEmpty()) {
+        QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
+        topLevel->setFlags(topLevel->flags() & ~Qt::ItemIsSelectable);
+        const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
+        Q_FOREACH (const PimCommon::PluginUtilData &data, lst) {
+            PluginItem *subItem = new PluginItem(topLevel);
+            subItem->setText(0, data.mName);
+            subItem->mIdentifier = data.mIdentifier;
+            subItem->mDescription = data.mDescription;
+            subItem->mEnableByDefault = data.mEnableByDefault;
+            const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
+            subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
+            itemsList.append(subItem);
+        }
+    }
+}
+
