@@ -20,6 +20,7 @@
 
 #include <QObject>
 #include <pimcommon/genericplugininterface.h>
+#include <pimcommon/pluginutil.h>
 #include "pimcommon_export.h"
 class KActionCollection;
 class QAction;
@@ -48,6 +49,11 @@ public:
     void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
     void setActionCollection(KActionCollection *ac);
+
+    QVector<PimCommon::PluginUtilData> pluginsDataList() const;
+    QString configGroupName() const;
+    QString configPrefixSettingKey() const;
+
 private Q_SLOTS:
     void slotPluginActivated(PimCommon::GenericPluginInterface *interface);
 

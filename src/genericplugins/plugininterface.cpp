@@ -194,3 +194,18 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
 
     return listType;
 }
+
+QVector<PimCommon::PluginUtilData> PluginInterface::pluginsDataList() const
+{
+    return GenericPluginManager::self()->pluginsDataList();
+}
+
+QString PluginInterface::configGroupName() const
+{
+    return GenericPluginManager::self()->configGroupName();
+}
+
+QString PluginInterface::configPrefixSettingKey() const
+{
+    return GenericPluginManager::self()->configPrefixSettingKey();
+}
