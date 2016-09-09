@@ -30,9 +30,9 @@ using namespace PimCommon;
 class PimCommon::PluginInterfacePrivate
 {
 public:
-    PluginInterfacePrivate(KActionCollection *ac)
+    PluginInterfacePrivate()
         : mParentWidget(Q_NULLPTR),
-          mActionCollection(ac)
+          mActionCollection(Q_NULLPTR)
     {
 
     }
@@ -43,15 +43,20 @@ public:
     QVector<PimCommon::GenericPluginInterface *> mListGenericInterface;
 };
 
-PluginInterface::PluginInterface(KActionCollection *ac, QObject *parent)
+PluginInterface::PluginInterface(QObject *parent)
     : QObject(parent),
-      d(new PimCommon::PluginInterfacePrivate(ac))
+      d(new PimCommon::PluginInterfacePrivate)
 {
 }
 
 PluginInterface::~PluginInterface()
 {
     delete d;
+}
+
+void PimCommon::PluginInterface::setActionCollection(KActionCollection *ac)
+{
+    d->mActionCollection = ac;
 }
 
 void PluginInterface::initializePlugins()
@@ -75,6 +80,10 @@ void PluginInterface::setServiceTypeName(const QString &name)
 
 void PluginInterface::createPluginInterface()
 {
+    if (!d->mActionCollection) {
+        qCWarning(PIMCOMMON_LOG) << "Missing action collection";
+        return;
+    }
     Q_FOREACH (PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {
         PimCommon::GenericPluginInterface *interface = plugin->createInterface(d->mActionCollection, d->mParentWidget);
         connect(interface, &PimCommon::GenericPluginInterface::emitPluginActivated, this, &PluginInterface::slotPluginActivated);

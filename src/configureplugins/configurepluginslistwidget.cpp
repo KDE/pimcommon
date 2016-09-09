@@ -41,7 +41,6 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     connect(mListWidget, &QTreeWidget::itemChanged, this, &ConfigurePluginsListWidget::slotItemChanged);
 
     mainLayout->addWidget(mListWidget);
-
 }
 
 ConfigurePluginsListWidget::~ConfigurePluginsListWidget()

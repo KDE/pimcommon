@@ -31,7 +31,7 @@ class PIMCOMMON_EXPORT PluginInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit PluginInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR);
+    explicit PluginInterface(QObject *parent = Q_NULLPTR);
     ~PluginInterface();
 
     void setParentWidget(QWidget *widget);
@@ -47,6 +47,7 @@ public:
     void initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient);
     void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
+    void setActionCollection(KActionCollection *ac);
 private Q_SLOTS:
     void slotPluginActivated(PimCommon::GenericPluginInterface *interface);
 
