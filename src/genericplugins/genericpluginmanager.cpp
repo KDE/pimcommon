@@ -113,11 +113,12 @@ QString GenericPluginManagerPrivate::configPrefixSettingKey() const
 
 bool GenericPluginManagerPrivate::initializePlugins()
 {
-    if (serviceTypeName.isEmpty() || pluginName.isEmpty()) {
-        return false;
-    }
     if (!mPluginList.isEmpty()) {
         return true;
+    }
+
+    if (serviceTypeName.isEmpty() || pluginName.isEmpty()) {
+        return false;
     }
     static const QString s_serviceTypeName = serviceTypeName;
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData & md) {
