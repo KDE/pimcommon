@@ -34,6 +34,8 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mainLayout->setMargin(0);
 
     mListWidget = new QTreeWidget(this);
+    mListWidget->setSortingEnabled(true);
+    mListWidget->sortItems(0, Qt::AscendingOrder);
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mListWidget->setHeaderHidden(true);
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
