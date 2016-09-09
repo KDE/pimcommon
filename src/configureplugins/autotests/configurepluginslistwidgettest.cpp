@@ -42,6 +42,7 @@ void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()
 
     QTreeWidget *mListWidget = w.findChild<QTreeWidget *>(QStringLiteral("listwidget"));
     QVERIFY(mListWidget);
+    QVERIFY(mListWidget->isSortingEnabled());
 }
 
 QTEST_MAIN(ConfigurePluginsListWidgetTest)
