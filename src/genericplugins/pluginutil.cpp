@@ -19,6 +19,10 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+namespace {
+inline QString pluginConfigFile() { return QStringLiteral("pimpluginsrc"); }
+}
+
 bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId)
 {
     if (pluginId.isEmpty()) {
@@ -36,7 +40,7 @@ bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsL
 QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const QString &groupName, const QString &prefixSettingKey)
 {
     QPair<QStringList, QStringList> pair;
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
     QStringList enabledPlugins;
     QStringList disabledPlugins;
     if (config->hasGroup(groupName)) {
@@ -52,7 +56,7 @@ QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const Q
 
 void PimCommon::PluginUtil::savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList)
 {
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("pimpluginsrc"));
+    KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
     KConfigGroup grp = config->group(groupName);
     grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
     grp.writeEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), disabledPluginsList);
