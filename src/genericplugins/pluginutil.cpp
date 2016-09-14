@@ -61,3 +61,13 @@ void PimCommon::PluginUtil::savePluginSettings(const QString &groupName, const Q
     grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
     grp.writeEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), disabledPluginsList);
 }
+
+PimCommon::PluginUtilData PimCommon::PluginUtil::createPluginMetaData(const KPluginMetaData &metaData)
+{
+    PluginUtilData pluginData;
+    pluginData.mDescription = metaData.description();
+    pluginData.mName = metaData.name();
+    pluginData.mIdentifier = metaData.pluginId();
+    pluginData.mEnableByDefault = metaData.isEnabledByDefault();
+    return pluginData;
+}
