@@ -122,3 +122,10 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
     }
 }
 
+void ConfigurePluginsListWidget::changeState(const QList<PluginItem *> &items)
+{
+    Q_FOREACH (PluginItem *item, items) {
+        item->setCheckState(0, item->mEnableByDefault ? Qt::Checked : Qt::Unchecked);
+    }
+}
+
