@@ -114,5 +114,5 @@ install(FILES
 
 
 add_subdirectory(src)
-install( FILES pimcommon.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES pimcommon.renamecategories pimcommon.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
