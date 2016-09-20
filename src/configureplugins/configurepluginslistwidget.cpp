@@ -23,7 +23,10 @@
 
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QPushButton>
+#include <QToolButton>
 #include <QTreeWidget>
+#include <QHeaderView>
 
 using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
@@ -104,6 +107,10 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
                                               const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList)
 {
+#ifdef CONFIGUREPLUGIN_SUPPORT
+    mListWidget->setColumnCount(2);
+    mListWidget->header()->resizeSection(0, 300);
+#endif
     itemsList.clear();
     if (!lst.isEmpty()) {
         QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
@@ -117,9 +124,24 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             subItem->mEnableByDefault = data.mEnableByDefault;
             const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
             subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
+#ifdef CONFIGUREPLUGIN_SUPPORT
+            QToolButton *but = new QToolButton(mListWidget);
+            but->setFixedWidth(48);
+            but->setToolTip(i18n("Configure"));
+            but->setAutoFillBackground(true);
+            mListWidget->setItemWidget(subItem, 1, but);
+            connect(but, &QToolButton::clicked, this, &ConfigurePluginsListWidget::slotClicked);
+#endif
             itemsList.append(subItem);
         }
     }
+}
+
+void ConfigurePluginsListWidget::slotClicked()
+{
+#ifdef CONFIGUREPLUGIN_SUPPORT
+    qDebug() <<" void ConfigurePluginsListWidget::slotClicked()";
+#endif
 }
 
 void ConfigurePluginsListWidget::changeState(const QList<PluginItem *> &items)

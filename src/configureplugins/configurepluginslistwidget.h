@@ -64,6 +64,8 @@ protected:
     void changeState(const QList<PluginItem *> &items);
 
     QTreeWidget *mListWidget;
+private Q_SLOTS:
+    void slotClicked();
 };
 }
 
