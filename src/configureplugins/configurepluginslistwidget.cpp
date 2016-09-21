@@ -105,7 +105,7 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 }
 
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
-                                              const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList)
+        const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList)
 {
 #ifdef CONFIGUREPLUGIN_SUPPORT
     mListWidget->setColumnCount(2);
@@ -140,7 +140,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
 void ConfigurePluginsListWidget::slotClicked()
 {
 #ifdef CONFIGUREPLUGIN_SUPPORT
-    qDebug() <<" void ConfigurePluginsListWidget::slotClicked()";
+    qDebug() << " void ConfigurePluginsListWidget::slotClicked()";
 #endif
 }
 

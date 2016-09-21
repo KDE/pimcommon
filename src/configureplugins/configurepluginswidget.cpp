@@ -81,7 +81,6 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     readConfig();
 }
 
-
 void ConfigurePluginsWidget::save()
 {
     mConfigureListWidget->save();

@@ -19,8 +19,12 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-namespace {
-inline QString pluginConfigFile() { return QStringLiteral("pimpluginsrc"); }
+namespace
+{
+inline QString pluginConfigFile()
+{
+    return QStringLiteral("pimpluginsrc");
+}
 }
 
 bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId)
