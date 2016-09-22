@@ -20,7 +20,8 @@
 using namespace PimCommon;
 
 AbstractGenericPlugin::AbstractGenericPlugin(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      mIsEnabled(true)
 {
 
 }
@@ -43,6 +44,16 @@ bool AbstractGenericPlugin::hasToolBarSupport() const
 bool AbstractGenericPlugin::hasConfigureDialog() const
 {
     return false;
+}
+
+void AbstractGenericPlugin::setIsEnabled(bool enabled)
+{
+    mIsEnabled = enabled;
+}
+
+bool AbstractGenericPlugin::isEnabled() const
+{
+    return mIsEnabled;
 }
 
 

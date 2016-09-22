@@ -55,20 +55,17 @@ class GenericPluginInfo
 {
 public:
     GenericPluginInfo()
-        : plugin(Q_NULLPTR)
+        : plugin(Q_NULLPTR),
+          isEnabled(true)
     {
 
     }
-    QString saveName() const;
-
-    KPluginMetaData metaData;
+    QString metaDataFileNameBaseName;
+    QString metaDataFileName;
+    PimCommon::PluginUtilData pluginData;
     PimCommon::GenericPlugin *plugin;
+    bool isEnabled;
 };
-
-QString GenericPluginInfo::saveName() const
-{
-    return QFileInfo(metaData.fileName()).baseName();
-}
 
 namespace
 {
@@ -131,24 +128,25 @@ bool GenericPluginManagerPrivate::initializePlugins()
     QSet<QString> unique;
     while (i.hasPrevious()) {
         GenericPluginInfo info;
-        info.metaData = i.previous();
+        const KPluginMetaData data = i.previous();
 
-        const PimCommon::PluginUtilData pluginData = PimCommon::PluginUtil::createPluginMetaData(info.metaData);
-        mPluginDataList.append(pluginData);
-
-        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, pluginData.mEnableByDefault, pluginData.mIdentifier);
-        if (isPluginActivated) {
-            if (pluginVersion() == info.metaData.version()) {
-                // only load plugins once, even if found multiple times!
-                if (unique.contains(info.saveName())) {
-                    continue;
-                }
-                info.plugin = Q_NULLPTR;
-                mPluginList.push_back(info);
-                unique.insert(info.saveName());
-            } else {
-                qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
+        //1) get plugin data => name/description etc.
+        info.pluginData = PimCommon::PluginUtil::createPluginMetaData(data);
+        //2) look at if plugin is activated
+        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, info.pluginData.mEnableByDefault, info.pluginData.mIdentifier);
+        info.isEnabled = isPluginActivated;
+        info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
+        info.metaDataFileName = data.fileName();
+        if (pluginVersion() == data.version()) {
+            // only load plugins once, even if found multiple times!
+            if (unique.contains(info.metaDataFileNameBaseName)) {
+                continue;
             }
+            info.plugin = Q_NULLPTR;
+            mPluginList.push_back(info);
+            unique.insert(info.metaDataFileNameBaseName);
+        } else {
+            qCWarning(PIMCOMMON_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<GenericPluginInfo>::iterator end(mPluginList.end());
@@ -177,9 +175,12 @@ QVector<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
 
 void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
 {
-    KPluginLoader pluginLoader(item->metaData.fileName());
+    KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<PimCommon::GenericPlugin>(q, QVariantList() << item->saveName());
+        item->plugin = pluginLoader.factory()->create<PimCommon::GenericPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
+        item->plugin->setIsEnabled(item->isEnabled);
+        item->pluginData.mHasConfigureDialog = item->plugin->hasConfigureDialog();
+        mPluginDataList.append(item->pluginData);
     }
 }
 

@@ -35,6 +35,12 @@ public:
     virtual bool hasPopupMenuSupport() const;
     virtual bool hasToolBarSupport() const;
     virtual bool hasConfigureDialog() const;
+
+    void setIsEnabled(bool enabled);
+    bool isEnabled() const;
+
+private:
+    bool mIsEnabled;
 };
 }
 #endif // AbstractGENERICPLUGIN_H
