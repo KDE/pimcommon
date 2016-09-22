@@ -24,6 +24,7 @@ class QAction;
 class KActionCollection;
 namespace PimCommon
 {
+class GenericPlugin;
 class PIMCOMMON_EXPORT ActionType
 {
 public:
@@ -74,6 +75,10 @@ public:
 
     void setActionType(const ActionType &type);
     ActionType actionType() const;
+
+    void setPlugin(GenericPlugin *plugin);
+    GenericPlugin *plugin() const;
+
     virtual void createAction(KActionCollection *ac) = 0;
     virtual void exec() = 0;
     virtual void setCurrentItems(const Akonadi::Item::List &items);
@@ -82,10 +87,6 @@ public:
     virtual void setCollections(const Akonadi::Collection::List &cols);
 
     virtual GenericPluginInterface::RequireTypes requires() const;
-
-    virtual bool hasPopupMenuSupport() const;
-    virtual bool hasToolBarSupport() const;
-    virtual bool hasConfigureDialog() const;
 
     virtual void showConfigureDialog(QWidget *parentWidget = Q_NULLPTR);
 

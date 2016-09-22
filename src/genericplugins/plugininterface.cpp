@@ -86,6 +86,7 @@ void PluginInterface::createPluginInterface()
     }
     Q_FOREACH (PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {
         PimCommon::GenericPluginInterface *interface = plugin->createInterface(d->mActionCollection, d->mParentWidget);
+        interface->setPlugin(plugin);
         connect(interface, &PimCommon::GenericPluginInterface::emitPluginActivated, this, &PluginInterface::slotPluginActivated);
         d->mListGenericInterface.append(interface);
     }
@@ -166,7 +167,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
         } else {
             listType.insert(type, QList<QAction *>() << actionType.action());
         }
-        if (interface->hasPopupMenuSupport()) {
+        if (interface->plugin()->hasPopupMenuSupport()) {
             type = PimCommon::ActionType::PopupMenu;
             if (listType.contains(type)) {
                 QList<QAction *> lst = listType.value(type);
@@ -178,7 +179,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
                 listType.insert(type, QList<QAction *>() << actionType.action());
             }
         }
-        if (interface->hasToolBarSupport()) {
+        if (interface->plugin()->hasToolBarSupport()) {
             type = PimCommon::ActionType::ToolBar;
             if (listType.contains(type)) {
                 QList<QAction *> lst = listType.value(type);

@@ -32,6 +32,9 @@ public:
     ~GenericPlugin();
 
     virtual PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR) = 0;
+    virtual bool hasPopupMenuSupport() const;
+    virtual bool hasToolBarSupport() const;
+    virtual bool hasConfigureDialog() const;
 };
 }
 #endif // GENERICPLUGIN_H

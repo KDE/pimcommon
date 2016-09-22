@@ -23,11 +23,13 @@ class PimCommon::GenericPluginInterfacePrivate
 {
 public:
     GenericPluginInterfacePrivate()
-        : parentWidget(Q_NULLPTR)
+        : plugin(Q_NULLPTR),
+          parentWidget(Q_NULLPTR)
     {
 
     }
     ActionType actionType;
+    GenericPlugin *plugin;
     QWidget *parentWidget;
 };
 
@@ -63,6 +65,16 @@ ActionType GenericPluginInterface::actionType() const
     return d->actionType;
 }
 
+void GenericPluginInterface::setPlugin(GenericPlugin *plugin)
+{
+    d->plugin = plugin;
+}
+
+GenericPlugin *GenericPluginInterface::plugin() const
+{
+    return d->plugin;
+}
+
 void GenericPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {
     Q_UNUSED(numberOfSelectedItems);
@@ -92,21 +104,6 @@ void GenericPluginInterface::setCollections(const Akonadi::Collection::List &col
 PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires() const
 {
     return None;
-}
-
-bool GenericPluginInterface::hasPopupMenuSupport() const
-{
-    return false;
-}
-
-bool GenericPluginInterface::hasToolBarSupport() const
-{
-    return false;
-}
-
-bool GenericPluginInterface::hasConfigureDialog() const
-{
-    return false;
 }
 
 void GenericPluginInterface::showConfigureDialog(QWidget *parentWidget)
