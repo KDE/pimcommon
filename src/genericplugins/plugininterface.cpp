@@ -85,14 +85,15 @@ void PluginInterface::createPluginInterface()
         return;
     }
     Q_FOREACH (PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {
-        PimCommon::GenericPluginInterface *interface = plugin->createInterface(d->mActionCollection, d->mParentWidget);
+        PimCommon::GenericPluginInterface *interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(d->mActionCollection, this));
+        interface->setParentWidget(d->mParentWidget);
         interface->setPlugin(plugin);
         connect(interface, &PimCommon::GenericPluginInterface::emitPluginActivated, this, &PluginInterface::slotPluginActivated);
         d->mListGenericInterface.append(interface);
     }
 }
 
-void PluginInterface::initializeInterfaceRequires(PimCommon::GenericPluginInterface *interface)
+void PluginInterface::initializeInterfaceRequires(PimCommon::AbstractGenericPluginInterface *interface)
 {
     Q_UNUSED(interface)
 }
@@ -116,7 +117,7 @@ QString PluginInterface::actionXmlExtension(ActionType::Type type)
     return {};
 }
 
-void PluginInterface::slotPluginActivated(PimCommon::GenericPluginInterface *interface)
+void PluginInterface::slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface)
 {
     initializeInterfaceRequires(interface);
     if (interface) {

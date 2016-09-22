@@ -42,7 +42,7 @@ public:
     void setPluginName(const QString &name);
     void setServiceTypeName(const QString &name);
     void initializePlugins();
-    virtual void initializeInterfaceRequires(PimCommon::GenericPluginInterface *interface);
+    virtual void initializeInterfaceRequires(AbstractGenericPluginInterface *interface);
     static QString actionXmlExtension(PimCommon::ActionType::Type type);
 
     void initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient);
@@ -55,7 +55,7 @@ public:
     QString configPrefixSettingKey() const;
 
 private Q_SLOTS:
-    void slotPluginActivated(PimCommon::GenericPluginInterface *interface);
+    void slotPluginActivated(AbstractGenericPluginInterface *interface);
 
 private:
     PluginInterfacePrivate *const d;

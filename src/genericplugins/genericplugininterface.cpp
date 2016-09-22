@@ -23,18 +23,14 @@ class PimCommon::GenericPluginInterfacePrivate
 {
 public:
     GenericPluginInterfacePrivate()
-        : plugin(Q_NULLPTR),
-          parentWidget(Q_NULLPTR)
     {
 
     }
     ActionType actionType;
-    GenericPlugin *plugin;
-    QWidget *parentWidget;
 };
 
 GenericPluginInterface::GenericPluginInterface(QObject *parent)
-    : QObject(parent),
+    : AbstractGenericPluginInterface(parent),
       d(new GenericPluginInterfacePrivate)
 {
 
@@ -45,16 +41,6 @@ GenericPluginInterface::~GenericPluginInterface()
     delete d;
 }
 
-void GenericPluginInterface::setParentWidget(QWidget *parent)
-{
-    d->parentWidget = parent;
-}
-
-QWidget *GenericPluginInterface::parentWidget() const
-{
-    return d->parentWidget;
-}
-
 void GenericPluginInterface::setActionType(const ActionType &type)
 {
     d->actionType = type;
@@ -63,16 +49,6 @@ void GenericPluginInterface::setActionType(const ActionType &type)
 ActionType GenericPluginInterface::actionType() const
 {
     return d->actionType;
-}
-
-void GenericPluginInterface::setPlugin(GenericPlugin *plugin)
-{
-    d->plugin = plugin;
-}
-
-GenericPlugin *GenericPluginInterface::plugin() const
-{
-    return d->plugin;
 }
 
 void GenericPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
@@ -104,11 +80,6 @@ void GenericPluginInterface::setCollections(const Akonadi::Collection::List &col
 PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires() const
 {
     return None;
-}
-
-void GenericPluginInterface::showConfigureDialog(QWidget *parentWidget)
-{
-    Q_UNUSED(parentWidget);
 }
 
 ActionType::ActionType(QAction *action, ActionType::Type type)

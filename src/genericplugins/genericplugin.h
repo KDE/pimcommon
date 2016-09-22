@@ -18,23 +18,18 @@
 #ifndef GENERICPLUGIN_H
 #define GENERICPLUGIN_H
 
-#include <QObject>
+#include "abstractgenericplugin.h"
 #include "pimcommon_export.h"
 class KActionCollection;
 namespace PimCommon
 {
 class GenericPluginInterface;
-class PIMCOMMON_EXPORT GenericPlugin : public QObject
+class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
 {
     Q_OBJECT
 public:
     explicit GenericPlugin(QObject *parent = Q_NULLPTR);
     ~GenericPlugin();
-
-    virtual PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR) = 0;
-    virtual bool hasPopupMenuSupport() const;
-    virtual bool hasToolBarSupport() const;
-    virtual bool hasConfigureDialog() const;
 };
 }
 #endif // GENERICPLUGIN_H

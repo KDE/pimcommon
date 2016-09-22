@@ -20,7 +20,7 @@
 using namespace PimCommon;
 
 GenericPlugin::GenericPlugin(QObject *parent)
-    : QObject(parent)
+    : AbstractGenericPlugin(parent)
 {
 
 }
@@ -29,20 +29,3 @@ GenericPlugin::~GenericPlugin()
 {
 
 }
-
-bool GenericPlugin::hasPopupMenuSupport() const
-{
-    return false;
-}
-
-bool GenericPlugin::hasToolBarSupport() const
-{
-    return false;
-}
-
-bool GenericPlugin::hasConfigureDialog() const
-{
-    return false;
-}
-
-

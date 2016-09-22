@@ -17,9 +17,11 @@
 
 #ifndef GENERICPLUGININTERFACE_H
 #define GENERICPLUGININTERFACE_H
+
 #include <QObject>
-#include <AkonadiCore/Item>
+#include "abstractgenericplugininterface.h"
 #include "pimcommon_export.h"
+#include <AkonadiCore/Item>
 class QAction;
 class KActionCollection;
 namespace PimCommon
@@ -53,7 +55,7 @@ private:
 };
 
 class GenericPluginInterfacePrivate;
-class PIMCOMMON_EXPORT GenericPluginInterface : public QObject
+class PIMCOMMON_EXPORT GenericPluginInterface : public AbstractGenericPluginInterface
 {
     Q_OBJECT
 public:
@@ -70,17 +72,9 @@ public:
     Q_ENUMS(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
 
-    void setParentWidget(QWidget *parent);
-    QWidget *parentWidget() const;
-
     void setActionType(const ActionType &type);
     ActionType actionType() const;
 
-    void setPlugin(GenericPlugin *plugin);
-    GenericPlugin *plugin() const;
-
-    virtual void createAction(KActionCollection *ac) = 0;
-    virtual void exec() = 0;
     virtual void setCurrentItems(const Akonadi::Item::List &items);
     virtual void setItems(const Akonadi::Item::List &items);
     virtual void setCurrentCollection(const Akonadi::Collection &col);
@@ -88,12 +82,8 @@ public:
 
     virtual GenericPluginInterface::RequireTypes requires() const;
 
-    virtual void showConfigureDialog(QWidget *parentWidget = Q_NULLPTR);
-
     virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
-Q_SIGNALS:
-    void emitPluginActivated(PimCommon::GenericPluginInterface *interface);
 
 private:
     GenericPluginInterfacePrivate *const d;
