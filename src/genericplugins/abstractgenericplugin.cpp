@@ -46,8 +46,9 @@ bool AbstractGenericPlugin::hasConfigureDialog() const
     return false;
 }
 
-void AbstractGenericPlugin::showConfigureDialog()
+void AbstractGenericPlugin::showConfigureDialog(QWidget *parent)
 {
+    Q_UNUSED(parent);
     //Reimplement it.
 }
 

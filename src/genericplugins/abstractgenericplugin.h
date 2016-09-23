@@ -36,7 +36,7 @@ public:
     virtual bool hasToolBarSupport() const;
     virtual bool hasConfigureDialog() const;
 
-    virtual void showConfigureDialog();
+    virtual void showConfigureDialog(QWidget *parent = Q_NULLPTR);
 
     void setIsEnabled(bool enabled);
     bool isEnabled() const;
