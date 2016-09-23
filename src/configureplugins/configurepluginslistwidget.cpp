@@ -30,8 +30,6 @@
 #include <QDebug>
 #include <QAction>
 
-//#define CONFIGUREPLUGIN_SUPPORT 1
-
 using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     : QWidget(parent)
@@ -111,10 +109,10 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
         const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName)
 {
-#ifdef CONFIGUREPLUGIN_SUPPORT
+    //TODO need to fix it.
     mListWidget->setColumnCount(2);
     mListWidget->header()->resizeSection(0, 300);
-#endif
+
     itemsList.clear();
     if (!lst.isEmpty()) {
         QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
@@ -129,7 +127,6 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             subItem->mHasConfigureSupport = data.mHasConfigureDialog;
             const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
             subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
-#ifdef CONFIGUREPLUGIN_SUPPORT
             if (data.mHasConfigureDialog) {
                 QToolButton *but = new QToolButton(mListWidget);
                 QAction *act = new QAction(but);
@@ -144,7 +141,6 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
                 mListWidget->setItemWidget(subItem, 1, but);
                 connect(but, &QToolButton::triggered, this, &ConfigurePluginsListWidget::slotConfigureClicked);
             }
-#endif
             itemsList.append(subItem);
         }
     }
@@ -152,17 +148,12 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
 
 void ConfigurePluginsListWidget::slotConfigureClicked(QAction *act)
 {
-#ifdef CONFIGUREPLUGIN_SUPPORT
     if (act) {
         const QStringList lst = act->data().toStringList();
         if (lst.count() == 2) {
             Q_EMIT configureClicked(lst.at(0), lst.at(1));
         }
     }
-    qDebug() << " void ConfigurePluginsListWidget::slotClicked()";
-#else
-    Q_UNUSED(act);
-#endif
 }
 
 void ConfigurePluginsListWidget::changeState(const QList<PluginItem *> &items)

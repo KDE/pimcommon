@@ -34,9 +34,15 @@ protected:
     virtual QWidget *createLayout() = 0;
     virtual void save() = 0;
     virtual void load() = 0;
-private Q_SLOTS:
-    void slotAccepted();
+    virtual void reset();
+
+    virtual QString helpAnchor() const;
+
+
 private:
+    void slotHelpClicked();
+    void slotAccepted();
+    void slotRestoreDefaultClicked();
     void saveConfig();
     void readConfig();
 };

@@ -20,6 +20,7 @@
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -40,12 +41,34 @@ void ConfigurePluginDialog::initLayout()
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(createLayout());
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::RestoreDefaults|QDialogButtonBox::Help, this);
     layout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfigurePluginDialog::slotAccepted);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfigurePluginDialog::rejected);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfigurePluginDialog::reject);
+    connect(buttonBox, &QDialogButtonBox::helpRequested, this, &ConfigurePluginDialog::slotHelpClicked);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &ConfigurePluginDialog::slotRestoreDefaultClicked);
     readConfig();
     load();
+}
+
+void ConfigurePluginDialog::reset()
+{
+    //Reimplement it.
+}
+
+QString ConfigurePluginDialog::helpAnchor() const
+{
+    return {};
+}
+
+void ConfigurePluginDialog::slotHelpClicked()
+{
+    //TODO
+}
+
+void ConfigurePluginDialog::slotRestoreDefaultClicked()
+{
+    reset();
 }
 
 void ConfigurePluginDialog::slotAccepted()
