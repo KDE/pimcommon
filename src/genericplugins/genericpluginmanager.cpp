@@ -188,7 +188,6 @@ void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
 
 GenericPlugin *GenericPluginManagerPrivate::pluginFromIdentifier(const QString &id)
 {
-    QVector<PimCommon::GenericPlugin *> lst;
     QVector<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if ((*it).pluginData.mIdentifier == id) {
