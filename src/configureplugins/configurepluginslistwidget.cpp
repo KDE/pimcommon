@@ -28,6 +28,7 @@
 #include <QTreeWidget>
 #include <QHeaderView>
 #include <QDebug>
+#include <QAction>
 
 //#define CONFIGUREPLUGIN_SUPPORT 1
 
@@ -131,12 +132,17 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
 #ifdef CONFIGUREPLUGIN_SUPPORT
             if (data.mHasConfigureDialog) {
                 QToolButton *but = new QToolButton(mListWidget);
+                QAction *act = new QAction(but);
+                const QStringList actData { configureGroupName, data.mIdentifier };
+                act->setData(actData);
+                but->setDefaultAction(act);
+                but->setText(i18n("..."));
                 but->setFixedWidth(48);
                 but->setToolTip(i18n("Configure"));
                 but->setAutoFillBackground(true);
                 but->setEnabled(subItem->mHasConfigureSupport);
                 mListWidget->setItemWidget(subItem, 1, but);
-                connect(but, &QToolButton::clicked, this, &ConfigurePluginsListWidget::slotClicked);
+                connect(but, &QToolButton::triggered, this, &ConfigurePluginsListWidget::slotConfigureClicked);
             }
 #endif
             itemsList.append(subItem);
@@ -144,10 +150,18 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
     }
 }
 
-void ConfigurePluginsListWidget::slotClicked()
+void ConfigurePluginsListWidget::slotConfigureClicked(QAction *act)
 {
 #ifdef CONFIGUREPLUGIN_SUPPORT
+    if (act) {
+        const QStringList lst = act->data().toStringList();
+        if (lst.count() == 2) {
+            Q_EMIT configureClicked(lst.at(0), lst.at(1));
+        }
+    }
     qDebug() << " void ConfigurePluginsListWidget::slotClicked()";
+#else
+    Q_UNUSED(act);
 #endif
 }
 

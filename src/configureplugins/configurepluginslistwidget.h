@@ -24,6 +24,7 @@
 
 #include <QTreeWidgetItem>
 class QTreeWidget;
+class QAction;
 namespace PimCommon
 {
 class PIMCOMMON_EXPORT ConfigurePluginsListWidget : public QWidget
@@ -40,6 +41,7 @@ public:
 Q_SIGNALS:
     void descriptionChanged(const QString &description);
     void changed();
+    void configureClicked(const QString &configureGroupName, const QString &identifier);
 
 private:
     void slotItemSelectionChanged();
@@ -67,7 +69,7 @@ protected:
 
     QTreeWidget *mListWidget;
 private Q_SLOTS:
-    void slotClicked();
+    void slotConfigureClicked(QAction *act);
 };
 }
 
