@@ -137,6 +137,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
         info.isEnabled = isPluginActivated;
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
+
         if (pluginVersion() == data.version()) {
             // only load plugins once, even if found multiple times!
             if (unique.contains(info.metaDataFileNameBaseName)) {
