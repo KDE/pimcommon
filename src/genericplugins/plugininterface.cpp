@@ -213,3 +213,8 @@ QString PluginInterface::configPrefixSettingKey() const
 {
     return GenericPluginManager::self()->configPrefixSettingKey();
 }
+
+PimCommon::GenericPlugin *PluginInterface::pluginFromIdentifier(const QString &id)
+{
+    return GenericPluginManager::self()->pluginFromIdentifier(id);
+}

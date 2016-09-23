@@ -54,6 +54,7 @@ public:
     QString configGroupName() const;
     QString configPrefixSettingKey() const;
 
+    PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
 private Q_SLOTS:
     void slotPluginActivated(AbstractGenericPluginInterface *interface);
 
