@@ -93,6 +93,7 @@ public:
     QVector<PluginUtilData> pluginsDataList() const;
     QString configGroupName() const;
     QString configPrefixSettingKey() const;
+    GenericPlugin *pluginFromIdentifier(const QString &id);
 private:
     QVector<PluginUtilData> mPluginDataList;
     GenericPluginManager *q;
@@ -185,6 +186,18 @@ void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
     }
 }
 
+GenericPlugin *GenericPluginManagerPrivate::pluginFromIdentifier(const QString &id)
+{
+    QVector<PimCommon::GenericPlugin *> lst;
+    QVector<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QVector<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+        if ((*it).pluginData.mIdentifier == id) {
+            return (*it).plugin;
+        }
+    }
+    return {};
+}
+
 GenericPluginManager::GenericPluginManager(QObject *parent)
     : QObject(parent),
       d(new GenericPluginManagerPrivate(this))
@@ -245,4 +258,9 @@ QString GenericPluginManager::configGroupName() const
 QString GenericPluginManager::configPrefixSettingKey() const
 {
     return d->configPrefixSettingKey();
+}
+
+GenericPlugin *GenericPluginManager::pluginFromIdentifier(const QString &id)
+{
+    return d->pluginFromIdentifier(id);
 }

@@ -64,6 +64,8 @@ public:
     QString configGroupName() const;
     QString configPrefixSettingKey() const;
 
+    GenericPlugin *pluginFromIdentifier(const QString &id);
+
 private:
     GenericPluginManagerPrivate *const d;
 };
