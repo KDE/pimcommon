@@ -46,6 +46,11 @@ bool AbstractGenericPlugin::hasConfigureDialog() const
     return false;
 }
 
+void AbstractGenericPlugin::showConfigureDialog()
+{
+    //Reimplement it.
+}
+
 void AbstractGenericPlugin::setIsEnabled(bool enabled)
 {
     mIsEnabled = enabled;

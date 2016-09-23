@@ -187,6 +187,7 @@ set(libpimcommon_generericplugin_SRCS
 set(libpimcommon_configure_plugins_SRCS
     configureplugins/configurepluginslistwidget.cpp
     configureplugins/configurepluginswidget.cpp
+    configureplugins/configureplugindialog.cpp
     )
  
 
@@ -356,6 +357,7 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     GenericPluginInterface
     AbstractGenericPlugin
     AbstractGenericPluginInterface
+
     PluginUtil
     PluginInterface
     REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
@@ -539,6 +541,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     HEADER_NAMES
     ConfigurePluginsListWidget
     ConfigurePluginsWidget
+    ConfigurePluginDialog
     REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
     PREFIX PimCommon
     RELATIVE configureplugins

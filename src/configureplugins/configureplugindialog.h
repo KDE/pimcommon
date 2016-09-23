@@ -15,34 +15,30 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef AbstractGENERICPLUGIN_H
-#define AbstractGENERICPLUGIN_H
+#ifndef CONFIGUREPLUGINDIALOG_H
+#define CONFIGUREPLUGINDIALOG_H
 
-#include <QObject>
+#include <QDialog>
 #include "pimcommon_export.h"
-class KActionCollection;
 namespace PimCommon
 {
-class AbstractGenericPluginInterface;
-class PIMCOMMON_EXPORT AbstractGenericPlugin : public QObject
+class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit AbstractGenericPlugin(QObject *parent = Q_NULLPTR);
-    ~AbstractGenericPlugin();
+    explicit ConfigurePluginDialog(QWidget *parent = Q_NULLPTR);
+    ~ConfigurePluginDialog();
 
-    virtual PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) = 0;
-    virtual bool hasPopupMenuSupport() const;
-    virtual bool hasToolBarSupport() const;
-    virtual bool hasConfigureDialog() const;
-
-    virtual void showConfigureDialog();
-
-    void setIsEnabled(bool enabled);
-    bool isEnabled() const;
-
+    void initLayout();
+protected:
+    virtual QWidget *createLayout() = 0;
+    virtual void save() = 0;
+    virtual void load() = 0;
+private Q_SLOTS:
+    void slotAccepted();
 private:
-    bool mIsEnabled;
+    void saveConfig();
+    void readConfig();
 };
 }
-#endif // AbstractGENERICPLUGIN_H
+#endif // CONFIGUREPLUGINDIALOG_H
