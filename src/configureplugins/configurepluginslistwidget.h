@@ -62,7 +62,7 @@ protected:
         bool mHasConfigureSupport;
     };
     void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
-    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList);
+    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName = QString());
     void changeState(const QList<PluginItem *> &items);
 
     QTreeWidget *mListWidget;

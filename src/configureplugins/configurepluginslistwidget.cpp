@@ -108,7 +108,7 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 }
 
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
-        const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList)
+        const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName)
 {
 #ifdef CONFIGUREPLUGIN_SUPPORT
     mListWidget->setColumnCount(2);
