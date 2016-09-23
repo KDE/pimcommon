@@ -51,13 +51,15 @@ protected:
     public:
         PluginItem(QTreeWidgetItem *parent)
             : QTreeWidgetItem(parent),
-              mEnableByDefault(false)
+              mEnableByDefault(false),
+              mHasConfigureSupport(false)
         {
 
         }
         QString mIdentifier;
         QString mDescription;
         bool mEnableByDefault;
+        bool mHasConfigureSupport;
     };
     void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
     void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList);

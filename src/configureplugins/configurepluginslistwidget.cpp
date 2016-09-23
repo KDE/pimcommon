@@ -27,6 +27,9 @@
 #include <QToolButton>
 #include <QTreeWidget>
 #include <QHeaderView>
+#include <QDebug>
+
+//#define CONFIGUREPLUGIN_SUPPORT 1
 
 using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
@@ -122,15 +125,19 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             subItem->mIdentifier = data.mIdentifier;
             subItem->mDescription = data.mDescription;
             subItem->mEnableByDefault = data.mEnableByDefault;
+            subItem->mHasConfigureSupport = data.mHasConfigureDialog;
             const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
             subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
 #ifdef CONFIGUREPLUGIN_SUPPORT
-            QToolButton *but = new QToolButton(mListWidget);
-            but->setFixedWidth(48);
-            but->setToolTip(i18n("Configure"));
-            but->setAutoFillBackground(true);
-            mListWidget->setItemWidget(subItem, 1, but);
-            connect(but, &QToolButton::clicked, this, &ConfigurePluginsListWidget::slotClicked);
+            if (data.mHasConfigureDialog) {
+                QToolButton *but = new QToolButton(mListWidget);
+                but->setFixedWidth(48);
+                but->setToolTip(i18n("Configure"));
+                but->setAutoFillBackground(true);
+                but->setEnabled(subItem->mHasConfigureSupport);
+                mListWidget->setItemWidget(subItem, 1, but);
+                connect(but, &QToolButton::clicked, this, &ConfigurePluginsListWidget::slotClicked);
+            }
 #endif
             itemsList.append(subItem);
         }
