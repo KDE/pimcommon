@@ -109,10 +109,8 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
         const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName)
 {
-    //TODO need to fix it.
     mListWidget->setColumnCount(2);
-    mListWidget->header()->resizeSection(0, 300);
-
+    mListWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     itemsList.clear();
     if (!lst.isEmpty()) {
         QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
