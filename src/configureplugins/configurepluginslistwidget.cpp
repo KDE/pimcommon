@@ -44,6 +44,9 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mListWidget->setHeaderHidden(true);
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
+    mListWidget->setColumnCount(2);
+    mListWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+
     connect(mListWidget, &QTreeWidget::itemSelectionChanged, this, &ConfigurePluginsListWidget::slotItemSelectionChanged);
     connect(mListWidget, &QTreeWidget::itemChanged, this, &ConfigurePluginsListWidget::slotItemChanged);
 
@@ -109,8 +112,7 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
         const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName)
 {
-    mListWidget->setColumnCount(2);
-    mListWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+
     itemsList.clear();
     if (!lst.isEmpty()) {
         QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
