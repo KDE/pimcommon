@@ -56,14 +56,13 @@ void ConfigurePluginDialog::reset()
     //Reimplement it.
 }
 
-QString ConfigurePluginDialog::helpAnchor() const
+void ConfigurePluginDialog::help()
 {
-    return {};
 }
 
 void ConfigurePluginDialog::slotHelpClicked()
 {
-    //TODO
+    help();
 }
 
 void ConfigurePluginDialog::slotRestoreDefaultClicked()

@@ -36,7 +36,7 @@ protected:
     virtual void load() = 0;
     virtual void reset();
 
-    virtual QString helpAnchor() const;
+    virtual void help();
 
 
 private:
