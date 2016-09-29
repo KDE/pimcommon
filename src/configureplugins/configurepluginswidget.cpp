@@ -87,12 +87,6 @@ void ConfigurePluginsWidget::save()
     mConfigureListWidget->save();
 }
 
-QString ConfigurePluginsWidget::helpAnchor() const
-{
-    //TODO
-    return {};
-}
-
 void ConfigurePluginsWidget::doLoadFromGlobalSettings()
 {
     mConfigureListWidget->doLoadFromGlobalSettings();

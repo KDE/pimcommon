@@ -34,7 +34,6 @@ public:
     ~ConfigurePluginsWidget();
 
     void save();
-    QString helpAnchor() const;
     void doLoadFromGlobalSettings();
     void doResetToDefaultsOther();
 
