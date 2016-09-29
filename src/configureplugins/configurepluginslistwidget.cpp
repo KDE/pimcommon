@@ -133,8 +133,9 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
                 const QStringList actData { configureGroupName, data.mIdentifier };
                 act->setData(actData);
                 but->setDefaultAction(act);
+                but->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
                 but->setText(i18n("..."));
-                but->setFixedWidth(32);
+                but->setFixedWidth(28);
                 but->setToolTip(i18n("Configure"));
                 but->setAutoFillBackground(true);
                 but->setEnabled(subItem->mHasConfigureSupport);
