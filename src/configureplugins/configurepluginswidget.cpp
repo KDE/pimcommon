@@ -48,6 +48,7 @@ ConfigurePluginsWidget::~ConfigurePluginsWidget()
 void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePluginListWidget)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
+    layout->setMargin(0);
 
     KMessageWidget *messageWidget = new KMessageWidget(this);
     messageWidget->setObjectName(QStringLiteral("messagewidget"));
