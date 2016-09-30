@@ -55,7 +55,8 @@ protected:
         PluginItem(QTreeWidgetItem *parent)
             : QTreeWidgetItem(parent),
               mEnableByDefault(false),
-              mHasConfigureSupport(false)
+              mHasConfigureSupport(false),
+              mEnableFromUserSettings(false)
         {
 
         }
@@ -63,9 +64,11 @@ protected:
         QString mDescription;
         bool mEnableByDefault;
         bool mHasConfigureSupport;
+        bool mEnableFromUserSettings;
     };
     void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
     void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName = QString());
+    void resetToUserSettings(const QList<PluginItem *> &items);
     void changeState(const QList<PluginItem *> &items);
 
     QTreeWidget *mListWidget;

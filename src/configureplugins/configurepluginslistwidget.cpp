@@ -131,6 +131,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             subItem->mEnableByDefault = data.mEnableByDefault;
             subItem->mHasConfigureSupport = data.mHasConfigureDialog;
             const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
+            subItem->mEnableFromUserSettings = isPluginActivated;
             subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
             if (data.mHasConfigureDialog) {
                 QToolButton *but = new QToolButton(mListWidget);
@@ -169,3 +170,9 @@ void ConfigurePluginsListWidget::changeState(const QList<PluginItem *> &items)
     }
 }
 
+void ConfigurePluginsListWidget::resetToUserSettings(const QList<PluginItem *> &items)
+{
+    Q_FOREACH (PluginItem *item, items) {
+        item->setCheckState(0, item->mEnableFromUserSettings ? Qt::Checked : Qt::Unchecked);
+    }
+}
