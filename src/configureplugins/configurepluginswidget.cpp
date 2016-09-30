@@ -87,6 +87,11 @@ void ConfigurePluginsWidget::save()
     mConfigureListWidget->save();
 }
 
+void ConfigurePluginsWidget::defaults()
+{
+    mConfigureListWidget->defaults();
+}
+
 void ConfigurePluginsWidget::doLoadFromGlobalSettings()
 {
     mConfigureListWidget->doLoadFromGlobalSettings();

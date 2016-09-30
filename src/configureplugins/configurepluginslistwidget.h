@@ -37,6 +37,7 @@ public:
     virtual void save();
     virtual void doLoadFromGlobalSettings();
     virtual void doResetToDefaultsOther();
+    virtual void defaults();
     virtual void initialize();
 Q_SIGNALS:
     void descriptionChanged(const QString &description);

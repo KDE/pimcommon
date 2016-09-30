@@ -86,6 +86,11 @@ void ConfigurePluginsListWidget::doResetToDefaultsOther()
 {
 }
 
+void ConfigurePluginsListWidget::defaults()
+{
+
+}
+
 void ConfigurePluginsListWidget::initialize()
 {
 }

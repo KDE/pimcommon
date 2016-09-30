@@ -34,6 +34,7 @@ public:
     ~ConfigurePluginsWidget();
 
     void save();
+    void defaults();
     void doLoadFromGlobalSettings();
     void doResetToDefaultsOther();
 
