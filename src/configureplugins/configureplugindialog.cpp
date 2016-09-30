@@ -23,6 +23,7 @@
 #include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include "../util/pimutil.h"
 
 using namespace PimCommon;
 
@@ -58,6 +59,11 @@ void ConfigurePluginDialog::reset()
 
 void ConfigurePluginDialog::help()
 {
+}
+
+void ConfigurePluginDialog::showHelp(const QString &name, const QString &anchor)
+{
+    PimCommon::Util::invokeHelp(name, anchor);
 }
 
 void ConfigurePluginDialog::slotHelpClicked()

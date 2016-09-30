@@ -30,7 +30,9 @@ public:
     ~ConfigurePluginDialog();
 
     void initLayout();
+
 protected:
+    void showHelp(const QString &name, const QString &anchor);
     virtual QWidget *createLayout() = 0;
     virtual void save() = 0;
     virtual void load() = 0;
