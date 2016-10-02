@@ -28,7 +28,8 @@
 using namespace PimCommon;
 
 ConfigurePluginDialog::ConfigurePluginDialog(QWidget *parent)
-    : QDialog(parent)
+    : QDialog(parent),
+      mButtonBox(Q_NULLPTR)
 {
 }
 
@@ -42,12 +43,12 @@ void ConfigurePluginDialog::initLayout()
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(createLayout());
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::RestoreDefaults|QDialogButtonBox::Help, this);
-    layout->addWidget(buttonBox);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfigurePluginDialog::slotAccepted);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfigurePluginDialog::reject);
-    connect(buttonBox, &QDialogButtonBox::helpRequested, this, &ConfigurePluginDialog::slotHelpClicked);
-    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &ConfigurePluginDialog::slotRestoreDefaultClicked);
+    mButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::RestoreDefaults|QDialogButtonBox::Help, this);
+    layout->addWidget(mButtonBox);
+    connect(mButtonBox, &QDialogButtonBox::accepted, this, &ConfigurePluginDialog::slotAccepted);
+    connect(mButtonBox, &QDialogButtonBox::rejected, this, &ConfigurePluginDialog::reject);
+    connect(mButtonBox, &QDialogButtonBox::helpRequested, this, &ConfigurePluginDialog::slotHelpClicked);
+    connect(mButtonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &ConfigurePluginDialog::slotRestoreDefaultClicked);
     readConfig();
     load();
 }
@@ -59,6 +60,11 @@ void ConfigurePluginDialog::reset()
 
 void ConfigurePluginDialog::help()
 {
+}
+
+QDialogButtonBox *ConfigurePluginDialog::buttonBox() const
+{
+    return mButtonBox;
 }
 
 void ConfigurePluginDialog::showHelp(const QString &name, const QString &anchor)

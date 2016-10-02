@@ -20,6 +20,7 @@
 
 #include <QDialog>
 #include "pimcommon_export.h"
+class QDialogButtonBox;
 namespace PimCommon
 {
 class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
@@ -40,6 +41,7 @@ protected:
 
     virtual void help();
 
+    QDialogButtonBox *buttonBox() const;
 
 private:
     void slotHelpClicked();
@@ -47,6 +49,7 @@ private:
     void slotRestoreDefaultClicked();
     void saveConfig();
     void readConfig();
+    QDialogButtonBox *mButtonBox;
 };
 }
 #endif // CONFIGUREPLUGINDIALOG_H
