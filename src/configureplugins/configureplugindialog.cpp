@@ -44,6 +44,7 @@ void ConfigurePluginDialog::initLayout()
     layout->addWidget(createLayout());
 
     mButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::RestoreDefaults|QDialogButtonBox::Help, this);
+    mButtonBox->setObjectName(QStringLiteral("buttonBox"));
     layout->addWidget(mButtonBox);
     connect(mButtonBox, &QDialogButtonBox::accepted, this, &ConfigurePluginDialog::slotAccepted);
     connect(mButtonBox, &QDialogButtonBox::rejected, this, &ConfigurePluginDialog::reject);
