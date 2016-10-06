@@ -113,6 +113,7 @@ private:
     QString autoDetectURL(const QString &_word) const;
     void readAutoCorrectionXmlFile(bool forceGlobal = false);
     bool excludeToUppercase(const QString &word) const;
+    QColor linkColor();
 
     bool mSingleSpaces; // suppress double spaces.
     bool mUppercaseFirstCharOfSentence; // convert first letter of a sentence automaticall to uppercase
@@ -144,6 +145,7 @@ private:
     QHash<QString, QString> mSuperScriptEntries;
     TypographicQuotes mTypographicSingleQuotes;
     TypographicQuotes mTypographicDoubleQuotes;
+    QColor mLinkColor;
 };
 }
 

@@ -554,6 +554,15 @@ bool AutoCorrection::autoBoldUnderline()
     return true;
 }
 
+QColor AutoCorrection::linkColor()
+{
+    if (mLinkColor.isValid()) {
+        return mLinkColor;
+    }
+    mLinkColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color();
+    return mLinkColor;
+}
+
 bool AutoCorrection::autoFormatURLs()
 {
     if (!mAutoFormatUrl) {
@@ -575,8 +584,8 @@ bool AutoCorrection::autoFormatURLs()
     format.setFontItalic(true);
     format.setAnchor(true);
     format.setUnderlineStyle(QTextCharFormat::SingleUnderline);
-    format.setUnderlineColor(KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color());
-    format.setForeground(KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color());
+    format.setUnderlineColor(linkColor());
+    format.setForeground(linkColor());
     mCursor.mergeCharFormat(format);
 
     mWord = mCursor.selectedText();
