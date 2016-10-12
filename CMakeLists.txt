@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.12)
 
 project(pimcommon)
 
-set(KF5_VERSION "5.26.0")
+set(KF5_VERSION "5.27.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(LIBRARY_NAMELINK)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
