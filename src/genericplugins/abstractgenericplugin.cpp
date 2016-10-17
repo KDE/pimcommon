@@ -62,4 +62,3 @@ bool AbstractGenericPlugin::isEnabled() const
     return mIsEnabled;
 }
 
-

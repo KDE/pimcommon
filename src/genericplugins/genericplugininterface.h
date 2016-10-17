@@ -84,7 +84,6 @@ public:
 
     virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
-
 private:
     GenericPluginInterfacePrivate *const d;
 };
