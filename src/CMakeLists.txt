@@ -196,8 +196,13 @@ set(libpimcommon_genericgrantlee_SRCS
     genericgrantlee/genericgrantleeformatter.cpp
     )
 
+set(libpimcommon_networkmanager_SRCS
+    network/networkmanager.cpp
+    )
+
 set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
+    ${libpimcommon_networkmanager_SRCS}
     ${libpimcommon_configure_plugins_SRCS}
     ${libpimcommon_job_SRCS}
     ${libpimcommon_genericgrantlee_SRCS}
@@ -339,6 +344,14 @@ ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
     REQUIRED_HEADERS PimCommon_genericgrantlee_HEADERS
     PREFIX PimCommon
     RELATIVE genericgrantlee
+    )
+
+ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
+    HEADER_NAMES
+    NetworkManager
+    REQUIRED_HEADERS PimCommon_networkmanager_HEADERS
+    PREFIX PimCommon
+    RELATIVE network
     )
 
 ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
@@ -571,6 +584,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasegenericgrantlee_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
@@ -609,6 +623,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${PimCommon_HEADERS}
+    ${PimCommon_networkmanager_HEADERS}
     ${PimCommon_acl_HEADERS}
     ${PimCommon_autocorrection_HEADERS}
     ${PimCommon_autocorrectionwidgets_HEADERS}

@@ -22,6 +22,7 @@
 #include "googletranslator.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
 #include "Libkdepim/ProgressIndicatorWidget"
+#include <PimCommon/NetworkManager>
 
 #include <QPushButton>
 #include <KLocalizedString>
@@ -54,12 +55,10 @@ public:
           languageSettingsChanged(false),
           standalone(true)
     {
-        mNetworkConfigurationManager = new QNetworkConfigurationManager();
     }
     ~TranslatorWidgetPrivate()
     {
         delete abstractTranslator;
-        delete mNetworkConfigurationManager;
     }
 
     void initLanguage();
@@ -78,7 +77,6 @@ public:
     KPIM::ProgressIndicatorWidget *progressIndictor;
     QPushButton *invert;
     QSplitter *splitter;
-    QNetworkConfigurationManager *mNetworkConfigurationManager;
     bool languageSettingsChanged;
     bool standalone;
 };
@@ -362,7 +360,7 @@ void TranslatorWidget::setTextToTranslate(const QString &text)
 
 void TranslatorWidget::slotTranslate()
 {
-    if (!d->mNetworkConfigurationManager->isOnline()) {
+    if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
         KMessageBox::information(this, i18n("No network connection detected, we cannot translate text."), i18n("No network"));
         return;
     }
