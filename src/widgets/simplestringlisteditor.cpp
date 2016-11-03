@@ -449,14 +449,14 @@ void SimpleStringListEditor::slotContextMenu(const QPoint &pos)
     const bool hasItemsSelected = !lstSelectedItems.isEmpty();
     QMenu *menu = new QMenu(this);
     if (d->mAddButton) {
-        menu->addAction(d->mAddButton->text(), this, SLOT(slotAdd()));
+        menu->addAction(d->mAddButton->text(), this, &SimpleStringListEditor::slotAdd);
     }
     if (d->mModifyButton && (lstSelectedItems.count() == 1)) {
-        menu->addAction(d->mModifyButton->text(), this, SLOT(slotModify()));
+        menu->addAction(d->mModifyButton->text(), this, &SimpleStringListEditor::slotModify);
     }
     if (d->mRemoveButton && hasItemsSelected) {
         menu->addSeparator();
-        menu->addAction(d->mRemoveButton->text(), this, SLOT(slotRemove()));
+        menu->addAction(d->mRemoveButton->text(), this, &SimpleStringListEditor::slotRemove);
     }
     menu->exec(d->mListBox->mapToGlobal(pos));
     delete menu;
