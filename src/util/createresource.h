@@ -29,7 +29,7 @@ class PIMCOMMON_EXPORT CreateResource  : public QObject
 {
     Q_OBJECT
 public:
-    explicit CreateResource();
+    explicit CreateResource(QObject *parent = Q_NULLPTR);
     ~CreateResource();
 
     QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings, bool synchronizeTree = false);

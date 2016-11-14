@@ -32,7 +32,8 @@ using namespace Akonadi;
 
 using namespace PimCommon;
 
-CreateResource::CreateResource()
+CreateResource::CreateResource(QObject *parent)
+    : QObject(parent)
 {
 }
 
