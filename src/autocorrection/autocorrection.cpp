@@ -1053,9 +1053,13 @@ void AutoCorrection::replaceTypographicQuotes()
 
 void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
 {
-    auto kdelang = QLocale::system().uiLanguages().at(0);
-    if (kdelang == QLatin1String("C")) {
-        kdelang = QStringLiteral("en_US");
+    QString kdelang = QStringLiteral("en_US");
+    const QStringList lst = QLocale::system().uiLanguages();
+    if (!lst.isEmpty()) {
+        kdelang = lst.at(0);
+        if (kdelang == QLatin1String("C")) {
+            kdelang = QStringLiteral("en_US");
+        }
     }
     kdelang.remove(QRegularExpression(QStringLiteral("@.*")));
 
