@@ -25,6 +25,7 @@
 
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KStandardGuiItem>
 #include <QMenu>
 
 #include <QLabel>
@@ -97,7 +98,7 @@ StorageServiceDeleteDialog::StorageServiceDeleteDialog(DeleteType type, PimCommo
     mUser1Button = new QPushButton;
     buttonBox->addButton(mUser1Button, QDialogButtonBox::ActionRole);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &StorageServiceDeleteDialog::reject);
-    mUser1Button->setText(i18n("Delete"));
+    KStandardGuiItem::assign(mUser1Button, KStandardGuiItem::Delete);
 
     QWidget *w = new QWidget;
     QVBoxLayout *vbox = new QVBoxLayout;

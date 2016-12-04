@@ -26,6 +26,7 @@
 #include <KLocalizedString>
 #include <ItemModifyJob>
 #include <KSharedConfig>
+#include <KStandardGuiItem>
 #include <item.h>
 #include <entityannotationsattribute.h>
 
@@ -144,7 +145,7 @@ void AnnotationEditDialog::slotDeleteNote()
     const int answer = KMessageBox::warningContinueCancel(this,
                        i18n("Do you really want to delete this note?"),
                        i18nc("@title:window", "Delete Note?"),
-                       KGuiItem(i18nc("@action:button", "Delete"), QStringLiteral("edit-delete")));
+                       KStandardGuiItem::del());
     if (answer == KMessageBox::Continue) {
         d->mItem.removeAttribute<Akonadi::EntityAnnotationsAttribute>();
         new Akonadi::ItemModifyJob(d->mItem);
