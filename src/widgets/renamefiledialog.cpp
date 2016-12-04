@@ -34,6 +34,7 @@
 #include <KIO/StatJob>
 #include <KJobWidgets>
 #include <KMessageBox>
+#include <KStandardGuiItem>
 
 #include <QHBoxLayout>
 #include <QCheckBox>
@@ -141,7 +142,8 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     renameLayout->addWidget(d->suggestNewName);
     connect(d->suggestNewName, &QPushButton::clicked, this, &RenameFileDialog::slotSuggestNewNamePressed);
 
-    QPushButton *overWrite = new QPushButton(i18n("&Overwrite"), this);
+    QPushButton *overWrite = new QPushButton(this);
+    KStandardGuiItem::assign(overWrite, KStandardGuiItem::Overwrite);
     connect(overWrite, &QPushButton::clicked, this, &RenameFileDialog::slotOverwritePressed);
 
     QPushButton *ignore = new QPushButton(i18n("&Ignore"), this);
