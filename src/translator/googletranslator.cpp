@@ -194,12 +194,12 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 #if !defined(NDEBUG)
     mJsonDebug = QString::fromUtf8(jsonDoc.toJson(QJsonDocument::Indented));
 #endif
-    Q_FOREACH (const QVariant &level0, json) {
+    for (const QVariant &level0 : json) {
         const QVariantList listLevel0 = level0.toList();
         if (listLevel0.isEmpty()) {
             continue;
         }
-        Q_FOREACH (const QVariant &level1, listLevel0) {
+        for (const QVariant &level1 : listLevel0) {
             if (level1.toList().size() <= 2) {
                 continue;
             }

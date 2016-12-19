@@ -478,7 +478,7 @@ QString DropBoxStorageService::fillListWidget(StorageServiceTreeWidget *listWidg
     }
     if (info.contains(QStringLiteral("contents"))) {
         const QVariantList lst = info.value(QStringLiteral("contents")).toList();
-        Q_FOREACH (const QVariant &variant, lst) {
+        for (const QVariant &variant : lst) {
             const QVariantMap qwer = variant.toMap();
             //qCDebug(PIMCOMMON_LOG)<<" qwer "<<qwer;
             if (qwer.contains(QStringLiteral("is_dir"))) {

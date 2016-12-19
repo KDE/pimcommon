@@ -396,11 +396,11 @@ void AutoCorrectionWidget::addAutocorrectEntry()
 
 void AutoCorrectionWidget::removeAutocorrectEntry()
 {
-    QList<QTreeWidgetItem *> listItems = d->ui->treeWidget->selectedItems();
+    const QList<QTreeWidgetItem *> listItems = d->ui->treeWidget->selectedItems();
     if (listItems.isEmpty()) {
         return;
     }
-    Q_FOREACH (QTreeWidgetItem *item, listItems) {
+    for (QTreeWidgetItem *item : listItems) {
         QTreeWidgetItem *below = d->ui->treeWidget->itemBelow(item);
 
         QString findStr;
@@ -494,11 +494,11 @@ void AutoCorrectionWidget::addAbbreviationEntry()
 
 void AutoCorrectionWidget::removeAbbreviationEntry()
 {
-    QList<QListWidgetItem *> listItem = d->ui->abbreviationList->selectedItems();
+    const QList<QListWidgetItem *> listItem = d->ui->abbreviationList->selectedItems();
     if (listItem.isEmpty()) {
         return;
     }
-    Q_FOREACH (QListWidgetItem *item, listItem) {
+    for (QListWidgetItem *item : listItem) {
         d->m_upperCaseExceptions.remove(item->text());
         delete item;
     }
@@ -524,11 +524,11 @@ void AutoCorrectionWidget::addTwoUpperLetterEntry()
 
 void AutoCorrectionWidget::removeTwoUpperLetterEntry()
 {
-    QList<QListWidgetItem *> listItem = d->ui->twoUpperLetterList->selectedItems();
+    const QList<QListWidgetItem *> listItem = d->ui->twoUpperLetterList->selectedItems();
     if (listItem.isEmpty()) {
         return;
     }
-    Q_FOREACH (QListWidgetItem *item, listItem) {
+    for (QListWidgetItem *item : listItem) {
         d->m_twoUpperLetterExceptions.remove(item->text());
         delete item;
     }

@@ -33,7 +33,7 @@ QStringList PimCommon::DropBoxUtil::getListFolder(const QString &data)
 
     if (info.contains(QStringLiteral("contents"))) {
         const QVariantList lst = info.value(QStringLiteral("contents")).toList();
-        Q_FOREACH (const QVariant &variant, lst) {
+        for (const QVariant &variant : lst) {
             const QVariantMap qwer = variant.toMap();
             if (qwer.contains(QStringLiteral("is_dir"))) {
                 const bool value = qwer.value(QStringLiteral("is_dir")).toBool();

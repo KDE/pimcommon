@@ -145,7 +145,7 @@ void AclModifyJob::slotModifyDone(KJob *job)
 void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &collectionList)
 {
     QStringList folderNames;
-    Q_FOREACH (const Akonadi::Collection &col, collectionList) {
+    for (const Akonadi::Collection &col : collectionList) {
         if (col.hasAttribute<PimCommon::ImapAclAttribute>()) {
             PimCommon::ImapAclAttribute *attribute = col.attribute<PimCommon::ImapAclAttribute>();
             if (canAdministrate(attribute, col)) {
@@ -157,7 +157,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
                     // parentCollection() only returns the ID, but we have the
                     // collection in our list already because we've recursively
                     // fetched. So look it up in our list.
-                    Q_FOREACH (const Akonadi::Collection &it, collectionList) {
+                    for (const Akonadi::Collection &it : collectionList) {
                         if (it.id() == cur.id()) {
                             fullName = QLatin1String("/") + it.displayName() + fullName;
                             parentFound = true;

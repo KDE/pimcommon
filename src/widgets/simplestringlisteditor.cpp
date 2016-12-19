@@ -290,11 +290,11 @@ void SimpleStringListEditor::slotAdd()
 
 void SimpleStringListEditor::slotRemove()
 {
-    QList<QListWidgetItem *> selectedItems = d->mListBox->selectedItems();
+    const QList<QListWidgetItem *> selectedItems = d->mListBox->selectedItems();
     if (selectedItems.isEmpty()) {
         return;
     }
-    Q_FOREACH (QListWidgetItem *item, selectedItems) {
+    for (QListWidgetItem *item : selectedItems) {
         delete d->mListBox->takeItem(d->mListBox->row(item));
     }
     slotSelectionChanged();

@@ -79,7 +79,7 @@ public:
     {
         if (KMessageBox::Yes == KMessageBox::questionYesNo(q, i18n("Do you want to delete selected template?"), i18n("Delete template"))) {
             const QList<QListWidgetItem *> lstSelectedItems = q->selectedItems();
-            Q_FOREACH (QListWidgetItem *item, lstSelectedItems) {
+            for (QListWidgetItem *item : lstSelectedItems) {
                 if (item->data(TemplateListWidget::DefaultTemplate).toBool() == false) {
                     delete item;
                 }

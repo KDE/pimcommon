@@ -169,7 +169,7 @@ bool MigrateApplicationFiles::copyRecursively(const QString &srcFilePath, const 
         }
         QDir sourceDir(srcFilePath);
         const QStringList fileNames = sourceDir.entryList(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
-        Q_FOREACH (const QString &fileName, fileNames) {
+        for (const QString &fileName : fileNames) {
             const QString newSrcFilePath = srcFilePath + QLatin1Char('/') + fileName;
             const QString newTgtFilePath = tgtFilePath + QLatin1Char('/') + fileName;
             if (!copyRecursively(newSrcFilePath, newTgtFilePath)) {
@@ -214,7 +214,7 @@ void MigrateApplicationFiles::migrateFile(const MigrateFileInfo &info)
         } else {
             QDir sourceDir(originalPath);
             const QStringList fileNames = sourceDir.entryList(info.filePatterns(), QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot);
-            Q_FOREACH (const QString &file, fileNames) {
+            for (const QString &file : fileNames) {
                 QFile copyFile(originalPath + QLatin1Char('/') + file);
                 if (!copyFile.copy(newPath + QLatin1Char('/') + file)) {
                     qCDebug(PIMCOMMON_LOG) << "impossible to copy " << copyFile.fileName() << " to " << newPath;

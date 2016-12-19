@@ -141,7 +141,7 @@ QByteArray ImapAclAttribute::serialized() const
 
 static void fillRightsMap(const QList<QByteArray> &rights, QMap <QByteArray, KIMAP::Acl::Rights> &map)
 {
-    foreach (const QByteArray &right, rights) {
+    for (const QByteArray &right : rights) {
         const QByteArray trimmed = right.trimmed();
         const int wsIndex = trimmed.indexOf(' ');
         const QByteArray id = trimmed.mid(0, wsIndex).trimmed();

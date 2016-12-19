@@ -39,8 +39,8 @@ CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
     lay->addWidget(menu);
 
     mCustomTools = new PimCommon::CustomToolsWidgetNg(new KActionCollection(this));
-    QList<KToggleAction *> lst = mCustomTools->actionList();
-    Q_FOREACH (KToggleAction *act, lst) {
+    const QList<KToggleAction *> lst = mCustomTools->actionList();
+    for (KToggleAction *act : lst) {
         menu->addAction(act);
     }
 
