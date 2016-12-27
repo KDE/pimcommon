@@ -203,7 +203,7 @@ void QWebdavUrlInfo::davParsePropstats(const QString &path, const QDomNodeList &
     setIsDir(isDirectory);
     setIsFile(!isDirectory);
 
-    if (isDirectory && !name().endsWith(QLatin1String("/"))) {
+    if (isDirectory && !name().endsWith(QLatin1Char('/'))) {
         setName(name() + QLatin1String("/"));
     }
 #if 0
