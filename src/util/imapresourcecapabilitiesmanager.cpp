@@ -79,7 +79,8 @@ void ImapResourceCapabilitiesManager::slotCapabilities(QDBusPendingCallWatcher *
 
 void ImapResourceCapabilitiesManager::init()
 {
-    Q_FOREACH (const Akonadi::AgentInstance &instance, Akonadi::AgentManager::self()->instances()) {
+    const Akonadi::AgentInstance::List lstInstances = Akonadi::AgentManager::self()->instances();
+    for (const Akonadi::AgentInstance &instance : lstInstances) {
         const QString identifier = instance.identifier();
         if (PimCommon::Util::isImapResource(identifier)) {
             searchCapabilities(identifier);
