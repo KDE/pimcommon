@@ -32,7 +32,7 @@ public:
     GenericGrantleeFormatterPrivate(const QString &defaultHtmlMain, const QString &themePath)
         : mThemePath(themePath),
           mDefaultMainFile(defaultHtmlMain),
-          mEngine(Q_NULLPTR)
+          mEngine(nullptr)
     {
         initializeEngine();
     }

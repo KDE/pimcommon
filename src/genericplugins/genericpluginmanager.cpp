@@ -55,7 +55,7 @@ class GenericPluginInfo
 {
 public:
     GenericPluginInfo()
-        : plugin(Q_NULLPTR),
+        : plugin(nullptr),
           isEnabled(true)
     {
 
@@ -144,7 +144,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
             if (unique.contains(info.metaDataFileNameBaseName)) {
                 continue;
             }
-            info.plugin = Q_NULLPTR;
+            info.plugin = nullptr;
             mPluginList.push_back(info);
             unique.insert(info.metaDataFileNameBaseName);
         } else {

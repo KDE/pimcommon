@@ -24,7 +24,7 @@ class RegularExpressionTests : public QObject
 {
     Q_OBJECT
 public:
-    explicit RegularExpressionTests(QObject *parent = Q_NULLPTR);
+    explicit RegularExpressionTests(QObject *parent = nullptr);
     ~RegularExpressionTests();
 private Q_SLOTS:
     void shouldVerifyQStringListFilterConversion_data();

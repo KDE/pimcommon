@@ -24,10 +24,10 @@ class PimCommon::KActionMenuChangeCasePrivate
 {
 public:
     KActionMenuChangeCasePrivate()
-        : mUpperCase(Q_NULLPTR),
-          mSentenceCase(Q_NULLPTR),
-          mLowerCase(Q_NULLPTR),
-          mReverseCase(Q_NULLPTR)
+        : mUpperCase(nullptr),
+          mSentenceCase(nullptr),
+          mLowerCase(nullptr),
+          mReverseCase(nullptr)
     {
 
     }

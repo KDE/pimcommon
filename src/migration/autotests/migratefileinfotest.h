@@ -24,7 +24,7 @@ class MigrateFileInfoTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit MigrateFileInfoTest(QObject *parent = Q_NULLPTR);
+    explicit MigrateFileInfoTest(QObject *parent = nullptr);
     ~MigrateFileInfoTest();
 
 private Q_SLOTS:

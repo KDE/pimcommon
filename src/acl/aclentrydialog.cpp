@@ -42,10 +42,10 @@ class AclEntryDialog::Private
 public:
     Private(AclEntryDialog *qq)
         : q(qq),
-          mButtonGroup(Q_NULLPTR),
-          mUserIdLineEdit(Q_NULLPTR),
-          mButtonLayout(Q_NULLPTR),
-          mOkButton(Q_NULLPTR)
+          mButtonGroup(nullptr),
+          mUserIdLineEdit(nullptr),
+          mButtonLayout(nullptr),
+          mOkButton(nullptr)
     {
     }
 
@@ -62,7 +62,7 @@ public:
 
 void AclEntryDialog::Private::slotChanged()
 {
-    mOkButton->setEnabled(!mUserIdLineEdit->text().trimmed().isEmpty() && mButtonGroup->checkedButton() != Q_NULLPTR);
+    mOkButton->setEnabled(!mUserIdLineEdit->text().trimmed().isEmpty() && mButtonGroup->checkedButton() != nullptr);
 }
 
 void AclEntryDialog::Private::slotSelectAddresses()

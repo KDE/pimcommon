@@ -252,7 +252,7 @@ void StorageServiceSettingsWidget::slotAddService()
         if (type != PimCommon::StorageServiceManager::Unknown) {
             const QString serviceName = PimCommon::StorageServiceManager::serviceToI18n(type);
             const QString service = PimCommon::StorageServiceManager::serviceName(type);
-            StorageServiceAbstract *storage = Q_NULLPTR;
+            StorageServiceAbstract *storage = nullptr;
             switch (type) {
             case PimCommon::StorageServiceManager::DropBox: {
                 storage = new PimCommon::DropBoxStorageService;
@@ -306,7 +306,7 @@ void StorageServiceSettingsWidget::defaultConnection(StorageServiceAbstract *sto
 
 void StorageServiceSettingsWidget::slotAuthenticationCancelled(const QString &serviceName)
 {
-    PimCommon::StorageListWidgetItem *item = Q_NULLPTR;
+    PimCommon::StorageListWidgetItem *item = nullptr;
     for (int i = 0; i < mListService->count(); ++i) {
         if (mListService->item(i)->data(Name).toString() == serviceName) {
             item = static_cast<PimCommon::StorageListWidgetItem *>(mListService->item(i));
@@ -318,7 +318,7 @@ void StorageServiceSettingsWidget::slotAuthenticationCancelled(const QString &se
 
 void StorageServiceSettingsWidget::slotAuthenticationFailed(const QString &serviceName, const QString &error)
 {
-    PimCommon::StorageListWidgetItem *item = Q_NULLPTR;
+    PimCommon::StorageListWidgetItem *item = nullptr;
     for (int i = 0; i < mListService->count(); ++i) {
         if (mListService->item(i)->data(Name).toString() == serviceName) {
             item = static_cast<PimCommon::StorageListWidgetItem *>(mListService->item(i));

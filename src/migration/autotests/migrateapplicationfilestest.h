@@ -24,7 +24,7 @@ class MigrateApplicationFilesTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit MigrateApplicationFilesTest(QObject *parent = Q_NULLPTR);
+    explicit MigrateApplicationFilesTest(QObject *parent = nullptr);
     ~MigrateApplicationFilesTest();
 private Q_SLOTS:
     void initTestCase();

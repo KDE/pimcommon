@@ -40,7 +40,7 @@ void ActionTypeTest::shouldHaveDefaultValue()
 
 void ActionTypeTest::shouldAssignValue()
 {
-    QAction *act = new QAction(Q_NULLPTR);
+    QAction *act = new QAction(nullptr);
     PimCommon::ActionType::Type type = PimCommon::ActionType::File;
     PimCommon::ActionType actionType(act, type);
     QCOMPARE(actionType.action(), act);

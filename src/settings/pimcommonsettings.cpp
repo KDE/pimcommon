@@ -20,7 +20,7 @@
 
 using namespace PimCommon;
 
-PimCommonSettings *PimCommonSettings::mSelf = Q_NULLPTR;
+PimCommonSettings *PimCommonSettings::mSelf = nullptr;
 
 PimCommonSettings *PimCommonSettings::self()
 {

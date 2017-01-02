@@ -28,7 +28,7 @@
 using namespace PimCommon;
 
 ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection(QWidget *parent)
-    : ImportAbstractAutocorrection(parent), mArchive(Q_NULLPTR), mTempDir(Q_NULLPTR)
+    : ImportAbstractAutocorrection(parent), mArchive(nullptr), mTempDir(nullptr)
 {
 }
 
@@ -44,11 +44,11 @@ void ImportLibreOfficeAutocorrection::closeArchive()
             mArchive->close();
         }
         delete mArchive;
-        mArchive = Q_NULLPTR;
+        mArchive = nullptr;
     }
 
     delete mTempDir;
-    mTempDir = Q_NULLPTR;
+    mTempDir = nullptr;
 }
 
 bool ImportLibreOfficeAutocorrection::import(const QString &fileName, LoadAttribute loadAttribute)
@@ -85,7 +85,7 @@ void ImportLibreOfficeAutocorrection::importAutoCorrectionFile()
 
 bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirectory *archiveDirectory)
 {
-    const KArchiveEntry *documentList = Q_NULLPTR;
+    const KArchiveEntry *documentList = nullptr;
 
     QString archiveFileName;
     switch (type) {

@@ -31,8 +31,8 @@ class PimCommon::PluginInterfacePrivate
 {
 public:
     PluginInterfacePrivate()
-        : mParentWidget(Q_NULLPTR),
-          mActionCollection(Q_NULLPTR)
+        : mParentWidget(nullptr),
+          mActionCollection(nullptr)
     {
 
     }

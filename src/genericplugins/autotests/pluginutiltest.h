@@ -24,7 +24,7 @@ class PluginUtilTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit PluginUtilTest(QObject *parent = Q_NULLPTR);
+    explicit PluginUtilTest(QObject *parent = nullptr);
     ~PluginUtilTest();
 private Q_SLOTS:
     void shouldTestIsEnabled_data();

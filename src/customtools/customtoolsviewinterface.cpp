@@ -34,6 +34,6 @@ void CustomToolsViewInterface::setText(const QString &)
 
 KToggleAction *CustomToolsViewInterface::action() const
 {
-    return Q_NULLPTR;
+    return nullptr;
 }
 

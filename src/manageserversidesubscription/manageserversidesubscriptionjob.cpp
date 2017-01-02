@@ -31,7 +31,7 @@ class PimCommon::ManageServerSideSubscriptionJobPrivate
 {
 public:
     ManageServerSideSubscriptionJobPrivate()
-        : mParentWidget(Q_NULLPTR)
+        : mParentWidget(nullptr)
     {
 
     }
@@ -89,7 +89,7 @@ void ManageServerSideSubscriptionJob::slotConfigureSubscriptionFinished(QDBusPen
         qCDebug(PIMCOMMON_LOG) << "ManageServerSideSubscriptionJob return an invalid reply";
     }
     watcher->deleteLater();
-    watcher = Q_NULLPTR;
+    watcher = nullptr;
     deleteLater();
 }
 

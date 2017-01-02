@@ -31,7 +31,7 @@ class PimCommon::SelectMultiCollectionDialogPrivate
 {
 public:
     SelectMultiCollectionDialogPrivate()
-        : mSelectMultiCollection(Q_NULLPTR)
+        : mSelectMultiCollection(nullptr)
     {
 
     }

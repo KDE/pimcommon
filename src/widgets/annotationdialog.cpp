@@ -45,8 +45,8 @@ class Q_DECL_HIDDEN AnnotationEditDialog::Private
 {
 public:
     Private()
-        : mTextEdit(Q_NULLPTR),
-          mNoteType(Q_NULLPTR),
+        : mTextEdit(nullptr),
+          mNoteType(nullptr),
           mHasAnnotation(false)
     {
     }

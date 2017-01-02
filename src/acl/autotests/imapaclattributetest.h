@@ -23,7 +23,7 @@ class ImapAclAttributeTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImapAclAttributeTest(QObject *parent = Q_NULLPTR);
+    explicit ImapAclAttributeTest(QObject *parent = nullptr);
     ~ImapAclAttributeTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

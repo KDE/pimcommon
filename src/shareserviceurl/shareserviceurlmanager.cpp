@@ -30,7 +30,7 @@ class PimCommon::ShareServiceUrlManagerPrivate
 {
 public:
     ShareServiceUrlManagerPrivate(ShareServiceUrlManager *qq)
-        : mMenu(Q_NULLPTR),
+        : mMenu(nullptr),
           q(qq)
     {
 

@@ -42,7 +42,7 @@ class PimCommon::AutoCorrectionWidgetPrivate
 public:
     AutoCorrectionWidgetPrivate()
         : ui(new Ui::AutoCorrectionWidget),
-          mAutoCorrection(Q_NULLPTR),
+          mAutoCorrection(nullptr),
           mWasChanged(false)
     {
 
@@ -202,7 +202,7 @@ void AutoCorrectionWidget::addAutoCorrectEntries()
 {
     d->ui->treeWidget->clear();
     QHash<QString, QString>::const_iterator i = d->m_autocorrectEntries.constBegin();
-    QTreeWidgetItem *item = Q_NULLPTR;
+    QTreeWidgetItem *item = nullptr;
     while (i != d->m_autocorrectEntries.constEnd()) {
         item = new QTreeWidgetItem(d->ui->treeWidget, item);
         item->setText(0, i.key());
@@ -408,11 +408,11 @@ void AutoCorrectionWidget::removeAutocorrectEntry()
             //qCDebug(PIMCOMMON_LOG) << "below";
             findStr = item->text(0);
             delete item;
-            item = Q_NULLPTR;
+            item = nullptr;
         } else if (d->ui->treeWidget->topLevelItemCount() > 0) {
             findStr = item->text(0);
             delete item;
-            item = Q_NULLPTR;
+            item = nullptr;
         }
         if (!findStr.isEmpty()) {
             d->m_autocorrectEntries.remove(findStr);
@@ -434,7 +434,7 @@ void AutoCorrectionWidget::enableAddRemoveButton()
     const QString find = d->ui->find->text();
     const QString replace = d->ui->replace->text();
 
-    QTreeWidgetItem *item = Q_NULLPTR;
+    QTreeWidgetItem *item = nullptr;
     if (d->m_autocorrectEntries.contains(find)) {
         item = d->ui->treeWidget->findItems(find, Qt::MatchCaseSensitive).at(0);
     }
@@ -568,7 +568,7 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
         }
         const QString fileName = QFileDialog::getOpenFileName(this, title,  QString(), filter);
         if (!fileName.isEmpty()) {
-            PimCommon::ImportAbstractAutocorrection *importAutoCorrection = Q_NULLPTR;
+            PimCommon::ImportAbstractAutocorrection *importAutoCorrection = nullptr;
             switch (type) {
             case AutoCorrectionWidget::LibreOffice:
                 importAutoCorrection = new PimCommon::ImportLibreOfficeAutocorrection(this);

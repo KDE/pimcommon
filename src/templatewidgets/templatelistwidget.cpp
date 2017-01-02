@@ -307,7 +307,7 @@ QStringList TemplateListWidget::mimeTypes() const
 QMimeData *TemplateListWidget::mimeData(const QList<QListWidgetItem *> items) const
 {
     if (items.isEmpty()) {
-        return Q_NULLPTR;
+        return nullptr;
     }
     QMimeData *mimeData = new QMimeData();
     QListWidgetItem *item = items.first();

@@ -23,8 +23,8 @@ class PimCommon::AbstractGenericPluginInterfacePrivate
 {
 public:
     AbstractGenericPluginInterfacePrivate()
-        : plugin(Q_NULLPTR),
-          parentWidget(Q_NULLPTR)
+        : plugin(nullptr),
+          parentWidget(nullptr)
     {
 
     }

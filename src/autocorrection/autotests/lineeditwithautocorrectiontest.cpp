@@ -27,7 +27,7 @@ LineEditWithAutocorrectionTest::LineEditWithAutocorrectionTest()
 
 void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()
 {
-    PimCommon::LineEditWithAutoCorrection lineedit(Q_NULLPTR, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     QHash<QString, QString> entries;
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
@@ -42,7 +42,7 @@ void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()
 
 void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
 {
-    PimCommon::LineEditWithAutoCorrection lineedit(Q_NULLPTR, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
@@ -60,7 +60,7 @@ void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
 
 void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()
 {
-    PimCommon::LineEditWithAutoCorrection lineedit(Q_NULLPTR, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
@@ -78,7 +78,7 @@ void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()
 
 void LineEditWithAutocorrectionTest::shouldNotAddTwoSpace()
 {
-    PimCommon::LineEditWithAutoCorrection lineedit(Q_NULLPTR, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO ");
     lineedit.autocorrection()->setSingleSpaces(true);
     lineedit.autocorrection()->setEnabledAutoCorrection(true);

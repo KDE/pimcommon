@@ -24,7 +24,7 @@ class ConfigurePluginsListWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfigurePluginsListWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit ConfigurePluginsListWidgetTest(QObject *parent = nullptr);
     ~ConfigurePluginsListWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -24,7 +24,7 @@ class HubicTestWidget : public ServiceTestWidget
 {
     Q_OBJECT
 public:
-    explicit HubicTestWidget(QWidget *parent = Q_NULLPTR);
+    explicit HubicTestWidget(QWidget *parent = nullptr);
 };
 
 #endif

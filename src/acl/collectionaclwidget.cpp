@@ -35,9 +35,9 @@ using namespace PimCommon;
 class ActionButton : public QPushButton
 {
 public:
-    ActionButton(QWidget *parent = Q_NULLPTR)
+    ActionButton(QWidget *parent = nullptr)
         : QPushButton(parent),
-          mDefaultAction(Q_NULLPTR)
+          mDefaultAction(nullptr)
     {
     }
 

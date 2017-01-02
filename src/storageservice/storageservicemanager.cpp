@@ -232,9 +232,9 @@ void StorageServiceManager::slotShareFile()
         if (d->mListService.contains(type)) {
             StorageServiceAbstract *service = d->mListService.value(type);
             if (service && service->hasUploadOrDownloadInProgress()) {
-                KMessageBox::information(Q_NULLPTR, i18n("There is still an upload in progress."));
+                KMessageBox::information(nullptr, i18n("There is still an upload in progress."));
             } else {
-                const QString fileName = QFileDialog::getOpenFileName(Q_NULLPTR, i18n("File to upload"));
+                const QString fileName = QFileDialog::getOpenFileName(nullptr, i18n("File to upload"));
                 if (!fileName.isEmpty()) {
                     QFileInfo info(fileName);
                     const QRegExp disallowedSymbols = QRegExp(service->disallowedSymbols());
@@ -276,7 +276,7 @@ void StorageServiceManager::slotDownloadFile()
         const QString type = act->data().toString();
         StorageServiceAbstract *service = d->mListService.value(type);
         if (service) {
-            QPointer<PimCommon::StorageServiceDownloadDialog> dlg = new PimCommon::StorageServiceDownloadDialog(service, Q_NULLPTR);
+            QPointer<PimCommon::StorageServiceDownloadDialog> dlg = new PimCommon::StorageServiceDownloadDialog(service, nullptr);
             dlg->setDefaultDownloadPath(d->mDefaultUploadFolder);
             dlg->exec();
             delete dlg;
@@ -345,7 +345,7 @@ void StorageServiceManager::readConfig()
 
     const QStringList services = grp.readEntry("Services", QStringList());
     for (const QString &service : services) {
-        PimCommon::StorageServiceAbstract *storageService = Q_NULLPTR;
+        PimCommon::StorageServiceAbstract *storageService = nullptr;
         if (service == serviceName(DropBox)) {
             if (!d->mListService.contains(serviceName(DropBox))) {
                 storageService = new DropBoxStorageService();

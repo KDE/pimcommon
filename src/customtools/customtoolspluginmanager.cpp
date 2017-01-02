@@ -48,7 +48,7 @@ class CustomToolsPluginInfo
 {
 public:
     CustomToolsPluginInfo()
-        : plugin(Q_NULLPTR)
+        : plugin(nullptr)
     {
 
     }
@@ -103,7 +103,7 @@ void CustomToolsPluginManagerPrivate::initializePluginList()
             if (unique.contains(info.saveName())) {
                 continue;
             }
-            info.plugin = Q_NULLPTR;
+            info.plugin = nullptr;
             mPluginList.push_back(info);
             unique.insert(info.saveName());
         } else {

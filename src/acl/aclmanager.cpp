@@ -50,7 +50,7 @@ public:
         PermissionsTextRole
     };
 
-    AclModel(QObject *parent = Q_NULLPTR)
+    AclModel(QObject *parent = nullptr)
         : QAbstractListModel(parent)
     {
     }
@@ -272,7 +272,7 @@ public:
 
         if (mImapUserName == userId) {
             if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-                        Q_NULLPTR,
+                        nullptr,
                         i18n("Do you really want to remove your own permissions for this folder? "
                              "You will not be able to access it afterwards."),
                         i18n("Remove"))) {
@@ -280,7 +280,7 @@ public:
             }
         } else {
             if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-                        Q_NULLPTR,
+                        nullptr,
                         i18n("Do you really want to remove these permissions for this folder?"),
                         i18n("Remove"))) {
                 return;

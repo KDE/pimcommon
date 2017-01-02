@@ -49,10 +49,10 @@ class Q_DECL_HIDDEN PimCommon::RenameFileDialog::RenameFileDialogPrivate
 public:
     RenameFileDialogPrivate(const QUrl &_url, RenameFileDialog *qq)
         : url(_url),
-          applyAll(Q_NULLPTR),
-          rename(Q_NULLPTR),
-          suggestNewName(Q_NULLPTR),
-          nameEdit(Q_NULLPTR),
+          applyAll(nullptr),
+          rename(nullptr),
+          suggestNewName(nullptr),
+          nameEdit(nullptr),
           q(qq)
     {
 

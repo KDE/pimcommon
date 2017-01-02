@@ -62,7 +62,7 @@ OrgKdeAkonadiImapSettingsInterface *PimCommon::Util::createImapSettingsInterface
             new OrgKdeAkonadiImapSettingsInterface(
                 QLatin1String("org.freedesktop.Akonadi.Resource.") + ident, QStringLiteral("/Settings"), QDBusConnection::sessionBus());
     } else {
-        return Q_NULLPTR;
+        return nullptr;
     }
 }
 

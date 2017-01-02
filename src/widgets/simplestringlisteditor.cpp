@@ -53,13 +53,13 @@ class PimCommon::SimpleStringListEditorPrivate
 {
 public:
     SimpleStringListEditorPrivate()
-        : mListBox(Q_NULLPTR),
-          mAddButton(Q_NULLPTR),
-          mRemoveButton(Q_NULLPTR),
-          mModifyButton(Q_NULLPTR),
-          mUpButton(Q_NULLPTR),
-          mDownButton(Q_NULLPTR),
-          mButtonLayout(Q_NULLPTR)
+        : mListBox(nullptr),
+          mAddButton(nullptr),
+          mRemoveButton(nullptr),
+          mModifyButton(nullptr),
+          mUpButton(nullptr),
+          mDownButton(nullptr),
+          mButtonLayout(nullptr)
     {
 
     }

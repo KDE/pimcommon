@@ -24,7 +24,7 @@ class ShareServiceUrlManagerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ShareServiceUrlManagerTest(QObject *parent = Q_NULLPTR);
+    explicit ShareServiceUrlManagerTest(QObject *parent = nullptr);
     ~ShareServiceUrlManagerTest();
 
 private Q_SLOTS:

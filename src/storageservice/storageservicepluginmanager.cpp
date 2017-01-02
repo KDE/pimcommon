@@ -49,7 +49,7 @@ class StorageServicePluginInfo
 {
 public:
     StorageServicePluginInfo()
-        : plugin(Q_NULLPTR)
+        : plugin(nullptr)
     {
 
     }
@@ -96,7 +96,7 @@ void StorageServicePluginManagerPrivate::initializePluginList()
         if (unique.contains(info.saveName())) {
             continue;
         }
-        info.plugin = Q_NULLPTR;
+        info.plugin = nullptr;
         mPluginList.push_back(info);
         unique.insert(info.saveName());
     }

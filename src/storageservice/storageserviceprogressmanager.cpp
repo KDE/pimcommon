@@ -175,7 +175,7 @@ void StorageServiceProgressManager::slotProgressItemCanceled(KPIM::ProgressItem 
 
 ProgressJob::ProgressJob(KPIM::ProgressItem *item, StorageServiceProgressManager::ProgressType type)
     : mType(type),
-      mStorageService(Q_NULLPTR),
+      mStorageService(nullptr),
       mProgressItem(item)
 {
 }

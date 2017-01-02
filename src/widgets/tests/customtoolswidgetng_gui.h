@@ -28,7 +28,7 @@ class CustomToolWidgetNgTest : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomToolWidgetNgTest(QWidget *parent = Q_NULLPTR);
+    explicit CustomToolWidgetNgTest(QWidget *parent = nullptr);
     ~CustomToolWidgetNgTest();
 
 private:

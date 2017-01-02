@@ -24,7 +24,7 @@ class GenericPluginManagerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GenericPluginManagerTest(QObject *parent = Q_NULLPTR);
+    explicit GenericPluginManagerTest(QObject *parent = nullptr);
     ~GenericPluginManagerTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

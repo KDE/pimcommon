@@ -42,7 +42,7 @@ class PimCommon::CollectionAclPagePrivate
 {
 public:
     CollectionAclPagePrivate()
-        : mCollectionAclWidget(Q_NULLPTR)
+        : mCollectionAclWidget(nullptr)
     {
 
     }

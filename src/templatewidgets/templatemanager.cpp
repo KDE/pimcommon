@@ -32,8 +32,8 @@ class PimCommon::TemplateManagerPrivate
 {
 public:
     TemplateManagerPrivate()
-        : mTemplateListWidget(Q_NULLPTR),
-          mDirWatch(Q_NULLPTR)
+        : mTemplateListWidget(nullptr),
+          mDirWatch(nullptr)
     {
 
     }

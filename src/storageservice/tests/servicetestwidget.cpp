@@ -34,7 +34,7 @@
 
 ServiceTestWidget::ServiceTestWidget(QWidget *parent)
     : QWidget(parent),
-      mStorageService(Q_NULLPTR)
+      mStorageService(nullptr)
 {
     PimCommon::TestSettingsJob *settingsJob = new PimCommon::TestSettingsJob;
     PimCommon::StorageServiceJobConfig *configJob = PimCommon::StorageServiceJobConfig::self();

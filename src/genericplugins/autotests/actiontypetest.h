@@ -24,7 +24,7 @@ class ActionTypeTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ActionTypeTest(QObject *parent = Q_NULLPTR);
+    explicit ActionTypeTest(QObject *parent = nullptr);
     ~ActionTypeTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

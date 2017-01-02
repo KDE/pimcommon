@@ -30,7 +30,7 @@ class PimCommon::CustomToolsWidgetNgPrivate
 {
 public:
     CustomToolsWidgetNgPrivate()
-        : mStackedWidget(Q_NULLPTR)
+        : mStackedWidget(nullptr)
     {
 
     }
