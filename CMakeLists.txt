@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
+set(PIM_VERSION "5.4.40")
 
-project(pimcommon)
+project(pimcommon VERSION ${PIM_VERSION})
 
 set(KF5_VERSION "5.28.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
@@ -23,7 +24,6 @@ include(ECMInstallIcons)
 include(ECMCoverageOption)
 
 
-set(PIM_VERSION "5.4.40")
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(AKONADIMIME_LIB_VERSION "5.4.40")
@@ -78,7 +78,7 @@ if (Qt5Designer_FOUND)
     find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG REQUIRED)
 endif()
 
-ecm_setup_version(${PIMCOMMON_LIB_VERSION} VARIABLE_PREFIX PIMCOMMON
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
     SOVERSION 5
