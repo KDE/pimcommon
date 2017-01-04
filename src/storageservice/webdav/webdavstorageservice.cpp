@@ -363,12 +363,12 @@ QString WebDavStorageService::fillListWidget(StorageServiceTreeWidget *listWidge
     }
     QString parentFolder;
     if (!currentFolder.isEmpty()) {
-        QStringList parts = currentFolder.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = currentFolder.split(QLatin1Char('/'), QString::SkipEmptyParts);
         if (!parts.isEmpty()) {
             parts.removeLast();
         }
 
-        parentFolder = parts.join(QStringLiteral("/"));
+        parentFolder = parts.join(QLatin1Char('/'));
         if (parentFolder.isEmpty()) {
             parentFolder = QStringLiteral("/");
         }

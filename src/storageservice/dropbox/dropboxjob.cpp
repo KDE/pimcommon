@@ -556,9 +556,9 @@ void DropBoxJob::renameFolder(const QString &source, const QString &destination)
     query.addQueryItem(QStringLiteral("root"), mRootPath);
     query.addQueryItem(QStringLiteral("from_path"), source);
 
-    QStringList parts = source.split(QStringLiteral("/"), QString::SkipEmptyParts);
+    QStringList parts = source.split(QLatin1Char('/'), QString::SkipEmptyParts);
     parts.removeLast();
-    QString destinationFolder = parts.join(QStringLiteral("/"));
+    QString destinationFolder = parts.join(QLatin1Char('/'));
     if (destinationFolder.isEmpty()) {
         destinationFolder = QStringLiteral("/");
     }
@@ -587,9 +587,9 @@ void DropBoxJob::renameFile(const QString &oldName, const QString &newName)
     query.addQueryItem(QStringLiteral("root"), mRootPath);
 
     //Generate new path.
-    QStringList parts = oldName.split(QStringLiteral("/"), QString::SkipEmptyParts);
+    QStringList parts = oldName.split(QLatin1Char('/'), QString::SkipEmptyParts);
     parts.removeLast();
-    QString destinationFolder = parts.join(QStringLiteral("/"));
+    QString destinationFolder = parts.join(QLatin1Char('/'));
     if (destinationFolder.isEmpty()) {
         destinationFolder = QStringLiteral("/");
     }

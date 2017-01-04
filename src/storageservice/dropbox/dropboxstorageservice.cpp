@@ -466,9 +466,9 @@ QString DropBoxStorageService::fillListWidget(StorageServiceTreeWidget *listWidg
                 if (path == QLatin1String("/")) {
                     parentFolder = path;
                 } else {
-                    QStringList parts = path.split(QStringLiteral("/"));
+                    QStringList parts = path.split(QLatin1Char('/'));
                     parts.removeLast();
-                    parentFolder = parts.join(QStringLiteral("/"));
+                    parentFolder = parts.join(QLatin1Char('/'));
                     if (parentFolder.isEmpty()) {
                         parentFolder = QStringLiteral("/");
                     }

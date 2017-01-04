@@ -112,7 +112,7 @@ void WebDavJob::copyFile(const QString &source, const QString &destination)
     mError = false;
     QString filename;
     if (!source.isEmpty()) {
-        QStringList parts = source.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = source.split(QLatin1Char('/'), QString::SkipEmptyParts);
         filename = parts.takeLast();
     }
 
@@ -131,7 +131,7 @@ void WebDavJob::copyFolder(const QString &source, const QString &destination)
     mError = false;
     QString filename;
     if (!source.isEmpty()) {
-        QStringList parts = source.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = source.split(QLatin1Char('/'), QString::SkipEmptyParts);
         filename = parts.takeLast();
     }
 
@@ -168,9 +168,9 @@ void WebDavJob::renameFolder(const QString &source, const QString &destination)
 
     QString destinationFolder;
     if (!source.isEmpty()) {
-        QStringList parts = source.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = source.split(QLatin1Char('/'), QString::SkipEmptyParts);
         parts.removeLast();
-        destinationFolder = parts.join(QStringLiteral("/"));
+        destinationFolder = parts.join(QLatin1Char('/'));
         if (destinationFolder.isEmpty()) {
             destinationFolder = QStringLiteral("/");
         }
@@ -201,9 +201,9 @@ void WebDavJob::renameFile(const QString &oldName, const QString &newName)
 
     QString destination;
     if (!oldName.isEmpty()) {
-        QStringList parts = oldName.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = oldName.split(QLatin1Char('/'), QString::SkipEmptyParts);
         parts.removeLast();
-        destination = parts.join(QStringLiteral("/"));
+        destination = parts.join(QLatin1Char('/'));
         if (destination.isEmpty()) {
             destination = QStringLiteral("/");
         }
@@ -269,7 +269,7 @@ void WebDavJob::moveFolder(const QString &source, const QString &destination)
     mError = false;
     QString destinationPath;
     if (!source.isEmpty()) {
-        QStringList parts = source.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = source.split(QLatin1Char('/'), QString::SkipEmptyParts);
         const QString folderName = parts.takeLast();
 
         destinationPath = destination;
@@ -295,7 +295,7 @@ void WebDavJob::moveFile(const QString &source, const QString &destination)
     mError = false;
     QString destinationPath;
     if (!source.isEmpty()) {
-        QStringList parts = source.split(QStringLiteral("/"), QString::SkipEmptyParts);
+        QStringList parts = source.split(QLatin1Char('/'), QString::SkipEmptyParts);
         const QString folderName = parts.takeLast();
 
         destinationPath = destination;
