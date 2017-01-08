@@ -161,8 +161,8 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
     Q_FOREACH (PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
         PimCommon::ActionType actionType = interface->actionType();
         PimCommon::ActionType::Type type = actionType.type();
-        if (listType.contains(type)) {
-            QList<QAction *> lst = listType.value(type);
+        QList<QAction *> lst = listType.value(type);
+        if (!lst.isEmpty()) {
             QAction *act = new QAction(this);
             act->setSeparator(true);
             lst << act << actionType.action();
@@ -172,8 +172,8 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
         }
         if (interface->plugin()->hasPopupMenuSupport()) {
             type = PimCommon::ActionType::PopupMenu;
-            if (listType.contains(type)) {
-                QList<QAction *> lst = listType.value(type);
+            QList<QAction *> lst = listType.value(type);
+            if (!lst.isEmpty()) {
                 QAction *act = new QAction(this);
                 act->setSeparator(true);
                 lst << act << actionType.action();
@@ -184,8 +184,8 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
         }
         if (interface->plugin()->hasToolBarSupport()) {
             type = PimCommon::ActionType::ToolBar;
-            if (listType.contains(type)) {
-                QList<QAction *> lst = listType.value(type);
+            QList<QAction *> lst = listType.value(type);
+            if (!lst.isEmpty()) {
                 QAction *act = new QAction(this);
                 act->setSeparator(true);
                 lst << act << actionType.action();
