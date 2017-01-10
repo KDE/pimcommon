@@ -28,15 +28,15 @@ class PIMCOMMON_EXPORT AbstractGenericPlugin : public QObject
 {
     Q_OBJECT
 public:
-    explicit AbstractGenericPlugin(QObject *parent = Q_NULLPTR);
+    explicit AbstractGenericPlugin(QObject *parent = nullptr);
     ~AbstractGenericPlugin();
 
-    virtual PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) = 0;
+    virtual PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) = 0;
     virtual bool hasPopupMenuSupport() const;
     virtual bool hasToolBarSupport() const;
     virtual bool hasConfigureDialog() const;
 
-    virtual void showConfigureDialog(QWidget *parent = Q_NULLPTR);
+    virtual void showConfigureDialog(QWidget *parent = nullptr);
 
     void setIsEnabled(bool enabled);
     bool isEnabled() const;

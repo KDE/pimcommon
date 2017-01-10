@@ -38,7 +38,7 @@ class PIMCOMMON_EXPORT CheckedCollectionWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CheckedCollectionWidget(const QString &mimetype, QWidget *parent = Q_NULLPTR);
+    explicit CheckedCollectionWidget(const QString &mimetype, QWidget *parent = nullptr);
     ~CheckedCollectionWidget();
 
     Akonadi::EntityTreeModel *entityTreeModel() const;

@@ -32,7 +32,7 @@ class PIMCOMMON_EXPORT FetchRecursiveCollectionsJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit FetchRecursiveCollectionsJob(QObject *parent = Q_NULLPTR);
+    explicit FetchRecursiveCollectionsJob(QObject *parent = nullptr);
     ~FetchRecursiveCollectionsJob();
 
     void setTopCollection(const Akonadi::Collection &col);

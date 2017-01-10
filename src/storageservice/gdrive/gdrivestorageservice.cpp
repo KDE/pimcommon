@@ -631,7 +631,7 @@ QString GDriveStorageService::fillListWidget(StorageServiceTreeWidget *listWidge
             const QVariantMap varData = data.toMap();
             KGAPI2::Drive::FilePtr file = KGAPI2::Drive::File::fromJSON(varData);
             if (file) {
-                StorageServiceTreeWidgetItem *treeWidgetItem = Q_NULLPTR;
+                StorageServiceTreeWidgetItem *treeWidgetItem = nullptr;
                 if (file->isFolder()) {
                     treeWidgetItem = listWidget->addFolder(file->title(), file->id());
                     treeWidgetItem->setDateCreated(file->createdDate());

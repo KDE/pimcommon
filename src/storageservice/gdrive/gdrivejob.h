@@ -32,7 +32,7 @@ class GDriveJob : public PimCommon::StorageServiceAbstractJob
 {
     Q_OBJECT
 public:
-    explicit GDriveJob(QObject *parent = Q_NULLPTR);
+    explicit GDriveJob(QObject *parent = nullptr);
     ~GDriveJob();
 
     void requestTokenAccess() Q_DECL_OVERRIDE;

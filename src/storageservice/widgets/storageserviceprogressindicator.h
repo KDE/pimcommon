@@ -32,7 +32,7 @@ class PIMCOMMON_EXPORT StorageServiceProgressIndicator : public QObject
 {
     Q_OBJECT
 public:
-    explicit StorageServiceProgressIndicator(QObject *parent = Q_NULLPTR);
+    explicit StorageServiceProgressIndicator(QObject *parent = nullptr);
     ~StorageServiceProgressIndicator();
 
     void startAnimation();

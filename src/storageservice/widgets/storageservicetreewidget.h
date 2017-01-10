@@ -52,7 +52,7 @@ public:
         ColumnLastModification = 3
     };
 
-    explicit StorageServiceTreeWidget(PimCommon::StorageServiceAbstract *storageService, QWidget *parent = Q_NULLPTR);
+    explicit StorageServiceTreeWidget(PimCommon::StorageServiceAbstract *storageService, QWidget *parent = nullptr);
     ~StorageServiceTreeWidget();
 
     void setCurrentFolder(const QString &folder);

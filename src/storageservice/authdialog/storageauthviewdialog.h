@@ -26,7 +26,7 @@ class StorageAuthViewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit StorageAuthViewDialog(QWidget *parent = Q_NULLPTR);
+    explicit StorageAuthViewDialog(QWidget *parent = nullptr);
     ~StorageAuthViewDialog();
 
     void setUrl(const QUrl &url);

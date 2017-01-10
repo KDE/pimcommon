@@ -27,7 +27,7 @@ class AutoCorrectionTreeWidget : public QTreeWidget
 {
     Q_OBJECT
 public:
-    explicit AutoCorrectionTreeWidget(QWidget *parent = Q_NULLPTR);
+    explicit AutoCorrectionTreeWidget(QWidget *parent = nullptr);
     ~AutoCorrectionTreeWidget();
 
 protected:

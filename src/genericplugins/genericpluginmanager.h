@@ -45,7 +45,7 @@ public:
         bool mEnableByDefault;
     };
 
-    explicit GenericPluginManager(QObject *parent = Q_NULLPTR);
+    explicit GenericPluginManager(QObject *parent = nullptr);
     ~GenericPluginManager();
 
     bool initializePlugins();

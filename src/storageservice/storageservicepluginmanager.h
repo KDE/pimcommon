@@ -31,7 +31,7 @@ class PIMCOMMON_EXPORT StorageServicePluginManager : public QObject
 public:
     static StorageServicePluginManager *self();
 
-    explicit StorageServicePluginManager(QObject *parent = Q_NULLPTR);
+    explicit StorageServicePluginManager(QObject *parent = nullptr);
     ~StorageServicePluginManager();
 
     QVector<PimCommon::StorageServicePlugin *> pluginsList() const;

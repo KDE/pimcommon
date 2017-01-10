@@ -40,7 +40,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    explicit AclEntryDialog(QWidget *parent = Q_NULLPTR);
+    explicit AclEntryDialog(QWidget *parent = nullptr);
 
     /**
      * Destroys the ACL entry dialog.

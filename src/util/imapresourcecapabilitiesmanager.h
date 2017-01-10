@@ -33,7 +33,7 @@ class PIMCOMMON_EXPORT ImapResourceCapabilitiesManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit ImapResourceCapabilitiesManager(QObject *parent = Q_NULLPTR);
+    explicit ImapResourceCapabilitiesManager(QObject *parent = nullptr);
     ~ImapResourceCapabilitiesManager();
 
     bool hasAnnotationSupport(const QString &identifier) const;

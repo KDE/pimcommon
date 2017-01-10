@@ -26,7 +26,7 @@ class PIMCOMMON_EXPORT AclListView : public QListView
 {
     Q_OBJECT
 public:
-    explicit AclListView(QWidget *parent = Q_NULLPTR);
+    explicit AclListView(QWidget *parent = nullptr);
     ~AclListView();
 
 public Q_SLOTS:

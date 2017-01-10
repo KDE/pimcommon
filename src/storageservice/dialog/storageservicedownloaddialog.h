@@ -35,7 +35,7 @@ class PIMCOMMON_EXPORT StorageServiceDownloadDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit StorageServiceDownloadDialog(PimCommon::StorageServiceAbstract *storage, QWidget *parent = Q_NULLPTR);
+    explicit StorageServiceDownloadDialog(PimCommon::StorageServiceAbstract *storage, QWidget *parent = nullptr);
     ~StorageServiceDownloadDialog();
 
     void setDefaultDownloadPath(const QString &path);
@@ -74,7 +74,7 @@ class StorageServiceDownloadTreeWidget : public PimCommon::StorageServiceTreeWid
 {
     Q_OBJECT
 public:
-    explicit StorageServiceDownloadTreeWidget(PimCommon::StorageServiceAbstract *storageService, QWidget *parent = Q_NULLPTR);
+    explicit StorageServiceDownloadTreeWidget(PimCommon::StorageServiceAbstract *storageService, QWidget *parent = nullptr);
 
 Q_SIGNALS:
     void downloadFile();

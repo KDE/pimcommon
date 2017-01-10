@@ -31,7 +31,7 @@ class PIMCOMMON_EXPORT ConfigurePluginsListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ConfigurePluginsListWidget(QWidget *parent = Q_NULLPTR);
+    explicit ConfigurePluginsListWidget(QWidget *parent = nullptr);
     ~ConfigurePluginsListWidget();
 
     virtual void save();

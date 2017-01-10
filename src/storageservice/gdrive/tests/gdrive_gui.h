@@ -24,7 +24,7 @@ class GdriveTestWidget : public ServiceTestWidget
 {
     Q_OBJECT
 public:
-    explicit GdriveTestWidget(QWidget *parent = Q_NULLPTR);
+    explicit GdriveTestWidget(QWidget *parent = nullptr);
 };
 
 #endif

@@ -29,8 +29,8 @@ class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ConfigurePluginsWidget(QWidget *parent = Q_NULLPTR);
-    explicit ConfigurePluginsWidget(ConfigurePluginsListWidget *configurePluginListWidget, QWidget *parent = Q_NULLPTR);
+    explicit ConfigurePluginsWidget(QWidget *parent = nullptr);
+    explicit ConfigurePluginsWidget(ConfigurePluginsListWidget *configurePluginListWidget, QWidget *parent = nullptr);
     ~ConfigurePluginsWidget();
 
     void save();
@@ -45,7 +45,7 @@ private:
     void initialize();
     void readConfig();
     void writeConfig();
-    void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = Q_NULLPTR);
+    void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
 
     QSplitter *mSplitter;
     ConfigurePluginsListWidget *mConfigureListWidget;

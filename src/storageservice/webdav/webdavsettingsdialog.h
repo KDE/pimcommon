@@ -28,7 +28,7 @@ class WebDavSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit WebDavSettingsDialog(QWidget *parent = Q_NULLPTR);
+    explicit WebDavSettingsDialog(QWidget *parent = nullptr);
     ~WebDavSettingsDialog();
 
     QString serviceLocation() const;

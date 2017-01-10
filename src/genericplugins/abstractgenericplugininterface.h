@@ -30,7 +30,7 @@ class PIMCOMMON_EXPORT AbstractGenericPluginInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit AbstractGenericPluginInterface(QObject *parent = Q_NULLPTR);
+    explicit AbstractGenericPluginInterface(QObject *parent = nullptr);
     ~AbstractGenericPluginInterface();
 
     void setParentWidget(QWidget *parent);
@@ -42,7 +42,7 @@ public:
     virtual void createAction(KActionCollection *ac) = 0;
     virtual void exec() = 0;
 
-    virtual void showConfigureDialog(QWidget *parentWidget = Q_NULLPTR);
+    virtual void showConfigureDialog(QWidget *parentWidget = nullptr);
 
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);

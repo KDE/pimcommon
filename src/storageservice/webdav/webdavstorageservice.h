@@ -28,7 +28,7 @@ class PIMCOMMON_EXPORT WebDavStorageService : public PimCommon::StorageServiceAb
 {
     Q_OBJECT
 public:
-    explicit WebDavStorageService(QObject *parent = Q_NULLPTR);
+    explicit WebDavStorageService(QObject *parent = nullptr);
     ~WebDavStorageService();
 
     static QString name();

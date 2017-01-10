@@ -29,7 +29,7 @@ class PIMCOMMON_EXPORT HubicStorageService : public PimCommon::StorageServiceAbs
 {
     Q_OBJECT
 public:
-    explicit HubicStorageService(QObject *parent = Q_NULLPTR);
+    explicit HubicStorageService(QObject *parent = nullptr);
     ~HubicStorageService();
 
     static QString name();

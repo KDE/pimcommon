@@ -27,7 +27,7 @@ class PIMCOMMON_EXPORT NetworkManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit NetworkManager(QObject *parent = Q_NULLPTR);
+    explicit NetworkManager(QObject *parent = nullptr);
     ~NetworkManager();
     static NetworkManager *self();
 

@@ -32,7 +32,7 @@ class PIMCOMMON_EXPORT PluginInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit PluginInterface(QObject *parent = Q_NULLPTR);
+    explicit PluginInterface(QObject *parent = nullptr);
     ~PluginInterface();
 
     void setParentWidget(QWidget *widget);

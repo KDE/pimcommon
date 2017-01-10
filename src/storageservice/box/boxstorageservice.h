@@ -29,7 +29,7 @@ class PIMCOMMON_EXPORT BoxStorageService : public PimCommon::StorageServiceAbstr
 {
     Q_OBJECT
 public:
-    explicit BoxStorageService(QObject *parent = Q_NULLPTR);
+    explicit BoxStorageService(QObject *parent = nullptr);
     ~BoxStorageService();
 
     static QString name();

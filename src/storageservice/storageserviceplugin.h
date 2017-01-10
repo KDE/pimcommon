@@ -27,7 +27,7 @@ class PIMCOMMON_EXPORT StorageServicePlugin : public QObject
 {
     Q_OBJECT
 public:
-    explicit StorageServicePlugin(QObject *parent = Q_NULLPTR);
+    explicit StorageServicePlugin(QObject *parent = nullptr);
     ~StorageServicePlugin();
     enum Capability {
         NoCapability = 0,

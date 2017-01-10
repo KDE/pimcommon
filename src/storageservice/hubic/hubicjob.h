@@ -27,7 +27,7 @@ class HubicJob : public PimCommon::StorageServiceAbstractJob
 {
     Q_OBJECT
 public:
-    explicit HubicJob(QObject *parent = Q_NULLPTR);
+    explicit HubicJob(QObject *parent = nullptr);
     ~HubicJob();
 
     void deleteFile(const QString &filename) Q_DECL_OVERRIDE;

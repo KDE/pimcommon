@@ -27,7 +27,7 @@ class StorageServiceComboBox : public QComboBox
 {
     Q_OBJECT
 public:
-    explicit StorageServiceComboBox(const QList<PimCommon::StorageServiceAbstract::Capability> &lstCap, const QStringList &excludeService, QWidget *parent = Q_NULLPTR);
+    explicit StorageServiceComboBox(const QList<PimCommon::StorageServiceAbstract::Capability> &lstCap, const QStringList &excludeService, QWidget *parent = nullptr);
     ~StorageServiceComboBox();
 
     PimCommon::StorageServiceManager::ServiceType service() const;

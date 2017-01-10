@@ -29,7 +29,7 @@ class PIMCOMMON_EXPORT MigrateApplicationFiles : public QObject
 {
     Q_OBJECT
 public:
-    explicit MigrateApplicationFiles(QObject *parent = Q_NULLPTR);
+    explicit MigrateApplicationFiles(QObject *parent = nullptr);
     ~MigrateApplicationFiles();
 
     bool start();

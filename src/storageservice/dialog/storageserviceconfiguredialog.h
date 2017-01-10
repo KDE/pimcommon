@@ -32,7 +32,7 @@ class PIMCOMMON_EXPORT StorageServiceConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit StorageServiceConfigureDialog(QWidget *parent = Q_NULLPTR);
+    explicit StorageServiceConfigureDialog(QWidget *parent = nullptr);
     ~StorageServiceConfigureDialog();
 
     QMap<QString, PimCommon::StorageServiceAbstract *> listService() const;

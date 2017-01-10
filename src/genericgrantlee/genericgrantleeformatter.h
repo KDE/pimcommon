@@ -29,8 +29,8 @@ class PIMCOMMON_EXPORT GenericGrantleeFormatter : public QObject
 {
     Q_OBJECT
 public:
-    explicit GenericGrantleeFormatter(QObject *parent = Q_NULLPTR);
-    explicit GenericGrantleeFormatter(const QString &defaultHtmlMain, const QString &themePath, QObject *parent = Q_NULLPTR);
+    explicit GenericGrantleeFormatter(QObject *parent = nullptr);
+    explicit GenericGrantleeFormatter(const QString &defaultHtmlMain, const QString &themePath, QObject *parent = nullptr);
     ~GenericGrantleeFormatter();
 
     void setDefaultHtmlMainFile(const QString &name);

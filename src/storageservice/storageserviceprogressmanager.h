@@ -61,7 +61,7 @@ private Q_SLOTS:
     void slotDownloadFileProgress(const QString &serviceName, qint64 done, qint64 total);
     void slotActionFailed(const QString &serviceName, const QString &);
 private:
-    explicit StorageServiceProgressManager(QObject *parent = Q_NULLPTR);
+    explicit StorageServiceProgressManager(QObject *parent = nullptr);
     friend class StorageServiceProgressManagerPrivate;
     QHash<QString, ProgressJob *> mHashList;
 };

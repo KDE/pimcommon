@@ -52,7 +52,7 @@ class PIMCOMMON_EXPORT StorageServiceAbstract : public QObject
 {
     Q_OBJECT
 public:
-    explicit StorageServiceAbstract(QObject *parent = Q_NULLPTR);
+    explicit StorageServiceAbstract(QObject *parent = nullptr);
     ~StorageServiceAbstract();
 
     enum Capability {

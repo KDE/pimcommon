@@ -30,7 +30,7 @@ class PIMCOMMON_EXPORT ManageServerSideSubscriptionJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit ManageServerSideSubscriptionJob(QObject *parent = Q_NULLPTR);
+    explicit ManageServerSideSubscriptionJob(QObject *parent = nullptr);
 
     ~ManageServerSideSubscriptionJob();
 

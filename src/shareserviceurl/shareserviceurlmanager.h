@@ -31,7 +31,7 @@ class PIMCOMMON_EXPORT ShareServiceUrlManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit ShareServiceUrlManager(QObject *parent = Q_NULLPTR);
+    explicit ShareServiceUrlManager(QObject *parent = nullptr);
     ~ShareServiceUrlManager();
     enum ServiceType {
         Fbook = 0,

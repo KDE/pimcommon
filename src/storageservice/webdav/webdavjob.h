@@ -27,7 +27,7 @@ class WebDavJob : public PimCommon::StorageServiceAbstractJob
 {
     Q_OBJECT
 public:
-    explicit WebDavJob(QObject *parent = Q_NULLPTR);
+    explicit WebDavJob(QObject *parent = nullptr);
     ~WebDavJob();
 
     void requestTokenAccess() Q_DECL_OVERRIDE;

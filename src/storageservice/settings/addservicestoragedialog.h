@@ -26,7 +26,7 @@ class AddServiceStorageDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit AddServiceStorageDialog(const QList<PimCommon::StorageServiceAbstract::Capability> &lstCap, const QStringList &excludeService, QWidget *parent = Q_NULLPTR);
+    explicit AddServiceStorageDialog(const QList<PimCommon::StorageServiceAbstract::Capability> &lstCap, const QStringList &excludeService, QWidget *parent = nullptr);
     ~AddServiceStorageDialog();
 
     PimCommon::StorageServiceManager::ServiceType serviceSelected() const;

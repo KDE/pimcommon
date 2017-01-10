@@ -28,8 +28,8 @@ class PIMCOMMON_EXPORT SelectMultiCollectionDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent = Q_NULLPTR);
-    explicit SelectMultiCollectionDialog(const QString &mimetype, QWidget *parent = Q_NULLPTR);
+    explicit SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent = nullptr);
+    explicit SelectMultiCollectionDialog(const QString &mimetype, QWidget *parent = nullptr);
     ~SelectMultiCollectionDialog();
 
     QVector<Akonadi::Collection> selectedCollection() const;

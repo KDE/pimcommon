@@ -39,7 +39,7 @@ public:
         ToolBar = 5
     };
     ActionType()
-        : mAction(Q_NULLPTR),
+        : mAction(nullptr),
           mType(Tools)
     {
 
@@ -59,7 +59,7 @@ class PIMCOMMON_EXPORT GenericPluginInterface : public AbstractGenericPluginInte
 {
     Q_OBJECT
 public:
-    explicit GenericPluginInterface(QObject *parent = Q_NULLPTR);
+    explicit GenericPluginInterface(QObject *parent = nullptr);
     ~GenericPluginInterface();
 
     enum RequireType {

@@ -30,7 +30,7 @@ class PIMCOMMON_EXPORT CustomToolsPluginManager : public QObject
 public:
     static CustomToolsPluginManager *self();
 
-    explicit CustomToolsPluginManager(QObject *parent = Q_NULLPTR);
+    explicit CustomToolsPluginManager(QObject *parent = nullptr);
     ~CustomToolsPluginManager();
 
     QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;

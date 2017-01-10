@@ -210,7 +210,7 @@ QNetworkReply *GDriveJob::uploadFile(const QString &filename, const QString &upl
     KGAPI2::Drive::FileCreateJob *createJob = new KGAPI2::Drive::FileCreateJob(filename/*, file*/, mAccount);
     connect(createJob, &KGAPI2::Drive::FileCreateJob::finished, this, &GDriveJob::slotUploadJobFinished);
     connect(createJob, &KGAPI2::Drive::FileCreateJob::progress, this, &GDriveJob::slotUploadDownLoadProgress);
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void GDriveJob::slotUploadDownLoadProgress(KGAPI2::Job *job, int progress, int total)
@@ -283,11 +283,11 @@ QNetworkReply *GDriveJob::downloadFile(const QString &name, const QString &fileI
         KGAPI2::Drive::FilePtr file(new KGAPI2::Drive::File());
         KGAPI2::Drive::FileFetchContentJob *fileFetchContentJob = new KGAPI2::Drive::FileFetchContentJob(file, mAccount, this);
         //TODO
-        return Q_NULLPTR;
+        return nullptr;
     } else {
         delete mDownloadFile;
     }
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 void GDriveJob::refreshToken()

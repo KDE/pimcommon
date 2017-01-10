@@ -30,10 +30,10 @@ class PIMCOMMON_EXPORT CustomToolsPlugin : public QObject
 {
     Q_OBJECT
 public:
-    explicit CustomToolsPlugin(QObject *parent = Q_NULLPTR);
+    explicit CustomToolsPlugin(QObject *parent = nullptr);
     ~CustomToolsPlugin();
 
-    virtual PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent = Q_NULLPTR) = 0;
+    virtual PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent = nullptr) = 0;
     virtual QString customToolName() const = 0;
 
 private:

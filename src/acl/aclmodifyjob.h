@@ -31,7 +31,7 @@ class AclModifyJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit AclModifyJob(QObject *parent = Q_NULLPTR);
+    explicit AclModifyJob(QObject *parent = nullptr);
     ~AclModifyJob();
 
     void setTopLevelCollection(const Akonadi::Collection &topLevelCollection);

@@ -26,7 +26,7 @@ class PIMCOMMON_EXPORT DropBoxStorageService : public PimCommon::StorageServiceA
 {
     Q_OBJECT
 public:
-    explicit DropBoxStorageService(QObject *parent = Q_NULLPTR);
+    explicit DropBoxStorageService(QObject *parent = nullptr);
     ~DropBoxStorageService();
 
     static QString name();

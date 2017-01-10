@@ -29,7 +29,7 @@ class DropBoxJob : public PimCommon::StorageServiceAbstractJob
 {
     Q_OBJECT
 public:
-    explicit DropBoxJob(QObject *parent = Q_NULLPTR);
+    explicit DropBoxJob(QObject *parent = nullptr);
     ~DropBoxJob();
 
     void requestTokenAccess() Q_DECL_OVERRIDE;

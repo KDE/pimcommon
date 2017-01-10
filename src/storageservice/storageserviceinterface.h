@@ -27,7 +27,7 @@ class PIMCOMMON_EXPORT StorageServiceInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit StorageServiceInterface(QObject *parent = Q_NULLPTR);
+    explicit StorageServiceInterface(QObject *parent = nullptr);
     ~StorageServiceInterface();
 
     virtual void downloadFile(const QString &name, const QString &fileId, const QString &destination);

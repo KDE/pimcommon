@@ -28,7 +28,7 @@ class PIMCOMMON_EXPORT CustomTreeView : public QTreeWidget
 {
     Q_OBJECT
 public:
-    explicit CustomTreeView(QWidget *parent = Q_NULLPTR);
+    explicit CustomTreeView(QWidget *parent = nullptr);
     ~CustomTreeView();
 
     void setDefaultText(const QString &text);

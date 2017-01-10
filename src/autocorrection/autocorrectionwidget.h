@@ -42,7 +42,7 @@ public:
         KMail
     };
 
-    explicit AutoCorrectionWidget(QWidget *parent = Q_NULLPTR);
+    explicit AutoCorrectionWidget(QWidget *parent = nullptr);
     ~AutoCorrectionWidget();
     void setAutoCorrection(AutoCorrection *autoCorrect);
     void loadConfig();

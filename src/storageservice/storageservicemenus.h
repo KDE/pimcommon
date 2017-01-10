@@ -28,7 +28,7 @@ class PIMCOMMON_EXPORT StorageServiceMenus : public QObject
 {
     Q_OBJECT
 public:
-    explicit StorageServiceMenus(QObject *parent = Q_NULLPTR);
+    explicit StorageServiceMenus(QObject *parent = nullptr);
     ~StorageServiceMenus();
 
     KActionMenu *shareLinkServices(QWidget *parent) const;

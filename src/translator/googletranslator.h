@@ -30,7 +30,7 @@ class GoogleTranslator : public QObject
 {
     Q_OBJECT
 public:
-    explicit GoogleTranslator(QObject *parent = Q_NULLPTR);
+    explicit GoogleTranslator(QObject *parent = nullptr);
     ~GoogleTranslator();
 
     QMap<QString, QMap<QString, QString> > initListLanguage(KComboBox *from);

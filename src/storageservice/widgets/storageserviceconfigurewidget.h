@@ -31,7 +31,7 @@ class PIMCOMMON_EXPORT StorageServiceConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit StorageServiceConfigureWidget(QWidget *parent = Q_NULLPTR);
+    explicit StorageServiceConfigureWidget(QWidget *parent = nullptr);
     ~StorageServiceConfigureWidget();
 
     virtual void loadSettings();

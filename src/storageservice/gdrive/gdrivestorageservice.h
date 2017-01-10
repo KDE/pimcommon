@@ -30,7 +30,7 @@ class PIMCOMMON_EXPORT GDriveStorageService : public PimCommon::StorageServiceAb
 {
     Q_OBJECT
 public:
-    explicit GDriveStorageService(QObject *parent = Q_NULLPTR);
+    explicit GDriveStorageService(QObject *parent = nullptr);
     ~GDriveStorageService();
 
     static QString name();

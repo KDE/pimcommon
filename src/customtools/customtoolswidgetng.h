@@ -29,7 +29,7 @@ class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomToolsWidgetNg(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit CustomToolsWidgetNg(KActionCollection *ac, QWidget *parent = nullptr);
     ~CustomToolsWidgetNg();
 
     QList<KToggleAction *> actionList() const;
