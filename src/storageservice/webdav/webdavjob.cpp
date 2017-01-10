@@ -249,7 +249,7 @@ QNetworkReply *WebDavJob::uploadFile(const QString &filename, const QString &upl
         }
     }
     delete file;
-    return 0;
+    return nullptr;
 }
 
 void WebDavJob::listFolder(const QString &folder)
@@ -622,6 +622,6 @@ QNetworkReply *WebDavJob::downloadFile(const QString &name, const QString &fileI
     } else {
         delete mDownloadFile;
     }
-    return 0;
+    return nullptr;
 }
 

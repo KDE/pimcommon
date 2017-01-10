@@ -176,7 +176,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
         }
     }
     folderNames.sort();
-    if (KMessageBox::Continue != KMessageBox::warningContinueCancelList(0,
+    if (KMessageBox::Continue != KMessageBox::warningContinueCancelList(nullptr,
             i18n("Do you really want to apply this folders permissions on the subdirectories:"),
             folderNames,
             i18n("Apply Permissions"))) {

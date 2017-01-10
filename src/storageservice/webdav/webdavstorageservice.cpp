@@ -338,7 +338,7 @@ QString WebDavStorageService::fillListWidget(StorageServiceTreeWidget *listWidge
         if (QUrl(info.name()).path() == currentFolder) {
             continue;
         }
-        StorageServiceTreeWidgetItem *item = 0;
+        StorageServiceTreeWidgetItem *item = nullptr;
         if (info.isDir()) {
             QFileInfo folderInfo(info.name());
             item = listWidget->addFolder(folderInfo.dir().dirName(), info.name());
