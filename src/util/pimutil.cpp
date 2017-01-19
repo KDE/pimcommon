@@ -129,7 +129,9 @@ QString PimCommon::Util::loadToFile(const QString &filter, QWidget *parent, cons
 
 bool PimCommon::Util::isImapResource(const QString &identifier)
 {
-    return (identifier.contains(KOLAB_RESOURCE_IDENTIFIER) || identifier.contains(IMAP_RESOURCE_IDENTIFIER) || identifier.contains(GMAIL_RESOURCE_IDENTIFIER));
+    return (identifier.startsWith(KOLAB_RESOURCE_IDENTIFIER) ||
+            identifier.startsWith(IMAP_RESOURCE_IDENTIFIER) ||
+            identifier.startsWith(GMAIL_RESOURCE_IDENTIFIER));
 }
 
 bool PimCommon::Util::isImapFolder(const Akonadi::Collection &col, bool &isOnline)
