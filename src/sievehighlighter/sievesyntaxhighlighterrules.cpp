@@ -16,7 +16,7 @@
 */
 
 #include "sievesyntaxhighlighterrules.h"
-
+#include "helper_p.h"
 #include <QTextCharFormat>
 
 #include <KPIMTextEdit/SyntaxHighlighterBase>
@@ -54,7 +54,7 @@ void SieveSyntaxHighlighterRulesPrivate::init()
     keywords << QStringLiteral("\\binclude\\b");
     keywords << QStringLiteral("\\bglobal\\b");
     keywords << QStringLiteral("\\bforeverypart\\b");
-    Q_FOREACH (const QString &s, keywords) {
+    for (const QString &s : qAsConst(keywords)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, keywordFormat));
     }
@@ -64,7 +64,7 @@ void SieveSyntaxHighlighterRulesPrivate::init()
     textKeywordFormat.setForeground(Qt::green);
     QStringList textKeywords;
     textKeywords << QStringLiteral("\\btext:");
-    Q_FOREACH (const QString &s, textKeywords) {
+    for (const QString &s : qAsConst(textKeywords)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, textKeywordFormat));
     }
@@ -74,8 +74,8 @@ void SieveSyntaxHighlighterRulesPrivate::init()
     debugFormat.setForeground(Qt::red);
     debugFormat.setFontWeight(QFont::Bold);
     debugFormat.setFontItalic(true);
-    textKeywords << QStringLiteral("\\bdebug_log");
-    Q_FOREACH (const QString &s, textKeywords) {
+    const QStringList debugKeywords = {QStringLiteral("\\bdebug_log")};
+    for (const QString &s : qAsConst(debugKeywords)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, debugFormat));
     }
@@ -132,7 +132,7 @@ void SieveSyntaxHighlighterRulesPrivate::init()
               << QStringLiteral("\\s:from\\b")
               << QStringLiteral("\\s:first\\b")
               << QStringLiteral("\\s:comparator\\b");
-    Q_FOREACH (const QString &s, matchType) {
+    for (const QString &s : qAsConst(matchType)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, matchFormat));
     }
@@ -141,9 +141,8 @@ void SieveSyntaxHighlighterRulesPrivate::init()
     QTextCharFormat controlFormat;
     controlFormat.setForeground(Qt::green);
     controlFormat.setFontWeight(QFont::Bold);
-    QStringList controlType;
-    controlType << QStringLiteral("\\bif\\b") << QStringLiteral("\\belsif\\b") << QStringLiteral("\\belse\\b");
-    Q_FOREACH (const QString &s, controlType) {
+    const QStringList controlType = {QStringLiteral("\\bif\\b"), QStringLiteral("\\belsif\\b"), QStringLiteral("\\belse\\b")};
+    for (const QString &s : controlType) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, controlFormat));
     }
@@ -172,7 +171,7 @@ void SieveSyntaxHighlighterRulesPrivate::init()
                << QStringLiteral("\\benclose\\b")
                << QStringLiteral("\\breplace\\b")
                << QStringLiteral("\\bextracttext\\b");
-    Q_FOREACH (const QString &s, actionType) {
+    for (const QString &s : qAsConst(actionType)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, actionFormat));
     }
@@ -204,7 +203,7 @@ void SieveSyntaxHighlighterRulesPrivate::init()
              << QStringLiteral("\\bmetadataexists\\b")
              << QStringLiteral("\\bservermetadata\\b")
              << QStringLiteral("\\bservermetadataexists\\b");
-    Q_FOREACH (const QString &s, testType) {
+    for (const QString &s : qAsConst(testType)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, testFormat));
     }
@@ -233,9 +232,7 @@ void SieveSyntaxHighlighterRules::addCapabilities(const QStringList &capabilitie
     QTextCharFormat keywordFormat;
     keywordFormat.setForeground(Qt::darkGreen);
     keywordFormat.setFontWeight(QFont::Bold);
-    QStringList keywords;
-    keywords << capabilities;
-    Q_FOREACH (const QString &s, keywords) {
+    for (const QString &s : capabilities) {
         const QRegularExpression regex(QStringLiteral("\"%1\"").arg(s), QRegularExpression::CaseInsensitiveOption);
         d->m_rules.append(KPIMTextEdit::Rule(regex, keywordFormat));
     }

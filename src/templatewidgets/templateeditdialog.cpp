@@ -39,10 +39,10 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = nullptr;
     if (defaultTemplate) {
-        buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
+        buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
         connect(buttonBox, &QDialogButtonBox::rejected, this, &TemplateEditDialog::reject);
     } else {
-        buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+        buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         mOkButton = buttonBox->button(QDialogButtonBox::Ok);
         mOkButton->setDefault(true);
         mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

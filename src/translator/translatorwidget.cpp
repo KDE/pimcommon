@@ -205,8 +205,7 @@ void TranslatorWidget::readConfig()
     if (indexTo != -1) {
         d->to->setCurrentIndex(indexTo);
     }
-    QList<int> size;
-    size << 100 << 400;
+    const QList<int> size = {100, 400};
     d->splitter->setSizes(myGroup.readEntry("mainSplitter", size));
     d->invert->setEnabled(from != QLatin1String("auto"));
 

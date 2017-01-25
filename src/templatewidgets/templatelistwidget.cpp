@@ -200,7 +200,7 @@ public:
     {
         q->clear();
         const QVector<PimCommon::defaultTemplate> templatesLst = q->defaultTemplates();
-        Q_FOREACH (const PimCommon::defaultTemplate &tmp, templatesLst) {
+        for (const PimCommon::defaultTemplate &tmp : templatesLst) {
             createListWidgetItem(tmp.name, tmp.text, true);
         }
         KConfigGroup group = config.data()->group("template");
@@ -299,8 +299,7 @@ QVector<defaultTemplate> TemplateListWidget::defaultTemplates()
 
 QStringList TemplateListWidget::mimeTypes() const
 {
-    QStringList lst;
-    lst << QStringLiteral("text/plain");
+    const QStringList lst{QStringLiteral("text/plain")};
     return lst;
 }
 

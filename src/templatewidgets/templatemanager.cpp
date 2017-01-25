@@ -17,6 +17,7 @@
 
 #include "templatemanager.h"
 #include "templatewidgets/templatelistwidget.h"
+#include "helper_p.h"
 
 #include <KDirWatch>
 
@@ -85,7 +86,7 @@ void TemplateManager::loadTemplates(bool init)
 {
     if (!init) {
         if (!d->mTemplatesDirectories.isEmpty()) {
-            Q_FOREACH (const QString &directory, d->mTemplatesDirectories) {
+            for (const QString &directory : qAsConst(d->mTemplatesDirectories)) {
                 d->mDirWatch->removeDir(directory);
             }
         } else {
@@ -93,7 +94,7 @@ void TemplateManager::loadTemplates(bool init)
         }
     }
 
-    Q_FOREACH (const QString &directory, d->mTemplatesDirectories) {
+    for (const QString &directory : qAsConst(d->mTemplatesDirectories)) {
         QDirIterator dirIt(directory, QStringList(), QDir::AllDirs | QDir::NoDotAndDotDot);
         while (dirIt.hasNext()) {
             dirIt.next();
