@@ -62,16 +62,15 @@ SelectMultiCollectionDialog::~SelectMultiCollectionDialog()
 void SelectMultiCollectionDialog::initialize(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection)
 {
     setWindowTitle(i18n("Select Multiple Folders"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectMultiCollectionDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectMultiCollectionDialog::reject);
 
-    d->mSelectMultiCollection = new SelectMultiCollectionWidget(mimetype, selectedCollection);
+    d->mSelectMultiCollection = new SelectMultiCollectionWidget(mimetype, selectedCollection, this);
     mainLayout->addWidget(d->mSelectMultiCollection);
     mainLayout->addWidget(buttonBox);
     readConfig();

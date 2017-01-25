@@ -16,6 +16,7 @@
 */
 
 #include "customtoolsplugin.h"
+#include "helper_p.h"
 #include "customtoolsviewinterface.h"
 #include "customtoolswidgetng.h"
 #include "customtools/customtoolspluginmanager.h"
@@ -68,7 +69,7 @@ void CustomToolsWidgetNg::initializeView(KActionCollection *ac)
 
 void CustomToolsWidgetNg::slotToolsWasClosed()
 {
-    Q_FOREACH (PimCommon::CustomToolsViewInterface *interface, d->mListInterfaceView) {
+    for (PimCommon::CustomToolsViewInterface *interface : qAsConst(d->mListInterfaceView)) {
         interface->action()->setChecked(false);
     }
     hide();
@@ -79,7 +80,7 @@ void CustomToolsWidgetNg::slotActivateView(QWidget *w)
     if (w) {
         d->mStackedWidget->setCurrentWidget(w);
         setVisible(true);
-        Q_FOREACH (PimCommon::CustomToolsViewInterface *interface, d->mListInterfaceView) {
+        for (PimCommon::CustomToolsViewInterface *interface : qAsConst(d->mListInterfaceView)) {
             if (interface != w) {
                 interface->action()->setChecked(false);
             }
@@ -95,7 +96,7 @@ QList<KToggleAction *> CustomToolsWidgetNg::actionList() const
 {
     QList<KToggleAction *> lstActions;
     lstActions.reserve(d->mListInterfaceView.count());
-    Q_FOREACH (PimCommon::CustomToolsViewInterface *interface, d->mListInterfaceView) {
+    for (PimCommon::CustomToolsViewInterface *interface : qAsConst(d->mListInterfaceView)) {
         lstActions << interface->action();
     }
     return lstActions;
@@ -104,7 +105,7 @@ QList<KToggleAction *> CustomToolsWidgetNg::actionList() const
 void CustomToolsWidgetNg::setText(const QString &text)
 {
     if (isVisible()) {
-        Q_FOREACH (PimCommon::CustomToolsViewInterface *interface, d->mListInterfaceView) {
+        for (PimCommon::CustomToolsViewInterface *interface : qAsConst(d->mListInterfaceView)) {
             if (interface == d->mStackedWidget->currentWidget()) {
                 interface->setText(text);
                 break;

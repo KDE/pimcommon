@@ -56,9 +56,8 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     : QWidget(parent),
       d(new PimCommon::CheckedCollectionWidgetPrivate)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(0);
-    setLayout(vbox);
 
     // Create a new change recorder.
     Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder(this);

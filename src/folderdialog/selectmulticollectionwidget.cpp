@@ -50,9 +50,8 @@ SelectMultiCollectionWidget::~SelectMultiCollectionWidget()
 
 void SelectMultiCollectionWidget::initialize(const QString &mimetype)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(0);
-    setLayout(vbox);
 
     mCheckedCollectionWidget = new PimCommon::CheckedCollectionWidget(mimetype);
 

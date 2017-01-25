@@ -99,11 +99,12 @@ QString AclUtils::permissionsToUserString(KIMAP::Acl::Rights permissions)
 
 QString AclUtils::guessUserName(const QString &loginName, const QString &serverName)
 {
-    if (loginName.contains(QLatin1Char('@'))) {
+    int pos = loginName.indexOf(QLatin1Char('@'));
+    if (pos != -1) {
         // strip of the domain part and use user name only
-        return loginName.left(loginName.indexOf(QLatin1Char('@')));
+        return loginName.left(pos);
     } else {
-        int pos = serverName.lastIndexOf(QLatin1Char('.'));
+        pos = serverName.lastIndexOf(QLatin1Char('.'));
         if (pos == -1) {   // no qualified domain name, only hostname
             return QStringLiteral("%1@%2").arg(loginName, serverName);
         }

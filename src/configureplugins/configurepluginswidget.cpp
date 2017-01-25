@@ -105,8 +105,7 @@ void ConfigurePluginsWidget::doResetToDefaultsOther()
 void ConfigurePluginsWidget::readConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), "ConfigurePluginsWidget");
-    QList<int> size;
-    size << 400 << 100;
+    const QList<int> size = {400, 100};
     mSplitter->setSizes(group.readEntry("splitter", size));
 }
 
