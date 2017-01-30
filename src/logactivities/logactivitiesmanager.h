@@ -30,6 +30,13 @@ public:
     ~LogActivitiesManager();
 
     static LogActivitiesManager *self();
+
+    void appendLog(const QString &str);
+
+    QString log() const;
+
+private:
+    QString mLog;
 };
 }
 #endif // LOGACTIVITIESMANAGER_H

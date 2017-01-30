@@ -15,36 +15,21 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifndef LOGACTIVITIESMANAGERTEST_H
+#define LOGACTIVITIESMANAGERTEST_H
 
-#include "logactivitiesmanager.h"
-#include <QtGlobal>
+#include <QObject>
 
-using namespace PimCommon;
-
-Q_GLOBAL_STATIC(LogActivitiesManager, s_pLogActivitiesSelf)
-
-LogActivitiesManager::LogActivitiesManager(QObject *parent)
-    : QObject(parent)
+class LogActivitiesManagerTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit LogActivitiesManagerTest(QObject *parent = nullptr);
+    ~LogActivitiesManagerTest();
 
-}
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 
-LogActivitiesManager::~LogActivitiesManager()
-{
+};
 
-}
-
-LogActivitiesManager *LogActivitiesManager::self()
-{
-    return s_pLogActivitiesSelf;
-}
-
-void LogActivitiesManager::appendLog(const QString &str)
-{
-    //TODO
-}
-
-QString LogActivitiesManager::log() const
-{
-    return mLog;
-}
+#endif // LOGACTIVITIESMANAGERTEST_H

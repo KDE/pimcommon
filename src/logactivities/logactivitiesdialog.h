@@ -15,36 +15,18 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifndef LOGACTIVITIESDIALOG_H
+#define LOGACTIVITIESDIALOG_H
 
-#include "logactivitiesmanager.h"
-#include <QtGlobal>
-
-using namespace PimCommon;
-
-Q_GLOBAL_STATIC(LogActivitiesManager, s_pLogActivitiesSelf)
-
-LogActivitiesManager::LogActivitiesManager(QObject *parent)
-    : QObject(parent)
+#include <QDialog>
+namespace PimCommon
 {
-
+class LogActivitiesDialog : public QDialog
+{
+public:
+    explicit LogActivitiesDialog(QWidget *parent = nullptr);
+    ~LogActivitiesDialog();
+};
 }
 
-LogActivitiesManager::~LogActivitiesManager()
-{
-
-}
-
-LogActivitiesManager *LogActivitiesManager::self()
-{
-    return s_pLogActivitiesSelf;
-}
-
-void LogActivitiesManager::appendLog(const QString &str)
-{
-    //TODO
-}
-
-QString LogActivitiesManager::log() const
-{
-    return mLog;
-}
+#endif // LOGACTIVITIESDIALOG_H

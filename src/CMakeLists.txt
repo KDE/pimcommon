@@ -192,6 +192,8 @@ set(libpimcommon_configure_plugins_SRCS
  
 set(libpimcommon_logactivities_SRCS
     logactivities/logactivitiesmanager.cpp
+    logactivities/logactivitiesdialog.cpp
+    logactivities/logactivitieswidget.cpp
     )
 
 

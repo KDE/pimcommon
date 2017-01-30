@@ -14,37 +14,26 @@
   with this program; if not, write to the Free Software Foundation, Inc.,
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
+#include "logactivitiesmanagertest.h"
+#include "../logactivitiesmanager.h"
 
+#include <QTest>
 
-#include "logactivitiesmanager.h"
-#include <QtGlobal>
-
-using namespace PimCommon;
-
-Q_GLOBAL_STATIC(LogActivitiesManager, s_pLogActivitiesSelf)
-
-LogActivitiesManager::LogActivitiesManager(QObject *parent)
+LogActivitiesManagerTest::LogActivitiesManagerTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-LogActivitiesManager::~LogActivitiesManager()
+LogActivitiesManagerTest::~LogActivitiesManagerTest()
 {
 
 }
 
-LogActivitiesManager *LogActivitiesManager::self()
+void LogActivitiesManagerTest::shouldHaveDefaultValue()
 {
-    return s_pLogActivitiesSelf;
+    PimCommon::LogActivitiesManager manager;
+    QVERIFY(manager.log().isEmpty());
 }
 
-void LogActivitiesManager::appendLog(const QString &str)
-{
-    //TODO
-}
-
-QString LogActivitiesManager::log() const
-{
-    return mLog;
-}
+QTEST_MAIN(LogActivitiesManagerTest)
