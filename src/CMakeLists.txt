@@ -190,6 +190,9 @@ set(libpimcommon_configure_plugins_SRCS
     configureplugins/configureplugindialog.cpp
     )
  
+set(libpimcommon_logactivities_SRCS
+    logactivities/logactivitiesmanager.cpp
+    )
 
 
 set(libpimcommon_genericgrantlee_SRCS
@@ -221,6 +224,7 @@ set(libpimcommon_SRCS
     ${libpimcommon_widgets_SRCS}
     ${libpimcommon_customtools_SRCS}
     ${libpimcommon_generericplugin_SRCS}
+    ${libpimcommon_logactivities_SRCS}
     )
 
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon)
@@ -331,6 +335,7 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(genericplugins/autotests)
     add_subdirectory(configureplugins/autotests)
+    add_subdirectory(logactivities/autotests)
 endif()
 
 if( LibKGAPI2_FOUND )
