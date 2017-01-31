@@ -17,6 +17,7 @@
 
 #include "logactivitieswidgettest.h"
 #include "../logactivitieswidget.h"
+#include <QPlainTextEdit>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -37,6 +38,10 @@ void LogActivitiesWidgetTest::shouldHaveDefaultValue()
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
+
+    QPlainTextEdit *mLog = w.findChild<QPlainTextEdit *>(QStringLiteral("log"));
+    QVERIFY(mLog);
+    QVERIFY(mLog->isReadOnly());
 }
 
 QTEST_MAIN(LogActivitiesWidgetTest)

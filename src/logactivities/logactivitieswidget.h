@@ -20,6 +20,7 @@
 
 #include <QWidget>
 #include "pimcommon_export.h"
+class QPlainTextEdit;
 namespace PimCommon
 {
 class PIMCOMMON_EXPORT LogActivitiesWidget : public QWidget
@@ -28,6 +29,8 @@ class PIMCOMMON_EXPORT LogActivitiesWidget : public QWidget
 public:
     explicit LogActivitiesWidget(QWidget *parent = nullptr);
     ~LogActivitiesWidget();
+private:
+    QPlainTextEdit *mLog;
 };
 }
 

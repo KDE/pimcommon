@@ -17,6 +17,7 @@
 
 #include "logactivitieswidget.h"
 #include <KLocalizedString>
+#include <QPlainTextEdit>
 #include <QVBoxLayout>
 
 using namespace PimCommon;
@@ -27,6 +28,11 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
+
+    mLog = new QPlainTextEdit(this);
+    mLog->setObjectName(QStringLiteral("log"));
+    mLog->setReadOnly(true);
+    mainLayout->addWidget(mLog);
 }
 
 LogActivitiesWidget::~LogActivitiesWidget()

@@ -22,6 +22,7 @@
 #include "pimcommon_export.h"
 namespace PimCommon
 {
+class LogActivitiesManagerPrivate;
 class PIMCOMMON_EXPORT LogActivitiesManager : public QObject
 {
     Q_OBJECT
@@ -35,8 +36,12 @@ public:
 
     QString log() const;
 
+    void clear();
+
+    void showLogActivitiesDialog();
+
 private:
-    QString mLog;
+    LogActivitiesManagerPrivate *const d;
 };
 }
 #endif // LOGACTIVITIESMANAGER_H

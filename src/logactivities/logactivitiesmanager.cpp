@@ -17,21 +17,40 @@
 
 
 #include "logactivitiesmanager.h"
+#include "logactivitiesdialog.h"
 #include <QtGlobal>
 
 using namespace PimCommon;
 
 Q_GLOBAL_STATIC(LogActivitiesManager, s_pLogActivitiesSelf)
 
+class PimCommon::LogActivitiesManagerPrivate
+{
+public:
+    LogActivitiesManagerPrivate()
+        : mDialog{nullptr}
+    {
+
+    }
+    ~LogActivitiesManagerPrivate()
+    {
+        delete mDialog;
+    }
+
+    QString mLog;
+    PimCommon::LogActivitiesDialog *mDialog;
+};
+
 LogActivitiesManager::LogActivitiesManager(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      d(new LogActivitiesManagerPrivate)
 {
 
 }
 
 LogActivitiesManager::~LogActivitiesManager()
 {
-
+    delete d;
 }
 
 LogActivitiesManager *LogActivitiesManager::self()
@@ -46,5 +65,18 @@ void LogActivitiesManager::appendLog(const QString &str)
 
 QString LogActivitiesManager::log() const
 {
-    return mLog;
+    return d->mLog;
+}
+
+void LogActivitiesManager::clear()
+{
+    d->mLog.clear();
+}
+
+void LogActivitiesManager::showLogActivitiesDialog()
+{
+    if (!d->mDialog) {
+        d->mDialog = new PimCommon::LogActivitiesDialog();
+    }
+    d->mDialog->show();
 }
