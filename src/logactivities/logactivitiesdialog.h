@@ -22,11 +22,14 @@
 #include "pimcommon_export.h"
 namespace PimCommon
 {
+class LogActivitiesWidget;
 class PIMCOMMON_EXPORT LogActivitiesDialog : public QDialog
 {
 public:
     explicit LogActivitiesDialog(QWidget *parent = nullptr);
     ~LogActivitiesDialog();
+private:
+    LogActivitiesWidget *mLogWidget;
 };
 }
 

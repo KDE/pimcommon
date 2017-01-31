@@ -16,6 +16,7 @@
 */
 
 #include "logactivitiesdialog.h"
+#include "logactivitieswidget.h"
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <KLocalizedString>
@@ -27,9 +28,15 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
+
+    mLogWidget = new LogActivitiesWidget(this);
+    mLogWidget->setObjectName(QStringLiteral("logwidget"));
+    mainLayout->addWidget(mLogWidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(buttonBox);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &LogActivitiesDialog::accept);
 }
 
 LogActivitiesDialog::~LogActivitiesDialog()
