@@ -19,9 +19,10 @@
 #define LOGACTIVITIESWIDGET_H
 
 #include <QWidget>
+#include "pimcommon_export.h"
 namespace PimCommon
 {
-class LogActivitiesWidget : public QWidget
+class PIMCOMMON_EXPORT LogActivitiesWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -19,9 +19,10 @@
 #define LOGACTIVITIESDIALOG_H
 
 #include <QDialog>
+#include "pimcommon_export.h"
 namespace PimCommon
 {
-class LogActivitiesDialog : public QDialog
+class PIMCOMMON_EXPORT LogActivitiesDialog : public QDialog
 {
 public:
     explicit LogActivitiesDialog(QWidget *parent = nullptr);
