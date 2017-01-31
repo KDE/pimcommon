@@ -16,13 +16,17 @@
 */
 
 #include "logactivitieswidget.h"
+#include <KLocalizedString>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     : QWidget(parent)
 {
-
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setMargin(0);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 }
 
 LogActivitiesWidget::~LogActivitiesWidget()

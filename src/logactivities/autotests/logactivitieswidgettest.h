@@ -15,24 +15,17 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "logactivitiesdialog.h"
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <KLocalizedString>
+#ifndef LOGACTIVITIESWIDGETTEST_H
+#define LOGACTIVITIESWIDGETTEST_H
 
-using namespace PimCommon;
+#include <QObject>
 
-LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
-    : QDialog(parent)
+class LogActivitiesWidgetTest : public QObject
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    mainLayout->addWidget(buttonBox);
-}
+    Q_OBJECT
+public:
+    explicit LogActivitiesWidgetTest(QObject *parent = nullptr);
+    ~LogActivitiesWidgetTest();
+};
 
-LogActivitiesDialog::~LogActivitiesDialog()
-{
-
-}
+#endif // LOGACTIVITIESWIDGETTEST_H
