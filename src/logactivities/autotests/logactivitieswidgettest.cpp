@@ -16,7 +16,9 @@
 */
 
 #include "logactivitieswidgettest.h"
+#include "../logactivitieswidget.h"
 #include <QTest>
+#include <QVBoxLayout>
 
 LogActivitiesWidgetTest::LogActivitiesWidgetTest(QObject *parent)
     : QObject(parent)
@@ -27,6 +29,14 @@ LogActivitiesWidgetTest::LogActivitiesWidgetTest(QObject *parent)
 LogActivitiesWidgetTest::~LogActivitiesWidgetTest()
 {
 
+}
+
+void LogActivitiesWidgetTest::shouldHaveDefaultValue()
+{
+    PimCommon::LogActivitiesWidget w;
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }
 
 QTEST_MAIN(LogActivitiesWidgetTest)

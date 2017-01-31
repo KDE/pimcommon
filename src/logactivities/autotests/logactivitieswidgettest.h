@@ -26,6 +26,8 @@ class LogActivitiesWidgetTest : public QObject
 public:
     explicit LogActivitiesWidgetTest(QObject *parent = nullptr);
     ~LogActivitiesWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // LOGACTIVITIESWIDGETTEST_H

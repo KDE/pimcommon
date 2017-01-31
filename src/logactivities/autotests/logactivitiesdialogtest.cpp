@@ -17,7 +17,11 @@
 
 
 #include "logactivitiesdialogtest.h"
+#include "../logactivitiesdialog.h"
+#include "../logactivitieswidget.h"
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
 
 LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
     : QObject(parent)
@@ -28,6 +32,19 @@ LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
 LogActivitiesDialogTest::~LogActivitiesDialogTest()
 {
 
+}
+
+void LogActivitiesDialogTest::shouldHaveDefaultValue()
+{
+    PimCommon::LogActivitiesDialog w;
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+
+    PimCommon::LogActivitiesWidget *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
+    QVERIFY(mLogWidget);
+
+    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
 }
 
 QTEST_MAIN(LogActivitiesDialogTest)

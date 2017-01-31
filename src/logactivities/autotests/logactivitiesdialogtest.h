@@ -27,6 +27,8 @@ class LogActivitiesDialogTest : public QObject
 public:
     explicit LogActivitiesDialogTest(QObject *parent = nullptr);
     ~LogActivitiesDialogTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // LOGACTIVITIESDIALOGTEST_H
