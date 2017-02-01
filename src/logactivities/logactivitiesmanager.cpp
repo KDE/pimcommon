@@ -18,6 +18,8 @@
 
 #include "logactivitiesmanager.h"
 #include "logactivitiesdialog.h"
+#include <QTime>
+
 #include <QtGlobal>
 
 using namespace PimCommon;
@@ -37,7 +39,7 @@ public:
         delete mDialog;
     }
 
-    QString mLog;
+    QStringList mLog;
     PimCommon::LogActivitiesDialog *mDialog;
 };
 
@@ -60,12 +62,13 @@ LogActivitiesManager *LogActivitiesManager::self()
 
 void LogActivitiesManager::appendLog(const QString &str)
 {
-    //TODO
+    const QString timedLog = QLatin1Char('[') + QTime::currentTime().toString() + QLatin1String("] ") + str;
+    d->mLog.append(timedLog);
 }
 
 QString LogActivitiesManager::log() const
 {
-    return d->mLog;
+    return d->mLog.join(QLatin1Char('\n'));
 }
 
 void LogActivitiesManager::clear()
