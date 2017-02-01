@@ -28,6 +28,8 @@ class PIMCOMMON_EXPORT LogActivitiesDialog : public QDialog
 public:
     explicit LogActivitiesDialog(QWidget *parent = nullptr);
     ~LogActivitiesDialog();
+
+    void setLog(const QString &str);
 private:
     LogActivitiesWidget *mLogWidget;
 };

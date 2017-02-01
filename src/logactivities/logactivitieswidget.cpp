@@ -39,3 +39,8 @@ LogActivitiesWidget::~LogActivitiesWidget()
 {
 
 }
+
+void LogActivitiesWidget::setLog(const QString &str)
+{
+    mLog->setPlainText(str);
+}

@@ -29,6 +29,7 @@ class PIMCOMMON_EXPORT LogActivitiesWidget : public QWidget
 public:
     explicit LogActivitiesWidget(QWidget *parent = nullptr);
     ~LogActivitiesWidget();
+    void setLog(const QString &str);
 private:
     QPlainTextEdit *mLog;
 };

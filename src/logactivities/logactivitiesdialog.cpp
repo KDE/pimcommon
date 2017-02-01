@@ -43,3 +43,8 @@ LogActivitiesDialog::~LogActivitiesDialog()
 {
 
 }
+
+void LogActivitiesDialog::setLog(const QString &str)
+{
+    mLogWidget->setLog(str);
+}

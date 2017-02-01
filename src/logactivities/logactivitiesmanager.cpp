@@ -80,6 +80,8 @@ void LogActivitiesManager::showLogActivitiesDialog()
 {
     if (!d->mDialog) {
         d->mDialog = new PimCommon::LogActivitiesDialog();
+
     }
+    d->mDialog->setLog(log());
     d->mDialog->show();
 }
