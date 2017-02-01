@@ -19,7 +19,7 @@
 #include <KLocalizedString>
 #include <QPlainTextEdit>
 #include <QVBoxLayout>
-
+#include <KPIMTextEdit/PlainTextEditorWidget>
 using namespace PimCommon;
 
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
@@ -29,7 +29,7 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mLog = new QPlainTextEdit(this);
+    mLog = new KPIMTextEdit::PlainTextEditorWidget(this);
     mLog->setObjectName(QStringLiteral("log"));
     mLog->setReadOnly(true);
     mainLayout->addWidget(mLog);
