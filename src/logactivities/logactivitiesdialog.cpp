@@ -36,7 +36,7 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(buttonBox);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &LogActivitiesDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
 }
 
 LogActivitiesDialog::~LogActivitiesDialog()

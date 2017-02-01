@@ -338,6 +338,7 @@ if (BUILD_TESTING)
     add_subdirectory(genericplugins/autotests)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(logactivities/autotests)
+    add_subdirectory(logactivities/tests)
 endif()
 
 if( LibKGAPI2_FOUND )
