@@ -17,7 +17,7 @@
 
 #include "logactivitieswidgettest.h"
 #include "../logactivitieswidget.h"
-#include <QPlainTextEdit>
+#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -39,7 +39,7 @@ void LogActivitiesWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
 
-    QPlainTextEdit *mLog = w.findChild<QPlainTextEdit *>(QStringLiteral("log"));
+    KPIMTextEdit::PlainTextEditorWidget *mLog = w.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("log"));
     QVERIFY(mLog);
     QVERIFY(mLog->isReadOnly());
 }
