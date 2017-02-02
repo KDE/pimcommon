@@ -45,6 +45,11 @@ void LogActivitiesWidget::setLog(const QString &str)
     mLog->setPlainText(str);
 }
 
+QString LogActivitiesWidget::log() const
+{
+    return mLog->toPlainText();
+}
+
 void LogActivitiesWidget::clear()
 {
     mLog->clear();

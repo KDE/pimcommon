@@ -66,6 +66,14 @@ void LogActivitiesDialogTest::shouldClearLog()
     PimCommon::LogActivitiesDialog w;
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
 
+
+    PimCommon::LogActivitiesWidget *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
+
+    QVERIFY(mLogWidget->log().isEmpty());
+
+    mLogWidget->setLog(QStringLiteral("FOOO"));
+    QVERIFY(!mLogWidget->log().isEmpty());
+
     const QList<QAbstractButton *> lstButtonBox = buttonBox->buttons();
     QAbstractButton *clearButton = nullptr;
     for (QAbstractButton *b : lstButtonBox) {
@@ -77,6 +85,7 @@ void LogActivitiesDialogTest::shouldClearLog()
     QSignalSpy spy(&w, &PimCommon::LogActivitiesDialog::logCleared);
     QTest::mouseClick(clearButton, Qt::LeftButton);
     QCOMPARE(spy.count(), 1);
+    QVERIFY(mLogWidget->log().isEmpty());
 }
 
 QTEST_MAIN(LogActivitiesDialogTest)
