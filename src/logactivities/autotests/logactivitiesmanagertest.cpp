@@ -36,4 +36,17 @@ void LogActivitiesManagerTest::shouldHaveDefaultValue()
     QVERIFY(manager.log().isEmpty());
 }
 
+void LogActivitiesManagerTest::shouldAppendLog()
+{
+    PimCommon::LogActivitiesManager manager;
+    QVERIFY(manager.log().isEmpty());
+    manager.appendLog(QStringLiteral("ff"));
+    QVERIFY(!manager.log().isEmpty());
+    manager.appendLog(QStringLiteral("ff"));
+    QVERIFY(!manager.log().isEmpty());
+
+    manager.clear();
+    QVERIFY(manager.log().isEmpty());
+}
+
 QTEST_MAIN(LogActivitiesManagerTest)
