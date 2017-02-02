@@ -40,9 +40,9 @@ public:
         delete mDialog;
     }
 
-    bool mEnableLogActivities;
     QStringList mLog;
     PimCommon::LogActivitiesDialog *mDialog;
+    bool mEnableLogActivities;
 };
 
 LogActivitiesManager::LogActivitiesManager(QObject *parent)
@@ -64,8 +64,10 @@ LogActivitiesManager *LogActivitiesManager::self()
 
 void LogActivitiesManager::appendLog(const QString &str)
 {
-    const QString timedLog = QLatin1Char('[') + QTime::currentTime().toString() + QLatin1String("] ") + str;
-    d->mLog.append(timedLog);
+    if (d->mEnableLogActivities) {
+        const QString timedLog = QLatin1Char('[') + QTime::currentTime().toString() + QLatin1String("] ") + str;
+        d->mLog.append(timedLog);
+    }
 }
 
 QString LogActivitiesManager::log() const
@@ -90,8 +92,10 @@ void LogActivitiesManager::showLogActivitiesDialog()
 
 void LogActivitiesManager::setEnableLogActivities(bool b)
 {
-    //TODO clear if necessary
     d->mEnableLogActivities = b;
+    if (!d->mEnableLogActivities) {
+        clear();
+    }
 }
 
 bool LogActivitiesManager::enableLogActivities() const
