@@ -29,6 +29,7 @@ public:
     ~LogActivitiesDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldClearLog();
 };
 
 #endif // LOGACTIVITIESDIALOGTEST_H

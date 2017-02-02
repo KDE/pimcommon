@@ -20,6 +20,7 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <KLocalizedString>
+#include <QPushButton>
 
 using namespace PimCommon;
 
@@ -35,6 +36,12 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
+
+    mClearButton = new QPushButton(i18n("Clear"), this);
+    mClearButton->setObjectName(QStringLiteral("clearbutton"));
+    buttonBox->addButton(mClearButton, QDialogButtonBox::ActionRole);
+    connect(mClearButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotClear);
+
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
 }
@@ -47,4 +54,10 @@ LogActivitiesDialog::~LogActivitiesDialog()
 void LogActivitiesDialog::setLog(const QString &str)
 {
     mLogWidget->setLog(str);
+}
+
+void LogActivitiesDialog::slotClear()
+{
+    mLogWidget->clear();
+    Q_EMIT logCleared();
 }

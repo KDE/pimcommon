@@ -20,18 +20,27 @@
 
 #include <QDialog>
 #include "pimcommon_export.h"
+class QPushButton;
 namespace PimCommon
 {
 class LogActivitiesWidget;
 class PIMCOMMON_EXPORT LogActivitiesDialog : public QDialog
 {
+    Q_OBJECT
 public:
     explicit LogActivitiesDialog(QWidget *parent = nullptr);
     ~LogActivitiesDialog();
 
     void setLog(const QString &str);
+
+Q_SIGNALS:
+    void logCleared();
+
 private:
+    void slotClear();
+
     LogActivitiesWidget *mLogWidget;
+    QPushButton *mClearButton;
 };
 }
 

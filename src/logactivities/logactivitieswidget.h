@@ -34,6 +34,7 @@ public:
     explicit LogActivitiesWidget(QWidget *parent = nullptr);
     ~LogActivitiesWidget();
     void setLog(const QString &str);
+    void clear();
 private:
     KPIMTextEdit::PlainTextEditorWidget *mLog;
 };

@@ -19,9 +19,12 @@
 #include "logactivitiesdialogtest.h"
 #include "../logactivitiesdialog.h"
 #include "../logactivitieswidget.h"
+#include <QAbstractButton>
 #include <QDialogButtonBox>
 #include <QTest>
 #include <QVBoxLayout>
+#include <qtestmouse.h>
+#include <QSignalSpy>
 
 LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
     : QObject(parent)
@@ -45,6 +48,35 @@ void LogActivitiesDialogTest::shouldHaveDefaultValue()
 
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+
+    const QList<QAbstractButton *> lstButtonBox = buttonBox->buttons();
+    bool hasClearButton = false;
+    for (QAbstractButton *b : lstButtonBox) {
+        if (b->objectName() == QLatin1String("clearbutton")) {
+            hasClearButton = true;
+            QVERIFY(!b->text().isEmpty());
+            break;
+        }
+    }
+    QVERIFY(hasClearButton);
+}
+
+void LogActivitiesDialogTest::shouldClearLog()
+{
+    PimCommon::LogActivitiesDialog w;
+    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+
+    const QList<QAbstractButton *> lstButtonBox = buttonBox->buttons();
+    QAbstractButton *clearButton = nullptr;
+    for (QAbstractButton *b : lstButtonBox) {
+        if (b->objectName() == QLatin1String("clearbutton")) {
+            clearButton = b;
+            break;
+        }
+    }
+    QSignalSpy spy(&w, &PimCommon::LogActivitiesDialog::logCleared);
+    QTest::mouseClick(clearButton, Qt::LeftButton);
+    QCOMPARE(spy.count(), 1);
 }
 
 QTEST_MAIN(LogActivitiesDialogTest)
