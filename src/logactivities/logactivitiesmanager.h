@@ -40,6 +40,9 @@ public:
 
     void showLogActivitiesDialog();
 
+    void setEnableLogActivities(bool b);
+    bool enableLogActivities() const;
+
 private:
     LogActivitiesManagerPrivate *const d;
 };

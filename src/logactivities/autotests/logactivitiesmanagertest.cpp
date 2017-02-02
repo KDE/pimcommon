@@ -34,6 +34,7 @@ void LogActivitiesManagerTest::shouldHaveDefaultValue()
 {
     PimCommon::LogActivitiesManager manager;
     QVERIFY(manager.log().isEmpty());
+    QVERIFY(!manager.enableLogActivities());
 }
 
 void LogActivitiesManagerTest::shouldAppendLog()
@@ -47,6 +48,16 @@ void LogActivitiesManagerTest::shouldAppendLog()
 
     manager.clear();
     QVERIFY(manager.log().isEmpty());
+}
+
+void LogActivitiesManagerTest::shouldEnableActivities()
+{
+    PimCommon::LogActivitiesManager manager;
+    QVERIFY(!manager.enableLogActivities());
+    manager.setEnableLogActivities(true);
+    QVERIFY(manager.enableLogActivities());
+    manager.setEnableLogActivities(false);
+    QVERIFY(!manager.enableLogActivities());
 }
 
 QTEST_MAIN(LogActivitiesManagerTest)

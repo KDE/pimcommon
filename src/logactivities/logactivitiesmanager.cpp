@@ -30,7 +30,8 @@ class PimCommon::LogActivitiesManagerPrivate
 {
 public:
     LogActivitiesManagerPrivate()
-        : mDialog{nullptr}
+        : mDialog{nullptr},
+          mEnableLogActivities{false}
     {
 
     }
@@ -39,6 +40,7 @@ public:
         delete mDialog;
     }
 
+    bool mEnableLogActivities;
     QStringList mLog;
     PimCommon::LogActivitiesDialog *mDialog;
 };
@@ -84,4 +86,15 @@ void LogActivitiesManager::showLogActivitiesDialog()
     }
     d->mDialog->setLog(log());
     d->mDialog->show();
+}
+
+void LogActivitiesManager::setEnableLogActivities(bool b)
+{
+    //TODO clear if necessary
+    d->mEnableLogActivities = b;
+}
+
+bool LogActivitiesManager::enableLogActivities() const
+{
+    return d->mEnableLogActivities;
 }
