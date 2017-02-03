@@ -18,11 +18,12 @@
 #include "../logactivitiesmanager.h"
 
 #include <QTest>
+#include <QStandardPaths>
 
 LogActivitiesManagerTest::LogActivitiesManagerTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 LogActivitiesManagerTest::~LogActivitiesManagerTest()

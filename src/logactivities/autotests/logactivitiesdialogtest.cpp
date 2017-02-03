@@ -27,11 +27,12 @@
 #include <qtestmouse.h>
 #include <QSignalSpy>
 #include <QCheckBox>
+#include <QStandardPaths>
 
 LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 LogActivitiesDialogTest::~LogActivitiesDialogTest()
