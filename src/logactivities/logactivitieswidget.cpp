@@ -20,6 +20,7 @@
 #include <QPlainTextEdit>
 #include <QVBoxLayout>
 #include <KPIMTextEdit/PlainTextEditorWidget>
+#include <KPIMTextEdit/PlainTextEditor>
 using namespace PimCommon;
 
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
@@ -38,6 +39,11 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
 LogActivitiesWidget::~LogActivitiesWidget()
 {
 
+}
+
+void LogActivitiesWidget::addLogEntry(const QString &entry)
+{
+    mLog->editor()->appendHtml(entry);
 }
 
 void LogActivitiesWidget::setLog(const QString &str)

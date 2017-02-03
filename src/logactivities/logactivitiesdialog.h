@@ -40,6 +40,8 @@ private:
     void slotClear();
     void readConfig();
     void writeConfig();
+    void slotLogEntryCleared();
+    void slotLogEntryAdded(const QString &entry);
 
     LogActivitiesWidget *mLogWidget;
     QPushButton *mClearButton;

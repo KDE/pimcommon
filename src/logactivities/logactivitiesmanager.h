@@ -43,6 +43,10 @@ public:
     void setEnableLogActivities(bool b);
     bool enableLogActivities() const;
 
+Q_SIGNALS:
+    void logEntryAdded(const QString &entry);
+    void logEntryCleared();
+
 private:
     LogActivitiesManagerPrivate *const d;
 };

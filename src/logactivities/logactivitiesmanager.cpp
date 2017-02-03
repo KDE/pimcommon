@@ -67,6 +67,7 @@ void LogActivitiesManager::appendLog(const QString &str)
     if (d->mEnableLogActivities) {
         const QString timedLog = QLatin1Char('[') + QTime::currentTime().toString() + QLatin1String("] ") + str;
         d->mLog.append(timedLog);
+        Q_EMIT logEntryAdded(timedLog);
     }
 }
 
@@ -78,6 +79,7 @@ QString LogActivitiesManager::log() const
 void LogActivitiesManager::clear()
 {
     d->mLog.clear();
+    Q_EMIT logEntryCleared();
 }
 
 void LogActivitiesManager::showLogActivitiesDialog()

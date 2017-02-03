@@ -36,6 +36,7 @@ public:
     void setLog(const QString &str);
     QString log() const;
     void clear();
+    void addLogEntry(const QString &entry);
 private:
     KPIMTextEdit::PlainTextEditorWidget *mLog;
 };

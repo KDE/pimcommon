@@ -17,6 +17,7 @@
 
 #include "logactivitiesdialog.h"
 #include "logactivitieswidget.h"
+#include "logactivitiesmanager.h"
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -48,6 +49,11 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
     readConfig();
+    void logEntryAdded(const QString &entry);
+    void logEntryCleared();
+
+    connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryAdded, this, &LogActivitiesDialog::slotLogEntryAdded);
+    connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryCleared, this, &LogActivitiesDialog::slotLogEntryCleared);
 }
 
 LogActivitiesDialog::~LogActivitiesDialog()
@@ -58,6 +64,16 @@ LogActivitiesDialog::~LogActivitiesDialog()
 void LogActivitiesDialog::setLog(const QString &str)
 {
     mLogWidget->setLog(str);
+}
+
+void LogActivitiesDialog::slotLogEntryAdded(const QString &entry)
+{
+    mLogWidget->addLogEntry(entry);
+}
+
+void LogActivitiesDialog::slotLogEntryCleared()
+{
+    mLogWidget->clear();
 }
 
 void LogActivitiesDialog::slotClear()
