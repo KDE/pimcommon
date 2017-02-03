@@ -17,9 +17,11 @@
 
 #include "logactivitiesdialog.h"
 #include "logactivitieswidget.h"
+#include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
-#include <KLocalizedString>
 #include <QPushButton>
 
 using namespace PimCommon;
@@ -45,11 +47,12 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
 
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
+    readConfig();
 }
 
 LogActivitiesDialog::~LogActivitiesDialog()
 {
-
+    writeConfig();
 }
 
 void LogActivitiesDialog::setLog(const QString &str)
@@ -61,4 +64,19 @@ void LogActivitiesDialog::slotClear()
 {
     mLogWidget->clear();
     Q_EMIT logCleared();
+}
+
+void LogActivitiesDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "LogActivitiesDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
+}
+
+void LogActivitiesDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "LogActivitiesDialog");
+    group.writeEntry("Size", size());
 }

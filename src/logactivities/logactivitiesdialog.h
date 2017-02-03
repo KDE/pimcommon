@@ -38,6 +38,8 @@ Q_SIGNALS:
 
 private:
     void slotClear();
+    void readConfig();
+    void writeConfig();
 
     LogActivitiesWidget *mLogWidget;
     QPushButton *mClearButton;
