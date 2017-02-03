@@ -31,6 +31,9 @@ public:
 
 private:
     void slotOpenDialog();
+    void slotClearLog();
+    void slotEnableLogActivities(bool enable);
+    void slotAddLog();
 };
 
 #endif // LOGACTIVITIESMAINWIDGET_H

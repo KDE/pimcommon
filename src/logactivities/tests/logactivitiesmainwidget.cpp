@@ -22,6 +22,7 @@
 #include "logactivities/logactivitiesmanager.h"
 #include <QPushButton>
 #include <QHBoxLayout>
+#include <QCheckBox>
 
 LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
     : QWidget(parent)
@@ -30,6 +31,21 @@ LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
     QPushButton *button = new QPushButton(QStringLiteral("Open Log"), this);
     connect(button, &QPushButton::clicked, this, &LogActivitiesMainWidget::slotOpenDialog);
     mainLayout->addWidget(button);
+
+    QPushButton *addLog = new QPushButton(QStringLiteral("Append Log"), this);
+    connect(addLog, &QPushButton::clicked, this, &LogActivitiesMainWidget::slotAddLog);
+    mainLayout->addWidget(addLog);
+
+    QPushButton *clearLogButton = new QPushButton(QStringLiteral("Clear log"), this);
+    connect(clearLogButton, &QPushButton::clicked, this, &LogActivitiesMainWidget::slotClearLog);
+    mainLayout->addWidget(clearLogButton);
+
+    QCheckBox *enableLog = new QCheckBox(QStringLiteral("Enable Log Activities"), this);
+    connect(enableLog, &QPushButton::toggled, this, &LogActivitiesMainWidget::slotEnableLogActivities);
+    enableLog->setChecked(true);
+    mainLayout->addWidget(enableLog);
+
+
     PimCommon::LogActivitiesManager::self()->setEnableLogActivities(true);
     PimCommon::LogActivitiesManager::self()->appendLog(QStringLiteral("foo"));
 }
@@ -37,4 +53,19 @@ LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
 void LogActivitiesMainWidget::slotOpenDialog()
 {
     PimCommon::LogActivitiesManager::self()->showLogActivitiesDialog();
+}
+
+void LogActivitiesMainWidget::slotClearLog()
+{
+    PimCommon::LogActivitiesManager::self()->clear();
+}
+
+void LogActivitiesMainWidget::slotEnableLogActivities(bool enable)
+{
+    PimCommon::LogActivitiesManager::self()->setEnableLogActivities(enable);
+}
+
+void LogActivitiesMainWidget::slotAddLog()
+{
+    PimCommon::LogActivitiesManager::self()->appendLog(QStringLiteral("Foo"));
 }
