@@ -19,12 +19,14 @@
 #include "logactivitiesdialogtest.h"
 #include "../logactivitiesdialog.h"
 #include "../logactivitieswidget.h"
+#include "../logactivitiesmanager.h"
 #include <QAbstractButton>
 #include <QDialogButtonBox>
 #include <QTest>
 #include <QVBoxLayout>
 #include <qtestmouse.h>
 #include <QSignalSpy>
+#include <QCheckBox>
 
 LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
     : QObject(parent)
@@ -45,6 +47,11 @@ void LogActivitiesDialogTest::shouldHaveDefaultValue()
 
     PimCommon::LogActivitiesWidget *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
     QVERIFY(mLogWidget);
+
+    QCheckBox *mEnableLogActivities = w.findChild<QCheckBox *>(QStringLiteral("enablelogactivities"));
+    QVERIFY(mEnableLogActivities);
+    QVERIFY(!mEnableLogActivities->text().isEmpty());
+    QVERIFY(!mEnableLogActivities->isChecked());
 
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
@@ -86,6 +93,14 @@ void LogActivitiesDialogTest::shouldClearLog()
     QTest::mouseClick(clearButton, Qt::LeftButton);
     QCOMPARE(spy.count(), 1);
     QVERIFY(mLogWidget->log().isEmpty());
+}
+
+void LogActivitiesDialogTest::shouldHaveCorrectLogActivities()
+{
+    PimCommon::LogActivitiesManager::self()->setEnableLogActivities(true);
+    PimCommon::LogActivitiesDialog w;
+    QCheckBox *mEnableLogActivities = w.findChild<QCheckBox *>(QStringLiteral("enablelogactivities"));
+    QVERIFY(mEnableLogActivities->isChecked());
 }
 
 QTEST_MAIN(LogActivitiesDialogTest)

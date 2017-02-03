@@ -21,6 +21,7 @@
 #include <QDialog>
 #include "pimcommon_export.h"
 class QPushButton;
+class QCheckBox;
 namespace PimCommon
 {
 class LogActivitiesWidget;
@@ -42,9 +43,11 @@ private:
     void writeConfig();
     void slotLogEntryCleared();
     void slotLogEntryAdded(const QString &entry);
+    void slotEnableLogActivities(bool state);
 
     LogActivitiesWidget *mLogWidget;
     QPushButton *mClearButton;
+    QCheckBox *mEnableLogActivities;
 };
 }
 

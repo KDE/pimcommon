@@ -24,6 +24,7 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QCheckBox>
 
 using namespace PimCommon;
 
@@ -38,6 +39,11 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mLogWidget->setObjectName(QStringLiteral("logwidget"));
     mainLayout->addWidget(mLogWidget);
 
+    mEnableLogActivities = new QCheckBox(i18n("Log activities"), this);
+    mEnableLogActivities->setObjectName(QStringLiteral("enablelogactivities"));
+    mainLayout->addWidget(mEnableLogActivities);
+    connect(mEnableLogActivities, &QCheckBox::toggled, this, &LogActivitiesDialog::slotEnableLogActivities);
+
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
@@ -49,16 +55,20 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
     readConfig();
-    void logEntryAdded(const QString &entry);
-    void logEntryCleared();
 
     connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryAdded, this, &LogActivitiesDialog::slotLogEntryAdded);
     connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryCleared, this, &LogActivitiesDialog::slotLogEntryCleared);
+    mEnableLogActivities->setChecked(PimCommon::LogActivitiesManager::self()->enableLogActivities());
 }
 
 LogActivitiesDialog::~LogActivitiesDialog()
 {
     writeConfig();
+}
+
+void LogActivitiesDialog::slotEnableLogActivities(bool state)
+{
+    PimCommon::LogActivitiesManager::self()->setEnableLogActivities(state);
 }
 
 void LogActivitiesDialog::setLog(const QString &str)
