@@ -84,6 +84,7 @@ void LogActivitiesManager::showLogActivitiesDialog()
 {
     if (!d->mDialog) {
         d->mDialog = new PimCommon::LogActivitiesDialog();
+        connect(d->mDialog, &LogActivitiesDialog::logCleared, this, &LogActivitiesManager::clear);
 
     }
     d->mDialog->setLog(log());
