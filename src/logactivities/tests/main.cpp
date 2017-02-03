@@ -24,7 +24,7 @@
 #include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
-#include "../logactivitiesdialog.h"
+#include "logactivitiesmainwidget.h"
 
 int main(int argc, char **argv)
 {
@@ -41,8 +41,8 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    PimCommon::LogActivitiesDialog dlg;
-    dlg.show();
+    LogActivitiesMainWidget *w = new LogActivitiesMainWidget;
+    w->show();
     app.exec();
     return 0;
 }

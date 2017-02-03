@@ -18,9 +18,23 @@
 */
 
 #include "logactivitiesmainwidget.h"
+#include "logactivities/logactivitiesdialog.h"
+#include "logactivities/logactivitiesmanager.h"
+#include <QPushButton>
+#include <QHBoxLayout>
 
 LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QPushButton *button = new QPushButton(QStringLiteral("Open Log"), this);
+    connect(button, &QPushButton::clicked, this, &LogActivitiesMainWidget::slotOpenDialog);
+    mainLayout->addWidget(button);
+    PimCommon::LogActivitiesManager::self()->setEnableLogActivities(true);
+    PimCommon::LogActivitiesManager::self()->appendLog(QStringLiteral("foo"));
+}
 
+void LogActivitiesMainWidget::slotOpenDialog()
+{
+    PimCommon::LogActivitiesManager::self()->showLogActivitiesDialog();
 }

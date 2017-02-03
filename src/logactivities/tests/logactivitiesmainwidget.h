@@ -27,6 +27,10 @@ class LogActivitiesMainWidget : public QWidget
     Q_OBJECT
 public:
     explicit LogActivitiesMainWidget(QWidget *parent = nullptr);
+    ~LogActivitiesMainWidget() = default;
+
+private:
+    void slotOpenDialog();
 };
 
 #endif // LOGACTIVITIESMAINWIDGET_H
