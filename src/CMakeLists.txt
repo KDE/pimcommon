@@ -421,6 +421,15 @@ ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
     RELATIVE settings
     )
 
+ecm_generate_headers(PimCommon_Camelcaselogactivities_HEADERS
+    HEADER_NAMES
+    LogActivitiesManager
+    REQUIRED_HEADERS PimCommon_logactivities_HEADERS
+    PREFIX PimCommon
+    RELATIVE logactivities
+    )
+
+
 ecm_generate_headers(PimCommon_Camelcasestorageservicewidgets_HEADERS
     HEADER_NAMES
     StorageServiceProgressWidget
@@ -592,6 +601,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_Camelcaselogactivities_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasegenericgrantlee_HEADERS}
@@ -657,6 +667,7 @@ install(FILES
     ${PimCommon_texteditor_commonwidget_HEADERS}
     ${PimCommon_translator_HEADERS}
     ${PimCommon_widgets_HEADERS}
+    ${PimCommon_logactivities_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon
     COMPONENT Devel
