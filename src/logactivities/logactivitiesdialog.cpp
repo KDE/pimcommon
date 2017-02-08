@@ -44,13 +44,14 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mainLayout->addWidget(mEnableLogActivities);
     connect(mEnableLogActivities, &QCheckBox::toggled, this, &LogActivitiesDialog::slotEnableLogActivities);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close|QDialogButtonBox::Save, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
     mClearButton = new QPushButton(i18n("Clear"), this);
     mClearButton->setObjectName(QStringLiteral("clearbutton"));
     buttonBox->addButton(mClearButton, QDialogButtonBox::ActionRole);
     connect(mClearButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotClear);
+    connect(buttonBox->button(QDialogButtonBox::Save), &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
 
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
@@ -64,6 +65,11 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
 LogActivitiesDialog::~LogActivitiesDialog()
 {
     writeConfig();
+}
+
+void LogActivitiesDialog::slotSave()
+{
+    //TODO implement it.
 }
 
 void LogActivitiesDialog::slotEnableLogActivities(bool state)
