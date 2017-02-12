@@ -87,6 +87,8 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
 
+option(KDEPIM_DISABLE_STORAGE_SERVICE "Disable Storage Service Support (broken)." FALSE)
+
 ########### Targets ###########
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
