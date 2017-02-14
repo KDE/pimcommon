@@ -29,14 +29,14 @@ using namespace PimCommon;
 class PimCommon::ShareServiceUrlManagerPrivate
 {
 public:
-    ShareServiceUrlManagerPrivate(ShareServiceUrlManager *qq)
+    explicit ShareServiceUrlManagerPrivate(ShareServiceUrlManager *qq)
         : mMenu(nullptr),
           q(qq)
     {
 
     }
-    QIcon typeToIcon(ShareServiceUrlManager::ServiceType type);
-    QString typeToI18n(ShareServiceUrlManager::ServiceType type);
+    QIcon typeToIcon(ShareServiceUrlManager::ServiceType type) const;
+    QString typeToI18n(ShareServiceUrlManager::ServiceType type) const;
     void initializeMenu();
     KActionMenu *mMenu;
     ShareServiceUrlManager *q;
@@ -58,7 +58,7 @@ void ShareServiceUrlManagerPrivate::initializeMenu()
     q->connect(mMenu->menu(), &QMenu::triggered, q, &ShareServiceUrlManager::slotSelectServiceUrl);
 }
 
-QIcon ShareServiceUrlManagerPrivate::typeToIcon(ShareServiceUrlManager::ServiceType type)
+QIcon ShareServiceUrlManagerPrivate::typeToIcon(ShareServiceUrlManager::ServiceType type) const
 {
     QIcon icon;
     switch (type) {
@@ -90,7 +90,7 @@ QIcon ShareServiceUrlManagerPrivate::typeToIcon(ShareServiceUrlManager::ServiceT
     return icon;
 }
 
-QString ShareServiceUrlManagerPrivate::typeToI18n(ShareServiceUrlManager::ServiceType type)
+QString ShareServiceUrlManagerPrivate::typeToI18n(ShareServiceUrlManager::ServiceType type) const
 {
     QString str;
     switch (type) {
