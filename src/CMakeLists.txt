@@ -12,12 +12,6 @@ set(libpimcommon_sieve_SRCS
     )
 
 if ( NOT KDEPIM_DISABLE_STORAGE_SERVICE)
-    if( KF5GAPI_FOUND )
-        set(libpimcommon_storageservice_gdrive
-            storageservice/gdrive/gdrivestorageservice.cpp
-            storageservice/gdrive/gdrivejob.cpp
-            )
-    endif()
     set(libpimcommon_storageservice_SRCS
         ${libpimcommon_storageservice_gdrive}
         storageservice/storageserviceabstract.cpp
@@ -253,12 +247,6 @@ add_library(KF5PimCommon ${libpimcommon_SRCS})
 generate_export_header(KF5PimCommon BASE_NAME pimcommon)
 add_library(KF5::PimCommon ALIAS KF5PimCommon)
 
-if( KF5GAPI_FOUND )
-    target_link_libraries(KF5PimCommon
-        PRIVATE
-        KF5::GAPIDrive
-        )
-endif()
 
 if ( Qt5TextToSpeech_FOUND ) 
     target_link_libraries(KF5PimCommon
@@ -341,12 +329,6 @@ if (BUILD_TESTING)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(logactivities/autotests)
     add_subdirectory(logactivities/tests)
-endif()
-if( NOT KDEPIM_DISABLE_STORAGE_SERVICE)
-    if( LibKGAPI2_FOUND )
-        add_subdirectory(storageservice/gdrive/tests/)
-        add_subdirectory(storageservice/gdrive/icons/)
-    endif()
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
