@@ -18,6 +18,7 @@
 #include "logactivitiesdialog.h"
 #include "logactivitieswidget.h"
 #include "logactivitiesmanager.h"
+#include <PimCommon/PimUtil>
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -69,7 +70,9 @@ LogActivitiesDialog::~LogActivitiesDialog()
 
 void LogActivitiesDialog::slotSave()
 {
-    //TODO implement it.
+    const QString filter = i18n("All Files (*)");
+    PimCommon::Util::saveTextAs(PimCommon::LogActivitiesManager::self()->log(), filter, this, QUrl(),
+                                i18nc("@title:window", "Save Log"));
 }
 
 void LogActivitiesDialog::slotEnableLogActivities(bool state)
