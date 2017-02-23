@@ -125,7 +125,7 @@ AnnotationEditDialog::~AnnotationEditDialog()
 
 void AnnotationEditDialog::slotAccepted()
 {
-    bool textIsEmpty = d->mTextEdit->toPlainText().isEmpty();
+    bool textIsEmpty = d->mTextEdit->isEmpty();
     if (!textIsEmpty) {
         d->mItem.removeAttribute<Akonadi::EntityAnnotationsAttribute>();
         Akonadi::EntityAnnotationsAttribute *annotation = d->mItem.attribute<Akonadi::EntityAnnotationsAttribute>(Akonadi::Item::AddIfMissing);
