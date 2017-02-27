@@ -18,6 +18,7 @@
  */
 
 #include "aclmanager.h"
+#include "helper_p.h"
 #include "pimcommon_debug.h"
 #include "aclentrydialog_p.h"
 #include "aclutils_p.h"
@@ -134,7 +135,7 @@ public:
         QMap<QByteArray, KIMAP::Acl::Rights> result;
 
         typedef QPair<QByteArray, KIMAP::Acl::Rights> RightPair;
-        foreach (const RightPair &right, mRights) {
+        for (const RightPair &right : qAsConst(mRights)) {
             result.insert(right.first, right.second);
         }
 

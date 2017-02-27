@@ -17,6 +17,7 @@
 
 #include "migrateapplicationfiles.h"
 #include "pimcommon_debug.h"
+#include "helper_p.h"
 #include <kdelibs4migration.h>
 #include <KSharedConfig>
 #include <KConfigGroup>
@@ -89,7 +90,7 @@ bool MigrateApplicationFiles::start()
 bool MigrateApplicationFiles::migrateConfig()
 {
     qCDebug(PIMCOMMON_LOG) << "Start migration...";
-    Q_FOREACH (const MigrateFileInfo &info, d->mMigrateInfoList) {
+    for (const MigrateFileInfo &info : qAsConst(d->mMigrateInfoList)) {
         if ((info.version() == -1) || (info.version() > d->mCurrentConfigVersion)) {
             if (info.folder()) {
                 migrateFolder(info);

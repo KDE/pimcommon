@@ -16,6 +16,7 @@
 */
 
 #include "plugininterface.h"
+#include "helper_p.h"
 #include "genericpluginmanager.h"
 #include "pimcommon_debug.h"
 
@@ -150,7 +151,7 @@ void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClie
 
 void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {
-    Q_FOREACH (PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
+    for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
         interface->updateActions(numberOfSelectedItems, numberOfSelectedCollections);
     }
 }
@@ -158,7 +159,7 @@ void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelec
 QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType()
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
-    Q_FOREACH (PimCommon::GenericPluginInterface *interface, d->mListGenericInterface) {
+    for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
         PimCommon::ActionType actionType = interface->actionType();
         PimCommon::ActionType::Type type = actionType.type();
         QList<QAction *> lst = listType.value(type);

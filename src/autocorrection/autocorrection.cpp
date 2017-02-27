@@ -17,6 +17,7 @@
 */
 
 #include "autocorrection.h"
+#include "helper_p.h"
 #include "settings/pimcommonsettings.h"
 #include "import/importkmailautocorrection.h"
 #include <KColorScheme>
@@ -742,7 +743,7 @@ void AutoCorrection::capitalizeWeekDays()
     }
 
     const QString trimmed = mWord.trimmed();
-    Q_FOREACH (const QString &name, mCacheNameOfDays) {
+    for (const QString &name : qAsConst(mCacheNameOfDays)) {
         if (trimmed == name) {
             const int pos = mWord.indexOf(name);
             mWord.replace(pos, 1, name.at(0).toUpper());

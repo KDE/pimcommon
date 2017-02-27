@@ -230,7 +230,7 @@ public:
     void saveTemplates(KConfig *configFile)
     {
         // clear everything
-        foreach (const QString &group, configFile->groupList()) {
+        for (const QString &group : configFile->groupList()) {
             configFile->deleteGroup(group);
         }
         int numberOfTemplate = 0;
