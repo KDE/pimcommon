@@ -25,7 +25,7 @@
 #include <QApplication>
 #include <QCommandLineParser>
 
-#include "../src/widgets/spellchecklineedit.h"
+#include "../spellchecklineedit.h"
 
 int main(int argc, char *argv[])
 {
