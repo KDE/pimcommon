@@ -3,7 +3,7 @@ add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
 
 
-add_definitions(-DTRANSLATION_DOMAIN=\"libpimcommon\")
+
 
 set(libpimcommon_sieve_SRCS
     sievehighlighter/sievesyntaxhighlighter.cpp
