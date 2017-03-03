@@ -15,33 +15,21 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef COLLECTIONACLWIDGET_H
-#define COLLECTIONACLWIDGET_H
+#ifndef GENERICPLUGIN_H
+#define GENERICPLUGIN_H
 
-#include <QWidget>
-class QCheckBox;
+#include "abstractgenericplugin.h"
+#include "PIMCOMMONAKONADI_EXPORT.h"
+class KActionCollection;
 namespace PimCommon
 {
-class AclManager;
-class CollectionAclWidget : public QWidget
+class GenericPluginInterface;
+class PIMCOMMONAKONADI_EXPORT GenericPlugin : public AbstractGenericPlugin
 {
     Q_OBJECT
 public:
-    explicit CollectionAclWidget(QWidget *parent = nullptr);
-    ~CollectionAclWidget();
-
-    PimCommon::AclManager *aclManager() const;
-    bool recursive() const;
-    void setEnableRecursiveCheckBox(bool enable);
-
-private Q_SLOTS:
-    void slotRecursivePermissionChanged();
-    void slotCollectionCanBeAdministrated(bool b);
-
-private:
-    PimCommon::AclManager *mAclManager;
-    QCheckBox *mRecursiveChk;
+    explicit GenericPlugin(QObject *parent = nullptr);
+    ~GenericPlugin();
 };
 }
-
-#endif // COLLECTIONACLWIDGET_H
+#endif // GENERICPLUGIN_H

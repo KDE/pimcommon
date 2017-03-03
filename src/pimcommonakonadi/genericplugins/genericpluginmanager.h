@@ -20,14 +20,14 @@
 
 #include <QObject>
 #include <QVector>
-#include "pimcommon_export.h"
+#include "PIMCOMMONAKONADI_EXPORT.h"
 #include "pluginutil.h"
 
 namespace PimCommon
 {
 class GenericPluginManagerPrivate;
 class GenericPlugin;
-class PIMCOMMON_EXPORT GenericPluginManager : public QObject
+class PIMCOMMONAKONADI_EXPORT GenericPluginManager : public QObject
 {
     Q_OBJECT
 public:

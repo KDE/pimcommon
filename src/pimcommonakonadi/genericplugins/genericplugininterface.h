@@ -20,14 +20,14 @@
 
 #include <QObject>
 #include "abstractgenericplugininterface.h"
-#include "pimcommon_export.h"
+#include "PIMCOMMONAKONADI_EXPORT.h"
 #include <AkonadiCore/Item>
 class QAction;
 class KActionCollection;
 namespace PimCommon
 {
 class GenericPlugin;
-class PIMCOMMON_EXPORT ActionType
+class PIMCOMMONAKONADI_EXPORT ActionType
 {
 public:
     enum Type {
@@ -55,7 +55,7 @@ private:
 };
 
 class GenericPluginInterfacePrivate;
-class PIMCOMMON_EXPORT GenericPluginInterface : public AbstractGenericPluginInterface
+class PIMCOMMONAKONADI_EXPORT GenericPluginInterface : public AbstractGenericPluginInterface
 {
     Q_OBJECT
 public:

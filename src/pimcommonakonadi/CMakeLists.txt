@@ -9,6 +9,16 @@ set(libpimcommonakonadi_folderdialog_SRCS
     )
 
 
+set(libpimcommonakonadi_generericplugin_SRCS
+    genericplugins/genericpluginmanager.cpp
+    genericplugins/genericplugin.cpp
+    genericplugins/genericplugininterface.cpp
+    genericplugins/plugininterface.cpp
+    genericplugins/pluginutil.cpp
+    genericplugins/abstractgenericplugin.cpp
+    genericplugins/abstractgenericplugininterface.cpp
+    )
+
 set(libpimcommonakonadi_acl_SRCS
     acl/aclentrydialog.cpp
     acl/aclmanager.cpp
@@ -23,6 +33,7 @@ set(libpimcommonakonadi_acl_SRCS
 set(libpimcommonakonadi_SRCS
     ${libpimcommonakonadi_acl_SRCS}
     ${libpimcommonakonadi_folderdialog_SRCS}
+    ${libpimcommonakonadi_generericplugin_SRCS}
     )
 
 ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi)
@@ -78,6 +89,7 @@ install(TARGETS
 if (BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
+    add_subdirectory(genericplugins/autotests)
 endif()
 
 
@@ -99,6 +111,21 @@ ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
     RELATIVE folderdialog
     )
 
+ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
+    HEADER_NAMES
+    GenericPluginManager
+    GenericPlugin
+    GenericPluginInterface
+    AbstractGenericPlugin
+    AbstractGenericPluginInterface
+
+    PluginUtil
+    PluginInterface
+    REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
+    PREFIX PimCommon
+    RELATIVE genericplugins
+    )
+
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
     LIB_NAME KF5PimCommonAkonadi
     DEPS "AkonadiCore AkonadiWidgets Contacts AkonadiContact Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
@@ -108,6 +135,7 @@ ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
 install(FILES
     ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcasefolderdialog_HEADERS}
+    ${PimCommon_CamelCasegenericplugins_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
     COMPONENT Devel
     )
@@ -117,6 +145,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
     ${PimCommon_acl_HEADERS}
     ${PimCommon_folderdialog_HEADERS}
+    ${PimCommon_genericplugins_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonAkonadi
     COMPONENT Devel

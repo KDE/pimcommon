@@ -18,7 +18,7 @@
 #include "plugininterface.h"
 #include "helper_p.h"
 #include "genericpluginmanager.h"
-#include "pimcommon_debug.h"
+#include "pimcommonakonadi_debug.h"
 
 #include <KActionCollection>
 #include <KXMLGUIClient>
@@ -65,7 +65,7 @@ void PluginInterface::initializePlugins()
     PimCommon::GenericPluginManager::self()->setPluginName(d->mPluginName);
     PimCommon::GenericPluginManager::self()->setServiceTypeName(d->mServiceTypeName);
     if (!PimCommon::GenericPluginManager::self()->initializePlugins()) {
-        qCDebug(PIMCOMMON_LOG) << " Impossible to initialize plugins";
+        qCDebug(PIMCOMMONAKONADI_LOG) << " Impossible to initialize plugins";
     }
 }
 
@@ -82,7 +82,7 @@ void PluginInterface::setServiceTypeName(const QString &name)
 void PluginInterface::createPluginInterface()
 {
     if (!d->mActionCollection) {
-        qCWarning(PIMCOMMON_LOG) << "Missing action collection";
+        qCWarning(PIMCOMMONAKONADI_LOG) << "Missing action collection";
         return;
     }
     Q_FOREACH (PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {

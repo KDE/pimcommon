@@ -17,7 +17,7 @@
 
 #include "genericplugin.h"
 #include "genericpluginmanager.h"
-#include "pimcommon_debug.h"
+#include "pimcommonakonadi_debug.h"
 #include "pluginutil.h"
 
 #include <kpluginmetadata.h>
@@ -148,7 +148,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
             mPluginList.push_back(info);
             unique.insert(info.metaDataFileNameBaseName);
         } else {
-            qCWarning(PIMCOMMON_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
+            qCWarning(PIMCOMMONAKONADI_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<GenericPluginInfo>::iterator end(mPluginList.end());

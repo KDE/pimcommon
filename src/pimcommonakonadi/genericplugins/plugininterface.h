@@ -21,14 +21,14 @@
 #include <QObject>
 #include <pimcommon/genericplugininterface.h>
 #include <pimcommon/pluginutil.h>
-#include "pimcommon_export.h"
+#include "PIMCOMMONAKONADI_EXPORT.h"
 class KActionCollection;
 class QAction;
 class KXMLGUIClient;
 namespace PimCommon
 {
 class PluginInterfacePrivate;
-class PIMCOMMON_EXPORT PluginInterface : public QObject
+class PIMCOMMONAKONADI_EXPORT PluginInterface : public QObject
 {
     Q_OBJECT
 public:

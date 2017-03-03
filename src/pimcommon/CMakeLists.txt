@@ -150,16 +150,6 @@ set(libpimcommon_manageserversidesubscription_SRCS
     manageserversidesubscription/manageserversidesubscriptionjob.cpp
     )
 
-set(libpimcommon_generericplugin_SRCS
-    genericplugins/genericpluginmanager.cpp
-    genericplugins/genericplugin.cpp
-    genericplugins/genericplugininterface.cpp
-    genericplugins/plugininterface.cpp
-    genericplugins/pluginutil.cpp
-    genericplugins/abstractgenericplugin.cpp
-    genericplugins/abstractgenericplugininterface.cpp
-    )
-
 set(libpimcommon_configure_plugins_SRCS
     configureplugins/configurepluginslistwidget.cpp
     configureplugins/configurepluginswidget.cpp
@@ -305,7 +295,7 @@ if (BUILD_TESTING)
     endif()
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
-    add_subdirectory(genericplugins/autotests)
+
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(logactivities/autotests)
     add_subdirectory(logactivities/tests)
@@ -333,22 +323,6 @@ ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
     REQUIRED_HEADERS PimCommon_job_HEADERS
     PREFIX PimCommon
     RELATIVE job
-    )
-
-
-ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
-    HEADER_NAMES
-    GenericPluginManager
-    GenericPlugin
-    GenericPluginInterface
-    AbstractGenericPlugin
-    AbstractGenericPluginInterface
-
-    PluginUtil
-    PluginInterface
-    REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
-    PREFIX PimCommon
-    RELATIVE genericplugins
     )
 
 
@@ -555,7 +529,6 @@ install(FILES
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasegenericgrantlee_HEADERS}
-    ${PimCommon_CamelCasegenericplugins_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseautocorrection_HEADERS}
     ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
@@ -578,7 +551,6 @@ install(FILES
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
     ${PimCommon_Camelcasetranslator_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
-
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
     COMPONENT Devel
     )
@@ -595,7 +567,6 @@ install(FILES
     ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_genericgrantlee_HEADERS}
-    ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_job_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
     ${PimCommon_migrate_HEADERS}

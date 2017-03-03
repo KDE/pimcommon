@@ -18,7 +18,7 @@
 #ifndef AbstractGENERICPLUGININTERFACE_H
 #define AbstractGENERICPLUGININTERFACE_H
 #include <QObject>
-#include "pimcommon_export.h"
+#include "PIMCOMMONAKONADI_EXPORT.h"
 class QAction;
 class KActionCollection;
 namespace PimCommon
@@ -26,7 +26,7 @@ namespace PimCommon
 class AbstractGenericPlugin;
 
 class AbstractGenericPluginInterfacePrivate;
-class PIMCOMMON_EXPORT AbstractGenericPluginInterface : public QObject
+class PIMCOMMONAKONADI_EXPORT AbstractGenericPluginInterface : public QObject
 {
     Q_OBJECT
 public:
