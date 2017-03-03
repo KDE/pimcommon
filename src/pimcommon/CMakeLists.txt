@@ -104,27 +104,9 @@ set(libpimcommon_templatewidgets_SRCS
     templatewidgets/templatemanager.cpp
     )
 
-set(libpimcommon_folderdialog_SRCS
-    folderdialog/selectmulticollectionwidget.cpp
-    folderdialog/selectmulticollectiondialog.cpp
-    folderdialog/checkedcollectionwidget.cpp
-    )
-
 set(libpimcommon_job_SRCS
    job/fetchrecursivecollectionsjob.cpp
    )
-
-set(libpimcommon_acl_SRCS
-    acl/aclentrydialog.cpp
-    acl/aclmanager.cpp
-    acl/aclutils.cpp
-    acl/collectionaclpage.cpp
-    acl/imapaclattribute.cpp
-    acl/collectionaclwidget.cpp
-    acl/acllistview.cpp
-    acl/aclmodifyjob.cpp
-    )
-
 
 set(libpimcommon_widgets_SRCS
     widgets/minimumcombobox.cpp
@@ -214,8 +196,7 @@ set(libpimcommon_SRCS
     ${libpimcommon_autocorrection_SRCS}
     ${libpimcommon_translator_SRCS}
     ${libpimcommon_templatewidgets_SRCS}
-    ${libpimcommon_folderdialog_SRCS}
-    ${libpimcommon_acl_SRCS}
+
     ${libpimcommon_sieve_SRCS}
     ${libpimcommon_widgets_SRCS}
     ${libpimcommon_customtools_SRCS}
@@ -305,14 +286,13 @@ if (BUILD_TESTING)
     add_subdirectory(translator/autotests)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(widgets/autotests)
-    add_subdirectory(acl/autotests)
     add_subdirectory(migration/autotests)
     add_subdirectory(util/autotests)
     add_subdirectory(shareserviceurl/autotests)
     add_subdirectory(translator/tests)
     add_subdirectory(widgets/tests)
     add_subdirectory(autocorrection/tests)
-    add_subdirectory(folderdialog/tests/)
+
     if (NOT KDEPIM_DISABLE_STORAGE_SERVICE)
         add_subdirectory(storageservice/dropbox/tests)
         add_subdirectory(storageservice/hubic/tests)
@@ -492,15 +472,6 @@ ecm_generate_headers(PimCommon_Camelcasesievehighlighter_HEADERS
     )
 
 
-ecm_generate_headers(PimCommon_Camelcaseacl_HEADERS
-    HEADER_NAMES
-    CollectionAclPage
-    ImapAclAttribute
-    REQUIRED_HEADERS PimCommon_acl_HEADERS
-    PREFIX PimCommon
-    RELATIVE acl
-    )
-
 ecm_generate_headers(PimCommon_Camelcasemigrate_HEADERS
     HEADER_NAMES
     MigrateApplicationFiles
@@ -535,15 +506,6 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrection_HEADERS
     REQUIRED_HEADERS PimCommon_autocorrection_HEADERS
     PREFIX PimCommon
     RELATIVE autocorrection/
-    )
-
-ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
-    HEADER_NAMES
-    CheckedCollectionWidget
-    SelectMultiCollectionDialog
-    REQUIRED_HEADERS PimCommon_folderdialog_HEADERS
-    PREFIX PimCommon
-    RELATIVE folderdialog
     )
 
 ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
@@ -595,12 +557,10 @@ install(FILES
     ${PimCommon_CamelCasegenericgrantlee_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
-    ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcaseautocorrection_HEADERS}
     ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
     ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
-    ${PimCommon_Camelcasefolderdialog_HEADERS}
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommon_Camelcasemigrate_HEADERS}
     ${PimCommon_Camelcaseplaintexteditor_HEADERS}
@@ -630,12 +590,10 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${PimCommon_HEADERS}
     ${PimCommon_networkmanager_HEADERS}
-    ${PimCommon_acl_HEADERS}
     ${PimCommon_autocorrection_HEADERS}
     ${PimCommon_autocorrectionwidgets_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_customtools_HEADERS}
-    ${PimCommon_folderdialog_HEADERS}
     ${PimCommon_genericgrantlee_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_job_HEADERS}
