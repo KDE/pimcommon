@@ -22,7 +22,7 @@
 #include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include "../util/pimutil.h"
+#include <PimCommon/PimUtil>
 
 using namespace PimCommon;
 

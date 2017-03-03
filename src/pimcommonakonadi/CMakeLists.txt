@@ -30,11 +30,42 @@ set(libpimcommonakonadi_acl_SRCS
     acl/aclmodifyjob.cpp
     )
 
+set(libpimcommonakonadi_configure_plugins_SRCS
+    configureplugins/configurepluginslistwidget.cpp
+    configureplugins/configurepluginswidget.cpp
+    configureplugins/configureplugindialog.cpp
+    )
+
+set(libpimcommonakonadi_manageserversidesubscription_SRCS
+    manageserversidesubscription/manageserversidesubscriptionjob.cpp
+    )
+
+set(libpimcommonakonadi_widgets_SRCS
+    widgets/annotationdialog.cpp
+    )
+
+set(libpimcommon_job_SRCS
+   job/fetchrecursivecollectionsjob.cpp
+   )
+
+set(libpimcommonakonadi_util_SRCS
+    util/createresource.cpp
+    util/imapresourcecapabilitiesmanager.cpp
+    util/mailutil.cpp
+    )
+
+
 set(libpimcommonakonadi_SRCS
     ${libpimcommonakonadi_acl_SRCS}
     ${libpimcommonakonadi_folderdialog_SRCS}
     ${libpimcommonakonadi_generericplugin_SRCS}
+    ${libpimcommonakonadi_configure_plugins_SRCS}
+    ${libpimcommonakonadi_manageserversidesubscription_SRCS}
+    ${libpimcommonakonadi_widgets_SRCS}
+    ${libpimcommonakonadi_util_SRCS}
+    ${libpimcommon_job_SRCS}
     )
+
 
 ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi)
 
@@ -81,24 +112,60 @@ set_target_properties(KF5PimCommonAkonadi PROPERTIES
     EXPORT_NAME PimCommonAkonadi
     )
 
+
 install(TARGETS
     KF5PimCommonAkonadi
-    EXPORT KF5PimCommonAkonadiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}  ${LIBRARY_NAMELINK}
+    EXPORT KF5PimCommonTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}  ${LIBRARY_NAMELINK}
     )
 
 if (BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
     add_subdirectory(genericplugins/autotests)
+    add_subdirectory(configureplugins/autotests)
 endif()
 
+ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
+    HEADER_NAMES
+    CreateResource
+    ImapResourceCapabilitiesManager
+    MailUtil
+    REQUIRED_HEADERS PimCommonAkonadiUtil_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE util
+    )
+
+ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
+    HEADER_NAMES
+    FetchRecursiveCollectionsJob
+    REQUIRED_HEADERS PimCommon_job_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE job
+    )
+
+
+ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
+    HEADER_NAMES
+    AnnotationDialog
+    REQUIRED_HEADERS PimCommonAkonadi_widgets_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE widgets
+    )
+
+ecm_generate_headers(PimCommon_Camelcasemanagerserversidesubscription_HEADERS
+    HEADER_NAMES
+    ManageServerSideSubscriptionJob
+    REQUIRED_HEADERS PimCommon_managerserversidesubscription_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE manageserversidesubscription
+    )
 
 ecm_generate_headers(PimCommon_Camelcaseacl_HEADERS
     HEADER_NAMES
     CollectionAclPage
     ImapAclAttribute
     REQUIRED_HEADERS PimCommon_acl_HEADERS
-    PREFIX PimCommon
+    PREFIX PimCommonAkonadi
     RELATIVE acl
     )
 
@@ -107,7 +174,7 @@ ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
     CheckedCollectionWidget
     SelectMultiCollectionDialog
     REQUIRED_HEADERS PimCommon_folderdialog_HEADERS
-    PREFIX PimCommon
+    PREFIX PimCommonAkonadi
     RELATIVE folderdialog
     )
 
@@ -122,8 +189,18 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     PluginUtil
     PluginInterface
     REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
-    PREFIX PimCommon
+    PREFIX PimCommonAkonadi
     RELATIVE genericplugins
+    )
+
+ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
+    HEADER_NAMES
+    ConfigurePluginsListWidget
+    ConfigurePluginsWidget
+    ConfigurePluginDialog
+    REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE configureplugins
     )
 
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
@@ -133,9 +210,14 @@ ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
 
 
 install(FILES
+    ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcasefolderdialog_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
+    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
+    ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
+    ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
+    ${PimCommonAkonadiUtil_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
     COMPONENT Devel
     )
@@ -146,8 +228,15 @@ install(FILES
     ${PimCommon_acl_HEADERS}
     ${PimCommon_folderdialog_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
+    ${PimCommon_configureplugins_HEADERS}
+    ${PimCommon_serversidesubscription_HEADERS}
+    ${PimCommonAkonadi_casewidgets_HEADERS}
+    ${PimCommonAkonadi_widgets_HEADERS}
+    ${PimCommon_managerserversidesubscription_HEADERS}
+    ${PimCommon_job_HEADERS}
+    ${PimCommonAkonadiUtil_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonAkonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi
     COMPONENT Devel
     )
 

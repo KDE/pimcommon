@@ -18,7 +18,7 @@
 #ifndef PLUGINUTIL_H
 #define PLUGINUTIL_H
 
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include "pimcommonakonadi_export.h"
 
 #include <QString>
 #include <QStringList>

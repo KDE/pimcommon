@@ -19,7 +19,7 @@
 */
 
 #include "fetchrecursivecollectionsjob.h"
-#include "pimcommon_debug.h"
+#include "pimcommonakonadi_debug.h"
 #include <CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
 using namespace PimCommon;
@@ -49,7 +49,7 @@ FetchRecursiveCollectionsJob::~FetchRecursiveCollectionsJob()
 void FetchRecursiveCollectionsJob::start()
 {
     if (!d->mTopCollection.isValid()) {
-        qCWarning(PIMCOMMON_LOG) << "Any collection is defined";
+        qCWarning(PIMCOMMONAKONADI_LOG) << "Any collection is defined";
         Q_EMIT fetchCollectionFailed();
         deleteLater();
         return;
@@ -67,7 +67,7 @@ void FetchRecursiveCollectionsJob::setTopCollection(const Akonadi::Collection &c
 void FetchRecursiveCollectionsJob::slotInitialCollectionFetchingDone(KJob *job)
 {
     if (job->error()) {
-        qCWarning(PIMCOMMON_LOG) << job->errorString();
+        qCWarning(PIMCOMMONAKONADI_LOG) << job->errorString();
         Q_EMIT fetchCollectionFailed();
         deleteLater();
         return;

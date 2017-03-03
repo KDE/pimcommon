@@ -16,13 +16,13 @@
 */
 
 #include "imapresourcecapabilitiesmanager.h"
-#include "util/pimutil.h"
+#include <PimCommon/PimUtil>
 #include <AkonadiCore/AgentManager>
 #include <KDBusConnectionPool>
 #include <QDBusInterface>
 #include <qdbuspendingcall.h>
 #include <qdbuspendingreply.h>
-#include "pimcommon_debug.h"
+#include "pimcommonakonadi_debug.h"
 using namespace PimCommon;
 ImapResourceCapabilitiesManager::ImapResourceCapabilitiesManager(QObject *parent)
     : QObject(parent)
@@ -60,7 +60,7 @@ void ImapResourceCapabilitiesManager::searchCapabilities(const QString &identifi
         watcher->setProperty("identifier", identifier);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, &ImapResourceCapabilitiesManager::slotCapabilities);
     } else {
-        qCDebug(PIMCOMMON_LOG) << "interface not valid";
+        qCDebug(PIMCOMMONAKONADI_LOG) << "interface not valid";
     }
 }
 

@@ -20,7 +20,7 @@
 
 #include <QObject>
 #include "abstractgenericplugininterface.h"
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include "pimcommonakonadi_export.h"
 #include <AkonadiCore/Item>
 class QAction;
 class KActionCollection;

@@ -19,15 +19,15 @@
 #define CONFIGUREPLUGINSLISTWIDGET_H
 
 #include <QWidget>
-#include "pimcommon_export.h"
-#include "pimcommon/pluginutil.h"
+#include "pimcommonakonadi_export.h"
+#include <PimCommonAkonadi/PluginUtil>
 
 #include <QTreeWidgetItem>
 class QTreeWidget;
 class QAction;
 namespace PimCommon
 {
-class PIMCOMMON_EXPORT ConfigurePluginsListWidget : public QWidget
+class PIMCOMMONAKONADI_EXPORT ConfigurePluginsListWidget : public QWidget
 {
     Q_OBJECT
 public:

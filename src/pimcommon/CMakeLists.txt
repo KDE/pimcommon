@@ -104,9 +104,6 @@ set(libpimcommon_templatewidgets_SRCS
     templatewidgets/templatemanager.cpp
     )
 
-set(libpimcommon_job_SRCS
-   job/fetchrecursivecollectionsjob.cpp
-   )
 
 set(libpimcommon_widgets_SRCS
     widgets/minimumcombobox.cpp
@@ -114,7 +111,6 @@ set(libpimcommon_widgets_SRCS
     widgets/simplestringlisteditor.cpp
     widgets/customtreeview.cpp
     widgets/configureimmutablewidgetutils.cpp
-    widgets/annotationdialog.cpp
     widgets/kactionmenuchangecase.cpp
     widgets/lineeditwithcompleter.cpp
     widgets/spellchecklineedit.cpp
@@ -130,9 +126,7 @@ set(libpimcommon_customtools_SRCS
 
 
 set(libpimcommon_util_SRCS
-    util/createresource.cpp
     util/pimutil.cpp
-    util/imapresourcecapabilitiesmanager.cpp
     util/networkutil.cpp
     )
 
@@ -146,16 +140,6 @@ set(libpimcommon_shareserviceurl_SRCS
     shareserviceurl/shareserviceurlmanager.cpp
     )
 
-set(libpimcommon_manageserversidesubscription_SRCS
-    manageserversidesubscription/manageserversidesubscriptionjob.cpp
-    )
-
-set(libpimcommon_configure_plugins_SRCS
-    configureplugins/configurepluginslistwidget.cpp
-    configureplugins/configurepluginswidget.cpp
-    configureplugins/configureplugindialog.cpp
-    )
- 
 set(libpimcommon_logactivities_SRCS
     logactivities/logactivitiesmanager.cpp
     logactivities/logactivitiesdialog.cpp
@@ -175,9 +159,7 @@ set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
     ${libpimcommon_networkmanager_SRCS}
     ${libpimcommon_configure_plugins_SRCS}
-    ${libpimcommon_job_SRCS}
     ${libpimcommon_genericgrantlee_SRCS}
-    ${libpimcommon_manageserversidesubscription_SRCS}
     ${libpimcommon_shareserviceurl_SRCS}
     ${libpimcommon_migrate_SRCS}
     ${libpimcommon_util_SRCS}
@@ -186,11 +168,9 @@ set(libpimcommon_SRCS
     ${libpimcommon_autocorrection_SRCS}
     ${libpimcommon_translator_SRCS}
     ${libpimcommon_templatewidgets_SRCS}
-
     ${libpimcommon_sieve_SRCS}
     ${libpimcommon_widgets_SRCS}
     ${libpimcommon_customtools_SRCS}
-    ${libpimcommon_generericplugin_SRCS}
     ${libpimcommon_logactivities_SRCS}
     )
 
@@ -295,8 +275,6 @@ if (BUILD_TESTING)
     endif()
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
-
-    add_subdirectory(configureplugins/autotests)
     add_subdirectory(logactivities/autotests)
     add_subdirectory(logactivities/tests)
 endif()
@@ -317,22 +295,13 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     RELATIVE network
     )
 
-ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
-    HEADER_NAMES
-    FetchRecursiveCollectionsJob
-    REQUIRED_HEADERS PimCommon_job_HEADERS
-    PREFIX PimCommon
-    RELATIVE job
-    )
 
 
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
     HEADER_NAMES
     PimUtil
     NetworkUtil
-    CreateResource
     MetaType
-    ImapResourceCapabilitiesManager
     REQUIRED_HEADERS PimCommon_HEADERS
     PREFIX PimCommon
     RELATIVE util
@@ -464,14 +433,6 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     RELATIVE autocorrection/widgets/
     )
 
-ecm_generate_headers(PimCommon_Camelcasemanagerserversidesubscription_HEADERS
-    HEADER_NAMES
-    ManageServerSideSubscriptionJob
-    REQUIRED_HEADERS PimCommon_managerserversidesubscription_HEADERS
-    PREFIX PimCommon
-    RELATIVE manageserversidesubscription
-    )
-
 ecm_generate_headers(PimCommon_Camelcaseautocorrection_HEADERS
     HEADER_NAMES
     AutoCorrectionWidget
@@ -491,15 +452,6 @@ ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     RELATIVE templatewidgets
     )
 
-ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
-    HEADER_NAMES
-    ConfigurePluginsListWidget
-    ConfigurePluginsWidget
-    ConfigurePluginDialog
-    REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
-    PREFIX PimCommon
-    RELATIVE configureplugins
-    )
 
 ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     HEADER_NAMES
@@ -511,7 +463,6 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     RenameFileDialog
     SimpleStringlistEditor
     KActionMenuChangeCase
-    AnnotationDialog
     KPimPrintPreviewDialog
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
@@ -532,7 +483,6 @@ install(FILES
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseautocorrection_HEADERS}
     ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
-    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommon_Camelcasemigrate_HEADERS}
@@ -564,7 +514,6 @@ install(FILES
     ${PimCommon_networkmanager_HEADERS}
     ${PimCommon_autocorrection_HEADERS}
     ${PimCommon_autocorrectionwidgets_HEADERS}
-    ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_genericgrantlee_HEADERS}
     ${PimCommon_job_HEADERS}

@@ -18,7 +18,7 @@
 #ifndef AbstractGENERICPLUGININTERFACE_H
 #define AbstractGENERICPLUGININTERFACE_H
 #include <QObject>
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include "pimcommonakonadi_export.h"
 class QAction;
 class KActionCollection;
 namespace PimCommon

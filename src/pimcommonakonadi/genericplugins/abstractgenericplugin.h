@@ -19,7 +19,7 @@
 #define AbstractGENERICPLUGIN_H
 
 #include <QObject>
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include "pimcommonakonadi_export.h"
 class KActionCollection;
 namespace PimCommon
 {

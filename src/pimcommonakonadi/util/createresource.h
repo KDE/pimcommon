@@ -18,14 +18,14 @@
 #ifndef PIMCOMMONCREATERESOURCE_H
 #define PIMCOMMONCREATERESOURCE_H
 
-#include "pimcommon_export.h"
+#include "pimcommonakonadi_export.h"
 #include <QObject>
 #include <QVariant>
 #include <QMap>
 
 namespace PimCommon
 {
-class PIMCOMMON_EXPORT CreateResource  : public QObject
+class PIMCOMMONAKONADI_EXPORT CreateResource  : public QObject
 {
     Q_OBJECT
 public:

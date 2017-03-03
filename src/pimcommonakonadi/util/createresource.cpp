@@ -17,7 +17,7 @@
 
 #include "createresource.h"
 
-#include "pimcommon_debug.h"
+#include "pimcommonakonadi_debug.h"
 #include <KLocalizedString>
 
 #include <agenttype.h>
@@ -55,10 +55,10 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
     }
 
     if (m.methodSignature().isEmpty()) {
-        qCWarning(PIMCOMMON_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
+        qCWarning(PIMCOMMONAKONADI_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
         const int numberOfMethod(mo->methodCount());
         for (int i = 0; i < numberOfMethod; ++ i) {
-            qCWarning(PIMCOMMON_LOG) << mo->method(i).methodSignature();
+            qCWarning(PIMCOMMONAKONADI_LOG) << mo->method(i).methodSignature();
         }
         return QVariant::Invalid;
     }
@@ -80,11 +80,11 @@ QString CreateResource::createResource(const QString &resources, const QString &
     }
 
     // check if unique instance already exists
-    qCDebug(PIMCOMMON_LOG) << type.capabilities();
+    qCDebug(PIMCOMMONAKONADI_LOG) << type.capabilities();
     if (type.capabilities().contains(QStringLiteral("Unique"))) {
         const AgentInstance::List lstInstances = AgentManager::self()->instances();
         for (const AgentInstance &instance : lstInstances) {
-            qCDebug(PIMCOMMON_LOG) << instance.type().identifier() << (instance.type() == type);
+            qCDebug(PIMCOMMONAKONADI_LOG) << instance.type().identifier() << (instance.type() == type);
             if (instance.type() == type) {
                 Q_EMIT createResourceInfo(i18n("Resource '%1' is already set up.", type.name()));
                 return QString();
@@ -111,7 +111,7 @@ QString CreateResource::createResource(const QString &resources, const QString &
             }
             const QMap<QString, QVariant>::const_iterator end(settings.constEnd());
             for (QMap<QString, QVariant>::const_iterator it = settings.constBegin(); it != end; ++it) {
-                qCDebug(PIMCOMMON_LOG) << "Setting up " << it.key() << " for agent " << instance.identifier();
+                qCDebug(PIMCOMMONAKONADI_LOG) << "Setting up " << it.key() << " for agent " << instance.identifier();
                 const QString methodName = QStringLiteral("set%1").arg(it.key());
                 QVariant arg = it.value();
                 const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);

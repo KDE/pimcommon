@@ -21,7 +21,7 @@
 #include <QObject>
 #include <QHash>
 
-#include "pimcommon_export.h"
+#include "pimcommonakonadi_export.h"
 class QDBusPendingCallWatcher;
 namespace Akonadi
 {
@@ -29,7 +29,7 @@ class AgentInstance;
 }
 namespace PimCommon
 {
-class PIMCOMMON_EXPORT ImapResourceCapabilitiesManager : public QObject
+class PIMCOMMONAKONADI_EXPORT ImapResourceCapabilitiesManager : public QObject
 {
     Q_OBJECT
 public:

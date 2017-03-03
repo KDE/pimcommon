@@ -20,7 +20,7 @@
 
 #include <QObject>
 #include <QVector>
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include "pimcommonakonadi_export.h"
 #include "pluginutil.h"
 
 namespace PimCommon

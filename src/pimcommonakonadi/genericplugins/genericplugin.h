@@ -19,7 +19,7 @@
 #define GENERICPLUGIN_H
 
 #include "abstractgenericplugin.h"
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include "pimcommonakonadi_export.h"
 class KActionCollection;
 namespace PimCommon
 {

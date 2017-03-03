@@ -20,7 +20,7 @@
 #ifndef MESSAGECORE_ANNOTATIONDIALOG_H
 #define MESSAGECORE_ANNOTATIONDIALOG_H
 
-#include "pimcommon_export.h"
+#include "pimcommonakonadi_export.h"
 
 #include <QDialog>
 
@@ -37,7 +37,7 @@ namespace PimCommon
  *
  * @author Thomas McGuire <mcguire@kde.org>
  */
-class PIMCOMMON_EXPORT AnnotationEditDialog : public QDialog
+class PIMCOMMONAKONADI_EXPORT AnnotationEditDialog : public QDialog
 {
     Q_OBJECT
 

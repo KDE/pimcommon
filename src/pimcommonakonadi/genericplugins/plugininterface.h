@@ -19,9 +19,9 @@
 #define PLUGININTERFACE_H
 
 #include <QObject>
-#include <pimcommon/genericplugininterface.h>
-#include <pimcommon/pluginutil.h>
-#include "PIMCOMMONAKONADI_EXPORT.h"
+#include <PimCommonAkonadi/GenericPluginInterface>
+#include <PimCommonAkonadi/PluginUtil>
+#include "pimcommonakonadi_export.h"
 class KActionCollection;
 class QAction;
 class KXMLGUIClient;

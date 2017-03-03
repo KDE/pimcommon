@@ -19,13 +19,13 @@
 #define CONFIGUREPLUGINSWIDGET_H
 
 #include <QWidget>
-#include "pimcommon_export.h"
+#include "pimcommonakonadi_export.h"
 class QSplitter;
 class QTextEdit;
 namespace PimCommon
 {
 class ConfigurePluginsListWidget;
-class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
+class PIMCOMMONAKONADI_EXPORT ConfigurePluginsWidget : public QWidget
 {
     Q_OBJECT
 public:

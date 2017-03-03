@@ -35,36 +35,28 @@
 **   your version.
 **
 *******************************************************************************/
-#ifndef PIMCOMMON_MAILUTIL_H
-#define PIMCOMMON_MAILUTIL_H
 
-#include "pimcommon_export.h"
-#include <QUrl>
-class OrgKdeAkonadiImapSettingsInterface;
-class QWidget;
+#include "mailutil.h"
+#include <PimCommon/PimUtil>
 
-#define IMAP_RESOURCE_IDENTIFIER QStringLiteral("akonadi_imap_resource")
-#define KOLAB_RESOURCE_IDENTIFIER QStringLiteral("akonadi_kolab_resource")
-#define POP3_RESOURCE_IDENTIFIER QStringLiteral("akonadi_pop3_resource")
-#define MBOX_RESOURCE_IDENTIFIER QStringLiteral("akonadi_mbox_resource")
-#define GMAIL_RESOURCE_IDENTIFIER QStringLiteral("akonadi_gmail_resource")
-namespace PimCommon
+#include <AgentInstance>
+#include <AkonadiCore/AgentManager>
+#include <AkonadiCore/ServerManager>
+
+bool PimCommon::MailUtil::isImapFolder(const Akonadi::Collection &col, bool &isOnline)
 {
+    const Akonadi::AgentInstance agentInstance = Akonadi::AgentManager::self()->instance(col.resource());
+    isOnline = agentInstance.isOnline();
 
-/**
- * The Util namespace contains a collection of helper functions use in
- * various places.
- */
-namespace Util
-{
-PIMCOMMON_EXPORT OrgKdeAkonadiImapSettingsInterface *createImapSettingsInterface(const QString &ident);
-PIMCOMMON_EXPORT void saveTextAs(const QString &text, const QString &filter, QWidget *parent, const QUrl &url = QUrl(), const QString &caption = QString());
-PIMCOMMON_EXPORT bool saveToFile(const QString &filename, const QString &text);
-PIMCOMMON_EXPORT QString loadToFile(const QString &filter, QWidget *parent, const QUrl &url = QUrl(), const QString &caption = QString());
-PIMCOMMON_EXPORT void invokeHelp(const QString &docfile, const QString &anchor = QString());
-PIMCOMMON_EXPORT bool isImapResource(const QString &identifier);
+    return PimCommon::Util::isImapResource(agentInstance.type().identifier());
 }
 
+QString PimCommon::MailUtil::indexerServiceName()
+{
+    QLatin1String basename("org.freedesktop.Akonadi.Agent.akonadi_indexing_agent");
+    if (Akonadi::ServerManager::hasInstanceIdentifier()) {
+        return basename + QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
+    } else {
+        return basename;
+    }
 }
-
-#endif

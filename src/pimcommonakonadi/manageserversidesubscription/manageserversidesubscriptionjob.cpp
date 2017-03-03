@@ -16,8 +16,8 @@
 */
 
 #include "manageserversidesubscriptionjob.h"
-#include "util/pimutil.h"
-#include "pimcommon_debug.h"
+#include "util/mailutil.h"
+#include "pimcommonakonadi_debug.h"
 #include <KLocalizedString>
 #include <QDBusInterface>
 #include <QDBusPendingCall>
@@ -55,18 +55,18 @@ ManageServerSideSubscriptionJob::~ManageServerSideSubscriptionJob()
 void ManageServerSideSubscriptionJob::start()
 {
     if (!d->mCurrentCollection.isValid()) {
-        qCDebug(PIMCOMMON_LOG) << " collection not defined";
+        qCDebug(PIMCOMMONAKONADI_LOG) << " collection not defined";
         deleteLater();
         return;
     }
     bool isImapOnline = false;
-    if (PimCommon::Util::isImapFolder(d->mCurrentCollection, isImapOnline)) {
+    if (PimCommon::MailUtil::isImapFolder(d->mCurrentCollection, isImapOnline)) {
         QDBusInterface iface(
             QLatin1String("org.freedesktop.Akonadi.Resource.") + d->mCurrentCollection.resource(),
             QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
             KDBusConnectionPool::threadConnection(), this);
         if (!iface.isValid()) {
-            qCDebug(PIMCOMMON_LOG) << "Cannot create imap dbus interface";
+            qCDebug(PIMCOMMONAKONADI_LOG) << "Cannot create imap dbus interface";
             deleteLater();
             return;
         }
@@ -86,7 +86,7 @@ void ManageServerSideSubscriptionJob::slotConfigureSubscriptionFinished(QDBusPen
             KMessageBox::error(d->mParentWidget, i18n("Log in failed, please configure the IMAP account before setting up server-side subscription."));
         }
     } else {
-        qCDebug(PIMCOMMON_LOG) << "ManageServerSideSubscriptionJob return an invalid reply";
+        qCDebug(PIMCOMMONAKONADI_LOG) << "ManageServerSideSubscriptionJob return an invalid reply";
     }
     watcher->deleteLater();
     watcher = nullptr;

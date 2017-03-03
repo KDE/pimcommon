@@ -19,14 +19,14 @@
 #define MANAGESERVERSIDESUBSCRIPTIONJOB_H
 
 #include <QObject>
-#include "pimcommon_export.h"
+#include "pimcommonakonadi_export.h"
 #include <QSharedPointer>
 #include <AkonadiCore/collection.h>
 class QDBusPendingCallWatcher;
 namespace PimCommon
 {
 class ManageServerSideSubscriptionJobPrivate;
-class PIMCOMMON_EXPORT ManageServerSideSubscriptionJob : public QObject
+class PIMCOMMONAKONADI_EXPORT ManageServerSideSubscriptionJob : public QObject
 {
     Q_OBJECT
 public:
