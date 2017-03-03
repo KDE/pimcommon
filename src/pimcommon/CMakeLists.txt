@@ -209,16 +209,13 @@ set(pimcommon_webengine_libs Qt5::WebEngineWidgets)
 
 target_link_libraries(KF5PimCommon
     PUBLIC
-    KF5::AkonadiCore
-    KF5::AkonadiWidgets
     KF5::Contacts
-    KF5::AkonadiContact
     Qt5::Network
     KF5::KIOCore
     KF5::ConfigWidgets
     PRIVATE
     KF5::I18n
-    ${pimcommon_webengine_libs}
+    Qt5::WebEngineWidgets
     KF5::IMAP
     KF5::Libkdepim
     KF5::Archive
@@ -471,7 +468,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
 
 ecm_generate_pri_file(BASE_NAME PimCommon
     LIB_NAME KF5PimCommon
-    DEPS "AkonadiCore AkonadiWidgets Contacts AkonadiContact Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
+    DEPS "Contacts Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
     )
 
 
