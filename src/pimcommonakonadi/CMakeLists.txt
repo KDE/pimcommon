@@ -87,7 +87,7 @@ target_link_libraries(KF5PimCommonAkonadi
     PRIVATE
     KF5::I18n
     KF5::IMAP
-    KF5::Libkdepim
+    KF5::LibkdepimAkonadi
     KF5::Archive
     KF5::Codecs
     KF5::NewStuff
