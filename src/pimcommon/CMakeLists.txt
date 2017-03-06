@@ -209,7 +209,6 @@ set(pimcommon_webengine_libs Qt5::WebEngineWidgets)
 
 target_link_libraries(KF5PimCommon
     PUBLIC
-    KF5::Contacts
     Qt5::Network
     KF5::KIOCore
     KF5::ConfigWidgets
