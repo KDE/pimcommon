@@ -216,7 +216,6 @@ target_link_libraries(KF5PimCommon
     PRIVATE
     KF5::I18n
     Qt5::WebEngineWidgets
-    KF5::IMAP
     KF5::Libkdepim
     KF5::Archive
     KF5::Codecs
