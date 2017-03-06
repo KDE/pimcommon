@@ -217,11 +217,9 @@ target_link_libraries(KF5PimCommon
     Qt5::WebEngineWidgets
     KF5::Libkdepim
     KF5::Archive
-    KF5::Codecs
     KF5::NewStuff
     KF5::PimTextEdit
     KF5::Wallet
-    KF5::DBusAddons
     KF5::XmlGui
     KF5::PimTextEdit
     KF5::IconThemes
