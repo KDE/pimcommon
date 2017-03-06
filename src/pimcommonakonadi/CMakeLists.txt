@@ -88,15 +88,11 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::I18n
     KF5::IMAP
     KF5::LibkdepimAkonadi
-    KF5::Archive
     KF5::Codecs
-    KF5::NewStuff
     KF5::PimTextEdit
-    KF5::Wallet
     KF5::DBusAddons
     KF5::XmlGui
     KF5::PimTextEdit
-    KF5::IconThemes
     KF5::Completion
     KF5::KIOWidgets
     )
