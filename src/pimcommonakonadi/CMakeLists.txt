@@ -2,6 +2,36 @@
 add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
 
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonAkonadi")
+
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonAkonadiConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+
+
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfigVersion.cmake"
+    SOVERSION 5
+    )
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KF5PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonAkonadiTargets.cmake NAMESPACE KF5::)
+
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    )
+
+
 set(libpimcommonakonadi_folderdialog_SRCS
     folderdialog/selectmulticollectionwidget.cpp
     folderdialog/selectmulticollectiondialog.cpp
@@ -103,7 +133,7 @@ set_target_properties(KF5PimCommonAkonadi PROPERTIES
 
 install(TARGETS
     KF5PimCommonAkonadi
-    EXPORT KF5PimCommonTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}  ${LIBRARY_NAMELINK}
+    EXPORT KF5PimCommonAkonadiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}  ${LIBRARY_NAMELINK}
     )
 
 if (BUILD_TESTING)

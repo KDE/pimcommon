@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.4.47")
+set(PIM_VERSION "5.4.48")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -78,12 +78,6 @@ if (Qt5Designer_FOUND)
     find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG REQUIRED)
 endif()
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
-    SOVERSION 5
-    )
-
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
 
@@ -91,30 +85,6 @@ set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libx
 ########### Targets ###########
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
-
-########### CMake Config Files ###########
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommon")
-
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
-install(EXPORT KF5PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonTargets.cmake NAMESPACE KF5::)
-
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
-    )
-
 
 add_subdirectory(src)
 install( FILES pimcommon.renamecategories pimcommon.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
