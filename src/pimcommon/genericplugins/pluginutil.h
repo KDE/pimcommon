@@ -18,7 +18,7 @@
 #ifndef PLUGINUTIL_H
 #define PLUGINUTIL_H
 
-#include "pimcommonakonadi_export.h"
+#include "pimcommon_export.h"
 
 #include <QString>
 #include <QStringList>
@@ -28,7 +28,7 @@
 namespace PimCommon
 {
 
-class PIMCOMMONAKONADI_EXPORT PluginUtilData
+class PIMCOMMON_EXPORT PluginUtilData
 {
 public:
     PluginUtilData()
@@ -47,10 +47,10 @@ public:
 
 namespace PluginUtil
 {
-PIMCOMMONAKONADI_EXPORT bool isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
-PIMCOMMONAKONADI_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
-PIMCOMMONAKONADI_EXPORT void savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList);
-PIMCOMMONAKONADI_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
+PIMCOMMON_EXPORT bool isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
+PIMCOMMON_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
+PIMCOMMON_EXPORT void savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList);
+PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
 
 }
 }

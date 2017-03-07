@@ -14,7 +14,6 @@ set(libpimcommonakonadi_generericplugin_SRCS
     genericplugins/genericplugin.cpp
     genericplugins/genericplugininterface.cpp
     genericplugins/plugininterface.cpp
-    genericplugins/pluginutil.cpp
     genericplugins/abstractgenericplugin.cpp
     genericplugins/abstractgenericplugininterface.cpp
     )
@@ -28,12 +27,6 @@ set(libpimcommonakonadi_acl_SRCS
     acl/collectionaclwidget.cpp
     acl/acllistview.cpp
     acl/aclmodifyjob.cpp
-    )
-
-set(libpimcommonakonadi_configure_plugins_SRCS
-    configureplugins/configurepluginslistwidget.cpp
-    configureplugins/configurepluginswidget.cpp
-    configureplugins/configureplugindialog.cpp
     )
 
 set(libpimcommonakonadi_manageserversidesubscription_SRCS
@@ -117,7 +110,6 @@ if (BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
     add_subdirectory(genericplugins/autotests)
-    add_subdirectory(configureplugins/autotests)
 endif()
 
 ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
@@ -173,7 +165,7 @@ ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
     RELATIVE folderdialog
     )
 
-ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
+ecm_generate_headers(PimCommonAkoandi_CamelCasegenericplugins_HEADERS
     HEADER_NAMES
     GenericPluginManager
     GenericPlugin
@@ -181,21 +173,10 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     AbstractGenericPlugin
     AbstractGenericPluginInterface
 
-    PluginUtil
     PluginInterface
-    REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
+    REQUIRED_HEADERS PimCommonAkonadi_genericplugins_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE genericplugins
-    )
-
-ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
-    HEADER_NAMES
-    ConfigurePluginsListWidget
-    ConfigurePluginsWidget
-    ConfigurePluginDialog
-    REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
-    PREFIX PimCommonAkonadi
-    RELATIVE configureplugins
     )
 
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
@@ -208,8 +189,7 @@ install(FILES
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcasefolderdialog_HEADERS}
-    ${PimCommon_CamelCasegenericplugins_HEADERS}
-    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
+    ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
     ${PimCommonAkonadiUtil_CamelCase_HEADERS}
@@ -222,8 +202,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
     ${PimCommon_acl_HEADERS}
     ${PimCommon_folderdialog_HEADERS}
-    ${PimCommon_genericplugins_HEADERS}
-    ${PimCommon_configureplugins_HEADERS}
+    ${PimCommonAkonadi_genericplugins_HEADERS}
     ${PimCommon_serversidesubscription_HEADERS}
     ${PimCommonAkonadi_casewidgets_HEADERS}
     ${PimCommonAkonadi_widgets_HEADERS}

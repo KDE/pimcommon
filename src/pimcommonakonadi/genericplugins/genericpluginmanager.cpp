@@ -18,7 +18,6 @@
 #include "genericplugin.h"
 #include "genericpluginmanager.h"
 #include "pimcommonakonadi_debug.h"
-#include "pluginutil.h"
 
 #include <kpluginmetadata.h>
 #include <KPluginLoader>

@@ -19,11 +19,11 @@
 #define CONFIGUREPLUGINDIALOG_H
 
 #include <QDialog>
-#include "pimcommonakonadi_export.h"
+#include "pimcommon_export.h"
 class QDialogButtonBox;
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_EXPORT ConfigurePluginDialog : public QDialog
+class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
 {
     Q_OBJECT
 public:

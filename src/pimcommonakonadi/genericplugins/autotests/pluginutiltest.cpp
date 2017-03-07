@@ -16,7 +16,7 @@
 */
 
 #include "pluginutiltest.h"
-#include "../pluginutil.h"
+#include <PimCommon/PluginUtil>
 #include <QTest>
 
 PluginUtilTest::PluginUtilTest(QObject *parent)

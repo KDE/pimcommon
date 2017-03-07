@@ -21,7 +21,7 @@
 #include <QObject>
 #include <QVector>
 #include "pimcommonakonadi_export.h"
-#include "pluginutil.h"
+#include <PimCommon/PluginUtil>
 
 namespace PimCommon
 {

@@ -24,6 +24,17 @@ set(libpimcommon_autocorrection_SRCS
     autocorrection/widgets/richtexteditwithautocorrection.cpp
     )
 
+set(libpimcommon_generericplugin_SRCS
+    genericplugins/pluginutil.cpp
+    )
+
+    
+set(libpimcommon_configure_plugins_SRCS
+    configureplugins/configurepluginslistwidget.cpp
+    configureplugins/configurepluginswidget.cpp
+    configureplugins/configureplugindialog.cpp
+    )
+
 set(libpimcommon_translator_SRCS
     translator/translatorutil.cpp
     translator/translatorwidget.cpp
@@ -90,6 +101,7 @@ set(libpimcommon_networkmanager_SRCS
 
 set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
+    ${libpimcommon_configure_plugins_SRCS}
     ${libpimcommon_networkmanager_SRCS}
     ${libpimcommon_configure_plugins_SRCS}
     ${libpimcommon_genericgrantlee_SRCS}
@@ -105,6 +117,7 @@ set(libpimcommon_SRCS
     ${libpimcommon_widgets_SRCS}
     ${libpimcommon_customtools_SRCS}
     ${libpimcommon_logactivities_SRCS}
+    ${libpimcommon_generericplugin_SRCS}
     )
 
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon)
@@ -188,7 +201,17 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(logactivities/autotests)
     add_subdirectory(logactivities/tests)
+    add_subdirectory(configureplugins/autotests)
 endif()
+
+ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
+    HEADER_NAMES
+    PluginUtil
+    REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
+    PREFIX PimCommon
+    RELATIVE genericplugins
+    )
+
 
 ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
     HEADER_NAMES
@@ -326,6 +349,15 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     RELATIVE widgets
     )
 
+ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
+    HEADER_NAMES
+    ConfigurePluginsListWidget
+    ConfigurePluginsWidget
+    ConfigurePluginDialog
+    REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
+    PREFIX PimCommon
+    RELATIVE configureplugins
+    )
 ecm_generate_pri_file(BASE_NAME PimCommon
     LIB_NAME KF5PimCommon
     DEPS "Contacts Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
@@ -333,6 +365,8 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 
 
 install(FILES
+    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
+    ${PimCommon_CamelCasegenericplugins_HEADERS}
     ${PimCommon_Camelcaselogactivities_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
@@ -368,6 +402,8 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${PimCommon_HEADERS}
+    ${PimCommon_genericplugins_HEADERS}
+    ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_networkmanager_HEADERS}
     ${PimCommon_autocorrection_HEADERS}
     ${PimCommon_autocorrectionwidgets_HEADERS}
