@@ -81,7 +81,6 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::AkonadiWidgets
     KF5::Contacts
     KF5::AkonadiContact
-    Qt5::Network
     KF5::KIOCore
     KF5::ConfigWidgets
     PRIVATE
