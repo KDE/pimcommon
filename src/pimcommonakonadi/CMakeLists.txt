@@ -165,7 +165,7 @@ ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
     RELATIVE folderdialog
     )
 
-ecm_generate_headers(PimCommonAkoandi_CamelCasegenericplugins_HEADERS
+ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     HEADER_NAMES
     GenericPluginManager
     GenericPlugin
