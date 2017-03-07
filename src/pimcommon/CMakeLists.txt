@@ -11,73 +11,6 @@ set(libpimcommon_sieve_SRCS
     sievehighlighter/sievesyntaxhighlighterutil.cpp
     )
 
-if ( NOT KDEPIM_DISABLE_STORAGE_SERVICE)
-    set(libpimcommon_storageservice_SRCS
-        ${libpimcommon_storageservice_gdrive}
-        storageservice/storageserviceabstract.cpp
-        storageservice/storageservicemanager.cpp
-        storageservice/storageserviceprogressmanager.cpp
-
-        storageservice/job/storageserviceabstractjob.cpp
-
-        storageservice/storageservicejobconfig.cpp
-
-
-        storageservice/dropbox/dropboxstorageservice.cpp
-        storageservice/dropbox/dropboxjob.cpp
-        storageservice/dropbox/dropboxutil.cpp
-
-        storageservice/authdialog/storageauthviewwidget.cpp
-        storageservice/authdialog/storageauthviewdialog.cpp
-        storageservice/authdialog/logindialog.cpp
-        storageservice/authdialog/storageauthwebview.cpp
-
-        storageservice/hubic/hubicstorageservice.cpp
-        storageservice/hubic/hubicjob.cpp
-
-        storageservice/settings/storageservicecombobox.cpp
-        storageservice/settings/addservicestoragedialog.cpp
-        storageservice/settings/storagelistwidgetitem.cpp
-        storageservice/settings/storageservicesettingswidget.cpp
-
-        storageservice/yousendit/yousenditjob.cpp
-        storageservice/yousendit/yousenditstorageservice.cpp
-        storageservice/yousendit/yousenditutil.cpp
-
-        storageservice/webdav/webdavstorageservice.cpp
-        storageservice/webdav/webdavjob.cpp
-        storageservice/webdav/webdavsettingsdialog.cpp
-        storageservice/webdav/protocol/webdav_url_info.cpp
-
-        storageservice/utils/storageserviceutils.cpp
-
-        storageservice/box/boxjob.cpp
-        storageservice/box/boxstorageservice.cpp
-        storageservice/box/boxutil.cpp
-
-        storageservice/dialog/storageservicedownloaddialog.cpp
-        storageservice/dialog/storageservicechecknamedialog.cpp
-        storageservice/dialog/storageserviceconfiguredialog.cpp
-        storageservice/dialog/storageservicedeletedialog.cpp
-        storageservice/dialog/storageservicepropertiesdialog.cpp
-
-        storageservice/widgets/storageserviceconfigurewidget.cpp
-        storageservice/widgets/storageservicetreewidget.cpp
-        storageservice/widgets/storageserviceprogresswidget.cpp
-        storageservice/widgets/storageserviceprogressindicator.cpp
-        storageservice/widgets/storageservicetreewidgetitem.cpp
-
-        storageservice/settings/storageservicesettings.cpp
-
-        storageservice/storageservicepluginmanager.cpp
-        storageservice/storageserviceplugin.cpp
-        storageservice/storageserviceinterface.cpp
-        storageservice/storageservicemenus.cpp
-        )
-
-    qt5_add_dbus_adaptor(libpimcommon_storageservice_SRCS storageservice/org.kde.pim.StorageManager.xml storageservice/storageservicemanager.h PimCommon::StorageServiceManager )
-endif()
-
 set(libpimcommon_autocorrection_SRCS
     autocorrection/autocorrection.cpp
     autocorrection/autocorrectionwidget.cpp
@@ -205,8 +138,6 @@ if ( Qt5TextToSpeech_FOUND )
         )
 endif()
 
-set(pimcommon_webengine_libs Qt5::WebEngineWidgets)
-
 target_link_libraries(KF5PimCommon
     PUBLIC
     Qt5::Network
@@ -214,7 +145,6 @@ target_link_libraries(KF5PimCommon
     KF5::ConfigWidgets
     PRIVATE
     KF5::I18n
-    Qt5::WebEngineWidgets
     KF5::Libkdepim
     KF5::Archive
     KF5::NewStuff
@@ -255,17 +185,6 @@ if (BUILD_TESTING)
     add_subdirectory(translator/tests)
     add_subdirectory(widgets/tests)
     add_subdirectory(autocorrection/tests)
-
-    if (NOT KDEPIM_DISABLE_STORAGE_SERVICE)
-        add_subdirectory(storageservice/dropbox/tests)
-        add_subdirectory(storageservice/hubic/tests)
-        add_subdirectory(storageservice/tests)
-        add_subdirectory(storageservice/yousendit/tests)
-        add_subdirectory(storageservice/webdav/tests)
-        add_subdirectory(storageservice/box/tests)
-        add_subdirectory(storageservice/dropbox/icons/)
-        add_subdirectory(storageservice/autotests)
-    endif()
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
     add_subdirectory(logactivities/autotests)
@@ -300,22 +219,6 @@ ecm_generate_headers(PimCommon_CamelCase_HEADERS
     RELATIVE util
     )
 
-if (NOT KDEPIM_DISABLE_STORAGE_SERVICE)
-    ecm_generate_headers(PimCommon_Camelcasestorageservice_HEADERS
-        HEADER_NAMES
-        StorageServiceAbstract
-        StorageServiceManager
-        StorageServiceProgressManager
-        StorageServiceJobConfig
-        StorageServicePluginManager
-        StorageServicePlugin
-        StorageServiceInterface
-        REQUIRED_HEADERS PimCommon_storageservice_HEADERS
-        PREFIX PimCommon
-        RELATIVE storageservice
-        )
-endif()
-
 ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
     HEADER_NAMES
     PimCommonSettings
@@ -331,44 +234,6 @@ ecm_generate_headers(PimCommon_Camelcaselogactivities_HEADERS
     PREFIX PimCommon
     RELATIVE logactivities
     )
-
-if (NOT KDEPIM_DISABLE_STORAGE_SERVICE)
-    ecm_generate_headers(PimCommon_Camelcasestorageservicewidgets_HEADERS
-        HEADER_NAMES
-        StorageServiceProgressWidget
-        StorageServiceTreeWidget
-        StorageServiceConfigureWidget
-        StorageServiceProgressIndicator
-        REQUIRED_HEADERS PimCommon_storageservicewidgets_HEADERS
-        PREFIX PimCommon
-        RELATIVE storageservice/widgets
-        )
-
-    ecm_generate_headers(PimCommon_Camelcasestorageservicedialog_HEADERS
-        HEADER_NAMES
-        StorageServiceCheckNameDialog
-        StorageServiceConfigureDialog
-        REQUIRED_HEADERS PimCommon_storageservicedialog_HEADERS
-        PREFIX PimCommon
-        RELATIVE storageservice/dialog
-        )
-
-    ecm_generate_headers(PimCommon_Camelcasestorageservicesettings_HEADERS
-        HEADER_NAMES
-        StorageServiceSettings
-        StorageServiceSettingsWidget
-        REQUIRED_HEADERS PimCommon_storageservicesettings_HEADERS
-        PREFIX PimCommon
-        RELATIVE storageservice/settings
-        )
-    ecm_generate_headers(PimCommon_Camelcasestorageserviceinterface_HEADERS
-        HEADER_NAMES
-        ISettingsJob
-        REQUIRED_HEADERS PimCommon_storageserviceinterface_HEADERS
-        PREFIX PimCommon
-        RELATIVE storageservice/interface
-        )
-endif()
 
 ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
     HEADER_NAMES

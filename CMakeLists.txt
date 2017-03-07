@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.4.45")
+set(PIM_VERSION "5.4.46")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -36,7 +36,7 @@ set(KCONTACTS_LIB_VERSION "5.4.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.4.43")
 set(AKONADI_VERSION "5.4.40")
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test WebEngineWidgets Xml PrintSupport)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml PrintSupport)
 
 find_package(KF5Archive ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_VERSION} CONFIG REQUIRED)
@@ -87,7 +87,6 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
 
-option(KDEPIM_DISABLE_STORAGE_SERVICE "Disable Storage Service Support (broken)." FALSE)
 
 ########### Targets ###########
 
