@@ -149,7 +149,6 @@ target_link_libraries(KF5PimCommon
     KF5::Archive
     KF5::NewStuff
     KF5::PimTextEdit
-    KF5::Wallet
     KF5::XmlGui
     KF5::PimTextEdit
     KF5::IconThemes
