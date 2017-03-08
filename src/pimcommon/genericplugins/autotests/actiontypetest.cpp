@@ -16,7 +16,7 @@
 */
 
 #include "actiontypetest.h"
-#include "../genericplugininterface.h"
+#include <PimCommonAkonadi/GenericPluginInterface>
 #include <QAction>
 #include <QTest>
 

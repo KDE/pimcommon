@@ -19,41 +19,13 @@
 #define GENERICPLUGININTERFACE_H
 
 #include <QObject>
-#include "abstractgenericplugininterface.h"
+#include <PimCommon/AbstractGenericPluginInterface>
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/Item>
 class QAction;
 class KActionCollection;
 namespace PimCommon
 {
-class GenericPlugin;
-class PIMCOMMONAKONADI_EXPORT ActionType
-{
-public:
-    enum Type {
-        Tools = 0,
-        Edit = 1,
-        File = 2,
-        Action = 3,
-        PopupMenu = 4,
-        ToolBar = 5
-    };
-    ActionType()
-        : mAction(nullptr),
-          mType(Tools)
-    {
-
-    }
-
-    ActionType(QAction *action, Type type);
-    QAction *action() const;
-    Type type() const;
-
-private:
-    QAction *mAction;
-    Type mType;
-};
-
 class GenericPluginInterfacePrivate;
 class PIMCOMMONAKONADI_EXPORT GenericPluginInterface : public AbstractGenericPluginInterface
 {

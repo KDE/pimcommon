@@ -17,14 +17,14 @@
 
 #include "plugininterface.h"
 #include "helper_p.h"
-#include "genericpluginmanager.h"
+#include <PimCommon/GenericPluginManager>
 #include "pimcommonakonadi_debug.h"
 
 #include <KActionCollection>
 #include <KXMLGUIClient>
 #include <QAction>
 
-#include "genericplugin.h"
+#include <PimCommon/GenericPlugin>
 
 using namespace PimCommon;
 

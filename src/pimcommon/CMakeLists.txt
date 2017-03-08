@@ -53,6 +53,10 @@ set(libpimcommon_autocorrection_SRCS
 
 set(libpimcommon_generericplugin_SRCS
     genericplugins/pluginutil.cpp
+    genericplugins/genericpluginmanager.cpp
+    genericplugins/genericplugin.cpp
+    genericplugins/abstractgenericplugin.cpp
+    genericplugins/abstractgenericplugininterface.cpp
     )
 
     
@@ -229,11 +233,16 @@ if (BUILD_TESTING)
     add_subdirectory(logactivities/autotests)
     add_subdirectory(logactivities/tests)
     add_subdirectory(configureplugins/autotests)
+    add_subdirectory(genericplugins/autotests)
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     HEADER_NAMES
     PluginUtil
+    GenericPluginManager
+    GenericPlugin
+    AbstractGenericPlugin
+    AbstractGenericPluginInterface
     REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
     PREFIX PimCommon
     RELATIVE genericplugins

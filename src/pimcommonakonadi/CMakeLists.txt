@@ -40,12 +40,8 @@ set(libpimcommonakonadi_folderdialog_SRCS
 
 
 set(libpimcommonakonadi_generericplugin_SRCS
-    genericplugins/genericpluginmanager.cpp
-    genericplugins/genericplugin.cpp
     genericplugins/genericplugininterface.cpp
     genericplugins/plugininterface.cpp
-    genericplugins/abstractgenericplugin.cpp
-    genericplugins/abstractgenericplugininterface.cpp
     )
 
 set(libpimcommonakonadi_acl_SRCS
@@ -139,7 +135,6 @@ install(TARGETS
 if (BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
-    add_subdirectory(genericplugins/autotests)
 endif()
 
 ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
@@ -197,13 +192,8 @@ ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
 
 ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     HEADER_NAMES
-    GenericPluginManager
-    GenericPlugin
-    GenericPluginInterface
-    AbstractGenericPlugin
-    AbstractGenericPluginInterface
-
     PluginInterface
+    GenericPluginInterface
     REQUIRED_HEADERS PimCommonAkonadi_genericplugins_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE genericplugins

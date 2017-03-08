@@ -19,12 +19,12 @@
 #define GENERICPLUGIN_H
 
 #include "abstractgenericplugin.h"
-#include "pimcommonakonadi_export.h"
+#include "pimcommon_export.h"
 class KActionCollection;
 namespace PimCommon
 {
 class GenericPluginInterface;
-class PIMCOMMONAKONADI_EXPORT GenericPlugin : public AbstractGenericPlugin
+class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
 {
     Q_OBJECT
 public:
