@@ -661,7 +661,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(simpleQuote.begin + nbsp + text + nbsp + simpleQuote.end));
 
-    text = QStringLiteral("(");
+    text = QLatin1Char('(');
     doc.setPlainText(QStringLiteral("\"") + text + QStringLiteral("\""));
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
