@@ -1,4 +1,4 @@
-macro(add_mailcommon_collectionpage_test _name)
+macro(add_pimcommon_collectionpage_test _name)
     ecm_add_test(${ARGN}
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-collectionpage-"
@@ -6,13 +6,13 @@ macro(add_mailcommon_collectionpage_test _name)
     )
 endmacro()
 
-add_mailcommon_collectionpage_test(collectionannotationsattributetest
+add_pimcommon_collectionpage_test(collectionannotationsattributetest
     collectionannotationsattributetest.cpp
     ../attributes/collectionannotationsattribute.cpp
 )
-add_mailcommon_collectionpage_test(incidencesforwidgettest
+add_pimcommon_collectionpage_test(incidencesforwidgettest
     incidencesforwidgettest.cpp
 )
-add_mailcommon_collectionpage_test(contenttypewidgettest
+add_pimcommon_collectionpage_test(contenttypewidgettest
     contenttypewidgettest.cpp
 )

@@ -17,8 +17,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef MAILCOMMON_ACLMANAGER_H
-#define MAILCOMMON_ACLMANAGER_H
+#ifndef PIMCOMMON_ACLMANAGER_H
+#define PIMCOMMON_ACLMANAGER_H
 
 #include "pimcommonakonadi_export.h"
 

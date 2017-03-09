@@ -17,8 +17,8 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef MAILCOMMON_ACLUTILS_P_H
-#define MAILCOMMON_ACLUTILS_P_H
+#ifndef PIMCOMMON_ACLUTILS_P_H
+#define PIMCOMMON_ACLUTILS_P_H
 
 #include <KIMAP/Acl>
 

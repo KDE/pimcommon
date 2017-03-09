@@ -17,8 +17,8 @@
   the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
   Boston, MA 02110-1301, USA.
 */
-#ifndef MAILCOMMON_METATYPE_H
-#define MAILCOMMON_METATYPE_H
+#ifndef PIMCOMMON_METATYPE_H
+#define PIMCOMMON_METATYPE_H
 
 #include <QList>
 

@@ -23,8 +23,8 @@
 // Any improvements should be done at kdepim-runtime and
 // than afterwards copy the new version
 
-#ifndef MAILCOMMON_IMAPACLATTRIBUTE_H
-#define MAILCOMMON_IMAPACLATTRIBUTE_H
+#ifndef PIMCOMMON_IMAPACLATTRIBUTE_H
+#define PIMCOMMON_IMAPACLATTRIBUTE_H
 
 #include "pimcommonakonadi_export.h"
 
