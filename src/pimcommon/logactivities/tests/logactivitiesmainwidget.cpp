@@ -45,7 +45,6 @@ LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
     enableLog->setChecked(true);
     mainLayout->addWidget(enableLog);
 
-
     PimCommon::LogActivitiesManager::self()->setEnableLogActivities(true);
     PimCommon::LogActivitiesManager::self()->appendLog(QStringLiteral("foo"));
 }

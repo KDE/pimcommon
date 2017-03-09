@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "logactivitiesdialogtest.h"
 #include "../logactivitiesdialog.h"
 #include "../logactivitieswidget.h"
@@ -73,7 +72,6 @@ void LogActivitiesDialogTest::shouldClearLog()
 {
     PimCommon::LogActivitiesDialog w;
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
-
 
     PimCommon::LogActivitiesWidget *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
 

@@ -433,7 +433,7 @@ void AclManager::save(bool recursive)
     const QMap<QByteArray, KIMAP::Acl::Rights> rights = d->mModel->rights();
     QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = rights.cbegin();
     const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = rights.cend();
-    for (;it != itEnd; ++it) {
+    for (; it != itEnd; ++it) {
 
         // we can use job->exec() here, it is not a hot path
         Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);

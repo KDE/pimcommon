@@ -45,7 +45,7 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mainLayout->addWidget(mEnableLogActivities);
     connect(mEnableLogActivities, &QCheckBox::toggled, this, &LogActivitiesDialog::slotEnableLogActivities);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close|QDialogButtonBox::Save, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close | QDialogButtonBox::Save, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
     mClearButton = new QPushButton(i18n("Clear"), this);
