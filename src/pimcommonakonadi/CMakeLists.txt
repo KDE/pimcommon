@@ -73,8 +73,17 @@ set(libpimcommonakonadi_util_SRCS
     util/mailutil.cpp
     )
 
+set(libpimcommonakonadi_collection_SRCS
+  collectionpage/collectiontypeutil.cpp
+  collectionpage/attributeregistrar.cpp
+  collectionpage/attributes/collectionannotationsattribute.cpp
+  collectionpage/incidencesforwidget.cpp
+  collectionpage/contenttypewidget.cpp
+)
+
 
 set(libpimcommonakonadi_SRCS
+    ${libpimcommonakonadi_collection_SRCS}
     ${libpimcommonakonadi_acl_SRCS}
     ${libpimcommonakonadi_folderdialog_SRCS}
     ${libpimcommonakonadi_generericplugin_SRCS}
@@ -135,7 +144,27 @@ install(TARGETS
 if (BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
+    add_subdirectory(collectionpage/autotests/)
 endif()
+
+ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpage_HEADERS
+  HEADER_NAMES
+  IncidencesForWidget
+  CollectionTypeUtil
+  ContentTypeWidget
+  REQUIRED_HEADERS PimCommonAkonadi_collectionpage_HEADERS
+  PREFIX PimCommonAkonadi
+  RELATIVE collectionpage
+)
+
+ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS
+  HEADER_NAMES
+  CollectionAnnotationsAttribute
+  REQUIRED_HEADERS PimCommonAkonadi_collectionpageattributes_HEADERS
+  PREFIX PimCommonAkonadi
+  RELATIVE collectionpage/attributes
+)
+
 
 ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
     HEADER_NAMES
@@ -206,6 +235,8 @@ ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
 
 
 install(FILES
+    ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
+    ${PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcasefolderdialog_HEADERS}
@@ -221,6 +252,8 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_debug.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
     ${PimCommon_acl_HEADERS}
+    ${PimCommonAkonadi_collectionpage_HEADERS}
+    ${PimCommonAkonadi_collectionpageattributes_HEADERS}
     ${PimCommon_folderdialog_HEADERS}
     ${PimCommonAkonadi_genericplugins_HEADERS}
     ${PimCommon_serversidesubscription_HEADERS}

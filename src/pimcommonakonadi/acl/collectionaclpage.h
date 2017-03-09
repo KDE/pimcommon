@@ -31,7 +31,7 @@
 #ifndef COLLECTIONACLPAGE_H
 #define COLLECTIONACLPAGE_H
 
-#include <collectionpropertiespage.h>
+#include <AkonadiWidgets/CollectionPropertiesPage>
 #include "pimcommonakonadi_export.h"
 
 namespace PimCommon
