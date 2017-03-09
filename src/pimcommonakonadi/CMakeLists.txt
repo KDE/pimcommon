@@ -64,8 +64,8 @@ set(libpimcommonakonadi_widgets_SRCS
     )
 
 set(libpimcommon_job_SRCS
-   job/fetchrecursivecollectionsjob.cpp
-   )
+    job/fetchrecursivecollectionsjob.cpp
+    )
 
 set(libpimcommonakonadi_util_SRCS
     util/createresource.cpp

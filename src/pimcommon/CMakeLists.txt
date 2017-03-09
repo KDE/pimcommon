@@ -59,7 +59,7 @@ set(libpimcommon_generericplugin_SRCS
     genericplugins/abstractgenericplugininterface.cpp
     )
 
-    
+
 set(libpimcommon_configure_plugins_SRCS
     configureplugins/configurepluginslistwidget.cpp
     configureplugins/configurepluginswidget.cpp
@@ -99,12 +99,10 @@ set(libpimcommon_customtools_SRCS
     customtools/customtoolsviewinterface.cpp
     )
 
-
 set(libpimcommon_util_SRCS
     util/pimutil.cpp
     util/networkutil.cpp
     )
-
 
 set(libpimcommon_migrate_SRCS
     migration/migrateapplicationfiles.cpp
@@ -248,7 +246,6 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     RELATIVE genericplugins
     )
 
-
 ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
     HEADER_NAMES
     GenericGrantleeFormatter
@@ -264,8 +261,6 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     PREFIX PimCommon
     RELATIVE network
     )
-
-
 
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
     HEADER_NAMES
@@ -318,7 +313,6 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     PREFIX PimCommon
     RELATIVE customtools
     )
-
 
 ecm_generate_headers(PimCommon_Camelcasesievehighlighter_HEADERS
     HEADER_NAMES
@@ -396,7 +390,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     )
 ecm_generate_pri_file(BASE_NAME PimCommon
     LIB_NAME KF5PimCommon
-    DEPS "Contacts Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
+    DEPS "Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
     )
 
 
