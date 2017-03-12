@@ -19,7 +19,7 @@
 #define LOGACTIVITIESWIDGET_H
 
 #include <QWidget>
-#include "pimcommon_export.h"
+#include "pimcommon_private_export.h"
 class QPlainTextEdit;
 namespace KPIMTextEdit
 {
@@ -27,7 +27,7 @@ class PlainTextEditorWidget;
 }
 namespace PimCommon
 {
-class PIMCOMMON_EXPORT LogActivitiesWidget : public QWidget
+class PIMCOMMON_TESTS_EXPORT LogActivitiesWidget : public QWidget
 {
     Q_OBJECT
 public:
