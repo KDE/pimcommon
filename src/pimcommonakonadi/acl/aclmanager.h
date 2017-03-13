@@ -20,7 +20,7 @@
 #ifndef PIMCOMMON_ACLMANAGER_H
 #define PIMCOMMON_ACLMANAGER_H
 
-#include "pimcommonakonadi_export.h"
+#include "pimcommonakonadi_private_export.h"
 
 #include <Collection>
 
@@ -33,7 +33,7 @@ class QItemSelectionModel;
 namespace PimCommon
 {
 
-class PIMCOMMONAKONADI_EXPORT AclManager : public QObject
+class PIMCOMMONAKONADI_TESTS_EXPORT AclManager : public QObject
 {
     Q_OBJECT
 

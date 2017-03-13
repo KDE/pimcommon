@@ -19,10 +19,10 @@
 #define ACLLISTVIEW_H
 
 #include <QListView>
-#include "pimcommonakonadi_export.h"
+#include "pimcommonakonadi_private_export.h"
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_EXPORT AclListView : public QListView
+class PIMCOMMONAKONADI_TESTS_EXPORT AclListView : public QListView
 {
     Q_OBJECT
 public:
