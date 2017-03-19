@@ -1,17 +1,26 @@
-maintainer: mlaurent
+name: pimcommon
 description: PimCommon Library 
-tier: 3
-type: functional
+public_lib: true
+group: kdepim
 platforms:
     - name: All
-portingAid: false
-deprecated: false
-release: false
+irc: akonadi
+
 libraries:
  - qmake: PimCommon
    cmake: "KF5::PimCommon"
-cmakename: KF5PimCommon
+   cmakename: KF5PimCommon
+ - qmake: PimCommonAkonadi
+   cmake: "KF5::PimCommonAkonadi"
+   cmakename: KF5PimCommonAkonadi   
 
-public_lib: true
-group: kdepim
 
+group_info:
+    fancyname: KDE PIM
+    maintainer:
+        - mlaurent
+    irc: kontact
+    mailinglist: kde-pim
+    platforms:
+        - All
+    logo: docs/kontact.svg
