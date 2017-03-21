@@ -52,7 +52,10 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mClearButton->setObjectName(QStringLiteral("clearbutton"));
     buttonBox->addButton(mClearButton, QDialogButtonBox::ActionRole);
     connect(mClearButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotClear);
-    connect(buttonBox->button(QDialogButtonBox::Save), &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
+    QPushButton *saveButton = buttonBox->button(QDialogButtonBox::Save);
+    saveButton->setObjectName(QStringLiteral("savebutton"));
+    saveButton->setEnabled(false);;
+    connect(saveButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
 
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &LogActivitiesDialog::reject);
@@ -60,6 +63,7 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
 
     connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryAdded, this, &LogActivitiesDialog::slotLogEntryAdded);
     connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryCleared, this, &LogActivitiesDialog::slotLogEntryCleared);
+    connect(mLogWidget, &LogActivitiesWidget::textChanged, saveButton, &QPushButton::setEnabled);
     mEnableLogActivities->setChecked(PimCommon::LogActivitiesManager::self()->enableLogActivities());
 }
 
