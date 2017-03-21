@@ -62,7 +62,8 @@ void LogActivitiesDialogTest::shouldHaveDefaultValue()
         if (b->objectName() == QLatin1String("clearbutton")) {
             hasClearButton = true;
             QVERIFY(!b->text().isEmpty());
-            break;
+        } else if (b->objectName() == QLatin1String("savebutton")) {
+            QVERIFY(!b->isEnabled());
         }
     }
     QVERIFY(hasClearButton);

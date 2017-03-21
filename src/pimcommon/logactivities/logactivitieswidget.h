@@ -37,7 +37,11 @@ public:
     QString log() const;
     void clear();
     void addLogEntry(const QString &entry);
+Q_SIGNALS:
+    void textChanged(bool changed);
+
 private:
+    void slotTextChanged();
     KPIMTextEdit::PlainTextEditorWidget *mLog;
 };
 }

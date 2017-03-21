@@ -34,11 +34,17 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     mLog->setObjectName(QStringLiteral("log"));
     mLog->setReadOnly(true);
     mainLayout->addWidget(mLog);
+    connect(mLog->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &LogActivitiesWidget::slotTextChanged);
 }
 
 LogActivitiesWidget::~LogActivitiesWidget()
 {
 
+}
+
+void LogActivitiesWidget::slotTextChanged()
+{
+    Q_EMIT textChanged(!mLog->editor()->document()->isEmpty());
 }
 
 void LogActivitiesWidget::addLogEntry(const QString &entry)
