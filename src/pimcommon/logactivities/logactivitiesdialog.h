@@ -19,13 +19,13 @@
 #define LOGACTIVITIESDIALOG_H
 
 #include <QDialog>
-#include "pimcommon_export.h"
+#include "pimcommon_private_export.h"
 class QPushButton;
 class QCheckBox;
 namespace PimCommon
 {
 class LogActivitiesWidget;
-class PIMCOMMON_EXPORT LogActivitiesDialog : public QDialog
+class PIMCOMMON_TESTS_EXPORT LogActivitiesDialog : public QDialog
 {
     Q_OBJECT
 public:
