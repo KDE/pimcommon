@@ -19,12 +19,12 @@
 #define CUSTOMTOOLSPLUGINMANAGER_H
 
 #include <QObject>
-#include "pimcommon_export.h"
+#include "pimcommon_private_export.h"
 namespace PimCommon
 {
 class CustomToolsPlugin;
 class CustomToolsPluginManagerPrivate;
-class PIMCOMMON_EXPORT CustomToolsPluginManager : public QObject
+class PIMCOMMON_TESTS_EXPORT CustomToolsPluginManager : public QObject
 {
     Q_OBJECT
 public:
