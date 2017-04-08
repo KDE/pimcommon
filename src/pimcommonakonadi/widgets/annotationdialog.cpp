@@ -100,8 +100,8 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     hbox->addWidget(label);
     d->mNoteType = new KComboBox;
     hbox->addWidget(d->mNoteType);
-    d->mNoteType->addItem(i18nc("@item:inlistbox", "Private note"), QByteArray("/private/comment"));
-    d->mNoteType->addItem(i18nc("@item:inlistbox", "Shared note"), QByteArray("/shared/comment"));
+    d->mNoteType->addItem(i18nc("@item:inlistbox", "Private note"), QByteArrayLiteral("/private/comment"));
+    d->mNoteType->addItem(i18nc("@item:inlistbox", "Shared note"), QByteArrayLiteral("/shared/comment"));
 
     vbox->addLayout(hbox);
     if (d->mHasAnnotation && item.attribute<Akonadi::EntityAnnotationsAttribute>()) {
