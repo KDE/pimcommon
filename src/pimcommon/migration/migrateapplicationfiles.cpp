@@ -205,8 +205,7 @@ void MigrateApplicationFiles::migrateFile(const MigrateFileInfo &info)
 
     if (!originalPath.isEmpty()) {
         if (info.filePatterns().isEmpty()) {
-            QFile newFile(newPath);
-            if (!newFile.exists()) {
+            if (!QFileInfo::exists(newPath)) {
                 QFile copyFile(originalPath);
                 if (!copyFile.copy(newPath)) {
                     qCDebug(PIMCOMMON_LOG) << "impossible to copy " << originalPath << " to " << newPath;
