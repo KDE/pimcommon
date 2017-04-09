@@ -182,7 +182,7 @@ bool MigrateApplicationFiles::copyRecursively(const QString &srcFilePath, const 
             qCDebug(PIMCOMMON_LOG) << "Can not create path " << srcFileInfo.absolutePath();
             return false;
         }
-        if (!QFile(tgtFilePath).exists() && !QFile::copy(srcFilePath, tgtFilePath)) {
+        if (!QFileInfo::exists(tgtFilePath) && !QFile::copy(srcFilePath, tgtFilePath)) {
             qCDebug(PIMCOMMON_LOG) << " can't copy" << srcFilePath << " tgtFilePath" << tgtFilePath;
             return false;
         }
