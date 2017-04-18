@@ -16,7 +16,7 @@
 */
 
 #include "sievesyntaxhighlighterrules.h"
-#include "helper_p.h"
+
 #include <QTextCharFormat>
 
 #include <KPIMTextEdit/SyntaxHighlighterBase>

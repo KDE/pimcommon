@@ -18,7 +18,7 @@
  */
 
 #include "aclmanager.h"
-#include "helper_p.h"
+
 #include "pimcommonakonadi_debug.h"
 #include "aclentrydialog_p.h"
 #include "aclutils_p.h"

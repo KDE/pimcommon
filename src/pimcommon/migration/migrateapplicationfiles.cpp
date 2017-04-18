@@ -17,7 +17,7 @@
 
 #include "migrateapplicationfiles.h"
 #include "pimcommon_debug.h"
-#include "helper_p.h"
+
 #include <kdelibs4migration.h>
 #include <KSharedConfig>
 #include <KConfigGroup>

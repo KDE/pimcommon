@@ -17,7 +17,7 @@
 */
 
 #include "autocorrection.h"
-#include "helper_p.h"
+
 #include "settings/pimcommonsettings.h"
 #include "import/importkmailautocorrection.h"
 #include <KColorScheme>

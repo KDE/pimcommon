@@ -16,7 +16,7 @@
 */
 
 #include "customtoolsplugin.h"
-#include "helper_p.h"
+
 #include "customtoolsviewinterface.h"
 #include "customtoolswidgetng.h"
 #include "customtools/customtoolspluginmanager.h"

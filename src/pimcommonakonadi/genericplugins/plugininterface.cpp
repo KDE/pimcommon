@@ -16,7 +16,7 @@
 */
 
 #include "plugininterface.h"
-#include "helper_p.h"
+
 #include <PimCommon/GenericPluginManager>
 #include "pimcommonakonadi_debug.h"
 

@@ -17,7 +17,7 @@
 
 #include "templatemanager.h"
 #include "templatewidgets/templatelistwidget.h"
-#include "helper_p.h"
+
 
 #include <KDirWatch>
 
