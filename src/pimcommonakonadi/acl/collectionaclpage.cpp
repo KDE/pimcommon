@@ -32,7 +32,7 @@
 #include "collectionaclwidget.h"
 #include "aclmanager.h"
 #include "imapaclattribute.h"
-#include <collection.h>
+#include <AkonadiCore/Collection>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 
