@@ -121,8 +121,8 @@ QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::plugins
     QVector<PimCommon::CustomToolsPlugin *> lst;
     QVector<CustomToolsPluginInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<CustomToolsPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
-        if ((*it).plugin) {
-            lst << (*it).plugin;
+        if (auto plugin = (*it).plugin) {
+            lst << plugin;
         }
     }
     return lst;

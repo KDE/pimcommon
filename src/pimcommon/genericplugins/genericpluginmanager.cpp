@@ -167,8 +167,8 @@ QVector<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
     QVector<PimCommon::GenericPlugin *> lst;
     QVector<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
-        if ((*it).plugin) {
-            lst << (*it).plugin;
+        if (auto plugin = (*it).plugin) {
+            lst << plugin;
         }
     }
     return lst;
