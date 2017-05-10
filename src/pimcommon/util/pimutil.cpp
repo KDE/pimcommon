@@ -44,6 +44,7 @@
 #include <QDesktopServices>
 #include <KMessageBox>
 #include <KLocalizedString>
+#include <KEmailAddress>
 
 #include <QTextStream>
 #include <QWidget>
@@ -144,4 +145,21 @@ void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
         // launch khelpcenter, or a browser for URIs not handled by khelpcenter
         QDesktopServices::openUrl(url);
     }
+}
+
+QStringList PimCommon::Util::generateEmailList(const QStringList &list)
+{
+    QString str;
+    const int numberOfElement{list.count()};
+    for (int i = 0; i < numberOfElement; i++) {
+        QString tmpStr = list.at(i);
+        if (!tmpStr.trimmed().isEmpty()) {
+            if (!str.isEmpty()) {
+                str.append(QStringLiteral(", "));
+            }
+            str.append(tmpStr);
+        }
+    }
+    const QStringList emails = KEmailAddress::splitAddressList(str);
+    return emails;
 }
