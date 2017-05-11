@@ -27,7 +27,7 @@ class PIMCOMMON_EXPORT KPimPrintPreviewDialog : public QPrintPreviewDialog
 {
 public:
     explicit KPimPrintPreviewDialog(QWidget *parent = nullptr);
-    explicit KPimPrintPreviewDialog(QPrinter *printer, QWidget *parent = 0);
+    explicit KPimPrintPreviewDialog(QPrinter *printer, QWidget *parent = nullptr);
     ~KPimPrintPreviewDialog();
 private:
     void readConfig();
