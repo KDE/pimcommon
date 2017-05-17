@@ -170,7 +170,8 @@ void SieveSyntaxHighlighterRulesPrivate::init()
                << QStringLiteral("\\bvacation\\b")
                << QStringLiteral("\\benclose\\b")
                << QStringLiteral("\\breplace\\b")
-               << QStringLiteral("\\bextracttext\\b");
+               << QStringLiteral("\\bextracttext\\b")
+               << QStringLiteral("\\bbreak\\b");
     for (const QString &s : qAsConst(actionType)) {
         const QRegularExpression regex(s, QRegularExpression::CaseInsensitiveOption);
         m_rules.append(KPIMTextEdit::Rule(regex, actionFormat));
