@@ -33,7 +33,7 @@ public Q_SLOTS:
     void slotCollectionCanBeAdministrated(bool b);
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 
 private:
     void generalPaletteChanged();

@@ -31,7 +31,7 @@ public:
     ~LineEditWithCompleter();
 
 protected:
-    void contextMenuEvent(QContextMenuEvent *e) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *e) override;
 
 private Q_SLOTS:
     void slotClearHistory();

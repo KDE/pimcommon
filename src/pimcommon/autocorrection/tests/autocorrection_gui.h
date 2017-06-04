@@ -53,7 +53,7 @@ public:
     ~TextEditAutoCorrectionWidget();
 
 protected:
-    void keyPressEvent(QKeyEvent *e) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *e) override;
 
 private:
     PimCommon::AutoCorrection *mAutoCorrection;

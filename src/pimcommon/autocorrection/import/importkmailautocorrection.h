@@ -27,7 +27,7 @@ class ImportKMailAutocorrection : public ImportAbstractAutocorrection
 public:
     explicit ImportKMailAutocorrection(QWidget *parent = nullptr);
     ~ImportKMailAutocorrection();
-    bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) Q_DECL_OVERRIDE;
+    bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
 };
 }
 

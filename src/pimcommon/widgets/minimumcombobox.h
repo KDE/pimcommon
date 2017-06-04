@@ -34,7 +34,7 @@ public:
     explicit MinimumComboBox(QWidget *parent = nullptr);
 
 protected:
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+    QSize minimumSizeHint() const override;
 };
 
 }

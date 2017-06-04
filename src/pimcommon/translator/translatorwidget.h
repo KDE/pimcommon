@@ -35,7 +35,7 @@ public:
     void setResultFailed(bool failed);
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 
 private:
     bool mResultFailed;
@@ -51,7 +51,7 @@ Q_SIGNALS:
     void translateText();
 
 protected:
-    void dropEvent(QDropEvent *) Q_DECL_OVERRIDE;
+    void dropEvent(QDropEvent *) override;
 };
 
 class PIMCOMMON_EXPORT TranslatorWidget : public QWidget
@@ -82,7 +82,7 @@ private Q_SLOTS:
     void slotConfigChanged();
 
 protected:
-    bool event(QEvent *e) Q_DECL_OVERRIDE;
+    bool event(QEvent *e) override;
 
 Q_SIGNALS:
     void toolsWasClosed();

@@ -48,10 +48,10 @@ public:
     explicit CollectionAclPage(QWidget *parent = nullptr);
     ~CollectionAclPage();
 
-    void load(const Akonadi::Collection &collection) Q_DECL_OVERRIDE;
-    void save(Akonadi::Collection &collection) Q_DECL_OVERRIDE;
+    void load(const Akonadi::Collection &collection) override;
+    void save(Akonadi::Collection &collection) override;
 
-    bool canHandle(const Akonadi::Collection &collection) const Q_DECL_OVERRIDE;
+    bool canHandle(const Akonadi::Collection &collection) const override;
 
 protected:
     void init();

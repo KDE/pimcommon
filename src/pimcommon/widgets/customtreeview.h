@@ -41,8 +41,8 @@ private:
     void generalFontChanged();
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
-    void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
+    void changeEvent(QEvent *event) override;
 
 protected:
     bool mShowDefaultText;

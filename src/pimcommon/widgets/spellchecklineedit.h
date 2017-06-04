@@ -52,10 +52,10 @@ public:
     ~SpellCheckLineEdit();
 
 protected:
-    QSize sizeHint() const Q_DECL_OVERRIDE;
-    QSize minimumSizeHint() const Q_DECL_OVERRIDE;
-    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
-    void insertFromMimeData(const QMimeData *source) Q_DECL_OVERRIDE;
+    QSize sizeHint() const override;
+    QSize minimumSizeHint() const override;
+    void keyPressEvent(QKeyEvent *) override;
+    void insertFromMimeData(const QMimeData *source) override;
 
 Q_SIGNALS:
     /**

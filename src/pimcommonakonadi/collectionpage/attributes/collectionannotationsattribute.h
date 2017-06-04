@@ -37,10 +37,10 @@ public:
     void setAnnotations(const QMap<QByteArray, QByteArray> &annotations);
     QMap<QByteArray, QByteArray> annotations() const;
 
-    QByteArray type() const Q_DECL_OVERRIDE;
-    CollectionAnnotationsAttribute *clone() const Q_DECL_OVERRIDE;
-    QByteArray serialized() const Q_DECL_OVERRIDE;
-    void deserialize(const QByteArray &data) Q_DECL_OVERRIDE;
+    QByteArray type() const override;
+    CollectionAnnotationsAttribute *clone() const override;
+    QByteArray serialized() const override;
+    void deserialize(const QByteArray &data) override;
 
     bool operator==(const CollectionAnnotationsAttribute &other) const;
 
