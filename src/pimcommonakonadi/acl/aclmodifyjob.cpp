@@ -23,6 +23,7 @@
 #include "util/pimutil.h"
 #include "aclutils_p.h"
 #include "pimcommonakonadi_debug.h"
+#include <AkonadiCore/ServerManager>
 
 #include "imapaclattribute.h"
 #include "job/fetchrecursivecollectionsjob.h"
@@ -72,7 +73,11 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
 
     QString resource = collection.resource();
     if (resource.contains(QLatin1String("akonadi_kolabproxy_resource"))) {
-        QDBusInterface interface(QLatin1String("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"), QLatin1String("/KolabProxy"));
+        QString basename(QStringLiteral("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"));
+        if (Akonadi::ServerManager::hasInstanceIdentifier()) {
+            basename += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
+        }
+        QDBusInterface interface(basename, QLatin1String("/KolabProxy"));
         if (interface.isValid()) {
             QDBusReply<QString> reply = interface.call(QLatin1String("imapResourceForCollection"), collection.remoteId().toLongLong());
             if (reply.isValid()) {

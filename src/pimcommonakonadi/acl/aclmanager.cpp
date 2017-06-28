@@ -30,6 +30,7 @@
 #include <CollectionModifyJob>
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
+#include <AkonadiCore/ServerManager>
 #include "aclmodifyjob.h"
 #include <KEmailAddress>
 
@@ -303,7 +304,11 @@ public:
 
         QString resource = collection.resource();
         if (resource.contains(QStringLiteral("akonadi_kolabproxy_resource"))) {
-            QDBusInterface interface(QStringLiteral("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"), QStringLiteral("/KolabProxy"));
+            QString basename(QStringLiteral("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"));
+            if (Akonadi::ServerManager::hasInstanceIdentifier()) {
+                basename += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
+            }
+            QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));
             if (interface.isValid()) {
                 QDBusReply<QString> reply = interface.call(QStringLiteral("imapResourceForCollection"), collection.remoteId().toLongLong());
                 if (reply.isValid()) {
