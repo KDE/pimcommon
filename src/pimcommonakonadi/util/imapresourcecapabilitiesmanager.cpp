@@ -16,13 +16,17 @@
 */
 
 #include "imapresourcecapabilitiesmanager.h"
-#include <PimCommon/PimUtil>
+#include "pimcommonakonadi_debug.h"
+#include "util/pimutil.h"
+
 #include <AkonadiCore/AgentManager>
+#include <AkonadiCore/ServerManager>
+
 #include <KDBusConnectionPool>
 #include <QDBusInterface>
-#include <qdbuspendingcall.h>
-#include <qdbuspendingreply.h>
-#include "pimcommonakonadi_debug.h"
+#include <QDBusPendingCall>
+#include <QDBusPendingReply>
+
 using namespace PimCommon;
 ImapResourceCapabilitiesManager::ImapResourceCapabilitiesManager(QObject *parent)
     : QObject(parent)
@@ -49,8 +53,9 @@ void ImapResourceCapabilitiesManager::searchCapabilities(const QString &identifi
 {
     //By default makes it as true.
     mImapResource.insert(identifier, true);
-    QDBusInterface iface(
-        QLatin1String("org.freedesktop.Akonadi.Resource.") + identifier,
+    const QString service =
+        Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, identifier);
+    QDBusInterface iface(service,
         QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
         KDBusConnectionPool::threadConnection(), this);
 
@@ -97,4 +102,3 @@ bool ImapResourceCapabilitiesManager::hasAnnotationSupport(const QString &identi
     }
     return mImapResource.value(identifier, true);
 }
-
