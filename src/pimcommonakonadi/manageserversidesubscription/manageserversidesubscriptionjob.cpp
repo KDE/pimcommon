@@ -18,12 +18,16 @@
 #include "manageserversidesubscriptionjob.h"
 #include "util/mailutil.h"
 #include "pimcommonakonadi_debug.h"
+
+#include <AkonadiCore/ServerManager>
+
+#include <KDBusConnectionPool>
 #include <KLocalizedString>
+#include <KMessageBox>
+
 #include <QDBusInterface>
 #include <QDBusPendingCall>
 #include <QDBusPendingReply>
-#include <kdbusconnectionpool.h>
-#include <KMessageBox>
 
 using namespace PimCommon;
 
@@ -61,12 +65,14 @@ void ManageServerSideSubscriptionJob::start()
     }
     bool isImapOnline = false;
     if (PimCommon::MailUtil::isImapFolder(d->mCurrentCollection, isImapOnline)) {
-        QDBusInterface iface(
-            QLatin1String("org.freedesktop.Akonadi.Resource.") + d->mCurrentCollection.resource(),
+        const QString service =
+            Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
+                                                     d->mCurrentCollection.resource());
+        QDBusInterface iface(service,
             QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
             KDBusConnectionPool::threadConnection(), this);
         if (!iface.isValid()) {
-            qCDebug(PIMCOMMONAKONADI_LOG) << "Cannot create imap dbus interface";
+            qCDebug(PIMCOMMONAKONADI_LOG) << "Cannot create imap dbus interface for service " << service;
             deleteLater();
             return;
         }
@@ -102,4 +108,3 @@ void ManageServerSideSubscriptionJob::setCurrentCollection(const Akonadi::Collec
 {
     d->mCurrentCollection = col;
 }
-
