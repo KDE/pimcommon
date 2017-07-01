@@ -21,14 +21,14 @@
 #define PIMCOMMON_COLLECTIONANNOTATIONSATTRIBUTE_H
 
 #include <Attribute>
-#include "pimcommon_export.h"
+#include "pimcommonakonadi_export.h"
 
 #include <QMap>
 
 namespace PimCommon
 {
 
-class PIMCOMMON_EXPORT CollectionAnnotationsAttribute : public Akonadi::Attribute
+class PIMCOMMONAKONADI_EXPORT CollectionAnnotationsAttribute : public Akonadi::Attribute
 {
 public:
     CollectionAnnotationsAttribute();
