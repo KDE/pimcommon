@@ -8,7 +8,6 @@ endmacro()
 
 add_pimcommon_collectionpage_test(collectionannotationsattributetest
     collectionannotationsattributetest.cpp
-    ../attributes/collectionannotationsattribute.cpp
 )
 add_pimcommon_collectionpage_test(incidencesforwidgettest
     incidencesforwidgettest.cpp
