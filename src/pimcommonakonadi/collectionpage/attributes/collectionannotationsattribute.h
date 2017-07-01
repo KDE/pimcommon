@@ -33,6 +33,7 @@ class PIMCOMMON_EXPORT CollectionAnnotationsAttribute : public Akonadi::Attribut
 public:
     CollectionAnnotationsAttribute();
     CollectionAnnotationsAttribute(const QMap<QByteArray, QByteArray> &annotations);
+    ~CollectionAnnotationsAttribute() =default;
 
     void setAnnotations(const QMap<QByteArray, QByteArray> &annotations);
     QMap<QByteArray, QByteArray> annotations() const;
