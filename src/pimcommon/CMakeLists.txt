@@ -149,7 +149,7 @@ set(libpimcommon_SRCS
     ${libpimcommon_logactivities_SRCS}
     ${libpimcommon_generericplugin_SRCS}
     )
-
+qt5_add_resources(libpimcommon_SRCS widgets/icons.qrc)
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon)
 
 ki18n_wrap_ui(libpimcommon_SRCS
@@ -375,6 +375,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     SimpleStringlistEditor
     KActionMenuChangeCase
     KPimPrintPreviewDialog
+    LineEditPassword
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
     RELATIVE widgets

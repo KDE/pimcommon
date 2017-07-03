@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.5.60")
+set(PIM_VERSION "5.5.61")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
