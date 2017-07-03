@@ -87,6 +87,11 @@ void LineEditPassword::showToggleEchoModeAction(const QString &text)
     mToggleEchoModeAction->setVisible(mIsToggleEchoModeAvailable && (mPasswordLineEdit->echoMode() == QLineEdit::Normal || !text.isEmpty()));
 }
 
+QLineEdit *LineEditPassword::passwordLineEdit() const
+{
+    return mPasswordLineEdit;
+}
+
 QAction *LineEditPassword::toggleEchoModeAction() const
 {
     return mToggleEchoModeAction;

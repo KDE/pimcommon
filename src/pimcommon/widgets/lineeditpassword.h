@@ -35,6 +35,8 @@ public:
 
     QAction *toggleEchoModeAction() const;
 
+    QLineEdit *passwordLineEdit() const;
+
 private:
     void initialize();
     void toggleEchoMode();
