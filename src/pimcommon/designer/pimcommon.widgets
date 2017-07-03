@@ -13,3 +13,9 @@ WhatsThis=A widget to make translate string
 IncludeFile=pimcommon/translatorwidget.h
 Group=Input (KDE-PIM)
 
+[PimCommon::LineEditPassword]
+ToolTip=A LineEdit which allows to show password
+WhatsThis=A LineEdit which allows to show password
+IncludeFile=pimcommon/lineeditpassword.h
+Group=Input (KDE-PIM)
+
