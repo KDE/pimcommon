@@ -18,15 +18,30 @@
 #ifndef LINEEDITPASSWORD_H
 #define LINEEDITPASSWORD_H
 
-#include <QLineEdit>
+#include <QWidget>
 #include "pimcommon_export.h"
+class QLineEdit;
+class QAction;
 namespace PimCommon
 {
-class PIMCOMMON_EXPORT LineEditPassword : public QLineEdit
+class PIMCOMMON_EXPORT LineEditPassword : public QWidget
 {
 public:
     explicit LineEditPassword(QWidget *parent = nullptr);
     ~LineEditPassword();
+
+    void setPassword(const QString &p);
+    QString password() const;
+
+    QAction *toggleEchoModeAction() const;
+
+private:
+    void initialize();
+    void toggleEchoMode();
+    void showToggleEchoModeAction(const QString &text);
+    QLineEdit *mPasswordLineEdit = nullptr;
+    QAction *mToggleEchoModeAction = nullptr;
+    bool mIsToggleEchoModeAvailable;
 };
 }
 
