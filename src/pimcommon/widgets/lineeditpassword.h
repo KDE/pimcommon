@@ -24,6 +24,7 @@ class QLineEdit;
 class QAction;
 namespace PimCommon
 {
+class LineEditPasswordPrivate;
 class PIMCOMMON_EXPORT LineEditPassword : public QWidget
 {
 public:
@@ -41,9 +42,8 @@ private:
     void initialize();
     void toggleEchoMode();
     void showToggleEchoModeAction(const QString &text);
-    QLineEdit *mPasswordLineEdit = nullptr;
-    QAction *mToggleEchoModeAction = nullptr;
-    bool mIsToggleEchoModeAvailable;
+    class LineEditPasswordPrivate;
+    LineEditPasswordPrivate *const d;
 };
 }
 
