@@ -27,21 +27,42 @@ namespace PimCommon
 class LineEditPasswordPrivate;
 class PIMCOMMON_EXPORT LineEditPassword : public QWidget
 {
+    Q_OBJECT
 public:
+    /**
+     * Constructs a lineedit password widget.
+     * @since 5.37
+     *
+     * @param parent Passed to lower level constructor.
+     */
     explicit LineEditPassword(QWidget *parent = nullptr);
+    /**
+      * Destructs the lineedit password widget.
+      */
     ~LineEditPassword();
 
+    /**
+     * Assign password
+     */
     void setPassword(const QString &p);
+
+    /**
+     * Returns the password entered.
+     */
     QString password() const;
 
+
+    /**
+     * Returns the QAction (@internal)
+     */
     QAction *toggleEchoModeAction() const;
 
+    /**
+     * Returns the lineedit widget.
+     */
     QLineEdit *passwordLineEdit() const;
 
 private:
-    void initialize();
-    void toggleEchoMode();
-    void showToggleEchoModeAction(const QString &text);
     class LineEditPasswordPrivate;
     LineEditPasswordPrivate *const d;
 };
