@@ -1161,6 +1161,7 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
         qCDebug(PIMCOMMON_LOG) << "We can't save in file :" << fname;
         return;
     }
+    //TODO port to QXmlStreamWriter + add Autotests.
     QDomDocument root(QStringLiteral("autocorrection"));
     root.appendChild(root.createProcessingInstruction(QStringLiteral("xml"), QStringLiteral("version=\"1.0\" encoding=\"UTF-8\"")));
 
