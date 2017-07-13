@@ -41,6 +41,9 @@ public:
     void toggleEchoMode();
     void showToggleEchoModeAction(const QString &text);
 
+    QIcon passwordIcon;
+    QIcon visibleIcon;
+
     QLineEdit *mPasswordLineEdit = nullptr;
     QAction *mToggleEchoModeAction = nullptr;
     bool mIsToggleEchoModeAvailable = true;
@@ -55,6 +58,7 @@ void LineEditPassword::LineEditPasswordPrivate::initialize()
     mToggleEchoModeAction->setVisible(false);
     mToggleEchoModeAction->setToolTip(i18n("Change the visibility of the password"));
 
+
     connect(mToggleEchoModeAction, &QAction::triggered, this, &LineEditPassword::LineEditPasswordPrivate::toggleEchoMode);
     connect(mPasswordLineEdit, &QLineEdit::textChanged, this, &LineEditPassword::LineEditPasswordPrivate::showToggleEchoModeAction);
 }
@@ -68,10 +72,16 @@ void LineEditPassword::LineEditPasswordPrivate::toggleEchoMode()
 {
     if (mPasswordLineEdit->echoMode() == QLineEdit::Password) {
         mPasswordLineEdit->setEchoMode(QLineEdit::Normal);
-        mToggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("hint"), QIcon(QStringLiteral(":/icons/hint.svg"))));
+        if (passwordIcon.isNull()) {
+            passwordIcon = QIcon::fromTheme(QStringLiteral("hint"), QIcon(QStringLiteral(":/icons/hint.svg")));
+        }
+        mToggleEchoModeAction->setIcon(passwordIcon);
     } else if (mPasswordLineEdit->echoMode() == QLineEdit::Normal) {
+        if (visibleIcon.isNull()) {
+            visibleIcon = QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg")));
+        }
         mPasswordLineEdit->setEchoMode(QLineEdit::Password);
-        mToggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg"))));
+        mToggleEchoModeAction->setIcon(visibleIcon);
     }
 }
 
