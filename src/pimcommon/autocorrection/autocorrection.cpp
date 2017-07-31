@@ -25,7 +25,6 @@
 #include "pimcommon_debug.h"
 #include <QTextBlock>
 #include <QTextDocument>
-#include <QDomDocument>
 #include <QFile>
 #include <QDir>
 #include <QStandardPaths>
@@ -1176,10 +1175,10 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
     QXmlStreamWriter streamWriter(&file);
 
     streamWriter.setAutoFormatting(true);
-    streamWriter.setAutoFormattingIndent(2);
+    streamWriter.setAutoFormattingIndent(1);
     streamWriter.writeStartDocument();
 
-    streamWriter.writeStartElement(QStringLiteral("autocorrection"));
+    streamWriter.writeDTD(QStringLiteral("<!DOCTYPE autocorrection>"));
 
     streamWriter.writeStartElement(QStringLiteral("Word"));
 
@@ -1203,83 +1202,34 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
         ++upper;
         streamWriter.writeEndElement();
     }
+    streamWriter.writeEndElement();
 
+
+    streamWriter.writeStartElement(QStringLiteral("TwoUpperLetterExceptions"));
+    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
+    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
+        streamWriter.writeStartElement(QStringLiteral("word"));
+        streamWriter.writeAttribute(QStringLiteral("exception"), *twoUpper);
+        ++twoUpper;
+        streamWriter.writeEndElement();
+    }
+    streamWriter.writeEndElement();
+
+    streamWriter.writeStartElement(QStringLiteral("DoubleQuote"));
+    streamWriter.writeStartElement(QStringLiteral("doublequote"));
+    streamWriter.writeAttribute(QStringLiteral("begin"), mTypographicDoubleQuotes.begin);
+    streamWriter.writeAttribute(QStringLiteral("end"), mTypographicDoubleQuotes.end);
+    streamWriter.writeEndElement();
+    streamWriter.writeEndElement();
+
+    streamWriter.writeStartElement(QStringLiteral("SimpleQuote"));
+    streamWriter.writeStartElement(QStringLiteral("simplequote"));
+    streamWriter.writeAttribute(QStringLiteral("begin"), mTypographicSingleQuotes.begin);
+    streamWriter.writeAttribute(QStringLiteral("end"), mTypographicSingleQuotes.end);
+    streamWriter.writeEndElement();
     streamWriter.writeEndElement();
 
     streamWriter.writeEndDocument();
-
-#if 0
-    //TODO port to QXmlStreamWriter + add Autotests.
-    QDomDocument root(QStringLiteral("autocorrection"));
-    root.appendChild(root.createProcessingInstruction(QStringLiteral("xml"), QStringLiteral("version=\"1.0\" encoding=\"UTF-8\"")));
-
-    QDomElement word = root.createElement(QStringLiteral("Word"));
-    root.appendChild(word);
-    QDomElement items = root.createElement(QStringLiteral("items"));
-
-    QHashIterator<QString, QString> i(mAutocorrectEntries);
-    while (i.hasNext()) {
-        i.next();
-        QDomElement item = root.createElement(QStringLiteral("item"));
-        item.setAttribute(QStringLiteral("find"), i.key());
-        item.setAttribute(QStringLiteral("replace"), i.value());
-        items.appendChild(item);
-    }
-    word.appendChild(items);
-
-    QDomElement upperCaseExceptions = root.createElement(QStringLiteral("UpperCaseExceptions"));
-    QSet<QString>::const_iterator upper = mUpperCaseExceptions.constBegin();
-    while (upper != mUpperCaseExceptions.constEnd()) {
-        QDomElement item = root.createElement(QStringLiteral("word"));
-        item.setAttribute(QStringLiteral("exception"), *upper);
-        upperCaseExceptions.appendChild(item);
-        ++upper;
-    }
-    word.appendChild(upperCaseExceptions);
-
-    QDomElement twoUpperLetterExceptions = root.createElement(QStringLiteral("TwoUpperLetterExceptions"));
-    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
-    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
-        QDomElement item = root.createElement(QStringLiteral("word"));
-        item.setAttribute(QStringLiteral("exception"), *twoUpper);
-        twoUpperLetterExceptions.appendChild(item);
-        ++twoUpper;
-    }
-    word.appendChild(twoUpperLetterExceptions);
-
-    //Don't save it as  discussed with Calligra dev
-    /*
-    QDomElement supperscript = root.createElement(QStringLiteral( "SuperScript" ));
-    QHashIterator<QString, QString> j(mSuperScriptEntries);
-    while (j.hasNext()) {
-        j.next();
-        QDomElement item = root.createElement(QStringLiteral( "superscript" ));
-        item.setAttribute(QStringLiteral("find"), j.key());
-        item.setAttribute(QStringLiteral("super"), j.value());
-        supperscript.appendChild(item);
-    }
-    word.appendChild(supperscript);
-    */
-
-    QDomElement doubleQuote = root.createElement(QStringLiteral("DoubleQuote"));
-    QDomElement item = root.createElement(QStringLiteral("doublequote"));
-    item.setAttribute(QStringLiteral("begin"), mTypographicDoubleQuotes.begin);
-    item.setAttribute(QStringLiteral("end"), mTypographicDoubleQuotes.end);
-    doubleQuote.appendChild(item);
-    word.appendChild(doubleQuote);
-
-    QDomElement singleQuote = root.createElement(QStringLiteral("SimpleQuote"));
-    item = root.createElement(QStringLiteral("simplequote"));
-    item.setAttribute(QStringLiteral("begin"), mTypographicSingleQuotes.begin);
-    item.setAttribute(QStringLiteral("end"), mTypographicSingleQuotes.end);
-    singleQuote.appendChild(item);
-    word.appendChild(singleQuote);
-
-    QTextStream ts(&file);
-    ts.setCodec("UTF-8");
-    ts << root.toString();
-    file.close();
-#endif
 }
 
 QString AutoCorrection::language() const

@@ -695,7 +695,12 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     const QString refFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-ref.xml");
     const QString generatedFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.xml");
 
+    //First
     autocorrection.loadGlobalFileName(originalFile, true);
+    autocorrection.writeAutoCorrectionXmlFile(generatedFile);
+
+    //Second
+    autocorrection.loadGlobalFileName(generatedFile, true);
     autocorrection.writeAutoCorrectionXmlFile(generatedFile);
 
     QStringList args = QStringList()

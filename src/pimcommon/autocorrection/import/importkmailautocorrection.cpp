@@ -19,8 +19,10 @@
 
 #include <QFile>
 #include <QDomDocument>
+#include <QXmlStreamReader>
 #include "pimcommon_debug.h"
 using namespace PimCommon;
+//#define USE_XMLSTREAMREADER 1
 
 ImportKMailAutocorrection::ImportKMailAutocorrection(QWidget *parent)
     : ImportAbstractAutocorrection(parent)
@@ -38,7 +40,65 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
     if (!xmlFile.open(QIODevice::ReadOnly)) {
         return false;
     }
-
+#ifdef USE_XMLSTREAMREADER
+    QXmlStreamReader xml(&xmlFile);
+    if (xml.readNextStartElement()) {
+        while (xml.readNextStartElement()) {
+            qDebug() << "xml.name() "<<xml.name();
+            if (xml.name() == QLatin1String("UpperCaseExceptions")) {
+                if (loadAttribute == All) {
+                    while (xml.readNextStartElement()) {
+                        const QStringRef tagname = xml.name();
+                        if (tagname == QLatin1String("word")) {
+                            if (xml.attributes().hasAttribute(QStringLiteral("exception"))) {
+                                const QString exception = xml.attributes().value(QStringLiteral("exception")).toString();
+                                mUpperCaseExceptions += exception;
+                                xml.skipCurrentElement();
+                            }
+                        }
+                    }
+                } else {
+                    xml.skipCurrentElement();
+                }
+            } else if(xml.name() == QLatin1String("TwoUpperLetterExceptions")) {
+                if (loadAttribute == All) {
+                    while (xml.readNextStartElement()) {
+                        const QStringRef tagname = xml.name();
+                        if (tagname == QLatin1String("word")) {
+                            if (xml.attributes().hasAttribute(QStringLiteral("exception"))) {
+                                const QString exception = xml.attributes().value(QStringLiteral("exception")).toString();
+                                mTwoUpperLetterExceptions += exception;
+                                xml.skipCurrentElement();
+                            }
+                        } else {
+                            xml.skipCurrentElement();
+                        }
+                    }
+                } else {
+                    xml.skipCurrentElement();
+                }
+            } else if(xml.name() == QLatin1String("DoubleQuote")) {
+                if (loadAttribute == All) {
+                } else {
+                    xml.skipCurrentElement();
+                }
+            } else if(xml.name() == QLatin1String("SimpleQuote")) {
+                if (loadAttribute == All) {
+                } else {
+                    xml.skipCurrentElement();
+                }
+            } else if(xml.name() == QLatin1String("SuperScript")) {
+                if (loadAttribute == All || loadAttribute == SuperScript) {
+                } else {
+                    xml.skipCurrentElement();
+                }
+            } else {
+                //TODO verify
+                xml.skipCurrentElement();
+            }
+        }
+    }
+#else
     QDomDocument doc;
     if (!doc.setContent(&xmlFile)) {
         return false;
@@ -120,7 +180,7 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
             }
         }
     }
-
+#endif
     return true;
 }
 
