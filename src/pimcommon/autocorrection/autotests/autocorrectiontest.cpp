@@ -21,9 +21,21 @@
 #include <qtest.h>
 #include "pimcommon_debug.h"
 #include <QTextDocument>
+#include <QStandardPaths>
+#include <QProcess>
+
+#ifndef Q_OS_WIN
+void initLocale()
+{
+    setenv("LC_ALL", "en_US.utf-8", 1);
+}
+
+Q_CONSTRUCTOR_FUNCTION(initLocale)
+#endif
 
 AutoCorrectionTest::AutoCorrectionTest()
 {
+    QStandardPaths::setTestModeEnabled(true);
     mConfig = KSharedConfig::openConfig(QStringLiteral("autocorrectiontestrc"));
     PimCommon::PimCommonSettings::self()->setSharedConfig(mConfig);
     PimCommon::PimCommonSettings::self()->load();
@@ -667,6 +679,16 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
 }
+/*
+QString readAutoCorrectionFile(const QString &autocorrectFile)
+{
+    QFile file(autocorrectFile);
+    file.open(QIODevice::ReadOnly);
+    Q_ASSERT(file.isOpen());
+    const QString data = QString::fromUtf8(file.readAll());
+    return data;
+}
+*/
 
 void AutoCorrectionTest::shouldLoadSaveAutocorrection_data()
 {
@@ -678,6 +700,24 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
 {
     QFETCH(QString, filename);
     PimCommon::AutoCorrection autocorrection;
+    const QString originalFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral(".xml");
+    const QString refFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-ref.xml");
+    const QString generatedFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.xml");
+
+    autocorrection.loadGlobalFileName(originalFile, true);
+    autocorrection.writeAutoCorrectionXmlFile(generatedFile);
+
+    //QString script = readAutoCorrectionFile(originalFile);
+
+    QStringList args = QStringList()
+                       << QStringLiteral("-u")
+                       << refFile
+                       << generatedFile;
+    QProcess proc;
+    proc.setProcessChannelMode(QProcess::ForwardedChannels);
+    proc.start(QStringLiteral("diff"), args);
+    QVERIFY(proc.waitForFinished());
+
     //autocorrection.
 }
 
