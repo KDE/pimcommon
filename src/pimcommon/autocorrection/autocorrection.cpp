@@ -1112,43 +1112,53 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     //qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
 
     if (localFileName.isEmpty()) {
-        if (fname.isEmpty()) {
-            mTypographicSingleQuotes = typographicDefaultSingleQuotes();
-            mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
-        } else {
-            ImportKMailAutocorrection import;
-            if (import.import(fname, ImportAbstractAutocorrection::All)) {
-                mUpperCaseExceptions = import.upperCaseExceptions();
-                mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
-                mAutocorrectEntries = import.autocorrectEntries();
-                mTypographicSingleQuotes = import.typographicSingleQuotes();
-                mTypographicDoubleQuotes = import.typographicDoubleQuotes();
-                mSuperScriptEntries = import.superScriptEntries();
-                if (forceGlobal) {
-                    mTypographicSingleQuotes = typographicDefaultSingleQuotes();
-                    mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
-                }
-                mMaxFindStringLenght = import.maxFindStringLenght();
-                mMinFindStringLenght = import.minFindStringLenght();
-            }
-        }
+        loadGlobalFileName(fname, forceGlobal);
+    } else {
+        loadLocalFileName(localFileName, fname);
+    }
+}
+
+void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
+{
+    if (fname.isEmpty()) {
+        mTypographicSingleQuotes = typographicDefaultSingleQuotes();
+        mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
     } else {
         ImportKMailAutocorrection import;
-        if (import.import(localFileName, ImportAbstractAutocorrection::All)) {
+        if (import.import(fname, ImportAbstractAutocorrection::All)) {
             mUpperCaseExceptions = import.upperCaseExceptions();
             mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
             mAutocorrectEntries = import.autocorrectEntries();
             mTypographicSingleQuotes = import.typographicSingleQuotes();
             mTypographicDoubleQuotes = import.typographicDoubleQuotes();
-            //Don't import it in local
-            //mSuperScriptEntries = import.superScriptEntries();
-        }
-        if (!fname.isEmpty() && import.import(fname, ImportAbstractAutocorrection::SuperScript)) {
             mSuperScriptEntries = import.superScriptEntries();
+            if (forceGlobal) {
+                mTypographicSingleQuotes = typographicDefaultSingleQuotes();
+                mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
+            }
+            mMaxFindStringLenght = import.maxFindStringLenght();
+            mMinFindStringLenght = import.minFindStringLenght();
         }
-        mMaxFindStringLenght = import.maxFindStringLenght();
-        mMinFindStringLenght = import.minFindStringLenght();
     }
+}
+
+void AutoCorrection::loadLocalFileName(const QString &localFileName, const QString &fname)
+{
+    ImportKMailAutocorrection import;
+    if (import.import(localFileName, ImportAbstractAutocorrection::All)) {
+        mUpperCaseExceptions = import.upperCaseExceptions();
+        mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+        mAutocorrectEntries = import.autocorrectEntries();
+        mTypographicSingleQuotes = import.typographicSingleQuotes();
+        mTypographicDoubleQuotes = import.typographicDoubleQuotes();
+        //Don't import it in local
+        //mSuperScriptEntries = import.superScriptEntries();
+    }
+    if (!fname.isEmpty() && import.import(fname, ImportAbstractAutocorrection::SuperScript)) {
+        mSuperScriptEntries = import.superScriptEntries();
+    }
+    mMaxFindStringLenght = import.maxFindStringLenght();
+    mMinFindStringLenght = import.minFindStringLenght();
 }
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)

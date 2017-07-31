@@ -1,3 +1,5 @@
+add_definitions( -DAUTOCORRECTION_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
+
 macro(add_pimcommon_autocorrect_unittest _source)
     ecm_add_test(${_source}
         NAME_PREFIX "pimcommon-autocorrection-"

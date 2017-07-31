@@ -668,4 +668,17 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
 }
 
+void AutoCorrectionTest::shouldLoadSaveAutocorrection_data()
+{
+    QTest::addColumn<QString>("filename");
+    QTest::newRow("empty") << QString();
+}
+
+void AutoCorrectionTest::shouldLoadSaveAutocorrection()
+{
+    QFETCH(QString, filename);
+    PimCommon::AutoCorrection autocorrection;
+    //autocorrection.
+}
+
 QTEST_MAIN(AutoCorrectionTest)

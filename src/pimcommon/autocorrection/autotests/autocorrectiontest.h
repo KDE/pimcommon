@@ -52,6 +52,9 @@ private Q_SLOTS:
 
     void shouldAddNonBreakingSpaceBeforeAfterQuote();
 
+    void shouldLoadSaveAutocorrection_data();
+    void shouldLoadSaveAutocorrection();
+
 private:
     KSharedConfig::Ptr mConfig;
 };

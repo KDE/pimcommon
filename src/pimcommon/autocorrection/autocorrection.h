@@ -90,6 +90,8 @@ public:
 
     void setNonBreakingSpace(const QChar &nonBreakingSpace);
 
+    void loadGlobalFileName(const QString &fname, bool forceGlobal);
+    void loadLocalFileName(const QString &localFileName, const QString &fname);
 private:
     bool isFrenchLanguage() const;
     void readConfig();
