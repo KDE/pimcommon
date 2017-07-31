@@ -31,6 +31,7 @@
 #include <QStandardPaths>
 #include <QFileInfo>
 #include <QRegularExpression>
+#include <QXmlStreamWriter>
 
 using namespace PimCommon;
 
@@ -1171,6 +1172,43 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
         qCDebug(PIMCOMMON_LOG) << "We can't save in file :" << fname;
         return;
     }
+
+    QXmlStreamWriter streamWriter(&file);
+
+    streamWriter.setAutoFormatting(true);
+    streamWriter.setAutoFormattingIndent(2);
+    streamWriter.writeStartDocument();
+
+    streamWriter.writeStartElement(QStringLiteral("autocorrection"));
+
+    streamWriter.writeStartElement(QStringLiteral("Word"));
+
+    streamWriter.writeStartElement(QStringLiteral("items"));
+    QHashIterator<QString, QString> i(mAutocorrectEntries);
+    while (i.hasNext()) {
+        i.next();
+        streamWriter.writeStartElement(QStringLiteral("item"));
+        streamWriter.writeAttribute(QStringLiteral("find"), i.key());
+        streamWriter.writeAttribute(QStringLiteral("replace"), i.value());
+        streamWriter.writeEndElement();
+    }
+    streamWriter.writeEndElement();
+
+
+    streamWriter.writeStartElement(QStringLiteral("UpperCaseExceptions"));
+    QSet<QString>::const_iterator upper = mUpperCaseExceptions.constBegin();
+    while (upper != mUpperCaseExceptions.constEnd()) {
+        streamWriter.writeStartElement(QStringLiteral("word"));
+        streamWriter.writeAttribute(QStringLiteral("exception"), *upper);
+        ++upper;
+        streamWriter.writeEndElement();
+    }
+
+    streamWriter.writeEndElement();
+
+    streamWriter.writeEndDocument();
+
+#if 0
     //TODO port to QXmlStreamWriter + add Autotests.
     QDomDocument root(QStringLiteral("autocorrection"));
     root.appendChild(root.createProcessingInstruction(QStringLiteral("xml"), QStringLiteral("version=\"1.0\" encoding=\"UTF-8\"")));
@@ -1241,6 +1279,7 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
     ts.setCodec("UTF-8");
     ts << root.toString();
     file.close();
+#endif
 }
 
 QString AutoCorrection::language() const
