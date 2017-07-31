@@ -679,21 +679,12 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
 }
-/*
-QString readAutoCorrectionFile(const QString &autocorrectFile)
-{
-    QFile file(autocorrectFile);
-    file.open(QIODevice::ReadOnly);
-    Q_ASSERT(file.isOpen());
-    const QString data = QString::fromUtf8(file.readAll());
-    return data;
-}
-*/
 
 void AutoCorrectionTest::shouldLoadSaveAutocorrection_data()
 {
     QTest::addColumn<QString>("filename");
-    QTest::newRow("empty") << QString();
+    QTest::newRow("empty") << QStringLiteral("empty");
+    QTest::newRow("custom-fr") << QStringLiteral("custom-fr");
 }
 
 void AutoCorrectionTest::shouldLoadSaveAutocorrection()
@@ -707,8 +698,6 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     autocorrection.loadGlobalFileName(originalFile, true);
     autocorrection.writeAutoCorrectionXmlFile(generatedFile);
 
-    //QString script = readAutoCorrectionFile(originalFile);
-
     QStringList args = QStringList()
                        << QStringLiteral("-u")
                        << refFile
@@ -717,8 +706,6 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);
     QVERIFY(proc.waitForFinished());
-
-    //autocorrection.
 }
 
 QTEST_MAIN(AutoCorrectionTest)

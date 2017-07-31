@@ -1,10 +1,13 @@
 add_definitions( -DAUTOCORRECTION_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 
 macro(add_pimcommon_autocorrect_unittest _source)
-    ecm_add_test(${_source}
-        NAME_PREFIX "pimcommon-autocorrection-"
-        LINK_LIBRARIES Qt5::Test KF5::PimCommon KF5::PimTextEdit
-    )
+  set(_test ${_source})
+  get_filename_component(_name ${_source} NAME_WE)
+  add_executable( ${_name} ${_test} )
+  add_test( ${_name} ${_name} )
+  ecm_mark_as_test(pimcommon-autocorrection-${_name})
+  set_tests_properties(${_name} PROPERTIES ENVIRONMENT "QT_HASH_SEED=1;QT_NO_CPU_FEATURE=sse4.2")
+  target_link_libraries(${_name}  Qt5::Test KF5::PimCommon KF5::PimTextEdit)
 endmacro()
 
 add_pimcommon_autocorrect_unittest(autocorrectiontest.cpp)

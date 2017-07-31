@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE autocorrection>
+<Word>
+ <items/>
+ <UpperCaseExceptions/>
+ <TwoUpperLetterExceptions/>
+ <DoubleQuote>
+  <doublequote end="”" begin="“"/>
+ </DoubleQuote>
+ <SimpleQuote>
+  <simplequote end="’" begin="‘"/>
+ </SimpleQuote>
+</Word>
