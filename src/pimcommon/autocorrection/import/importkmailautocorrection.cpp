@@ -42,6 +42,8 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
     }
 #ifdef USE_XMLSTREAMREADER
     QXmlStreamReader xml(&xmlFile);
+    mMaxFindStringLenght = 0;
+    mMinFindStringLenght = 0;
     if (xml.readNextStartElement()) {
         while (xml.readNextStartElement()) {
             qDebug() << "xml.name() "<<xml.name();
@@ -79,16 +81,63 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                 }
             } else if(xml.name() == QLatin1String("DoubleQuote")) {
                 if (loadAttribute == All) {
+                    if (xml.readNextStartElement()) {
+                        const QStringRef tagname = xml.name();
+                        if (tagname == QLatin1String("doublequote")) {
+                            mTypographicDoubleQuotes.begin = xml.attributes().value(QStringLiteral("begin")).toString().at(0);
+                            mTypographicDoubleQuotes.end = xml.attributes().value(QStringLiteral("end")).toString().at(0);
+                        } else {
+                            xml.skipCurrentElement();
+                        }
+                    }
                 } else {
                     xml.skipCurrentElement();
                 }
             } else if(xml.name() == QLatin1String("SimpleQuote")) {
                 if (loadAttribute == All) {
+                    if (xml.readNextStartElement()) {
+                        const QStringRef tagname = xml.name();
+                        if (tagname == QLatin1String("simplequote")) {
+                            mTypographicSingleQuotes.begin = xml.attributes().value(QStringLiteral("begin")).toString().at(0);
+                            mTypographicSingleQuotes.end = xml.attributes().value(QStringLiteral("end")).toString().at(0);
+                        } else {
+                            xml.skipCurrentElement();
+                        }
+                    }
                 } else {
                     xml.skipCurrentElement();
                 }
             } else if(xml.name() == QLatin1String("SuperScript")) {
                 if (loadAttribute == All || loadAttribute == SuperScript) {
+                    while (xml.readNextStartElement()) {
+                        const QStringRef tagname = xml.name();
+                        if (tagname == QLatin1String("item")) {
+                            const QString find = xml.attributes().value(QStringLiteral("find")).toString();
+                            const QString super = xml.attributes().value(QStringLiteral("super")).toString();
+                            mSuperScriptEntries.insert(find, super);
+                        } else {
+                            xml.skipCurrentElement();
+                        }
+                    }
+
+                } else {
+                    xml.skipCurrentElement();
+                }
+            } else if(xml.name() == QLatin1String("items")) {
+                if (loadAttribute == All) {
+                    while (xml.readNextStartElement()) {
+                        const QStringRef tagname = xml.name();
+                        if (tagname == QLatin1String("item")) {
+                            const QString find = xml.attributes().value(QStringLiteral("find")).toString();
+                            const QString replace = xml.attributes().value(QStringLiteral("replace")).toString();
+                            const int findLenght(find.length());
+                            mMaxFindStringLenght = qMax(findLenght, mMaxFindStringLenght);
+                            mMinFindStringLenght = qMin(findLenght, mMinFindStringLenght);
+                            mAutocorrectEntries.insert(find, replace);
+                        } else {
+                            xml.skipCurrentElement();
+                        }
+                    }
                 } else {
                     xml.skipCurrentElement();
                 }
