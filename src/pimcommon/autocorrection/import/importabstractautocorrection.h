@@ -28,11 +28,13 @@ namespace PimCommon
 {
 class ImportAbstractAutocorrection
 {
+    Q_GADGET
 public:
     enum LoadAttribute {
         All = 0,
         SuperScript
     };
+    Q_ENUM(LoadAttribute)
 
     explicit ImportAbstractAutocorrection(QWidget *parent);
     virtual ~ImportAbstractAutocorrection();
