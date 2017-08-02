@@ -5,9 +5,9 @@
  <UpperCaseExceptions/>
  <TwoUpperLetterExceptions/>
  <DoubleQuote>
-  <doublequote end="”" begin="“"/>
+  <doublequote begin="“" end="”"/>
  </DoubleQuote>
  <SimpleQuote>
-  <simplequote end="’" begin="‘"/>
+  <simplequote begin="‘" end="’"/>
  </SimpleQuote>
 </Word>
