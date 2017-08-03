@@ -47,8 +47,7 @@ class QListWidgetItem;
 // SimpleStringListEditor (a listbox with "add..." and "remove" buttons)
 //
 //
-namespace PimCommon
-{
+namespace PimCommon {
 class SimpleStringListEditorPrivate;
 class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
 {
@@ -66,12 +65,8 @@ public:
     };
 
     /** Constructor. Populates the list with @p strings. */
-    explicit SimpleStringListEditor(QWidget *parent = nullptr,
-                                    ButtonCode buttons = Unsorted,
-                                    const QString &addLabel = QString(),
-                                    const QString &removeLabel = QString(),
-                                    const QString &modifyLabel = QString(),
-                                    const QString &addDialogLabel = QString());
+    explicit SimpleStringListEditor(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(),
+                                    const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
 
     ~SimpleStringListEditor();
     /** Sets the list of strings displayed to @p strings */
@@ -119,7 +114,6 @@ private:
     QList<QListWidgetItem *> selectedItems() const;
     SimpleStringListEditorPrivate *const d;
 };
-
 }
 
 #endif // _SIMPLESTRINGLISTEDITOR_H_

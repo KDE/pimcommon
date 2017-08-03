@@ -18,7 +18,6 @@
 #include "templatemanager.h"
 #include "templatewidgets/templatelistwidget.h"
 
-
 #include <KDirWatch>
 
 #include <KConfigGroup>
@@ -33,10 +32,9 @@ class PimCommon::TemplateManagerPrivate
 {
 public:
     TemplateManagerPrivate()
-        : mTemplateListWidget(nullptr),
-          mDirWatch(nullptr)
+        : mTemplateListWidget(nullptr)
+        , mDirWatch(nullptr)
     {
-
     }
 
     QStringList mTemplatesDirectories;
@@ -45,9 +43,8 @@ public:
 };
 
 TemplateManager::TemplateManager(const QString &relativeTemplateDir, PimCommon::TemplateListWidget *templateListWidget)
-    : QObject(templateListWidget),
-      d(new PimCommon::TemplateManagerPrivate)
-
+    : QObject(templateListWidget)
+    , d(new PimCommon::TemplateManagerPrivate)
 {
     d->mTemplateListWidget = templateListWidget;
     d->mDirWatch = new KDirWatch(this);

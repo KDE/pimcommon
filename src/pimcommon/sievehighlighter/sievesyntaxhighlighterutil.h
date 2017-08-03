@@ -21,15 +21,12 @@
 #include "pimcommon_export.h"
 #include <QStringList>
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMON_EXPORT SieveSyntaxHighlighterUtil
 {
 public:
     QStringList fullCapabilities() const;
 };
-
 }
 
 #endif // SIEVESYNTAXHIGHLIGHTERUTIL_H

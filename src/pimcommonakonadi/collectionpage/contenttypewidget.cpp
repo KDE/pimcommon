@@ -33,14 +33,14 @@ public:
     ContentTypeWidgetPrivate()
         : mContentsComboBox(nullptr)
     {
-
     }
+
     KComboBox *mContentsComboBox;
 };
 
 ContentTypeWidget::ContentTypeWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new PimCommon::ContentTypeWidgetPrivate)
+    : QWidget(parent)
+    , d(new PimCommon::ContentTypeWidgetPrivate)
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
     hbox->setMargin(0);

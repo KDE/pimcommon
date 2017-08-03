@@ -22,8 +22,7 @@
 #include <QStringList>
 
 #include "pimcommon_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT MigrateFileInfo
 {
 public:

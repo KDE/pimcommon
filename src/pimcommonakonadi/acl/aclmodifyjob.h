@@ -24,8 +24,7 @@
 #include <KIMAP/Acl>
 #include <AkonadiCore/collection.h>
 class KJob;
-namespace PimCommon
-{
+namespace PimCommon {
 class ImapAclAttribute;
 class AclModifyJob : public QObject
 {

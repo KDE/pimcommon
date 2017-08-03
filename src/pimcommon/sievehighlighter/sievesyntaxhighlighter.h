@@ -25,8 +25,7 @@
 
 class QTextDocument;
 
-namespace PimCommon
-{
+namespace PimCommon {
 class SieveSyntaxHighlighterPrivate;
 class PIMCOMMON_EXPORT SieveSyntaxHighlighter : public KPIMTextEdit::SyntaxHighlighterBase
 {
@@ -41,8 +40,6 @@ private:
     void init() override;
     SieveSyntaxHighlighterPrivate *const d;
 };
-
 }
 
 #endif
-

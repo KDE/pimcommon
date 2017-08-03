@@ -20,8 +20,7 @@
 
 #include <QObject>
 #include "pimcommon_private_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class CustomToolsPlugin;
 class CustomToolsPluginManagerPrivate;
 class PIMCOMMON_TESTS_EXPORT CustomToolsPluginManager : public QObject

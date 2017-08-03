@@ -22,12 +22,10 @@
 NetworkUtilTest::NetworkUtilTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 NetworkUtilTest::~NetworkUtilTest()
 {
-
 }
 
 void NetworkUtilTest::shouldHaveDefaultValue()

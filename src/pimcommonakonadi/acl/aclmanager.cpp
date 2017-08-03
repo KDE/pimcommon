@@ -77,18 +77,16 @@ public:
         default:
             return QVariant();
         }
-
     }
 
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override {
-        if (index.row() < 0 || index.row() >= mRights.count())
-        {
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override
+    {
+        if (index.row() < 0 || index.row() >= mRights.count()) {
             return false;
         }
 
         QPair<QByteArray, KIMAP::Acl::Rights> &right = mRights[ index.row() ];
-        switch (role)
-        {
+        switch (role) {
         case UserIdRole:
             right.first = value.toByteArray();
             Q_EMIT dataChanged(index, index);
@@ -144,10 +142,10 @@ public:
     }
 
 protected:
-    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) override {
+    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) override
+    {
         beginInsertRows(parent, row, row + count - 1);
-        for (int i = 0; i < count; ++i)
-        {
+        for (int i = 0; i < count; ++i) {
             mRights.insert(row, qMakePair(QByteArray(), KIMAP::Acl::Rights()));
         }
         endInsertRows();
@@ -155,10 +153,10 @@ protected:
         return true;
     }
 
-    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override {
+    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override
+    {
         beginRemoveRows(parent, row, row + count - 1);
-        for (int i = 0; i < count; ++i)
-        {
+        for (int i = 0; i < count; ++i) {
             mRights.remove(row, count);
         }
         endRemoveRows();
@@ -174,8 +172,8 @@ class Q_DECL_HIDDEN PimCommon::AclManager::Private
 {
 public:
     Private(AclManager *qq)
-        : q(qq),
-          mChanged(false)
+        : q(qq)
+        , mChanged(false)
     {
         mAddAction = new QAction(i18n("Add Entry..."), q);
         q->connect(mAddAction, SIGNAL(triggered(bool)),
@@ -212,8 +210,8 @@ public:
         if (canAdmin && itemSelected) {
             const QModelIndex index = mSelectionModel->selectedIndexes().first();
             const QString userId = index.data(AclModel::UserIdRole).toString();
-            const KIMAP::Acl::Rights rights =
-                static_cast<KIMAP::Acl::Rights>(index.data(AclModel::PermissionsRole).toInt());
+            const KIMAP::Acl::Rights rights
+                = static_cast<KIMAP::Acl::Rights>(index.data(AclModel::PermissionsRole).toInt());
 
             // Don't allow users to remove their own admin permissions - there's no way back
             if (mImapUserName == userId && (rights & KIMAP::Acl::Admin)) {
@@ -249,8 +247,8 @@ public:
         if (mEditAction->isEnabled()) {
             const QModelIndex index = mSelectionModel->selectedIndexes().first();
             const QString userId = index.data(AclModel::UserIdRole).toString();
-            const KIMAP::Acl::Rights permissions =
-                static_cast<KIMAP::Acl::Rights>(index.data(AclModel::PermissionsRole).toInt());
+            const KIMAP::Acl::Rights permissions
+                = static_cast<KIMAP::Acl::Rights>(index.data(AclModel::PermissionsRole).toInt());
 
             AclEntryDialog dlg;
             dlg.setWindowTitle(i18n("Edit ACL"));
@@ -274,17 +272,17 @@ public:
 
         if (mImapUserName == userId) {
             if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-                        nullptr,
-                        i18n("Do you really want to remove your own permissions for this folder? "
-                             "You will not be able to access it afterwards."),
-                        i18n("Remove"))) {
+                    nullptr,
+                    i18n("Do you really want to remove your own permissions for this folder? "
+                         "You will not be able to access it afterwards."),
+                    i18n("Remove"))) {
                 return;
             }
         } else {
             if (KMessageBox::Cancel == KMessageBox::warningContinueCancel(
-                        nullptr,
-                        i18n("Do you really want to remove these permissions for this folder?"),
-                        i18n("Remove"))) {
+                    nullptr,
+                    i18n("Do you really want to remove these permissions for this folder?"),
+                    i18n("Remove"))) {
                 return;
             }
         }
@@ -298,8 +296,8 @@ public:
         mCollection = collection;
         mChanged = false;
 
-        const PimCommon::ImapAclAttribute *attribute =
-            collection.attribute<PimCommon::ImapAclAttribute>();
+        const PimCommon::ImapAclAttribute *attribute
+            = collection.attribute<PimCommon::ImapAclAttribute>();
         const QMap<QByteArray, KIMAP::Acl::Rights> rights = attribute->rights();
 
         QString resource = collection.resource();
@@ -316,8 +314,8 @@ public:
                 }
             }
         }
-        OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface =
-            PimCommon::Util::createImapSettingsInterface(resource);
+        OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface
+            = PimCommon::Util::createImapSettingsInterface(resource);
 
         QString loginName;
         QString serverName;
@@ -364,7 +362,8 @@ public:
 };
 
 AclManager::AclManager(QObject *parent)
-    : QObject(parent), d(new Private(this))
+    : QObject(parent)
+    , d(new Private(this))
 {
 }
 
@@ -417,8 +416,8 @@ void AclManager::save(bool recursive)
     }
 
     // refresh the collection, it might be outdated in the meantime
-    Akonadi::CollectionFetchJob *job =
-        new Akonadi::CollectionFetchJob(d->mCollection, Akonadi::CollectionFetchJob::Base);
+    Akonadi::CollectionFetchJob *job
+        = new Akonadi::CollectionFetchJob(d->mCollection, Akonadi::CollectionFetchJob::Base);
     if (!job->exec()) {
         qCDebug(PIMCOMMONAKONADI_LOG) << " collection Fetch error" << job->errorString();
         return;
@@ -439,7 +438,6 @@ void AclManager::save(bool recursive)
     QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = rights.cbegin();
     const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = rights.cend();
     for (; it != itEnd; ++it) {
-
         // we can use job->exec() here, it is not a hot path
         Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);
         searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(it.key()));
@@ -449,13 +447,13 @@ void AclManager::save(bool recursive)
         }
 
         if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
-            Akonadi::ContactGroupExpandJob *expandJob =
-                new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
+            Akonadi::ContactGroupExpandJob *expandJob
+                = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
             if (expandJob->exec()) {
                 const KContacts::Addressee::List lstContacts = expandJob->contacts();
                 for (const KContacts::Addressee &contact : lstContacts) {
-                    const QByteArray rawEmail =
-                        KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
+                    const QByteArray rawEmail
+                        = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
                     if (!rawEmail.isEmpty()) {
                         newRights[ rawEmail ] = it.value();
                     }

@@ -44,14 +44,14 @@ public:
     CollectionAclPagePrivate()
         : mCollectionAclWidget(nullptr)
     {
-
     }
+
     CollectionAclWidget *mCollectionAclWidget;
 };
 
 CollectionAclPage::CollectionAclPage(QWidget *parent)
-    : CollectionPropertiesPage(parent),
-      d(new PimCommon::CollectionAclPagePrivate)
+    : CollectionPropertiesPage(parent)
+    , d(new PimCommon::CollectionAclPagePrivate)
 {
     setObjectName(QStringLiteral("PimCommon::CollectionAclPage"));
 
@@ -91,4 +91,3 @@ void CollectionAclPage::save(Akonadi::Collection &collection)
     PimCommon::ImapAclAttribute *attribute = d->mCollectionAclWidget->aclManager()->collection().attribute<PimCommon::ImapAclAttribute>();
     collection.addAttribute(attribute->clone());
 }
-

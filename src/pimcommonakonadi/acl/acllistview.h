@@ -20,8 +20,7 @@
 
 #include <QListView>
 #include "pimcommonakonadi_private_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMONAKONADI_TESTS_EXPORT AclListView : public QListView
 {
     Q_OBJECT

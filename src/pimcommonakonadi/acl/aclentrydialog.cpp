@@ -41,11 +41,11 @@ class AclEntryDialog::Private
 {
 public:
     Private(AclEntryDialog *qq)
-        : q(qq),
-          mButtonGroup(nullptr),
-          mUserIdLineEdit(nullptr),
-          mButtonLayout(nullptr),
-          mOkButton(nullptr)
+        : q(qq)
+        , mButtonGroup(nullptr)
+        , mUserIdLineEdit(nullptr)
+        , mButtonLayout(nullptr)
+        , mOkButton(nullptr)
     {
     }
 
@@ -73,15 +73,16 @@ void AclEntryDialog::Private::slotSelectAddresses()
         return;
     }
 
-    const QString text = !dlg.selectedAddresses().isEmpty() ?
-                         dlg.selectedAddresses().at(0).quotedEmail() :
-                         QString();
+    const QString text = !dlg.selectedAddresses().isEmpty()
+                         ? dlg.selectedAddresses().at(0).quotedEmail()
+                         : QString();
 
     mUserIdLineEdit->setText(text);
 }
 
 AclEntryDialog::AclEntryDialog(QWidget *parent)
-    : QDialog(parent), d(new Private(this))
+    : QDialog(parent)
+    , d(new Private(this))
 {
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QVBoxLayout *mainLayout = new QVBoxLayout;
@@ -122,8 +123,8 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     for (unsigned int i = 0; i < AclUtils::standardPermissionsCount(); ++i) {
         const KIMAP::Acl::Rights permissions = AclUtils::permissionsForIndex(i);
 
-        QRadioButton *radioButton =
-            new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
+        QRadioButton *radioButton
+            = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
     }
@@ -131,8 +132,8 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     d->mButtonLayout->addStretch(1);
     layout->addWidget(groupBox, 1, 0, 1, 3);
 
-    label =
-        new QLabel(
+    label
+        = new QLabel(
         i18n("<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
     layout->addWidget(label, 2, 0, 1, 3);
     layout->setRowStretch(2, 10);
@@ -144,7 +145,6 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     d->mOkButton->setEnabled(false);
 
     d->mUserIdLineEdit->setFocus();
-
 }
 
 AclEntryDialog::~AclEntryDialog()
@@ -171,8 +171,8 @@ void AclEntryDialog::setPermissions(KIMAP::Acl::Rights permissions)
     if (button) {
         button->setChecked(true);
     } else {
-        QRadioButton *radioButton =
-            new QRadioButton(AclUtils::permissionsToUserString(permissions));
+        QRadioButton *radioButton
+            = new QRadioButton(AclUtils::permissionsToUserString(permissions));
 
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
@@ -190,7 +190,7 @@ KIMAP::Acl::Rights AclEntryDialog::permissions() const
     }
 
     return KIMAP::Acl::denormalizedRights(
-               static_cast<KIMAP::Acl::Rights>(d->mButtonGroup->id(button)));
+        static_cast<KIMAP::Acl::Rights>(d->mButtonGroup->id(button)));
 }
 
 #include "moc_aclentrydialog_p.cpp"

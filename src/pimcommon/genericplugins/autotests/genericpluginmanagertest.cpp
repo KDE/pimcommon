@@ -22,12 +22,10 @@
 GenericPluginManagerTest::GenericPluginManagerTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GenericPluginManagerTest::~GenericPluginManagerTest()
 {
-
 }
 
 void GenericPluginManagerTest::shouldHaveDefaultValue()

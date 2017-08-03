@@ -22,12 +22,10 @@ using namespace PimCommon;
 MigrateFileInfoTest::MigrateFileInfoTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MigrateFileInfoTest::~MigrateFileInfoTest()
 {
-
 }
 
 void MigrateFileInfoTest::shouldHaveDefaultValue()

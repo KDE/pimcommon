@@ -36,7 +36,6 @@ ImapResourceCapabilitiesManager::ImapResourceCapabilitiesManager(QObject *parent
 
 ImapResourceCapabilitiesManager::~ImapResourceCapabilitiesManager()
 {
-
 }
 
 void ImapResourceCapabilitiesManager::slotInstanceAdded(const Akonadi::AgentInstance &instance)
@@ -53,11 +52,11 @@ void ImapResourceCapabilitiesManager::searchCapabilities(const QString &identifi
 {
     //By default makes it as true.
     mImapResource.insert(identifier, true);
-    const QString service =
-        Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, identifier);
+    const QString service
+        = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, identifier);
     QDBusInterface iface(service,
-        QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
-        KDBusConnectionPool::threadConnection(), this);
+                         QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
+                         KDBusConnectionPool::threadConnection(), this);
 
     if (iface.isValid()) {
         QDBusPendingCall call = iface.asyncCall(QStringLiteral("serverCapabilities"));

@@ -48,15 +48,15 @@ class Q_DECL_HIDDEN PimCommon::RenameFileDialog::RenameFileDialogPrivate
 {
 public:
     RenameFileDialogPrivate(const QUrl &_url, RenameFileDialog *qq)
-        : url(_url),
-          applyAll(nullptr),
-          rename(nullptr),
-          suggestNewName(nullptr),
-          nameEdit(nullptr),
-          q(qq)
+        : url(_url)
+        , applyAll(nullptr)
+        , rename(nullptr)
+        , suggestNewName(nullptr)
+        , nameEdit(nullptr)
+        , q(qq)
     {
-
     }
+
     QString suggestName(const QUrl &baseURL, const QString &oldName);
 
     QUrl url;
@@ -65,7 +65,6 @@ public:
     QPushButton *suggestNewName;
     QLineEdit *nameEdit;
     RenameFileDialog *q;
-
 };
 
 QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const QUrl &baseURL, const QString &oldName)
@@ -118,12 +117,11 @@ QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const 
     } else { // already exists -> recurse
         return suggestName(baseURL, suggestedName);
     }
-
 }
 
 RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *parent)
-    : QDialog(parent),
-      d(new RenameFileDialogPrivate(url, this))
+    : QDialog(parent)
+    , d(new RenameFileDialogPrivate(url, this))
 {
     setWindowTitle(i18n("File Already Exists"));
     QVBoxLayout *pLayout = new QVBoxLayout(this);
@@ -241,4 +239,3 @@ QUrl RenameFileDialog::newName() const
 
     return newDest;
 }
-

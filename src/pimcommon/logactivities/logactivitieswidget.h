@@ -21,12 +21,10 @@
 #include <QWidget>
 #include "pimcommon_private_export.h"
 class QPlainTextEdit;
-namespace KPIMTextEdit
-{
+namespace KPIMTextEdit {
 class PlainTextEditorWidget;
 }
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_TESTS_EXPORT LogActivitiesWidget : public QWidget
 {
     Q_OBJECT

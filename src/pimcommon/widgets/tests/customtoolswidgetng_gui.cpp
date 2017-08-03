@@ -50,7 +50,6 @@ CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
 
 CustomToolWidgetNgTest::~CustomToolWidgetNgTest()
 {
-
 }
 
 int main(int argc, char **argv)
@@ -74,4 +73,3 @@ int main(int argc, char **argv)
     delete w;
     return ret;
 }
-

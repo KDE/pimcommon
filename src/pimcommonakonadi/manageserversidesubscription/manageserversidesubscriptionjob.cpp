@@ -37,7 +37,6 @@ public:
     ManageServerSideSubscriptionJobPrivate()
         : mParentWidget(nullptr)
     {
-
     }
 
     Akonadi::Collection mCurrentCollection;
@@ -45,10 +44,9 @@ public:
 };
 
 ManageServerSideSubscriptionJob::ManageServerSideSubscriptionJob(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::ManageServerSideSubscriptionJobPrivate)
+    : QObject(parent)
+    , d(new PimCommon::ManageServerSideSubscriptionJobPrivate)
 {
-
 }
 
 ManageServerSideSubscriptionJob::~ManageServerSideSubscriptionJob()
@@ -65,12 +63,12 @@ void ManageServerSideSubscriptionJob::start()
     }
     bool isImapOnline = false;
     if (PimCommon::MailUtil::isImapFolder(d->mCurrentCollection, isImapOnline)) {
-        const QString service =
-            Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
-                                                     d->mCurrentCollection.resource());
+        const QString service
+            = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
+                                                       d->mCurrentCollection.resource());
         QDBusInterface iface(service,
-            QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
-            KDBusConnectionPool::threadConnection(), this);
+                             QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
+                             KDBusConnectionPool::threadConnection(), this);
         if (!iface.isValid()) {
             qCDebug(PIMCOMMONAKONADI_LOG) << "Cannot create imap dbus interface for service " << service;
             deleteLater();

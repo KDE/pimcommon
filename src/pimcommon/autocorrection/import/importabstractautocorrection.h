@@ -24,8 +24,7 @@
 
 #include "autocorrection/autocorrection.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class ImportAbstractAutocorrection
 {
     Q_GADGET

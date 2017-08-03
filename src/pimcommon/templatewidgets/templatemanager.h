@@ -22,16 +22,16 @@
 #include <QObject>
 #include "pimcommon_debug.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class TemplateListWidget;
 struct TemplateInfo {
     QString name;
     QString script;
     bool isValid() const
     {
-        return (!name.isEmpty() && !script.isEmpty());
+        return !name.isEmpty() && !script.isEmpty();
     }
+
     void debug() const
     {
         qCDebug(PIMCOMMON_LOG) << " name :" << name << " script :" << script;

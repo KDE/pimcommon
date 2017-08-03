@@ -22,8 +22,7 @@
 #include "pimcommon_private_export.h"
 class QPushButton;
 class QCheckBox;
-namespace PimCommon
-{
+namespace PimCommon {
 class LogActivitiesWidget;
 class PIMCOMMON_TESTS_EXPORT LogActivitiesDialog : public QDialog
 {

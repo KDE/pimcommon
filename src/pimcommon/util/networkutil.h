@@ -18,8 +18,7 @@
 #ifndef NETWORKUTIL_H
 #define NETWORKUTIL_H
 #include "pimcommon_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT NetworkUtil
 {
 public:

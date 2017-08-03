@@ -23,12 +23,10 @@
 
 #include "pimcommonakonadi_export.h"
 class QDBusPendingCallWatcher;
-namespace Akonadi
-{
+namespace Akonadi {
 class AgentInstance;
 }
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMONAKONADI_EXPORT ImapResourceCapabilitiesManager : public QObject
 {
     Q_OBJECT

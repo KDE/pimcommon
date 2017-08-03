@@ -24,13 +24,11 @@
 
 class QTreeWidgetItem;
 
-namespace Ui
-{
+namespace Ui {
 class AutoCorrectionWidget;
 }
 
-namespace PimCommon
-{
+namespace PimCommon {
 class AutoCorrectionWidgetPrivate;
 class PIMCOMMON_EXPORT AutoCorrectionWidget : public QWidget
 {
@@ -97,7 +95,6 @@ private:
 
     AutoCorrectionWidgetPrivate *const d;
 };
-
 }
 
 #endif // AutoCorrectionWidget_H

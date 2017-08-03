@@ -22,15 +22,13 @@
 using namespace PimCommon;
 
 AclListView::AclListView(QWidget *parent)
-    : QListView(parent),
-      mCanBeAdministrated(true)
+    : QListView(parent)
+    , mCanBeAdministrated(true)
 {
-
 }
 
 AclListView::~AclListView()
 {
-
 }
 
 void AclListView::slotCollectionCanBeAdministrated(bool b)
@@ -68,4 +66,3 @@ void AclListView::paintEvent(QPaintEvent *event)
         QListView::paintEvent(event);
     }
 }
-

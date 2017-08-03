@@ -29,11 +29,11 @@ class PimCommon::LogActivitiesManagerPrivate
 {
 public:
     LogActivitiesManagerPrivate()
-        : mDialog{nullptr},
-          mEnableLogActivities{false}
+        : mDialog{nullptr}
+        , mEnableLogActivities{false}
     {
-
     }
+
     ~LogActivitiesManagerPrivate()
     {
         delete mDialog;
@@ -45,10 +45,9 @@ public:
 };
 
 LogActivitiesManager::LogActivitiesManager(QObject *parent)
-    : QObject(parent),
-      d(new LogActivitiesManagerPrivate)
+    : QObject(parent)
+    , d(new LogActivitiesManagerPrivate)
 {
-
 }
 
 LogActivitiesManager::~LogActivitiesManager()
@@ -86,7 +85,6 @@ void LogActivitiesManager::showLogActivitiesDialog()
     if (!d->mDialog) {
         d->mDialog = new PimCommon::LogActivitiesDialog();
         connect(d->mDialog, &LogActivitiesDialog::logCleared, this, &LogActivitiesManager::clear);
-
     }
     d->mDialog->setLog(log());
     d->mDialog->show();

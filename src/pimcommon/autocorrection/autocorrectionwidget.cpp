@@ -41,12 +41,12 @@ class PimCommon::AutoCorrectionWidgetPrivate
 {
 public:
     AutoCorrectionWidgetPrivate()
-        : ui(new Ui::AutoCorrectionWidget),
-          mAutoCorrection(nullptr),
-          mWasChanged(false)
+        : ui(new Ui::AutoCorrectionWidget)
+        , mAutoCorrection(nullptr)
+        , mWasChanged(false)
     {
-
     }
+
     ~AutoCorrectionWidgetPrivate()
     {
         delete ui;
@@ -62,9 +62,9 @@ public:
     bool mWasChanged;
 };
 
-AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent) :
-    QWidget(parent),
-    d(new PimCommon::AutoCorrectionWidgetPrivate)
+AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
+    : QWidget(parent)
+    , d(new PimCommon::AutoCorrectionWidgetPrivate)
 {
     d->ui->setupUi(this);
 
@@ -195,7 +195,6 @@ void AutoCorrectionWidget::loadAutoCorrectionAndException()
 
     d->ui->abbreviationList->clear();
     d->ui->abbreviationList->addItems(d->m_upperCaseExceptions.toList());
-
 }
 
 void AutoCorrectionWidget::addAutoCorrectEntries()
@@ -457,7 +456,6 @@ void AutoCorrectionWidget::enableAddRemoveButton()
         d->ui->addButton->setEnabled(enable);
     }
     d->ui->removeButton->setEnabled(enable);
-
 }
 
 void AutoCorrectionWidget::setFindReplaceText(QTreeWidgetItem *item, int column)
@@ -519,7 +517,6 @@ void AutoCorrectionWidget::addTwoUpperLetterEntry()
     }
     slotEnableDisableTwoUpperEntry();
     d->ui->twoUpperLetter->clear();
-
 }
 
 void AutoCorrectionWidget::removeTwoUpperLetterEntry()
@@ -566,7 +563,7 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
             filter = i18n("KMail Autocorrection File (*.xml)");
             break;
         }
-        const QString fileName = QFileDialog::getOpenFileName(this, title,  QString(), filter);
+        const QString fileName = QFileDialog::getOpenFileName(this, title, QString(), filter);
         if (!fileName.isEmpty()) {
             PimCommon::ImportAbstractAutocorrection *importAutoCorrection = nullptr;
             switch (type) {
@@ -646,4 +643,3 @@ void AutoCorrectionWidget::slotExportAutoCorrection()
     }
     d->mAutoCorrection->writeAutoCorrectionXmlFile(saveUrl);
 }
-

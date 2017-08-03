@@ -25,15 +25,14 @@ class PimCommon::SieveSyntaxHighlighterPrivate
 public:
     SieveSyntaxHighlighterPrivate()
     {
-
     }
 
     SieveSyntaxHighlighterRules mRules;
 };
 
 SieveSyntaxHighlighter::SieveSyntaxHighlighter(QTextDocument *doc)
-    : SyntaxHighlighterBase(doc),
-      d(new PimCommon::SieveSyntaxHighlighterPrivate)
+    : SyntaxHighlighterBase(doc)
+    , d(new PimCommon::SieveSyntaxHighlighterPrivate)
 {
     init();
 }
@@ -53,4 +52,3 @@ void SieveSyntaxHighlighter::init()
 {
     m_rules = d->mRules.rules();
 }
-

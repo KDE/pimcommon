@@ -54,4 +54,3 @@ void PimCommonSettings::slotSyncNow()
 PimCommonSettings::~PimCommonSettings()
 {
 }
-

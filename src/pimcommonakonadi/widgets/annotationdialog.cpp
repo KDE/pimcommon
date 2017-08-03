@@ -45,9 +45,9 @@ class Q_DECL_HIDDEN AnnotationEditDialog::Private
 {
 public:
     Private()
-        : mTextEdit(nullptr),
-          mNoteType(nullptr),
-          mHasAnnotation(false)
+        : mTextEdit(nullptr)
+        , mNoteType(nullptr)
+        , mHasAnnotation(false)
     {
     }
 
@@ -58,7 +58,8 @@ public:
 };
 
 AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *parent)
-    : QDialog(parent), d(new Private)
+    : QDialog(parent)
+    , d(new Private)
 {
     d->mItem = item;
     //check for correct key?
@@ -143,9 +144,9 @@ void AnnotationEditDialog::slotAccepted()
 void AnnotationEditDialog::slotDeleteNote()
 {
     const int answer = KMessageBox::warningContinueCancel(this,
-                       i18n("Do you really want to delete this note?"),
-                       i18nc("@title:window", "Delete Note?"),
-                       KStandardGuiItem::del());
+                                                          i18n("Do you really want to delete this note?"),
+                                                          i18nc("@title:window", "Delete Note?"),
+                                                          KStandardGuiItem::del());
     if (answer == KMessageBox::Continue) {
         d->mItem.removeAttribute<Akonadi::EntityAnnotationsAttribute>();
         new Akonadi::ItemModifyJob(d->mItem);
@@ -169,4 +170,3 @@ void AnnotationEditDialog::writeConfig()
     KConfigGroup group(cfg, "AnnotationEditDialog");
     group.writeEntry("Size", size());
 }
-

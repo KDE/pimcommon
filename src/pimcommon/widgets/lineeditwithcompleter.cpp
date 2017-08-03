@@ -25,12 +25,10 @@ using namespace PimCommon;
 LineEditWithCompleter::LineEditWithCompleter(QWidget *parent)
     : KLineEdit(parent)
 {
-
 }
 
 LineEditWithCompleter::~LineEditWithCompleter()
 {
-
 }
 
 void LineEditWithCompleter::contextMenuEvent(QContextMenuEvent *e)

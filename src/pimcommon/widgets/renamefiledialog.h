@@ -34,8 +34,7 @@
 
 #include "pimcommon_export.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class RenameFileDialogPrivate;
 class PIMCOMMON_EXPORT RenameFileDialog : public QDialog
 {
@@ -69,4 +68,3 @@ private:
 }
 
 #endif /* RENAMEFILEDIALOG_H */
-

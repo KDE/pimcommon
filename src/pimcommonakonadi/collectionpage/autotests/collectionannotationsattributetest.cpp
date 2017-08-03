@@ -21,12 +21,10 @@
 CollectionAnnotationsAttributeTest::CollectionAnnotationsAttributeTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CollectionAnnotationsAttributeTest::~CollectionAnnotationsAttributeTest()
 {
-
 }
 
 void CollectionAnnotationsAttributeTest::shouldHaveDefaultValue()

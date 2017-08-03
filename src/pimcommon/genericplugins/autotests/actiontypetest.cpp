@@ -23,12 +23,10 @@
 ActionTypeTest::ActionTypeTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ActionTypeTest::~ActionTypeTest()
 {
-
 }
 
 void ActionTypeTest::shouldHaveDefaultValue()

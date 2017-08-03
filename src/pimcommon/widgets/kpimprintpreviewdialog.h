@@ -21,8 +21,7 @@
 #include <QPrintPreviewDialog>
 #include "pimcommon_export.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT KPimPrintPreviewDialog : public QPrintPreviewDialog
 {
 public:

@@ -58,7 +58,7 @@ OrgKdeAkonadiImapSettingsInterface *PimCommon::Util::createImapSettingsInterface
     if (isImapResource(ident)) {
         return
             new OrgKdeAkonadiImapSettingsInterface(
-                QLatin1String("org.freedesktop.Akonadi.Resource.") + ident, QStringLiteral("/Settings"), QDBusConnection::sessionBus());
+            QLatin1String("org.freedesktop.Akonadi.Resource.") + ident, QStringLiteral("/Settings"), QDBusConnection::sessionBus());
     } else {
         return nullptr;
     }
@@ -127,9 +127,9 @@ QString PimCommon::Util::loadToFile(const QString &filter, QWidget *parent, cons
 
 bool PimCommon::Util::isImapResource(const QString &identifier)
 {
-    return (identifier.startsWith(KOLAB_RESOURCE_IDENTIFIER) ||
-            identifier.startsWith(IMAP_RESOURCE_IDENTIFIER) ||
-            identifier.startsWith(GMAIL_RESOURCE_IDENTIFIER));
+    return identifier.startsWith(KOLAB_RESOURCE_IDENTIFIER)
+           || identifier.startsWith(IMAP_RESOURCE_IDENTIFIER)
+           || identifier.startsWith(GMAIL_RESOURCE_IDENTIFIER);
 }
 
 void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
@@ -150,7 +150,9 @@ void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
 QStringList PimCommon::Util::generateEmailList(const QStringList &list)
 {
     QString str;
-    const int numberOfElement{list.count()};
+    const int numberOfElement{
+        list.count()
+    };
     for (int i = 0; i < numberOfElement; i++) {
         QString tmpStr = list.at(i);
         if (!tmpStr.trimmed().isEmpty()) {

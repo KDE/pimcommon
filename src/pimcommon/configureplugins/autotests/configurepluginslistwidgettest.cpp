@@ -24,12 +24,10 @@
 ConfigurePluginsListWidgetTest::ConfigurePluginsListWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ConfigurePluginsListWidgetTest::~ConfigurePluginsListWidgetTest()
 {
-
 }
 
 void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()

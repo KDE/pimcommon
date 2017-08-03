@@ -28,7 +28,9 @@
 using namespace PimCommon;
 
 ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection(QWidget *parent)
-    : ImportAbstractAutocorrection(parent), mArchive(nullptr), mTempDir(nullptr)
+    : ImportAbstractAutocorrection(parent)
+    , mArchive(nullptr)
+    , mTempDir(nullptr)
 {
 }
 
@@ -132,7 +134,6 @@ bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirect
                                 mUpperCaseExceptions.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")));
                             }
                             break;
-
                         }
                     } else {
                         qCDebug(PIMCOMMON_LOG) << " unknown tag " << tag;

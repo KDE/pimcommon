@@ -32,16 +32,17 @@
 #include <QDropEvent>
 #include <QFileDialog>
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class TemplateListWidgetPrivate
 {
 public:
     TemplateListWidgetPrivate(const QString &configName, TemplateListWidget *qq)
-        : dirty(false), config(KSharedConfig::openConfig(configName, KConfig::NoGlobals)), q(qq)
+        : dirty(false)
+        , config(KSharedConfig::openConfig(configName, KConfig::NoGlobals))
+        , q(qq)
     {
     }
+
     ~TemplateListWidgetPrivate()
     {
         save();
@@ -264,6 +265,7 @@ public:
         saveTemplates(config.data());
         dirty = false;
     }
+
     QString knewstuffConfigName;
     bool dirty;
     KSharedConfig::Ptr config;
@@ -271,7 +273,8 @@ public:
 };
 
 TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *parent)
-    : QListWidget(parent), d(new TemplateListWidgetPrivate(configName, this))
+    : QListWidget(parent)
+    , d(new TemplateListWidgetPrivate(configName, this))
 {
     setContextMenuPolicy(Qt::CustomContextMenu);
     setDragDropMode(QAbstractItemView::DragDrop);
@@ -299,7 +302,9 @@ QVector<defaultTemplate> TemplateListWidget::defaultTemplates()
 
 QStringList TemplateListWidget::mimeTypes() const
 {
-    const QStringList lst{QStringLiteral("text/plain")};
+    const QStringList lst{
+        QStringLiteral("text/plain")
+    };
     return lst;
 }
 
@@ -367,6 +372,5 @@ void TemplateListWidget::addDefaultTemplate(const QString &templateName, const Q
 {
     d->createListWidgetItem(templateName, templateScript, true);
 }
-
 }
 #include "moc_templatelistwidget.cpp"

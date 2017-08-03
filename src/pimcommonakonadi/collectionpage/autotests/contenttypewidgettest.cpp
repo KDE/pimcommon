@@ -27,12 +27,10 @@
 ContentTypeWidgetTest::ContentTypeWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ContentTypeWidgetTest::~ContentTypeWidgetTest()
 {
-
 }
 
 void ContentTypeWidgetTest::shouldHaveDefaultValue()
@@ -78,7 +76,6 @@ void ContentTypeWidgetTest::shouldChangeItem()
         contentType.setCurrentIndex(i);
         QCOMPARE(contentType.currentText(), combo->currentText());
     }
-
 }
 
 QTEST_MAIN(ContentTypeWidgetTest)

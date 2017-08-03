@@ -23,9 +23,7 @@
 
 class QTimer;
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMON_EXPORT PimCommonSettings : public PimCommon::PimCommonSettingsBase
 {
     Q_OBJECT
@@ -48,9 +46,7 @@ private:
     static PimCommonSettings *mSelf;
 
     QTimer *mConfigSyncTimer;
-
 };
-
 }
 
 #endif /* PIMCOMMON_SETTINGS_H */

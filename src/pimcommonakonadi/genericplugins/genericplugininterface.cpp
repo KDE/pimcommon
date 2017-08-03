@@ -24,16 +24,15 @@ class PimCommon::GenericPluginInterfacePrivate
 public:
     GenericPluginInterfacePrivate()
     {
-
     }
+
     ActionType actionType;
 };
 
 GenericPluginInterface::GenericPluginInterface(QObject *parent)
-    : AbstractGenericPluginInterface(parent),
-      d(new GenericPluginInterfacePrivate)
+    : AbstractGenericPluginInterface(parent)
+    , d(new GenericPluginInterfacePrivate)
 {
-
 }
 
 GenericPluginInterface::~GenericPluginInterface()
@@ -83,8 +82,8 @@ PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires
 }
 
 ActionType::ActionType(QAction *action, ActionType::Type type)
-    : mAction(action),
-      mType(type)
+    : mAction(action)
+    , mType(type)
 {
 }
 

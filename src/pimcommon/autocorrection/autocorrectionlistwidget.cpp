@@ -28,7 +28,6 @@ AutoCorrectionListWidget::AutoCorrectionListWidget(QWidget *parent)
 
 AutoCorrectionListWidget::~AutoCorrectionListWidget()
 {
-
 }
 
 void AutoCorrectionListWidget::keyPressEvent(QKeyEvent *event)
@@ -38,4 +37,3 @@ void AutoCorrectionListWidget::keyPressEvent(QKeyEvent *event)
     }
     QListWidget::keyPressEvent(event);
 }
-

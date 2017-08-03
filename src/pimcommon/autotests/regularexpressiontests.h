@@ -59,7 +59,6 @@ private Q_SLOTS:
 
     void shouldCaptureValue_data();
     void shouldCaptureValue();
-
 };
 
 #endif // REGULAREXPRESSIONTESTS_H

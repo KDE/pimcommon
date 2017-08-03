@@ -53,35 +53,29 @@ class PimCommon::SimpleStringListEditorPrivate
 {
 public:
     SimpleStringListEditorPrivate()
-        : mListBox(nullptr),
-          mAddButton(nullptr),
-          mRemoveButton(nullptr),
-          mModifyButton(nullptr),
-          mUpButton(nullptr),
-          mDownButton(nullptr),
-          mButtonLayout(nullptr)
+        : mListBox(nullptr)
+        , mAddButton(nullptr)
+        , mRemoveButton(nullptr)
+        , mModifyButton(nullptr)
+        , mUpButton(nullptr)
+        , mDownButton(nullptr)
+        , mButtonLayout(nullptr)
     {
-
     }
 
-    QListWidget   *mListBox;
-    QPushButton   *mAddButton;
-    QPushButton   *mRemoveButton;
-    QPushButton   *mModifyButton;
-    QPushButton   *mUpButton;
-    QPushButton   *mDownButton;
-    QVBoxLayout   *mButtonLayout;
+    QListWidget *mListBox;
+    QPushButton *mAddButton;
+    QPushButton *mRemoveButton;
+    QPushButton *mModifyButton;
+    QPushButton *mUpButton;
+    QPushButton *mDownButton;
+    QVBoxLayout *mButtonLayout;
     QString mAddDialogLabel;
 };
 
-SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
-        ButtonCode buttons,
-        const QString &addLabel,
-        const QString &removeLabel,
-        const QString &modifyLabel,
-        const QString &addDialogLabel)
-    : QWidget(parent),
-      d(new SimpleStringListEditorPrivate)
+SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel, const QString &addDialogLabel)
+    : QWidget(parent)
+    , d(new SimpleStringListEditorPrivate)
 {
     setAddDialogLabel(addDialogLabel);
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
@@ -98,7 +92,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
 
     if (buttons == None) {
         qCDebug(PIMCOMMON_LOG) << "SimpleStringListBox called with no buttons."
-                               "Consider using a plain QListBox instead!";
+                                  "Consider using a plain QListBox instead!";
     }
 
     d->mButtonLayout = new QVBoxLayout(); // inherits spacing
@@ -143,7 +137,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
     if (buttons & Up) {
         if (!(buttons & Down)) {
             qCDebug(PIMCOMMON_LOG) << "Are you sure you want to use an Up button"
-                                   "without a Down button??";
+                                      "without a Down button??";
         }
         d->mUpButton = new QPushButton(QString(), this);
         d->mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
@@ -157,7 +151,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
     if (buttons & Down) {
         if (!(buttons & Up)) {
             qCDebug(PIMCOMMON_LOG) << "Are you sure you want to use a Down button"
-                                   "without an Up button??";
+                                      "without an Up button??";
         }
         d->mDownButton = new QPushButton(QString(), this);
         d->mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
@@ -246,7 +240,7 @@ void SimpleStringListEditor::setButtonText(ButtonCode button, const QString &tex
     case Up:
     case Down:
         qCDebug(PIMCOMMON_LOG) << "SimpleStringListEditor: Cannot change text of"
-                               "Up and Down buttons: they don't contains text!";
+                                  "Up and Down buttons: they don't contains text!";
         return;
     default:
         if (button & All) {
@@ -264,8 +258,8 @@ void SimpleStringListEditor::addNewEntry()
 {
     bool ok = false;
     const QString newEntry = QInputDialog::getText(this, i18n("New Value"),
-                             d->mAddDialogLabel, QLineEdit::Normal, QString(),
-                             &ok);
+                                                   d->mAddDialogLabel, QLineEdit::Normal, QString(),
+                                                   &ok);
     if (ok && !newEntry.trimmed().isEmpty()) {
         insertNewEntry(newEntry);
     }
@@ -411,7 +405,6 @@ void SimpleStringListEditor::slotDown()
 
 void SimpleStringListEditor::slotSelectionChanged()
 {
-
     QList<QListWidgetItem *> lstSelectedItems = d->mListBox->selectedItems();
     const int numberOfItemSelected(lstSelectedItems.count());
     const bool uniqItemSelected = (numberOfItemSelected == 1);
@@ -433,13 +426,13 @@ void SimpleStringListEditor::slotSelectionChanged()
     const bool theFirst = (currentIndex == 0);
 
     if (d->mUpButton) {
-        d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst) ||
-                                 (!uniqItemSelected)) && !allItemSelected);
+        d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst)
+                                                     || (!uniqItemSelected)) && !allItemSelected);
     }
     if (d->mDownButton) {
-        d->mDownButton->setEnabled(aItemIsSelected &&
-                                   ((uniqItemSelected && !theLast) ||
-                                    (!uniqItemSelected)) && !allItemSelected);
+        d->mDownButton->setEnabled(aItemIsSelected
+                                   && ((uniqItemSelected && !theLast)
+                                       || (!uniqItemSelected)) && !allItemSelected);
     }
 }
 
@@ -471,4 +464,3 @@ QSize SimpleStringListEditor::sizeHint() const
     sh.setHeight(d->mButtonLayout->minimumSize().height());
     return sh;
 }
-

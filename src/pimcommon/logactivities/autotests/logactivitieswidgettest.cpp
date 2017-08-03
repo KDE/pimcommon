@@ -24,12 +24,10 @@
 LogActivitiesWidgetTest::LogActivitiesWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LogActivitiesWidgetTest::~LogActivitiesWidgetTest()
 {
-
 }
 
 void LogActivitiesWidgetTest::shouldHaveDefaultValue()

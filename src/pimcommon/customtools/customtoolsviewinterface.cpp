@@ -20,12 +20,10 @@ using namespace PimCommon;
 CustomToolsViewInterface::CustomToolsViewInterface(QWidget *parent)
     : QWidget(parent)
 {
-
 }
 
 CustomToolsViewInterface::~CustomToolsViewInterface()
 {
-
 }
 
 void CustomToolsViewInterface::setText(const QString &)
@@ -36,4 +34,3 @@ KToggleAction *CustomToolsViewInterface::action() const
 {
     return nullptr;
 }
-

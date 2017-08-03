@@ -88,7 +88,6 @@ void ConfigurePluginsListWidget::doResetToDefaultsOther()
 
 void ConfigurePluginsListWidget::defaults()
 {
-
 }
 
 void ConfigurePluginsListWidget::initialize()
@@ -110,14 +109,13 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
         }
     }
     PimCommon::PluginUtil::savePluginSettings(groupName,
-            prefixSettingKey,
-            enabledPlugins, disabledPlugins);
+                                              prefixSettingKey,
+                                              enabledPlugins, disabledPlugins);
 }
 
-void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName,
-        const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName)
+void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey,
+                                              QList<PluginItem *> &itemsList, const QString &configureGroupName)
 {
-
     itemsList.clear();
     if (!lst.isEmpty()) {
         QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
@@ -136,7 +134,9 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             if (data.mHasConfigureDialog) {
                 QToolButton *but = new QToolButton(mListWidget);
                 QAction *act = new QAction(but);
-                const QStringList actData { configureGroupName, data.mIdentifier };
+                const QStringList actData {
+                    configureGroupName, data.mIdentifier
+                };
                 act->setData(actData);
                 but->setDefaultAction(act);
                 but->setIcon(QIcon::fromTheme(QStringLiteral("configure")));

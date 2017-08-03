@@ -22,8 +22,7 @@
 #include <QObject>
 #include <QVariantHash>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class GenericGrantleeFormatterPrivate;
 class PIMCOMMON_EXPORT GenericGrantleeFormatter : public QObject
 {

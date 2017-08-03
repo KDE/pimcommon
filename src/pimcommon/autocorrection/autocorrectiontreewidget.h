@@ -20,9 +20,7 @@
 
 #include <QTreeWidget>
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class AutoCorrectionTreeWidget : public QTreeWidget
 {
     Q_OBJECT
@@ -36,7 +34,6 @@ protected:
 Q_SIGNALS:
     void deleteSelectedItems();
 };
-
 }
 
 #endif // AutoCorrectionTreeWidget_H

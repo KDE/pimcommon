@@ -39,7 +39,6 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
 
 LogActivitiesWidget::~LogActivitiesWidget()
 {
-
 }
 
 void LogActivitiesWidget::slotTextChanged()

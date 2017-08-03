@@ -22,8 +22,7 @@
 #include "pimcommon_export.h"
 class QSplitter;
 class QTextEdit;
-namespace PimCommon
-{
+namespace PimCommon {
 class ConfigurePluginsListWidget;
 class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
 {

@@ -21,8 +21,7 @@
 #include "pimcommon_export.h"
 #include "kpimtextedit/richtexteditor.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class AutoCorrection;
 class RichTextEditWithAutoCorrectionPrivate;
 class PIMCOMMON_EXPORT RichTextEditWithAutoCorrection : public KPIMTextEdit::RichTextEditor

@@ -32,7 +32,6 @@ private Q_SLOTS:
 
     void shouldGenerateServiceUrl_data();
     void shouldGenerateServiceUrl();
-
 };
 
 #endif // SHARESERVICEURLMANAGERTEST_H

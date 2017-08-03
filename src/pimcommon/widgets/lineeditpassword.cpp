@@ -17,7 +17,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "lineeditpassword.h"
 
 #include <KLocalizedString>
@@ -35,8 +34,8 @@ public:
     LineEditPasswordPrivate(LineEditPassword *qq)
         : q(qq)
     {
-
     }
+
     void initialize();
     void toggleEchoMode();
     void showToggleEchoModeAction(const QString &text);
@@ -57,7 +56,6 @@ void LineEditPassword::LineEditPasswordPrivate::initialize()
     toggleEchoModeAction->setObjectName(QStringLiteral("visibilityAction"));
     toggleEchoModeAction->setVisible(false);
     toggleEchoModeAction->setToolTip(i18n("Change the visibility of the password"));
-
 
     connect(toggleEchoModeAction, &QAction::triggered, this, &LineEditPassword::LineEditPasswordPrivate::toggleEchoMode);
     connect(passwordLineEdit, &QLineEdit::textChanged, this, &LineEditPassword::LineEditPasswordPrivate::showToggleEchoModeAction);

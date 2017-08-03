@@ -29,8 +29,8 @@
 using namespace PimCommon;
 
 GoogleTranslator::GoogleTranslator(QObject *parent)
-    : QObject(parent),
-      mNetworkAccessManager(new QNetworkAccessManager(this))
+    : QObject(parent)
+    , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GoogleTranslator::slotTranslateFinished);
 }

@@ -22,10 +22,8 @@ using namespace PimCommon;
 GenericPlugin::GenericPlugin(QObject *parent)
     : AbstractGenericPlugin(parent)
 {
-
 }
 
 GenericPlugin::~GenericPlugin()
 {
-
 }

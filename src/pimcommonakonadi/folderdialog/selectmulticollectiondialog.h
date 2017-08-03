@@ -21,8 +21,7 @@
 #include <QDialog>
 #include <Collection>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class SelectMultiCollectionDialogPrivate;
 class PIMCOMMONAKONADI_EXPORT SelectMultiCollectionDialog : public QDialog
 {

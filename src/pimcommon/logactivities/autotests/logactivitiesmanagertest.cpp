@@ -28,7 +28,6 @@ LogActivitiesManagerTest::LogActivitiesManagerTest(QObject *parent)
 
 LogActivitiesManagerTest::~LogActivitiesManagerTest()
 {
-
 }
 
 void LogActivitiesManagerTest::shouldHaveDefaultValue()

@@ -22,8 +22,7 @@
 #include <Collection>
 #include <QModelIndex>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class CheckedCollectionWidget;
 class SelectMultiCollectionWidget : public QWidget
 {

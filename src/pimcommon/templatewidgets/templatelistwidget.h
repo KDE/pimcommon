@@ -21,8 +21,7 @@
 #include "pimcommon_export.h"
 #include <QListWidget>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class TemplateListWidgetPrivate;
 
 struct defaultTemplate {

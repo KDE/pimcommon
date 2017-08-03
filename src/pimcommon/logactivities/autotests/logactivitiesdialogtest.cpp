@@ -36,7 +36,6 @@ LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
 
 LogActivitiesDialogTest::~LogActivitiesDialogTest()
 {
-
 }
 
 void LogActivitiesDialogTest::shouldHaveDefaultValue()

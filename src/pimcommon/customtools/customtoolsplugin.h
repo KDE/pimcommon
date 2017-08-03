@@ -21,8 +21,7 @@
 #include "pimcommon_export.h"
 #include <QObject>
 class KActionCollection;
-namespace PimCommon
-{
+namespace PimCommon {
 class CustomToolsWidgetNg;
 class CustomToolsViewInterface;
 class CustomToolsPluginPrivate;

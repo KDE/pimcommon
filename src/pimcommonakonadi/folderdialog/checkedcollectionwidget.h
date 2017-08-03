@@ -25,14 +25,12 @@ class QItemSelectionModel;
 class QTreeView;
 class KCheckableProxyModel;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeModel;
 class Collection;
 }
 
-namespace PimCommon
-{
+namespace PimCommon {
 class CheckedCollectionWidgetPrivate;
 class PIMCOMMONAKONADI_EXPORT CheckedCollectionWidget : public QWidget
 {

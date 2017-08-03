@@ -23,8 +23,7 @@
 
 #include <QWidget>
 #include "pimcommonakonadi_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class ContentTypeWidgetPrivate;
 class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QWidget
 {

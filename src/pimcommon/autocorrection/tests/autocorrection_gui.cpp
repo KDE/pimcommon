@@ -71,8 +71,8 @@ void ConfigureTestDialog::slotSaveSettings()
 }
 
 TextEditAutoCorrectionWidget::TextEditAutoCorrectionWidget(PimCommon::AutoCorrection *autoCorrection, QWidget *parent)
-    : QTextEdit(parent),
-      mAutoCorrection(autoCorrection)
+    : QTextEdit(parent)
+    , mAutoCorrection(autoCorrection)
 {
     setAcceptRichText(false);
 }
@@ -169,4 +169,3 @@ int main(int argc, char **argv)
     delete w;
     return ret;
 }
-

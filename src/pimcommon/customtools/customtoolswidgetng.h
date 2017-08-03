@@ -22,8 +22,7 @@
 #include "pimcommon_export.h"
 class KToggleAction;
 class KActionCollection;
-namespace PimCommon
-{
+namespace PimCommon {
 class CustomToolsWidgetNgPrivate;
 class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
 {

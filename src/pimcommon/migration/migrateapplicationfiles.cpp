@@ -31,10 +31,9 @@ class PimCommon::MigrateApplicationFilesPrivate
 {
 public:
     MigrateApplicationFilesPrivate()
-        : mMigrateApplicationVersion(1),
-          mCurrentConfigVersion(0)
+        : mMigrateApplicationVersion(1)
+        , mCurrentConfigVersion(0)
     {
-
     }
 
     QVector<MigrateFileInfo> mMigrateInfoList;
@@ -46,10 +45,9 @@ public:
 };
 
 MigrateApplicationFiles::MigrateApplicationFiles(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::MigrateApplicationFilesPrivate)
+    : QObject(parent)
+    , d(new PimCommon::MigrateApplicationFilesPrivate)
 {
-
 }
 
 MigrateApplicationFiles::~MigrateApplicationFiles()
@@ -259,4 +257,3 @@ void MigrateApplicationFiles::insertMigrateInfo(const MigrateFileInfo &info)
         d->mMigrateInfoList.append(info);
     }
 }
-

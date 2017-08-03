@@ -25,8 +25,7 @@
 class KActionCollection;
 class QAction;
 class KXMLGUIClient;
-namespace PimCommon
-{
+namespace PimCommon {
 class PluginInterfacePrivate;
 class PIMCOMMONAKONADI_EXPORT PluginInterface : public QObject
 {

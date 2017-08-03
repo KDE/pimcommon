@@ -25,8 +25,7 @@
 #include <QTreeWidgetItem>
 class QTreeWidget;
 class QAction;
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT ConfigurePluginsListWidget : public QWidget
 {
     Q_OBJECT
@@ -53,13 +52,13 @@ protected:
     {
     public:
         PluginItem(QTreeWidgetItem *parent)
-            : QTreeWidgetItem(parent),
-              mEnableByDefault(false),
-              mHasConfigureSupport(false),
-              mEnableFromUserSettings(false)
+            : QTreeWidgetItem(parent)
+            , mEnableByDefault(false)
+            , mHasConfigureSupport(false)
+            , mEnableFromUserSettings(false)
         {
-
         }
+
         QString mIdentifier;
         QString mDescription;
         bool mEnableByDefault;
@@ -67,7 +66,8 @@ protected:
         bool mEnableFromUserSettings;
     };
     void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
-    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList, const QString &configureGroupName = QString());
+    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList,
+                      const QString &configureGroupName = QString());
     void resetToUserSettings(const QList<PluginItem *> &items);
     void changeState(const QList<PluginItem *> &items);
 

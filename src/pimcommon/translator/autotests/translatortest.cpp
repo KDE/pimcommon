@@ -29,7 +29,6 @@
 
 TranslatorTest::TranslatorTest()
 {
-
 }
 
 void TranslatorTest::shouldHaveDefaultValuesOnCreation()

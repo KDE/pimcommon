@@ -54,7 +54,7 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     connect(mClearButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotClear);
     QPushButton *saveButton = buttonBox->button(QDialogButtonBox::Save);
     saveButton->setObjectName(QStringLiteral("savebutton"));
-    saveButton->setEnabled(false);;
+    saveButton->setEnabled(false);
     connect(saveButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
 
     mainLayout->addWidget(buttonBox);

@@ -33,22 +33,21 @@ public:
     SelectMultiCollectionDialogPrivate()
         : mSelectMultiCollection(nullptr)
     {
-
     }
 
     SelectMultiCollectionWidget *mSelectMultiCollection;
 };
 
 SelectMultiCollectionDialog::SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent)
-    : QDialog(parent),
-      d(new PimCommon::SelectMultiCollectionDialogPrivate)
+    : QDialog(parent)
+    , d(new PimCommon::SelectMultiCollectionDialogPrivate)
 {
     initialize(mimetype, selectedCollection);
 }
 
 SelectMultiCollectionDialog::SelectMultiCollectionDialog(const QString &mimetype, QWidget *parent)
-    : QDialog(parent),
-      d(new PimCommon::SelectMultiCollectionDialogPrivate)
+    : QDialog(parent)
+    , d(new PimCommon::SelectMultiCollectionDialogPrivate)
 {
     initialize(mimetype);
 }
@@ -95,4 +94,3 @@ QVector<Akonadi::Collection> SelectMultiCollectionDialog::selectedCollection() c
 {
     return d->mSelectMultiCollection->selectedCollection();
 }
-

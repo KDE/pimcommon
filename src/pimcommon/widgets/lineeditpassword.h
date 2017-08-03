@@ -22,8 +22,7 @@
 #include "pimcommon_export.h"
 class QLineEdit;
 class QAction;
-namespace PimCommon
-{
+namespace PimCommon {
 class LineEditPasswordPrivate;
 class PIMCOMMON_EXPORT LineEditPassword : public QWidget
 {
@@ -50,7 +49,6 @@ public:
      * Returns the password entered.
      */
     QString password() const;
-
 
     /**
      * Returns the QAction (@internal)

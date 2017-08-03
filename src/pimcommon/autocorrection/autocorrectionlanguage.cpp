@@ -44,7 +44,6 @@ AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
 
 AutoCorrectionLanguage::~AutoCorrectionLanguage()
 {
-
 }
 
 QString AutoCorrectionLanguage::language() const

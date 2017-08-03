@@ -55,7 +55,6 @@ void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
     QTest::keyClicks(&lineedit, originalWord);
     QTest::keyClick(&lineedit, ' ');
     QCOMPARE(lineedit.toPlainText(), QString(replaceWord + QLatin1Char(' ')));
-
 }
 
 void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()

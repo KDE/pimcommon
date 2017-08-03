@@ -26,11 +26,11 @@ class PimCommon::RichTextEditWithAutoCorrectionPrivate
 {
 public:
     RichTextEditWithAutoCorrectionPrivate()
-        : mAutoCorrection(new PimCommon::AutoCorrection()),
-          mNeedToDelete(true)
+        : mAutoCorrection(new PimCommon::AutoCorrection())
+        , mNeedToDelete(true)
     {
-
     }
+
     ~RichTextEditWithAutoCorrectionPrivate()
     {
         if (mNeedToDelete) {
@@ -43,8 +43,8 @@ public:
 };
 
 RichTextEditWithAutoCorrection::RichTextEditWithAutoCorrection(QWidget *parent)
-    : KPIMTextEdit::RichTextEditor(parent),
-      d(new PimCommon::RichTextEditWithAutoCorrectionPrivate)
+    : KPIMTextEdit::RichTextEditor(parent)
+    , d(new PimCommon::RichTextEditWithAutoCorrectionPrivate)
 {
 }
 
@@ -72,8 +72,8 @@ void RichTextEditWithAutoCorrection::setAutocorrectionLanguage(const QString &la
 
 static bool isSpecial(const QTextCharFormat &charFormat)
 {
-    return charFormat.isFrameFormat() || charFormat.isImageFormat() ||
-           charFormat.isListFormat() || charFormat.isTableFormat() || charFormat.isTableCellFormat();
+    return charFormat.isFrameFormat() || charFormat.isImageFormat()
+           || charFormat.isListFormat() || charFormat.isTableFormat() || charFormat.isTableCellFormat();
 }
 
 void RichTextEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)

@@ -24,8 +24,7 @@ class QNetworkAccessManager;
 class KComboBox;
 class QNetworkReply;
 
-namespace PimCommon
-{
+namespace PimCommon {
 class GoogleTranslator : public QObject
 {
     Q_OBJECT

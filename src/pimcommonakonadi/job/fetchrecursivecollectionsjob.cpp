@@ -29,16 +29,15 @@ class PimCommon::FetchRecursiveCollectionsJobPrivate
 public:
     FetchRecursiveCollectionsJobPrivate()
     {
-
     }
+
     Akonadi::Collection mTopCollection;
 };
 
 FetchRecursiveCollectionsJob::FetchRecursiveCollectionsJob(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::FetchRecursiveCollectionsJobPrivate)
+    : QObject(parent)
+    , d(new PimCommon::FetchRecursiveCollectionsJobPrivate)
 {
-
 }
 
 FetchRecursiveCollectionsJob::~FetchRecursiveCollectionsJob()
@@ -76,4 +75,3 @@ void FetchRecursiveCollectionsJob::slotInitialCollectionFetchingDone(KJob *job)
     Q_EMIT fetchCollectionFinished(fetchJob->collections() << d->mTopCollection);
     deleteLater();
 }
-

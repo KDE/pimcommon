@@ -54,11 +54,11 @@ class GenericPluginInfo
 {
 public:
     GenericPluginInfo()
-        : plugin(nullptr),
-          isEnabled(true)
+        : plugin(nullptr)
+        , isEnabled(true)
     {
-
     }
+
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PimCommon::PluginUtilData pluginData;
@@ -66,8 +66,7 @@ public:
     bool isEnabled;
 };
 
-namespace
-{
+namespace {
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -80,8 +79,8 @@ public:
     GenericPluginManagerPrivate(GenericPluginManager *qq)
         : q(qq)
     {
-
     }
+
     void loadPlugin(GenericPluginInfo *item);
     QVector<GenericPlugin *> pluginsList() const;
     bool initializePlugins();
@@ -118,7 +117,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
         return false;
     }
     static const QString s_serviceTypeName = serviceTypeName;
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData & md) {
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData &md) {
         return md.serviceTypes().contains(s_serviceTypeName);
     });
 
@@ -197,10 +196,9 @@ GenericPlugin *GenericPluginManagerPrivate::pluginFromIdentifier(const QString &
 }
 
 GenericPluginManager::GenericPluginManager(QObject *parent)
-    : QObject(parent),
-      d(new GenericPluginManagerPrivate(this))
+    : QObject(parent)
+    , d(new GenericPluginManagerPrivate(this))
 {
-
 }
 
 GenericPluginManager::~GenericPluginManager()

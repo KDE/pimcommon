@@ -20,8 +20,7 @@
 
 #include "importabstractautocorrection.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class ImportKMailAutocorrection : public ImportAbstractAutocorrection
 {
 public:

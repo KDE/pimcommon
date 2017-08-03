@@ -28,12 +28,10 @@ using namespace PimCommon;
 ImapAclAttributeTest::ImapAclAttributeTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ImapAclAttributeTest::~ImapAclAttributeTest()
 {
-
 }
 
 void ImapAclAttributeTest::shouldHaveDefaultValue()

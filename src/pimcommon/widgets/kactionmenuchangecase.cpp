@@ -24,12 +24,11 @@ class PimCommon::KActionMenuChangeCasePrivate
 {
 public:
     KActionMenuChangeCasePrivate()
-        : mUpperCase(nullptr),
-          mSentenceCase(nullptr),
-          mLowerCase(nullptr),
-          mReverseCase(nullptr)
+        : mUpperCase(nullptr)
+        , mSentenceCase(nullptr)
+        , mLowerCase(nullptr)
+        , mReverseCase(nullptr)
     {
-
     }
 
     QAction *mUpperCase;
@@ -39,8 +38,8 @@ public:
 };
 
 KActionMenuChangeCase::KActionMenuChangeCase(QObject *parent)
-    : KActionMenu(parent),
-      d(new PimCommon::KActionMenuChangeCasePrivate)
+    : KActionMenu(parent)
+    , d(new PimCommon::KActionMenuChangeCasePrivate)
 {
     setText(i18n("Change Case"));
     d->mUpperCase = new QAction(i18n("Uppercase"), this);

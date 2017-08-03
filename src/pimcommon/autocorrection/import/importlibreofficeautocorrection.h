@@ -26,9 +26,7 @@ class QDomDocument;
 class QFile;
 class KArchiveDirectory;
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class ImportLibreOfficeAutocorrection : public ImportAbstractAutocorrection
 {
 public:
@@ -51,7 +49,6 @@ private:
     KZip *mArchive;
     QTemporaryDir *mTempDir;
 };
-
 }
 
 #endif // IMPORTLIBREOFFICEAUTOCORRECTION_H

@@ -21,13 +21,11 @@
 #include <QVector>
 #include "pimcommon_export.h"
 
-namespace KPIMTextEdit
-{
+namespace KPIMTextEdit {
 class Rule;
 }
 
-namespace PimCommon
-{
+namespace PimCommon {
 class SieveSyntaxHighlighterRulesPrivate;
 class PIMCOMMON_EXPORT SieveSyntaxHighlighterRules
 {

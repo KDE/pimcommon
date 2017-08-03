@@ -25,8 +25,7 @@
 #include <QObject>
 #include "pimcommonakonadi_export.h"
 class KJob;
-namespace PimCommon
-{
+namespace PimCommon {
 class FetchRecursiveCollectionsJobPrivate;
 class PIMCOMMONAKONADI_EXPORT FetchRecursiveCollectionsJob : public QObject
 {

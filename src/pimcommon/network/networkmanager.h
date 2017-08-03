@@ -21,8 +21,7 @@
 #include <QObject>
 #include "pimcommon_export.h"
 class QNetworkConfigurationManager;
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT NetworkManager : public QObject
 {
     Q_OBJECT

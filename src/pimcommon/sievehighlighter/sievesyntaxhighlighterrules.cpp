@@ -28,8 +28,8 @@ class PimCommon::SieveSyntaxHighlighterRulesPrivate
 public:
     SieveSyntaxHighlighterRulesPrivate()
     {
-
     }
+
     void init();
     QVector<KPIMTextEdit::Rule> m_rules;
 };

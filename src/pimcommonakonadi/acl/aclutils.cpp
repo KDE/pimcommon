@@ -38,31 +38,31 @@ static const struct {
     },
 
     {
-        KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen |
-        KIMAP::Acl::Insert | KIMAP::Acl::Post,
+        KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen
+        |KIMAP::Acl::Insert | KIMAP::Acl::Post,
         I18N_NOOP2("Permissions", "Append")
     },
 
     {
-        KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen |
-        KIMAP::Acl::Insert | KIMAP::Acl::Post | KIMAP::Acl::Write |
-        KIMAP::Acl::CreateMailbox | KIMAP::Acl::DeleteMailbox |
-        KIMAP::Acl::DeleteMessage | KIMAP::Acl::Expunge,
+        KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen
+        |KIMAP::Acl::Insert | KIMAP::Acl::Post | KIMAP::Acl::Write
+        |KIMAP::Acl::CreateMailbox | KIMAP::Acl::DeleteMailbox
+        |KIMAP::Acl::DeleteMessage | KIMAP::Acl::Expunge,
         I18N_NOOP2("Permissions", "Write")
     },
 
     {
-        KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen |
-        KIMAP::Acl::Insert | KIMAP::Acl::Post | KIMAP::Acl::Write |
-        KIMAP::Acl::CreateMailbox | KIMAP::Acl::DeleteMailbox |
-        KIMAP::Acl::DeleteMessage | KIMAP::Acl::Expunge | KIMAP::Acl::Admin,
+        KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen
+        |KIMAP::Acl::Insert | KIMAP::Acl::Post | KIMAP::Acl::Write
+        |KIMAP::Acl::CreateMailbox | KIMAP::Acl::DeleteMailbox
+        |KIMAP::Acl::DeleteMessage | KIMAP::Acl::Expunge | KIMAP::Acl::Admin,
         I18N_NOOP2("Permissions", "All")
     }
 };
 
 uint AclUtils::standardPermissionsCount()
 {
-    return (sizeof(standardPermissions) / sizeof(*standardPermissions));
+    return sizeof(standardPermissions) / sizeof(*standardPermissions);
 }
 
 KIMAP::Acl::Rights AclUtils::permissionsForIndex(uint index)

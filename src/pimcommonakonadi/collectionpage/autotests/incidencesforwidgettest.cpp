@@ -28,12 +28,10 @@
 IncidencesForWidgetTest::IncidencesForWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 IncidencesForWidgetTest::~IncidencesForWidgetTest()
 {
-
 }
 
 void IncidencesForWidgetTest::shouldHaveDefaultValue()

@@ -23,9 +23,7 @@
 #include "kpimtextedit/plaintexteditor.h"
 #include <kio/job.h>
 #include "kpimtextedit/plaintexteditorwidget.h"
-namespace PimCommon
-{
-
+namespace PimCommon {
 class TranslatorResultTextEdit : public KPIMTextEdit::PlainTextEditor
 {
     Q_OBJECT
@@ -96,4 +94,3 @@ private:
 }
 
 #endif /* TRANSLATORWIDGET_H */
-

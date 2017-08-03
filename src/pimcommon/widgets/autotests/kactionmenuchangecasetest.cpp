@@ -24,12 +24,10 @@ using namespace PimCommon;
 KActionMenuChangeCaseTest::KActionMenuChangeCaseTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 KActionMenuChangeCaseTest::~KActionMenuChangeCaseTest()
 {
-
 }
 
 void KActionMenuChangeCaseTest::shouldHaveDefaultValue()

@@ -24,12 +24,10 @@
 CustomToolsWidgetNgTest::CustomToolsWidgetNgTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CustomToolsWidgetNgTest::~CustomToolsWidgetNgTest()
 {
-
 }
 
 void CustomToolsWidgetNgTest::shouldHaveDefaultValue()

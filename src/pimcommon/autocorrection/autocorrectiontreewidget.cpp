@@ -28,7 +28,6 @@ AutoCorrectionTreeWidget::AutoCorrectionTreeWidget(QWidget *parent)
 
 AutoCorrectionTreeWidget::~AutoCorrectionTreeWidget()
 {
-
 }
 
 void AutoCorrectionTreeWidget::keyPressEvent(QKeyEvent *event)
@@ -38,4 +37,3 @@ void AutoCorrectionTreeWidget::keyPressEvent(QKeyEvent *event)
     }
     QTreeWidget::keyPressEvent(event);
 }
-

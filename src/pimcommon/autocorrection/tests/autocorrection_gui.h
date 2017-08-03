@@ -24,8 +24,7 @@
 
 #include <QTextEdit>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class AutoCorrection;
 class AutoCorrectionWidget;
 class LineEditWithAutoCorrection;

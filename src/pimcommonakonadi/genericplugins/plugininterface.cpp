@@ -32,11 +32,11 @@ class PimCommon::PluginInterfacePrivate
 {
 public:
     PluginInterfacePrivate()
-        : mParentWidget(nullptr),
-          mActionCollection(nullptr)
+        : mParentWidget(nullptr)
+        , mActionCollection(nullptr)
     {
-
     }
+
     QString mPluginName;
     QString mServiceTypeName;
     QWidget *mParentWidget;
@@ -45,8 +45,8 @@ public:
 };
 
 PluginInterface::PluginInterface(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::PluginInterfacePrivate)
+    : QObject(parent)
+    , d(new PimCommon::PluginInterfacePrivate)
 {
 }
 

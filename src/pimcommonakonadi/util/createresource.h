@@ -23,9 +23,8 @@
 #include <QVariant>
 #include <QMap>
 
-namespace PimCommon
-{
-class PIMCOMMONAKONADI_EXPORT CreateResource  : public QObject
+namespace PimCommon {
+class PIMCOMMONAKONADI_EXPORT CreateResource : public QObject
 {
     Q_OBJECT
 public:

@@ -22,12 +22,8 @@
 
 #include <KIMAP/Acl>
 
-namespace PimCommon
-{
-
-namespace AclUtils
-{
-
+namespace PimCommon {
+namespace AclUtils {
 /**
  * Returns the number of standard permissions available.
  */
@@ -59,9 +55,7 @@ QString permissionsToUserString(KIMAP::Acl::Rights permissions);
  *   login: testuser@mydomain.org   acls: testuser
  */
 QString guessUserName(const QString &loginName, const QString &serverName);
-
 }
-
 }
 
 #endif

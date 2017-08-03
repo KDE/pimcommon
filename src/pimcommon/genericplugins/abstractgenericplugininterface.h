@@ -21,8 +21,7 @@
 #include "pimcommon_export.h"
 class QAction;
 class KActionCollection;
-namespace PimCommon
-{
+namespace PimCommon {
 class AbstractGenericPlugin;
 class GenericPlugin;
 class PIMCOMMON_EXPORT ActionType
@@ -37,10 +36,9 @@ public:
         ToolBar = 5
     };
     ActionType()
-        : mAction(nullptr),
-          mType(Tools)
+        : mAction(nullptr)
+        , mType(Tools)
     {
-
     }
 
     ActionType(QAction *action, Type type);

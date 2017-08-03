@@ -22,8 +22,7 @@
 
 #include <PimCommon/SpellCheckLineEdit>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class AutoCorrection;
 class LineEditWithAutoCorrectionPrivate;
 class PIMCOMMON_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheckLineEdit

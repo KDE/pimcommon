@@ -24,12 +24,10 @@
 using namespace PimCommon;
 CollectionTypeUtil::CollectionTypeUtil()
 {
-
 }
 
 CollectionTypeUtil::~CollectionTypeUtil()
 {
-
 }
 
 QByteArray CollectionTypeUtil::kolabFolderType()
@@ -51,25 +49,25 @@ QString CollectionTypeUtil::folderContentDescription(CollectionTypeUtil::FolderC
 {
     switch (type) {
     case CollectionTypeUtil::ContentsTypeMail:
-        return (i18nc("type of folder content", "Mail"));
+        return i18nc("type of folder content", "Mail");
     case CollectionTypeUtil::ContentsTypeCalendar:
-        return (i18nc("type of folder content", "Calendar"));
+        return i18nc("type of folder content", "Calendar");
     case CollectionTypeUtil::ContentsTypeContact:
-        return (i18nc("type of folder content", "Contacts"));
+        return i18nc("type of folder content", "Contacts");
     case CollectionTypeUtil::ContentsTypeNote:
-        return (i18nc("type of folder content", "Notes"));
+        return i18nc("type of folder content", "Notes");
     case CollectionTypeUtil::ContentsTypeTask:
-        return (i18nc("type of folder content", "Tasks"));
+        return i18nc("type of folder content", "Tasks");
     case CollectionTypeUtil::ContentsTypeJournal:
-        return (i18nc("type of folder content", "Journal"));
+        return i18nc("type of folder content", "Journal");
     case CollectionTypeUtil::ContentsTypeConfiguration:
-        return (i18nc("type of folder content", "Configuration"));
+        return i18nc("type of folder content", "Configuration");
     case CollectionTypeUtil::ContentsTypeFreebusy:
-        return (i18nc("type of folder content", "Freebusy"));
+        return i18nc("type of folder content", "Freebusy");
     case CollectionTypeUtil::ContentsTypeFile:
-        return (i18nc("type of folder content", "Files"));
+        return i18nc("type of folder content", "Files");
     default:
-        return (i18nc("type of folder content", "Unknown"));
+        return i18nc("type of folder content", "Unknown");
     }
 }
 
@@ -252,4 +250,3 @@ QString CollectionTypeUtil::iconNameFromContentsType(CollectionTypeUtil::FolderC
 
     return iconName;
 }
-

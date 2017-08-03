@@ -21,9 +21,7 @@
 #include <KComboBox>
 #include "pimcommon_export.h"
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMON_EXPORT AutoCorrectionLanguage : public KComboBox
 {
 public:
@@ -42,6 +40,5 @@ public:
      */
     void setLanguage(const QString &language);
 };
-
 }
 #endif // AutoCorrectionLanguage_H

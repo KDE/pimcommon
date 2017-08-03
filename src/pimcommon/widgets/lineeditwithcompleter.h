@@ -21,8 +21,7 @@
 #include <KLineEdit>
 #include "pimcommon_export.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT LineEditWithCompleter : public KLineEdit
 {
     Q_OBJECT

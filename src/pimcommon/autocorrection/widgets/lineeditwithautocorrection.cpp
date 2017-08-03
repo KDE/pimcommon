@@ -25,11 +25,11 @@ class PimCommon::LineEditWithAutoCorrectionPrivate
 {
 public:
     LineEditWithAutoCorrectionPrivate()
-        : mAutoCorrection(new PimCommon::AutoCorrection()),
-          mNeedToDeleteAutoCorrection(true)
+        : mAutoCorrection(new PimCommon::AutoCorrection())
+        , mNeedToDeleteAutoCorrection(true)
     {
-
     }
+
     ~LineEditWithAutoCorrectionPrivate()
     {
         if (mNeedToDeleteAutoCorrection) {
@@ -42,8 +42,8 @@ public:
 };
 
 LineEditWithAutoCorrection::LineEditWithAutoCorrection(QWidget *parent, const QString &configFile)
-    : PimCommon::SpellCheckLineEdit(parent, configFile),
-      d(new PimCommon::LineEditWithAutoCorrectionPrivate)
+    : PimCommon::SpellCheckLineEdit(parent, configFile)
+    , d(new PimCommon::LineEditWithAutoCorrectionPrivate)
 {
 }
 
@@ -91,4 +91,3 @@ void LineEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
     }
     PimCommon::SpellCheckLineEdit::keyPressEvent(e);
 }
-

@@ -50,8 +50,8 @@ public:
     CustomToolsPluginInfo()
         : plugin(nullptr)
     {
-
     }
+
     QString saveName() const;
 
     KPluginMetaData metaData;
@@ -63,8 +63,7 @@ QString CustomToolsPluginInfo::saveName() const
     return QFileInfo(metaData.fileName()).baseName();
 }
 
-namespace
-{
+namespace {
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -77,8 +76,8 @@ public:
     CustomToolsPluginManagerPrivate(CustomToolsPluginManager *qq)
         : q(qq)
     {
-
     }
+
     QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
     void initializePluginList();
     void loadPlugin(CustomToolsPluginInfo *item);
@@ -88,7 +87,7 @@ public:
 
 void CustomToolsPluginManagerPrivate::initializePluginList()
 {
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon"), [](const KPluginMetaData & md) {
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon"), [](const KPluginMetaData &md) {
         return md.serviceTypes().contains(QStringLiteral("PimCommonCustomTools/Plugin"));
     });
 
@@ -142,8 +141,8 @@ CustomToolsPluginManager *CustomToolsPluginManager::self()
 }
 
 CustomToolsPluginManager::CustomToolsPluginManager(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::CustomToolsPluginManagerPrivate(this))
+    : QObject(parent)
+    , d(new PimCommon::CustomToolsPluginManagerPrivate(this))
 {
     d->initializePluginList();
 }

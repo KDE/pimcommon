@@ -24,8 +24,7 @@
 
 class KActionMenu;
 class QAction;
-namespace PimCommon
-{
+namespace PimCommon {
 class ShareServiceUrlManagerPrivate;
 class PIMCOMMON_EXPORT ShareServiceUrlManager : public QObject
 {

@@ -19,8 +19,7 @@
 #define TEST_CUSTOMTOOLWIDGETTESTNG_GUI_H
 
 #include <QWidget>
-namespace PimCommon
-{
+namespace PimCommon {
 class CustomToolsWidgetNg;
 }
 

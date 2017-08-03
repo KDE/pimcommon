@@ -22,8 +22,7 @@
 
 #include <QWidget>
 class KToggleAction;
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT CustomToolsViewInterface : public QWidget
 {
     Q_OBJECT
@@ -38,7 +37,6 @@ Q_SIGNALS:
     void insertText(const QString &text);
     void toolsWasClosed();
     void activateView(QWidget *);
-
 };
 }
 #endif // CUSTOMTOOLSVIEWINTERFACE_H

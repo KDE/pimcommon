@@ -23,9 +23,7 @@
 #include <QHash>
 #include <QSet>
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMON_EXPORT AutoCorrection
 {
 public:

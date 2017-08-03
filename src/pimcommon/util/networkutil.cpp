@@ -30,7 +30,6 @@ NetworkUtil *NetworkUtil::self()
 NetworkUtil::NetworkUtil()
     : mLowBandwidth(false)
 {
-
 }
 
 bool NetworkUtil::lowBandwidth() const
@@ -42,4 +41,3 @@ void NetworkUtil::setLowBandwidth(bool lowBandwidh)
 {
     mLowBandwidth = lowBandwidh;
 }
-

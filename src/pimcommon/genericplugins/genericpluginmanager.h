@@ -23,8 +23,7 @@
 #include "pimcommon_export.h"
 #include <PimCommon/PluginUtil>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class GenericPluginManagerPrivate;
 class GenericPlugin;
 class PIMCOMMON_EXPORT GenericPluginManager : public QObject
@@ -37,8 +36,8 @@ public:
         GenericPluginData()
             : mEnableByDefault(false)
         {
-
         }
+
         QString mDescription;
         QString mName;
         QString mIdentifier;

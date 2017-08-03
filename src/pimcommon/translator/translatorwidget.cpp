@@ -51,11 +51,12 @@ class Q_DECL_HIDDEN TranslatorWidget::TranslatorWidgetPrivate
 {
 public:
     TranslatorWidgetPrivate()
-        : abstractTranslator(nullptr),
-          languageSettingsChanged(false),
-          standalone(true)
+        : abstractTranslator(nullptr)
+        , languageSettingsChanged(false)
+        , standalone(true)
     {
     }
+
     ~TranslatorWidgetPrivate()
     {
         delete abstractTranslator;
@@ -102,8 +103,8 @@ void TranslatorWidget::TranslatorWidgetPrivate::initLanguage()
 }
 
 TranslatorResultTextEdit::TranslatorResultTextEdit(QWidget *parent)
-    : KPIMTextEdit::PlainTextEditor(parent),
-      mResultFailed(false)
+    : KPIMTextEdit::PlainTextEditor(parent)
+    , mResultFailed(false)
 {
     setReadOnly(true);
 }
@@ -156,15 +157,15 @@ void TranslatorTextEdit::dropEvent(QDropEvent *event)
 }
 
 TranslatorWidget::TranslatorWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new TranslatorWidgetPrivate)
+    : QWidget(parent)
+    , d(new TranslatorWidgetPrivate)
 {
     init();
 }
 
 TranslatorWidget::TranslatorWidget(const QString &text, QWidget *parent)
-    : QWidget(parent),
-      d(new TranslatorWidgetPrivate)
+    : QWidget(parent)
+    , d(new TranslatorWidgetPrivate)
 {
     init();
     d->inputText->setPlainText(text);
@@ -208,7 +209,6 @@ void TranslatorWidget::readConfig()
     const QList<int> size = {100, 400};
     d->splitter->setSizes(myGroup.readEntry("mainSplitter", size));
     d->invert->setEnabled(from != QLatin1String("auto"));
-
 }
 
 void TranslatorWidget::init()
@@ -319,7 +319,6 @@ void TranslatorWidget::init()
     hide();
     setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed));
     d->languageSettingsChanged = false;
-
 }
 
 void TranslatorWidget::slotConfigChanged()
@@ -470,4 +469,3 @@ void TranslatorWidget::slotDebug()
     d->abstractTranslator->debug();
 #endif
 }
-

@@ -24,8 +24,7 @@
 #include <AkonadiCore/Item>
 class QAction;
 class KActionCollection;
-namespace PimCommon
-{
+namespace PimCommon {
 class GenericPluginInterfacePrivate;
 class PIMCOMMONAKONADI_EXPORT GenericPluginInterface : public AbstractGenericPluginInterface
 {

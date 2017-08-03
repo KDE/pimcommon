@@ -23,8 +23,7 @@
 #include <QSharedPointer>
 #include <AkonadiCore/collection.h>
 class QDBusPendingCallWatcher;
-namespace PimCommon
-{
+namespace PimCommon {
 class ManageServerSideSubscriptionJobPrivate;
 class PIMCOMMONAKONADI_EXPORT ManageServerSideSubscriptionJob : public QObject
 {

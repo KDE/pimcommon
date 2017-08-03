@@ -24,8 +24,7 @@
 
 class KComboBox;
 
-namespace PimCommon
-{
+namespace PimCommon {
 class TranslatorUtil
 {
 public:

@@ -30,9 +30,9 @@ public:
     }
 
     GenericGrantleeFormatterPrivate(const QString &defaultHtmlMain, const QString &themePath)
-        : mThemePath(themePath),
-          mDefaultMainFile(defaultHtmlMain),
-          mEngine(nullptr)
+        : mThemePath(themePath)
+        , mDefaultMainFile(defaultHtmlMain)
+        , mEngine(nullptr)
     {
         initializeEngine();
     }
@@ -110,17 +110,15 @@ QString GenericGrantleeFormatterPrivate::render(const QVariantHash &mapping) con
 }
 
 GenericGrantleeFormatter::GenericGrantleeFormatter(const QString &defaultHtmlMain, const QString &themePath, QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::GenericGrantleeFormatterPrivate(defaultHtmlMain, themePath))
+    : QObject(parent)
+    , d(new PimCommon::GenericGrantleeFormatterPrivate(defaultHtmlMain, themePath))
 {
-
 }
 
 GenericGrantleeFormatter::GenericGrantleeFormatter(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::GenericGrantleeFormatterPrivate)
+    : QObject(parent)
+    , d(new PimCommon::GenericGrantleeFormatterPrivate)
 {
-
 }
 
 GenericGrantleeFormatter::~GenericGrantleeFormatter()

@@ -20,8 +20,7 @@
 
 #include <QObject>
 #include "pimcommon_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class LogActivitiesManagerPrivate;
 class PIMCOMMON_EXPORT LogActivitiesManager : public QObject
 {

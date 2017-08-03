@@ -30,9 +30,7 @@ class QAbstractItemModel;
 class QAction;
 class QItemSelectionModel;
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMONAKONADI_TESTS_EXPORT AclManager : public QObject
 {
     Q_OBJECT
@@ -120,7 +118,6 @@ private:
     Q_PRIVATE_SLOT(d, void deleteAcl())
     //@endcond
 };
-
 }
 
 #endif

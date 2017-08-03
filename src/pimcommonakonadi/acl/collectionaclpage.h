@@ -34,8 +34,7 @@
 #include <AkonadiWidgets/CollectionPropertiesPage>
 #include "pimcommonakonadi_export.h"
 
-namespace PimCommon
-{
+namespace PimCommon {
 /**
  * "Access Control" tab in the folder dialog
  */

@@ -24,12 +24,10 @@
 CollectionAclWidgetTest::CollectionAclWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CollectionAclWidgetTest::~CollectionAclWidgetTest()
 {
-
 }
 
 void CollectionAclWidgetTest::shouldHaveDefaultValue()

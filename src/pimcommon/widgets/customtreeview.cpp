@@ -24,8 +24,8 @@
 using namespace PimCommon;
 
 CustomTreeView::CustomTreeView(QWidget *parent)
-    : QTreeWidget(parent),
-      mShowDefaultText(true)
+    : QTreeWidget(parent)
+    , mShowDefaultText(true)
 {
 }
 
@@ -96,4 +96,3 @@ void CustomTreeView::paintEvent(QPaintEvent *event)
         QTreeWidget::paintEvent(event);
     }
 }
-

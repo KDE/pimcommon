@@ -24,8 +24,7 @@
 #include <QByteArray>
 #include <QString>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMONAKONADI_EXPORT CollectionTypeUtil
 {
 public:

@@ -33,15 +33,15 @@ public:
     CustomToolsWidgetNgPrivate()
         : mStackedWidget(nullptr)
     {
-
     }
+
     QStackedWidget *mStackedWidget;
     QList<PimCommon::CustomToolsViewInterface *> mListInterfaceView;
 };
 
 CustomToolsWidgetNg::CustomToolsWidgetNg(KActionCollection *ac, QWidget *parent)
-    : QWidget(parent),
-      d(new PimCommon::CustomToolsWidgetNgPrivate)
+    : QWidget(parent)
+    , d(new PimCommon::CustomToolsWidgetNgPrivate)
 {
     QHBoxLayout *lay = new QHBoxLayout(this);
     d->mStackedWidget = new QStackedWidget;

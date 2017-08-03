@@ -34,7 +34,6 @@ class PimCommon::ImapAclAttributePrivate
 public:
     ImapAclAttributePrivate()
     {
-
     }
 
     QMap<QByteArray, KIMAP::Acl::Rights> mRights;
@@ -47,8 +46,7 @@ ImapAclAttribute::ImapAclAttribute()
 {
 }
 
-ImapAclAttribute::ImapAclAttribute(const QMap<QByteArray, KIMAP::Acl::Rights> &rights,
-                                   const QMap<QByteArray, KIMAP::Acl::Rights> &oldRights)
+ImapAclAttribute::ImapAclAttribute(const QMap<QByteArray, KIMAP::Acl::Rights> &rights, const QMap<QByteArray, KIMAP::Acl::Rights> &oldRights)
     : d(new PimCommon::ImapAclAttributePrivate)
 {
     d->mRights = rights;

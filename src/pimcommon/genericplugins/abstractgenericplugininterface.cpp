@@ -23,20 +23,19 @@ class PimCommon::AbstractGenericPluginInterfacePrivate
 {
 public:
     AbstractGenericPluginInterfacePrivate()
-        : plugin(nullptr),
-          parentWidget(nullptr)
+        : plugin(nullptr)
+        , parentWidget(nullptr)
     {
-
     }
+
     AbstractGenericPlugin *plugin;
     QWidget *parentWidget;
 };
 
 AbstractGenericPluginInterface::AbstractGenericPluginInterface(QObject *parent)
-    : QObject(parent),
-      d(new AbstractGenericPluginInterfacePrivate)
+    : QObject(parent)
+    , d(new AbstractGenericPluginInterfacePrivate)
 {
-
 }
 
 AbstractGenericPluginInterface::~AbstractGenericPluginInterface()

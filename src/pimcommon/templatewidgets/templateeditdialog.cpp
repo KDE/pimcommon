@@ -33,7 +33,8 @@
 using namespace PimCommon;
 
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
-    : QDialog(parent), mOkButton(nullptr)
+    : QDialog(parent)
+    , mOkButton(nullptr)
 {
     setWindowTitle(defaultTemplate ? i18n("Default template") : i18n("Template"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -129,4 +130,3 @@ QString TemplateEditDialog::templateName() const
 {
     return mTemplateNameEdit->text();
 }
-

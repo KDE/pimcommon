@@ -32,9 +32,7 @@
 #include "kpimtextedit/richtexteditor.h"
 
 class QMimeData;
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMON_EXPORT SpellCheckLineEdit : public KPIMTextEdit::RichTextEditor
 {
     Q_OBJECT
@@ -68,4 +66,3 @@ Q_SIGNALS:
 };
 }
 #endif /* SpellCheckLineEdit_H */
-

@@ -24,15 +24,13 @@ class PimCommon::CustomToolsPluginPrivate
 public:
     CustomToolsPluginPrivate()
     {
-
     }
 };
 
 CustomToolsPlugin::CustomToolsPlugin(QObject *parent)
-    : QObject(parent),
-      d(new PimCommon::CustomToolsPluginPrivate)
+    : QObject(parent)
+    , d(new PimCommon::CustomToolsPluginPrivate)
 {
-
 }
 
 CustomToolsPlugin::~CustomToolsPlugin()

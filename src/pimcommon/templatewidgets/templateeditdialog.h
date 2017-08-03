@@ -21,12 +21,10 @@
 #include <QDialog>
 
 class KLineEdit;
-namespace KPIMTextEdit
-{
+namespace KPIMTextEdit {
 class PlainTextEditorWidget;
 }
-namespace PimCommon
-{
+namespace PimCommon {
 class TemplateEditDialog : public QDialog
 {
     Q_OBJECT

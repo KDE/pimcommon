@@ -36,8 +36,8 @@ class ActionButton : public QPushButton
 {
 public:
     ActionButton(QWidget *parent = nullptr)
-        : QPushButton(parent),
-          mDefaultAction(nullptr)
+        : QPushButton(parent)
+        , mDefaultAction(nullptr)
     {
     }
 
@@ -55,10 +55,10 @@ public:
     }
 
 protected:
-    void actionEvent(QActionEvent *event) override {
+    void actionEvent(QActionEvent *event) override
+    {
         QAction *action = event->action();
-        switch (event->type())
-        {
+        switch (event->type()) {
         case QEvent::ActionChanged:
             if (action == mDefaultAction) {
                 setDefaultAction(mDefaultAction);
@@ -77,8 +77,8 @@ private:
 };
 
 CollectionAclWidget::CollectionAclWidget(QWidget *parent)
-    : QWidget(parent),
-      mAclManager(new PimCommon::AclManager(this))
+    : QWidget(parent)
+    , mAclManager(new PimCommon::AclManager(this))
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     QVBoxLayout *listViewLayout = new QVBoxLayout;
@@ -125,7 +125,6 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
 
 CollectionAclWidget::~CollectionAclWidget()
 {
-
 }
 
 void CollectionAclWidget::slotCollectionCanBeAdministrated(bool b)

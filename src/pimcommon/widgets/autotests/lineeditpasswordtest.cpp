@@ -27,7 +27,6 @@
 LineEditPasswordTest::LineEditPasswordTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LineEditPasswordTest::shouldHaveDefaultValue()

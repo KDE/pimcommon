@@ -32,7 +32,6 @@ private Q_SLOTS:
     void shouldAppendLog();
     void shouldEnableActivities();
     void shouldClearLog();
-
 };
 
 #endif // LOGACTIVITIESMANAGERTEST_H

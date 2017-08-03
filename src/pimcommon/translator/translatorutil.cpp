@@ -22,7 +22,6 @@ using namespace PimCommon;
 
 TranslatorUtil::TranslatorUtil()
 {
-
 }
 
 QPair<QString, QString> TranslatorUtil::pair(TranslatorUtil::languages lang)
@@ -225,4 +224,3 @@ void PimCommon::TranslatorUtil::addItemToFromComboBox(KComboBox *combo, const QP
 {
     combo->addItem(pair.first, pair.second);
 }
-

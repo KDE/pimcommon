@@ -22,8 +22,7 @@
 #include <kdelibs4migration.h>
 #include "migratefileinfo.h"
 #include "pimcommon_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class MigrateApplicationFilesPrivate;
 class PIMCOMMON_EXPORT MigrateApplicationFiles : public QObject
 {

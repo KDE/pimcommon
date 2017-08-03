@@ -25,15 +25,13 @@
 
 #include <QMap>
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 class PIMCOMMONAKONADI_EXPORT CollectionAnnotationsAttribute : public Akonadi::Attribute
 {
 public:
     CollectionAnnotationsAttribute();
     CollectionAnnotationsAttribute(const QMap<QByteArray, QByteArray> &annotations);
-    ~CollectionAnnotationsAttribute() =default;
+    ~CollectionAnnotationsAttribute() = default;
 
     void setAnnotations(const QMap<QByteArray, QByteArray> &annotations);
     QMap<QByteArray, QByteArray> annotations() const;
@@ -48,7 +46,6 @@ public:
 private:
     QMap<QByteArray, QByteArray> mAnnotations;
 };
-
 }
 
 #endif

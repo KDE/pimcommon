@@ -104,7 +104,6 @@ void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QStringLiteral("Foo. Foo"));
     QCOMPARE(position, text.length());
-
 }
 
 void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
@@ -187,7 +186,6 @@ void AutoCorrectionTest::shouldReplaceSingleQuote()
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(simpleQuote.begin + text + simpleQuote.end));
-
 }
 
 void AutoCorrectionTest::shouldReplaceDoubleQuote()
@@ -311,7 +309,6 @@ void AutoCorrectionTest::shouldReplaceToTextFormat()
     QCOMPARE(position, 3);
 
     //TODO QCOMPARE(doc.toHtml(), text);
-
 }
 
 void AutoCorrectionTest::shouldReplaceAutoFraction()
@@ -336,7 +333,6 @@ void AutoCorrectionTest::shouldReplaceAutoFraction()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(QStringLiteral("½") + suffix));
     QCOMPARE(position, 1);
-
 }
 
 void AutoCorrectionTest::shouldNotAddSpaceWhenWeAlreadyHaveASpace()
@@ -404,7 +400,6 @@ void AutoCorrectionTest::shouldAutocorrectWord()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(convertWord + suffix));
     //FIXME ? QCOMPARE(position, convertWord.length());
-
 }
 
 void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
@@ -430,7 +425,6 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     autocorrection.autocorrect(false, doc, position);
     QString result = QStringLiteral("foo. blabla Foo. Tt");
     QCOMPARE(doc.toPlainText(), result);
-
 }
 
 typedef QHash<QString, QString> mapAutoCorrect;
@@ -624,7 +618,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.setLanguage(QStringLiteral("fr"));
     autocorrection.setAddNonBreakingSpace(true);
     //TODO fix me verify why it doesn't use no breaking space
-    const QChar nbsp = QChar(/*QChar::Nbsp*/QLatin1Char('b'));
+    const QChar nbsp = QChar(/*QChar::Nbsp*/ QLatin1Char('b'));
     autocorrection.setNonBreakingSpace(nbsp);
 
     PimCommon::AutoCorrection::TypographicQuotes doubleQuote;

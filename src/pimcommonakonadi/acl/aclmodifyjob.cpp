@@ -36,9 +36,9 @@
 using namespace PimCommon;
 
 AclModifyJob::AclModifyJob(QObject *parent)
-    : QObject(parent),
-      mRecursive(false),
-      mCurrentIndex(-1)
+    : QObject(parent)
+    , mRecursive(false)
+    , mCurrentIndex(-1)
 {
 }
 
@@ -85,8 +85,8 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
             }
         }
     }
-    OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface =
-        PimCommon::Util::createImapSettingsInterface(resource);
+    OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface
+        = PimCommon::Util::createImapSettingsInterface(resource);
 
     QString loginName;
     QString serverName;
@@ -122,7 +122,7 @@ void AclModifyJob::changeAcl(Akonadi::Collection collection)
         if (canAdministrate(attribute, collection)) {
             attribute->setRights(mNewRight);
             Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(collection);
-            connect(modifyJob, SIGNAL(result(KJob*)), this, SLOT(slotModifyDone(KJob*)));
+            connect(modifyJob, SIGNAL(result(KJob *)), this, SLOT(slotModifyDone(KJob *)));
         }
     } else {
         checkNewCollection();
@@ -182,9 +182,9 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
     }
     folderNames.sort();
     if (KMessageBox::Continue != KMessageBox::warningContinueCancelList(nullptr,
-            i18n("Do you really want to apply this folders permissions on the subdirectories:"),
-            folderNames,
-            i18n("Apply Permissions"))) {
+                                                                        i18n("Do you really want to apply this folders permissions on the subdirectories:"),
+                                                                        folderNames,
+                                                                        i18n("Apply Permissions"))) {
         deleteLater();
         qCDebug(PIMCOMMONAKONADI_LOG) << "AclModifyJob: User canceled .";
         return;

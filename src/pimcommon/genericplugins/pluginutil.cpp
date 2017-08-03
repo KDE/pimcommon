@@ -19,8 +19,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-namespace
-{
+namespace {
 inline QString pluginConfigFile()
 {
     return QStringLiteral("pimpluginsrc");
@@ -35,7 +34,7 @@ bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsL
     const bool pluginEnabledByUser = enabledPluginsList.contains(pluginId);
     const bool pluginDisabledByUser = disabledPluginsList.contains(pluginId);
     if ((isEnabledByDefault && !pluginDisabledByUser)
-            || (!isEnabledByDefault && pluginEnabledByUser)) {
+        || (!isEnabledByDefault && pluginEnabledByUser)) {
         return true;
     }
     return false;

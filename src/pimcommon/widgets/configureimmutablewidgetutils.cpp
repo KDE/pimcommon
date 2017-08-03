@@ -34,9 +34,9 @@
 
 using namespace PimCommon;
 
-static const char lockedDownWarning[] =
-    I18N_NOOP("<qt><p>This setting has been fixed by your administrator.</p>"
-              "<p>If you think this is an error, please contact him.</p></qt>");
+static const char lockedDownWarning[]
+    = I18N_NOOP("<qt><p>This setting has been fixed by your administrator.</p>"
+                "<p>If you think this is an error, please contact him.</p></qt>");
 
 void ConfigureImmutableWidgetUtils::checkLockDown(QWidget *w, const KConfigSkeletonItem *item)
 {
@@ -46,8 +46,7 @@ void ConfigureImmutableWidgetUtils::checkLockDown(QWidget *w, const KConfigSkele
     }
 }
 
-void ConfigureImmutableWidgetUtils::populateButtonGroup(QGroupBox *box, QButtonGroup *group, int orientation,
-        const KCoreConfigSkeleton::ItemEnum *e)
+void ConfigureImmutableWidgetUtils::populateButtonGroup(QGroupBox *box, QButtonGroup *group, int orientation, const KCoreConfigSkeleton::ItemEnum *e)
 {
     box->setTitle(e->label());
     if (orientation == Qt::Horizontal) {
@@ -86,8 +85,7 @@ void ConfigureImmutableWidgetUtils::loadWidget(PimCommon::SimpleStringListEditor
     b->setStringList(e->value());
 }
 
-void ConfigureImmutableWidgetUtils::loadWidget(QGroupBox *box, QButtonGroup *group,
-        const KCoreConfigSkeleton::ItemEnum *e)
+void ConfigureImmutableWidgetUtils::loadWidget(QGroupBox *box, QButtonGroup *group, const KCoreConfigSkeleton::ItemEnum *e)
 {
     Q_ASSERT(group->buttons().size() == e->choices().size());
     checkLockDown(box, e);

@@ -37,14 +37,14 @@ class PimCommon::CheckedCollectionWidgetPrivate
 {
 public:
     CheckedCollectionWidgetPrivate()
-        : mFolderView(nullptr),
-          mSelectionModel(nullptr),
-          mCheckProxy(nullptr),
-          mCollectionFilter(nullptr),
-          mEntityTreeModel(nullptr)
+        : mFolderView(nullptr)
+        , mSelectionModel(nullptr)
+        , mCheckProxy(nullptr)
+        , mCollectionFilter(nullptr)
+        , mEntityTreeModel(nullptr)
     {
-
     }
+
     QTreeView *mFolderView;
     QItemSelectionModel *mSelectionModel;
     KCheckableProxyModel *mCheckProxy;
@@ -53,8 +53,8 @@ public:
 };
 
 CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidget *parent)
-    : QWidget(parent),
-      d(new PimCommon::CheckedCollectionWidgetPrivate)
+    : QWidget(parent)
+    , d(new PimCommon::CheckedCollectionWidgetPrivate)
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(0);
@@ -132,4 +132,3 @@ void CheckedCollectionWidget::slotSetCollectionFilter(const QString &filter)
     d->mCollectionFilter->setFilterWildcard(filter);
     d->mFolderView->expandAll();
 }
-

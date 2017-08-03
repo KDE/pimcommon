@@ -19,10 +19,9 @@
 using namespace PimCommon;
 
 MigrateFileInfo::MigrateFileInfo()
-    : mVersion(-1),
-      mFolder(false)
+    : mVersion(-1)
+    , mFolder(false)
 {
-
 }
 
 bool MigrateFileInfo::isValid() const

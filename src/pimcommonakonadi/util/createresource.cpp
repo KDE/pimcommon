@@ -57,7 +57,7 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
     if (m.methodSignature().isEmpty()) {
         qCWarning(PIMCOMMONAKONADI_LOG) << "Did not find D-Bus method: " << method << " available methods are:";
         const int numberOfMethod(mo->methodCount());
-        for (int i = 0; i < numberOfMethod; ++ i) {
+        for (int i = 0; i < numberOfMethod; ++i) {
             qCWarning(PIMCOMMONAKONADI_LOG) << mo->method(i).methodSignature();
         }
         return QVariant::Invalid;
@@ -141,4 +141,3 @@ QString CreateResource::createResource(const QString &resources, const QString &
     }
     return QString();
 }
-

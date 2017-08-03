@@ -20,15 +20,13 @@
 using namespace PimCommon;
 
 AbstractGenericPlugin::AbstractGenericPlugin(QObject *parent)
-    : QObject(parent),
-      mIsEnabled(true)
+    : QObject(parent)
+    , mIsEnabled(true)
 {
-
 }
 
 AbstractGenericPlugin::~AbstractGenericPlugin()
 {
-
 }
 
 bool AbstractGenericPlugin::hasPopupMenuSupport() const
@@ -61,4 +59,3 @@ bool AbstractGenericPlugin::isEnabled() const
 {
     return mIsEnabled;
 }
-

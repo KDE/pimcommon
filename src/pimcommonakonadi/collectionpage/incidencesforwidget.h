@@ -24,8 +24,7 @@
 #include "pimcommonakonadi_export.h"
 #include <QWidget>
 
-namespace PimCommon
-{
+namespace PimCommon {
 class IncidencesForWidgetPrivate;
 class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QWidget
 {

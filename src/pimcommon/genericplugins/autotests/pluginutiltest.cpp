@@ -22,12 +22,10 @@
 PluginUtilTest::PluginUtilTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 PluginUtilTest::~PluginUtilTest()
 {
-
 }
 
 void PluginUtilTest::shouldTestIsEnabled_data()
@@ -47,11 +45,15 @@ void PluginUtilTest::shouldTestIsEnabled_data()
     QTest::newRow("pluginidempty-2") << QStringList() << QStringList() << false << QString() << false;
 
     //Use setting from user settings
-    QStringList disabled{ QStringLiteral("foo") };
+    QStringList disabled{
+        QStringLiteral("foo")
+    };
     QTest::newRow("usersettingdisabled") << QStringList() << disabled << true << QStringLiteral("foo") << false;
     QTest::newRow("usersettingdisabled-2") << QStringList() << disabled << false << QStringLiteral("foo") << false;
 
-    QStringList enabled{ QStringLiteral("foo") };
+    QStringList enabled{
+        QStringLiteral("foo")
+    };
     QTest::newRow("usersettingenabled") << enabled << QStringList() << true << QStringLiteral("foo") << true;
     QTest::newRow("usersettingenabled-2") << enabled << QStringList() << false << QStringLiteral("foo") << true;
 }

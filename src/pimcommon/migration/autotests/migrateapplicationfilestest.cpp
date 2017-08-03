@@ -27,12 +27,10 @@ using namespace PimCommon;
 MigrateApplicationFilesTest::MigrateApplicationFilesTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MigrateApplicationFilesTest::~MigrateApplicationFilesTest()
 {
-
 }
 
 void MigrateApplicationFilesTest::initTestCase()
@@ -288,7 +286,6 @@ void MigrateApplicationFilesTest::shouldNotMigrateIfAlreadyDone()
     Q_FOREACH (const QString &file, files) {
         QVERIFY(!QFile(xdgDatahome + file).exists());
     }
-
 }
 
 void MigrateApplicationFilesTest::shouldMigrateFiles()

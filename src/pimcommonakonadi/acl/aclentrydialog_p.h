@@ -24,9 +24,7 @@
 
 #include <QDialog>
 
-namespace PimCommon
-{
-
+namespace PimCommon {
 /**
  * @short A dialog for editing an IMAP ACL entry.
  */
@@ -76,7 +74,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotChanged())
     //@endcond
 };
-
 }
 
 #endif
