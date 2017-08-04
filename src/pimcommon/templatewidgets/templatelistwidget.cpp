@@ -24,6 +24,7 @@
 #include <KLocalizedString>
 #include <QMenu>
 #include <KNS3/DownloadDialog>
+#include <KAuthorized>
 #include <QIcon>
 
 #include <QListWidgetItem>
@@ -187,10 +188,12 @@ public:
         }
         menu->addAction(i18n("Import..."), q, SLOT(slotImportTemplates()));
 
-        if (!knewstuffConfigName.isEmpty()) {
-            menu->addSeparator();
-            QAction *act = menu->addAction(i18n("Download new Templates..."), q, SLOT(slotDownloadTemplates()));
-            act->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
+        if (KAuthorized::authorize(QStringLiteral("ghns"))) {
+            if (!knewstuffConfigName.isEmpty()) {
+                menu->addSeparator();
+                QAction *act = menu->addAction(i18n("Download new Templates..."), q, SLOT(slotDownloadTemplates()));
+                act->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
+            }
         }
 
         menu->exec(q->mapToGlobal(pos));
