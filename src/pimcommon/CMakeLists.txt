@@ -91,6 +91,7 @@ set(libpimcommon_widgets_SRCS
     widgets/spellchecklineedit.cpp
     widgets/kpimprintpreviewdialog.cpp
     widgets/lineeditpassword.cpp
+    widgets/lineeditwithcompleterng.cpp
     )
 
 set(libpimcommon_customtools_SRCS
