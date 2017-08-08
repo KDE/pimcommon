@@ -63,7 +63,7 @@ ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     d->mContentsComboBox->addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeFreebusy));
     d->mContentsComboBox->addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeFile));
 
-    connect(d->mContentsComboBox, static_cast<void (KComboBox::*)(int)>(&KComboBox::activated), this, &ContentTypeWidget::activated);
+    connect(d->mContentsComboBox, QOverload<int>::of(&KComboBox::activated), this, &ContentTypeWidget::activated);
 }
 
 ContentTypeWidget::~ContentTypeWidget()

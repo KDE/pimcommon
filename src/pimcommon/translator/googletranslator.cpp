@@ -166,7 +166,7 @@ void GoogleTranslator::translate()
     const QNetworkRequest request(url);
 
     QNetworkReply *reply = mNetworkAccessManager->get(request);
-    connect(reply, static_cast<void (QNetworkReply::*)(QNetworkReply::NetworkError)>(&QNetworkReply::error), this, &GoogleTranslator::slotError);
+    connect(reply, QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), this, &GoogleTranslator::slotError);
 }
 
 void GoogleTranslator::slotError(QNetworkReply::NetworkError /*error*/)
