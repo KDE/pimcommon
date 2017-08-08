@@ -377,6 +377,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     KActionMenuChangeCase
     KPimPrintPreviewDialog
     LineEditPassword
+    LineEditWithCompleterNg
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
     RELATIVE widgets
