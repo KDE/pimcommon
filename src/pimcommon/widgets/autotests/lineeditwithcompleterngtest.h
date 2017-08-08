@@ -15,31 +15,22 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef LINEEDITWITHCOMPLETERNG_H
-#define LINEEDITWITHCOMPLETERNG_H
+#ifndef LINEEDITWITHCOMPLETERNGTEST_H
+#define LINEEDITWITHCOMPLETERNGTEST_H
 
-#include <QLineEdit>
-#include "pimcommon_export.h"
-class QStringListModel;
-namespace PimCommon {
-class PIMCOMMON_EXPORT LineEditWithCompleterNg : public QLineEdit
+#include <QObject>
+
+class LineEditWithCompleterNgTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LineEditWithCompleterNg(QWidget *parent = nullptr);
-    ~LineEditWithCompleterNg();
+    explicit LineEditWithCompleterNgTest(QObject *parent = nullptr);
+    ~LineEditWithCompleterNgTest() = default;
 
-    void addCompletionItem(const QString &str);
-
-protected:
-    void contextMenuEvent(QContextMenuEvent *e) override;
-
-public Q_SLOTS:
-    void slotClearHistory();
-
-private:
-    QStringListModel *mCompleterListModel;
-    QStringList mListCompetion;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+    void shouldAddCompletionItem();
+    void shouldClearCompleter();
 };
-}
-#endif // LINEEDITWITHCOMPLETER_H
+
+#endif // LINEEDITWITHCOMPLETERNGTEST_H
