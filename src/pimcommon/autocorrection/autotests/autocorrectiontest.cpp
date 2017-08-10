@@ -705,6 +705,7 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);
     QVERIFY(proc.waitForFinished());
+    QCOMPARE(proc.exitCode(), 0);
 }
 
 QTEST_MAIN(AutoCorrectionTest)
