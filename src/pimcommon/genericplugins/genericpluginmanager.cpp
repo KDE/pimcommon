@@ -32,24 +32,6 @@
 
 using namespace PimCommon;
 
-class GenericPluginManagerInstancePrivate
-{
-public:
-    GenericPluginManagerInstancePrivate()
-        : genericPluginManager(new GenericPluginManager)
-    {
-    }
-
-    ~GenericPluginManagerInstancePrivate()
-    {
-        delete genericPluginManager;
-    }
-
-    GenericPluginManager *genericPluginManager;
-};
-
-Q_GLOBAL_STATIC(GenericPluginManagerInstancePrivate, sInstance)
-
 class GenericPluginInfo
 {
 public:
@@ -233,7 +215,8 @@ QString GenericPluginManager::pluginName() const
 
 GenericPluginManager *GenericPluginManager::self()
 {
-    return sInstance->genericPluginManager;
+    static GenericPluginManager s_self;
+    return &s_self;
 }
 
 QVector<GenericPlugin *> GenericPluginManager::pluginsList() const

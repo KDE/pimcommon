@@ -26,24 +26,6 @@
 
 using namespace PimCommon;
 
-class CustomToolsPluginManagerInstancePrivate
-{
-public:
-    CustomToolsPluginManagerInstancePrivate()
-        : customToolsPluginManager(new CustomToolsPluginManager)
-    {
-    }
-
-    ~CustomToolsPluginManagerInstancePrivate()
-    {
-        delete customToolsPluginManager;
-    }
-
-    CustomToolsPluginManager *customToolsPluginManager;
-};
-
-Q_GLOBAL_STATIC(CustomToolsPluginManagerInstancePrivate, sInstance)
-
 class CustomToolsPluginInfo
 {
 public:
@@ -137,7 +119,8 @@ void CustomToolsPluginManagerPrivate::loadPlugin(CustomToolsPluginInfo *item)
 
 CustomToolsPluginManager *CustomToolsPluginManager::self()
 {
-    return sInstance->customToolsPluginManager;
+    static CustomToolsPluginManager s_self;
+    return &s_self;
 }
 
 CustomToolsPluginManager::CustomToolsPluginManager(QObject *parent)
