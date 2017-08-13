@@ -50,8 +50,8 @@ public:
     RenameFileDialogPrivate(const QUrl &_url, RenameFileDialog *qq)
         : url(_url)
         , applyAll(nullptr)
-        , rename(nullptr)
-        , suggestNewName(nullptr)
+        , renameBtn(nullptr)
+        , suggestNewNameBtn(nullptr)
         , nameEdit(nullptr)
         , q(qq)
     {
@@ -61,8 +61,8 @@ public:
 
     QUrl url;
     QCheckBox *applyAll;
-    QPushButton *rename;
-    QPushButton *suggestNewName;
+    QPushButton *renameBtn;
+    QPushButton *suggestNewNameBtn;
     QLineEdit *nameEdit;
     RenameFileDialog *q;
 };
@@ -136,9 +136,9 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     renameLayout->addWidget(d->nameEdit);
     d->nameEdit->setClearButtonEnabled(true);
     d->nameEdit->setText(url.fileName());
-    d->suggestNewName = new QPushButton(i18n("Suggest New &Name"), this);
-    renameLayout->addWidget(d->suggestNewName);
-    connect(d->suggestNewName, &QPushButton::clicked, this, &RenameFileDialog::slotSuggestNewNamePressed);
+    d->suggestNewNameBtn = new QPushButton(i18n("Suggest New &Name"), this);
+    renameLayout->addWidget(d->suggestNewNameBtn);
+    connect(d->suggestNewNameBtn, &QPushButton::clicked, this, &RenameFileDialog::slotSuggestNewNamePressed);
 
     QPushButton *overWrite = new QPushButton(this);
     KStandardGuiItem::assign(overWrite, KStandardGuiItem::Overwrite);
@@ -147,8 +147,8 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     QPushButton *ignore = new QPushButton(i18n("&Ignore"), this);
     connect(ignore, &QPushButton::clicked, this, &RenameFileDialog::slotIgnorePressed);
 
-    d->rename = new QPushButton(i18n("&Rename"), this);
-    connect(d->rename, &QPushButton::clicked, this, &RenameFileDialog::slotRenamePressed);
+    d->renameBtn = new QPushButton(i18n("&Rename"), this);
+    connect(d->renameBtn, &QPushButton::clicked, this, &RenameFileDialog::slotRenamePressed);
 
     KSeparator *separator = new KSeparator(this);
     pLayout->addWidget(separator);
@@ -162,7 +162,7 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
         layout->addWidget(d->applyAll);
         slotApplyAllPressed();
     }
-    layout->addWidget(d->rename);
+    layout->addWidget(d->renameBtn);
     layout->addWidget(overWrite);
     layout->addWidget(ignore);
 }
@@ -216,8 +216,8 @@ void RenameFileDialog::slotApplyAllPressed()
 {
     const bool enabled(!d->applyAll->isChecked());
     d->nameEdit->setEnabled(enabled);
-    d->suggestNewName->setEnabled(enabled);
-    d->rename->setEnabled(enabled);
+    d->suggestNewNameBtn->setEnabled(enabled);
+    d->renameBtn->setEnabled(enabled);
 }
 
 void RenameFileDialog::slotSuggestNewNamePressed()
