@@ -122,7 +122,7 @@ void AclModifyJob::changeAcl(Akonadi::Collection collection)
         if (canAdministrate(attribute, collection)) {
             attribute->setRights(mNewRight);
             Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(collection);
-            connect(modifyJob, SIGNAL(result(KJob *)), this, SLOT(slotModifyDone(KJob *)));
+            connect(modifyJob, SIGNAL(result(KJob*)), this, SLOT(slotModifyDone(KJob*)));
         }
     } else {
         checkNewCollection();
