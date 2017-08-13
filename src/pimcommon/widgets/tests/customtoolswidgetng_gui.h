@@ -15,8 +15,8 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef TEST_CUSTOMTOOLWIDGETTESTNG_GUI_H
-#define TEST_CUSTOMTOOLWIDGETTESTNG_GUI_H
+#ifndef TEST_CUSTOMTOOLSWIDGETNG_GUI_H
+#define TEST_CUSTOMTOOLSWIDGETNG_GUI_H
 
 #include <QWidget>
 namespace PimCommon {

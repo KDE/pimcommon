@@ -31,8 +31,8 @@
     your version.
 */
 
-#ifndef _SIMPLESTRINGLISTEDITOR_H_
-#define _SIMPLESTRINGLISTEDITOR_H_
+#ifndef SIMPLESTRINGLISTEDITOR_H
+#define SIMPLESTRINGLISTEDITOR_H
 
 #include <QWidget>
 #include <QStringList>
@@ -116,4 +116,4 @@ private:
 };
 }
 
-#endif // _SIMPLESTRINGLISTEDITOR_H_
+#endif // SIMPLESTRINGLISTEDITOR_H

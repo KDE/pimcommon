@@ -15,8 +15,8 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef KMMIGRATEKMAIL4CONFIGTEST_H
-#define KMMIGRATEKMAIL4CONFIGTEST_H
+#ifndef MIGRATEAPPLICATIONFILESTEST_H
+#define MIGRATEAPPLICATIONFILESTEST_H
 
 #include <QObject>
 
@@ -42,4 +42,4 @@ private Q_SLOTS:
     void shouldNotMigrateIfAlreadyDone();
 };
 
-#endif // KMMIGRATEKMAIL4CONFIGTEST_H
+#endif // MIGRATEAPPLICATIONFILESTEST_H

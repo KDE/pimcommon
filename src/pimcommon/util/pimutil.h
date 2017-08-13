@@ -35,8 +35,8 @@
 **   your version.
 **
 *******************************************************************************/
-#ifndef PIMCOMMON_MAILUTIL_H
-#define PIMCOMMON_MAILUTIL_H
+#ifndef PIMCOMMON_PIMUTIL_H
+#define PIMCOMMON_PIMUTIL_H
 
 #include "pimcommon_export.h"
 #include <QUrl>

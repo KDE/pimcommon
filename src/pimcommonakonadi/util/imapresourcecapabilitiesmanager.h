@@ -15,8 +15,8 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef IMAPRESOURCEMANAGER_H
-#define IMAPRESOURCEMANAGER_H
+#ifndef IMAPRESOURCECAPABILITIESMANAGER_H
+#define IMAPRESOURCECAPABILITIESMANAGER_H
 
 #include <QObject>
 #include <QHash>
@@ -46,4 +46,4 @@ private:
 };
 }
 
-#endif // IMAPRESOURCEMANAGER_H
+#endif // IMAPRESOURCECAPABILITIESMANAGER_H
