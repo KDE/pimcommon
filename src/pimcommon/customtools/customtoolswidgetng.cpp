@@ -15,11 +15,11 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "customtoolsplugin.h"
-
-#include "customtoolsviewinterface.h"
 #include "customtoolswidgetng.h"
-#include "customtools/customtoolspluginmanager.h"
+#include "customtoolsplugin.h"
+#include "customtoolspluginmanager.h"
+#include "customtoolsviewinterface.h"
+
 #include <KToggleAction>
 
 #include <QHBoxLayout>

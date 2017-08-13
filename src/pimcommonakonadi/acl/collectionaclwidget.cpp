@@ -15,17 +15,18 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "aclmanager.h"
 #include "collectionaclwidget.h"
 #include "acllistview.h"
+#include "aclmanager.h"
 
 #include <KLocalizedString>
-#include <QVBoxLayout>
+
 #include <QAction>
 #include <QActionEvent>
+#include <QCheckBox>
 #include <QHBoxLayout>
 #include <QPushButton>
-#include <QCheckBox>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 /**

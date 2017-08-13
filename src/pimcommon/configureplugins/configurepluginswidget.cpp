@@ -15,16 +15,17 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "configurepluginslistwidget.h"
 #include "configurepluginswidget.h"
+#include "configurepluginslistwidget.h"
 
-#include <QVBoxLayout>
-#include <KLocalizedString>
 #include <KConfigGroup>
-#include <QTextEdit>
-#include <KSharedConfig>
+#include <KLocalizedString>
 #include <KMessageWidget>
+#include <KSharedConfig>
+
 #include <QSplitter>
+#include <QTextEdit>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 

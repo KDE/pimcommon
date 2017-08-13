@@ -18,27 +18,27 @@
  */
 
 #include "aclmanager.h"
-
-#include "pimcommonakonadi_debug.h"
 #include "aclentrydialog_p.h"
 #include "aclutils_p.h"
+#include "aclmodifyjob.h"
 #include "imapaclattribute.h"
 #include "imapresourcesettings.h"
+#include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
-#include <Collection>
-#include <CollectionFetchJob>
-#include <CollectionModifyJob>
+
+#include <AkonadiCore/CollectionFetchJob>
+#include <AkonadiCore/ServerManager>
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
-#include <AkonadiCore/ServerManager>
-#include "aclmodifyjob.h"
-#include <KEmailAddress>
 
+#include <KEmailAddress>
 #include <KLocalizedString>
 #include <KMessageBox>
 
 #include <QAbstractListModel>
 #include <QAction>
+#include <QDBusInterface>
+#include <QDBusReply>
 #include <QItemSelectionModel>
 
 using namespace PimCommon;
@@ -478,5 +478,4 @@ void AclManager::setChanged(bool b)
     d->mChanged = b;
 }
 
-#include "aclmodifyjob.h"
 #include "moc_aclmanager.cpp"

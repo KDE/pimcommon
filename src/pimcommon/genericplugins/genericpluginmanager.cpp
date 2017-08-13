@@ -15,20 +15,14 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "genericplugin.h"
 #include "genericpluginmanager.h"
+#include "genericplugin.h"
 #include "pimcommon_debug.h"
 
-#include <kpluginmetadata.h>
-#include <KPluginLoader>
 #include <KPluginFactory>
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include <qfileinfo.h>
-#include <QVariant>
-#include <QSet>
-#include <QVariantList>
-#include <QDebug>
+#include <KPluginLoader>
+
+#include <QFileInfo>
 
 using namespace PimCommon;
 

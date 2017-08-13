@@ -15,14 +15,16 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "customtoolsplugin.h"
 #include "customtoolspluginmanager.h"
+#include "customtoolsplugin.h"
+
 #include <KPluginFactory>
 #include <KPluginLoader>
-#include <kpluginmetadata.h>
+#include <KPluginMetaData>
+
+#include <QDebug>
 #include <QFileInfo>
 #include <QSet>
-#include <QDebug>
 
 using namespace PimCommon;
 
