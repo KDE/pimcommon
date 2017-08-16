@@ -4,7 +4,15 @@ set(PIM_VERSION "5.6.42")
 project(pimcommon VERSION ${PIM_VERSION})
 
 set(KF5_VERSION "5.37.0")
-find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
+option(RUN_UNINSTALL "test run uninstalled apps (experimental)" FALSE)
+
+set(ECM_VERSION ${KF5_VERSION})
+# ECM setup
+if (RUN_UNINSTALL)
+   set(ECM_VERSION "5.38.0")
+endif()
+
+find_package(ECM ${ECM_VERSION} CONFIG REQUIRED)
 set(LIBRARY_NAMELINK)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
 
