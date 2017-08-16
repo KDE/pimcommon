@@ -278,28 +278,30 @@ void AutoCorrectionWidget::enableDoubleQuotes(bool state)
 
 void AutoCorrectionWidget::selectSingleQuoteCharOpen()
 {
-    KPIMTextEdit::SelectSpecialCharDialog dlg(this);
-    dlg.setCurrentChar(d->m_singleQuotes.begin);
-    dlg.showSelectButton(false);
-    dlg.autoInsertChar();
-    if (dlg.exec()) {
-        d->m_singleQuotes.begin = dlg.currentChar();
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
+    dlg->setCurrentChar(d->m_singleQuotes.begin);
+    dlg->showSelectButton(false);
+    dlg->autoInsertChar();
+    if (dlg->exec()) {
+        d->m_singleQuotes.begin = dlg->currentChar();
         d->ui->singleQuote1->setText(d->m_singleQuotes.begin);
         emitChanged();
     }
+    delete dlg;
 }
 
 void AutoCorrectionWidget::selectSingleQuoteCharClose()
 {
-    KPIMTextEdit::SelectSpecialCharDialog dlg(this);
-    dlg.showSelectButton(false);
-    dlg.setCurrentChar(d->m_singleQuotes.end);
-    dlg.autoInsertChar();
-    if (dlg.exec()) {
-        d->m_singleQuotes.end = dlg.currentChar();
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog (this);
+    dlg->showSelectButton(false);
+    dlg->setCurrentChar(d->m_singleQuotes.end);
+    dlg->autoInsertChar();
+    if (dlg->exec()) {
+        d->m_singleQuotes.end = dlg->currentChar();
         d->ui->singleQuote2->setText(d->m_singleQuotes.end);
         emitChanged();
     }
+    delete dlg;
 }
 
 void AutoCorrectionWidget::setDefaultSingleQuotes()
@@ -312,28 +314,30 @@ void AutoCorrectionWidget::setDefaultSingleQuotes()
 
 void AutoCorrectionWidget::selectDoubleQuoteCharOpen()
 {
-    KPIMTextEdit::SelectSpecialCharDialog dlg(this);
-    dlg.showSelectButton(false);
-    dlg.setCurrentChar(d->m_doubleQuotes.begin);
-    dlg.autoInsertChar();
-    if (dlg.exec()) {
-        d->m_doubleQuotes.begin = dlg.currentChar();
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog (this);
+    dlg->showSelectButton(false);
+    dlg->setCurrentChar(d->m_doubleQuotes.begin);
+    dlg->autoInsertChar();
+    if (dlg->exec()) {
+        d->m_doubleQuotes.begin = dlg->currentChar();
         d->ui->doubleQuote1->setText(d->m_doubleQuotes.begin);
         emitChanged();
     }
+    delete dlg;
 }
 
 void AutoCorrectionWidget::selectDoubleQuoteCharClose()
 {
-    KPIMTextEdit::SelectSpecialCharDialog dlg(this);
-    dlg.showSelectButton(false);
-    dlg.setCurrentChar(d->m_doubleQuotes.end);
-    dlg.autoInsertChar();
-    if (dlg.exec()) {
-        d->m_doubleQuotes.end = dlg.currentChar();
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog (this);
+    dlg->showSelectButton(false);
+    dlg->setCurrentChar(d->m_doubleQuotes.end);
+    dlg->autoInsertChar();
+    if (dlg->exec()) {
+        d->m_doubleQuotes.end = dlg->currentChar();
         d->ui->doubleQuote2->setText(d->m_doubleQuotes.end);
         emitChanged();
     }
+    delete dlg;
 }
 
 void AutoCorrectionWidget::setDefaultDoubleQuotes()
