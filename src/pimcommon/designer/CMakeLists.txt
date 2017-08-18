@@ -1,4 +1,4 @@
-if (Qt5Designer_FOUND)
+if (KF5DesignerPlugin_FOUND)
     kf5designerplugin_add_plugin(pimcommonwidgets pimcommon.widgets)
     target_link_libraries(pimcommonwidgets
         KF5::PimCommon KF5::PimTextEdit

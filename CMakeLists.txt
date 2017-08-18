@@ -70,15 +70,8 @@ find_package(KF5LibkdepimAkonadi ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(Grantlee5 "5.1" CONFIG REQUIRED)
 
-find_package(Qt5Designer CONFIG)
-set_package_properties(Qt5Designer PROPERTIES
-    PURPOSE "Required to build the Qt Designer plugins"
-    TYPE OPTIONAL
-    )
-
-if (Qt5Designer_FOUND)
-    find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG)
+set_package_properties(KF5DesignerPlugin PROPERTIES DESCRIPTION "KF5 designer plugin" TYPE OPTIONAL)
 
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
