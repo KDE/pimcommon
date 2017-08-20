@@ -92,9 +92,8 @@ bool GenericPluginManagerPrivate::initializePlugins()
     if (serviceTypeName.isEmpty() || pluginName.isEmpty()) {
         return false;
     }
-    static const QString s_serviceTypeName = serviceTypeName;
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData &md) {
-        return md.serviceTypes().contains(s_serviceTypeName);
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [this](const KPluginMetaData &md) {
+        return md.serviceTypes().contains(serviceTypeName);
     });
 
     const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
@@ -205,12 +204,6 @@ void GenericPluginManager::setPluginName(const QString &pluginName)
 QString GenericPluginManager::pluginName() const
 {
     return d->pluginName;
-}
-
-GenericPluginManager *GenericPluginManager::self()
-{
-    static GenericPluginManager s_self;
-    return &s_self;
 }
 
 QVector<GenericPlugin *> GenericPluginManager::pluginsList() const

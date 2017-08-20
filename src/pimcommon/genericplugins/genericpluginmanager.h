@@ -55,8 +55,6 @@ public:
     void setPluginName(const QString &pluginName);
     QString pluginName() const;
 
-    static GenericPluginManager *self();
-
     QVector<PimCommon::GenericPlugin *> pluginsList() const;
     QVector<PimCommon::PluginUtilData> pluginsDataList() const;
 

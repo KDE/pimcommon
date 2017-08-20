@@ -34,6 +34,7 @@ public:
     PluginInterfacePrivate()
         : mParentWidget(nullptr)
         , mActionCollection(nullptr)
+        , mGenericPluginManager(nullptr)
     {
     }
 
@@ -42,12 +43,14 @@ public:
     QWidget *mParentWidget;
     KActionCollection *mActionCollection;
     QVector<PimCommon::GenericPluginInterface *> mListGenericInterface;
+    GenericPluginManager *mGenericPluginManager;
 };
 
 PluginInterface::PluginInterface(QObject *parent)
     : QObject(parent)
     , d(new PimCommon::PluginInterfacePrivate)
 {
+    d->mGenericPluginManager = new GenericPluginManager(this);
 }
 
 PluginInterface::~PluginInterface()
@@ -62,9 +65,9 @@ void PimCommon::PluginInterface::setActionCollection(KActionCollection *ac)
 
 void PluginInterface::initializePlugins()
 {
-    PimCommon::GenericPluginManager::self()->setPluginName(d->mPluginName);
-    PimCommon::GenericPluginManager::self()->setServiceTypeName(d->mServiceTypeName);
-    if (!PimCommon::GenericPluginManager::self()->initializePlugins()) {
+    d->mGenericPluginManager->setPluginName(d->mPluginName);
+    d->mGenericPluginManager->setServiceTypeName(d->mServiceTypeName);
+    if (!d->mGenericPluginManager->initializePlugins()) {
         qCDebug(PIMCOMMONAKONADI_LOG) << " Impossible to initialize plugins";
     }
 }
@@ -85,7 +88,7 @@ void PluginInterface::createPluginInterface()
         qCWarning(PIMCOMMONAKONADI_LOG) << "Missing action collection";
         return;
     }
-    Q_FOREACH (PimCommon::GenericPlugin *plugin, PimCommon::GenericPluginManager::self()->pluginsList()) {
+    Q_FOREACH (PimCommon::GenericPlugin *plugin, d->mGenericPluginManager->pluginsList()) {
         if (plugin->isEnabled()) {
             PimCommon::GenericPluginInterface *interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(d->mActionCollection, this));
             interface->setParentWidget(d->mParentWidget);
@@ -202,20 +205,20 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
 
 QVector<PimCommon::PluginUtilData> PluginInterface::pluginsDataList() const
 {
-    return GenericPluginManager::self()->pluginsDataList();
+    return d->mGenericPluginManager->pluginsDataList();
 }
 
 QString PluginInterface::configGroupName() const
 {
-    return GenericPluginManager::self()->configGroupName();
+    return d->mGenericPluginManager->configGroupName();
 }
 
 QString PluginInterface::configPrefixSettingKey() const
 {
-    return GenericPluginManager::self()->configPrefixSettingKey();
+    return d->mGenericPluginManager->configPrefixSettingKey();
 }
 
 PimCommon::GenericPlugin *PluginInterface::pluginFromIdentifier(const QString &id)
 {
-    return GenericPluginManager::self()->pluginFromIdentifier(id);
+    return d->mGenericPluginManager->pluginFromIdentifier(id);
 }
