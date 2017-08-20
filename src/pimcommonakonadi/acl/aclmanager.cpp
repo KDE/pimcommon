@@ -302,10 +302,10 @@ public:
 
         QString resource = collection.resource();
         if (resource.contains(QStringLiteral("akonadi_kolabproxy_resource"))) {
-            QString basename(QStringLiteral("org.freedesktop.Akonadi.Agent.akonadi_kolabproxy_resource"));
-            if (Akonadi::ServerManager::hasInstanceIdentifier()) {
-                basename += QLatin1Char('.') + Akonadi::ServerManager::instanceIdentifier();
-            }
+
+            const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent,
+                                                                        QStringLiteral("akonadi_kolabproxy_resource"));
+
             QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));
             if (interface.isValid()) {
                 QDBusReply<QString> reply = interface.call(QStringLiteral("imapResourceForCollection"), collection.remoteId().toLongLong());
