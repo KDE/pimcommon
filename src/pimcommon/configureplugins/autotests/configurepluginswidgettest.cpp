@@ -23,10 +23,12 @@
 #include <KMessageWidget>
 #include <QSplitter>
 #include <QTest>
+#include <QStandardPaths>
 
 ConfigurePluginsWidgetTest::ConfigurePluginsWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfigurePluginsWidgetTest::~ConfigurePluginsWidgetTest()

@@ -19,11 +19,13 @@
 #include "customtools/customtoolswidgetng.h"
 #include <QStackedWidget>
 #include <QTest>
+#include <QStandardPaths>
 #include <KActionCollection>
 
 CustomToolsWidgetNgTest::CustomToolsWidgetNgTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 CustomToolsWidgetNgTest::~CustomToolsWidgetNgTest()
