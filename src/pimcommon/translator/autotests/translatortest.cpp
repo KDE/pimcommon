@@ -26,9 +26,10 @@
 #include <qtestmouse.h>
 #include <QComboBox>
 #include <QSignalSpy>
-
+#include <QStandardPaths>
 TranslatorTest::TranslatorTest()
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void TranslatorTest::shouldHaveDefaultValuesOnCreation()
