@@ -22,7 +22,11 @@
 #include <ChangeRecorder>
 #include <EntityTreeModel>
 #include <EntityRightsFilterModel>
+#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
 #include <KRecursiveFilterProxyModel>
+#else
+#include <QSortFilterProxyModel>
+#endif
 
 #include <KCheckableProxyModel>
 #include <QLineEdit>
@@ -48,7 +52,12 @@ public:
     QTreeView *mFolderView;
     QItemSelectionModel *mSelectionModel;
     KCheckableProxyModel *mCheckProxy;
+#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
     KRecursiveFilterProxyModel *mCollectionFilter;
+#else
+    QSortFilterProxyModel *mCollectionFilter = nullptr;
+#endif
+
     Akonadi::EntityTreeModel *mEntityTreeModel;
 };
 
@@ -81,10 +90,14 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     d->mCheckProxy = new KCheckableProxyModel(this);
     d->mCheckProxy->setSelectionModel(d->mSelectionModel);
     d->mCheckProxy->setSourceModel(mimeTypeProxy);
-
+#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
     d->mCollectionFilter = new KRecursiveFilterProxyModel(this);
-    d->mCollectionFilter->setSourceModel(d->mCheckProxy);
     d->mCollectionFilter->setDynamicSortFilter(true);
+#else
+    d->mCollectionFilter = new QSortFilterProxyModel(this);
+    d->mCollectionFilter->setRecursiveFiltering(true);
+#endif
+    d->mCollectionFilter->setSourceModel(d->mCheckProxy);
     d->mCollectionFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
     QLineEdit *searchLine = new QLineEdit(this);
