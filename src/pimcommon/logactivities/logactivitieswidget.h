@@ -40,7 +40,7 @@ Q_SIGNALS:
 
 private:
     void slotTextChanged();
-    KPIMTextEdit::PlainTextEditorWidget *mLog;
+    KPIMTextEdit::PlainTextEditorWidget *mLog = nullptr;
 };
 }
 

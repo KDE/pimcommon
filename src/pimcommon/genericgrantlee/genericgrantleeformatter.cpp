@@ -53,7 +53,7 @@ public:
 
     QString mThemePath;
     QString mDefaultMainFile;
-    Grantlee::Engine *mEngine;
+    Grantlee::Engine *mEngine = nullptr;
     QString mErrorMessage;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
     Grantlee::Template mSelfcontainedTemplate;

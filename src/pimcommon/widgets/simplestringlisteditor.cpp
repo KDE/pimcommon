@@ -63,13 +63,13 @@ public:
     {
     }
 
-    QListWidget *mListBox;
-    QPushButton *mAddButton;
-    QPushButton *mRemoveButton;
-    QPushButton *mModifyButton;
-    QPushButton *mUpButton;
-    QPushButton *mDownButton;
-    QVBoxLayout *mButtonLayout;
+    QListWidget *mListBox = nullptr;
+    QPushButton *mAddButton = nullptr;
+    QPushButton *mRemoveButton = nullptr;
+    QPushButton *mModifyButton = nullptr;
+    QPushButton *mUpButton = nullptr;
+    QPushButton *mDownButton = nullptr;
+    QVBoxLayout *mButtonLayout = nullptr;
     QString mAddDialogLabel;
 };
 

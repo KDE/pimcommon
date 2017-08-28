@@ -45,16 +45,13 @@ class Q_DECL_HIDDEN AnnotationEditDialog::Private
 {
 public:
     Private()
-        : mTextEdit(nullptr)
-        , mNoteType(nullptr)
-        , mHasAnnotation(false)
     {
     }
 
     Akonadi::Item mItem;
-    KPIMTextEdit::PlainTextEditorWidget *mTextEdit;
-    KComboBox *mNoteType;
-    bool mHasAnnotation;
+    KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
+    KComboBox *mNoteType = nullptr;
+    bool mHasAnnotation = false;
 };
 
 AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *parent)

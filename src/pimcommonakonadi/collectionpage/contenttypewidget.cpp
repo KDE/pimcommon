@@ -35,7 +35,7 @@ public:
     {
     }
 
-    KComboBox *mContentsComboBox;
+    KComboBox *mContentsComboBox = nullptr;
 };
 
 ContentTypeWidget::ContentTypeWidget(QWidget *parent)

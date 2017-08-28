@@ -35,7 +35,7 @@ public:
     {
     }
 
-    QStackedWidget *mStackedWidget;
+    QStackedWidget *mStackedWidget = nullptr;
     QList<PimCommon::CustomToolsViewInterface *> mListInterfaceView;
 };
 

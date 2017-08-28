@@ -39,7 +39,7 @@ private Q_SLOTS:
 private:
     void initialize(const QString &mimetype);
     void updateStatus(const QModelIndex &parent);
-    PimCommon::CheckedCollectionWidget *mCheckedCollectionWidget;
+    PimCommon::CheckedCollectionWidget *mCheckedCollectionWidget = nullptr;
     QList<Akonadi::Collection::Id> mListCollection;
 };
 }

@@ -35,7 +35,7 @@ public:
     {
     }
 
-    SelectMultiCollectionWidget *mSelectMultiCollection;
+    SelectMultiCollectionWidget *mSelectMultiCollection = nullptr;
 };
 
 SelectMultiCollectionDialog::SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent)

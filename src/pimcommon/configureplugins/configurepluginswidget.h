@@ -46,9 +46,9 @@ private:
     void writeConfig();
     void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
 
-    QSplitter *mSplitter;
-    ConfigurePluginsListWidget *mConfigureListWidget;
-    QTextEdit *mDescription;
+    QSplitter *mSplitter = nullptr;
+    ConfigurePluginsListWidget *mConfigureListWidget = nullptr;
+    QTextEdit *mDescription = nullptr;
 };
 }
 #endif // CONFIGUREPLUGINSWIDGET_H

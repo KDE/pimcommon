@@ -40,8 +40,8 @@ public:
     }
 
     QStringList mLog;
-    PimCommon::LogActivitiesDialog *mDialog;
-    bool mEnableLogActivities;
+    PimCommon::LogActivitiesDialog *mDialog = nullptr;
+    bool mEnableLogActivities = false;
 };
 
 LogActivitiesManager::LogActivitiesManager(QObject *parent)

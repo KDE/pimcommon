@@ -40,10 +40,10 @@ public:
 
     QString mPluginName;
     QString mServiceTypeName;
-    QWidget *mParentWidget;
-    KActionCollection *mActionCollection;
+    QWidget *mParentWidget = nullptr;
+    KActionCollection *mActionCollection = nullptr;
     QVector<PimCommon::GenericPluginInterface *> mListGenericInterface;
-    GenericPluginManager *mGenericPluginManager;
+    GenericPluginManager *mGenericPluginManager = nullptr;
 };
 
 PluginInterface::PluginInterface(QObject *parent)

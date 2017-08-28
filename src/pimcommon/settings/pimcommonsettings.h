@@ -45,7 +45,7 @@ private:
     virtual ~PimCommonSettings();
     static PimCommonSettings *mSelf;
 
-    QTimer *mConfigSyncTimer;
+    QTimer *mConfigSyncTimer = nullptr;
 };
 }
 

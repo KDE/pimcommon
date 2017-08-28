@@ -71,7 +71,7 @@ protected:
     void resetToUserSettings(const QList<PluginItem *> &items);
     void changeState(const QList<PluginItem *> &items);
 
-    QTreeWidget *mListWidget;
+    QTreeWidget *mListWidget = nullptr;
 private Q_SLOTS:
     void slotConfigureClicked(QAction *act);
 };

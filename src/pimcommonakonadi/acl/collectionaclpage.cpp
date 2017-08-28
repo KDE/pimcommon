@@ -42,11 +42,10 @@ class PimCommon::CollectionAclPagePrivate
 {
 public:
     CollectionAclPagePrivate()
-        : mCollectionAclWidget(nullptr)
     {
     }
 
-    CollectionAclWidget *mCollectionAclWidget;
+    CollectionAclWidget *mCollectionAclWidget = nullptr;
 };
 
 CollectionAclPage::CollectionAclPage(QWidget *parent)

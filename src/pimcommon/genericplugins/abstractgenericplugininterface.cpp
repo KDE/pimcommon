@@ -28,8 +28,8 @@ public:
     {
     }
 
-    AbstractGenericPlugin *plugin;
-    QWidget *parentWidget;
+    AbstractGenericPlugin *plugin = nullptr;
+    QWidget *parentWidget = nullptr;
 };
 
 AbstractGenericPluginInterface::AbstractGenericPluginInterface(QObject *parent)

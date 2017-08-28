@@ -29,11 +29,10 @@ class PimCommon::IncidencesForWidgetPrivate
 {
 public:
     IncidencesForWidgetPrivate()
-        : mIncidencesForComboBox(nullptr)
     {
     }
 
-    KComboBox *mIncidencesForComboBox;
+    KComboBox *mIncidencesForComboBox = nullptr;
 };
 IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     : QWidget(parent)

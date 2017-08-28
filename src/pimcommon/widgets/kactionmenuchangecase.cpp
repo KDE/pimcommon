@@ -24,17 +24,13 @@ class PimCommon::KActionMenuChangeCasePrivate
 {
 public:
     KActionMenuChangeCasePrivate()
-        : mUpperCase(nullptr)
-        , mSentenceCase(nullptr)
-        , mLowerCase(nullptr)
-        , mReverseCase(nullptr)
     {
     }
 
-    QAction *mUpperCase;
-    QAction *mSentenceCase;
-    QAction *mLowerCase;
-    QAction *mReverseCase;
+    QAction *mUpperCase = nullptr;
+    QAction *mSentenceCase = nullptr;
+    QAction *mLowerCase = nullptr;
+    QAction *mReverseCase = nullptr;
 };
 
 KActionMenuChangeCase::KActionMenuChangeCase(QObject *parent)

@@ -49,16 +49,16 @@ public:
     {
     }
 
-    QTreeView *mFolderView;
-    QItemSelectionModel *mSelectionModel;
-    KCheckableProxyModel *mCheckProxy;
+    QTreeView *mFolderView = nullptr;
+    QItemSelectionModel *mSelectionModel = nullptr;
+    KCheckableProxyModel *mCheckProxy = nullptr;
 #if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-    KRecursiveFilterProxyModel *mCollectionFilter;
+    KRecursiveFilterProxyModel *mCollectionFilter = nullptr;
 #else
     QSortFilterProxyModel *mCollectionFilter = nullptr;
 #endif
 
-    Akonadi::EntityTreeModel *mEntityTreeModel;
+    Akonadi::EntityTreeModel *mEntityTreeModel = nullptr;
 };
 
 CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidget *parent)

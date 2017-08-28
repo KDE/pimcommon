@@ -37,7 +37,7 @@ public:
         }
     }
 
-    PimCommon::AutoCorrection *mAutoCorrection;
+    PimCommon::AutoCorrection *mAutoCorrection = nullptr;
     bool mNeedToDeleteAutoCorrection;
 };
 

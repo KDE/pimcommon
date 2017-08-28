@@ -38,8 +38,8 @@ private Q_SLOTS:
     void slotCollectionCanBeAdministrated(bool b);
 
 private:
-    PimCommon::AclManager *mAclManager;
-    QCheckBox *mRecursiveChk;
+    PimCommon::AclManager *mAclManager = nullptr;
+    QCheckBox *mRecursiveChk = nullptr;
 };
 }
 

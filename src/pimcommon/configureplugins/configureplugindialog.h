@@ -48,7 +48,7 @@ private:
     void slotRestoreDefaultClicked();
     void saveConfig();
     void readConfig();
-    QDialogButtonBox *mButtonBox;
+    QDialogButtonBox *mButtonBox = nullptr;
 };
 }
 #endif // CONFIGUREPLUGINDIALOG_H

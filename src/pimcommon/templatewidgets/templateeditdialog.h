@@ -44,9 +44,9 @@ private Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    KPIMTextEdit::PlainTextEditorWidget *mTextEdit;
-    KLineEdit *mTemplateNameEdit;
-    QPushButton *mOkButton;
+    KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
+    KLineEdit *mTemplateNameEdit = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 }
 

@@ -67,19 +67,19 @@ public:
 
     QMap<QString, QMap<QString, QString> > listLanguage;
     QByteArray data;
-    TranslatorTextEdit *inputText;
-    KPIMTextEdit::PlainTextEditorWidget *translatedText;
-    TranslatorResultTextEdit *translatorResultTextEdit;
-    MinimumComboBox *from;
-    MinimumComboBox *to;
-    QPushButton *translate;
-    QPushButton *clear;
-    PimCommon::GoogleTranslator *abstractTranslator;
-    KPIM::ProgressIndicatorWidget *progressIndictor;
-    QPushButton *invert;
-    QSplitter *splitter;
-    bool languageSettingsChanged;
-    bool standalone;
+    TranslatorTextEdit *inputText = nullptr;
+    KPIMTextEdit::PlainTextEditorWidget *translatedText = nullptr;
+    TranslatorResultTextEdit *translatorResultTextEdit = nullptr;
+    MinimumComboBox *from = nullptr;
+    MinimumComboBox *to = nullptr;
+    QPushButton *translate = nullptr;
+    QPushButton *clear = nullptr;
+    PimCommon::GoogleTranslator *abstractTranslator = nullptr;
+    KPIM::ProgressIndicatorWidget *progressIndictor = nullptr;
+    QPushButton *invert = nullptr;
+    QSplitter *splitter = nullptr;
+    bool languageSettingsChanged = false;
+    bool standalone = false;
 };
 
 void TranslatorWidget::TranslatorWidgetPrivate::fillToCombobox(const QString &lang)

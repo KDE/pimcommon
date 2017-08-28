@@ -38,7 +38,7 @@ public Q_SLOTS:
     void slotClearHistory();
 
 private:
-    QStringListModel *mCompleterListModel;
+    QStringListModel *mCompleterListModel = nullptr;
     QStringList mListCompetion;
 };
 }

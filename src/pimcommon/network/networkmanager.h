@@ -33,7 +33,7 @@ public:
     QNetworkConfigurationManager *networkConfigureManager() const;
 
 private:
-    QNetworkConfigurationManager *mNetworkConfigureManager;
+    QNetworkConfigurationManager *mNetworkConfigureManager = nullptr;
 };
 }
 

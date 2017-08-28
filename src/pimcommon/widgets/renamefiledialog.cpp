@@ -60,11 +60,11 @@ public:
     QString suggestName(const QUrl &baseURL, const QString &oldName);
 
     QUrl url;
-    QCheckBox *applyAll;
-    QPushButton *renameBtn;
-    QPushButton *suggestNewNameBtn;
-    QLineEdit *nameEdit;
-    RenameFileDialog *q;
+    QCheckBox *applyAll = nullptr;
+    QPushButton *renameBtn = nullptr;
+    QPushButton *suggestNewNameBtn = nullptr;
+    QLineEdit *nameEdit = nullptr;
+    RenameFileDialog *q = nullptr;
 };
 
 QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const QUrl &baseURL, const QString &oldName)

@@ -39,7 +39,7 @@ public:
     QString saveName() const;
 
     KPluginMetaData metaData;
-    PimCommon::CustomToolsPlugin *plugin;
+    PimCommon::CustomToolsPlugin *plugin = nullptr;
 };
 
 QString CustomToolsPluginInfo::saveName() const

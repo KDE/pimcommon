@@ -45,9 +45,9 @@ private:
     void slotLogEntryAdded(const QString &entry);
     void slotEnableLogActivities(bool state);
 
-    LogActivitiesWidget *mLogWidget;
-    QPushButton *mClearButton;
-    QCheckBox *mEnableLogActivities;
+    LogActivitiesWidget *mLogWidget = nullptr;
+    QPushButton *mClearButton = nullptr;
+    QCheckBox *mEnableLogActivities = nullptr;
 };
 }
 

@@ -348,12 +348,12 @@ public:
         selectionChanged();
     }
 
-    AclManager *q;
-    AclModel *mModel;
-    QItemSelectionModel *mSelectionModel;
-    QAction *mAddAction;
-    QAction *mEditAction;
-    QAction *mDeleteAction;
+    AclManager *q = nullptr;
+    AclModel *mModel = nullptr;
+    QItemSelectionModel *mSelectionModel = nullptr;
+    QAction *mAddAction = nullptr;
+    QAction *mEditAction = nullptr;
+    QAction *mDeleteAction = nullptr;
 
     Akonadi::Collection mCollection;
     QString mImapUserName;

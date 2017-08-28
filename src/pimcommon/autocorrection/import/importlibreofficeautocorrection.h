@@ -46,8 +46,8 @@ private:
     void closeArchive();
     bool loadDomElement(QDomDocument &doc, QFile *file);
     bool importFile(Type type, const KArchiveDirectory *archiveDirectory);
-    KZip *mArchive;
-    QTemporaryDir *mTempDir;
+    KZip *mArchive = nullptr;
+    QTemporaryDir *mTempDir = nullptr;
 };
 }
 

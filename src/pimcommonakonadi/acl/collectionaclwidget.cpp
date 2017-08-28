@@ -74,7 +74,7 @@ protected:
     }
 
 private:
-    QAction *mDefaultAction;
+    QAction *mDefaultAction = nullptr;
 };
 
 CollectionAclWidget::CollectionAclWidget(QWidget *parent)

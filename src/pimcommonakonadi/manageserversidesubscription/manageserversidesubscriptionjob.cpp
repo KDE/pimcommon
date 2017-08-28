@@ -40,7 +40,7 @@ public:
     }
 
     Akonadi::Collection mCurrentCollection;
-    QWidget *mParentWidget;
+    QWidget *mParentWidget = nullptr;
 };
 
 ManageServerSideSubscriptionJob::ManageServerSideSubscriptionJob(QObject *parent)

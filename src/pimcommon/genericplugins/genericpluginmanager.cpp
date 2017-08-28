@@ -38,7 +38,7 @@ public:
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PimCommon::PluginUtilData pluginData;
-    PimCommon::GenericPlugin *plugin;
+    PimCommon::GenericPlugin *plugin = nullptr;
     bool isEnabled;
 };
 

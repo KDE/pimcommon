@@ -52,12 +52,12 @@ public:
     void slotChanged();
     void slotSelectAddresses();
 
-    AclEntryDialog *q;
-    QButtonGroup *mButtonGroup;
-    KPIM::AddresseeLineEdit *mUserIdLineEdit;
-    QVBoxLayout *mButtonLayout;
+    AclEntryDialog *q = nullptr;
+    QButtonGroup *mButtonGroup = nullptr;
+    KPIM::AddresseeLineEdit *mUserIdLineEdit = nullptr;
+    QVBoxLayout *mButtonLayout = nullptr;
     KIMAP::Acl::Rights mCustomPermissions;
-    QPushButton *mOkButton;
+    QPushButton *mOkButton = nullptr;
 };
 
 void AclEntryDialog::Private::slotChanged()

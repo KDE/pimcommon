@@ -38,8 +38,8 @@ public:
     }
 
     QStringList mTemplatesDirectories;
-    PimCommon::TemplateListWidget *mTemplateListWidget;
-    KDirWatch *mDirWatch;
+    PimCommon::TemplateListWidget *mTemplateListWidget = nullptr;
+    KDirWatch *mDirWatch = nullptr;
 };
 
 TemplateManager::TemplateManager(const QString &relativeTemplateDir, PimCommon::TemplateListWidget *templateListWidget)

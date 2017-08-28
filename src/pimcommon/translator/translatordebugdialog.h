@@ -38,8 +38,8 @@ private Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    KPIMTextEdit::PlainTextEditorWidget *mEdit;
-    QPushButton *mUser1Button;
+    KPIMTextEdit::PlainTextEditorWidget *mEdit = nullptr;
+    QPushButton *mUser1Button = nullptr;
 };
 
 #endif // TRANSLATORDEBUGDIALOG_H

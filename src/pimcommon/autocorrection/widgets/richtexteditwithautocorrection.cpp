@@ -38,8 +38,8 @@ public:
         }
     }
 
-    PimCommon::AutoCorrection *mAutoCorrection;
-    bool mNeedToDelete;
+    PimCommon::AutoCorrection *mAutoCorrection = nullptr;
+    bool mNeedToDelete = false;
 };
 
 RichTextEditWithAutoCorrection::RichTextEditWithAutoCorrection(QWidget *parent)
