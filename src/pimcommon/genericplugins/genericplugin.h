@@ -20,9 +20,7 @@
 
 #include "abstractgenericplugin.h"
 #include "pimcommon_export.h"
-class KActionCollection;
 namespace PimCommon {
-class GenericPluginInterface;
 class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
 {
     Q_OBJECT

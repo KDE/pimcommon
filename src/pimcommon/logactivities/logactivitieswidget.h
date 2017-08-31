@@ -20,7 +20,6 @@
 
 #include <QWidget>
 #include "pimcommon_private_export.h"
-class QPlainTextEdit;
 namespace KPIMTextEdit {
 class PlainTextEditorWidget;
 }

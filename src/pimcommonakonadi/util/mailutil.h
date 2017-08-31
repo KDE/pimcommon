@@ -40,7 +40,6 @@
 
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/collection.h>
-class QWidget;
 
 namespace PimCommon {
 /**
