@@ -369,7 +369,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     MinimumComboBox
     ConfigureImmutableWidgetUtils
     RenameFileDialog
-    SimpleStringlistEditor
+    SimpleStringListEditor
     KActionMenuChangeCase
     KPimPrintPreviewDialog
     LineEditWithCompleterNg
