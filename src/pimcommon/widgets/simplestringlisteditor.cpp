@@ -37,6 +37,7 @@
 #include <kiconloader.h>
 #include <QIcon>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include "pimcommon_debug.h"
 #include <QPushButton>
 #include <QMenu>
@@ -288,11 +289,13 @@ void SimpleStringListEditor::slotRemove()
     if (selectedItems.isEmpty()) {
         return;
     }
-    for (QListWidgetItem *item : selectedItems) {
-        delete d->mListBox->takeItem(d->mListBox->row(item));
+    if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove selected text?"), i18n("Remove"))) {
+        for (QListWidgetItem *item : selectedItems) {
+            delete d->mListBox->takeItem(d->mListBox->row(item));
+        }
+        slotSelectionChanged();
+        Q_EMIT changed();
     }
-    slotSelectionChanged();
-    Q_EMIT changed();
 }
 
 QString SimpleStringListEditor::modifyEntry(const QString &text)
