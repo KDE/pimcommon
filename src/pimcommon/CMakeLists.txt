@@ -33,8 +33,6 @@ install(FILES
 
 
 set(libpimcommon_sieve_SRCS
-    sievehighlighter/sievesyntaxhighlighter.cpp
-    sievehighlighter/sievesyntaxhighlighterrules.cpp
     sievehighlighter/sievesyntaxhighlighterutil.cpp
     )
 
@@ -316,8 +314,6 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
 ecm_generate_headers(PimCommon_Camelcasesievehighlighter_HEADERS
     HEADER_NAMES
     SieveSyntaxHighlighterUtil
-    SieveSyntaxHighlighter
-    SieveSyntaxHighlighterRules
     REQUIRED_HEADERS PimCommon_sievehighlighter_HEADERS
     PREFIX PimCommon
     RELATIVE sievehighlighter

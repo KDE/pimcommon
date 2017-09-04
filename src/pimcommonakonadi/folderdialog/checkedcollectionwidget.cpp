@@ -19,7 +19,7 @@
 #include <RecursiveCollectionFilterProxyModel>
 #include <CollectionFilterProxyModel>
 
-#include <ChangeRecorder>
+#include <Monitor>
 #include <EntityTreeModel>
 #include <EntityRightsFilterModel>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
@@ -69,14 +69,15 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     vbox->setMargin(0);
 
     // Create a new change recorder.
-    Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder(this);
-    changeRecorder->fetchCollection(true);
-    changeRecorder->setAllMonitored(true);
-    changeRecorder->setMimeTypeMonitored(mimetype);
-    connect(changeRecorder, &Akonadi::ChangeRecorder::collectionAdded, this, &CheckedCollectionWidget::collectionAdded);
-    connect(changeRecorder, &Akonadi::ChangeRecorder::collectionRemoved, this, &CheckedCollectionWidget::collectionRemoved);
+    Akonadi::Monitor *monitor = new Akonadi::Monitor(this);
+    monitor->setObjectName(QStringLiteral("CheckedCollectionWidgetMonitor"));
+    monitor->fetchCollection(true);
+    monitor->setAllMonitored(true);
+    monitor->setMimeTypeMonitored(mimetype);
+    connect(monitor, &Akonadi::Monitor::collectionAdded, this, &CheckedCollectionWidget::collectionAdded);
+    connect(monitor, &Akonadi::Monitor::collectionRemoved, this, &CheckedCollectionWidget::collectionRemoved);
 
-    d->mEntityTreeModel = new Akonadi::EntityTreeModel(changeRecorder, this);
+    d->mEntityTreeModel = new Akonadi::EntityTreeModel(monitor, this);
     // Set the model to show only collections, not items.
     d->mEntityTreeModel->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
 
