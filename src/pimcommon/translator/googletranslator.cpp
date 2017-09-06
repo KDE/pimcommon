@@ -176,6 +176,7 @@ void GoogleTranslator::slotError(QNetworkReply::NetworkError /*error*/)
 
 void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 {
+    mResult.clear();
     mJsonData = QString::fromUtf8(reply->readAll());
     reply->deleteLater();
     //  jsonData contains arrays like this: ["foo",,"bar"]
