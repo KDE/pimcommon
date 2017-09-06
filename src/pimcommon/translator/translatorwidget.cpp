@@ -346,7 +346,6 @@ void TranslatorWidget::slotFromLanguageChanged(int index, bool initialize)
         d->to->setCurrentIndex(indexTo);
     }
     if (!initialize) {
-        d->translatorResultTextEdit->clear();
         slotTranslate();
     }
 }
@@ -354,7 +353,6 @@ void TranslatorWidget::slotFromLanguageChanged(int index, bool initialize)
 void TranslatorWidget::setTextToTranslate(const QString &text)
 {
     d->inputText->setPlainText(text);
-    d->translatorResultTextEdit->clear();
     slotTranslate();
 }
 
