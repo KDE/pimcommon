@@ -51,9 +51,6 @@ class Q_DECL_HIDDEN TranslatorWidget::TranslatorWidgetPrivate
 {
 public:
     TranslatorWidgetPrivate()
-        : abstractTranslator(nullptr)
-        , languageSettingsChanged(false)
-        , standalone(true)
     {
     }
 
@@ -79,7 +76,7 @@ public:
     QPushButton *invert = nullptr;
     QSplitter *splitter = nullptr;
     bool languageSettingsChanged = false;
-    bool standalone = false;
+    bool standalone = true;
 };
 
 void TranslatorWidget::TranslatorWidgetPrivate::fillToCombobox(const QString &lang)
@@ -214,6 +211,7 @@ void TranslatorWidget::readConfig()
 void TranslatorWidget::init()
 {
     d->abstractTranslator = new GoogleTranslator();
+    d->abstractTranslator->setParentWidget(this);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
 

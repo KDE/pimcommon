@@ -32,6 +32,8 @@ public:
     explicit GoogleTranslator(QObject *parent = nullptr);
     ~GoogleTranslator();
 
+    void setParentWidget(QWidget *parent);
+
     QMap<QString, QMap<QString, QString> > initListLanguage(KComboBox *from);
     void translate();
     void debug();
@@ -58,6 +60,7 @@ private:
     QString mJsonData;
     QString mJsonDebug;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    QWidget *mParentWidget = nullptr;
 };
 }
 

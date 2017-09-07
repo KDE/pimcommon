@@ -39,6 +39,11 @@ GoogleTranslator::~GoogleTranslator()
 {
 }
 
+void GoogleTranslator::setParentWidget(QWidget *parent)
+{
+    mParentWidget = parent;
+}
+
 void GoogleTranslator::setInputText(const QString &text)
 {
     mInputText = text;
@@ -213,7 +218,7 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 void GoogleTranslator::debug()
 {
 #if !defined(NDEBUG)
-    QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog;
+    QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog(mParentWidget);
     dlg->setDebug(mJsonDebug);
     dlg->exec();
     delete dlg;
