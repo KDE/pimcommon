@@ -41,9 +41,8 @@ ConfigureTestDialog::ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrecti
     : QDialog(parent)
 {
     setWindowTitle(QStringLiteral("Configure Autocorrection"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -52,7 +51,7 @@ ConfigureTestDialog::ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrecti
 
     buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
-    mWidget = new PimCommon::AutoCorrectionWidget;
+    mWidget = new PimCommon::AutoCorrectionWidget(this);
     mainLayout->addWidget(mWidget);
     mainLayout->addWidget(buttonBox);
 
@@ -108,7 +107,7 @@ AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
     PimCommon::PimCommonSettings::self()->load();
 
     mAutoCorrection = new PimCommon::AutoCorrection;
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(this);
     QToolBar *bar = new QToolBar;
     lay->addWidget(bar);
     bar->addAction(QStringLiteral("Configure..."), this, SLOT(slotConfigure()));
@@ -123,8 +122,6 @@ AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
 
     mEdit = new TextEditAutoCorrectionWidget(mAutoCorrection);
     lay->addWidget(mEdit);
-
-    setLayout(lay);
 }
 
 AutocorrectionTestWidget::~AutocorrectionTestWidget()

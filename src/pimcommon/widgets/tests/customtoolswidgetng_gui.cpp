@@ -33,19 +33,18 @@
 CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(this);
 
-    QToolBar *menu = new QToolBar;
+    QToolBar *menu = new QToolBar(this);
     lay->addWidget(menu);
 
-    mCustomTools = new PimCommon::CustomToolsWidgetNg(new KActionCollection(this));
+    mCustomTools = new PimCommon::CustomToolsWidgetNg(new KActionCollection(this), this);
     const QList<KToggleAction *> lst = mCustomTools->actionList();
     for (KToggleAction *act : lst) {
         menu->addAction(act);
     }
 
     lay->addWidget(mCustomTools);
-    setLayout(lay);
 }
 
 CustomToolWidgetNgTest::~CustomToolWidgetNgTest()
