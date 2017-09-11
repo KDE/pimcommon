@@ -41,7 +41,7 @@ private Q_SLOTS:
     void slotSaveSettings();
 
 private:
-    PimCommon::AutoCorrectionWidget *mWidget;
+    PimCommon::AutoCorrectionWidget *mWidget = nullptr;
 };
 
 class TextEditAutoCorrectionWidget : public QTextEdit
@@ -55,7 +55,7 @@ protected:
     void keyPressEvent(QKeyEvent *e) override;
 
 private:
-    PimCommon::AutoCorrection *mAutoCorrection;
+    PimCommon::AutoCorrection *mAutoCorrection = nullptr;
 };
 
 class AutocorrectionTestWidget : public QWidget
@@ -70,9 +70,9 @@ private Q_SLOTS:
     void slotChangeMode(bool);
 
 private:
-    TextEditAutoCorrectionWidget *mEdit;
-    PimCommon::LineEditWithAutoCorrection *mSubject;
-    PimCommon::AutoCorrection *mAutoCorrection;
+    TextEditAutoCorrectionWidget *mEdit = nullptr;
+    PimCommon::LineEditWithAutoCorrection *mSubject = nullptr;
+    PimCommon::AutoCorrection *mAutoCorrection = nullptr;
     KSharedConfig::Ptr mConfig;
 };
 
