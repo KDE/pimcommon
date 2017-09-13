@@ -20,8 +20,6 @@
 #include "folderdialog/selectmulticollectiondialog.h"
 #include <KMime/Message>
 #include <QApplication>
-#include <KAboutData>
-#include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
@@ -29,15 +27,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("selectmulticollection_gui"), i18n("SelectMultiCollectiontest_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for selectmulticollection dialog"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
     PimCommon::SelectMultiCollectionDialog *dialog = new PimCommon::SelectMultiCollectionDialog(KMime::Message::mimeType());
     dialog->exec();
     delete dialog;

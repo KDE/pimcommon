@@ -19,9 +19,7 @@
 
 #include "pimcommon_debug.h"
 
-#include <KLocalizedString>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
@@ -29,15 +27,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("richtexteditwithautocorrection_gui"), i18n("richtexteditwithautocorrectionTest_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for richtexteditwithautocorrection"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     PimCommon::RichTextEditWithAutoCorrection *w = new PimCommon::RichTextEditWithAutoCorrection;
 

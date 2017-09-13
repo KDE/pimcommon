@@ -23,7 +23,6 @@
 
 #include "pimcommon_debug.h"
 
-#include <KLocalizedString>
 #include <KSharedConfig>
 
 #include <QPointer>
@@ -33,7 +32,6 @@
 #include <QToolBar>
 #include <QAction>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QDialogButtonBox>
 
@@ -148,15 +146,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("autocorrectiontest_gui"), i18n("AutoCorrectionTest_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for autocorrection widget"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     AutocorrectionTestWidget *w = new AutocorrectionTestWidget();
     w->resize(800, 600);

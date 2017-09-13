@@ -20,8 +20,6 @@
 #include <QDebug>
 #include <QStandardPaths>
 #include <QApplication>
-#include <KAboutData>
-#include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 #include "logactivitiesmainwidget.h"
@@ -29,17 +27,12 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    KAboutData aboutData(QStringLiteral("logactivities"), i18n("logactivities_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for log activities"));
     QStandardPaths::setTestModeEnabled(true);
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
 
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     LogActivitiesMainWidget *w = new LogActivitiesMainWidget;
     w->show();

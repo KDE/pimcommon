@@ -19,12 +19,10 @@
 #include "customtools/customtoolswidgetng.h"
 #include "customtools/customtoolspluginmanager.h"
 #include <QStandardPaths>
-#include <KLocalizedString>
 #include <KToggleAction>
 
 #include <QVBoxLayout>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QToolBar>
 
@@ -55,15 +53,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("customtoolswidgetng_gui"), i18n("CustomToolWidgetsTestNg_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for customtoolswidget"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     CustomToolWidgetNgTest *w = new CustomToolWidgetNgTest();
     w->resize(800, 200);
