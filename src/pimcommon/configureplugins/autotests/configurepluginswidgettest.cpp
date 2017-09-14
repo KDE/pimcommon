@@ -18,8 +18,7 @@
 #include "configurepluginswidgettest.h"
 #include "../configurepluginswidget.h"
 #include "../configurepluginslistwidget.h"
-
-#include <KTextEdit>
+#include <QTextEdit>
 #include <KMessageWidget>
 #include <QSplitter>
 #include <QTest>

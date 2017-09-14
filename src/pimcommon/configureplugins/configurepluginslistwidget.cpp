@@ -17,18 +17,15 @@
 
 #include "configurepluginslistwidget.h"
 
-#include <KConfigGroup>
 #include <KSharedConfig>
 #include <KLocalizedString>
 
-#include <QHBoxLayout>
-#include <QLabel>
 #include <QPushButton>
 #include <QToolButton>
 #include <QTreeWidget>
 #include <QHeaderView>
-#include <QDebug>
 #include <QAction>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)

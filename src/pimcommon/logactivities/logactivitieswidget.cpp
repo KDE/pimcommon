@@ -16,8 +16,6 @@
 */
 
 #include "logactivitieswidget.h"
-#include <KLocalizedString>
-#include <QPlainTextEdit>
 #include <QVBoxLayout>
 #include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KPIMTextEdit/PlainTextEditor>

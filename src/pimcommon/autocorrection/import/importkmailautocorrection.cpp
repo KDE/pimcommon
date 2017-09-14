@@ -18,7 +18,6 @@
 #include "importkmailautocorrection.h"
 
 #include <QFile>
-#include <QDomDocument>
 #include <QXmlStreamReader>
 #include "pimcommon_debug.h"
 using namespace PimCommon;

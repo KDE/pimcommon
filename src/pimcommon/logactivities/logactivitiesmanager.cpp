@@ -19,7 +19,6 @@
 #include "logactivitiesdialog.h"
 #include <QTime>
 
-#include <QtGlobal>
 
 using namespace PimCommon;
 

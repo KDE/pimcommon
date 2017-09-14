@@ -17,9 +17,9 @@
 
 #include "configurepluginslistwidgettest.h"
 #include "../configurepluginslistwidget.h"
-#include <QHBoxLayout>
 #include <QTest>
 #include <QTreeWidget>
+#include <QVBoxLayout>
 
 ConfigurePluginsListWidgetTest::ConfigurePluginsListWidgetTest(QObject *parent)
     : QObject(parent)

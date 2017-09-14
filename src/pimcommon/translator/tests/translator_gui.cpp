@@ -17,7 +17,6 @@
 
 #include "translator/translatorwidget.h"
 
-#include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>

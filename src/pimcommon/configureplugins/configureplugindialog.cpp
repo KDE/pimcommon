@@ -17,7 +17,6 @@
 
 #include "configureplugindialog.h"
 #include <QVBoxLayout>
-#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <KConfigGroup>

@@ -17,11 +17,9 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <QDebug>
 #include <QStandardPaths>
 #include <QApplication>
 #include <QCommandLineParser>
-#include <QCommandLineOption>
 #include "logactivitiesmainwidget.h"
 
 int main(int argc, char **argv)

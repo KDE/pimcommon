@@ -27,11 +27,10 @@
  */
 
 #include "spellchecklineedit.h"
-
+#include <QStyleOptionFrame>
 #include <QKeyEvent>
 #include <QStyle>
 #include <QApplication>
-#include <QStyleOptionFrameV2>
 #include <QMimeData>
 
 using namespace PimCommon;
