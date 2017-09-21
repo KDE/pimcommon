@@ -48,6 +48,7 @@ private:
     LogActivitiesWidget *mLogWidget = nullptr;
     QPushButton *mClearButton = nullptr;
     QCheckBox *mEnableLogActivities = nullptr;
+    QPushButton *mSaveButton = nullptr;
 };
 }
 

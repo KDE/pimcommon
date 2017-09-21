@@ -18,6 +18,8 @@
 #include "logactivitiesmanager.h"
 #include "logactivitiesdialog.h"
 #include <QTime>
+#include <QDebug>
+#include <QPointer>
 
 
 using namespace PimCommon;
@@ -35,11 +37,12 @@ public:
 
     ~LogActivitiesManagerPrivate()
     {
-        delete mDialog;
+        //Disable delete it.
+        //delete mDialog;
     }
 
     QStringList mLog;
-    PimCommon::LogActivitiesDialog *mDialog = nullptr;
+    QPointer<PimCommon::LogActivitiesDialog> mDialog = nullptr;
     bool mEnableLogActivities = false;
 };
 
@@ -83,7 +86,8 @@ void LogActivitiesManager::showLogActivitiesDialog()
 {
     if (!d->mDialog) {
         d->mDialog = new PimCommon::LogActivitiesDialog();
-        connect(d->mDialog, &LogActivitiesDialog::logCleared, this, &LogActivitiesManager::clear);
+        d->mDialog->setAttribute(Qt::WA_DeleteOnClose, true);
+        connect(d->mDialog.data(), &LogActivitiesDialog::logCleared, this, &LogActivitiesManager::clear);
     }
     d->mDialog->setLog(log());
     d->mDialog->show();

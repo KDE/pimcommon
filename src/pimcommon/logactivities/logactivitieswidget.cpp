@@ -19,6 +19,7 @@
 #include <QVBoxLayout>
 #include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KPIMTextEdit/PlainTextEditor>
+#include <QDebug>
 using namespace PimCommon;
 
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
@@ -37,6 +38,7 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
 
 LogActivitiesWidget::~LogActivitiesWidget()
 {
+    disconnect(mLog->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &LogActivitiesWidget::slotTextChanged);
 }
 
 void LogActivitiesWidget::slotTextChanged()
