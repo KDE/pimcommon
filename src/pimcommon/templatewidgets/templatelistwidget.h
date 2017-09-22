@@ -64,16 +64,6 @@ Q_SIGNALS:
 private:
     friend class TemplateListWidgetPrivate;
     TemplateListWidgetPrivate *const d;
-    Q_PRIVATE_SLOT(d, void slotAdd())
-    Q_PRIVATE_SLOT(d, void slotRemove())
-    Q_PRIVATE_SLOT(d, void slotModify())
-    Q_PRIVATE_SLOT(d, void slotInsertTemplate())
-    Q_PRIVATE_SLOT(d, void slotContextMenu(const QPoint &pos))
-    Q_PRIVATE_SLOT(d, void slotInsertNewTemplate(const QString &))
-    Q_PRIVATE_SLOT(d, void slotExportTemplates())
-    Q_PRIVATE_SLOT(d, void slotImportTemplates())
-    Q_PRIVATE_SLOT(d, void slotDuplicate())
-    Q_PRIVATE_SLOT(d, void slotDownloadTemplates())
 };
 }
 Q_DECLARE_TYPEINFO(PimCommon::defaultTemplate, Q_MOVABLE_TYPE);
