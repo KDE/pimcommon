@@ -176,24 +176,20 @@ public:
         , mChanged(false)
     {
         mAddAction = new QAction(i18n("Add Entry..."), q);
-        q->connect(mAddAction, SIGNAL(triggered(bool)),
-                   q, SLOT(addAcl()));
+        q->connect(mAddAction, &QAction::triggered, q, [this]() { addAcl(); });
 
         mEditAction = new QAction(i18n("Edit Entry..."), q);
         mEditAction->setEnabled(false);
-        q->connect(mEditAction, SIGNAL(triggered(bool)),
-                   q, SLOT(editAcl()));
+        q->connect(mEditAction, &QAction::triggered, q, [this]() { editAcl(); });
 
         mDeleteAction = new QAction(i18n("Remove Entry"), q);
         mDeleteAction->setEnabled(false);
-        q->connect(mDeleteAction, SIGNAL(triggered(bool)),
-                   q, SLOT(deleteAcl()));
+        q->connect(mDeleteAction, &QAction::triggered, q, [this]() { deleteAcl(); } );
 
         mModel = new AclModel(q);
 
         mSelectionModel = new QItemSelectionModel(mModel);
-        q->connect(mSelectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)),
-                   q, SLOT(selectionChanged()));
+        q->connect(mSelectionModel, &QItemSelectionModel::selectionChanged, q, [this]() { selectionChanged(); });
     }
 
     ~Private()

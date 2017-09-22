@@ -111,11 +111,6 @@ private:
     //@cond PRIVATE
     class Private;
     Private *const d;
-
-    Q_PRIVATE_SLOT(d, void selectionChanged())
-    Q_PRIVATE_SLOT(d, void addAcl())
-    Q_PRIVATE_SLOT(d, void editAcl())
-    Q_PRIVATE_SLOT(d, void deleteAcl())
     //@endcond
 };
 }
