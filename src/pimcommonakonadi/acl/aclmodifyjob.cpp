@@ -37,8 +37,6 @@ using namespace PimCommon;
 
 AclModifyJob::AclModifyJob(QObject *parent)
     : QObject(parent)
-    , mRecursive(false)
-    , mCurrentIndex(-1)
 {
 }
 
@@ -120,7 +118,7 @@ void AclModifyJob::changeAcl(Akonadi::Collection collection)
         if (canAdministrate(attribute, collection)) {
             attribute->setRights(mNewRight);
             Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(collection);
-            connect(modifyJob, SIGNAL(result(KJob*)), this, SLOT(slotModifyDone(KJob*)));
+            connect(modifyJob, &KJob::result, this, &AclModifyJob::slotModifyDone);
         }
     } else {
         checkNewCollection();

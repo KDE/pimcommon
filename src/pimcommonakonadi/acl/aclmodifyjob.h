@@ -38,20 +38,18 @@ public:
     void setNewRights(const QMap<QByteArray, KIMAP::Acl::Rights> &right);
     void start();
 
-private Q_SLOTS:
+private:
     void slotModifyDone(KJob *job);
     void slotFetchCollectionFinished(const Akonadi::Collection::List &collectionList);
     void slotFetchCollectionFailed();
-
-private:
     void changeAcl(Akonadi::Collection collection);
     void checkNewCollection();
     bool canAdministrate(PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const;
     Akonadi::Collection mTopLevelCollection;
     Akonadi::Collection::List mRecursiveCollection;
     QMap<QByteArray, KIMAP::Acl::Rights> mNewRight;
-    bool mRecursive;
-    int mCurrentIndex;
+    bool mRecursive = false;
+    int mCurrentIndex = -1;
 };
 }
 #endif // ACLMODIFYJOB_H
