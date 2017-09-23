@@ -108,7 +108,7 @@ AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
     QVBoxLayout *lay = new QVBoxLayout(this);
     QToolBar *bar = new QToolBar;
     lay->addWidget(bar);
-    bar->addAction(QStringLiteral("Configure..."), this, SLOT(slotConfigure()));
+    bar->addAction(QStringLiteral("Configure..."), this, &AutocorrectionTestWidget::slotConfigure);
     QAction *richText = new QAction(QStringLiteral("HTML mode"), this);
     richText->setCheckable(true);
     connect(richText, &QAction::toggled, this, &AutocorrectionTestWidget::slotChangeMode);

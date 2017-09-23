@@ -112,7 +112,7 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->abbreviationList, &PimCommon::AutoCorrectionListWidget::deleteSelectedItems, this, &AutoCorrectionWidget::removeAbbreviationEntry);
     connect(d->ui->twoUpperLetterList, &PimCommon::AutoCorrectionListWidget::itemSelectionChanged, this, &AutoCorrectionWidget::slotEnableDisableTwoUpperEntry);
     connect(d->ui->twoUpperLetterList, &PimCommon::AutoCorrectionListWidget::deleteSelectedItems, this, &AutoCorrectionWidget::removeTwoUpperLetterEntry);
-    connect(d->ui->autocorrectionLanguage, SIGNAL(activated(int)), SLOT(changeLanguage(int)));
+    connect(d->ui->autocorrectionLanguage, QOverload<int>::of(&PimCommon::AutoCorrectionLanguage::activated), this, &AutoCorrectionWidget::changeLanguage);
     connect(d->ui->addNonBreakingSpaceInFrench, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
     connect(d->ui->twoUpperLetter, &KLineEdit::returnPressed, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
     connect(d->ui->abbreviation, &KLineEdit::returnPressed, this, &AutoCorrectionWidget::addAbbreviationEntry);
