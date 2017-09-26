@@ -38,9 +38,8 @@ public:
 
     void setParentWidget(QWidget *parentWidget);
 
-private Q_SLOTS:
-    void slotConfigureSubscriptionFinished(QDBusPendingCallWatcher *watcher);
 private:
+    void slotConfigureSubscriptionFinished(QDBusPendingCallWatcher *watcher);
     ManageServerSideSubscriptionJobPrivate *const d;
 };
 }

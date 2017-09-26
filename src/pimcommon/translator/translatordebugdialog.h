@@ -32,10 +32,8 @@ public:
 
     void setDebug(const QString &debugStr);
 
-private Q_SLOTS:
-    void slotSaveAs();
-
 private:
+    void slotSaveAs();
     void readConfig();
     void writeConfig();
     KPIMTextEdit::PlainTextEditorWidget *mEdit = nullptr;

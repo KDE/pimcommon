@@ -106,10 +106,9 @@ protected Q_SLOTS:
     void slotDown();
 
     void slotSelectionChanged();
-private Q_SLOTS:
-    void slotContextMenu(const QPoint &);
 
 private:
+    void slotContextMenu(const QPoint &);
     bool containsString(const QString &str);
     QList<QListWidgetItem *> selectedItems() const;
     SimpleStringListEditorPrivate *const d;

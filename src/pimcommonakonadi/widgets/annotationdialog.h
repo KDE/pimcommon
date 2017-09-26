@@ -52,15 +52,11 @@ public:
      */
     ~AnnotationEditDialog();
 
-protected:
+private:
     void readConfig();
     void writeConfig();
-
-private Q_SLOTS:
     void slotAccepted();
     void slotDeleteNote();
-
-private:
     //@cond PRIVATE
     class Private;
     Private *const d;

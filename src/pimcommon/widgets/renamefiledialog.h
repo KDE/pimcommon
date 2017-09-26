@@ -53,14 +53,12 @@ public:
 
     QUrl newName() const;
 
-private Q_SLOTS:
+private:
     void slotOverwritePressed();
     void slotIgnorePressed();
     void slotRenamePressed();
     void slotApplyAllPressed();
     void slotSuggestNewNamePressed();
-
-private:
     //@cond PRIVATE
     class RenameFileDialogPrivate;
     RenameFileDialogPrivate *const d;

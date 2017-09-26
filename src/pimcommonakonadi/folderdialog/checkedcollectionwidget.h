@@ -51,10 +51,8 @@ Q_SIGNALS:
     void collectionAdded(const Akonadi::Collection &, const Akonadi::Collection &);
     void collectionRemoved(const Akonadi::Collection &);
 
-private Q_SLOTS:
-    void slotSetCollectionFilter(const QString &filter);
-
 private:
+    void slotSetCollectionFilter(const QString &filter);
     CheckedCollectionWidgetPrivate *const d;
 };
 }

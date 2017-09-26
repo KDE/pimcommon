@@ -34,9 +34,8 @@ public:
 
     QVector<Akonadi::Collection> selectedCollection(const QModelIndex &parent = QModelIndex()) const;
 
-private Q_SLOTS:
-    void slotCollectionsTreeFetched();
 private:
+    void slotCollectionsTreeFetched();
     void initialize(const QString &mimetype);
     void updateStatus(const QModelIndex &parent);
     PimCommon::CheckedCollectionWidget *mCheckedCollectionWidget = nullptr;

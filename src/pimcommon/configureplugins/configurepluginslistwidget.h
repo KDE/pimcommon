@@ -72,7 +72,7 @@ protected:
     void changeState(const QList<PluginItem *> &items);
 
     QTreeWidget *mListWidget = nullptr;
-private Q_SLOTS:
+private:
     void slotConfigureClicked(QAction *act);
 };
 }

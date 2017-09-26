@@ -35,11 +35,12 @@ public:
     ~ImapResourceCapabilitiesManager();
 
     bool hasAnnotationSupport(const QString &identifier) const;
-private Q_SLOTS:
+
+private:
     void slotInstanceAdded(const Akonadi::AgentInstance &instance);
     void slotInstanceRemoved(const Akonadi::AgentInstance &instance);
     void slotCapabilities(QDBusPendingCallWatcher *watcher);
-private:
+
     void init();
     void searchCapabilities(const QString &identifier);
     QHash<QString, bool> mImapResource;

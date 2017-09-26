@@ -42,10 +42,8 @@ Q_SIGNALS:
     void fetchCollectionFinished(const Akonadi::Collection::List &list);
     void fetchCollectionFailed();
 
-private Q_SLOTS:
-    void slotInitialCollectionFetchingDone(KJob *job);
-
 private:
+    void slotInitialCollectionFetchingDone(KJob *job);
     FetchRecursiveCollectionsJobPrivate *const d;
 };
 }

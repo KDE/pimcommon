@@ -38,10 +38,8 @@ public:
     void setScript(const QString &);
     QString script() const;
 
-private Q_SLOTS:
-    void slotTemplateChanged();
-
 private:
+    void slotTemplateChanged();
     void readConfig();
     void writeConfig();
     KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
