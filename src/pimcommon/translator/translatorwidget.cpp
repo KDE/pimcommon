@@ -272,7 +272,7 @@ void TranslatorWidget::init()
     connect(d->translate, &QPushButton::clicked, this, &TranslatorWidget::slotTranslate);
 
 #if !defined(NDEBUG)
-    if (!qEnvironmentVariableIsEmpty("KDEPIM_TRANSLATE_DEBUG")) {
+    if (!qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING")) {
         QPushButton *debugButton = new QPushButton(i18n("Debug"));
         hboxLayout->addWidget(debugButton);
         connect(debugButton, &QPushButton::clicked, this, &TranslatorWidget::slotDebug);
