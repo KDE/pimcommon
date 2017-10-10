@@ -217,12 +217,12 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 
 void GoogleTranslator::debug()
 {
-#if !defined(NDEBUG)
-    QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog(mParentWidget);
-    dlg->setDebug(mJsonDebug);
-    dlg->exec();
-    delete dlg;
-#endif
+    if (!qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING")) {
+        QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog(mParentWidget);
+        dlg->setDebug(mJsonDebug);
+        dlg->exec();
+        delete dlg;
+    }
 }
 
 void GoogleTranslator::clear()

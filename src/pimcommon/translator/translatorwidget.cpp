@@ -271,13 +271,11 @@ void TranslatorWidget::init()
     hboxLayout->addWidget(d->translate);
     connect(d->translate, &QPushButton::clicked, this, &TranslatorWidget::slotTranslate);
 
-#if !defined(NDEBUG)
     if (!qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING")) {
         QPushButton *debugButton = new QPushButton(i18n("Debug"));
         hboxLayout->addWidget(debugButton);
         connect(debugButton, &QPushButton::clicked, this, &TranslatorWidget::slotDebug);
     }
-#endif
 
     d->progressIndictor = new KPIM::ProgressIndicatorWidget(this);
     hboxLayout->addWidget(d->progressIndictor);
