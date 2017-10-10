@@ -461,7 +461,5 @@ void TranslatorWidget::slotClear()
 
 void TranslatorWidget::slotDebug()
 {
-#if !defined(NDEBUG)
     d->abstractTranslator->debug();
-#endif
 }

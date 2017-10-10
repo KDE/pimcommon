@@ -32,6 +32,7 @@ GoogleTranslator::GoogleTranslator(QObject *parent)
     : QObject(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
+    mDebug = !qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING");
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GoogleTranslator::slotTranslateFinished);
 }
 
@@ -197,9 +198,9 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
         return;
     }
     const QVariantList json = jsonDoc.toVariant().toList();
-#if !defined(NDEBUG)
-    mJsonDebug = QString::fromUtf8(jsonDoc.toJson(QJsonDocument::Indented));
-#endif
+    if (mDebug) {
+        mJsonDebug = QString::fromUtf8(jsonDoc.toJson(QJsonDocument::Indented));
+    }
     for (const QVariant &level0 : json) {
         const QVariantList listLevel0 = level0.toList();
         if (listLevel0.isEmpty()) {
@@ -217,7 +218,7 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 
 void GoogleTranslator::debug()
 {
-    if (!qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING")) {
+    if (mDebug) {
         QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog(mParentWidget);
         dlg->setDebug(mJsonDebug);
         dlg->exec();

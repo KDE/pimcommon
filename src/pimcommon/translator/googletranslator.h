@@ -61,6 +61,7 @@ private:
     QString mJsonDebug;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     QWidget *mParentWidget = nullptr;
+    bool mDebug = false;
 };
 }
 
