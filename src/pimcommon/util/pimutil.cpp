@@ -71,7 +71,7 @@ void PimCommon::Util::saveTextAs(const QString &text, const QString &filter, QWi
         fdlg->setWindowTitle(caption);
     }
     fdlg->setAcceptMode(QFileDialog::AcceptSave);
-    if (fdlg->exec() == QDialog::Accepted && fdlg) {
+    if (fdlg->exec() == QDialog::Accepted) {
         const QString fileName = fdlg->selectedFiles().at(0);
         if (!saveToFile(fileName, text)) {
             KMessageBox::error(parent,
@@ -106,7 +106,7 @@ QString PimCommon::Util::loadToFile(const QString &filter, QWidget *parent, cons
     }
     fdlg->setAcceptDrops(QFileDialog::AcceptOpen);
     QString result;
-    if (fdlg->exec() == QDialog::Accepted && fdlg) {
+    if (fdlg->exec() == QDialog::Accepted) {
         const QString fileName = fdlg->selectedFiles().at(0);
         QFile file(fileName);
         if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
