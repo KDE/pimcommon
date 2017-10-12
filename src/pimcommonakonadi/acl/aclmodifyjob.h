@@ -42,7 +42,7 @@ private:
     void slotModifyDone(KJob *job);
     void slotFetchCollectionFinished(const Akonadi::Collection::List &collectionList);
     void slotFetchCollectionFailed();
-    void changeAcl(Akonadi::Collection collection);
+    void changeAcl(const Akonadi::Collection &collection);
     void checkNewCollection();
     bool canAdministrate(PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const;
     Akonadi::Collection mTopLevelCollection;

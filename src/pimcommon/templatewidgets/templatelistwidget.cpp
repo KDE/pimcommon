@@ -234,7 +234,8 @@ public:
     void saveTemplates(KConfig *configFile)
     {
         // clear everything
-        for (const QString &group : configFile->groupList()) {
+        const QStringList lst = configFile->groupList();
+        for (const QString &group : lst) {
             configFile->deleteGroup(group);
         }
         int numberOfTemplate = 0;

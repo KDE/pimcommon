@@ -111,7 +111,7 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
     return rights[ imapUserName.toUtf8() ] & KIMAP::Acl::Admin;
 }
 
-void AclModifyJob::changeAcl(Akonadi::Collection collection)
+void AclModifyJob::changeAcl(const Akonadi::Collection &collection)
 {
     if (collection.hasAttribute<PimCommon::ImapAclAttribute>()) {
         PimCommon::ImapAclAttribute *attribute = collection.attribute<PimCommon::ImapAclAttribute>();
