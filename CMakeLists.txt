@@ -3,7 +3,7 @@ set(PIM_VERSION "5.6.44")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
-set(ECM_VERSION "5.38.0")
+set(ECM_VERSION "5.39.0")
 
 find_package(ECM ${ECM_VERSION} CONFIG REQUIRED)
 set(LIBRARY_NAMELINK)
