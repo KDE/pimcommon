@@ -292,7 +292,7 @@ void AutoCorrectionWidget::selectSingleQuoteCharOpen()
 
 void AutoCorrectionWidget::selectSingleQuoteCharClose()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog (this);
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
     dlg->showSelectButton(false);
     dlg->setCurrentChar(d->m_singleQuotes.end);
     dlg->autoInsertChar();
@@ -314,7 +314,7 @@ void AutoCorrectionWidget::setDefaultSingleQuotes()
 
 void AutoCorrectionWidget::selectDoubleQuoteCharOpen()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog (this);
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
     dlg->showSelectButton(false);
     dlg->setCurrentChar(d->m_doubleQuotes.begin);
     dlg->autoInsertChar();
@@ -328,7 +328,7 @@ void AutoCorrectionWidget::selectDoubleQuoteCharOpen()
 
 void AutoCorrectionWidget::selectDoubleQuoteCharClose()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog (this);
+    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
     dlg->showSelectButton(false);
     dlg->setCurrentChar(d->m_doubleQuotes.end);
     dlg->autoInsertChar();

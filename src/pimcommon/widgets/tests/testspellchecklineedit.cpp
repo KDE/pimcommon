@@ -18,7 +18,6 @@
 #include <QWidget>
 #include <QVBoxLayout>
 
-
 #include <QApplication>
 #include <QCommandLineParser>
 

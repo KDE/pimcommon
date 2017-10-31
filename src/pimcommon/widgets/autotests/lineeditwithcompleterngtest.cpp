@@ -25,17 +25,15 @@ QTEST_MAIN(LineEditWithCompleterNgTest)
 LineEditWithCompleterNgTest::LineEditWithCompleterNgTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LineEditWithCompleterNgTest::shouldHaveDefaultValue()
 {
-   PimCommon::LineEditWithCompleterNg w;
-   QVERIFY(w.completer());
-   QVERIFY(w.completer()->model());
-   QCOMPARE(w.completer()->model()->rowCount(), 0);
+    PimCommon::LineEditWithCompleterNg w;
+    QVERIFY(w.completer());
+    QVERIFY(w.completer()->model());
+    QCOMPARE(w.completer()->model()->rowCount(), 0);
 }
-
 
 void LineEditWithCompleterNgTest::shouldAddCompletionItem()
 {
@@ -54,7 +52,7 @@ void LineEditWithCompleterNgTest::shouldAddCompletionItem()
 void LineEditWithCompleterNgTest::shouldClearCompleter()
 {
     PimCommon::LineEditWithCompleterNg w;
-    for (int i = 0; i < 10 ;++i) {
+    for (int i = 0; i < 10; ++i) {
         w.addCompletionItem(QStringLiteral("ff%1").arg(i));
     }
     QCOMPARE(w.completer()->model()->rowCount(), 10);

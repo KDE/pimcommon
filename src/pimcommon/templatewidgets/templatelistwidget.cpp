@@ -166,32 +166,48 @@ public:
         QMenu *menu = new QMenu(q);
 
         if (!listSelectedIsEmpty) {
-            menu->addAction(i18n("Insert template"), q, [this]() { slotInsertTemplate(); });
+            menu->addAction(i18n("Insert template"), q, [this]() {
+                    slotInsertTemplate();
+                });
             menu->addSeparator();
         }
 
-        menu->addAction(i18n("Add..."), q,  [this]() { slotAdd(); });
+        menu->addAction(i18n("Add..."), q, [this]() {
+                slotAdd();
+            });
         if (!listSelectedIsEmpty) {
             const bool defaultTemplate = lstSelectedItems.first()->data(TemplateListWidget::DefaultTemplate).toBool();
             if (lstSelectedItems.count() == 1) {
-                menu->addAction(defaultTemplate ? i18n("Show...") : i18n("Modify..."), q, [this]() { slotModify(); });
-                menu->addAction(i18n("Duplicate"), q, [this]() { slotDuplicate(); });
+                menu->addAction(defaultTemplate ? i18n("Show...") : i18n("Modify..."), q, [this]() {
+                        slotModify();
+                    });
+                menu->addAction(i18n("Duplicate"), q, [this]() {
+                        slotDuplicate();
+                    });
             }
             if (lstSelectedItems.count() == 1 && !defaultTemplate) {
                 menu->addSeparator();
-                menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove"), q, [this]() { slotRemove(); });
+                menu->addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove"), q, [this]() {
+                        slotRemove();
+                    });
             }
         }
         menu->addSeparator();
         if (q->count() > 0) {
-            menu->addAction(i18n("Export..."), q, [this]() { slotExportTemplates(); });
+            menu->addAction(i18n("Export..."), q, [this]() {
+                    slotExportTemplates();
+                });
         }
-        menu->addAction(i18n("Import..."), q, [this]() { slotImportTemplates(); });
+        menu->addAction(i18n("Import..."), q, [this]() {
+                slotImportTemplates();
+            });
 
         if (KAuthorized::authorize(QStringLiteral("ghns"))) {
             if (!knewstuffConfigName.isEmpty()) {
                 menu->addSeparator();
-                QAction *act = menu->addAction(i18n("Download new Templates..."), q, [this]() { slotDownloadTemplates(); });
+                QAction *act = menu->addAction(i18n("Download new Templates..."), q, [this]() {
+                        slotDownloadTemplates();
+                    });
                 act->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
             }
         }
@@ -283,9 +299,15 @@ TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *paren
     setContextMenuPolicy(Qt::CustomContextMenu);
     setDragDropMode(QAbstractItemView::DragDrop);
 
-    connect(this, &TemplateListWidget::customContextMenuRequested, this, [this](const QPoint &p) { d->slotContextMenu(p); });
-    connect(this, &TemplateListWidget::doubleClicked, this, [this]() { d->slotModify(); });
-    connect(this, &TemplateListWidget::insertNewTemplate, this, [this](const QString &tmp) { d->slotInsertNewTemplate(tmp); });
+    connect(this, &TemplateListWidget::customContextMenuRequested, this, [this](const QPoint &p) {
+            d->slotContextMenu(p);
+        });
+    connect(this, &TemplateListWidget::doubleClicked, this, [this]() {
+            d->slotModify();
+        });
+    connect(this, &TemplateListWidget::insertNewTemplate, this, [this](const QString &tmp) {
+            d->slotInsertNewTemplate(tmp);
+        });
 }
 
 TemplateListWidget::~TemplateListWidget()

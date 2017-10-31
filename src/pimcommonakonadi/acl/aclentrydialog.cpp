@@ -137,9 +137,15 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     layout->addWidget(label, 2, 0, 1, 3);
     layout->setRowStretch(2, 10);
 
-    connect(d->mUserIdLineEdit, &KPIM::AddresseeLineEdit::textChanged, this, [this]() { d->slotChanged(); });
-    connect(button, &QPushButton::clicked, this, [this]() { d->slotSelectAddresses(); });
-    connect(d->mButtonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), this, [this]() { d->slotChanged(); });
+    connect(d->mUserIdLineEdit, &KPIM::AddresseeLineEdit::textChanged, this, [this]() {
+        d->slotChanged();
+    });
+    connect(button, &QPushButton::clicked, this, [this]() {
+        d->slotSelectAddresses();
+    });
+    connect(d->mButtonGroup, QOverload<QAbstractButton *>::of(&QButtonGroup::buttonClicked), this, [this]() {
+        d->slotChanged();
+    });
 
     d->mOkButton->setEnabled(false);
 

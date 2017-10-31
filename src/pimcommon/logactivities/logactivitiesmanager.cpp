@@ -21,7 +21,6 @@
 #include <QDebug>
 #include <QPointer>
 
-
 using namespace PimCommon;
 
 Q_GLOBAL_STATIC(LogActivitiesManager, s_pLogActivitiesSelf)
