@@ -74,18 +74,18 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     d->ui->add1->setEnabled(false);
     d->ui->add2->setEnabled(false);
 
-    connect(d->ui->autoChangeFormat, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->autoFormatUrl, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->upperCase, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->upperUpper, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->ignoreDoubleSpace, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->autoReplaceNumber, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->capitalizeDaysName, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->advancedAutocorrection, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->enabledAutocorrection, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
+    connect(d->ui->autoChangeFormat, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->autoFormatUrl, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->upperCase, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->upperUpper, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->ignoreDoubleSpace, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->autoReplaceNumber, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->capitalizeDaysName, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->advancedAutocorrection, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->enabledAutocorrection, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->typographicSingleQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::enableSingleQuotes);
     connect(d->ui->typographicDoubleQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::enableDoubleQuotes);
-    connect(d->ui->autoSuperScript, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
+    connect(d->ui->autoSuperScript, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->singleQuote1, &QPushButton::clicked, this, &AutoCorrectionWidget::selectSingleQuoteCharOpen);
     connect(d->ui->singleQuote2, &QPushButton::clicked, this, &AutoCorrectionWidget::selectSingleQuoteCharClose);
     connect(d->ui->singleDefault, &QPushButton::clicked, this, &AutoCorrectionWidget::setDefaultSingleQuotes);
@@ -106,14 +106,14 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->remove1, &QPushButton::clicked, this, &AutoCorrectionWidget::removeAbbreviationEntry);
     connect(d->ui->add2, &QPushButton::clicked, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
     connect(d->ui->remove2, &QPushButton::clicked, this, &AutoCorrectionWidget::removeTwoUpperLetterEntry);
-    connect(d->ui->typographicDoubleQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
-    connect(d->ui->typographicSingleQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
+    connect(d->ui->typographicDoubleQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->typographicSingleQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->abbreviationList, &PimCommon::AutoCorrectionListWidget::itemSelectionChanged, this, &AutoCorrectionWidget::slotEnableDisableAbreviationList);
     connect(d->ui->abbreviationList, &PimCommon::AutoCorrectionListWidget::deleteSelectedItems, this, &AutoCorrectionWidget::removeAbbreviationEntry);
     connect(d->ui->twoUpperLetterList, &PimCommon::AutoCorrectionListWidget::itemSelectionChanged, this, &AutoCorrectionWidget::slotEnableDisableTwoUpperEntry);
     connect(d->ui->twoUpperLetterList, &PimCommon::AutoCorrectionListWidget::deleteSelectedItems, this, &AutoCorrectionWidget::removeTwoUpperLetterEntry);
     connect(d->ui->autocorrectionLanguage, QOverload<int>::of(&PimCommon::AutoCorrectionLanguage::activated), this, &AutoCorrectionWidget::changeLanguage);
-    connect(d->ui->addNonBreakingSpaceInFrench, &QCheckBox::clicked, this, &AutoCorrectionWidget::changed);
+    connect(d->ui->addNonBreakingSpaceInFrench, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->twoUpperLetter, &KLineEdit::returnPressed, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
     connect(d->ui->abbreviation, &KLineEdit::returnPressed, this, &AutoCorrectionWidget::addAbbreviationEntry);
     slotEnableDisableAbreviationList();
@@ -641,6 +641,10 @@ void AutoCorrectionWidget::loadGlobalAutoCorrectionAndException()
 
 void AutoCorrectionWidget::slotExportAutoCorrection()
 {
+    if (d->mWasChanged) {
+        KMessageBox::error(this, i18n("Please save changes before exporting settings."), i18n("Export Autocorrection File"));
+        return;
+    }
     const QString saveUrl = QFileDialog::getSaveFileName(this, i18n("Export Autocorrection File"), QDir::homePath());
     if (saveUrl.isEmpty()) {
         return;
