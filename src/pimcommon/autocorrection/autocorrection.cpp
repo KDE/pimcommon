@@ -1176,7 +1176,7 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
     QXmlStreamWriter streamWriter(&file);
 
     streamWriter.setAutoFormatting(true);
-    streamWriter.setAutoFormattingIndent(1);
+    streamWriter.setAutoFormattingIndent(2);
     streamWriter.writeStartDocument();
 
     streamWriter.writeDTD(QStringLiteral("<!DOCTYPE autocorrection>"));
