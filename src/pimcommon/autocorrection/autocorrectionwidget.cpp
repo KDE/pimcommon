@@ -42,8 +42,6 @@ class PimCommon::AutoCorrectionWidgetPrivate
 public:
     AutoCorrectionWidgetPrivate()
         : ui(new Ui::AutoCorrectionWidget)
-        , mAutoCorrection(nullptr)
-        , mWasChanged(false)
     {
     }
 

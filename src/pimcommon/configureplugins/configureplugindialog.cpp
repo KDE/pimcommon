@@ -27,7 +27,6 @@ using namespace PimCommon;
 
 ConfigurePluginDialog::ConfigurePluginDialog(QWidget *parent)
     : QDialog(parent)
-    , mButtonBox(nullptr)
 {
 }
 

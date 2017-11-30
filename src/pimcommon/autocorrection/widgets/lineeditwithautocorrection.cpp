@@ -26,7 +26,6 @@ class PimCommon::LineEditWithAutoCorrectionPrivate
 public:
     LineEditWithAutoCorrectionPrivate()
         : mAutoCorrection(new PimCommon::AutoCorrection())
-        , mNeedToDeleteAutoCorrection(true)
     {
     }
 
@@ -38,7 +37,7 @@ public:
     }
 
     PimCommon::AutoCorrection *mAutoCorrection = nullptr;
-    bool mNeedToDeleteAutoCorrection;
+    bool mNeedToDeleteAutoCorrection = true;
 };
 
 LineEditWithAutoCorrection::LineEditWithAutoCorrection(QWidget *parent, const QString &configFile)

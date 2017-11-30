@@ -31,7 +31,6 @@ class PimCommon::CustomToolsWidgetNgPrivate
 {
 public:
     CustomToolsWidgetNgPrivate()
-        : mStackedWidget(nullptr)
     {
     }
 

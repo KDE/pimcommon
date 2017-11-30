@@ -30,8 +30,6 @@ class GenericPluginInfo
 {
 public:
     GenericPluginInfo()
-        : plugin(nullptr)
-        , isEnabled(true)
     {
     }
 
@@ -39,7 +37,7 @@ public:
     QString metaDataFileName;
     PimCommon::PluginUtilData pluginData;
     PimCommon::GenericPlugin *plugin = nullptr;
-    bool isEnabled;
+    bool isEnabled = true;
 };
 
 namespace {

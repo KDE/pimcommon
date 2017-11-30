@@ -53,8 +53,8 @@ public:
     int minFindStringLenght() const;
 
 protected:
-    int mMaxFindStringLenght;
-    int mMinFindStringLenght;
+    int mMaxFindStringLenght = 0;
+    int mMinFindStringLenght = 0;
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;

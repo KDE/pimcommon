@@ -27,7 +27,6 @@ class PimCommon::RichTextEditWithAutoCorrectionPrivate
 public:
     RichTextEditWithAutoCorrectionPrivate()
         : mAutoCorrection(new PimCommon::AutoCorrection())
-        , mNeedToDelete(true)
     {
     }
 
@@ -39,7 +38,7 @@ public:
     }
 
     PimCommon::AutoCorrection *mAutoCorrection = nullptr;
-    bool mNeedToDelete = false;
+    bool mNeedToDelete = true;
 };
 
 RichTextEditWithAutoCorrection::RichTextEditWithAutoCorrection(QWidget *parent)

@@ -20,9 +20,7 @@
 using namespace PimCommon;
 
 ImportAbstractAutocorrection::ImportAbstractAutocorrection(QWidget *parent)
-    : mMaxFindStringLenght(0)
-    , mMinFindStringLenght(0)
-    , mParent(parent)
+    : mParent(parent)
 {
 }
 
