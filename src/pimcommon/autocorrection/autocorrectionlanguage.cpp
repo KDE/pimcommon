@@ -17,19 +17,46 @@
 
 #include "autocorrectionlanguage.h"
 #include <QLocale>
+#include <QDebug>
 using namespace PimCommon;
 
-AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
-    : KComboBox(parent)
+static bool stripCountryCode(QString *languageCode)
 {
-    for (int i = QLocale::Abkhazian; i <= QLocale::LastLanguage; ++i) {
-        const auto lang = static_cast<QLocale::Language>(i);
-        QLocale locale(lang);
-        if (locale.name() == QLatin1String("C")) {
-            continue;
-        }
-        addItem(QLocale::system().languageToString(lang), locale.name());
+    const int idx = languageCode->indexOf(QLatin1String("_"));
+    if (idx != -1) {
+        *languageCode = languageCode->left(idx);
+        return true;
     }
+    return false;
+}
+
+AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
+    : QComboBox(parent)
+{
+    QLocale cLocale(QLocale::C);
+    QSet<QString> insertedLanguages;
+    const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    for (const QLocale &lang : allLocales) {
+        QString languageCode = lang.name();
+        if (lang != cLocale) {
+            const QString nativeName = lang.nativeLanguageName();
+            // For some languages the native name might be empty.
+            // In this case use the non native language name as fallback.
+            // See: QTBUG-51323
+            QString languageName = nativeName.isEmpty() ? QLocale::languageToString(lang.language()) : nativeName;
+            languageName = languageName.toLower();
+            if (!insertedLanguages.contains(languageName)) {
+                addItem(languageName, languageCode);
+                insertedLanguages << languageName;
+            } else if (stripCountryCode(&languageCode)) {
+                if (!insertedLanguages.contains(languageName)) {
+                    addItem(languageName, languageCode);
+                    insertedLanguages << languageName;
+                }
+            }
+        }
+    }
+
     QString defaultLang;
     if (!QLocale::system().uiLanguages().isEmpty()) {
         defaultLang = QLocale::system().uiLanguages().at(0);
