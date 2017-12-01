@@ -22,7 +22,7 @@
 #include "pimcommon_export.h"
 
 namespace PimCommon {
-class PIMCOMMON_EXPORT AutoCorrectionLanguage : public KComboBox
+class PIMCOMMON_EXPORT AutoCorrectionLanguage : public QComboBox
 {
 public:
     explicit AutoCorrectionLanguage(QWidget *parent);
