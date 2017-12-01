@@ -17,7 +17,8 @@
 
 #include "autocorrectionlanguage.h"
 #include <QLocale>
-#include <QDebug>
+#include <QSet>
+
 using namespace PimCommon;
 
 static bool stripCountryCode(QString *languageCode)
