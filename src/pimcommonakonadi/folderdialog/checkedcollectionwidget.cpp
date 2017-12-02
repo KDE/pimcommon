@@ -96,7 +96,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     d->mCollectionFilter->setDynamicSortFilter(true);
 #else
     d->mCollectionFilter = new QSortFilterProxyModel(this);
-    d->mCollectionFilter->setRecursiveFiltering(true);
+    d->mCollectionFilter->setRecursiveFilteringEnabled(true);
 #endif
     d->mCollectionFilter->setSourceModel(d->mCheckProxy);
     d->mCollectionFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
