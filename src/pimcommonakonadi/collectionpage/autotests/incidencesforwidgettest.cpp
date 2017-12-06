@@ -60,7 +60,7 @@ void IncidencesForWidgetTest::shouldEmitSignalWhenIndexChanged()
 {
     PimCommon::IncidencesForWidget contentType;
     contentType.show();
-    QTest::qWaitForWindowExposed(&contentType);
+    QVERIFY(QTest::qWaitForWindowExposed(&contentType));
     QSignalSpy spy(&contentType, SIGNAL(currentIndexChanged(int)));
     contentType.setCurrentIndex(1);
     QCOMPARE(spy.at(0).count(), 1);

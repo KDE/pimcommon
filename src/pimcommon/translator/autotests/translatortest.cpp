@@ -104,7 +104,7 @@ void TranslatorTest::shouldHideWidgetWhenPressEscape()
 {
     PimCommon::TranslatorWidget edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QTest::keyPress(&edit, Qt::Key_Escape);
     QCOMPARE(edit.isVisible(), false);
 }
@@ -113,7 +113,7 @@ void TranslatorTest::shouldEmitTranslatorWasClosedSignalWhenCloseIt()
 {
     PimCommon::TranslatorWidget edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QSignalSpy spy(&edit, SIGNAL(toolsWasClosed()));
     QTest::keyClick(&edit, Qt::Key_Escape);
     QCOMPARE(spy.count(), 1);
