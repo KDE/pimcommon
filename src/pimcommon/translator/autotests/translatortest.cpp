@@ -114,7 +114,7 @@ void TranslatorTest::shouldEmitTranslatorWasClosedSignalWhenCloseIt()
     PimCommon::TranslatorWidget edit;
     edit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    QSignalSpy spy(&edit, SIGNAL(toolsWasClosed()));
+    QSignalSpy spy(&edit, &PimCommon::TranslatorWidget::toolsWasClosed);
     QTest::keyClick(&edit, Qt::Key_Escape);
     QCOMPARE(spy.count(), 1);
 }

@@ -43,10 +43,10 @@ void KActionMenuChangeCaseTest::shouldHaveDefaultValue()
 void KActionMenuChangeCaseTest::shouldEmitSignals()
 {
     KActionMenuChangeCase menu;
-    QSignalSpy spyUpper(&menu, SIGNAL(upperCase()));
-    QSignalSpy spyLower(&menu, SIGNAL(lowerCase()));
-    QSignalSpy spySentence(&menu, SIGNAL(sentenceCase()));
-    QSignalSpy spyReverse(&menu, SIGNAL(reverseCase()));
+    QSignalSpy spyUpper(&menu, &KActionMenuChangeCase::upperCase);
+    QSignalSpy spyLower(&menu, &KActionMenuChangeCase::lowerCase);
+    QSignalSpy spySentence(&menu, &KActionMenuChangeCase::sentenceCase);
+    QSignalSpy spyReverse(&menu, &KActionMenuChangeCase::reverseCase);
     menu.upperCaseAction()->trigger();
     menu.lowerCaseAction()->trigger();
     menu.sentenceCaseAction()->trigger();
