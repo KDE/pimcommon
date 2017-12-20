@@ -36,8 +36,6 @@ public:
         ToolBar = 5
     };
     ActionType()
-        : mAction(nullptr)
-        , mType(Tools)
     {
     }
 
@@ -47,7 +45,7 @@ public:
 
 private:
     QAction *mAction = nullptr;
-    Type mType;
+    Type mType = Tools;
 };
 
 class AbstractGenericPluginInterfacePrivate;
