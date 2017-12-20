@@ -26,7 +26,7 @@ public:
     {
     }
 
-    ActionType actionType;
+    QVector<ActionType> actionTypes;
 };
 
 GenericPluginInterface::GenericPluginInterface(QObject *parent)
@@ -40,14 +40,20 @@ GenericPluginInterface::~GenericPluginInterface()
     delete d;
 }
 
-void GenericPluginInterface::setActionType(const ActionType &type)
+void GenericPluginInterface::setActionTypes(const QVector<ActionType> &type)
 {
-    d->actionType = type;
+    d->actionTypes = type;
 }
 
-ActionType GenericPluginInterface::actionType() const
+void GenericPluginInterface::addActionType(const ActionType &type)
 {
-    return d->actionType;
+    //TODO check already existance ?
+    d->actionTypes.append(type);
+}
+
+QVector<ActionType> GenericPluginInterface::actionTypes() const
+{
+    return d->actionTypes;
 }
 
 void GenericPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)

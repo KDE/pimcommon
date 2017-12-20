@@ -163,19 +163,8 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
     for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
-        PimCommon::ActionType actionType = interface->actionType();
-        PimCommon::ActionType::Type type = actionType.type();
-        QList<QAction *> lst = listType.value(type);
-        if (!lst.isEmpty()) {
-            QAction *act = new QAction(this);
-            act->setSeparator(true);
-            lst << act << actionType.action();
-            listType.insert(type, lst);
-        } else {
-            listType.insert(type, QList<QAction *>() << actionType.action());
-        }
-        if (interface->plugin()->hasPopupMenuSupport()) {
-            type = PimCommon::ActionType::PopupMenu;
+        for (const PimCommon::ActionType &actionType : interface->actionTypes()) {
+            PimCommon::ActionType::Type type = actionType.type();
             QList<QAction *> lst = listType.value(type);
             if (!lst.isEmpty()) {
                 QAction *act = new QAction(this);
@@ -185,17 +174,29 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
             } else {
                 listType.insert(type, QList<QAction *>() << actionType.action());
             }
-        }
-        if (interface->plugin()->hasToolBarSupport()) {
-            type = PimCommon::ActionType::ToolBar;
-            QList<QAction *> lst = listType.value(type);
-            if (!lst.isEmpty()) {
-                QAction *act = new QAction(this);
-                act->setSeparator(true);
-                lst << act << actionType.action();
-                listType.insert(type, lst);
-            } else {
-                listType.insert(type, QList<QAction *>() << actionType.action());
+            if (interface->plugin()->hasPopupMenuSupport()) {
+                type = PimCommon::ActionType::PopupMenu;
+                QList<QAction *> lst = listType.value(type);
+                if (!lst.isEmpty()) {
+                    QAction *act = new QAction(this);
+                    act->setSeparator(true);
+                    lst << act << actionType.action();
+                    listType.insert(type, lst);
+                } else {
+                    listType.insert(type, QList<QAction *>() << actionType.action());
+                }
+            }
+            if (interface->plugin()->hasToolBarSupport()) {
+                type = PimCommon::ActionType::ToolBar;
+                QList<QAction *> lst = listType.value(type);
+                if (!lst.isEmpty()) {
+                    QAction *act = new QAction(this);
+                    act->setSeparator(true);
+                    lst << act << actionType.action();
+                    listType.insert(type, lst);
+                } else {
+                    listType.insert(type, QList<QAction *>() << actionType.action());
+                }
             }
         }
     }
