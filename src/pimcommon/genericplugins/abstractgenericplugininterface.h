@@ -33,7 +33,9 @@ public:
         File = 2,
         Action = 3,
         PopupMenu = 4,
-        ToolBar = 5
+        ToolBar = 5,
+        Message = 6,
+        Folder = 7
     };
     ActionType()
     {
