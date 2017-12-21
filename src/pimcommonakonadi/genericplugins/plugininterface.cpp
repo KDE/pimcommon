@@ -120,9 +120,9 @@ QString PluginInterface::actionXmlExtension(ActionType::Type type)
     case PimCommon::ActionType::ToolBar:
         return QStringLiteral("_toolbar_actions");
     case PimCommon::ActionType::Message:
-        return QStringLiteral("_message_actions");
+        return QStringLiteral("_plugins_message");
     case PimCommon::ActionType::Folder:
-        return QStringLiteral("_folder_actions");
+        return QStringLiteral("_plugins_folder");
     }
     return {};
 }
