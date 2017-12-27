@@ -71,6 +71,7 @@ public:
 
 Q_SIGNALS:
     void emitPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
+    void message(const QString &str);
 
 private:
     AbstractGenericPluginInterfacePrivate *const d;
