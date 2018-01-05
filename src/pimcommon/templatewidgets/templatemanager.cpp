@@ -31,12 +31,6 @@ using namespace PimCommon;
 class PimCommon::TemplateManagerPrivate
 {
 public:
-    TemplateManagerPrivate()
-        : mTemplateListWidget(nullptr)
-        , mDirWatch(nullptr)
-    {
-    }
-
     QStringList mTemplatesDirectories;
     PimCommon::TemplateListWidget *mTemplateListWidget = nullptr;
     KDirWatch *mDirWatch = nullptr;
@@ -124,5 +118,3 @@ TemplateInfo TemplateManager::loadTemplate(const QString &themePath, const QStri
     }
     return info;
 }
-
-#include "moc_templatemanager.cpp"
