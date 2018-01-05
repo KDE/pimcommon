@@ -206,8 +206,8 @@ public:
             if (!knewstuffConfigName.isEmpty()) {
                 menu->addSeparator();
                 menu->addAction(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Download new Templates..."), q, [this]() {
-                    slotDownloadTemplates();
-                });
+                        slotDownloadTemplates();
+                    });
             }
         }
 
