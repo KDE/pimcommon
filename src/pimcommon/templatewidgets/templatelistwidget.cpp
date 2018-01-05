@@ -397,4 +397,3 @@ void TemplateListWidget::addDefaultTemplate(const QString &templateName, const Q
     d->createListWidgetItem(templateName, templateScript, true);
 }
 }
-#include "moc_templatelistwidget.cpp"
