@@ -205,10 +205,9 @@ public:
         if (KAuthorized::authorize(QStringLiteral("ghns"))) {
             if (!knewstuffConfigName.isEmpty()) {
                 menu->addSeparator();
-                QAction *act = menu->addAction(i18n("Download new Templates..."), q, [this]() {
-                        slotDownloadTemplates();
-                    });
-                act->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
+                menu->addAction(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Download new Templates..."), q, [this]() {
+                    slotDownloadTemplates();
+                });
             }
         }
 
