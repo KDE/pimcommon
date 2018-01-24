@@ -81,7 +81,7 @@ QString CreateResource::createResource(const QString &resources, const QString &
 
     // check if unique instance already exists
     qCDebug(PIMCOMMONAKONADI_LOG) << type.capabilities();
-    if (type.capabilities().contains(QStringLiteral("Unique"))) {
+    if (type.capabilities().contains(QLatin1String("Unique"))) {
         const AgentInstance::List lstInstances = AgentManager::self()->instances();
         for (const AgentInstance &instance : lstInstances) {
             qCDebug(PIMCOMMONAKONADI_LOG) << instance.type().identifier() << (instance.type() == type);
