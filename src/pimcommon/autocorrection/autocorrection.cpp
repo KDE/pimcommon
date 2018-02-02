@@ -754,12 +754,12 @@ void AutoCorrection::capitalizeWeekDays()
 
 bool AutoCorrection::excludeToUppercase(const QString &word) const
 {
-    if (word.startsWith(QStringLiteral("http://"))
-        || word.startsWith(QStringLiteral("www."))
-        || word.startsWith(QStringLiteral("mailto:"))
-        || word.startsWith(QStringLiteral("ftp://"))
-        || word.startsWith(QStringLiteral("https://"))
-        || word.startsWith(QStringLiteral("ftps://"))) {
+    if (word.startsWith(QLatin1String("http://"))
+        || word.startsWith(QLatin1String("www."))
+        || word.startsWith(QLatin1String("mailto:"))
+        || word.startsWith(QLatin1String("ftp://"))
+        || word.startsWith(QLatin1String("https://"))
+        || word.startsWith(QLatin1String("ftps://"))) {
         return true;
     }
     return false;
@@ -847,11 +847,11 @@ bool AutoCorrection::autoFractions()
         return false;
     }
 
-    if (trimmed.startsWith(QStringLiteral("1/2"))) {
+    if (trimmed.startsWith(QLatin1String("1/2"))) {
         mWord.replace(0, 3, QStringLiteral("½"));
-    } else if (trimmed.startsWith(QStringLiteral("1/4"))) {
+    } else if (trimmed.startsWith(QLatin1String("1/4"))) {
         mWord.replace(0, 3, QStringLiteral("¼"));
-    } else if (trimmed.startsWith(QStringLiteral("3/4"))) {
+    } else if (trimmed.startsWith(QLatin1String("3/4"))) {
         mWord.replace(0, 3, QStringLiteral("¾"));
     } else {
         return false;
