@@ -157,7 +157,7 @@ QStringList PimCommon::Util::generateEmailList(const QStringList &list)
         QString tmpStr = list.at(i);
         if (!tmpStr.trimmed().isEmpty()) {
             if (!str.isEmpty()) {
-                str.append(QStringLiteral(", "));
+                str.append(QLatin1String(", "));
             }
             str.append(tmpStr);
         }
