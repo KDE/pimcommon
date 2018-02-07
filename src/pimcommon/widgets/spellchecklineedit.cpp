@@ -112,7 +112,7 @@ void SpellCheckLineEdit::insertFromMimeData(const QMimeData *source)
         pasteText.replace(QLatin1Char('\r'), QLatin1Char('\n'));
         // remove blank lines
         while (pasteText.contains(QLatin1String("\n\n"))) {
-            pasteText.replace(QStringLiteral("\n\n"), QStringLiteral("\n"));
+            pasteText.replace(QLatin1String("\n\n"), QLatin1String("\n"));
         }
 
         QRegExp reTopSpace(QStringLiteral("^ *\n"));
