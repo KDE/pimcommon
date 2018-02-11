@@ -28,7 +28,7 @@ class PIMCOMMON_EXPORT CustomToolsViewInterface : public QWidget
     Q_OBJECT
 public:
     explicit CustomToolsViewInterface(QWidget *parent = nullptr);
-    virtual ~CustomToolsViewInterface();
+    ~CustomToolsViewInterface() override;
 
     virtual void setText(const QString &text);
     virtual KToggleAction *action() const;

@@ -42,7 +42,7 @@ private Q_SLOTS:
 
 private:
     PimCommonSettings();
-    virtual ~PimCommonSettings();
+    ~PimCommonSettings() override;
     static PimCommonSettings *mSelf;
 
     QTimer *mConfigSyncTimer = nullptr;
