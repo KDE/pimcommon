@@ -1,5 +1,6 @@
 name: pimcommon
 description: PimCommon Library 
+maintainer: mlaurent
 public_lib: true
 group: kdepim
 platforms:
@@ -14,13 +15,3 @@ libraries:
    cmake: "KF5::PimCommonAkonadi"
    cmakename: KF5PimCommonAkonadi   
 
-
-group_info:
-    fancyname: KDE PIM
-    maintainer:
-        - mlaurent
-    irc: kontact
-    mailinglist: kde-pim
-    platforms:
-        - All
-    logo: docs/kontact.svg
