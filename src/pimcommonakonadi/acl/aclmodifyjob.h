@@ -35,8 +35,9 @@ public:
 
     void setTopLevelCollection(const Akonadi::Collection &topLevelCollection);
     void setRecursive(bool recursive);
-    void setNewRights(const QMap<QByteArray, KIMAP::Acl::Rights> &right);
     void start();
+
+    void setCurrentRight(const QMap<QByteArray, KIMAP::Acl::Rights> &currentRight);
 
 private:
     void slotModifyDone(KJob *job);
@@ -48,8 +49,10 @@ private:
     Akonadi::Collection mTopLevelCollection;
     Akonadi::Collection::List mRecursiveCollection;
     QMap<QByteArray, KIMAP::Acl::Rights> mNewRight;
+    QMap<QByteArray, KIMAP::Acl::Rights> mCurrentRight;
     bool mRecursive = false;
     int mCurrentIndex = -1;
+    void searchContact();
 };
 }
 #endif // ACLMODIFYJOB_H

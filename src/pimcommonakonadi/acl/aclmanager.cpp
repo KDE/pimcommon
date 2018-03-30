@@ -435,44 +435,8 @@ void AclManager::save(bool recursive)
 
     d->mChanged = false;
 
-    QMap<QByteArray, KIMAP::Acl::Rights> newRights;
-
-    const QMap<QByteArray, KIMAP::Acl::Rights> rights = d->mModel->rights();
-    QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = rights.cbegin();
-    const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = rights.cend();
-    for (; it != itEnd; ++it) {
-#if 0 //BUG in searchjob
-        // we can use job->exec() here, it is not a hot path
-        Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);
-        searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(it.key()));
-        searchJob->setLimit(1);
-        if (!searchJob->exec()) {
-            continue;
-        }
-
-        if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
-            Akonadi::ContactGroupExpandJob *expandJob
-                = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
-            if (expandJob->exec()) {
-                const KContacts::Addressee::List lstContacts = expandJob->contacts();
-                for (const KContacts::Addressee &contact : lstContacts) {
-                    const QByteArray rawEmail
-                        = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
-                    if (!rawEmail.isEmpty()) {
-                        newRights[ rawEmail ] = it.value();
-                    }
-                }
-            }
-        } else { // it has been a normal contact
-#endif
-            const QByteArray rawEmail = KEmailAddress::extractEmailAddress(it.key());
-            if (!rawEmail.isEmpty()) {
-                newRights[ rawEmail ] = it.value();
-            }
-        //}
-    }
     PimCommon::AclModifyJob *modifyAclJob = new PimCommon::AclModifyJob;
-    modifyAclJob->setNewRights(newRights);
+    modifyAclJob->setCurrentRight(d->mModel->rights());
     modifyAclJob->setTopLevelCollection(d->mCollection);
     modifyAclJob->setRecursive(recursive);
     modifyAclJob->start();
