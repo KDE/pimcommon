@@ -68,7 +68,7 @@ public:
     explicit SimpleStringListEditor(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(),
                                     const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
 
-    ~SimpleStringListEditor();
+    ~SimpleStringListEditor() override;
     /** Sets the list of strings displayed to @p strings */
     void setStringList(const QStringList &strings);
 

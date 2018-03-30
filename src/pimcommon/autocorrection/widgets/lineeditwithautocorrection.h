@@ -30,7 +30,7 @@ class PIMCOMMON_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheck
     Q_OBJECT
 public:
     explicit LineEditWithAutoCorrection(QWidget *parent, const QString &configFile);
-    ~LineEditWithAutoCorrection();
+    ~LineEditWithAutoCorrection() override;
 
     PimCommon::AutoCorrection *autocorrection() const;
 

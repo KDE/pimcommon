@@ -41,7 +41,7 @@ class PIMCOMMONAKONADI_EXPORT ImapAclAttribute : public Akonadi::Attribute
 public:
     ImapAclAttribute();
     ImapAclAttribute(const QMap<QByteArray, KIMAP::Acl::Rights> &rights, const QMap<QByteArray, KIMAP::Acl::Rights> &oldRights);
-    ~ImapAclAttribute();
+    ~ImapAclAttribute() override;
     void setRights(const QMap<QByteArray, KIMAP::Acl::Rights> &rights);
     QMap<QByteArray, KIMAP::Acl::Rights> rights() const;
     QMap<QByteArray, KIMAP::Acl::Rights> oldRights() const;

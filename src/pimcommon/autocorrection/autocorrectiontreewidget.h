@@ -26,7 +26,7 @@ class AutoCorrectionTreeWidget : public QTreeWidget
     Q_OBJECT
 public:
     explicit AutoCorrectionTreeWidget(QWidget *parent = nullptr);
-    ~AutoCorrectionTreeWidget();
+    ~AutoCorrectionTreeWidget() override;
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;

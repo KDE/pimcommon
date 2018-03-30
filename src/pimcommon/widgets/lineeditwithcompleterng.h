@@ -27,7 +27,7 @@ class PIMCOMMON_EXPORT LineEditWithCompleterNg : public QLineEdit
     Q_OBJECT
 public:
     explicit LineEditWithCompleterNg(QWidget *parent = nullptr);
-    ~LineEditWithCompleterNg();
+    ~LineEditWithCompleterNg() override;
 
     void addCompletionItem(const QString &str);
 

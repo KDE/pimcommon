@@ -49,7 +49,7 @@ class TextEditAutoCorrectionWidget : public QTextEdit
     Q_OBJECT
 public:
     explicit TextEditAutoCorrectionWidget(PimCommon::AutoCorrection *autoCorrection, QWidget *parent = nullptr);
-    ~TextEditAutoCorrectionWidget();
+    ~TextEditAutoCorrectionWidget() override;
 
 protected:
     void keyPressEvent(QKeyEvent *e) override;

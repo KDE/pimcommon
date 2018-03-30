@@ -26,7 +26,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT AclListView : public QListView
     Q_OBJECT
 public:
     explicit AclListView(QWidget *parent = nullptr);
-    ~AclListView();
+    ~AclListView() override;
 
 public Q_SLOTS:
     void slotCollectionCanBeAdministrated(bool b);

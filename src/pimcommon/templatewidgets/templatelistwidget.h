@@ -34,7 +34,7 @@ class PIMCOMMON_EXPORT TemplateListWidget : public QListWidget
     Q_OBJECT
 public:
     explicit TemplateListWidget(const QString &configName, QWidget *parent = nullptr);
-    ~TemplateListWidget();
+    ~TemplateListWidget() override;
 
     //Need to load template in specific class to allow to use correct defaultTemplates function
     void loadTemplates();

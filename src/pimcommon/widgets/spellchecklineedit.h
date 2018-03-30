@@ -47,7 +47,7 @@ public:
     /**
     * Destructor
     */
-    ~SpellCheckLineEdit();
+    ~SpellCheckLineEdit() override;
 
 protected:
     QSize sizeHint() const override;

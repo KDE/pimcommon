@@ -31,7 +31,7 @@ class ImportLibreOfficeAutocorrection : public ImportAbstractAutocorrection
 {
 public:
     explicit ImportLibreOfficeAutocorrection(QWidget *parent = nullptr);
-    ~ImportLibreOfficeAutocorrection();
+    ~ImportLibreOfficeAutocorrection() override;
 
     bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
 

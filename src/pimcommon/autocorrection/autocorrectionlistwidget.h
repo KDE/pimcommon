@@ -26,7 +26,7 @@ class AutoCorrectionListWidget : public QListWidget
     Q_OBJECT
 public:
     explicit AutoCorrectionListWidget(QWidget *parent = nullptr);
-    ~AutoCorrectionListWidget();
+    ~AutoCorrectionListWidget() override;
 
 protected:
     void keyPressEvent(QKeyEvent *event) override;

@@ -45,7 +45,7 @@ class PIMCOMMONAKONADI_EXPORT CollectionAclPage : public Akonadi::CollectionProp
 
 public:
     explicit CollectionAclPage(QWidget *parent = nullptr);
-    ~CollectionAclPage();
+    ~CollectionAclPage() override;
 
     void load(const Akonadi::Collection &collection) override;
     void save(Akonadi::Collection &collection) override;
