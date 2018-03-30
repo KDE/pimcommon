@@ -32,13 +32,18 @@
 #include <KLocalizedString>
 #include <QDBusInterface>
 #include <QDBusReply>
+#include <ContactGroupSearchJob>
+#include <ContactGroupExpandJob>
 #include <AkonadiCore/CollectionModifyJob>
+#include <KContacts/Addressee>
 
 using namespace PimCommon;
 
 AclModifyJob::AclModifyJob(QObject *parent)
     : QObject(parent)
 {
+    connect(this, &AclModifyJob::searchContactDone, this, &AclModifyJob::slotModifyAcl);
+    connect(this, &AclModifyJob::searchNextContact, this, &AclModifyJob::searchContact);
 }
 
 AclModifyJob::~AclModifyJob()
@@ -47,40 +52,41 @@ AclModifyJob::~AclModifyJob()
 
 void AclModifyJob::searchContact()
 {
-    QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = mCurrentRight.cbegin();
     const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = mCurrentRight.cend();
-    for (; it != itEnd; ++it) {
-#if 0 //BUG in searchjob
-        // we can use job->exec() here, it is not a hot path
+    if (mIt != itEnd) {
         Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);
-        searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(it.key()));
+        searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(mIt.key()));
         searchJob->setLimit(1);
-        if (!searchJob->exec()) {
-            continue;
-        }
+        connect(searchJob, &Akonadi::ContactGroupSearchJob::result, this, &AclModifyJob::slotGroupSearchResult);
+    } else {
+        Q_EMIT searchContactDone();
+    }
+}
 
-        if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
-            Akonadi::ContactGroupExpandJob *expandJob
-                = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
-            if (expandJob->exec()) {
-                const KContacts::Addressee::List lstContacts = expandJob->contacts();
-                for (const KContacts::Addressee &contact : lstContacts) {
-                    const QByteArray rawEmail
-                        = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
-                    if (!rawEmail.isEmpty()) {
-                        mNewRight[ rawEmail ] = it.value();
-                    }
+void AclModifyJob::slotGroupSearchResult(KJob *job)
+{
+    Akonadi::ContactGroupSearchJob *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
+    if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
+        Akonadi::ContactGroupExpandJob *expandJob
+            = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
+        if (expandJob->exec()) {
+            const KContacts::Addressee::List lstContacts = expandJob->contacts();
+            for (const KContacts::Addressee &contact : lstContacts) {
+                const QByteArray rawEmail
+                    = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
+                if (!rawEmail.isEmpty()) {
+                    mNewRight[ rawEmail ] = mIt.value();
                 }
             }
-        } else { // it has been a normal contact
-#endif
-            const QByteArray rawEmail = KEmailAddress::extractEmailAddress(it.key());
-            if (!rawEmail.isEmpty()) {
-                mNewRight[ rawEmail ] = it.value();
-            }
-        //}
+        }
+    } else { // it has been a normal contact
+        const QByteArray rawEmail = KEmailAddress::extractEmailAddress(mIt.key());
+        if (!rawEmail.isEmpty()) {
+            mNewRight[ rawEmail ] = mIt.value();
+        }
     }
-
+    mIt++;
+    Q_EMIT searchNextContact();
 }
 
 void AclModifyJob::start()
@@ -89,8 +95,12 @@ void AclModifyJob::start()
         deleteLater();
         return;
     }
+    mIt = mCurrentRight.cbegin();
     searchContact();
+}
 
+void AclModifyJob::slotModifyAcl()
+{
     mCurrentIndex = 0;
     if (mRecursive) {
         PimCommon::FetchRecursiveCollectionsJob *fetchJob = new PimCommon::FetchRecursiveCollectionsJob(this);
