@@ -441,6 +441,7 @@ void AclManager::save(bool recursive)
     QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = rights.cbegin();
     const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = rights.cend();
     for (; it != itEnd; ++it) {
+#if 0 //BUG in searchjob
         // we can use job->exec() here, it is not a hot path
         Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);
         searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(it.key()));
@@ -463,11 +464,12 @@ void AclManager::save(bool recursive)
                 }
             }
         } else { // it has been a normal contact
+#endif
             const QByteArray rawEmail = KEmailAddress::extractEmailAddress(it.key());
             if (!rawEmail.isEmpty()) {
                 newRights[ rawEmail ] = it.value();
             }
-        }
+        //}
     }
     PimCommon::AclModifyJob *modifyAclJob = new PimCommon::AclModifyJob;
     modifyAclJob->setNewRights(newRights);
