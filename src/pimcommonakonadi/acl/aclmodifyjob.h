@@ -39,6 +39,10 @@ public:
 
     void setCurrentRight(const QMap<QByteArray, KIMAP::Acl::Rights> &currentRight);
 
+Q_SIGNALS:
+    void searchContactDone();
+    void searchNextContact();
+
 private:
     void slotModifyDone(KJob *job);
     void slotFetchCollectionFinished(const Akonadi::Collection::List &collectionList);
@@ -46,13 +50,17 @@ private:
     void changeAcl(const Akonadi::Collection &collection);
     void checkNewCollection();
     bool canAdministrate(PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const;
+    void searchContact();
+    void slotModifyAcl();
+    void slotGroupSearchResult(KJob *job);
+
     Akonadi::Collection mTopLevelCollection;
     Akonadi::Collection::List mRecursiveCollection;
     QMap<QByteArray, KIMAP::Acl::Rights> mNewRight;
     QMap<QByteArray, KIMAP::Acl::Rights> mCurrentRight;
+    QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator mIt;
     bool mRecursive = false;
     int mCurrentIndex = -1;
-    void searchContact();
 };
 }
 #endif // ACLMODIFYJOB_H
