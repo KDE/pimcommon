@@ -28,8 +28,6 @@
 
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/ServerManager>
-#include <Akonadi/Contact/ContactGroupExpandJob>
-#include <Akonadi/Contact/ContactGroupSearchJob>
 
 #include <KEmailAddress>
 #include <KLocalizedString>
@@ -91,15 +89,12 @@ public:
             right.first = value.toByteArray();
             Q_EMIT dataChanged(index, index);
             return true;
-            break;
         case PermissionsRole:
             right.second = static_cast<KIMAP::Acl::Rights>(value.toInt());
             Q_EMIT dataChanged(index, index);
             return true;
-            break;
         default:
             return false;
-            break;
         }
 
         return false;
@@ -236,13 +231,16 @@ public:
         if (!dlg.exec()) {
             return;
         }
+        const QString userId = dlg.userId();
+        const QStringList lstAddresses = KEmailAddress::splitAddressList(dlg.userId());
+        for (const QString &addr : lstAddresses) {
+            if (mModel->insertRow(mModel->rowCount())) {
+                const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
+                mModel->setData(index, addr, AclModel::UserIdRole);
+                mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
 
-        if (mModel->insertRow(mModel->rowCount())) {
-            const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
-            mModel->setData(index, dlg.userId(), AclModel::UserIdRole);
-            mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
-
-            mChanged = true;
+                mChanged = true;
+            }
         }
     }
 
@@ -262,10 +260,28 @@ public:
             if (!dlg.exec()) {
                 return;
             }
-
-            mModel->setData(index, dlg.userId(), AclModel::UserIdRole);
-            mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
-            mChanged = true;
+            const QStringList lstAddresses = KEmailAddress::splitAddressList(dlg.userId());
+            if (lstAddresses.count() == 1) {
+                mModel->setData(index, lstAddresses.at(0), AclModel::UserIdRole);
+                mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
+                mChanged = true;
+            } else {
+                bool firstElement = true;
+                for (const QString &addr : lstAddresses) {
+                    if (firstElement) {
+                        mModel->setData(index, lstAddresses.at(0), AclModel::UserIdRole);
+                        mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
+                        firstElement = false;
+                    } else {
+                        if (mModel->insertRow(mModel->rowCount())) {
+                            const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
+                            mModel->setData(index, addr, AclModel::UserIdRole);
+                            mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
+                        }
+                    }
+                }
+                mChanged = true;
+            }
         }
     }
 
