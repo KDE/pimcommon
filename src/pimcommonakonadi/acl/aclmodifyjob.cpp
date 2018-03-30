@@ -24,6 +24,7 @@
 #include "aclutils_p.h"
 #include "pimcommonakonadi_debug.h"
 #include <AkonadiCore/ServerManager>
+#include <KEmailAddress>
 
 #include "imapaclattribute.h"
 #include "job/fetchrecursivecollectionsjob.h"
@@ -44,12 +45,52 @@ AclModifyJob::~AclModifyJob()
 {
 }
 
+void AclModifyJob::searchContact()
+{
+    QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = mCurrentRight.cbegin();
+    const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = mCurrentRight.cend();
+    for (; it != itEnd; ++it) {
+#if 0 //BUG in searchjob
+        // we can use job->exec() here, it is not a hot path
+        Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);
+        searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(it.key()));
+        searchJob->setLimit(1);
+        if (!searchJob->exec()) {
+            continue;
+        }
+
+        if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
+            Akonadi::ContactGroupExpandJob *expandJob
+                = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
+            if (expandJob->exec()) {
+                const KContacts::Addressee::List lstContacts = expandJob->contacts();
+                for (const KContacts::Addressee &contact : lstContacts) {
+                    const QByteArray rawEmail
+                        = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
+                    if (!rawEmail.isEmpty()) {
+                        mNewRight[ rawEmail ] = it.value();
+                    }
+                }
+            }
+        } else { // it has been a normal contact
+#endif
+            const QByteArray rawEmail = KEmailAddress::extractEmailAddress(it.key());
+            if (!rawEmail.isEmpty()) {
+                mNewRight[ rawEmail ] = it.value();
+            }
+        //}
+    }
+
+}
+
 void AclModifyJob::start()
 {
     if (!mTopLevelCollection.isValid()) {
         deleteLater();
         return;
     }
+    searchContact();
+
     mCurrentIndex = 0;
     if (mRecursive) {
         PimCommon::FetchRecursiveCollectionsJob *fetchJob = new PimCommon::FetchRecursiveCollectionsJob(this);
@@ -109,6 +150,11 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
         }
     }
     return rights[ imapUserName.toUtf8() ] & KIMAP::Acl::Admin;
+}
+
+void AclModifyJob::setCurrentRight(const QMap<QByteArray, KIMAP::Acl::Rights> &currentRight)
+{
+    mCurrentRight = currentRight;
 }
 
 void AclModifyJob::changeAcl(const Akonadi::Collection &collection)
@@ -203,9 +249,4 @@ void AclModifyJob::setTopLevelCollection(const Akonadi::Collection &topLevelColl
 void AclModifyJob::setRecursive(bool recursive)
 {
     mRecursive = recursive;
-}
-
-void AclModifyJob::setNewRights(const QMap<QByteArray, KIMAP::Acl::Rights> &right)
-{
-    mNewRight = right;
 }
