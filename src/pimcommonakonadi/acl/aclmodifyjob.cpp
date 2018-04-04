@@ -38,6 +38,7 @@
 #include <KContacts/Addressee>
 
 using namespace PimCommon;
+//#define SEARCHCONTACT_AKONADI 1
 
 AclModifyJob::AclModifyJob(QObject *parent)
     : QObject(parent)
@@ -95,8 +96,21 @@ void AclModifyJob::start()
         deleteLater();
         return;
     }
+#ifdef SEARCHCONTACT_AKONADI
     mIt = mCurrentRight.cbegin();
     searchContact();
+#else
+    const QMap<QByteArray, KIMAP::Acl::Rights> rights = mCurrentRight;
+    QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = rights.cbegin();
+    const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = rights.cend();
+    for (; it != itEnd; ++it) {
+        const QByteArray rawEmail = KEmailAddress::extractEmailAddress(it.key());
+        if (!rawEmail.isEmpty()) {
+            mNewRight[rawEmail] = it.value();
+        }
+    }
+    slotModifyAcl();
+#endif
 }
 
 void AclModifyJob::slotModifyAcl()
