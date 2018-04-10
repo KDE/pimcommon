@@ -29,8 +29,6 @@ using namespace PimCommon;
 
 ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection(QWidget *parent)
     : ImportAbstractAutocorrection(parent)
-    , mArchive(nullptr)
-    , mTempDir(nullptr)
 {
 }
 
