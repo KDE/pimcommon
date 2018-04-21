@@ -685,27 +685,22 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
 {
     QFETCH(QString, filename);
     PimCommon::AutoCorrection autocorrection;
+    PimCommon::AutoCorrection autocorrectionReference;
     const QString originalFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral(".xml");
     const QString refFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-ref.xml");
     const QString generatedFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.xml");
 
-    //First
     autocorrection.loadGlobalFileName(originalFile, true);
     autocorrection.writeAutoCorrectionXmlFile(generatedFile);
 
-    //Second
+    //make sure the xml is valid and we can feed ourself with our own generated file
     autocorrection.loadGlobalFileName(generatedFile, true);
-    autocorrection.writeAutoCorrectionXmlFile(generatedFile);
 
-    QStringList args = QStringList()
-                       << QStringLiteral("-u")
-                       << refFile
-                       << generatedFile;
-    QProcess proc;
-    proc.setProcessChannelMode(QProcess::ForwardedChannels);
-    proc.start(QStringLiteral("diff"), args);
-    QVERIFY(proc.waitForFinished());
-    QCOMPARE(proc.exitCode(), 0);
+    autocorrectionReference.loadGlobalFileName(refFile, true);
+
+    QCOMPARE(autocorrection.autocorrectEntries(), autocorrectionReference.autocorrectEntries());
+    QCOMPARE(autocorrection.upperCaseExceptions(), autocorrectionReference.upperCaseExceptions());
+    QCOMPARE(autocorrection.twoUpperLetterExceptions(), autocorrectionReference.twoUpperLetterExceptions());
 }
 
 QTEST_MAIN(AutoCorrectionTest)
