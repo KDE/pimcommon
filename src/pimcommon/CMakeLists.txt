@@ -32,10 +32,6 @@ install(FILES
     )
 
 
-set(libpimcommon_sieve_SRCS
-    sievehighlighter/sievesyntaxhighlighterutil.cpp
-    )
-
 set(libpimcommon_autocorrection_SRCS
     autocorrection/autocorrection.cpp
     autocorrection/autocorrectionwidget.cpp
@@ -140,7 +136,6 @@ set(libpimcommon_SRCS
     ${libpimcommon_autocorrection_SRCS}
     ${libpimcommon_translator_SRCS}
     ${libpimcommon_templatewidgets_SRCS}
-    ${libpimcommon_sieve_SRCS}
     ${libpimcommon_widgets_SRCS}
     ${libpimcommon_customtools_SRCS}
     ${libpimcommon_logactivities_SRCS}
@@ -311,15 +306,6 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     RELATIVE customtools
     )
 
-ecm_generate_headers(PimCommon_Camelcasesievehighlighter_HEADERS
-    HEADER_NAMES
-    SieveSyntaxHighlighterUtil
-    REQUIRED_HEADERS PimCommon_sievehighlighter_HEADERS
-    PREFIX PimCommon
-    RELATIVE sievehighlighter
-    )
-
-
 ecm_generate_headers(PimCommon_Camelcasemigrate_HEADERS
     HEADER_NAMES
     MigrateApplicationFiles
@@ -407,7 +393,6 @@ install(FILES
     ${PimCommon_Camelcasescript_HEADERS}
     ${PimCommon_Camelcasesettings_HEADERS}
     ${PimCommon_Camelcaseshareserviceurl_HEADERS}
-    ${PimCommon_Camelcasesievehighlighter_HEADERS}
     ${PimCommon_Camelcasestorageservice_HEADERS}
     ${PimCommon_Camelcasestorageservicedialog_HEADERS}
     ${PimCommon_Camelcasestorageserviceinterface_HEADERS}
@@ -441,7 +426,6 @@ install(FILES
     ${PimCommon_richtexteditor_HEADERS}
     ${PimCommon_settings_HEADERS}
     ${PimCommon_shareserviceurl_HEADERS}
-    ${PimCommon_sievehighlighter_HEADERS}
     ${PimCommon_storageservice_HEADERS}
     ${PimCommon_storageservicedialog_HEADERS}
     ${PimCommon_storageserviceinterface_HEADERS}
