@@ -31,7 +31,7 @@ public:
     explicit LogActivitiesWidget(QWidget *parent = nullptr);
     ~LogActivitiesWidget();
     void setLog(const QString &str);
-    QString log() const;
+    Q_REQUIRED_RESULT QString log() const;
     void clear();
     void addLogEntry(const QString &entry);
 Q_SIGNALS:

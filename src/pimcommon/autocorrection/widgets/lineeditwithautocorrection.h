@@ -32,7 +32,7 @@ public:
     explicit LineEditWithAutoCorrection(QWidget *parent, const QString &configFile);
     ~LineEditWithAutoCorrection() override;
 
-    PimCommon::AutoCorrection *autocorrection() const;
+    Q_REQUIRED_RESULT PimCommon::AutoCorrection *autocorrection() const;
 
     void setAutocorrection(PimCommon::AutoCorrection *autocorrect);
     void setAutocorrectionLanguage(const QString &language);

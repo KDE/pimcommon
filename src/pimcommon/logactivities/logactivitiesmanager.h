@@ -33,7 +33,7 @@ public:
 
     void appendLog(const QString &str);
 
-    QString log() const;
+    Q_REQUIRED_RESULT QString log() const;
 
     void clear();
 

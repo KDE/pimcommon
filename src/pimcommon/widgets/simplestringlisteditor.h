@@ -76,16 +76,16 @@ public:
     void appendStringList(const QStringList &strings);
 
     /** Retrieves the current list of strings */
-    QStringList stringList() const;
+    Q_REQUIRED_RESULT QStringList stringList() const;
 
     /** Sets the text of button @p button to @p text */
     void setButtonText(ButtonCode button, const QString &text);
 
     void setUpDownAutoRepeat(bool b);
-    QSize sizeHint() const override;
+    Q_REQUIRED_RESULT QSize sizeHint() const override;
 
     virtual void addNewEntry();
-    virtual QString modifyEntry(const QString &text);
+    Q_REQUIRED_RESULT virtual QString modifyEntry(const QString &text);
     void setAddDialogLabel(const QString &addDialogLabel);
 
 Q_SIGNALS:

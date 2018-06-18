@@ -32,7 +32,7 @@ public:
     explicit SelectMultiCollectionWidget(const QString &mimetype, QWidget *parent = nullptr);
     ~SelectMultiCollectionWidget();
 
-    QVector<Akonadi::Collection> selectedCollection(const QModelIndex &parent = QModelIndex()) const;
+    Q_REQUIRED_RESULT QVector<Akonadi::Collection> selectedCollection(const QModelIndex &parent = QModelIndex()) const;
 
 private:
     void slotCollectionsTreeFetched();

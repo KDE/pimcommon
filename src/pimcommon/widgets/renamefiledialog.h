@@ -51,7 +51,7 @@ public:
         RENAMEFILE_OVERWRITEALL = 4
     };
 
-    QUrl newName() const;
+    Q_REQUIRED_RESULT QUrl newName() const;
 
 private:
     void slotOverwritePressed();

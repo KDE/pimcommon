@@ -40,7 +40,7 @@ protected:
 
     virtual void help();
 
-    QDialogButtonBox *buttonBox() const;
+    Q_REQUIRED_RESULT QDialogButtonBox *buttonBox() const;
 
 private:
     void slotHelpClicked();

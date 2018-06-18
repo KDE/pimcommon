@@ -39,13 +39,13 @@ public:
     explicit CheckedCollectionWidget(const QString &mimetype, QWidget *parent = nullptr);
     ~CheckedCollectionWidget();
 
-    Akonadi::EntityTreeModel *entityTreeModel() const;
+    Q_REQUIRED_RESULT Akonadi::EntityTreeModel *entityTreeModel() const;
 
-    QTreeView *folderTreeView() const;
+    Q_REQUIRED_RESULT QTreeView *folderTreeView() const;
 
-    QItemSelectionModel *selectionModel() const;
+    Q_REQUIRED_RESULT QItemSelectionModel *selectionModel() const;
 
-    KCheckableProxyModel *checkableProxy() const;
+    Q_REQUIRED_RESULT KCheckableProxyModel *checkableProxy() const;
 
 Q_SIGNALS:
     void collectionAdded(const Akonadi::Collection &, const Akonadi::Collection &);

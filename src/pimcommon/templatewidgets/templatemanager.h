@@ -27,7 +27,7 @@ class TemplateListWidget;
 struct TemplateInfo {
     QString name;
     QString script;
-    bool isValid() const
+    Q_REQUIRED_RESULT bool isValid() const
     {
         return !name.isEmpty() && !script.isEmpty();
     }

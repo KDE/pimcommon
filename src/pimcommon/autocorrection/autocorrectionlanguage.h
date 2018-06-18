@@ -32,7 +32,7 @@ public:
     * @brief language
     * @return specified language
     */
-    QString language() const;
+    Q_REQUIRED_RESULT QString language() const;
 
     /**
      * @brief setLanguage

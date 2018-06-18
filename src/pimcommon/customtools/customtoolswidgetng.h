@@ -31,7 +31,7 @@ public:
     explicit CustomToolsWidgetNg(KActionCollection *ac, QWidget *parent = nullptr);
     ~CustomToolsWidgetNg();
 
-    QList<KToggleAction *> actionList() const;
+    Q_REQUIRED_RESULT QList<KToggleAction *> actionList() const;
 
     void setText(const QString &text);
 

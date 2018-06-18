@@ -29,8 +29,8 @@ public:
     explicit CollectionAclWidget(QWidget *parent = nullptr);
     ~CollectionAclWidget();
 
-    PimCommon::AclManager *aclManager() const;
-    bool recursive() const;
+    Q_REQUIRED_RESULT PimCommon::AclManager *aclManager() const;
+    Q_REQUIRED_RESULT bool recursive() const;
     void setEnableRecursiveCheckBox(bool enable);
 
 private Q_SLOTS:

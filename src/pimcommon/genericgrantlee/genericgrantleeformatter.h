@@ -35,9 +35,9 @@ public:
     void setDefaultHtmlMainFile(const QString &name);
 
     void changeGrantleePath(const QString &path);
-    QString errorMessage() const;
+    Q_REQUIRED_RESULT QString errorMessage() const;
 
-    QString render(const QVariantHash &mapping) const;
+    Q_REQUIRED_RESULT QString render(const QVariantHash &mapping) const;
 
     //For debug
     void setContent(const QString &content);

@@ -32,7 +32,7 @@ public:
 
     void setDefaultText(const QString &text);
 
-    bool showDefaultText() const;
+    Q_REQUIRED_RESULT bool showDefaultText() const;
     void setShowDefaultText(bool b);
 
 private:

@@ -50,7 +50,7 @@ public:
     void load(const Akonadi::Collection &collection) override;
     void save(Akonadi::Collection &collection) override;
 
-    bool canHandle(const Akonadi::Collection &collection) const override;
+    Q_REQUIRED_RESULT bool canHandle(const Akonadi::Collection &collection) const override;
 
 protected:
     void init();

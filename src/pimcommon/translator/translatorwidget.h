@@ -58,7 +58,7 @@ class PIMCOMMON_EXPORT TranslatorWidget : public QWidget
 public:
     explicit TranslatorWidget(QWidget *parent = nullptr);
     explicit TranslatorWidget(const QString &text, QWidget *parent = nullptr);
-    ~TranslatorWidget();
+    ~TranslatorWidget() override;
 
     void setTextToTranslate(const QString &);
     void writeConfig();

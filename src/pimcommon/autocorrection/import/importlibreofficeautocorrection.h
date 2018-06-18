@@ -33,7 +33,7 @@ public:
     explicit ImportLibreOfficeAutocorrection(QWidget *parent = nullptr);
     ~ImportLibreOfficeAutocorrection() override;
 
-    bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
+    Q_REQUIRED_RESULT bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
 
 private:
     enum Type {

@@ -31,7 +31,7 @@ public:
     explicit CreateResource(QObject *parent = nullptr);
     ~CreateResource();
 
-    QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings, bool synchronizeTree = false);
+    Q_REQUIRED_RESULT QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings, bool synchronizeTree = false);
 
 Q_SIGNALS:
     void createResourceInfo(const QString &);

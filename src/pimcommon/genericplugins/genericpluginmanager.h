@@ -47,21 +47,21 @@ public:
     explicit GenericPluginManager(QObject *parent = nullptr);
     ~GenericPluginManager();
 
-    bool initializePlugins();
+    Q_REQUIRED_RESULT bool initializePlugins();
 
     void setServiceTypeName(const QString &serviceName);
-    QString serviceTypeName() const;
+    Q_REQUIRED_RESULT QString serviceTypeName() const;
 
     void setPluginName(const QString &pluginName);
-    QString pluginName() const;
+    Q_REQUIRED_RESULT QString pluginName() const;
 
-    QVector<PimCommon::GenericPlugin *> pluginsList() const;
-    QVector<PimCommon::PluginUtilData> pluginsDataList() const;
+    Q_REQUIRED_RESULT QVector<PimCommon::GenericPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QVector<PimCommon::PluginUtilData> pluginsDataList() const;
 
-    QString configGroupName() const;
-    QString configPrefixSettingKey() const;
+    Q_REQUIRED_RESULT QString configGroupName() const;
+    Q_REQUIRED_RESULT QString configPrefixSettingKey() const;
 
-    GenericPlugin *pluginFromIdentifier(const QString &id);
+    Q_REQUIRED_RESULT GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:
     GenericPluginManagerPrivate *const d;

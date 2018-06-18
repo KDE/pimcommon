@@ -54,14 +54,14 @@ public:
         IncForReaders
     };
 
-    CollectionTypeUtil::IncidencesFor incidencesForFromString(const QString &string);
-    CollectionTypeUtil::FolderContentsType typeFromKolabName(const QByteArray &name);
-    QString folderContentDescription(CollectionTypeUtil::FolderContentsType type);
-    QByteArray kolabNameFromType(CollectionTypeUtil::FolderContentsType type);
-    QString incidencesForToString(CollectionTypeUtil::IncidencesFor type);
-    CollectionTypeUtil::FolderContentsType contentsTypeFromString(const QString &type);
-    QString typeNameFromKolabType(const QByteArray &type);
-    QString iconNameFromContentsType(CollectionTypeUtil::FolderContentsType type);
+    Q_REQUIRED_RESULT CollectionTypeUtil::IncidencesFor incidencesForFromString(const QString &string);
+    Q_REQUIRED_RESULT CollectionTypeUtil::FolderContentsType typeFromKolabName(const QByteArray &name);
+    Q_REQUIRED_RESULT QString folderContentDescription(CollectionTypeUtil::FolderContentsType type);
+    Q_REQUIRED_RESULT QByteArray kolabNameFromType(CollectionTypeUtil::FolderContentsType type);
+    Q_REQUIRED_RESULT QString incidencesForToString(CollectionTypeUtil::IncidencesFor type);
+    Q_REQUIRED_RESULT CollectionTypeUtil::FolderContentsType contentsTypeFromString(const QString &type);
+    Q_REQUIRED_RESULT QString typeNameFromKolabType(const QByteArray &type);
+    Q_REQUIRED_RESULT QString iconNameFromContentsType(CollectionTypeUtil::FolderContentsType type);
 };
 }
 #endif // COLLECTIONTYPEUTIL_H

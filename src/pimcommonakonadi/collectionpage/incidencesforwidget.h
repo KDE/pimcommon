@@ -33,7 +33,7 @@ public:
     explicit IncidencesForWidget(QWidget *parent = nullptr);
     ~IncidencesForWidget();
 
-    int currentIndex() const;
+    Q_REQUIRED_RESULT int currentIndex() const;
     void setCurrentIndex(int index);
 
 Q_SIGNALS:

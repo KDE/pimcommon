@@ -28,21 +28,21 @@ class PIMCOMMON_EXPORT MigrateFileInfo
 public:
     MigrateFileInfo();
 
-    QString type() const;
+    Q_REQUIRED_RESULT QString type() const;
     void setType(const QString &type);
 
-    QString path() const;
+    Q_REQUIRED_RESULT QString path() const;
     void setPath(const QString &path);
 
-    bool folder() const;
+    Q_REQUIRED_RESULT bool folder() const;
     void setFolder(bool folder);
 
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
-    int version() const;
+    Q_REQUIRED_RESULT int version() const;
     void setVersion(int version);
 
-    QStringList filePatterns() const;
+    Q_REQUIRED_RESULT QStringList filePatterns() const;
     void setFilePatterns(const QStringList &filePatterns);
 
 private:

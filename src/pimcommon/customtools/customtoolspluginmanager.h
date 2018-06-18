@@ -32,7 +32,7 @@ public:
     explicit CustomToolsPluginManager(QObject *parent = nullptr);
     ~CustomToolsPluginManager();
 
-    QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
 private:
     CustomToolsPluginManagerPrivate *const d;
 };

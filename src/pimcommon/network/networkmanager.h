@@ -30,7 +30,7 @@ public:
     ~NetworkManager();
     static NetworkManager *self();
 
-    QNetworkConfigurationManager *networkConfigureManager() const;
+    Q_REQUIRED_RESULT QNetworkConfigurationManager *networkConfigureManager() const;
 
 private:
     QNetworkConfigurationManager *mNetworkConfigureManager = nullptr;

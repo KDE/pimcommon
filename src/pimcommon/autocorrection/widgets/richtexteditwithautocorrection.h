@@ -31,7 +31,7 @@ public:
     explicit RichTextEditWithAutoCorrection(QWidget *parent = nullptr);
     ~RichTextEditWithAutoCorrection() override;
 
-    PimCommon::AutoCorrection *autocorrection() const;
+    Q_REQUIRED_RESULT PimCommon::AutoCorrection *autocorrection() const;
 
     void setAutocorrection(PimCommon::AutoCorrection *autocorrect);
 

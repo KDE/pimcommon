@@ -55,34 +55,34 @@ public:
     void setSuperScript(bool b);
     void setAddNonBreakingSpace(bool b);
 
-    bool isEnabledAutoCorrection() const;
-    bool isUppercaseFirstCharOfSentence() const;
-    bool isFixTwoUppercaseChars() const;
-    bool isSingleSpaces() const;
-    bool isAutoFractions() const;
-    bool isCapitalizeWeekDays() const;
-    bool isReplaceDoubleQuotes() const;
-    bool isReplaceSingleQuotes() const;
-    bool isAdvancedAutocorrect() const;
-    bool isAutoFormatUrl() const;
-    bool isAutoBoldUnderline() const;
-    bool isSuperScript() const;
+    Q_REQUIRED_RESULT bool isEnabledAutoCorrection() const;
+    Q_REQUIRED_RESULT bool isUppercaseFirstCharOfSentence() const;
+    Q_REQUIRED_RESULT bool isFixTwoUppercaseChars() const;
+    Q_REQUIRED_RESULT bool isSingleSpaces() const;
+    Q_REQUIRED_RESULT bool isAutoFractions() const;
+    Q_REQUIRED_RESULT bool isCapitalizeWeekDays() const;
+    Q_REQUIRED_RESULT bool isReplaceDoubleQuotes() const;
+    Q_REQUIRED_RESULT bool isReplaceSingleQuotes() const;
+    Q_REQUIRED_RESULT bool isAdvancedAutocorrect() const;
+    Q_REQUIRED_RESULT bool isAutoFormatUrl() const;
+    Q_REQUIRED_RESULT bool isAutoBoldUnderline() const;
+    Q_REQUIRED_RESULT bool isSuperScript() const;
 
-    bool isAddNonBreakingSpace() const;
+    Q_REQUIRED_RESULT bool isAddNonBreakingSpace() const;
 
-    QString language() const;
-    TypographicQuotes typographicSingleQuotes() const;
-    TypographicQuotes typographicDoubleQuotes() const;
-    TypographicQuotes typographicDefaultSingleQuotes() const;
-    TypographicQuotes typographicDefaultDoubleQuotes() const;
-    QSet<QString> upperCaseExceptions() const;
-    QSet<QString> twoUpperLetterExceptions() const;
-    QHash<QString, QString> autocorrectEntries() const;
+    Q_REQUIRED_RESULT QString language() const;
+    Q_REQUIRED_RESULT TypographicQuotes typographicSingleQuotes() const;
+    Q_REQUIRED_RESULT TypographicQuotes typographicDoubleQuotes() const;
+    Q_REQUIRED_RESULT TypographicQuotes typographicDefaultSingleQuotes() const;
+    Q_REQUIRED_RESULT TypographicQuotes typographicDefaultDoubleQuotes() const;
+    Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
+    Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
+    Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
 
-    bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
+    Q_REQUIRED_RESULT bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
     void writeConfig();
 
-    bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);
+    Q_REQUIRED_RESULT bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);
 
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
 

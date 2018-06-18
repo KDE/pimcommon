@@ -31,13 +31,13 @@ public:
     explicit KActionMenuChangeCase(QObject *parent = nullptr);
     ~KActionMenuChangeCase();
 
-    QAction *upperCaseAction() const;
+    Q_REQUIRED_RESULT QAction *upperCaseAction() const;
 
-    QAction *sentenceCaseAction() const;
+    Q_REQUIRED_RESULT QAction *sentenceCaseAction() const;
 
-    QAction *lowerCaseAction() const;
+    Q_REQUIRED_RESULT QAction *lowerCaseAction() const;
 
-    QAction *reverseCaseAction() const;
+    Q_REQUIRED_RESULT QAction *reverseCaseAction() const;
 
     void appendInActionCollection(KActionCollection *ac);
 

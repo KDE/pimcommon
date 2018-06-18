@@ -40,17 +40,17 @@ public:
 
     virtual bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) = 0;
 
-    QSet<QString> upperCaseExceptions() const;
-    QSet<QString> twoUpperLetterExceptions() const;
-    QHash<QString, QString> autocorrectEntries() const;
-    QHash<QString, QString> superScriptEntries() const;
+    Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
+    Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
+    Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
+    Q_REQUIRED_RESULT QHash<QString, QString> superScriptEntries() const;
 
-    AutoCorrection::TypographicQuotes typographicSingleQuotes() const;
-    AutoCorrection::TypographicQuotes typographicDoubleQuotes() const;
+    Q_REQUIRED_RESULT AutoCorrection::TypographicQuotes typographicSingleQuotes() const;
+    Q_REQUIRED_RESULT AutoCorrection::TypographicQuotes typographicDoubleQuotes() const;
 
-    int maxFindStringLenght() const;
+    Q_REQUIRED_RESULT int maxFindStringLenght() const;
 
-    int minFindStringLenght() const;
+    Q_REQUIRED_RESULT int minFindStringLenght() const;
 
 protected:
     int mMaxFindStringLenght = 0;

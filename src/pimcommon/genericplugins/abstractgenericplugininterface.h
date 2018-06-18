@@ -42,8 +42,8 @@ public:
     }
 
     ActionType(QAction *action, Type type);
-    QAction *action() const;
-    Type type() const;
+    Q_REQUIRED_RESULT QAction *action() const;
+    Q_REQUIRED_RESULT Type type() const;
 
 private:
     QAction *mAction = nullptr;
@@ -59,10 +59,10 @@ public:
     ~AbstractGenericPluginInterface();
 
     void setParentWidget(QWidget *parent);
-    QWidget *parentWidget() const;
+    Q_REQUIRED_RESULT QWidget *parentWidget() const;
 
     void setPlugin(AbstractGenericPlugin *plugin);
-    AbstractGenericPlugin *plugin() const;
+    Q_REQUIRED_RESULT AbstractGenericPlugin *plugin() const;
 
     virtual void createAction(KActionCollection *ac) = 0;
     virtual void exec() = 0;

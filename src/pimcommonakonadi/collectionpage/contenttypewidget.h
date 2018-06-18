@@ -32,11 +32,11 @@ public:
     explicit ContentTypeWidget(QWidget *parent = nullptr);
     ~ContentTypeWidget();
 
-    int currentIndex() const;
+    Q_REQUIRED_RESULT int currentIndex() const;
     void setCurrentIndex(int index);
 
     void setCurrentItem(const QString &name);
-    QString currentText() const;
+    Q_REQUIRED_RESULT QString currentText() const;
 
 Q_SIGNALS:
     void activated(int index);

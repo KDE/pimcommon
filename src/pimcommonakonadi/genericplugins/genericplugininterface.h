@@ -43,7 +43,7 @@ public:
 
     void setActionTypes(const QVector<ActionType> &type);
     void addActionType(const ActionType &type);
-    QVector<ActionType> actionTypes() const;
+    Q_REQUIRED_RESULT QVector<ActionType> actionTypes() const;
 
     virtual void setCurrentItems(const Akonadi::Item::List &items);
     virtual void setItems(const Akonadi::Item::List &items);

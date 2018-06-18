@@ -34,7 +34,7 @@ public:
     explicit ImapResourceCapabilitiesManager(QObject *parent = nullptr);
     ~ImapResourceCapabilitiesManager();
 
-    bool hasAnnotationSupport(const QString &identifier) const;
+    Q_REQUIRED_RESULT bool hasAnnotationSupport(const QString &identifier) const;
 
 private:
     void slotInstanceAdded(const Akonadi::AgentInstance &instance);

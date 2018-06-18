@@ -34,12 +34,12 @@ public:
 
     void setParentWidget(QWidget *parent);
 
-    QMap<QString, QMap<QString, QString> > initListLanguage(KComboBox *from);
+    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString> > initListLanguage(KComboBox *from);
     void translate();
     void debug();
     void clear();
 
-    QString resultTranslate() const;
+    Q_REQUIRED_RESULT QString resultTranslate() const;
     void setInputText(const QString &text);
     void setFrom(const QString &language);
     void setTo(const QString &language);

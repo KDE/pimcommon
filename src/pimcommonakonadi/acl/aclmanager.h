@@ -63,33 +63,33 @@ public:
     /**
      * Sets the @p collection whose ACL are managed.
      */
-    Akonadi::Collection collection() const;
+    Q_REQUIRED_RESULT Akonadi::Collection collection() const;
 
     /**
      * Returns the model that represents the ACL of the managed collection.
      */
-    QAbstractItemModel *model() const;
+    Q_REQUIRED_RESULT QAbstractItemModel *model() const;
 
     /**
      * Returns the selection model that is used by the manager to select the
      * ACL entry to work on.
      */
-    QItemSelectionModel *selectionModel() const;
+    Q_REQUIRED_RESULT QItemSelectionModel *selectionModel() const;
 
     /**
      * Returns the action that handles adding new ACL entries.
      */
-    QAction *addAction() const;
+    Q_REQUIRED_RESULT QAction *addAction() const;
 
     /**
      * Returns the action that handles editing the currently selected ACL entry.
      */
-    QAction *editAction() const;
+    Q_REQUIRED_RESULT QAction *editAction() const;
 
     /**
      * Returns the action that handles deleting the currently selected ACL entry.
      */
-    QAction *deleteAction() const;
+    Q_REQUIRED_RESULT QAction *deleteAction() const;
 
     void setChanged(bool b);
 public Q_SLOTS:

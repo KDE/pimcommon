@@ -31,14 +31,14 @@ public:
     ~AbstractGenericPlugin();
 
     virtual PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) = 0;
-    virtual bool hasPopupMenuSupport() const;
-    virtual bool hasToolBarSupport() const;
-    virtual bool hasConfigureDialog() const;
+    Q_REQUIRED_RESULT virtual bool hasPopupMenuSupport() const;
+    Q_REQUIRED_RESULT virtual bool hasToolBarSupport() const;
+    Q_REQUIRED_RESULT virtual bool hasConfigureDialog() const;
 
     virtual void showConfigureDialog(QWidget *parent = nullptr);
 
     void setIsEnabled(bool enabled);
-    bool isEnabled() const;
+    Q_REQUIRED_RESULT bool isEnabled() const;
 
 private:
     bool mIsEnabled;

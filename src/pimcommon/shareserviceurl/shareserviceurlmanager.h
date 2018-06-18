@@ -44,9 +44,9 @@ public:
         ServiceEndType
     };
 
-    KActionMenu *menu() const;
+    Q_REQUIRED_RESULT KActionMenu *menu() const;
 
-    QUrl generateServiceUrl(const QString &link, const QString &title, ServiceType type);
+    Q_REQUIRED_RESULT QUrl generateServiceUrl(const QString &link, const QString &title, ServiceType type);
 
     void openUrl(const QUrl &url);
 

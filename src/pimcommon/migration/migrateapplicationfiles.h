@@ -31,20 +31,20 @@ public:
     explicit MigrateApplicationFiles(QObject *parent = nullptr);
     ~MigrateApplicationFiles();
 
-    bool start();
-    bool checkIfNecessary();
+    Q_REQUIRED_RESULT bool start();
+    Q_REQUIRED_RESULT bool checkIfNecessary();
     void insertMigrateInfo(const MigrateFileInfo &info);
 
-    int version() const;
+    Q_REQUIRED_RESULT int version() const;
     void setVersion(int version);
 
-    QString configFileName() const;
+    Q_REQUIRED_RESULT QString configFileName() const;
     void setConfigFileName(const QString &configFileName);
 
-    int currentConfigVersion() const;
+    Q_REQUIRED_RESULT int currentConfigVersion() const;
     void setCurrentConfigVersion(int currentConfigVersion);
 
-    QString applicationName() const;
+    Q_REQUIRED_RESULT QString applicationName() const;
     void setApplicationName(const QString &applicationName);
 
 Q_SIGNALS:
