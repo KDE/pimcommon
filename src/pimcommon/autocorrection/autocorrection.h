@@ -86,7 +86,7 @@ public:
 
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
 
-    void setNonBreakingSpace(const QChar &nonBreakingSpace);
+    void setNonBreakingSpace(QChar nonBreakingSpace);
 
     void loadGlobalFileName(const QString &fname, bool forceGlobal);
     void loadLocalFileName(const QString &localFileName, const QString &fname);

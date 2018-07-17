@@ -765,7 +765,7 @@ bool AutoCorrection::excludeToUppercase(const QString &word) const
     return false;
 }
 
-void AutoCorrection::setNonBreakingSpace(const QChar &nonBreakingSpace)
+void AutoCorrection::setNonBreakingSpace(QChar nonBreakingSpace)
 {
     mNonBreakingSpace = nonBreakingSpace;
 }
