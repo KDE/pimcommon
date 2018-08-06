@@ -34,6 +34,7 @@ public:
     Q_REQUIRED_RESULT virtual bool hasPopupMenuSupport() const;
     Q_REQUIRED_RESULT virtual bool hasToolBarSupport() const;
     Q_REQUIRED_RESULT virtual bool hasConfigureDialog() const;
+    Q_REQUIRED_RESULT virtual bool hasStatusBarSupport() const;
 
     virtual void showConfigureDialog(QWidget *parent = nullptr);
 

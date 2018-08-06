@@ -44,6 +44,11 @@ bool AbstractGenericPlugin::hasConfigureDialog() const
     return false;
 }
 
+bool AbstractGenericPlugin::hasStatusBarSupport() const
+{
+    return false;
+}
+
 void AbstractGenericPlugin::showConfigureDialog(QWidget *parent)
 {
     Q_UNUSED(parent);
