@@ -1,7 +1,3 @@
-
-add_definitions( -DQT_NO_CAST_FROM_ASCII )
-add_definitions( -DQT_NO_CAST_TO_ASCII )
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonAkonadi")
