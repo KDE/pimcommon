@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.9.42")
+set(PIM_VERSION "5.9.43")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -62,6 +62,19 @@ find_package(KF5IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5LibkdepimAkonadi ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(Grantlee5 "5.1" CONFIG REQUIRED)
+
+find_package(KF5Purpose CONFIG QUIET)
+set_package_properties(KF5Purpose PROPERTIES DESCRIPTION "Support for sharing file"
+                       TYPE OPTIONAL
+                      )
+if (KF5Purpose_FOUND)
+  message(STATUS "Found KF5 Purpose, filesharing enabled")
+  set(KF5_USE_PURPOSE true)
+  add_definitions(-DKF5_USE_PURPOSE)
+else()
+  message(STATUS "KF5 Purpose not found, filesharing disabled")
+endif()
+
 
 find_package(KF5DesignerPlugin ${KF5_VERSION} CONFIG)
 set_package_properties(KF5DesignerPlugin PROPERTIES DESCRIPTION "KF5 designer plugin" TYPE OPTIONAL)

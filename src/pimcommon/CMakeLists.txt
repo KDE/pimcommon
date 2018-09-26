@@ -80,6 +80,7 @@ set(libpimcommon_widgets_SRCS
     widgets/spellchecklineedit.cpp
     widgets/kpimprintpreviewdialog.cpp
     widgets/lineeditwithcompleterng.cpp
+    widgets/purposemenuwidget.cpp
     )
 
 set(libpimcommon_customtools_SRCS
@@ -187,6 +188,11 @@ target_link_libraries(KF5PimCommon
     Qt5::PrintSupport
     Grantlee5::Templates
     )
+
+if (KF5_USE_PURPOSE)
+    target_link_libraries(KF5PimCommon PRIVATE KF5::Purpose KF5::PurposeWidgets)
+endif()
+
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon>")
 
@@ -349,6 +355,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     KActionMenuChangeCase
     KPimPrintPreviewDialog
     LineEditWithCompleterNg
+    PurposeMenuWidget
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
     RELATIVE widgets
