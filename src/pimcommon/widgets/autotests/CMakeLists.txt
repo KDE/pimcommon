@@ -9,3 +9,12 @@ ecm_add_test(lineeditwithcompleterngtest.cpp
     NAME_PREFIX pimcommon-widget
     LINK_LIBRARIES Qt5::Test Qt5::Gui KF5::WidgetsAddons KF5::I18n KF5::PimCommon
 )
+
+if (KF5_USE_PURPOSE)
+    set(test_purpose_libs KF5::Purpose KF5::PurposeWidgets)
+endif()
+ecm_add_test(purposemenuwidgettest.cpp
+    TEST_NAME purposemenuwidgettest
+    NAME_PREFIX pimcommon-widget
+    LINK_LIBRARIES Qt5::Test Qt5::Gui KF5::WidgetsAddons KF5::I18n KF5::PimCommon ${test_purpose_libs}
+)
