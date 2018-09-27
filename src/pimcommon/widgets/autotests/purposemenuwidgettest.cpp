@@ -16,12 +16,26 @@
 */
 
 #include "purposemenuwidgettest.h"
+
+#include <QMenu>
 #include <QTest>
 
 QTEST_MAIN(PurposeMenuWidgetTest)
+
 
 PurposeMenuWidgetTest::PurposeMenuWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void PurposeMenuWidgetTest::shouldHaveDefaultValues()
+{
+    TestMenu w(nullptr);
+#ifdef KF5_USE_PURPOSE
+    QVERIFY(w.menu());
+    QCOMPARE(w.menu()->objectName(), QStringLiteral("purposesharemenu"));
+#else
+    QVERIFY(!w.menu());
+#endif
 }

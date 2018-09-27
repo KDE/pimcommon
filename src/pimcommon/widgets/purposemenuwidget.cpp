@@ -17,7 +17,6 @@
 
 
 #include "purposemenuwidget.h"
-
 #ifdef KF5_USE_PURPOSE
 #include <Purpose/AlternativesModel>
 #include <PurposeWidgets/Menu>
@@ -36,11 +35,11 @@ PurposeMenuWidget::PurposeMenuWidget(QWidget *parentWidget, QObject *parent)
 {
 #ifdef KF5_USE_PURPOSE
     mShareMenu = new Purpose::Menu(mParentWidget);
+    mShareMenu->setObjectName(QStringLiteral("purposesharemenu"));
     mShareMenu->model()->setPluginType(QStringLiteral("Export"));
     connect(mShareMenu, &Purpose::Menu::aboutToShow, this, &PurposeMenuWidget::slotInitializeShareMenu);
     connect(mShareMenu, &Purpose::Menu::finished, this, &PurposeMenuWidget::slotShareActionFinished);
 #endif
-
 }
 
 PurposeMenuWidget::~PurposeMenuWidget()
