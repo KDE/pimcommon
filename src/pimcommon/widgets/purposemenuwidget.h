@@ -20,6 +20,7 @@
 
 #include <QObject>
 #include "pimcommon_export.h"
+#include "config-pimcommon.h"
 #ifdef KF5_USE_PURPOSE
 namespace Purpose {
 class Menu;

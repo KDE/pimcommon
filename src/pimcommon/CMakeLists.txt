@@ -26,7 +26,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
     )
-
+configure_file(config-pimcommon.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-pimcommon.h)
 
 set(libpimcommon_autocorrection_SRCS
     autocorrection/autocorrection.cpp
@@ -405,7 +405,9 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_debug.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
+    ${CMAKE_CURRENT_BINARY_DIR}/config-pimcommon.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
+    ${CMAKE_CURRENT_BINARY_DIR}/config-pimcommon.h
     ${PimCommon_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
