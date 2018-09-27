@@ -163,12 +163,6 @@ generate_export_header(KF5PimCommon BASE_NAME pimcommon)
 add_library(KF5::PimCommon ALIAS KF5PimCommon)
 
 
-if ( Qt5TextToSpeech_FOUND ) 
-    target_link_libraries(KF5PimCommon
-        PRIVATE Qt5::TextToSpeech
-        )
-endif()
-
 target_link_libraries(KF5PimCommon
     PUBLIC
     Qt5::Network
