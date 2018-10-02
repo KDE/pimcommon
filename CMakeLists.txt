@@ -22,7 +22,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 include(ECMInstallIcons)
-include(ECMCoverageOption)
+
 
 
 
