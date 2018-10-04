@@ -18,6 +18,7 @@
 #include "logactivitiesdialog.h"
 #include "logactivitieswidget.h"
 #include "logactivitiesmanager.h"
+#include "logactivitiespurposemenuwidget.h"
 #include <PimCommon/PimUtil>
 #include <KLocalizedString>
 #include <KConfigGroup>
@@ -56,6 +57,20 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mSaveButton = buttonBox->button(QDialogButtonBox::Save);
     mSaveButton->setObjectName(QStringLiteral("savebutton"));
     mSaveButton->setEnabled(false);
+
+    LogactivitiesPurposeMenuWidget *purposeMenu = new LogactivitiesPurposeMenuWidget(this, this);
+    if (purposeMenu->menu()) {
+        mShareButton = new QPushButton(i18n("Share..."), this);
+        mShareButton->setMenu(purposeMenu->menu());
+        mShareButton->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+        purposeMenu->setEditorWidget(mLogWidget->editor());
+        buttonBox->addButton(mShareButton, QDialogButtonBox::ActionRole);
+        mShareButton->setEnabled(false);
+    } else {
+        delete purposeMenu;
+    }
+
+
     connect(mSaveButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
 
     mainLayout->addWidget(buttonBox);
@@ -64,14 +79,22 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
 
     connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryAdded, this, &LogActivitiesDialog::slotLogEntryAdded);
     connect(PimCommon::LogActivitiesManager::self(), &LogActivitiesManager::logEntryCleared, this, &LogActivitiesDialog::slotLogEntryCleared);
-    connect(mLogWidget, &LogActivitiesWidget::textChanged, mSaveButton, &QPushButton::setEnabled);
+    connect(mLogWidget, &LogActivitiesWidget::textChanged, this, &LogActivitiesDialog::slotActivityTextChanged);
     mEnableLogActivities->setChecked(PimCommon::LogActivitiesManager::self()->enableLogActivities());
 }
 
 LogActivitiesDialog::~LogActivitiesDialog()
 {
-    disconnect(mLogWidget, &LogActivitiesWidget::textChanged, mSaveButton, &QPushButton::setEnabled);
+    disconnect(mLogWidget, &LogActivitiesWidget::textChanged, this, &LogActivitiesDialog::slotActivityTextChanged);
     writeConfig();
+}
+
+void LogActivitiesDialog::slotActivityTextChanged(bool changed)
+{
+    mSaveButton->setEnabled(changed);
+    if (mShareButton) {
+        mShareButton->setEnabled(changed);
+    }
 }
 
 void LogActivitiesDialog::slotSave()

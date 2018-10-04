@@ -22,6 +22,7 @@
 #include "pimcommon_private_export.h"
 namespace KPIMTextEdit {
 class PlainTextEditorWidget;
+class PlainTextEditor;
 }
 namespace PimCommon {
 class PIMCOMMON_TESTS_EXPORT LogActivitiesWidget : public QWidget
@@ -34,6 +35,7 @@ public:
     Q_REQUIRED_RESULT QString log() const;
     void clear();
     void addLogEntry(const QString &entry);
+    Q_REQUIRED_RESULT KPIMTextEdit::PlainTextEditor *editor();
 Q_SIGNALS:
     void textChanged(bool changed);
 

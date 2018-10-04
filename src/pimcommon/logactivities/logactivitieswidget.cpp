@@ -65,3 +65,8 @@ void LogActivitiesWidget::clear()
 {
     mLog->clear();
 }
+
+KPIMTextEdit::PlainTextEditor *LogActivitiesWidget::editor()
+{
+    return mLog->editor();
+}

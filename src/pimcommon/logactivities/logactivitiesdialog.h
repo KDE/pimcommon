@@ -44,11 +44,13 @@ private:
     void slotLogEntryCleared();
     void slotLogEntryAdded(const QString &entry);
     void slotEnableLogActivities(bool state);
+    void slotActivityTextChanged(bool changed);
 
     LogActivitiesWidget *mLogWidget = nullptr;
     QPushButton *mClearButton = nullptr;
     QCheckBox *mEnableLogActivities = nullptr;
     QPushButton *mSaveButton = nullptr;
+    QPushButton *mShareButton = nullptr;
 };
 }
 
