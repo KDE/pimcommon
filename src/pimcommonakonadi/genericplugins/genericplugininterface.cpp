@@ -47,7 +47,7 @@ void GenericPluginInterface::setActionTypes(const QVector<ActionType> &type)
 
 void GenericPluginInterface::addActionType(const ActionType &type)
 {
-    //TODO check already existance ?
+    //TODO check already existence ?
     d->actionTypes.append(type);
 }
 
