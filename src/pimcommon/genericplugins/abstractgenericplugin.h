@@ -31,7 +31,7 @@ public:
     explicit AbstractGenericPlugin(QObject *parent = nullptr);
     ~AbstractGenericPlugin();
 
-    virtual PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) = 0;
+    virtual PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent = nullptr) = 0;
     Q_REQUIRED_RESULT virtual bool hasPopupMenuSupport() const;
     Q_REQUIRED_RESULT virtual bool hasToolBarSupport() const;
     Q_REQUIRED_RESULT virtual bool hasConfigureDialog() const;
