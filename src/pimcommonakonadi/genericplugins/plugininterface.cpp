@@ -91,8 +91,10 @@ void PluginInterface::createPluginInterface()
     }
     Q_FOREACH (PimCommon::GenericPlugin *plugin, d->mGenericPluginManager->pluginsList()) {
         if (plugin->isEnabled()) {
-            PimCommon::GenericPluginInterface *interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(d->mActionCollection, this));
+            PimCommon::GenericPluginInterface *interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(this));
             interface->setParentWidget(d->mParentWidget);
+            //Add parent before creating action
+            interface->createAction(d->mActionCollection);
             interface->setPlugin(plugin);
             connect(interface, &PimCommon::GenericPluginInterface::emitPluginActivated, this, &PluginInterface::slotPluginActivated);
             d->mListGenericInterface.append(interface);
