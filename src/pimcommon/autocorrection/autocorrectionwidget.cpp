@@ -118,7 +118,7 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     slotEnableDisableAbreviationList();
     slotEnableDisableTwoUpperEntry();
 
-    QMenu *menu = new QMenu();
+    QMenu *menu = new QMenu(this);
     d->ui->importAutoCorrection->setMenu(menu);
 
     QAction *act = new QAction(i18n("LibreOffice Autocorrection"), this);
