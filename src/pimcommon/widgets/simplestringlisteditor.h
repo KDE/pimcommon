@@ -94,7 +94,7 @@ Q_SIGNALS:
       argument to QString() to suppress adding.
     */
     void aboutToAdd(QString &);
-    void changed(void);
+    void changed();
 
 protected:
     void insertNewEntry(const QString &newEntry);
