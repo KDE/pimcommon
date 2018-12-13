@@ -125,7 +125,6 @@ target_link_libraries(KF5PimCommonAkonadi
 target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi>")
 
 target_include_directories(KF5PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
-target_include_directories(KF5PimCommonAkonadi PUBLIC $<TARGET_PROPERTY:KF5::IMAP,INTERFACE_INCLUDE_DIRECTORIES>)
 
 set_target_properties(KF5PimCommonAkonadi PROPERTIES
     VERSION ${PIMCOMMON_VERSION_STRING}
