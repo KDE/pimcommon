@@ -109,9 +109,9 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::AkonadiContact
     KF5::KIOCore
     KF5::ConfigWidgets
+    KF5::IMAP
     PRIVATE
     KF5::I18n
-    KF5::IMAP
     KF5::LibkdepimAkonadi
     KF5::Codecs
     KF5::PimTextEdit
