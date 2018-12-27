@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2012-2018 Montel Laurent <montel@kde.org>
+  Copyright (c) 2012-2019 Montel Laurent <montel@kde.org>
   code based on calligra autocorrection.
 
   This program is free software; you can redistribute it and/or modify it
