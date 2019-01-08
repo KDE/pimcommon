@@ -138,9 +138,9 @@ bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const
     if (resource.contains(QLatin1String("akonadi_kolabproxy_resource"))) {
         const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent,
                                                                           QStringLiteral("akonadi_kolabproxy_resource"));
-        QDBusInterface interface(basename, QLatin1String("/KolabProxy"));
+        QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));
         if (interface.isValid()) {
-            QDBusReply<QString> reply = interface.call(QLatin1String("imapResourceForCollection"), collection.remoteId().toLongLong());
+            QDBusReply<QString> reply = interface.call(QStringLiteral("imapResourceForCollection"), collection.remoteId().toLongLong());
             if (reply.isValid()) {
                 resource = reply;
             }
