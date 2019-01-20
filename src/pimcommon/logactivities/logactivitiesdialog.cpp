@@ -71,7 +71,6 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
         delete purposeMenu;
     }
 
-
     connect(mSaveButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
 
     mainLayout->addWidget(buttonBox);

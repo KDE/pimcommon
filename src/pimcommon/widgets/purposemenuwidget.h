@@ -29,8 +29,7 @@ class Menu;
 #endif
 class QMenu;
 class QTemporaryFile;
-namespace PimCommon
-{
+namespace PimCommon {
 class PIMCOMMON_EXPORT PurposeMenuWidget : public QObject
 {
     Q_OBJECT

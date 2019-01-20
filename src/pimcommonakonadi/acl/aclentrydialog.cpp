@@ -133,7 +133,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
 
     label
         = new QLabel(
-        i18n("<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
+              i18n("<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
     layout->addWidget(label, 2, 0, 1, 3);
     layout->setRowStretch(2, 10);
 

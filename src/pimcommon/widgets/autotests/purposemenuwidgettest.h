@@ -27,7 +27,6 @@ public:
     TestMenu(QWidget *parentWidget, QObject *parent = nullptr)
         : PimCommon::PurposeMenuWidget(parentWidget, parent)
     {
-
     }
 
     QByteArray text() override
@@ -35,7 +34,6 @@ public:
         return "";
     }
 };
-
 
 class PurposeMenuWidgetTest : public QObject
 {

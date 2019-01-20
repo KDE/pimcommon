@@ -59,6 +59,7 @@ protected:
             , mEnableFromUserSettings(false)
         {
         }
+
         QString mIdentifier;
         QString mDescription;
         bool mEnableByDefault;

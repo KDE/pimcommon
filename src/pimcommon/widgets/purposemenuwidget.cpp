@@ -16,7 +16,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "purposemenuwidget.h"
 #ifdef KF5_USE_PURPOSE
 #include <Purpose/AlternativesModel>
@@ -28,11 +27,10 @@
 #include <QUrl>
 #endif
 
-
 using namespace PimCommon;
 PurposeMenuWidget::PurposeMenuWidget(QWidget *parentWidget, QObject *parent)
-    : QObject(parent),
-      mParentWidget(parentWidget)
+    : QObject(parent)
+    , mParentWidget(parentWidget)
 {
 #ifdef KF5_USE_PURPOSE
     mShareMenu = new Purpose::Menu(mParentWidget);
@@ -88,7 +86,7 @@ void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int e
             KMessageBox::information(mParentWidget, i18n("File was shared."));
         } else {
             KMessageBox::information(mParentWidget, i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", url),
-                    QString(), QString(), KMessageBox::AllowLink);
+                                     QString(), QString(), KMessageBox::AllowLink);
         }
     }
 #endif

@@ -22,11 +22,9 @@
 
 QTEST_MAIN(PurposeMenuWidgetTest)
 
-
 PurposeMenuWidgetTest::PurposeMenuWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void PurposeMenuWidgetTest::shouldHaveDefaultValues()
