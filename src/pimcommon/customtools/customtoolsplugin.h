@@ -34,7 +34,17 @@ public:
     ~CustomToolsPlugin();
 
     virtual PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent = nullptr) = 0;
-    virtual QString customToolName() const = 0;
+    Q_REQUIRED_RESULT virtual QString customToolName() const = 0;
+
+    Q_REQUIRED_RESULT virtual bool hasConfigureDialog() const;
+    virtual void showConfigureDialog(QWidget *parent);
+
+    void emitConfigChanged();
+
+    Q_REQUIRED_RESULT virtual QString description() const;
+
+    void setIsEnabled(bool enabled);
+    Q_REQUIRED_RESULT bool isEnabled() const;
 
 private:
     CustomToolsPluginPrivate *const d;

@@ -25,14 +25,16 @@ class KToggleAction;
 class KActionCollection;
 namespace PimCommon {
 class CustomToolsWidgetNgPrivate;
+class CustomToolsPlugin;
 class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CustomToolsWidgetNg(KActionCollection *ac, QWidget *parent = nullptr);
+    explicit CustomToolsWidgetNg(QWidget *parent = nullptr);
     ~CustomToolsWidgetNg();
 
     Q_REQUIRED_RESULT QList<KToggleAction *> actionList() const;
+    void initializeView(KActionCollection *ac, const QVector<CustomToolsPlugin *> &localPluginsList);
 
     void setText(const QString &text);
 
@@ -45,7 +47,6 @@ Q_SIGNALS:
     void toolActivated();
 
 private:
-    void initializeView(KActionCollection *ac);
     CustomToolsWidgetNgPrivate *const d;
 };
 }

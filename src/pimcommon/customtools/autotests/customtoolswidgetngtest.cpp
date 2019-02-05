@@ -34,7 +34,7 @@ CustomToolsWidgetNgTest::~CustomToolsWidgetNgTest()
 
 void CustomToolsWidgetNgTest::shouldHaveDefaultValue()
 {
-    PimCommon::CustomToolsWidgetNg widget(new KActionCollection(this));
+    PimCommon::CustomToolsWidgetNg widget;
     widget.show();
 
     QStackedWidget *stackWidget = widget.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));

@@ -296,6 +296,7 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     CustomToolsWidgetng
     CustomToolsPlugin
     CustomToolsViewInterface
+    CustomToolsPluginManager
     REQUIRED_HEADERS PimCommon_customtools_HEADERS
     PREFIX PimCommon
     RELATIVE customtools
