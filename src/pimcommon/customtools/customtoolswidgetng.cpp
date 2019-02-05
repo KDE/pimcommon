@@ -55,6 +55,12 @@ CustomToolsWidgetNg::~CustomToolsWidgetNg()
     delete d;
 }
 
+void CustomToolsWidgetNg::addCustomToolViewInterface(PimCommon::CustomToolsViewInterface *plugin)
+{
+    d->mListInterfaceView.append(plugin);
+    d->mStackedWidget->addWidget(plugin);
+}
+
 void CustomToolsWidgetNg::initializeView(KActionCollection *ac, const QVector<CustomToolsPlugin *> &localPluginsList)
 {
     for (CustomToolsPlugin *plugin : localPluginsList) {

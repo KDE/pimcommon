@@ -26,6 +26,7 @@ class KActionCollection;
 namespace PimCommon {
 class CustomToolsWidgetNgPrivate;
 class CustomToolsPlugin;
+class CustomToolsViewInterface;
 class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
 {
     Q_OBJECT
@@ -37,6 +38,8 @@ public:
     void initializeView(KActionCollection *ac, const QVector<CustomToolsPlugin *> &localPluginsList);
 
     void setText(const QString &text);
+
+    void addCustomToolViewInterface(PimCommon::CustomToolsViewInterface *plugin);
 
 public Q_SLOTS:
     void slotToolsWasClosed();
