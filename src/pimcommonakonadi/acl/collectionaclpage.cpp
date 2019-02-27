@@ -67,7 +67,7 @@ CollectionAclPage::~CollectionAclPage()
 void CollectionAclPage::init()
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     d->mCollectionAclWidget = new CollectionAclWidget(this);
     layout->addWidget(d->mCollectionAclWidget);
 }

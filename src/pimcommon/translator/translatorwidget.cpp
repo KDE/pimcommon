@@ -217,7 +217,7 @@ void TranslatorWidget::init()
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
 
     QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->setMargin(2);
+    layout->setContentsMargins(2, 2, 2, 2);
     QHBoxLayout *hboxLayout = new QHBoxLayout;
     QToolButton *closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));

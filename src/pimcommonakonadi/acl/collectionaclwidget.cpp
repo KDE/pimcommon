@@ -99,7 +99,7 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
 
     QWidget *buttonBox = new QWidget;
     QVBoxLayout *buttonBoxVBoxLayout = new QVBoxLayout(buttonBox);
-    buttonBoxVBoxLayout->setMargin(0);
+    buttonBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(buttonBox);
 
     ActionButton *button = new ActionButton(buttonBox);

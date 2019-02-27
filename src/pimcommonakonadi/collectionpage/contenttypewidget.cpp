@@ -43,7 +43,7 @@ ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     , d(new PimCommon::ContentTypeWidgetPrivate)
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
-    hbox->setMargin(0);
+    hbox->setContentsMargins(0, 0, 0, 0);
 
     QLabel *label = new QLabel(i18n("&Folder contents:"), this);
     label->setObjectName(QStringLiteral("contenttypewidgetlabel"));

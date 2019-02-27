@@ -27,7 +27,7 @@ LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mLog = new KPIMTextEdit::PlainTextEditorWidget(this);

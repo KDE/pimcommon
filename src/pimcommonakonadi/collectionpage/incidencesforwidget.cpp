@@ -39,7 +39,7 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     , d(new PimCommon::IncidencesForWidgetPrivate)
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
-    hbox->setMargin(0);
+    hbox->setContentsMargins(0, 0, 0, 0);
 
     QLabel *label = new QLabel(i18n("Generate free/&busy and activate alarms for:"), this);
     label->setObjectName(QStringLiteral("contentstypelabel"));

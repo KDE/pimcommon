@@ -34,7 +34,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     mListWidget = new QTreeWidget(this);
     mListWidget->setSortingEnabled(true);

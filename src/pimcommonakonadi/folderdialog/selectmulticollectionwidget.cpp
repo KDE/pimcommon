@@ -52,7 +52,7 @@ SelectMultiCollectionWidget::~SelectMultiCollectionWidget()
 void SelectMultiCollectionWidget::initialize(const QString &mimetype)
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    vbox->setMargin(0);
+    vbox->setContentsMargins(0, 0, 0, 0);
 
     mCheckedCollectionWidget = new PimCommon::CheckedCollectionWidget(mimetype);
 
