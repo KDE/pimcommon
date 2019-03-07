@@ -30,7 +30,7 @@
 #include <item.h>
 #include <entityannotationsattribute.h>
 
-#include <KComboBox>
+#include <QComboBox>
 #include <QIcon>
 
 #include <QLabel>
@@ -50,7 +50,7 @@ public:
 
     Akonadi::Item mItem;
     KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
-    KComboBox *mNoteType = nullptr;
+    QComboBox *mNoteType = nullptr;
     bool mHasAnnotation = false;
 };
 
@@ -96,7 +96,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     hbox->addStretch();
     label = new QLabel(i18nc("@label:listbox", "Note type:"));
     hbox->addWidget(label);
-    d->mNoteType = new KComboBox;
+    d->mNoteType = new QComboBox;
     hbox->addWidget(d->mNoteType);
     d->mNoteType->addItem(i18nc("@item:inlistbox", "Private note"), QByteArrayLiteral("/private/comment"));
     d->mNoteType->addItem(i18nc("@item:inlistbox", "Shared note"), QByteArrayLiteral("/shared/comment"));

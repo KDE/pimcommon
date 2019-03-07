@@ -23,7 +23,7 @@
 #include <QPair>
 #include <QString>
 
-class KComboBox;
+class QComboBox;
 
 namespace PimCommon {
 class TranslatorUtil
@@ -32,7 +32,7 @@ public:
     TranslatorUtil();
 
     void addPairToMap(QMap<QString, QString> &map, const QPair<QString, QString> &pair);
-    void addItemToFromComboBox(KComboBox *combo, const QPair<QString, QString> &pair);
+    void addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair);
 
     enum translatorType {
         GoogleTranslator = 0

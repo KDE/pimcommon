@@ -39,7 +39,7 @@ void IncidencesForWidgetTest::shouldHaveDefaultValue()
     PimCommon::IncidencesForWidget contentType;
     QLabel *label = contentType.findChild<QLabel *>(QStringLiteral("contentstypelabel"));
     QVERIFY(label);
-    KComboBox *combo = contentType.findChild<KComboBox *>(QStringLiteral("contentstypecombobox"));
+    QComboBox *combo = contentType.findChild<QComboBox *>(QStringLiteral("contentstypecombobox"));
     QVERIFY(combo);
     QVERIFY(combo->count() > 0);
     QCOMPARE(contentType.currentIndex(), 0);
@@ -48,7 +48,7 @@ void IncidencesForWidgetTest::shouldHaveDefaultValue()
 void IncidencesForWidgetTest::shouldChangeComboBoxIndex()
 {
     PimCommon::IncidencesForWidget contentType;
-    KComboBox *combo = contentType.findChild<KComboBox *>(QStringLiteral("contentstypecombobox"));
+    QComboBox *combo = contentType.findChild<QComboBox *>(QStringLiteral("contentstypecombobox"));
     for (int i = 0; i < combo->count(); ++i) {
         contentType.setCurrentIndex(i);
         QCOMPARE(contentType.currentIndex(), i);

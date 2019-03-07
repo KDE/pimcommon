@@ -21,7 +21,7 @@
 #include "contenttypewidget.h"
 #include "collectiontypeutil.h"
 #include <KLocalizedString>
-#include <KComboBox>
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <QLabel>
 
@@ -35,7 +35,7 @@ public:
     {
     }
 
-    KComboBox *mContentsComboBox = nullptr;
+    QComboBox *mContentsComboBox = nullptr;
 };
 
 ContentTypeWidget::ContentTypeWidget(QWidget *parent)
@@ -48,7 +48,7 @@ ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     QLabel *label = new QLabel(i18n("&Folder contents:"), this);
     label->setObjectName(QStringLiteral("contenttypewidgetlabel"));
     hbox->addWidget(label);
-    d->mContentsComboBox = new KComboBox(this);
+    d->mContentsComboBox = new QComboBox(this);
     d->mContentsComboBox->setObjectName(QStringLiteral("contentcombobox"));
     label->setBuddy(d->mContentsComboBox);
     hbox->addWidget(d->mContentsComboBox);
@@ -63,7 +63,7 @@ ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     d->mContentsComboBox->addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeFreebusy));
     d->mContentsComboBox->addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeFile));
 
-    connect(d->mContentsComboBox, QOverload<int>::of(&KComboBox::activated), this, &ContentTypeWidget::activated);
+    connect(d->mContentsComboBox, QOverload<int>::of(&QComboBox::activated), this, &ContentTypeWidget::activated);
 }
 
 ContentTypeWidget::~ContentTypeWidget()
@@ -83,7 +83,10 @@ void ContentTypeWidget::setCurrentIndex(int index)
 
 void ContentTypeWidget::setCurrentItem(const QString &name)
 {
-    d->mContentsComboBox->setCurrentItem(name);
+    const int pos = d->mContentsComboBox->findText(name);
+    if (pos != -1) {
+        d->mContentsComboBox->setCurrentIndex(pos);
+    }
 }
 
 QString ContentTypeWidget::currentText() const

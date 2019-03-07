@@ -22,7 +22,7 @@
 #include <QObject>
 #include <QNetworkReply>
 class QNetworkAccessManager;
-class KComboBox;
+class QComboBox;
 class QNetworkReply;
 
 namespace PimCommon {
@@ -35,7 +35,7 @@ public:
 
     void setParentWidget(QWidget *parent);
 
-    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString> > initListLanguage(KComboBox *from);
+    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString> > initListLanguage(QComboBox *from);
     void translate();
     void debug();
     void clear();

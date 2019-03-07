@@ -19,7 +19,7 @@
 #ifndef AutoCorrectionLanguage_H
 #define AutoCorrectionLanguage_H
 
-#include <KComboBox>
+#include <QComboBox>
 #include "pimcommon_export.h"
 
 namespace PimCommon {

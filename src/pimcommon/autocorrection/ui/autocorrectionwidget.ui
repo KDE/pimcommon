@@ -577,7 +577,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KComboBox</class>
+   <class>QComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
   </customwidget>
@@ -598,7 +598,7 @@
   </customwidget>
   <customwidget>
    <class>PimCommon::AutoCorrectionLanguage</class>
-   <extends>KComboBox</extends>
+   <extends>QComboBox</extends>
    <header>autocorrection/autocorrectionlanguage.h</header>
   </customwidget>
  </customwidgets>

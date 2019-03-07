@@ -18,7 +18,7 @@
 
 #include "translatorutil.h"
 #include <KLocalizedString>
-#include <KComboBox>
+#include <QComboBox>
 using namespace PimCommon;
 
 TranslatorUtil::TranslatorUtil()
@@ -221,7 +221,7 @@ void PimCommon::TranslatorUtil::addPairToMap(QMap<QString, QString> &map, const 
     map.insert(pair.first, pair.second);
 }
 
-void PimCommon::TranslatorUtil::addItemToFromComboBox(KComboBox *combo, const QPair<QString, QString> &pair)
+void PimCommon::TranslatorUtil::addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair)
 {
     combo->addItem(pair.first, pair.second);
 }

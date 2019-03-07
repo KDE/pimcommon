@@ -22,7 +22,7 @@
 #include <QLabel>
 #include <QHBoxLayout>
 #include <KLocalizedString>
-#include <KComboBox>
+#include <QComboBox>
 
 using namespace PimCommon;
 class PimCommon::IncidencesForWidgetPrivate
@@ -32,7 +32,7 @@ public:
     {
     }
 
-    KComboBox *mIncidencesForComboBox = nullptr;
+    QComboBox *mIncidencesForComboBox = nullptr;
 };
 IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     : QWidget(parent)
@@ -45,7 +45,7 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("contentstypelabel"));
     hbox->addWidget(label);
 
-    d->mIncidencesForComboBox = new KComboBox(this);
+    d->mIncidencesForComboBox = new QComboBox(this);
     label->setBuddy(d->mIncidencesForComboBox);
     hbox->addWidget(d->mIncidencesForComboBox);
 
@@ -69,7 +69,7 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
 
     d->mIncidencesForComboBox->setObjectName(QStringLiteral("contentstypecombobox"));
     d->mIncidencesForComboBox->setWhatsThis(whatsThisForMyOwnFolders);
-    connect(d->mIncidencesForComboBox, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &IncidencesForWidget::currentIndexChanged);
+    connect(d->mIncidencesForComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &IncidencesForWidget::currentIndexChanged);
 }
 
 IncidencesForWidget::~IncidencesForWidget()
