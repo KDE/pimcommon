@@ -25,7 +25,7 @@
 
 namespace PimCommon {
 /** @short A QComboBox, which minimum size hint can be really small */
-class PIMCOMMON_EXPORT MinimumComboBox : public QComboBox
+class PIMCOMMON_EXPORT MinimumComboBox : public KComboBox
 {
     Q_OBJECT
 public:
