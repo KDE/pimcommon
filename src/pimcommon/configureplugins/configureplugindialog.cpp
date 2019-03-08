@@ -36,10 +36,13 @@ ConfigurePluginDialog::~ConfigurePluginDialog()
     saveConfig();
 }
 
-void ConfigurePluginDialog::initLayout()
+void ConfigurePluginDialog::initLayout(bool addSpacer)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(createLayout());
+    if (addSpacer) {
+        layout->addStretch(1);
+    }
 
     mButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Help, this);
     mButtonBox->setObjectName(QStringLiteral("buttonBox"));

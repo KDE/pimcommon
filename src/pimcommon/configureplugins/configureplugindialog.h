@@ -30,7 +30,7 @@ public:
     explicit ConfigurePluginDialog(QWidget *parent = nullptr);
     ~ConfigurePluginDialog();
 
-    void initLayout();
+    void initLayout(bool addSpacer = false);
 
 protected:
     void showHelp(const QString &name, const QString &anchor);
