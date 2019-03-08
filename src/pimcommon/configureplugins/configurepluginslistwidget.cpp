@@ -112,7 +112,7 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 }
 
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey,
-                                              QList<PluginItem *> &itemsList, const QString &configureGroupName)
+                                              QList<PluginItem *> &itemsList, const QString &configureGroupName, bool checkable)
 {
     itemsList.clear();
     if (!lst.isEmpty()) {
@@ -126,9 +126,11 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             subItem->mDescription = data.mDescription;
             subItem->mEnableByDefault = data.mEnableByDefault;
             subItem->mHasConfigureSupport = data.mHasConfigureDialog;
-            const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
-            subItem->mEnableFromUserSettings = isPluginActivated;
-            subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
+            if (checkable) {
+                const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
+                subItem->mEnableFromUserSettings = isPluginActivated;
+                subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
+            }
             if (data.mHasConfigureDialog) {
                 QToolButton *but = new QToolButton(mListWidget);
                 QAction *act = new QAction(but);
