@@ -49,7 +49,7 @@ private:
     void slotFetchCollectionFailed();
     void changeAcl(const Akonadi::Collection &collection);
     void checkNewCollection();
-    bool canAdministrate(PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const;
+    bool canAdministrate(const PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const;
     void searchContact();
     void slotModifyAcl();
     void slotGroupSearchResult(KJob *job);

@@ -127,7 +127,7 @@ void AclModifyJob::slotModifyAcl()
     }
 }
 
-bool AclModifyJob::canAdministrate(PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const
+bool AclModifyJob::canAdministrate(const PimCommon::ImapAclAttribute *attribute, const Akonadi::Collection &collection) const
 {
     if (!attribute || !collection.isValid()) {
         return false;
@@ -184,10 +184,11 @@ void AclModifyJob::setCurrentRight(const QMap<QByteArray, KIMAP::Acl::Rights> &c
 void AclModifyJob::changeAcl(const Akonadi::Collection &collection)
 {
     if (collection.hasAttribute<PimCommon::ImapAclAttribute>()) {
-        PimCommon::ImapAclAttribute *attribute = collection.attribute<PimCommon::ImapAclAttribute>();
-        if (canAdministrate(attribute, collection)) {
+        Akonadi::Collection mutableCollection = collection;
+        PimCommon::ImapAclAttribute *attribute = mutableCollection.attribute<PimCommon::ImapAclAttribute>();
+        if (canAdministrate(attribute, mutableCollection)) {
             attribute->setRights(mNewRight);
-            Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(collection);
+            Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(mutableCollection);
             connect(modifyJob, &KJob::result, this, &AclModifyJob::slotModifyDone);
         }
     } else {
@@ -218,7 +219,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
     QStringList folderNames;
     for (const Akonadi::Collection &col : collectionList) {
         if (col.hasAttribute<PimCommon::ImapAclAttribute>()) {
-            PimCommon::ImapAclAttribute *attribute = col.attribute<PimCommon::ImapAclAttribute>();
+            const PimCommon::ImapAclAttribute *attribute = col.attribute<PimCommon::ImapAclAttribute>();
             if (canAdministrate(attribute, col)) {
                 QString fullName;
                 bool parentFound;
