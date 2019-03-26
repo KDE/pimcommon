@@ -21,7 +21,6 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
-#include "pimcommon_debug.h"
 
 namespace PimCommon {
 class TemplateListWidget;
@@ -33,10 +32,7 @@ struct TemplateInfo {
         return !name.isEmpty() && !script.isEmpty();
     }
 
-    void debug() const
-    {
-        qCDebug(PIMCOMMON_LOG) << " name :" << name << " script :" << script;
-    }
+    void debug() const;
 };
 class TemplateManagerPrivate;
 class PIMCOMMON_EXPORT TemplateManager : public QObject

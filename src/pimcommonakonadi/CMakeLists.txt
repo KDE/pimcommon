@@ -246,7 +246,6 @@ install(FILES
     )
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_debug.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
     ${PimCommon_acl_HEADERS}
     ${PimCommonAkonadi_collectionpage_HEADERS}

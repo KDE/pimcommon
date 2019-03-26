@@ -18,6 +18,7 @@
 
 #include "templatemanager.h"
 #include "templatewidgets/templatelistwidget.h"
+#include "pimcommon_debug.h"
 
 #include <KDirWatch>
 
@@ -118,4 +119,9 @@ TemplateInfo TemplateManager::loadTemplate(const QString &themePath, const QStri
         }
     }
     return info;
+}
+
+void TemplateInfo::debug() const
+{
+    qCDebug(PIMCOMMON_LOG) << " name :" << name << " script :" << script;
 }
