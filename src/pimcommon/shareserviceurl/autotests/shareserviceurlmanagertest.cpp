@@ -17,7 +17,7 @@
 
 #include "shareserviceurlmanagertest.h"
 #include "../shareserviceurlmanager.h"
-#include <qtest.h>
+#include <QTest>
 #include <kactionmenu.h>
 #include <QMenu>
 ShareServiceUrlManagerTest::ShareServiceUrlManagerTest(QObject *parent)

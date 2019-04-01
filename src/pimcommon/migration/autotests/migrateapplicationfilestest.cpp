@@ -17,7 +17,7 @@
 
 #include "migrateapplicationfilestest.h"
 #include "../migrateapplicationfiles.h"
-#include <qtest.h>
+#include <QTest>
 #include <QStandardPaths>
 #include <QDebug>
 #include <QDir>

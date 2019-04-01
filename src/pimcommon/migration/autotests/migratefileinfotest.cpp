@@ -17,7 +17,7 @@
 
 #include "migratefileinfotest.h"
 #include "../migratefileinfo.h"
-#include <qtest.h>
+#include <QTest>
 using namespace PimCommon;
 MigrateFileInfoTest::MigrateFileInfoTest(QObject *parent)
     : QObject(parent)

@@ -17,9 +17,9 @@
 
 #include "collectionaclwidgettest.h"
 #include "../collectionaclwidget.h"
-#include <qlistview.h>
+#include <QListView>
 #include <QPushButton>
-#include <qtest.h>
+#include <QTest>
 
 CollectionAclWidgetTest::CollectionAclWidgetTest(QObject *parent)
     : QObject(parent)

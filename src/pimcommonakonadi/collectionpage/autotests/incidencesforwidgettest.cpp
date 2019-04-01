@@ -21,8 +21,8 @@
 #include "incidencesforwidgettest.h"
 #include "../incidencesforwidget.h"
 #include <kcombobox.h>
-#include <qlabel.h>
-#include <qtest.h>
+#include <QLabel>
+#include <QTest>
 #include <QSignalSpy>
 
 IncidencesForWidgetTest::IncidencesForWidgetTest(QObject *parent)
