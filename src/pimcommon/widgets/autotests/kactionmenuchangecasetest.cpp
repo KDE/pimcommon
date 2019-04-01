@@ -17,7 +17,7 @@
 
 #include "kactionmenuchangecasetest.h"
 #include "../src/pimcommon/widgets/kactionmenuchangecase.h"
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 #include <QMenu>
 using namespace PimCommon;

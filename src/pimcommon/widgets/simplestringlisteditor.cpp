@@ -34,7 +34,7 @@
 
 #include "simplestringlisteditor.h"
 
-#include <qinputdialog.h>
+#include <QInputDialog>
 #include <kiconloader.h>
 #include <QIcon>
 #include <KLocalizedString>

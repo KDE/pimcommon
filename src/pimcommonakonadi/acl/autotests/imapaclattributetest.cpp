@@ -17,7 +17,7 @@
 
 #include "imapaclattributetest.h"
 #include "../imapaclattribute.h"
-#include <qtest.h>
+#include <QTest>
 
 typedef QMap<QByteArray, KIMAP::Acl::Rights> ImapAcl;
 Q_DECLARE_METATYPE(ImapAcl)

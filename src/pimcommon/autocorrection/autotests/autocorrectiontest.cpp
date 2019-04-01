@@ -18,7 +18,7 @@
 #include "autocorrectiontest.h"
 #include "../autocorrection.h"
 #include "settings/pimcommonsettings.h"
-#include <qtest.h>
+#include <QTest>
 #include "pimcommon_debug.h"
 #include <QTextDocument>
 #include <QStandardPaths>

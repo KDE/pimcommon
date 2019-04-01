@@ -21,8 +21,8 @@
 #include "contenttypewidgettest.h"
 #include "../contenttypewidget.h"
 #include <kcombobox.h>
-#include <qlabel.h>
-#include <qtest.h>
+#include <QLabel>
+#include <QTest>
 #include <QSignalSpy>
 ContentTypeWidgetTest::ContentTypeWidgetTest(QObject *parent)
     : QObject(parent)

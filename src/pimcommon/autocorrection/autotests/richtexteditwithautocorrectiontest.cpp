@@ -16,7 +16,7 @@
 */
 
 #include "richtexteditwithautocorrectiontest.h"
-#include <qtest.h>
+#include <QTest>
 #include "../widgets/richtexteditwithautocorrection.h"
 #include "../autocorrection.h"
 #include <qtestkeyboard.h>

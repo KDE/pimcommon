@@ -16,7 +16,7 @@
 */
 
 #include "networkutiltest.h"
-#include <qtest.h>
+#include <QTest>
 #include "../networkutil.h"
 
 NetworkUtilTest::NetworkUtilTest(QObject *parent)
