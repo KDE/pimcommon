@@ -167,7 +167,7 @@ void GoogleTranslator::translate()
 
     QUrl url;
     url.setQuery(urlQuery);
-    url.setScheme(QStringLiteral("http"));
+    url.setScheme(QStringLiteral("https"));
     url.setHost(QStringLiteral("translate.googleapis.com"));
     url.setPath(QStringLiteral("/translate_a/single"));
     const QNetworkRequest request(url);
