@@ -88,6 +88,6 @@ void CollectionAclPage::save(Akonadi::Collection &collection)
 
     // The collection dialog expects the changed collection to run
     // its own ItemModifyJob, so make him happy...
-    PimCommon::ImapAclAttribute *attribute = d->mCollectionAclWidget->aclManager()->collection().attribute<PimCommon::ImapAclAttribute>();
-    collection.addAttribute(attribute->clone());
+    const auto origCol = d->mCollectionAclWidget->aclManager()->collection();
+    collection.addAttribute(origCol.attribute<PimCommon::ImapAclAttribute>()->clone());
 }
