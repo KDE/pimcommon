@@ -71,7 +71,6 @@ set(libpimcommon_templatewidgets_SRCS
 
 
 set(libpimcommon_widgets_SRCS
-    widgets/minimumcombobox.cpp
     widgets/renamefiledialog.cpp
     widgets/simplestringlisteditor.cpp
     widgets/customtreeview.cpp
@@ -344,7 +343,6 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     HEADER_NAMES
     CustomTreeView
     SpellCheckLineEdit
-    MinimumComboBox
     ConfigureImmutableWidgetUtils
     RenameFileDialog
     SimpleStringListEditor

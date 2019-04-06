@@ -18,7 +18,6 @@
 */
 
 #include "translatorwidget.h"
-#include "widgets/minimumcombobox.h"
 #include "translatorutil.h"
 #include "googletranslator.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
@@ -34,7 +33,7 @@
 
 #include <QMimeData>
 #include <QIcon>
-
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QLabel>
@@ -68,8 +67,8 @@ public:
     TranslatorTextEdit *inputText = nullptr;
     KPIMTextEdit::PlainTextEditorWidget *translatedText = nullptr;
     TranslatorResultTextEdit *translatorResultTextEdit = nullptr;
-    MinimumComboBox *from = nullptr;
-    MinimumComboBox *to = nullptr;
+    QComboBox *from = nullptr;
+    QComboBox *to = nullptr;
     QPushButton *translate = nullptr;
     QPushButton *clear = nullptr;
     PimCommon::GoogleTranslator *abstractTranslator = nullptr;
@@ -234,13 +233,15 @@ void TranslatorWidget::init()
 
     QLabel *label = new QLabel(i18nc("Translate from language", "From:"));
     hboxLayout->addWidget(label);
-    d->from = new MinimumComboBox;
+    d->from = new QComboBox;
+    d->from->setMinimumWidth(50);
     d->from->setObjectName(QStringLiteral("from"));
     hboxLayout->addWidget(d->from);
 
     label = new QLabel(i18nc("Translate to language", "To:"));
     hboxLayout->addWidget(label);
-    d->to = new MinimumComboBox;
+    d->to = new QComboBox;
+    d->to->setMinimumWidth(50);
     d->to->setObjectName(QStringLiteral("to"));
 
     hboxLayout->addWidget(d->to);
@@ -308,13 +309,13 @@ void TranslatorWidget::init()
     slotFromLanguageChanged(0, true);
     slotTextChanged();
     readConfig();
-    connect(d->from, QOverload<int>::of(&MinimumComboBox::currentIndexChanged), this, [this](int val) {
+    connect(d->from, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int val) {
         slotFromLanguageChanged(val, false);
     });
-    connect(d->from, QOverload<int>::of(&MinimumComboBox::currentIndexChanged), this, &TranslatorWidget::slotConfigChanged);
+    connect(d->from, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TranslatorWidget::slotConfigChanged);
 
-    connect(d->to, QOverload<int>::of(&MinimumComboBox::currentIndexChanged), this, &TranslatorWidget::slotConfigChanged);
-    connect(d->to, QOverload<int>::of(&MinimumComboBox::currentIndexChanged), this, &TranslatorWidget::slotTranslate);
+    connect(d->to, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TranslatorWidget::slotConfigChanged);
+    connect(d->to, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TranslatorWidget::slotTranslate);
 
     hide();
     setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed));
