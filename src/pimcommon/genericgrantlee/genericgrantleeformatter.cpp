@@ -26,93 +26,26 @@ class PimCommon::GenericGrantleeFormatterPrivate
 {
 public:
     GenericGrantleeFormatterPrivate()
+        : mEngine(new Grantlee::Engine)
     {
-        mEngine = new Grantlee::Engine;
     }
-
-    GenericGrantleeFormatterPrivate(const QString &defaultHtmlMain, const QString &themePath)
-        : mThemePath(themePath)
-        , mDefaultMainFile(defaultHtmlMain)
-    {
-        initializeEngine();
-    }
-
-    ~GenericGrantleeFormatterPrivate()
-    {
-        delete mEngine;
-        mTemplateLoader.clear();
-    }
-
-    void setContent(const QString &content);
-    void setDefaultHtmlMainFile(const QString &name);
-    void initializeEngine();
-    void refreshTemplate();
-    void changeGrantleePath(const QString &path);
-    void insertToContext(const QString &key, const QVariantHash &mapping);
-    QString render(const QVariantHash &mapping) const;
 
     QString mThemePath;
     QString mDefaultMainFile;
-    Grantlee::Engine *mEngine = nullptr;
+    std::unique_ptr<Grantlee::Engine> mEngine;
     QString mErrorMessage;
     QSharedPointer<Grantlee::FileSystemTemplateLoader> mTemplateLoader;
-    Grantlee::Template mSelfcontainedTemplate;
+    Grantlee::Template mTemplate;
 };
 
-void GenericGrantleeFormatterPrivate::setContent(const QString &content)
-{
-    mSelfcontainedTemplate = mEngine->newTemplate(content, QStringLiteral("content"));
-    if (mSelfcontainedTemplate->error()) {
-        mErrorMessage = mSelfcontainedTemplate->errorString() + QLatin1String("<br>");
-    }
-}
-
-void GenericGrantleeFormatterPrivate::setDefaultHtmlMainFile(const QString &name)
-{
-    if (mDefaultMainFile != name) {
-        mDefaultMainFile = name;
-        refreshTemplate();
-    }
-}
-
-void GenericGrantleeFormatterPrivate::initializeEngine()
-{
-    mEngine = new Grantlee::Engine;
-    mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
-
-    changeGrantleePath(mThemePath);
-}
-
-void GenericGrantleeFormatterPrivate::refreshTemplate()
-{
-    mSelfcontainedTemplate = mEngine->loadByName(mDefaultMainFile);
-    if (mSelfcontainedTemplate->error()) {
-        mErrorMessage += mSelfcontainedTemplate->errorString() + QLatin1String("<br>");
-    }
-}
-
-void GenericGrantleeFormatterPrivate::changeGrantleePath(const QString &path)
-{
-    if (!mTemplateLoader) {
-        mTemplateLoader = QSharedPointer<Grantlee::FileSystemTemplateLoader>(new Grantlee::FileSystemTemplateLoader);
-    }
-    mTemplateLoader->setTemplateDirs(QStringList() << path);
-    mEngine->addTemplateLoader(mTemplateLoader);
-
-    refreshTemplate();
-}
-
-QString GenericGrantleeFormatterPrivate::render(const QVariantHash &mapping) const
-{
-    Grantlee::Context context(mapping);
-    const QString contentHtml = mSelfcontainedTemplate->render(&context);
-    return contentHtml;
-}
 
 GenericGrantleeFormatter::GenericGrantleeFormatter(const QString &defaultHtmlMain, const QString &themePath, QObject *parent)
     : QObject(parent)
-    , d(new PimCommon::GenericGrantleeFormatterPrivate(defaultHtmlMain, themePath))
+    , d(new PimCommon::GenericGrantleeFormatterPrivate)
 {
+    d->mThemePath = themePath;
+    d->mDefaultMainFile = defaultHtmlMain;
+    changeGrantleePath(d->mThemePath);
 }
 
 GenericGrantleeFormatter::GenericGrantleeFormatter(QObject *parent)
@@ -121,19 +54,25 @@ GenericGrantleeFormatter::GenericGrantleeFormatter(QObject *parent)
 {
 }
 
-GenericGrantleeFormatter::~GenericGrantleeFormatter()
-{
-    delete d;
-}
+GenericGrantleeFormatter::~GenericGrantleeFormatter() = default;
 
 void GenericGrantleeFormatter::setDefaultHtmlMainFile(const QString &name)
 {
-    d->setDefaultHtmlMainFile(name);
+    if (d->mDefaultMainFile != name) {
+        d->mDefaultMainFile = name;
+        refreshTemplate();
+    }
 }
 
 void GenericGrantleeFormatter::changeGrantleePath(const QString &path)
 {
-    d->changeGrantleePath(path);
+    if (!d->mTemplateLoader) {
+        d->mTemplateLoader.reset(new Grantlee::FileSystemTemplateLoader);
+    }
+    d->mTemplateLoader->setTemplateDirs(QStringList() << path);
+    d->mEngine->addTemplateLoader(d->mTemplateLoader);
+
+    refreshTemplate();
 }
 
 QString GenericGrantleeFormatter::errorMessage() const
@@ -143,15 +82,23 @@ QString GenericGrantleeFormatter::errorMessage() const
 
 QString GenericGrantleeFormatter::render(const QVariantHash &mapping) const
 {
-    return d->render(mapping);
+    Grantlee::Context context(mapping);
+    const QString contentHtml = d->mTemplate->render(&context);
+    return contentHtml;
 }
 
 void GenericGrantleeFormatter::setContent(const QString &content)
 {
-    d->setContent(content);
+    d->mTemplate = d->mEngine->newTemplate(content, QStringLiteral("content"));
+    if (d->mTemplate->error()) {
+        d->mErrorMessage = d->mTemplate->errorString() + QLatin1String("<br>");
+    }
 }
 
 void GenericGrantleeFormatter::refreshTemplate()
 {
-    d->refreshTemplate();
+    d->mTemplate = d->mEngine->loadByName(d->mDefaultMainFile);
+    if (d->mTemplate->error()) {
+        d->mErrorMessage += d->mTemplate->errorString() + QLatin1String("<br>");
+    }
 }

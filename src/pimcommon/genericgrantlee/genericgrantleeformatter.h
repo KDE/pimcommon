@@ -23,6 +23,8 @@
 #include <QObject>
 #include <QVariantHash>
 
+#include <memory>
+
 namespace PimCommon {
 class GenericGrantleeFormatterPrivate;
 class PIMCOMMON_EXPORT GenericGrantleeFormatter : public QObject
@@ -44,7 +46,7 @@ public:
     void setContent(const QString &content);
     void refreshTemplate();
 private:
-    GenericGrantleeFormatterPrivate *const d;
+    std::unique_ptr<GenericGrantleeFormatterPrivate> const d;
 };
 }
 #endif // GENERICGRANTLEEFORMATTER_H
