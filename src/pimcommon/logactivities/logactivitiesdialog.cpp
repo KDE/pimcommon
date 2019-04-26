@@ -60,16 +60,12 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mSaveButton->setEnabled(false);
 
     LogactivitiesPurposeMenuWidget *purposeMenu = new LogactivitiesPurposeMenuWidget(this, this);
-    if (purposeMenu->menu()) {
-        mShareButton = new QPushButton(i18n("Share..."), this);
-        mShareButton->setMenu(purposeMenu->menu());
-        mShareButton->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
-        purposeMenu->setEditorWidget(mLogWidget->editor());
-        buttonBox->addButton(mShareButton, QDialogButtonBox::ActionRole);
-        mShareButton->setEnabled(false);
-    } else {
-        delete purposeMenu;
-    }
+    mShareButton = new QPushButton(i18n("Share..."), this);
+    mShareButton->setMenu(purposeMenu->menu());
+    mShareButton->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+    purposeMenu->setEditorWidget(mLogWidget->editor());
+    buttonBox->addButton(mShareButton, QDialogButtonBox::ActionRole);
+    mShareButton->setEnabled(false);
 
     connect(mSaveButton, &QPushButton::clicked, this, &LogActivitiesDialog::slotSave);
 
@@ -92,9 +88,7 @@ LogActivitiesDialog::~LogActivitiesDialog()
 void LogActivitiesDialog::slotActivityTextChanged(bool changed)
 {
     mSaveButton->setEnabled(changed);
-    if (mShareButton) {
-        mShareButton->setEnabled(changed);
-    }
+    mShareButton->setEnabled(changed);
 }
 
 void LogActivitiesDialog::slotSave()
