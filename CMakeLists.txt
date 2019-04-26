@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.11.41")
+set(PIM_VERSION "5.11.42")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -64,9 +64,6 @@ find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(Grantlee5 "5.1" CONFIG REQUIRED)
 
 find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG REQUIRED)
-set(KF5_USE_PURPOSE true)
-add_definitions(-DKF5_USE_PURPOSE)
-
 
 find_package(KF5DesignerPlugin ${KF5_MIN_VERSION} CONFIG)
 set_package_properties(KF5DesignerPlugin PROPERTIES DESCRIPTION "KF5 designer plugin" TYPE OPTIONAL)

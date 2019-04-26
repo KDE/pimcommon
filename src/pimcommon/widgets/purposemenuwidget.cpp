@@ -17,7 +17,6 @@
 */
 
 #include "purposemenuwidget.h"
-#ifdef KF5_USE_PURPOSE
 #include <Purpose/AlternativesModel>
 #include <PurposeWidgets/Menu>
 #include <QJsonArray>
@@ -25,41 +24,31 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <QUrl>
-#endif
 
 using namespace PimCommon;
 PurposeMenuWidget::PurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     : QObject(parent)
     , mParentWidget(parentWidget)
 {
-#ifdef KF5_USE_PURPOSE
     mShareMenu = new Purpose::Menu(mParentWidget);
     mShareMenu->setObjectName(QStringLiteral("purposesharemenu"));
     mShareMenu->model()->setPluginType(QStringLiteral("Export"));
     connect(mShareMenu, &Purpose::Menu::aboutToShow, this, &PurposeMenuWidget::slotInitializeShareMenu);
     connect(mShareMenu, &Purpose::Menu::finished, this, &PurposeMenuWidget::slotShareActionFinished);
-#endif
 }
 
 PurposeMenuWidget::~PurposeMenuWidget()
 {
-#ifdef KF5_USE_PURPOSE
     delete mTemporaryShareFile;
-#endif
 }
 
 QMenu *PurposeMenuWidget::menu() const
 {
-#ifdef KF5_USE_PURPOSE
     return mShareMenu;
-#else
-    return nullptr;
-#endif
 }
 
 void PurposeMenuWidget::slotInitializeShareMenu()
 {
-#ifdef KF5_USE_PURPOSE
     delete mTemporaryShareFile;
     mTemporaryShareFile = new QTemporaryFile();
     mTemporaryShareFile->open();
@@ -71,12 +60,10 @@ void PurposeMenuWidget::slotInitializeShareMenu()
         { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
     });
     mShareMenu->reload();
-#endif
 }
 
 void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
 {
-#ifdef KF5_USE_PURPOSE
     if (error) {
         KMessageBox::error(mParentWidget, i18n("There was a problem sharing the document: %1", message),
                            i18n("Share"));
@@ -89,5 +76,4 @@ void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int e
                                      QString(), QString(), KMessageBox::AllowLink);
         }
     }
-#endif
 }

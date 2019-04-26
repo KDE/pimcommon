@@ -21,12 +21,9 @@
 
 #include <QObject>
 #include "pimcommon_export.h"
-#include <config-pimcommon.h>
-#ifdef KF5_USE_PURPOSE
 namespace Purpose {
 class Menu;
 }
-#endif
 class QMenu;
 class QTemporaryFile;
 namespace PimCommon {
@@ -42,10 +39,8 @@ public:
 private:
     void slotInitializeShareMenu();
     void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
-#ifdef KF5_USE_PURPOSE
     Purpose::Menu *mShareMenu = nullptr;
     QTemporaryFile *mTemporaryShareFile = nullptr;
-#endif
     QWidget *mParentWidget = nullptr;
 };
 }

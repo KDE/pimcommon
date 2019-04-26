@@ -26,7 +26,6 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
     )
-configure_file(config-pimcommon.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-pimcommon.h)
 
 set(libpimcommon_autocorrection_SRCS
     autocorrection/autocorrection.cpp
@@ -181,11 +180,9 @@ target_link_libraries(KF5PimCommon
     KF5::KIOWidgets
     Qt5::PrintSupport
     Grantlee5::Templates
+    KF5::Purpose
+    KF5::PurposeWidgets
     )
-
-if (KF5_USE_PURPOSE)
-    target_link_libraries(KF5PimCommon PRIVATE KF5::Purpose KF5::PurposeWidgets)
-endif()
 
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon>")
@@ -405,7 +402,6 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
-    ${CMAKE_CURRENT_BINARY_DIR}/config-pimcommon.h
     ${PimCommon_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
