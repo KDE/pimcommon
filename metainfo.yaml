@@ -10,8 +10,8 @@ irc: akonadi
 libraries:
  - qmake: PimCommon
    cmake: "KF5::PimCommon"
-   cmakename: KF5PimCommon
+cmakename: KF5PimCommon
  - qmake: PimCommonAkonadi
    cmake: "KF5::PimCommonAkonadi"
-   cmakename: KF5PimCommonAkonadi   
+cmakename: KF5PimCommonAkonadi   
 
