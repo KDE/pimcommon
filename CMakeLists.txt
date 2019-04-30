@@ -63,7 +63,7 @@ find_package(KF5LibkdepimAkonadi ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(Grantlee5 "5.1" CONFIG REQUIRED)
 
-find_package(KF5Purpose CONFIG QUIET)
+find_package(KF5Purpose CONFIG)
 set_package_properties(KF5Purpose PROPERTIES DESCRIPTION "Support for sharing file"
                        TYPE OPTIONAL
                       )
