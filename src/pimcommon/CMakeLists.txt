@@ -110,10 +110,6 @@ set(libpimcommon_logactivities_SRCS
     )
 
 
-set(libpimcommon_genericgrantlee_SRCS
-    genericgrantlee/genericgrantleeformatter.cpp
-    )
-
 set(libpimcommon_networkmanager_SRCS
     network/networkmanager.cpp
     )
@@ -123,7 +119,6 @@ set(libpimcommon_SRCS
     ${libpimcommon_configure_plugins_SRCS}
     ${libpimcommon_networkmanager_SRCS}
     ${libpimcommon_configure_plugins_SRCS}
-    ${libpimcommon_genericgrantlee_SRCS}
     ${libpimcommon_shareserviceurl_SRCS}
     ${libpimcommon_migrate_SRCS}
     ${libpimcommon_util_SRCS}
@@ -179,7 +174,6 @@ target_link_libraries(KF5PimCommon
     KF5::Completion
     KF5::KIOWidgets
     Qt5::PrintSupport
-    Grantlee5::Templates
     KF5::Purpose
     KF5::PurposeWidgets
     )
@@ -228,14 +222,6 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
     PREFIX PimCommon
     RELATIVE genericplugins
-    )
-
-ecm_generate_headers(PimCommon_CamelCasegenericgrantlee_HEADERS
-    HEADER_NAMES
-    GenericGrantleeFormatter
-    REQUIRED_HEADERS PimCommon_genericgrantlee_HEADERS
-    PREFIX PimCommon
-    RELATIVE genericgrantlee
     )
 
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
@@ -373,7 +359,6 @@ install(FILES
     ${PimCommon_Camelcaselogactivities_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
-    ${PimCommon_CamelCasegenericgrantlee_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseautocorrection_HEADERS}
     ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
@@ -409,7 +394,6 @@ install(FILES
     ${PimCommon_autocorrection_HEADERS}
     ${PimCommon_autocorrectionwidgets_HEADERS}
     ${PimCommon_customtools_HEADERS}
-    ${PimCommon_genericgrantlee_HEADERS}
     ${PimCommon_job_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
     ${PimCommon_migrate_HEADERS}
