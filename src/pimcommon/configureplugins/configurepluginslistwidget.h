@@ -66,11 +66,11 @@ protected:
         bool mHasConfigureSupport;
         bool mEnableFromUserSettings;
     };
-    void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
-    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QList<PluginItem *> &itemsList,
+    void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems);
+    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QVector<PluginItem *> &itemsList,
                       const QString &configureGroupName = QString(), bool checkable = true);
-    void resetToUserSettings(const QList<PluginItem *> &items);
-    void changeState(const QList<PluginItem *> &items);
+    void resetToUserSettings(const QVector<PluginItem *> &items);
+    void changeState(const QVector<PluginItem *> &items);
 
     QTreeWidget *mListWidget = nullptr;
 private:

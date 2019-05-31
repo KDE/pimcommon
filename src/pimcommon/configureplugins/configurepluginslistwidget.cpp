@@ -92,7 +92,7 @@ void ConfigurePluginsListWidget::initialize()
 {
 }
 
-void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems)
+void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems)
 {
     if (listItems.isEmpty()) {
         return;
@@ -112,7 +112,7 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
 }
 
 void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey,
-                                              QList<PluginItem *> &itemsList, const QString &configureGroupName, bool checkable)
+                                              QVector<PluginItem *> &itemsList, const QString &configureGroupName, bool checkable)
 {
     itemsList.clear();
     if (!lst.isEmpty()) {
@@ -163,14 +163,14 @@ void ConfigurePluginsListWidget::slotConfigureClicked(QAction *act)
     }
 }
 
-void ConfigurePluginsListWidget::changeState(const QList<PluginItem *> &items)
+void ConfigurePluginsListWidget::changeState(const QVector<PluginItem *> &items)
 {
     for (PluginItem *item : items) {
         item->setCheckState(0, item->mEnableByDefault ? Qt::Checked : Qt::Unchecked);
     }
 }
 
-void ConfigurePluginsListWidget::resetToUserSettings(const QList<PluginItem *> &items)
+void ConfigurePluginsListWidget::resetToUserSettings(const QVector<PluginItem *> &items)
 {
     for (PluginItem *item : items) {
         item->setCheckState(0, item->mEnableFromUserSettings ? Qt::Checked : Qt::Unchecked);
