@@ -22,7 +22,6 @@
 #include "pimcommon_debug.h"
 #include <QTextDocument>
 #include <QStandardPaths>
-#include <QProcess>
 
 #ifndef Q_OS_WIN
 void initLocale()

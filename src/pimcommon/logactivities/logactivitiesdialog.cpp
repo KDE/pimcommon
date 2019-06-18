@@ -28,7 +28,6 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QCheckBox>
-#include <QDebug>
 
 using namespace PimCommon;
 

@@ -20,7 +20,6 @@
 #include <QStackedWidget>
 #include <QTest>
 #include <QStandardPaths>
-#include <KActionCollection>
 
 CustomToolsWidgetNgTest::CustomToolsWidgetNgTest(QObject *parent)
     : QObject(parent)

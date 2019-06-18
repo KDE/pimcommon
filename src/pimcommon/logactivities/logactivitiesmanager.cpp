@@ -19,7 +19,6 @@
 #include "logactivitiesmanager.h"
 #include "logactivitiesdialog.h"
 #include <QTime>
-#include <QDebug>
 #include <QPointer>
 
 using namespace PimCommon;
