@@ -58,11 +58,6 @@ void ShareServiceUrlManagerTest::shouldGenerateServiceUrl_data()
     QTest::newRow("title and valid link (twitter)") << QStringLiteral("kde") << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::Twitter
                                                     << QUrl(QStringLiteral("https://twitter.com/share?url=http://www.kde.org&text=kde")) << true;
 
-    QTest::newRow("no title but valid link (googleplus)") << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::GooglePlus
-                                                          << QUrl(QStringLiteral("https://plus.google.com/share?url=http://www.kde.org")) << true;
-    QTest::newRow("title and valid link (googleplus)") << QStringLiteral("kde") << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::GooglePlus
-                                                       << QUrl(QStringLiteral("https://plus.google.com/share?url=http://www.kde.org")) << true;
-
     QTest::newRow("no title but valid link (mailto)") << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::MailTo
                                                       << QUrl(QStringLiteral("mailto:?subject&body=http://www.kde.org")) << true;
     QTest::newRow("title and valid link (mailto)") << QStringLiteral("kde") << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::MailTo
