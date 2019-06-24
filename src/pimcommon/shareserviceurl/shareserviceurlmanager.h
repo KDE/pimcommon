@@ -36,7 +36,6 @@ public:
     enum ServiceType {
         Fbook = 0,
         Twitter,
-        GooglePlus,
         MailTo,
         LinkedIn,
         Evernote,

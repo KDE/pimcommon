@@ -69,9 +69,6 @@ QIcon ShareServiceUrlManagerPrivate::typeToIcon(ShareServiceUrlManager::ServiceT
     case ShareServiceUrlManager::Twitter:
         icon = QIcon::fromTheme(QStringLiteral("im-twitter"));
         break;
-    case ShareServiceUrlManager::GooglePlus:
-        icon = QIcon::fromTheme(QStringLiteral("im-google"));
-        break;
     case ShareServiceUrlManager::MailTo:
         icon = QIcon::fromTheme(QStringLiteral("kmail"));
         break;
@@ -100,9 +97,6 @@ QString ShareServiceUrlManagerPrivate::typeToI18n(ShareServiceUrlManager::Servic
         break;
     case ShareServiceUrlManager::Twitter:
         str = i18n("Twitter");
-        break;
-    case ShareServiceUrlManager::GooglePlus:
-        str = i18n("Google Plus");
         break;
     case ShareServiceUrlManager::MailTo:
         str = i18n("Mail");
@@ -173,14 +167,6 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("url"), link);
         urlQuery.addQueryItem(QStringLiteral("text"), title);
-        url.setQuery(urlQuery);
-        break;
-    }
-    case GooglePlus:
-    {
-        url.setUrl(QStringLiteral("https://plus.google.com/share"));
-        QUrlQuery urlQuery;
-        urlQuery.addQueryItem(QStringLiteral("url"), link);
         url.setQuery(urlQuery);
         break;
     }
