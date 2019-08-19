@@ -291,7 +291,7 @@ void TranslatorWidget::init()
     d->inputText = new TranslatorTextEdit(this);
     KPIMTextEdit::PlainTextEditorWidget *editorWidget = new KPIMTextEdit::PlainTextEditorWidget(d->inputText);
     d->inputText->setObjectName(QStringLiteral("inputtext"));
-    d->inputText->setPlaceholderText(i18n("Drag text that you want to translate."));
+    d->inputText->setPlaceholderText(i18n("Drag text that you want to translate. (Be careful text will be send to Google Server)."));
     connect(d->inputText, &TranslatorTextEdit::textChanged, this, &TranslatorWidget::slotTextChanged);
     connect(d->inputText, &TranslatorTextEdit::translateText, this, &TranslatorWidget::slotTranslate);
 
