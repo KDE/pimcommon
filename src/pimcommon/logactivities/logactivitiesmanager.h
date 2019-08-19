@@ -23,6 +23,10 @@
 #include "pimcommon_export.h"
 namespace PimCommon {
 class LogActivitiesManagerPrivate;
+/**
+ * @brief The LogActivitiesManager class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT LogActivitiesManager : public QObject
 {
     Q_OBJECT

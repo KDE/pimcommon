@@ -36,6 +36,9 @@
 
 namespace PimCommon {
 class ImapAclAttributePrivate;
+/**
+ * @brief The ImapAclAttribute class
+ */
 class PIMCOMMONAKONADI_EXPORT ImapAclAttribute : public Akonadi::Attribute
 {
 public:

@@ -26,6 +26,10 @@
 
 namespace PimCommon {
 class IncidencesForWidgetPrivate;
+/**
+ * @brief The IncidencesForWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QWidget
 {
     Q_OBJECT

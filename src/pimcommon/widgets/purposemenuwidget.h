@@ -27,6 +27,10 @@ class Menu;
 class QMenu;
 class QTemporaryFile;
 namespace PimCommon {
+/**
+ * @brief The PurposeMenuWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT PurposeMenuWidget : public QObject
 {
     Q_OBJECT

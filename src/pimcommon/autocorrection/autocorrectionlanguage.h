@@ -23,6 +23,10 @@
 #include "pimcommon_export.h"
 
 namespace PimCommon {
+/**
+ * @brief The AutoCorrectionLanguage class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT AutoCorrectionLanguage : public QComboBox
 {
 public:

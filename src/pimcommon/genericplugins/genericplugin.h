@@ -22,6 +22,10 @@
 #include "abstractgenericplugin.h"
 #include "pimcommon_export.h"
 namespace PimCommon {
+/**
+ * @brief The GenericPlugin class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
 {
     Q_OBJECT

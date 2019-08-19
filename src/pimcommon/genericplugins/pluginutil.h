@@ -27,6 +27,10 @@
 #include <kpluginmetadata.h>
 
 namespace PimCommon {
+/**
+ * @brief The PluginUtilData class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT PluginUtilData
 {
 public:

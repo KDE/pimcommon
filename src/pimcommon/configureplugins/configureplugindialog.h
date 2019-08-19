@@ -23,6 +23,10 @@
 #include "pimcommon_export.h"
 class QDialogButtonBox;
 namespace PimCommon {
+/**
+ * @brief The ConfigurePluginDialog class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
 {
     Q_OBJECT

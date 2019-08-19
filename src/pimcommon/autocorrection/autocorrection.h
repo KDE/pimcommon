@@ -25,6 +25,10 @@
 #include <QSet>
 
 namespace PimCommon {
+/**
+ * @brief The AutoCorrection class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT AutoCorrection
 {
 public:

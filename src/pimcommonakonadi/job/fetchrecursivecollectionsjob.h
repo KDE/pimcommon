@@ -27,6 +27,10 @@
 class KJob;
 namespace PimCommon {
 class FetchRecursiveCollectionsJobPrivate;
+/**
+ * @brief The FetchRecursiveCollectionsJob class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONAKONADI_EXPORT FetchRecursiveCollectionsJob : public QObject
 {
     Q_OBJECT

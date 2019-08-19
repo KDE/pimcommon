@@ -23,6 +23,10 @@
 #include "pimcommon_export.h"
 
 namespace PimCommon {
+/**
+ * @brief The KPimPrintPreviewDialog class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT KPimPrintPreviewDialog : public QPrintPreviewDialog
 {
 public:

@@ -25,6 +25,10 @@ class QSplitter;
 class QTextEdit;
 namespace PimCommon {
 class ConfigurePluginsListWidget;
+/**
+ * @brief The ConfigurePluginsWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
 {
     Q_OBJECT

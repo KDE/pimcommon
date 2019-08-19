@@ -25,6 +25,10 @@
 #include "pimcommon_export.h"
 namespace PimCommon {
 class MigrateApplicationFilesPrivate;
+/**
+ * @brief The MigrateApplicationFiles class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT MigrateApplicationFiles : public QObject
 {
     Q_OBJECT

@@ -26,6 +26,10 @@
 namespace PimCommon {
 class AutoCorrection;
 class LineEditWithAutoCorrectionPrivate;
+/**
+ * @brief The LineEditWithAutoCorrection class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheckLineEdit
 {
     Q_OBJECT

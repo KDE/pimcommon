@@ -27,6 +27,10 @@
 namespace PimCommon {
 class GenericPluginManagerPrivate;
 class GenericPlugin;
+/**
+ * @brief The GenericPluginManager class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT GenericPluginManager : public QObject
 {
     Q_OBJECT

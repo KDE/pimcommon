@@ -20,6 +20,10 @@
 #define NETWORKUTIL_H
 #include "pimcommon_export.h"
 namespace PimCommon {
+/**
+ * @brief The NetworkUtil class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT NetworkUtil
 {
 public:

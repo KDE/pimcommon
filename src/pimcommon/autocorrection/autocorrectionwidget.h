@@ -31,6 +31,10 @@ class AutoCorrectionWidget;
 
 namespace PimCommon {
 class AutoCorrectionWidgetPrivate;
+/**
+ * @brief The AutoCorrectionWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT AutoCorrectionWidget : public QWidget
 {
     Q_OBJECT

@@ -26,6 +26,10 @@
 class QDBusPendingCallWatcher;
 namespace PimCommon {
 class ManageServerSideSubscriptionJobPrivate;
+/**
+ * @brief The ManageServerSideSubscriptionJob class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONAKONADI_EXPORT ManageServerSideSubscriptionJob : public QObject
 {
     Q_OBJECT

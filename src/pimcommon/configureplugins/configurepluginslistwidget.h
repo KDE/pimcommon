@@ -27,6 +27,10 @@
 class QTreeWidget;
 class QAction;
 namespace PimCommon {
+/**
+ * @brief The ConfigurePluginsListWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT ConfigurePluginsListWidget : public QWidget
 {
     Q_OBJECT

@@ -25,6 +25,10 @@
 #include "pimcommonakonadi_export.h"
 namespace PimCommon {
 class ContentTypeWidgetPrivate;
+/**
+ * @brief The ContentTypeWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QWidget
 {
     Q_OBJECT

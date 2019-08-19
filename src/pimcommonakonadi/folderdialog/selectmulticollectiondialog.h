@@ -24,6 +24,10 @@
 
 namespace PimCommon {
 class SelectMultiCollectionDialogPrivate;
+/**
+ * @brief The SelectMultiCollectionDialog class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONAKONADI_EXPORT SelectMultiCollectionDialog : public QDialog
 {
     Q_OBJECT

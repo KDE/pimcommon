@@ -25,6 +25,10 @@
 namespace PimCommon {
 class AutoCorrection;
 class RichTextEditWithAutoCorrectionPrivate;
+/**
+ * @brief The RichTextEditWithAutoCorrection class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT RichTextEditWithAutoCorrection : public KPIMTextEdit::RichTextEditor
 {
     Q_OBJECT

@@ -24,6 +24,10 @@
 namespace PimCommon {
 class CustomToolsPlugin;
 class CustomToolsPluginManagerPrivate;
+/**
+ * @brief The CustomToolsPluginManager class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT CustomToolsPluginManager : public QObject
 {
     Q_OBJECT

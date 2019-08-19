@@ -24,6 +24,10 @@
 
 #include "pimcommon_export.h"
 namespace PimCommon {
+/**
+ * @brief The MigrateFileInfo class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT MigrateFileInfo
 {
 public:

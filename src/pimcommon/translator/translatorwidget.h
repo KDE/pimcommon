@@ -40,6 +40,10 @@ private:
     bool mResultFailed;
 };
 
+/**
+ * @brief The TranslatorTextEdit class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT TranslatorTextEdit : public KPIMTextEdit::PlainTextEditor
 {
     Q_OBJECT
