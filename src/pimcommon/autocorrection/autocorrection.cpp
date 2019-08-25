@@ -604,8 +604,8 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
 
     bool secure = false;
     int link_type = 0;
-    int pos = word.indexOf(QStringLiteral("http://"));
-    int tmp_pos = word.indexOf(QStringLiteral("https://"));
+    int pos = word.indexOf(QLatin1String("http://"));
+    int tmp_pos = word.indexOf(QLatin1String("https://"));
 
     if (tmp_pos != -1 && pos == -1) {
         secure = true;
@@ -615,12 +615,12 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
         pos = tmp_pos;
     }
 
-    tmp_pos = word.indexOf(QStringLiteral("mailto:/"));
+    tmp_pos = word.indexOf(QLatin1String("mailto:/"));
     if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
         pos = tmp_pos;
     }
-    tmp_pos = word.indexOf(QStringLiteral("ftp://"));
-    const int secureftp = word.indexOf(QStringLiteral("ftps://"));
+    tmp_pos = word.indexOf(QLatin1String("ftp://"));
+    const int secureftp = word.indexOf(QLatin1String("ftps://"));
     if (secureftp != -1 && tmp_pos == -1) {
         secure = true;
     }
@@ -628,21 +628,21 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
     if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
         pos = tmp_pos;
     }
-    tmp_pos = word.indexOf(QStringLiteral("ftp."));
+    tmp_pos = word.indexOf(QLatin1String("ftp."));
 
     if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
         pos = tmp_pos;
         link_type = 3;
     }
-    tmp_pos = word.indexOf(QStringLiteral("file:/"));
+    tmp_pos = word.indexOf(QLatin1String("file:/"));
     if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
         pos = tmp_pos;
     }
-    tmp_pos = word.indexOf(QStringLiteral("news:"));
+    tmp_pos = word.indexOf(QLatin1String("news:"));
     if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
         pos = tmp_pos;
     }
-    tmp_pos = word.indexOf(QStringLiteral("www."));
+    tmp_pos = word.indexOf(QLatin1String("www."));
 
     if ((tmp_pos < pos || pos == -1) && tmp_pos != -1 && word.indexOf(QLatin1Char('.'), tmp_pos + 4) != -1) {
         pos = tmp_pos;
