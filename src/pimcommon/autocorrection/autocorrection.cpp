@@ -672,7 +672,7 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
     if (pos != -1) {
         // A URL inside e.g. quotes (like "http://www.calligra.org" with the quotes) shouldn't include the quote in the URL.
         while (!word.at(word.length() - 1).isLetter() && !word.at(word.length() - 1).isDigit() && word.at(word.length() - 1) != QLatin1Char('/')) {
-            word.truncate(word.length() - 1);
+            word.chop(1);
         }
         word.remove(0, pos);
         QString newWord = word;
