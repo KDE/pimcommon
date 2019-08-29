@@ -21,8 +21,8 @@
 #include "translatorutil.h"
 #include "googletranslator.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
-#include "Libkdepim/ProgressIndicatorWidget"
 #include <PimCommon/NetworkManager>
+#include <KBusyIndicatorWidget>
 
 #include <QPushButton>
 #include <KLocalizedString>
@@ -72,7 +72,7 @@ public:
     QPushButton *translate = nullptr;
     QPushButton *clear = nullptr;
     PimCommon::GoogleTranslator *abstractTranslator = nullptr;
-    KPIM::ProgressIndicatorWidget *progressIndictor = nullptr;
+    KBusyIndicatorWidget *progressIndicator = nullptr;
     QPushButton *invert = nullptr;
     QSplitter *splitter = nullptr;
     bool languageSettingsChanged = false;
@@ -279,8 +279,8 @@ void TranslatorWidget::init()
         connect(debugButton, &QPushButton::clicked, this, &TranslatorWidget::slotDebug);
     }
 
-    d->progressIndictor = new KPIM::ProgressIndicatorWidget(this);
-    hboxLayout->addWidget(d->progressIndictor);
+    d->progressIndicator = new KBusyIndicatorWidget(this);
+    hboxLayout->addWidget(d->progressIndicator);
 
     hboxLayout->addItem(new QSpacerItem(5, 5, QSizePolicy::MinimumExpanding, QSizePolicy::Minimum));
 
@@ -372,7 +372,7 @@ void TranslatorWidget::slotTranslate()
     const QString from = d->from->itemData(d->from->currentIndex()).toString();
     const QString to = d->to->itemData(d->to->currentIndex()).toString();
     d->translate->setEnabled(false);
-    d->progressIndictor->start();
+    d->progressIndicator->show();
 
     d->abstractTranslator->setFrom(from);
     d->abstractTranslator->setTo(to);
@@ -383,7 +383,7 @@ void TranslatorWidget::slotTranslate()
 void TranslatorWidget::slotTranslateDone()
 {
     d->translate->setEnabled(true);
-    d->progressIndictor->stop();
+    d->progressIndicator->hide();
     d->translatorResultTextEdit->setResultFailed(false);
     d->translatorResultTextEdit->setPlainText(d->abstractTranslator->resultTranslate());
 }
@@ -391,7 +391,7 @@ void TranslatorWidget::slotTranslateDone()
 void TranslatorWidget::slotTranslateFailed(bool signalFailed, const QString &message)
 {
     d->translate->setEnabled(true);
-    d->progressIndictor->stop();
+    d->progressIndicator->hide();
     d->translatorResultTextEdit->setResultFailed(signalFailed);
     d->translatorResultTextEdit->clear();
     if (!message.isEmpty()) {
@@ -431,7 +431,7 @@ void TranslatorWidget::slotCloseWidget()
     }
     d->inputText->clear();
     d->translatorResultTextEdit->clear();
-    d->progressIndictor->stop();
+    d->progressIndicator->hide();
     if (d->standalone) {
         hide();
     }
