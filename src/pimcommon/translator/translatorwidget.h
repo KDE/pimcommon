@@ -57,6 +57,10 @@ protected:
     void dropEvent(QDropEvent *) override;
 };
 
+/**
+ * @brief The TranslatorWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT TranslatorWidget : public QWidget
 {
     Q_OBJECT

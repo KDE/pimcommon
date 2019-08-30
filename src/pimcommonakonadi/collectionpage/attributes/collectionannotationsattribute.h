@@ -26,6 +26,9 @@
 #include <QMap>
 
 namespace PimCommon {
+/**
+ * @brief The CollectionAnnotationsAttribute class
+ */
 class PIMCOMMONAKONADI_EXPORT CollectionAnnotationsAttribute : public Akonadi::Attribute
 {
 public:

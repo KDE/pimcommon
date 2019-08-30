@@ -25,6 +25,10 @@
 class QTimer;
 
 namespace PimCommon {
+/**
+ * @brief The PimCommonSettings class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMON_EXPORT PimCommonSettings : public PimCommon::PimCommonSettingsBase
 {
     Q_OBJECT

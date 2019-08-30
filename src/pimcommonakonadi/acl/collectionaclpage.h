@@ -36,10 +36,10 @@
 #include "pimcommonakonadi_export.h"
 
 namespace PimCommon {
+class CollectionAclPagePrivate;
 /**
  * "Access Control" tab in the folder dialog
  */
-class CollectionAclPagePrivate;
 class PIMCOMMONAKONADI_EXPORT CollectionAclPage : public Akonadi::CollectionPropertiesPage
 {
     Q_OBJECT
