@@ -24,7 +24,7 @@ using namespace PimCommon;
 
 static bool stripCountryCode(QString *languageCode)
 {
-    const int idx = languageCode->indexOf(QLatin1String("_"));
+    const int idx = languageCode->indexOf(QLatin1Char('_'));
     if (idx != -1) {
         *languageCode = languageCode->left(idx);
         return true;
