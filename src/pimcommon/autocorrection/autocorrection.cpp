@@ -1059,7 +1059,7 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     const QStringList lst = QLocale::system().uiLanguages();
     if (!lst.isEmpty()) {
         kdelang = lst.at(0);
-        if (kdelang == QLatin1String("C")) {
+        if (kdelang == QLatin1Char('C')) {
             kdelang = QStringLiteral("en_US");
         }
     }

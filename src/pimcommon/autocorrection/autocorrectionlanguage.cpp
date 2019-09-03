@@ -62,7 +62,7 @@ AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
     QString defaultLang;
     if (!QLocale::system().uiLanguages().isEmpty()) {
         defaultLang = QLocale::system().uiLanguages().at(0);
-        if (defaultLang == QLatin1String("C")) {
+        if (defaultLang == QLatin1Char('C')) {
             defaultLang = QStringLiteral("en_US");
         }
     }
