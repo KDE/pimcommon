@@ -3,7 +3,7 @@ set(PIM_VERSION "5.12.40")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.61.0")
+set(KF5_MIN_VERSION "5.62.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(LIBRARY_NAMELINK)
@@ -66,15 +66,8 @@ find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 
-set(USE_NEW_DESIGNERPLUGIN_MACRO false)
-if (ECM_VERSION VERSION_GREATER "5.61.0")
-       option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
-       add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
-       set(USE_NEW_DESIGNERPLUGIN_MACRO true)
-else()
-       find_package(KF5DesignerPlugin ${KF5_MIN_VERSION} CONFIG)
-       set_package_properties(KF5DesignerPlugin PROPERTIES DESCRIPTION "KF5 designer plugin" TYPE OPTIONAL)
-endif()
+option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
+add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
