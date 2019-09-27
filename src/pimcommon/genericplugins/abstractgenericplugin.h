@@ -46,6 +46,9 @@ public:
     void setIsEnabled(bool enabled);
     Q_REQUIRED_RESULT bool isEnabled() const;
 
+Q_SIGNALS:
+    void configChanged();
+
 private:
     bool mIsEnabled;
 };
