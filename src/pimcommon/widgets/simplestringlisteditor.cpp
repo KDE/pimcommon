@@ -35,7 +35,6 @@
 #include "simplestringlisteditor.h"
 
 #include <QInputDialog>
-#include <kiconloader.h>
 #include <QIcon>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -136,7 +135,6 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         }
         d->mUpButton = new QPushButton(QString(), this);
         d->mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
-        d->mUpButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
         d->mUpButton->setAutoDefault(false);
         d->mUpButton->setEnabled(false);   // no selection yet
         d->mButtonLayout->addWidget(d->mUpButton);
@@ -150,7 +148,6 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         }
         d->mDownButton = new QPushButton(QString(), this);
         d->mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
-        d->mDownButton->setIconSize(QSize(KIconLoader::SizeSmall, KIconLoader::SizeSmall));
         d->mDownButton->setAutoDefault(false);
         d->mDownButton->setEnabled(false);   // no selection yet
         d->mButtonLayout->addWidget(d->mDownButton);

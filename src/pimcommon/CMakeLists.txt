@@ -170,7 +170,6 @@ target_link_libraries(KF5PimCommon
     KF5::PimTextEdit
     KF5::XmlGui
     KF5::PimTextEdit
-    KF5::IconThemes
     KF5::Completion
     KF5::KIOWidgets
     Qt5::PrintSupport
