@@ -59,6 +59,7 @@ public:
     Q_REQUIRED_RESULT QString configPrefixSettingKey() const;
 
     PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
+    void clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient);
 private Q_SLOTS:
     void slotPluginActivated(AbstractGenericPluginInterface *interface);
 

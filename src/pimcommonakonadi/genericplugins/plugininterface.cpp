@@ -33,9 +33,6 @@ class PimCommon::PluginInterfacePrivate
 {
 public:
     PluginInterfacePrivate()
-        : mParentWidget(nullptr)
-        , mActionCollection(nullptr)
-        , mGenericPluginManager(nullptr)
     {
     }
 
@@ -141,6 +138,21 @@ void PluginInterface::slotPluginActivated(PimCommon::AbstractGenericPluginInterf
 void PluginInterface::setParentWidget(QWidget *widget)
 {
     d->mParentWidget = widget;
+}
+
+void PluginInterface::clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient)
+{
+    if (guiClient->factory()) {
+        QHashIterator<PimCommon::ActionType::Type, QList<QAction *> > localActionsType(actionsType());
+        while (localActionsType.hasNext()) {
+            localActionsType.next();
+            QList<QAction *> lst = localActionsType.value();
+            if (!lst.isEmpty()) {
+                const QString actionlistname = prefix + PimCommon::PluginInterface::actionXmlExtension(localActionsType.key());
+                guiClient->unplugActionList(actionlistname);
+            }
+        }
+    }
 }
 
 void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient)
