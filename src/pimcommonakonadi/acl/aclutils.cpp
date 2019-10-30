@@ -25,22 +25,23 @@ using namespace PimCommon;
 
 static const struct {
     KIMAP::Acl::Rights permissions;
+    const char *context;
     const char *userString;
 } standardPermissions[] = {
     {
         KIMAP::Acl::None,
-        I18N_NOOP2("Permissions", "None")
+        I18NC_NOOP("Permissions", "None")
     },
 
     {
         KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen,
-        I18N_NOOP2("Permissions", "Read")
+        I18NC_NOOP("Permissions", "Read")
     },
 
     {
         KIMAP::Acl::Lookup | KIMAP::Acl::Read | KIMAP::Acl::KeepSeen
         |KIMAP::Acl::Insert | KIMAP::Acl::Post,
-        I18N_NOOP2("Permissions", "Append")
+        I18NC_NOOP("Permissions", "Append")
     },
 
     {
@@ -48,7 +49,7 @@ static const struct {
         |KIMAP::Acl::Insert | KIMAP::Acl::Post | KIMAP::Acl::Write
         |KIMAP::Acl::CreateMailbox | KIMAP::Acl::DeleteMailbox
         |KIMAP::Acl::DeleteMessage | KIMAP::Acl::Expunge,
-        I18N_NOOP2("Permissions", "Write")
+        I18NC_NOOP("Permissions", "Write")
     },
 
     {
@@ -56,7 +57,7 @@ static const struct {
         |KIMAP::Acl::Insert | KIMAP::Acl::Post | KIMAP::Acl::Write
         |KIMAP::Acl::CreateMailbox | KIMAP::Acl::DeleteMailbox
         |KIMAP::Acl::DeleteMessage | KIMAP::Acl::Expunge | KIMAP::Acl::Admin,
-        I18N_NOOP2("Permissions", "All")
+        I18NC_NOOP("Permissions", "All")
     }
 };
 
@@ -89,7 +90,7 @@ QString AclUtils::permissionsToUserString(KIMAP::Acl::Rights permissions)
     const uint maxSize(sizeof(standardPermissions) / sizeof(*standardPermissions));
     for (uint i = 0; i < maxSize; ++i) {
         if (KIMAP::Acl::normalizedRights(permissions) == standardPermissions[i].permissions) {
-            return i18nc("Permissions", standardPermissions[ i ].userString);
+            return i18nc(standardPermissions[ i ].context, standardPermissions[ i ].userString);
         }
     }
 
