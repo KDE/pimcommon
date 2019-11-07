@@ -57,6 +57,18 @@ public:
     {
     }
 
+    QList<QListWidgetItem *> selectedItems() const
+    {
+        QList<QListWidgetItem *> listWidgetItem;
+        const int numberOfFilters = mListBox->count();
+        for (int i = 0; i < numberOfFilters; ++i) {
+            if (mListBox->item(i)->isSelected()) {
+                listWidgetItem << mListBox->item(i);
+            }
+        }
+        return listWidgetItem;
+    }
+
     QListWidget *mListBox = nullptr;
     QPushButton *mAddButton = nullptr;
     QPushButton *mRemoveButton = nullptr;
@@ -317,18 +329,6 @@ void SimpleStringListEditor::slotModify()
     }
 }
 
-QList<QListWidgetItem *> SimpleStringListEditor::selectedItems() const
-{
-    QList<QListWidgetItem *> listWidgetItem;
-    const int numberOfFilters = d->mListBox->count();
-    for (int i = 0; i < numberOfFilters; ++i) {
-        if (d->mListBox->item(i)->isSelected()) {
-            listWidgetItem << d->mListBox->item(i);
-        }
-    }
-    return listWidgetItem;
-}
-
 void SimpleStringListEditor::setAddDialogLabel(const QString &addDialogLabel)
 {
     d->mAddDialogLabel = addDialogLabel.isEmpty() ? i18n("New entry:") : addDialogLabel;
@@ -336,7 +336,7 @@ void SimpleStringListEditor::setAddDialogLabel(const QString &addDialogLabel)
 
 void SimpleStringListEditor::slotUp()
 {
-    QList<QListWidgetItem *> listWidgetItem = selectedItems();
+    QList<QListWidgetItem *> listWidgetItem = d->selectedItems();
     if (listWidgetItem.isEmpty()) {
         return;
     }
@@ -367,7 +367,7 @@ void SimpleStringListEditor::slotUp()
 
 void SimpleStringListEditor::slotDown()
 {
-    QList<QListWidgetItem *> listWidgetItem = selectedItems();
+    QList<QListWidgetItem *> listWidgetItem = d->selectedItems();
     if (listWidgetItem.isEmpty()) {
         return;
     }
@@ -399,13 +399,14 @@ void SimpleStringListEditor::slotDown()
 
 void SimpleStringListEditor::slotSelectionChanged()
 {
-    QList<QListWidgetItem *> lstSelectedItems = d->mListBox->selectedItems();
+    const QList<QListWidgetItem *> lstSelectedItems = d->mListBox->selectedItems();
     const int numberOfItemSelected(lstSelectedItems.count());
     const bool uniqItemSelected = (numberOfItemSelected == 1);
+    const bool aItemIsSelected = !lstSelectedItems.isEmpty();
     // if there is one, item will be non-null (ie. true), else 0
     // (ie. false):
     if (d->mRemoveButton) {
-        d->mRemoveButton->setEnabled(!lstSelectedItems.isEmpty());
+        d->mRemoveButton->setEnabled(aItemIsSelected);
     }
 
     if (d->mModifyButton) {
@@ -414,7 +415,6 @@ void SimpleStringListEditor::slotSelectionChanged()
 
     const int currentIndex = d->mListBox->currentRow();
 
-    const bool aItemIsSelected = !lstSelectedItems.isEmpty();
     const bool allItemSelected = (d->mListBox->count() == numberOfItemSelected);
     const bool theLast = (currentIndex >= d->mListBox->count() - 1);
     const bool theFirst = (currentIndex == 0);

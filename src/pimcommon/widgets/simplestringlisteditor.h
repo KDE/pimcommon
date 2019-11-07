@@ -115,7 +115,6 @@ protected Q_SLOTS:
 private:
     void slotContextMenu(const QPoint &);
     bool containsString(const QString &str);
-    QList<QListWidgetItem *> selectedItems() const;
     SimpleStringListEditorPrivate *const d;
 };
 }
