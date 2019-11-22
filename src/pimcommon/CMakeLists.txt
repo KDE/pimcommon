@@ -419,5 +419,7 @@ install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
-add_subdirectory(designer)
+if(BUILD_DESIGNERPLUGIN)
+    add_subdirectory(designer)
+endif()
 
