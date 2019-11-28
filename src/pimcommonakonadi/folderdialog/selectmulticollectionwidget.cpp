@@ -19,12 +19,8 @@
 #include "selectmulticollectionwidget.h"
 #include "folderdialog/checkedcollectionwidget.h"
 
-#include <RecursiveCollectionFilterProxyModel>
 #include <CollectionFilterProxyModel>
-
-#include <ChangeRecorder>
 #include <EntityTreeModel>
-#include <EntityRightsFilterModel>
 
 #include <KCheckableProxyModel>
 

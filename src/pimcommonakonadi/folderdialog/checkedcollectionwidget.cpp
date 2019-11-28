@@ -17,12 +17,10 @@
 */
 
 #include "checkedcollectionwidget.h"
-#include <RecursiveCollectionFilterProxyModel>
 #include <CollectionFilterProxyModel>
 
 #include <Monitor>
 #include <EntityTreeModel>
-#include <EntityRightsFilterModel>
 #include <QSortFilterProxyModel>
 
 #include <KCheckableProxyModel>
