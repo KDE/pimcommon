@@ -20,7 +20,7 @@
 
 #include "contenttypewidgettest.h"
 #include "../contenttypewidget.h"
-#include <kcombobox.h>
+#include <QComboBox>
 #include <QLabel>
 #include <QTest>
 #include <QSignalSpy>

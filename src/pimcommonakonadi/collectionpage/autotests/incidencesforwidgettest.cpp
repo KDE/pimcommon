@@ -20,7 +20,7 @@
 
 #include "incidencesforwidgettest.h"
 #include "../incidencesforwidget.h"
-#include <kcombobox.h>
+#include <QComboBox>
 #include <QLabel>
 #include <QTest>
 #include <QSignalSpy>
