@@ -118,7 +118,6 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::DBusAddons
     KF5::XmlGui
     KF5::PimTextEdit
-    KF5::Completion
     KF5::KIOWidgets
     )
 
