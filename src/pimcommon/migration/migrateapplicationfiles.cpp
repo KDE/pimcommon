@@ -19,7 +19,7 @@
 #include "migrateapplicationfiles.h"
 #include "pimcommon_debug.h"
 
-#include <kdelibs4migration.h>
+#include <Kdelibs4Migration>
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <QFile>

@@ -20,7 +20,7 @@
 #define MIGRATEAPPLICATIONFILE_H
 
 #include <QObject>
-#include <kdelibs4migration.h>
+#include <Kdelibs4Migration>
 #include "migratefileinfo.h"
 #include "pimcommon_export.h"
 namespace PimCommon {

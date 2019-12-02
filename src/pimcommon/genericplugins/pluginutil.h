@@ -24,7 +24,7 @@
 #include <QString>
 #include <QStringList>
 #include <QPair>
-#include <kpluginmetadata.h>
+#include <KPluginMetaData>
 
 namespace PimCommon {
 /**
