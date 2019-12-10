@@ -90,7 +90,6 @@ set(libpimcommon_customtools_SRCS
 
 set(libpimcommon_util_SRCS
     util/pimutil.cpp
-    util/networkutil.cpp
     )
 
 set(libpimcommon_migrate_SRCS
@@ -198,7 +197,6 @@ if (BUILD_TESTING)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(widgets/autotests)
     add_subdirectory(migration/autotests)
-    add_subdirectory(util/autotests)
     add_subdirectory(shareserviceurl/autotests)
     add_subdirectory(translator/tests)
     add_subdirectory(widgets/tests)
@@ -234,7 +232,6 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
     HEADER_NAMES
     PimUtil
-    NetworkUtil
     REQUIRED_HEADERS PimCommon_HEADERS
     PREFIX PimCommon
     RELATIVE util
