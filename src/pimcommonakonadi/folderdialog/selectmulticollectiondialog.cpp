@@ -61,7 +61,7 @@ SelectMultiCollectionDialog::~SelectMultiCollectionDialog()
 
 void SelectMultiCollectionDialog::initialize(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection)
 {
-    setWindowTitle(i18n("Select Multiple Folders"));
+    setWindowTitle(i18nc("@title:window", "Select Multiple Folders"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Close, this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

@@ -34,7 +34,7 @@ using namespace PimCommon;
 LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Log activities"));
+    setWindowTitle(i18nc("@title:window", "Log activities"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 

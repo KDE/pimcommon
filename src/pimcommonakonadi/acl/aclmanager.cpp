@@ -226,7 +226,7 @@ public:
     void addAcl()
     {
         AclEntryDialog dlg;
-        dlg.setWindowTitle(i18n("Add ACL"));
+        dlg.setWindowTitle(i18nc("@title:window", "Add ACL"));
 
         if (!dlg.exec()) {
             return;
@@ -253,7 +253,7 @@ public:
                 = static_cast<KIMAP::Acl::Rights>(index.data(AclModel::PermissionsRole).toInt());
 
             AclEntryDialog dlg;
-            dlg.setWindowTitle(i18n("Edit ACL"));
+            dlg.setWindowTitle(i18nc("@title:window", "Edit ACL"));
             dlg.setUserId(userId);
             dlg.setPermissions(permissions);
 

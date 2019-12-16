@@ -30,7 +30,7 @@
 TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Translator Debug"));
+    setWindowTitle(i18nc("@title:window", "Translator Debug"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
