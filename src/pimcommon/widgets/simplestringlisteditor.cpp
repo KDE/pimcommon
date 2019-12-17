@@ -172,7 +172,6 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
     if (buttons & Custom) {
         d->mCustomButton = new QPushButton(i18n("&Customize..."), this);
         d->mCustomButton->setAutoDefault(false);
-        d->mCustomButton->setEnabled(false);   // no selection yet
         d->mButtonLayout->addWidget(d->mCustomButton);
         connect(d->mCustomButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotCustomize);
     }
