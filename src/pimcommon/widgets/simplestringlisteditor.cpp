@@ -304,12 +304,20 @@ void SimpleStringListEditor::slotAdd()
 
 void SimpleStringListEditor::slotCustomize()
 {
-    customEntry();
+    QListWidgetItem *item = d->mListBox->currentItem();
+    if (!item) {
+        return;
+    }
+    const QString newText = customEntry(item->text());
+    if (!newText.isEmpty()) {
+        item->setText(newText);
+        Q_EMIT changed();
+    }
 }
 
-void SimpleStringListEditor::customEntry()
+QString SimpleStringListEditor::customEntry(const QString &text)
 {
-    //TODO
+    return {};
 }
 
 void SimpleStringListEditor::slotRemove()

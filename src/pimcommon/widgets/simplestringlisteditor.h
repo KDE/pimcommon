@@ -91,7 +91,7 @@ public:
     Q_REQUIRED_RESULT QSize sizeHint() const override;
 
     virtual void addNewEntry();
-    virtual void customEntry();
+    virtual QString customEntry(const QString &text);
 
     Q_REQUIRED_RESULT virtual QString modifyEntry(const QString &text);
     void setAddDialogLabel(const QString &addDialogLabel);
