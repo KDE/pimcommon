@@ -75,6 +75,7 @@ public:
     QPushButton *mModifyButton = nullptr;
     QPushButton *mUpButton = nullptr;
     QPushButton *mDownButton = nullptr;
+    QPushButton *mCustomButton = nullptr;
     QVBoxLayout *mButtonLayout = nullptr;
     QString mAddDialogLabel;
     QString mRemoveDialogLabel;
@@ -129,6 +130,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         connect(d->mListBox, &QListWidget::itemDoubleClicked, this, &SimpleStringListEditor::slotModify);
     }
 
+
     if (buttons & Remove) {
         if (removeLabel.isEmpty()) {
             d->mRemoveButton = new QPushButton(i18n("&Remove"), this);
@@ -165,6 +167,14 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         d->mDownButton->setEnabled(false);   // no selection yet
         d->mButtonLayout->addWidget(d->mDownButton);
         connect(d->mDownButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotDown);
+    }
+
+    if (buttons & Custom) {
+        d->mCustomButton = new QPushButton(i18n("&Customize..."), this);
+        d->mCustomButton->setAutoDefault(false);
+        d->mCustomButton->setEnabled(false);   // no selection yet
+        d->mButtonLayout->addWidget(d->mCustomButton);
+        connect(d->mCustomButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotCustomize);
     }
 
     d->mButtonLayout->addStretch(1);   // spacer
@@ -242,6 +252,12 @@ void SimpleStringListEditor::setButtonText(ButtonCode button, const QString &tex
         }
         d->mModifyButton->setText(text);
         return;
+    case Custom:
+        if (!d->mCustomButton) {
+            break;
+        }
+        d->mCustomButton->setText(text);
+        return;
     case Up:
     case Down:
         qCDebug(PIMCOMMON_LOG) << "SimpleStringListEditor: Cannot change text of"
@@ -285,6 +301,16 @@ void SimpleStringListEditor::insertNewEntry(const QString &entry)
 void SimpleStringListEditor::slotAdd()
 {
     addNewEntry();
+}
+
+void SimpleStringListEditor::slotCustomize()
+{
+    customEntry();
+}
+
+void SimpleStringListEditor::customEntry()
+{
+    //TODO
 }
 
 void SimpleStringListEditor::slotRemove()

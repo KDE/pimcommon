@@ -59,12 +59,13 @@ class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
     Q_OBJECT
 public:
     enum ButtonCode {
-        None = 0x00,
-        Add = 0x01,
-        Remove = 0x02,
-        Modify = 0x04,
-        Up = 0x08,
-        Down = 0x10,
+        None = 0,
+        Add = 1,
+        Remove = 2,
+        Modify = 4,
+        Up = 8,
+        Down = 16,
+        Custom = 32,
         All = Add | Remove | Modify | Up | Down,
         Unsorted = Add | Remove | Modify
     };
@@ -90,6 +91,8 @@ public:
     Q_REQUIRED_RESULT QSize sizeHint() const override;
 
     virtual void addNewEntry();
+    virtual void customEntry();
+
     Q_REQUIRED_RESULT virtual QString modifyEntry(const QString &text);
     void setAddDialogLabel(const QString &addDialogLabel);
 
@@ -110,6 +113,7 @@ protected Q_SLOTS:
     void slotModify();
     void slotUp();
     void slotDown();
+    void slotCustomize();
 
     void slotSelectionChanged();
 
