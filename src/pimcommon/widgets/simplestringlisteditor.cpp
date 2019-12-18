@@ -130,7 +130,6 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         connect(d->mListBox, &QListWidget::itemDoubleClicked, this, &SimpleStringListEditor::slotModify);
     }
 
-
     if (buttons & Remove) {
         if (removeLabel.isEmpty()) {
             d->mRemoveButton = new QPushButton(i18n("&Remove"), this);

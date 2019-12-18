@@ -71,8 +71,7 @@ public:
     };
 
     /** Constructor. Populates the list with @p strings. */
-    explicit SimpleStringListEditor(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(),
-                                    const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
+    explicit SimpleStringListEditor(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(), const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
 
     ~SimpleStringListEditor() override;
     /** Sets the list of strings displayed to @p strings */

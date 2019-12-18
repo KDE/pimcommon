@@ -71,8 +71,7 @@ protected:
         bool mEnableFromUserSettings;
     };
     void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems);
-    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QVector<PluginItem *> &itemsList,
-                      const QString &configureGroupName = QString(), bool checkable = true);
+    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QVector<PluginItem *> &itemsList, const QString &configureGroupName = QString(), bool checkable = true);
     void resetToUserSettings(const QVector<PluginItem *> &items);
     void changeState(const QVector<PluginItem *> &items);
 

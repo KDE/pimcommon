@@ -26,6 +26,7 @@ public:
     CustomToolsPluginPrivate()
     {
     }
+
     bool enabled = false;
 };
 
@@ -39,7 +40,6 @@ CustomToolsPlugin::~CustomToolsPlugin()
 {
     delete d;
 }
-
 
 bool CustomToolsPlugin::hasConfigureDialog() const
 {

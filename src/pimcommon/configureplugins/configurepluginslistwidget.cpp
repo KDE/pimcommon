@@ -111,8 +111,7 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
                                               enabledPlugins, disabledPlugins);
 }
 
-void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey,
-                                              QVector<PluginItem *> &itemsList, const QString &configureGroupName, bool checkable)
+void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QVector<PluginItem *> &itemsList, const QString &configureGroupName, bool checkable)
 {
     itemsList.clear();
     if (!lst.isEmpty()) {
