@@ -190,10 +190,10 @@ void AutoCorrectionWidget::loadAutoCorrectionAndException()
     d->m_twoUpperLetterExceptions = d->mAutoCorrection->twoUpperLetterExceptions();
 
     d->ui->twoUpperLetterList->clear();
-    d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.toList());
+    d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.values());
 
     d->ui->abbreviationList->clear();
-    d->ui->abbreviationList->addItems(d->m_upperCaseExceptions.toList());
+    d->ui->abbreviationList->addItems(d->m_upperCaseExceptions.values());
 }
 
 void AutoCorrectionWidget::addAutoCorrectEntries()
@@ -589,10 +589,10 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
                 d->m_twoUpperLetterExceptions = importAutoCorrection->twoUpperLetterExceptions();
 
                 d->ui->twoUpperLetterList->clear();
-                d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.toList());
+                d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.values());
 
                 d->ui->abbreviationList->clear();
-                d->ui->abbreviationList->addItems(d->m_upperCaseExceptions.toList());
+                d->ui->abbreviationList->addItems(d->m_upperCaseExceptions.values());
             }
             delete importAutoCorrection;
         }
