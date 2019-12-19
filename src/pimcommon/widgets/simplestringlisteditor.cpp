@@ -171,6 +171,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
     if (buttons & Custom) {
         d->mCustomButton = new QPushButton(i18n("&Customize..."), this);
         d->mCustomButton->setAutoDefault(false);
+        d->mCustomButton->setEnabled(false);   // no selection yet
         d->mButtonLayout->addWidget(d->mCustomButton);
         connect(d->mCustomButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotCustomize);
     }
@@ -316,6 +317,7 @@ void SimpleStringListEditor::slotCustomize()
 
 QString SimpleStringListEditor::customEntry(const QString &text)
 {
+    Q_UNUSED(text);
     return {};
 }
 
@@ -456,6 +458,10 @@ void SimpleStringListEditor::slotSelectionChanged()
     const bool allItemSelected = (d->mListBox->count() == numberOfItemSelected);
     const bool theLast = (currentIndex >= d->mListBox->count() - 1);
     const bool theFirst = (currentIndex == 0);
+
+    if (d->mCustomButton) {
+        d->mCustomButton->setEnabled(uniqItemSelected);
+    }
 
     if (d->mUpButton) {
         d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst)
