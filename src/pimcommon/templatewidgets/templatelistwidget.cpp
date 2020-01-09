@@ -55,6 +55,9 @@ public:
         QListWidgetItem *item = new QListWidgetItem(name, q);
         item->setData(TemplateListWidget::Text, text);
         item->setData(TemplateListWidget::DefaultTemplate, isDefaultTemplate);
+        if (isDefaultTemplate) {
+            item->setIcon(QIcon::fromTheme(QStringLiteral("lock")));
+        }
         q->setCurrentItem(item);
     }
 
