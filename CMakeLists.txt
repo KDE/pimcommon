@@ -3,7 +3,7 @@ set(PIM_VERSION "5.13.42")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.65.0")
+set(KF5_MIN_VERSION "5.66.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(LIBRARY_NAMELINK)
