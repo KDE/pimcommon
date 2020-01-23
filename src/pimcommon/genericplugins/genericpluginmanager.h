@@ -54,8 +54,8 @@ public:
 
     Q_REQUIRED_RESULT bool initializePlugins();
 
-    void setServiceTypeName(const QString &serviceName);
-    Q_REQUIRED_RESULT QString serviceTypeName() const;
+    void setPluginDirectory(const QString &directory);
+    Q_REQUIRED_RESULT QString pluginDirectory() const;
 
     void setPluginName(const QString &pluginName);
     Q_REQUIRED_RESULT QString pluginName() const;

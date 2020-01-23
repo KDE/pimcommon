@@ -37,7 +37,7 @@ public:
     }
 
     QString mPluginName;
-    QString mServiceTypeName;
+    QString mPluginDirectory;
     QWidget *mParentWidget = nullptr;
     KActionCollection *mActionCollection = nullptr;
     QVector<PimCommon::GenericPluginInterface *> mListGenericInterface;
@@ -64,7 +64,7 @@ void PimCommon::PluginInterface::setActionCollection(KActionCollection *ac)
 void PluginInterface::initializePlugins()
 {
     d->mGenericPluginManager->setPluginName(d->mPluginName);
-    d->mGenericPluginManager->setServiceTypeName(d->mServiceTypeName);
+    d->mGenericPluginManager->setPluginDirectory(d->mPluginDirectory);
     if (!d->mGenericPluginManager->initializePlugins()) {
         qCDebug(PIMCOMMONAKONADI_LOG) << " Impossible to initialize plugins";
     }
@@ -75,9 +75,9 @@ void PluginInterface::setPluginName(const QString &name)
     d->mPluginName = name;
 }
 
-void PluginInterface::setServiceTypeName(const QString &name)
+void PluginInterface::setPluginDirectory(const QString &name)
 {
-    d->mServiceTypeName = name;
+    d->mPluginDirectory = name;
 }
 
 void PluginInterface::createPluginInterface()

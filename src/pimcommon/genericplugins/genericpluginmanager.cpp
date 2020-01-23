@@ -59,7 +59,7 @@ public:
     void loadPlugin(GenericPluginInfo *item);
     QVector<GenericPlugin *> pluginsList() const;
     bool initializePlugins();
-    QString serviceTypeName;
+    QString pluginDirectory;
     QString pluginName;
     QVector<GenericPluginInfo> mPluginList;
 
@@ -88,12 +88,10 @@ bool GenericPluginManagerPrivate::initializePlugins()
         return true;
     }
 
-    if (serviceTypeName.isEmpty() || pluginName.isEmpty()) {
+    if (pluginDirectory.isEmpty() || pluginName.isEmpty()) {
         return false;
     }
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [this](const KPluginMetaData &md) {
-        return md.serviceTypes().contains(serviceTypeName);
-    });
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginDirectory);
 
     const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
     QVectorIterator<KPluginMetaData> i(plugins);
@@ -185,14 +183,14 @@ bool GenericPluginManager::initializePlugins()
     return d->initializePlugins();
 }
 
-void GenericPluginManager::setServiceTypeName(const QString &serviceName)
+void GenericPluginManager::setPluginDirectory(const QString &directory)
 {
-    d->serviceTypeName = serviceName;
+    d->pluginDirectory = directory;
 }
 
-QString GenericPluginManager::serviceTypeName() const
+QString GenericPluginManager::pluginDirectory() const
 {
-    return d->serviceTypeName;
+    return d->pluginDirectory;
 }
 
 void GenericPluginManager::setPluginName(const QString &pluginName)

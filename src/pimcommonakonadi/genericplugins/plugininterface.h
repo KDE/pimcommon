@@ -40,11 +40,11 @@ public:
     ~PluginInterface();
 
     void setParentWidget(QWidget *widget);
-    QHash<PimCommon::ActionType::Type, QList<QAction *> > actionsType();
+    Q_REQUIRED_RESULT QHash<PimCommon::ActionType::Type, QList<QAction *> > actionsType();
     void createPluginInterface();
 
     void setPluginName(const QString &name);
-    void setServiceTypeName(const QString &name);
+    void setPluginDirectory(const QString &name);
     void initializePlugins();
     virtual void initializeInterfaceRequires(AbstractGenericPluginInterface *interface);
     static QString actionXmlExtension(PimCommon::ActionType::Type type);

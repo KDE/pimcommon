@@ -72,9 +72,7 @@ public:
 
 void CustomToolsPluginManagerPrivate::initializePluginList()
 {
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon"), [](const KPluginMetaData &md) {
-        return md.serviceTypes().contains(QLatin1String("PimCommonCustomTools/Plugin"));
-    });
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon/customtools"));
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();

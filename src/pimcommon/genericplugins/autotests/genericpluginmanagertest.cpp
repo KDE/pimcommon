@@ -38,7 +38,7 @@ void GenericPluginManagerTest::shouldInitialized()
 {
     PimCommon::GenericPluginManager pluginManager;
     QVERIFY(!pluginManager.initializePlugins());
-    pluginManager.setServiceTypeName(QStringLiteral("foo"));
+    pluginManager.setPluginDirectory(QStringLiteral("foo"));
     QVERIFY(!pluginManager.initializePlugins());
     pluginManager.setPluginName(QStringLiteral("foo"));
     QVERIFY(pluginManager.initializePlugins());
