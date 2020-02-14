@@ -309,13 +309,25 @@ void TranslatorWidget::init()
     slotFromLanguageChanged(0, true);
     slotTextChanged();
     readConfig();
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(d->from, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int val) {
         slotFromLanguageChanged(val, false);
+        slotConfigChanged();
     });
-    connect(d->from, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TranslatorWidget::slotConfigChanged);
-
-    connect(d->to, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TranslatorWidget::slotConfigChanged);
-    connect(d->to, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &TranslatorWidget::slotTranslate);
+    connect(d->to, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this]() {
+        slotConfigChanged();
+        slotTranslate();
+    });
+#else
+    connect(d->from, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, [this](int val) {
+        slotFromLanguageChanged(val, false);
+        slotConfigChanged();
+    });
+    connect(d->to, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, [this]() {
+        slotConfigChanged();
+        slotTranslate();
+    });
+#endif
 
     hide();
     setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed));
