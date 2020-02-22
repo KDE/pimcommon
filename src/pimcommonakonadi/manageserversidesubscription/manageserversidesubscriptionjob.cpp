@@ -22,10 +22,10 @@
 
 #include <AkonadiCore/ServerManager>
 
-#include <KDBusConnectionPool>
 #include <KLocalizedString>
 #include <KMessageBox>
 
+#include <QDBusConnection>
 #include <QDBusInterface>
 #include <QDBusPendingCall>
 #include <QDBusPendingReply>
@@ -69,7 +69,7 @@ void ManageServerSideSubscriptionJob::start()
                                                        d->mCurrentCollection.resource());
         QDBusInterface iface(service,
                              QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
-                             KDBusConnectionPool::threadConnection(), this);
+                             QDBusConnection::sessionBus(), this);
         if (!iface.isValid()) {
             qCDebug(PIMCOMMONAKONADI_LOG) << "Cannot create imap dbus interface for service " << service;
             deleteLater();

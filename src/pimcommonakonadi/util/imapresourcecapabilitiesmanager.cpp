@@ -23,7 +23,7 @@
 #include <AkonadiCore/AgentManager>
 #include <AkonadiCore/ServerManager>
 
-#include <KDBusConnectionPool>
+#include <QDBusConnection>
 #include <QDBusInterface>
 #include <QDBusPendingCall>
 #include <QDBusPendingReply>
@@ -57,7 +57,7 @@ void ImapResourceCapabilitiesManager::searchCapabilities(const QString &identifi
         = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, identifier);
     QDBusInterface iface(service,
                          QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
-                         KDBusConnectionPool::threadConnection(), this);
+                         QDBusConnection::sessionBus(), this);
 
     if (iface.isValid()) {
         QDBusPendingCall call = iface.asyncCall(QStringLiteral("serverCapabilities"));
