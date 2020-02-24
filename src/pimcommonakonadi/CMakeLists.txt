@@ -93,7 +93,15 @@ set(libpimcommonakonadi_SRCS
     )
 
 
-ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi)
+else()
+    ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
+        DESCRIPTION "kdepim (pimcommonakonadi)"
+        EXPORT PIMCOMMON
+    )
+endif()
+
 
 
 add_library(KF5PimCommonAkonadi ${libpimcommonakonadi_SRCS})

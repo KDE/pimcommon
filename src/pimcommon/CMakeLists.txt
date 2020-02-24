@@ -132,7 +132,16 @@ set(libpimcommon_SRCS
     ${libpimcommon_generericplugin_SRCS}
     )
 qt5_add_resources(libpimcommon_SRCS widgets/icons.qrc)
-ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon)
+else()
+    ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
+        DESCRIPTION "kdepim (pimcommon)"
+        OLD_CATEGORY_NAMES log_pimcommon
+        EXPORT PIMCOMMON
+    )
+endif()
+
 
 ki18n_wrap_ui(libpimcommon_SRCS
     autocorrection/ui/autocorrectionwidget.ui
