@@ -27,7 +27,7 @@
  *  your version.
  */
 #include "renamefiledialog.h"
-
+#include "kio_version.h"
 #include <kseparator.h>
 #include <QLineEdit>
 #include <QPushButton>
@@ -201,7 +201,12 @@ void RenameFileDialog::slotRenamePressed()
     if (newName().isLocalFile()) {
         fileExists = QFile::exists(newName().path());
     } else {
+//#if KIO_VERSION < QT_VERSION_CHECK(5, 69, 0)
+#if KIOCORE_ENABLE_DEPRECATED_SINCE(5, 69)
         auto job = KIO::stat(newName(), KIO::StatJob::DestinationSide, 0);
+#else
+        auto job = KIO::statDetails(newName(), KIO::StatJob::DestinationSide, KIO::StatDetail::Basic);
+#endif
         KJobWidgets::setWindow(job, this);
         fileExists = job->exec();
     }
