@@ -201,8 +201,7 @@ void RenameFileDialog::slotRenamePressed()
     if (newName().isLocalFile()) {
         fileExists = QFile::exists(newName().path());
     } else {
-//#if KIO_VERSION < QT_VERSION_CHECK(5, 69, 0)
-#if KIOCORE_ENABLE_DEPRECATED_SINCE(5, 69)
+#if KIO_VERSION < QT_VERSION_CHECK(5, 69, 0)
         auto job = KIO::stat(newName(), KIO::StatJob::DestinationSide, 0);
 #else
         auto job = KIO::statDetails(newName(), KIO::StatJob::DestinationSide, KIO::StatDetail::Basic);
