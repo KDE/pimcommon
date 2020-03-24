@@ -86,7 +86,7 @@ void AclModifyJob::slotGroupSearchResult(KJob *job)
             mNewRight[ rawEmail ] = mIt.value();
         }
     }
-    mIt++;
+    ++mIt;
     Q_EMIT searchNextContact();
 }
 

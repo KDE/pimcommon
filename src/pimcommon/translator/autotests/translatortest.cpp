@@ -92,7 +92,6 @@ void TranslatorTest::shouldInvertLanguageWhenClickOnInvertButton()
     from->setCurrentIndex(fromIndex);
     to->setCurrentIndex(toIndex);
     QPushButton *invert = edit.findChild<QPushButton *>(QStringLiteral("invert-button"));
-    QCOMPARE(fromIndex != toIndex, true);
     QTest::mouseClick(invert, Qt::LeftButton);
     const int newFromIndex = from->currentIndex();
     const int newToIndex = to->currentIndex();

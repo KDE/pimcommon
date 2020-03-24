@@ -239,9 +239,9 @@ public:
         if (group.hasKey(QStringLiteral("templateCount"))) {
             const int numberTemplate = group.readEntry("templateCount", 0);
             for (int i = 0; i < numberTemplate; ++i) {
-                KConfigGroup group = configFile->group(QStringLiteral("templateDefine_%1").arg(i));
-                const QString name = group.readEntry("Name", QString());
-                const QString text = group.readEntry("Text", QString());
+                KConfigGroup templateGroup = configFile->group(QStringLiteral("templateDefine_%1").arg(i));
+                const QString name = templateGroup.readEntry("Name", QString());
+                const QString text = templateGroup.readEntry("Text", QString());
 
                 createListWidgetItem(name, text, false);
             }
