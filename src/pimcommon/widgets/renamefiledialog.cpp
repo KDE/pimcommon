@@ -204,7 +204,7 @@ void RenameFileDialog::slotRenamePressed()
 #if KIO_VERSION < QT_VERSION_CHECK(5, 69, 0)
         auto job = KIO::stat(newName(), KIO::StatJob::DestinationSide, 0);
 #else
-        auto job = KIO::statDetails(newName(), KIO::StatJob::DestinationSide, KIO::StatDetail::Basic);
+        auto job = KIO::statDetails(newName(), KIO::StatJob::DestinationSide, KIO::StatBasic);
 #endif
         KJobWidgets::setWindow(job, this);
         fileExists = job->exec();
