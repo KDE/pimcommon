@@ -20,7 +20,7 @@
 #include "translatorwidget.h"
 #include "translatorutil.h"
 #include "googletranslator.h"
-#include "kpimtextedit/plaintexteditorwidget.h"
+#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <PimCommon/NetworkManager>
 #include <KBusyIndicatorWidget>
 

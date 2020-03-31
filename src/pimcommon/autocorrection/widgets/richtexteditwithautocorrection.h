@@ -20,7 +20,7 @@
 #define RICHTEXTEDITWITHAUTOCORRECTION_H
 
 #include "pimcommon_export.h"
-#include "kpimtextedit/richtexteditor.h"
+#include <KPIMTextEdit/RichTextEditor>
 
 namespace PimCommon {
 class AutoCorrection;

@@ -17,7 +17,7 @@
 
 #include "translatortest.h"
 #include "translator/translatorwidget.h"
-#include "kpimtextedit/plaintexteditorwidget.h"
+#include <KPIMTextEdit/PlainTextEditorWidget>
 
 #include <QPushButton>
 

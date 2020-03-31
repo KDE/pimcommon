@@ -20,7 +20,7 @@
 */
 
 #include "annotationdialog.h"
-#include "kpimtextedit/plaintexteditorwidget.h"
+#include <KPIMTextEdit/PlainTextEditorWidget>
 
 #include <KMessageBox>
 #include <KLocalizedString>
