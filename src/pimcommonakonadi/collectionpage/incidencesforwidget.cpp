@@ -69,11 +69,7 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
 
     d->mIncidencesForComboBox->setObjectName(QStringLiteral("contentstypecombobox"));
     d->mIncidencesForComboBox->setWhatsThis(whatsThisForMyOwnFolders);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(d->mIncidencesForComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &IncidencesForWidget::currentIndexChanged);
-#else
-    connect(d->mIncidencesForComboBox, QOverload<int, const QString &>::of(&QComboBox::currentIndexChanged), this, &IncidencesForWidget::currentIndexChanged);
-#endif
 }
 
 IncidencesForWidget::~IncidencesForWidget()
