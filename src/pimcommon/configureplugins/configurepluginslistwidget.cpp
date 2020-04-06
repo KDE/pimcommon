@@ -58,8 +58,10 @@ ConfigurePluginsListWidget::~ConfigurePluginsListWidget()
 void ConfigurePluginsListWidget::slotItemChanged(QTreeWidgetItem *item, int column)
 {
     Q_UNUSED(item);
-    if (column == 0) {
-        Q_EMIT changed();
+    if (mInitializeDone) {
+        if (column == 0) {
+            Q_EMIT changed();
+        }
     }
 }
 
@@ -78,6 +80,7 @@ void ConfigurePluginsListWidget::save()
 void ConfigurePluginsListWidget::doLoadFromGlobalSettings()
 {
     initialize();
+    initializeDone();
 }
 
 void ConfigurePluginsListWidget::doResetToDefaultsOther()
@@ -90,6 +93,11 @@ void ConfigurePluginsListWidget::defaults()
 
 void ConfigurePluginsListWidget::initialize()
 {
+}
+
+void ConfigurePluginsListWidget::initializeDone()
+{
+    mInitializeDone = true;
 }
 
 void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems)

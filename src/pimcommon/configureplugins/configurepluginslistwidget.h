@@ -43,6 +43,7 @@ public:
     virtual void doResetToDefaultsOther();
     virtual void defaults();
     virtual void initialize();
+    void initializeDone();
 Q_SIGNALS:
     void descriptionChanged(const QString &description);
     void changed();
@@ -78,6 +79,7 @@ protected:
     QTreeWidget *mListWidget = nullptr;
 private:
     void slotConfigureClicked(QAction *act);
+    bool mInitializeDone = false;
 };
 }
 

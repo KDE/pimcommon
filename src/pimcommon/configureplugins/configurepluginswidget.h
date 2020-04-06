@@ -23,6 +23,7 @@
 #include "pimcommon_export.h"
 class QSplitter;
 class QTextEdit;
+class KMessageWidget;
 namespace PimCommon {
 class ConfigurePluginsListWidget;
 /**
@@ -49,11 +50,13 @@ private:
     void initialize();
     void readConfig();
     void writeConfig();
+    void slotConfigChanged();
     void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
 
     QSplitter *mSplitter = nullptr;
     ConfigurePluginsListWidget *mConfigureListWidget = nullptr;
     QTextEdit *mDescription = nullptr;
+    KMessageWidget *mMessageWidget = nullptr;
 };
 }
 #endif // CONFIGUREPLUGINSWIDGET_H

@@ -52,11 +52,11 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
-    KMessageWidget *messageWidget = new KMessageWidget(this);
-    messageWidget->setObjectName(QStringLiteral("messagewidget"));
-    messageWidget->setText(i18n("Restart is necessary for applying the changes."));
-    messageWidget->setCloseButtonVisible(false);
-    layout->addWidget(messageWidget);
+    mMessageWidget = new KMessageWidget(i18n("Restart is necessary for applying the changes."), this);
+    mMessageWidget->setObjectName(QStringLiteral("mMessageWidget"));
+    mMessageWidget->setCloseButtonVisible(false);
+    mMessageWidget->setVisible(false);
+    layout->addWidget(mMessageWidget);
 
     mSplitter = new QSplitter(this);
     mSplitter->setObjectName(QStringLiteral("splitter"));
@@ -78,10 +78,16 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     mSplitter->addWidget(mDescription);
 
     connect(mConfigureListWidget, &ConfigurePluginsListWidget::descriptionChanged, mDescription, &QTextEdit::setText);
-    connect(mConfigureListWidget, &ConfigurePluginsListWidget::changed, this, &ConfigurePluginsWidget::changed);
+    connect(mConfigureListWidget, &ConfigurePluginsListWidget::changed, this, &ConfigurePluginsWidget::slotConfigChanged);
 
     initialize();
     readConfig();
+}
+
+void ConfigurePluginsWidget::slotConfigChanged()
+{
+    mMessageWidget->animatedShow();
+    Q_EMIT changed();
 }
 
 void ConfigurePluginsWidget::save()
