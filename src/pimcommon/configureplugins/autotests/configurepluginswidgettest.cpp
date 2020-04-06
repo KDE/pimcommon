@@ -38,10 +38,10 @@ void ConfigurePluginsWidgetTest::shouldHaveDefaultValue()
 {
     PimCommon::ConfigurePluginsWidget w;
 
-    KMessageWidget *messageWidget = w.findChild<KMessageWidget *>(QStringLiteral("messagewidget"));
-    QVERIFY(messageWidget);
-    QVERIFY(!messageWidget->isCloseButtonVisible());
-    QVERIFY(!messageWidget->text().isEmpty());
+    KMessageWidget *mMessageWidget = w.findChild<KMessageWidget *>(QStringLiteral("mMessageWidget"));
+    QVERIFY(mMessageWidget);
+    QVERIFY(!mMessageWidget->isCloseButtonVisible());
+    QVERIFY(!mMessageWidget->text().isEmpty());
 
     QSplitter *mSplitter = w.findChild<QSplitter *>(QStringLiteral("splitter"));
     QVERIFY(mSplitter);
