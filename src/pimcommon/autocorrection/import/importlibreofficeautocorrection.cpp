@@ -106,7 +106,7 @@ bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirect
     if (documentList && documentList->isFile()) {
         const KArchiveFile *archiveFile = static_cast<const KArchiveFile *>(documentList);
         archiveFile->copyTo(mTempDir->path());
-        QFile file(mTempDir->path() + QDir::separator() + archiveFileName);
+        QFile file(mTempDir->path() + QLatin1Char('/') + archiveFileName);
         QDomDocument doc;
         if (loadDomElement(doc, &file)) {
             QDomElement list = doc.documentElement();

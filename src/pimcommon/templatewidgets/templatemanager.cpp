@@ -104,14 +104,14 @@ void TemplateManager::loadTemplates(bool init)
 TemplateInfo TemplateManager::loadTemplate(const QString &themePath, const QString &defaultDesktopFileName)
 {
     TemplateInfo info;
-    const QString themeInfoFile = themePath + QDir::separator() + defaultDesktopFileName;
+    const QString themeInfoFile = themePath + QLatin1Char('/') + defaultDesktopFileName;
     KConfig config(themeInfoFile);
     KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
 
     info.name = group.readEntry("Name", QString());
     const QString filename = group.readEntry("FileName", QString());
     if (!filename.isEmpty()) {
-        QFile file(themePath + QDir::separator() + filename);
+        QFile file(themePath + QLatin1Char('/') + filename);
         if (file.exists()) {
             if (file.open(QIODevice::ReadOnly)) {
                 info.script = QString::fromUtf8(file.readAll());
