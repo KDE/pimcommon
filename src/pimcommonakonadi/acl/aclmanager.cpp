@@ -232,7 +232,7 @@ public:
             return;
         }
         const QString userId = dlg.userId();
-        const QStringList lstAddresses = KEmailAddress::splitAddressList(dlg.userId());
+        const QStringList lstAddresses = KEmailAddress::splitAddressList(userId);
         for (const QString &addr : lstAddresses) {
             if (mModel->insertRow(mModel->rowCount())) {
                 const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
