@@ -21,7 +21,7 @@
 
 #include <QDialog>
 
-class KLineEdit;
+class QLineEdit;
 namespace KPIMTextEdit {
 class PlainTextEditorWidget;
 }
@@ -44,7 +44,7 @@ private:
     void readConfig();
     void writeConfig();
     KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
-    KLineEdit *mTemplateNameEdit = nullptr;
+    QLineEdit *mTemplateNameEdit = nullptr;
     QPushButton *mOkButton = nullptr;
 };
 }

@@ -27,6 +27,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 #include "settings/pimcommonsettings.h"
 #include <KPIMTextEdit/SelectSpecialCharDialog>
+#include <Libkdepim/LineEditCatchReturnKey>
 
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -34,6 +35,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include <QTreeWidgetItem>
 #include <QMenu>
 #include <QFileDialog>
+#include <QPointer>
 
 using namespace PimCommon;
 
@@ -73,6 +75,10 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     d->ui->add1->setEnabled(false);
     d->ui->add2->setEnabled(false);
 
+    KPIM::LineEditCatchReturnKey(d->ui->find, this);
+    KPIM::LineEditCatchReturnKey(d->ui->replace, this);
+    KPIM::LineEditCatchReturnKey(d->ui->abbreviation, this);
+    KPIM::LineEditCatchReturnKey(d->ui->twoUpperLetter, this);
     connect(d->ui->autoChangeFormat, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->autoFormatUrl, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->upperCase, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
@@ -97,10 +103,10 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->treeWidget, &PimCommon::AutoCorrectionTreeWidget::itemClicked, this, &AutoCorrectionWidget::setFindReplaceText);
     connect(d->ui->treeWidget, &PimCommon::AutoCorrectionTreeWidget::deleteSelectedItems, this, &AutoCorrectionWidget::removeAutocorrectEntry);
     connect(d->ui->treeWidget, &PimCommon::AutoCorrectionTreeWidget::itemSelectionChanged, this, &AutoCorrectionWidget::updateAddRemoveButton);
-    connect(d->ui->find, &KLineEdit::textChanged, this, &AutoCorrectionWidget::enableAddRemoveButton);
-    connect(d->ui->replace, &KLineEdit::textChanged, this, &AutoCorrectionWidget::enableAddRemoveButton);
-    connect(d->ui->abbreviation, &KLineEdit::textChanged, this, &AutoCorrectionWidget::abbreviationChanged);
-    connect(d->ui->twoUpperLetter, &KLineEdit::textChanged, this, &AutoCorrectionWidget::twoUpperLetterChanged);
+    connect(d->ui->find, &QLineEdit::textChanged, this, &AutoCorrectionWidget::enableAddRemoveButton);
+    connect(d->ui->replace, &QLineEdit::textChanged, this, &AutoCorrectionWidget::enableAddRemoveButton);
+    connect(d->ui->abbreviation, &QLineEdit::textChanged, this, &AutoCorrectionWidget::abbreviationChanged);
+    connect(d->ui->twoUpperLetter, &QLineEdit::textChanged, this, &AutoCorrectionWidget::twoUpperLetterChanged);
     connect(d->ui->add1, &QPushButton::clicked, this, &AutoCorrectionWidget::addAbbreviationEntry);
     connect(d->ui->remove1, &QPushButton::clicked, this, &AutoCorrectionWidget::removeAbbreviationEntry);
     connect(d->ui->add2, &QPushButton::clicked, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
@@ -113,8 +119,8 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->twoUpperLetterList, &PimCommon::AutoCorrectionListWidget::deleteSelectedItems, this, &AutoCorrectionWidget::removeTwoUpperLetterEntry);
     connect(d->ui->autocorrectionLanguage, QOverload<int>::of(&PimCommon::AutoCorrectionLanguage::activated), this, &AutoCorrectionWidget::changeLanguage);
     connect(d->ui->addNonBreakingSpaceInFrench, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
-    connect(d->ui->twoUpperLetter, &KLineEdit::returnPressed, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
-    connect(d->ui->abbreviation, &KLineEdit::returnPressed, this, &AutoCorrectionWidget::addAbbreviationEntry);
+    connect(d->ui->twoUpperLetter, &QLineEdit::returnPressed, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
+    connect(d->ui->abbreviation, &QLineEdit::returnPressed, this, &AutoCorrectionWidget::addAbbreviationEntry);
     slotEnableDisableAbreviationList();
     slotEnableDisableTwoUpperEntry();
 

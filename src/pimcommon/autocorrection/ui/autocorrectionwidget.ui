@@ -335,10 +335,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KLineEdit" name="find">
-           <property name="trapEnterKeyEvent" stdset="0">
-            <bool>true</bool>
-           </property>
+          <widget class="QLineEdit" name="find">
            <property name="showClearButton" stdset="0">
             <bool>true</bool>
            </property>
@@ -355,10 +352,7 @@
           </widget>
          </item>
          <item>
-          <widget class="KLineEdit" name="replace">
-           <property name="trapEnterKeyEvent" stdset="0">
-            <bool>true</bool>
-           </property>
+          <widget class="QLineEdit" name="replace">
            <property name="showClearButton" stdset="0">
             <bool>true</bool>
            </property>
@@ -412,10 +406,7 @@
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="KLineEdit" name="abbreviation">
-           <property name="trapEnterKeyEvent" stdset="0">
-            <bool>true</bool>
-           </property>
+          <widget class="QLineEdit" name="abbreviation">
            <property name="showClearButton" stdset="0">
             <bool>true</bool>
            </property>
@@ -480,10 +471,7 @@
           </widget>
          </item>
          <item row="1" column="0">
-          <widget class="KLineEdit" name="twoUpperLetter">
-           <property name="trapEnterKeyEvent" stdset="0">
-            <bool>true</bool>
-           </property>
+          <widget class="QLineEdit" name="twoUpperLetter">
            <property name="showClearButton" stdset="0">
             <bool>true</bool>
            </property>
@@ -576,11 +564,6 @@
   </layout>
  </widget>
  <customwidgets>
-  <customwidget>
-   <class>KLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>klineedit.h</header>
-  </customwidget>
   <customwidget>
    <class>PimCommon::AutoCorrectionListWidget</class>
    <extends>QListWidget</extends>

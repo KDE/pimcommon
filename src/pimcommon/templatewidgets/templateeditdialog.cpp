@@ -19,9 +19,10 @@
 #include "templateeditdialog.h"
 #include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KPIMTextEdit/PlainTextEditor>
+#include <Libkdepim/LineEditCatchReturnKey>
 
 #include <KLocalizedString>
-#include <KLineEdit>
+#include <QLineEdit>
 
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -35,7 +36,6 @@ using namespace PimCommon;
 
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)
-    , mOkButton(nullptr)
 {
     setWindowTitle(defaultTemplate ? i18n("Default template") : i18n("Template"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -63,8 +63,8 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     QLabel *label = new QLabel(i18n("Name:"));
     hbox->addWidget(label);
 
-    mTemplateNameEdit = new KLineEdit;
-    mTemplateNameEdit->setTrapReturnKey(true);
+    mTemplateNameEdit = new QLineEdit;
+    new KPIM::LineEditCatchReturnKey(mTemplateNameEdit, this);
     mTemplateNameEdit->setClearButtonEnabled(!defaultTemplate);
     mTemplateNameEdit->setReadOnly(defaultTemplate);
     hbox->addWidget(mTemplateNameEdit);
