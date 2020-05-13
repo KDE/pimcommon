@@ -27,7 +27,7 @@
 #include <KEmailAddress>
 
 #include "imapaclattribute.h"
-#include "job/fetchrecursivecollectionsjob.h"
+
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <QDBusInterface>
@@ -35,7 +35,10 @@
 #include <ContactGroupSearchJob>
 #include <ContactGroupExpandJob>
 #include <AkonadiCore/CollectionModifyJob>
+#include <AkonadiCore/CollectionFetchJob>
+#include <AkonadiCore/CollectionFetchScope>
 #include <KContacts/Addressee>
+#include <collectionfetchjob.h>
 
 using namespace PimCommon;
 //#define SEARCHCONTACT_AKONADI 1
@@ -117,11 +120,18 @@ void AclModifyJob::slotModifyAcl()
 {
     mCurrentIndex = 0;
     if (mRecursive) {
-        PimCommon::FetchRecursiveCollectionsJob *fetchJob = new PimCommon::FetchRecursiveCollectionsJob(this);
-        fetchJob->setTopCollection(mTopLevelCollection);
-        connect(fetchJob, &FetchRecursiveCollectionsJob::fetchCollectionFailed, this, &AclModifyJob::slotFetchCollectionFailed);
-        connect(fetchJob, &FetchRecursiveCollectionsJob::fetchCollectionFinished, this, &AclModifyJob::slotFetchCollectionFinished);
-        fetchJob->start();
+        auto job = new Akonadi::CollectionFetchJob(mTopLevelCollection, Akonadi::CollectionFetchJob::Recursive, this);
+        job->fetchScope().setAncestorRetrieval(Akonadi::CollectionFetchScope::All);
+        connect(job, &Akonadi::CollectionFetchJob::finished,
+                this, [this](KJob *job) {
+                    if (job->error()) {
+                        qCWarning(PIMCOMMONAKONADI_LOG) << job->errorString();
+                        slotFetchCollectionFailed();
+                    } else {
+                        auto fetch = static_cast<Akonadi::CollectionFetchJob*>(job);
+                        slotFetchCollectionFinished(fetch->collections());
+                    }
+                });
     } else {
         changeAcl(mTopLevelCollection);
     }
