@@ -61,10 +61,6 @@ set(libpimcommonakonadi_widgets_SRCS
     widgets/annotationdialog.cpp
     )
 
-set(libpimcommon_job_SRCS
-    job/fetchrecursivecollectionsjob.cpp
-    )
-
 set(libpimcommonakonadi_util_SRCS
     util/createresource.cpp
     util/imapresourcecapabilitiesmanager.cpp
@@ -89,7 +85,6 @@ set(libpimcommonakonadi_SRCS
     ${libpimcommonakonadi_manageserversidesubscription_SRCS}
     ${libpimcommonakonadi_widgets_SRCS}
     ${libpimcommonakonadi_util_SRCS}
-    ${libpimcommon_job_SRCS}
     )
 
 
@@ -175,14 +170,6 @@ ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
     RELATIVE util
     )
 
-ecm_generate_headers(PimCommon_CamelCasejob_HEADERS
-    HEADER_NAMES
-    FetchRecursiveCollectionsJob
-    REQUIRED_HEADERS PimCommon_job_HEADERS
-    PREFIX PimCommonAkonadi
-    RELATIVE job
-    )
-
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
     HEADER_NAMES
@@ -236,7 +223,6 @@ ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
 install(FILES
     ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
     ${PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS}
-    ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcaseacl_HEADERS}
     ${PimCommon_Camelcasefolderdialog_HEADERS}
     ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
@@ -258,7 +244,6 @@ install(FILES
     ${PimCommonAkonadi_casewidgets_HEADERS}
     ${PimCommonAkonadi_widgets_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
-    ${PimCommon_job_HEADERS}
     ${PimCommonAkonadiUtil_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi
