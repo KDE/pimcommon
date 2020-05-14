@@ -176,7 +176,11 @@ void GoogleTranslator::translate()
     const QNetworkRequest request(url);
 
     QNetworkReply *reply = mNetworkAccessManager->get(request);
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(reply, QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), this, &GoogleTranslator::slotError);
+#else
+    connect(reply, QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::errorOccurred), this, &GoogleTranslator::slotError);
+#endif
 }
 
 void GoogleTranslator::slotError(QNetworkReply::NetworkError /*error*/)
