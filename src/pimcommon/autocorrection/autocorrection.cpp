@@ -906,7 +906,7 @@ int AutoCorrection::advancedAutocorrect()
             continue;
         }
         if (actualWord.endsWith(i.key())
-            || actualWord.toLower().endsWith(i.key())
+            || actualWord.endsWith(i.key(), Qt::CaseInsensitive)
             || actualWordWithFirstUpperCase.endsWith(i.key())) {
             int pos = mWord.lastIndexOf(i.key());
             if (pos == -1) {

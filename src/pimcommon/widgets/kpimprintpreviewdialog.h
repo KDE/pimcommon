@@ -29,6 +29,7 @@ namespace PimCommon {
  */
 class PIMCOMMON_EXPORT KPimPrintPreviewDialog : public QPrintPreviewDialog
 {
+    Q_OBJECT
 public:
     explicit KPimPrintPreviewDialog(QWidget *parent = nullptr);
     explicit KPimPrintPreviewDialog(QPrinter *printer, QWidget *parent = nullptr);

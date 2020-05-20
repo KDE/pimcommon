@@ -182,7 +182,8 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
     for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
-        for (const PimCommon::ActionType &actionType : interface->actionTypes()) {
+        const auto actionTypes = interface->actionTypes();
+        for (const PimCommon::ActionType &actionType : actionTypes) {
             PimCommon::ActionType::Type type = actionType.type();
             QList<QAction *> lst = listType.value(type);
             if (!lst.isEmpty()) {

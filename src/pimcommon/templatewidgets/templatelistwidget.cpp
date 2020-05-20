@@ -302,7 +302,7 @@ TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *paren
     setContextMenuPolicy(Qt::CustomContextMenu);
     setDragDropMode(QAbstractItemView::DragDrop);
 
-    connect(this, &TemplateListWidget::customContextMenuRequested, this, [this](const QPoint &p) {
+    connect(this, &TemplateListWidget::customContextMenuRequested, this, [this](QPoint p) {
             d->slotContextMenu(p);
         });
     connect(this, &TemplateListWidget::doubleClicked, this, [this]() {

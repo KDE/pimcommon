@@ -43,7 +43,7 @@ public:
         CurrentCollection = 3,
         Collections = 4
     };
-    Q_ENUMS(RequireType)
+    Q_ENUM(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
 
     void setActionTypes(const QVector<ActionType> &type);
