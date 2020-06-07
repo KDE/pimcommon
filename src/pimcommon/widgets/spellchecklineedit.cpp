@@ -31,7 +31,6 @@
 #include <QStyleOptionFrame>
 #include <QKeyEvent>
 #include <QStyle>
-#include <QApplication>
 #include <QMimeData>
 
 using namespace PimCommon;

@@ -24,7 +24,6 @@
 #include <QTemporaryDir>
 #include "pimcommon_debug.h"
 #include <QDomDocument>
-#include <QDir>
 
 using namespace PimCommon;
 
