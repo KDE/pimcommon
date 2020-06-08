@@ -74,7 +74,7 @@ QMap<QString, QMap<QString, QString> > GoogleTranslator::initListLanguage(QCombo
     QMap<QString, QMap<QString, QString> > listLanguage;
 
     TranslatorUtil translatorUtil;
-    QList<QPair<QString, QString> > fullListLanguage;
+    QVector<QPair<QString, QString> > fullListLanguage;
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::automatic));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::en));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::nl));
