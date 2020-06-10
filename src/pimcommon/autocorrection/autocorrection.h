@@ -84,7 +84,7 @@ public:
     Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
     Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
 
-    Q_REQUIRED_RESULT bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
+    bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
     void writeConfig();
 
     Q_REQUIRED_RESULT bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);

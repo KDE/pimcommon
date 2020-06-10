@@ -86,7 +86,8 @@ void PluginInterface::createPluginInterface()
         qCWarning(PIMCOMMONAKONADI_LOG) << "Missing action collection";
         return;
     }
-    for (PimCommon::GenericPlugin *plugin : d->mGenericPluginManager->pluginsList()) {
+    const auto pluginsList = d->mGenericPluginManager->pluginsList();
+    for (PimCommon::GenericPlugin *plugin : pluginsList) {
         if (plugin->isEnabled()) {
             PimCommon::GenericPluginInterface *interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(this));
             interface->setParentWidget(d->mParentWidget);

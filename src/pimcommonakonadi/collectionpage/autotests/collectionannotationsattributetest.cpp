@@ -63,7 +63,7 @@ void CollectionAnnotationsAttributeTest::shouldCloneAttribute()
     annotations.insert("bla", "bla");
     annotations.insert("foo2", "bli");
     PimCommon::CollectionAnnotationsAttribute attr(annotations);
-    PimCommon::CollectionAnnotationsAttribute *result = static_cast<PimCommon::CollectionAnnotationsAttribute *>(attr.clone());
+    PimCommon::CollectionAnnotationsAttribute *result = attr.clone();
     QVERIFY(attr == *result);
     delete result;
 }
