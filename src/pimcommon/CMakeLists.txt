@@ -79,6 +79,7 @@ set(libpimcommon_widgets_SRCS
     widgets/kpimprintpreviewdialog.cpp
     widgets/lineeditwithcompleterng.cpp
     widgets/purposemenuwidget.cpp
+    widgets/customlogwidget.cpp
     )
 
 set(libpimcommon_customtools_SRCS
@@ -332,6 +333,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     KActionMenuChangeCase
     KPimPrintPreviewDialog
     LineEditWithCompleterNg
+    CustomLogWidget
     PurposeMenuWidget
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
