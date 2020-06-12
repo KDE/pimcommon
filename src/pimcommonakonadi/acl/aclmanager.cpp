@@ -236,7 +236,8 @@ public:
         for (const QString &addr : lstAddresses) {
             if (mModel->insertRow(mModel->rowCount())) {
                 const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
-                mModel->setData(index, addr, AclModel::UserIdRole);
+                const QString extractedAddress = KEmailAddress::extractEmailAddress(addr);
+                mModel->setData(index, extractedAddress, AclModel::UserIdRole);
                 mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
 
                 mChanged = true;
@@ -262,20 +263,20 @@ public:
             }
             const QStringList lstAddresses = KEmailAddress::splitAddressList(dlg.userId());
             if (lstAddresses.count() == 1) {
-                mModel->setData(index, lstAddresses.at(0), AclModel::UserIdRole);
+                mModel->setData(index, KEmailAddress::extractEmailAddress(lstAddresses.at(0)), AclModel::UserIdRole);
                 mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
                 mChanged = true;
             } else {
                 bool firstElement = true;
                 for (const QString &addr : lstAddresses) {
                     if (firstElement) {
-                        mModel->setData(index, lstAddresses.at(0), AclModel::UserIdRole);
+                        mModel->setData(index, KEmailAddress::extractEmailAddress(lstAddresses.at(0)), AclModel::UserIdRole);
                         mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
                         firstElement = false;
                     } else {
                         if (mModel->insertRow(mModel->rowCount())) {
                             const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
-                            mModel->setData(index, addr, AclModel::UserIdRole);
+                            mModel->setData(index, KEmailAddress::extractEmailAddress(addr), AclModel::UserIdRole);
                             mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
                         }
                     }
