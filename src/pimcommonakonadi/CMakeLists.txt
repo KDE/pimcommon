@@ -61,6 +61,10 @@ set(libpimcommonakonadi_widgets_SRCS
     widgets/annotationdialog.cpp
     )
 
+set(libpimcommonakonadi_ldap_SRCS
+    ldap/ldapsearchdialog.cpp
+    )
+
 set(libpimcommonakonadi_util_SRCS
     util/createresource.cpp
     util/imapresourcecapabilitiesmanager.cpp
@@ -77,6 +81,7 @@ set(libpimcommonakonadi_collection_SRCS
 
 
 set(libpimcommonakonadi_SRCS
+    ${libpimcommonakonadi_ldap_SRCS}
     ${libpimcommonakonadi_collection_SRCS}
     ${libpimcommonakonadi_acl_SRCS}
     ${libpimcommonakonadi_folderdialog_SRCS}
@@ -117,6 +122,8 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::XmlGui
     KF5::PimTextEdit
     KF5::KIOWidgets
+    KF5::KCMUtils
+    KF5::Ldap
     )
 
 target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi>")
@@ -139,6 +146,7 @@ if (BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
     add_subdirectory(collectionpage/autotests/)
+    add_subdirectory(ldap/tests)
 endif()
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpage_HEADERS
@@ -177,6 +185,14 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_widgets_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE widgets
+    )
+
+ecm_generate_headers(PimCommonAkonadi_Camelcaseldap_HEADERS
+    HEADER_NAMES
+    LdapSearchDialog
+    REQUIRED_HEADERS PimCommonAkonadi_ldap_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE ldap
     )
 
 ecm_generate_headers(PimCommon_Camelcasemanagerserversidesubscription_HEADERS
@@ -224,6 +240,7 @@ install(FILES
     ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
     ${PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS}
     ${PimCommon_Camelcaseacl_HEADERS}
+    ${PimCommonAkonadi_Camelcaseldap_HEADERS}
     ${PimCommon_Camelcasefolderdialog_HEADERS}
     ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
@@ -236,6 +253,7 @@ install(FILES
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
     ${PimCommon_acl_HEADERS}
+    ${PimCommonAkonadi_ldap_HEADERS}
     ${PimCommonAkonadi_collectionpage_HEADERS}
     ${PimCommonAkonadi_collectionpageattributes_HEADERS}
     ${PimCommon_folderdialog_HEADERS}
