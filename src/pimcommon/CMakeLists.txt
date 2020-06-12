@@ -91,6 +91,7 @@ set(libpimcommon_customtools_SRCS
 
 set(libpimcommon_util_SRCS
     util/pimutil.cpp
+    util/broadcaststatus.cpp
     )
 
 set(libpimcommon_migrate_SRCS
@@ -237,6 +238,7 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
     HEADER_NAMES
     PimUtil
+    BroadcastStatus
     REQUIRED_HEADERS PimCommon_HEADERS
     PREFIX PimCommon
     RELATIVE util
