@@ -23,9 +23,9 @@
 
 #include "ldapsearchdialog.h"
 
-#include "ldapclient.h"
+#include <KLDAP/LdapClient>
 
-#include "ldapclientsearchconfig.h"
+#include <KLDAP/LdapClientSearchConfig>
 #include <Libkdepim/ProgressIndicatorLabel>
 #include <Libkdepim/LineEditCatchReturnKey>
 
