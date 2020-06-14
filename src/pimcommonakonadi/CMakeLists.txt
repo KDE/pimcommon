@@ -71,6 +71,10 @@ set(libpimcommonakonadi_util_SRCS
     util/mailutil.cpp
     )
 
+set(libpimcommonakonadi_progresswidget_SRCS
+   progresswidget/agentprogressmonitor.cpp
+   progresswidget/progressmanagerakonadi.cpp)
+
 set(libpimcommonakonadi_collection_SRCS
   collectionpage/collectiontypeutil.cpp
   collectionpage/attributeregistrar.cpp
@@ -90,6 +94,7 @@ set(libpimcommonakonadi_SRCS
     ${libpimcommonakonadi_manageserversidesubscription_SRCS}
     ${libpimcommonakonadi_widgets_SRCS}
     ${libpimcommonakonadi_util_SRCS}
+    ${libpimcommonakonadi_progresswidget_SRCS}
     )
 
 
@@ -178,6 +183,13 @@ ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
     RELATIVE util
     )
 
+ecm_generate_headers(libkdepimakonadi_Camelcaseprogresswidget_HEADERS
+    HEADER_NAMES
+    ProgressManagerAkonadi
+    REQUIRED_HEADERS libkdepimakonadi_progresswidget_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE progresswidget
+    )
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
     HEADER_NAMES
@@ -246,6 +258,7 @@ install(FILES
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
     ${PimCommonAkonadiUtil_CamelCase_HEADERS}
+    ${libkdepimakonadi_Camelcaseprogresswidget_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
     COMPONENT Devel
     )
@@ -263,6 +276,7 @@ install(FILES
     ${PimCommonAkonadi_widgets_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
     ${PimCommonAkonadiUtil_HEADERS}
+    ${libkdepimakonadi_progresswidget_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi
     COMPONENT Devel
