@@ -343,7 +343,7 @@ install(FILES
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
     ${PimCommonAkonadiUtil_CamelCase_HEADERS}
-    ${PimCommonAkonadiCamel_caseprogresswidget_HEADERS}
+    ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
     ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
     ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
     ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
