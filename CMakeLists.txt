@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.14.45")
+set(PIM_VERSION "5.14.46")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -22,7 +22,7 @@ include(FeatureSummary)
 include(ECMQtDeclareLoggingCategory)
 include(ECMAddTests)
 include(ECMInstallIcons)
-
+include(ECMAddQtDesignerPlugin)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -68,6 +68,16 @@ find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
 option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
+
+option(FORCE_DISABLE_AKONADI_SEARCH "Disable features and API that require akonadi-search, e.g. because xapian isn't available" OFF)
+if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+   find_package(KF5AkonadiSearch ${AKONADISEARCH_LIB_VERSION} CONFIG REQUIRED)
+   set_package_properties(KF5AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://www.kde.org" TYPE REQUIRED PURPOSE "Provides search capabilities in KMail and Akonadi")
+endif()
+
+set(DISABLE_AKONADI_SEARCH ${FORCE_DISABLE_AKONADI_SEARCH})
+configure_file(config-akonadi-search.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-akonadi-search.h)
+
 
 find_package(Xsltproc)
 set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")

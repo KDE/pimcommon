@@ -83,6 +83,37 @@ set(libpimcommonakonadi_collection_SRCS
   collectionpage/contenttypewidget.cpp
 )
 
+set(libpimcommonakonadi_addressline_LIB_SRCS
+    addressline/completionorder/completionordereditor.cpp
+    addressline/completionorder/completionorderwidget.cpp
+    addressline/addresslineedit/addresseelineedit.cpp
+    addressline/addresslineedit/addresseelineedit_p.cpp
+    addressline/addresslineedit/addresseelineeditmanager.cpp
+    addressline/addresslineedit/addresseelineeditldap.cpp
+    addressline/addresslineedit/addresseelineeditakonadi.cpp
+    addressline/addresslineedit/addresseelineeditbaloo.cpp
+    addressline/addresslineedit/kmailcompletion.cpp
+    addressline/addresslineedit/baloocompletionemail.cpp
+    addressline/completionconfiguredialog/completionconfiguredialog.cpp
+    addressline/addresslineedit/addresseelineeditutil.cpp
+    addressline/recentaddress/recentaddresswidget.cpp
+    addressline/recentaddress/recentaddresses.cpp
+    )
+if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+set(libpimcommonakonadi_addressline_blacklist_baloo_LIB_SRCS
+    addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.cpp
+    )
+endif()
+
+set(libpimcommonakonadi_addressline_plugin_LIB_SRCS
+    addressline/plugins/addressesslineeditabstractplugin.cpp
+    addressline/plugins/addressesslineeditpluginmanager.cpp
+    )
+
 
 set(libpimcommonakonadi_SRCS
     ${libpimcommonakonadi_ldap_SRCS}
@@ -95,6 +126,9 @@ set(libpimcommonakonadi_SRCS
     ${libpimcommonakonadi_widgets_SRCS}
     ${libpimcommonakonadi_util_SRCS}
     ${libpimcommonakonadi_progresswidget_SRCS}
+    ${libpimcommonakonadi_addressline_LIB_SRCS}
+    ${libpimcommonakonadi_addressline_blacklist_baloo_LIB_SRCS}
+    ${libpimcommonakonadi_addressline_plugin_LIB_SRCS}
     )
 
 
@@ -129,7 +163,13 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::KIOWidgets
     KF5::KCMUtils
     KF5::Ldap
+    KF5::ItemViews
     )
+
+if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+    target_link_libraries(KF5PimCommonAkonadi PRIVATE KF5::AkonadiSearchPIM)
+endif()
+
 
 target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi>")
 
@@ -152,7 +192,52 @@ if (BUILD_TESTING)
     add_subdirectory(folderdialog/tests/)
     add_subdirectory(collectionpage/autotests/)
     add_subdirectory(ldap/tests)
+    add_subdirectory(addressline/tests)
+    add_subdirectory(addressline/autotests)
+    if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+       add_subdirectory(addressline/blacklistbaloocompletion/autotests)
+    endif()       
 endif()
+
+
+
+if(BUILD_DESIGNERPLUGIN)
+        add_subdirectory(designer)
+endif()
+
+ecm_generate_headers(PimCommonAkonadi_Camelcaseaddressline_HEADERS
+    HEADER_NAMES
+    AddresseeLineEdit
+    REQUIRED_HEADERS PimCommonAkonadi_addressline_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE addressline/addresslineedit/
+    )
+
+ecm_generate_headers(PimCommonAkonadi_Camelcaserecentaddress_HEADERS
+    HEADER_NAMES
+    RecentAddresses
+    REQUIRED_HEADERS PimCommonAkonadi_recentaddress_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE addressline/recentaddress/
+    )
+
+ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionorder_HEADERS
+    HEADER_NAMES
+    CompletionOrderEditor
+    REQUIRED_HEADERS PimCommonAkonadi_completionorder_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE addressline/completionorder
+    )
+
+ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS
+    HEADER_NAMES
+    CompletionConfigureDialog
+    REQUIRED_HEADERS PimCommonAkonadi_completionconfiguredialog_HEADERS
+    PREFIX PimCommonAkonadi
+    RELATIVE addressline/completionconfiguredialog/
+    )
+
+
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpage_HEADERS
   HEADER_NAMES
@@ -183,7 +268,7 @@ ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
     RELATIVE util
     )
 
-ecm_generate_headers(libkdepimakonadi_Camelcaseprogresswidget_HEADERS
+ecm_generate_headers(PimCommonAkonadi_Camelcaseprogresswidget_HEADERS
     HEADER_NAMES
     ProgressManagerAkonadi
     REQUIRED_HEADERS libkdepimakonadi_progresswidget_HEADERS
@@ -258,7 +343,11 @@ install(FILES
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
     ${PimCommonAkonadiUtil_CamelCase_HEADERS}
-    ${libkdepimakonadi_Camelcaseprogresswidget_HEADERS}
+    ${PimCommonAkonadiCamel_caseprogresswidget_HEADERS}
+    ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
+    ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
+    ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
+    ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
     COMPONENT Devel
     )
@@ -276,7 +365,12 @@ install(FILES
     ${PimCommonAkonadi_widgets_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
     ${PimCommonAkonadiUtil_HEADERS}
-    ${libkdepimakonadi_progresswidget_HEADERS}
+    ${PimCommonAkonadi_progresswidget_HEADERS}
+    ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
+    ${PimCommonAkonadi_completionorder_HEADERS}
+    ${PimCommonAkonadi_addressline_HEADERS}
+    ${PimCommonAkonadi_recentaddress_HEADERS}
+
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi
     COMPONENT Devel
