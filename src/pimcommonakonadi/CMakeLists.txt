@@ -153,9 +153,9 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::KIOCore
     KF5::ConfigWidgets
     KF5::IMAP
+    KF5::Libkdepim
     PRIVATE
     KF5::I18n
-    KF5::LibkdepimAkonadi
     KF5::Codecs
     KF5::PimTextEdit
     KF5::XmlGui
@@ -271,7 +271,7 @@ ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
 ecm_generate_headers(PimCommonAkonadi_Camelcaseprogresswidget_HEADERS
     HEADER_NAMES
     ProgressManagerAkonadi
-    REQUIRED_HEADERS libkdepimakonadi_progresswidget_HEADERS
+    REQUIRED_HEADERS PimCommonAkonadi_progresswidget_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE progresswidget
     )

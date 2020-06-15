@@ -31,7 +31,7 @@
 #ifndef KDEPIM_RECENTADDRESSES_H
 #define KDEPIM_RECENTADDRESSES_H
 
-#include "kdepim_export.h"
+#include "pimcommonakonadi_export.h"
 #include <KContacts/Addressee>
 #include <QStringList>
 class KConfig;
@@ -44,7 +44,7 @@ namespace PimCommon {
  * @author Carsten Pfeiffer <pfeiffer@kde.org>
  */
 
-class KDEPIM_EXPORT RecentAddresses
+class PIMCOMMONAKONADI_EXPORT RecentAddresses
 {
 public:
     ~RecentAddresses();

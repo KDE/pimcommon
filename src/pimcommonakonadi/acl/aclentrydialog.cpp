@@ -20,7 +20,7 @@
 #include "aclentrydialog_p.h"
 #include "aclutils_p.h"
 
-#include <LibkdepimAkonadi/AddresseeLineEdit>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
 
@@ -54,7 +54,7 @@ public:
 
     AclEntryDialog *q = nullptr;
     QButtonGroup *mButtonGroup = nullptr;
-    KPIM::AddresseeLineEdit *mUserIdLineEdit = nullptr;
+    PimCommon::AddresseeLineEdit *mUserIdLineEdit = nullptr;
     QVBoxLayout *mButtonLayout = nullptr;
     KIMAP::Acl::Rights mCustomPermissions;
     QPushButton *mOkButton = nullptr;
@@ -102,7 +102,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     QLabel *label = new QLabel(i18n("&User identifier:"), page);
     layout->addWidget(label, 0, 0);
 
-    d->mUserIdLineEdit = new KPIM::AddresseeLineEdit(page);
+    d->mUserIdLineEdit = new PimCommon::AddresseeLineEdit(page);
     layout->addWidget(d->mUserIdLineEdit, 0, 1);
     label->setBuddy(d->mUserIdLineEdit);
     d->mUserIdLineEdit->setWhatsThis(
@@ -137,7 +137,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     layout->addWidget(label, 2, 0, 1, 3);
     layout->setRowStretch(2, 10);
 
-    connect(d->mUserIdLineEdit, &KPIM::AddresseeLineEdit::textChanged, this, [this]() {
+    connect(d->mUserIdLineEdit, &AddresseeLineEdit::textChanged, this, [this]() {
         d->slotChanged();
     });
     connect(button, &QPushButton::clicked, this, [this]() {
