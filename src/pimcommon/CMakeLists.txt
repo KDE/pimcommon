@@ -115,8 +115,14 @@ set(libpimcommon_networkmanager_SRCS
     network/networkmanager.cpp
     )
 
+set(libpimcommon_misc_SRCS
+    misc/emailvalidator.cpp
+    )
+
+
 set(libpimcommon_SRCS
     settings/pimcommonsettings.cpp
+    ${libpimcommon_misc_SRCS}
     ${libpimcommon_configure_plugins_SRCS}
     ${libpimcommon_networkmanager_SRCS}
     ${libpimcommon_configure_plugins_SRCS}
@@ -213,6 +219,7 @@ if (BUILD_TESTING)
     add_subdirectory(logactivities/tests)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(genericplugins/autotests)
+    add_subdirectory(misc/autotests)
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
@@ -233,6 +240,14 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     REQUIRED_HEADERS PimCommon_networkmanager_HEADERS
     PREFIX PimCommon
     RELATIVE network
+    )
+
+ecm_generate_headers(PimCommon_CamelCasemisc_HEADERS
+    HEADER_NAMES
+    EmailValidator
+    REQUIRED_HEADERS PimCommon_misc_HEADERS
+    PREFIX PimCommon
+    RELATIVE misc
     )
 
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
@@ -383,6 +398,7 @@ install(FILES
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
     ${PimCommon_Camelcasetranslator_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
+    ${PimCommon_CamelCasemisc_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
     COMPONENT Devel
     )
@@ -415,6 +431,7 @@ install(FILES
     ${PimCommon_translator_HEADERS}
     ${PimCommon_widgets_HEADERS}
     ${PimCommon_logactivities_HEADERS}
+    ${PimCommon_misc_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon
     COMPONENT Devel
