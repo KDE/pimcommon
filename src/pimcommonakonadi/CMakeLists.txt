@@ -258,12 +258,12 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS
 )
 
 
-ecm_generate_headers(PimCommonAkonadiUtil_CamelCase_HEADERS
+ecm_generate_headers(PimCommonAkonadi_CamelCaseUtil_HEADERS
     HEADER_NAMES
     CreateResource
     ImapResourceCapabilitiesManager
     MailUtil
-    REQUIRED_HEADERS PimCommonAkonadiUtil_HEADERS
+    REQUIRED_HEADERS PimCommonAkonadi_Util_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE util
     )
@@ -292,28 +292,28 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseldap_HEADERS
     RELATIVE ldap
     )
 
-ecm_generate_headers(PimCommon_Camelcasemanagerserversidesubscription_HEADERS
+ecm_generate_headers(PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS
     HEADER_NAMES
     ManageServerSideSubscriptionJob
-    REQUIRED_HEADERS PimCommon_managerserversidesubscription_HEADERS
+    REQUIRED_HEADERS PimCommonAkonadi_managerserversidesubscription_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE manageserversidesubscription
     )
 
-ecm_generate_headers(PimCommon_Camelcaseacl_HEADERS
+ecm_generate_headers(PimCommonAkonadi_Camelcaseacl_HEADERS
     HEADER_NAMES
     CollectionAclPage
     ImapAclAttribute
-    REQUIRED_HEADERS PimCommon_acl_HEADERS
+    REQUIRED_HEADERS PimCommonAkonadi_acl_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE acl
     )
 
-ecm_generate_headers(PimCommon_Camelcasefolderdialog_HEADERS
+ecm_generate_headers(PimCommonAkonadi_Camelcasefolderdialog_HEADERS
     HEADER_NAMES
     CheckedCollectionWidget
     SelectMultiCollectionDialog
-    REQUIRED_HEADERS PimCommon_folderdialog_HEADERS
+    REQUIRED_HEADERS PimCommonAkonadi_folderdialog_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE folderdialog
     )
@@ -336,13 +336,13 @@ ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
 install(FILES
     ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
     ${PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS}
-    ${PimCommon_Camelcaseacl_HEADERS}
+    ${PimCommonAkonadi_Camelcaseacl_HEADERS}
     ${PimCommonAkonadi_Camelcaseldap_HEADERS}
-    ${PimCommon_Camelcasefolderdialog_HEADERS}
+    ${PimCommonAkonadi_Camelcasefolderdialog_HEADERS}
     ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
-    ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
+    ${PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
-    ${PimCommonAkonadiUtil_CamelCase_HEADERS}
+    ${PimCommonAkonadi_CamelCaseUtil_HEADERS}
     ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
     ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
     ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
@@ -354,17 +354,16 @@ install(FILES
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
-    ${PimCommon_acl_HEADERS}
+    ${PimCommonAkonadi_acl_HEADERS}
     ${PimCommonAkonadi_ldap_HEADERS}
     ${PimCommonAkonadi_collectionpage_HEADERS}
     ${PimCommonAkonadi_collectionpageattributes_HEADERS}
-    ${PimCommon_folderdialog_HEADERS}
+    ${PimCommonAkonadi_folderdialog_HEADERS}
     ${PimCommonAkonadi_genericplugins_HEADERS}
-    ${PimCommon_serversidesubscription_HEADERS}
     ${PimCommonAkonadi_casewidgets_HEADERS}
     ${PimCommonAkonadi_widgets_HEADERS}
-    ${PimCommon_managerserversidesubscription_HEADERS}
-    ${PimCommonAkonadiUtil_HEADERS}
+    ${PimCommonAkonadi_managerserversidesubscription_HEADERS}
+    ${PimCommonAkonadi_Util_HEADERS}
     ${PimCommonAkonadi_progresswidget_HEADERS}
     ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
     ${PimCommonAkonadi_completionorder_HEADERS}
