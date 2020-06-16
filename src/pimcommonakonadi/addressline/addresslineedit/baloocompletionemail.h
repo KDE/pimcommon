@@ -32,7 +32,7 @@ public:
 
     void setBlackList(const QStringList &lst);
 
-    QStringList cleanupEmailList();
+    Q_REQUIRED_RESULT QStringList cleanupEmailList();
 private:
     QString stripEmail(const QString &email, QString &address);
     QStringList mListEmail;

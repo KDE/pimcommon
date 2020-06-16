@@ -29,14 +29,14 @@ public:
     AddresseeLineEditBaloo();
     ~AddresseeLineEditBaloo();
 
-    int balooCompletionSource() const;
+    Q_REQUIRED_RESULT int balooCompletionSource() const;
     void setBalooCompletionSource(int value);
 
-    QStringList balooBlackList() const;
-    QStringList domainExcludeList() const;
+    Q_REQUIRED_RESULT QStringList balooBlackList() const;
+    Q_REQUIRED_RESULT QStringList domainExcludeList() const;
 
     void loadBalooBlackList();
-    QStringList cleanupEmailList(const QStringList &inputList);
+    Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
 private:
     QStringList mBalooBlackList;
     QStringList mDomainExcludeList;

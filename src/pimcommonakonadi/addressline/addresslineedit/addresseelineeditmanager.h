@@ -89,7 +89,7 @@ public:
 
     //Ldap
     void initializeLdap();
-    QString ldapText() const;
+    Q_REQUIRED_RESULT QString ldapText() const;
     void setLdapText(const QString &ldapText);
     KLDAP::LdapClientSearch *ldapSearch() const;
     QTimer *ldapTimer() const;
@@ -100,7 +100,7 @@ public:
     void restartLdap(const QString &searchString, AddresseeLineEdit *addressLine);
 
     //Baloo
-    int balooCompletionSource() const;
+    Q_REQUIRED_RESULT int balooCompletionSource() const;
     void setBalooCompletionSource(int value);
 
     //Akonadi
@@ -110,19 +110,19 @@ public:
 
     AddresseeLineEdit *addressLineEdit() const;
     void setAddressLineEdit(AddresseeLineEdit *addressLineEdit);
-    bool isOnline() const;
+    Q_REQUIRED_RESULT bool isOnline() const;
 
     void loadBalooBlackList();
-    QStringList cleanupEmailList(const QStringList &inputList);
-    QStringList balooBlackList() const;
+    Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
+    Q_REQUIRED_RESULT QStringList balooBlackList() const;
 
-    bool showOU() const;
+    Q_REQUIRED_RESULT bool showOU() const;
     void setShowOU(bool showOU);
 
     bool autoGroupExpand() const;
     void setAutoGroupExpand(bool checked);
 
-    QColor alternateColor() const;
+    Q_REQUIRED_RESULT QColor alternateColor() const;
 
 private:
     mutable QColor mAlternateColor;
