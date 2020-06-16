@@ -34,7 +34,7 @@
 #include <QShortcut>
 
 #include <Libkdepim/LineEditCatchReturnKey>
-#include <Libkdepim/EmailValidator>
+#include <PimCommon/EmailValidator>
 
 using namespace PimCommon;
 RecentAddressWidget::RecentAddressWidget(QWidget *parent)
@@ -50,7 +50,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     new KPIM::LineEditCatchReturnKey(mLineEdit, this);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
-    KPIM::EmailValidator *emailValidator = new KPIM::EmailValidator(this);
+    PimCommon::EmailValidator *emailValidator = new PimCommon::EmailValidator(this);
     mLineEdit->setValidator(emailValidator);
     connect(mLineEdit, &QLineEdit::returnPressed, this, &RecentAddressWidget::slotAddItem);
 
