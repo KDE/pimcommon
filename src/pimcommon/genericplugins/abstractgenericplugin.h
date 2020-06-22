@@ -21,7 +21,6 @@
 
 #include <QObject>
 #include "pimcommon_export.h"
-class KActionCollection;
 namespace PimCommon {
 class AbstractGenericPluginInterface;
 /**
