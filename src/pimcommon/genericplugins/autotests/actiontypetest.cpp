@@ -43,6 +43,7 @@ void ActionTypeTest::shouldAssignValue()
     PimCommon::ActionType actionType(act, type);
     QCOMPARE(actionType.action(), act);
     QCOMPARE(actionType.type(), type);
+    delete act;
 }
 
 QTEST_MAIN(ActionTypeTest)
