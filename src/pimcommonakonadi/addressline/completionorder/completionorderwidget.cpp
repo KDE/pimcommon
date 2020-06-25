@@ -128,6 +128,9 @@ public:
             mEnabled = groupEnabled.readEntry(mIdentifier, true);
         }
     }
+    ~SimpleCompletionItem()
+    {
+    }
 
     bool isEnabled() const override
     {
@@ -199,6 +202,10 @@ public:
     {
         setItem(item);
     }
+    ~CompletionViewItem()
+    {
+        delete mItem;
+    }
 
     void setItem(CompletionItem *item)
     {
@@ -233,9 +240,6 @@ private:
 CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     : QWidget(parent)
     , mConfig(QStringLiteral("kpimcompletionorder"))
-    , mCollectionModel(nullptr)
-    , mLdapSearch(nullptr)
-    , mDirty(false)
 {
     new CompletionOrderEditorAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/"), this, QDBusConnection::ExportAdaptors);
