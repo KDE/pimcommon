@@ -133,7 +133,7 @@ private Q_SLOTS:
     void slotTriggerDelayedQueries();
 
 private:
-    AddresseeLineEdit *q = nullptr;
+    AddresseeLineEdit *const q;
     QToolButton *mToolButton = nullptr;
     QTimer *mDelayedQueryTimer = nullptr;
     QString mPreviousAddresses;

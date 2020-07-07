@@ -31,7 +31,6 @@ class PimCommon::ContentTypeWidgetPrivate
 {
 public:
     ContentTypeWidgetPrivate()
-        : mContentsComboBox(nullptr)
     {
     }
 

@@ -36,7 +36,6 @@ class PimCommon::ManageServerSideSubscriptionJobPrivate
 {
 public:
     ManageServerSideSubscriptionJobPrivate()
-        : mParentWidget(nullptr)
     {
     }
 

@@ -168,7 +168,6 @@ class Q_DECL_HIDDEN PimCommon::AclManager::Private
 public:
     Private(AclManager *qq)
         : q(qq)
-        , mChanged(false)
     {
         mAddAction = new QAction(i18n("Add Entry..."), q);
         q->connect(mAddAction, &QAction::triggered, q, [this]() {
@@ -368,7 +367,7 @@ public:
         selectionChanged();
     }
 
-    AclManager *q = nullptr;
+    AclManager *const q;
     AclModel *mModel = nullptr;
     QItemSelectionModel *mSelectionModel = nullptr;
     QAction *mAddAction = nullptr;
@@ -378,7 +377,7 @@ public:
     Akonadi::Collection mCollection;
     QString mImapUserName;
     KIMAP::Acl::Rights mUserRights;
-    bool mChanged;
+    bool mChanged = false;
 };
 
 AclManager::AclManager(QObject *parent)

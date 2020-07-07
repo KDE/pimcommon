@@ -31,8 +31,7 @@ class PimCommon::ShareServiceUrlManagerPrivate
 {
 public:
     explicit ShareServiceUrlManagerPrivate(ShareServiceUrlManager *qq)
-        : mMenu(nullptr)
-        , q(qq)
+        : q(qq)
     {
     }
 
@@ -40,7 +39,7 @@ public:
     QString typeToI18n(ShareServiceUrlManager::ServiceType type) const;
     void initializeMenu();
     KActionMenu *mMenu = nullptr;
-    ShareServiceUrlManager *q = nullptr;
+    ShareServiceUrlManager *const q;
 };
 
 void ShareServiceUrlManagerPrivate::initializeMenu()

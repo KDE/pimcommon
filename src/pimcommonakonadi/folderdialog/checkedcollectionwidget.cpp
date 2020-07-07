@@ -36,11 +36,6 @@ class PimCommon::CheckedCollectionWidgetPrivate
 {
 public:
     CheckedCollectionWidgetPrivate()
-        : mFolderView(nullptr)
-        , mSelectionModel(nullptr)
-        , mCheckProxy(nullptr)
-        , mCollectionFilter(nullptr)
-        , mEntityTreeModel(nullptr)
     {
     }
 

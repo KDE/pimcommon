@@ -42,17 +42,13 @@ class AclEntryDialog::Private
 public:
     Private(AclEntryDialog *qq)
         : q(qq)
-        , mButtonGroup(nullptr)
-        , mUserIdLineEdit(nullptr)
-        , mButtonLayout(nullptr)
-        , mOkButton(nullptr)
     {
     }
 
     void slotChanged();
     void slotSelectAddresses();
 
-    AclEntryDialog *q = nullptr;
+    AclEntryDialog *const q;
     QButtonGroup *mButtonGroup = nullptr;
     PimCommon::AddresseeLineEdit *mUserIdLineEdit = nullptr;
     QVBoxLayout *mButtonLayout = nullptr;

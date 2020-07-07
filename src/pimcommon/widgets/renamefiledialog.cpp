@@ -49,10 +49,6 @@ class Q_DECL_HIDDEN PimCommon::RenameFileDialog::RenameFileDialogPrivate
 public:
     RenameFileDialogPrivate(const QUrl &_url, RenameFileDialog *qq)
         : url(_url)
-        , applyAll(nullptr)
-        , renameBtn(nullptr)
-        , suggestNewNameBtn(nullptr)
-        , nameEdit(nullptr)
         , q(qq)
     {
     }
@@ -64,7 +60,7 @@ public:
     QPushButton *renameBtn = nullptr;
     QPushButton *suggestNewNameBtn = nullptr;
     QLineEdit *nameEdit = nullptr;
-    RenameFileDialog *q = nullptr;
+    RenameFileDialog *const q;
 };
 
 QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const QUrl &baseURL, const QString &oldName)
