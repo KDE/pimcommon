@@ -482,17 +482,21 @@ void AutoCorrection::addNonBreakingSpace()
             }
         } else {
             //°C (degres)
-            const QChar previousChar = text.at(mCursor.position() - 2 - block.position());
-            if (lastChar == QLatin1Char('C') && previousChar == QChar(0x000B0)) {
-                const int pos = mCursor.position() - 3 - block.position();
-                if (pos >= 0) {
-                    const QChar previousChar = text.at(pos);
-                    if (previousChar.isSpace()) {
-                        QTextCursor cursor(mCursor);
-                        cursor.setPosition(pos);
-                        cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
-                        cursor.deleteChar();
-                        mCursor.insertText(mNonBreakingSpace);
+            const int pos = mCursor.position() - 2 - block.position();
+            if (pos >= 0) {
+                const QChar previousChar = text.at(pos);
+
+                if (lastChar == QLatin1Char('C') && previousChar == QChar(0x000B0)) {
+                    const int pos = mCursor.position() - 3 - block.position();
+                    if (pos >= 0) {
+                        const QChar previousChar = text.at(pos);
+                        if (previousChar.isSpace()) {
+                            QTextCursor cursor(mCursor);
+                            cursor.setPosition(pos);
+                            cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
+                            cursor.deleteChar();
+                            mCursor.insertText(mNonBreakingSpace);
+                        }
                     }
                 }
             }
