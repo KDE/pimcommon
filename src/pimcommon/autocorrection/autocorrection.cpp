@@ -919,6 +919,9 @@ int AutoCorrection::advancedAutocorrect()
             if (pos == -1) {
                 pos = actualWordWithFirstUpperCase.lastIndexOf(i.key());
             }
+            if (pos == -1) {
+                continue;
+            }
             QString replacement = i.value();
 
             // Keep capitalized words capitalized.
