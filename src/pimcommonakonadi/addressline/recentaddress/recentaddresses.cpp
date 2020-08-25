@@ -40,10 +40,10 @@ bool RecentAddresses::exists()
 
 RecentAddresses::RecentAddresses(KConfig *config)
 {
-    if (!config) {
-        load(KSharedConfig::openConfig().data());
-    } else {
+    if (config) {
         load(config);
+    } else {
+        load(KSharedConfig::openConfig().data());
     }
 }
 
@@ -53,17 +53,15 @@ RecentAddresses::~RecentAddresses()
 
 void RecentAddresses::load(KConfig *config)
 {
-    QStringList addresses;
     QString name;
     QString email;
 
     m_addresseeList.clear();
     KConfigGroup cg(config, "General");
     m_maxCount = cg.readEntry("Maximum Recent Addresses", 200);
-    addresses = cg.readEntry("Recent Addresses", QStringList());
-    QStringList::ConstIterator end(addresses.constEnd());
-    for (QStringList::ConstIterator it = addresses.constBegin(); it != end; ++it) {
-        KContacts::Addressee::parseEmailAddress(*it, name, email);
+    const QStringList addresses = cg.readEntry("Recent Addresses", QStringList());
+    for (const QString &address : addresses ) {
+        KContacts::Addressee::parseEmailAddress(address, name, email);
         if (!email.isEmpty()) {
             KContacts::Addressee addr;
             addr.setNameFromString(name);
@@ -143,10 +141,8 @@ QStringList RecentAddresses::addresses() const
 {
     QStringList addresses;
     addresses.reserve(m_addresseeList.count());
-    KContacts::Addressee::List::ConstIterator end = m_addresseeList.constEnd();
-    for (KContacts::Addressee::List::ConstIterator it = m_addresseeList.constBegin();
-         it != end; ++it) {
-        addresses.append((*it).fullEmail());
+    for (const KContacts::Addressee &addr : m_addresseeList) {
+        addresses.append(addr.fullEmail());
     }
     return addresses;
 }

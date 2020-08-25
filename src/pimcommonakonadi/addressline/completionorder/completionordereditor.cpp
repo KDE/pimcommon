@@ -12,7 +12,6 @@
 #include <KDescendantsProxyModel>
 #include <KLDAP/LdapClient>
 #include <KLDAP/LdapClientSearch>
-//#include "ldap/ldapclientsearchconfig.h"
 
 #include <kcontacts/addressee.h>
 #include <kcontacts/contactgroup.h>
