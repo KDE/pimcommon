@@ -24,7 +24,7 @@
 #include <KLDAP/LdapClient>
 #include <KLDAP/LdapClientSearch>
 
-//#include "ldap/ldapclientsearchconfig.h"
+#include <KLDAP/LdapClientSearchConfig>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 
@@ -78,12 +78,11 @@ public:
 
     void save(CompletionOrderWidget *) override
     {
-        //FIXME
-//        KConfig *config = KLDAP::LdapClientSearchConfig::config();
-//        KConfigGroup group(config, "LDAP");
-//        group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()),
-//                         mWeight);
-//        group.sync();
+        KConfig *config = KLDAP::LdapClientSearchConfig::config();
+        KConfigGroup group(config, "LDAP");
+        group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()),
+                         mWeight);
+        group.sync();
     }
 
     bool hasEnableSupport() const override

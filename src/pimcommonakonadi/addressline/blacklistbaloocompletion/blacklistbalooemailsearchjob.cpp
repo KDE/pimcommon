@@ -25,7 +25,6 @@ using namespace PimCommon;
 
 BlackListBalooEmailSearchJob::BlackListBalooEmailSearchJob(QObject *parent)
     : QObject(parent)
-    , mLimit(500)
 {
 }
 
