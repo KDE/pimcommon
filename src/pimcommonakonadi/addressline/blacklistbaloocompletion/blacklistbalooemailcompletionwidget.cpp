@@ -26,7 +26,6 @@
 using namespace PimCommon;
 BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget *parent)
     : QWidget(parent)
-    , mLimit(500)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 

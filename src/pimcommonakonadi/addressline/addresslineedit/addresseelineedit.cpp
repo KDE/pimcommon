@@ -623,7 +623,6 @@ void AddresseeLineEdit::loadContacts()
     if (showRecentAddresses()) {
         const QStringList recent
             = AddresseeLineEditManager::self()->cleanupEmailList(PimCommon::RecentAddresses::self(recentAddressConfig())->addresses());
-        QStringList::ConstIterator it = recent.constBegin();
         QString name, email;
 
         KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimcompletionorder"));
@@ -632,10 +631,9 @@ void AddresseeLineEdit::loadContacts()
         removeCompletionSource(recentAddressGroupName);
         const int idx = addCompletionSource(recentAddressGroupName, weight);
 
-        QStringList::ConstIterator end = recent.constEnd();
         KContacts::Addressee addr;
-        for (; it != end; ++it) {
-            KEmailAddress::extractEmailAddressAndName(*it, email, name);
+        for (const QString &recentAdr : recent) {
+            KEmailAddress::extractEmailAddressAndName(recentAdr, email, name);
             name = KEmailAddress::quoteNameIfNecessary(name);
             if (!name.isEmpty() && (name[0] == QLatin1Char('"')) && (name[name.length() - 1] == QLatin1Char('"'))) {
                 name.remove(0, 1);

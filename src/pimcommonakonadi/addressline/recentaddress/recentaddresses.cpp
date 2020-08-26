@@ -83,9 +83,8 @@ void RecentAddresses::add(const QString &entry)
 {
     if (!entry.isEmpty() && m_maxCount > 0) {
         const QStringList list = KEmailAddress::splitAddressList(entry);
-        QStringList::const_iterator e_itEnd(list.constEnd());
-        for (QStringList::const_iterator e_it = list.constBegin(); e_it != e_itEnd; ++e_it) {
-            KEmailAddress::EmailParseResult errorCode = KEmailAddress::isValidAddress(*e_it);
+        for (const QString &str : list) {
+            KEmailAddress::EmailParseResult errorCode = KEmailAddress::isValidAddress(str);
             if (errorCode != KEmailAddress::AddressOk) {
                 continue;
             }
@@ -93,7 +92,7 @@ void RecentAddresses::add(const QString &entry)
             QString fullName;
             KContacts::Addressee addr;
 
-            KContacts::Addressee::parseEmailAddress(*e_it, fullName, email);
+            KContacts::Addressee::parseEmailAddress(str, fullName, email);
 
             KContacts::Addressee::List::Iterator end(m_addresseeList.end());
             for (KContacts::Addressee::List::Iterator it = m_addresseeList.begin();
