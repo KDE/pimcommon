@@ -51,18 +51,7 @@ using namespace PimCommon;
 AddresseeLineEditPrivate::AddresseeLineEditPrivate(PimCommon::AddresseeLineEdit *qq, bool enableCompletion)
     : QObject(qq)
     , q(qq)
-    , mRecentAddressConfig(nullptr)
     , mUseCompletion(enableCompletion)
-    , mCompletionInitialized(false)
-    , mSmartPaste(false)
-    , mLastSearchMode(false)
-    , mSearchExtended(false)
-    , mUseSemicolonAsSeparator(false)
-    , mEnableBalooSearch(true)
-    , mEnableAkonadiSearch(true)
-    , mExpandIntern(true)
-    , mShowRecentAddresses(true)
-    , mCanDeleteLineEdit(true)
 {
     mDelayedQueryTimer = new QTimer(this);
     mDelayedQueryTimer->setSingleShot(true);

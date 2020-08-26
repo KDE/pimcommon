@@ -25,7 +25,6 @@
 using namespace PimCommon;
 
 AddresseeLineEditBaloo::AddresseeLineEditBaloo()
-    : mBalooCompletionSource(0)
 {
     loadBalooBlackList();
 }
