@@ -501,7 +501,7 @@ void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight,
         const QString givenName = addr.givenName();
         const QString familyName = addr.familyName();
         const QString nickName = addr.nickName();
-        QString fullEmail = addr.fullEmail(email);
+        const QString fullEmail = addr.fullEmail(email);
 
         QString appendix;
 

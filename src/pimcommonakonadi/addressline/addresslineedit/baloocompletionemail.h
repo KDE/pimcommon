@@ -21,7 +21,7 @@ public:
 
     Q_REQUIRED_RESULT QStringList cleanupEmailList();
 private:
-    QString stripEmail(const QString &email, QString &address);
+    Q_REQUIRED_RESULT QString stripEmail(const QString &email, QString &address);
     QStringList mListEmail;
     QStringList mExcludeDomain;
     QStringList mBlackList;

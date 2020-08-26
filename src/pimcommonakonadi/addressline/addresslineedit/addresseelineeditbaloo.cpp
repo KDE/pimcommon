@@ -12,12 +12,14 @@
 using namespace PimCommon;
 
 AddresseeLineEditBaloo::AddresseeLineEditBaloo()
+    : mBalooCompletionEmail(new PimCommon::BalooCompletionEmail)
 {
     loadBalooBlackList();
 }
 
 AddresseeLineEditBaloo::~AddresseeLineEditBaloo()
 {
+    delete mBalooCompletionEmail;
 }
 
 int AddresseeLineEditBaloo::balooCompletionSource() const
@@ -47,13 +49,12 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
     KConfigGroup group(config, "AddressLineEdit");
     mBalooBlackList = group.readEntry("BalooBackList", QStringList());
     mDomainExcludeList = group.readEntry("ExcludeDomain", QStringList());
+    mBalooCompletionEmail->setBlackList(mBalooBlackList);
+    mBalooCompletionEmail->setExcludeDomain(mDomainExcludeList);
 }
 
 QStringList AddresseeLineEditBaloo::cleanupEmailList(const QStringList &inputList)
 {
-    PimCommon::BalooCompletionEmail completionEmail;
-    completionEmail.setEmailList(inputList);
-    completionEmail.setBlackList(mBalooBlackList);
-    completionEmail.setExcludeDomain(mDomainExcludeList);
-    return completionEmail.cleanupEmailList();
+    mBalooCompletionEmail->setEmailList(inputList);
+    return mBalooCompletionEmail->cleanupEmailList();
 }
