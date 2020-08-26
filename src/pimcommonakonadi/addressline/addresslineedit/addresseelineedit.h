@@ -130,7 +130,7 @@ public:
     Q_REQUIRED_RESULT KLDAP::LdapClientSearch *ldapSearch() const;
 
     void setShowRecentAddresses(bool b);
-    bool showRecentAddresses() const;
+    Q_REQUIRED_RESULT bool showRecentAddresses() const;
 
     void setRecentAddressConfig(KConfig *config);
     Q_REQUIRED_RESULT KConfig *recentAddressConfig() const;
@@ -139,7 +139,7 @@ public:
 
     void setIcon(const QIcon &icon, const QString &tooltip = QString());
 
-    bool canDeleteLineEdit() const;
+    Q_REQUIRED_RESULT bool canDeleteLineEdit() const;
 Q_SIGNALS:
     void textCompleted();
     void addAddress(const QString &address);
