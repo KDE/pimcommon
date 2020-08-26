@@ -508,12 +508,9 @@ void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight,
     if (emails.isEmpty()) {
         return;
     }
-    QStringList::ConstIterator it;
     int isPrefEmail = 1; //first in list is preferredEmail
-    QStringList::ConstIterator end(emails.constEnd());
-    for (it = emails.constBegin(); it != end; ++it) {
+    for (const QString &email : emails) {
         //TODO: highlight preferredEmail
-        const QString email((*it));
         const QString givenName = addr.givenName();
         const QString familyName = addr.familyName();
         const QString nickName = addr.nickName();
