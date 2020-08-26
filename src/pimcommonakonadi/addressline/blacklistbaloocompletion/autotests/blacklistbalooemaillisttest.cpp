@@ -42,7 +42,7 @@ void BlackListBalooEmailListTest::shouldFillListEmail()
 void BlackListBalooEmailListTest::shouldFillListWithAlreadyBlackListedEmail()
 {
     PimCommon::BlackListBalooEmailList blackList;
-    QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bla@kde.org") << QStringLiteral("bli@kde.org");
+    const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bla@kde.org") << QStringLiteral("bli@kde.org");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 3);
 
@@ -73,7 +73,7 @@ void BlackListBalooEmailListTest::shouldReturnChangedItems()
 void BlackListBalooEmailListTest::shouldNotAddDuplicateEmails()
 {
     PimCommon::BlackListBalooEmailList blackList;
-    QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bli@kde.org") << QStringLiteral("bli@kde.org");
+    const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bli@kde.org") << QStringLiteral("bli@kde.org");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 2);
 
@@ -100,7 +100,7 @@ void BlackListBalooEmailListTest::shouldExcludeDomain()
 void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDifferentCase()
 {
     PimCommon::BlackListBalooEmailList blackList;
-    QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("Foo@kde.org") << QStringLiteral("foo@kde.ORG");
+    const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("Foo@kde.org") << QStringLiteral("foo@kde.ORG");
     QCOMPARE(blackList.setEmailFound(emails), 1);
 
     QCOMPARE(blackList.count(), 1);
@@ -109,7 +109,7 @@ void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDifferentCase()
 void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDisplayNameOrNot()
 {
     PimCommon::BlackListBalooEmailList blackList;
-    QStringList emails = QStringList() << QStringLiteral("foo@kde.org")
+    const QStringList emails = QStringList() << QStringLiteral("foo@kde.org")
                                        << QStringLiteral("Bla Blo <Foo@kde.org>");
     QCOMPARE(blackList.setEmailFound(emails), 1);
 

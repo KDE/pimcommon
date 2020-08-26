@@ -111,7 +111,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
 {
     itemsList.clear();
     if (!lst.isEmpty()) {
-        QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, QStringList() << topLevelItemName);
+        QTreeWidgetItem *topLevel = new QTreeWidgetItem(mListWidget, {topLevelItemName});
         topLevel->setFlags(topLevel->flags() & ~Qt::ItemIsSelectable);
         const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
         for (const PimCommon::PluginUtilData &data : lst) {

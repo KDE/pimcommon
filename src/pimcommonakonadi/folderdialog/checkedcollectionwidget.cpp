@@ -57,7 +57,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
 
     Akonadi::CollectionFilterProxyModel *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
     mimeTypeProxy->setExcludeVirtualCollections(true);
-    mimeTypeProxy->addMimeTypeFilters(QStringList() << mimetype);
+    mimeTypeProxy->addMimeTypeFilters({mimetype});
     mimeTypeProxy->setSourceModel(d->mEntityTreeModel);
 
     // Create the Check proxy model.
