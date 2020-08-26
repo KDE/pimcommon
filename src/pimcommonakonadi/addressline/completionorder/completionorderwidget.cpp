@@ -370,8 +370,7 @@ void CompletionOrderWidget::loadCompletionItems()
     descendantsProxy->setSourceModel(model);
 
     Akonadi::CollectionFilterProxyModel *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
-    mimeTypeProxy->addMimeTypeFilters(QStringList() << KContacts::Addressee::mimeType()
-                                                    << KContacts::ContactGroup::mimeType());
+    mimeTypeProxy->addMimeTypeFilters({KContacts::Addressee::mimeType(), KContacts::ContactGroup::mimeType()});
     mimeTypeProxy->setSourceModel(descendantsProxy);
     mimeTypeProxy->setExcludeVirtualCollections(true);
 
