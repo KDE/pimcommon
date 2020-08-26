@@ -489,12 +489,8 @@ void AddresseeLineEdit::addContactGroup(const KContacts::ContactGroup &group, in
     d->addCompletionItem(group.name(), weight, source);
 }
 
-void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight, int source, QString append)
+void AddresseeLineEdit::addContact(const QStringList &emails, const KContacts::Addressee &addr, int weight, int source, QString append)
 {
-    const QStringList emails = AddresseeLineEditManager::self()->cleanupEmailList(addr.emails());
-    if (emails.isEmpty()) {
-        return;
-    }
     int isPrefEmail = 1; //first in list is preferredEmail
     for (const QString &email : emails) {
         //TODO: highlight preferredEmail
@@ -540,6 +536,15 @@ void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight,
 
         isPrefEmail = 0;
     }
+}
+
+void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight, int source, QString append)
+{
+    const QStringList emails = AddresseeLineEditManager::self()->cleanupEmailList(addr.emails());
+    if (emails.isEmpty()) {
+        return;
+    }
+    addContact(emails, addr, weight, source, append);
 }
 
 #ifndef QT_NO_CONTEXTMENU
@@ -631,6 +636,9 @@ void AddresseeLineEdit::loadContacts()
         for (const QString &recentAdr : recent) {
             KContacts::Addressee addr;
             KEmailAddress::extractEmailAddressAndName(recentAdr, email, name);
+            if (email.isEmpty()) {
+                continue;
+            }
             name = KEmailAddress::quoteNameIfNecessary(name);
             if (!name.isEmpty() && (name[0] == QLatin1Char('"')) && (name[name.length() - 1] == QLatin1Char('"'))) {
                 name.remove(0, 1);
@@ -638,7 +646,7 @@ void AddresseeLineEdit::loadContacts()
             }
             addr.setNameFromString(name);
             addr.insertEmail(email, true);
-            addContact(addr, weight, idx);
+            addContact(QStringList() << email, addr, weight, idx);
         }
     } else {
         removeCompletionSource(recentAddressGroupName);

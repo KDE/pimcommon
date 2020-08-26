@@ -204,6 +204,7 @@ protected:
     void loadContacts();
 
 private:
+    void addContact(const QStringList &emails, const KContacts::Addressee &addr, int weight, int source, QString append = QString());
     void groupExpandResult(KJob *job);
     bool eventFilter(QObject *, QEvent *) override;
 
