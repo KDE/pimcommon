@@ -19,18 +19,12 @@ using namespace PimCommon;
 class PimCommon::MigrateApplicationFilesPrivate
 {
 public:
-    MigrateApplicationFilesPrivate()
-        : mMigrateApplicationVersion(1)
-        , mCurrentConfigVersion(0)
-    {
-    }
-
     QVector<MigrateFileInfo> mMigrateInfoList;
     QString mConfigFileName;
     QString mApplicationName;
     Kdelibs4Migration mMigration;
-    int mMigrateApplicationVersion;
-    int mCurrentConfigVersion;
+    int mMigrateApplicationVersion = 1;
+    int mCurrentConfigVersion = 0;
 };
 
 MigrateApplicationFiles::MigrateApplicationFiles(QObject *parent)

@@ -280,7 +280,7 @@ public:
     QString knewstuffConfigName;
     bool dirty;
     KSharedConfig::Ptr config;
-    TemplateListWidget *q;
+    TemplateListWidget * const q;
 };
 
 TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *parent)

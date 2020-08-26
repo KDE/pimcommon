@@ -12,7 +12,8 @@
 
 using namespace PimCommon;
 
-EmailValidator::EmailValidator(QObject *parent) : QValidator(parent)
+EmailValidator::EmailValidator(QObject *parent)
+    : QValidator(parent)
 {
 }
 

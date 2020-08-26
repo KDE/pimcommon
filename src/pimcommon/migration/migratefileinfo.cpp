@@ -8,8 +8,6 @@
 using namespace PimCommon;
 
 MigrateFileInfo::MigrateFileInfo()
-    : mVersion(-1)
-    , mFolder(false)
 {
 }
 

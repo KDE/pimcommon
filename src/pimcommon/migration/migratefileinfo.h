@@ -42,8 +42,8 @@ private:
     QStringList mFilePattern;
     QString mType;
     QString mPath;
-    int mVersion;
-    bool mFolder;
+    int mVersion = -1;
+    bool mFolder = false;
 };
 }
 
