@@ -17,7 +17,6 @@
 
 #include "pimcommon_export.h"
 
-class QListWidget;
 
 //
 //

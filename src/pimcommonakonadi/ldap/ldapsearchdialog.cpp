@@ -442,7 +442,7 @@ public:
     void slotUnselectAll();
     void slotSelectionChanged();
 
-    LdapSearchDialog *q;
+    LdapSearchDialog *const q;
     KGuiItem startSearchGuiItem;
     KGuiItem stopSearchGuiItem;
     int mNumHosts = 0;

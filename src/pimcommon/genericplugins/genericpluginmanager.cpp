@@ -57,7 +57,7 @@ public:
     GenericPlugin *pluginFromIdentifier(const QString &id);
 private:
     QVector<PluginUtilData> mPluginDataList;
-    GenericPluginManager *q;
+    GenericPluginManager *const q;
 };
 
 QString GenericPluginManagerPrivate::configGroupName() const

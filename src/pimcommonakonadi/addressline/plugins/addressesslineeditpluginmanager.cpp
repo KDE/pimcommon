@@ -50,7 +50,7 @@ public:
     QVector<AddressessLineEditPluginInfo> mPluginList;
     bool initializePlugins();
 private:
-    AddressessLineEditPluginManager *q;
+    AddressessLineEditPluginManager *const q;
 };
 
 bool AddressessLineEditPluginManagerPrivate::initializePlugins()
