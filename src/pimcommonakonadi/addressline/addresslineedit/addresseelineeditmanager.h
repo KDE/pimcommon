@@ -124,7 +124,10 @@ public:
 
     Q_REQUIRED_RESULT QColor alternateColor() const;
 
+    Q_REQUIRED_RESULT QStringList cleanupRecentAddressEmailList(const QStringList &inputList);
 private:
+    QStringList mRecentAddressEmailList;
+    QStringList mRecentCleanupAddressEmailList;
     mutable QColor mAlternateColor;
     bool mShowOU = false;
     bool mAutoGroupExpand = false;

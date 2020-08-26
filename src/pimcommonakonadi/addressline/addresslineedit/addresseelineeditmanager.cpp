@@ -196,6 +196,16 @@ void AddresseeLineEditManager::loadBalooBlackList()
     mAddressessLineEditBaloo->loadBalooBlackList();
 }
 
+QStringList AddresseeLineEditManager::cleanupRecentAddressEmailList(const QStringList &inputList)
+{
+    if (inputList != mRecentAddressEmailList) {
+        mRecentCleanupAddressEmailList = mAddressessLineEditBaloo->cleanupEmailList(inputList);
+        mRecentAddressEmailList = inputList;
+    }
+    return mRecentCleanupAddressEmailList;
+}
+
+
 QStringList AddresseeLineEditManager::cleanupEmailList(const QStringList &inputList)
 {
     return mAddressessLineEditBaloo->cleanupEmailList(inputList);
