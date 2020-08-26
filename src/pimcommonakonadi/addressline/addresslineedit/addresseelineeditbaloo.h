@@ -23,6 +23,7 @@
 #include <QStringList>
 
 namespace PimCommon {
+class BalooCompletionEmail;
 class AddresseeLineEditBaloo
 {
 public:
@@ -38,6 +39,7 @@ public:
     void loadBalooBlackList();
     Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
 private:
+    PimCommon::BalooCompletionEmail *mBalooCompletionEmail = nullptr;
     QStringList mBalooBlackList;
     QStringList mDomainExcludeList;
 
