@@ -414,9 +414,9 @@ public:
     {
     }
 
-    QList< QPair<KLDAP::LdapAttrMap, QString> > selectedItems()
+    QVector< QPair<KLDAP::LdapAttrMap, QString> > selectedItems()
     {
-        QList< QPair<KLDAP::LdapAttrMap, QString> > contacts;
+        QVector< QPair<KLDAP::LdapAttrMap, QString> > contacts;
 
         const QModelIndexList selected = mResultView->selectionModel()->selectedRows();
         const int numberOfSelectedElement(selected.count());
@@ -838,7 +838,7 @@ void LdapSearchDialog::slotUser1()
 
     d->mSelectedContacts.clear();
 
-    const QList< QPair<KLDAP::LdapAttrMap, QString> > &items = d->selectedItems();
+    const QVector< QPair<KLDAP::LdapAttrMap, QString> > &items = d->selectedItems();
 
     if (!items.isEmpty()) {
         const QDateTime now = QDateTime::currentDateTime();

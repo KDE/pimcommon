@@ -86,7 +86,7 @@ public:
      * @p source index
      * @p append  is added to completion string, but removed, when mail is selected.
      */
-    void addContact(const KContacts::Addressee &contact, int weight, int source = -1, QString append = QString());
+    void addContact(const KContacts::Addressee &contact, int weight, int source = -1, const QString &append = QString());
 
     /**
      * Same as the above, but this time with contact groups.

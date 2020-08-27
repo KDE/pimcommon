@@ -285,9 +285,8 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
         KContacts::Addressee::List list;
         KContacts::VCardDrag::fromMimeData(md, list);
 
-        const KContacts::Addressee::List::ConstIterator end(list.constEnd());
-        for (KContacts::Addressee::List::ConstIterator ait = list.constBegin(); ait != end; ++ait) {
-            insertEmails((*ait).emails());
+        for (const KContacts::Addressee &addr : qAsConst(list)) {
+            insertEmails(addr.emails());
         }
     }
     // Case two: The user dropped a list or Urls.
@@ -449,8 +448,8 @@ void AddresseeLineEdit::insertEmails(const QStringList &emails)
     QMenu menu(this);
     menu.setTitle(i18n("Select email from contact"));
     menu.setObjectName(QStringLiteral("Addresschooser"));
-    for (QStringList::const_iterator it = emails.constBegin(), end = emails.constEnd(); it != end; ++it) {
-        menu.addAction(*it);
+    for (const QString &email : emails) {
+        menu.addAction(email);
     }
     const QAction *result = menu.exec(QCursor::pos());
     if (!result) {
@@ -538,7 +537,7 @@ void AddresseeLineEdit::addContact(const QStringList &emails, const KContacts::A
     }
 }
 
-void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight, int source, QString append)
+void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight, int source, const QString &append)
 {
     const QStringList emails = AddresseeLineEditManager::self()->cleanupEmailList(addr.emails());
     if (emails.isEmpty()) {
