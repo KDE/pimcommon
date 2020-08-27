@@ -33,7 +33,7 @@ private:
     void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
     Purpose::Menu *mShareMenu = nullptr;
     QTemporaryFile *mTemporaryShareFile = nullptr;
-    QWidget *mParentWidget = nullptr;
+    QWidget *const mParentWidget;
 };
 }
 

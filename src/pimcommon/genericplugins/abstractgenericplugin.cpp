@@ -10,7 +10,6 @@ using namespace PimCommon;
 
 AbstractGenericPlugin::AbstractGenericPlugin(QObject *parent)
     : QObject(parent)
-    , mIsEnabled(true)
 {
 }
 

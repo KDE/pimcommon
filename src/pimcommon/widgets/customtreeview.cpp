@@ -14,7 +14,6 @@ using namespace PimCommon;
 
 CustomTreeView::CustomTreeView(QWidget *parent)
     : QTreeWidget(parent)
-    , mShowDefaultText(true)
 {
 }
 

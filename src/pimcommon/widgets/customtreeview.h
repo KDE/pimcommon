@@ -37,7 +37,7 @@ protected:
     void changeEvent(QEvent *event) override;
 
 protected:
-    bool mShowDefaultText;
+    bool mShowDefaultText = true;
 
 private:
     QColor mTextColor;

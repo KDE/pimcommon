@@ -23,8 +23,8 @@ public:
     {
     }
 
-    QIcon typeToIcon(ShareServiceUrlManager::ServiceType type) const;
-    QString typeToI18n(ShareServiceUrlManager::ServiceType type) const;
+    Q_REQUIRED_RESULT QIcon typeToIcon(ShareServiceUrlManager::ServiceType type) const;
+    Q_REQUIRED_RESULT QString typeToI18n(ShareServiceUrlManager::ServiceType type) const;
     void initializeMenu();
     KActionMenu *mMenu = nullptr;
     ShareServiceUrlManager *const q;

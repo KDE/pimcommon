@@ -27,8 +27,7 @@ class TemplateListWidgetPrivate
 {
 public:
     TemplateListWidgetPrivate(const QString &configName, TemplateListWidget *qq)
-        : dirty(false)
-        , config(KSharedConfig::openConfig(configName, KConfig::NoGlobals))
+        : config(KSharedConfig::openConfig(configName, KConfig::NoGlobals))
         , q(qq)
     {
     }
@@ -278,7 +277,7 @@ public:
     }
 
     QString knewstuffConfigName;
-    bool dirty;
+    bool dirty =false;
     KSharedConfig::Ptr config;
     TemplateListWidget * const q;
 };

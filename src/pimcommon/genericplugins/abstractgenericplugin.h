@@ -37,7 +37,7 @@ Q_SIGNALS:
     void configChanged();
 
 private:
-    bool mIsEnabled;
+    bool mIsEnabled = true;
 };
 }
 #endif // AbstractGENERICPLUGIN_H
