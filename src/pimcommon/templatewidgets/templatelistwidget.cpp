@@ -277,7 +277,7 @@ public:
     }
 
     QString knewstuffConfigName;
-    bool dirty =false;
+    bool dirty = false;
     KSharedConfig::Ptr config;
     TemplateListWidget * const q;
 };
