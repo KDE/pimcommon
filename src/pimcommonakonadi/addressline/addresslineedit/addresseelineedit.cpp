@@ -266,7 +266,7 @@ void AddresseeLineEdit::mouseReleaseEvent(QMouseEvent *event)
     if (d->useCompletion()
         && QApplication::clipboard()->supportsSelection()
         && !isReadOnly()
-        && event->button() == Qt::MidButton) {
+        && event->button() == Qt::MiddleButton) {
         d->setSmartPaste(true);
     }
 #endif
@@ -685,7 +685,7 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
             const Qt::MouseButtons buttons = mouseEvent->buttons();
             if (event->type() == QEvent::MouseButtonPress
                 || event->type() == QEvent::MouseButtonDblClick
-                || buttons & Qt::LeftButton || buttons & Qt::MidButton
+                || buttons & Qt::LeftButton || buttons & Qt::MiddleButton
                 || buttons & Qt::RightButton) {
                 if (itemIsHeader(item)) {
                     return true; // eat the event, we don't want anything to happen
