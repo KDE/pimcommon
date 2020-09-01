@@ -110,7 +110,7 @@ void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDisplayNameOrNot()
 {
     PimCommon::BlackListBalooEmailList blackList;
     const QStringList emails = QStringList() << QStringLiteral("foo@kde.org")
-                                       << QStringLiteral("Bla Blo <Foo@kde.org>");
+                                             << QStringLiteral("Bla Blo <Foo@kde.org>");
     QCOMPARE(blackList.setEmailFound(emails), 1);
 
     QCOMPARE(blackList.count(), 1);

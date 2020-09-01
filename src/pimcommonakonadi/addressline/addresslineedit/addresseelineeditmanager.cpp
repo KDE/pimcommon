@@ -193,7 +193,6 @@ QStringList AddresseeLineEditManager::cleanupRecentAddressEmailList(const QStrin
     return mRecentCleanupAddressEmailList;
 }
 
-
 QStringList AddresseeLineEditManager::cleanupEmailList(const QStringList &inputList)
 {
     return mAddressessLineEditBaloo->cleanupEmailList(inputList);

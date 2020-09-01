@@ -114,6 +114,7 @@ public:
             mEnabled = groupEnabled.readEntry(mIdentifier, true);
         }
     }
+
     ~SimpleCompletionItem()
     {
     }
@@ -188,6 +189,7 @@ public:
     {
         setItem(item);
     }
+
     ~CompletionViewItem()
     {
         delete mItem;

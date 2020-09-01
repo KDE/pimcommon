@@ -17,7 +17,6 @@
 
 #include "pimcommon_export.h"
 
-
 //
 //
 // SimpleStringListEditor (a listbox with "add..." and "remove" buttons)

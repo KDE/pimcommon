@@ -55,7 +55,7 @@ public:
     void initializePluginList();
     void loadPlugin(CustomToolsPluginInfo *item);
     QVector<CustomToolsPluginInfo> mPluginList;
-    CustomToolsPluginManager * const q;
+    CustomToolsPluginManager *const q;
 };
 
 void CustomToolsPluginManagerPrivate::initializePluginList()

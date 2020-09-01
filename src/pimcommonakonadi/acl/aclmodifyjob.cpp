@@ -111,14 +111,14 @@ void AclModifyJob::slotModifyAcl()
         job->fetchScope().setAncestorRetrieval(Akonadi::CollectionFetchScope::All);
         connect(job, &Akonadi::CollectionFetchJob::finished,
                 this, [this](KJob *job) {
-                    if (job->error()) {
-                        qCWarning(PIMCOMMONAKONADI_LOG) << job->errorString();
-                        slotFetchCollectionFailed();
-                    } else {
-                        auto fetch = static_cast<Akonadi::CollectionFetchJob*>(job);
-                        slotFetchCollectionFinished(fetch->collections());
-                    }
-                });
+            if (job->error()) {
+                qCWarning(PIMCOMMONAKONADI_LOG) << job->errorString();
+                slotFetchCollectionFailed();
+            } else {
+                auto fetch = static_cast<Akonadi::CollectionFetchJob *>(job);
+                slotFetchCollectionFinished(fetch->collections());
+            }
+        });
     } else {
         changeAcl(mTopLevelCollection);
     }

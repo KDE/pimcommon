@@ -60,7 +60,7 @@ void RecentAddresses::load(KConfig *config)
     KConfigGroup cg(config, "General");
     m_maxCount = cg.readEntry("Maximum Recent Addresses", 200);
     const QStringList addresses = cg.readEntry("Recent Addresses", QStringList());
-    for (const QString &address : addresses ) {
+    for (const QString &address : addresses) {
         KContacts::Addressee::parseEmailAddress(address, name, email);
         if (!email.isEmpty()) {
             KContacts::Addressee addr;
