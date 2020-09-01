@@ -6,7 +6,6 @@ project(pimcommon VERSION ${PIM_VERSION})
 set(KF5_MIN_VERSION "5.73.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
-set(LIBRARY_NAMELINK)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
