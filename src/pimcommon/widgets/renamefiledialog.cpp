@@ -30,9 +30,9 @@ public:
     {
     }
 
-    QString suggestName(const QUrl &baseURL, const QString &oldName);
+    Q_REQUIRED_RESULT QString suggestName(const QUrl &baseURL, const QString &oldName);
 
-    QUrl url;
+    const QUrl url;
     QCheckBox *applyAll = nullptr;
     QPushButton *renameBtn = nullptr;
     QPushButton *suggestNewNameBtn = nullptr;

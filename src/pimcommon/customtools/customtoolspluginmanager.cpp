@@ -20,12 +20,7 @@ using namespace PimCommon;
 class CustomToolsPluginInfo
 {
 public:
-    CustomToolsPluginInfo()
-        : plugin(nullptr)
-    {
-    }
-
-    QString saveName() const;
+    Q_REQUIRED_RESULT QString saveName() const;
 
     KPluginMetaData metaData;
     PimCommon::CustomToolsPlugin *plugin = nullptr;

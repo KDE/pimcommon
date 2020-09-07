@@ -11,10 +11,6 @@ using namespace PimCommon;
 class PimCommon::CustomToolsPluginPrivate
 {
 public:
-    CustomToolsPluginPrivate()
-    {
-    }
-
     bool enabled = false;
 };
 

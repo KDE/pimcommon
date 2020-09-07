@@ -17,7 +17,6 @@ class PimCommon::LogActivitiesManagerPrivate
 {
 public:
     LogActivitiesManagerPrivate()
-        : mDialog(nullptr)
     {
     }
 

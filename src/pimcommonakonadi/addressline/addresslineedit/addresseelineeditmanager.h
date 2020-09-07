@@ -119,11 +119,11 @@ private:
     mutable QColor mAlternateColor;
     bool mShowOU = false;
     bool mAutoGroupExpand = false;
-    KMailCompletion *mCompletion = nullptr;
-    AddresseeLineEditAkonadi *mAddresseeLineEditAkonadi = nullptr;
-    AddresseeLineEditLdap *mAddressessLineEditLdap = nullptr;
-    AddresseeLineEditBaloo *mAddressessLineEditBaloo = nullptr;
-    QNetworkConfigurationManager *mNetworkConfigMgr = nullptr;
+    KMailCompletion *const mCompletion;
+    AddresseeLineEditAkonadi *const mAddresseeLineEditAkonadi;
+    AddresseeLineEditLdap *const mAddressessLineEditLdap;
+    AddresseeLineEditBaloo *const mAddressessLineEditBaloo;
+    QNetworkConfigurationManager *const mNetworkConfigMgr;
 };
 }
 #endif // ADDRESSEELINEEDITMANAGER_H

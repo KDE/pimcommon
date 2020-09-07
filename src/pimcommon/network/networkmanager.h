@@ -26,7 +26,7 @@ public:
     Q_REQUIRED_RESULT QNetworkConfigurationManager *networkConfigureManager() const;
 
 private:
-    QNetworkConfigurationManager *mNetworkConfigureManager = nullptr;
+    QNetworkConfigurationManager *const mNetworkConfigureManager;
 };
 }
 

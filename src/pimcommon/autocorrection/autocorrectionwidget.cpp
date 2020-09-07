@@ -46,7 +46,7 @@ public:
     QSet<QString> m_upperCaseExceptions;
     QSet<QString> m_twoUpperLetterExceptions;
     QHash<QString, QString> m_autocorrectEntries;
-    Ui::AutoCorrectionWidget *ui = nullptr;
+    Ui::AutoCorrectionWidget *const ui;
     AutoCorrection *mAutoCorrection = nullptr;
     bool mWasChanged = false;
 };

@@ -12,8 +12,8 @@ Q_GLOBAL_STATIC(NetworkManager, s_pNetworkManagerSelf)
 
 NetworkManager::NetworkManager(QObject *parent)
     : QObject(parent)
+    , mNetworkConfigureManager(new QNetworkConfigurationManager())
 {
-    mNetworkConfigureManager = new QNetworkConfigurationManager();
 }
 
 NetworkManager::~NetworkManager()

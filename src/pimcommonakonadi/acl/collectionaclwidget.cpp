@@ -27,7 +27,6 @@ class ActionButton : public QPushButton
 public:
     ActionButton(QWidget *parent = nullptr)
         : QPushButton(parent)
-        , mDefaultAction(nullptr)
     {
     }
 

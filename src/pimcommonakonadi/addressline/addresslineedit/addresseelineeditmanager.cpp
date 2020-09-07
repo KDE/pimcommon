@@ -24,9 +24,7 @@ using namespace PimCommon;
 Q_GLOBAL_STATIC(AddresseeLineEditManager, sInstance)
 
 AddresseeLineEditManager::AddresseeLineEditManager()
-    : mShowOU(false)
-    , mAutoGroupExpand(false)
-    , mCompletion(new KMailCompletion)
+    : mCompletion(new KMailCompletion)
     , mAddresseeLineEditAkonadi(new AddresseeLineEditAkonadi)
     , mAddressessLineEditLdap(new AddresseeLineEditLdap(this))
     , mAddressessLineEditBaloo(new AddresseeLineEditBaloo)

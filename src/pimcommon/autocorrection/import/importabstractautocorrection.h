@@ -50,7 +50,7 @@ protected:
     QHash<QString, QString> mSuperScriptEntries;
     AutoCorrection::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrection::TypographicQuotes mTypographicDoubleQuotes;
-    QWidget *mParent = nullptr;
+    QWidget *const mParent;
 };
 }
 

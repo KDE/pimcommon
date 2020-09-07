@@ -12,7 +12,6 @@ using namespace PimCommon;
 
 AclListView::AclListView(QWidget *parent)
     : QListView(parent)
-    , mCanBeAdministrated(true)
 {
 }
 

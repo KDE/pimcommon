@@ -108,24 +108,24 @@ private:
     bool excludeToUppercase(const QString &word) const;
     QColor linkColor();
 
-    bool mSingleSpaces; // suppress double spaces.
-    bool mUppercaseFirstCharOfSentence; // convert first letter of a sentence automaticall to uppercase
-    bool mFixTwoUppercaseChars;  // convert two uppercase characters to one upper and one lowercase.
-    bool mAutoFractions; // replace 1/2 with ½
-    bool mCapitalizeWeekDays;
-    bool mAdvancedAutocorrect; // autocorrection from a list of entries
+    bool mSingleSpaces = true; // suppress double spaces.
+    bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automaticall to uppercase
+    bool mFixTwoUppercaseChars = false;  // convert two uppercase characters to one upper and one lowercase.
+    bool mAutoFractions = true; // replace 1/2 with ½
+    bool mCapitalizeWeekDays = false;
+    bool mAdvancedAutocorrect = false; // autocorrection from a list of entries
 
-    bool mReplaceDoubleQuotes;  // replace double quotes with typographical quotes
-    bool mReplaceSingleQuotes;  // replace single quotes with typographical quotes
+    bool mReplaceDoubleQuotes = false;  // replace double quotes with typographical quotes
+    bool mReplaceSingleQuotes = false;  // replace single quotes with typographical quotes
 
-    bool mAutoFormatUrl;
-    bool mAutoBoldUnderline;
-    bool mEnabled;
-    bool mSuperScriptAppendix;
+    bool mAutoFormatUrl = false;
+    bool mAutoBoldUnderline = false;
+    bool mEnabled = false;
+    bool mSuperScriptAppendix = false;
 
-    bool mAddNonBreakingSpace;
-    int mMaxFindStringLenght;
-    int mMinFindStringLenght;
+    bool mAddNonBreakingSpace = false;
+    int mMaxFindStringLenght = 0;
+    int mMinFindStringLenght = 0;
     QString mWord;
     QTextCursor mCursor;
     QChar mNonBreakingSpace;

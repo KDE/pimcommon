@@ -48,7 +48,7 @@ private:
     QString mResult;
     QString mJsonData;
     QString mJsonDebug;
-    QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    QNetworkAccessManager *const mNetworkAccessManager;
     QWidget *mParentWidget = nullptr;
     bool mDebug = false;
 };

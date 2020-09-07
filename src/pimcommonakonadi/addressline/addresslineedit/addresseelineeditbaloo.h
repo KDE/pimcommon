@@ -26,7 +26,7 @@ public:
     void loadBalooBlackList();
     Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
 private:
-    PimCommon::BalooCompletionEmail *mBalooCompletionEmail = nullptr;
+    PimCommon::BalooCompletionEmail *const mBalooCompletionEmail;
     QStringList mBalooBlackList;
     QStringList mDomainExcludeList;
 

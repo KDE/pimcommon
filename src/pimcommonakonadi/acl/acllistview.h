@@ -26,7 +26,7 @@ protected:
 private:
     void generalPaletteChanged();
     QColor mTextColor;
-    bool mCanBeAdministrated;
+    bool mCanBeAdministrated = true;
 };
 }
 #endif // ACLLISTVIEW_H

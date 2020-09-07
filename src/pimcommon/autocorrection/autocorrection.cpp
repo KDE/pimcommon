@@ -24,18 +24,6 @@
 using namespace PimCommon;
 
 AutoCorrection::AutoCorrection()
-    : mSingleSpaces(true)
-    , mUppercaseFirstCharOfSentence(false)
-    , mFixTwoUppercaseChars(false)
-    , mAutoFractions(true)
-    , mCapitalizeWeekDays(false)
-    , mReplaceDoubleQuotes(false)
-    , mReplaceSingleQuotes(false)
-    , mEnabled(false)
-    , mSuperScriptAppendix(false)
-    , mAddNonBreakingSpace(false)
-    , mMaxFindStringLenght(0)
-    , mMinFindStringLenght(0)
 {
     mNonBreakingSpace = QChar(QChar::Nbsp);
     // default double quote open 0x201c
