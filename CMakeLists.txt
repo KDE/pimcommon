@@ -3,7 +3,7 @@ set(PIM_VERSION "5.15.40")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.73.0")
+set(KF5_MIN_VERSION "5.74.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
