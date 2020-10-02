@@ -262,9 +262,9 @@ public:
                         firstElement = false;
                     } else {
                         if (mModel->insertRow(mModel->rowCount())) {
-                            const QModelIndex index = mModel->index(mModel->rowCount() - 1, 0);
-                            mModel->setData(index, KEmailAddress::extractEmailAddress(addr), AclModel::UserIdRole);
-                            mModel->setData(index, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
+                            const QModelIndex rowindex = mModel->index(mModel->rowCount() - 1, 0);
+                            mModel->setData(rowindex, KEmailAddress::extractEmailAddress(addr), AclModel::UserIdRole);
+                            mModel->setData(rowindex, static_cast<int>(dlg.permissions()), AclModel::PermissionsRole);
                         }
                     }
                 }

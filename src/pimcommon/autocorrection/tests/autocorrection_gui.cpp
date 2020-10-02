@@ -88,8 +88,8 @@ void TextEditAutoCorrectionWidget::keyPressEvent(QKeyEvent *e)
 
 AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
     : QWidget(parent)
+    , mConfig(KSharedConfig::openConfig(QStringLiteral("autocorrectionguirc")))
 {
-    mConfig = KSharedConfig::openConfig(QStringLiteral("autocorrectionguirc"));
     PimCommon::PimCommonSettings::self()->setSharedConfig(mConfig);
     PimCommon::PimCommonSettings::self()->load();
 
