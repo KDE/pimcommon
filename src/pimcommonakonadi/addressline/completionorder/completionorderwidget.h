@@ -73,8 +73,6 @@ private:
     void slotSelectionChanged();
     void slotMoveUp();
     void slotMoveDown();
-    void readConfig();
-    void writeConfig();
     void addRecentAddressItem();
     void addCompletionItemForCollection(const QModelIndex &);
     void slotItemChanged();
