@@ -77,8 +77,8 @@ public:
     QPushButton *mDownButton = nullptr;
     QPushButton *mCustomButton = nullptr;
     QVBoxLayout *mButtonLayout = nullptr;
-    QString mAddDialogLabel;
-    QString mRemoveDialogLabel;
+    QString mAddDialogLabel = i18n("New entry:");
+    QString mRemoveDialogLabel = i18n("Do you want to remove selected text?");
 };
 
 SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel, const QString &addDialogLabel)
@@ -366,12 +366,12 @@ void SimpleStringListEditor::slotModify()
 
 void SimpleStringListEditor::setRemoveDialogLabel(const QString &removeDialogLabel)
 {
-    d->mRemoveDialogLabel = removeDialogLabel.isEmpty() ? i18n("Do you want to remove selected text?") : removeDialogLabel;
+    d->mRemoveDialogLabel = removeDialogLabel;
 }
 
 void SimpleStringListEditor::setAddDialogLabel(const QString &addDialogLabel)
 {
-    d->mAddDialogLabel = addDialogLabel.isEmpty() ? i18n("New entry:") : addDialogLabel;
+    d->mAddDialogLabel = addDialogLabel;
 }
 
 void SimpleStringListEditor::slotUp()
