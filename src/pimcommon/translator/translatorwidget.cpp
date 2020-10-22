@@ -8,13 +8,11 @@
 #include "translatorwidget.h"
 #include "translatorutil.h"
 #include "googletranslator.h"
-#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <PimCommon/NetworkManager>
 #include <KBusyIndicatorWidget>
 
 #include <QPushButton>
 #include <KLocalizedString>
-#include <kio/job.h>
 #include <KConfigGroup>
 #include <KSeparator>
 #include <KMessageBox>

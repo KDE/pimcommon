@@ -17,7 +17,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KColorScheme>
-#include <AkonadiCore/Session>
 
 using namespace PimCommon;
 

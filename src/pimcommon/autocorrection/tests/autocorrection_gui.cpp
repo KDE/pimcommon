@@ -12,7 +12,6 @@
 
 #include "pimcommon_debug.h"
 
-#include <KSharedConfig>
 
 #include <QPointer>
 #include <QVBoxLayout>
