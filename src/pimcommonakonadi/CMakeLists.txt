@@ -329,7 +329,7 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
 
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
     LIB_NAME KF5PimCommonAkonadi
-    DEPS "AkonadiCore AkonadiWidgets Contacts AkonadiContact Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
+    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
     )
 
 

@@ -368,7 +368,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     )
 ecm_generate_pri_file(BASE_NAME PimCommon
     LIB_NAME KF5PimCommon
-    DEPS "Network KIOCore ConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
+    DEPS "network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
     )
 
 
