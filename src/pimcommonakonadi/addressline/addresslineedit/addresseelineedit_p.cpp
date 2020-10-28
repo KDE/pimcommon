@@ -30,7 +30,6 @@
 #include <AkonadiSearch/PIM/contactcompleter.h>
 #endif
 
-
 #include <addressline/addresslineedit/baloocompletionemail.h>
 #include <akonadi/contact/contactsearchjob.h>
 

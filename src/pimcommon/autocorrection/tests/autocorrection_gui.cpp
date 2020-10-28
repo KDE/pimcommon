@@ -12,7 +12,6 @@
 
 #include "pimcommon_debug.h"
 
-
 #include <QPointer>
 #include <QVBoxLayout>
 #include <QPushButton>
