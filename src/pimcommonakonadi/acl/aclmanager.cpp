@@ -304,7 +304,7 @@ public:
         mCollection = collection;
         mChanged = false;
 
-        const PimCommon::ImapAclAttribute *attribute
+        const auto *attribute
             = collection.attribute<PimCommon::ImapAclAttribute>();
         const QMap<QByteArray, KIMAP::Acl::Rights> rights = attribute->rights();
 
@@ -423,7 +423,7 @@ void AclManager::save(bool recursive)
     }
 
     // refresh the collection, it might be outdated in the meantime
-    Akonadi::CollectionFetchJob *job
+    auto *job
         = new Akonadi::CollectionFetchJob(d->mCollection, Akonadi::CollectionFetchJob::Base);
     if (!job->exec()) {
         qCDebug(PIMCOMMONAKONADI_LOG) << " collection Fetch error" << job->errorString();
@@ -439,7 +439,7 @@ void AclManager::save(bool recursive)
 
     d->mChanged = false;
 
-    PimCommon::AclModifyJob *modifyAclJob = new PimCommon::AclModifyJob;
+    auto *modifyAclJob = new PimCommon::AclModifyJob;
     modifyAclJob->setCurrentRight(d->mModel->rights());
     modifyAclJob->setTopLevelCollection(d->mCollection);
     modifyAclJob->setRecursive(recursive);

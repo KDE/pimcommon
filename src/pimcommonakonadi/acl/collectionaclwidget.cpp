@@ -69,11 +69,11 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     : QWidget(parent)
     , mAclManager(new PimCommon::AclManager(this))
 {
-    QHBoxLayout *layout = new QHBoxLayout(this);
-    QVBoxLayout *listViewLayout = new QVBoxLayout;
+    auto *layout = new QHBoxLayout(this);
+    auto *listViewLayout = new QVBoxLayout;
     layout->addLayout(listViewLayout);
 
-    AclListView *view = new AclListView;
+    auto *view = new AclListView;
     view->setObjectName(QStringLiteral("list_view"));
     listViewLayout->addWidget(view);
     mRecursiveChk = new QCheckBox(i18n("Apply permissions on all &subfolders."), this);
@@ -85,11 +85,11 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     view->setSelectionModel(mAclManager->selectionModel());
 
     QWidget *buttonBox = new QWidget;
-    QVBoxLayout *buttonBoxVBoxLayout = new QVBoxLayout(buttonBox);
+    auto *buttonBoxVBoxLayout = new QVBoxLayout(buttonBox);
     buttonBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(buttonBox);
 
-    ActionButton *button = new ActionButton(buttonBox);
+    auto *button = new ActionButton(buttonBox);
     buttonBoxVBoxLayout->addWidget(button);
     button->setObjectName(QStringLiteral("add"));
     button->setDefaultAction(mAclManager->addAction());

@@ -20,9 +20,9 @@
 CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout(this);
+    auto *lay = new QVBoxLayout(this);
 
-    QToolBar *menu = new QToolBar(this);
+    auto *menu = new QToolBar(this);
     lay->addWidget(menu);
 
     mCustomTools = new PimCommon::CustomToolsWidgetNg(this);
@@ -48,7 +48,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    CustomToolWidgetNgTest *w = new CustomToolWidgetNgTest();
+    auto *w = new CustomToolWidgetNgTest();
     w->resize(800, 200);
     w->show();
     const int ret = app.exec();

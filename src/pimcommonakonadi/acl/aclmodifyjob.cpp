@@ -45,7 +45,7 @@ void AclModifyJob::searchContact()
 {
     const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = mCurrentRight.cend();
     if (mIt != itEnd) {
-        Akonadi::ContactGroupSearchJob *searchJob = new Akonadi::ContactGroupSearchJob(this);
+        auto *searchJob = new Akonadi::ContactGroupSearchJob(this);
         searchJob->setQuery(Akonadi::ContactGroupSearchJob::Name, QString::fromLatin1(mIt.key()));
         searchJob->setLimit(1);
         connect(searchJob, &Akonadi::ContactGroupSearchJob::result, this, &AclModifyJob::slotGroupSearchResult);
@@ -56,7 +56,7 @@ void AclModifyJob::searchContact()
 
 void AclModifyJob::slotGroupSearchResult(KJob *job)
 {
-    Akonadi::ContactGroupSearchJob *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
+    auto *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
     if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
         Akonadi::ContactGroupExpandJob *expandJob
             = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
@@ -182,10 +182,10 @@ void AclModifyJob::changeAcl(const Akonadi::Collection &collection)
 {
     if (collection.hasAttribute<PimCommon::ImapAclAttribute>()) {
         Akonadi::Collection mutableCollection = collection;
-        PimCommon::ImapAclAttribute *attribute = mutableCollection.attribute<PimCommon::ImapAclAttribute>();
+        auto *attribute = mutableCollection.attribute<PimCommon::ImapAclAttribute>();
         if (canAdministrate(attribute, mutableCollection)) {
             attribute->setRights(mNewRight);
-            Akonadi::CollectionModifyJob *modifyJob = new Akonadi::CollectionModifyJob(mutableCollection);
+            auto *modifyJob = new Akonadi::CollectionModifyJob(mutableCollection);
             connect(modifyJob, &KJob::result, this, &AclModifyJob::slotModifyDone);
         }
     } else {
@@ -216,7 +216,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
     QStringList folderNames;
     for (const Akonadi::Collection &col : collectionList) {
         if (col.hasAttribute<PimCommon::ImapAclAttribute>()) {
-            const PimCommon::ImapAclAttribute *attribute = col.attribute<PimCommon::ImapAclAttribute>();
+            const auto *attribute = col.attribute<PimCommon::ImapAclAttribute>();
             if (canAdministrate(attribute, col)) {
                 QString fullName;
                 bool parentFound;

@@ -216,7 +216,7 @@ public:
     bool operator<(const QTreeWidgetItem &other) const override
     {
         const QTreeWidgetItem *otherItem = &other;
-        const CompletionViewItem *completionItem = static_cast<const CompletionViewItem *>(otherItem);
+        const auto *completionItem = static_cast<const CompletionViewItem *>(otherItem);
         // item with weight 100 should be on the top -> reverse sorting
         return mItem->completionWeight() > completionItem->item()->completionWeight();
     }
@@ -232,10 +232,10 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     new CompletionOrderEditorAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/"), this, QDBusConnection::ExportAdaptors);
 
-    QHBoxLayout *hbox = new QHBoxLayout(this);
+    auto *hbox = new QHBoxLayout(this);
 
     QWidget *page = new QWidget(this);
-    QHBoxLayout *pageHBoxLayout = new QHBoxLayout(page);
+    auto *pageHBoxLayout = new QHBoxLayout(page);
     pageHBoxLayout->setContentsMargins(0, 0, 0, 0);
     hbox->addWidget(page);
     mListView = new QTreeWidget(page);
@@ -250,7 +250,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mListView->setSortingEnabled(true);
 
     QWidget *upDownBox = new QWidget(page);
-    QVBoxLayout *upDownBoxVBoxLayout = new QVBoxLayout(upDownBox);
+    auto *upDownBoxVBoxLayout = new QVBoxLayout(upDownBox);
     upDownBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
     pageHBoxLayout->addWidget(upDownBox);
     mUpButton = new QPushButton(upDownBox);
@@ -298,7 +298,7 @@ void CompletionOrderWidget::save()
         group.deleteGroup();
 
         for (int itemIndex = 0; itemIndex < mListView->topLevelItemCount(); ++itemIndex) {
-            CompletionViewItem *item
+            auto *item
                 = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));
             item->item()->setCompletionWeight(w);
             item->item()->setIsEnabled(item->checkState(0) == Qt::Checked);
@@ -345,20 +345,20 @@ void CompletionOrderWidget::loadCompletionItems()
         }
     }
 
-    Akonadi::ChangeRecorder *monitor = new Akonadi::ChangeRecorder(this);
+    auto *monitor = new Akonadi::ChangeRecorder(this);
     monitor->fetchCollection(true);
     monitor->setCollectionMonitored(Akonadi::Collection::root());
     monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType(), true);
     monitor->setMimeTypeMonitored(KContacts::ContactGroup::mimeType(), true);
 
-    Akonadi::EntityTreeModel *model = new Akonadi::EntityTreeModel(monitor, this);
+    auto *model = new Akonadi::EntityTreeModel(monitor, this);
     model->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
 
-    KDescendantsProxyModel *descendantsProxy = new KDescendantsProxyModel(this);
+    auto *descendantsProxy = new KDescendantsProxyModel(this);
     descendantsProxy->setDisplayAncestorData(true);
     descendantsProxy->setSourceModel(model);
 
-    Akonadi::CollectionFilterProxyModel *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
+    auto *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
     mimeTypeProxy->addMimeTypeFilters({KContacts::Addressee::mimeType(), KContacts::ContactGroup::mimeType()});
     mimeTypeProxy->setSourceModel(descendantsProxy);
     mimeTypeProxy->setExcludeVirtualCollections(true);
@@ -418,11 +418,11 @@ static void swapItems(CompletionViewItem *one, CompletionViewItem *other)
 
 void CompletionOrderWidget::slotMoveUp()
 {
-    CompletionViewItem *item = static_cast<CompletionViewItem *>(mListView->currentItem());
+    auto *item = static_cast<CompletionViewItem *>(mListView->currentItem());
     if (!item) {
         return;
     }
-    CompletionViewItem *above = static_cast<CompletionViewItem *>(mListView->itemAbove(item));
+    auto *above = static_cast<CompletionViewItem *>(mListView->itemAbove(item));
     if (!above) {
         return;
     }
@@ -434,11 +434,11 @@ void CompletionOrderWidget::slotMoveUp()
 
 void CompletionOrderWidget::slotMoveDown()
 {
-    CompletionViewItem *item = static_cast<CompletionViewItem *>(mListView->currentItem());
+    auto *item = static_cast<CompletionViewItem *>(mListView->currentItem());
     if (!item) {
         return;
     }
-    CompletionViewItem *below = static_cast<CompletionViewItem *>(mListView->itemBelow(item));
+    auto *below = static_cast<CompletionViewItem *>(mListView->itemBelow(item));
     if (!below) {
         return;
     }

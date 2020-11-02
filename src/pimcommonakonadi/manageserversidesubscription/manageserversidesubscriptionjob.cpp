@@ -63,7 +63,7 @@ void ManageServerSideSubscriptionJob::start()
             return;
         }
         QDBusPendingCall call = iface.asyncCall(QStringLiteral("configureSubscription"), (qlonglong)d->mParentWidget->winId());
-        QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+        auto *watcher = new QDBusPendingCallWatcher(call, this);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, &ManageServerSideSubscriptionJob::slotConfigureSubscriptionFinished);
     }
 }

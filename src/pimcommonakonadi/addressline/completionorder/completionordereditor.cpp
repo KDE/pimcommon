@@ -41,7 +41,7 @@ CompletionOrderEditor::CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch
     , d(new PimCommon::CompletionOrderEditorPrivate)
 {
     setWindowTitle(i18nc("@title:window", "Edit Completion Order"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     d->mCompletionOrderWidget = new CompletionOrderWidget(this);
     d->mCompletionOrderWidget->setObjectName(QStringLiteral("completionorderwidget"));

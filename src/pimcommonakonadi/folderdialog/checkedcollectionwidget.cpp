@@ -39,11 +39,11 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     : QWidget(parent)
     , d(new PimCommon::CheckedCollectionWidgetPrivate)
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto *vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(0, 0, 0, 0);
 
     // Create a new change recorder.
-    Akonadi::Monitor *monitor = new Akonadi::Monitor(this);
+    auto *monitor = new Akonadi::Monitor(this);
     monitor->setObjectName(QStringLiteral("CheckedCollectionWidgetMonitor"));
     monitor->fetchCollection(true);
     monitor->setAllMonitored(true);
@@ -55,7 +55,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     // Set the model to show only collections, not items.
     d->mEntityTreeModel->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
 
-    Akonadi::CollectionFilterProxyModel *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
+    auto *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
     mimeTypeProxy->setExcludeVirtualCollections(true);
     mimeTypeProxy->addMimeTypeFilters({mimetype});
     mimeTypeProxy->setSourceModel(d->mEntityTreeModel);
@@ -70,7 +70,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     d->mCollectionFilter->setSourceModel(d->mCheckProxy);
     d->mCollectionFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
-    QLineEdit *searchLine = new QLineEdit(this);
+    auto *searchLine = new QLineEdit(this);
     searchLine->setPlaceholderText(i18n("Search..."));
     searchLine->setClearButtonEnabled(true);
     connect(searchLine, &QLineEdit::textChanged, this, &CheckedCollectionWidget::slotSetCollectionFilter);

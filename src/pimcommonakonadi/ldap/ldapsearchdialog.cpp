@@ -469,13 +469,13 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     , d(new Private(this))
 {
     setWindowTitle(i18nc("@title:window", "Import Contacts from LDAP"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel, this);
     d->user1Button = new QPushButton;
     buttonBox->addButton(d->user1Button, QDialogButtonBox::ActionRole);
 
-    QPushButton *user2Button = new QPushButton;
+    auto *user2Button = new QPushButton;
     buttonBox->addButton(user2Button, QDialogButtonBox::ActionRole);
 
     connect(d->user1Button, &QPushButton::clicked, this, &LdapSearchDialog::slotUser1);
@@ -488,12 +488,12 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
 
-    QVBoxLayout *topLayout = new QVBoxLayout(page);
+    auto *topLayout = new QVBoxLayout(page);
     topLayout->setContentsMargins(0, 0, 0, 0);
 
     QGroupBox *groupBox = new QGroupBox(i18n("Search for Addresses in Directory"),
                                         page);
-    QGridLayout *boxLayout = new QGridLayout();
+    auto *boxLayout = new QGridLayout();
     groupBox->setLayout(boxLayout);
     boxLayout->setColumnStretch(1, 1);
 
@@ -541,7 +541,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
 
     topLayout->addWidget(groupBox);
 
-    QHBoxLayout *quickSearchLineLayout = new QHBoxLayout;
+    auto *quickSearchLineLayout = new QHBoxLayout;
     quickSearchLineLayout->addStretch();
     d->searchLine = new QLineEdit;
     new KPIM::LineEditCatchReturnKey(d->searchLine, this);
@@ -573,14 +573,14 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->mResultView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(d->mResultView, &QTableView::customContextMenuRequested, this, &LdapSearchDialog::slotCustomContextMenuRequested);
 
-    QHBoxLayout *buttonLayout = new QHBoxLayout;
+    auto *buttonLayout = new QHBoxLayout;
     buttonLayout->setContentsMargins(0, 0, 0, 0);
     topLayout->addLayout(buttonLayout);
 
     d->progressIndication = new KPIM::ProgressIndicatorLabel(i18n("Searching..."));
     buttonLayout->addWidget(d->progressIndication);
 
-    QDialogButtonBox *buttons = new QDialogButtonBox(page);
+    auto *buttons = new QDialogButtonBox(page);
     QPushButton *button = buttons->addButton(i18n("Select All"),
                                              QDialogButtonBox::ActionRole);
     connect(button, &QPushButton::clicked, this, [this]() {
@@ -668,10 +668,10 @@ void LdapSearchDialog::Private::restoreSettings()
         mIsConfigured = false;
     } else {
         mIsConfigured = true;
-        KLDAP::LdapClientSearchConfig *clientSearchConfig = new KLDAP::LdapClientSearchConfig;
+        auto *clientSearchConfig = new KLDAP::LdapClientSearchConfig;
         for (int j = 0; j < mNumHosts; ++j) {
             KLDAP::LdapServer ldapServer;
-            KLDAP::LdapClient *ldapClient = new KLDAP::LdapClient(0, q);
+            auto *ldapClient = new KLDAP::LdapClient(0, q);
             clientSearchConfig->readConfig(ldapServer, group, j, true);
             ldapClient->setServer(ldapServer);
             QStringList attrs;

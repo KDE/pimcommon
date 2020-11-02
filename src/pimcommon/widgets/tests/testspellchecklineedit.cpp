@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     parser.process(app);
 
     QWidget *w = new QWidget;
-    QVBoxLayout *vbox = new QVBoxLayout(w);
+    auto *vbox = new QVBoxLayout(w);
 
     PimCommon::SpellCheckLineEdit *spellCheckLineEdit = new PimCommon::SpellCheckLineEdit(w, QStringLiteral("testspecklineeditrc"));
     vbox->addWidget(spellCheckLineEdit);

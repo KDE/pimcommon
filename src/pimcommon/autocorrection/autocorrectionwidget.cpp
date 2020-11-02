@@ -112,7 +112,7 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     slotEnableDisableAbreviationList();
     slotEnableDisableTwoUpperEntry();
 
-    QMenu *menu = new QMenu(this);
+    auto *menu = new QMenu(this);
     d->ui->importAutoCorrection->setMenu(menu);
 
     QAction *act = new QAction(i18n("LibreOffice Autocorrection"), this);
@@ -547,7 +547,7 @@ void AutoCorrectionWidget::slotEnableDisableTwoUpperEntry()
 void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
 {
     if (act) {
-        AutoCorrectionWidget::ImportFileType type = act->data().value<AutoCorrectionWidget::ImportFileType>();
+        auto type = act->data().value<AutoCorrectionWidget::ImportFileType>();
         QString title;
         QString filter;
         switch (type) {

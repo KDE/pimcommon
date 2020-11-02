@@ -80,7 +80,7 @@ QByteArray ImapAclAttribute::type() const
 
 ImapAclAttribute *ImapAclAttribute::clone() const
 {
-    ImapAclAttribute *attr = new ImapAclAttribute(d->mRights, d->mOldRights);
+    auto *attr = new ImapAclAttribute(d->mRights, d->mOldRights);
     attr->setMyRights(d->mMyRights);
     return attr;
 }

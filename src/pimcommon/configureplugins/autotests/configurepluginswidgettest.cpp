@@ -27,19 +27,19 @@ void ConfigurePluginsWidgetTest::shouldHaveDefaultValue()
 {
     PimCommon::ConfigurePluginsWidget w;
 
-    KMessageWidget *mMessageWidget = w.findChild<KMessageWidget *>(QStringLiteral("mMessageWidget"));
+    auto *mMessageWidget = w.findChild<KMessageWidget *>(QStringLiteral("mMessageWidget"));
     QVERIFY(mMessageWidget);
     QVERIFY(!mMessageWidget->isCloseButtonVisible());
     QVERIFY(!mMessageWidget->text().isEmpty());
 
-    QSplitter *mSplitter = w.findChild<QSplitter *>(QStringLiteral("splitter"));
+    auto *mSplitter = w.findChild<QSplitter *>(QStringLiteral("splitter"));
     QVERIFY(mSplitter);
     QCOMPARE(mSplitter->count(), 2);
 
-    PimCommon::ConfigurePluginsListWidget *mConfigureListWidget = mSplitter->findChild<PimCommon::ConfigurePluginsListWidget *>(QStringLiteral("configureListWidget"));
+    auto *mConfigureListWidget = mSplitter->findChild<PimCommon::ConfigurePluginsListWidget *>(QStringLiteral("configureListWidget"));
     QVERIFY(mConfigureListWidget);
 
-    QTextEdit *mDescription = mSplitter->findChild<QTextEdit *>(QStringLiteral("description"));
+    auto *mDescription = mSplitter->findChild<QTextEdit *>(QStringLiteral("description"));
     QVERIFY(mDescription);
     QVERIFY(mDescription->isReadOnly());
     QVERIFY(mDescription->document()->isEmpty());

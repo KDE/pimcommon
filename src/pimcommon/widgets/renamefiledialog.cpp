@@ -97,12 +97,12 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     , d(new RenameFileDialogPrivate(url, this))
 {
     setWindowTitle(i18nc("@title:window", "File Already Exists"));
-    QVBoxLayout *pLayout = new QVBoxLayout(this);
+    auto *pLayout = new QVBoxLayout(this);
 
     QLabel *label = new QLabel(xi18n("A file named <filename>%1</filename> already exists. Do you want to overwrite it?", url.fileName()), this);
     pLayout->addWidget(label);
 
-    QHBoxLayout *renameLayout = new QHBoxLayout();
+    auto *renameLayout = new QHBoxLayout();
     pLayout->addLayout(renameLayout);
 
     d->nameEdit = new QLineEdit(this);
@@ -113,7 +113,7 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     renameLayout->addWidget(d->suggestNewNameBtn);
     connect(d->suggestNewNameBtn, &QPushButton::clicked, this, &RenameFileDialog::slotSuggestNewNamePressed);
 
-    QPushButton *overWrite = new QPushButton(this);
+    auto *overWrite = new QPushButton(this);
     KStandardGuiItem::assign(overWrite, KStandardGuiItem::Overwrite);
     connect(overWrite, &QPushButton::clicked, this, &RenameFileDialog::slotOverwritePressed);
 
@@ -126,7 +126,7 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     KSeparator *separator = new KSeparator(this);
     pLayout->addWidget(separator);
 
-    QHBoxLayout *layout = new QHBoxLayout();
+    auto *layout = new QHBoxLayout();
     pLayout->addLayout(layout);
 
     if (multiFiles) {

@@ -37,7 +37,7 @@ ConfigurePluginsWidget::~ConfigurePluginsWidget()
 
 void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePluginListWidget)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
     mMessageWidget = new KMessageWidget(i18n("Restart is necessary for applying the changes."), this);

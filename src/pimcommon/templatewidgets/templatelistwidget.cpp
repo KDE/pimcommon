@@ -39,7 +39,7 @@ public:
 
     void createListWidgetItem(const QString &name, const QString &text, bool isDefaultTemplate)
     {
-        QListWidgetItem *item = new QListWidgetItem(name, q);
+        auto *item = new QListWidgetItem(name, q);
         item->setData(TemplateListWidget::Text, text);
         item->setData(TemplateListWidget::DefaultTemplate, isDefaultTemplate);
         if (isDefaultTemplate) {
@@ -154,7 +154,7 @@ public:
     {
         const QList<QListWidgetItem *> lstSelectedItems = q->selectedItems();
         const bool listSelectedIsEmpty = lstSelectedItems.isEmpty();
-        QMenu *menu = new QMenu(q);
+        auto *menu = new QMenu(q);
 
         if (!listSelectedIsEmpty) {
             menu->addAction(i18n("Insert template"), q, [this]() {
@@ -328,7 +328,7 @@ QMimeData *TemplateListWidget::mimeData(const QList<QListWidgetItem *> items) co
     if (items.isEmpty()) {
         return nullptr;
     }
-    QMimeData *mimeData = new QMimeData();
+    auto *mimeData = new QMimeData();
     QListWidgetItem *item = items.first();
     mimeData->setText(item->data(TemplateListWidget::Text).toString());
     return mimeData;

@@ -20,7 +20,7 @@ using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
@@ -56,7 +56,7 @@ void ConfigurePluginsListWidget::slotItemChanged(QTreeWidgetItem *item, int colu
 void ConfigurePluginsListWidget::slotItemSelectionChanged()
 {
     QTreeWidgetItem *item = mListWidget->currentItem();
-    if (PluginItem *pluginItem = dynamic_cast<PluginItem *>(item)) {
+    if (auto *pluginItem = dynamic_cast<PluginItem *>(item)) {
         Q_EMIT descriptionChanged(pluginItem->mDescription);
     }
 }
@@ -115,7 +115,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
         topLevel->setFlags(topLevel->flags() & ~Qt::ItemIsSelectable);
         const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
         for (const PimCommon::PluginUtilData &data : lst) {
-            PluginItem *subItem = new PluginItem(topLevel);
+            auto *subItem = new PluginItem(topLevel);
             subItem->setText(0, data.mName);
             subItem->mIdentifier = data.mIdentifier;
             subItem->mDescription = data.mDescription;
@@ -127,8 +127,8 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
                 subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
             }
             if (data.mHasConfigureDialog) {
-                QToolButton *but = new QToolButton(mListWidget);
-                QAction *act = new QAction(but);
+                auto *but = new QToolButton(mListWidget);
+                auto *act = new QAction(but);
                 const QStringList actData {
                     configureGroupName, data.mIdentifier
                 };

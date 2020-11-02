@@ -14,7 +14,7 @@
 LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    auto *mainLayout = new QHBoxLayout(this);
     QPushButton *button = new QPushButton(QStringLiteral("Open Log"), this);
     connect(button, &QPushButton::clicked, this, &LogActivitiesMainWidget::slotOpenDialog);
     mainLayout->addWidget(button);

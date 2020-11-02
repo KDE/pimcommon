@@ -23,7 +23,7 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Log activities"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mLogWidget = new LogActivitiesWidget(this);
@@ -46,7 +46,7 @@ LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     mSaveButton->setObjectName(QStringLiteral("savebutton"));
     mSaveButton->setEnabled(false);
 
-    LogactivitiesPurposeMenuWidget *purposeMenu = new LogactivitiesPurposeMenuWidget(this, this);
+    auto *purposeMenu = new LogactivitiesPurposeMenuWidget(this, this);
     mShareButton = new QPushButton(i18n("Share..."), this);
     mShareButton->setMenu(purposeMenu->menu());
     mShareButton->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));

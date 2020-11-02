@@ -76,7 +76,7 @@ QString BalooCompletionEmail::stripEmail(const QString &email, QString &address)
     QString displayName, addrSpec, comment;
     if (KEmailAddress::AddressOk == KEmailAddress::splitAddress(email, displayName, addrSpec, comment)) {
         address = addrSpec;
-        while (1) {
+        while (true) {
             if ((displayName.startsWith(QLatin1String("\\\"")) && displayName.endsWith(QLatin1String("\\\"")))) {
                 displayName = displayName.mid(2, displayName.length() - 4).trimmed();
             } else if ((displayName.startsWith(QLatin1Char('\'')) && displayName.endsWith(QLatin1Char('\'')))

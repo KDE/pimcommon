@@ -165,7 +165,7 @@ void AddresseeLineEditPrivate::setCompletedItems(const QStringList &items, bool 
         completionBox->clear();
         const int numberOfItems(items.count());
         for (int i = 0; i < numberOfItems; ++i) {
-            QListWidgetItem *item = new QListWidgetItem(items.at(i), completionBox);
+            auto *item = new QListWidgetItem(items.at(i), completionBox);
             if (!items.at(i).startsWith(s_completionItemIndentString)) {
                 item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
                 item->setBackground(AddresseeLineEditManager::self()->alternateColor());
@@ -400,7 +400,7 @@ void AddresseeLineEditPrivate::akonadiPerformSearch()
     AddresseeLineEditManager::self()->akonadiJobsInFlight.clear();
 
     // now start new jobs
-    Akonadi::ContactSearchJob *contactJob = new Akonadi::ContactSearchJob(AddresseeLineEditManager::self()->akonadiSession());
+    auto *contactJob = new Akonadi::ContactSearchJob(AddresseeLineEditManager::self()->akonadiSession());
     contactJob->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
     contactJob->setQuery(Akonadi::ContactSearchJob::NameOrEmail, mSearchString,
                          Akonadi::ContactSearchJob::ContainsWordBoundaryMatch);
@@ -409,7 +409,7 @@ void AddresseeLineEditPrivate::akonadiPerformSearch()
     connect(contactJob, &KJob::result,
             this, &AddresseeLineEditPrivate::slotAkonadiSearchResult);
 
-    Akonadi::ContactGroupSearchJob *groupJob = new Akonadi::ContactGroupSearchJob(AddresseeLineEditManager::self()->akonadiSession());
+    auto *groupJob = new Akonadi::ContactGroupSearchJob(AddresseeLineEditManager::self()->akonadiSession());
     groupJob->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
     groupJob->setQuery(Akonadi::ContactGroupSearchJob::Name, mSearchString,
                        Akonadi::ContactGroupSearchJob::ContainsMatch);

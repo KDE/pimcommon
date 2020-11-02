@@ -201,10 +201,10 @@ void TranslatorWidget::init()
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
-    QHBoxLayout *hboxLayout = new QHBoxLayout;
-    QToolButton *closeBtn = new QToolButton(this);
+    auto *hboxLayout = new QHBoxLayout;
+    auto *closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
     closeBtn->setIconSize(QSize(16, 16));
@@ -275,7 +275,7 @@ void TranslatorWidget::init()
     d->splitter = new QSplitter;
     d->splitter->setChildrenCollapsible(false);
     d->inputText = new TranslatorTextEdit(this);
-    KPIMTextEdit::PlainTextEditorWidget *editorWidget = new KPIMTextEdit::PlainTextEditorWidget(d->inputText);
+    auto *editorWidget = new KPIMTextEdit::PlainTextEditorWidget(d->inputText);
     d->inputText->setObjectName(QStringLiteral("inputtext"));
     d->inputText->setPlaceholderText(i18n("Drag text that you want to translate. (Be careful text will be send to Google Server)."));
     connect(d->inputText, &TranslatorTextEdit::textChanged, this, &TranslatorWidget::slotTextChanged);
@@ -432,7 +432,7 @@ bool TranslatorWidget::event(QEvent *e)
     // window-global actions (e.g. Emil Sedgh binds Esc to "close tab").
     // With a shortcut override we can catch this before it gets to kactions.
     if (e->type() == QEvent::ShortcutOverride || e->type() == QEvent::KeyPress) {
-        QKeyEvent *kev = static_cast<QKeyEvent * >(e);
+        auto *kev = static_cast<QKeyEvent * >(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();

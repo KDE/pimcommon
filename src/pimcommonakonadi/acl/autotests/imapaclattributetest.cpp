@@ -196,7 +196,7 @@ void ImapAclAttributeTest::testSerializeDeserialize()
     QFETCH(QByteArray, serialized);
     QFETCH(QByteArray, oldSerialized);
 
-    ImapAclAttribute *attr = new ImapAclAttribute();
+    auto *attr = new ImapAclAttribute();
     attr->setRights(rights);
     attr->setMyRights(myRights);
     QCOMPARE(attr->serialized(), serialized);
@@ -222,7 +222,7 @@ void ImapAclAttributeTest::testOldRights()
     acls.insert("second_user@host", KIMAP::Acl::Lookup | KIMAP::Acl::Read);
     acls.insert("third_user@host", KIMAP::Acl::Lookup | KIMAP::Acl::Read);
 
-    ImapAclAttribute *attr = new ImapAclAttribute();
+    auto *attr = new ImapAclAttribute();
     attr->setRights(acls);
 
     ImapAcl oldAcls = acls;

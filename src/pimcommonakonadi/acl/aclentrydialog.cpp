@@ -68,7 +68,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     : QDialog(parent)
     , d(new Private(this))
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     d->mOkButton->setDefault(true);
@@ -80,7 +80,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
 
-    QGridLayout *layout = new QGridLayout(page);
+    auto *layout = new QGridLayout(page);
     layout->setContentsMargins(0, 0, 0, 0);
 
     QLabel *label = new QLabel(i18n("&User identifier:"), page);

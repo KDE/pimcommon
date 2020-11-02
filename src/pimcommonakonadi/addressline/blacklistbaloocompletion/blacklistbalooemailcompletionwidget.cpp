@@ -27,9 +27,9 @@ using namespace PimCommon;
 BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
-    QHBoxLayout *searchLayout = new QHBoxLayout;
+    auto *searchLayout = new QHBoxLayout;
     mainLayout->addLayout(searchLayout);
 
     QLabel *lab = new QLabel(i18n("Search email:"), this);
@@ -66,10 +66,10 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     connect(mBlackListWarning, &BlackListBalooEmailWarning::saveChanges, this, &BlackListBalooEmailCompletionWidget::slotSaveChanges);
     mainLayout->addWidget(mBlackListWarning);
 
-    QHBoxLayout *searchLineLayout = new QHBoxLayout;
+    auto *searchLineLayout = new QHBoxLayout;
     mainLayout->addLayout(searchLineLayout);
 
-    QHBoxLayout *selectElementLayout = new QHBoxLayout;
+    auto *selectElementLayout = new QHBoxLayout;
     searchLineLayout->addLayout(selectElementLayout);
 
     mSelectButton = new QPushButton(i18n("&Select"), this);
@@ -105,7 +105,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     searchLineLayout->addWidget(mNumberOfEmailsFound);
     searchLineLayout->addWidget(mSearchInResultLineEdit);
 
-    QHBoxLayout *excludeDomainLayout = new QHBoxLayout;
+    auto *excludeDomainLayout = new QHBoxLayout;
     excludeDomainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->addLayout(excludeDomainLayout);
 
@@ -179,7 +179,7 @@ void BlackListBalooEmailCompletionWidget::slotSearch()
     const QString searchEmail = mSearchLineEdit->text().trimmed();
     if (searchEmail.length() > 2) {
         mSearchInResultLineEdit->clear();
-        PimCommon::BlackListBalooEmailSearchJob *job = new PimCommon::BlackListBalooEmailSearchJob(this);
+        auto *job = new PimCommon::BlackListBalooEmailSearchJob(this);
         job->setSearchEmail(searchEmail);
         job->setLimit(mLimit);
         connect(job, &BlackListBalooEmailSearchJob::emailsFound, this, &BlackListBalooEmailCompletionWidget::slotEmailFound);

@@ -23,17 +23,17 @@ CompletionOrderWidgetTest::~CompletionOrderWidgetTest()
 void CompletionOrderWidgetTest::shouldHaveDefaultValue()
 {
     PimCommon::CompletionOrderWidget w;
-    QTreeWidget *treewidget = w.findChild<QTreeWidget *>(QStringLiteral("listview"));
+    auto *treewidget = w.findChild<QTreeWidget *>(QStringLiteral("listview"));
     QVERIFY(treewidget);
     QVERIFY(treewidget->isHeaderHidden());
     QVERIFY(treewidget->isSortingEnabled());
     QCOMPARE(treewidget->topLevelItemCount(), 0);
 
-    QPushButton *up = w.findChild<QPushButton *>(QStringLiteral("mUpButton"));
+    auto *up = w.findChild<QPushButton *>(QStringLiteral("mUpButton"));
     QVERIFY(up);
     QVERIFY(up->autoRepeat());
 
-    QPushButton *down = w.findChild<QPushButton *>(QStringLiteral("mDownButton"));
+    auto *down = w.findChild<QPushButton *>(QStringLiteral("mDownButton"));
     QVERIFY(down);
     QVERIFY(down->autoRepeat());
 }

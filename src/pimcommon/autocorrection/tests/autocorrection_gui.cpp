@@ -26,7 +26,7 @@ ConfigureTestDialog::ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrecti
     : QDialog(parent)
 {
     setWindowTitle(QStringLiteral("Configure Autocorrection"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
@@ -92,8 +92,8 @@ AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
     PimCommon::PimCommonSettings::self()->load();
 
     mAutoCorrection = new PimCommon::AutoCorrection;
-    QVBoxLayout *lay = new QVBoxLayout(this);
-    QToolBar *bar = new QToolBar;
+    auto *lay = new QVBoxLayout(this);
+    auto *bar = new QToolBar;
     lay->addWidget(bar);
     bar->addAction(QStringLiteral("Configure..."), this, &AutocorrectionTestWidget::slotConfigure);
     QAction *richText = new QAction(QStringLiteral("HTML mode"), this);
@@ -138,7 +138,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    AutocorrectionTestWidget *w = new AutocorrectionTestWidget();
+    auto *w = new AutocorrectionTestWidget();
     w->resize(800, 600);
 
     w->show();

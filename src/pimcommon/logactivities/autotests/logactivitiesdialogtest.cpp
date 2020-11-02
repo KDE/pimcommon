@@ -30,18 +30,18 @@ LogActivitiesDialogTest::~LogActivitiesDialogTest()
 void LogActivitiesDialogTest::shouldHaveDefaultValue()
 {
     PimCommon::LogActivitiesDialog w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    PimCommon::LogActivitiesWidget *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
+    auto *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
     QVERIFY(mLogWidget);
 
-    QCheckBox *mEnableLogActivities = w.findChild<QCheckBox *>(QStringLiteral("enablelogactivities"));
+    auto *mEnableLogActivities = w.findChild<QCheckBox *>(QStringLiteral("enablelogactivities"));
     QVERIFY(mEnableLogActivities);
     QVERIFY(!mEnableLogActivities->text().isEmpty());
     QVERIFY(!mEnableLogActivities->isChecked());
 
-    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
     const QList<QAbstractButton *> lstButtonBox = buttonBox->buttons();
@@ -60,9 +60,9 @@ void LogActivitiesDialogTest::shouldHaveDefaultValue()
 void LogActivitiesDialogTest::shouldClearLog()
 {
     PimCommon::LogActivitiesDialog w;
-    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
 
-    PimCommon::LogActivitiesWidget *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
+    auto *mLogWidget = w.findChild<PimCommon::LogActivitiesWidget *>(QStringLiteral("logwidget"));
 
     QVERIFY(mLogWidget->log().isEmpty());
 
@@ -87,7 +87,7 @@ void LogActivitiesDialogTest::shouldHaveCorrectLogActivities()
 {
     PimCommon::LogActivitiesManager::self()->setEnableLogActivities(true);
     PimCommon::LogActivitiesDialog w;
-    QCheckBox *mEnableLogActivities = w.findChild<QCheckBox *>(QStringLiteral("enablelogactivities"));
+    auto *mEnableLogActivities = w.findChild<QCheckBox *>(QStringLiteral("enablelogactivities"));
     QVERIFY(mEnableLogActivities->isChecked());
 }
 

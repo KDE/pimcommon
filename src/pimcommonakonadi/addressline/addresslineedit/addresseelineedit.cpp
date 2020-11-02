@@ -317,7 +317,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
                         dataStream.open(QIODevice::ReadOnly);
                         QString error;
                         if (KContacts::ContactGroupTool::convertFromXml(&dataStream, group, &error)) {
-                            Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(group);
+                            auto *expandJob = new Akonadi::ContactGroupExpandJob(group);
                             connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this, &AddresseeLineEdit::groupExpandResult);
                             expandJob->start();
                         } else {
@@ -411,7 +411,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
 
 void AddresseeLineEdit::groupExpandResult(KJob *job)
 {
-    Akonadi::ContactGroupExpandJob *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
+    auto *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
 
     if (!expandJob) {
         return;
@@ -705,7 +705,7 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
 
     if ((object == this)
         && (event->type() == QEvent::ShortcutOverride)) {
-        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        auto *keyEvent = static_cast<QKeyEvent *>(event);
         if (keyEvent->key() == Qt::Key_Up || keyEvent->key() == Qt::Key_Down
             || keyEvent->key() == Qt::Key_Tab) {
             keyEvent->accept();
@@ -888,7 +888,7 @@ void AddresseeLineEdit::slotEditingFinished()
     if (!text().trimmed().isEmpty() && enableAkonadiSearch()) {
         const QStringList addresses = KEmailAddress::splitAddressList(text());
         for (const QString &address : addresses) {
-            Akonadi::ContactGroupSearchJob *job = new Akonadi::ContactGroupSearchJob();
+            auto *job = new Akonadi::ContactGroupSearchJob();
             connect(job, &Akonadi::ContactGroupSearchJob::result, this, &AddresseeLineEdit::slotGroupSearchResult);
             d->mightBeGroupJobsAdd(job);
             job->setQuery(Akonadi::ContactGroupSearchJob::Name, address);
@@ -898,7 +898,7 @@ void AddresseeLineEdit::slotEditingFinished()
 
 void AddresseeLineEdit::slotGroupSearchResult(KJob *job)
 {
-    Akonadi::ContactGroupSearchJob *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
+    auto *searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
 
     // Laurent I don't understand why Akonadi::ContactGroupSearchJob send two "result(...)" signal. For the moment
     // avoid to go in this method twice, until I understand it.
@@ -927,7 +927,7 @@ void AddresseeLineEdit::expandGroups()
 
     const KContacts::ContactGroup::List lstGroups = d->groups();
     for (const KContacts::ContactGroup &group : lstGroups) {
-        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(group);
+        auto *expandJob = new Akonadi::ContactGroupExpandJob(group);
         connect(expandJob, &Akonadi::ContactGroupExpandJob::result, this, &AddresseeLineEdit::groupExpandResult);
         addresses.removeAll(group.name());
         expandJob->start();

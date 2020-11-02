@@ -26,7 +26,7 @@ ConfigurePluginDialog::~ConfigurePluginDialog()
 
 void ConfigurePluginDialog::initLayout(bool addSpacer)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->addWidget(createLayout());
     if (addSpacer) {
         layout->addStretch(1);

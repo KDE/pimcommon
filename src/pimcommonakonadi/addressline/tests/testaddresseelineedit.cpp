@@ -24,11 +24,11 @@ int main(int argc, char *argv[])
     parser.process(app);
 
     QWidget *w = new QWidget;
-    QVBoxLayout *vbox = new QVBoxLayout(w);
+    auto *vbox = new QVBoxLayout(w);
 
-    PimCommon::AddresseeLineEdit *kale1 = new PimCommon::AddresseeLineEdit(nullptr);
+    auto *kale1 = new PimCommon::AddresseeLineEdit(nullptr);
     vbox->addWidget(kale1);
-    PimCommon::AddresseeLineEdit *kale2 = new PimCommon::AddresseeLineEdit(nullptr);
+    auto *kale2 = new PimCommon::AddresseeLineEdit(nullptr);
     vbox->addWidget(kale2);
     vbox->addStretch();
 

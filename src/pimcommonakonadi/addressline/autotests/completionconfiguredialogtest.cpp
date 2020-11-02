@@ -30,10 +30,10 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
 {
     PimCommon::CompletionConfigureDialog dlg;
 
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    QTabWidget *tabWidget = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto *tabWidget = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tabWidget);
     QVERIFY(tabWidget->count() > 0);
     for (int i = 0; i < tabWidget->count(); ++i) {

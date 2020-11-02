@@ -26,7 +26,7 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)
 {
     setWindowTitle(defaultTemplate ? i18n("Default template") : i18n("Template"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = nullptr;
     if (defaultTemplate) {
         buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
@@ -44,10 +44,10 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     mainLayout->addWidget(w);
     mainLayout->addWidget(buttonBox);
 
-    QVBoxLayout *vbox = new QVBoxLayout;
+    auto *vbox = new QVBoxLayout;
     vbox->setContentsMargins(0, 0, 0, 0);
 
-    QHBoxLayout *hbox = new QHBoxLayout;
+    auto *hbox = new QHBoxLayout;
     QLabel *label = new QLabel(i18n("Name:"));
     hbox->addWidget(label);
 
