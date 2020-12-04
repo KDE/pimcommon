@@ -9,7 +9,6 @@
 
 #include "completionordereditor.h"
 #include "completionorderwidget.h"
-#include <KDescendantsProxyModel>
 #include <KLDAP/LdapClient>
 #include <KLDAP/LdapClientSearch>
 
