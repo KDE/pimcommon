@@ -12,6 +12,7 @@
 #include <KLDAP/LdapClient>
 
 #include <KLDAP/LdapClientSearchConfig>
+#include <KLDAP/LdapSearchClientReadConfigServerJob>
 #include <Libkdepim/ProgressIndicatorLabel>
 #include <Libkdepim/LineEditCatchReturnKey>
 
@@ -670,10 +671,13 @@ void LdapSearchDialog::Private::restoreSettings()
         mIsConfigured = true;
         auto *clientSearchConfig = new KLDAP::LdapClientSearchConfig;
         for (int j = 0; j < mNumHosts; ++j) {
-            KLDAP::LdapServer ldapServer;
             auto *ldapClient = new KLDAP::LdapClient(0, q);
-            clientSearchConfig->readConfig(ldapServer, group, j, true);
-            ldapClient->setServer(ldapServer);
+            auto *job = new KLDAP::LdapSearchClientReadConfigServerJob(q);
+            job->setCurrentIndex(j);
+            job->setActive(true);
+            job->setConfig(group);
+            job->setLdapClient(ldapClient);
+            job->start();
             QStringList attrs;
 
             QMap<QString, QString>::ConstIterator end(adrbookattr2ldap().constEnd());
