@@ -115,7 +115,7 @@ public:
         }
     }
 
-    ~SimpleCompletionItem()
+    ~SimpleCompletionItem() override
     {
     }
 
@@ -190,7 +190,7 @@ public:
         setItem(item);
     }
 
-    ~CompletionViewItem()
+    ~CompletionViewItem() override
     {
         delete mItem;
     }
