@@ -14,7 +14,7 @@ class AutoCorrectionTest : public QObject
     Q_OBJECT
 public:
     AutoCorrectionTest();
-    ~AutoCorrectionTest();
+    ~AutoCorrectionTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
