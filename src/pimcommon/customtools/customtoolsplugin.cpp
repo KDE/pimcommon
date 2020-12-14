@@ -32,7 +32,7 @@ bool CustomToolsPlugin::hasConfigureDialog() const
 
 void CustomToolsPlugin::showConfigureDialog(QWidget *parent)
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
 }
 
 QString CustomToolsPlugin::description() const

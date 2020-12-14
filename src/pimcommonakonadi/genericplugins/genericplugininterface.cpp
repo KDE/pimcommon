@@ -47,28 +47,28 @@ QVector<ActionType> GenericPluginInterface::actionTypes() const
 
 void GenericPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {
-    Q_UNUSED(numberOfSelectedItems);
-    Q_UNUSED(numberOfSelectedCollections);
+    Q_UNUSED(numberOfSelectedItems)
+    Q_UNUSED(numberOfSelectedCollections)
 }
 
 void GenericPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
 {
-    Q_UNUSED(items);
+    Q_UNUSED(items)
 }
 
 void GenericPluginInterface::setItems(const Akonadi::Item::List &items)
 {
-    Q_UNUSED(items);
+    Q_UNUSED(items)
 }
 
 void GenericPluginInterface::setCurrentCollection(const Akonadi::Collection &col)
 {
-    Q_UNUSED(col);
+    Q_UNUSED(col)
 }
 
 void GenericPluginInterface::setCollections(const Akonadi::Collection::List &cols)
 {
-    Q_UNUSED(cols);
+    Q_UNUSED(cols)
 }
 
 PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires() const

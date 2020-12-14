@@ -84,7 +84,7 @@ public:
 
     void setIsEnabled(bool b) override
     {
-        Q_UNUSED(b);
+        Q_UNUSED(b)
     }
 
 protected:

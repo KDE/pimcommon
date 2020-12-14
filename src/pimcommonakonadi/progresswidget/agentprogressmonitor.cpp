@@ -44,7 +44,7 @@ void AgentProgressMonitor::abort()
 
 void AgentProgressMonitor::instanceRemoved(const Akonadi::AgentInstance &instance)
 {
-    Q_UNUSED(instance);
+    Q_UNUSED(instance)
 
     if (!mItem.data()) {
         return;

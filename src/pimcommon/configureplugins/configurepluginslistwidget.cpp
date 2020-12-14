@@ -45,7 +45,7 @@ ConfigurePluginsListWidget::~ConfigurePluginsListWidget()
 
 void ConfigurePluginsListWidget::slotItemChanged(QTreeWidgetItem *item, int column)
 {
-    Q_UNUSED(item);
+    Q_UNUSED(item)
     if (mInitializeDone) {
         if (column == 0) {
             Q_EMIT changed();

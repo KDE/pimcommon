@@ -52,5 +52,5 @@ AbstractGenericPlugin *AbstractGenericPluginInterface::plugin() const
 
 void AbstractGenericPluginInterface::showConfigureDialog(QWidget *parentWidget)
 {
-    Q_UNUSED(parentWidget);
+    Q_UNUSED(parentWidget)
 }

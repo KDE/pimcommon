@@ -39,7 +39,7 @@ bool AbstractGenericPlugin::hasStatusBarSupport() const
 
 void AbstractGenericPlugin::showConfigureDialog(QWidget *parent)
 {
-    Q_UNUSED(parent);
+    Q_UNUSED(parent)
     //Reimplement it.
 }
 

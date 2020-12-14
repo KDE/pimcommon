@@ -19,7 +19,7 @@ EmailValidator::EmailValidator(QObject *parent)
 
 QValidator::State EmailValidator::validate(QString &str, int &pos) const
 {
-    Q_UNUSED(pos);
+    Q_UNUSED(pos)
 
     if (KEmailAddress::isValidSimpleAddress(str)) {
         return QValidator::Acceptable;

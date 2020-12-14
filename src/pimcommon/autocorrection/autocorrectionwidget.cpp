@@ -457,7 +457,7 @@ void AutoCorrectionWidget::enableAddRemoveButton()
 
 void AutoCorrectionWidget::setFindReplaceText(QTreeWidgetItem *item, int column)
 {
-    Q_UNUSED(column);
+    Q_UNUSED(column)
     d->ui->find->setText(item->text(0));
     d->ui->replace->setText(item->text(1));
 }
