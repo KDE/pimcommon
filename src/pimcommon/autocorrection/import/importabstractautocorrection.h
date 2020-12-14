@@ -12,9 +12,9 @@
 #include <QHash>
 
 #include "autocorrection/autocorrection.h"
-
+#include "pimcommon_private_export.h"
 namespace PimCommon {
-class ImportAbstractAutocorrection
+class PIMCOMMON_TESTS_EXPORT ImportAbstractAutocorrection
 {
     Q_GADGET
 public:
