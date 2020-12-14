@@ -8,9 +8,9 @@
 #define IMPORTKMAILAUTOCORRECTION_H
 
 #include "importabstractautocorrection.h"
-
+#include "pimcommon_private_export.h"
 namespace PimCommon {
-class ImportKMailAutocorrection : public ImportAbstractAutocorrection
+class PIMCOMMON_TESTS_EXPORT ImportKMailAutocorrection : public ImportAbstractAutocorrection
 {
 public:
     explicit ImportKMailAutocorrection(QWidget *parent = nullptr);
