@@ -165,6 +165,9 @@ kconfig_add_kcfg_files(libpimcommon_SRCS
     )
 
 add_library(KF5PimCommon ${libpimcommon_SRCS})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(KF5PimCommon PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(KF5PimCommon BASE_NAME pimcommon)
 add_library(KF5::PimCommon ALIAS KF5PimCommon)
 

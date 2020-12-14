@@ -140,6 +140,10 @@ ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi
 
 
 add_library(KF5PimCommonAkonadi ${libpimcommonakonadi_SRCS})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(KF5PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
+endif()
+
 generate_export_header(KF5PimCommonAkonadi BASE_NAME pimcommonakonadi)
 add_library(KF5::PimCommonAkonadi ALIAS KF5PimCommonAkonadi)
 
