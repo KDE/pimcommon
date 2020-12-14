@@ -31,7 +31,8 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
     mMinFindStringLenght = 0;
     if (xml.readNextStartElement()) {
         while (xml.readNextStartElement()) {
-            if (xml.name() == QLatin1String("UpperCaseExceptions")) {
+            const QStringRef xmlName = xml.name();
+            if (xmlName == QLatin1String("UpperCaseExceptions")) {
                 if (loadAttribute == All) {
                     while (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
@@ -46,7 +47,7 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                 } else {
                     xml.skipCurrentElement();
                 }
-            } else if (xml.name() == QLatin1String("TwoUpperLetterExceptions")) {
+            } else if (xmlName == QLatin1String("TwoUpperLetterExceptions")) {
                 if (loadAttribute == All) {
                     while (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
@@ -63,7 +64,7 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                 } else {
                     xml.skipCurrentElement();
                 }
-            } else if (xml.name() == QLatin1String("DoubleQuote")) {
+            } else if (xmlName == QLatin1String("DoubleQuote")) {
                 if (loadAttribute == All) {
                     if (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
@@ -74,11 +75,12 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                         } else {
                             xml.skipCurrentElement();
                         }
+                        xml.skipCurrentElement();
                     }
                 } else {
                     xml.skipCurrentElement();
                 }
-            } else if (xml.name() == QLatin1String("SimpleQuote")) {
+            } else if (xmlName == QLatin1String("SimpleQuote")) {
                 if (loadAttribute == All) {
                     if (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
@@ -89,11 +91,12 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                         } else {
                             xml.skipCurrentElement();
                         }
+                        xml.skipCurrentElement();
                     }
                 } else {
                     xml.skipCurrentElement();
                 }
-            } else if (xml.name() == QLatin1String("SuperScript")) {
+            } else if (xmlName == QLatin1String("SuperScript")) {
                 if (loadAttribute == All || loadAttribute == SuperScript) {
                     while (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
@@ -109,7 +112,7 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                 } else {
                     xml.skipCurrentElement();
                 }
-            } else if (xml.name() == QLatin1String("items")) {
+            } else if (xmlName == QLatin1String("items")) {
                 if (loadAttribute == All) {
                     while (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
