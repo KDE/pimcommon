@@ -85,8 +85,14 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                     if (xml.readNextStartElement()) {
                         const QStringRef tagname = xml.name();
                         if (tagname == QLatin1String("simplequote")) {
-                            mTypographicSingleQuotes.begin = xml.attributes().value(QStringLiteral("begin")).toString().at(0);
-                            mTypographicSingleQuotes.end = xml.attributes().value(QStringLiteral("end")).toString().at(0);
+                            const QString simpleQuoteBegin = xml.attributes().value(QStringLiteral("begin")).toString();
+                            if (!simpleQuoteBegin.isEmpty()) { //crash when we have old data with bug.
+                                mTypographicSingleQuotes.begin = simpleQuoteBegin.at(0);
+                            }
+                            const QString simpleQuoteEnd = xml.attributes().value(QStringLiteral("end")).toString();
+                            if (!simpleQuoteEnd.isEmpty()) { //crash when we have old data with bug.
+                                mTypographicSingleQuotes.end = simpleQuoteEnd.at(0);
+                            }
                             xml.skipCurrentElement();
                         } else {
                             xml.skipCurrentElement();
