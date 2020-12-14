@@ -16,6 +16,7 @@ public:
     ~ImportKMailAutocorrectionTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
+    void shouldLoadFile();
 };
 
 #endif // IMPORTKMAILAUTOCORRECTIONTEST_H
