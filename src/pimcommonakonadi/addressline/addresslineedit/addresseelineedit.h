@@ -7,7 +7,7 @@
   SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
   SPDX-FileCopyrightText: 2004 Daniel Molkentin <danimo@klaralvdalens-datakonsult.se>
   SPDX-FileCopyrightText: 2004 Karl-Heinz Zimmer <khz@klaralvdalens-datakonsult.se>
-  SPDX-FileCopyrightText: 2017-2020 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2017-2021 Laurent Montel <montel@kde.org>
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
