@@ -49,7 +49,7 @@ void ImapResourceCapabilitiesManager::searchCapabilities(const QString &identifi
 
     if (iface.isValid()) {
         QDBusPendingCall call = iface.asyncCall(QStringLiteral("serverCapabilities"));
-        auto *watcher = new QDBusPendingCallWatcher(call, this);
+        auto watcher = new QDBusPendingCallWatcher(call, this);
         watcher->setProperty("identifier", identifier);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, &ImapResourceCapabilitiesManager::slotCapabilities);
     } else {

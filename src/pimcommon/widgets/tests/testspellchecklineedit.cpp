@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
     parser.addHelpOption();
     parser.process(app);
 
-    QWidget *w = new QWidget;
-    auto *vbox = new QVBoxLayout(w);
+    auto w = new QWidget;
+    auto vbox = new QVBoxLayout(w);
 
-    PimCommon::SpellCheckLineEdit *spellCheckLineEdit = new PimCommon::SpellCheckLineEdit(w, QStringLiteral("testspecklineeditrc"));
+    auto spellCheckLineEdit = new PimCommon::SpellCheckLineEdit(w, QStringLiteral("testspecklineeditrc"));
     vbox->addWidget(spellCheckLineEdit);
     vbox->addStretch();
 

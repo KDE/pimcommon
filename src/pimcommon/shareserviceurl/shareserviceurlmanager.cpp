@@ -35,7 +35,7 @@ void ShareServiceUrlManagerPrivate::initializeMenu()
     mMenu = new KActionMenu(QIcon::fromTheme(QStringLiteral("document-share")), i18n("Share On..."), q);
     for (int i = 0; i < ShareServiceUrlManager::ServiceEndType; ++i) {
         const auto type = static_cast<ShareServiceUrlManager::ServiceType>(i);
-        QAction *action = new QAction(i18nc("@action:inmenu Share On...", "%1", typeToI18n(type)), q);
+        auto action = new QAction(i18nc("@action:inmenu Share On...", "%1", typeToI18n(type)), q);
         action->setData(QVariant::fromValue(type));
         const QIcon icon = typeToIcon(type);
         if (!icon.isNull()) {

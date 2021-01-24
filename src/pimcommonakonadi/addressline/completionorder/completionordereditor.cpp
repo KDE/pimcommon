@@ -40,7 +40,7 @@ CompletionOrderEditor::CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch
     , d(new PimCommon::CompletionOrderEditorPrivate)
 {
     setWindowTitle(i18nc("@title:window", "Edit Completion Order"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     d->mCompletionOrderWidget = new CompletionOrderWidget(this);
     d->mCompletionOrderWidget->setObjectName(QStringLiteral("completionorderwidget"));
@@ -51,7 +51,7 @@ CompletionOrderEditor::CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch
 
     d->mCompletionOrderWidget->loadCompletionItems();
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

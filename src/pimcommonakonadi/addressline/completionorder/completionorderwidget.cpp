@@ -216,7 +216,7 @@ public:
     bool operator<(const QTreeWidgetItem &other) const override
     {
         const QTreeWidgetItem *otherItem = &other;
-        const auto *completionItem = static_cast<const CompletionViewItem *>(otherItem);
+        const auto completionItem = static_cast<const CompletionViewItem *>(otherItem);
         // item with weight 100 should be on the top -> reverse sorting
         return mItem->completionWeight() > completionItem->item()->completionWeight();
     }
@@ -232,10 +232,10 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     new CompletionOrderEditorAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/"), this, QDBusConnection::ExportAdaptors);
 
-    auto *hbox = new QHBoxLayout(this);
+    auto hbox = new QHBoxLayout(this);
 
-    QWidget *page = new QWidget(this);
-    auto *pageHBoxLayout = new QHBoxLayout(page);
+    auto page = new QWidget(this);
+    auto pageHBoxLayout = new QHBoxLayout(page);
     pageHBoxLayout->setContentsMargins(0, 0, 0, 0);
     hbox->addWidget(page);
     mListView = new QTreeWidget(page);
@@ -249,8 +249,8 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mListView->setHeaderHidden(true);
     mListView->setSortingEnabled(true);
 
-    QWidget *upDownBox = new QWidget(page);
-    auto *upDownBoxVBoxLayout = new QVBoxLayout(upDownBox);
+    auto upDownBox = new QWidget(page);
+    auto upDownBoxVBoxLayout = new QVBoxLayout(upDownBox);
     upDownBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
     pageHBoxLayout->addWidget(upDownBox);
     mUpButton = new QPushButton(upDownBox);
@@ -271,7 +271,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mDownButton->setToolTip(i18n("Move Down"));
     mDownButton->setFocusPolicy(Qt::StrongFocus);
 
-    QWidget *spacer = new QWidget(upDownBox);
+    auto spacer = new QWidget(upDownBox);
     upDownBoxVBoxLayout->addWidget(spacer);
     upDownBoxVBoxLayout->setStretchFactor(spacer, 100);
 
@@ -317,7 +317,7 @@ KConfig *CompletionOrderWidget::configFile()
 void CompletionOrderWidget::addRecentAddressItem()
 {
     //Be default it's the first.
-    SimpleCompletionItem *item = new SimpleCompletionItem(this, i18n("Recent Addresses"), QStringLiteral("Recent Addresses"), 10);
+    auto item = new SimpleCompletionItem(this, i18n("Recent Addresses"), QStringLiteral("Recent Addresses"), 10);
     item->setIcon(QIcon::fromTheme(QStringLiteral("kmail")));
     new CompletionViewItem(mListView, item);
 }
@@ -329,7 +329,7 @@ void CompletionOrderWidget::addCompletionItemForCollection(const QModelIndex &in
         return;
     }
 
-    SimpleCompletionItem *item = new SimpleCompletionItem(this, index.data().toString(), QString::number(collection.id()), mDefaultValue++, true);
+    auto item = new SimpleCompletionItem(this, index.data().toString(), QString::number(collection.id()), mDefaultValue++, true);
     item->setIcon(index.data(Qt::DecorationRole).value<QIcon>());
 
     new CompletionViewItem(mListView, item);
@@ -345,20 +345,20 @@ void CompletionOrderWidget::loadCompletionItems()
         }
     }
 
-    auto *monitor = new Akonadi::ChangeRecorder(this);
+    auto monitor = new Akonadi::ChangeRecorder(this);
     monitor->fetchCollection(true);
     monitor->setCollectionMonitored(Akonadi::Collection::root());
     monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType(), true);
     monitor->setMimeTypeMonitored(KContacts::ContactGroup::mimeType(), true);
 
-    auto *model = new Akonadi::EntityTreeModel(monitor, this);
+    auto model = new Akonadi::EntityTreeModel(monitor, this);
     model->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
 
-    auto *descendantsProxy = new KDescendantsProxyModel(this);
+    auto descendantsProxy = new KDescendantsProxyModel(this);
     descendantsProxy->setDisplayAncestorData(true);
     descendantsProxy->setSourceModel(model);
 
-    auto *mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
+    auto mimeTypeProxy = new Akonadi::CollectionFilterProxyModel(this);
     mimeTypeProxy->addMimeTypeFilters({KContacts::Addressee::mimeType(), KContacts::ContactGroup::mimeType()});
     mimeTypeProxy->setSourceModel(descendantsProxy);
     mimeTypeProxy->setExcludeVirtualCollections(true);
@@ -418,11 +418,11 @@ static void swapItems(CompletionViewItem *one, CompletionViewItem *other)
 
 void CompletionOrderWidget::slotMoveUp()
 {
-    auto *item = static_cast<CompletionViewItem *>(mListView->currentItem());
+    auto item = static_cast<CompletionViewItem *>(mListView->currentItem());
     if (!item) {
         return;
     }
-    auto *above = static_cast<CompletionViewItem *>(mListView->itemAbove(item));
+    auto above = static_cast<CompletionViewItem *>(mListView->itemAbove(item));
     if (!above) {
         return;
     }
@@ -434,11 +434,11 @@ void CompletionOrderWidget::slotMoveUp()
 
 void CompletionOrderWidget::slotMoveDown()
 {
-    auto *item = static_cast<CompletionViewItem *>(mListView->currentItem());
+    auto item = static_cast<CompletionViewItem *>(mListView->currentItem());
     if (!item) {
         return;
     }
-    auto *below = static_cast<CompletionViewItem *>(mListView->itemBelow(item));
+    auto below = static_cast<CompletionViewItem *>(mListView->itemBelow(item));
     if (!below) {
         return;
     }

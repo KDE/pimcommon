@@ -47,9 +47,9 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     d->mItem = item;
     //check for correct key?
     d->mHasAnnotation = item.hasAttribute<Akonadi::EntityAnnotationsAttribute>();
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    QWidget *mainWidget = new QWidget(this);
-    auto *mainLayout = new QVBoxLayout(this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto mainWidget = new QWidget(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(mainWidget);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
@@ -59,7 +59,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
 
     if (d->mHasAnnotation) {
         setWindowTitle(i18nc("@title:window", "Edit Note"));
-        auto *user1Button = new QPushButton;
+        auto user1Button = new QPushButton;
         buttonBox->addButton(user1Button, QDialogButtonBox::ActionRole);
         user1Button->setText(i18nc("@action:button", "Delete Note"));
         user1Button->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
@@ -70,15 +70,15 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
 
     buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
-    QLabel *label = new QLabel(i18n("Enter the text that should be stored as a note to the mail:"));
-    auto *vbox = new QVBoxLayout(mainWidget);
+    auto label = new QLabel(i18n("Enter the text that should be stored as a note to the mail:"));
+    auto vbox = new QVBoxLayout(mainWidget);
     vbox->setContentsMargins(0, 0, 0, 0);
     d->mTextEdit = new KPIMTextEdit::PlainTextEditorWidget(this);
     vbox->addWidget(label);
     vbox->addWidget(d->mTextEdit);
     d->mTextEdit->setFocus();
 
-    auto *hbox = new QHBoxLayout;
+    auto hbox = new QHBoxLayout;
     hbox->addStretch();
     label = new QLabel(i18nc("@label:listbox", "Note type:"));
     hbox->addWidget(label);

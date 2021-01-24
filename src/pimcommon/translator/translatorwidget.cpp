@@ -201,10 +201,10 @@ void TranslatorWidget::init()
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
 
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
-    auto *hboxLayout = new QHBoxLayout;
-    auto *closeBtn = new QToolButton(this);
+    auto hboxLayout = new QHBoxLayout;
+    auto closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
     closeBtn->setIconSize(QSize(16, 16));
@@ -217,7 +217,7 @@ void TranslatorWidget::init()
     hboxLayout->addWidget(closeBtn);
     connect(closeBtn, &QToolButton::clicked, this, &TranslatorWidget::slotCloseWidget);
 
-    QLabel *label = new QLabel(i18nc("Translate from language", "From:"));
+    auto label = new QLabel(i18nc("Translate from language", "From:"));
     hboxLayout->addWidget(label);
     d->from = new QComboBox;
     d->from->setMinimumWidth(50);
@@ -232,7 +232,7 @@ void TranslatorWidget::init()
 
     hboxLayout->addWidget(d->to);
 
-    KSeparator *separator = new KSeparator;
+    auto separator = new KSeparator;
     separator->setOrientation(Qt::Vertical);
     hboxLayout->addWidget(separator);
 
@@ -260,7 +260,7 @@ void TranslatorWidget::init()
     connect(d->translate, &QPushButton::clicked, this, &TranslatorWidget::slotTranslate);
 
     if (!qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING")) {
-        QPushButton *debugButton = new QPushButton(i18n("Debug"));
+        auto debugButton = new QPushButton(i18n("Debug"));
         hboxLayout->addWidget(debugButton);
         connect(debugButton, &QPushButton::clicked, this, &TranslatorWidget::slotDebug);
     }
@@ -275,7 +275,7 @@ void TranslatorWidget::init()
     d->splitter = new QSplitter;
     d->splitter->setChildrenCollapsible(false);
     d->inputText = new TranslatorTextEdit(this);
-    auto *editorWidget = new KPIMTextEdit::PlainTextEditorWidget(d->inputText);
+    auto editorWidget = new KPIMTextEdit::PlainTextEditorWidget(d->inputText);
     d->inputText->setObjectName(QStringLiteral("inputtext"));
     d->inputText->setPlaceholderText(i18n("Drag text that you want to translate. (Be careful text will be send to Google Server)."));
     connect(d->inputText, &TranslatorTextEdit::textChanged, this, &TranslatorWidget::slotTextChanged);
@@ -432,7 +432,7 @@ bool TranslatorWidget::event(QEvent *e)
     // window-global actions (e.g. Emil Sedgh binds Esc to "close tab").
     // With a shortcut override we can catch this before it gets to kactions.
     if (e->type() == QEvent::ShortcutOverride || e->type() == QEvent::KeyPress) {
-        auto *kev = static_cast<QKeyEvent * >(e);
+        auto kev = static_cast<QKeyEvent * >(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();

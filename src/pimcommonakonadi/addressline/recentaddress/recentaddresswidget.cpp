@@ -27,9 +27,9 @@ using namespace PimCommon;
 RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
-    auto *lineLayout = new QHBoxLayout;
+    auto lineLayout = new QHBoxLayout;
     layout->addLayout(lineLayout);
 
     mLineEdit = new QLineEdit(this);
@@ -37,7 +37,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     new KPIM::LineEditCatchReturnKey(mLineEdit, this);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
-    auto *emailValidator = new PimCommon::EmailValidator(this);
+    auto emailValidator = new PimCommon::EmailValidator(this);
     mLineEdit->setValidator(emailValidator);
     connect(mLineEdit, &QLineEdit::returnPressed, this, &RecentAddressWidget::slotAddItem);
 
@@ -60,7 +60,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     lineLayout->addWidget(mRemoveButton);
     connect(mRemoveButton, &QPushButton::clicked, this, &RecentAddressWidget::slotRemoveItem);
 
-    auto *shortcut = new QShortcut(this);
+    auto shortcut = new QShortcut(this);
     shortcut->setKey(QKeySequence(Qt::Key_Delete));
     connect(shortcut, &QShortcut::activated, this, &RecentAddressWidget::slotRemoveItem);
 
@@ -137,7 +137,7 @@ void RecentAddressWidget::setAddresses(const QStringList &addrs)
 bool RecentAddressWidget::eventFilter(QObject *o, QEvent *e)
 {
     if (o == mLineEdit && e->type() == QEvent::KeyPress) {
-        auto *keyEvent = static_cast<QKeyEvent *>(e);
+        auto keyEvent = static_cast<QKeyEvent *>(e);
         if (keyEvent->key() == Qt::Key_Down
             || keyEvent->key() == Qt::Key_Up) {
             return (static_cast<QObject *>(mListView))->event(e);

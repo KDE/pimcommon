@@ -20,12 +20,12 @@ BlackListBalooEmailWarning::BlackListBalooEmailWarning(QWidget *parent)
     setWordWrap(true);
 
     setText(i18n("The list was changed. Do you want to save before to make another search ?"));
-    QAction *saveAction = new QAction(i18n("Save"), this);
+    auto saveAction = new QAction(i18n("Save"), this);
     saveAction->setObjectName(QStringLiteral("saveblacklist"));
     connect(saveAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSaveBlackList);
     addAction(saveAction);
 
-    QAction *searchAction = new QAction(i18n("Search"), this);
+    auto searchAction = new QAction(i18n("Search"), this);
     searchAction->setObjectName(QStringLiteral("search"));
     connect(searchAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSearch);
     addAction(searchAction);

@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 
     parser.process(app);
 
-    auto *w = new LogActivitiesMainWidget;
+    auto w = new LogActivitiesMainWidget;
     w->show();
     app.exec();
     return 0;

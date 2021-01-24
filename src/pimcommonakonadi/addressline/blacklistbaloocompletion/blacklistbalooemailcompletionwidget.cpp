@@ -27,12 +27,12 @@ using namespace PimCommon;
 BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
-    auto *searchLayout = new QHBoxLayout;
+    auto searchLayout = new QHBoxLayout;
     mainLayout->addLayout(searchLayout);
 
-    QLabel *lab = new QLabel(i18n("Search email:"), this);
+    auto lab = new QLabel(i18n("Search email:"), this);
     lab->setObjectName(QStringLiteral("search_label"));
     searchLayout->addWidget(lab);
 
@@ -66,10 +66,10 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     connect(mBlackListWarning, &BlackListBalooEmailWarning::saveChanges, this, &BlackListBalooEmailCompletionWidget::slotSaveChanges);
     mainLayout->addWidget(mBlackListWarning);
 
-    auto *searchLineLayout = new QHBoxLayout;
+    auto searchLineLayout = new QHBoxLayout;
     mainLayout->addLayout(searchLineLayout);
 
-    auto *selectElementLayout = new QHBoxLayout;
+    auto selectElementLayout = new QHBoxLayout;
     searchLineLayout->addLayout(selectElementLayout);
 
     mSelectButton = new QPushButton(i18n("&Select"), this);
@@ -105,11 +105,11 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     searchLineLayout->addWidget(mNumberOfEmailsFound);
     searchLineLayout->addWidget(mSearchInResultLineEdit);
 
-    auto *excludeDomainLayout = new QHBoxLayout;
+    auto excludeDomainLayout = new QHBoxLayout;
     excludeDomainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->addLayout(excludeDomainLayout);
 
-    QLabel *excludeDomainLabel = new QLabel(i18n("Exclude domain names:"), this);
+    auto excludeDomainLabel = new QLabel(i18n("Exclude domain names:"), this);
     excludeDomainLabel->setObjectName(QStringLiteral("domain_label"));
     excludeDomainLayout->addWidget(excludeDomainLabel);
 
@@ -179,7 +179,7 @@ void BlackListBalooEmailCompletionWidget::slotSearch()
     const QString searchEmail = mSearchLineEdit->text().trimmed();
     if (searchEmail.length() > 2) {
         mSearchInResultLineEdit->clear();
-        auto *job = new PimCommon::BlackListBalooEmailSearchJob(this);
+        auto job = new PimCommon::BlackListBalooEmailSearchJob(this);
         job->setSearchEmail(searchEmail);
         job->setLimit(mLimit);
         connect(job, &BlackListBalooEmailSearchJob::emailsFound, this, &BlackListBalooEmailCompletionWidget::slotEmailFound);

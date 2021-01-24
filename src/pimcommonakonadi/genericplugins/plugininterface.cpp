@@ -77,7 +77,7 @@ void PluginInterface::createPluginInterface()
     const auto pluginsList = d->mGenericPluginManager->pluginsList();
     for (PimCommon::GenericPlugin *plugin : pluginsList) {
         if (plugin->isEnabled()) {
-            auto *interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(this));
+            auto interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(this));
             interface->setParentWidget(d->mParentWidget);
             //Add parent before creating action
             interface->createAction(d->mActionCollection);
@@ -176,7 +176,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
             PimCommon::ActionType::Type type = actionType.type();
             QList<QAction *> lst = listType.value(type);
             if (!lst.isEmpty()) {
-                auto *act = new QAction(this);
+                auto act = new QAction(this);
                 act->setSeparator(true);
                 lst << act << actionType.action();
                 listType.insert(type, lst);
@@ -187,7 +187,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
                 type = PimCommon::ActionType::PopupMenu;
                 lst = listType.value(type);
                 if (!lst.isEmpty()) {
-                    auto *act = new QAction(this);
+                    auto act = new QAction(this);
                     act->setSeparator(true);
                     lst << act << actionType.action();
                     listType.insert(type, lst);
@@ -199,7 +199,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsTy
                 type = PimCommon::ActionType::ToolBar;
                 lst = listType.value(type);
                 if (!lst.isEmpty()) {
-                    auto *act = new QAction(this);
+                    auto act = new QAction(this);
                     act->setSeparator(true);
                     lst << act << actionType.action();
                     listType.insert(type, lst);

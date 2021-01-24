@@ -28,10 +28,10 @@ ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     : QWidget(parent)
     , d(new PimCommon::ContentTypeWidgetPrivate)
 {
-    auto *hbox = new QHBoxLayout(this);
+    auto hbox = new QHBoxLayout(this);
     hbox->setContentsMargins(0, 0, 0, 0);
 
-    QLabel *label = new QLabel(i18n("&Folder contents:"), this);
+    auto label = new QLabel(i18n("&Folder contents:"), this);
     label->setObjectName(QStringLiteral("contenttypewidgetlabel"));
     hbox->addWidget(label);
     d->mContentsComboBox = new QComboBox(this);

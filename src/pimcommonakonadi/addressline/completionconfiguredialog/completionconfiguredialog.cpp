@@ -43,7 +43,7 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
     , d(new PimCommon::CompletionConfigureDialogPrivate)
 {
     setWindowTitle(i18nc("@title:window", "Configure Completion"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     d->mTabWidget = new QTabWidget(this);
     d->mTabWidget->setObjectName(QStringLiteral("tabwidget"));
@@ -63,7 +63,7 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
     d->mTabWidget->addTab(d->mBlackListBalooWidget, i18n("Blacklist Email Address"));
 #endif
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CompletionConfigureDialog::slotSave);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);

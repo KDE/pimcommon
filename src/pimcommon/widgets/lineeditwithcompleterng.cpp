@@ -16,7 +16,7 @@ using namespace PimCommon;
 LineEditWithCompleterNg::LineEditWithCompleterNg(QWidget *parent)
     : QLineEdit(parent)
 {
-    auto *completer = new QCompleter(this);
+    auto completer = new QCompleter(this);
     mCompleterListModel = new QStringListModel(this);
     completer->setModel(mCompleterListModel);
     setCompleter(completer);

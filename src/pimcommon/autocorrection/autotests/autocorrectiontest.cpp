@@ -415,7 +415,7 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     QCOMPARE(doc.toPlainText(), result);
 }
 
-typedef QHash<QString, QString> mapAutoCorrect;
+using mapAutoCorrect = QHash<QString, QString>;
 Q_DECLARE_METATYPE(mapAutoCorrect)
 
 void AutoCorrectionTest::shouldAutocorrectMultiWord_data()

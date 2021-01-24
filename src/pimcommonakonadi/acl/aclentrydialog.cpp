@@ -68,22 +68,22 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     : QDialog(parent)
     , d(new Private(this))
 {
-    auto *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto mainLayout = new QVBoxLayout(this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     d->mOkButton->setDefault(true);
     d->mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AclEntryDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AclEntryDialog::reject);
 
-    QWidget *page = new QWidget(this);
+    auto page = new QWidget(this);
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
 
-    auto *layout = new QGridLayout(page);
+    auto layout = new QGridLayout(page);
     layout->setContentsMargins(0, 0, 0, 0);
 
-    QLabel *label = new QLabel(i18n("&User identifier:"), page);
+    auto label = new QLabel(i18n("&User identifier:"), page);
     layout->addWidget(label, 0, 0);
 
     d->mUserIdLineEdit = new PimCommon::AddresseeLineEdit(page);
@@ -95,10 +95,10 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
               "This can be a simple user name or the full email address of the user; "
               "the login for your own account on the server will tell you which one it is."));
 
-    QPushButton *button = new QPushButton(i18nc("select an email address", "Se&lect..."), page);
+    auto button = new QPushButton(i18nc("select an email address", "Se&lect..."), page);
     layout->addWidget(button, 0, 2);
 
-    QGroupBox *groupBox = new QGroupBox(i18n("Permissions"), page);
+    auto groupBox = new QGroupBox(i18n("Permissions"), page);
     d->mButtonLayout = new QVBoxLayout(groupBox);
 
     d->mButtonGroup = new QButtonGroup(groupBox);
@@ -106,7 +106,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     for (unsigned int i = 0; i < AclUtils::standardPermissionsCount(); ++i) {
         const KIMAP::Acl::Rights permissions = AclUtils::permissionsForIndex(i);
 
-        QRadioButton *radioButton
+        auto *radioButton
             = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
@@ -160,7 +160,7 @@ void AclEntryDialog::setPermissions(KIMAP::Acl::Rights permissions)
     if (button) {
         button->setChecked(true);
     } else {
-        QRadioButton *radioButton
+        auto *radioButton
             = new QRadioButton(AclUtils::permissionsToUserString(permissions));
 
         d->mButtonLayout->addWidget(radioButton);

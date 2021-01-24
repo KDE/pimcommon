@@ -69,11 +69,11 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     : QWidget(parent)
     , mAclManager(new PimCommon::AclManager(this))
 {
-    auto *layout = new QHBoxLayout(this);
-    auto *listViewLayout = new QVBoxLayout;
+    auto layout = new QHBoxLayout(this);
+    auto listViewLayout = new QVBoxLayout;
     layout->addLayout(listViewLayout);
 
-    auto *view = new AclListView;
+    auto view = new AclListView;
     view->setObjectName(QStringLiteral("list_view"));
     listViewLayout->addWidget(view);
     mRecursiveChk = new QCheckBox(i18n("Apply permissions on all &subfolders."), this);
@@ -84,12 +84,12 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     view->setModel(mAclManager->model());
     view->setSelectionModel(mAclManager->selectionModel());
 
-    QWidget *buttonBox = new QWidget;
-    auto *buttonBoxVBoxLayout = new QVBoxLayout(buttonBox);
+    auto buttonBox = new QWidget;
+    auto buttonBoxVBoxLayout = new QVBoxLayout(buttonBox);
     buttonBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(buttonBox);
 
-    auto *button = new ActionButton(buttonBox);
+    auto button = new ActionButton(buttonBox);
     buttonBoxVBoxLayout->addWidget(button);
     button->setObjectName(QStringLiteral("add"));
     button->setDefaultAction(mAclManager->addAction());
@@ -104,7 +104,7 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     button->setDefaultAction(mAclManager->deleteAction());
     button->setObjectName(QStringLiteral("delete"));
 
-    QWidget *spacer = new QWidget(buttonBox);
+    auto spacer = new QWidget(buttonBox);
     buttonBoxVBoxLayout->addWidget(spacer);
     spacer->setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
     connect(view, SIGNAL(doubleClicked(QModelIndex)), mAclManager->editAction(), SIGNAL(triggered()));

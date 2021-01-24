@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
-    PimCommon::SelectMultiCollectionDialog *dialog = new PimCommon::SelectMultiCollectionDialog(KMime::Message::mimeType());
+    auto dialog = new PimCommon::SelectMultiCollectionDialog(KMime::Message::mimeType());
     dialog->exec();
     delete dialog;
     return 0;

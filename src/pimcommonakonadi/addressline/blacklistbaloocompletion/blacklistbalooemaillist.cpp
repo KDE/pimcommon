@@ -43,7 +43,7 @@ QHash<QString, bool> BlackListBalooEmailList::blackListItemChanged() const
     QHash<QString, bool> result;
     for (int i = 0; i < count(); ++i) {
         QListWidgetItem *element = item(i);
-        auto *blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(element);
+        auto blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(element);
         bool currentStatus = (blackListItem->checkState() == Qt::Checked);
         if (blackListItem->initializeStatus() != currentStatus) {
             result.insert(blackListItem->text(), currentStatus);
@@ -81,7 +81,7 @@ int BlackListBalooEmailList::setEmailFound(const QStringList &list)
             continue;
         }
         if (!emailsAdded.contains(mail) && !emailsLower.contains(mailToLower) && !onlyEmails.contains(emailToLower)) {
-            auto *item = new BlackListBalooEmailListItem(this);
+            auto item = new BlackListBalooEmailListItem(this);
             if (mEmailBlackList.contains(mail)) {
                 item->setCheckState(Qt::Checked);
                 item->setInitializeStatus(true);

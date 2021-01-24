@@ -29,7 +29,7 @@ class AddresseeLineEditBaloo;
 class AddresseeLineEditManager
 {
 public:
-    typedef QMap< QString, QPair<int, int> > CompletionItemsMap;
+    using CompletionItemsMap = QMap<QString, QPair<int, int>>;
 
     AddresseeLineEditManager();
 

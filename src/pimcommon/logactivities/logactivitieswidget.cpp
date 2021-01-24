@@ -13,7 +13,7 @@ using namespace PimCommon;
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 

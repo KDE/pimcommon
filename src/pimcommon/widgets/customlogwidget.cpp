@@ -26,7 +26,7 @@ QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, con
     if (!index.isValid()) {
         return nullptr;
     }
-    auto *document = new QTextDocument(nullptr);
+    auto document = new QTextDocument(nullptr);
     document->setDocumentMargin(1);
     const QColor textColor = index.data(Qt::ForegroundRole).value<QColor>();
     QStyleOptionViewItem option4 = option;
@@ -97,7 +97,7 @@ QWidget *LogItemDelegate::createEditor(QWidget *, const QStyleOptionViewItem &, 
 CustomLogWidget::CustomLogWidget(QWidget *parent)
     : QListWidget(parent)
 {
-    auto *itemDelegate = new LogItemDelegate(this);
+    auto itemDelegate = new LogItemDelegate(this);
     setItemDelegate(itemDelegate);
 }
 
@@ -107,7 +107,7 @@ CustomLogWidget::~CustomLogWidget()
 
 void CustomLogWidget::addTitleLogEntry(const QString &log)
 {
-    auto *item = new QListWidgetItem(log);
+    auto item = new QListWidgetItem(log);
     item->setForeground(Qt::black);
     QFont font = item->font();
     font.setBold(true);
@@ -119,7 +119,7 @@ void CustomLogWidget::addTitleLogEntry(const QString &log)
 
 void CustomLogWidget::addInfoLogEntry(const QString &log)
 {
-    auto *item = new QListWidgetItem(log);
+    auto item = new QListWidgetItem(log);
     item->setForeground(Qt::blue);
     item->setData(ItemLogType, Info);
     addItem(item);
@@ -128,7 +128,7 @@ void CustomLogWidget::addInfoLogEntry(const QString &log)
 
 void CustomLogWidget::addErrorLogEntry(const QString &log)
 {
-    auto *item = new QListWidgetItem(log);
+    auto item = new QListWidgetItem(log);
     item->setForeground(Qt::red);
     item->setData(ItemLogType, Error);
     addItem(item);
@@ -137,7 +137,7 @@ void CustomLogWidget::addErrorLogEntry(const QString &log)
 
 void CustomLogWidget::addEndLineLogEntry()
 {
-    auto *item = new QListWidgetItem;
+    auto item = new QListWidgetItem;
     item->setData(ItemLogType, EndLine);
     addItem(item);
     scrollToItem(item);

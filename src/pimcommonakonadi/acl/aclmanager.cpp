@@ -116,7 +116,7 @@ public:
     {
         QMap<QByteArray, KIMAP::Acl::Rights> result;
 
-        typedef QPair<QByteArray, KIMAP::Acl::Rights> RightPair;
+        using RightPair = QPair<QByteArray, KIMAP::Acl::Rights>;
         for (const RightPair &right : qAsConst(mRights)) {
             result.insert(right.first, right.second);
         }
@@ -439,7 +439,7 @@ void AclManager::save(bool recursive)
 
     d->mChanged = false;
 
-    auto *modifyAclJob = new PimCommon::AclModifyJob;
+    auto modifyAclJob = new PimCommon::AclModifyJob;
     modifyAclJob->setCurrentRight(d->mModel->rights());
     modifyAclJob->setTopLevelCollection(d->mCollection);
     modifyAclJob->setRecursive(recursive);

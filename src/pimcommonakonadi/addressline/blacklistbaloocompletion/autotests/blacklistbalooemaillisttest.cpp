@@ -32,7 +32,7 @@ void BlackListBalooEmailListTest::shouldFillListEmail()
     for (int i = 0; i < blackList.count(); ++i) {
         QListWidgetItem *item = blackList.item(i);
         QVERIFY(item);
-        auto *blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(item);
+        auto blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(item);
         QVERIFY(!blackListItem->initializeStatus());
         QCOMPARE(blackListItem->checkState(), Qt::Unchecked);
     }
@@ -50,7 +50,7 @@ void BlackListBalooEmailListTest::shouldFillListWithAlreadyBlackListedEmail()
     for (int i = 0; i < blackList.count(); ++i) {
         QListWidgetItem *item = blackList.item(i);
         QVERIFY(item);
-        auto *blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(item);
+        auto blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(item);
         QVERIFY(blackListItem->initializeStatus());
         QCOMPARE(blackListItem->checkState(), Qt::Checked);
     }

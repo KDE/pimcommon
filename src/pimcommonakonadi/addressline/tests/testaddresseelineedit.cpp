@@ -23,12 +23,12 @@ int main(int argc, char *argv[])
     parser.addHelpOption();
     parser.process(app);
 
-    QWidget *w = new QWidget;
-    auto *vbox = new QVBoxLayout(w);
+    auto w = new QWidget;
+    auto vbox = new QVBoxLayout(w);
 
-    auto *kale1 = new PimCommon::AddresseeLineEdit(nullptr);
+    auto kale1 = new PimCommon::AddresseeLineEdit(nullptr);
     vbox->addWidget(kale1);
-    auto *kale2 = new PimCommon::AddresseeLineEdit(nullptr);
+    auto kale2 = new PimCommon::AddresseeLineEdit(nullptr);
     vbox->addWidget(kale2);
     vbox->addStretch();
 

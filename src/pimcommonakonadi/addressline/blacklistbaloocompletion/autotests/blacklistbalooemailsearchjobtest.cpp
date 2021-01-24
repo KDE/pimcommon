@@ -19,7 +19,7 @@ BlackListBalooEmailSearchJobTest::~BlackListBalooEmailSearchJobTest()
 
 void BlackListBalooEmailSearchJobTest::shouldNotSearchWhenTextIsEmpty()
 {
-    auto *job = new PimCommon::BlackListBalooEmailSearchJob;
+    auto job = new PimCommon::BlackListBalooEmailSearchJob;
     QVERIFY(!job->start());
 }
 
