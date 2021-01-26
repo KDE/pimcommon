@@ -7,10 +7,11 @@
 #ifndef ADDRESSEELINEEDITUTIL_H
 #define ADDRESSEELINEEDITUTIL_H
 
-#include <QString>
 #include "pimcommonakonadi_export.h"
+#include <QString>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The AddresseeLineEditUtil class
  * @author Laurent Montel <montel@kde.org>

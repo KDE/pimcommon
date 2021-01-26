@@ -9,7 +9,8 @@
 
 #include <QStringList>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class BalooCompletionEmail;
 class AddresseeLineEditBaloo
 {
@@ -25,6 +26,7 @@ public:
 
     void loadBalooBlackList();
     Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
+
 private:
     PimCommon::BalooCompletionEmail *const mBalooCompletionEmail;
     QStringList mBalooBlackList;

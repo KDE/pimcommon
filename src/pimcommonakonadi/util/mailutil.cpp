@@ -23,6 +23,5 @@ bool PimCommon::MailUtil::isImapFolder(const Akonadi::Collection &col, bool &isO
 
 QString PimCommon::MailUtil::indexerServiceName()
 {
-    return Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent,
-                                                    QStringLiteral("akonadi_indexing_agent"));
+    return Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent, QStringLiteral("akonadi_indexing_agent"));
 }

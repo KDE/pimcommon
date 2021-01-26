@@ -40,7 +40,7 @@ bool AbstractGenericPlugin::hasStatusBarSupport() const
 void AbstractGenericPlugin::showConfigureDialog(QWidget *parent)
 {
     Q_UNUSED(parent)
-    //Reimplement it.
+    // Reimplement it.
 }
 
 void AbstractGenericPlugin::setIsEnabled(bool enabled)

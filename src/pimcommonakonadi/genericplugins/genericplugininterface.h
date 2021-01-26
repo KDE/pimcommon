@@ -7,11 +7,12 @@
 #ifndef GENERICPLUGININTERFACE_H
 #define GENERICPLUGININTERFACE_H
 
-#include <QObject>
-#include <PimCommon/AbstractGenericPluginInterface>
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/Item>
-namespace PimCommon {
+#include <PimCommon/AbstractGenericPluginInterface>
+#include <QObject>
+namespace PimCommon
+{
 class GenericPluginInterfacePrivate;
 /**
  * @brief The GenericPluginInterface class
@@ -24,13 +25,7 @@ public:
     explicit GenericPluginInterface(QObject *parent = nullptr);
     ~GenericPluginInterface();
 
-    enum RequireType {
-        None = 0,
-        CurrentItems = 1,
-        Items = 2,
-        CurrentCollection = 3,
-        Collections = 4
-    };
+    enum RequireType { None = 0, CurrentItems = 1, Items = 2, CurrentCollection = 3, Collections = 4 };
     Q_ENUM(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
 

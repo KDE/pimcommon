@@ -5,13 +5,13 @@
 */
 
 #include "configurepluginswidgettest.h"
-#include "../configurepluginswidget.h"
 #include "../configurepluginslistwidget.h"
-#include <QTextEdit>
+#include "../configurepluginswidget.h"
 #include <KMessageWidget>
 #include <QSplitter>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
+#include <QTextEdit>
 
 ConfigurePluginsWidgetTest::ConfigurePluginsWidgetTest(QObject *parent)
     : QObject(parent)

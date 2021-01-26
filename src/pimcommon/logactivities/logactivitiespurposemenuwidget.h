@@ -8,10 +8,12 @@
 #define LOGACTIVITIESPURPOSEMENUWIDGET_H
 
 #include "widgets/purposemenuwidget.h"
-namespace KPIMTextEdit {
+namespace KPIMTextEdit
+{
 class PlainTextEditor;
 }
-namespace PimCommon {
+namespace PimCommon
+{
 class LogactivitiesPurposeMenuWidget : public PimCommon::PurposeMenuWidget
 {
     Q_OBJECT
@@ -21,6 +23,7 @@ public:
 
     QByteArray text() override;
     void setEditorWidget(KPIMTextEdit::PlainTextEditor *editor);
+
 private:
     KPIMTextEdit::PlainTextEditor *mEditor = nullptr;
 };

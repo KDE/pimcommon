@@ -6,11 +6,11 @@
 
 #include "migrateapplicationfilestest.h"
 #include "../migrateapplicationfiles.h"
-#include <QTest>
-#include <QStandardPaths>
 #include <QDebug>
 #include <QDir>
+#include <QStandardPaths>
 #include <QTemporaryDir>
+#include <QTest>
 
 using namespace PimCommon;
 MigrateApplicationFilesTest::MigrateApplicationFilesTest(QObject *parent)
@@ -24,10 +24,11 @@ MigrateApplicationFilesTest::~MigrateApplicationFilesTest()
 
 void MigrateApplicationFilesTest::initTestCase()
 {
-    //qDebug() << " QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)" <<QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    // qDebug() << " QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)"
+    // <<QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     QStandardPaths::setTestModeEnabled(true);
     const QString applicationHome = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-    //qDebug() << "application data" << applicationHome;
+    // qDebug() << "application data" << applicationHome;
     QDir(applicationHome).removeRecursively();
 }
 
@@ -42,7 +43,7 @@ void MigrateApplicationFilesTest::shouldHaveDefaultValue()
 void MigrateApplicationFilesTest::shouldVerifyIfCheckIsNecessary()
 {
     MigrateApplicationFiles migrate;
-    //Invalid before config file is not set.
+    // Invalid before config file is not set.
     QVERIFY(!migrate.checkIfNecessary());
     migrate.setConfigFileName(QStringLiteral("foorc"));
     // If config file doesn't exist we need to check migrate
@@ -84,7 +85,7 @@ void MigrateApplicationFilesTest::shouldMigrateFolders()
     const QString kdehome = kdehomeDir.path();
     qputenv("KDEHOME", QFile::encodeName(kdehome));
 
-    //Generate kde4 apps dir
+    // Generate kde4 apps dir
     const QString folderName = QStringLiteral("foo/folder1/");
     const QString appsPath = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + folderName;
     QDir().mkpath(appsPath);
@@ -127,7 +128,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateFoldersIfAlreadyDone()
     const QString kdehome = kdehomeDir.path();
     qputenv("KDEHOME", QFile::encodeName(kdehome));
 
-    //Generate kde4 apps dir
+    // Generate kde4 apps dir
     const QString folderName = QStringLiteral("foo/folder1/");
     const QString appsPath = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + folderName;
     QDir().mkpath(appsPath);
@@ -149,7 +150,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateFoldersIfAlreadyDone()
     migrate.setConfigFileName(QStringLiteral("foorc"));
     QVERIFY(migrate.checkIfNecessary());
 
-    //We have a current version == 2 => don't migrate old info. Put after checkIfNecessary to override value
+    // We have a current version == 2 => don't migrate old info. Put after checkIfNecessary to override value
     migrate.setCurrentConfigVersion(3);
 
     MigrateFileInfo info;
@@ -172,7 +173,7 @@ void MigrateApplicationFilesTest::shouldMigrateFoldersWithSubFolders()
     const QString kdehome = kdehomeDir.path();
     qputenv("KDEHOME", QFile::encodeName(kdehome));
 
-    //Generate kde4 apps dir
+    // Generate kde4 apps dir
     const QString folderName = QStringLiteral("foo/folder1/");
     const QString appsPath = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + folderName;
     QDir().mkpath(appsPath);
@@ -191,7 +192,7 @@ void MigrateApplicationFilesTest::shouldMigrateFoldersWithSubFolders()
         QVERIFY(!QFile::exists(xdgFile));
     }
 
-    //SubFolder.
+    // SubFolder.
     const QString subFolder = QStringLiteral("foo/folder1/subfolder/");
     const QString appsPathSubfolder = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + subFolder;
     QDir().mkpath(appsPathSubfolder);
@@ -234,7 +235,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateIfAlreadyDone()
     const QString kdehome = kdehomeDir.path();
     qputenv("KDEHOME", QFile::encodeName(kdehome));
 
-    //Generate kde4 apps dir
+    // Generate kde4 apps dir
     const QString folderName = QStringLiteral("foo/");
     const QString appsPath = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + folderName;
     QDir().mkpath(appsPath);
@@ -269,7 +270,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateIfAlreadyDone()
     migrate.insertMigrateInfo(info2);
 
     QVERIFY(migrate.checkIfNecessary());
-    //We have a current version == 3 => don't migrate old info.
+    // We have a current version == 3 => don't migrate old info.
     migrate.setCurrentConfigVersion(3);
     QVERIFY(migrate.start());
     for (const QString &file : qAsConst(files)) {
@@ -284,7 +285,7 @@ void MigrateApplicationFilesTest::shouldMigrateFiles()
     const QString kdehome = kdehomeDir.path();
     qputenv("KDEHOME", QFile::encodeName(kdehome));
 
-    //Generate kde4 apps dir
+    // Generate kde4 apps dir
     const QString folderName = QStringLiteral("foo/");
     const QString appsPath = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + folderName;
     QDir().mkpath(appsPath);
@@ -298,7 +299,7 @@ void MigrateApplicationFilesTest::shouldMigrateFiles()
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
-        //qDebug()<<" storedConfigFilePath"<<storedConfigFilePath;
+        // qDebug()<<" storedConfigFilePath"<<storedConfigFilePath;
         QVERIFY(QFile::copy(fooFile.fileName(), storedConfigFilePath));
 
         const QString xdgFile = xdgDatahome + file;
@@ -331,14 +332,14 @@ void MigrateApplicationFilesTest::shouldMigrateFilesWithPattern()
     const QString kdehome = kdehomeDir.path();
     qputenv("KDEHOME", QFile::encodeName(kdehome));
 
-    //Generate kde4 apps dir
+    // Generate kde4 apps dir
     const QString folderName = QStringLiteral("foo/");
     const QString appsPath = kdehome + QLatin1Char('/') + QLatin1String("share/apps/") + folderName;
     QDir().mkpath(appsPath);
     QVERIFY(QDir(appsPath).exists());
     const QString xdgDatahome = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + folderName;
 
-    //Copy files.
+    // Copy files.
     QStringList files;
     QStringList filesMustBeMigrated;
     filesMustBeMigrated << QStringLiteral("text2.txt") << QStringLiteral("text.txt");
@@ -350,7 +351,7 @@ void MigrateApplicationFilesTest::shouldMigrateFilesWithPattern()
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
-        //qDebug()<<" storedConfigFilePath"<<storedConfigFilePath;
+        // qDebug()<<" storedConfigFilePath"<<storedConfigFilePath;
         QVERIFY(QFile::copy(fooFile.fileName(), storedConfigFilePath));
 
         const QString xdgFile = xdgDatahome + file;

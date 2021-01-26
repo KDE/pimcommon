@@ -6,8 +6,8 @@
  */
 
 #include "collectionaclpage.h"
-#include "collectionaclwidget.h"
 #include "aclmanager.h"
+#include "collectionaclwidget.h"
 #include "imapaclattribute.h"
 #include <AkonadiCore/Collection>
 #include <KLocalizedString>

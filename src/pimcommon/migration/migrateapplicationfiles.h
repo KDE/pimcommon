@@ -7,10 +7,11 @@
 #ifndef MIGRATEAPPLICATIONFILE_H
 #define MIGRATEAPPLICATIONFILE_H
 
-#include <QObject>
 #include "migratefileinfo.h"
 #include "pimcommon_export.h"
-namespace PimCommon {
+#include <QObject>
+namespace PimCommon
+{
 class MigrateApplicationFilesPrivate;
 /**
  * @brief The MigrateApplicationFiles class

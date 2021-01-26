@@ -8,7 +8,8 @@
 #define TEST_CUSTOMTOOLSWIDGETNG_GUI_H
 
 #include <QWidget>
-namespace PimCommon {
+namespace PimCommon
+{
 class CustomToolsWidgetNg;
 }
 

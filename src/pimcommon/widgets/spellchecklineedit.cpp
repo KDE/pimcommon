@@ -5,10 +5,10 @@
  */
 
 #include "spellchecklineedit.h"
-#include <QStyleOptionFrame>
 #include <QKeyEvent>
-#include <QStyle>
 #include <QMimeData>
+#include <QStyle>
+#include <QStyleOptionFrame>
 
 using namespace PimCommon;
 
@@ -37,9 +37,7 @@ SpellCheckLineEdit::~SpellCheckLineEdit()
 
 void SpellCheckLineEdit::keyPressEvent(QKeyEvent *e)
 {
-    if (e->key() == Qt::Key_Enter
-        || e->key() == Qt::Key_Return
-        || e->key() == Qt::Key_Down) {
+    if (e->key() == Qt::Key_Enter || e->key() == Qt::Key_Return || e->key() == Qt::Key_Down) {
         Q_EMIT focusDown();
         return;
     } else if (e->key() == Qt::Key_Up) {

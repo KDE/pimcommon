@@ -9,7 +9,8 @@
 
 #include "abstractgenericplugin.h"
 #include "pimcommon_export.h"
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The GenericPlugin class
  * @author Laurent Montel <montel@kde.org>

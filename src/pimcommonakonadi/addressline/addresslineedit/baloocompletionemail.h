@@ -7,9 +7,10 @@
 
 #ifndef BALOOCOMPLETIONEMAIL_H
 #define BALOOCOMPLETIONEMAIL_H
-#include <QStringList>
 #include "pimcommonakonadi_private_export.h"
-namespace PimCommon {
+#include <QStringList>
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT BalooCompletionEmail
 {
 public:
@@ -20,6 +21,7 @@ public:
     void setBlackList(const QStringList &lst);
 
     Q_REQUIRED_RESULT QStringList cleanupEmailList();
+
 private:
     Q_REQUIRED_RESULT QString stripEmail(const QString &email, QString &address);
     QStringList mListEmail;

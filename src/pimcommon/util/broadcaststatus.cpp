@@ -21,7 +21,8 @@ static void deleteGlobalStaticBroadcastStatus()
     instance_ = nullptr;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 BroadcastStatus *BroadcastStatus::instance()
 {
     if (!instance_) {

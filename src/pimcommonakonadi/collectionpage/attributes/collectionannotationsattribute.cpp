@@ -14,14 +14,12 @@ CollectionAnnotationsAttribute::CollectionAnnotationsAttribute()
 {
 }
 
-CollectionAnnotationsAttribute::CollectionAnnotationsAttribute(
-    const QMap<QByteArray, QByteArray> &annotations)
+CollectionAnnotationsAttribute::CollectionAnnotationsAttribute(const QMap<QByteArray, QByteArray> &annotations)
     : mAnnotations(annotations)
 {
 }
 
-void CollectionAnnotationsAttribute::setAnnotations(
-    const QMap<QByteArray, QByteArray> &annotations)
+void CollectionAnnotationsAttribute::setAnnotations(const QMap<QByteArray, QByteArray> &annotations)
 {
     mAnnotations = annotations;
 }

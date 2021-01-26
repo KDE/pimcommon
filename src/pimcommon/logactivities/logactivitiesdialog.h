@@ -7,11 +7,12 @@
 #ifndef LOGACTIVITIESDIALOG_H
 #define LOGACTIVITIESDIALOG_H
 
-#include <QDialog>
 #include "pimcommon_private_export.h"
+#include <QDialog>
 class QPushButton;
 class QCheckBox;
-namespace PimCommon {
+namespace PimCommon
+{
 class LogActivitiesWidget;
 class PIMCOMMON_TESTS_EXPORT LogActivitiesDialog : public QDialog
 {

@@ -8,9 +8,9 @@
 #include "recentaddresswidgettest.h"
 #include "../recentaddress/recentaddresswidget.h"
 #include <QLineEdit>
-#include <QToolButton>
 #include <QListWidget>
 #include <QTest>
+#include <QToolButton>
 #include <qtestmouse.h>
 
 RecentAddressWidgetTest::RecentAddressWidgetTest(QObject *parent)
@@ -53,7 +53,7 @@ void RecentAddressWidgetTest::shouldAddAddresses()
     lst << QStringLiteral("foo2");
     w.setAddresses(lst);
     QCOMPARE(listview->count(), lst.count());
-    //Clear list before to add
+    // Clear list before to add
     w.setAddresses(lst);
     QCOMPARE(listview->count(), lst.count());
 }

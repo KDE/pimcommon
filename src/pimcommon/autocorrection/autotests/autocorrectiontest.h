@@ -7,8 +7,8 @@
 #ifndef AUTOCORRECTIONTEST_H
 #define AUTOCORRECTIONTEST_H
 
-#include <QObject>
 #include <KSharedConfig>
+#include <QObject>
 class AutoCorrectionTest : public QObject
 {
     Q_OBJECT

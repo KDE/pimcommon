@@ -4,10 +4,10 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include <QStandardPaths>
+#include "logactivitiesmainwidget.h"
 #include <QApplication>
 #include <QCommandLineParser>
-#include "logactivitiesmainwidget.h"
+#include <QStandardPaths>
 
 int main(int argc, char **argv)
 {

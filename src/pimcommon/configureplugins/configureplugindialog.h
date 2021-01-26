@@ -7,10 +7,11 @@
 #ifndef CONFIGUREPLUGINDIALOG_H
 #define CONFIGUREPLUGINDIALOG_H
 
-#include <QDialog>
 #include "pimcommon_export.h"
+#include <QDialog>
 class QDialogButtonBox;
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The ConfigurePluginDialog class
  * @author Laurent Montel <montel@kde.org>

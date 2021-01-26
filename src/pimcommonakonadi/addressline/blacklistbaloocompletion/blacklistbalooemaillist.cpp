@@ -8,10 +8,10 @@
 #include "blacklistbalooemaillist.h"
 #include "pimcommonakonadi_debug.h"
 
-#include <QPainter>
-#include <QEvent>
-#include <KLocalizedString>
 #include <KEmailAddress>
+#include <KLocalizedString>
+#include <QEvent>
+#include <QPainter>
 using namespace PimCommon;
 
 BlackListBalooEmailList::BlackListBalooEmailList(QWidget *parent)

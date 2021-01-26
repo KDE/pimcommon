@@ -10,7 +10,8 @@
 #include "pimcommon_export.h"
 #include <QListWidget>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class TemplateListWidgetPrivate;
 
 struct defaultTemplate {
@@ -29,7 +30,7 @@ public:
     explicit TemplateListWidget(const QString &configName, QWidget *parent = nullptr);
     ~TemplateListWidget() override;
 
-    //Need to load template in specific class to allow to use correct defaultTemplates function
+    // Need to load template in specific class to allow to use correct defaultTemplates function
     void loadTemplates();
 
     Q_REQUIRED_RESULT virtual QVector<PimCommon::defaultTemplate> defaultTemplates();
@@ -45,10 +46,7 @@ protected:
     QMimeData *mimeData(const QList<QListWidgetItem *> items) const override;
 
     void dropEvent(QDropEvent *event) override;
-    enum TemplateData {
-        Text = Qt::UserRole + 1,
-        DefaultTemplate = Qt::UserRole + 2
-    };
+    enum TemplateData { Text = Qt::UserRole + 1, DefaultTemplate = Qt::UserRole + 2 };
 
 Q_SIGNALS:
     void insertTemplate(const QString &);

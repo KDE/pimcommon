@@ -13,40 +13,40 @@
 
 #include <KLDAP/LdapClientSearchConfig>
 #include <KLDAP/LdapSearchClientReadConfigServerJob>
-#include <Libkdepim/ProgressIndicatorLabel>
 #include <Libkdepim/LineEditCatchReturnKey>
+#include <Libkdepim/ProgressIndicatorLabel>
 
-#include <QPair>
 #include <QApplication>
 #include <QCheckBox>
+#include <QClipboard>
 #include <QCloseEvent>
 #include <QFrame>
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QHeaderView>
 #include <QLabel>
+#include <QMenu>
+#include <QPair>
 #include <QPushButton>
+#include <QSortFilterProxyModel>
 #include <QTableView>
 #include <QVBoxLayout>
-#include <QSortFilterProxyModel>
-#include <QMenu>
-#include <QClipboard>
 
-#include <QLineEdit>
-#include <QComboBox>
+#include <KCMultiDialog>
 #include <KConfig>
 #include <KConfigGroup>
-#include <KCMultiDialog>
+#include <KMessageBox>
+#include <QComboBox>
 #include <QDialogButtonBox>
+#include <QLineEdit>
 #include <kldap/ldapobject.h>
 #include <kldap/ldapserver.h>
-#include <KMessageBox>
 
-#include <QLocale>
-#include <KLocalizedString>
 #include <KConfigGroup>
-#include <QDialogButtonBox>
 #include <KGuiItem>
+#include <KLocalizedString>
+#include <QDialogButtonBox>
+#include <QLocale>
 
 using namespace PimCommon;
 static QString asUtf8(const QByteArray &val)
@@ -57,8 +57,8 @@ static QString asUtf8(const QByteArray &val)
 
     const char *data = val.data();
 
-    //QString::fromUtf8() bug workaround
-    if (data[ val.size() - 1 ] == '\0') {
+    // QString::fromUtf8() bug workaround
+    if (data[val.size() - 1] == '\0') {
         return QString::fromUtf8(data, val.size() - 1);
     } else {
         return QString::fromUtf8(data, val.size());
@@ -87,25 +87,25 @@ static QMap<QString, QString> &adrbookattr2ldap()
     static QMap<QString, QString> keys;
 
     if (keys.isEmpty()) {
-        keys[ i18nc("@item LDAP search key", "Title") ] = QStringLiteral("title");
-        keys[ i18n("Full Name") ] = QStringLiteral("cn");
-        keys[ i18nc("@item LDAP search key", "Email") ] = QStringLiteral("mail");
-        keys[ i18n("Home Number") ] = QStringLiteral("homePhone");
-        keys[ i18n("Work Number") ] = QStringLiteral("telephoneNumber");
-        keys[ i18n("Mobile Number") ] = QStringLiteral("mobile");
-        keys[ i18n("Fax Number") ] = QStringLiteral("facsimileTelephoneNumber");
-        keys[ i18n("Pager") ] = QStringLiteral("pager");
-        keys[ i18n("Street") ] = QStringLiteral("street");
-        keys[ i18nc("@item LDAP search key", "State") ] = QStringLiteral("st");
-        keys[ i18n("Country") ] = QStringLiteral("co");
-        keys[ i18n("City") ] = QStringLiteral("l");   //krazy:exclude=doublequote_chars
-        keys[ i18n("Organization") ] = QStringLiteral("o");   //krazy:exclude=doublequote_chars
-        keys[ i18n("Company") ] = QStringLiteral("Company");
-        keys[ i18n("Department") ] = QStringLiteral("department");
-        keys[ i18n("Zip Code") ] = QStringLiteral("postalCode");
-        keys[ i18n("Postal Address") ] = QStringLiteral("postalAddress");
-        keys[ i18n("Description") ] = QStringLiteral("description");
-        keys[ i18n("User ID") ] = QStringLiteral("uid");
+        keys[i18nc("@item LDAP search key", "Title")] = QStringLiteral("title");
+        keys[i18n("Full Name")] = QStringLiteral("cn");
+        keys[i18nc("@item LDAP search key", "Email")] = QStringLiteral("mail");
+        keys[i18n("Home Number")] = QStringLiteral("homePhone");
+        keys[i18n("Work Number")] = QStringLiteral("telephoneNumber");
+        keys[i18n("Mobile Number")] = QStringLiteral("mobile");
+        keys[i18n("Fax Number")] = QStringLiteral("facsimileTelephoneNumber");
+        keys[i18n("Pager")] = QStringLiteral("pager");
+        keys[i18n("Street")] = QStringLiteral("street");
+        keys[i18nc("@item LDAP search key", "State")] = QStringLiteral("st");
+        keys[i18n("Country")] = QStringLiteral("co");
+        keys[i18n("City")] = QStringLiteral("l"); // krazy:exclude=doublequote_chars
+        keys[i18n("Organization")] = QStringLiteral("o"); // krazy:exclude=doublequote_chars
+        keys[i18n("Company")] = QStringLiteral("Company");
+        keys[i18n("Department")] = QStringLiteral("department");
+        keys[i18n("Zip Code")] = QStringLiteral("postalCode");
+        keys[i18n("Postal Address")] = QStringLiteral("postalAddress");
+        keys[i18n("Description")] = QStringLiteral("description");
+        keys[i18n("User ID")] = QStringLiteral("uid");
     }
 
     return keys;
@@ -114,11 +114,11 @@ static QMap<QString, QString> &adrbookattr2ldap()
 static QString makeFilter(const QString &query, LdapSearchDialog::FilterType attr, bool startsWith)
 {
     /* The reasoning behind this filter is:
-    * If it's a person, or a distlist, show it, even if it doesn't have an email address.
-    * If it's not a person, or a distlist, only show it if it has an email attribute.
-    * This allows both resource accounts with an email address which are not a person and
-    * person entries without an email address to show up, while still not showing things
-    * like structural entries in the ldap tree. */
+     * If it's a person, or a distlist, show it, even if it doesn't have an email address.
+     * If it's not a person, or a distlist, only show it if it has an email attribute.
+     * This allows both resource accounts with an email address which are not a person and
+     * person entries without an email address to show up, while still not showing things
+     * like structural entries in the ldap tree. */
     QString result(QStringLiteral("&(|(objectclass=person)(objectclass=groupofnames)(mail=*))("));
     if (query.isEmpty()) {
         // Return a filter that matches everything
@@ -166,17 +166,17 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAt
     }
 
     if (!attrs.value(QStringLiteral("o")).isEmpty()) {
-        addr.setOrganization(asUtf8(attrs[ QStringLiteral("o") ].first()));
+        addr.setOrganization(asUtf8(attrs[QStringLiteral("o")].first()));
     }
     if (addr.organization().isEmpty() && !attrs.value(QStringLiteral("Company")).isEmpty()) {
-        addr.setOrganization(asUtf8(attrs[ QStringLiteral("Company") ].first()));
+        addr.setOrganization(asUtf8(attrs[QStringLiteral("Company")].first()));
     }
 
     // Address
     KContacts::Address workAddr(KContacts::Address::Work);
 
     if (!attrs.value(QStringLiteral("department")).isEmpty()) {
-        addr.setDepartment(asUtf8(attrs[ QStringLiteral("department") ].first()));
+        addr.setDepartment(asUtf8(attrs[QStringLiteral("department")].first()));
     }
 
     if (!workAddr.isEmpty()) {
@@ -185,31 +185,31 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAt
 
     // phone
     if (!attrs.value(QStringLiteral("homePhone")).isEmpty()) {
-        KContacts::PhoneNumber homeNr = asUtf8(attrs[  QStringLiteral("homePhone") ].first());
+        KContacts::PhoneNumber homeNr = asUtf8(attrs[QStringLiteral("homePhone")].first());
         homeNr.setType(KContacts::PhoneNumber::Home);
         addr.insertPhoneNumber(homeNr);
     }
 
     if (!attrs.value(QStringLiteral("telephoneNumber")).isEmpty()) {
-        KContacts::PhoneNumber workNr = asUtf8(attrs[  QStringLiteral("telephoneNumber") ].first());
+        KContacts::PhoneNumber workNr = asUtf8(attrs[QStringLiteral("telephoneNumber")].first());
         workNr.setType(KContacts::PhoneNumber::Work);
         addr.insertPhoneNumber(workNr);
     }
 
     if (!attrs.value(QStringLiteral("facsimileTelephoneNumber")).isEmpty()) {
-        KContacts::PhoneNumber faxNr = asUtf8(attrs[  QStringLiteral("facsimileTelephoneNumber") ].first());
+        KContacts::PhoneNumber faxNr = asUtf8(attrs[QStringLiteral("facsimileTelephoneNumber")].first());
         faxNr.setType(KContacts::PhoneNumber::Fax);
         addr.insertPhoneNumber(faxNr);
     }
 
     if (!attrs.value(QStringLiteral("mobile")).isEmpty()) {
-        KContacts::PhoneNumber cellNr = asUtf8(attrs[  QStringLiteral("mobile") ].first());
+        KContacts::PhoneNumber cellNr = asUtf8(attrs[QStringLiteral("mobile")].first());
         cellNr.setType(KContacts::PhoneNumber::Cell);
         addr.insertPhoneNumber(cellNr);
     }
 
     if (!attrs.value(QStringLiteral("pager")).isEmpty()) {
-        KContacts::PhoneNumber pagerNr = asUtf8(attrs[  QStringLiteral("pager") ].first());
+        KContacts::PhoneNumber pagerNr = asUtf8(attrs[QStringLiteral("pager")].first());
         pagerNr.setType(KContacts::PhoneNumber::Pager);
         addr.insertPhoneNumber(pagerNr);
     }
@@ -220,9 +220,7 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAt
 class ContactListModel : public QAbstractTableModel
 {
 public:
-    enum Role {
-        ServerRole = Qt::UserRole + 1
-    };
+    enum Role { ServerRole = Qt::UserRole + 1 };
 
     explicit ContactListModel(QObject *parent)
         : QAbstractTableModel(parent)
@@ -316,8 +314,7 @@ public:
         case 8:
             return i18n("Street");
         case 9:
-            return i18nc("@title:column Column containing the residential state of the address",
-                         "State");
+            return i18nc("@title:column Column containing the residential state of the address", "State");
         case 10:
             return i18n("Country");
         case 11:
@@ -345,8 +342,7 @@ public:
             return QVariant();
         }
 
-        if (index.row() < 0 || index.row() >= mContactList.count()
-            || index.column() < 0 || index.column() > 17) {
+        if (index.row() < 0 || index.row() >= mContactList.count() || index.column() < 0 || index.column() > 17) {
             return QVariant();
         }
 
@@ -415,9 +411,9 @@ public:
     {
     }
 
-    QVector< QPair<KLDAP::LdapAttrMap, QString> > selectedItems()
+    QVector<QPair<KLDAP::LdapAttrMap, QString>> selectedItems()
     {
-        QVector< QPair<KLDAP::LdapAttrMap, QString> > contacts;
+        QVector<QPair<KLDAP::LdapAttrMap, QString>> contacts;
 
         const QModelIndexList selected = mResultView->selectionModel()->selectedRows();
         const int numberOfSelectedElement(selected.count());
@@ -492,8 +488,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     auto topLayout = new QVBoxLayout(page);
     topLayout->setContentsMargins(0, 0, 0, 0);
 
-    auto groupBox = new QGroupBox(i18n("Search for Addresses in Directory"),
-                                        page);
+    auto groupBox = new QGroupBox(i18n("Search for Addresses in Directory"), page);
     auto boxLayout = new QGridLayout();
     groupBox->setLayout(boxLayout);
     boxLayout->setColumnStretch(1, 1);
@@ -557,7 +552,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->mModel = new ContactListModel(d->mResultView);
 
     d->sortproxy = new QSortFilterProxyModel(this);
-    d->sortproxy->setFilterKeyColumn(-1); //Search in all column
+    d->sortproxy->setFilterKeyColumn(-1); // Search in all column
     d->sortproxy->setSourceModel(d->mModel);
     d->sortproxy->setFilterCaseSensitivity(Qt::CaseInsensitive);
     connect(d->searchLine, &QLineEdit::textChanged, d->sortproxy, &QSortFilterProxyModel::setFilterFixedString);
@@ -582,13 +577,11 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     buttonLayout->addWidget(d->progressIndication);
 
     auto buttons = new QDialogButtonBox(page);
-    QPushButton *button = buttons->addButton(i18n("Select All"),
-                                             QDialogButtonBox::ActionRole);
+    QPushButton *button = buttons->addButton(i18n("Select All"), QDialogButtonBox::ActionRole);
     connect(button, &QPushButton::clicked, this, [this]() {
         d->slotSelectAll();
     });
-    button = buttons->addButton(i18n("Unselect All"),
-                                QDialogButtonBox::ActionRole);
+    button = buttons->addButton(i18n("Unselect All"), QDialogButtonBox::ActionRole);
     connect(button, &QPushButton::clicked, this, [this]() {
         d->slotUnselectAll();
     });
@@ -598,12 +591,10 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->user1Button->setText(i18n("Add Selected"));
     user2Button->setText(i18n("Configure LDAP Servers..."));
 
-    connect(d->mRecursiveCheckbox, &QCheckBox::toggled,
-            this, [this](bool state) {
+    connect(d->mRecursiveCheckbox, &QCheckBox::toggled, this, [this](bool state) {
         d->slotSetScope(state);
     });
-    connect(d->mSearchButton, SIGNAL(clicked()),
-            this, SLOT(slotStartSearch()));
+    connect(d->mSearchButton, SIGNAL(clicked()), this, SLOT(slotStartSearch()));
 
     setTabOrder(d->mSearchEdit, d->mFilterCombo);
     setTabOrder(d->mFilterCombo, d->mSearchButton);
@@ -681,14 +672,13 @@ void LdapSearchDialog::Private::restoreSettings()
             QStringList attrs;
 
             QMap<QString, QString>::ConstIterator end(adrbookattr2ldap().constEnd());
-            for (QMap<QString, QString>::ConstIterator it = adrbookattr2ldap().constBegin();
-                 it != end; ++it) {
+            for (QMap<QString, QString>::ConstIterator it = adrbookattr2ldap().constBegin(); it != end; ++it) {
                 attrs << *it;
             }
 
             ldapClient->setAttributes(attrs);
 
-            q->connect(ldapClient, SIGNAL(result(KLDAP::LdapClient,KLDAP::LdapObject)), q, SLOT(slotAddResult(KLDAP::LdapClient,KLDAP::LdapObject)));
+            q->connect(ldapClient, SIGNAL(result(KLDAP::LdapClient, KLDAP::LdapObject)), q, SLOT(slotAddResult(KLDAP::LdapClient, KLDAP::LdapObject)));
             q->connect(ldapClient, SIGNAL(done()), q, SLOT(slotSearchDone()));
             q->connect(ldapClient, &KLDAP::LdapClient::error, q, [this](const QString &err) {
                 slotError(err);
@@ -773,8 +763,7 @@ void LdapSearchDialog::Private::slotStartSearch()
 
     const bool startsWith = (mSearchType->currentIndex() == 1);
 
-    const QString filter = makeFilter(mSearchEdit->text().trimmed(),
-                                      mFilterCombo->currentData().value<FilterType>(), startsWith);
+    const QString filter = makeFilter(mSearchEdit->text().trimmed(), mFilterCombo->currentData().value<FilterType>(), startsWith);
 
     // loop in the list and run the KLDAP::LdapClients
     mModel->clear();
@@ -842,7 +831,7 @@ void LdapSearchDialog::slotUser1()
 
     d->mSelectedContacts.clear();
 
-    const QVector< QPair<KLDAP::LdapAttrMap, QString> > &items = d->selectedItems();
+    const QVector<QPair<KLDAP::LdapAttrMap, QString>> &items = d->selectedItems();
 
     if (!items.isEmpty()) {
         const QDateTime now = QDateTime::currentDateTime();
@@ -853,7 +842,8 @@ void LdapSearchDialog::slotUser1()
             // set a comment where the contact came from
             contact.setNote(i18nc("arguments are host name, datetime",
                                   "Imported from LDAP directory %1 on %2",
-                                  items.at(i).second, QLocale().toString(now, QLocale::ShortFormat)));
+                                  items.at(i).second,
+                                  QLocale().toString(now, QLocale::ShortFormat)));
 
             d->mSelectedContacts.append(contact);
         }
@@ -873,7 +863,7 @@ void LdapSearchDialog::slotUser2()
     dialog->setWindowTitle(i18nc("@title:window", "Configure the Address Book LDAP Settings"));
     dialog->addModule(QStringLiteral("kcmldap.desktop"));
 
-    if (dialog->exec()) {   //krazy:exclude=crashy
+    if (dialog->exec()) { // krazy:exclude=crashy
         d->restoreSettings();
     }
     delete dialog;

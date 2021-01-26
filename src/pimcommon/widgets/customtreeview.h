@@ -7,11 +7,12 @@
 #ifndef CUSTOMTREEVIEW_H
 #define CUSTOMTREEVIEW_H
 
-#include <QTreeWidget>
 #include "pimcommon_export.h"
+#include <QTreeWidget>
 class QPaintEvent;
 class QEvent;
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The CustomTreeView class
  * @author Laurent Montel <montel@kde.org>

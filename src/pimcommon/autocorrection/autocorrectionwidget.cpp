@@ -8,22 +8,22 @@
 #include "widgets/configureimmutablewidgetutils.h"
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include "autocorrection.h"
-#include "ui_autocorrectionwidget.h"
-#include "import/importlibreofficeautocorrection.h"
-#include "import/importkmailautocorrection.h"
 #include "import/importabstractautocorrection.h"
+#include "import/importkmailautocorrection.h"
+#include "import/importlibreofficeautocorrection.h"
+#include "ui_autocorrectionwidget.h"
 
 #include "settings/pimcommonsettings.h"
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <Libkdepim/LineEditCatchReturnKey>
 
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 
-#include <QTreeWidgetItem>
-#include <QMenu>
 #include <QFileDialog>
+#include <QMenu>
 #include <QPointer>
+#include <QTreeWidgetItem>
 
 using namespace PimCommon;
 
@@ -401,7 +401,7 @@ void AutoCorrectionWidget::removeAutocorrectEntry()
 
         QString findStr;
         if (below) {
-            //qCDebug(PIMCOMMON_LOG) << "below";
+            // qCDebug(PIMCOMMON_LOG) << "below";
             findStr = item->text(0);
             delete item;
             item = nullptr;

@@ -11,11 +11,11 @@
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-# ifndef PIMCOMMON_TESTS_EXPORT
-#  define PIMCOMMON_TESTS_EXPORT PIMCOMMON_EXPORT
-# endif
+#ifndef PIMCOMMON_TESTS_EXPORT
+#define PIMCOMMON_TESTS_EXPORT PIMCOMMON_EXPORT
+#endif
 #else /* not compiling tests */
-# define PIMCOMMON_TESTS_EXPORT
+#define PIMCOMMON_TESTS_EXPORT
 #endif
 
 #endif

@@ -9,12 +9,12 @@
 #include "pimcommonakonadi_debug.h"
 #include <KLocalizedString>
 
-#include <agenttype.h>
-#include <agentmanager.h>
 #include <agentinstancecreatejob.h>
+#include <agentmanager.h>
+#include <agenttype.h>
 
-#include <QDBusReply>
 #include <QDBusInterface>
+#include <QDBusReply>
 #include <QMetaMethod>
 
 using namespace Akonadi;
@@ -30,7 +30,7 @@ CreateResource::~CreateResource()
 {
 }
 
-//code from accountwizard
+// code from accountwizard
 static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
 {
     QMetaMethod m;
@@ -105,7 +105,8 @@ QString CreateResource::createResource(const QString &resources, const QString &
                 QVariant arg = it.value();
                 const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);
                 if (!arg.canConvert(targetType)) {
-                    Q_EMIT createResourceError(i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QString::fromLatin1(QVariant::typeToName(targetType))));
+                    Q_EMIT createResourceError(
+                        i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QString::fromLatin1(QVariant::typeToName(targetType))));
                     return QString();
                 }
                 arg.convert(targetType);

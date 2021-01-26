@@ -8,22 +8,25 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-namespace {
+namespace
+{
 inline QString pluginConfigFile()
 {
     return QStringLiteral("pimpluginsrc");
 }
 }
 
-bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId)
+bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsList,
+                                              const QStringList &disabledPluginsList,
+                                              bool isEnabledByDefault,
+                                              const QString &pluginId)
 {
     if (pluginId.isEmpty()) {
         return false;
     }
     const bool pluginEnabledByUser = enabledPluginsList.contains(pluginId);
     const bool pluginDisabledByUser = disabledPluginsList.contains(pluginId);
-    if ((isEnabledByDefault && !pluginDisabledByUser)
-        || (!isEnabledByDefault && pluginEnabledByUser)) {
+    if ((isEnabledByDefault && !pluginDisabledByUser) || (!isEnabledByDefault && pluginEnabledByUser)) {
         return true;
     }
     return false;
@@ -46,7 +49,10 @@ QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const Q
     return pair;
 }
 
-void PimCommon::PluginUtil::savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList)
+void PimCommon::PluginUtil::savePluginSettings(const QString &groupName,
+                                               const QString &prefixSettingKey,
+                                               const QStringList &enabledPluginsList,
+                                               const QStringList &disabledPluginsList)
 {
     KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
     KConfigGroup grp = config->group(groupName);

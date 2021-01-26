@@ -12,7 +12,8 @@
 
 #include <QDialog>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @short A dialog for editing an IMAP ACL entry.
  */

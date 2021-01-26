@@ -8,12 +8,13 @@
 #ifndef BLACKLISTBALOOEMAILLIST_H
 #define BLACKLISTBALOOEMAILLIST_H
 
+#include "pimcommonakonadi_private_export.h"
+#include <QHash>
 #include <QListWidget>
 #include <QListWidgetItem>
-#include <QHash>
-#include "pimcommonakonadi_private_export.h"
 
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailListItem : public QListWidgetItem
 {
 public:
@@ -40,6 +41,7 @@ public:
 
     void setExcludeDomain(const QStringList &domain);
     Q_REQUIRED_RESULT int setEmailFound(const QStringList &);
+
 protected:
     void paintEvent(QPaintEvent *event) override;
 

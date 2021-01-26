@@ -7,8 +7,8 @@
 #ifndef PURPOSEMENUWIDGETTEST_H
 #define PURPOSEMENUWIDGETTEST_H
 
-#include <QObject>
 #include "widgets/purposemenuwidget.h"
+#include <QObject>
 class TestMenu : public PimCommon::PurposeMenuWidget
 {
     Q_OBJECT

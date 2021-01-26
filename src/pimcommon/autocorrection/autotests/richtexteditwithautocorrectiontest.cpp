@@ -5,9 +5,9 @@
 */
 
 #include "richtexteditwithautocorrectiontest.h"
-#include <QTest>
-#include "../widgets/richtexteditwithautocorrection.h"
 #include "../autocorrection.h"
+#include "../widgets/richtexteditwithautocorrection.h"
+#include <QTest>
 #include <qtestkeyboard.h>
 
 RichTextEditWithAutoCorrectionTest::RichTextEditWithAutoCorrectionTest()

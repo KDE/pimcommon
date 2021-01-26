@@ -7,8 +7,8 @@
 #include "customtoolswidgetngtest.h"
 #include "customtools/customtoolswidgetng.h"
 #include <QStackedWidget>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 CustomToolsWidgetNgTest::CustomToolsWidgetNgTest(QObject *parent)
     : QObject(parent)

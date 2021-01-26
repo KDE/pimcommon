@@ -10,12 +10,12 @@
 
 #include <QPushButton>
 
-#include <QTest>
-#include <qtestkeyboard.h>
-#include <qtestmouse.h>
 #include <QComboBox>
 #include <QSignalSpy>
 #include <QStandardPaths>
+#include <QTest>
+#include <qtestkeyboard.h>
+#include <qtestmouse.h>
 TranslatorTest::TranslatorTest()
 {
     QStandardPaths::setTestModeEnabled(true);

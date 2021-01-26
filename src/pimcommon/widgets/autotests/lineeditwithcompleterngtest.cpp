@@ -30,7 +30,7 @@ void LineEditWithCompleterNgTest::shouldAddCompletionItem()
     w.addCompletionItem(QStringLiteral("ff"));
     QCOMPARE(w.completer()->model()->rowCount(), 1);
 
-    //Don't add same element
+    // Don't add same element
     w.addCompletionItem(QStringLiteral("ff"));
     QCOMPARE(w.completer()->model()->rowCount(), 1);
 

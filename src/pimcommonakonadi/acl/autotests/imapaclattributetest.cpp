@@ -179,7 +179,8 @@ void ImapAclAttributeTest::testSerializeDeserialize_data()
     QTest::newRow("lookup") << acl << KIMAP::Acl::Rights(KIMAP::Acl::None) << QByteArray("user@host l %% ") << QByteArray("testme@host l %% user@host l");
 
     acl.insert("user@host", KIMAP::Acl::Lookup | KIMAP::Acl::Read);
-    QTest::newRow("lookup/read") << acl << KIMAP::Acl::Rights(KIMAP::Acl::None)  << QByteArray("user@host lr %% ") << QByteArray("testme@host l %% user@host lr");
+    QTest::newRow("lookup/read") << acl << KIMAP::Acl::Rights(KIMAP::Acl::None) << QByteArray("user@host lr %% ")
+                                 << QByteArray("testme@host l %% user@host lr");
 
     acl.insert("otheruser@host", KIMAP::Acl::Lookup | KIMAP::Acl::Read);
     QTest::newRow("lookup/read") << acl << KIMAP::Acl::Rights(KIMAP::Acl::None) << QByteArray("otheruser@host lr % user@host lr %% ")

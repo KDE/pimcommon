@@ -9,7 +9,8 @@
 
 #include "importabstractautocorrection.h"
 #include "pimcommon_private_export.h"
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMON_TESTS_EXPORT ImportKMailAutocorrection : public ImportAbstractAutocorrection
 {
 public:

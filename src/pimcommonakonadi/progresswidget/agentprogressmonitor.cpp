@@ -16,19 +16,14 @@ AgentProgressMonitor::AgentProgressMonitor(const AgentInstance &agent, KPIM::Pro
     , mAgent(agent)
     , mItem(item)
 {
-    connect(AgentManager::self(), &AgentManager::instanceProgressChanged,
-            this, &AgentProgressMonitor::instanceProgressChanged);
-    connect(AgentManager::self(), &AgentManager::instanceStatusChanged,
-            this, &AgentProgressMonitor::instanceStatusChanged);
-    connect(Akonadi::AgentManager::self(), &AgentManager::instanceRemoved,
-            this, &AgentProgressMonitor::instanceRemoved);
-    connect(Akonadi::AgentManager::self(), &AgentManager::instanceNameChanged,
-            this, &AgentProgressMonitor::instanceNameChanged);
+    connect(AgentManager::self(), &AgentManager::instanceProgressChanged, this, &AgentProgressMonitor::instanceProgressChanged);
+    connect(AgentManager::self(), &AgentManager::instanceStatusChanged, this, &AgentProgressMonitor::instanceStatusChanged);
+    connect(Akonadi::AgentManager::self(), &AgentManager::instanceRemoved, this, &AgentProgressMonitor::instanceRemoved);
+    connect(Akonadi::AgentManager::self(), &AgentManager::instanceNameChanged, this, &AgentProgressMonitor::instanceNameChanged);
     // TODO connect to instanceError, instanceWarning, instanceOnline ?
     // and do what?
 
-    connect(item, &KPIM::ProgressItem::progressItemCanceled,
-            this, &AgentProgressMonitor::abort);
+    connect(item, &KPIM::ProgressItem::progressItemCanceled, this, &AgentProgressMonitor::abort);
 
     // TODO handle offline case
 }
@@ -50,7 +45,7 @@ void AgentProgressMonitor::instanceRemoved(const Akonadi::AgentInstance &instanc
         return;
     }
 
-    mItem.data()->disconnect(this);   // avoid abort call
+    mItem.data()->disconnect(this); // avoid abort call
     mItem.data()->cancel();
     if (mItem.data()) {
         mItem.data()->setComplete();
@@ -90,7 +85,7 @@ void AgentProgressMonitor::instanceStatusChanged(const AgentInstance &instance)
         case AgentInstance::Running:
             break;
         case AgentInstance::Broken:
-            mItem.data()->disconnect(this);   // avoid abort call
+            mItem.data()->disconnect(this); // avoid abort call
             mItem.data()->cancel();
             if (mItem.data()) {
                 mItem.data()->setComplete();

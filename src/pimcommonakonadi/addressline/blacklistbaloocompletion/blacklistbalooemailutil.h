@@ -9,9 +9,10 @@
 #define BLACKLISTBALOOEMAILUTIL_H
 
 #include "pimcommonakonadi_private_export.h"
-#include <QStringList>
 #include <QHash>
-namespace PimCommon {
+#include <QStringList>
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailUtil
 {
 public:
@@ -20,6 +21,7 @@ public:
     void initialBlackList(const QStringList &blackList);
     void newBlackList(const QHash<QString, bool> &);
     Q_REQUIRED_RESULT QStringList createNewBlackList();
+
 private:
     QStringList mInitialList;
     QHash<QString, bool> mNewBlackList;

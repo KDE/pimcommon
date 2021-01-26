@@ -7,9 +7,9 @@
 #include "logactivitiesmainwidget.h"
 #include "logactivities/logactivitiesdialog.h"
 #include "logactivities/logactivitiesmanager.h"
-#include <QPushButton>
-#include <QHBoxLayout>
 #include <QCheckBox>
+#include <QHBoxLayout>
+#include <QPushButton>
 
 LogActivitiesMainWidget::LogActivitiesMainWidget(QWidget *parent)
     : QWidget(parent)

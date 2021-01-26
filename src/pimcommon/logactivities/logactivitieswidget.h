@@ -7,13 +7,15 @@
 #ifndef LOGACTIVITIESWIDGET_H
 #define LOGACTIVITIESWIDGET_H
 
-#include <QWidget>
 #include "pimcommon_private_export.h"
-namespace KPIMTextEdit {
+#include <QWidget>
+namespace KPIMTextEdit
+{
 class PlainTextEditorWidget;
 class PlainTextEditor;
 }
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMON_TESTS_EXPORT LogActivitiesWidget : public QWidget
 {
     Q_OBJECT

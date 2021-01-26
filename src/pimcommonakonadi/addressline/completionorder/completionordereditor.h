@@ -12,11 +12,13 @@
 #include "pimcommonakonadi_export.h"
 #include <QDialog>
 
-namespace KLDAP {
+namespace KLDAP
+{
 class LdapClientSearch;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class CompletionOrderEditorPrivate;
 /**
  * @brief The CompletionOrderEditor class

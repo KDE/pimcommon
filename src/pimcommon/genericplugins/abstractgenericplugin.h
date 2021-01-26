@@ -7,9 +7,10 @@
 #ifndef AbstractGENERICPLUGIN_H
 #define AbstractGENERICPLUGIN_H
 
-#include <QObject>
 #include "pimcommon_export.h"
-namespace PimCommon {
+#include <QObject>
+namespace PimCommon
+{
 class AbstractGenericPluginInterface;
 /**
  * @brief The AbstractGenericPlugin class

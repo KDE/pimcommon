@@ -16,7 +16,8 @@
 
 #undef None
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
    Provides a singleton which broadcasts status messages by emitting
    signals. Interested mainwindows can connect to the statusMsg()

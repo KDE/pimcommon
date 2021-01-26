@@ -6,8 +6,8 @@
 #include "logactivitiesmanagertest.h"
 #include "../logactivitiesmanager.h"
 
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 LogActivitiesManagerTest::LogActivitiesManagerTest(QObject *parent)
     : QObject(parent)

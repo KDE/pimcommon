@@ -5,8 +5,8 @@
 */
 
 #include "kactionmenuchangecase.h"
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
 #include <QAction>
 using namespace PimCommon;
 class PimCommon::KActionMenuChangeCasePrivate

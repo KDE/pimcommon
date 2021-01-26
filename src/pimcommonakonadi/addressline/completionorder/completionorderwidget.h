@@ -8,21 +8,23 @@
 #ifndef COMPLETIONORDERWIDGET_H
 #define COMPLETIONORDERWIDGET_H
 
-#include <QWidget>
 #include "pimcommonakonadi_private_export.h"
-#include <QDBusAbstractAdaptor>
 #include <KConfig>
+#include <QDBusAbstractAdaptor>
+#include <QWidget>
 
 class QPushButton;
 class QAbstractItemModel;
 class QModelIndex;
 class QTreeWidget;
 
-namespace KLDAP {
+namespace KLDAP
+{
 class LdapClientSearch;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class CompletionOrderEditorAdaptor : public QDBusAbstractAdaptor
 {
     Q_OBJECT

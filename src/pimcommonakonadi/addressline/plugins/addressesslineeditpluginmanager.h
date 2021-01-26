@@ -7,10 +7,11 @@
 #ifndef ADDRESSESSLINEEDITPLUGINMANAGER_H
 #define ADDRESSESSLINEEDITPLUGINMANAGER_H
 
-#include <QObject>
 #include "pimcommonakonadi_export.h"
+#include <QObject>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AddressessLineEditAbstractPlugin;
 class AddressessLineEditPluginManagerPrivate;
 /**

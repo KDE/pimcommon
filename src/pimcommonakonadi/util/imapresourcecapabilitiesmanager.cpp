@@ -39,13 +39,10 @@ void ImapResourceCapabilitiesManager::slotInstanceRemoved(const Akonadi::AgentIn
 
 void ImapResourceCapabilitiesManager::searchCapabilities(const QString &identifier)
 {
-    //By default makes it as true.
+    // By default makes it as true.
     mImapResource.insert(identifier, true);
-    const QString service
-        = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, identifier);
-    QDBusInterface iface(service,
-                         QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
-                         QDBusConnection::sessionBus(), this);
+    const QString service = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, identifier);
+    QDBusInterface iface(service, QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"), QDBusConnection::sessionBus(), this);
 
     if (iface.isValid()) {
         QDBusPendingCall call = iface.asyncCall(QStringLiteral("serverCapabilities"));

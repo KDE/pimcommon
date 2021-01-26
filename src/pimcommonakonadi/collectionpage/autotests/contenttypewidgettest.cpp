@@ -9,8 +9,8 @@
 #include "../contenttypewidget.h"
 #include <QComboBox>
 #include <QLabel>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 ContentTypeWidgetTest::ContentTypeWidgetTest(QObject *parent)
     : QObject(parent)
 {
@@ -49,8 +49,8 @@ void ContentTypeWidgetTest::shouldEmitSignalWhenIndexChanged()
     QVERIFY(QTest::qWaitForWindowExposed(&contentType));
     QSignalSpy spy(&contentType, &PimCommon::ContentTypeWidget::activated);
     contentType.setCurrentIndex(1);
-    //FIXME
-    //QCOMPARE(spy.at(0).count(), 1);
+    // FIXME
+    // QCOMPARE(spy.at(0).count(), 1);
 }
 
 void ContentTypeWidgetTest::shouldChangeItem()

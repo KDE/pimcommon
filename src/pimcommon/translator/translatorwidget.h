@@ -10,9 +10,10 @@
 
 #include "pimcommon_export.h"
 #include <KPIMTextEdit/PlainTextEditor>
-#include <kio/job.h>
 #include <KPIMTextEdit/PlainTextEditorWidget>
-namespace PimCommon {
+#include <kio/job.h>
+namespace PimCommon
+{
 class TranslatorResultTextEdit : public KPIMTextEdit::PlainTextEditor
 {
     Q_OBJECT

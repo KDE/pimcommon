@@ -21,9 +21,11 @@ class KUrlRequester;
 class QSpinBox;
 class QComboBox;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class SimpleStringListEditor;
-namespace ConfigureImmutableWidgetUtils {
+namespace ConfigureImmutableWidgetUtils
+{
 void checkLockDown(QWidget *w, const KConfigSkeletonItem *item);
 PIMCOMMON_EXPORT void populateButtonGroup(QGroupBox *box, QButtonGroup *group, int orientation, const KCoreConfigSkeleton::ItemEnum *e);
 PIMCOMMON_EXPORT void populateCheckBox(QCheckBox *b, const KCoreConfigSkeleton::ItemBool *e);

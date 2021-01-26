@@ -21,7 +21,8 @@
 
 #include <QMap>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class ImapAclAttributePrivate;
 /**
  * @brief The ImapAclAttribute class
@@ -43,6 +44,7 @@ public:
     void deserialize(const QByteArray &data) override;
 
     bool operator==(const ImapAclAttribute &other) const;
+
 private:
     ImapAclAttributePrivate *const d;
     QMap<QByteArray, KIMAP::Acl::Rights> mRights;

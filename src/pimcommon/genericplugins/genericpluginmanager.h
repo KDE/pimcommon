@@ -7,12 +7,13 @@
 #ifndef GENERICPLUGINMANAGER_H
 #define GENERICPLUGINMANAGER_H
 
-#include <QObject>
-#include <QVector>
 #include "pimcommon_export.h"
 #include <PimCommon/PluginUtil>
+#include <QObject>
+#include <QVector>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class GenericPluginManagerPrivate;
 class GenericPlugin;
 /**

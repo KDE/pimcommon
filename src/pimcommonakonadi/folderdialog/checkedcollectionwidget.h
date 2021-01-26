@@ -7,19 +7,21 @@
 #ifndef CHECKEDCOLLECTIONWIDGET_H
 #define CHECKEDCOLLECTIONWIDGET_H
 
-#include <QWidget>
 #include "pimcommonakonadi_export.h"
+#include <QWidget>
 
 class QItemSelectionModel;
 class QTreeView;
 class KCheckableProxyModel;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class EntityTreeModel;
 class Collection;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class CheckedCollectionWidgetPrivate;
 /**
  * @brief The CheckedCollectionWidget class

@@ -13,9 +13,17 @@
 
 #include <AkonadiCore/AgentInstance>
 
-namespace PimCommon {
-namespace ProgressManagerAkonadi {
-PIMCOMMONAKONADI_EXPORT KPIM::ProgressItem *createProgressItem(KPIM::ProgressItem *parent, const Akonadi::AgentInstance &agent, const QString &id, const QString &label, const QString &status, bool canBeCanceled, KPIM::ProgressItem::CryptoStatus cryptoStatus);
+namespace PimCommon
+{
+namespace ProgressManagerAkonadi
+{
+PIMCOMMONAKONADI_EXPORT KPIM::ProgressItem *createProgressItem(KPIM::ProgressItem *parent,
+                                                               const Akonadi::AgentInstance &agent,
+                                                               const QString &id,
+                                                               const QString &label,
+                                                               const QString &status,
+                                                               bool canBeCanceled,
+                                                               KPIM::ProgressItem::CryptoStatus cryptoStatus);
 }
 }
 #endif // PROGRESSMANAGERAKONADI_H

@@ -7,10 +7,10 @@
  */
 #include "recentaddresses.h"
 
-#include <KEmailAddress>
+#include "pimcommonakonadi_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include "pimcommonakonadi_debug.h"
+#include <KEmailAddress>
 #include <KSharedConfig>
 #include <QCoreApplication>
 
@@ -95,10 +95,9 @@ void RecentAddresses::add(const QString &entry)
             KContacts::Addressee::parseEmailAddress(str, fullName, email);
 
             KContacts::Addressee::List::Iterator end(m_addresseeList.end());
-            for (KContacts::Addressee::List::Iterator it = m_addresseeList.begin();
-                 it != end; ++it) {
+            for (KContacts::Addressee::List::Iterator it = m_addresseeList.begin(); it != end; ++it) {
                 if (email == (*it).preferredEmail()) {
-                    //already inside, remove it here and add it later at pos==1
+                    // already inside, remove it here and add it later at pos==1
                     m_addresseeList.erase(it);
                     break;
                 }

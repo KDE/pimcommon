@@ -5,17 +5,17 @@
 */
 
 #include "logactivitiesdialog.h"
-#include "logactivitieswidget.h"
 #include "logactivitiesmanager.h"
 #include "logactivitiespurposemenuwidget.h"
-#include <PimCommon/PimUtil>
-#include <KLocalizedString>
+#include "logactivitieswidget.h"
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
-#include <QVBoxLayout>
+#include <PimCommon/PimUtil>
+#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QCheckBox>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 
@@ -81,8 +81,7 @@ void LogActivitiesDialog::slotActivityTextChanged(bool changed)
 void LogActivitiesDialog::slotSave()
 {
     const QString filter = i18n("All Files (*)");
-    PimCommon::Util::saveTextAs(PimCommon::LogActivitiesManager::self()->log(), filter, this, QUrl(),
-                                i18nc("@title:window", "Save Log"));
+    PimCommon::Util::saveTextAs(PimCommon::LogActivitiesManager::self()->log(), filter, this, QUrl(), i18nc("@title:window", "Save Log"));
 }
 
 void LogActivitiesDialog::slotEnableLogActivities(bool state)

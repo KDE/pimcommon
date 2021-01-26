@@ -5,13 +5,13 @@
 */
 
 #include "templatemanager.h"
-#include "templatewidgets/templatelistwidget.h"
 #include "pimcommon_debug.h"
+#include "templatewidgets/templatelistwidget.h"
 
 #include <KDirWatch>
 
-#include <KConfigGroup>
 #include <KConfig>
+#include <KConfigGroup>
 
 #include <QDirIterator>
 #include <QStandardPaths>
@@ -54,7 +54,7 @@ void TemplateManager::initTemplatesDirectories(const QString &templatesRelativeP
     if (!templatesRelativePath.isEmpty()) {
         d->mTemplatesDirectories = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, templatesRelativePath, QStandardPaths::LocateDirectory);
         if (d->mTemplatesDirectories.count() < 2) {
-            //Make sure to add local directory
+            // Make sure to add local directory
             const QString localDirectory = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + templatesRelativePath;
             if (!d->mTemplatesDirectories.contains(localDirectory)) {
                 d->mTemplatesDirectories.append(localDirectory);

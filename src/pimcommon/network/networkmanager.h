@@ -7,10 +7,11 @@
 #ifndef NetworkManager_H
 #define NetworkManager_H
 
-#include <QObject>
 #include "pimcommon_export.h"
+#include <QObject>
 class QNetworkConfigurationManager;
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The NetworkManager class
  * @author Laurent Montel <montel@kde.org>

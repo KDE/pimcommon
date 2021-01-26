@@ -6,14 +6,14 @@
 
 #include "configurepluginslistwidget.h"
 
-#include <KSharedConfig>
 #include <KLocalizedString>
+#include <KSharedConfig>
 
+#include <QAction>
+#include <QHeaderView>
 #include <QPushButton>
 #include <QToolButton>
 #include <QTreeWidget>
-#include <QHeaderView>
-#include <QAction>
 #include <QVBoxLayout>
 
 using namespace PimCommon;
@@ -102,12 +102,16 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
             disabledPlugins << item->mIdentifier;
         }
     }
-    PimCommon::PluginUtil::savePluginSettings(groupName,
-                                              prefixSettingKey,
-                                              enabledPlugins, disabledPlugins);
+    PimCommon::PluginUtil::savePluginSettings(groupName, prefixSettingKey, enabledPlugins, disabledPlugins);
 }
 
-void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst, const QString &topLevelItemName, const QString &groupName, const QString &prefixKey, QVector<PluginItem *> &itemsList, const QString &configureGroupName, bool checkable)
+void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst,
+                                              const QString &topLevelItemName,
+                                              const QString &groupName,
+                                              const QString &prefixKey,
+                                              QVector<PluginItem *> &itemsList,
+                                              const QString &configureGroupName,
+                                              bool checkable)
 {
     itemsList.clear();
     if (!lst.isEmpty()) {
@@ -129,9 +133,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUti
             if (data.mHasConfigureDialog) {
                 auto but = new QToolButton(mListWidget);
                 auto act = new QAction(but);
-                const QStringList actData {
-                    configureGroupName, data.mIdentifier
-                };
+                const QStringList actData{configureGroupName, data.mIdentifier};
                 act->setData(actData);
                 but->setDefaultAction(act);
                 but->setIcon(QIcon::fromTheme(QStringLiteral("configure")));

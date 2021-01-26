@@ -5,13 +5,13 @@
 */
 
 #include "importlibreofficeautocorrection.h"
-#include <QFile>
-#include <KZip>
+#include "pimcommon_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <QTemporaryDir>
-#include "pimcommon_debug.h"
+#include <KZip>
 #include <QDomDocument>
+#include <QFile>
+#include <QTemporaryDir>
 
 using namespace PimCommon;
 
@@ -41,7 +41,7 @@ void ImportLibreOfficeAutocorrection::closeArchive()
 
 bool ImportLibreOfficeAutocorrection::import(const QString &fileName, LoadAttribute loadAttribute)
 {
-    //We Don't have it in LibreOffice
+    // We Don't have it in LibreOffice
     if (loadAttribute == SuperScript) {
         return false;
     }
@@ -61,13 +61,13 @@ void ImportLibreOfficeAutocorrection::importAutoCorrectionFile()
 {
     mTempDir = new QTemporaryDir();
     const KArchiveDirectory *archiveDirectory = mArchive->directory();
-    //Replace word
+    // Replace word
     importFile(DOCUMENT, archiveDirectory);
 
-    //No tread as end of line
+    // No tread as end of line
     importFile(SENTENCE, archiveDirectory);
 
-    //Two upper letter
+    // Two upper letter
     importFile(WORD, archiveDirectory);
 }
 
@@ -106,7 +106,8 @@ bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirect
                         switch (type) {
                         case DOCUMENT:
                             if (e.hasAttribute(QStringLiteral("block-list:abbreviated-name")) && e.hasAttribute(QStringLiteral("block-list:name"))) {
-                                mAutocorrectEntries.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")), e.attribute(QStringLiteral("block-list:name")));
+                                mAutocorrectEntries.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")),
+                                                           e.attribute(QStringLiteral("block-list:name")));
                             }
                             break;
                         case SENTENCE:
@@ -139,8 +140,7 @@ bool ImportLibreOfficeAutocorrection::loadDomElement(QDomDocument &doc, QFile *f
     int errorRow;
     int errorCol;
     if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        qCDebug(PIMCOMMON_LOG) << "Unable to load document.Parse error in line " << errorRow
-                               << ", col " << errorCol << ": " << errorMsg;
+        qCDebug(PIMCOMMON_LOG) << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
         return false;
     }
     return true;

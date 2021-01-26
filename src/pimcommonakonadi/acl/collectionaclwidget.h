@@ -9,7 +9,8 @@
 
 #include <QWidget>
 class QCheckBox;
-namespace PimCommon {
+namespace PimCommon
+{
 class AclManager;
 class CollectionAclWidget : public QWidget
 {

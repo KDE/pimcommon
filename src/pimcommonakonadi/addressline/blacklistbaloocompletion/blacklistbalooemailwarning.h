@@ -8,10 +8,11 @@
 #ifndef BLACKLISTBALOOEMAILWARNING_H
 #define BLACKLISTBALOOEMAILWARNING_H
 
-#include <KMessageWidget>
 #include "pimcommonakonadi_private_export.h"
+#include <KMessageWidget>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailWarning : public KMessageWidget
 {
     Q_OBJECT

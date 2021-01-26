@@ -8,20 +8,20 @@
 #include "annotationdialog.h"
 #include <KPIMTextEdit/PlainTextEditorWidget>
 
-#include <KMessageBox>
-#include <KLocalizedString>
 #include <ItemModifyJob>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
 #include <KStandardGuiItem>
-#include <item.h>
 #include <entityannotationsattribute.h>
+#include <item.h>
 
 #include <QComboBox>
 #include <QIcon>
 
-#include <QLabel>
 #include <KConfigGroup>
 #include <QDialogButtonBox>
+#include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -45,7 +45,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     , d(new Private)
 {
     d->mItem = item;
-    //check for correct key?
+    // check for correct key?
     d->mHasAnnotation = item.hasAttribute<Akonadi::EntityAnnotationsAttribute>();
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     auto mainWidget = new QWidget(this);

@@ -5,12 +5,12 @@
 */
 
 #include "configureplugindialog.h"
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <PimCommon/PimUtil>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 
@@ -45,7 +45,7 @@ void ConfigurePluginDialog::initLayout(bool addSpacer)
 
 void ConfigurePluginDialog::reset()
 {
-    //Reimplement it.
+    // Reimplement it.
 }
 
 void ConfigurePluginDialog::help()

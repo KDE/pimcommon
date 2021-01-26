@@ -6,11 +6,12 @@
 
 #ifndef AbstractGENERICPLUGININTERFACE_H
 #define AbstractGENERICPLUGININTERFACE_H
-#include <QObject>
 #include "pimcommon_export.h"
+#include <QObject>
 class QAction;
 class KActionCollection;
-namespace PimCommon {
+namespace PimCommon
+{
 class AbstractGenericPlugin;
 class GenericPlugin;
 /**
@@ -20,16 +21,7 @@ class GenericPlugin;
 class PIMCOMMON_EXPORT ActionType
 {
 public:
-    enum Type {
-        Tools = 0,
-        Edit = 1,
-        File = 2,
-        Action = 3,
-        PopupMenu = 4,
-        ToolBar = 5,
-        Message = 6,
-        Folder = 7
-    };
+    enum Type { Tools = 0, Edit = 1, File = 2, Action = 3, PopupMenu = 4, ToolBar = 5, Message = 6, Folder = 7 };
     ActionType()
     {
     }

@@ -12,7 +12,8 @@
 
 class QTimer;
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The PimCommonSettings class
  * @author Laurent Montel <montel@kde.org>

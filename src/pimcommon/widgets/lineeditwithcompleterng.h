@@ -7,10 +7,11 @@
 #ifndef LINEEDITWITHCOMPLETERNG_H
 #define LINEEDITWITHCOMPLETERNG_H
 
-#include <QLineEdit>
 #include "pimcommon_export.h"
+#include <QLineEdit>
 class QStringListModel;
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The LineEditWithCompleterNg class
  * @author Laurent Montel <montel@kde.org>

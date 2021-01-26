@@ -7,11 +7,12 @@
 #ifndef CUSTOMTOOLSWIDGETNG_H
 #define CUSTOMTOOLSWIDGETNG_H
 
-#include <QWidget>
 #include "pimcommon_export.h"
+#include <QWidget>
 class KToggleAction;
 class KActionCollection;
-namespace PimCommon {
+namespace PimCommon
+{
 class CustomToolsWidgetNgPrivate;
 class CustomToolsPlugin;
 class CustomToolsViewInterface;

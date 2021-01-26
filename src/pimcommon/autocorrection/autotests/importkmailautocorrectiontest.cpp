@@ -12,7 +12,6 @@ QTEST_MAIN(ImportKMailAutocorrectionTest)
 ImportKMailAutocorrectionTest::ImportKMailAutocorrectionTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void ImportKMailAutocorrectionTest::shouldHaveDefaultValues()
@@ -50,5 +49,4 @@ void ImportKMailAutocorrectionTest::shouldLoadFile()
 
     auto resultAutocorrectEntries = import.autocorrectEntries();
     QCOMPARE(resultAutocorrectEntries.count(), 1221);
-
 }

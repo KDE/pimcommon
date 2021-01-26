@@ -11,9 +11,9 @@
 #include <KLDAP/LdapClient>
 #include <KLDAP/LdapClientSearch>
 
-#include <KLDAP/LdapClientSearchConfig>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
+#include <KLDAP/LdapClientSearchConfig>
 
 #include <AkonadiCore/ChangeRecorder>
 #include <AkonadiCore/CollectionFilterProxyModel>
@@ -24,12 +24,12 @@
 
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <QTreeWidget>
-#include <QTreeWidgetItem>
+#include <QDBusConnection>
 #include <QHBoxLayout>
 #include <QPushButton>
+#include <QTreeWidget>
+#include <QTreeWidgetItem>
 #include <QVBoxLayout>
-#include <QDBusConnection>
 
 using namespace PimCommon;
 
@@ -67,8 +67,7 @@ public:
     {
         KConfig *config = KLDAP::LdapClientSearchConfig::config();
         KConfigGroup group(config, "LDAP");
-        group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()),
-                         mWeight);
+        group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()), mWeight);
         group.sync();
     }
 
@@ -258,7 +257,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mUpButton->setAutoRepeat(true);
     mUpButton->setObjectName(QStringLiteral("mUpButton"));
     mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
-    mUpButton->setEnabled(false);   // b/c no item is selected yet
+    mUpButton->setEnabled(false); // b/c no item is selected yet
     mUpButton->setToolTip(i18n("Move Up"));
     mUpButton->setFocusPolicy(Qt::StrongFocus);
 
@@ -267,7 +266,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mDownButton->setAutoRepeat(true);
     mDownButton->setObjectName(QStringLiteral("mDownButton"));
     mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
-    mDownButton->setEnabled(false);   // b/c no item is selected yet
+    mDownButton->setEnabled(false); // b/c no item is selected yet
     mDownButton->setToolTip(i18n("Move Down"));
     mDownButton->setFocusPolicy(Qt::StrongFocus);
 
@@ -275,12 +274,9 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     upDownBoxVBoxLayout->addWidget(spacer);
     upDownBoxVBoxLayout->setStretchFactor(spacer, 100);
 
-    connect(mListView, &QTreeWidget::itemSelectionChanged,
-            this, &CompletionOrderWidget::slotSelectionChanged);
-    connect(mListView, &QTreeWidget::currentItemChanged,
-            this, &CompletionOrderWidget::slotSelectionChanged);
-    connect(mListView, &QTreeWidget::itemChanged,
-            this, &CompletionOrderWidget::slotItemChanged);
+    connect(mListView, &QTreeWidget::itemSelectionChanged, this, &CompletionOrderWidget::slotSelectionChanged);
+    connect(mListView, &QTreeWidget::currentItemChanged, this, &CompletionOrderWidget::slotSelectionChanged);
+    connect(mListView, &QTreeWidget::itemChanged, this, &CompletionOrderWidget::slotItemChanged);
     connect(mUpButton, &QAbstractButton::clicked, this, &CompletionOrderWidget::slotMoveUp);
     connect(mDownButton, &QAbstractButton::clicked, this, &CompletionOrderWidget::slotMoveDown);
 }
@@ -293,13 +289,12 @@ void CompletionOrderWidget::save()
 {
     if (mDirty) {
         int w = 100;
-        //Clean up order
+        // Clean up order
         KConfigGroup group(configFile(), "CompletionWeights");
         group.deleteGroup();
 
         for (int itemIndex = 0; itemIndex < mListView->topLevelItemCount(); ++itemIndex) {
-            auto *item
-                = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));
+            auto *item = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));
             item->item()->setCompletionWeight(w);
             item->item()->setIsEnabled(item->checkState(0) == Qt::Checked);
             item->item()->save(this);
@@ -316,7 +311,7 @@ KConfig *CompletionOrderWidget::configFile()
 
 void CompletionOrderWidget::addRecentAddressItem()
 {
-    //Be default it's the first.
+    // Be default it's the first.
     auto item = new SimpleCompletionItem(this, i18n("Recent Addresses"), QStringLiteral("Recent Addresses"), 10);
     item->setIcon(QIcon::fromTheme(QStringLiteral("kmail")));
     new CompletionViewItem(mListView, item);
@@ -365,8 +360,7 @@ void CompletionOrderWidget::loadCompletionItems()
 
     mCollectionModel = mimeTypeProxy;
 
-    connect(mimeTypeProxy, &QAbstractItemModel::rowsInserted,
-            this, &CompletionOrderWidget::rowsInserted);
+    connect(mimeTypeProxy, &QAbstractItemModel::rowsInserted, this, &CompletionOrderWidget::rowsInserted);
     for (int row = 0; row < mCollectionModel->rowCount(); ++row) {
         addCompletionItemForCollection(mCollectionModel->index(row, 0));
     }

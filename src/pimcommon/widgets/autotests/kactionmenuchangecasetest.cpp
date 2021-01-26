@@ -6,9 +6,9 @@
 
 #include "kactionmenuchangecasetest.h"
 #include "../src/pimcommon/widgets/kactionmenuchangecase.h"
-#include <QTest>
-#include <QSignalSpy>
 #include <QMenu>
+#include <QSignalSpy>
+#include <QTest>
 using namespace PimCommon;
 KActionMenuChangeCaseTest::KActionMenuChangeCaseTest(QObject *parent)
     : QObject(parent)

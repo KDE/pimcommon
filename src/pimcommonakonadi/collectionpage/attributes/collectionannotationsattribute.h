@@ -7,12 +7,13 @@
 #ifndef PIMCOMMON_COLLECTIONANNOTATIONSATTRIBUTE_H
 #define PIMCOMMON_COLLECTIONANNOTATIONSATTRIBUTE_H
 
-#include <Attribute>
 #include "pimcommonakonadi_export.h"
+#include <Attribute>
 
 #include <QMap>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The CollectionAnnotationsAttribute class
  */

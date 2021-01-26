@@ -7,10 +7,10 @@
 
 #include "completionconfiguredialogtest.h"
 #include "../completionconfiguredialog/completionconfiguredialog.h"
-#include <QTabWidget>
 #include <QDialogButtonBox>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTabWidget>
+#include <QTest>
 
 CompletionConfigureDialogTest::CompletionConfigureDialogTest(QObject *parent)
     : QObject(parent)
@@ -38,9 +38,8 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
     QVERIFY(tabWidget->count() > 0);
     for (int i = 0; i < tabWidget->count(); ++i) {
         const QString objName = tabWidget->widget(i)->objectName();
-        const bool hasName = (objName == QLatin1String("completionorder_widget"))
-                             || (objName == QLatin1String("recentaddress_widget"))
-                             || (objName == QLatin1String("blacklistbaloo_widget"));
+        const bool hasName = (objName == QLatin1String("completionorder_widget")) || (objName == QLatin1String("recentaddress_widget"))
+            || (objName == QLatin1String("blacklistbaloo_widget"));
         QVERIFY(hasName);
     }
 }

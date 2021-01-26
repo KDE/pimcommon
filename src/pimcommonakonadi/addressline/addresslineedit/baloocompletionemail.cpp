@@ -6,9 +6,9 @@
 */
 
 #include "baloocompletionemail.h"
-#include <QMap>
-#include <KEmailAddress>
 #include "pimcommonakonadi_debug.h"
+#include <KEmailAddress>
+#include <QMap>
 
 using namespace PimCommon;
 
@@ -37,7 +37,7 @@ QStringList BalooCompletionEmail::cleanupEmailList()
         return mListEmail;
     }
     QMap<QString, QString> hashEmail;
-    for (QString email :  qAsConst(mListEmail)) {
+    for (QString email : qAsConst(mListEmail)) {
         if (!mBlackList.contains(email)) {
             QString address;
             email = stripEmail(email, address);

@@ -7,12 +7,13 @@
 #ifndef CONFIGUREPLUGINSWIDGET_H
 #define CONFIGUREPLUGINSWIDGET_H
 
-#include <QWidget>
 #include "pimcommon_export.h"
+#include <QWidget>
 class QSplitter;
 class QTextEdit;
 class KMessageWidget;
-namespace PimCommon {
+namespace PimCommon
+{
 class ConfigurePluginsListWidget;
 /**
  * @brief The ConfigurePluginsWidget class

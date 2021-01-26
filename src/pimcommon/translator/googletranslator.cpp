@@ -5,10 +5,10 @@
 */
 
 #include "googletranslator.h"
-#include "translatorutil.h"
-#include "translatordebugdialog.h"
-#include <KLocalizedString>
 #include "pimcommon_debug.h"
+#include "translatordebugdialog.h"
+#include "translatorutil.h"
+#include <KLocalizedString>
 #include <QJsonParseError>
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -57,12 +57,12 @@ QString GoogleTranslator::resultTranslate() const
     return mResult;
 }
 
-QMap<QString, QMap<QString, QString> > GoogleTranslator::initListLanguage(QComboBox *from)
+QMap<QString, QMap<QString, QString>> GoogleTranslator::initListLanguage(QComboBox *from)
 {
-    QMap<QString, QMap<QString, QString> > listLanguage;
+    QMap<QString, QMap<QString, QString>> listLanguage;
 
     TranslatorUtil translatorUtil;
-    QVector<QPair<QString, QString> > fullListLanguage;
+    QVector<QPair<QString, QString>> fullListLanguage;
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::automatic));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::en));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::nl));
@@ -130,7 +130,7 @@ QMap<QString, QMap<QString, QString> > GoogleTranslator::initListLanguage(QCombo
 
         QMap<QString, QString> toList;
         for (int j = 0; j < fullListLanguageSize; ++j) {
-            if (j != 0 && j != i) { //don't add auto and current language
+            if (j != 0 && j != i) { // don't add auto and current language
                 translatorUtil.addPairToMap(toList, fullListLanguage.at(j));
             }
         }
@@ -185,7 +185,7 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
     //  but this is not valid JSON for QJSON, it expects empty strings: ["foo","","bar"]
     mJsonData.replace(QRegExp(QLatin1String(",{3,3}")), QStringLiteral(",\"\",\"\","));
     mJsonData.replace(QRegExp(QLatin1String(",{2,2}")), QStringLiteral(",\"\","));
-    //qCDebug(PIMCOMMON_LOG) << mJsonData;
+    // qCDebug(PIMCOMMON_LOG) << mJsonData;
 
     QJsonParseError parsingError;
     const QJsonDocument jsonDoc = QJsonDocument::fromJson(mJsonData.toUtf8(), &parsingError);

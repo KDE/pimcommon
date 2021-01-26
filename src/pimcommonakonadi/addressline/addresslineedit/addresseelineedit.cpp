@@ -14,46 +14,46 @@
 
 #include "addresseelineedit.h"
 #include "addresseelineedit_p.h"
-#include "addresseelineeditutil.h"
 #include "addresseelineeditmanager.h"
+#include "addresseelineeditutil.h"
 #include "addressline/recentaddress/recentaddresses.h"
 #include <KLDAP/LdapClientSearch>
 
 #include <KContacts/VCardConverter>
 
 #include <Job>
-#include <QUrl>
 #include <KConfigGroup>
+#include <QUrl>
 
-#include <KEmailAddress>
-#include <KColorScheme>
-#include <KJobWidgets>
-#include <kcontacts/contactgrouptool.h>
-#include <KIO/StoredTransferJob>
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
+#include <KColorScheme>
+#include <KEmailAddress>
+#include <KIO/StoredTransferJob>
+#include <KJobWidgets>
+#include <kcontacts/contactgrouptool.h>
 
-#include <KCompletionBox>
 #include "pimcommonakonadi_debug.h"
+#include <KCodecs>
+#include <KCompletionBox>
 #include <KLocalizedString>
 #include <KStandardShortcut>
-#include <KCodecs>
 
-#include <QMimeData>
-#include <QApplication>
-#include <QObject>
-#include <QBuffer>
-#include <QEvent>
-#include <QClipboard>
-#include <QKeyEvent>
-#include <QDropEvent>
-#include <QMouseEvent>
-#include <QMenu>
-#include <KSharedConfig>
-#include <KMessageBox>
 #include <ContactGroupExpandJob>
-#include <kcontacts/vcarddrag.h>
+#include <KMessageBox>
+#include <KSharedConfig>
+#include <QApplication>
+#include <QBuffer>
+#include <QClipboard>
+#include <QDropEvent>
+#include <QEvent>
+#include <QKeyEvent>
+#include <QMenu>
+#include <QMimeData>
+#include <QMouseEvent>
+#include <QObject>
 #include <addressline/completionconfiguredialog/completionconfiguredialog.h>
+#include <kcontacts/vcarddrag.h>
 
 using namespace PimCommon;
 
@@ -157,7 +157,7 @@ void AddresseeLineEdit::keyPressEvent(QKeyEvent *event)
     const int key = event->key() | event->modifiers();
 
     if (KStandardShortcut::shortcut(KStandardShortcut::SubstringCompletion).contains(key)) {
-        //TODO: add LDAP substring lookup, when it becomes available in KPIM::LDAPSearch
+        // TODO: add LDAP substring lookup, when it becomes available in KPIM::LDAPSearch
         d->updateSearchString();
         d->startSearches();
         d->doCompletion(true);
@@ -165,7 +165,7 @@ void AddresseeLineEdit::keyPressEvent(QKeyEvent *event)
     } else if (KStandardShortcut::shortcut(KStandardShortcut::TextCompletion).contains(key)) {
         const int len = text().length();
 
-        if (len == cursorPosition()) {   // at End?
+        if (len == cursorPosition()) { // at End?
             d->updateSearchString();
             d->startSearches();
             d->doCompletion(true);
@@ -188,7 +188,7 @@ void AddresseeLineEdit::keyPressEvent(QKeyEvent *event)
         d->updateSearchString();
 
         QString searchString(d->searchString());
-        //LDAP does not know about our string manipulation, remove it
+        // LDAP does not know about our string manipulation, remove it
         if (d->searchExtended()) {
             searchString = d->searchString().mid(1);
         }
@@ -263,10 +263,7 @@ void AddresseeLineEdit::mouseReleaseEvent(QMouseEvent *event)
 {
     // reimplemented from QLineEdit::mouseReleaseEvent()
 #ifndef QT_NO_CLIPBOARD
-    if (d->useCompletion()
-        && QApplication::clipboard()->supportsSelection()
-        && !isReadOnly()
-        && event->button() == Qt::MiddleButton) {
+    if (d->useCompletion() && QApplication::clipboard()->supportsSelection() && !isReadOnly() && event->button() == Qt::MiddleButton) {
         d->setSmartPaste(true);
     }
 #endif
@@ -311,7 +308,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
                     QByteArray data = job->data();
                     list += converter.parseVCards(data);
 
-                    if (list.isEmpty()) {  // try to parse a contact group
+                    if (list.isEmpty()) { // try to parse a contact group
                         KContacts::ContactGroup group;
                         QBuffer dataStream(&data);
                         dataStream.open(QIODevice::ReadOnly);
@@ -444,7 +441,7 @@ void AddresseeLineEdit::insertEmails(const QStringList &emails)
         setText(contents + emails.front());
         return;
     }
-    //multiple emails, let the user choose one
+    // multiple emails, let the user choose one
     QMenu menu(this);
     menu.setTitle(i18n("Select email from contact"));
     menu.setObjectName(QStringLiteral("Addresschooser"));
@@ -475,7 +472,7 @@ bool AddresseeLineEdit::isCompletionEnabled() const
 
 void AddresseeLineEdit::addItem(const Akonadi::Item &item, int weight, int source)
 {
-    //Let Akonadi results always have a higher weight than baloo results
+    // Let Akonadi results always have a higher weight than baloo results
     if (item.hasPayload<KContacts::Addressee>()) {
         addContact(item.payload<KContacts::Addressee>(), weight + 1, source);
     } else if (item.hasPayload<KContacts::ContactGroup>()) {
@@ -490,9 +487,9 @@ void AddresseeLineEdit::addContactGroup(const KContacts::ContactGroup &group, in
 
 void AddresseeLineEdit::addContact(const QStringList &emails, const KContacts::Addressee &addr, int weight, int source, QString append)
 {
-    int isPrefEmail = 1; //first in list is preferredEmail
+    int isPrefEmail = 1; // first in list is preferredEmail
     for (const QString &email : emails) {
-        //TODO: highlight preferredEmail
+        // TODO: highlight preferredEmail
         const QString givenName = addr.givenName();
         const QString familyName = addr.familyName();
         const QString nickName = addr.nickName();
@@ -550,7 +547,7 @@ void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight,
 void AddresseeLineEdit::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu *menu = createStandardContextMenu();
-    if (menu) {   // can be 0 on platforms with only a touch interface
+    if (menu) { // can be 0 on platforms with only a touch interface
         menu->exec(event->globalPos());
         delete menu;
     }
@@ -622,8 +619,8 @@ void AddresseeLineEdit::loadContacts()
 {
     const QString recentAddressGroupName = i18n("Recent Addresses");
     if (showRecentAddresses()) {
-        const QStringList recent
-            = AddresseeLineEditManager::self()->cleanupRecentAddressEmailList(PimCommon::RecentAddresses::self(recentAddressConfig())->addresses());
+        const QStringList recent =
+            AddresseeLineEditManager::self()->cleanupRecentAddressEmailList(PimCommon::RecentAddresses::self(recentAddressConfig())->addresses());
         QString name, email;
 
         KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimcompletionorder"));
@@ -664,12 +661,8 @@ int AddresseeLineEdit::addCompletionSource(const QString &source, int weight)
 
 bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
 {
-    if (d->completionInitialized()
-        && (object == completionBox()
-            || completionBox()->findChild<QWidget *>(object->objectName()) == object)) {
-        if (event->type() == QEvent::MouseButtonPress
-            || event->type() == QEvent::MouseMove
-            || event->type() == QEvent::MouseButtonRelease
+    if (d->completionInitialized() && (object == completionBox() || completionBox()->findChild<QWidget *>(object->objectName()) == object)) {
+        if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::MouseMove || event->type() == QEvent::MouseButtonRelease
             || event->type() == QEvent::MouseButtonDblClick) {
             const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
             // find list box item at the event position
@@ -683,10 +676,8 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
             // avoid selection of headers on button press, or move or release while
             // a button is pressed
             const Qt::MouseButtons buttons = mouseEvent->buttons();
-            if (event->type() == QEvent::MouseButtonPress
-                || event->type() == QEvent::MouseButtonDblClick
-                || buttons & Qt::LeftButton || buttons & Qt::MiddleButton
-                || buttons & Qt::RightButton) {
+            if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::MouseButtonDblClick || buttons & Qt::LeftButton
+                || buttons & Qt::MiddleButton || buttons & Qt::RightButton) {
                 if (itemIsHeader(item)) {
                     return true; // eat the event, we don't want anything to happen
                 } else {
@@ -703,26 +694,22 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
         }
     }
 
-    if ((object == this)
-        && (event->type() == QEvent::ShortcutOverride)) {
+    if ((object == this) && (event->type() == QEvent::ShortcutOverride)) {
         auto keyEvent = static_cast<QKeyEvent *>(event);
-        if (keyEvent->key() == Qt::Key_Up || keyEvent->key() == Qt::Key_Down
-            || keyEvent->key() == Qt::Key_Tab) {
+        if (keyEvent->key() == Qt::Key_Up || keyEvent->key() == Qt::Key_Down || keyEvent->key() == Qt::Key_Tab) {
             keyEvent->accept();
             return true;
         }
     }
 
-    if ((object == this)
-        && (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease)
-        && completionBox()->isVisible()) {
+    if ((object == this) && (event->type() == QEvent::KeyPress || event->type() == QEvent::KeyRelease) && completionBox()->isVisible()) {
         const QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
         int currentIndex = completionBox()->currentRow();
         if (currentIndex < 0) {
             return true;
         }
         if (keyEvent->key() == Qt::Key_Up) {
-            //qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Up currentIndex=" << currentIndex;
+            // qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Up currentIndex=" << currentIndex;
             // figure out if the item we would be moving to is one we want
             // to ignore. If so, go one further
             const QListWidgetItem *itemAbove = completionBox()->item(currentIndex);
@@ -730,7 +717,7 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
                 // there is a header above is, check if there is even further up
                 // and if so go one up, so it'll be selected
                 if (currentIndex > 0 && completionBox()->item(currentIndex - 1)) {
-                    //qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Up -> skipping" << currentIndex - 1;
+                    // qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Up -> skipping" << currentIndex - 1;
                     completionBox()->setCurrentRow(currentIndex - 1);
                     completionBox()->item(currentIndex - 1)->setSelected(true);
                 } else if (currentIndex == 0) {
@@ -752,11 +739,11 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
             }
         } else if (keyEvent->key() == Qt::Key_Down) {
             // same strategy for downwards
-            //qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Down. currentIndex=" << currentIndex;
+            // qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Down. currentIndex=" << currentIndex;
             const QListWidgetItem *itemBelow = completionBox()->item(currentIndex);
             if (itemBelow && itemIsHeader(itemBelow)) {
                 if (completionBox()->item(currentIndex + 1)) {
-                    //qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Down -> skipping" << currentIndex+1;
+                    // qCDebug(PIMCOMMONAKONADI_LOG) <<"EVENTFILTER: Qt::Key_Down -> skipping" << currentIndex+1;
                     completionBox()->setCurrentRow(currentIndex + 1);
                     completionBox()->item(currentIndex + 1)->setSelected(true);
                 } else {
@@ -778,8 +765,7 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
                 completionBox()->setCurrentItem(item);
                 item->setSelected(true);
             }
-        } else if (event->type() == QEvent::KeyRelease
-                   && (keyEvent->key() == Qt::Key_Tab || keyEvent->key() == Qt::Key_Backtab)) {
+        } else if (event->type() == QEvent::KeyRelease && (keyEvent->key() == Qt::Key_Tab || keyEvent->key() == Qt::Key_Backtab)) {
             /// first, find the header of the current section
             QListWidgetItem *myHeader = nullptr;
             int myHeaderIndex = -1;
@@ -794,7 +780,7 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
 
                 index--;
             }
-            Q_ASSERT(myHeader);   // we should always be able to find a header
+            Q_ASSERT(myHeader); // we should always be able to find a header
 
             // find the next header (searching backwards, for Qt::Key_Backtab)
             QListWidgetItem *nextHeader = nullptr;
@@ -905,7 +891,7 @@ void AddresseeLineEdit::slotGroupSearchResult(KJob *job)
     if (!d->mightBeGroupJobs().contains(searchJob)) {
         return;
     }
-    //Q_ASSERT(d->mMightBeGroupJobs.contains(searchJob));
+    // Q_ASSERT(d->mMightBeGroupJobs.contains(searchJob));
     d->mightBeGroupJobsRemoveOne(searchJob);
 
     const KContacts::ContactGroup::List contactGroups = searchJob->contactGroups();

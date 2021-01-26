@@ -7,9 +7,10 @@
 #ifndef CUSTOMTOOLSPLUGINMANAGER_H
 #define CUSTOMTOOLSPLUGINMANAGER_H
 
-#include <QObject>
 #include "pimcommon_export.h"
-namespace PimCommon {
+#include <QObject>
+namespace PimCommon
+{
 class CustomToolsPlugin;
 class CustomToolsPluginManagerPrivate;
 /**
@@ -26,6 +27,7 @@ public:
     ~CustomToolsPluginManager();
 
     Q_REQUIRED_RESULT QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
+
 private:
     CustomToolsPluginManagerPrivate *const d;
 };

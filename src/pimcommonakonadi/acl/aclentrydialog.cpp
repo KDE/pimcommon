@@ -15,13 +15,13 @@
 #include <KLocalizedString>
 
 #include <QButtonGroup>
+#include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QRadioButton>
 #include <QVBoxLayout>
-#include <QDialogButtonBox>
 
 using namespace PimCommon;
 
@@ -57,9 +57,7 @@ void AclEntryDialog::Private::slotSelectAddresses()
         return;
     }
 
-    const QString text = !dlg.selectedAddresses().isEmpty()
-                         ? dlg.selectedAddresses().at(0).quotedEmail()
-                         : QString();
+    const QString text = !dlg.selectedAddresses().isEmpty() ? dlg.selectedAddresses().at(0).quotedEmail() : QString();
 
     mUserIdLineEdit->setText(text);
 }
@@ -89,11 +87,10 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     d->mUserIdLineEdit = new PimCommon::AddresseeLineEdit(page);
     layout->addWidget(d->mUserIdLineEdit, 0, 1);
     label->setBuddy(d->mUserIdLineEdit);
-    d->mUserIdLineEdit->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "The User Identifier is the login of the user on the IMAP server. "
-              "This can be a simple user name or the full email address of the user; "
-              "the login for your own account on the server will tell you which one it is."));
+    d->mUserIdLineEdit->setWhatsThis(i18nc("@info:whatsthis",
+                                           "The User Identifier is the login of the user on the IMAP server. "
+                                           "This can be a simple user name or the full email address of the user; "
+                                           "the login for your own account on the server will tell you which one it is."));
 
     auto button = new QPushButton(i18nc("select an email address", "Se&lect..."), page);
     layout->addWidget(button, 0, 2);
@@ -106,8 +103,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     for (unsigned int i = 0; i < AclUtils::standardPermissionsCount(); ++i) {
         const KIMAP::Acl::Rights permissions = AclUtils::permissionsForIndex(i);
 
-        auto *radioButton
-            = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
+        auto *radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
     }
@@ -115,9 +111,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     d->mButtonLayout->addStretch(1);
     layout->addWidget(groupBox, 1, 0, 1, 3);
 
-    label
-        = new QLabel(
-              i18n("<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
+    label = new QLabel(i18n("<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
     layout->addWidget(label, 2, 0, 1, 3);
     layout->setRowStretch(2, 10);
 
@@ -160,8 +154,7 @@ void AclEntryDialog::setPermissions(KIMAP::Acl::Rights permissions)
     if (button) {
         button->setChecked(true);
     } else {
-        auto *radioButton
-            = new QRadioButton(AclUtils::permissionsToUserString(permissions));
+        auto *radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions));
 
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
@@ -178,8 +171,7 @@ KIMAP::Acl::Rights AclEntryDialog::permissions() const
         return d->mCustomPermissions;
     }
 
-    return KIMAP::Acl::denormalizedRights(
-        static_cast<KIMAP::Acl::Rights>(d->mButtonGroup->id(button)));
+    return KIMAP::Acl::denormalizedRights(static_cast<KIMAP::Acl::Rights>(d->mButtonGroup->id(button)));
 }
 
 #include "moc_aclentrydialog_p.cpp"

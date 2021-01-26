@@ -12,7 +12,8 @@
 
 #include "pimcommon_export.h"
 
-namespace PimCommon {
+namespace PimCommon
+{
 class RenameFileDialogPrivate;
 /**
  * @brief The RenameFileDialog class

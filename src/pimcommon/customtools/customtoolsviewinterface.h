@@ -11,7 +11,8 @@
 
 #include <QWidget>
 class KToggleAction;
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The CustomToolsViewInterface class
  * @author Laurent Montel <montel@kde.org>

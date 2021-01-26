@@ -6,25 +6,25 @@
 */
 
 #include "aclmodifyjob.h"
-#include "imapresourcesettings.h"
-#include "util/pimutil.h"
 #include "aclutils_p.h"
+#include "imapresourcesettings.h"
 #include "pimcommonakonadi_debug.h"
+#include "util/pimutil.h"
 #include <AkonadiCore/ServerManager>
 #include <KEmailAddress>
 
 #include "imapaclattribute.h"
 
-#include <KMessageBox>
-#include <KLocalizedString>
-#include <QDBusInterface>
-#include <QDBusReply>
-#include <ContactGroupSearchJob>
-#include <ContactGroupExpandJob>
-#include <AkonadiCore/CollectionModifyJob>
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
+#include <AkonadiCore/CollectionModifyJob>
+#include <ContactGroupExpandJob>
+#include <ContactGroupSearchJob>
 #include <KContacts/Addressee>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <QDBusInterface>
+#include <QDBusReply>
 #include <collectionfetchjob.h>
 
 using namespace PimCommon;
@@ -57,23 +57,21 @@ void AclModifyJob::searchContact()
 void AclModifyJob::slotGroupSearchResult(KJob *job)
 {
     auto searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
-    if (!searchJob->contactGroups().isEmpty()) {   // it has been a distribution list
-        Akonadi::ContactGroupExpandJob *expandJob
-            = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
+    if (!searchJob->contactGroups().isEmpty()) { // it has been a distribution list
+        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
         if (expandJob->exec()) {
             const KContacts::Addressee::List lstContacts = expandJob->contacts();
             for (const KContacts::Addressee &contact : lstContacts) {
-                const QByteArray rawEmail
-                    = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
+                const QByteArray rawEmail = KEmailAddress::extractEmailAddress(contact.preferredEmail().toUtf8());
                 if (!rawEmail.isEmpty()) {
-                    mNewRight[ rawEmail ] = mIt.value();
+                    mNewRight[rawEmail] = mIt.value();
                 }
             }
         }
     } else { // it has been a normal contact
         const QByteArray rawEmail = KEmailAddress::extractEmailAddress(mIt.key());
         if (!rawEmail.isEmpty()) {
-            mNewRight[ rawEmail ] = mIt.value();
+            mNewRight[rawEmail] = mIt.value();
         }
     }
     ++mIt;
@@ -109,8 +107,7 @@ void AclModifyJob::slotModifyAcl()
     if (mRecursive) {
         auto job = new Akonadi::CollectionFetchJob(mTopLevelCollection, Akonadi::CollectionFetchJob::Recursive, this);
         job->fetchScope().setAncestorRetrieval(Akonadi::CollectionFetchScope::All);
-        connect(job, &Akonadi::CollectionFetchJob::finished,
-                this, [this](KJob *job) {
+        connect(job, &Akonadi::CollectionFetchJob::finished, this, [this](KJob *job) {
             if (job->error()) {
                 qCWarning(PIMCOMMONAKONADI_LOG) << job->errorString();
                 slotFetchCollectionFailed();
@@ -133,8 +130,7 @@ bool AclModifyJob::canAdministrate(const PimCommon::ImapAclAttribute *attribute,
 
     QString resource = collection.resource();
     if (resource.contains(QLatin1String("akonadi_kolabproxy_resource"))) {
-        const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent,
-                                                                          QStringLiteral("akonadi_kolabproxy_resource"));
+        const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent, QStringLiteral("akonadi_kolabproxy_resource"));
         QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));
         if (interface.isValid()) {
             QDBusReply<QString> reply = interface.call(QStringLiteral("imapResourceForCollection"), collection.remoteId().toLongLong());
@@ -143,8 +139,7 @@ bool AclModifyJob::canAdministrate(const PimCommon::ImapAclAttribute *attribute,
             }
         }
     }
-    OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface
-        = PimCommon::Util::createImapSettingsInterface(resource);
+    OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface = PimCommon::Util::createImapSettingsInterface(resource);
 
     QString loginName;
     QString serverName;
@@ -170,7 +165,7 @@ bool AclModifyJob::canAdministrate(const PimCommon::ImapAclAttribute *attribute,
             imapUserName = guessedUserName;
         }
     }
-    return rights[ imapUserName.toUtf8() ] & KIMAP::Acl::Admin;
+    return rights[imapUserName.toUtf8()] & KIMAP::Acl::Admin;
 }
 
 void AclModifyJob::setCurrentRight(const QMap<QByteArray, KIMAP::Acl::Rights> &currentRight)
@@ -248,7 +243,8 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
     if (KMessageBox::warningContinueCancelList(nullptr,
                                                i18n("Do you really want to apply the folder's permissions to these subfolders?"),
                                                folderNames,
-                                               i18n("Apply Permissions")) != KMessageBox::Continue) {
+                                               i18n("Apply Permissions"))
+        != KMessageBox::Continue) {
         deleteLater();
         qCDebug(PIMCOMMONAKONADI_LOG) << "AclModifyJob: User canceled .";
         return;

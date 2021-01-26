@@ -6,8 +6,8 @@
 
 #include "plugininterface.h"
 
-#include <PimCommon/GenericPluginManager>
 #include "pimcommonakonadi_debug.h"
+#include <PimCommon/GenericPluginManager>
 
 #include <KActionCollection>
 #include <KXMLGUIClient>
@@ -79,7 +79,7 @@ void PluginInterface::createPluginInterface()
         if (plugin->isEnabled()) {
             auto interface = static_cast<PimCommon::GenericPluginInterface *>(plugin->createInterface(this));
             interface->setParentWidget(d->mParentWidget);
-            //Add parent before creating action
+            // Add parent before creating action
             interface->createAction(d->mActionCollection);
             interface->setPlugin(plugin);
             connect(interface, &PimCommon::GenericPluginInterface::emitPluginActivated, this, &PluginInterface::slotPluginActivated);
@@ -132,7 +132,7 @@ void PluginInterface::setParentWidget(QWidget *widget)
 void PluginInterface::clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient)
 {
     if (guiClient->factory()) {
-        QHashIterator<PimCommon::ActionType::Type, QList<QAction *> > localActionsType(actionsType());
+        QHashIterator<PimCommon::ActionType::Type, QList<QAction *>> localActionsType(actionsType());
         while (localActionsType.hasNext()) {
             localActionsType.next();
             QList<QAction *> lst = localActionsType.value();
@@ -147,7 +147,7 @@ void PluginInterface::clearPluginActions(const QString &prefix, KXMLGUIClient *g
 void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient)
 {
     if (guiClient->factory()) {
-        QHashIterator<PimCommon::ActionType::Type, QList<QAction *> > localActionsType(actionsType());
+        QHashIterator<PimCommon::ActionType::Type, QList<QAction *>> localActionsType(actionsType());
         while (localActionsType.hasNext()) {
             localActionsType.next();
             QList<QAction *> lst = localActionsType.value();
@@ -167,9 +167,9 @@ void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelec
     }
 }
 
-QHash<PimCommon::ActionType::Type, QList<QAction *> > PluginInterface::actionsType()
+QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsType()
 {
-    QHash<PimCommon::ActionType::Type, QList<QAction *> > listType;
+    QHash<PimCommon::ActionType::Type, QList<QAction *>> listType;
     for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
         const auto actionTypes = interface->actionTypes();
         for (const PimCommon::ActionType &actionType : actionTypes) {

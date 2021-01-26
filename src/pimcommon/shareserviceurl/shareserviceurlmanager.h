@@ -7,13 +7,14 @@
 #ifndef SHARESERVICEURLMANAGER_H
 #define SHARESERVICEURLMANAGER_H
 
-#include <QObject>
 #include "pimcommon_export.h"
+#include <QObject>
 #include <QUrl>
 
 class KActionMenu;
 class QAction;
-namespace PimCommon {
+namespace PimCommon
+{
 class ShareServiceUrlManagerPrivate;
 /**
  * @brief The ShareServiceUrlManager class
@@ -25,16 +26,7 @@ class PIMCOMMON_EXPORT ShareServiceUrlManager : public QObject
 public:
     explicit ShareServiceUrlManager(QObject *parent = nullptr);
     ~ShareServiceUrlManager();
-    enum ServiceType {
-        Fbook = 0,
-        Twitter,
-        MailTo,
-        LinkedIn,
-        Evernote,
-        Pocket,
-        LiveJournal,
-        ServiceEndType
-    };
+    enum ServiceType { Fbook = 0, Twitter, MailTo, LinkedIn, Evernote, Pocket, LiveJournal, ServiceEndType };
 
     Q_REQUIRED_RESULT KActionMenu *menu() const;
 

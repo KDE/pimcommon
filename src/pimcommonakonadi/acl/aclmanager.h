@@ -18,7 +18,8 @@ class QAbstractItemModel;
 class QAction;
 class QItemSelectionModel;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT AclManager : public QObject
 {
     Q_OBJECT

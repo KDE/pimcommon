@@ -6,8 +6,8 @@
 
 #include "logactivitiesmanager.h"
 #include "logactivitiesdialog.h"
-#include <QTime>
 #include <QPointer>
+#include <QTime>
 
 using namespace PimCommon;
 
@@ -22,8 +22,8 @@ public:
 
     ~LogActivitiesManagerPrivate()
     {
-        //Disable delete it.
-        //delete mDialog;
+        // Disable delete it.
+        // delete mDialog;
     }
 
     QStringList mLog;

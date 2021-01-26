@@ -10,7 +10,8 @@
 #include <Libkdepim/ProgressManager> // ProgressItem
 
 #include <AgentInstance>
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @internal
  *

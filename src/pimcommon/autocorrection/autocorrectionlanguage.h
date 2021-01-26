@@ -7,10 +7,11 @@
 #ifndef AutoCorrectionLanguage_H
 #define AutoCorrectionLanguage_H
 
-#include <QComboBox>
 #include "pimcommon_export.h"
+#include <QComboBox>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The AutoCorrectionLanguage class
  * @author Laurent Montel <montel@kde.org>
@@ -22,9 +23,9 @@ public:
     ~AutoCorrectionLanguage();
 
     /**
-    * @brief language
-    * @return specified language
-    */
+     * @brief language
+     * @return specified language
+     */
     Q_REQUIRED_RESULT QString language() const;
 
     /**

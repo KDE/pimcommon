@@ -12,10 +12,12 @@
 
 #include <QDialog>
 class KConfig;
-namespace KLDAP {
+namespace KLDAP
+{
 class LdapClientSearch;
 }
-namespace PimCommon {
+namespace PimCommon
+{
 class CompletionConfigureDialogPrivate;
 /**
  * @brief The CompletionConfigureDialog class

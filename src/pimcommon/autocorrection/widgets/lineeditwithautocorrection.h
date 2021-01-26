@@ -11,7 +11,8 @@
 
 #include <PimCommon/SpellCheckLineEdit>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AutoCorrection;
 class LineEditWithAutoCorrectionPrivate;
 /**

@@ -7,12 +7,13 @@
 #define CUSTOMLOGWIDGET_H
 
 #include "pimcommon_export.h"
-#include <QStyledItemDelegate>
 #include <QListWidget>
+#include <QStyledItemDelegate>
 
 class QTextDocument;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class LogItemDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
@@ -44,16 +45,9 @@ public:
     Q_REQUIRED_RESULT bool isEmpty() const;
 
 private:
-    enum ItemType {
-        ItemLogType = Qt::UserRole + 1
-    };
+    enum ItemType { ItemLogType = Qt::UserRole + 1 };
 
-    enum LogType {
-        Title = 0,
-        Error,
-        Info,
-        EndLine
-    };
+    enum LogType { Title = 0, Error, Info, EndLine };
 };
 }
 

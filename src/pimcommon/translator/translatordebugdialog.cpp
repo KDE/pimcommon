@@ -8,8 +8,8 @@
 #include "util/pimutil.h"
 #include <KPIMTextEdit/PlainTextEditorWidget>
 
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>

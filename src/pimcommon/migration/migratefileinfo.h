@@ -11,7 +11,8 @@
 #include <QStringList>
 
 #include "pimcommon_export.h"
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The MigrateFileInfo class
  * @author Laurent Montel <montel@kde.org>

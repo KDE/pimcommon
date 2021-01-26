@@ -9,7 +9,8 @@
 
 #include <QTreeWidget>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AutoCorrectionTreeWidget : public QTreeWidget
 {
     Q_OBJECT

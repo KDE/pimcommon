@@ -7,11 +7,12 @@
 #ifndef SELECTMULTICOLLECTIONWIDGET_H
 #define SELECTMULTICOLLECTIONWIDGET_H
 
-#include <QWidget>
 #include <Collection>
 #include <QModelIndex>
+#include <QWidget>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class CheckedCollectionWidget;
 class SelectMultiCollectionWidget : public QWidget
 {

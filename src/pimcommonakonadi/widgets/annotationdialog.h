@@ -10,11 +10,13 @@
 
 #include <QDialog>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Item;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @short A dialog for editing annotations of an email.
  *

@@ -10,13 +10,13 @@
 #include "addresseelineeditldap.h"
 #include "kmailcompletion.h"
 
+#include <KColorScheme>
+#include <KConfigGroup>
 #include <KLDAP/LdapClient>
+#include <KSharedConfig>
+#include <QCoreApplication>
 #include <QNetworkConfigurationManager>
 #include <QTimer>
-#include <QCoreApplication>
-#include <KConfigGroup>
-#include <KSharedConfig>
-#include <KColorScheme>
 
 using namespace PimCommon;
 

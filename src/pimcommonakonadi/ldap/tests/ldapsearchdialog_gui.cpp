@@ -15,8 +15,8 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     QCommandLineParser parser;
-    //We can't use it otherwise we need to call kbuilsyscoca in test mode too.
-    //QStandardPaths::setTestModeEnabled(true);
+    // We can't use it otherwise we need to call kbuilsyscoca in test mode too.
+    // QStandardPaths::setTestModeEnabled(true);
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);

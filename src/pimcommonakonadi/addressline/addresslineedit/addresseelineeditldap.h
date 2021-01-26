@@ -7,14 +7,16 @@
 #ifndef ADDRESSEELINEEDITLDAP_H
 #define ADDRESSEELINEEDITLDAP_H
 
-#include <QTimer>
 #include <QMap>
+#include <QTimer>
 
-namespace KLDAP {
+namespace KLDAP
+{
 class LdapClientSearch;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AddresseeLineEditManager;
 class AddresseeLineEdit;
 class AddresseeLineEditLdap : public QObject
@@ -43,6 +45,7 @@ public:
     void startLoadingLDAPEntries();
     void stopLDAPLookup();
     void restartLdap(const QString &searchString, AddresseeLineEdit *addressLine);
+
 private:
     // maps LDAP client indices to completion source indices
     // the assumption that they are always the first n indices in s_static->completion

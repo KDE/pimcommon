@@ -12,12 +12,13 @@
 
 #include <QValidator>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
   A validator that enforces correct email addresses.
   @see KEmailAddress::isValidSimpleAddress
 */
-class PIMCOMMON_EXPORT EmailValidator : public QValidator //krazy:exclude=dpointer
+class PIMCOMMON_EXPORT EmailValidator : public QValidator // krazy:exclude=dpointer
 {
     Q_OBJECT
 public:

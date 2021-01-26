@@ -7,20 +7,21 @@
 #ifndef ADDRESSEELINEEDITMANAGER_H
 #define ADDRESSEELINEEDITMANAGER_H
 
-#include <QMap>
 #include <AkonadiCore/Collection>
+#include <QMap>
 
 #include <AkonadiCore/Item>
 #include <AkonadiCore/Session>
-#include <QVector>
-#include <QPointer>
 #include <KLDAP/LdapClientSearch>
+#include <QPointer>
+#include <QVector>
 
 #include <QColor>
 
 class QTimer;
 class QNetworkConfigurationManager;
-namespace PimCommon {
+namespace PimCommon
+{
 class KMailCompletion;
 class AddresseeLineEdit;
 class AddresseeLineEditAkonadi;
@@ -73,9 +74,9 @@ public:
     QMap<Akonadi::Collection::Id, collectionInfo> akonadiCollectionToCompletionSourceMap;
     // a list of akonadi items (contacts) that have not had their collection fetched yet
     Akonadi::Item::List akonadiPendingItems;
-    QVector<QPointer<Akonadi::Job> > akonadiJobsInFlight;
+    QVector<QPointer<Akonadi::Job>> akonadiJobsInFlight;
 
-    //Ldap
+    // Ldap
     void initializeLdap();
     Q_REQUIRED_RESULT QString ldapText() const;
     void setLdapText(const QString &ldapText);
@@ -87,11 +88,11 @@ public:
     void startLoadingLDAPEntries();
     void restartLdap(const QString &searchString, AddresseeLineEdit *addressLine);
 
-    //Baloo
+    // Baloo
     Q_REQUIRED_RESULT int balooCompletionSource() const;
     void setBalooCompletionSource(int value);
 
-    //Akonadi
+    // Akonadi
     Akonadi::Session *akonadiSession() const;
 
     KMailCompletion *completion() const;
@@ -113,6 +114,7 @@ public:
     Q_REQUIRED_RESULT QColor alternateColor() const;
 
     Q_REQUIRED_RESULT QStringList cleanupRecentAddressEmailList(const QStringList &inputList);
+
 private:
     QStringList mRecentAddressEmailList;
     QStringList mRecentCleanupAddressEmailList;

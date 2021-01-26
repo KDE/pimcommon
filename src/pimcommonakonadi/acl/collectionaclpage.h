@@ -9,10 +9,11 @@
 #ifndef COLLECTIONACLPAGE_H
 #define COLLECTIONACLPAGE_H
 
-#include <AkonadiWidgets/CollectionPropertiesPage>
 #include "pimcommonakonadi_export.h"
+#include <AkonadiWidgets/CollectionPropertiesPage>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class CollectionAclPagePrivate;
 /**
  * "Access Control" tab in the folder dialog

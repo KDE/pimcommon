@@ -6,9 +6,9 @@
 
 #include "importkmailautocorrection.h"
 
+#include "pimcommon_debug.h"
 #include <QFile>
 #include <QXmlStreamReader>
-#include "pimcommon_debug.h"
 using namespace PimCommon;
 
 ImportKMailAutocorrection::ImportKMailAutocorrection(QWidget *parent)
@@ -86,11 +86,11 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                         const QStringRef tagname = xml.name();
                         if (tagname == QLatin1String("simplequote")) {
                             const QString simpleQuoteBegin = xml.attributes().value(QStringLiteral("begin")).toString();
-                            if (!simpleQuoteBegin.isEmpty()) { //crash when we have old data with bug.
+                            if (!simpleQuoteBegin.isEmpty()) { // crash when we have old data with bug.
                                 mTypographicSingleQuotes.begin = simpleQuoteBegin.at(0);
                             }
                             const QString simpleQuoteEnd = xml.attributes().value(QStringLiteral("end")).toString();
-                            if (!simpleQuoteEnd.isEmpty()) { //crash when we have old data with bug.
+                            if (!simpleQuoteEnd.isEmpty()) { // crash when we have old data with bug.
                                 mTypographicSingleQuotes.end = simpleQuoteEnd.at(0);
                             }
                             xml.skipCurrentElement();
@@ -138,7 +138,7 @@ bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute lo
                     xml.skipCurrentElement();
                 }
             } else {
-                //TODO verify
+                // TODO verify
                 xml.skipCurrentElement();
             }
         }

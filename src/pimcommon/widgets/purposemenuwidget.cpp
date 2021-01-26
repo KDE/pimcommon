@@ -5,12 +5,12 @@
 */
 
 #include "purposemenuwidget.h"
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <Purpose/AlternativesModel>
 #include <PurposeWidgets/Menu>
 #include <QJsonArray>
 #include <QTemporaryFile>
-#include <KMessageBox>
-#include <KLocalizedString>
 #include <QUrl>
 
 using namespace PimCommon;
@@ -43,25 +43,25 @@ void PurposeMenuWidget::slotInitializeShareMenu()
     mTemporaryShareFile->setPermissions(QFile::ReadUser);
     mTemporaryShareFile->write(text());
     mTemporaryShareFile->close();
-    mShareMenu->model()->setInputData(QJsonObject {
-        { QStringLiteral("urls"), QJsonArray { {QUrl::fromLocalFile(mTemporaryShareFile->fileName()).toString()} } },
-        { QStringLiteral("mimeType"), { QStringLiteral("text/plain") } }
-    });
+    mShareMenu->model()->setInputData(QJsonObject{{QStringLiteral("urls"), QJsonArray{{QUrl::fromLocalFile(mTemporaryShareFile->fileName()).toString()}}},
+                                                  {QStringLiteral("mimeType"), {QStringLiteral("text/plain")}}});
     mShareMenu->reload();
 }
 
 void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
 {
     if (error) {
-        KMessageBox::error(mParentWidget, i18n("There was a problem sharing the document: %1", message),
-                           i18n("Share"));
+        KMessageBox::error(mParentWidget, i18n("There was a problem sharing the document: %1", message), i18n("Share"));
     } else {
         const QString url = output[QLatin1String("url")].toString();
         if (url.isEmpty()) {
             KMessageBox::information(mParentWidget, i18n("File was shared."));
         } else {
-            KMessageBox::information(mParentWidget, i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", url),
-                                     QString(), QString(), KMessageBox::AllowLink);
+            KMessageBox::information(mParentWidget,
+                                     i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", url),
+                                     QString(),
+                                     QString(),
+                                     KMessageBox::AllowLink);
         }
     }
 }

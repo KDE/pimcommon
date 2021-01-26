@@ -7,9 +7,10 @@
 #ifndef LOGACTIVITIESMANAGER_H
 #define LOGACTIVITIESMANAGER_H
 
-#include <QObject>
 #include "pimcommon_export.h"
-namespace PimCommon {
+#include <QObject>
+namespace PimCommon
+{
 class LogActivitiesManagerPrivate;
 /**
  * @brief The LogActivitiesManager class

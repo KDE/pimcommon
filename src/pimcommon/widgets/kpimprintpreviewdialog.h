@@ -7,10 +7,11 @@
 #ifndef KPIMPRINTPREVIEWDIALOG_H
 #define KPIMPRINTPREVIEWDIALOG_H
 
-#include <QPrintPreviewDialog>
 #include "pimcommon_export.h"
+#include <QPrintPreviewDialog>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The KPimPrintPreviewDialog class
  * @author Laurent Montel <montel@kde.org>
@@ -22,6 +23,7 @@ public:
     explicit KPimPrintPreviewDialog(QWidget *parent = nullptr);
     explicit KPimPrintPreviewDialog(QPrinter *printer, QWidget *parent = nullptr);
     ~KPimPrintPreviewDialog();
+
 private:
     void readConfig();
     void writeConfig();

@@ -7,18 +7,18 @@
 
 #include "autocorrection.h"
 
-#include "settings/pimcommonsettings.h"
 #include "import/importkmailautocorrection.h"
-#include <KColorScheme>
-#include <QLocale>
 #include "pimcommon_debug.h"
+#include "settings/pimcommonsettings.h"
+#include <KColorScheme>
+#include <QDir>
+#include <QFile>
+#include <QFileInfo>
+#include <QLocale>
+#include <QRegularExpression>
+#include <QStandardPaths>
 #include <QTextBlock>
 #include <QTextDocument>
-#include <QFile>
-#include <QDir>
-#include <QStandardPaths>
-#include <QFileInfo>
-#include <QRegularExpression>
 #include <QXmlStreamWriter>
 
 using namespace PimCommon;
@@ -55,17 +55,17 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
     QTextBlock block = cursor.block();
     int pos = qMax(block.position(), cursorPosition - mMaxFindStringLenght);
 
-    //TODO verify that pos == block.position() => it's a full line => not a piece of word
-    //TODO if not => check if pos -1 is a space => not a piece of word
-    //TODO otherwise move cursor until we detect a space
-    //TODO otherwise we must not autoconvert it.
+    // TODO verify that pos == block.position() => it's a full line => not a piece of word
+    // TODO if not => check if pos -1 is a space => not a piece of word
+    // TODO otherwise move cursor until we detect a space
+    // TODO otherwise we must not autoconvert it.
     if (pos != block.position()) {
         const QString text = block.text();
         const int currentPos = (pos - block.position());
         if (!text.at(currentPos - 1).isSpace()) {
-            //qDebug() << " current Text " << text << " currentPos "<< currentPos << " pos " << pos;
-            //qDebug() << "selected text " << text.right(text.length() - currentPos);
-            //qDebug() << "  text after " << text.at(currentPos - 1);
+            // qDebug() << " current Text " << text << " currentPos "<< currentPos << " pos " << pos;
+            // qDebug() << "selected text " << text.right(text.length() - currentPos);
+            // qDebug() << "  text after " << text.at(currentPos - 1);
             bool foundWord = false;
             const int textLength(text.length());
             for (int i = currentPos; i < textLength; ++i) {
@@ -99,7 +99,7 @@ void AutoCorrection::selectPreviousWord(QTextCursor &cursor, int cursorPosition)
             if (space) {
                 // double spaces belong to the previous word
             } else if (pos < cursorPosition) {
-                cursor.setPosition(pos + block.position() + 1);    // +1 because we don't want to set it on the space itself
+                cursor.setPosition(pos + block.position() + 1); // +1 because we don't want to set it on the space itself
             } else {
                 space = true;
             }
@@ -118,7 +118,7 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         mCursor = QTextCursor(&document);
         mCursor.setPosition(position);
 
-        //If we already have a space not necessary to look at other autocorrect feature.
+        // If we already have a space not necessary to look at other autocorrect feature.
         if (!singleSpaces()) {
             return false;
         }
@@ -135,7 +135,7 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             done = autoFormatURLs();
             if (!done) {
                 done = autoBoldUnderline();
-                //We replace */- by format => remove cursor position by 2
+                // We replace */- by format => remove cursor position by 2
                 if (done) {
                     oldPosition -= 2;
                 }
@@ -146,7 +146,7 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         }
         if (!done) {
             done = autoFractions();
-            //We replace three characters with 1
+            // We replace three characters with 1
             if (done) {
                 oldPosition -= 2;
             }
@@ -397,10 +397,7 @@ void AutoCorrection::superscriptAppendix()
                 bool found = true;
                 // don't apply superscript to 1th, 2th and 3th
                 const int numberLength(number.length());
-                if (numberLength == 1
-                    && (*constIter == QLatin1Char('1')
-                        || *constIter == QLatin1Char('2')
-                        || *constIter == QLatin1Char('3'))) {
+                if (numberLength == 1 && (*constIter == QLatin1Char('1') || *constIter == QLatin1Char('2') || *constIter == QLatin1Char('3'))) {
                     found = false;
                 }
                 if (found) {
@@ -440,10 +437,7 @@ void AutoCorrection::addNonBreakingSpace()
         const QString text = block.text();
         const QChar lastChar = text.at(mCursor.position() - 1 - block.position());
 
-        if (lastChar == QLatin1Char(':')
-            || lastChar == QLatin1Char(';')
-            || lastChar == QLatin1Char('!')
-            || lastChar == QLatin1Char('?')
+        if (lastChar == QLatin1Char(':') || lastChar == QLatin1Char(';') || lastChar == QLatin1Char('!') || lastChar == QLatin1Char('?')
             || lastChar == QLatin1Char('%')) {
             const int pos = mCursor.position() - 2 - block.position();
             if (pos >= 0) {
@@ -668,7 +662,7 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
             newWord = (secure ? QStringLiteral("ftps://") : QStringLiteral("ftp://")) + word;
             break;
         }
-        //qCDebug(PIMCOMMON_LOG) <<"newWord:" << newWord;
+        // qCDebug(PIMCOMMON_LOG) <<"newWord:" << newWord;
         return newWord;
     }
 
@@ -700,7 +694,7 @@ void AutoCorrection::fixTwoUppercaseChars()
     }
 }
 
-//Return true if we can add space
+// Return true if we can add space
 bool AutoCorrection::singleSpaces()
 {
     if (!mSingleSpaces) {
@@ -735,12 +729,8 @@ void AutoCorrection::capitalizeWeekDays()
 
 bool AutoCorrection::excludeToUppercase(const QString &word) const
 {
-    if (word.startsWith(QLatin1String("http://"))
-        || word.startsWith(QLatin1String("www."))
-        || word.startsWith(QLatin1String("mailto:"))
-        || word.startsWith(QLatin1String("ftp://"))
-        || word.startsWith(QLatin1String("https://"))
-        || word.startsWith(QLatin1String("ftps://"))) {
+    if (word.startsWith(QLatin1String("http://")) || word.startsWith(QLatin1String("www.")) || word.startsWith(QLatin1String("mailto:"))
+        || word.startsWith(QLatin1String("ftp://")) || word.startsWith(QLatin1String("https://")) || word.startsWith(QLatin1String("ftps://"))) {
         return true;
     }
     return false;
@@ -767,7 +757,7 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
 
     const QString text = mCursor.selectedText();
 
-    if (text.isEmpty()) {// start of a paragraph
+    if (text.isEmpty()) { // start of a paragraph
         if (!excludeToUppercase(mWord)) {
             mWord.replace(0, 1, mWord.at(0).toUpper());
         }
@@ -820,8 +810,7 @@ bool AutoCorrection::autoFractions()
     if (trimmed.length() > 3) {
         const QChar x = trimmed.at(3);
         const uchar xunicode = x.unicode();
-        if (!(xunicode == '.' || xunicode == ',' || xunicode == '?' || xunicode == '!'
-              || xunicode == ':' || xunicode == ';')) {
+        if (!(xunicode == '.' || xunicode == ',' || xunicode == '?' || xunicode == '!' || xunicode == ':' || xunicode == ';')) {
             return false;
         }
     } else if (trimmed.length() < 3) {
@@ -871,8 +860,7 @@ int AutoCorrection::advancedAutocorrect()
     bool hasPunctuation = false;
     const QChar lastChar = actualWord.at(actualWord.length() - 1);
     const ushort charUnicode = lastChar.unicode();
-    if (charUnicode == '.' || charUnicode == ',' || charUnicode == '?'
-        || charUnicode == '!' || charUnicode == ':' || charUnicode == ';') {
+    if (charUnicode == '.' || charUnicode == ',' || charUnicode == '?' || charUnicode == '!' || charUnicode == ':' || charUnicode == ';') {
         hasPunctuation = true;
         actualWord.chop(1);
     }
@@ -885,9 +873,7 @@ int AutoCorrection::advancedAutocorrect()
         if (i.key().length() > actualWordLength) {
             continue;
         }
-        if (actualWord.endsWith(i.key())
-            || actualWord.endsWith(i.key(), Qt::CaseInsensitive)
-            || actualWordWithFirstUpperCase.endsWith(i.key())) {
+        if (actualWord.endsWith(i.key()) || actualWord.endsWith(i.key(), Qt::CaseInsensitive) || actualWordWithFirstUpperCase.endsWith(i.key())) {
             int pos = mWord.lastIndexOf(i.key());
             if (pos == -1) {
                 pos = actualWord.toLower().lastIndexOf(i.key());
@@ -936,8 +922,7 @@ void AutoCorrection::replaceTypographicQuotes()
     /* this method is ported from lib/kotext/KoAutoFormat.cpp KoAutoFormat::doTypographicQuotes
      * from Calligra 1.x branch */
 
-    if (!(mReplaceDoubleQuotes && mWord.contains(QLatin1Char('"')))
-        && !(mReplaceSingleQuotes && mWord.contains(QLatin1Char('\'')))) {
+    if (!(mReplaceDoubleQuotes && mWord.contains(QLatin1Char('"'))) && !(mReplaceSingleQuotes && mWord.contains(QLatin1Char('\'')))) {
         return;
     }
 
@@ -963,8 +948,8 @@ void AutoCorrection::replaceTypographicQuotes()
                 QChar::Category c1 = mWord.at(i - 1).category();
 
                 // case 1 and 2
-                if (c1 == QChar::Separator_Space || c1 == QChar::Separator_Line || c1 == QChar::Separator_Paragraph
-                    || c1 == QChar::Punctuation_Open || c1 == QChar::Other_Control) {
+                if (c1 == QChar::Separator_Space || c1 == QChar::Separator_Line || c1 == QChar::Separator_Paragraph || c1 == QChar::Punctuation_Open
+                    || c1 == QChar::Other_Control) {
                     ending = false;
                 }
 
@@ -1054,22 +1039,25 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     mSuperScriptEntries.clear();
 
     QString localFileName;
-    //Look at local file:
+    // Look at local file:
     if (!forceGlobal) {
         if (!mAutoCorrectLang.isEmpty()) {
-            localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
+            localFileName =
+                QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
         } else {
             if (!kdelang.isEmpty()) {
-                localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+                localFileName =
+                    QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
             }
             if (localFileName.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
                 kdelang.remove(QRegularExpression(QStringLiteral("_.*")));
-                localFileName = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+                localFileName =
+                    QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
             }
         }
     }
     QString fname;
-    //Load Global directly
+    // Load Global directly
     if (!mAutoCorrectLang.isEmpty()) {
         if (mAutoCorrectLang == QLatin1String("en_US")) {
             fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/autocorrect.xml"));
@@ -1092,8 +1080,8 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     if (mAutoCorrectLang.isEmpty()) {
         mAutoCorrectLang = kdelang;
     }
-    //qCDebug(PIMCOMMON_LOG)<<" fname :"<<fname;
-    //qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
+    // qCDebug(PIMCOMMON_LOG)<<" fname :"<<fname;
+    // qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
 
     if (localFileName.isEmpty()) {
         loadGlobalFileName(fname, forceGlobal);
@@ -1135,8 +1123,8 @@ void AutoCorrection::loadLocalFileName(const QString &localFileName, const QStri
         mAutocorrectEntries = import.autocorrectEntries();
         mTypographicSingleQuotes = import.typographicSingleQuotes();
         mTypographicDoubleQuotes = import.typographicDoubleQuotes();
-        //Don't import it in local
-        //mSuperScriptEntries = import.superScriptEntries();
+        // Don't import it in local
+        // mSuperScriptEntries = import.superScriptEntries();
     }
     if (!fname.isEmpty() && import.import(fname, ImportAbstractAutocorrection::SuperScript)) {
         mSuperScriptEntries = import.superScriptEntries();
@@ -1148,7 +1136,8 @@ void AutoCorrection::loadLocalFileName(const QString &localFileName, const QStri
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 {
     const QString fname = filename.isEmpty() ? QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/autocorrect/custom-")
-                          + (mAutoCorrectLang == QLatin1String("en_US") ? QStringLiteral("autocorrect") : mAutoCorrectLang) + QLatin1String(".xml") : filename;
+            + (mAutoCorrectLang == QLatin1String("en_US") ? QStringLiteral("autocorrect") : mAutoCorrectLang) + QLatin1String(".xml")
+                                             : filename;
     QFileInfo fileInfo(fname);
     QDir().mkpath(fileInfo.absolutePath());
     QFile file(fname);
@@ -1234,7 +1223,7 @@ void AutoCorrection::setLanguage(const QString &lang, bool forceGlobal)
 {
     if (mAutoCorrectLang != lang || forceGlobal) {
         mAutoCorrectLang = lang;
-        //Re-read xml file
+        // Re-read xml file
         readAutoCorrectionXmlFile(forceGlobal);
     }
 }

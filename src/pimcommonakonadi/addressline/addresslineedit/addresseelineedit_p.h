@@ -6,23 +6,25 @@
 
 #ifndef ADDRESSEELINEEDIT_P_H
 #define ADDRESSEELINEEDIT_P_H
-#include <QStringList>
-#include <QObject>
-#include <QList>
 #include <KLDAP/LdapClientSearch>
+#include <QList>
+#include <QObject>
+#include <QStringList>
 
-#include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
+#include <AkonadiCore/Item>
 #include <kcontacts/contactgroup.h>
 
 class KConfig;
 class QToolButton;
 class QTimer;
-namespace Akonadi {
+namespace Akonadi
+{
 class ContactGroupSearchJob;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AddresseeLineEdit;
 class AddresseeLineEditPrivate : public QObject
 {
@@ -133,7 +135,7 @@ private:
     bool mCompletionInitialized = false;
     bool mSmartPaste = false;
     bool mLastSearchMode = false;
-    bool mSearchExtended = false; //has \" been added?
+    bool mSearchExtended = false; // has \" been added?
     bool mUseSemicolonAsSeparator = false;
     bool mEnableBalooSearch = true;
     bool mEnableAkonadiSearch = true;

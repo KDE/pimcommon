@@ -10,7 +10,8 @@
 #include "pimcommon_export.h"
 #include <QObject>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class TemplateListWidget;
 struct TemplateInfo {
     QString name;

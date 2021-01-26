@@ -7,9 +7,9 @@
 
 #include "blacklistbalooemailwarningtest.h"
 #include "../blacklistbalooemailwarning.h"
-#include <QTest>
-#include <QSignalSpy>
 #include <QAction>
+#include <QSignalSpy>
+#include <QTest>
 
 BlackListBalooEmailWarningTest::BlackListBalooEmailWarningTest(QObject *parent)
     : QObject(parent)

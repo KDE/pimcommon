@@ -7,15 +7,17 @@
 #ifndef IMAPRESOURCECAPABILITIESMANAGER_H
 #define IMAPRESOURCECAPABILITIESMANAGER_H
 
-#include <QObject>
 #include <QHash>
+#include <QObject>
 
 #include "pimcommonakonadi_export.h"
 class QDBusPendingCallWatcher;
-namespace Akonadi {
+namespace Akonadi
+{
 class AgentInstance;
 }
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The ImapResourceCapabilitiesManager class
  * @author Laurent Montel <montel@kde.org>

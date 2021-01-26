@@ -11,7 +11,8 @@
 #include <QByteArray>
 #include <QString>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The CollectionTypeUtil class
  * @author Laurent Montel <montel@kde.org>
@@ -39,11 +40,7 @@ public:
         ContentsTypeLast = ContentsTypeFile
     };
 
-    enum IncidencesFor {
-        IncForNobody,
-        IncForAdmins,
-        IncForReaders
-    };
+    enum IncidencesFor { IncForNobody, IncForAdmins, IncForReaders };
 
     Q_REQUIRED_RESULT CollectionTypeUtil::IncidencesFor incidencesForFromString(const QString &string);
     Q_REQUIRED_RESULT CollectionTypeUtil::FolderContentsType typeFromKolabName(const QByteArray &name);

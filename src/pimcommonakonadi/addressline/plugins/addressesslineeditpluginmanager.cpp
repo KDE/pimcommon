@@ -8,9 +8,9 @@
 #include "addressesslineeditabstractplugin.h"
 #include "pimcommonakonadi_debug.h"
 
-#include <KPluginMetaData>
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
+#include <KPluginMetaData>
 
 #include <QFileInfo>
 #include <QSet>
@@ -29,7 +29,8 @@ public:
     PimCommon::AddressessLineEditAbstractPlugin *plugin = nullptr;
 };
 
-namespace {
+namespace
+{
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -49,6 +50,7 @@ public:
     QVector<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
     QVector<AddressessLineEditPluginInfo> mPluginList;
     bool initializePlugins();
+
 private:
     AddressessLineEditPluginManager *const q;
 };

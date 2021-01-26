@@ -169,7 +169,7 @@ CollectionTypeUtil::FolderContentsType CollectionTypeUtil::contentsTypeFromStrin
         return CollectionTypeUtil::ContentsTypeFile;
     }
 
-    return CollectionTypeUtil::ContentsTypeMail; //safety return value
+    return CollectionTypeUtil::ContentsTypeMail; // safety return value
 }
 
 QString CollectionTypeUtil::typeNameFromKolabType(const QByteArray &type)

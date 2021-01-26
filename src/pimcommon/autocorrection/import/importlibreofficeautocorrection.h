@@ -15,7 +15,8 @@ class QDomDocument;
 class QFile;
 class KArchiveDirectory;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class ImportLibreOfficeAutocorrection : public ImportAbstractAutocorrection
 {
 public:
@@ -25,11 +26,7 @@ public:
     Q_REQUIRED_RESULT bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
 
 private:
-    enum Type {
-        DOCUMENT,
-        SENTENCE,
-        WORD
-    };
+    enum Type { DOCUMENT, SENTENCE, WORD };
 
     void importAutoCorrectionFile();
     void closeArchive();

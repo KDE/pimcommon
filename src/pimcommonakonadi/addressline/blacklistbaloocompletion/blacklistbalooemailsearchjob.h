@@ -11,7 +11,8 @@
 #include <QObject>
 
 #include "pimcommonakonadi_private_export.h"
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailSearchJob : public QObject
 {
     Q_OBJECT

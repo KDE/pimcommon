@@ -7,13 +7,14 @@
 #ifndef GOOGLETRANSLATOR_H
 #define GOOGLETRANSLATOR_H
 
-#include <QObject>
 #include <QNetworkReply>
+#include <QObject>
 class QNetworkAccessManager;
 class QComboBox;
 class QNetworkReply;
 
-namespace PimCommon {
+namespace PimCommon
+{
 class GoogleTranslator : public QObject
 {
     Q_OBJECT
@@ -23,7 +24,7 @@ public:
 
     void setParentWidget(QWidget *parent);
 
-    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString> > initListLanguage(QComboBox *from);
+    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from);
     void translate();
     void debug();
     void clear();

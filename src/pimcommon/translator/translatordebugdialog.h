@@ -9,7 +9,8 @@
 
 #include <QDialog>
 
-namespace KPIMTextEdit {
+namespace KPIMTextEdit
+{
 class PlainTextEditorWidget;
 }
 class TranslatorDebugDialog : public QDialog

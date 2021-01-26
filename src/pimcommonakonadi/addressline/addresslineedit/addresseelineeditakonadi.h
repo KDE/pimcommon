@@ -7,11 +7,13 @@
 #ifndef ADDRESSEELINEEDITAKONADI_H
 #define ADDRESSEELINEEDITAKONADI_H
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Session;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The AddresseeLineEditAkonadi class
  * @author Laurent Montel <montel@kde.org>

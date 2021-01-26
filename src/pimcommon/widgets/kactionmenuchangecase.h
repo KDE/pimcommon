@@ -7,11 +7,12 @@
 #ifndef KACTIONMENUCHANGECASE_H
 #define KACTIONMENUCHANGECASE_H
 
-#include <KActionMenu>
 #include "pimcommon_export.h"
+#include <KActionMenu>
 class QAction;
 class KActionCollection;
-namespace PimCommon {
+namespace PimCommon
+{
 class KActionMenuChangeCasePrivate;
 /**
  * @brief The KActionMenuChangeCase class

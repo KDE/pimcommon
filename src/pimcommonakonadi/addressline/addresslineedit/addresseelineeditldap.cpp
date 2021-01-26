@@ -6,8 +6,8 @@
 
 #include "addresseelineeditldap.h"
 #include "addresseelineeditmanager.h"
-#include <KLDAP/LdapClientSearch>
 #include <KLDAP/LdapClient>
+#include <KLDAP/LdapClientSearch>
 #include <KLDAP/LdapServer>
 #include <KLocalizedString>
 
@@ -26,14 +26,12 @@ AddresseeLineEditLdap::~AddresseeLineEditLdap()
 void AddresseeLineEditLdap::updateLDAPWeights()
 {
     /* Add completion sources for all ldap server, 0 to n. Added first so
-       * that they map to the LdapClient::clientNumber() */
+     * that they map to the LdapClient::clientNumber() */
     mLdapSearch->updateCompletionWeights();
     int clientIndex = 0;
     const QList<KLDAP::LdapClient *> lstClients = mLdapSearch->clients();
     for (const KLDAP::LdapClient *client : lstClients) {
-        const int sourceIndex
-            = mAddressLineStatic->addCompletionSource(i18n("LDAP server: %1", client->server().host()),
-                                                      client->completionWeight());
+        const int sourceIndex = mAddressLineStatic->addCompletionSource(i18n("LDAP server: %1", client->server().host()), client->completionWeight());
         mLdapClientToCompletionSourceMap.insert(clientIndex, sourceIndex);
         ++clientIndex;
     }
@@ -77,9 +75,10 @@ void AddresseeLineEditLdap::init()
         mLdapSearch->setFilter(QStringLiteral("&(|(objectclass=person)(objectclass=groupOfNames)(mail=*))"
                                               "(|(cn=%1*)(mail=%1*)(mail=*@%1*)(givenName=%1*)(sn=%1*))"));
 #endif
-        //Fix bug 323272 "Exchange doesn't like any queries beginning with *."
-        mLdapSearch->setFilter(QStringLiteral("&(|(objectclass=person)(objectclass=groupOfNames)(mail=*))"
-                                              "(|(cn=%1*)(mail=%1*)(givenName=%1*)(sn=%1*))"));
+        // Fix bug 323272 "Exchange doesn't like any queries beginning with *."
+        mLdapSearch->setFilter(
+            QStringLiteral("&(|(objectclass=person)(objectclass=groupOfNames)(mail=*))"
+                           "(|(cn=%1*)(mail=%1*)(givenName=%1*)(sn=%1*))"));
     }
 }
 

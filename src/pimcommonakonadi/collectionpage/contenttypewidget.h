@@ -8,9 +8,10 @@
 #ifndef CONTENTTYPEWIDGET_H
 #define CONTENTTYPEWIDGET_H
 
-#include <QWidget>
 #include "pimcommonakonadi_export.h"
-namespace PimCommon {
+#include <QWidget>
+namespace PimCommon
+{
 class ContentTypeWidgetPrivate;
 /**
  * @brief The ContentTypeWidget class

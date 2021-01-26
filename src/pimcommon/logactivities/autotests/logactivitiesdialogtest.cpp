@@ -6,16 +6,16 @@
 
 #include "logactivitiesdialogtest.h"
 #include "../logactivitiesdialog.h"
-#include "../logactivitieswidget.h"
 #include "../logactivitiesmanager.h"
+#include "../logactivitieswidget.h"
 #include <QAbstractButton>
+#include <QCheckBox>
 #include <QDialogButtonBox>
+#include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 #include <qtestmouse.h>
-#include <QSignalSpy>
-#include <QCheckBox>
-#include <QStandardPaths>
 
 LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
     : QObject(parent)

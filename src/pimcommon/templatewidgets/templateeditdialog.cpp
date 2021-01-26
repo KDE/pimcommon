@@ -5,20 +5,20 @@
 */
 
 #include "templateeditdialog.h"
-#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KPIMTextEdit/PlainTextEditor>
+#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <Libkdepim/LineEditCatchReturnKey>
 
 #include <KLocalizedString>
 #include <QLineEdit>
 
-#include <QVBoxLayout>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <QDialogButtonBox>
 #include <QHBoxLayout>
 #include <QLabel>
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 

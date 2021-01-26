@@ -8,8 +8,8 @@
 #include "completionorderwidgettest.h"
 #include "../completionorder/completionorderwidget.h"
 #include <QPushButton>
-#include <QTreeWidget>
 #include <QTest>
+#include <QTreeWidget>
 
 CompletionOrderWidgetTest::CompletionOrderWidgetTest(QObject *parent)
     : QObject(parent)

@@ -7,16 +7,16 @@
 #include "checkedcollectionwidget.h"
 #include <CollectionFilterProxyModel>
 
-#include <Monitor>
 #include <EntityTreeModel>
+#include <Monitor>
 #include <QSortFilterProxyModel>
 
 #include <KCheckableProxyModel>
-#include <QLineEdit>
 #include <KLocalizedString>
+#include <QLineEdit>
 
-#include <QVBoxLayout>
 #include <QTreeView>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 

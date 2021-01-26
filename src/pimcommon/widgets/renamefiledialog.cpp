@@ -4,20 +4,20 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 #include "renamefiledialog.h"
-#include <kseparator.h>
-#include <QLineEdit>
-#include <QPushButton>
-#include <KLocalizedString>
 #include <KIO/StatJob>
 #include <KJobWidgets>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KStandardGuiItem>
+#include <QLineEdit>
+#include <QPushButton>
+#include <kseparator.h>
 
-#include <QHBoxLayout>
 #include <QCheckBox>
+#include <QFileInfo>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <QFileInfo>
 
 using namespace PimCommon;
 
@@ -46,7 +46,7 @@ QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const 
     QString basename = oldName;
     const QChar spacer(QLatin1Char(' '));
 
-    //ignore dots at the beginning, that way "..aFile.tar.gz" will become "..aFile 1.tar.gz" instead of " 1..aFile.tar.gz"
+    // ignore dots at the beginning, that way "..aFile.tar.gz" will become "..aFile 1.tar.gz" instead of " 1..aFile.tar.gz"
     int index = basename.indexOf(QLatin1Char('.'));
     int continuous = 0;
     while (continuous == index) {
@@ -66,7 +66,7 @@ QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const 
         bool ok;
         const int number = tmp.toInt(&ok);
 
-        if (!ok) {  // ok there is no number
+        if (!ok) { // ok there is no number
             suggestedName = basename + spacer + QLatin1Char('1') + dotSuffix;
         } else {
             // yes there's already a number behind the spacer so increment it by one

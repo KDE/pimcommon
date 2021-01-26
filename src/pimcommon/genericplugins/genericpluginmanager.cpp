@@ -29,7 +29,8 @@ public:
     bool isEnabled = true;
 };
 
-namespace {
+namespace
+{
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -55,6 +56,7 @@ public:
     QString configGroupName() const;
     QString configPrefixSettingKey() const;
     GenericPlugin *pluginFromIdentifier(const QString &id);
+
 private:
     QVector<PluginUtilData> mPluginDataList;
     GenericPluginManager *const q;
@@ -89,10 +91,11 @@ bool GenericPluginManagerPrivate::initializePlugins()
         GenericPluginInfo info;
         const KPluginMetaData data = i.previous();
 
-        //1) get plugin data => name/description etc.
+        // 1) get plugin data => name/description etc.
         info.pluginData = PimCommon::PluginUtil::createPluginMetaData(data);
-        //2) look at if plugin is activated
-        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, info.pluginData.mEnableByDefault, info.pluginData.mIdentifier);
+        // 2) look at if plugin is activated
+        const bool isPluginActivated =
+            PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, info.pluginData.mEnableByDefault, info.pluginData.mIdentifier);
         info.isEnabled = isPluginActivated;
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();

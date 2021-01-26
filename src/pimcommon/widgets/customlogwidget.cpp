@@ -4,10 +4,10 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "customlogwidget.h"
-#include <QTextDocument>
-#include <QPainter>
-#include <QApplication>
 #include <QAbstractTextDocumentLayout>
+#include <QApplication>
+#include <QPainter>
+#include <QTextDocument>
 
 #include "pimcommon_debug.h"
 using namespace PimCommon;
@@ -35,9 +35,10 @@ QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, con
     QString text = option4.text;
 
     const QString content = QStringLiteral(
-        "<html style=\"color:%1\">"
-        "<body> %2").arg(textColor.name().toUpper(), text)
-                            + QLatin1String("</table></body></html>");
+                                "<html style=\"color:%1\">"
+                                "<body> %2")
+                                .arg(textColor.name().toUpper(), text)
+        + QLatin1String("</table></body></html>");
 
     document->setHtml(content);
 

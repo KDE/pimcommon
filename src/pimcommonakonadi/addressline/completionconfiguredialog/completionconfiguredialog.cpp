@@ -6,13 +6,13 @@
 */
 
 #include "completionconfiguredialog.h"
+#include <KConfigGroup>
+#include <KLDAP/LdapClientSearch>
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QTabWidget>
-#include <KConfigGroup>
-#include <KSharedConfig>
-#include <KLDAP/LdapClientSearch>
+#include <QVBoxLayout>
 
 #include <addressline/completionorder/completionorderwidget.h>
 #include <config-akonadi-search.h>

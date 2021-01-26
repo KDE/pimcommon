@@ -7,9 +7,10 @@
 #ifndef ACLLISTVIEW_H
 #define ACLLISTVIEW_H
 
-#include <QListView>
 #include "pimcommonakonadi_private_export.h"
-namespace PimCommon {
+#include <QListView>
+namespace PimCommon
+{
 class PIMCOMMONAKONADI_TESTS_EXPORT AclListView : public QListView
 {
     Q_OBJECT

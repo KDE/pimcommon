@@ -10,22 +10,22 @@
 #include <KLocalizedString>
 #include <KUrlRequester>
 
-#include <QWidget>
-#include <QLineEdit>
-#include <QGroupBox>
 #include <QButtonGroup>
 #include <QCheckBox>
+#include <QComboBox>
+#include <QGroupBox>
 #include <QHBoxLayout>
-#include <QVBoxLayout>
+#include <QLineEdit>
 #include <QRadioButton>
 #include <QSpinBox>
-#include <QComboBox>
+#include <QVBoxLayout>
+#include <QWidget>
 
 using namespace PimCommon;
 
-static const char lockedDownWarning[]
-    = I18N_NOOP("<qt><p>This setting has been fixed by your administrator.</p>"
-                "<p>If you think this is an error, please contact him.</p></qt>");
+static const char lockedDownWarning[] = I18N_NOOP(
+    "<qt><p>This setting has been fixed by your administrator.</p>"
+    "<p>If you think this is an error, please contact him.</p></qt>");
 
 void ConfigureImmutableWidgetUtils::checkLockDown(QWidget *w, const KConfigSkeletonItem *item)
 {

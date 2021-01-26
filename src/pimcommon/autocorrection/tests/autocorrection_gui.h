@@ -7,13 +7,14 @@
 #ifndef TEST_AUTOCORRECTION_GUI_H
 #define TEST_AUTOCORRECTION_GUI_H
 
-#include <QWidget>
 #include <KSharedConfig>
 #include <QDialog>
+#include <QWidget>
 
 #include <QTextEdit>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AutoCorrection;
 class AutoCorrectionWidget;
 class LineEditWithAutoCorrection;

@@ -7,10 +7,11 @@
 #ifndef SELECTMULTICOLLECTIONDIALOG_H
 #define SELECTMULTICOLLECTIONDIALOG_H
 #include "pimcommonakonadi_export.h"
-#include <QDialog>
 #include <Collection>
+#include <QDialog>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class SelectMultiCollectionDialogPrivate;
 /**
  * @brief The SelectMultiCollectionDialog class

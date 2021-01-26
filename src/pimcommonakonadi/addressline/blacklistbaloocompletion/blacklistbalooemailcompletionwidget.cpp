@@ -12,16 +12,16 @@
 #include "blacklistbalooemailwarning.h"
 #include <Libkdepim/LineEditCatchReturnKey>
 
+#include "pimcommonakonadi_debug.h"
+#include <KConfigGroup>
+#include <KListWidgetSearchLine>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <QHBoxLayout>
+#include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QLabel>
-#include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <KConfigGroup>
-#include <KSharedConfig>
-#include <KListWidgetSearchLine>
-#include "pimcommonakonadi_debug.h"
 
 using namespace PimCommon;
 BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget *parent)
@@ -208,7 +208,7 @@ void BlackListBalooEmailCompletionWidget::setEmailBlackList(const QStringList &l
 
 void BlackListBalooEmailCompletionWidget::slotSaveChanges()
 {
-    //TODO avoid to save a lot.
+    // TODO avoid to save a lot.
     const QHash<QString, bool> result = mEmailList->blackListItemChanged();
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     KConfigGroup group(config, "AddressLineEdit");

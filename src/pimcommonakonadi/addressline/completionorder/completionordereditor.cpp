@@ -18,10 +18,10 @@
 
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <QPushButton>
-#include <QVBoxLayout>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 

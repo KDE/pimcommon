@@ -11,12 +11,14 @@
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/collection.h>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * The Util namespace contains a collection of helper functions use in
  * various places.
  */
-namespace MailUtil {
+namespace MailUtil
+{
 Q_REQUIRED_RESULT PIMCOMMONAKONADI_EXPORT QString indexerServiceName();
 Q_REQUIRED_RESULT PIMCOMMONAKONADI_EXPORT bool isImapFolder(const Akonadi::Collection &col, bool &isOnline);
 }

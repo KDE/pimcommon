@@ -7,14 +7,15 @@
 #ifndef PLUGININTERFACE_H
 #define PLUGININTERFACE_H
 
-#include <QObject>
-#include <PimCommonAkonadi/GenericPluginInterface>
-#include <PimCommon/PluginUtil>
 #include "pimcommonakonadi_export.h"
+#include <PimCommon/PluginUtil>
+#include <PimCommonAkonadi/GenericPluginInterface>
+#include <QObject>
 class KActionCollection;
 class QAction;
 class KXMLGUIClient;
-namespace PimCommon {
+namespace PimCommon
+{
 class PluginInterfacePrivate;
 /**
  * @brief The PluginInterface class
@@ -28,7 +29,7 @@ public:
     ~PluginInterface();
 
     void setParentWidget(QWidget *widget);
-    Q_REQUIRED_RESULT QHash<PimCommon::ActionType::Type, QList<QAction *> > actionsType();
+    Q_REQUIRED_RESULT QHash<PimCommon::ActionType::Type, QList<QAction *>> actionsType();
     void createPluginInterface();
 
     void setPluginName(const QString &name);

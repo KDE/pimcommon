@@ -12,8 +12,8 @@
 
 #include <KCheckableProxyModel>
 
-#include <QVBoxLayout>
 #include <QTreeView>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 SelectMultiCollectionWidget::SelectMultiCollectionWidget(const QString &mimetype, QWidget *parent)
@@ -43,7 +43,10 @@ void SelectMultiCollectionWidget::initialize(const QString &mimetype)
     connect(mCheckedCollectionWidget, &PimCommon::CheckedCollectionWidget::collectionAdded, this, &SelectMultiCollectionWidget::slotCollectionsTreeFetched);
     connect(mCheckedCollectionWidget, &PimCommon::CheckedCollectionWidget::collectionRemoved, this, &SelectMultiCollectionWidget::slotCollectionsTreeFetched);
 
-    connect(mCheckedCollectionWidget->entityTreeModel(), &Akonadi::EntityTreeModel::collectionTreeFetched, this, &SelectMultiCollectionWidget::slotCollectionsTreeFetched);
+    connect(mCheckedCollectionWidget->entityTreeModel(),
+            &Akonadi::EntityTreeModel::collectionTreeFetched,
+            this,
+            &SelectMultiCollectionWidget::slotCollectionsTreeFetched);
     vbox->addWidget(mCheckedCollectionWidget);
 }
 
@@ -53,8 +56,8 @@ void SelectMultiCollectionWidget::updateStatus(const QModelIndex &parent)
     for (int i = 0; i < nbCol; ++i) {
         const QModelIndex child = mCheckedCollectionWidget->checkableProxy()->index(i, 0, parent);
 
-        const Akonadi::Collection col
-            = mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const Akonadi::Collection col =
+            mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
         if (mListCollection.contains(col.id())) {
             mCheckedCollectionWidget->checkableProxy()->setData(child, Qt::Checked, Qt::CheckStateRole);
@@ -79,8 +82,8 @@ QVector<Akonadi::Collection> SelectMultiCollectionWidget::selectedCollection(con
     for (int i = 0; i < nbCol; ++i) {
         const QModelIndex child = mCheckedCollectionWidget->checkableProxy()->index(i, 0, parent);
 
-        const Akonadi::Collection col
-            = mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const Akonadi::Collection col =
+            mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
         if (mCheckedCollectionWidget->checkableProxy()->data(child, Qt::CheckStateRole).value<int>()) {
             lst << col;

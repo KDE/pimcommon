@@ -7,21 +7,19 @@
 #ifndef IMPORTABSTRACTAUTOCORRECTION_H
 #define IMPORTABSTRACTAUTOCORRECTION_H
 
+#include <QHash>
 #include <QSet>
 #include <QString>
-#include <QHash>
 
 #include "autocorrection/autocorrection.h"
 #include "pimcommon_private_export.h"
-namespace PimCommon {
+namespace PimCommon
+{
 class PIMCOMMON_TESTS_EXPORT ImportAbstractAutocorrection
 {
     Q_GADGET
 public:
-    enum LoadAttribute {
-        All = 0,
-        SuperScript
-    };
+    enum LoadAttribute { All = 0, SuperScript };
     Q_ENUM(LoadAttribute)
 
     explicit ImportAbstractAutocorrection(QWidget *parent);

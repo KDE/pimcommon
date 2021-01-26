@@ -5,15 +5,15 @@
 */
 
 #include "customtoolswidgetng_gui.h"
-#include "customtools/customtoolswidgetng.h"
 #include "customtools/customtoolspluginmanager.h"
-#include <QStandardPaths>
+#include "customtools/customtoolswidgetng.h"
 #include <KToggleAction>
+#include <QStandardPaths>
 
-#include <QVBoxLayout>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QToolBar>
+#include <QVBoxLayout>
 
 #include <KXmlGui/kactioncollection.h>
 

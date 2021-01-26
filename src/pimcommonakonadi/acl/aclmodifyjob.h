@@ -7,11 +7,12 @@
 #ifndef ACLMODIFYJOB_H
 #define ACLMODIFYJOB_H
 
-#include <QObject>
-#include <KIMAP/Acl>
 #include <AkonadiCore/collection.h>
+#include <KIMAP/Acl>
+#include <QObject>
 class KJob;
-namespace PimCommon {
+namespace PimCommon
+{
 class ImapAclAttribute;
 class AclModifyJob : public QObject
 {

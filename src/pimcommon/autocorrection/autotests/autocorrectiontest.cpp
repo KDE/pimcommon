@@ -6,11 +6,11 @@
 
 #include "autocorrectiontest.h"
 #include "../autocorrection.h"
-#include "settings/pimcommonsettings.h"
-#include <QTest>
 #include "pimcommon_debug.h"
-#include <QTextDocument>
+#include "settings/pimcommonsettings.h"
 #include <QStandardPaths>
+#include <QTest>
+#include <QTextDocument>
 
 #ifndef Q_OS_WIN
 void initLocale()
@@ -54,7 +54,7 @@ void AutoCorrectionTest::shouldHaveDefaultValue()
 void AutoCorrectionTest::shouldRestoreValue()
 {
     PimCommon::AutoCorrection autocorrection;
-    //TODO
+    // TODO
 }
 
 void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
@@ -63,7 +63,7 @@ void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setUppercaseFirstCharOfSentence(true);
 
-    //Uppercase here.
+    // Uppercase here.
     QTextDocument doc;
     QString text = QStringLiteral("foo");
     doc.setPlainText(text);
@@ -71,21 +71,21 @@ void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QStringLiteral("Foo"));
 
-    //IT's not first char -> not uppercase
+    // IT's not first char -> not uppercase
     text = QStringLiteral(" foo");
     doc.setPlainText(text);
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), text);
 
-    //It's already uppercase
+    // It's already uppercase
     text = QStringLiteral("Foo");
     doc.setPlainText(text);
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), text);
 
-    //Word is after a ". "
+    // Word is after a ". "
     text = QStringLiteral("Foo. foo");
     doc.setPlainText(text);
     position = text.length();
@@ -100,7 +100,7 @@ void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setFixTwoUppercaseChars(true);
 
-    //Remove two uppercases
+    // Remove two uppercases
     QTextDocument doc;
     QString text = QStringLiteral("FOo");
     doc.setPlainText(text);
@@ -108,7 +108,7 @@ void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QStringLiteral("Foo"));
 
-    //There is not two uppercase
+    // There is not two uppercase
     text = QStringLiteral("foo");
     doc.setPlainText(text);
     position = text.length();
@@ -121,14 +121,14 @@ void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), text);
 
-    //There is a uppercase word
+    // There is a uppercase word
     text = QStringLiteral("FOO");
     doc.setPlainText(text);
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), text);
 
-    //Exclude 2 upper letter
+    // Exclude 2 upper letter
     text = QStringLiteral("ABc");
     doc.setPlainText(text);
     position = text.length();
@@ -232,7 +232,7 @@ void AutoCorrectionTest::shouldReplaceToTextFormat()
     autocorrection.setAutoBoldUnderline(true);
 
     QTextDocument doc;
-    //We don't use html => don't change it.
+    // We don't use html => don't change it.
     QString text = QStringLiteral("*foo*");
     doc.setHtml(text);
     int position = text.length();
@@ -281,7 +281,7 @@ void AutoCorrectionTest::shouldReplaceToTextFormat()
     QCOMPARE(charFormat.font().bold(), false);
     QCOMPARE(charFormat.font().strikeOut(), true);
 
-    //Don't convert it.
+    // Don't convert it.
     text = QStringLiteral("-foo1");
     doc.setHtml(text);
     position = text.length();
@@ -296,7 +296,7 @@ void AutoCorrectionTest::shouldReplaceToTextFormat()
     QCOMPARE(doc.toPlainText(), result);
     QCOMPARE(position, 3);
 
-    //TODO QCOMPARE(doc.toHtml(), text);
+    // TODO QCOMPARE(doc.toHtml(), text);
 }
 
 void AutoCorrectionTest::shouldReplaceAutoFraction()
@@ -329,21 +329,21 @@ void AutoCorrectionTest::shouldNotAddSpaceWhenWeAlreadyHaveASpace()
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setSingleSpaces(true);
     QTextDocument doc;
-    //We already a space => don't allow to add more
+    // We already a space => don't allow to add more
     QString text = QStringLiteral("FOO ");
     doc.setPlainText(text);
     int position = text.length();
     bool result = autocorrection.autocorrect(false, doc, position);
     QCOMPARE(result, false);
 
-    //We can add a space
+    // We can add a space
     text = QStringLiteral("FOO");
     doc.setPlainText(text);
     position = text.length();
     result = autocorrection.autocorrect(false, doc, position);
     QCOMPARE(result, true);
 
-    //We have a space => don't add it.
+    // We have a space => don't add it.
     text = QStringLiteral("FOO ");
     position = text.length();
     QString fullText = text + QStringLiteral("FOO");
@@ -359,7 +359,7 @@ void AutoCorrectionTest::shouldAutocorrectWord()
     autocorrection.setAdvancedAutocorrect(true);
 
     QTextDocument doc;
-    //No changes
+    // No changes
     QString text = QStringLiteral("FOO");
     doc.setPlainText(text);
     int position = text.length();
@@ -368,7 +368,7 @@ void AutoCorrectionTest::shouldAutocorrectWord()
     QCOMPARE(doc.toPlainText(), text);
     QCOMPARE(position, oldPosition);
 
-    //Convert word
+    // Convert word
     QHash<QString, QString> entries;
     const QString convertWord = QStringLiteral("BLABLA");
     entries.insert(text, convertWord);
@@ -387,7 +387,7 @@ void AutoCorrectionTest::shouldAutocorrectWord()
     doc.setPlainText(text);
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(convertWord + suffix));
-    //FIXME ? QCOMPARE(position, convertWord.length());
+    // FIXME ? QCOMPARE(position, convertWord.length());
 }
 
 void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
@@ -399,7 +399,7 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     lst.insert(QStringLiteral("Foo."));
     autocorrection.setUpperCaseExceptions(lst);
 
-    //Uppercase here.
+    // Uppercase here.
     QTextDocument doc;
     QString text = QStringLiteral("foo. blabla Foo. tt");
     doc.setPlainText(text);
@@ -562,15 +562,19 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
     QTest::newRow("disable") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << false << false << false << false;
     QTest::newRow("enablebutdisablealloptions") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << false << false << false;
     QTest::newRow("enableandenableuppercase") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << true << false << false;
-    QTest::newRow("enableandenableuppercaseandadvanced") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced")
+        << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true << false;
 
-    QTest::newRow("enableandenableuppercaseandadvanced-2") << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true << false;
-    QTest::newRow("enableandenableuppercaseandadvanced-3") << QStringLiteral("blablobli") << QStringLiteral("Blablobli") << map << true << true << true << false;
-    QTest::newRow("enableandenableuppercaseandadvanced-4") << QStringLiteral("blablobli. foo") << QStringLiteral("blablobli. Foo") << map << true << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced-2")
+        << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced-3")
+        << QStringLiteral("blablobli") << QStringLiteral("Blablobli") << map << true << true << true << false;
+    QTest::newRow("enableandenableuppercaseandadvanced-4")
+        << QStringLiteral("blablobli. foo") << QStringLiteral("blablobli. Foo") << map << true << true << true << false;
 
     QTest::newRow("enableandenablefixtouppercase") << QStringLiteral("Boo boo. BOo") << QStringLiteral("Boo boo. Boo") << map << true << true << false << true;
     QTest::newRow("enableandenablefixtouppercase-2") << QStringLiteral("Boo BOo") << QStringLiteral("Boo Boo") << map << true << true << false << true;
-    //TODO add more
+    // TODO add more
 }
 
 void AutoCorrectionTest::shouldReplaceWithMultiOption()
@@ -605,7 +609,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.setReplaceSingleQuotes(true);
     autocorrection.setLanguage(QStringLiteral("fr"));
     autocorrection.setAddNonBreakingSpace(true);
-    //TODO fix me verify why it doesn't use no breaking space
+    // TODO fix me verify why it doesn't use no breaking space
     const QChar nbsp = QChar(/*QChar::Nbsp*/ QLatin1Char('b'));
     autocorrection.setNonBreakingSpace(nbsp);
 
@@ -635,7 +639,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(text + nbsp + doubleQuote.end));
 
-    //Simple quote
+    // Simple quote
     text = QStringLiteral("sss");
     doc.setPlainText(text + QStringLiteral("\'"));
     position = text.length();
@@ -648,7 +652,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
 
-    //Simple quote
+    // Simple quote
     text = QStringLiteral("sss");
     doc.setPlainText(QStringLiteral("\'") + text + QStringLiteral("\'"));
     position = text.length();
@@ -681,7 +685,7 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     autocorrection.loadGlobalFileName(originalFile, true);
     autocorrection.writeAutoCorrectionXmlFile(generatedFile);
 
-    //make sure the xml is valid and we can feed ourself with our own generated file
+    // make sure the xml is valid and we can feed ourself with our own generated file
     autocorrection.loadGlobalFileName(generatedFile, true);
 
     autocorrectionReference.loadGlobalFileName(refFile, true);

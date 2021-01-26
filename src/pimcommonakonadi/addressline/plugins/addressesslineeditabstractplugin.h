@@ -7,17 +7,17 @@
 #ifndef ADDRESSESSLINEEDITABSTRACTPLUGIN_H
 #define ADDRESSESSLINEEDITABSTRACTPLUGIN_H
 
-#include <QObject>
 #include "pimcommonakonadi_export.h"
+#include <QObject>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AddresseeLineEdit;
 /**
  * @brief The AddressessLineEditAbstractPluginInfo struct
  * @author Laurent Montel <montel@kde.org>
  */
-struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo
-{
+struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo {
     QString name;
     QString identifier;
     QString description;

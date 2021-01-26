@@ -12,15 +12,15 @@
 
 #include "pimcommon_debug.h"
 
-#include <QPointer>
-#include <QVBoxLayout>
-#include <QPushButton>
-#include <QKeyEvent>
-#include <QToolBar>
 #include <QAction>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDialogButtonBox>
+#include <QKeyEvent>
+#include <QPointer>
+#include <QPushButton>
+#include <QToolBar>
+#include <QVBoxLayout>
 
 ConfigureTestDialog::ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrection, QWidget *parent)
     : QDialog(parent)

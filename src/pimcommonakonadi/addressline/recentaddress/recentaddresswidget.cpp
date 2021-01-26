@@ -9,16 +9,16 @@
 #include "recentaddresses.h"
 
 #include <KConfig>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QLineEdit>
 #include <QPushButton>
-#include <KMessageBox>
-#include <KLocalizedString>
 
-#include <QVBoxLayout>
-#include <QListWidget>
 #include <QKeyEvent>
-#include <QToolButton>
+#include <QListWidget>
 #include <QShortcut>
+#include <QToolButton>
+#include <QVBoxLayout>
 
 #include <Libkdepim/LineEditCatchReturnKey>
 #include <PimCommon/EmailValidator>
@@ -109,7 +109,10 @@ void RecentAddressWidget::slotRemoveItem()
     if (selectedItems.isEmpty()) {
         return;
     }
-    if (KMessageBox::Yes == KMessageBox::questionYesNo(this, i18np("Do you want to remove this email address?", "Do you want to remove %1 email addresses?", selectedItems.count()), i18n("Remove"))) {
+    if (KMessageBox::Yes
+        == KMessageBox::questionYesNo(this,
+                                      i18np("Do you want to remove this email address?", "Do you want to remove %1 email addresses?", selectedItems.count()),
+                                      i18n("Remove"))) {
         for (QListWidgetItem *item : selectedItems) {
             delete mListView->takeItem(mListView->row(item));
         }
@@ -138,8 +141,7 @@ bool RecentAddressWidget::eventFilter(QObject *o, QEvent *e)
 {
     if (o == mLineEdit && e->type() == QEvent::KeyPress) {
         auto keyEvent = static_cast<QKeyEvent *>(e);
-        if (keyEvent->key() == Qt::Key_Down
-            || keyEvent->key() == Qt::Key_Up) {
+        if (keyEvent->key() == Qt::Key_Down || keyEvent->key() == Qt::Key_Up) {
             return (static_cast<QObject *>(mListView))->event(e);
         }
     }

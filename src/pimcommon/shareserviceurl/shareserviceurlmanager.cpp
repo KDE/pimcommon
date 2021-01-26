@@ -9,8 +9,8 @@
 #include "pimcommon_debug.h"
 #include <KActionMenu>
 #include <KLocalizedString>
-#include <QMenu>
 #include <QDesktopServices>
+#include <QMenu>
 #include <QUrlQuery>
 
 using namespace PimCommon;
@@ -139,8 +139,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         return url;
     }
     switch (type) {
-    case Fbook:
-    {
+    case Fbook: {
         url.setUrl(QStringLiteral("https://www.facebook.com/sharer.php"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("u"), link);
@@ -148,8 +147,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         url.setQuery(urlQuery);
         break;
     }
-    case Twitter:
-    {
+    case Twitter: {
         url.setUrl(QStringLiteral("https://twitter.com/share"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("url"), link);
@@ -157,8 +155,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         url.setQuery(urlQuery);
         break;
     }
-    case MailTo:
-    {
+    case MailTo: {
         url.setUrl(QStringLiteral("mailto:"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("subject"), title);
@@ -166,8 +163,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         url.setQuery(urlQuery);
         break;
     }
-    case LinkedIn:
-    {
+    case LinkedIn: {
         url.setUrl(QStringLiteral("http://www.linkedin.com/shareArticle"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("mini"), QStringLiteral("true"));
@@ -176,8 +172,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         url.setQuery(urlQuery);
         break;
     }
-    case Evernote:
-    {
+    case Evernote: {
         url.setUrl(QStringLiteral("https://www.evernote.com/clip.action"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("url"), link);
@@ -185,8 +180,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         url.setQuery(urlQuery);
         break;
     }
-    case Pocket:
-    {
+    case Pocket: {
         url.setUrl(QStringLiteral("https://getpocket.com/save"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("url"), link);
@@ -194,8 +188,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         url.setQuery(urlQuery);
         break;
     }
-    case LiveJournal:
-    {
+    case LiveJournal: {
         url.setUrl(QStringLiteral("http://www.livejournal.com/update.bml"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("event"), link);

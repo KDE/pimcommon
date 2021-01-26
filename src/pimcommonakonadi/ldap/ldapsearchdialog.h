@@ -11,16 +11,18 @@
 
 #include "pimcommonakonadi_export.h"
 
-#include <kcontacts/addressee.h>
 #include <QDialog>
+#include <kcontacts/addressee.h>
 
 class QCloseEvent;
 
-namespace KLDAP {
+namespace KLDAP
+{
 class LdapClient;
 class LdapObject;
 }
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @short A dialog to search contacts in a LDAP directory.
  *
@@ -35,12 +37,7 @@ class PIMCOMMONAKONADI_EXPORT LdapSearchDialog : public QDialog
     Q_OBJECT
 
 public:
-    enum FilterType {
-        Name = 0,
-        Email,
-        HomeNumber,
-        WorkNumber
-    };
+    enum FilterType { Name = 0, Email, HomeNumber, WorkNumber };
 
     /**
      * Creates a new ldap search dialog.

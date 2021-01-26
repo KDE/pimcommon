@@ -5,9 +5,9 @@
 */
 
 #include "logactivitieswidget.h"
-#include <QVBoxLayout>
-#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <KPIMTextEdit/PlainTextEditor>
+#include <KPIMTextEdit/PlainTextEditorWidget>
+#include <QVBoxLayout>
 using namespace PimCommon;
 
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)

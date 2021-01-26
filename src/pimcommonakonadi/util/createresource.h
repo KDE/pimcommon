@@ -8,11 +8,12 @@
 #define PIMCOMMONCREATERESOURCE_H
 
 #include "pimcommonakonadi_export.h"
+#include <QMap>
 #include <QObject>
 #include <QVariant>
-#include <QMap>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The CreateResource class
  * @author Laurent Montel <montel@kde.org>
@@ -24,7 +25,10 @@ public:
     explicit CreateResource(QObject *parent = nullptr);
     ~CreateResource();
 
-    Q_REQUIRED_RESULT QString createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings, bool synchronizeTree = false);
+    Q_REQUIRED_RESULT QString createResource(const QString &resources,
+                                             const QString &name,
+                                             const QMap<QString, QVariant> &settings,
+                                             bool synchronizeTree = false);
 
 Q_SIGNALS:
     void createResourceInfo(const QString &);

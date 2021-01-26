@@ -5,8 +5,8 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#include <QWidget>
 #include <QVBoxLayout>
+#include <QWidget>
 
 #include <PimCommonAkonadi/AddresseeLineEdit>
 

@@ -6,8 +6,8 @@
 */
 
 #include "baloocompletionemailtest.h"
-#include <QTest>
 #include "../addresslineedit/baloocompletionemail.h"
+#include <QTest>
 BalooCompletionEmailTest::BalooCompletionEmailTest(QObject *parent)
     : QObject(parent)
 {

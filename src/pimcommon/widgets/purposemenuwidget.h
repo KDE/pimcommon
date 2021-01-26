@@ -7,14 +7,16 @@
 #ifndef PURPOSEMENUWIDGET_H
 #define PURPOSEMENUWIDGET_H
 
-#include <QObject>
 #include "pimcommon_export.h"
-namespace Purpose {
+#include <QObject>
+namespace Purpose
+{
 class Menu;
 }
 class QMenu;
 class QTemporaryFile;
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The PurposeMenuWidget class
  * @author Laurent Montel <montel@kde.org>
@@ -28,6 +30,7 @@ public:
 
     virtual QByteArray text() = 0;
     QMenu *menu() const;
+
 private:
     void slotInitializeShareMenu();
     void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);

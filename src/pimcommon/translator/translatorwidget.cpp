@@ -6,30 +6,30 @@
 */
 
 #include "translatorwidget.h"
-#include "translatorutil.h"
 #include "googletranslator.h"
-#include <PimCommon/NetworkManager>
+#include "translatorutil.h"
 #include <KBusyIndicatorWidget>
+#include <PimCommon/NetworkManager>
 
-#include <QPushButton>
-#include <KLocalizedString>
 #include <KConfigGroup>
-#include <KSeparator>
+#include <KLocalizedString>
 #include <KMessageBox>
+#include <KSeparator>
+#include <QPushButton>
 
-#include <QMimeData>
-#include <QIcon>
+#include <KSharedConfig>
 #include <QComboBox>
 #include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QToolButton>
+#include <QIcon>
 #include <QKeyEvent>
-#include <QShortcut>
-#include <QPainter>
-#include <QSplitter>
-#include <KSharedConfig>
+#include <QLabel>
+#include <QMimeData>
 #include <QNetworkConfigurationManager>
+#include <QPainter>
+#include <QShortcut>
+#include <QSplitter>
+#include <QToolButton>
+#include <QVBoxLayout>
 
 using namespace PimCommon;
 
@@ -48,7 +48,7 @@ public:
     void initLanguage();
     void fillToCombobox(const QString &lang);
 
-    QMap<QString, QMap<QString, QString> > listLanguage;
+    QMap<QString, QMap<QString, QString>> listLanguage;
     QByteArray data;
     TranslatorTextEdit *inputText = nullptr;
     KPIMTextEdit::PlainTextEditorWidget *translatedText = nullptr;
@@ -236,8 +236,7 @@ void TranslatorWidget::init()
     separator->setOrientation(Qt::Vertical);
     hboxLayout->addWidget(separator);
 
-    d->invert = new QPushButton(
-        i18nc("Invert language choices so that from becomes to and to becomes from", "Invert"), this);
+    d->invert = new QPushButton(i18nc("Invert language choices so that from becomes to and to becomes from", "Invert"), this);
     d->invert->setObjectName(QStringLiteral("invert-button"));
     connect(d->invert, &QPushButton::clicked, this, &TranslatorWidget::slotInvertLanguage);
     hboxLayout->addWidget(d->invert);
@@ -291,7 +290,7 @@ void TranslatorWidget::init()
     layout->addWidget(d->splitter);
 
     d->initLanguage();
-    d->from->setCurrentIndex(0);   //Fill "to" combobox
+    d->from->setCurrentIndex(0); // Fill "to" combobox
     slotFromLanguageChanged(0, true);
     slotTextChanged();
     readConfig();
@@ -432,7 +431,7 @@ bool TranslatorWidget::event(QEvent *e)
     // window-global actions (e.g. Emil Sedgh binds Esc to "close tab").
     // With a shortcut override we can catch this before it gets to kactions.
     if (e->type() == QEvent::ShortcutOverride || e->type() == QEvent::KeyPress) {
-        auto kev = static_cast<QKeyEvent * >(e);
+        auto kev = static_cast<QKeyEvent *>(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();

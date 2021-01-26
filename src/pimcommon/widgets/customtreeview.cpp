@@ -6,9 +6,9 @@
 
 #include "customtreeview.h"
 
-#include <QPainter>
-#include <QFontDatabase>
 #include <QEvent>
+#include <QFontDatabase>
+#include <QPainter>
 
 using namespace PimCommon;
 

@@ -10,7 +10,8 @@
 #include "pimcommon_export.h"
 #include <KPIMTextEdit/RichTextEditor>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AutoCorrection;
 class RichTextEditWithAutoCorrectionPrivate;
 /**

@@ -5,8 +5,8 @@
 */
 
 #include "manageserversidesubscriptionjob.h"
-#include "util/mailutil.h"
 #include "pimcommonakonadi_debug.h"
+#include "util/mailutil.h"
 
 #include <AkonadiCore/ServerManager>
 
@@ -51,12 +51,8 @@ void ManageServerSideSubscriptionJob::start()
     }
     bool isImapOnline = false;
     if (PimCommon::MailUtil::isImapFolder(d->mCurrentCollection, isImapOnline)) {
-        const QString service
-            = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource,
-                                                       d->mCurrentCollection.resource());
-        QDBusInterface iface(service,
-                             QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"),
-                             QDBusConnection::sessionBus(), this);
+        const QString service = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Resource, d->mCurrentCollection.resource());
+        QDBusInterface iface(service, QStringLiteral("/"), QStringLiteral("org.kde.Akonadi.ImapResourceBase"), QDBusConnection::sessionBus(), this);
         if (!iface.isValid()) {
             qCDebug(PIMCOMMONAKONADI_LOG) << "Cannot create imap dbus interface for service " << service;
             deleteLater();
@@ -73,7 +69,9 @@ void ManageServerSideSubscriptionJob::slotConfigureSubscriptionFinished(QDBusPen
     QDBusPendingReply<int> reply = *watcher;
     if (reply.isValid()) {
         if (reply == -2) {
-            KMessageBox::error(d->mParentWidget, i18n("IMAP server not configured yet. Please configure the server in the IMAP account before setting up server-side subscription."));
+            KMessageBox::error(
+                d->mParentWidget,
+                i18n("IMAP server not configured yet. Please configure the server in the IMAP account before setting up server-side subscription."));
         } else if (reply == -1) {
             KMessageBox::error(d->mParentWidget, i18n("Log in failed, please configure the IMAP account before setting up server-side subscription."));
         }

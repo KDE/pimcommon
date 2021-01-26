@@ -9,14 +9,15 @@
 #define RECENTADDRESSWIDGET_H
 
 #include "pimcommonakonadi_export.h"
-#include <QWidget>
 #include <QStringList>
+#include <QWidget>
 class KConfig;
 class QListWidget;
 class QLineEdit;
 class QToolButton;
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The RecentAddressWidget class
  * @author Laurent Montel <montel@kde.org>

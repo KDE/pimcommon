@@ -16,7 +16,8 @@
 #include <QString>
 #include <QStringList>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * KMailCompletion allows lookup of email addresses by keyword.
  * This is used for lookup by nickname, since we don't want the nickname to appear in the final email.
@@ -65,7 +66,7 @@ public:
     using KCompletion::postProcessMatches;
 
 private:
-    QMap< QString, QStringList > m_keyMap;
+    QMap<QString, QStringList> m_keyMap;
 };
 }
 

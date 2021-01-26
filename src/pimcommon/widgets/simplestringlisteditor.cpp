@@ -11,16 +11,16 @@
 
 #include "simplestringlisteditor.h"
 
-#include <QInputDialog>
-#include <QIcon>
+#include "pimcommon_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
-#include "pimcommon_debug.h"
-#include <QPushButton>
-#include <QMenu>
-#include <QVBoxLayout>
 #include <QHBoxLayout>
+#include <QIcon>
+#include <QInputDialog>
 #include <QListWidget>
+#include <QMenu>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 //********************************************************
 // SimpleStringListEditor
@@ -58,7 +58,12 @@ public:
     QString mRemoveDialogLabel = i18n("Do you want to remove selected text?");
 };
 
-SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel, const QString &addDialogLabel)
+SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
+                                               ButtonCode buttons,
+                                               const QString &addLabel,
+                                               const QString &removeLabel,
+                                               const QString &modifyLabel,
+                                               const QString &addDialogLabel)
     : QWidget(parent)
     , d(new SimpleStringListEditorPrivate)
 {
@@ -101,7 +106,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
             d->mModifyButton = new QPushButton(modifyLabel, this);
         }
         d->mModifyButton->setAutoDefault(false);
-        d->mModifyButton->setEnabled(false);   // no selection yet
+        d->mModifyButton->setEnabled(false); // no selection yet
         d->mButtonLayout->addWidget(d->mModifyButton);
         connect(d->mModifyButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotModify);
         connect(d->mListBox, &QListWidget::itemDoubleClicked, this, &SimpleStringListEditor::slotModify);
@@ -114,7 +119,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
             d->mRemoveButton = new QPushButton(removeLabel, this);
         }
         d->mRemoveButton->setAutoDefault(false);
-        d->mRemoveButton->setEnabled(false);   // no selection yet
+        d->mRemoveButton->setEnabled(false); // no selection yet
         d->mButtonLayout->addWidget(d->mRemoveButton);
         connect(d->mRemoveButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotRemove);
     }
@@ -127,7 +132,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         d->mUpButton = new QPushButton(QString(), this);
         d->mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
         d->mUpButton->setAutoDefault(false);
-        d->mUpButton->setEnabled(false);   // no selection yet
+        d->mUpButton->setEnabled(false); // no selection yet
         d->mButtonLayout->addWidget(d->mUpButton);
         connect(d->mUpButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotUp);
     }
@@ -140,7 +145,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
         d->mDownButton = new QPushButton(QString(), this);
         d->mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
         d->mDownButton->setAutoDefault(false);
-        d->mDownButton->setEnabled(false);   // no selection yet
+        d->mDownButton->setEnabled(false); // no selection yet
         d->mButtonLayout->addWidget(d->mDownButton);
         connect(d->mDownButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotDown);
     }
@@ -148,12 +153,12 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent, ButtonCode butto
     if (buttons & Custom) {
         d->mCustomButton = new QPushButton(i18n("&Customize..."), this);
         d->mCustomButton->setAutoDefault(false);
-        d->mCustomButton->setEnabled(false);   // no selection yet
+        d->mCustomButton->setEnabled(false); // no selection yet
         d->mButtonLayout->addWidget(d->mCustomButton);
         connect(d->mCustomButton, &QPushButton::clicked, this, &SimpleStringListEditor::slotCustomize);
     }
 
-    d->mButtonLayout->addStretch(1);   // spacer
+    d->mButtonLayout->addStretch(1); // spacer
 
     connect(d->mListBox, &QListWidget::currentItemChanged, this, &SimpleStringListEditor::slotSelectionChanged);
     connect(d->mListBox, &QListWidget::itemSelectionChanged, this, &SimpleStringListEditor::slotSelectionChanged);
@@ -254,9 +259,7 @@ void SimpleStringListEditor::setButtonText(ButtonCode button, const QString &tex
 void SimpleStringListEditor::addNewEntry()
 {
     bool ok = false;
-    const QString newEntry = QInputDialog::getText(this, i18n("New Value"),
-                                                   d->mAddDialogLabel, QLineEdit::Normal, QString(),
-                                                   &ok);
+    const QString newEntry = QInputDialog::getText(this, i18n("New Value"), d->mAddDialogLabel, QLineEdit::Normal, QString(), &ok);
     if (ok && !newEntry.trimmed().isEmpty()) {
         insertNewEntry(newEntry);
     }
@@ -316,9 +319,7 @@ void SimpleStringListEditor::slotRemove()
 QString SimpleStringListEditor::modifyEntry(const QString &text)
 {
     bool ok = false;
-    QString newText = QInputDialog::getText(this, i18n("Change Value"),
-                                            d->mAddDialogLabel, QLineEdit::Normal, text,
-                                            &ok);
+    QString newText = QInputDialog::getText(this, i18n("Change Value"), d->mAddDialogLabel, QLineEdit::Normal, text, &ok);
     Q_EMIT aboutToAdd(newText);
 
     if (!ok || newText.trimmed().isEmpty() || newText == text) {
@@ -441,13 +442,10 @@ void SimpleStringListEditor::slotSelectionChanged()
     }
 
     if (d->mUpButton) {
-        d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst)
-                                                     || (!uniqItemSelected)) && !allItemSelected);
+        d->mUpButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theFirst) || (!uniqItemSelected)) && !allItemSelected);
     }
     if (d->mDownButton) {
-        d->mDownButton->setEnabled(aItemIsSelected
-                                   && ((uniqItemSelected && !theLast)
-                                       || (!uniqItemSelected)) && !allItemSelected);
+        d->mDownButton->setEnabled(aItemIsSelected && ((uniqItemSelected && !theLast) || (!uniqItemSelected)) && !allItemSelected);
     }
 }
 

@@ -9,7 +9,8 @@
 
 #include <QListWidget>
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AutoCorrectionListWidget : public QListWidget
 {
     Q_OBJECT

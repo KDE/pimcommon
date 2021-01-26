@@ -8,13 +8,14 @@
 #ifndef BLACKLISTBALOOEMAILCOMPLETIONWIDGET_H
 #define BLACKLISTBALOOEMAILCOMPLETIONWIDGET_H
 
-#include <QWidget>
 #include "pimcommonakonadi_private_export.h"
+#include <QWidget>
 class QPushButton;
 class QLineEdit;
 class QLabel;
 class KListWidgetSearchLine;
-namespace PimCommon {
+namespace PimCommon
+{
 class BlackListBalooEmailList;
 class BlackListBalooEmailWarning;
 class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailCompletionWidget : public QWidget
@@ -27,6 +28,7 @@ public:
     void save();
     void load();
     void setEmailBlackList(const QStringList &list);
+
 private:
     void slotSelectionChanged();
     void slotUnselectEmails();

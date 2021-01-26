@@ -8,11 +8,12 @@
 #define AutoCorrection_H
 
 #include "pimcommon_export.h"
-#include <QTextCursor>
 #include <QHash>
 #include <QSet>
+#include <QTextCursor>
 
-namespace PimCommon {
+namespace PimCommon
+{
 /**
  * @brief The AutoCorrection class
  * @author Laurent Montel <montel@kde.org>
@@ -83,6 +84,7 @@ public:
 
     void loadGlobalFileName(const QString &fname, bool forceGlobal);
     void loadLocalFileName(const QString &localFileName, const QString &fname);
+
 private:
     bool isFrenchLanguage() const;
     void readConfig();
@@ -110,13 +112,13 @@ private:
 
     bool mSingleSpaces = true; // suppress double spaces.
     bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automaticall to uppercase
-    bool mFixTwoUppercaseChars = false;  // convert two uppercase characters to one upper and one lowercase.
+    bool mFixTwoUppercaseChars = false; // convert two uppercase characters to one upper and one lowercase.
     bool mAutoFractions = true; // replace 1/2 with ½
     bool mCapitalizeWeekDays = false;
     bool mAdvancedAutocorrect = false; // autocorrection from a list of entries
 
-    bool mReplaceDoubleQuotes = false;  // replace double quotes with typographical quotes
-    bool mReplaceSingleQuotes = false;  // replace single quotes with typographical quotes
+    bool mReplaceDoubleQuotes = false; // replace double quotes with typographical quotes
+    bool mReplaceSingleQuotes = false; // replace single quotes with typographical quotes
 
     bool mAutoFormatUrl = false;
     bool mAutoBoldUnderline = false;

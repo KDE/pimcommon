@@ -7,17 +7,19 @@
 #ifndef AutoCorrectionWidget_H
 #define AutoCorrectionWidget_H
 
-#include "pimcommon_export.h"
 #include "pimcommon/autocorrection.h"
+#include "pimcommon_export.h"
 #include <QWidget>
 
 class QTreeWidgetItem;
 
-namespace Ui {
+namespace Ui
+{
 class AutoCorrectionWidget;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class AutoCorrectionWidgetPrivate;
 /**
  * @brief The AutoCorrectionWidget class
@@ -28,10 +30,7 @@ class PIMCOMMON_EXPORT AutoCorrectionWidget : public QWidget
     Q_OBJECT
 
 public:
-    enum ImportFileType {
-        LibreOffice,
-        KMail
-    };
+    enum ImportFileType { LibreOffice, KMail };
 
     explicit AutoCorrectionWidget(QWidget *parent = nullptr);
     ~AutoCorrectionWidget();

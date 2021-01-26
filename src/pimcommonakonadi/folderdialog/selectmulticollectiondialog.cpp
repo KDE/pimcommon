@@ -7,8 +7,8 @@
 #include "selectmulticollectiondialog.h"
 #include "selectmulticollectionwidget.h"
 
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>

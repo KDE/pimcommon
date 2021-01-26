@@ -10,8 +10,10 @@
 
 #include <KIMAP/Acl>
 
-namespace PimCommon {
-namespace AclUtils {
+namespace PimCommon
+{
+namespace AclUtils
+{
 /**
  * Returns the number of standard permissions available.
  */

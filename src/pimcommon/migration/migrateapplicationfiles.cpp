@@ -7,12 +7,12 @@
 #include "migrateapplicationfiles.h"
 #include "pimcommon_debug.h"
 
-#include <Kdelibs4Migration>
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
+#include <Kdelibs4Migration>
+#include <QDir>
 #include <QFile>
 #include <QFileInfo>
-#include <QDir>
 
 using namespace PimCommon;
 
