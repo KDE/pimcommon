@@ -138,8 +138,8 @@ set(libpimcommon_SRCS
     ${libpimcommon_customtools_SRCS}
     ${libpimcommon_logactivities_SRCS}
     ${libpimcommon_generericplugin_SRCS}
+    widgets/icons.qrc
     )
-qt5_add_resources(libpimcommon_SRCS widgets/icons.qrc)
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
         DESCRIPTION "kdepim (pimcommon)"
         OLD_CATEGORY_NAMES log_pimcommon
