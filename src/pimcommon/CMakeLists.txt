@@ -174,7 +174,7 @@ add_library(KF5::PimCommon ALIAS KF5PimCommon)
 
 target_link_libraries(KF5PimCommon
     PUBLIC
-    Qt::Network
+    Qt5::Network
     KF5::KIOCore
     KF5::ConfigWidgets
     PRIVATE
@@ -186,7 +186,7 @@ target_link_libraries(KF5PimCommon
     KF5::XmlGui
     KF5::PimTextEdit
     KF5::KIOWidgets
-    Qt::PrintSupport
+    Qt5::PrintSupport
     KF5::Purpose
     KF5::PurposeWidgets
     )

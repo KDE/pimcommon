@@ -2,7 +2,7 @@ macro(add_libkdepim_blacklistbaloocompletion_unittest _name)
     ecm_add_test(${ARGN}
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-addessline-blaclistbaloocompletion-"
-        LINK_LIBRARIES Qt::Test KF5::PimCommonAkonadi KF5::WidgetsAddons KF5::Completion KF5::I18n KF5::ConfigCore KF5::ItemViews KF5::Codecs
+        LINK_LIBRARIES Qt5::Test KF5::PimCommonAkonadi KF5::WidgetsAddons KF5::Completion KF5::I18n KF5::ConfigCore KF5::ItemViews KF5::Codecs
     )
 endmacro()
 

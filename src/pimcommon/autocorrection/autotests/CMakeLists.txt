@@ -7,7 +7,7 @@ macro(add_pimcommon_autocorrect_unittest _source)
   add_test(NAME ${_name} COMMAND ${_name} )
   set_tests_properties(${_name} PROPERTIES ENVIRONMENT "QT_HASH_SEED=0")
   ecm_mark_as_test(pimcommon-autocorrection-${_name})
-  target_link_libraries(${_name}  Qt::Test KF5::PimCommon KF5::PimTextEdit)
+  target_link_libraries(${_name}  Qt5::Test KF5::PimCommon KF5::PimTextEdit)
 endmacro()
 
 add_pimcommon_autocorrect_unittest(autocorrectiontest.cpp)
