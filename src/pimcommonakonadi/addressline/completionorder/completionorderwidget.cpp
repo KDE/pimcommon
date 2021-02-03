@@ -294,7 +294,7 @@ void CompletionOrderWidget::save()
         group.deleteGroup();
 
         for (int itemIndex = 0; itemIndex < mListView->topLevelItemCount(); ++itemIndex) {
-            auto *item = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));
+            auto item = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));
             item->item()->setCompletionWeight(w);
             item->item()->setIsEnabled(item->checkState(0) == Qt::Checked);
             item->item()->save(this);

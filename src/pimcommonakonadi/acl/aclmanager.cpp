@@ -411,7 +411,7 @@ void AclManager::save(bool recursive)
     }
 
     // refresh the collection, it might be outdated in the meantime
-    auto *job = new Akonadi::CollectionFetchJob(d->mCollection, Akonadi::CollectionFetchJob::Base);
+    auto job = new Akonadi::CollectionFetchJob(d->mCollection, Akonadi::CollectionFetchJob::Base);
     if (!job->exec()) {
         qCDebug(PIMCOMMONAKONADI_LOG) << " collection Fetch error" << job->errorString();
         return;

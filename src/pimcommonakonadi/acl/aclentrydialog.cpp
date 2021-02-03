@@ -103,7 +103,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     for (unsigned int i = 0; i < AclUtils::standardPermissionsCount(); ++i) {
         const KIMAP::Acl::Rights permissions = AclUtils::permissionsForIndex(i);
 
-        auto *radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
+        auto radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
     }
@@ -154,7 +154,7 @@ void AclEntryDialog::setPermissions(KIMAP::Acl::Rights permissions)
     if (button) {
         button->setChecked(true);
     } else {
-        auto *radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions));
+        auto radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions));
 
         d->mButtonLayout->addWidget(radioButton);
         d->mButtonGroup->addButton(radioButton, permissions);
