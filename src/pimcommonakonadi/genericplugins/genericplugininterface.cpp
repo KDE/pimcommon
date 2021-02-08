@@ -71,7 +71,7 @@ void GenericPluginInterface::setCollections(const Akonadi::Collection::List &col
     Q_UNUSED(cols)
 }
 
-PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires() const
+PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requiresFeatures() const
 {
     return None;
 }

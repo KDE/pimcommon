@@ -38,7 +38,7 @@ public:
     virtual void setCurrentCollection(const Akonadi::Collection &col);
     virtual void setCollections(const Akonadi::Collection::List &cols);
 
-    virtual GenericPluginInterface::RequireTypes requires() const;
+    virtual GenericPluginInterface::RequireTypes requiresFeatures() const;
 
     virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
