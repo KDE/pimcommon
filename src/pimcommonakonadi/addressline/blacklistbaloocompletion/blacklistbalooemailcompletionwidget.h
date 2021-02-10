@@ -23,7 +23,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailCompletionWidget : public
     Q_OBJECT
 public:
     explicit BlackListBalooEmailCompletionWidget(QWidget *parent = nullptr);
-    ~BlackListBalooEmailCompletionWidget();
+    ~BlackListBalooEmailCompletionWidget() override;
 
     void save();
     void load();

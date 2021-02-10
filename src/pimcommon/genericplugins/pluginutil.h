@@ -24,8 +24,6 @@ class PIMCOMMON_EXPORT PluginUtilData
 {
 public:
     PluginUtilData()
-        : mEnableByDefault(false)
-        , mHasConfigureDialog(false)
     {
     }
 
@@ -33,8 +31,8 @@ public:
     QString mDescription;
     QString mIdentifier;
     QString mName;
-    bool mEnableByDefault;
-    bool mHasConfigureDialog;
+    bool mEnableByDefault = false;
+    bool mHasConfigureDialog = false;
 };
 
 namespace PluginUtil

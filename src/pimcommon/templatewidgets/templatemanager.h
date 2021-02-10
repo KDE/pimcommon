@@ -33,7 +33,7 @@ class PIMCOMMON_EXPORT TemplateManager : public QObject
     Q_OBJECT
 public:
     explicit TemplateManager(const QString &relativeTemplateDir, PimCommon::TemplateListWidget *sieveTemplateWidget);
-    ~TemplateManager();
+    ~TemplateManager() override;
 
 private:
     void slotDirectoryChanged();

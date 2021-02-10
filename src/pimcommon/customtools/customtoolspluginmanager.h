@@ -24,7 +24,7 @@ public:
     static CustomToolsPluginManager *self();
 
     explicit CustomToolsPluginManager(QObject *parent = nullptr);
-    ~CustomToolsPluginManager();
+    ~CustomToolsPluginManager() override;
 
     Q_REQUIRED_RESULT QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
 

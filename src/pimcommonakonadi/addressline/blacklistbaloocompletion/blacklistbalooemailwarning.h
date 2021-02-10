@@ -18,7 +18,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailWarning : public KMessage
     Q_OBJECT
 public:
     explicit BlackListBalooEmailWarning(QWidget *parent = nullptr);
-    ~BlackListBalooEmailWarning();
+    ~BlackListBalooEmailWarning() override;
 
 Q_SIGNALS:
     void newSearch();

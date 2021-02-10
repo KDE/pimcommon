@@ -23,7 +23,7 @@ class PIMCOMMONAKONADI_EXPORT AddressessLineEditPluginManager : public QObject
     Q_OBJECT
 public:
     explicit AddressessLineEditPluginManager(QObject *parent = nullptr);
-    ~AddressessLineEditPluginManager();
+    ~AddressessLineEditPluginManager() override;
 
     static AddressessLineEditPluginManager *self();
 

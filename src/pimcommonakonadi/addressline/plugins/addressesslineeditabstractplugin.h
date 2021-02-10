@@ -32,7 +32,7 @@ class PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPlugin : public QObject
     Q_OBJECT
 public:
     explicit AddressessLineEditAbstractPlugin(QObject *parent = nullptr);
-    ~AddressessLineEditAbstractPlugin();
+    ~AddressessLineEditAbstractPlugin() override;
 
     void setLineEdit(PimCommon::AddresseeLineEdit *linedit);
 

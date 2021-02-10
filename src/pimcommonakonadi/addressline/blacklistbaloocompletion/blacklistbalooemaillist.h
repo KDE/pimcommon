@@ -19,7 +19,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailListItem : public QListWi
 {
 public:
     explicit BlackListBalooEmailListItem(QListWidget *parent = nullptr);
-    ~BlackListBalooEmailListItem();
+    ~BlackListBalooEmailListItem() override;
 
     Q_REQUIRED_RESULT bool initializeStatus() const;
     void setInitializeStatus(bool initializeStatus);

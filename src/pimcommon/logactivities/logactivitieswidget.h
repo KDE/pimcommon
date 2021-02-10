@@ -21,7 +21,7 @@ class PIMCOMMON_TESTS_EXPORT LogActivitiesWidget : public QWidget
     Q_OBJECT
 public:
     explicit LogActivitiesWidget(QWidget *parent = nullptr);
-    ~LogActivitiesWidget();
+    ~LogActivitiesWidget() override;
     void setLog(const QString &str);
     Q_REQUIRED_RESULT QString log() const;
     void clear();

@@ -19,7 +19,7 @@ class PIMCOMMON_TESTS_EXPORT LogActivitiesDialog : public QDialog
     Q_OBJECT
 public:
     explicit LogActivitiesDialog(QWidget *parent = nullptr);
-    ~LogActivitiesDialog();
+    ~LogActivitiesDialog() override;
 
     void setLog(const QString &str);
 

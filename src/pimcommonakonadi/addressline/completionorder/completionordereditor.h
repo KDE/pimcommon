@@ -28,8 +28,8 @@ class PIMCOMMONAKONADI_EXPORT CompletionOrderEditor : public QDialog
     Q_OBJECT
 
 public:
-    CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch, QWidget *parent = nullptr);
-    ~CompletionOrderEditor();
+    explicit CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch, QWidget *parent = nullptr);
+    ~CompletionOrderEditor() override;
 
 private Q_SLOTS:
     void slotOk();

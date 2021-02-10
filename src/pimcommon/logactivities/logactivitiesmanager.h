@@ -21,7 +21,7 @@ class PIMCOMMON_EXPORT LogActivitiesManager : public QObject
     Q_OBJECT
 public:
     explicit LogActivitiesManager(QObject *parent = nullptr);
-    ~LogActivitiesManager();
+    ~LogActivitiesManager() override;
 
     static LogActivitiesManager *self();
 

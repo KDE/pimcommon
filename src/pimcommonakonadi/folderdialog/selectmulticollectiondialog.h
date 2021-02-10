@@ -23,7 +23,7 @@ class PIMCOMMONAKONADI_EXPORT SelectMultiCollectionDialog : public QDialog
 public:
     explicit SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent = nullptr);
     explicit SelectMultiCollectionDialog(const QString &mimetype, QWidget *parent = nullptr);
-    ~SelectMultiCollectionDialog();
+    ~SelectMultiCollectionDialog() override;
 
     Q_REQUIRED_RESULT QVector<Akonadi::Collection> selectedCollection() const;
 

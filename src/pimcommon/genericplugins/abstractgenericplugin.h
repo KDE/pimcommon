@@ -21,7 +21,7 @@ class PIMCOMMON_EXPORT AbstractGenericPlugin : public QObject
     Q_OBJECT
 public:
     explicit AbstractGenericPlugin(QObject *parent = nullptr);
-    ~AbstractGenericPlugin();
+    ~AbstractGenericPlugin() override;
 
     virtual PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent = nullptr) = 0;
     Q_REQUIRED_RESULT virtual bool hasPopupMenuSupport() const;

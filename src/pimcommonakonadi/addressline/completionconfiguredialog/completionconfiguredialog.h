@@ -28,7 +28,7 @@ class PIMCOMMONAKONADI_EXPORT CompletionConfigureDialog : public QDialog
     Q_OBJECT
 public:
     explicit CompletionConfigureDialog(QWidget *parent = nullptr);
-    ~CompletionConfigureDialog();
+    ~CompletionConfigureDialog() override;
 
     void load();
     void setEmailBlackList(const QStringList &lst);

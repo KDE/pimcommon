@@ -33,7 +33,7 @@ public:
     enum ImportFileType { LibreOffice, KMail };
 
     explicit AutoCorrectionWidget(QWidget *parent = nullptr);
-    ~AutoCorrectionWidget();
+    ~AutoCorrectionWidget() override;
     void setAutoCorrection(AutoCorrection *autoCorrect);
     void loadConfig();
     void writeConfig();

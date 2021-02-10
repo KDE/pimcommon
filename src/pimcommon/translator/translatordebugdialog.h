@@ -18,7 +18,7 @@ class TranslatorDebugDialog : public QDialog
     Q_OBJECT
 public:
     explicit TranslatorDebugDialog(QWidget *parent = nullptr);
-    ~TranslatorDebugDialog();
+    ~TranslatorDebugDialog() override;
 
     void setDebug(const QString &debugStr);
 

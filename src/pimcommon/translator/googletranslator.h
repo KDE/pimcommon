@@ -20,7 +20,7 @@ class GoogleTranslator : public QObject
     Q_OBJECT
 public:
     explicit GoogleTranslator(QObject *parent = nullptr);
-    ~GoogleTranslator();
+    ~GoogleTranslator() override;
 
     void setParentWidget(QWidget *parent);
 

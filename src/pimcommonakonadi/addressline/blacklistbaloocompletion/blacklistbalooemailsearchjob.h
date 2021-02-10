@@ -18,7 +18,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailSearchJob : public QObjec
     Q_OBJECT
 public:
     explicit BlackListBalooEmailSearchJob(QObject *parent = nullptr);
-    ~BlackListBalooEmailSearchJob();
+    ~BlackListBalooEmailSearchJob() override;
 
     Q_REQUIRED_RESULT bool start();
 

@@ -38,7 +38,7 @@ public:
     /**
      * Destroys the annotation edit dialog.
      */
-    ~AnnotationEditDialog();
+    ~AnnotationEditDialog() override;
 
 private:
     void readConfig();

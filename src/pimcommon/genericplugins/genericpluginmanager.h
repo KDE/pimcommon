@@ -28,18 +28,17 @@ public:
     {
     public:
         GenericPluginData()
-            : mEnableByDefault(false)
         {
         }
 
         QString mDescription;
         QString mName;
         QString mIdentifier;
-        bool mEnableByDefault;
+        bool mEnableByDefault = false;
     };
 
     explicit GenericPluginManager(QObject *parent = nullptr);
-    ~GenericPluginManager();
+    ~GenericPluginManager() override;
 
     Q_REQUIRED_RESULT bool initializePlugins();
 

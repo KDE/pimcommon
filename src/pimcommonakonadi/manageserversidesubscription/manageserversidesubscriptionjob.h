@@ -25,7 +25,7 @@ class PIMCOMMONAKONADI_EXPORT ManageServerSideSubscriptionJob : public QObject
 public:
     explicit ManageServerSideSubscriptionJob(QObject *parent = nullptr);
 
-    ~ManageServerSideSubscriptionJob();
+    ~ManageServerSideSubscriptionJob() override;
 
     void start();
     void setCurrentCollection(const Akonadi::Collection &col);

@@ -26,7 +26,7 @@ class PIMCOMMONAKONADI_EXPORT PluginInterface : public QObject
     Q_OBJECT
 public:
     explicit PluginInterface(QObject *parent = nullptr);
-    ~PluginInterface();
+    ~PluginInterface() override;
 
     void setParentWidget(QWidget *widget);
     Q_REQUIRED_RESULT QHash<PimCommon::ActionType::Type, QList<QAction *>> actionsType();

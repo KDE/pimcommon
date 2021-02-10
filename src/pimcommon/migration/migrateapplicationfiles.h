@@ -22,7 +22,7 @@ class PIMCOMMON_EXPORT MigrateApplicationFiles : public QObject
     Q_OBJECT
 public:
     explicit MigrateApplicationFiles(QObject *parent = nullptr);
-    ~MigrateApplicationFiles();
+    ~MigrateApplicationFiles() override;
 
     Q_REQUIRED_RESULT bool start();
     Q_REQUIRED_RESULT bool checkIfNecessary();

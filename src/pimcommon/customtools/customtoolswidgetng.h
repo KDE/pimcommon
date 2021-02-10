@@ -25,7 +25,7 @@ class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
     Q_OBJECT
 public:
     explicit CustomToolsWidgetNg(QWidget *parent = nullptr);
-    ~CustomToolsWidgetNg();
+    ~CustomToolsWidgetNg() override;
 
     Q_REQUIRED_RESULT QList<KToggleAction *> actionList() const;
     void initializeView(KActionCollection *ac, const QVector<CustomToolsPlugin *> &localPluginsList);

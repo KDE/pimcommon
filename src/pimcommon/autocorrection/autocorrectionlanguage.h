@@ -20,7 +20,7 @@ class PIMCOMMON_EXPORT AutoCorrectionLanguage : public QComboBox
 {
 public:
     explicit AutoCorrectionLanguage(QWidget *parent);
-    ~AutoCorrectionLanguage();
+    ~AutoCorrectionLanguage() override;
 
     /**
      * @brief language

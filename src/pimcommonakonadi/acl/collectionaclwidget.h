@@ -17,7 +17,7 @@ class CollectionAclWidget : public QWidget
     Q_OBJECT
 public:
     explicit CollectionAclWidget(QWidget *parent = nullptr);
-    ~CollectionAclWidget();
+    ~CollectionAclWidget() override;
 
     Q_REQUIRED_RESULT PimCommon::AclManager *aclManager() const;
     Q_REQUIRED_RESULT bool recursive() const;

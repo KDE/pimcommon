@@ -22,7 +22,7 @@ class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QWidget
     Q_OBJECT
 public:
     explicit ContentTypeWidget(QWidget *parent = nullptr);
-    ~ContentTypeWidget();
+    ~ContentTypeWidget() override;
 
     Q_REQUIRED_RESULT int currentIndex() const;
     void setCurrentIndex(int index);

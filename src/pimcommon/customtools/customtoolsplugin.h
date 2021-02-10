@@ -24,7 +24,7 @@ class PIMCOMMON_EXPORT CustomToolsPlugin : public QObject
     Q_OBJECT
 public:
     explicit CustomToolsPlugin(QObject *parent = nullptr);
-    ~CustomToolsPlugin();
+    ~CustomToolsPlugin() override;
 
     virtual PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent = nullptr) = 0;
     Q_REQUIRED_RESULT virtual QString customToolName() const = 0;

@@ -21,7 +21,7 @@ class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
     Q_OBJECT
 public:
     explicit ConfigurePluginDialog(QWidget *parent = nullptr);
-    ~ConfigurePluginDialog();
+    ~ConfigurePluginDialog() override;
 
     void initLayout(bool addSpacer = false);
 

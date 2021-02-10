@@ -23,7 +23,7 @@ class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QWidget
     Q_OBJECT
 public:
     explicit IncidencesForWidget(QWidget *parent = nullptr);
-    ~IncidencesForWidget();
+    ~IncidencesForWidget() override;
 
     Q_REQUIRED_RESULT int currentIndex() const;
     void setCurrentIndex(int index);

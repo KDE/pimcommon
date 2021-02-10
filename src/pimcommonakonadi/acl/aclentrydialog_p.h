@@ -32,7 +32,7 @@ public:
     /**
      * Destroys the ACL entry dialog.
      */
-    ~AclEntryDialog();
+    ~AclEntryDialog() override;
 
     /**
      * Sets the user @p id of the ACL entry.

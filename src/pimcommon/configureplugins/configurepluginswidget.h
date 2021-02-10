@@ -25,7 +25,7 @@ class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
 public:
     explicit ConfigurePluginsWidget(QWidget *parent = nullptr);
     explicit ConfigurePluginsWidget(ConfigurePluginsListWidget *configurePluginListWidget, QWidget *parent = nullptr);
-    ~ConfigurePluginsWidget();
+    ~ConfigurePluginsWidget() override;
 
     void save();
     void defaults();

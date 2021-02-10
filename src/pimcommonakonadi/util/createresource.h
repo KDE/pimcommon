@@ -23,7 +23,7 @@ class PIMCOMMONAKONADI_EXPORT CreateResource : public QObject
     Q_OBJECT
 public:
     explicit CreateResource(QObject *parent = nullptr);
-    ~CreateResource();
+    ~CreateResource() override;
 
     Q_REQUIRED_RESULT QString createResource(const QString &resources,
                                              const QString &name,

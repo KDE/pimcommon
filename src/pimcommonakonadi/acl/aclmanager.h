@@ -42,7 +42,7 @@ public:
     /**
      * Destroys the ACL manager.
      */
-    ~AclManager();
+    ~AclManager() override;
 
     /**
      * Sets the @p collection whose ACL will be managed.

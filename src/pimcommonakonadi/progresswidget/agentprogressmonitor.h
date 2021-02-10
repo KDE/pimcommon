@@ -25,7 +25,7 @@ class AgentProgressMonitor : public QObject
 public:
     // used by our friend ProgressManager
     AgentProgressMonitor(const Akonadi::AgentInstance &mAgent, KPIM::ProgressItem *mItem);
-    ~AgentProgressMonitor();
+    ~AgentProgressMonitor() override;
 
 private:
     void abort();

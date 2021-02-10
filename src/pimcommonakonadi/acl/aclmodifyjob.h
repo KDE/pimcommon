@@ -19,7 +19,7 @@ class AclModifyJob : public QObject
     Q_OBJECT
 public:
     explicit AclModifyJob(QObject *parent = nullptr);
-    ~AclModifyJob();
+    ~AclModifyJob() override;
 
     void setTopLevelCollection(const Akonadi::Collection &topLevelCollection);
     void setRecursive(bool recursive);

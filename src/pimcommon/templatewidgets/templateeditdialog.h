@@ -21,7 +21,7 @@ class TemplateEditDialog : public QDialog
     Q_OBJECT
 public:
     explicit TemplateEditDialog(QWidget *parent = nullptr, bool defaultTemplate = false);
-    ~TemplateEditDialog();
+    ~TemplateEditDialog() override;
 
     void setTemplateName(const QString &name);
     Q_REQUIRED_RESULT QString templateName() const;
