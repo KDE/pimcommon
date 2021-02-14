@@ -11,7 +11,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KNS3/DownloadDialog>
+#include <KNewStuff3/KNS3/QtQuickDialogWrapper>
 #include <KSharedConfig>
 #include <QIcon>
 #include <QMenu>
@@ -262,9 +262,7 @@ public:
 
     void slotDownloadTemplates()
     {
-        QPointer<KNS3::DownloadDialog> downloadThemesDialog = new KNS3::DownloadDialog(knewstuffConfigName);
-        downloadThemesDialog->exec();
-        delete downloadThemesDialog;
+        KNS3::QtQuickDialogWrapper(QStringLiteral("korganizer.knsrc")).exec();
     }
 
     void save()
