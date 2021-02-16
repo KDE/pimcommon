@@ -29,7 +29,7 @@ class PurposeMenuWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit PurposeMenuWidgetTest(QObject *parent = nullptr);
-    ~PurposeMenuWidgetTest() = default;
+    ~PurposeMenuWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

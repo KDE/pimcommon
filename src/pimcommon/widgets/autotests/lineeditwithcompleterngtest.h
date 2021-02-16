@@ -14,7 +14,7 @@ class LineEditWithCompleterNgTest : public QObject
     Q_OBJECT
 public:
     explicit LineEditWithCompleterNgTest(QObject *parent = nullptr);
-    ~LineEditWithCompleterNgTest() = default;
+    ~LineEditWithCompleterNgTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

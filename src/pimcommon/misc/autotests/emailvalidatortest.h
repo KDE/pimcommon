@@ -14,7 +14,7 @@ class EmailValidatorTest : public QObject
     Q_OBJECT
 public:
     explicit EmailValidatorTest(QObject *parent = nullptr);
-    ~EmailValidatorTest() = default;
+    ~EmailValidatorTest() override = default;
 
 private Q_SLOTS:
     void shouldValidateEmail_data();
