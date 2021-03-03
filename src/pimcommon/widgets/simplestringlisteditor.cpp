@@ -55,6 +55,9 @@ public:
     QPushButton *mCustomButton = nullptr;
     QVBoxLayout *mButtonLayout = nullptr;
     QString mAddDialogLabel = i18n("New entry:");
+    QString mAddDialogTitle = i18n("New Value");
+    QString mModifyDialogTitle = i18n("New Value");
+    QString mModifyDialogLabel = i18n("New entry:");
     QString mRemoveDialogLabel = i18n("Do you want to remove selected text?");
 };
 
@@ -259,7 +262,7 @@ void SimpleStringListEditor::setButtonText(ButtonCode button, const QString &tex
 void SimpleStringListEditor::addNewEntry()
 {
     bool ok = false;
-    const QString newEntry = QInputDialog::getText(this, i18n("New Value"), d->mAddDialogLabel, QLineEdit::Normal, QString(), &ok);
+    const QString newEntry = QInputDialog::getText(this, d->mAddDialogTitle, d->mAddDialogLabel, QLineEdit::Normal, QString(), &ok);
     if (ok && !newEntry.trimmed().isEmpty()) {
         insertNewEntry(newEntry);
     }
@@ -319,7 +322,7 @@ void SimpleStringListEditor::slotRemove()
 QString SimpleStringListEditor::modifyEntry(const QString &text)
 {
     bool ok = false;
-    QString newText = QInputDialog::getText(this, i18n("Change Value"), d->mAddDialogLabel, QLineEdit::Normal, text, &ok);
+    QString newText = QInputDialog::getText(this, d->mModifyDialogTitle, d->mModifyDialogLabel, QLineEdit::Normal, text, &ok);
     Q_EMIT aboutToAdd(newText);
 
     if (!ok || newText.trimmed().isEmpty() || newText == text) {
@@ -350,6 +353,21 @@ void SimpleStringListEditor::setRemoveDialogLabel(const QString &removeDialogLab
 void SimpleStringListEditor::setAddDialogLabel(const QString &addDialogLabel)
 {
     d->mAddDialogLabel = addDialogLabel;
+}
+
+void SimpleStringListEditor::setAddDialogTitle(const QString &str)
+{
+    d->mAddDialogTitle = str;
+}
+
+void SimpleStringListEditor::setModifyDialogTitle(const QString &str)
+{
+    d->mModifyDialogTitle = str;
+}
+
+void SimpleStringListEditor::setModifyDialogLabel(const QString &str)
+{
+    d->mModifyDialogLabel = str;
 }
 
 void SimpleStringListEditor::slotUp()

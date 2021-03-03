@@ -74,8 +74,13 @@ public:
 
     Q_REQUIRED_RESULT virtual QString modifyEntry(const QString &text);
     void setAddDialogLabel(const QString &addDialogLabel);
+    void setAddDialogTitle(const QString &str);
+
+    void setModifyDialogTitle(const QString &str);
+    void setModifyDialogLabel(const QString &str);
 
     void setRemoveDialogLabel(const QString &removeDialogLabel);
+
 Q_SIGNALS:
     /** Connected slots can alter the argument to be added or set the
       argument to QString() to suppress adding.
