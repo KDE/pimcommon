@@ -22,7 +22,7 @@ class PIMCOMMON_EXPORT EmailValidator : public QValidator // krazy:exclude=dpoin
 {
     Q_OBJECT
 public:
-    explicit EmailValidator(QObject *parent);
+    explicit EmailValidator(QObject *parent = nullptr);
 
     State validate(QString &str, int &pos) const override;
 
