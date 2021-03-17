@@ -94,6 +94,9 @@ bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirect
         const auto archiveFile = static_cast<const KArchiveFile *>(documentList);
         archiveFile->copyTo(mTempDir->path());
         QFile file(mTempDir->path() + QLatin1Char('/') + archiveFileName);
+        if (!file.open(QIODevice::ReadOnly)) {
+            qCWarning(PIMCOMMON_LOG) << "Impossible to open " << file.fileName();
+        }
         QDomDocument doc;
         if (loadDomElement(doc, &file)) {
             QDomElement list = doc.documentElement();
