@@ -173,7 +173,7 @@ public:
                 menu->addAction(defaultTemplate ? i18n("Show...") : i18n("Modify..."), q, [this]() {
                     slotModify();
                 });
-                menu->addAction(i18n("Duplicate"), q, [this]() {
+                menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Duplicate"), q, [this]() {
                     slotDuplicate();
                 });
             }
