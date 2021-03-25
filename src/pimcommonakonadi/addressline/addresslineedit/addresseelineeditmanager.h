@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADDRESSEELINEEDITMANAGER_H
-#define ADDRESSEELINEEDITMANAGER_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <QMap>
@@ -128,4 +127,3 @@ private:
     QNetworkConfigurationManager *const mNetworkConfigMgr;
 };
 }
-#endif // ADDRESSEELINEEDITMANAGER_H

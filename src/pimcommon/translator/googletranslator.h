@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GOOGLETRANSLATOR_H
-#define GOOGLETRANSLATOR_H
+#pragma once
 
 #include <QNetworkReply>
 #include <QObject>
@@ -55,4 +54,3 @@ private:
 };
 }
 
-#endif // GOOGLETRANSLATOR_H

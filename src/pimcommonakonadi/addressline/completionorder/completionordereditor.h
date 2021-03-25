@@ -6,8 +6,7 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef KDEPIM_COMPLETIONORDEREDITOR_H
-#define KDEPIM_COMPLETIONORDEREDITOR_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QDialog>
@@ -41,4 +40,3 @@ private:
 };
 } // namespace
 
-#endif /* COMPLETIONORDEREDITOR_H */

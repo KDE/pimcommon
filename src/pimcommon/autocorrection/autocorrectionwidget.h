@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AutoCorrectionWidget_H
-#define AutoCorrectionWidget_H
+#pragma once
 
 #include "pimcommon/autocorrection.h"
 #include "pimcommon_export.h"
@@ -89,4 +88,3 @@ private:
 };
 }
 
-#endif // AutoCorrectionWidget_H

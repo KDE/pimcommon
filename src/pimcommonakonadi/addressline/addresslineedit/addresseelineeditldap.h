@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSEELINEEDITLDAP_H
-#define ADDRESSEELINEEDITLDAP_H
+#pragma once
 
 #include <QMap>
 #include <QTimer>
@@ -60,4 +59,3 @@ private:
 };
 }
 
-#endif // ADDRESSEELINEEDITLDAP_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef COMPLETIONORDERWIDGET_H
-#define COMPLETIONORDERWIDGET_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 #include <KConfig>
@@ -91,4 +90,3 @@ private:
 };
 }
 
-#endif // COMPLETIONORDERWIDGET_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTMULTICOLLECTIONWIDGET_H
-#define SELECTMULTICOLLECTIONWIDGET_H
+#pragma once
 
 #include <Collection>
 #include <QModelIndex>
@@ -33,4 +32,3 @@ private:
 };
 }
 
-#endif // SELECTMULTICOLLECTIONWIDGET_H

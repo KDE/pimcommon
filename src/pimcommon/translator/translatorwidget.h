@@ -5,8 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRANSLATORWIDGET_H
-#define TRANSLATORWIDGET_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <KPIMTextEdit/PlainTextEditor>
@@ -91,4 +90,3 @@ private:
 };
 }
 
-#endif /* TRANSLATORWIDGET_H */

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SUBJECTLINEEDITWITHAUTOCORRECTION_H
-#define SUBJECTLINEEDITWITHAUTOCORRECTION_H
+#pragma once
 
 #include "pimcommon_export.h"
 
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif // SUBJECTLINEEDITWITHAUTOCORRECTION_H

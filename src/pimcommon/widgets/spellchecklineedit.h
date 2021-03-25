@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef SpellCheckLineEdit_H
-#define SpellCheckLineEdit_H
+#pragma once
 #include "pimcommon_export.h"
 #include <KPIMTextEdit/RichTextEditor>
 
@@ -48,4 +47,3 @@ Q_SIGNALS:
     void focusDown();
 };
 }
-#endif /* SpellCheckLineEdit_H */

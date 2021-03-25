@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AbstractGENERICPLUGIN_H
-#define AbstractGENERICPLUGIN_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -41,4 +40,3 @@ private:
     bool mIsEnabled = true;
 };
 }
-#endif // AbstractGENERICPLUGIN_H

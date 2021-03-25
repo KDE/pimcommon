@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CONTENTTYPEWIDGETTEST_H
-#define CONTENTTYPEWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldChangeItem();
 };
 
-#endif // CONTENTTYPEWIDGETTEST_H

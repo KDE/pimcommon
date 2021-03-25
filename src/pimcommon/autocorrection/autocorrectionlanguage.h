@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AutoCorrectionLanguage_H
-#define AutoCorrectionLanguage_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QComboBox>
@@ -35,4 +34,3 @@ public:
     void setLanguage(const QString &language);
 };
 }
-#endif // AutoCorrectionLanguage_H

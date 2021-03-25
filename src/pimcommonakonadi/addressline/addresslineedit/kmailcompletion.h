@@ -7,8 +7,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KDEPIM_KMAILCOMPLETION_H
-#define KDEPIM_KMAILCOMPLETION_H
+#pragma once
 
 #include <KCompletion>
 
@@ -70,4 +69,3 @@ private:
 };
 }
 
-#endif

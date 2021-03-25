@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AbstractGENERICPLUGININTERFACE_H
-#define AbstractGENERICPLUGININTERFACE_H
+#pragma once
 #include "pimcommon_export.h"
 #include <QObject>
 class QAction;
@@ -62,4 +61,3 @@ private:
     AbstractGenericPluginInterfacePrivate *const d;
 };
 }
-#endif // AbstractGENERICPLUGININTERFACE_H

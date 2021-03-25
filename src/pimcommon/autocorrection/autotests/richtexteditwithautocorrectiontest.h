@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef RICHTEXTEDITWITHAUTOCORRECTIONTEST_H
-#define RICHTEXTEDITWITHAUTOCORRECTIONTEST_H
+#pragma once
 #include <QObject>
 
 class RichTextEditWithAutoCorrectionTest : public QObject
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldReplaceWhenPressReturn();
 };
 
-#endif // RICHTEXTEDITWITHAUTOCORRECTIONTEST_H

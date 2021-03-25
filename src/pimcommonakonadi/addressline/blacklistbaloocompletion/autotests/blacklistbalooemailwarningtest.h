@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILWARNINGTEST_H
-#define BLACKLISTBALOOEMAILWARNINGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldEmitNewSearch();
 };
 
-#endif // BLACKLISTBALOOEMAILWARNINGTEST_H

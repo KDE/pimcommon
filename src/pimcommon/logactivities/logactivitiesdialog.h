@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LOGACTIVITIESDIALOG_H
-#define LOGACTIVITIESDIALOG_H
+#pragma once
 
 #include "pimcommon_private_export.h"
 #include <QDialog>
@@ -44,4 +43,3 @@ private:
 };
 }
 
-#endif // LOGACTIVITIESDIALOG_H

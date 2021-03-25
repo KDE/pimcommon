@@ -5,8 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef PIMCOMMON_ACLENTRYDIALOG_P_H
-#define PIMCOMMON_ACLENTRYDIALOG_P_H
+#pragma once
 
 #include <KIMAP/Acl>
 
@@ -63,4 +62,3 @@ private:
 };
 }
 
-#endif

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILSEARCHJOB_H
-#define BLACKLISTBALOOEMAILSEARCHJOB_H
+#pragma once
 
 #include <QObject>
 
@@ -35,4 +34,3 @@ private:
 };
 }
 
-#endif // BLACKLISTBALOOEMAILSEARCHJOB_H

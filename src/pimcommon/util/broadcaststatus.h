@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PIMCOMMON_BROADCASTSTATUS_H
-#define PIMCOMMON_BROADCASTSTATUS_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -63,4 +62,3 @@ protected:
 };
 }
 
-#endif

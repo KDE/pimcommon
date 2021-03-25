@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PIMCOMMON_AGENTPROGRESSMONITOR_H
-#define PIMCOMMON_AGENTPROGRESSMONITOR_H
+#pragma once
 
 #include <Libkdepim/ProgressManager> // ProgressItem
 
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif

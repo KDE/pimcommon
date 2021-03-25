@@ -5,8 +5,7 @@
 ** SPDX-License-Identifier: GPL-2.0-or-later
 **
 *******************************************************************************/
-#ifndef PIMCOMMON_PIMUTIL_H
-#define PIMCOMMON_PIMUTIL_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QUrl>
@@ -36,4 +35,3 @@ Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList generateEmailList(const QStringLi
 }
 }
 
-#endif

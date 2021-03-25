@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMAPRESOURCECAPABILITIESMANAGER_H
-#define IMAPRESOURCECAPABILITIESMANAGER_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -42,4 +41,3 @@ private:
 };
 }
 
-#endif // IMAPRESOURCECAPABILITIESMANAGER_H

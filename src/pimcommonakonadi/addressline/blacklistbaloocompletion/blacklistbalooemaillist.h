@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILLIST_H
-#define BLACKLISTBALOOEMAILLIST_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 #include <QHash>
@@ -56,4 +55,3 @@ private:
 };
 }
 
-#endif // BLACKLISTBALOOEMAILLIST_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PIMCOMMON_SETTINGS_H
-#define PIMCOMMON_SETTINGS_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include "pimcommonsetting_base.h"
@@ -43,4 +42,3 @@ private:
 };
 }
 
-#endif /* PIMCOMMON_SETTINGS_H */

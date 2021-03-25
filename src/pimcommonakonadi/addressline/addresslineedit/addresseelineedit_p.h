@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADDRESSEELINEEDIT_P_H
-#define ADDRESSEELINEEDIT_P_H
+#pragma once
 #include <KLDAP/LdapClientSearch>
 #include <QList>
 #include <QObject>
@@ -145,4 +144,3 @@ private:
 };
 }
 
-#endif // ADDRESSEELINEEDIT_P_H

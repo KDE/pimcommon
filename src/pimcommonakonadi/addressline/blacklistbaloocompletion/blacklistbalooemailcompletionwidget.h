@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILCOMPLETIONWIDGET_H
-#define BLACKLISTBALOOEMAILCOMPLETIONWIDGET_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 #include <QWidget>
@@ -57,4 +56,3 @@ private:
 };
 }
 
-#endif // BLACKLISTBALOOEMAILCOMPLETIONWIDGET_H

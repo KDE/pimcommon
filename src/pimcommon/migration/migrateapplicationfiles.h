@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MIGRATEAPPLICATIONFILE_H
-#define MIGRATEAPPLICATIONFILE_H
+#pragma once
 
 #include "migratefileinfo.h"
 #include "pimcommon_export.h"
@@ -53,4 +52,3 @@ private:
     MigrateApplicationFilesPrivate *const d;
 };
 }
-#endif // MIGRATEAPPLICATIONFILE_H

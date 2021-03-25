@@ -5,8 +5,7 @@
 
 */
 
-#ifndef CONTENTTYPEWIDGET_H
-#define CONTENTTYPEWIDGET_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QWidget>
@@ -37,4 +36,3 @@ private:
     ContentTypeWidgetPrivate *const d;
 };
 }
-#endif // CONTENTTYPEWIDGET_H

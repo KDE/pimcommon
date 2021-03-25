@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEST_CUSTOMTOOLSWIDGETNG_GUI_H
-#define TEST_CUSTOMTOOLSWIDGETNG_GUI_H
+#pragma once
 
 #include <QWidget>
 namespace PimCommon
@@ -24,4 +23,3 @@ private:
     PimCommon::CustomToolsWidgetNg *mCustomTools;
 };
 
-#endif

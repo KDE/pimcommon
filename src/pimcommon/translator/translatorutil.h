@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRANSLATORUTIL_H
-#define TRANSLATORUTIL_H
+#pragma once
 
 #include <QMap>
 #include <QPair>
@@ -93,4 +92,3 @@ public:
 };
 }
 
-#endif // TRANSLATORUTIL_H

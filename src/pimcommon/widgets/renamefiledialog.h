@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef RENAMEFILEDIALOG_H
-#define RENAMEFILEDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QUrl>
@@ -48,4 +47,3 @@ private:
 };
 }
 
-#endif /* RENAMEFILEDIALOG_H */

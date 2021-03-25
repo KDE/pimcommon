@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef EMAILVALIDATOR_H
-#define EMAILVALIDATOR_H
+#pragma once
 
 #include "pimcommon_export.h"
 
@@ -30,4 +29,3 @@ public:
 };
 }
 
-#endif

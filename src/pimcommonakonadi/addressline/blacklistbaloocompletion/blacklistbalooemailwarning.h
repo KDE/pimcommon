@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILWARNING_H
-#define BLACKLISTBALOOEMAILWARNING_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 #include <KMessageWidget>
@@ -29,4 +28,3 @@ private:
     void slotSearch();
 };
 }
-#endif // BLACKLISTBALOOEMAILWARNING_H

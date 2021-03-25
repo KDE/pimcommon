@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 
 */
-#ifndef ACLMODIFYJOB_H
-#define ACLMODIFYJOB_H
+#pragma once
 
 #include <AkonadiCore/collection.h>
 #include <KIMAP/Acl>
@@ -51,4 +50,3 @@ private:
     int mCurrentIndex = -1;
 };
 }
-#endif // ACLMODIFYJOB_H

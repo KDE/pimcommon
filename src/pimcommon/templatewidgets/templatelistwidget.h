@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEMPLATELISTWIDGET_H
-#define TEMPLATELISTWIDGET_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QListWidget>
@@ -58,4 +57,3 @@ private:
 };
 }
 Q_DECLARE_TYPEINFO(PimCommon::defaultTemplate, Q_MOVABLE_TYPE);
-#endif // TEMPLATELISTWIDGET_H

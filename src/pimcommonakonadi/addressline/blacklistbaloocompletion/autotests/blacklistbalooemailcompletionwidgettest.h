@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILCOMPLETIONWIDGETTEST_H
-#define BLACKLISTBALOOEMAILCOMPLETIONWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldChangeEnableSelectUnSelectButton();
 };
 
-#endif // BLACKLISTBALOOEMAILCOMPLETIONWIDGETTEST_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef COMPLETIONCONFIGUREDIALOGTEST_H
-#define COMPLETIONCONFIGUREDIALOGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void initTestCase();
 };
 
-#endif // COMPLETIONCONFIGUREDIALOGTEST_H

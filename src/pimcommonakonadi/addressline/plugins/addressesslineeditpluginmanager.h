@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSESSLINEEDITPLUGINMANAGER_H
-#define ADDRESSESSLINEEDITPLUGINMANAGER_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QObject>
@@ -35,4 +34,3 @@ private:
 };
 }
 
-#endif // ADDRESSESSLINEEDITPLUGINMANAGER_H

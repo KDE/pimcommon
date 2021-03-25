@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BALOOCOMPLETIONEMAIL_H
-#define BALOOCOMPLETIONEMAIL_H
+#pragma once
 #include "pimcommonakonadi_private_export.h"
 #include <QStringList>
 namespace PimCommon
@@ -30,4 +29,3 @@ private:
 };
 }
 
-#endif // BALOOCOMPLETIONEMAIL_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PIMCOMMONCREATERESOURCE_H
-#define PIMCOMMONCREATERESOURCE_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QMap>
@@ -36,4 +35,3 @@ Q_SIGNALS:
 };
 }
 
-#endif // CREATERESOURCE_H

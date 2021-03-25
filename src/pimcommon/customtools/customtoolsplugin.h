@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CUSTOMTOOLSPLUGIN_H
-#define CUSTOMTOOLSPLUGIN_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -43,4 +42,3 @@ private:
     CustomToolsPluginPrivate *const d;
 };
 }
-#endif // CUSTOMTOOLSPLUGIN_H

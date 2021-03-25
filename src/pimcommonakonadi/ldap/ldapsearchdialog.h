@@ -6,8 +6,7 @@
  *
  * SPDX-License-Identifier: LGPL-2.0-or-later
  */
-#ifndef KLDAP_LDAPSEARCHDIALOG_H
-#define KLDAP_LDAPSEARCHDIALOG_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 
@@ -91,4 +90,3 @@ private:
 };
 }
 Q_DECLARE_METATYPE(PimCommon::LdapSearchDialog::FilterType)
-#endif

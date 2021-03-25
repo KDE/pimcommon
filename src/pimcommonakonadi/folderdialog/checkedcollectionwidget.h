@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKEDCOLLECTIONWIDGET_H
-#define CHECKEDCOLLECTIONWIDGET_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QWidget>
@@ -52,4 +51,3 @@ private:
 };
 }
 
-#endif // CHECKEDCOLLECTIONWIDGET_H

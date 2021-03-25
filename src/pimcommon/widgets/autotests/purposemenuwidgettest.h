@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PURPOSEMENUWIDGETTEST_H
-#define PURPOSEMENUWIDGETTEST_H
+#pragma once
 
 #include "widgets/purposemenuwidget.h"
 #include <QObject>
@@ -34,4 +33,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif // PURPOSEMENUWIDGETTEST_H

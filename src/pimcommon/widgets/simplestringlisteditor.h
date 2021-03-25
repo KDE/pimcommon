@@ -9,8 +9,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SIMPLESTRINGLISTEDITOR_H
-#define SIMPLESTRINGLISTEDITOR_H
+#pragma once
 
 #include <QStringList>
 #include <QWidget>
@@ -108,4 +107,3 @@ private:
 };
 }
 
-#endif // SIMPLESTRINGLISTEDITOR_H

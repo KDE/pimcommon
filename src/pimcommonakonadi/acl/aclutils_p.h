@@ -5,8 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef PIMCOMMON_ACLUTILS_P_H
-#define PIMCOMMON_ACLUTILS_P_H
+#pragma once
 
 #include <KIMAP/Acl>
 
@@ -48,4 +47,3 @@ QString guessUserName(const QString &loginName, const QString &serverName);
 }
 }
 
-#endif

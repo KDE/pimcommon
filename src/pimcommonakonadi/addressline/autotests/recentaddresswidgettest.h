@@ -5,8 +5,7 @@
 
 */
 
-#ifndef RECENTADDRESSWIDGETTEST_H
-#define RECENTADDRESSWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -25,4 +24,3 @@ private Q_SLOTS:
     void shouldDisableAddButton();
 };
 
-#endif // RECENTADDRESSWIDGETTEST_H

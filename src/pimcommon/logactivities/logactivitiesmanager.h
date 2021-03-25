@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LOGACTIVITIESMANAGER_H
-#define LOGACTIVITIESMANAGER_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -44,4 +43,3 @@ private:
     LogActivitiesManagerPrivate *const d;
 };
 }
-#endif // LOGACTIVITIESMANAGER_H

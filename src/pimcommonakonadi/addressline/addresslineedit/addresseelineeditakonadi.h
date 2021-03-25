@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSEELINEEDITAKONADI_H
-#define ADDRESSEELINEEDITAKONADI_H
+#pragma once
 
 namespace Akonadi
 {
@@ -31,4 +30,3 @@ private:
 };
 }
 
-#endif // ADDRESSEELINEEDITAKONADI_H

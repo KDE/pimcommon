@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEST_AUTOCORRECTION_GUI_H
-#define TEST_AUTOCORRECTION_GUI_H
+#pragma once
 
 #include <KSharedConfig>
 #include <QDialog>
@@ -66,4 +65,3 @@ private:
     KSharedConfig::Ptr mConfig;
 };
 
-#endif

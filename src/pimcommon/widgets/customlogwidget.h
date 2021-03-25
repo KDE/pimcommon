@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef CUSTOMLOGWIDGET_H
-#define CUSTOMLOGWIDGET_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QListWidget>
@@ -51,4 +50,3 @@ private:
 };
 }
 
-#endif /* CUSTOMLOGWIDGET_H */

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILLISTTEST_H
-#define BLACKLISTBALOOEMAILLISTTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -27,4 +26,3 @@ private Q_SLOTS:
     void shouldAvoidSameEmailWithDisplayNameOrNot();
 };
 
-#endif // BLACKLISTBALOOEMAILLISTTEST_H

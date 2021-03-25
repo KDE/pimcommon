@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PROGRESSMANAGERAKONADI_H
-#define PROGRESSMANAGERAKONADI_H
+#pragma once
 #include "pimcommonakonadi_export.h"
 #include <Libkdepim/ProgressManager>
 
@@ -26,4 +25,3 @@ PIMCOMMONAKONADI_EXPORT KPIM::ProgressItem *createProgressItem(KPIM::ProgressIte
                                                                KPIM::ProgressItem::CryptoStatus cryptoStatus);
 }
 }
-#endif // PROGRESSMANAGERAKONADI_H

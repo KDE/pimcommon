@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRANSLATORDEBUGDIALOG_H
-#define TRANSLATORDEBUGDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -30,4 +29,3 @@ private:
     QPushButton *mUser1Button = nullptr;
 };
 
-#endif // TRANSLATORDEBUGDIALOG_H

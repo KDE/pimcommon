@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KACTIONMENUCHANGECASE_H
-#define KACTIONMENUCHANGECASE_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <KActionMenu>
@@ -46,4 +45,3 @@ private:
 };
 }
 
-#endif // KACTIONMENUCHANGECASE_H

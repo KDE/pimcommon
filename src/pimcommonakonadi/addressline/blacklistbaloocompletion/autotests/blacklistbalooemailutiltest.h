@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILUTILTEST_H
-#define BLACKLISTBALOOEMAILUTILTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldAddNewElements();
 };
 
-#endif // BLACKLISTBALOOEMAILUTILTEST_H

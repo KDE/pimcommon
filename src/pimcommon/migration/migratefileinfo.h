@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MIGRATEFILEINFO_H
-#define MIGRATEFILEINFO_H
+#pragma once
 
 #include <QString>
 #include <QStringList>
@@ -48,4 +47,3 @@ private:
 };
 }
 
-#endif // MIGRATEFILEINFO_H

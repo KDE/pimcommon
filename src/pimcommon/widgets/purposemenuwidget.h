@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PURPOSEMENUWIDGET_H
-#define PURPOSEMENUWIDGET_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -40,4 +39,3 @@ private:
 };
 }
 
-#endif // PURPOSEMENUWIDGET_H

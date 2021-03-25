@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSEELINEEDITBALOO_H
-#define ADDRESSEELINEEDITBALOO_H
+#pragma once
 
 #include <QStringList>
 
@@ -36,4 +35,3 @@ private:
 };
 }
 
-#endif // ADDRESSEELINEEDITBALOO_H

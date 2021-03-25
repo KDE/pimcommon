@@ -5,8 +5,7 @@
 
 */
 
-#ifndef COMPLETIONORDERWIDGETTEST_H
-#define COMPLETIONORDERWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // COMPLETIONORDERWIDGETTEST_H

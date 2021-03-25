@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef REGULAREXPRESSIONTESTS_H
-#define REGULAREXPRESSIONTESTS_H
+#pragma once
 
 #include <QObject>
 
@@ -50,4 +49,3 @@ private Q_SLOTS:
     void shouldCaptureValue();
 };
 
-#endif // REGULAREXPRESSIONTESTS_H

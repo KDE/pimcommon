@@ -5,8 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef PIMCOMMON_ACLMANAGER_H
-#define PIMCOMMON_ACLMANAGER_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 
@@ -104,4 +103,3 @@ private:
 };
 }
 
-#endif

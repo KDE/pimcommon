@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AutoCorrectionTreeWidget_H
-#define AutoCorrectionTreeWidget_H
+#pragma once
 
 #include <QTreeWidget>
 
@@ -26,4 +25,3 @@ Q_SIGNALS:
 };
 }
 
-#endif // AutoCorrectionTreeWidget_H

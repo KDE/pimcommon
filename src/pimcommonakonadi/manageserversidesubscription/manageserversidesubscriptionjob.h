@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MANAGESERVERSIDESUBSCRIPTIONJOB_H
-#define MANAGESERVERSIDESUBSCRIPTIONJOB_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/collection.h>
@@ -38,4 +37,3 @@ private:
 };
 }
 
-#endif // MANAGESERVERSIDESUBSCRIPTIONJOB_H

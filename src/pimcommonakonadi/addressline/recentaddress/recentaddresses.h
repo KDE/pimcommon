@@ -5,8 +5,7 @@
  *
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
-#ifndef KDEPIM_RECENTADDRESSES_H
-#define KDEPIM_RECENTADDRESSES_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <KContacts/Addressee>
@@ -88,4 +87,3 @@ private:
 };
 }
 
-#endif

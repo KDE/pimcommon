@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PLUGININTERFACE_H
-#define PLUGININTERFACE_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <PimCommon/PluginUtil>
@@ -57,4 +56,3 @@ private:
 };
 }
 
-#endif // PLUGININTERFACE_H

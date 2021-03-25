@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ACLLISTVIEW_H
-#define ACLLISTVIEW_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 #include <QListView>
@@ -30,4 +29,3 @@ private:
     bool mCanBeAdministrated = true;
 };
 }
-#endif // ACLLISTVIEW_H

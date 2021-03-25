@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIGUREPLUGINSWIDGET_H
-#define CONFIGUREPLUGINSWIDGET_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QWidget>
@@ -48,4 +47,3 @@ private:
     KMessageWidget *mMessageWidget = nullptr;
 };
 }
-#endif // CONFIGUREPLUGINSWIDGET_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTKMAILAUTOCORRECTION_H
-#define IMPORTKMAILAUTOCORRECTION_H
+#pragma once
 
 #include "importabstractautocorrection.h"
 #include "pimcommon_private_export.h"
@@ -20,4 +19,3 @@ public:
 };
 }
 
-#endif // IMPORTKMAILAUTOCORRECTION_H

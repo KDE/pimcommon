@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef COLLECTIONACLWIDGET_H
-#define COLLECTIONACLWIDGET_H
+#pragma once
 
 #include <QWidget>
 class QCheckBox;
@@ -33,4 +32,3 @@ private:
 };
 }
 
-#endif // COLLECTIONACLWIDGET_H

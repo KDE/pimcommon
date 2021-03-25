@@ -5,8 +5,7 @@
 ** SPDX-License-Identifier: GPL-2.0-or-later
 **
 *******************************************************************************/
-#ifndef PIMCOMMONAKONADI_MAILUTIL_H
-#define PIMCOMMONAKONADI_MAILUTIL_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/collection.h>
@@ -24,4 +23,3 @@ Q_REQUIRED_RESULT PIMCOMMONAKONADI_EXPORT bool isImapFolder(const Akonadi::Colle
 }
 }
 
-#endif

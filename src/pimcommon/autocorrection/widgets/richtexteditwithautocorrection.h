@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef RICHTEXTEDITWITHAUTOCORRECTION_H
-#define RICHTEXTEDITWITHAUTOCORRECTION_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <KPIMTextEdit/RichTextEditor>
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif // RICHTEXTEDITWITHAUTOCORRECTION_H

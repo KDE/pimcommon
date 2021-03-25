@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GENERICPLUGININTERFACE_H
-#define GENERICPLUGININTERFACE_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/Item>
@@ -47,4 +46,3 @@ private:
 };
 }
 Q_DECLARE_TYPEINFO(PimCommon::ActionType, Q_MOVABLE_TYPE);
-#endif // GENERICPLUGININTERFACE_H

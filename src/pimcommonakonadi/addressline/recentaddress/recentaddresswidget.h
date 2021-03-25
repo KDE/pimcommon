@@ -5,8 +5,7 @@
 
 */
 
-#ifndef RECENTADDRESSWIDGET_H
-#define RECENTADDRESSWIDGET_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QStringList>
@@ -48,4 +47,3 @@ private:
     bool mDirty = false;
 };
 }
-#endif // RECENTADDRESSWIDGET_H

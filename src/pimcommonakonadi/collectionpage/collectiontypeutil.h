@@ -5,8 +5,7 @@
 
 */
 
-#ifndef COLLECTIONTYPEUTIL_H
-#define COLLECTIONTYPEUTIL_H
+#pragma once
 #include "pimcommonakonadi_export.h"
 #include <QByteArray>
 #include <QString>
@@ -52,4 +51,3 @@ public:
     Q_REQUIRED_RESULT QString iconNameFromContentsType(CollectionTypeUtil::FolderContentsType type);
 };
 }
-#endif // COLLECTIONTYPEUTIL_H

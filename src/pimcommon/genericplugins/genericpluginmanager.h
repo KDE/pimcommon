@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GENERICPLUGINMANAGER_H
-#define GENERICPLUGINMANAGER_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <PimCommon/PluginUtil>
@@ -61,4 +60,3 @@ private:
 };
 }
 
-#endif // GENERICPLUGINMANAGER_H

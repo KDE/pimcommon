@@ -5,8 +5,7 @@
 
 */
 
-#ifndef COMPLETIONCONFIGUREDIALOG_H
-#define COMPLETIONCONFIGUREDIALOG_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 
@@ -45,4 +44,3 @@ private:
 };
 }
 
-#endif // COMPLETIONCONFIGUREDIALOG_H

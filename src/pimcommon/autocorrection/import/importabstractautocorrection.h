@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTABSTRACTAUTOCORRECTION_H
-#define IMPORTABSTRACTAUTOCORRECTION_H
+#pragma once
 
 #include <QHash>
 #include <QSet>
@@ -52,4 +51,3 @@ protected:
 };
 }
 
-#endif // IMPORTABSTRACTAUTOCORRECTION_H

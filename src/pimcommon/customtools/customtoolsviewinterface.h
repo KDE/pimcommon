@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CUSTOMTOOLSVIEWINTERFACE_H
-#define CUSTOMTOOLSVIEWINTERFACE_H
+#pragma once
 
 #include "pimcommon_export.h"
 
@@ -33,4 +32,3 @@ Q_SIGNALS:
     void activateView(QWidget *);
 };
 }
-#endif // CUSTOMTOOLSVIEWINTERFACE_H

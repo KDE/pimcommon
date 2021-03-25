@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDRESSESSLINEEDITABSTRACTPLUGIN_H
-#define ADDRESSESSLINEEDITABSTRACTPLUGIN_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QObject>
@@ -50,4 +49,3 @@ private:
 };
 }
 
-#endif // ADDRESSESSLINEEDITABSTRACTPLUGIN_H

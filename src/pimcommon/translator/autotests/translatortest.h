@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRANSLATORTEST_H
-#define TRANSLATORTEST_H
+#pragma once
 #include <QObject>
 
 class TranslatorTest : public QObject
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldEmitTranslatorWasClosedSignalWhenCloseIt();
 };
 
-#endif // TRANSLATORTEST_H

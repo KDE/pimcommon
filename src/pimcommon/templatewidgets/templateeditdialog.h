@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SIEVETEMPLATEEDITDIALOG_H
-#define SIEVETEMPLATEEDITDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif // TEMPLATEEDITDIALOG_H

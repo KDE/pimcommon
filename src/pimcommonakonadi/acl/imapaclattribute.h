@@ -10,8 +10,7 @@
 // Any improvements should be done at kdepim-runtime and
 // than afterwards copy the new version
 
-#ifndef PIMCOMMON_IMAPACLATTRIBUTE_H
-#define PIMCOMMON_IMAPACLATTRIBUTE_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 
@@ -53,4 +52,3 @@ private:
 };
 }
 
-#endif

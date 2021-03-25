@@ -6,8 +6,7 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef COLLECTIONACLPAGE_H
-#define COLLECTIONACLPAGE_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <AkonadiWidgets/CollectionPropertiesPage>
@@ -40,4 +39,3 @@ private:
 AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionAclPageFactory, CollectionAclPage)
 }
 
-#endif

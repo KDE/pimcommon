@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOCORRECTIONTEST_H
-#define AUTOCORRECTIONTEST_H
+#pragma once
 
 #include <KSharedConfig>
 #include <QObject>
@@ -48,4 +47,3 @@ private:
     KSharedConfig::Ptr mConfig;
 };
 
-#endif // AUTOCORRECTIONTEST_H

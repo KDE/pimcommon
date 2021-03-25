@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTLIBREOFFICEAUTOCORRECTION_H
-#define IMPORTLIBREOFFICEAUTOCORRECTION_H
+#pragma once
 
 #include "importabstractautocorrection.h"
 
@@ -37,4 +36,3 @@ private:
 };
 }
 
-#endif // IMPORTLIBREOFFICEAUTOCORRECTION_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIGUREIMMUTABLEWIDGETUTILS_H
-#define CONFIGUREIMMUTABLEWIDGETUTILS_H
+#pragma once
 
 #include "pimcommon_export.h"
 
@@ -51,4 +50,3 @@ PIMCOMMON_EXPORT void saveGroupBox(QGroupBox *b, KCoreConfigSkeleton::ItemBool *
 PIMCOMMON_EXPORT void saveButtonGroup(QButtonGroup *group, KCoreConfigSkeleton::ItemEnum *e);
 }
 }
-#endif // CONFIGUREIMMUTABLEWIDGETUTILS_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LOGACTIVITIESWIDGET_H
-#define LOGACTIVITIESWIDGET_H
+#pragma once
 
 #include "pimcommon_private_export.h"
 #include <QWidget>
@@ -36,4 +35,3 @@ private:
 };
 }
 
-#endif // LOGACTIVITIESWIDGET_H

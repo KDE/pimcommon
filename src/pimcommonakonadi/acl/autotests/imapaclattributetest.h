@@ -3,8 +3,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef IMAPACLATTRIBUTETEST_H
-#define IMAPACLATTRIBUTETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -29,4 +28,3 @@ private Q_SLOTS:
     void testOldRights();
 };
 
-#endif // IMAPACLATTRIBUTETEST_H

@@ -5,8 +5,7 @@
 
 */
 
-#ifndef INCIDENCESFORWIDGET_H
-#define INCIDENCESFORWIDGET_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 #include <QWidget>
@@ -36,4 +35,3 @@ private:
 };
 }
 
-#endif // INCIDENCESFORWIDGET_H

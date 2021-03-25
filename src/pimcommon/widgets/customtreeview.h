@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CUSTOMTREEVIEW_H
-#define CUSTOMTREEVIEW_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QTreeWidget>
@@ -46,4 +45,3 @@ private:
 };
 }
 
-#endif

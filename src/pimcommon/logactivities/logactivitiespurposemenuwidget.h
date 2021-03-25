@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LOGACTIVITIESPURPOSEMENUWIDGET_H
-#define LOGACTIVITIESPURPOSEMENUWIDGET_H
+#pragma once
 
 #include "widgets/purposemenuwidget.h"
 namespace KPIMTextEdit
@@ -29,4 +28,3 @@ private:
 };
 }
 
-#endif // LOGACTIVITIESPURPOSEMENUWIDGET_H

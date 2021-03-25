@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILSEARCHJOBTEST_H
-#define BLACKLISTBALOOEMAILSEARCHJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldNotSearchWhenTextIsEmpty();
 };
 
-#endif // BLACKLISTBALOOEMAILSEARCHJOBTEST_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTMULTICOLLECTIONDIALOG_H
-#define SELECTMULTICOLLECTIONDIALOG_H
+#pragma once
 #include "pimcommonakonadi_export.h"
 #include <Collection>
 #include <QDialog>
@@ -35,4 +34,3 @@ private:
 };
 }
 
-#endif // SELECTMULTICOLLECTIONDIALOG_H

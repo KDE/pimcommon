@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHARESERVICEURLMANAGER_H
-#define SHARESERVICEURLMANAGER_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -45,4 +44,3 @@ private:
 };
 }
 Q_DECLARE_METATYPE(PimCommon::ShareServiceUrlManager::ServiceType)
-#endif // SHARESERVICEURLMANAGER_H

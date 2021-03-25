@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LINEEDITWITHCOMPLETERNG_H
-#define LINEEDITWITHCOMPLETERNG_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QLineEdit>
@@ -36,4 +35,3 @@ private:
     QStringList mListCompetion;
 };
 }
-#endif // LINEEDITWITHCOMPLETER_H

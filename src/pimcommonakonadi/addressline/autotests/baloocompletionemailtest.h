@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BALOOCOMPLETIONEMAILTEST_H
-#define BALOOCOMPLETIONEMAILTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -32,4 +31,3 @@ private Q_SLOTS:
     void shouldExcludeEmptyNameWithDisplayNameForSameAddress();
 };
 
-#endif // BALOOCOMPLETIONEMAILTEST_H

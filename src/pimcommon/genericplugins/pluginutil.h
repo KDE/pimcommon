@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PLUGINUTIL_H
-#define PLUGINUTIL_H
+#pragma once
 
 #include "pimcommon_export.h"
 
@@ -46,4 +45,3 @@ Q_REQUIRED_RESULT PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaDat
 }
 }
 
-#endif // PLUGINUTIL_H

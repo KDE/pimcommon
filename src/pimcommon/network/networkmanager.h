@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef NetworkManager_H
-#define NetworkManager_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QObject>
@@ -31,4 +30,3 @@ private:
 };
 }
 
-#endif // NetworkManager_H

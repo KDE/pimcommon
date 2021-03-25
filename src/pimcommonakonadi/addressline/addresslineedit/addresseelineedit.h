@@ -12,8 +12,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KDEPIM_ADDRESSEELINEEDIT_H
-#define KDEPIM_ADDRESSEELINEEDIT_H
+#pragma once
 
 #include "pimcommonakonadi_export.h"
 
@@ -216,4 +215,3 @@ private:
 };
 }
 
-#endif

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 
 */
-#ifndef INCIDENCESFORWIDGETTEST_H
-#define INCIDENCESFORWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldEmitSignalWhenIndexChanged();
 };
 
-#endif // INCIDENCESFORWIDGETTEST_H

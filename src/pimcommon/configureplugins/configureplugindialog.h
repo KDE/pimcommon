@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIGUREPLUGINDIALOG_H
-#define CONFIGUREPLUGINDIALOG_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QDialog>
@@ -45,4 +44,3 @@ private:
     QDialogButtonBox *mButtonBox = nullptr;
 };
 }
-#endif // CONFIGUREPLUGINDIALOG_H

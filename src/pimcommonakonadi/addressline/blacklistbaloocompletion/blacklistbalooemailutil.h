@@ -5,8 +5,7 @@
 
 */
 
-#ifndef BLACKLISTBALOOEMAILUTIL_H
-#define BLACKLISTBALOOEMAILUTIL_H
+#pragma once
 
 #include "pimcommonakonadi_private_export.h"
 #include <QHash>
@@ -27,4 +26,3 @@ private:
     QHash<QString, bool> mNewBlackList;
 };
 }
-#endif // BLACKLISTBALOOEMAILUTIL_H

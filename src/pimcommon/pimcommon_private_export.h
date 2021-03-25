@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PIMCOMMONPRIVATE_EXPORT_H
-#define PIMCOMMONPRIVATE_EXPORT_H
+#pragma once
 
 #include "pimcommon_export.h"
 
@@ -18,4 +17,3 @@
 #define PIMCOMMON_TESTS_EXPORT
 #endif
 
-#endif

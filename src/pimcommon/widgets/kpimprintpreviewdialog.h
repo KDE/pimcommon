@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KPIMPRINTPREVIEWDIALOG_H
-#define KPIMPRINTPREVIEWDIALOG_H
+#pragma once
 
 #include "pimcommon_export.h"
 #include <QPrintPreviewDialog>
@@ -30,4 +29,3 @@ private:
 };
 }
 
-#endif // KPIMPRINTPREVIEWDIALOG_H
