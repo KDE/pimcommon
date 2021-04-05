@@ -21,7 +21,7 @@
 #include <QUrlQuery>
 #include <QWidget>
 
-#include <errno.h>
+#include <cerrno>
 
 OrgKdeAkonadiImapSettingsInterface *PimCommon::Util::createImapSettingsInterface(const QString &ident)
 {
