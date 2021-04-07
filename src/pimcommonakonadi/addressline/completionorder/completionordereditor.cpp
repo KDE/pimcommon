@@ -70,7 +70,7 @@ CompletionOrderEditor::~CompletionOrderEditor()
 
 void CompletionOrderEditor::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CompletionOrderEditor");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionOrderEditor");
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -79,7 +79,7 @@ void CompletionOrderEditor::readConfig()
 
 void CompletionOrderEditor::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CompletionOrderEditor");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionOrderEditor");
     group.writeEntry("Size", size());
     group.sync();
 }

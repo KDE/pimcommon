@@ -112,7 +112,7 @@ void LogActivitiesDialog::slotClear()
 
 void LogActivitiesDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "LogActivitiesDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "LogActivitiesDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
@@ -121,6 +121,6 @@ void LogActivitiesDialog::readConfig()
 
 void LogActivitiesDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "LogActivitiesDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "LogActivitiesDialog");
     group.writeEntry("Size", size());
 }

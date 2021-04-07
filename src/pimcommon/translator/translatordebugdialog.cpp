@@ -51,7 +51,7 @@ void TranslatorDebugDialog::setDebug(const QString &debugStr)
 
 void TranslatorDebugDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "TranslatorDebugDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "TranslatorDebugDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
@@ -60,7 +60,7 @@ void TranslatorDebugDialog::readConfig()
 
 void TranslatorDebugDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "TranslatorDebugDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "TranslatorDebugDialog");
     group.writeEntry("Size", size());
 }
 

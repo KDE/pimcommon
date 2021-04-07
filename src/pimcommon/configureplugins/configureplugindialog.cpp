@@ -80,7 +80,7 @@ void ConfigurePluginDialog::slotAccepted()
 
 void ConfigurePluginDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ConfigurePluginDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfigurePluginDialog");
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -89,7 +89,7 @@ void ConfigurePluginDialog::readConfig()
 
 void ConfigurePluginDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ConfigurePluginDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfigurePluginDialog");
     group.writeEntry("Size", size());
     group.sync();
 }

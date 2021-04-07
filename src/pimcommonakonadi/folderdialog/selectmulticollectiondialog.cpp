@@ -65,7 +65,7 @@ void SelectMultiCollectionDialog::initialize(const QString &mimetype, const QLis
 
 void SelectMultiCollectionDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "SelectMultiCollectionDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectMultiCollectionDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
@@ -74,7 +74,7 @@ void SelectMultiCollectionDialog::readConfig()
 
 void SelectMultiCollectionDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "SelectMultiCollectionDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectMultiCollectionDialog");
     group.writeEntry("Size", size());
 }
 

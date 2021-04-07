@@ -82,13 +82,13 @@ TemplateEditDialog::~TemplateEditDialog()
 
 void TemplateEditDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "TemplateEditDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "TemplateEditDialog");
     group.writeEntry("Size", size());
 }
 
 void TemplateEditDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "TemplateEditDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "TemplateEditDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(600, 400));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

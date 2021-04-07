@@ -29,7 +29,7 @@ KPimPrintPreviewDialog::~KPimPrintPreviewDialog()
 
 void KPimPrintPreviewDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "KPimPrintPreviewDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "KPimPrintPreviewDialog");
     const QSize size = group.readEntry("Size", QSize(800, 600));
     if (size.isValid()) {
         resize(size);
@@ -38,7 +38,7 @@ void KPimPrintPreviewDialog::readConfig()
 
 void KPimPrintPreviewDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "KPimPrintPreviewDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "KPimPrintPreviewDialog");
     group.writeEntry("Size", size());
     group.sync();
 }

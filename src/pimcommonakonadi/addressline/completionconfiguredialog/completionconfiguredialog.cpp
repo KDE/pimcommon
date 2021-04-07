@@ -79,7 +79,7 @@ CompletionConfigureDialog::~CompletionConfigureDialog()
 
 void CompletionConfigureDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CompletionConfigureDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionConfigureDialog");
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -88,7 +88,7 @@ void CompletionConfigureDialog::readConfig()
 
 void CompletionConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CompletionConfigureDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionConfigureDialog");
     group.writeEntry("Size", size());
     group.sync();
 }
