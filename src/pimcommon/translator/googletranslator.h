@@ -10,7 +10,6 @@
 #include <QObject>
 class QNetworkAccessManager;
 class QComboBox;
-class QNetworkReply;
 
 namespace PimCommon
 {
