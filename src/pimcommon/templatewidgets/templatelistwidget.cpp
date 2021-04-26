@@ -262,7 +262,7 @@ public:
 
     void slotDownloadTemplates()
     {
-        KNS3::QtQuickDialogWrapper(QStringLiteral("korganizer.knsrc")).exec();
+        KNS3::QtQuickDialogWrapper(knewstuffConfigName).exec();
     }
 
     void save()
