@@ -109,10 +109,10 @@ void AddresseeLineEditPrivate::init()
         if (!mCompletionInitialized) {
             q->setCompletionObject(AddresseeLineEditManager::self()->completion(), false);
             connect(q, &KLineEdit::completion, this, &AddresseeLineEditPrivate::slotCompletion);
-            connect(q, &AddresseeLineEdit::returnPressed, this, &AddresseeLineEditPrivate::slotReturnPressed);
+            connect(q, &AddresseeLineEdit::returnKeyPressed, this, &AddresseeLineEditPrivate::slotReturnPressed);
 
             KCompletionBox *box = q->completionBox();
-            connect(box, qOverload<const QString &>(&KCompletionBox::activated), this, &AddresseeLineEditPrivate::slotPopupCompletion);
+            connect(box, &KCompletionBox::textActivated, this, &AddresseeLineEditPrivate::slotPopupCompletion);
             connect(box, &KCompletionBox::userCancelled, this, &AddresseeLineEditPrivate::slotUserCancelled);
             connect(AddresseeLineEditManager::self()->ldapTimer(), &QTimer::timeout, this, &AddresseeLineEditPrivate::slotStartLDAPLookup);
             connect(AddresseeLineEditManager::self()->ldapSearch(),
