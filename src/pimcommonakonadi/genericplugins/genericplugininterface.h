@@ -9,7 +9,7 @@
 #include "pimcommonakonadi_export.h"
 #include <AkonadiCore/Item>
 #include <PimCommon/AbstractGenericPluginInterface>
-#include <QObject>
+
 namespace PimCommon
 {
 class GenericPluginInterfacePrivate;

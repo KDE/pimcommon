@@ -7,7 +7,8 @@
 #pragma once
 
 #include <QMap>
-#include <QTimer>
+#include <QObject>
+class QTimer;
 
 namespace KLDAP
 {

@@ -10,7 +10,7 @@
 #include <KLDAP/LdapClientSearch>
 #include <KLDAP/LdapServer>
 #include <KLocalizedString>
-
+#include <QTimer>
 using namespace PimCommon;
 
 AddresseeLineEditLdap::AddresseeLineEditLdap(AddresseeLineEditManager *addressLineStatic, QObject *parent)
