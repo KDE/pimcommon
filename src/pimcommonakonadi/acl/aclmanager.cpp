@@ -295,7 +295,7 @@ public:
         mCollection = collection;
         mChanged = false;
 
-        const auto *attribute = collection.attribute<PimCommon::ImapAclAttribute>();
+        const auto attribute = collection.attribute<PimCommon::ImapAclAttribute>();
         const QMap<QByteArray, KIMAP::Acl::Rights> rights = attribute->rights();
 
         QString resource = collection.resource();

@@ -25,19 +25,19 @@ RecentAddressWidgetTest::~RecentAddressWidgetTest()
 void RecentAddressWidgetTest::shouldHaveDefaultValue()
 {
     PimCommon::RecentAddressWidget w;
-    auto *lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
+    auto lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
     QVERIFY(lineedit);
     QVERIFY(lineedit->isClearButtonEnabled());
     QVERIFY(lineedit->text().isEmpty());
 
-    auto *newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
+    auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
     QVERIFY(newButton);
 
-    auto *removeButton = w.findChild<QToolButton *>(QStringLiteral("remove_button"));
+    auto removeButton = w.findChild<QToolButton *>(QStringLiteral("remove_button"));
     QVERIFY(removeButton);
     QVERIFY(!removeButton->isEnabled());
 
-    auto *listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
+    auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QVERIFY(listview);
     QCOMPARE(listview->count(), 0);
 }
@@ -45,7 +45,7 @@ void RecentAddressWidgetTest::shouldHaveDefaultValue()
 void RecentAddressWidgetTest::shouldAddAddresses()
 {
     PimCommon::RecentAddressWidget w;
-    auto *listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
+    auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QCOMPARE(listview->count(), 0);
     QStringList lst;
     lst << QStringLiteral("foo");
@@ -62,24 +62,24 @@ void RecentAddressWidgetTest::shouldInformThatItWasChanged()
 {
     PimCommon::RecentAddressWidget w;
     QVERIFY(!w.wasChanged());
-    auto *lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
+    auto lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
     lineedit->setText(QStringLiteral("foo"));
-    auto *newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
+    auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
     QVERIFY(newButton);
     QVERIFY(newButton->isEnabled());
     QTest::mouseClick(newButton, Qt::LeftButton);
     QVERIFY(w.wasChanged());
-    auto *listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
+    auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QCOMPARE(listview->count(), 1);
 }
 
 void RecentAddressWidgetTest::shouldNotAddMultiSameLine()
 {
     PimCommon::RecentAddressWidget w;
-    auto *lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
-    auto *newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
+    auto lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
+    auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
 
-    auto *listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
+    auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QCOMPARE(listview->count(), 0);
 
     lineedit->setText(QStringLiteral("foo"));
@@ -94,9 +94,9 @@ void RecentAddressWidgetTest::shouldNotAddMultiSameLine()
 void RecentAddressWidgetTest::shouldNotAddEmptyLine()
 {
     PimCommon::RecentAddressWidget w;
-    auto *lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
-    auto *newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
-    auto *listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
+    auto lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
+    auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
+    auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QCOMPARE(listview->count(), 0);
     QVERIFY(lineedit->text().isEmpty());
     QVERIFY(!newButton->isEnabled());
@@ -115,8 +115,8 @@ void RecentAddressWidgetTest::shouldNotAddEmptyLine()
 void RecentAddressWidgetTest::shouldDisableAddButton()
 {
     PimCommon::RecentAddressWidget w;
-    auto *lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
-    auto *newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
+    auto lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
+    auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
 
     lineedit->setText(QStringLiteral("foo"));
     QVERIFY(newButton->isEnabled());

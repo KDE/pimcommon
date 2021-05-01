@@ -112,7 +112,7 @@ void AnnotationEditDialog::slotAccepted()
     bool textIsEmpty = d->mTextEdit->isEmpty();
     if (!textIsEmpty) {
         d->mItem.removeAttribute<Akonadi::EntityAnnotationsAttribute>();
-        auto *annotation = d->mItem.attribute<Akonadi::EntityAnnotationsAttribute>(Akonadi::Item::AddIfMissing);
+        auto annotation = d->mItem.attribute<Akonadi::EntityAnnotationsAttribute>(Akonadi::Item::AddIfMissing);
         QMap<QByteArray, QByteArray> map;
         map.insert(d->mNoteType->itemData(d->mNoteType->currentIndex()).toByteArray(), d->mTextEdit->toPlainText().toUtf8());
         annotation->setAnnotations(map);

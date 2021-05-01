@@ -56,8 +56,7 @@ void SelectMultiCollectionWidget::updateStatus(const QModelIndex &parent)
     for (int i = 0; i < nbCol; ++i) {
         const QModelIndex child = mCheckedCollectionWidget->checkableProxy()->index(i, 0, parent);
 
-        const Akonadi::Collection col =
-            mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const auto col = mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
         if (mListCollection.contains(col.id())) {
             mCheckedCollectionWidget->checkableProxy()->setData(child, Qt::Checked, Qt::CheckStateRole);
@@ -82,8 +81,7 @@ QVector<Akonadi::Collection> SelectMultiCollectionWidget::selectedCollection(con
     for (int i = 0; i < nbCol; ++i) {
         const QModelIndex child = mCheckedCollectionWidget->checkableProxy()->index(i, 0, parent);
 
-        const Akonadi::Collection col =
-            mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const auto col = mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
         if (mCheckedCollectionWidget->checkableProxy()->data(child, Qt::CheckStateRole).value<int>()) {
             lst << col;

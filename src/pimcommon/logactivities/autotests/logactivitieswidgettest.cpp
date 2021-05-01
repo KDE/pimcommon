@@ -22,11 +22,11 @@ LogActivitiesWidgetTest::~LogActivitiesWidgetTest()
 void LogActivitiesWidgetTest::shouldHaveDefaultValue()
 {
     PimCommon::LogActivitiesWidget w;
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mLog = w.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("log"));
+    auto mLog = w.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("log"));
     QVERIFY(mLog);
     QVERIFY(mLog->isReadOnly());
 }

@@ -24,14 +24,14 @@ TranslatorTest::TranslatorTest()
 void TranslatorTest::shouldHaveDefaultValuesOnCreation()
 {
     PimCommon::TranslatorWidget edit;
-    auto *from = edit.findChild<QComboBox *>(QStringLiteral("from"));
-    auto *to = edit.findChild<QComboBox *>(QStringLiteral("to"));
+    auto from = edit.findChild<QComboBox *>(QStringLiteral("from"));
+    auto to = edit.findChild<QComboBox *>(QStringLiteral("to"));
 
-    auto *inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
-    auto *translatedText = edit.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("translatedtext"));
-    auto *translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
-    auto *clear = edit.findChild<QPushButton *>(QStringLiteral("clear-button"));
-    auto *invert = edit.findChild<QPushButton *>(QStringLiteral("invert-button"));
+    auto inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
+    auto translatedText = edit.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("translatedtext"));
+    auto translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
+    auto clear = edit.findChild<QPushButton *>(QStringLiteral("clear-button"));
+    auto invert = edit.findChild<QPushButton *>(QStringLiteral("invert-button"));
     QVERIFY(invert);
     QVERIFY(clear);
     QVERIFY(translate);
@@ -50,8 +50,8 @@ void TranslatorTest::shouldEnableTranslateButtonWhenTextToTranslateIsNotEmpty()
 {
     PimCommon::TranslatorWidget edit;
 
-    auto *inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
-    auto *translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
+    auto inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
+    auto translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
     inputtext->setPlainText(QStringLiteral("Foo"));
     QCOMPARE(translate->isEnabled(), true);
 }
@@ -59,11 +59,11 @@ void TranslatorTest::shouldEnableTranslateButtonWhenTextToTranslateIsNotEmpty()
 void TranslatorTest::shouldDisableTranslateButtonAndClearTextWhenClickOnClearButton()
 {
     PimCommon::TranslatorWidget edit;
-    auto *inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
-    auto *translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
-    auto *translatedText = edit.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("translatedtext"));
+    auto inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
+    auto translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
+    auto translatedText = edit.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("translatedtext"));
     inputtext->setPlainText(QStringLiteral("Foo"));
-    auto *clear = edit.findChild<QPushButton *>(QStringLiteral("clear-button"));
+    auto clear = edit.findChild<QPushButton *>(QStringLiteral("clear-button"));
     QTest::mouseClick(clear, Qt::LeftButton);
     QCOMPARE(inputtext->toPlainText(), QString());
     QCOMPARE(translatedText->toPlainText(), QString());
@@ -73,14 +73,14 @@ void TranslatorTest::shouldDisableTranslateButtonAndClearTextWhenClickOnClearBut
 void TranslatorTest::shouldInvertLanguageWhenClickOnInvertButton()
 {
     PimCommon::TranslatorWidget edit;
-    auto *from = edit.findChild<QComboBox *>(QStringLiteral("from"));
-    auto *to = edit.findChild<QComboBox *>(QStringLiteral("to"));
+    auto from = edit.findChild<QComboBox *>(QStringLiteral("from"));
+    auto to = edit.findChild<QComboBox *>(QStringLiteral("to"));
 
     const int fromIndex = 5;
     const int toIndex = 7;
     from->setCurrentIndex(fromIndex);
     to->setCurrentIndex(toIndex);
-    auto *invert = edit.findChild<QPushButton *>(QStringLiteral("invert-button"));
+    auto invert = edit.findChild<QPushButton *>(QStringLiteral("invert-button"));
     QTest::mouseClick(invert, Qt::LeftButton);
     const int newFromIndex = from->currentIndex();
     const int newToIndex = to->currentIndex();

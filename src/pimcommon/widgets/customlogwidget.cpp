@@ -28,7 +28,7 @@ QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, con
     }
     auto document = new QTextDocument(nullptr);
     document->setDocumentMargin(1);
-    const QColor textColor = index.data(Qt::ForegroundRole).value<QColor>();
+    const auto textColor = index.data(Qt::ForegroundRole).value<QColor>();
     QStyleOptionViewItem option4 = option;
     QStyledItemDelegate::initStyleOption(&option4, index);
 

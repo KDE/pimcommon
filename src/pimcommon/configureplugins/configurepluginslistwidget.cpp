@@ -56,7 +56,7 @@ void ConfigurePluginsListWidget::slotItemChanged(QTreeWidgetItem *item, int colu
 void ConfigurePluginsListWidget::slotItemSelectionChanged()
 {
     QTreeWidgetItem *item = mListWidget->currentItem();
-    if (auto *pluginItem = dynamic_cast<PluginItem *>(item)) {
+    if (auto pluginItem = dynamic_cast<PluginItem *>(item)) {
         Q_EMIT descriptionChanged(pluginItem->mDescription);
     }
 }

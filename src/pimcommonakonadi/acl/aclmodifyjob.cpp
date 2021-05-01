@@ -58,7 +58,7 @@ void AclModifyJob::slotGroupSearchResult(KJob *job)
 {
     auto searchJob = qobject_cast<Akonadi::ContactGroupSearchJob *>(job);
     if (!searchJob->contactGroups().isEmpty()) { // it has been a distribution list
-        Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
+        auto expandJob = new Akonadi::ContactGroupExpandJob(searchJob->contactGroups().at(0), this);
         if (expandJob->exec()) {
             const KContacts::Addressee::List lstContacts = expandJob->contacts();
             for (const KContacts::Addressee &contact : lstContacts) {
@@ -177,7 +177,7 @@ void AclModifyJob::changeAcl(const Akonadi::Collection &collection)
 {
     if (collection.hasAttribute<PimCommon::ImapAclAttribute>()) {
         Akonadi::Collection mutableCollection = collection;
-        auto *attribute = mutableCollection.attribute<PimCommon::ImapAclAttribute>();
+        auto attribute = mutableCollection.attribute<PimCommon::ImapAclAttribute>();
         if (canAdministrate(attribute, mutableCollection)) {
             attribute->setRights(mNewRight);
             auto modifyJob = new Akonadi::CollectionModifyJob(mutableCollection);
@@ -211,7 +211,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
     QStringList folderNames;
     for (const Akonadi::Collection &col : collectionList) {
         if (col.hasAttribute<PimCommon::ImapAclAttribute>()) {
-            const auto *attribute = col.attribute<PimCommon::ImapAclAttribute>();
+            const auto attribute = col.attribute<PimCommon::ImapAclAttribute>();
             if (canAdministrate(attribute, col)) {
                 QString fullName;
                 bool parentFound;

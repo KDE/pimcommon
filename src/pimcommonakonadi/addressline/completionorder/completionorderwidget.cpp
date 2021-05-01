@@ -319,7 +319,7 @@ void CompletionOrderWidget::addRecentAddressItem()
 
 void CompletionOrderWidget::addCompletionItemForCollection(const QModelIndex &index)
 {
-    const Akonadi::Collection collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    const auto collection = index.data(Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (!collection.isValid()) {
         return;
     }

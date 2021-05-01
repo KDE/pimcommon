@@ -23,11 +23,11 @@ void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()
 {
     PimCommon::ConfigurePluginsListWidget w;
 
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mListWidget = w.findChild<QTreeWidget *>(QStringLiteral("listwidget"));
+    auto mListWidget = w.findChild<QTreeWidget *>(QStringLiteral("listwidget"));
     QVERIFY(mListWidget);
     QVERIFY(mListWidget->isSortingEnabled());
 }

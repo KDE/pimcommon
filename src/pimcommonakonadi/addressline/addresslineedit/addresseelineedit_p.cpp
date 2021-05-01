@@ -671,7 +671,7 @@ void AddresseeLineEditPrivate::slotAkonadiHandleItems(const Akonadi::Item::List 
         if (sourceIndex.index == -1) {
             qCDebug(PIMCOMMONAKONADI_LOG) << "Fetching New collection: " << colId;
             // the collection isn't there, start the fetch job.
-            auto *collectionJob =
+            auto collectionJob =
                 new Akonadi::CollectionFetchJob(item.parentCollection(), Akonadi::CollectionFetchJob::Base, AddresseeLineEditManager::self()->akonadiSession());
             connect(collectionJob, &Akonadi::CollectionFetchJob::collectionsReceived, this, &AddresseeLineEditPrivate::slotAkonadiCollectionsReceived);
             /* we don't want to start multiple fetch jobs for the same collection,
