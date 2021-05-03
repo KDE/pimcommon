@@ -180,7 +180,7 @@ target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${
 target_include_directories(KF5PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
 set_target_properties(KF5PimCommonAkonadi PROPERTIES
-    VERSION ${PIMCOMMON_VERSION_STRING}
+    VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommonAkonadi
     )

@@ -197,7 +197,7 @@ target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INS
 target_include_directories(KF5PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
 set_target_properties(KF5PimCommon PROPERTIES
-    VERSION ${PIMCOMMON_VERSION_STRING}
+    VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommon
     )
