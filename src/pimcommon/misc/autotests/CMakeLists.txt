@@ -2,8 +2,8 @@ macro(add_pimcommon_misc_unittest _name)
     ecm_add_test(${ARGN}
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-misc-"
-        LINK_LIBRARIES Qt5::Test
-        Qt5::Widgets
+        LINK_LIBRARIES Qt::Test
+        Qt::Widgets
 	KF5::PimCommon
     )
 endmacro()
