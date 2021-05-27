@@ -166,11 +166,11 @@ void AutoCorrectionWidget::loadAutoCorrectionAndException()
 {
     /* tab 2 - Custom Quotes */
     d->m_singleQuotes = d->mAutoCorrection->typographicSingleQuotes();
-    d->ui->singleQuote1->setText(d->m_singleQuotes.begin);
-    d->ui->singleQuote2->setText(d->m_singleQuotes.end);
+    d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
+    d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
     d->m_doubleQuotes = d->mAutoCorrection->typographicDoubleQuotes();
-    d->ui->doubleQuote1->setText(d->m_doubleQuotes.begin);
-    d->ui->doubleQuote2->setText(d->m_doubleQuotes.end);
+    d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
+    d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
     enableSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
     enableDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
 
@@ -277,7 +277,7 @@ void AutoCorrectionWidget::selectSingleQuoteCharOpen()
     dlg->autoInsertChar();
     if (dlg->exec()) {
         d->m_singleQuotes.begin = dlg->currentChar();
-        d->ui->singleQuote1->setText(d->m_singleQuotes.begin);
+        d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
         emitChanged();
     }
     delete dlg;
@@ -291,7 +291,7 @@ void AutoCorrectionWidget::selectSingleQuoteCharClose()
     dlg->autoInsertChar();
     if (dlg->exec()) {
         d->m_singleQuotes.end = dlg->currentChar();
-        d->ui->singleQuote2->setText(d->m_singleQuotes.end);
+        d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
         emitChanged();
     }
     delete dlg;
@@ -300,8 +300,8 @@ void AutoCorrectionWidget::selectSingleQuoteCharClose()
 void AutoCorrectionWidget::setDefaultSingleQuotes()
 {
     d->m_singleQuotes = d->mAutoCorrection->typographicDefaultSingleQuotes();
-    d->ui->singleQuote1->setText(d->m_singleQuotes.begin);
-    d->ui->singleQuote2->setText(d->m_singleQuotes.end);
+    d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
+    d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
     emitChanged();
 }
 
@@ -313,7 +313,7 @@ void AutoCorrectionWidget::selectDoubleQuoteCharOpen()
     dlg->autoInsertChar();
     if (dlg->exec()) {
         d->m_doubleQuotes.begin = dlg->currentChar();
-        d->ui->doubleQuote1->setText(d->m_doubleQuotes.begin);
+        d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
         emitChanged();
     }
     delete dlg;
@@ -327,7 +327,7 @@ void AutoCorrectionWidget::selectDoubleQuoteCharClose()
     dlg->autoInsertChar();
     if (dlg->exec()) {
         d->m_doubleQuotes.end = dlg->currentChar();
-        d->ui->doubleQuote2->setText(d->m_doubleQuotes.end);
+        d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
         emitChanged();
     }
     delete dlg;
@@ -336,8 +336,8 @@ void AutoCorrectionWidget::selectDoubleQuoteCharClose()
 void AutoCorrectionWidget::setDefaultDoubleQuotes()
 {
     d->m_doubleQuotes = d->mAutoCorrection->typographicDefaultDoubleQuotes();
-    d->ui->doubleQuote1->setText(d->m_doubleQuotes.begin);
-    d->ui->doubleQuote2->setText(d->m_doubleQuotes.end);
+    d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
+    d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
     emitChanged();
 }
 
