@@ -162,7 +162,7 @@ void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClie
 
 void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {
-    for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
+    for (PimCommon::GenericPluginInterface *interface : std::as_const(d->mListGenericInterface)) {
         interface->updateActions(numberOfSelectedItems, numberOfSelectedCollections);
     }
 }
@@ -170,7 +170,7 @@ void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelec
 QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsType()
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *>> listType;
-    for (PimCommon::GenericPluginInterface *interface : qAsConst(d->mListGenericInterface)) {
+    for (PimCommon::GenericPluginInterface *interface : std::as_const(d->mListGenericInterface)) {
         const auto actionTypes = interface->actionTypes();
         for (const PimCommon::ActionType &actionType : actionTypes) {
             PimCommon::ActionType::Type type = actionType.type();

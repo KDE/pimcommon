@@ -94,7 +94,7 @@ void MigrateApplicationFilesTest::shouldMigrateFolders()
     QStringList files;
     files << QStringLiteral("file1") << QStringLiteral("file2");
     const QString xdgDatahome = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + folderName;
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
@@ -116,7 +116,7 @@ void MigrateApplicationFilesTest::shouldMigrateFolders()
     QVERIFY(migrate.checkIfNecessary());
 
     QVERIFY(migrate.start());
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QVERIFY(QFile(xdgDatahome + file).exists());
     }
 }
@@ -137,7 +137,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateFoldersIfAlreadyDone()
     QStringList files;
     files << QStringLiteral("file1") << QStringLiteral("file2");
     const QString xdgDatahome = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + folderName;
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
@@ -161,7 +161,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateFoldersIfAlreadyDone()
     migrate.insertMigrateInfo(info);
 
     QVERIFY(migrate.start());
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QVERIFY(!QFile(xdgDatahome + file).exists());
     }
 }
@@ -182,7 +182,7 @@ void MigrateApplicationFilesTest::shouldMigrateFoldersWithSubFolders()
     QStringList files;
     files << QStringLiteral("file1") << QStringLiteral("file2");
     const QString xdgDatahome = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + folderName;
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
@@ -198,7 +198,7 @@ void MigrateApplicationFilesTest::shouldMigrateFoldersWithSubFolders()
     QDir().mkpath(appsPathSubfolder);
     QVERIFY(QDir(appsPathSubfolder).exists());
     const QString xdgDatahomeSubfolder = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + subFolder;
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPathSubfolder + QLatin1Char('/') + file;
@@ -222,7 +222,7 @@ void MigrateApplicationFilesTest::shouldMigrateFoldersWithSubFolders()
     migrate.setCurrentConfigVersion(1);
 
     QVERIFY(migrate.start());
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QVERIFY(QFile(xdgDatahome + file).exists());
         QVERIFY(QFile(xdgDatahomeSubfolder + file).exists());
     }
@@ -245,7 +245,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateIfAlreadyDone()
 
     QStringList files;
     files << QStringLiteral("file1") << QStringLiteral("file2");
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
@@ -273,7 +273,7 @@ void MigrateApplicationFilesTest::shouldNotMigrateIfAlreadyDone()
     // We have a current version == 3 => don't migrate old info.
     migrate.setCurrentConfigVersion(3);
     QVERIFY(migrate.start());
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QVERIFY(!QFile(xdgDatahome + file).exists());
     }
 }
@@ -295,7 +295,7 @@ void MigrateApplicationFilesTest::shouldMigrateFiles()
 
     QStringList files;
     files << QStringLiteral("file1") << QStringLiteral("file2");
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
@@ -320,7 +320,7 @@ void MigrateApplicationFilesTest::shouldMigrateFiles()
 
     QVERIFY(migrate.checkIfNecessary());
     QVERIFY(migrate.start());
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QVERIFY(QFile(xdgDatahome + file).exists());
     }
 }
@@ -347,7 +347,7 @@ void MigrateApplicationFilesTest::shouldMigrateFilesWithPattern()
     filesMustNotBeMigrated << QStringLiteral("file1") << QStringLiteral("file2");
 
     files << filesMustBeMigrated << filesMustNotBeMigrated;
-    for (const QString &file : qAsConst(files)) {
+    for (const QString &file : std::as_const(files)) {
         QFile fooFile(QLatin1String(MIGRATION_DATA_DIR) + QLatin1Char('/') + file);
         QVERIFY(fooFile.exists());
         const QString storedConfigFilePath = appsPath + QLatin1Char('/') + file;
@@ -370,10 +370,10 @@ void MigrateApplicationFilesTest::shouldMigrateFilesWithPattern()
 
     QVERIFY(migrate.checkIfNecessary());
     QVERIFY(migrate.start());
-    for (const QString &file : qAsConst(filesMustBeMigrated)) {
+    for (const QString &file : std::as_const(filesMustBeMigrated)) {
         QVERIFY(QFile(xdgDatahome + file).exists());
     }
-    for (const QString &file : qAsConst(filesMustNotBeMigrated)) {
+    for (const QString &file : std::as_const(filesMustNotBeMigrated)) {
         QVERIFY(!QFile(xdgDatahome + file).exists());
     }
 }

@@ -67,7 +67,7 @@ void TemplateManager::loadTemplates(bool init)
 {
     if (!init) {
         if (!d->mTemplatesDirectories.isEmpty()) {
-            for (const QString &directory : qAsConst(d->mTemplatesDirectories)) {
+            for (const QString &directory : std::as_const(d->mTemplatesDirectories)) {
                 d->mDirWatch->removeDir(directory);
             }
         } else {
@@ -75,7 +75,7 @@ void TemplateManager::loadTemplates(bool init)
         }
     }
 
-    for (const QString &directory : qAsConst(d->mTemplatesDirectories)) {
+    for (const QString &directory : std::as_const(d->mTemplatesDirectories)) {
         QDirIterator dirIt(directory, QStringList(), QDir::AllDirs | QDir::NoDotAndDotDot);
         while (dirIt.hasNext()) {
             dirIt.next();

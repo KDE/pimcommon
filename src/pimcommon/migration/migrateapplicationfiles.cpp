@@ -71,7 +71,7 @@ bool MigrateApplicationFiles::start()
 bool MigrateApplicationFiles::migrateConfig()
 {
     qCDebug(PIMCOMMON_LOG) << "Start migration...";
-    for (const MigrateFileInfo &info : qAsConst(d->mMigrateInfoList)) {
+    for (const MigrateFileInfo &info : std::as_const(d->mMigrateInfoList)) {
         if ((info.version() == -1) || (info.version() > d->mCurrentConfigVersion)) {
             if (info.folder()) {
                 migrateFolder(info);

@@ -112,7 +112,7 @@ public:
         QMap<QByteArray, KIMAP::Acl::Rights> result;
 
         using RightPair = QPair<QByteArray, KIMAP::Acl::Rights>;
-        for (const RightPair &right : qAsConst(mRights)) {
+        for (const RightPair &right : std::as_const(mRights)) {
             result.insert(right.first, right.second);
         }
 

@@ -71,7 +71,7 @@ int BlackListBalooEmailList::setEmailFound(const QStringList &list)
 
         const QString mailToLower = mail.toLower();
         const QString emailToLower = email.toLower();
-        for (const QString &domain : qAsConst(mExcludeDomain)) {
+        for (const QString &domain : std::as_const(mExcludeDomain)) {
             if (email.endsWith(domain)) {
                 excludeDomain = true;
                 break;

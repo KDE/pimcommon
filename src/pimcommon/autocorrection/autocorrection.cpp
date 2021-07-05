@@ -718,7 +718,7 @@ void AutoCorrection::capitalizeWeekDays()
     }
 
     const QString trimmed = mWord.trimmed();
-    for (const QString &name : qAsConst(mCacheNameOfDays)) {
+    for (const QString &name : std::as_const(mCacheNameOfDays)) {
         if (trimmed == name) {
             const int pos = mWord.indexOf(name);
             mWord.replace(pos, 1, name.at(0).toUpper());

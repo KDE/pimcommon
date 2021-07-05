@@ -37,7 +37,7 @@ QStringList BalooCompletionEmail::cleanupEmailList()
         return mListEmail;
     }
     QMap<QString, QString> hashEmail;
-    for (QString email : qAsConst(mListEmail)) {
+    for (QString email : std::as_const(mListEmail)) {
         if (!mBlackList.contains(email)) {
             QString address;
             email = stripEmail(email, address);
@@ -45,7 +45,7 @@ QStringList BalooCompletionEmail::cleanupEmailList()
                 address = email;
             }
             bool excludeMail = false;
-            for (const QString &excludeDomain : qAsConst(mExcludeDomain)) {
+            for (const QString &excludeDomain : std::as_const(mExcludeDomain)) {
                 if (!excludeDomain.isEmpty()) {
                     if (address.endsWith(excludeDomain)) {
                         excludeMail = true;

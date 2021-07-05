@@ -282,7 +282,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
         KContacts::Addressee::List list;
         KContacts::VCardDrag::fromMimeData(md, list);
 
-        for (const KContacts::Addressee &addr : qAsConst(list)) {
+        for (const KContacts::Addressee &addr : std::as_const(list)) {
             insertEmails(addr.emails());
         }
     }
@@ -330,7 +330,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
         }
 
         // Now, let the user choose which addressee to add.
-        for (const KContacts::Addressee &addressee : qAsConst(list)) {
+        for (const KContacts::Addressee &addressee : std::as_const(list)) {
             insertEmails(addressee.emails());
         }
     }

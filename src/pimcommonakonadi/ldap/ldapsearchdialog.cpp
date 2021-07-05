@@ -721,7 +721,7 @@ void LdapSearchDialog::Private::saveSettings()
 
 void LdapSearchDialog::Private::cancelQuery()
 {
-    for (KLDAP::LdapClient *client : qAsConst(mLdapClientList)) {
+    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
         client->cancelQuery();
     }
 }
@@ -733,7 +733,7 @@ void LdapSearchDialog::Private::slotAddResult(const KLDAP::LdapClient &client, c
 
 void LdapSearchDialog::Private::slotSetScope(bool rec)
 {
-    for (KLDAP::LdapClient *client : qAsConst(mLdapClientList)) {
+    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
         if (rec) {
             client->setScope(QStringLiteral("sub"));
         } else {
@@ -767,7 +767,7 @@ void LdapSearchDialog::Private::slotStartSearch()
 
     // loop in the list and run the KLDAP::LdapClients
     mModel->clear();
-    for (KLDAP::LdapClient *client : qAsConst(mLdapClientList)) {
+    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
         client->startQuery(filter);
     }
 
@@ -783,7 +783,7 @@ void LdapSearchDialog::Private::slotStopSearch()
 void LdapSearchDialog::Private::slotSearchDone()
 {
     // If there are no more active clients, we are done.
-    for (KLDAP::LdapClient *client : qAsConst(mLdapClientList)) {
+    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
         if (client->isActive()) {
             return;
         }
