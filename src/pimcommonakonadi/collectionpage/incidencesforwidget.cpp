@@ -1,44 +1,22 @@
 /*
   SPDX-FileCopyrightText: 2014-2021 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2021 Carl Schwan <carlschwan@kde.org>
 
   SPDX-License-Identifier: LGPL-2.0-or-later
-
 */
 
 #include "incidencesforwidget.h"
 #include <KLocalizedString>
-#include <QComboBox>
-#include <QHBoxLayout>
-#include <QLabel>
 
 using namespace PimCommon;
-class PimCommon::IncidencesForWidgetPrivate
-{
-public:
-    IncidencesForWidgetPrivate()
-    {
-    }
-
-    QComboBox *mIncidencesForComboBox = nullptr;
-};
 IncidencesForWidget::IncidencesForWidget(QWidget *parent)
-    : QWidget(parent)
-    , d(new PimCommon::IncidencesForWidgetPrivate)
+    : QComboBox(parent)
 {
-    auto hbox = new QHBoxLayout(this);
-    hbox->setContentsMargins(0, 0, 0, 0);
+    addItem(i18n("Nobody"));
+    addItem(i18n("Admins of This Folder"));
+    addItem(i18n("All Readers of This Folder"));
 
-    auto label = new QLabel(i18n("Generate free/&busy and activate alarms for:"), this);
-    label->setObjectName(QStringLiteral("contentstypelabel"));
-    hbox->addWidget(label);
-
-    d->mIncidencesForComboBox = new QComboBox(this);
-    label->setBuddy(d->mIncidencesForComboBox);
-    hbox->addWidget(d->mIncidencesForComboBox);
-
-    d->mIncidencesForComboBox->addItem(i18n("Nobody"));
-    d->mIncidencesForComboBox->addItem(i18n("Admins of This Folder"));
-    d->mIncidencesForComboBox->addItem(i18n("All Readers of This Folder"));
+    setObjectName(QStringLiteral("contentstypecombobox"));
     const QString whatsThisForMyOwnFolders = i18n(
         "This setting defines which users sharing "
         "this folder should get \"busy\" periods in their freebusy lists "
@@ -53,23 +31,12 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
         "as busy for meetings.\n"
         "A company-wide folder with optional events in it would use \"Nobody\" "
         "since it is not known who will go to those events.");
-
-    d->mIncidencesForComboBox->setObjectName(QStringLiteral("contentstypecombobox"));
-    d->mIncidencesForComboBox->setWhatsThis(whatsThisForMyOwnFolders);
-    connect(d->mIncidencesForComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &IncidencesForWidget::currentIndexChanged);
+    setWhatsThis(whatsThisForMyOwnFolders);
 }
 
-IncidencesForWidget::~IncidencesForWidget()
-{
-    delete d;
-}
+IncidencesForWidget::~IncidencesForWidget() = default;
 
-int IncidencesForWidget::currentIndex() const
+QString IncidencesForWidget::labelName()
 {
-    return d->mIncidencesForComboBox->currentIndex();
-}
-
-void IncidencesForWidget::setCurrentIndex(int index)
-{
-    d->mIncidencesForComboBox->setCurrentIndex(index);
+    return i18n("Generate free/&busy and activate alarms for:");
 }
