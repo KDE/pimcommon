@@ -16,7 +16,5 @@ public:
     ~IncidencesForWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-    void shouldChangeComboBoxIndex();
-    void shouldEmitSignalWhenIndexChanged();
 };
 
