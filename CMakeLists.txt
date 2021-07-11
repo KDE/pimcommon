@@ -3,7 +3,7 @@ set(PIM_VERSION "5.18.40")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.83.0")
+set(KF5_MIN_VERSION "5.84.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
@@ -28,15 +28,15 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
-set(AKONADICONTACT_LIB_VERSION "5.17.80")
-set(LIBKDEPIM_LIB_VERSION "5.17.80")
+set(AKONADICONTACT_LIB_VERSION "5.18.40")
+set(LIBKDEPIM_LIB_VERSION "5.18.40")
 set(QT_REQUIRED_VERSION "5.15.0")
-set(KMIME_LIB_VERSION "5.17.80")
-set(KIMAP_LIB_VERSION "5.17.80")
-set(KPIMTEXTEDIT_LIB_VERSION "5.17.80")
-set(AKONADI_VERSION "5.17.80")
-set(KLDAP_LIB_VERSION "5.17.80")
-set(GRANTLEETHEME_LIB_VERSION "5.17.80")
+set(KMIME_LIB_VERSION "5.18.40")
+set(KIMAP_LIB_VERSION "5.18.40")
+set(KPIMTEXTEDIT_LIB_VERSION "5.18.40")
+set(AKONADI_VERSION "5.18.40")
+set(KLDAP_LIB_VERSION "5.18.40")
+set(GRANTLEETHEME_LIB_VERSION "5.18.40")
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml PrintSupport)
 
@@ -78,7 +78,7 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 option(FORCE_DISABLE_AKONADI_SEARCH "Disable features and API that require akonadi-search, e.g. because xapian isn't available" OFF)
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-   set(AKONADI_SEARCH_VERSION "5.17.80")	
+   set(AKONADI_SEARCH_VERSION "5.18.40")	
    find_package(KF5AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
    set_package_properties(KF5AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://invent.kde.org/pim/akonadi-search" TYPE REQUIRED PURPOSE "Provides search capabilities in KMail and Akonadi")
 endif()
