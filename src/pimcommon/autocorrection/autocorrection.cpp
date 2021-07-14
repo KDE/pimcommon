@@ -451,7 +451,7 @@ void AutoCorrection::addNonBreakingSpace()
                 }
             }
         } else {
-            //°C (degres)
+            //°C (degrees)
             const int pos = mCursor.position() - 2 - block.position();
             if (pos >= 0) {
                 const QChar previousChar = text.at(pos);

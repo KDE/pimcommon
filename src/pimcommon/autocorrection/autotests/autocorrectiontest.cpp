@@ -522,7 +522,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace_data()
     QTest::newRow("onecharacter") << QStringLiteral(":") << QStringLiteral(":") << QStringLiteral("fr") << true;
     QTest::newRow("onecharacter2") << QStringLiteral(" ") << QStringLiteral(" ") << QStringLiteral("fr") << true;
     QTest::newRow("percentage") << QStringLiteral("50 %") << QStringLiteral("50b%") << QStringLiteral("fr") << true;
-    QTest::newRow("degres") << QStringLiteral("50 °C") << QStringLiteral("50b°C") << QStringLiteral("fr") << true;
+    QTest::newRow("degrees") << QStringLiteral("50 °C") << QStringLiteral("50b°C") << QStringLiteral("fr") << true;
     QTest::newRow("simplespace") << QStringLiteral(" ") << QStringLiteral(" ") << QStringLiteral("fr") << true;
 }
 

@@ -68,7 +68,7 @@ QIcon ShareServiceUrlManagerPrivate::typeToIcon(ShareServiceUrlManager::ServiceT
     case ShareServiceUrlManager::LiveJournal:
         break;
     case ShareServiceUrlManager::ServiceEndType:
-        qCWarning(PIMCOMMON_LOG) << "icon for unknow type requested. It's a bug.";
+        qCWarning(PIMCOMMON_LOG) << "icon for unknown type requested. It's a bug.";
         break;
     }
 
@@ -101,7 +101,7 @@ QString ShareServiceUrlManagerPrivate::typeToI18n(ShareServiceUrlManager::Servic
         str = i18n("LiveJournal");
         break;
     case ShareServiceUrlManager::ServiceEndType:
-        qCWarning(PIMCOMMON_LOG) << "text for unknow type requested. It's a bug.";
+        qCWarning(PIMCOMMON_LOG) << "text for unknown type requested. It's a bug.";
         break;
     }
     return str;

@@ -110,7 +110,7 @@ private:
     QColor linkColor();
 
     bool mSingleSpaces = true; // suppress double spaces.
-    bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automaticall to uppercase
+    bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase
     bool mFixTwoUppercaseChars = false; // convert two uppercase characters to one upper and one lowercase.
     bool mAutoFractions = true; // replace 1/2 with ½
     bool mCapitalizeWeekDays = false;

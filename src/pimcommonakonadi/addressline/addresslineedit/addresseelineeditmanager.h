@@ -49,7 +49,7 @@ public:
     QStringList completionSources;
 
     // The weights associated with the completion sources in s_static->completionSources.
-    // Both are maintained by addCompletionSource(), don't attempt to modifiy those yourself.
+    // Both are maintained by addCompletionSource(), don't attempt to modify those yourself.
     QMap<QString, int> completionSourceWeights;
 
     // holds the cached mapping from akonadi collection id to the completion source index
