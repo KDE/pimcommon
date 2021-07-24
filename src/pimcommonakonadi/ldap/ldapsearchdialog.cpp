@@ -36,6 +36,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KMessageBox>
+#include <KPluginMetaData>
 #include <QComboBox>
 #include <QDialogButtonBox>
 #include <QLineEdit>
@@ -861,7 +862,7 @@ void LdapSearchDialog::slotUser2()
 
     QPointer<KCMultiDialog> dialog = new KCMultiDialog(this);
     dialog->setWindowTitle(i18nc("@title:window", "Configure the Address Book LDAP Settings"));
-    dialog->addModule(QStringLiteral("kcmldap.desktop"));
+    dialog->addModule(KPluginMetaData(QStringLiteral("pim/kcms/kaddressbook/kcm_ldap")));
 
     if (dialog->exec()) { // krazy:exclude=crashy
         d->restoreSettings();
