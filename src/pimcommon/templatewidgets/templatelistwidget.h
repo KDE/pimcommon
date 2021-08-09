@@ -42,8 +42,11 @@ public:
 
 protected:
     QStringList mimeTypes() const override;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QMimeData *mimeData(const QList<QListWidgetItem *> items) const override;
-
+#else
+    QMimeData *mimeData(const QList<QListWidgetItem *> &items) const override;
+#endif
     void dropEvent(QDropEvent *event) override;
     enum TemplateData { Text = Qt::UserRole + 1, DefaultTemplate = Qt::UserRole + 2 };
 
