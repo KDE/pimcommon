@@ -1031,7 +1031,8 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
             kdelang = QStringLiteral("en_US");
         }
     }
-    kdelang.remove(QRegularExpression(QStringLiteral("@.*")));
+    static QRegularExpression reg(QStringLiteral("@.*"));
+    kdelang.remove(reg);
 
     mUpperCaseExceptions.clear();
     mAutocorrectEntries.clear();

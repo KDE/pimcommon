@@ -49,7 +49,7 @@ public:
     PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
     void clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient);
 private Q_SLOTS:
-    void slotPluginActivated(AbstractGenericPluginInterface *interface);
+    void slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
 
 private:
     PluginInterfacePrivate *const d;

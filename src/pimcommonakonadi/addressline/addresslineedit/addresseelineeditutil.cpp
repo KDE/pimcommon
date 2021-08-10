@@ -12,11 +12,13 @@ QString PimCommon::AddresseeLineEditUtil::adaptPasteMails(const QString &str)
 {
     QString newText = str;
     // remove newlines in the to-be-pasted string
-    QStringList lines = newText.split(QRegularExpression(QStringLiteral("\r?\n")), Qt::SkipEmptyParts);
+    static QRegularExpression reg2(QStringLiteral("\r?\n"));
+    QStringList lines = newText.split(reg2, Qt::SkipEmptyParts);
     QStringList::iterator end(lines.end());
     for (QStringList::iterator it = lines.begin(); it != end; ++it) {
         // remove trailing commas and whitespace
-        (*it).remove(QRegularExpression(QStringLiteral(",?\\s*$")));
+        static QRegularExpression reg1(QRegularExpression(QStringLiteral(",?\\s*$")));
+        (*it).remove(reg1);
     }
     newText = lines.join(QLatin1String(", "));
 
@@ -28,7 +30,8 @@ QString PimCommon::AddresseeLineEditUtil::adaptPasteMails(const QString &str)
         newText.replace(QStringLiteral(" at "), QStringLiteral("@"));
         newText.replace(QStringLiteral(" dot "), QStringLiteral("."));
     } else if (newText.contains(QLatin1String("(at)"))) {
-        newText.replace(QRegularExpression(QStringLiteral("\\s*\\(at\\)\\s*")), QStringLiteral("@"));
+        static QRegularExpression reg((QStringLiteral("\\s*\\(at\\)\\s*")));
+        newText.replace(reg, QStringLiteral("@"));
     }
     return newText;
 }

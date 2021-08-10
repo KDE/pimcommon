@@ -83,7 +83,7 @@ QVector<Akonadi::Collection> SelectMultiCollectionWidget::selectedCollection(con
 
         const auto col = mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
-        if (mCheckedCollectionWidget->checkableProxy()->data(child, Qt::CheckStateRole).value<int>()) {
+        if (mCheckedCollectionWidget->checkableProxy()->data(child, Qt::CheckStateRole).toInt()) {
             lst << col;
         }
         lst << selectedCollection(child);
