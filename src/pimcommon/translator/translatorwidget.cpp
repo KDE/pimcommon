@@ -32,7 +32,10 @@
 #include <QVBoxLayout>
 
 using namespace PimCommon;
-
+namespace
+{
+static const char myTranslatorWidgetConfigGroupName[] = "TranslatorWidget";
+}
 class Q_DECL_HIDDEN TranslatorWidget::TranslatorWidgetPrivate
 {
 public:
@@ -164,7 +167,7 @@ TranslatorWidget::~TranslatorWidget()
 
 void TranslatorWidget::writeConfig()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), "TranslatorWidget");
+    KConfigGroup myGroup(KSharedConfig::openConfig(), myTranslatorWidgetConfigGroupName);
     if (d->languageSettingsChanged) {
         myGroup.writeEntry(QStringLiteral("FromLanguage"), d->from->itemData(d->from->currentIndex()).toString());
         myGroup.writeEntry("ToLanguage", d->to->itemData(d->to->currentIndex()).toString());
@@ -175,7 +178,7 @@ void TranslatorWidget::writeConfig()
 
 void TranslatorWidget::readConfig()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), "TranslatorWidget");
+    KConfigGroup myGroup(KSharedConfig::openConfig(), myTranslatorWidgetConfigGroupName);
     const QString from = myGroup.readEntry(QStringLiteral("FromLanguage"));
     const QString to = myGroup.readEntry(QStringLiteral("ToLanguage"));
     if (from.isEmpty()) {
