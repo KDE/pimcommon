@@ -25,7 +25,7 @@ using namespace PimCommon;
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)
 {
-    setWindowTitle(defaultTemplate ? i18n("Default template") : i18n("Template"));
+    setWindowTitle(defaultTemplate ? i18nc("@title:window", "Default template") : i18nc("@title:window", "Template"));
     auto mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = nullptr;
     if (defaultTemplate) {
