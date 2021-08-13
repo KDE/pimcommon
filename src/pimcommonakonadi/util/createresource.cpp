@@ -116,6 +116,11 @@ QString CreateResource::createResource(const QString &resources, const QString &
                     return QString();
                 }
             }
+            QDBusReply<void> reply = iface.call(QStringLiteral("save"));
+            if (!reply.isValid()) {
+                Q_EMIT createResourceError(i18n("Could not save settings: %1", reply.error().message()));
+                return QString();
+            }
             instance.reconfigure();
             if (synchronizeTree) {
                 instance.synchronizeCollectionTree();
