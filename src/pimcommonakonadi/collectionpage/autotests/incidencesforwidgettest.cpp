@@ -7,9 +7,6 @@
 
 #include "incidencesforwidgettest.h"
 #include "../incidencesforwidget.h"
-#include <QComboBox>
-#include <QLabel>
-#include <QSignalSpy>
 #include <QTest>
 
 IncidencesForWidgetTest::IncidencesForWidgetTest(QObject *parent)

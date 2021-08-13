@@ -13,7 +13,6 @@
 #include <KPluginMetaData>
 
 #include <QFileInfo>
-#include <QSet>
 
 using namespace PimCommon;
 

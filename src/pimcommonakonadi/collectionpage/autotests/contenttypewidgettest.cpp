@@ -7,9 +7,6 @@
 
 #include "contenttypewidgettest.h"
 #include "../contenttypewidget.h"
-#include <QComboBox>
-#include <QLabel>
-#include <QSignalSpy>
 #include <QTest>
 ContentTypeWidgetTest::ContentTypeWidgetTest(QObject *parent)
     : QObject(parent)
