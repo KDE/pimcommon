@@ -10,8 +10,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-set(KDE_COMPILERSETTINGS_LEVEL 5.85.0)
-include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+include(KDECompilerSettings NO_POLICY_SCOPE)
 
 include(GenerateExportHeader)
 include(ECMSetupVersion)
@@ -25,8 +24,6 @@ include(ECMAddTests)
 include(ECMInstallIcons)
 include(ECMAddQtDesignerPlugin)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(AKONADICONTACT_LIB_VERSION "5.18.40")
