@@ -66,7 +66,8 @@ int BlackListBalooEmailList::setEmailFound(const QStringList &list)
     QStringList onlyEmails;
     for (const QString &mail : list) {
         bool excludeDomain = false;
-        QString email, name;
+        QString email;
+        QString name;
         KEmailAddress::extractEmailAddressAndName(mail, email, name);
 
         const QString mailToLower = mail.toLower();

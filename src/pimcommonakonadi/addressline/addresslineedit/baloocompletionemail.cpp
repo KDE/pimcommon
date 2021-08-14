@@ -73,7 +73,9 @@ QStringList BalooCompletionEmail::cleanupEmailList()
  */
 QString BalooCompletionEmail::stripEmail(const QString &email, QString &address)
 {
-    QString displayName, addrSpec, comment;
+    QString displayName;
+    QString addrSpec;
+    QString comment;
     if (KEmailAddress::AddressOk == KEmailAddress::splitAddress(email, displayName, addrSpec, comment)) {
         address = addrSpec;
         while (true) {

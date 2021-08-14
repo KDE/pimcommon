@@ -621,7 +621,8 @@ void AddresseeLineEdit::loadContacts()
     if (showRecentAddresses()) {
         const QStringList recent =
             AddresseeLineEditManager::self()->cleanupRecentAddressEmailList(PimCommon::RecentAddresses::self(recentAddressConfig())->addresses());
-        QString name, email;
+        QString name;
+        QString email;
 
         KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimcompletionorder"));
         KConfigGroup group(config, "CompletionWeights");

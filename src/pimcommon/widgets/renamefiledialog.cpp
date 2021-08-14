@@ -42,7 +42,8 @@ public:
 
 QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const QUrl &baseURL, const QString &oldName)
 {
-    QString dotSuffix, suggestedName;
+    QString dotSuffix;
+    QString suggestedName;
     QString basename = oldName;
     const QChar spacer(QLatin1Char(' '));
 
