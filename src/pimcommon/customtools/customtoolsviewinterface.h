@@ -30,5 +30,6 @@ Q_SIGNALS:
     void insertText(const QString &text);
     void toolsWasClosed();
     void activateView(QWidget *);
+    void configure(QWidget *parent);
 };
 }
