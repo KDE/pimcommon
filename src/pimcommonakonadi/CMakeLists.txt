@@ -2,6 +2,16 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonAkonadi")
 
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KF5PimCommonAkonadi_QCH
+        FILE KF5PimCommonAkonadiQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonAkonadiQchTargets.cmake\")")
+endif()
+
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonAkonadiConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
@@ -382,3 +392,42 @@ install(FILES
 install(FILES
     ${PRI_FILENAME}
     DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
+
+if (BUILD_QCH)
+    ecm_add_qch(
+        KF5PimCommonAkonadi_QCH
+        NAME KF5PimCommonAkonadi
+        BASE_NAME KF5PimCommonAkonadi
+        VERSION ${PIM_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+        ${PimCommonAkonadi_acl_HEADERS}
+        ${PimCommonAkonadi_ldap_HEADERS}
+        ${PimCommonAkonadi_collectionpage_HEADERS}
+        ${PimCommonAkonadi_collectionpageattributes_HEADERS}
+        ${PimCommonAkonadi_folderdialog_HEADERS}
+        ${PimCommonAkonadi_genericplugins_HEADERS}
+        ${PimCommonAkonadi_casewidgets_HEADERS}
+        ${PimCommonAkonadi_widgets_HEADERS}
+        ${PimCommonAkonadi_managerserversidesubscription_HEADERS}
+        ${PimCommonAkonadi_Util_HEADERS}
+        ${PimCommonAkonadi_progresswidget_HEADERS}
+        ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
+        ${PimCommonAkonadi_completionorder_HEADERS}
+        ${PimCommonAkonadi_addressline_HEADERS}
+        ${PimCommonAkonadi_recentaddress_HEADERS}
+        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
+        LINK_QCHS
+            Qt5Core_QCH
+            Qt5Gui_QCH
+            Qt5Widgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+        BLANK_MACROS
+            PIMCOMMONAKONADI_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
