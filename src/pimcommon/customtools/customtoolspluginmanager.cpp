@@ -6,6 +6,7 @@
 
 #include "customtoolspluginmanager.h"
 #include "customtoolsplugin.h"
+#include "kcoreaddons_version.h"
 
 #include <KPluginFactory>
 #include <KPluginLoader>
@@ -56,7 +57,11 @@ public:
 
 void CustomToolsPluginManagerPrivate::initializePluginList()
 {
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon/customtools"));
+#else
+    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pimcommon/customtools"));
+#endif
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
@@ -96,10 +101,16 @@ QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::plugins
 
 void CustomToolsPluginManagerPrivate::loadPlugin(CustomToolsPluginInfo *item)
 {
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
     KPluginLoader pluginLoader(item->metaData.fileName());
     if (pluginLoader.factory()) {
         item->plugin = pluginLoader.factory()->create<PimCommon::CustomToolsPlugin>(q, QVariantList() << item->saveName());
     }
+#else
+    if (auto plugin = KPluginFactory::instantiatePlugin<PimCommon::CustomToolsPlugin>(item->metaData, q, QVariantList() << item->saveName()).plugin) {
+        item->plugin = plugin;
+    }
+#endif
 }
 
 CustomToolsPluginManager *CustomToolsPluginManager::self()

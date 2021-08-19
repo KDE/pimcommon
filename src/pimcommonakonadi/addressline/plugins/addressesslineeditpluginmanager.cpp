@@ -6,8 +6,8 @@
 
 #include "addressesslineeditpluginmanager.h"
 #include "addressesslineeditabstractplugin.h"
+#include "kcoreaddons_version.h"
 #include "pimcommonakonadi_debug.h"
-
 #include <KPluginFactory>
 #include <KPluginLoader>
 #include <KPluginMetaData>
@@ -23,6 +23,7 @@ public:
     {
     }
 
+    KPluginMetaData data;
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     PimCommon::AddressessLineEditAbstractPlugin *plugin = nullptr;
@@ -59,7 +60,11 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("addressline"));
+#else
+    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("addressline"));
+#endif
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
@@ -69,6 +74,7 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
 
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
+        info.data = data;
         if (pluginVersion() == data.version()) {
             info.plugin = nullptr;
             mPluginList.push_back(info);
@@ -85,10 +91,18 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
 
 void AddressessLineEditPluginManagerPrivate::loadPlugin(AddressessLineEditPluginInfo *item)
 {
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
     KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
         item->plugin = pluginLoader.factory()->create<PimCommon::AddressessLineEditAbstractPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
     }
+#else
+    if (auto plugin =
+            KPluginFactory::instantiatePlugin<PimCommon::AddressessLineEditAbstractPlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName)
+                .plugin) {
+        item->plugin = plugin;
+    }
+#endif
 }
 
 QVector<PimCommon::AddressessLineEditAbstractPlugin *> AddressessLineEditPluginManagerPrivate::pluginsList() const
