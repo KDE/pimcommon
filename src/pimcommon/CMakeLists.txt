@@ -37,119 +37,6 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
     )
 
-set(libpimcommon_autocorrection_SRCS
-    autocorrection/autocorrection.cpp
-    autocorrection/autocorrectionwidget.cpp
-    autocorrection/autocorrectionlistwidget.cpp
-    autocorrection/autocorrectiontreewidget.cpp
-    autocorrection/autocorrectionlanguage.cpp
-    autocorrection/import/importlibreofficeautocorrection.cpp
-    autocorrection/import/importkmailautocorrection.cpp
-    autocorrection/import/importabstractautocorrection.cpp
-    autocorrection/widgets/lineeditwithautocorrection.cpp
-    autocorrection/widgets/richtexteditwithautocorrection.cpp
-    )
-
-set(libpimcommon_generericplugin_SRCS
-    genericplugins/pluginutil.cpp
-    genericplugins/genericpluginmanager.cpp
-    genericplugins/genericplugin.cpp
-    genericplugins/abstractgenericplugin.cpp
-    genericplugins/abstractgenericplugininterface.cpp
-    )
-
-
-set(libpimcommon_configure_plugins_SRCS
-    configureplugins/configurepluginslistwidget.cpp
-    configureplugins/configurepluginswidget.cpp
-    configureplugins/configureplugindialog.cpp
-    )
-
-set(libpimcommon_translator_SRCS
-    translator/translatorutil.cpp
-    translator/translatorwidget.cpp
-    translator/translatordebugdialog.cpp
-    translator/googletranslator.cpp
-    )
-
-set(libpimcommon_templatewidgets_SRCS
-    templatewidgets/templatelistwidget.cpp
-    templatewidgets/templateeditdialog.cpp
-    templatewidgets/templatemanager.cpp
-    )
-
-
-set(libpimcommon_widgets_SRCS
-    widgets/renamefiledialog.cpp
-    widgets/simplestringlisteditor.cpp
-    widgets/customtreeview.cpp
-    widgets/configureimmutablewidgetutils.cpp
-    widgets/kactionmenuchangecase.cpp
-    widgets/spellchecklineedit.cpp
-    widgets/kpimprintpreviewdialog.cpp
-    widgets/lineeditwithcompleterng.cpp
-    widgets/purposemenuwidget.cpp
-    widgets/customlogwidget.cpp
-    )
-
-set(libpimcommon_customtools_SRCS
-    customtools/customtoolsplugin.cpp
-    customtools/customtoolspluginmanager.cpp
-    customtools/customtoolswidgetng.cpp
-    customtools/customtoolsviewinterface.cpp
-    )
-
-set(libpimcommon_util_SRCS
-    util/pimutil.cpp
-    util/broadcaststatus.cpp
-    )
-
-set(libpimcommon_migrate_SRCS
-    migration/migrateapplicationfiles.cpp
-    migration/migratefileinfo.cpp
-    )
-
-set(libpimcommon_shareserviceurl_SRCS
-    shareserviceurl/shareserviceurlmanager.cpp
-    )
-
-set(libpimcommon_logactivities_SRCS
-    logactivities/logactivitiesmanager.cpp
-    logactivities/logactivitiesdialog.cpp
-    logactivities/logactivitieswidget.cpp
-    logactivities/logactivitiespurposemenuwidget.cpp
-    )
-
-
-set(libpimcommon_networkmanager_SRCS
-    network/networkmanager.cpp
-    )
-
-set(libpimcommon_misc_SRCS
-    misc/emailvalidator.cpp
-    )
-
-
-set(libpimcommon_SRCS
-    settings/pimcommonsettings.cpp
-    ${libpimcommon_misc_SRCS}
-    ${libpimcommon_configure_plugins_SRCS}
-    ${libpimcommon_networkmanager_SRCS}
-    ${libpimcommon_configure_plugins_SRCS}
-    ${libpimcommon_shareserviceurl_SRCS}
-    ${libpimcommon_migrate_SRCS}
-    ${libpimcommon_util_SRCS}
-    ${libpimcommon_texteditor_SRCS}
-    ${libpimcommon_storageservice_SRCS}
-    ${libpimcommon_autocorrection_SRCS}
-    ${libpimcommon_translator_SRCS}
-    ${libpimcommon_templatewidgets_SRCS}
-    ${libpimcommon_widgets_SRCS}
-    ${libpimcommon_customtools_SRCS}
-    ${libpimcommon_logactivities_SRCS}
-    ${libpimcommon_generericplugin_SRCS}
-    widgets/icons.qrc
-    )
 ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
         DESCRIPTION "kdepim (pimcommon)"
         OLD_CATEGORY_NAMES log_pimcommon
@@ -174,12 +61,69 @@ kconfig_add_kcfg_files(libpimcommon_SRCS
     settings/pimcommonsetting_base.kcfgc
     )
 
-add_library(KF5PimCommon ${libpimcommon_SRCS})
+add_library(KF5PimCommon )
+add_library(KF5::PimCommon ALIAS KF5PimCommon)
+
+target_sources(KF5PimCommon PRIVATE
+    ${libpimcommon_SRCS}
+    autocorrection/autocorrection.cpp
+    autocorrection/autocorrectionwidget.cpp
+    autocorrection/autocorrectionlistwidget.cpp
+    autocorrection/autocorrectiontreewidget.cpp
+    autocorrection/autocorrectionlanguage.cpp
+    autocorrection/import/importlibreofficeautocorrection.cpp
+    autocorrection/import/importkmailautocorrection.cpp
+    autocorrection/import/importabstractautocorrection.cpp
+    autocorrection/widgets/lineeditwithautocorrection.cpp
+    autocorrection/widgets/richtexteditwithautocorrection.cpp
+    genericplugins/pluginutil.cpp
+    genericplugins/genericpluginmanager.cpp
+    genericplugins/genericplugin.cpp
+    genericplugins/abstractgenericplugin.cpp
+    genericplugins/abstractgenericplugininterface.cpp
+    configureplugins/configurepluginslistwidget.cpp
+    configureplugins/configurepluginswidget.cpp
+    configureplugins/configureplugindialog.cpp
+    translator/translatorutil.cpp
+    translator/translatorwidget.cpp
+    translator/translatordebugdialog.cpp
+    translator/googletranslator.cpp
+    templatewidgets/templatelistwidget.cpp
+    templatewidgets/templateeditdialog.cpp
+    templatewidgets/templatemanager.cpp
+    widgets/renamefiledialog.cpp
+    widgets/simplestringlisteditor.cpp
+    widgets/customtreeview.cpp
+    widgets/configureimmutablewidgetutils.cpp
+    widgets/kactionmenuchangecase.cpp
+    widgets/spellchecklineedit.cpp
+    widgets/kpimprintpreviewdialog.cpp
+    widgets/lineeditwithcompleterng.cpp
+    widgets/purposemenuwidget.cpp
+    widgets/customlogwidget.cpp
+    customtools/customtoolsplugin.cpp
+    customtools/customtoolspluginmanager.cpp
+    customtools/customtoolswidgetng.cpp
+    customtools/customtoolsviewinterface.cpp
+    util/pimutil.cpp
+    util/broadcaststatus.cpp
+    migration/migrateapplicationfiles.cpp
+    migration/migratefileinfo.cpp
+    shareserviceurl/shareserviceurlmanager.cpp
+    logactivities/logactivitiesmanager.cpp
+    logactivities/logactivitiesdialog.cpp
+    logactivities/logactivitieswidget.cpp
+    logactivities/logactivitiespurposemenuwidget.cpp
+    network/networkmanager.cpp
+    misc/emailvalidator.cpp
+    settings/pimcommonsettings.cpp
+    widgets/icons.qrc
+    )
+
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommon PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5PimCommon BASE_NAME pimcommon)
-add_library(KF5::PimCommon ALIAS KF5PimCommon)
 
 
 target_link_libraries(KF5PimCommon

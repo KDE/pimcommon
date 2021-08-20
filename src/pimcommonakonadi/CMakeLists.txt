@@ -40,89 +40,7 @@ install(FILES
     )
 
 
-set(libpimcommonakonadi_folderdialog_SRCS
-    folderdialog/selectmulticollectionwidget.cpp
-    folderdialog/selectmulticollectiondialog.cpp
-    folderdialog/checkedcollectionwidget.cpp
-    )
 
-
-set(libpimcommonakonadi_generericplugin_SRCS
-    genericplugins/genericplugininterface.cpp
-    genericplugins/plugininterface.cpp
-    )
-
-set(libpimcommonakonadi_acl_SRCS
-    acl/aclentrydialog.cpp
-    acl/aclmanager.cpp
-    acl/aclutils.cpp
-    acl/collectionaclpage.cpp
-    acl/imapaclattribute.cpp
-    acl/collectionaclwidget.cpp
-    acl/acllistview.cpp
-    acl/aclmodifyjob.cpp
-    )
-
-set(libpimcommonakonadi_manageserversidesubscription_SRCS
-    manageserversidesubscription/manageserversidesubscriptionjob.cpp
-    )
-
-set(libpimcommonakonadi_widgets_SRCS
-    widgets/annotationdialog.cpp
-    )
-
-set(libpimcommonakonadi_ldap_SRCS
-    ldap/ldapsearchdialog.cpp
-    )
-
-set(libpimcommonakonadi_util_SRCS
-    util/createresource.cpp
-    util/imapresourcecapabilitiesmanager.cpp
-    util/mailutil.cpp
-    )
-
-set(libpimcommonakonadi_progresswidget_SRCS
-   progresswidget/agentprogressmonitor.cpp
-   progresswidget/progressmanagerakonadi.cpp)
-
-set(libpimcommonakonadi_collection_SRCS
-  collectionpage/collectiontypeutil.cpp
-  collectionpage/attributeregistrar.cpp
-  collectionpage/attributes/collectionannotationsattribute.cpp
-  collectionpage/incidencesforwidget.cpp
-  collectionpage/contenttypewidget.cpp
-)
-
-set(libpimcommonakonadi_addressline_LIB_SRCS
-    addressline/completionorder/completionordereditor.cpp
-    addressline/completionorder/completionorderwidget.cpp
-    addressline/addresslineedit/addresseelineedit.cpp
-    addressline/addresslineedit/addresseelineedit_p.cpp
-    addressline/addresslineedit/addresseelineeditmanager.cpp
-    addressline/addresslineedit/addresseelineeditldap.cpp
-    addressline/addresslineedit/addresseelineeditakonadi.cpp
-    addressline/addresslineedit/addresseelineeditbaloo.cpp
-    addressline/addresslineedit/kmailcompletion.cpp
-    addressline/addresslineedit/baloocompletionemail.cpp
-    addressline/completionconfiguredialog/completionconfiguredialog.cpp
-    addressline/addresslineedit/addresseelineeditutil.cpp
-    addressline/recentaddress/recentaddresswidget.cpp
-    addressline/recentaddress/recentaddresses.cpp
-    )
-if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-set(libpimcommonakonadi_addressline_blacklist_baloo_LIB_SRCS
-    addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.cpp
-    )
-endif()
-
-set(libpimcommonakonadi_addressline_plugin_LIB_SRCS
-    addressline/plugins/addressesslineeditabstractplugin.cpp
-    addressline/plugins/addressesslineeditpluginmanager.cpp
-    )
 
 
 set(libpimcommonakonadi_SRCS
@@ -149,13 +67,71 @@ ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi
 
 
 
-add_library(KF5PimCommonAkonadi ${libpimcommonakonadi_SRCS})
+add_library(KF5PimCommonAkonadi )
+add_library(KF5::PimCommonAkonadi ALIAS KF5PimCommonAkonadi)
+
+target_sources(KF5PimCommonAkonadi PRIVATE
+    ${libpimcommonakonadi_SRCS}
+    folderdialog/selectmulticollectionwidget.cpp
+    folderdialog/selectmulticollectiondialog.cpp
+    folderdialog/checkedcollectionwidget.cpp
+    genericplugins/genericplugininterface.cpp
+    genericplugins/plugininterface.cpp
+    acl/aclentrydialog.cpp
+    acl/aclmanager.cpp
+    acl/aclutils.cpp
+    acl/collectionaclpage.cpp
+    acl/imapaclattribute.cpp
+    acl/collectionaclwidget.cpp
+    acl/acllistview.cpp
+    acl/aclmodifyjob.cpp
+    manageserversidesubscription/manageserversidesubscriptionjob.cpp
+    widgets/annotationdialog.cpp
+    ldap/ldapsearchdialog.cpp
+    util/createresource.cpp
+    util/imapresourcecapabilitiesmanager.cpp
+    util/mailutil.cpp
+   progresswidget/agentprogressmonitor.cpp
+   progresswidget/progressmanagerakonadi.cpp
+  collectionpage/collectiontypeutil.cpp
+  collectionpage/attributeregistrar.cpp
+  collectionpage/attributes/collectionannotationsattribute.cpp
+  collectionpage/incidencesforwidget.cpp
+  collectionpage/contenttypewidget.cpp
+    addressline/completionorder/completionordereditor.cpp
+    addressline/completionorder/completionorderwidget.cpp
+    addressline/addresslineedit/addresseelineedit.cpp
+    addressline/addresslineedit/addresseelineedit_p.cpp
+    addressline/addresslineedit/addresseelineeditmanager.cpp
+    addressline/addresslineedit/addresseelineeditldap.cpp
+    addressline/addresslineedit/addresseelineeditakonadi.cpp
+    addressline/addresslineedit/addresseelineeditbaloo.cpp
+    addressline/addresslineedit/kmailcompletion.cpp
+    addressline/addresslineedit/baloocompletionemail.cpp
+    addressline/completionconfiguredialog/completionconfiguredialog.cpp
+    addressline/addresslineedit/addresseelineeditutil.cpp
+    addressline/recentaddress/recentaddresswidget.cpp
+    addressline/recentaddress/recentaddresses.cpp
+    addressline/plugins/addressesslineeditabstractplugin.cpp
+    addressline/plugins/addressesslineeditpluginmanager.cpp
+    )
+
+if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+target_sources(KF5PimCommonAkonadi PRIVATE
+    addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.cpp
+    )
+endif()
+
+
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
 endif()
 
 generate_export_header(KF5PimCommonAkonadi BASE_NAME pimcommonakonadi)
-add_library(KF5::PimCommonAkonadi ALIAS KF5PimCommonAkonadi)
 
 target_link_libraries(KF5PimCommonAkonadi
     PUBLIC
