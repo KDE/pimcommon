@@ -43,21 +43,7 @@ install(FILES
 
 
 
-set(libpimcommonakonadi_SRCS
-    ${libpimcommonakonadi_ldap_SRCS}
-    ${libpimcommonakonadi_collection_SRCS}
-    ${libpimcommonakonadi_acl_SRCS}
-    ${libpimcommonakonadi_folderdialog_SRCS}
-    ${libpimcommonakonadi_generericplugin_SRCS}
-    ${libpimcommonakonadi_configure_plugins_SRCS}
-    ${libpimcommonakonadi_manageserversidesubscription_SRCS}
-    ${libpimcommonakonadi_widgets_SRCS}
-    ${libpimcommonakonadi_util_SRCS}
-    ${libpimcommonakonadi_progresswidget_SRCS}
-    ${libpimcommonakonadi_addressline_LIB_SRCS}
-    ${libpimcommonakonadi_addressline_blacklist_baloo_LIB_SRCS}
-    ${libpimcommonakonadi_addressline_plugin_LIB_SRCS}
-    )
+set(libpimcommonakonadi_SRCS)
 
 
 ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
