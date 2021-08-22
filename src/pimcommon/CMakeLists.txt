@@ -37,16 +37,8 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
     )
 
-ecm_qt_declare_logging_category(libpimcommon_SRCS HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
-        DESCRIPTION "kdepim (pimcommon)"
-        OLD_CATEGORY_NAMES log_pimcommon
-        EXPORT PIMCOMMON
-    )
 
 
-ki18n_wrap_ui(libpimcommon_SRCS
-    autocorrection/ui/autocorrectionwidget.ui
-    )
 
 macro(add_resource_iface _kcfgFile _ifaceName _className _fileName)
     kcfg_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/${_kcfgFile} ${_ifaceName})
@@ -63,6 +55,14 @@ kconfig_add_kcfg_files(libpimcommon_SRCS
 
 add_library(KF5PimCommon )
 add_library(KF5::PimCommon ALIAS KF5PimCommon)
+ki18n_wrap_ui(KF5PimCommon
+    autocorrection/ui/autocorrectionwidget.ui
+    )
+ecm_qt_declare_logging_category(KF5PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
+        DESCRIPTION "kdepim (pimcommon)"
+        OLD_CATEGORY_NAMES log_pimcommon
+        EXPORT PIMCOMMON
+    )
 
 target_sources(KF5PimCommon PRIVATE
     ${libpimcommon_SRCS}
