@@ -6,7 +6,7 @@ project(pimcommon VERSION ${PIM_VERSION})
 set(KF5_MIN_VERSION "5.85.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -88,9 +88,6 @@ endif()
 set(DISABLE_AKONADI_SEARCH ${FORCE_DISABLE_AKONADI_SEARCH})
 configure_file(config-akonadi-search.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-akonadi-search.h)
 
-
-find_package(Xsltproc)
-set_package_properties(Xsltproc PROPERTIES DESCRIPTION "XSLT processor from libxslt" TYPE REQUIRED PURPOSE "Required to generate D-Bus interfaces for all Akonadi resources.")
 
 if(BUILD_TESTING)
    find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
