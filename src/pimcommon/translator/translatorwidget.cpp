@@ -297,11 +297,11 @@ void TranslatorWidget::init()
     slotFromLanguageChanged(0, true);
     slotTextChanged();
     readConfig();
-    connect(d->from, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int val) {
+    connect(d->from, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int val) {
         slotFromLanguageChanged(val, false);
         slotConfigChanged();
     });
-    connect(d->to, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this]() {
+    connect(d->to, qOverload<int>(&QComboBox::currentIndexChanged), this, [this]() {
         slotConfigChanged();
         slotTranslate();
     });
