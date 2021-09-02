@@ -679,7 +679,9 @@ void LdapSearchDialog::Private::restoreSettings()
 
             ldapClient->setAttributes(attrs);
 
-            q->connect(ldapClient, SIGNAL(result(KLDAP::LdapClient, KLDAP::LdapObject)), q, SLOT(slotAddResult(KLDAP::LdapClient, KLDAP::LdapObject)));
+            // clang-format off
+            q->connect(ldapClient, SIGNAL(result(KLDAP::LdapClient,KLDAP::LdapObject)), q, SLOT(slotAddResult(KLDAP::LdapClient,KLDAP::LdapObject)));
+            // clang-format on
             q->connect(ldapClient, SIGNAL(done()), q, SLOT(slotSearchDone()));
             q->connect(ldapClient, &KLDAP::LdapClient::error, q, [this](const QString &err) {
                 slotError(err);
