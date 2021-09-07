@@ -8,8 +8,8 @@
 #include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
 
-#include <AkonadiCore/AgentManager>
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/AgentManager>
+#include <Akonadi/ServerManager>
 
 #include <QDBusConnection>
 #include <QDBusInterface>

@@ -7,7 +7,7 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <PimCommon/AbstractGenericPluginInterface>
 
 namespace PimCommon

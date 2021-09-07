@@ -10,8 +10,8 @@
 #include <KLocalizedString>
 
 #include <agentinstancecreatejob.h>
-#include <agentmanager.h>
 #include <agenttype.h>
+#include <akonadi/agentmanager.h>
 
 #include <QDBusInterface>
 #include <QDBusReply>

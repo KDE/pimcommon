@@ -10,8 +10,8 @@
 #include <QObject>
 #include <QStringList>
 
+#include <Akonadi/Item>
 #include <AkonadiCore/Collection>
-#include <AkonadiCore/Item>
 #include <kcontacts/contactgroup.h>
 
 class KConfig;

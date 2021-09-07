@@ -8,7 +8,7 @@
 #include "pimcommonakonadi_debug.h"
 #include "util/mailutil.h"
 
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/ServerManager>
 
 #include <KLocalizedString>
 #include <KMessageBox>

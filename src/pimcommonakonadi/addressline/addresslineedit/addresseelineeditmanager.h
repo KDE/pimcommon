@@ -9,11 +9,11 @@
 #include <AkonadiCore/Collection>
 #include <QMap>
 
-#include <AkonadiCore/Item>
-#include <AkonadiCore/Session>
+#include <Akonadi/Item>
 #include <KLDAP/LdapClientSearch>
 #include <QPointer>
 #include <QVector>
+#include <akonadi/session.h>
 
 #include <QColor>
 

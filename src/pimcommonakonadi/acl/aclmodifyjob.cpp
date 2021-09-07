@@ -10,14 +10,14 @@
 #include "imapresourcesettings.h"
 #include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/ServerManager>
 #include <KEmailAddress>
 
 #include "imapaclattribute.h"
 
-#include <AkonadiCore/CollectionFetchJob>
-#include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/CollectionModifyJob>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/CollectionModifyJob>
 #include <ContactGroupExpandJob>
 #include <ContactGroupSearchJob>
 #include <KContacts/Addressee>

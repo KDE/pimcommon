@@ -10,7 +10,7 @@
 #include "pimcommonakonadi_export.h"
 #include <Libkdepim/ProgressManager>
 
-#include <AkonadiCore/AgentInstance>
+#include <Akonadi/AgentInstance>
 
 namespace PimCommon
 {

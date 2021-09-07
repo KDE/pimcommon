@@ -9,7 +9,7 @@
 
 #include "pimcommonakonadi_private_export.h"
 
-#include <Collection>
+#include <Akonadi/Collection>
 
 #include <QObject>
 

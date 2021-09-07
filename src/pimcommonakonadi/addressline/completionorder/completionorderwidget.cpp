@@ -15,10 +15,10 @@
 #include <KContacts/ContactGroup>
 #include <KLDAP/LdapClientSearchConfig>
 
-#include <AkonadiCore/ChangeRecorder>
-#include <AkonadiCore/CollectionFilterProxyModel>
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiCore/Monitor>
+#include <Akonadi/ChangeRecorder>
+#include <Akonadi/CollectionFilterProxyModel>
+#include <Akonadi/EntityTreeModel>
+#include <Akonadi/Monitor>
 
 #include <kldap/ldapserver.h>
 

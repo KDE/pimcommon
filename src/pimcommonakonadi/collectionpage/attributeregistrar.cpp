@@ -6,7 +6,7 @@
 
 #include "collectionpage/attributes/collectionannotationsattribute.h"
 
-#include <AkonadiCore/attributefactory.h>
+#include <Akonadi/AttributeFactory>
 
 namespace
 {

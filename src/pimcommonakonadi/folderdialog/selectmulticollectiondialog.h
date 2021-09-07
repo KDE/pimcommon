@@ -6,7 +6,7 @@
 
 #pragma once
 #include "pimcommonakonadi_export.h"
-#include <Collection>
+#include <Akonadi/Collection>
 #include <QDialog>
 
 namespace PimCommon

@@ -14,8 +14,8 @@
 #include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
 
-#include <AkonadiCore/CollectionFetchJob>
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/ServerManager>
 
 #include <KEmailAddress>
 #include <KLocalizedString>

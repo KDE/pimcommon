@@ -7,8 +7,8 @@
 #include "checkedcollectionwidget.h"
 #include <CollectionFilterProxyModel>
 
+#include <Akonadi/Monitor>
 #include <EntityTreeModel>
-#include <Monitor>
 #include <QSortFilterProxyModel>
 
 #include <KCheckableProxyModel>

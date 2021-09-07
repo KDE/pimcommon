@@ -11,12 +11,11 @@
 #include "kmailcompletion.h"
 #include "pimcommonakonadi_debug.h"
 
+#include <Akonadi/CollectionFetchJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
 #include <Akonadi/Contact/ContactSearchJob>
-#include <AkonadiCore/CollectionFetchJob>
-#include <AkonadiCore/ItemFetchScope>
+#include <Akonadi/ItemFetchScope>
 #include <AkonadiCore/Job>
-#include <AkonadiCore/Session>
 #include <KColorScheme>
 #include <KCompletionBox>
 #include <KConfigGroup>
@@ -25,6 +24,7 @@
 #include <QMap>
 #include <QTimer>
 #include <QToolButton>
+#include <akonadi/session.h>
 #include <config-akonadi-search.h>
 #if !DISABLE_AKONADI_SEARCH
 #include <AkonadiSearch/PIM/contactcompleter.h>

@@ -9,7 +9,7 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
-#include <AkonadiWidgets/CollectionPropertiesPage>
+#include <Akonadi/CollectionPropertiesPage>
 
 namespace PimCommon
 {

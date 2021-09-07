@@ -10,8 +10,8 @@
 #include <PimCommon/PimUtil>
 
 #include <AgentInstance>
-#include <AkonadiCore/AgentManager>
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/AgentManager>
+#include <Akonadi/ServerManager>
 
 bool PimCommon::MailUtil::isImapFolder(const Akonadi::Collection &col, bool &isOnline)
 {
