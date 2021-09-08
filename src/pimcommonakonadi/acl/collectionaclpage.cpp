@@ -9,7 +9,7 @@
 #include "aclmanager.h"
 #include "collectionaclwidget.h"
 #include "imapaclattribute.h"
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 

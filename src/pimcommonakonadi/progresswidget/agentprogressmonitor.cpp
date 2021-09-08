@@ -6,7 +6,7 @@
 
 #include "agentprogressmonitor.h"
 
-#include <AgentManager>
+#include <Akonadi/AgentManager>
 
 using namespace Akonadi;
 using namespace PimCommon;

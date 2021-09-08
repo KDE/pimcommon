@@ -7,7 +7,7 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
-#include <AkonadiCore/collection.h>
+#include <Akonadi/Collection>
 #include <QObject>
 #include <QSharedPointer>
 class QDBusPendingCallWatcher;

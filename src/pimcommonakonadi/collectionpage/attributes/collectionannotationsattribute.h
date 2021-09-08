@@ -7,7 +7,7 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
-#include <Attribute>
+#include <Akonadi/Attribute>
 
 #include <QMap>
 

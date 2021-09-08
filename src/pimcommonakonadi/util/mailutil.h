@@ -8,7 +8,7 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
-#include <AkonadiCore/collection.h>
+#include <Akonadi/Collection>
 
 namespace PimCommon
 {
