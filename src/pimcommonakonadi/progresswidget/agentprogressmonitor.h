@@ -8,7 +8,7 @@
 
 #include <Libkdepim/ProgressManager> // ProgressItem
 
-#include <AgentInstance>
+#include <Akonadi/AgentInstance>
 namespace PimCommon
 {
 /**

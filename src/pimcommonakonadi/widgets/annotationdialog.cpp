@@ -9,7 +9,7 @@
 #include <KPIMTextEdit/PlainTextEditorWidget>
 
 #include <Akonadi/Item>
-#include <ItemModifyJob>
+#include <Akonadi/ItemModifyJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>

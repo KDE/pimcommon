@@ -5,10 +5,10 @@
 */
 
 #include "checkedcollectionwidget.h"
-#include <CollectionFilterProxyModel>
+#include <Akonadi/CollectionFilterProxyModel>
 
+#include <Akonadi/EntityTreeModel>
 #include <Akonadi/Monitor>
-#include <EntityTreeModel>
 #include <QSortFilterProxyModel>
 
 #include <KCheckableProxyModel>

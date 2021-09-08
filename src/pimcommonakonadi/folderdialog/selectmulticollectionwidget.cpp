@@ -7,8 +7,8 @@
 #include "selectmulticollectionwidget.h"
 #include "folderdialog/checkedcollectionwidget.h"
 
-#include <CollectionFilterProxyModel>
-#include <EntityTreeModel>
+#include <Akonadi/CollectionFilterProxyModel>
+#include <Akonadi/EntityTreeModel>
 
 #include <KCheckableProxyModel>
 

@@ -9,8 +9,8 @@
 #include "pimcommonakonadi_debug.h"
 #include <KLocalizedString>
 
-#include <agentinstancecreatejob.h>
-#include <agenttype.h>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentType>
 #include <akonadi/agentmanager.h>
 
 #include <QDBusInterface>

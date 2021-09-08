@@ -9,7 +9,7 @@
 #include "mailutil.h"
 #include <PimCommon/PimUtil>
 
-#include <AgentInstance>
+#include <Akonadi/AgentInstance>
 #include <Akonadi/AgentManager>
 #include <Akonadi/ServerManager>
 

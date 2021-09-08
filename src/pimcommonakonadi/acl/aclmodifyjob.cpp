@@ -25,7 +25,6 @@
 #include <KMessageBox>
 #include <QDBusInterface>
 #include <QDBusReply>
-#include <collectionfetchjob.h>
 
 using namespace PimCommon;
 //#define SEARCHCONTACT_AKONADI 1
