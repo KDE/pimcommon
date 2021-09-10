@@ -5,7 +5,7 @@
 */
 
 #include "addresseelineeditakonadi.h"
-#include <akonadi/session.h>
+#include <Akonadi/Session>
 
 using namespace PimCommon;
 

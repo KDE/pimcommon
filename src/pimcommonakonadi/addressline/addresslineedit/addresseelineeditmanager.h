@@ -10,10 +10,10 @@
 #include <QMap>
 
 #include <Akonadi/Item>
+#include <Akonadi/Session>
 #include <KLDAP/LdapClientSearch>
 #include <QPointer>
 #include <QVector>
-#include <akonadi/session.h>
 
 #include <QColor>
 

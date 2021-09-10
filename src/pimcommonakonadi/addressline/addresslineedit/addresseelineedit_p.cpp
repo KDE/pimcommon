@@ -15,7 +15,8 @@
 #include <Akonadi/Contact/ContactGroupSearchJob>
 #include <Akonadi/Contact/ContactSearchJob>
 #include <Akonadi/ItemFetchScope>
-#include <AkonadiCore/Job>
+#include <Akonadi/Job>
+#include <Akonadi/Session>
 #include <KColorScheme>
 #include <KCompletionBox>
 #include <KConfigGroup>
@@ -24,7 +25,6 @@
 #include <QMap>
 #include <QTimer>
 #include <QToolButton>
-#include <akonadi/session.h>
 #include <config-akonadi-search.h>
 #if !DISABLE_AKONADI_SEARCH
 #include <AkonadiSearch/PIM/contactcompleter.h>

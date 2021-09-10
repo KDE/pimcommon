@@ -21,7 +21,7 @@
 
 #include <KContacts/VCardConverter>
 
-#include <Job>
+#include <Akonadi/Job>
 #include <KConfigGroup>
 #include <QUrl>
 

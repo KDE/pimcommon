@@ -8,13 +8,13 @@
 #include "annotationdialog.h"
 #include <KPIMTextEdit/PlainTextEditorWidget>
 
+#include <Akonadi/EntityAnnotationsAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemModifyJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KSharedConfig>
 #include <KStandardGuiItem>
-#include <entityannotationsattribute.h>
 
 #include <QComboBox>
 #include <QIcon>
