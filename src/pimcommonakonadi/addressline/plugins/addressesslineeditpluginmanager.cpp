@@ -91,7 +91,7 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
 
 void AddressessLineEditPluginManagerPrivate::loadPlugin(AddressessLineEditPluginInfo *item)
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
     KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
         item->plugin = pluginLoader.factory()->create<PimCommon::AddressessLineEditAbstractPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);

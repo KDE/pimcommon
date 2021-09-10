@@ -101,7 +101,7 @@ QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::plugins
 
 void CustomToolsPluginManagerPrivate::loadPlugin(CustomToolsPluginInfo *item)
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
     KPluginLoader pluginLoader(item->metaData.fileName());
     if (pluginLoader.factory()) {
         item->plugin = pluginLoader.factory()->create<PimCommon::CustomToolsPlugin>(q, QVariantList() << item->saveName());
