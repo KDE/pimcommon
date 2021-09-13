@@ -6,11 +6,9 @@
 
 #include "genericpluginmanager.h"
 #include "genericplugin.h"
-#include "kcoreaddons_version.h"
 #include "pimcommon_debug.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <QFileInfo>
 
@@ -83,11 +81,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
     if (pluginDirectory.isEmpty() || pluginName.isEmpty()) {
         return false;
     }
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginDirectory);
-#else
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(pluginDirectory);
-#endif
 
     const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
     QVectorIterator<KPluginMetaData> i(plugins);
@@ -139,22 +133,12 @@ QVector<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
 
 void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    KPluginLoader pluginLoader(item->metaDataFileName);
-    if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<PimCommon::GenericPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
-        item->plugin->setIsEnabled(item->isEnabled);
-        item->pluginData.mHasConfigureDialog = item->plugin->hasConfigureDialog();
-        mPluginDataList.append(item->pluginData);
-    }
-#else
     if (auto plugin = KPluginFactory::instantiatePlugin<PimCommon::GenericPlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName).plugin) {
         item->plugin = plugin;
         item->plugin->setIsEnabled(item->isEnabled);
         item->pluginData.mHasConfigureDialog = item->plugin->hasConfigureDialog();
         mPluginDataList.append(item->pluginData);
     }
-#endif
 }
 
 GenericPlugin *GenericPluginManagerPrivate::pluginFromIdentifier(const QString &id)
