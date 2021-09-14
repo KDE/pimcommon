@@ -4,6 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "customlogwidget.h"
+#include <KColorScheme>
 #include <QAbstractTextDocumentLayout>
 #include <QApplication>
 #include <QPainter>
@@ -109,7 +110,7 @@ CustomLogWidget::~CustomLogWidget()
 void CustomLogWidget::addTitleLogEntry(const QString &log)
 {
     auto item = new QListWidgetItem(log);
-    item->setForeground(Qt::black);
+    item->setForeground(palette().color(QPalette::WindowText));
     QFont font = item->font();
     font.setBold(true);
     item->setFont(font);
@@ -121,7 +122,7 @@ void CustomLogWidget::addTitleLogEntry(const QString &log)
 void CustomLogWidget::addInfoLogEntry(const QString &log)
 {
     auto item = new QListWidgetItem(log);
-    item->setForeground(Qt::blue);
+    item->setForeground(palette().color(QPalette::WindowText));
     item->setData(ItemLogType, Info);
     addItem(item);
     scrollToItem(item);
@@ -130,7 +131,7 @@ void CustomLogWidget::addInfoLogEntry(const QString &log)
 void CustomLogWidget::addErrorLogEntry(const QString &log)
 {
     auto item = new QListWidgetItem(log);
-    item->setForeground(Qt::red);
+    item->setForeground(KColorScheme().foreground(KColorScheme::NegativeText));
     item->setData(ItemLogType, Error);
     addItem(item);
     scrollToItem(item);
