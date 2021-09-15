@@ -1,12 +1,12 @@
 include(ECMAddQtDesignerPlugin)
 ecm_qtdesignerplugin_widget(PimCommon::SimpleStringListEditor
-    INCLUDE_FILE "pimcommon/simplestringlisteditor.h"
+    INCLUDE_FILE "PimCommon/SimpleStringListEditor"
     TOOLTIP "A listbox with add/remove/move up/down button (KDE-PIM)"
     WHATSTHIS "A listbox which lets organize list order."
     GROUP "Input (KDE-PIM)"
     )
 ecm_qtdesignerplugin_widget(PimCommon::TranslatorWidget
-    INCLUDE_FILE "pimcommon/translatorwidget.h"
+    INCLUDE_FILE "PimCommon/TranslatorWidget"
     TOOLTIP "A widget to make translate string (KDE-PIM)"
     WHATSTHIS "A widget to make translate string."
     GROUP "Input (KDE-PIM)"
