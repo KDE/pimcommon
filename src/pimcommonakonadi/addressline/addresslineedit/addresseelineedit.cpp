@@ -28,10 +28,10 @@
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/Contact/ContactGroupSearchJob>
 #include <KColorScheme>
+#include <KContacts/ContactGroupTool>
 #include <KEmailAddress>
 #include <KIO/StoredTransferJob>
 #include <KJobWidgets>
-#include <kcontacts/contactgrouptool.h>
 
 #include "pimcommonakonadi_debug.h"
 #include <KCodecs>
@@ -40,6 +40,7 @@
 #include <KStandardShortcut>
 
 #include <ContactGroupExpandJob>
+#include <KContacts/VCardDrag>
 #include <KMessageBox>
 #include <KSharedConfig>
 #include <QApplication>
@@ -53,7 +54,6 @@
 #include <QMouseEvent>
 #include <QObject>
 #include <addressline/completionconfiguredialog/completionconfiguredialog.h>
-#include <kcontacts/vcarddrag.h>
 
 using namespace PimCommon;
 

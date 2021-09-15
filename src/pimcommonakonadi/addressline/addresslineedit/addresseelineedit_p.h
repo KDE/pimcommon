@@ -12,7 +12,7 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/Item>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/ContactGroup>
 
 class KConfig;
 class QToolButton;

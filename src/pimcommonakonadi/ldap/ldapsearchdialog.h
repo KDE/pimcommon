@@ -10,8 +10,8 @@
 
 #include "pimcommonakonadi_export.h"
 
+#include <KContacts/Addressee>
 #include <QDialog>
-#include <kcontacts/addressee.h>
 
 class QCloseEvent;
 

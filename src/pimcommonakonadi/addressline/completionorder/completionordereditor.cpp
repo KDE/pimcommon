@@ -12,8 +12,8 @@
 #include <KLDAP/LdapClient>
 #include <KLDAP/LdapClientSearch>
 
-#include <kcontacts/addressee.h>
-#include <kcontacts/contactgroup.h>
+#include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 #include <kldap/ldapserver.h>
 
 #include <KConfigGroup>

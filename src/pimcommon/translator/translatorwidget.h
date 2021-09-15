@@ -8,9 +8,9 @@
 #pragma once
 
 #include "pimcommon_export.h"
+#include <KIO/Job>
 #include <KPIMTextEdit/PlainTextEditor>
 #include <KPIMTextEdit/PlainTextEditorWidget>
-#include <kio/job.h>
 namespace PimCommon
 {
 class TranslatorResultTextEdit : public KPIMTextEdit::PlainTextEditor
