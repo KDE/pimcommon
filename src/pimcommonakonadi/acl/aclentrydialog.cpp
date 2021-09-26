@@ -121,7 +121,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     connect(button, &QPushButton::clicked, this, [this]() {
         d->slotSelectAddresses();
     });
-    connect(d->mButtonGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, [this]() {
+    connect(d->mButtonGroup, &QButtonGroup::buttonClicked, this, [this]() {
         d->slotChanged();
     });
 
