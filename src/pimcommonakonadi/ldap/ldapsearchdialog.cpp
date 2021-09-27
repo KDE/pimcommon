@@ -562,7 +562,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->mResultView->verticalHeader()->hide();
     d->mResultView->setSortingEnabled(true);
     d->mResultView->horizontalHeader()->setSortIndicatorShown(true);
-    connect(d->mResultView, qOverload<const QModelIndex &>(&QTableView::clicked), this, [this]() {
+    connect(d->mResultView, &QTableView::clicked, this, [this]() {
         d->slotSelectionChanged();
     });
     topLayout->addWidget(d->mResultView);
