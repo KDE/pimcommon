@@ -117,7 +117,7 @@ void AnnotationEditDialog::slotAccepted()
         map.insert(d->mNoteType->itemData(d->mNoteType->currentIndex()).toByteArray(), d->mTextEdit->toPlainText().toUtf8());
         annotation->setAnnotations(map);
         d->mItem.addAttribute(annotation);
-    } else if (d->mHasAnnotation && textIsEmpty) {
+    } else if (d->mHasAnnotation) {
         d->mItem.removeAttribute<Akonadi::EntityAnnotationsAttribute>();
     }
     new Akonadi::ItemModifyJob(d->mItem);

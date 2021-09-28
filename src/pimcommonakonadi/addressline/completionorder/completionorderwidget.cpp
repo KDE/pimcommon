@@ -42,7 +42,7 @@ CompletionOrderEditorAdaptor::CompletionOrderEditorAdaptor(QObject *parent)
 class LDAPCompletionItem : public CompletionItem
 {
 public:
-    LDAPCompletionItem(KLDAP::LdapClient *ldapClient)
+    explicit LDAPCompletionItem(KLDAP::LdapClient *ldapClient)
         : mLdapClient(ldapClient)
     {
         mWeight = mLdapClient->completionWeight();

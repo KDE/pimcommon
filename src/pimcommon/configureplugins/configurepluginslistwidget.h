@@ -45,19 +45,16 @@ protected:
     class PluginItem : public QTreeWidgetItem
     {
     public:
-        PluginItem(QTreeWidgetItem *parent)
+        explicit PluginItem(QTreeWidgetItem *parent)
             : QTreeWidgetItem(parent)
-            , mEnableByDefault(false)
-            , mHasConfigureSupport(false)
-            , mEnableFromUserSettings(false)
         {
         }
 
         QString mIdentifier;
         QString mDescription;
-        bool mEnableByDefault;
-        bool mHasConfigureSupport;
-        bool mEnableFromUserSettings;
+        bool mEnableByDefault = false;
+        bool mHasConfigureSupport = false;
+        bool mEnableFromUserSettings = false;
     };
     void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems);
     void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst,
