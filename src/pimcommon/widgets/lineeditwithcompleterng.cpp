@@ -18,6 +18,7 @@ LineEditWithCompleterNg::LineEditWithCompleterNg(QWidget *parent)
 {
     auto completer = new QCompleter(this);
     mCompleterListModel = new QStringListModel(this);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
     completer->setModel(mCompleterListModel);
     setCompleter(completer);
 }
