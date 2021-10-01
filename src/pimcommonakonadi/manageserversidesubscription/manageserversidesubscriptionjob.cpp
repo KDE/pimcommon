@@ -79,7 +79,6 @@ void ManageServerSideSubscriptionJob::slotConfigureSubscriptionFinished(QDBusPen
         qCDebug(PIMCOMMONAKONADI_LOG) << "ManageServerSideSubscriptionJob return an invalid reply";
     }
     watcher->deleteLater();
-    watcher = nullptr;
     deleteLater();
 }
 
