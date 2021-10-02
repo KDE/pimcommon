@@ -7,7 +7,6 @@
 #include "pimcommonakonadi_debug.h"
 
 #include "folderdialog/selectmulticollectiondialog.h"
-#include <KMime/Message>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
@@ -20,7 +19,7 @@ int main(int argc, char **argv)
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
-    auto dialog = new PimCommon::SelectMultiCollectionDialog(KMime::Message::mimeType());
+    auto dialog = new PimCommon::SelectMultiCollectionDialog(QStringLiteral("message/rfc822"));
     dialog->exec();
     delete dialog;
     return 0;

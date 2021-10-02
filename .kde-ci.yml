@@ -10,6 +10,5 @@ Dependencies:
     'kde/pim/akonadi' : '@same'
     'kde/pim/akonadi-contacts' : '@same'
     'kde/pim/kimap' : '@same'
-    'kde/pim/kmime' : '@same'
     'kde/pim/kpimtextedit' : '@same'
     'kde/pim/libkdepim' : '@same'
