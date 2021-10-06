@@ -96,11 +96,12 @@ QList<KToggleAction *> CustomToolsWidgetNg::actionList() const
 void CustomToolsWidgetNg::setText(const QString &text)
 {
     if (isVisible()) {
-        for (PimCommon::CustomToolsViewInterface *interface : std::as_const(d->mListInterfaceView)) {
-            if (interface == d->mStackedWidget->currentWidget()) {
-                interface->setText(text);
-                break;
-            }
+        auto currentWidget = d->mStackedWidget->currentWidget();
+        auto it = std::find_if(d->mListInterfaceView.cbegin(), d->mListInterfaceView.cend(), [currentWidget](auto interface) {
+            return interface == currentWidget;
+        });
+        if (it != d->mListInterfaceView.cend()) {
+            (*it)->setText(text);
         }
     }
 }
