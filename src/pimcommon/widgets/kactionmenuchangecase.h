@@ -41,7 +41,7 @@ Q_SIGNALS:
     void reverseCase();
 
 private:
-    KActionMenuChangeCasePrivate *const d;
+    std::unique_ptr<KActionMenuChangeCasePrivate> const d;
 };
 }
 

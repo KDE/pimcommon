@@ -103,7 +103,7 @@ protected Q_SLOTS:
 private:
     void slotContextMenu(const QPoint &);
     bool containsString(const QString &str);
-    SimpleStringListEditorPrivate *const d;
+    std::unique_ptr<SimpleStringListEditorPrivate> const d;
 };
 }
 

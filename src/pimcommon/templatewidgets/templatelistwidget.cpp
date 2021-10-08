@@ -299,10 +299,7 @@ TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *paren
     });
 }
 
-TemplateListWidget::~TemplateListWidget()
-{
-    delete d;
-}
+TemplateListWidget::~TemplateListWidget() = default;
 
 void TemplateListWidget::loadTemplates()
 {

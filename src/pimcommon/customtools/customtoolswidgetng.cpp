@@ -38,10 +38,7 @@ CustomToolsWidgetNg::CustomToolsWidgetNg(QWidget *parent)
     hide();
 }
 
-CustomToolsWidgetNg::~CustomToolsWidgetNg()
-{
-    delete d;
-}
+CustomToolsWidgetNg::~CustomToolsWidgetNg() = default;
 
 void CustomToolsWidgetNg::addCustomToolViewInterface(PimCommon::CustomToolsViewInterface *plugin)
 {

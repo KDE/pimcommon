@@ -9,6 +9,7 @@
 #include "migratefileinfo.h"
 #include "pimcommon_export.h"
 #include <QObject>
+#include <memory>
 namespace PimCommon
 {
 class MigrateApplicationFilesPrivate;
@@ -49,6 +50,6 @@ private:
     void migrateFolder(const MigrateFileInfo &info);
     void migrateFile(const MigrateFileInfo &info);
     bool migrateConfig();
-    MigrateApplicationFilesPrivate *const d;
+    std::unique_ptr<MigrateApplicationFilesPrivate> const d;
 };
 }

@@ -51,7 +51,6 @@ BroadcastStatus::BroadcastStatus()
 BroadcastStatus::~BroadcastStatus()
 {
     instance_ = nullptr;
-    delete d;
 }
 
 void BroadcastStatus::setStatusMsg(const QString &message)

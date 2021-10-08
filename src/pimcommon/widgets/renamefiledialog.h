@@ -43,7 +43,7 @@ private:
     void slotSuggestNewNamePressed();
     //@cond PRIVATE
     class RenameFileDialogPrivate;
-    RenameFileDialogPrivate *const d;
+    std::unique_ptr<RenameFileDialogPrivate> const d;
 };
 }
 

@@ -38,7 +38,6 @@ public:
 
     ~AutoCorrectionWidgetPrivate()
     {
-        delete ui;
     }
 
     AutoCorrection::TypographicQuotes m_singleQuotes;
@@ -46,7 +45,7 @@ public:
     QSet<QString> m_upperCaseExceptions;
     QSet<QString> m_twoUpperLetterExceptions;
     QHash<QString, QString> m_autocorrectEntries;
-    Ui::AutoCorrectionWidget *const ui;
+    std::unique_ptr<Ui::AutoCorrectionWidget> const ui;
     AutoCorrection *mAutoCorrection = nullptr;
     bool mWasChanged = false;
 };
@@ -128,10 +127,7 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->exportAutoCorrection, &QPushButton::clicked, this, &AutoCorrectionWidget::slotExportAutoCorrection);
 }
 
-AutoCorrectionWidget::~AutoCorrectionWidget()
-{
-    delete d;
-}
+AutoCorrectionWidget::~AutoCorrectionWidget() = default;
 
 void AutoCorrectionWidget::setAutoCorrection(AutoCorrection *autoCorrect)
 {

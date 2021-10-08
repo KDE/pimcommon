@@ -113,10 +113,7 @@ CustomToolsPluginManager::CustomToolsPluginManager(QObject *parent)
     d->initializePluginList();
 }
 
-CustomToolsPluginManager::~CustomToolsPluginManager()
-{
-    delete d;
-}
+CustomToolsPluginManager::~CustomToolsPluginManager() = default;
 
 QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManager::pluginsList() const
 {

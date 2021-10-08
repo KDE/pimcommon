@@ -86,7 +86,7 @@ private:
     void init();
     void initLanguage();
     class TranslatorWidgetPrivate;
-    TranslatorWidgetPrivate *const d;
+    std::unique_ptr<TranslatorWidgetPrivate> const d;
 };
 }
 

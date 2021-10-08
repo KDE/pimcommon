@@ -162,7 +162,6 @@ TranslatorWidget::~TranslatorWidget()
     disconnect(d->inputText, &TranslatorTextEdit::textChanged, this, &TranslatorWidget::slotTextChanged);
     disconnect(d->inputText, &TranslatorTextEdit::translateText, this, &TranslatorWidget::slotTranslate);
     writeConfig();
-    delete d;
 }
 
 void TranslatorWidget::writeConfig()

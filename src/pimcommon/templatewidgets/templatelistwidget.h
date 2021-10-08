@@ -56,7 +56,7 @@ Q_SIGNALS:
 
 private:
     friend class TemplateListWidgetPrivate;
-    TemplateListWidgetPrivate *const d;
+    std::unique_ptr<TemplateListWidgetPrivate> const d;
 };
 }
 Q_DECLARE_TYPEINFO(PimCommon::defaultTemplate, Q_MOVABLE_TYPE);

@@ -33,10 +33,7 @@ MigrateApplicationFiles::MigrateApplicationFiles(QObject *parent)
 {
 }
 
-MigrateApplicationFiles::~MigrateApplicationFiles()
-{
-    delete d;
-}
+MigrateApplicationFiles::~MigrateApplicationFiles() = default;
 
 void MigrateApplicationFiles::finished()
 {

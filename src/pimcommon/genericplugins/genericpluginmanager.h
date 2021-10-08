@@ -56,7 +56,7 @@ public:
     Q_REQUIRED_RESULT GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:
-    GenericPluginManagerPrivate *const d;
+    std::unique_ptr<GenericPluginManagerPrivate> const d;
 };
 }
 

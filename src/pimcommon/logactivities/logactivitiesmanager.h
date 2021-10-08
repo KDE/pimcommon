@@ -8,6 +8,7 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
+#include <memory>
 namespace PimCommon
 {
 class LogActivitiesManagerPrivate;
@@ -40,6 +41,6 @@ Q_SIGNALS:
     void logEntryCleared();
 
 private:
-    LogActivitiesManagerPrivate *const d;
+    std::unique_ptr<LogActivitiesManagerPrivate> const d;
 };
 }

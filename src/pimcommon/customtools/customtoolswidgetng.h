@@ -42,6 +42,6 @@ Q_SIGNALS:
     void toolActivated();
 
 private:
-    CustomToolsWidgetNgPrivate *const d;
+    std::unique_ptr<CustomToolsWidgetNgPrivate> const d;
 };
 }

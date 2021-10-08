@@ -45,10 +45,7 @@ KActionMenuChangeCase::KActionMenuChangeCase(QObject *parent)
     addAction(d->mReverseCase);
 }
 
-KActionMenuChangeCase::~KActionMenuChangeCase()
-{
-    delete d;
-}
+KActionMenuChangeCase::~KActionMenuChangeCase() = default;
 
 QAction *KActionMenuChangeCase::upperCaseAction() const
 {

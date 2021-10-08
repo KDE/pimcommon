@@ -8,6 +8,7 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
+#include <memory>
 class KActionCollection;
 namespace PimCommon
 {
@@ -39,6 +40,6 @@ public:
     Q_REQUIRED_RESULT bool isEnabled() const;
 
 private:
-    CustomToolsPluginPrivate *const d;
+    std::unique_ptr<CustomToolsPluginPrivate> const d;
 };
 }

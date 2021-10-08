@@ -12,7 +12,7 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
-
+#include <memory>
 #undef None
 
 namespace PimCommon
@@ -58,7 +58,7 @@ Q_SIGNALS:
 
 protected:
     BroadcastStatus();
-    BroadcastStatusPrivate *const d;
+    std::unique_ptr<BroadcastStatusPrivate> const d;
 };
 }
 

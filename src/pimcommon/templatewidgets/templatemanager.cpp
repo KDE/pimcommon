@@ -38,10 +38,7 @@ TemplateManager::TemplateManager(const QString &relativeTemplateDir, PimCommon::
     loadTemplates(true);
 }
 
-TemplateManager::~TemplateManager()
-{
-    delete d;
-}
+TemplateManager::~TemplateManager() = default;
 
 void TemplateManager::slotDirectoryChanged()
 {

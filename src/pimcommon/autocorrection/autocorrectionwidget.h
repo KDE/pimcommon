@@ -84,7 +84,7 @@ private:
     void loadGlobalAutoCorrectionAndException();
     void setLanguage(const QString &lang);
 
-    AutoCorrectionWidgetPrivate *const d;
+    std::unique_ptr<AutoCorrectionWidgetPrivate> const d;
 };
 }
 

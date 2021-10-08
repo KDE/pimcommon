@@ -20,10 +20,7 @@ CustomToolsPlugin::CustomToolsPlugin(QObject *parent)
 {
 }
 
-CustomToolsPlugin::~CustomToolsPlugin()
-{
-    delete d;
-}
+CustomToolsPlugin::~CustomToolsPlugin() = default;
 
 bool CustomToolsPlugin::hasConfigureDialog() const
 {

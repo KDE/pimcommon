@@ -8,6 +8,7 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
+#include <memory>
 
 namespace PimCommon
 {
@@ -40,7 +41,7 @@ private:
     void initTemplatesDirectories(const QString &templatesRelativePath);
     TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
 
-    TemplateManagerPrivate *const d;
+    std::unique_ptr<TemplateManagerPrivate> const d;
 };
 }
 

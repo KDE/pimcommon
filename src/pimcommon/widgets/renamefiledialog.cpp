@@ -141,10 +141,7 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     layout->addWidget(ignore);
 }
 
-RenameFileDialog::~RenameFileDialog()
-{
-    delete d;
-}
+RenameFileDialog::~RenameFileDialog() = default;
 
 void RenameFileDialog::slotOverwritePressed()
 {

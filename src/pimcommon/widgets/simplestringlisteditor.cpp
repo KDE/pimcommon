@@ -167,10 +167,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
     connect(d->mListBox, &QListWidget::itemSelectionChanged, this, &SimpleStringListEditor::slotSelectionChanged);
 }
 
-SimpleStringListEditor::~SimpleStringListEditor()
-{
-    delete d;
-}
+SimpleStringListEditor::~SimpleStringListEditor() = default;
 
 void SimpleStringListEditor::setUpDownAutoRepeat(bool b)
 {

@@ -7,6 +7,7 @@
 #pragma once
 #include "pimcommon_export.h"
 #include <QObject>
+#include <memory>
 class QAction;
 class KActionCollection;
 namespace PimCommon
@@ -58,6 +59,6 @@ Q_SIGNALS:
     void message(const QString &str);
 
 private:
-    AbstractGenericPluginInterfacePrivate *const d;
+    std::unique_ptr<AbstractGenericPluginInterfacePrivate> const d;
 };
 }

@@ -8,6 +8,7 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
+#include <memory>
 namespace PimCommon
 {
 class CustomToolsPlugin;
@@ -28,6 +29,6 @@ public:
     Q_REQUIRED_RESULT QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
 
 private:
-    CustomToolsPluginManagerPrivate *const d;
+    std::unique_ptr<CustomToolsPluginManagerPrivate> const d;
 };
 }

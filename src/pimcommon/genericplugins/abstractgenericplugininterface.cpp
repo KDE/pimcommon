@@ -25,10 +25,7 @@ AbstractGenericPluginInterface::AbstractGenericPluginInterface(QObject *parent)
 {
 }
 
-AbstractGenericPluginInterface::~AbstractGenericPluginInterface()
-{
-    delete d;
-}
+AbstractGenericPluginInterface::~AbstractGenericPluginInterface() = default;
 
 void AbstractGenericPluginInterface::setParentWidget(QWidget *parent)
 {

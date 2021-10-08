@@ -158,10 +158,7 @@ GenericPluginManager::GenericPluginManager(QObject *parent)
 {
 }
 
-GenericPluginManager::~GenericPluginManager()
-{
-    delete d;
-}
+GenericPluginManager::~GenericPluginManager() = default;
 
 bool GenericPluginManager::initializePlugins()
 {

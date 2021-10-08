@@ -37,10 +37,7 @@ LogActivitiesManager::LogActivitiesManager(QObject *parent)
 {
 }
 
-LogActivitiesManager::~LogActivitiesManager()
-{
-    delete d;
-}
+LogActivitiesManager::~LogActivitiesManager() = default;
 
 LogActivitiesManager *LogActivitiesManager::self()
 {
