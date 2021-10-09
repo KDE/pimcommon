@@ -74,7 +74,6 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
 CompletionConfigureDialog::~CompletionConfigureDialog()
 {
     writeConfig();
-    delete d;
 }
 
 void CompletionConfigureDialog::readConfig()

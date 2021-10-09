@@ -39,10 +39,7 @@ PluginInterface::PluginInterface(QObject *parent)
     d->mGenericPluginManager = new GenericPluginManager(this);
 }
 
-PluginInterface::~PluginInterface()
-{
-    delete d;
-}
+PluginInterface::~PluginInterface() = default;
 
 void PimCommon::PluginInterface::setActionCollection(KActionCollection *ac)
 {

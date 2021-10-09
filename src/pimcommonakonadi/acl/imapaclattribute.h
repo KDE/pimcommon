@@ -20,6 +20,7 @@
 
 #include <QMap>
 
+#include <memory>
 namespace PimCommon
 {
 class ImapAclAttributePrivate;
@@ -45,7 +46,7 @@ public:
     bool operator==(const ImapAclAttribute &other) const;
 
 private:
-    ImapAclAttributePrivate *const d;
+    std::unique_ptr<ImapAclAttributePrivate> const d;
     QMap<QByteArray, KIMAP::Acl::Rights> mRights;
     QMap<QByteArray, KIMAP::Acl::Rights> mOldRights;
     KIMAP::Acl::Rights mMyRights;

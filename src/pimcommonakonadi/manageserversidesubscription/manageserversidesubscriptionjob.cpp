@@ -37,10 +37,7 @@ ManageServerSideSubscriptionJob::ManageServerSideSubscriptionJob(QObject *parent
 {
 }
 
-ManageServerSideSubscriptionJob::~ManageServerSideSubscriptionJob()
-{
-    delete d;
-}
+ManageServerSideSubscriptionJob::~ManageServerSideSubscriptionJob() = default;
 
 void ManageServerSideSubscriptionJob::start()
 {

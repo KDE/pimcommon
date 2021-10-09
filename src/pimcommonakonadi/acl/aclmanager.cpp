@@ -146,10 +146,10 @@ private:
     QVector<QPair<QByteArray, KIMAP::Acl::Rights>> mRights;
 };
 
-class Q_DECL_HIDDEN PimCommon::AclManager::Private
+class Q_DECL_HIDDEN PimCommon::AclManager::AclManagerPrivate
 {
 public:
-    Private(AclManager *qq)
+    AclManagerPrivate(AclManager *qq)
         : q(qq)
     {
         mAddAction = new QAction(i18n("Add Entry..."), q);
@@ -177,7 +177,7 @@ public:
         });
     }
 
-    ~Private()
+    ~AclManagerPrivate()
     {
     }
 
@@ -358,14 +358,11 @@ public:
 
 AclManager::AclManager(QObject *parent)
     : QObject(parent)
-    , d(new Private(this))
+    , d(new AclManagerPrivate(this))
 {
 }
 
-AclManager::~AclManager()
-{
-    delete d;
-}
+AclManager::~AclManager() = default;
 
 void AclManager::setCollection(const Akonadi::Collection &collection)
 {

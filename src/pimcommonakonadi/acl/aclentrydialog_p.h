@@ -55,8 +55,8 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    class AclEntryDialogPrivate;
+    std::unique_ptr<AclEntryDialogPrivate> const d;
 
     //@endcond
 };

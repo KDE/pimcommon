@@ -79,8 +79,8 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    class LdapSearchDialogPrivate;
+    std::unique_ptr<LdapSearchDialogPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotAddResult(const KLDAP::LdapClient &, const KLDAP::LdapObject &))
     Q_PRIVATE_SLOT(d, void slotStartSearch())

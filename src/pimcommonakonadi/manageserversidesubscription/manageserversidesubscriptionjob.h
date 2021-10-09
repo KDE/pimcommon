@@ -33,7 +33,7 @@ public:
 
 private:
     void slotConfigureSubscriptionFinished(QDBusPendingCallWatcher *watcher);
-    ManageServerSideSubscriptionJobPrivate *const d;
+    std::unique_ptr<ManageServerSideSubscriptionJobPrivate> const d;
 };
 }
 

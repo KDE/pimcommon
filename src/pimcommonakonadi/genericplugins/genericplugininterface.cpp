@@ -24,10 +24,7 @@ GenericPluginInterface::GenericPluginInterface(QObject *parent)
 {
 }
 
-GenericPluginInterface::~GenericPluginInterface()
-{
-    delete d;
-}
+GenericPluginInterface::~GenericPluginInterface() = default;
 
 void GenericPluginInterface::setActionTypes(const QVector<ActionType> &type)
 {

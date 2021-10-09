@@ -114,10 +114,7 @@ ShareServiceUrlManager::ShareServiceUrlManager(QObject *parent)
     d->initializeMenu();
 }
 
-ShareServiceUrlManager::~ShareServiceUrlManager()
-{
-    delete d;
-}
+ShareServiceUrlManager::~ShareServiceUrlManager() = default;
 
 KActionMenu *ShareServiceUrlManager::menu() const
 {

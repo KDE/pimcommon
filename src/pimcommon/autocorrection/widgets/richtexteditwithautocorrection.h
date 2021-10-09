@@ -34,7 +34,7 @@ protected:
     void keyPressEvent(QKeyEvent *e) override;
 
 private:
-    RichTextEditWithAutoCorrectionPrivate *const d;
+    std::unique_ptr<RichTextEditWithAutoCorrectionPrivate> const d;
 };
 }
 

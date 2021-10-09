@@ -9,6 +9,7 @@
 #include "pimcommon_export.h"
 #include <QObject>
 #include <QUrl>
+#include <memory>
 
 class KActionMenu;
 class QAction;
@@ -40,7 +41,7 @@ Q_SIGNALS:
     void serviceUrlSelected(PimCommon::ShareServiceUrlManager::ServiceType type);
 
 private:
-    ShareServiceUrlManagerPrivate *const d;
+    std::unique_ptr<ShareServiceUrlManagerPrivate> const d;
 };
 }
 Q_DECLARE_METATYPE(PimCommon::ShareServiceUrlManager::ServiceType)

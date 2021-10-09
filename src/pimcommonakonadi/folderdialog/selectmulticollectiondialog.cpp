@@ -43,7 +43,6 @@ SelectMultiCollectionDialog::SelectMultiCollectionDialog(const QString &mimetype
 SelectMultiCollectionDialog::~SelectMultiCollectionDialog()
 {
     writeConfig();
-    delete d;
 }
 
 void SelectMultiCollectionDialog::initialize(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection)

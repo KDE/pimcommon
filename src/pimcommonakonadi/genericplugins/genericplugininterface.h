@@ -42,7 +42,7 @@ public:
     virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
 private:
-    GenericPluginInterfacePrivate *const d;
+    std::unique_ptr<GenericPluginInterfacePrivate> const d;
 };
 }
 Q_DECLARE_TYPEINFO(PimCommon::ActionType, Q_MOVABLE_TYPE);

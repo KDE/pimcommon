@@ -85,10 +85,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     vbox->addWidget(d->mFolderView);
 }
 
-CheckedCollectionWidget::~CheckedCollectionWidget()
-{
-    delete d;
-}
+CheckedCollectionWidget::~CheckedCollectionWidget() = default;
 
 Akonadi::EntityTreeModel *CheckedCollectionWidget::entityTreeModel() const
 {

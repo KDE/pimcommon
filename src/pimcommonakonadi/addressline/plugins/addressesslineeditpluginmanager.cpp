@@ -110,10 +110,7 @@ AddressessLineEditPluginManager::AddressessLineEditPluginManager(QObject *parent
 {
 }
 
-AddressessLineEditPluginManager::~AddressessLineEditPluginManager()
-{
-    delete d;
-}
+AddressessLineEditPluginManager::~AddressessLineEditPluginManager() = default;
 
 AddressessLineEditPluginManager *AddressessLineEditPluginManager::self()
 {

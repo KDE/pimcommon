@@ -35,10 +35,7 @@ LineEditWithAutoCorrection::LineEditWithAutoCorrection(QWidget *parent, const QS
 {
 }
 
-LineEditWithAutoCorrection::~LineEditWithAutoCorrection()
-{
-    delete d;
-}
+LineEditWithAutoCorrection::~LineEditWithAutoCorrection() = default;
 
 AutoCorrection *LineEditWithAutoCorrection::autocorrection() const
 {

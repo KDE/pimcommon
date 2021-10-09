@@ -65,7 +65,6 @@ CompletionOrderEditor::CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch
 CompletionOrderEditor::~CompletionOrderEditor()
 {
     writeConfig();
-    delete d;
 }
 
 void CompletionOrderEditor::readConfig()

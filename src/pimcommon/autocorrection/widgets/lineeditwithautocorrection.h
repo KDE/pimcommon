@@ -34,7 +34,7 @@ protected:
     void keyPressEvent(QKeyEvent *e) override;
 
 private:
-    LineEditWithAutoCorrectionPrivate *const d;
+    std::unique_ptr<LineEditWithAutoCorrectionPrivate> const d;
 };
 }
 

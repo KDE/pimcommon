@@ -36,7 +36,7 @@ private Q_SLOTS:
 private:
     void readConfig();
     void writeConfig();
-    CompletionOrderEditorPrivate *const d;
+    std::unique_ptr<CompletionOrderEditorPrivate> const d;
 };
 } // namespace
 

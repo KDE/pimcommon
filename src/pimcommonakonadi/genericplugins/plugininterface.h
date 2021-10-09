@@ -52,7 +52,7 @@ private Q_SLOTS:
     void slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
 
 private:
-    PluginInterfacePrivate *const d;
+    std::unique_ptr<PluginInterfacePrivate> const d;
 };
 }
 

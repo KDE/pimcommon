@@ -8,6 +8,7 @@
 
 #include "pimcommonakonadi_export.h"
 #include <QObject>
+#include <memory>
 
 namespace PimCommon
 {
@@ -30,7 +31,7 @@ public:
     QVector<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
 
 private:
-    AddressessLineEditPluginManagerPrivate *const d;
+    std::unique_ptr<AddressessLineEditPluginManagerPrivate> const d;
 };
 }
 

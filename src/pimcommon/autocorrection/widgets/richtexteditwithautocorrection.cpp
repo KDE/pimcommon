@@ -36,10 +36,7 @@ RichTextEditWithAutoCorrection::RichTextEditWithAutoCorrection(QWidget *parent)
 {
 }
 
-RichTextEditWithAutoCorrection::~RichTextEditWithAutoCorrection()
-{
-    delete d;
-}
+RichTextEditWithAutoCorrection::~RichTextEditWithAutoCorrection() = default;
 
 void RichTextEditWithAutoCorrection::setAutocorrection(PimCommon::AutoCorrection *autocorrect)
 {

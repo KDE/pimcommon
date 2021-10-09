@@ -45,8 +45,8 @@ private:
     void slotAccepted();
     void slotDeleteNote();
     //@cond PRIVATE
-    class Private;
-    Private *const d;
+    class AnnotationEditDialogPrivate;
+    std::unique_ptr<AnnotationEditDialogPrivate> const d;
     //@endcond
 };
 }

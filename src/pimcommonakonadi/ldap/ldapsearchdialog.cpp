@@ -404,10 +404,10 @@ private:
     QStringList mServerList;
 };
 
-class Q_DECL_HIDDEN LdapSearchDialog::Private
+class Q_DECL_HIDDEN LdapSearchDialog::LdapSearchDialogPrivate
 {
 public:
-    Private(LdapSearchDialog *qq)
+    LdapSearchDialogPrivate(LdapSearchDialog *qq)
         : q(qq)
     {
     }
@@ -464,7 +464,7 @@ public:
 
 LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
+    , d(new LdapSearchDialogPrivate(this))
 {
     setWindowTitle(i18nc("@title:window", "Import Contacts from LDAP"));
     auto mainLayout = new QVBoxLayout(this);
@@ -608,7 +608,6 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
 LdapSearchDialog::~LdapSearchDialog()
 {
     d->saveSettings();
-    delete d;
 }
 
 void LdapSearchDialog::setSearchText(const QString &text)
@@ -634,12 +633,12 @@ void LdapSearchDialog::slotCustomContextMenuRequested(const QPoint &pos)
     }
 }
 
-void LdapSearchDialog::Private::slotSelectionChanged()
+void LdapSearchDialog::LdapSearchDialogPrivate::slotSelectionChanged()
 {
     user1Button->setEnabled(mResultView->selectionModel()->hasSelection());
 }
 
-void LdapSearchDialog::Private::restoreSettings()
+void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 {
     // Create one KLDAP::LdapClient per selected server and configure it.
 
@@ -705,7 +704,7 @@ void LdapSearchDialog::Private::restoreSettings()
     }
 }
 
-void LdapSearchDialog::Private::saveSettings()
+void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 {
     KConfig *config = KLDAP::LdapClientSearchConfig::config();
     KConfigGroup group(config, "LDAPSearch");
@@ -722,19 +721,19 @@ void LdapSearchDialog::Private::saveSettings()
     group.sync();
 }
 
-void LdapSearchDialog::Private::cancelQuery()
+void LdapSearchDialog::LdapSearchDialogPrivate::cancelQuery()
 {
     for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
         client->cancelQuery();
     }
 }
 
-void LdapSearchDialog::Private::slotAddResult(const KLDAP::LdapClient &client, const KLDAP::LdapObject &obj)
+void LdapSearchDialog::LdapSearchDialogPrivate::slotAddResult(const KLDAP::LdapClient &client, const KLDAP::LdapObject &obj)
 {
     mModel->addContact(obj.attributes(), client.server().host());
 }
 
-void LdapSearchDialog::Private::slotSetScope(bool rec)
+void LdapSearchDialog::LdapSearchDialogPrivate::slotSetScope(bool rec)
 {
     for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
         if (rec) {
@@ -745,7 +744,7 @@ void LdapSearchDialog::Private::slotSetScope(bool rec)
     }
 }
 
-void LdapSearchDialog::Private::slotStartSearch()
+void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
 {
     cancelQuery();
 
@@ -777,13 +776,13 @@ void LdapSearchDialog::Private::slotStartSearch()
     saveSettings();
 }
 
-void LdapSearchDialog::Private::slotStopSearch()
+void LdapSearchDialog::LdapSearchDialogPrivate::slotStopSearch()
 {
     cancelQuery();
     slotSearchDone();
 }
 
-void LdapSearchDialog::Private::slotSearchDone()
+void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
 {
     // If there are no more active clients, we are done.
     for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
@@ -802,7 +801,7 @@ void LdapSearchDialog::Private::slotSearchDone()
 #endif
 }
 
-void LdapSearchDialog::Private::slotError(const QString &error)
+void LdapSearchDialog::LdapSearchDialogPrivate::slotError(const QString &error)
 {
 #ifndef QT_NO_CURSOR
     QApplication::restoreOverrideCursor();
@@ -816,13 +815,13 @@ void LdapSearchDialog::closeEvent(QCloseEvent *e)
     e->accept();
 }
 
-void LdapSearchDialog::Private::slotUnselectAll()
+void LdapSearchDialog::LdapSearchDialogPrivate::slotUnselectAll()
 {
     mResultView->clearSelection();
     slotSelectionChanged();
 }
 
-void LdapSearchDialog::Private::slotSelectAll()
+void LdapSearchDialog::LdapSearchDialogPrivate::slotSelectAll()
 {
     mResultView->selectAll();
     slotSelectionChanged();

@@ -47,7 +47,7 @@ Q_SIGNALS:
 
 private:
     void slotSetCollectionFilter(const QString &filter);
-    CheckedCollectionWidgetPrivate *const d;
+    std::unique_ptr<CheckedCollectionWidgetPrivate> const d;
 };
 }
 

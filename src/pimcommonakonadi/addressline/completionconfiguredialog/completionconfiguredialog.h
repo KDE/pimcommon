@@ -40,7 +40,7 @@ private:
     void slotSave();
     void readConfig();
     void writeConfig();
-    CompletionConfigureDialogPrivate *const d;
+    std::unique_ptr<CompletionConfigureDialogPrivate> const d;
 };
 }
 

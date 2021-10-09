@@ -30,7 +30,7 @@ private:
     void initialize(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection = QList<Akonadi::Collection::Id>());
     void writeConfig();
     void readConfig();
-    SelectMultiCollectionDialogPrivate *const d;
+    std::unique_ptr<SelectMultiCollectionDialogPrivate> const d;
 };
 }
 

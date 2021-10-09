@@ -27,10 +27,10 @@
 
 using namespace PimCommon;
 
-class Q_DECL_HIDDEN AnnotationEditDialog::Private
+class Q_DECL_HIDDEN AnnotationEditDialog::AnnotationEditDialogPrivate
 {
 public:
-    Private()
+    AnnotationEditDialogPrivate()
     {
     }
 
@@ -42,7 +42,7 @@ public:
 
 AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *parent)
     : QDialog(parent)
-    , d(new Private)
+    , d(new AnnotationEditDialogPrivate)
 {
     d->mItem = item;
     // check for correct key?
@@ -84,7 +84,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     hbox->addWidget(label);
     d->mNoteType = new QComboBox;
     hbox->addWidget(d->mNoteType);
-    d->mNoteType->addItem(i18nc("@item:inlistbox", "Private note"), QByteArrayLiteral("/private/comment"));
+    d->mNoteType->addItem(i18nc("@item:inlistbox", "AnnotationEditDialogPrivate note"), QByteArrayLiteral("/private/comment"));
     d->mNoteType->addItem(i18nc("@item:inlistbox", "Shared note"), QByteArrayLiteral("/shared/comment"));
 
     vbox->addLayout(hbox);
@@ -104,7 +104,6 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
 AnnotationEditDialog::~AnnotationEditDialog()
 {
     writeConfig();
-    delete d;
 }
 
 void AnnotationEditDialog::slotAccepted()

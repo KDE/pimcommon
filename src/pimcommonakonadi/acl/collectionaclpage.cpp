@@ -35,10 +35,7 @@ CollectionAclPage::CollectionAclPage(QWidget *parent)
     init();
 }
 
-CollectionAclPage::~CollectionAclPage()
-{
-    delete d;
-}
+CollectionAclPage::~CollectionAclPage() = default;
 
 void CollectionAclPage::init()
 {
