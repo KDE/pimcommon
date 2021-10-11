@@ -8,6 +8,7 @@
 
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KTreeWidgetSearchLineWidget>
 
 #include <QAction>
 #include <QHeaderView>
@@ -33,9 +34,13 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mListWidget->setColumnCount(2);
     mListWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
 
+    mTreeWidgetSearchLineEdit = new KTreeWidgetSearchLineWidget(this, mListWidget);
+    mTreeWidgetSearchLineEdit->setObjectName(QStringLiteral("mTreeWidgetSearchLineEdit"));
+
     connect(mListWidget, &QTreeWidget::itemSelectionChanged, this, &ConfigurePluginsListWidget::slotItemSelectionChanged);
     connect(mListWidget, &QTreeWidget::itemChanged, this, &ConfigurePluginsListWidget::slotItemChanged);
 
+    mainLayout->addWidget(mTreeWidgetSearchLineEdit);
     mainLayout->addWidget(mListWidget);
 }
 

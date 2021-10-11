@@ -143,6 +143,7 @@ target_link_libraries(KF5PimCommon
     Qt::PrintSupport
     KF5::Purpose
     KF5::PurposeWidgets
+    KF5::ItemViews
     )
 
 

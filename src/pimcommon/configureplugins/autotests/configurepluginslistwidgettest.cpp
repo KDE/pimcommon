@@ -6,6 +6,7 @@
 
 #include "configurepluginslistwidgettest.h"
 #include "../configurepluginslistwidget.h"
+#include <KTreeWidgetSearchLineWidget>
 #include <QTest>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -30,6 +31,9 @@ void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()
     auto mListWidget = w.findChild<QTreeWidget *>(QStringLiteral("listwidget"));
     QVERIFY(mListWidget);
     QVERIFY(mListWidget->isSortingEnabled());
+
+    auto mTreeWidgetSearchLineEdit = w.findChild<KTreeWidgetSearchLineWidget *>(QStringLiteral("mTreeWidgetSearchLineEdit"));
+    QVERIFY(mTreeWidgetSearchLineEdit);
 }
 
 QTEST_MAIN(ConfigurePluginsListWidgetTest)

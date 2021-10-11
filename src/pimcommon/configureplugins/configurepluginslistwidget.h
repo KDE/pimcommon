@@ -13,6 +13,7 @@
 #include <QTreeWidgetItem>
 class QTreeWidget;
 class QAction;
+class KTreeWidgetSearchLineWidget;
 namespace PimCommon
 {
 /**
@@ -70,6 +71,7 @@ protected:
     QTreeWidget *mListWidget = nullptr;
 
 private:
+    KTreeWidgetSearchLineWidget *mTreeWidgetSearchLineEdit = nullptr;
     void slotConfigureClicked(QAction *act);
     bool mInitializeDone = false;
 };
