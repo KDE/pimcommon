@@ -20,12 +20,12 @@
 using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     : QWidget(parent)
+    , mListWidget(new QTreeWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
-    mListWidget = new QTreeWidget(this);
     mListWidget->setSortingEnabled(true);
     mListWidget->sortItems(0, Qt::AscendingOrder);
     mListWidget->setObjectName(QStringLiteral("listwidget"));

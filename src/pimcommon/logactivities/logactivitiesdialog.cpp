@@ -21,16 +21,16 @@ using namespace PimCommon;
 
 LogActivitiesDialog::LogActivitiesDialog(QWidget *parent)
     : QDialog(parent)
+    , mLogWidget(new LogActivitiesWidget(this))
+    , mEnableLogActivities(new QCheckBox(i18n("Log activities"), this))
 {
     setWindowTitle(i18nc("@title:window", "Log activities"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mLogWidget = new LogActivitiesWidget(this);
     mLogWidget->setObjectName(QStringLiteral("logwidget"));
     mainLayout->addWidget(mLogWidget);
 
-    mEnableLogActivities = new QCheckBox(i18n("Log activities"), this);
     mEnableLogActivities->setObjectName(QStringLiteral("enablelogactivities"));
     mainLayout->addWidget(mEnableLogActivities);
     connect(mEnableLogActivities, &QCheckBox::toggled, this, &LogActivitiesDialog::slotEnableLogActivities);

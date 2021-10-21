@@ -68,7 +68,7 @@ protected:
     void resetToUserSettings(const QVector<PluginItem *> &items);
     void changeState(const QVector<PluginItem *> &items);
 
-    QTreeWidget *mListWidget = nullptr;
+    QTreeWidget *const mListWidget;
 
 private:
     KTreeWidgetSearchLineWidget *mTreeWidgetSearchLineEdit = nullptr;

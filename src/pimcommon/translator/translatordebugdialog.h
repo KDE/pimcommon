@@ -25,7 +25,7 @@ private:
     void slotSaveAs();
     void readConfig();
     void writeConfig();
-    KPIMTextEdit::PlainTextEditorWidget *mEdit = nullptr;
+    KPIMTextEdit::PlainTextEditorWidget *const mEdit;
     QPushButton *mUser1Button = nullptr;
 };
 

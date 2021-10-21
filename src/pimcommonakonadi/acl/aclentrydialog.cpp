@@ -79,7 +79,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
 
     auto layout = new QGridLayout(page);
-    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setContentsMargins({});
 
     auto label = new QLabel(i18n("&User identifier:"), page);
     layout->addWidget(label, 0, 0);

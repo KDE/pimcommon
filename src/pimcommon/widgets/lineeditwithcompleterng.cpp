@@ -15,9 +15,9 @@ using namespace PimCommon;
 #define MAX_COMPLETION_ITEMS 20
 LineEditWithCompleterNg::LineEditWithCompleterNg(QWidget *parent)
     : QLineEdit(parent)
+    , mCompleterListModel(new QStringListModel(this))
 {
     auto completer = new QCompleter(this);
-    mCompleterListModel = new QStringListModel(this);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     completer->setModel(mCompleterListModel);
     setCompleter(completer);

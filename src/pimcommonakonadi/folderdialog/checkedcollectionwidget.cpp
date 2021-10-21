@@ -40,7 +40,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     , d(new PimCommon::CheckedCollectionWidgetPrivate)
 {
     auto vbox = new QVBoxLayout(this);
-    vbox->setContentsMargins(0, 0, 0, 0);
+    vbox->setContentsMargins({});
 
     // Create a new change recorder.
     auto monitor = new Akonadi::Monitor(this);

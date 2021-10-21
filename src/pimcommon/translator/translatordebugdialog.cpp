@@ -17,6 +17,7 @@
 
 TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     : QDialog(parent)
+    , mEdit(new KPIMTextEdit::PlainTextEditorWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Translator Debug"));
     auto mainLayout = new QVBoxLayout(this);
@@ -29,7 +30,6 @@ TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     mUser1Button->setText(i18n("Save As..."));
     connect(mUser1Button, &QPushButton::clicked, this, &TranslatorDebugDialog::slotSaveAs);
 
-    mEdit = new KPIMTextEdit::PlainTextEditorWidget(this);
     mEdit->setReadOnly(true);
     mainLayout->addWidget(mEdit);
     mainLayout->addWidget(buttonBox);

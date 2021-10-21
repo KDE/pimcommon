@@ -45,7 +45,7 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     mainLayout->addWidget(buttonBox);
 
     auto vbox = new QVBoxLayout;
-    vbox->setContentsMargins(0, 0, 0, 0);
+    vbox->setContentsMargins({});
 
     auto hbox = new QHBoxLayout;
     auto label = new QLabel(i18n("Name:"));

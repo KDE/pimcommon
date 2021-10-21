@@ -73,7 +73,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
     setAddDialogLabel(addDialogLabel);
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
     auto hlay = new QHBoxLayout(this);
-    hlay->setContentsMargins(0, 0, 0, 0);
+    hlay->setContentsMargins({});
 
     d->mListBox = new QListWidget(this);
 

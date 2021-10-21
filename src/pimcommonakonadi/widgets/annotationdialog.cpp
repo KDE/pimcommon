@@ -72,7 +72,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
 
     auto label = new QLabel(i18n("Enter the text that should be stored as a note to the mail:"));
     auto vbox = new QVBoxLayout(mainWidget);
-    vbox->setContentsMargins(0, 0, 0, 0);
+    vbox->setContentsMargins({});
     d->mTextEdit = new KPIMTextEdit::PlainTextEditorWidget(this);
     vbox->addWidget(label);
     vbox->addWidget(d->mTextEdit);

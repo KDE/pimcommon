@@ -12,12 +12,12 @@ using namespace PimCommon;
 
 LogActivitiesWidget::LogActivitiesWidget(QWidget *parent)
     : QWidget(parent)
+    , mLog(new KPIMTextEdit::PlainTextEditorWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mLog = new KPIMTextEdit::PlainTextEditorWidget(this);
     mLog->setObjectName(QStringLiteral("log"));
     mLog->setReadOnly(true);
     mainLayout->addWidget(mLog);

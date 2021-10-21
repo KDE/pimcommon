@@ -86,7 +86,7 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
 
     auto buttonBox = new QWidget;
     auto buttonBoxVBoxLayout = new QVBoxLayout(buttonBox);
-    buttonBoxVBoxLayout->setContentsMargins(0, 0, 0, 0);
+    buttonBoxVBoxLayout->setContentsMargins({});
     layout->addWidget(buttonBox);
 
     auto button = new ActionButton(buttonBox);

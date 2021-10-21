@@ -31,7 +31,7 @@ Q_SIGNALS:
 
 private:
     void slotTextChanged();
-    KPIMTextEdit::PlainTextEditorWidget *mLog = nullptr;
+    KPIMTextEdit::PlainTextEditorWidget *const mLog;
 };
 }
 
