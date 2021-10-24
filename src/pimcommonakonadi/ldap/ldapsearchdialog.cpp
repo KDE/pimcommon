@@ -15,6 +15,7 @@
 #include <KLDAP/LdapSearchClientReadConfigServerJob>
 #include <Libkdepim/LineEditCatchReturnKey>
 #include <Libkdepim/ProgressIndicatorLabel>
+#include <kcontacts_version.h>
 
 #include <QApplication>
 #include <QCheckBox>
@@ -161,7 +162,13 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAt
     KLDAP::LdapAttrValue::ConstIterator it = lst.constBegin();
     bool pref = true;
     while (it != lst.constEnd()) {
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
         addr.insertEmail(asUtf8(*it), pref);
+#else
+        KContacts::Email email(asUtf8(*it));
+        email.setPreferred(pref);
+        addr.addEmail(email);
+#endif
         pref = false;
         ++it;
     }

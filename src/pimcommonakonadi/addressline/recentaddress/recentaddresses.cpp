@@ -13,6 +13,7 @@
 #include <KEmailAddress>
 #include <KSharedConfig>
 #include <QCoreApplication>
+#include <kcontacts_version.h>
 
 using namespace PimCommon;
 
@@ -54,18 +55,24 @@ RecentAddresses::~RecentAddresses()
 void RecentAddresses::load(KConfig *config)
 {
     QString name;
-    QString email;
+    QString emailString;
 
     m_addresseeList.clear();
     KConfigGroup cg(config, "General");
     m_maxCount = cg.readEntry("Maximum Recent Addresses", 200);
     const QStringList addresses = cg.readEntry("Recent Addresses", QStringList());
     for (const QString &address : addresses) {
-        KContacts::Addressee::parseEmailAddress(address, name, email);
-        if (!email.isEmpty()) {
+        KContacts::Addressee::parseEmailAddress(address, name, emailString);
+        if (!emailString.isEmpty()) {
             KContacts::Addressee addr;
             addr.setNameFromString(name);
-            addr.insertEmail(email, true);
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
+            addr.insertEmail(emailString, true);
+#else
+            KContacts::Email email(emailString);
+            email.setPreferred(true);
+            addr.addEmail(email);
+#endif
             m_addresseeList.append(addr);
         }
     }
@@ -88,22 +95,28 @@ void RecentAddresses::add(const QString &entry)
             if (errorCode != KEmailAddress::AddressOk) {
                 continue;
             }
-            QString email;
+            QString emailString;
             QString fullName;
             KContacts::Addressee addr;
 
-            KContacts::Addressee::parseEmailAddress(str, fullName, email);
+            KContacts::Addressee::parseEmailAddress(str, fullName, emailString);
 
             KContacts::Addressee::List::Iterator end(m_addresseeList.end());
             for (KContacts::Addressee::List::Iterator it = m_addresseeList.begin(); it != end; ++it) {
-                if (email == (*it).preferredEmail()) {
+                if (emailString == (*it).preferredEmail()) {
                     // already inside, remove it here and add it later at pos==1
                     m_addresseeList.erase(it);
                     break;
                 }
             }
             addr.setNameFromString(fullName);
-            addr.insertEmail(email, true);
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
+            addr.insertEmail(emailString, true);
+#else
+            KContacts::Email email(emailString);
+            email.setPreferred(true);
+            addr.addEmail(email);
+#endif
             m_addresseeList.prepend(addr);
             adjustSize();
         }
