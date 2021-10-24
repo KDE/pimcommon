@@ -161,7 +161,9 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAt
     KLDAP::LdapAttrValue::ConstIterator it = lst.constBegin();
     bool pref = true;
     while (it != lst.constEnd()) {
-        addr.insertEmail(asUtf8(*it), pref);
+        KContacts::Email email(asUtf8(*it));
+        email.setPreferred(pref);
+        addr.addEmail(email);
         pref = false;
         ++it;
     }
