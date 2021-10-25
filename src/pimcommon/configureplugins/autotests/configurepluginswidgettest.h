@@ -13,7 +13,7 @@ class ConfigurePluginsWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ConfigurePluginsWidgetTest(QObject *parent = nullptr);
-    ~ConfigurePluginsWidgetTest();
+    ~ConfigurePluginsWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

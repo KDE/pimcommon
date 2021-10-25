@@ -14,7 +14,7 @@ class ContentTypeWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ContentTypeWidgetTest(QObject *parent = nullptr);
-    ~ContentTypeWidgetTest();
+    ~ContentTypeWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

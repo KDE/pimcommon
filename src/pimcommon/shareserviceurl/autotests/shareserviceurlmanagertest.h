@@ -13,7 +13,7 @@ class ShareServiceUrlManagerTest : public QObject
     Q_OBJECT
 public:
     explicit ShareServiceUrlManagerTest(QObject *parent = nullptr);
-    ~ShareServiceUrlManagerTest();
+    ~ShareServiceUrlManagerTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

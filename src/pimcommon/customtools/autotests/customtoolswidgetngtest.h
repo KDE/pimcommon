@@ -13,7 +13,7 @@ class CustomToolsWidgetNgTest : public QObject
     Q_OBJECT
 public:
     explicit CustomToolsWidgetNgTest(QObject *parent = nullptr);
-    ~CustomToolsWidgetNgTest();
+    ~CustomToolsWidgetNgTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

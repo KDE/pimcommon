@@ -17,7 +17,7 @@ class CustomToolWidgetNgTest : public QWidget
     Q_OBJECT
 public:
     explicit CustomToolWidgetNgTest(QWidget *parent = nullptr);
-    ~CustomToolWidgetNgTest();
+    ~CustomToolWidgetNgTest() override;
 
 private:
     PimCommon::CustomToolsWidgetNg *mCustomTools;

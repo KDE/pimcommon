@@ -14,7 +14,7 @@ class BlackListBalooEmailListTest : public QObject
     Q_OBJECT
 public:
     explicit BlackListBalooEmailListTest(QObject *parent = nullptr);
-    ~BlackListBalooEmailListTest();
+    ~BlackListBalooEmailListTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldFillListEmail();

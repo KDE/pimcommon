@@ -13,7 +13,7 @@ class MigrateApplicationFilesTest : public QObject
     Q_OBJECT
 public:
     explicit MigrateApplicationFilesTest(QObject *parent = nullptr);
-    ~MigrateApplicationFilesTest();
+    ~MigrateApplicationFilesTest() override;
 private Q_SLOTS:
     void initTestCase();
     void shouldHaveDefaultValue();

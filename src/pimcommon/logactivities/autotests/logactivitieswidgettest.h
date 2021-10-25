@@ -13,7 +13,7 @@ class LogActivitiesWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit LogActivitiesWidgetTest(QObject *parent = nullptr);
-    ~LogActivitiesWidgetTest();
+    ~LogActivitiesWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

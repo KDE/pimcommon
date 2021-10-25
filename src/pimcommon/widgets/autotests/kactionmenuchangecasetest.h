@@ -13,7 +13,7 @@ class KActionMenuChangeCaseTest : public QObject
     Q_OBJECT
 public:
     explicit KActionMenuChangeCaseTest(QObject *parent = nullptr);
-    ~KActionMenuChangeCaseTest();
+    ~KActionMenuChangeCaseTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldEmitSignals();

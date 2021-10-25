@@ -13,7 +13,7 @@ class IncidencesForWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit IncidencesForWidgetTest(QObject *parent = nullptr);
-    ~IncidencesForWidgetTest();
+    ~IncidencesForWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

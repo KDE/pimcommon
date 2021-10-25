@@ -13,7 +13,7 @@ class MigrateFileInfoTest : public QObject
     Q_OBJECT
 public:
     explicit MigrateFileInfoTest(QObject *parent = nullptr);
-    ~MigrateFileInfoTest();
+    ~MigrateFileInfoTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

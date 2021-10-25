@@ -13,7 +13,7 @@ class LogActivitiesDialogTest : public QObject
     Q_OBJECT
 public:
     explicit LogActivitiesDialogTest(QObject *parent = nullptr);
-    ~LogActivitiesDialogTest();
+    ~LogActivitiesDialogTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldClearLog();

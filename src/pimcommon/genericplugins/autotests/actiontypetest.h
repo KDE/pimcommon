@@ -13,7 +13,7 @@ class ActionTypeTest : public QObject
     Q_OBJECT
 public:
     explicit ActionTypeTest(QObject *parent = nullptr);
-    ~ActionTypeTest();
+    ~ActionTypeTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldAssignValue();

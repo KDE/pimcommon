@@ -13,7 +13,7 @@ class CollectionAclWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CollectionAclWidgetTest(QObject *parent = nullptr);
-    ~CollectionAclWidgetTest();
+    ~CollectionAclWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

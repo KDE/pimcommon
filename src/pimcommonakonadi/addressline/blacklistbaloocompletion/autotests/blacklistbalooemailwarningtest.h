@@ -14,7 +14,7 @@ class BlackListBalooEmailWarningTest : public QObject
     Q_OBJECT
 public:
     explicit BlackListBalooEmailWarningTest(QObject *parent = nullptr);
-    ~BlackListBalooEmailWarningTest();
+    ~BlackListBalooEmailWarningTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

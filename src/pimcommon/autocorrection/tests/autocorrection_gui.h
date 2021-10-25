@@ -24,7 +24,7 @@ class ConfigureTestDialog : public QDialog
     Q_OBJECT
 public:
     explicit ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrection, QWidget *parent = nullptr);
-    ~ConfigureTestDialog();
+    ~ConfigureTestDialog() override;
 
 private Q_SLOTS:
     void slotSaveSettings();
@@ -52,7 +52,7 @@ class AutocorrectionTestWidget : public QWidget
     Q_OBJECT
 public:
     explicit AutocorrectionTestWidget(QWidget *parent = nullptr);
-    ~AutocorrectionTestWidget();
+    ~AutocorrectionTestWidget() override;
 
 private Q_SLOTS:
     void slotConfigure();

@@ -14,7 +14,7 @@ class CompletionOrderWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CompletionOrderWidgetTest(QObject *parent = nullptr);
-    ~CompletionOrderWidgetTest();
+    ~CompletionOrderWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

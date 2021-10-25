@@ -13,7 +13,7 @@ class GenericPluginManagerTest : public QObject
     Q_OBJECT
 public:
     explicit GenericPluginManagerTest(QObject *parent = nullptr);
-    ~GenericPluginManagerTest();
+    ~GenericPluginManagerTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldInitialized();

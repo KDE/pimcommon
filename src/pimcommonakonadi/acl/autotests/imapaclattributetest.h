@@ -12,7 +12,7 @@ class ImapAclAttributeTest : public QObject
     Q_OBJECT
 public:
     explicit ImapAclAttributeTest(QObject *parent = nullptr);
-    ~ImapAclAttributeTest();
+    ~ImapAclAttributeTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBuildAttribute();

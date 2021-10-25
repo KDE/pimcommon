@@ -59,7 +59,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT CompletionOrderWidget : public QWidget
     Q_OBJECT
 public:
     explicit CompletionOrderWidget(QWidget *parent = nullptr);
-    ~CompletionOrderWidget();
+    ~CompletionOrderWidget() override;
     void save();
 
     KConfig *configFile();

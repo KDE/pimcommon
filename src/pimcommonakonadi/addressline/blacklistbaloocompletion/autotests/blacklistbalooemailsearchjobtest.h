@@ -14,7 +14,7 @@ class BlackListBalooEmailSearchJobTest : public QObject
     Q_OBJECT
 public:
     explicit BlackListBalooEmailSearchJobTest(QObject *parent = nullptr);
-    ~BlackListBalooEmailSearchJobTest();
+    ~BlackListBalooEmailSearchJobTest() override;
 
 private Q_SLOTS:
     void shouldNotSearchWhenTextIsEmpty();

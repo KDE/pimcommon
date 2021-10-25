@@ -14,7 +14,7 @@ class BlackListBalooEmailCompletionWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit BlackListBalooEmailCompletionWidgetTest(QObject *parent = nullptr);
-    ~BlackListBalooEmailCompletionWidgetTest();
+    ~BlackListBalooEmailCompletionWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

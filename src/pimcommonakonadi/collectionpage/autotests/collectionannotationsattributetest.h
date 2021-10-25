@@ -13,7 +13,7 @@ class CollectionAnnotationsAttributeTest : public QObject
     Q_OBJECT
 public:
     explicit CollectionAnnotationsAttributeTest(QObject *parent = nullptr);
-    ~CollectionAnnotationsAttributeTest();
+    ~CollectionAnnotationsAttributeTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldAssignAttribute();

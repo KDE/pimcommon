@@ -32,7 +32,7 @@ class PIMCOMMON_EXPORT CustomLogWidget : public QListWidget
 {
 public:
     explicit CustomLogWidget(QWidget *parent = nullptr);
-    ~CustomLogWidget();
+    ~CustomLogWidget() override;
 
     void addInfoLogEntry(const QString &log);
     void addErrorLogEntry(const QString &log);

@@ -14,7 +14,7 @@ class BlackListBalooEmailUtilTest : public QObject
     Q_OBJECT
 public:
     explicit BlackListBalooEmailUtilTest(QObject *parent = nullptr);
-    ~BlackListBalooEmailUtilTest();
+    ~BlackListBalooEmailUtilTest() override;
 private Q_SLOTS:
     void shouldReturnEmptyResult();
     void shouldDontChangeWhenNotChanged();

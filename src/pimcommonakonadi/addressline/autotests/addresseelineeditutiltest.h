@@ -13,7 +13,7 @@ class AddresseeLineEditUtilTest : public QObject
     Q_OBJECT
 public:
     explicit AddresseeLineEditUtilTest(QObject *parent = nullptr);
-    ~AddresseeLineEditUtilTest();
+    ~AddresseeLineEditUtilTest() override;
 
 private Q_SLOTS:
     void shouldAdaptPasteMails_data();

@@ -13,7 +13,7 @@ class PluginUtilTest : public QObject
     Q_OBJECT
 public:
     explicit PluginUtilTest(QObject *parent = nullptr);
-    ~PluginUtilTest();
+    ~PluginUtilTest() override;
 private Q_SLOTS:
     void shouldTestIsEnabled_data();
     void shouldTestIsEnabled();

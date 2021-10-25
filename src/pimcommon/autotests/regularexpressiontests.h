@@ -13,7 +13,7 @@ class RegularExpressionTests : public QObject
     Q_OBJECT
 public:
     explicit RegularExpressionTests(QObject *parent = nullptr);
-    ~RegularExpressionTests();
+    ~RegularExpressionTests() override;
 private Q_SLOTS:
     void shouldVerifyQStringListFilterConversion_data();
     void shouldVerifyQStringListFilterConversion();

@@ -41,7 +41,7 @@ class PIMCOMMON_EXPORT AbstractGenericPluginInterface : public QObject
     Q_OBJECT
 public:
     explicit AbstractGenericPluginInterface(QObject *parent = nullptr);
-    ~AbstractGenericPluginInterface();
+    ~AbstractGenericPluginInterface() override;
 
     void setParentWidget(QWidget *parent);
     Q_REQUIRED_RESULT QWidget *parentWidget() const;

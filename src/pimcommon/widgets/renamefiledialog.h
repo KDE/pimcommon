@@ -23,7 +23,7 @@ class PIMCOMMON_EXPORT RenameFileDialog : public QDialog
     Q_OBJECT
 public:
     explicit RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *parent);
-    ~RenameFileDialog();
+    ~RenameFileDialog() override;
 
     enum RenameFileDialogResult {
         RENAMEFILE_IGNORE = 0,

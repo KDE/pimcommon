@@ -14,7 +14,7 @@ class BalooCompletionEmailTest : public QObject
     Q_OBJECT
 public:
     explicit BalooCompletionEmailTest(QObject *parent = nullptr);
-    ~BalooCompletionEmailTest();
+    ~BalooCompletionEmailTest() override;
 
 private Q_SLOTS:
     void returnEmptyListWhenEmailListIsEmpty();
