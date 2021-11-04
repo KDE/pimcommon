@@ -118,6 +118,58 @@ target_sources(KF5PimCommon PRIVATE
     misc/emailvalidator.cpp
     settings/pimcommonsettings.cpp
     widgets/icons.qrc
+    misc/emailvalidator.h
+    autocorrection/autocorrectionlistwidget.h
+    autocorrection/autocorrectionlanguage.h
+    autocorrection/import/importkmailautocorrection.h
+    autocorrection/import/importlibreofficeautocorrection.h
+    autocorrection/import/importabstractautocorrection.h
+    autocorrection/autocorrectionwidget.h
+    autocorrection/autocorrection.h
+    autocorrection/widgets/richtexteditwithautocorrection.h
+    autocorrection/widgets/lineeditwithautocorrection.h
+    autocorrection/autocorrectiontreewidget.h
+    migration/migrateapplicationfiles.h
+    migration/migratefileinfo.h
+    customtools/customtoolswidgetng.h
+    customtools/customtoolsplugin.h
+    customtools/customtoolspluginmanager.h
+    customtools/customtoolsviewinterface.h
+    configureplugins/configureplugindialog.h
+    configureplugins/configurepluginswidget.h
+    configureplugins/configurepluginslistwidget.h
+    shareserviceurl/shareserviceurlmanager.h
+    pimcommon_private_export.h
+    network/networkmanager.h
+    translator/googletranslator.h
+    translator/translatordebugdialog.h
+    translator/translatorwidget.h
+    translator/translatorutil.h
+    widgets/renamefiledialog.h
+    widgets/purposemenuwidget.h
+    widgets/kpimprintpreviewdialog.h
+    widgets/spellchecklineedit.h
+    widgets/customtreeview.h
+    widgets/lineeditwithcompleterng.h
+    widgets/simplestringlisteditor.h
+    widgets/customlogwidget.h
+    widgets/configureimmutablewidgetutils.h
+    widgets/kactionmenuchangecase.h
+    templatewidgets/templatemanager.h
+    templatewidgets/templatelistwidget.h
+    templatewidgets/templateeditdialog.h
+    logactivities/logactivitiespurposemenuwidget.h
+    logactivities/logactivitiesdialog.h
+    logactivities/logactivitieswidget.h
+    logactivities/logactivitiesmanager.h
+    util/broadcaststatus.h
+    util/pimutil.h
+    settings/pimcommonsettings.h
+    genericplugins/genericplugin.h
+    genericplugins/genericpluginmanager.h
+    genericplugins/pluginutil.h
+    genericplugins/abstractgenericplugininterface.h
+    genericplugins/abstractgenericplugin.h
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

@@ -100,6 +100,48 @@ target_sources(KF5PimCommonAkonadi PRIVATE
     addressline/recentaddress/recentaddresses.cpp
     addressline/plugins/addressesslineeditabstractplugin.cpp
     addressline/plugins/addressesslineeditpluginmanager.cpp
+    progresswidget/agentprogressmonitor.h
+    progresswidget/progressmanagerakonadi.h
+    acl/collectionaclpage.h
+    acl/aclutils_p.h
+    acl/acllistview.h
+    acl/aclentrydialog_p.h
+    acl/imapaclattribute.h
+    acl/aclmodifyjob.h
+    acl/aclmanager.h
+    acl/collectionaclwidget.h
+    manageserversidesubscription/manageserversidesubscriptionjob.h
+    ldap/ldapsearchdialog.h
+    addressline/completionorder/completionordereditor.h
+    addressline/completionorder/completionorderwidget.h
+    addressline/recentaddress/recentaddresses.h
+    addressline/recentaddress/recentaddresswidget.h
+    addressline/completionconfiguredialog/completionconfiguredialog.h
+    addressline/plugins/addressesslineeditabstractplugin.h
+    addressline/plugins/addressesslineeditpluginmanager.h
+    addressline/addresslineedit/addresseelineedit_p.h
+    addressline/addresslineedit/addresseelineeditldap.h
+    addressline/addresslineedit/addresseelineeditbaloo.h
+    addressline/addresslineedit/addresseelineedit.h
+    addressline/addresslineedit/addresseelineeditutil.h
+    addressline/addresslineedit/baloocompletionemail.h
+    addressline/addresslineedit/addresseelineeditakonadi.h
+    addressline/addresslineedit/addresseelineeditmanager.h
+    addressline/addresslineedit/kmailcompletion.h
+    collectionpage/contenttypewidget.h
+    collectionpage/collectiontypeutil.h
+    collectionpage/incidencesforwidget.h
+    collectionpage/attributes/collectionannotationsattribute.h
+    folderdialog/checkedcollectionwidget.h
+    folderdialog/selectmulticollectiondialog.h
+    folderdialog/selectmulticollectionwidget.h
+    widgets/annotationdialog.h
+    pimcommonakonadi_private_export.h
+    util/mailutil.h
+    util/imapresourcecapabilitiesmanager.h
+    util/createresource.h
+    genericplugins/genericplugininterface.h
+    genericplugins/plugininterface.h
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
@@ -109,6 +151,11 @@ target_sources(KF5PimCommonAkonadi PRIVATE
     addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.cpp
+    addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.h
+    addressline/blacklistbaloocompletion/blacklistbalooemailwarning.h
+    addressline/blacklistbaloocompletion/blacklistbalooemailutil.h
+    addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.h
+    addressline/blacklistbaloocompletion/blacklistbalooemaillist.h
     )
 endif()
 
