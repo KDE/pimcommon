@@ -109,10 +109,13 @@ void RecentAddressWidget::slotRemoveItem()
     if (selectedItems.isEmpty()) {
         return;
     }
-    if (KMessageBox::Yes
-        == KMessageBox::questionYesNo(this,
-                                      i18np("Do you want to remove this email address?", "Do you want to remove %1 email addresses?", selectedItems.count()),
-                                      i18n("Remove"))) {
+    const int answer =
+        KMessageBox::questionYesNo(this,
+                                   i18np("Do you want to remove this email address?", "Do you want to remove %1 email addresses?", selectedItems.count()),
+                                   i18n("Remove"),
+                                   KStandardGuiItem::remove(),
+                                   KStandardGuiItem::cancel());
+    if (answer == KMessageBox::Yes) {
         for (QListWidgetItem *item : selectedItems) {
             delete mListView->takeItem(mListView->row(item));
         }

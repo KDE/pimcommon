@@ -602,7 +602,11 @@ void AutoCorrectionWidget::changeLanguage(int index)
         return;
     }
     if (d->mWasChanged) {
-        const int rc = KMessageBox::warningYesNo(this, i18n("Language was changed, do you want to save config for previous language?"), i18n("Save config"));
+        const int rc = KMessageBox::warningYesNo(this,
+                                                 i18n("Language was changed, do you want to save config for previous language?"),
+                                                 i18n("Save config"),
+                                                 KStandardGuiItem::save(),
+                                                 KStandardGuiItem::discard());
         if (rc == KMessageBox::Yes) {
             writeConfig();
         }

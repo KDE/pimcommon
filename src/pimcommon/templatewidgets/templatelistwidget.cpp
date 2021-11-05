@@ -71,7 +71,12 @@ public:
 
     void slotRemove()
     {
-        if (KMessageBox::Yes == KMessageBox::questionYesNo(q, i18n("Do you want to delete selected template?"), i18n("Delete template"))) {
+        const int answer = KMessageBox::questionYesNo(q,
+                                                      i18n("Do you want to delete selected template?"),
+                                                      i18n("Delete template"),
+                                                      KStandardGuiItem::del(),
+                                                      KStandardGuiItem::cancel());
+        if (answer == KMessageBox::Yes) {
             const QList<QListWidgetItem *> lstSelectedItems = q->selectedItems();
             for (QListWidgetItem *item : lstSelectedItems) {
                 if (item->data(TemplateListWidget::DefaultTemplate).toBool() == false) {
