@@ -33,6 +33,8 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     mListWidget->setColumnCount(2);
     mListWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    mListWidget->header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
+    mListWidget->header()->setStretchLastSection(false);
 
     mTreeWidgetSearchLineEdit = new KTreeWidgetSearchLineWidget(this, mListWidget);
     mTreeWidgetSearchLineEdit->setObjectName(QStringLiteral("mTreeWidgetSearchLineEdit"));
