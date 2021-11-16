@@ -97,7 +97,7 @@ endif(BUILD_TESTING)
 ########### Targets ###########
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800) 
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900) 
 
 
 add_subdirectory(src)
