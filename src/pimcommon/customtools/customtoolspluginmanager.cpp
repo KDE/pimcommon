@@ -46,7 +46,7 @@ public:
     {
     }
 
-    QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
     void initializePluginList();
     void loadPlugin(CustomToolsPluginInfo *item);
     QVector<CustomToolsPluginInfo> mPluginList;

@@ -48,17 +48,17 @@ public:
         mWeight = mLdapClient->completionWeight();
     }
 
-    QString label() const override
+    Q_REQUIRED_RESULT QString label() const override
     {
         return i18n("LDAP server %1", mLdapClient->server().host());
     }
 
-    QIcon icon() const override
+    Q_REQUIRED_RESULT QIcon icon() const override
     {
         return QIcon::fromTheme(QStringLiteral("kmail"));
     }
 
-    int completionWeight() const override
+    Q_REQUIRED_RESULT int completionWeight() const override
     {
         return mWeight;
     }
@@ -71,12 +71,12 @@ public:
         group.sync();
     }
 
-    bool hasEnableSupport() const override
+    Q_REQUIRED_RESULT bool hasEnableSupport() const override
     {
         return false;
     }
 
-    bool isEnabled() const override
+    Q_REQUIRED_RESULT bool isEnabled() const override
     {
         return true;
     }
@@ -118,12 +118,12 @@ public:
     {
     }
 
-    bool isEnabled() const override
+    Q_REQUIRED_RESULT bool isEnabled() const override
     {
         return mEnabled;
     }
 
-    bool hasEnableSupport() const override
+    Q_REQUIRED_RESULT bool hasEnableSupport() const override
     {
         return mHasEnableSupport;
     }
@@ -133,17 +133,17 @@ public:
         mIcon = icon;
     }
 
-    QString label() const override
+    Q_REQUIRED_RESULT QString label() const override
     {
         return mLabel;
     }
 
-    QIcon icon() const override
+    Q_REQUIRED_RESULT QIcon icon() const override
     {
         return mIcon;
     }
 
-    int completionWeight() const override
+    Q_REQUIRED_RESULT int completionWeight() const override
     {
         return mWeight;
     }
@@ -207,7 +207,7 @@ public:
         }
     }
 
-    CompletionItem *item() const
+    Q_REQUIRED_RESULT CompletionItem *item() const
     {
         return mItem;
     }

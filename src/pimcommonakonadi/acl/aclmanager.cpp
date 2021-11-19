@@ -39,7 +39,7 @@ public:
     {
     }
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (index.row() < 0 || index.row() >= mRights.count()) {
             return QVariant();
@@ -83,7 +83,7 @@ public:
         return false;
     }
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (parent.isValid()) {
             return 0;
@@ -107,7 +107,7 @@ public:
         endResetModel();
     }
 
-    QMap<QByteArray, KIMAP::Acl::Rights> rights() const
+    Q_REQUIRED_RESULT QMap<QByteArray, KIMAP::Acl::Rights> rights() const
     {
         QMap<QByteArray, KIMAP::Acl::Rights> result;
 

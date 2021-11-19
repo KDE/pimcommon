@@ -45,7 +45,7 @@ public:
     }
 
     void loadPlugin(AddressessLineEditPluginInfo *item);
-    QVector<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QVector<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
     QVector<AddressessLineEditPluginInfo> mPluginList;
     bool initializePlugins();
 

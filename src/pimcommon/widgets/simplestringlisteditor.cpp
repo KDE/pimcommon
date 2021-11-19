@@ -34,7 +34,7 @@ public:
     {
     }
 
-    QList<QListWidgetItem *> selectedItems() const
+    Q_REQUIRED_RESULT QList<QListWidgetItem *> selectedItems() const
     {
         QList<QListWidgetItem *> listWidgetItem;
         const int numberOfFilters = mListBox->count();

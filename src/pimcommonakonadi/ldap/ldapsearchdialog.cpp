@@ -243,7 +243,7 @@ public:
         endResetModel();
     }
 
-    QPair<KLDAP::LdapAttrMap, QString> contact(const QModelIndex &index) const
+    Q_REQUIRED_RESULT QPair<KLDAP::LdapAttrMap, QString> contact(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
             return qMakePair(KLDAP::LdapAttrMap(), QString());
@@ -252,7 +252,7 @@ public:
         return qMakePair(mContactList.at(index.row()), mServerList.at(index.row()));
     }
 
-    QString email(const QModelIndex &index) const
+    Q_REQUIRED_RESULT QString email(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
             return QString();
@@ -261,7 +261,7 @@ public:
         return asUtf8(mContactList.at(index.row()).value(QStringLiteral("mail")).first()).trimmed();
     }
 
-    QString fullName(const QModelIndex &index) const
+    Q_REQUIRED_RESULT QString fullName(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
             return QString();
@@ -278,7 +278,7 @@ public:
         endResetModel();
     }
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return mContactList.count();
@@ -287,7 +287,7 @@ public:
         }
     }
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return 18;
@@ -296,7 +296,7 @@ public:
         }
     }
 
-    QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
+    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
         if (orientation == Qt::Vertical || role != Qt::DisplayRole || section < 0 || section > 17) {
             return QVariant();
@@ -344,7 +344,7 @@ public:
         }
     }
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid()) {
             return QVariant();
