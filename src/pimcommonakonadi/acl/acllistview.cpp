@@ -15,9 +15,7 @@ AclListView::AclListView(QWidget *parent)
 {
 }
 
-AclListView::~AclListView()
-{
-}
+AclListView::~AclListView() = default;
 
 void AclListView::slotCollectionCanBeAdministrated(bool b)
 {

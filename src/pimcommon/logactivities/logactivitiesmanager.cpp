@@ -16,9 +16,7 @@ Q_GLOBAL_STATIC(LogActivitiesManager, s_pLogActivitiesSelf)
 class PimCommon::LogActivitiesManagerPrivate
 {
 public:
-    LogActivitiesManagerPrivate()
-    {
-    }
+    LogActivitiesManagerPrivate() = default;
 
     ~LogActivitiesManagerPrivate()
     {

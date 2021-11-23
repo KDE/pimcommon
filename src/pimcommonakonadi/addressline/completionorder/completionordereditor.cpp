@@ -28,9 +28,7 @@ using namespace PimCommon;
 class PimCommon::CompletionOrderEditorPrivate
 {
 public:
-    CompletionOrderEditorPrivate()
-    {
-    }
+    CompletionOrderEditorPrivate() = default;
 
     CompletionOrderWidget *mCompletionOrderWidget = nullptr;
 };

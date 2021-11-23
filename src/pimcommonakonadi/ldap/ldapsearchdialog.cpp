@@ -54,7 +54,7 @@ using namespace PimCommon;
 static QString asUtf8(const QByteArray &val)
 {
     if (val.isEmpty()) {
-        return QString();
+        return {};
     }
 
     const char *data = val.data();
@@ -255,7 +255,7 @@ public:
     Q_REQUIRED_RESULT QString email(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
-            return QString();
+            return {};
         }
 
         return asUtf8(mContactList.at(index.row()).value(QStringLiteral("mail")).first()).trimmed();
@@ -264,7 +264,7 @@ public:
     Q_REQUIRED_RESULT QString fullName(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
-            return QString();
+            return {};
         }
 
         return asUtf8(mContactList.at(index.row()).value(QStringLiteral("cn")).first()).trimmed();
@@ -299,7 +299,7 @@ public:
     Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
         if (orientation == Qt::Vertical || role != Qt::DisplayRole || section < 0 || section > 17) {
-            return QVariant();
+            return {};
         }
 
         switch (section) {
@@ -340,18 +340,18 @@ public:
         case 17:
             return i18nc("@title:column Column containing title of the person", "Title");
         default:
-            return QVariant();
+            return {};
         }
     }
 
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid()) {
-            return QVariant();
+            return {};
         }
 
         if (index.row() < 0 || index.row() >= mContactList.count() || index.column() < 0 || index.column() > 17) {
-            return QVariant();
+            return {};
         }
 
         if (role == ServerRole) {
@@ -359,7 +359,7 @@ public:
         }
 
         if ((role != Qt::DisplayRole) && (role != Qt::ToolTipRole)) {
-            return QVariant();
+            return {};
         }
 
         const KLDAP::LdapAttrMap map = mContactList.at(index.row());
@@ -402,7 +402,7 @@ public:
         case 17:
             return join(map.value(QStringLiteral("title")), QStringLiteral(", "));
         default:
-            return QVariant();
+            return {};
         }
     }
 

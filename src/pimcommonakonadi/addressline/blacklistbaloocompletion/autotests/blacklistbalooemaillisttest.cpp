@@ -14,9 +14,7 @@ BlackListBalooEmailListTest::BlackListBalooEmailListTest(QObject *parent)
 {
 }
 
-BlackListBalooEmailListTest::~BlackListBalooEmailListTest()
-{
-}
+BlackListBalooEmailListTest::~BlackListBalooEmailListTest() = default;
 
 void BlackListBalooEmailListTest::shouldHaveDefaultValue()
 {

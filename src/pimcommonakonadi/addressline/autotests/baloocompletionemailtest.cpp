@@ -13,9 +13,7 @@ BalooCompletionEmailTest::BalooCompletionEmailTest(QObject *parent)
 {
 }
 
-BalooCompletionEmailTest::~BalooCompletionEmailTest()
-{
-}
+BalooCompletionEmailTest::~BalooCompletionEmailTest() = default;
 
 void BalooCompletionEmailTest::returnEmptyListWhenEmailListIsEmpty()
 {

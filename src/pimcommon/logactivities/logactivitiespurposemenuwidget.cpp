@@ -12,9 +12,7 @@ LogactivitiesPurposeMenuWidget::LogactivitiesPurposeMenuWidget(QWidget *parentWi
 {
 }
 
-LogactivitiesPurposeMenuWidget::~LogactivitiesPurposeMenuWidget()
-{
-}
+LogactivitiesPurposeMenuWidget::~LogactivitiesPurposeMenuWidget() = default;
 
 QByteArray LogactivitiesPurposeMenuWidget::text()
 {

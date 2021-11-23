@@ -112,9 +112,7 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     connect(mAclManager, &AclManager::collectionCanBeAdministrated, view, &AclListView::slotCollectionCanBeAdministrated);
 }
 
-CollectionAclWidget::~CollectionAclWidget()
-{
-}
+CollectionAclWidget::~CollectionAclWidget() = default;
 
 void CollectionAclWidget::slotCollectionCanBeAdministrated(bool b)
 {

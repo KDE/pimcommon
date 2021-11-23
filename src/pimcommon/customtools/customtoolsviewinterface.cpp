@@ -11,9 +11,7 @@ CustomToolsViewInterface::CustomToolsViewInterface(QWidget *parent)
 {
 }
 
-CustomToolsViewInterface::~CustomToolsViewInterface()
-{
-}
+CustomToolsViewInterface::~CustomToolsViewInterface() = default;
 
 void CustomToolsViewInterface::setText(const QString &)
 {

@@ -15,9 +15,7 @@ AutoCorrectionListWidget::AutoCorrectionListWidget(QWidget *parent)
 {
 }
 
-AutoCorrectionListWidget::~AutoCorrectionListWidget()
-{
-}
+AutoCorrectionListWidget::~AutoCorrectionListWidget() = default;
 
 void AutoCorrectionListWidget::keyPressEvent(QKeyEvent *event)
 {

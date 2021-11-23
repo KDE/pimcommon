@@ -19,9 +19,7 @@ using namespace PimCommon;
 class PimCommon::CustomToolsWidgetNgPrivate
 {
 public:
-    CustomToolsWidgetNgPrivate()
-    {
-    }
+    CustomToolsWidgetNgPrivate() = default;
 
     QStackedWidget *mStackedWidget = nullptr;
     QList<PimCommon::CustomToolsViewInterface *> mListInterfaceView;

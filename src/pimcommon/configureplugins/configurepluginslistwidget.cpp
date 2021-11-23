@@ -46,9 +46,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mainLayout->addWidget(mListWidget);
 }
 
-ConfigurePluginsListWidget::~ConfigurePluginsListWidget()
-{
-}
+ConfigurePluginsListWidget::~ConfigurePluginsListWidget() = default;
 
 void ConfigurePluginsListWidget::slotItemChanged(QTreeWidgetItem *item, int column)
 {

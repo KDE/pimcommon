@@ -30,9 +30,7 @@ using namespace PimCommon;
 class PimCommon::SimpleStringListEditorPrivate
 {
 public:
-    SimpleStringListEditorPrivate()
-    {
-    }
+    SimpleStringListEditorPrivate() = default;
 
     Q_REQUIRED_RESULT QList<QListWidgetItem *> selectedItems() const
     {
@@ -324,7 +322,7 @@ QString SimpleStringListEditor::modifyEntry(const QString &text)
     Q_EMIT aboutToAdd(newText);
 
     if (!ok || newText.trimmed().isEmpty() || newText == text) {
-        return QString();
+        return {};
     }
 
     return newText;

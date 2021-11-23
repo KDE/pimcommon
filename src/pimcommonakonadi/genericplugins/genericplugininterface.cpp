@@ -11,9 +11,7 @@ using namespace PimCommon;
 class PimCommon::GenericPluginInterfacePrivate
 {
 public:
-    GenericPluginInterfacePrivate()
-    {
-    }
+    GenericPluginInterfacePrivate() = default;
 
     QVector<ActionType> actionTypes;
 };

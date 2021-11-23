@@ -36,9 +36,7 @@ AclModifyJob::AclModifyJob(QObject *parent)
     connect(this, &AclModifyJob::searchNextContact, this, &AclModifyJob::searchContact);
 }
 
-AclModifyJob::~AclModifyJob()
-{
-}
+AclModifyJob::~AclModifyJob() = default;
 
 void AclModifyJob::searchContact()
 {

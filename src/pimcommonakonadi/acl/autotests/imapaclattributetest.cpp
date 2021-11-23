@@ -19,9 +19,7 @@ ImapAclAttributeTest::ImapAclAttributeTest(QObject *parent)
 {
 }
 
-ImapAclAttributeTest::~ImapAclAttributeTest()
-{
-}
+ImapAclAttributeTest::~ImapAclAttributeTest() = default;
 
 void ImapAclAttributeTest::shouldHaveDefaultValue()
 {

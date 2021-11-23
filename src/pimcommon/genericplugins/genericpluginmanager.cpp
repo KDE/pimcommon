@@ -17,9 +17,7 @@ using namespace PimCommon;
 class GenericPluginInfo
 {
 public:
-    GenericPluginInfo()
-    {
-    }
+    GenericPluginInfo() = default;
 
     KPluginMetaData data;
     QString metaDataFileNameBaseName;

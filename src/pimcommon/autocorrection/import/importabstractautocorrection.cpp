@@ -13,9 +13,7 @@ ImportAbstractAutocorrection::ImportAbstractAutocorrection(QWidget *parent)
 {
 }
 
-ImportAbstractAutocorrection::~ImportAbstractAutocorrection()
-{
-}
+ImportAbstractAutocorrection::~ImportAbstractAutocorrection() = default;
 
 QSet<QString> ImportAbstractAutocorrection::upperCaseExceptions() const
 {

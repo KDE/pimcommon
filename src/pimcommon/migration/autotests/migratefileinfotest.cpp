@@ -13,9 +13,7 @@ MigrateFileInfoTest::MigrateFileInfoTest(QObject *parent)
 {
 }
 
-MigrateFileInfoTest::~MigrateFileInfoTest()
-{
-}
+MigrateFileInfoTest::~MigrateFileInfoTest() = default;
 
 void MigrateFileInfoTest::shouldHaveDefaultValue()
 {

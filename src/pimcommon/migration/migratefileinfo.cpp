@@ -7,9 +7,7 @@
 #include "migratefileinfo.h"
 using namespace PimCommon;
 
-MigrateFileInfo::MigrateFileInfo()
-{
-}
+MigrateFileInfo::MigrateFileInfo() = default;
 
 bool MigrateFileInfo::isValid() const
 {

@@ -16,9 +16,7 @@ CustomToolsWidgetNgTest::CustomToolsWidgetNgTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-CustomToolsWidgetNgTest::~CustomToolsWidgetNgTest()
-{
-}
+CustomToolsWidgetNgTest::~CustomToolsWidgetNgTest() = default;
 
 void CustomToolsWidgetNgTest::shouldHaveDefaultValue()
 {

@@ -28,9 +28,7 @@ AgentProgressMonitor::AgentProgressMonitor(const AgentInstance &agent, KPIM::Pro
     // TODO handle offline case
 }
 
-AgentProgressMonitor::~AgentProgressMonitor()
-{
-}
+AgentProgressMonitor::~AgentProgressMonitor() = default;
 
 void AgentProgressMonitor::abort()
 {

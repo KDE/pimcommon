@@ -11,9 +11,7 @@ using namespace PimCommon;
 class PimCommon::AbstractGenericPluginInterfacePrivate
 {
 public:
-    AbstractGenericPluginInterfacePrivate()
-    {
-    }
+    AbstractGenericPluginInterfacePrivate() = default;
 
     AbstractGenericPlugin *plugin = nullptr;
     QWidget *parentWidget = nullptr;

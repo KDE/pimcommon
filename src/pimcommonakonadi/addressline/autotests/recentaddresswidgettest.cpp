@@ -18,9 +18,7 @@ RecentAddressWidgetTest::RecentAddressWidgetTest(QObject *parent)
 {
 }
 
-RecentAddressWidgetTest::~RecentAddressWidgetTest()
-{
-}
+RecentAddressWidgetTest::~RecentAddressWidgetTest() = default;
 
 void RecentAddressWidgetTest::shouldHaveDefaultValue()
 {

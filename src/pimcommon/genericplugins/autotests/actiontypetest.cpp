@@ -14,9 +14,7 @@ ActionTypeTest::ActionTypeTest(QObject *parent)
 {
 }
 
-ActionTypeTest::~ActionTypeTest()
-{
-}
+ActionTypeTest::~ActionTypeTest() = default;
 
 void ActionTypeTest::shouldHaveDefaultValue()
 {

@@ -12,9 +12,7 @@ CollectionAnnotationsAttributeTest::CollectionAnnotationsAttributeTest(QObject *
 {
 }
 
-CollectionAnnotationsAttributeTest::~CollectionAnnotationsAttributeTest()
-{
-}
+CollectionAnnotationsAttributeTest::~CollectionAnnotationsAttributeTest() = default;
 
 void CollectionAnnotationsAttributeTest::shouldHaveDefaultValue()
 {

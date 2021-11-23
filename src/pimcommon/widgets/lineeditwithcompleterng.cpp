@@ -23,9 +23,7 @@ LineEditWithCompleterNg::LineEditWithCompleterNg(QWidget *parent)
     setCompleter(completer);
 }
 
-LineEditWithCompleterNg::~LineEditWithCompleterNg()
-{
-}
+LineEditWithCompleterNg::~LineEditWithCompleterNg() = default;
 
 void LineEditWithCompleterNg::addCompletionItem(const QString &str)
 {

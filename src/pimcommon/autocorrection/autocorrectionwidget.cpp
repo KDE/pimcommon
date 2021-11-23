@@ -36,9 +36,7 @@ public:
     {
     }
 
-    ~AutoCorrectionWidgetPrivate()
-    {
-    }
+    ~AutoCorrectionWidgetPrivate() = default;
 
     AutoCorrection::TypographicQuotes m_singleQuotes;
     AutoCorrection::TypographicQuotes m_doubleQuotes;

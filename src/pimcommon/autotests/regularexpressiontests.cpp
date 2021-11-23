@@ -15,9 +15,7 @@ RegularExpressionTests::RegularExpressionTests(QObject *parent)
 {
 }
 
-RegularExpressionTests::~RegularExpressionTests()
-{
-}
+RegularExpressionTests::~RegularExpressionTests() = default;
 
 // verify all pattern used as <word><space><a less one digit> => QStringLiteral("ArchiveMailCollection \\d+");
 void RegularExpressionTests::shouldVerifyQStringListFilterConversion_data()

@@ -31,9 +31,7 @@ BlackListBalooEmailWarning::BlackListBalooEmailWarning(QWidget *parent)
     addAction(searchAction);
 }
 
-BlackListBalooEmailWarning::~BlackListBalooEmailWarning()
-{
-}
+BlackListBalooEmailWarning::~BlackListBalooEmailWarning() = default;
 
 void BlackListBalooEmailWarning::slotSaveBlackList()
 {

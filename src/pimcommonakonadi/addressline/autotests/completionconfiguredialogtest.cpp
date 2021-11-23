@@ -17,9 +17,7 @@ CompletionConfigureDialogTest::CompletionConfigureDialogTest(QObject *parent)
 {
 }
 
-CompletionConfigureDialogTest::~CompletionConfigureDialogTest()
-{
-}
+CompletionConfigureDialogTest::~CompletionConfigureDialogTest() = default;
 
 void CompletionConfigureDialogTest::initTestCase()
 {

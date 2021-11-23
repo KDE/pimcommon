@@ -23,9 +23,7 @@ using namespace PimCommon;
 class PimCommon::ManageServerSideSubscriptionJobPrivate
 {
 public:
-    ManageServerSideSubscriptionJobPrivate()
-    {
-    }
+    ManageServerSideSubscriptionJobPrivate() = default;
 
     Akonadi::Collection mCurrentCollection;
     QWidget *mParentWidget = nullptr;

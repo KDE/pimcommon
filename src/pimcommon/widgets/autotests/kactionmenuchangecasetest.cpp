@@ -15,9 +15,7 @@ KActionMenuChangeCaseTest::KActionMenuChangeCaseTest(QObject *parent)
 {
 }
 
-KActionMenuChangeCaseTest::~KActionMenuChangeCaseTest()
-{
-}
+KActionMenuChangeCaseTest::~KActionMenuChangeCaseTest() = default;
 
 void KActionMenuChangeCaseTest::shouldHaveDefaultValue()
 {

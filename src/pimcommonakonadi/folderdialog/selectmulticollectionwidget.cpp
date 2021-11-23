@@ -29,9 +29,7 @@ SelectMultiCollectionWidget::SelectMultiCollectionWidget(const QString &mimetype
     initialize(mimetype);
 }
 
-SelectMultiCollectionWidget::~SelectMultiCollectionWidget()
-{
-}
+SelectMultiCollectionWidget::~SelectMultiCollectionWidget() = default;
 
 void SelectMultiCollectionWidget::initialize(const QString &mimetype)
 {

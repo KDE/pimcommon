@@ -35,9 +35,7 @@ CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
     lay->addWidget(mCustomTools);
 }
 
-CustomToolWidgetNgTest::~CustomToolWidgetNgTest()
-{
-}
+CustomToolWidgetNgTest::~CustomToolWidgetNgTest() = default;
 
 int main(int argc, char **argv)
 {

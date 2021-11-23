@@ -22,9 +22,7 @@ namespace PimCommon
 class PIMCOMMON_EXPORT PluginUtilData
 {
 public:
-    PluginUtilData()
-    {
-    }
+    PluginUtilData() = default;
 
     QStringList mExtraInfo;
     QString mDescription;

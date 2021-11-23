@@ -14,9 +14,7 @@ IncidencesForWidgetTest::IncidencesForWidgetTest(QObject *parent)
 {
 }
 
-IncidencesForWidgetTest::~IncidencesForWidgetTest()
-{
-}
+IncidencesForWidgetTest::~IncidencesForWidgetTest() = default;
 
 void IncidencesForWidgetTest::shouldHaveDefaultValue()
 {

@@ -15,9 +15,7 @@ CollectionAclWidgetTest::CollectionAclWidgetTest(QObject *parent)
 {
 }
 
-CollectionAclWidgetTest::~CollectionAclWidgetTest()
-{
-}
+CollectionAclWidgetTest::~CollectionAclWidgetTest() = default;
 
 void CollectionAclWidgetTest::shouldHaveDefaultValue()
 {

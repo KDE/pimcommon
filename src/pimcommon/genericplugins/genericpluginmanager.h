@@ -26,9 +26,7 @@ public:
     class GenericPluginData
     {
     public:
-        GenericPluginData()
-        {
-        }
+        GenericPluginData() = default;
 
         QString mDescription;
         QString mName;

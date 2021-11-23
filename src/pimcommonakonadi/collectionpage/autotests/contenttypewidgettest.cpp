@@ -13,9 +13,7 @@ ContentTypeWidgetTest::ContentTypeWidgetTest(QObject *parent)
 {
 }
 
-ContentTypeWidgetTest::~ContentTypeWidgetTest()
-{
-}
+ContentTypeWidgetTest::~ContentTypeWidgetTest() = default;
 
 void ContentTypeWidgetTest::shouldHaveDefaultValue()
 {

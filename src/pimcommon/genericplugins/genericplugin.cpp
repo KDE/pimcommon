@@ -13,6 +13,4 @@ GenericPlugin::GenericPlugin(QObject *parent)
 {
 }
 
-GenericPlugin::~GenericPlugin()
-{
-}
+GenericPlugin::~GenericPlugin() = default;

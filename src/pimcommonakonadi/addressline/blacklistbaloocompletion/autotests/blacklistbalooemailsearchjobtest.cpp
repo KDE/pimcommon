@@ -13,9 +13,7 @@ BlackListBalooEmailSearchJobTest::BlackListBalooEmailSearchJobTest(QObject *pare
 {
 }
 
-BlackListBalooEmailSearchJobTest::~BlackListBalooEmailSearchJobTest()
-{
-}
+BlackListBalooEmailSearchJobTest::~BlackListBalooEmailSearchJobTest() = default;
 
 void BlackListBalooEmailSearchJobTest::shouldNotSearchWhenTextIsEmpty()
 {

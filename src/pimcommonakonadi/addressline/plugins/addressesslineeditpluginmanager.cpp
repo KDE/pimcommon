@@ -17,9 +17,7 @@ using namespace PimCommon;
 class AddressessLineEditPluginInfo
 {
 public:
-    AddressessLineEditPluginInfo()
-    {
-    }
+    AddressessLineEditPluginInfo() = default;
 
     KPluginMetaData data;
     QString metaDataFileNameBaseName;

@@ -19,9 +19,7 @@ ConfigurePluginsWidgetTest::ConfigurePluginsWidgetTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ConfigurePluginsWidgetTest::~ConfigurePluginsWidgetTest()
-{
-}
+ConfigurePluginsWidgetTest::~ConfigurePluginsWidgetTest() = default;
 
 void ConfigurePluginsWidgetTest::shouldHaveDefaultValue()
 {

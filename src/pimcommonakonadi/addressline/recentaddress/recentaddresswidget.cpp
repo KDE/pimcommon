@@ -73,9 +73,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     mDirty = false;
 }
 
-RecentAddressWidget::~RecentAddressWidget()
-{
-}
+RecentAddressWidget::~RecentAddressWidget() = default;
 
 void RecentAddressWidget::slotUpdateAddButton(const QString &str)
 {

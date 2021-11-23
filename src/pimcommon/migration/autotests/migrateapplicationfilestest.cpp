@@ -18,9 +18,7 @@ MigrateApplicationFilesTest::MigrateApplicationFilesTest(QObject *parent)
 {
 }
 
-MigrateApplicationFilesTest::~MigrateApplicationFilesTest()
-{
-}
+MigrateApplicationFilesTest::~MigrateApplicationFilesTest() = default;
 
 void MigrateApplicationFilesTest::initTestCase()
 {

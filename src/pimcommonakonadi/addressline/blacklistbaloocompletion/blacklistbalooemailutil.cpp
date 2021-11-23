@@ -8,13 +8,9 @@
 #include "blacklistbalooemailutil.h"
 
 using namespace PimCommon;
-BlackListBalooEmailUtil::BlackListBalooEmailUtil()
-{
-}
+BlackListBalooEmailUtil::BlackListBalooEmailUtil() = default;
 
-BlackListBalooEmailUtil::~BlackListBalooEmailUtil()
-{
-}
+BlackListBalooEmailUtil::~BlackListBalooEmailUtil() = default;
 
 void BlackListBalooEmailUtil::initialBlackList(const QStringList &blackList)
 {

@@ -20,9 +20,7 @@ BlackListBalooEmailCompletionWidgetTest::BlackListBalooEmailCompletionWidgetTest
 {
 }
 
-BlackListBalooEmailCompletionWidgetTest::~BlackListBalooEmailCompletionWidgetTest()
-{
-}
+BlackListBalooEmailCompletionWidgetTest::~BlackListBalooEmailCompletionWidgetTest() = default;
 
 void BlackListBalooEmailCompletionWidgetTest::shouldHaveDefaultValue()
 {

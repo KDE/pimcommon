@@ -14,9 +14,7 @@ ShareServiceUrlManagerTest::ShareServiceUrlManagerTest(QObject *parent)
 {
 }
 
-ShareServiceUrlManagerTest::~ShareServiceUrlManagerTest()
-{
-}
+ShareServiceUrlManagerTest::~ShareServiceUrlManagerTest() = default;
 
 void ShareServiceUrlManagerTest::shouldHaveDefaultValue()
 {

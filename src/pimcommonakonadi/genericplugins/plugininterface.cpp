@@ -20,9 +20,7 @@ using namespace PimCommon;
 class PimCommon::PluginInterfacePrivate
 {
 public:
-    PluginInterfacePrivate()
-    {
-    }
+    PluginInterfacePrivate() = default;
 
     QString mPluginName;
     QString mPluginDirectory;

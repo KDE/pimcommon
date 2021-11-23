@@ -15,9 +15,7 @@ BlackListBalooEmailSearchJob::BlackListBalooEmailSearchJob(QObject *parent)
 {
 }
 
-BlackListBalooEmailSearchJob::~BlackListBalooEmailSearchJob()
-{
-}
+BlackListBalooEmailSearchJob::~BlackListBalooEmailSearchJob() = default;
 
 bool BlackListBalooEmailSearchJob::start()
 {

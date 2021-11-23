@@ -13,9 +13,7 @@ GenericPluginManagerTest::GenericPluginManagerTest(QObject *parent)
 {
 }
 
-GenericPluginManagerTest::~GenericPluginManagerTest()
-{
-}
+GenericPluginManagerTest::~GenericPluginManagerTest() = default;
 
 void GenericPluginManagerTest::shouldHaveDefaultValue()
 {

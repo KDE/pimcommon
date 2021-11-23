@@ -18,9 +18,7 @@ LogItemDelegate::LogItemDelegate(QObject *parent)
 {
 }
 
-LogItemDelegate::~LogItemDelegate()
-{
-}
+LogItemDelegate::~LogItemDelegate() = default;
 
 QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
@@ -77,12 +75,12 @@ void LogItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
 QSize LogItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return QSize(0, 0);
+        return {0, 0};
     }
 
     QTextDocument *doc = document(option, index);
     if (!doc) {
-        return QSize(0, 0);
+        return {0, 0};
     }
 
     const QSize size = doc->documentLayout()->documentSize().toSize();
@@ -103,9 +101,7 @@ CustomLogWidget::CustomLogWidget(QWidget *parent)
     setItemDelegate(itemDelegate);
 }
 
-CustomLogWidget::~CustomLogWidget()
-{
-}
+CustomLogWidget::~CustomLogWidget() = default;
 
 void CustomLogWidget::addTitleLogEntry(const QString &log)
 {

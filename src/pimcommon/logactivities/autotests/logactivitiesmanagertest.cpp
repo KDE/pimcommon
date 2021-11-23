@@ -15,9 +15,7 @@ LogActivitiesManagerTest::LogActivitiesManagerTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-LogActivitiesManagerTest::~LogActivitiesManagerTest()
-{
-}
+LogActivitiesManagerTest::~LogActivitiesManagerTest() = default;
 
 void LogActivitiesManagerTest::shouldHaveDefaultValue()
 {

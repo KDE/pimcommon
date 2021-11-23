@@ -21,9 +21,7 @@ BlackListBalooEmailList::BlackListBalooEmailList(QWidget *parent)
     setSortingEnabled(true);
 }
 
-BlackListBalooEmailList::~BlackListBalooEmailList()
-{
-}
+BlackListBalooEmailList::~BlackListBalooEmailList() = default;
 
 void BlackListBalooEmailList::changeEvent(QEvent *event)
 {
@@ -133,9 +131,7 @@ BlackListBalooEmailListItem::BlackListBalooEmailListItem(QListWidget *parent)
     setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable);
 }
 
-BlackListBalooEmailListItem::~BlackListBalooEmailListItem()
-{
-}
+BlackListBalooEmailListItem::~BlackListBalooEmailListItem() = default;
 
 bool BlackListBalooEmailListItem::initializeStatus() const
 {

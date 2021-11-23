@@ -23,9 +23,7 @@ LogActivitiesDialogTest::LogActivitiesDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-LogActivitiesDialogTest::~LogActivitiesDialogTest()
-{
-}
+LogActivitiesDialogTest::~LogActivitiesDialogTest() = default;
 
 void LogActivitiesDialogTest::shouldHaveDefaultValue()
 {

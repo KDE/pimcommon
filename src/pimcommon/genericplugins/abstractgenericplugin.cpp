@@ -13,9 +13,7 @@ AbstractGenericPlugin::AbstractGenericPlugin(QObject *parent)
 {
 }
 
-AbstractGenericPlugin::~AbstractGenericPlugin()
-{
-}
+AbstractGenericPlugin::~AbstractGenericPlugin() = default;
 
 bool AbstractGenericPlugin::hasPopupMenuSupport() const
 {

@@ -29,9 +29,7 @@ AutoCorrectionTest::AutoCorrectionTest()
     PimCommon::PimCommonSettings::self()->load();
 }
 
-AutoCorrectionTest::~AutoCorrectionTest()
-{
-}
+AutoCorrectionTest::~AutoCorrectionTest() = default;
 
 void AutoCorrectionTest::shouldHaveDefaultValue()
 {

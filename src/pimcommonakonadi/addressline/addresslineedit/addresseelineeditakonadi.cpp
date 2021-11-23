@@ -9,13 +9,9 @@
 
 using namespace PimCommon;
 
-AddresseeLineEditAkonadi::AddresseeLineEditAkonadi()
-{
-}
+AddresseeLineEditAkonadi::AddresseeLineEditAkonadi() = default;
 
-AddresseeLineEditAkonadi::~AddresseeLineEditAkonadi()
-{
-}
+AddresseeLineEditAkonadi::~AddresseeLineEditAkonadi() = default;
 
 Akonadi::Session *AddresseeLineEditAkonadi::akonadiSession() const
 {

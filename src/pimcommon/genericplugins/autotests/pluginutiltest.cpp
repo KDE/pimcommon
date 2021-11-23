@@ -13,9 +13,7 @@ PluginUtilTest::PluginUtilTest(QObject *parent)
 {
 }
 
-PluginUtilTest::~PluginUtilTest()
-{
-}
+PluginUtilTest::~PluginUtilTest() = default;
 
 void PluginUtilTest::shouldTestIsEnabled_data()
 {

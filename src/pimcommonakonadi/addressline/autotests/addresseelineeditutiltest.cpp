@@ -13,9 +13,7 @@ AddresseeLineEditUtilTest::AddresseeLineEditUtilTest(QObject *parent)
 {
 }
 
-AddresseeLineEditUtilTest::~AddresseeLineEditUtilTest()
-{
-}
+AddresseeLineEditUtilTest::~AddresseeLineEditUtilTest() = default;
 
 void AddresseeLineEditUtilTest::shouldAdaptPasteMails_data()
 {

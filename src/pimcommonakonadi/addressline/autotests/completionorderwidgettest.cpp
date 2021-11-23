@@ -16,9 +16,7 @@ CompletionOrderWidgetTest::CompletionOrderWidgetTest(QObject *parent)
 {
 }
 
-CompletionOrderWidgetTest::~CompletionOrderWidgetTest()
-{
-}
+CompletionOrderWidgetTest::~CompletionOrderWidgetTest() = default;
 
 void CompletionOrderWidgetTest::shouldHaveDefaultValue()
 {

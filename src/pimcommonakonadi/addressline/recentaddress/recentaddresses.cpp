@@ -48,9 +48,7 @@ RecentAddresses::RecentAddresses(KConfig *config)
     }
 }
 
-RecentAddresses::~RecentAddresses()
-{
-}
+RecentAddresses::~RecentAddresses() = default;
 
 void RecentAddresses::load(KConfig *config)
 {

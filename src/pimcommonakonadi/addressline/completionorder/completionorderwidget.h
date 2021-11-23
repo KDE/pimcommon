@@ -40,9 +40,7 @@ class CompletionOrderWidget;
 class CompletionItem
 {
 public:
-    virtual ~CompletionItem()
-    {
-    }
+    virtual ~CompletionItem() = default;
 
     virtual QString label() const = 0;
     virtual QIcon icon() const = 0;

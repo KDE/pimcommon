@@ -35,9 +35,7 @@ BroadcastStatus *BroadcastStatus::instance()
 class BroadcastStatusPrivate
 {
 public:
-    BroadcastStatusPrivate()
-    {
-    }
+    BroadcastStatusPrivate() = default;
 
     QString mStatusMsg;
     bool mTransientActive = false;

@@ -18,9 +18,7 @@ using namespace PimCommon;
 class PimCommon::CollectionAclPagePrivate
 {
 public:
-    CollectionAclPagePrivate()
-    {
-    }
+    CollectionAclPagePrivate() = default;
 
     CollectionAclWidget *mCollectionAclWidget = nullptr;
 };

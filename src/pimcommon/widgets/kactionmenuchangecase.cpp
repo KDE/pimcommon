@@ -12,9 +12,7 @@ using namespace PimCommon;
 class PimCommon::KActionMenuChangeCasePrivate
 {
 public:
-    KActionMenuChangeCasePrivate()
-    {
-    }
+    KActionMenuChangeCasePrivate() = default;
 
     QAction *mUpperCase = nullptr;
     QAction *mSentenceCase = nullptr;

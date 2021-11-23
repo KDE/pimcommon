@@ -9,13 +9,9 @@
 #include <KLocalizedString>
 
 using namespace PimCommon;
-CollectionTypeUtil::CollectionTypeUtil()
-{
-}
+CollectionTypeUtil::CollectionTypeUtil() = default;
 
-CollectionTypeUtil::~CollectionTypeUtil()
-{
-}
+CollectionTypeUtil::~CollectionTypeUtil() = default;
 
 QByteArray CollectionTypeUtil::kolabFolderType()
 {
@@ -69,7 +65,7 @@ QString CollectionTypeUtil::incidencesForToString(CollectionTypeUtil::Incidences
         return QStringLiteral("readers");
     }
 
-    return QString(); // can't happen
+    return {}; // can't happen
 }
 
 CollectionTypeUtil::IncidencesFor CollectionTypeUtil::incidencesForFromString(const QString &string)
@@ -135,7 +131,7 @@ QByteArray CollectionTypeUtil::kolabNameFromType(CollectionTypeUtil::FolderConte
     case CollectionTypeUtil::ContentsTypeFile:
         return "file";
     default:
-        return QByteArray();
+        return {};
     }
 }
 

@@ -45,9 +45,7 @@ ConfigureTestDialog::ConfigureTestDialog(PimCommon::AutoCorrection *autoCorrecti
     connect(okButton, &QPushButton::clicked, this, &ConfigureTestDialog::slotSaveSettings);
 }
 
-ConfigureTestDialog::~ConfigureTestDialog()
-{
-}
+ConfigureTestDialog::~ConfigureTestDialog() = default;
 
 void ConfigureTestDialog::slotSaveSettings()
 {
@@ -61,9 +59,7 @@ TextEditAutoCorrectionWidget::TextEditAutoCorrectionWidget(PimCommon::AutoCorrec
     setAcceptRichText(false);
 }
 
-TextEditAutoCorrectionWidget::~TextEditAutoCorrectionWidget()
-{
-}
+TextEditAutoCorrectionWidget::~TextEditAutoCorrectionWidget() = default;
 
 void TextEditAutoCorrectionWidget::keyPressEvent(QKeyEvent *e)
 {

@@ -39,9 +39,7 @@ static const char myTranslatorWidgetConfigGroupName[] = "TranslatorWidget";
 class Q_DECL_HIDDEN TranslatorWidget::TranslatorWidgetPrivate
 {
 public:
-    TranslatorWidgetPrivate()
-    {
-    }
+    TranslatorWidgetPrivate() = default;
 
     ~TranslatorWidgetPrivate()
     {

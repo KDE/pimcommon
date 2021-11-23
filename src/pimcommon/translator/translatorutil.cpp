@@ -9,9 +9,7 @@
 #include <QComboBox>
 using namespace PimCommon;
 
-TranslatorUtil::TranslatorUtil()
-{
-}
+TranslatorUtil::TranslatorUtil() = default;
 
 QPair<QString, QString> TranslatorUtil::pair(TranslatorUtil::languages lang)
 {

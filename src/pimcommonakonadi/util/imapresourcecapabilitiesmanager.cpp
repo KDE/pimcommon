@@ -23,9 +23,7 @@ ImapResourceCapabilitiesManager::ImapResourceCapabilitiesManager(QObject *parent
     init();
 }
 
-ImapResourceCapabilitiesManager::~ImapResourceCapabilitiesManager()
-{
-}
+ImapResourceCapabilitiesManager::~ImapResourceCapabilitiesManager() = default;
 
 void ImapResourceCapabilitiesManager::slotInstanceAdded(const Akonadi::AgentInstance &instance)
 {

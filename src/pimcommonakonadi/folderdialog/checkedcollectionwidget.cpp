@@ -23,9 +23,7 @@ using namespace PimCommon;
 class PimCommon::CheckedCollectionWidgetPrivate
 {
 public:
-    CheckedCollectionWidgetPrivate()
-    {
-    }
+    CheckedCollectionWidgetPrivate() = default;
 
     QTreeView *mFolderView = nullptr;
     QItemSelectionModel *mSelectionModel = nullptr;

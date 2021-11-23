@@ -59,9 +59,7 @@ AutoCorrectionLanguage::AutoCorrectionLanguage(QWidget *parent)
     model()->sort(0);
 }
 
-AutoCorrectionLanguage::~AutoCorrectionLanguage()
-{
-}
+AutoCorrectionLanguage::~AutoCorrectionLanguage() = default;
 
 QString AutoCorrectionLanguage::language() const
 {

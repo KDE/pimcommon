@@ -10,9 +10,7 @@
 #include <QTest>
 #include <qtestkeyboard.h>
 
-LineEditWithAutocorrectionTest::LineEditWithAutocorrectionTest()
-{
-}
+LineEditWithAutocorrectionTest::LineEditWithAutocorrectionTest() = default;
 
 void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()
 {

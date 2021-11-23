@@ -114,9 +114,7 @@ public:
         }
     }
 
-    ~SimpleCompletionItem() override
-    {
-    }
+    ~SimpleCompletionItem() override = default;
 
     Q_REQUIRED_RESULT bool isEnabled() const override
     {
@@ -281,9 +279,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     connect(mDownButton, &QAbstractButton::clicked, this, &CompletionOrderWidget::slotMoveDown);
 }
 
-CompletionOrderWidget::~CompletionOrderWidget()
-{
-}
+CompletionOrderWidget::~CompletionOrderWidget() = default;
 
 void CompletionOrderWidget::save()
 {

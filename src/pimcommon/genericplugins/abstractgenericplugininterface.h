@@ -22,9 +22,7 @@ class PIMCOMMON_EXPORT ActionType
 {
 public:
     enum Type { Tools = 0, Edit = 1, File = 2, Action = 3, PopupMenu = 4, ToolBar = 5, Message = 6, Folder = 7 };
-    ActionType()
-    {
-    }
+    ActionType() = default;
 
     ActionType(QAction *action, Type type);
     Q_REQUIRED_RESULT QAction *action() const;

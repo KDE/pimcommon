@@ -44,9 +44,7 @@ AutoCorrection::AutoCorrection()
     }
 }
 
-AutoCorrection::~AutoCorrection()
-{
-}
+AutoCorrection::~AutoCorrection() = default;
 
 void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition)
 {
@@ -666,7 +664,7 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
         return newWord;
     }
 
-    return QString();
+    return {};
 }
 
 void AutoCorrection::fixTwoUppercaseChars()

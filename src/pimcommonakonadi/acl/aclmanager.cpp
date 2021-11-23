@@ -42,7 +42,7 @@ public:
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (index.row() < 0 || index.row() >= mRights.count()) {
-            return QVariant();
+            return {};
         }
 
         const QPair<QByteArray, KIMAP::Acl::Rights> right = mRights.at(index.row());
@@ -52,11 +52,11 @@ public:
         case UserIdRole:
             return QString::fromLatin1(right.first);
         case PermissionsRole:
-            return QVariant(static_cast<int>(right.second));
+            return {static_cast<int>(right.second)};
         case PermissionsTextRole:
             return AclUtils::permissionsToUserString(right.second);
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -177,9 +177,7 @@ public:
         });
     }
 
-    ~AclManagerPrivate()
-    {
-    }
+    ~AclManagerPrivate() = default;
 
     void selectionChanged()
     {

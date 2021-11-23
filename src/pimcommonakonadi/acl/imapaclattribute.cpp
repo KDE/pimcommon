@@ -20,9 +20,7 @@ using namespace PimCommon;
 class PimCommon::ImapAclAttributePrivate
 {
 public:
-    ImapAclAttributePrivate()
-    {
-    }
+    ImapAclAttributePrivate() = default;
 
     QMap<QByteArray, KIMAP::Acl::Rights> mRights;
     QMap<QByteArray, KIMAP::Acl::Rights> mOldRights;

@@ -12,9 +12,7 @@
 
 using namespace PimCommon;
 
-BalooCompletionEmail::BalooCompletionEmail()
-{
-}
+BalooCompletionEmail::BalooCompletionEmail() = default;
 
 void BalooCompletionEmail::setEmailList(const QStringList &lst)
 {

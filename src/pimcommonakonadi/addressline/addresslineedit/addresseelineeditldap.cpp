@@ -19,9 +19,7 @@ AddresseeLineEditLdap::AddresseeLineEditLdap(AddresseeLineEditManager *addressLi
 {
 }
 
-AddresseeLineEditLdap::~AddresseeLineEditLdap()
-{
-}
+AddresseeLineEditLdap::~AddresseeLineEditLdap() = default;
 
 void AddresseeLineEditLdap::updateLDAPWeights()
 {

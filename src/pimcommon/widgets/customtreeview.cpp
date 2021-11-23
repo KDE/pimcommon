@@ -17,9 +17,7 @@ CustomTreeView::CustomTreeView(QWidget *parent)
 {
 }
 
-CustomTreeView::~CustomTreeView()
-{
-}
+CustomTreeView::~CustomTreeView() = default;
 
 void CustomTreeView::changeEvent(QEvent *event)
 {

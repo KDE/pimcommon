@@ -16,9 +16,7 @@ ConfigurePluginsListWidgetTest::ConfigurePluginsListWidgetTest(QObject *parent)
 {
 }
 
-ConfigurePluginsListWidgetTest::~ConfigurePluginsListWidgetTest()
-{
-}
+ConfigurePluginsListWidgetTest::~ConfigurePluginsListWidgetTest() = default;
 
 void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()
 {

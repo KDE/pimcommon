@@ -13,9 +13,7 @@ BlackListBalooEmailUtilTest::BlackListBalooEmailUtilTest(QObject *parent)
 {
 }
 
-BlackListBalooEmailUtilTest::~BlackListBalooEmailUtilTest()
-{
-}
+BlackListBalooEmailUtilTest::~BlackListBalooEmailUtilTest() = default;
 
 void BlackListBalooEmailUtilTest::shouldReturnEmptyResult()
 {

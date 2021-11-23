@@ -40,6 +40,4 @@ void PimCommonSettings::slotSyncNow()
     config()->sync();
 }
 
-PimCommonSettings::~PimCommonSettings()
-{
-}
+PimCommonSettings::~PimCommonSettings() = default;

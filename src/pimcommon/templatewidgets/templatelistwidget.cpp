@@ -313,7 +313,7 @@ void TemplateListWidget::loadTemplates()
 
 QVector<defaultTemplate> TemplateListWidget::defaultTemplates()
 {
-    return QVector<PimCommon::defaultTemplate>();
+    return {};
 }
 
 QStringList TemplateListWidget::mimeTypes() const

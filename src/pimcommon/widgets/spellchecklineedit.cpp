@@ -31,9 +31,7 @@ SpellCheckLineEdit::SpellCheckLineEdit(QWidget *parent, const QString &configFil
     document()->setDocumentMargin(2);
 }
 
-SpellCheckLineEdit::~SpellCheckLineEdit()
-{
-}
+SpellCheckLineEdit::~SpellCheckLineEdit() = default;
 
 void SpellCheckLineEdit::keyPressEvent(QKeyEvent *e)
 {

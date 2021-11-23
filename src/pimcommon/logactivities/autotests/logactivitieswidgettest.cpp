@@ -15,9 +15,7 @@ LogActivitiesWidgetTest::LogActivitiesWidgetTest(QObject *parent)
 {
 }
 
-LogActivitiesWidgetTest::~LogActivitiesWidgetTest()
-{
-}
+LogActivitiesWidgetTest::~LogActivitiesWidgetTest() = default;
 
 void LogActivitiesWidgetTest::shouldHaveDefaultValue()
 {

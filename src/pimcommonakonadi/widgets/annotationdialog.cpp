@@ -30,9 +30,7 @@ using namespace PimCommon;
 class Q_DECL_HIDDEN AnnotationEditDialog::AnnotationEditDialogPrivate
 {
 public:
-    AnnotationEditDialogPrivate()
-    {
-    }
+    AnnotationEditDialogPrivate() = default;
 
     Akonadi::Item mItem;
     KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;

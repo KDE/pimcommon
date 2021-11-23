@@ -26,9 +26,7 @@ using namespace PimCommon;
 class PimCommon::CompletionConfigureDialogPrivate
 {
 public:
-    CompletionConfigureDialogPrivate()
-    {
-    }
+    CompletionConfigureDialogPrivate() = default;
 
     QTabWidget *mTabWidget = nullptr;
     PimCommon::CompletionOrderWidget *mCompletionOrderWidget = nullptr;

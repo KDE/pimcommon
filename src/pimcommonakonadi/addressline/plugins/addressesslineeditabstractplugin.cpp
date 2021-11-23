@@ -13,9 +13,7 @@ AddressessLineEditAbstractPlugin::AddressessLineEditAbstractPlugin(QObject *pare
 {
 }
 
-AddressessLineEditAbstractPlugin::~AddressessLineEditAbstractPlugin()
-{
-}
+AddressessLineEditAbstractPlugin::~AddressessLineEditAbstractPlugin() = default;
 
 void AddressessLineEditAbstractPlugin::setLineEdit(AddresseeLineEdit *linedit)
 {

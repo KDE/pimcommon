@@ -124,9 +124,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     slotSelectionChanged();
 }
 
-BlackListBalooEmailCompletionWidget::~BlackListBalooEmailCompletionWidget()
-{
-}
+BlackListBalooEmailCompletionWidget::~BlackListBalooEmailCompletionWidget() = default;
 
 void BlackListBalooEmailCompletionWidget::slotSelectionChanged()
 {

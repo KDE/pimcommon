@@ -28,9 +28,7 @@ GoogleTranslator::GoogleTranslator(QObject *parent)
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GoogleTranslator::slotTranslateFinished);
 }
 
-GoogleTranslator::~GoogleTranslator()
-{
-}
+GoogleTranslator::~GoogleTranslator() = default;
 
 void GoogleTranslator::setParentWidget(QWidget *parent)
 {

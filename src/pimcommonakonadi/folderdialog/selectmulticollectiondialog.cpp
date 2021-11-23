@@ -19,9 +19,7 @@ using namespace PimCommon;
 class PimCommon::SelectMultiCollectionDialogPrivate
 {
 public:
-    SelectMultiCollectionDialogPrivate()
-    {
-    }
+    SelectMultiCollectionDialogPrivate() = default;
 
     SelectMultiCollectionWidget *mSelectMultiCollection = nullptr;
 };

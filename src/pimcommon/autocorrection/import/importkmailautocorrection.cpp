@@ -16,9 +16,7 @@ ImportKMailAutocorrection::ImportKMailAutocorrection(QWidget *parent)
 {
 }
 
-ImportKMailAutocorrection::~ImportKMailAutocorrection()
-{
-}
+ImportKMailAutocorrection::~ImportKMailAutocorrection() = default;
 
 bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute loadAttribute)
 {
