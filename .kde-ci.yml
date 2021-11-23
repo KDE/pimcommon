@@ -7,6 +7,7 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@latest'
     'frameworks/kdesignerplugin' : '@latest'
     'frameworks/kcontacts' : '@latest'
+    'frameworks/purpose': '@latest'
     'pim/akonadi' : '@same'
     'pim/akonadi-contacts' : '@same'
     'pim/kimap' : '@same'
