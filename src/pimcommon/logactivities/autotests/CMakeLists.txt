@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 ecm_add_test(logactivitiesmanagertest.cpp
     NAME_PREFIX "pimcommon-logactivities-"
     LINK_LIBRARIES Qt::Test KF5::PimCommon KF5::PimTextEdit

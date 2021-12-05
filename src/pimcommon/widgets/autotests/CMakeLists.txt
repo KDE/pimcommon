@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 ecm_add_test(kactionmenuchangecasetest.cpp
     TEST_NAME kactionmenuchangecasetest
     NAME_PREFIX pimcommon-widget

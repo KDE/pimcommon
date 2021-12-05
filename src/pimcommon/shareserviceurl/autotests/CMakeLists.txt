@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 ecm_add_test(shareserviceurlmanagertest.cpp
     NAME_PREFIX "pimcommon-shareserviceurl-"
     LINK_LIBRARIES Qt::Test KF5::PimCommon

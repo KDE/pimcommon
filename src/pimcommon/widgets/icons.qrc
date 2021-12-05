@@ -1,4 +1,8 @@
 <!DOCTYPE RCC><RCC version="1.0">
+<!--
+  SPDX-License-Identifier: CC0-1.0 
+  SPDX-FileCopyrightText: none
+-->
 <qresource>
     <file>icons/visibility.svg</file>
     <file>icons/hint.svg</file>

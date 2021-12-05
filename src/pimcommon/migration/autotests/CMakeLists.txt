@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 add_definitions(-DMIGRATION_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 
 macro(add_pimcommon_migration_unittest _source)

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 include(ECMAddQtDesignerPlugin)
 ecm_qtdesignerplugin_widget(PimCommon::AddresseeLineEdit
     INCLUDE_FILE "PimCommonAkonadi/AddresseeLineEdit"

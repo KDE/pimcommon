@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 macro(add_libkdepim_blacklistbaloocompletion_unittest _name)
     ecm_add_test(${ARGN}
         TEST_NAME ${_name}

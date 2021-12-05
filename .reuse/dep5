@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: pimcommn
+Upstream-Contact: Montel Laurent <montel@kde.org>
+Source: https://invent.kde.org/pim/pimcommon
+
+Files: src/pimcommon/autocorrection/autotests/data/*.xml src/pimcommon/translator/DEBUG src/pimcommon/widgets/icons/hint.svg src/pimcommon/widgets/icons/visibility.svg
+Copyright: none
+License: CC0-1.0

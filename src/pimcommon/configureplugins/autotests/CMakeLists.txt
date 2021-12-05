@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
 add_executable( configurepluginswidgettest configurepluginswidgettest.cpp )
 add_test(NAME configurepluginswidgettest COMMAND configurepluginswidgettest )
 ecm_mark_as_test(kmail-configurepluginswidgettest)
