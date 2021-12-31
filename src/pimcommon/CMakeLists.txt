@@ -36,7 +36,7 @@ install(EXPORT KF5PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
     )
 
 
@@ -182,7 +182,7 @@ generate_export_header(KF5PimCommon BASE_NAME pimcommon)
 
 target_link_libraries(KF5PimCommon
     PUBLIC
-    Qt::Network
+    Qt${QT_MAJOR_VERSION}::Network
     KF5::KIOCore
     KF5::ConfigWidgets
     PRIVATE
@@ -194,14 +194,14 @@ target_link_libraries(KF5PimCommon
     KF5::XmlGui
     KF5::PimTextEdit
     KF5::KIOWidgets
-    Qt::PrintSupport
+    Qt${QT_MAJOR_VERSION}::PrintSupport
     KF5::Purpose
     KF5::PurposeWidgets
     KF5::ItemViews
     )
 
 
-target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon>")
+target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF}/pimcommon>")
 
 target_include_directories(KF5PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
@@ -380,7 +380,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     )
 ecm_generate_pri_file(BASE_NAME PimCommon
     LIB_NAME KF5PimCommon
-    DEPS "network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
+    DEPS "network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon
     )
 
 
@@ -411,7 +411,7 @@ install(FILES
     ${PimCommon_Camelcasetranslator_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
     ${PimCommon_CamelCasemisc_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon
     COMPONENT Devel
     )
 
@@ -445,7 +445,7 @@ install(FILES
     ${PimCommon_logactivities_HEADERS}
     ${PimCommon_misc_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/pimcommon
     COMPONENT Devel
     )
 

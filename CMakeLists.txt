@@ -44,7 +44,7 @@ set(KPIMTEXTEDIT_LIB_VERSION "5.19.40")
 set(AKONADI_VERSION "5.19.40")
 set(KLDAP_LIB_VERSION "5.19.40")
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml PrintSupport)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml PrintSupport)
 
 find_package(KF5Archive ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Codecs ${KF5_MIN_VERSION} CONFIG REQUIRED)

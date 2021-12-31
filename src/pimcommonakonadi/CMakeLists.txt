@@ -38,7 +38,7 @@ install(EXPORT KF5PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
     )
 
 
@@ -196,7 +196,7 @@ if (NOT FORCE_DISABLE_AKONADI_SEARCH)
 endif()
 
 
-target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi/;${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi>")
+target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/;${KDE_INSTALL_INCLUDEDIR_KF}/pimcommonakonadi>")
 
 target_include_directories(KF5PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
@@ -354,7 +354,7 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
 
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
     LIB_NAME KF5PimCommonAkonadi
-    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
+    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi
     )
 
 
@@ -373,7 +373,7 @@ install(FILES
     ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
     ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
     ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/PimCommonAkonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi
     COMPONENT Devel
     )
 
@@ -396,7 +396,7 @@ install(FILES
     ${PimCommonAkonadi_recentaddress_HEADERS}
 
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/pimcommonakonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/pimcommonakonadi
     COMPONENT Devel
     )
 
