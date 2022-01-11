@@ -13,7 +13,6 @@
 #include <KEmailAddress>
 #include <KSharedConfig>
 #include <QCoreApplication>
-#include <kcontacts_version.h>
 
 using namespace PimCommon;
 
@@ -64,13 +63,9 @@ void RecentAddresses::load(KConfig *config)
         if (!emailString.isEmpty()) {
             KContacts::Addressee addr;
             addr.setNameFromString(name);
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-            addr.insertEmail(emailString, true);
-#else
             KContacts::Email email(emailString);
             email.setPreferred(true);
             addr.addEmail(email);
-#endif
             m_addresseeList.append(addr);
         }
     }
@@ -108,13 +103,9 @@ void RecentAddresses::add(const QString &entry)
                 }
             }
             addr.setNameFromString(fullName);
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-            addr.insertEmail(emailString, true);
-#else
             KContacts::Email email(emailString);
             email.setPreferred(true);
             addr.addEmail(email);
-#endif
             m_addresseeList.prepend(addr);
             adjustSize();
         }

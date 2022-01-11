@@ -20,7 +20,6 @@
 #include <KLDAP/LdapClientSearch>
 
 #include <KContacts/VCardConverter>
-#include <kcontacts_version.h>
 
 #include <Akonadi/Job>
 #include <KConfigGroup>
@@ -299,13 +298,9 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
             // email-address.
             if (url.scheme() == QLatin1String("mailto")) {
                 KContacts::Addressee addressee;
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-                addressee.insertEmail(KEmailAddress::decodeMailtoUrl(url), true /* preferred */);
-#else
                 KContacts::Email email(KEmailAddress::decodeMailtoUrl(url));
                 email.setPreferred(true);
                 addressee.addEmail(email);
-#endif
                 list += addressee;
             } else { // Otherwise, download the vCard to which the Url points
                 KContacts::VCardConverter converter;
@@ -387,13 +382,9 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
                             QUrl url(dropData);
                             if (url.scheme() == QLatin1String("mailto")) {
                                 KContacts::Addressee addressee;
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-                                addressee.insertEmail(KEmailAddress::decodeMailtoUrl(url), true /* preferred */);
-#else
                                 KContacts::Email email(KEmailAddress::decodeMailtoUrl(url));
                                 email.setPreferred(true);
                                 addressee.addEmail(email);
-#endif
                                 insertEmails(addressee.emails());
                             } else {
                                 setText(KEmailAddress::normalizeAddressesAndDecodeIdn(dropData));
@@ -655,13 +646,9 @@ void AddresseeLineEdit::loadContacts()
                 name.chop(1);
             }
             addr.setNameFromString(name);
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
-            addr.insertEmail(emailString, true);
-#else
             KContacts::Email email(emailString);
             email.setPreferred(true);
             addr.addEmail(email);
-#endif
             addContact({emailString}, addr, weight, idx);
         }
     } else {
