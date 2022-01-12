@@ -101,7 +101,6 @@ target_sources(KF5PimCommon PRIVATE
     widgets/spellchecklineedit.cpp
     widgets/kpimprintpreviewdialog.cpp
     widgets/lineeditwithcompleterng.cpp
-    widgets/purposemenuwidget.cpp
     widgets/customlogwidget.cpp
     customtools/customtoolsplugin.cpp
     customtools/customtoolspluginmanager.cpp
@@ -115,7 +114,6 @@ target_sources(KF5PimCommon PRIVATE
     logactivities/logactivitiesmanager.cpp
     logactivities/logactivitiesdialog.cpp
     logactivities/logactivitieswidget.cpp
-    logactivities/logactivitiespurposemenuwidget.cpp
     network/networkmanager.cpp
     misc/emailvalidator.cpp
     settings/pimcommonsettings.cpp
@@ -148,7 +146,6 @@ target_sources(KF5PimCommon PRIVATE
     translator/translatorwidget.h
     translator/translatorutil.h
     widgets/renamefiledialog.h
-    widgets/purposemenuwidget.h
     widgets/kpimprintpreviewdialog.h
     widgets/spellchecklineedit.h
     widgets/customtreeview.h
@@ -160,7 +157,6 @@ target_sources(KF5PimCommon PRIVATE
     templatewidgets/templatemanager.h
     templatewidgets/templatelistwidget.h
     templatewidgets/templateeditdialog.h
-    logactivities/logactivitiespurposemenuwidget.h
     logactivities/logactivitiesdialog.h
     logactivities/logactivitieswidget.h
     logactivities/logactivitiesmanager.h
@@ -173,6 +169,16 @@ target_sources(KF5PimCommon PRIVATE
     genericplugins/abstractgenericplugininterface.h
     genericplugins/abstractgenericplugin.h
     )
+
+if (TARGET KF5::Purpose)
+    target_sources(KF5PimCommon PRIVATE
+        widgets/purposemenuwidget.h
+        logactivities/logactivitiespurposemenuwidget.h
+        widgets/purposemenuwidget.cpp
+        logactivities/logactivitiespurposemenuwidget.cpp
+    )
+
+endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommon PROPERTIES UNITY_BUILD ON)
@@ -195,11 +201,15 @@ target_link_libraries(KF5PimCommon
     KF5::PimTextEdit
     KF5::KIOWidgets
     Qt${QT_MAJOR_VERSION}::PrintSupport
-    KF5::Purpose
-    KF5::PurposeWidgets
     KF5::ItemViews
     )
-
+if (TARGET KF5::Purpose)
+    target_link_libraries(KF5PimCommon
+        PRIVATE
+        KF5::Purpose
+        KF5::PurposeWidgets
+    )
+endif()
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF}/pimcommon>")
 
