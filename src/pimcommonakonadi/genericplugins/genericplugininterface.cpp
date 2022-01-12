@@ -71,18 +71,3 @@ PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires
     return None;
 }
 
-ActionType::ActionType(QAction *action, ActionType::Type type)
-    : mAction(action)
-    , mType(type)
-{
-}
-
-QAction *ActionType::action() const
-{
-    return mAction;
-}
-
-ActionType::Type ActionType::type() const
-{
-    return mType;
-}

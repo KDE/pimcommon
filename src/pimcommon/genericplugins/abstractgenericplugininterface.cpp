@@ -49,3 +49,19 @@ void AbstractGenericPluginInterface::showConfigureDialog(QWidget *parentWidget)
 {
     Q_UNUSED(parentWidget)
 }
+
+ActionType::ActionType(QAction *action, ActionType::Type type)
+    : mAction(action)
+    , mType(type)
+{
+}
+
+QAction *ActionType::action() const
+{
+    return mAction;
+}
+
+ActionType::Type ActionType::type() const
+{
+    return mType;
+}
