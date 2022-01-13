@@ -7,7 +7,6 @@
 
 #include "aclutils_p.h"
 
-#include <ki18n_version.h>
 #include <KLazyLocalizedString>
 #include <KLocalizedString>
 
