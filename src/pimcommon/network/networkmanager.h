@@ -25,6 +25,8 @@ public:
 
     Q_REQUIRED_RESULT QNetworkConfigurationManager *networkConfigureManager() const;
 
+    Q_REQUIRED_RESULT bool isOnline() const;
+
 private:
     QNetworkConfigurationManager *const mNetworkConfigureManager;
 };

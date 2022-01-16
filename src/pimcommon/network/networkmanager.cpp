@@ -30,3 +30,8 @@ QNetworkConfigurationManager *NetworkManager::networkConfigureManager() const
 {
     return mNetworkConfigureManager;
 }
+
+bool NetworkManager::isOnline() const
+{
+    return mNetworkConfigureManager->isOnline();
+}
