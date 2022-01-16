@@ -24,7 +24,6 @@
 #include <QKeyEvent>
 #include <QLabel>
 #include <QMimeData>
-#include <QNetworkConfigurationManager>
 #include <QPainter>
 #include <QShortcut>
 #include <QSplitter>
@@ -344,7 +343,7 @@ void TranslatorWidget::setTextToTranslate(const QString &text)
 
 void TranslatorWidget::slotTranslate()
 {
-    if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
+    if (!PimCommon::NetworkManager::self()->isOnline()) {
         KMessageBox::information(this, i18n("No network connection detected, we cannot translate text."), i18n("No network"));
         return;
     }
