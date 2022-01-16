@@ -19,6 +19,7 @@ NetworkManager::NetworkManager(QObject *parent)
     : QObject(parent)
     , mNetworkConfigureManager(new QNetworkConfigurationManager())
 {
+    connect(mNetworkConfigureManager, &QNetworkConfigurationManager::onlineStateChanged, this, &NetworkManager::networkStatusChanged);
 }
 
 NetworkManager::~NetworkManager()

@@ -27,6 +27,9 @@ public:
 
     Q_REQUIRED_RESULT bool isOnline() const;
 
+Q_SIGNALS:
+    void networkStatusChanged(bool isOnline);
+
 private:
     QNetworkConfigurationManager *const mNetworkConfigureManager;
 };
