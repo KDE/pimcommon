@@ -17,14 +17,25 @@ Q_GLOBAL_STATIC(NetworkManager, s_pNetworkManagerSelf)
 
 NetworkManager::NetworkManager(QObject *parent)
     : QObject(parent)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     , mNetworkConfigureManager(new QNetworkConfigurationManager())
+#endif
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     connect(mNetworkConfigureManager, &QNetworkConfigurationManager::onlineStateChanged, this, &NetworkManager::networkStatusChanged);
+#else
+    QNetworkInformation::load(QNetworkInformation::Feature::Reachability);
+    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, [this](QNetworkInformation::Reachability newReachability) {
+        Q_EMIT networkStatusChanged(newReachability == QNetworkInformation::Reachability::Online);
+    });
+#endif
 }
 
 NetworkManager::~NetworkManager()
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     delete mNetworkConfigureManager;
+#endif
 }
 
 NetworkManager *NetworkManager::self()
