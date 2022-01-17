@@ -23,8 +23,6 @@ public:
     ~NetworkManager() override;
     static NetworkManager *self();
 
-    Q_REQUIRED_RESULT QNetworkConfigurationManager *networkConfigureManager() const;
-
     Q_REQUIRED_RESULT bool isOnline() const;
 
 Q_SIGNALS:

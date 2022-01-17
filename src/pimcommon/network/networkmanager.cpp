@@ -32,11 +32,6 @@ NetworkManager *NetworkManager::self()
     return s_pNetworkManagerSelf();
 }
 
-QNetworkConfigurationManager *NetworkManager::networkConfigureManager() const
-{
-    return mNetworkConfigureManager;
-}
-
 bool NetworkManager::isOnline() const
 {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 1, 0)
