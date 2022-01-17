@@ -18,7 +18,7 @@ namespace PimCommon
 class PIMCOMMONAKONADI_EXPORT AddresseeLineEditUtil
 {
 public:
-    static Q_REQUIRED_RESULT QString adaptPasteMails(const QString &str);
+    Q_REQUIRED_RESULT static QString adaptPasteMails(const QString &str);
 };
 }
 
