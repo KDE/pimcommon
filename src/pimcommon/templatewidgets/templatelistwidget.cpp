@@ -11,7 +11,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KNewStuff3/KNS3/QtQuickDialogWrapper>
+#include <KNS3/QtQuickDialogWrapper>
 #include <KSharedConfig>
 #include <QIcon>
 #include <QMenu>

@@ -108,8 +108,7 @@ target_sources(KF5PimCommon PRIVATE
     customtools/customtoolsviewinterface.cpp
     util/pimutil.cpp
     util/broadcaststatus.cpp
-    migration/migrateapplicationfiles.cpp
-    migration/migratefileinfo.cpp
+
     shareserviceurl/shareserviceurlmanager.cpp
     logactivities/logactivitiesmanager.cpp
     logactivities/logactivitiesdialog.cpp
@@ -129,8 +128,6 @@ target_sources(KF5PimCommon PRIVATE
     autocorrection/widgets/richtexteditwithautocorrection.h
     autocorrection/widgets/lineeditwithautocorrection.h
     autocorrection/autocorrectiontreewidget.h
-    migration/migrateapplicationfiles.h
-    migration/migratefileinfo.h
     customtools/customtoolswidgetng.h
     customtools/customtoolsplugin.h
     customtools/customtoolspluginmanager.h
@@ -170,6 +167,16 @@ target_sources(KF5PimCommon PRIVATE
     genericplugins/abstractgenericplugin.h
     )
 
+if (QT_MAJOR_VERSION STREQUAL "5")
+    target_sources(KF5PimCommon PRIVATE
+        migration/migrateapplicationfiles.cpp
+        migration/migrateapplicationfiles.h
+
+        migration/migratefileinfo.cpp
+        migration/migratefileinfo.h
+    )
+endif()
+
 if (TARGET KF5::Purpose)
     target_sources(KF5PimCommon PRIVATE
         widgets/purposemenuwidget.h
@@ -202,6 +209,7 @@ target_link_libraries(KF5PimCommon
     KF5::KIOWidgets
     Qt${QT_MAJOR_VERSION}::PrintSupport
     KF5::ItemViews
+    KF5::NewStuff
     )
 if (TARGET KF5::Purpose)
     target_link_libraries(KF5PimCommon
@@ -324,14 +332,16 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     RELATIVE customtools
     )
 
-ecm_generate_headers(PimCommon_Camelcasemigrate_HEADERS
-    HEADER_NAMES
-    MigrateApplicationFiles
-    MigrateFileInfo
-    REQUIRED_HEADERS PimCommon_migrate_HEADERS
-    PREFIX PimCommon
-    RELATIVE migration
+if (QT_MAJOR_VERSION STREQUAL "5")
+    ecm_generate_headers(PimCommon_Camelcasemigrate_HEADERS
+        HEADER_NAMES
+        MigrateApplicationFiles
+        MigrateFileInfo
+        REQUIRED_HEADERS PimCommon_migrate_HEADERS
+        PREFIX PimCommon
+        RELATIVE migration
     )
+endif()
 
 ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     HEADER_NAMES

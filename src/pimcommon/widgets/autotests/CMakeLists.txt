@@ -11,9 +11,10 @@ ecm_add_test(lineeditwithcompleterngtest.cpp
     NAME_PREFIX pimcommon-widget
     LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Gui KF5::WidgetsAddons KF5::I18n KF5::PimCommon
 )
-
+if (TARGET KF5::Purpose)
 ecm_add_test(purposemenuwidgettest.cpp
     TEST_NAME purposemenuwidgettest
     NAME_PREFIX pimcommon-widget
     LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Gui KF5::WidgetsAddons KF5::I18n KF5::PimCommon KF5::Purpose KF5::PurposeWidgets
     )
+endif()

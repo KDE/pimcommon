@@ -56,8 +56,11 @@ public:
 void CustomToolsPluginManagerPrivate::initializePluginList()
 {
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pimcommon/customtools"));
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QVectorIterator<KPluginMetaData> i(plugins);
+#else
+    QListIterator<KPluginMetaData> i(plugins);
+#endif
     i.toBack();
     QSet<QString> unique;
     while (i.hasPrevious()) {
