@@ -15,7 +15,7 @@
 #include <QToolBar>
 #include <QVBoxLayout>
 
-#include <KXmlGui/kactioncollection.h>
+#include <KActionCollection>
 
 CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
     : QWidget(parent)

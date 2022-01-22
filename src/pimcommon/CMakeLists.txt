@@ -178,6 +178,7 @@ if (QT_MAJOR_VERSION STREQUAL "5")
 endif()
 
 if (TARGET KF5::Purpose)
+    add_definitions(-DHAVE_PURPOSE)
     target_sources(KF5PimCommon PRIVATE
         widgets/purposemenuwidget.h
         logactivities/logactivitiespurposemenuwidget.h
@@ -238,7 +239,9 @@ if (BUILD_TESTING)
     add_subdirectory(translator/autotests)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(widgets/autotests)
-    add_subdirectory(migration/autotests)
+    if (QT_MAJOR_VERSION STREQUAL "5")
+        add_subdirectory(migration/autotests)
+    endif()
     add_subdirectory(shareserviceurl/autotests)
     add_subdirectory(translator/tests)
     add_subdirectory(widgets/tests)
