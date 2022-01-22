@@ -177,8 +177,8 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
     reply->deleteLater();
     //  jsonData contains arrays like this: ["foo",,"bar"]
     //  but this is not valid JSON for QJSON, it expects empty strings: ["foo","","bar"]
-    mJsonData.replace(QRegExp(QLatin1String(",{3,3}")), QStringLiteral(",\"\",\"\","));
-    mJsonData.replace(QRegExp(QLatin1String(",{2,2}")), QStringLiteral(",\"\","));
+    mJsonData.replace(QRegularExpression(QLatin1String(",{3,3}")), QStringLiteral(",\"\",\"\","));
+    mJsonData.replace(QRegularExpression(QLatin1String(",{2,2}")), QStringLiteral(",\"\","));
     // qCDebug(PIMCOMMON_LOG) << mJsonData;
 
     QJsonParseError parsingError;
