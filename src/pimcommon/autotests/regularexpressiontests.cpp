@@ -6,7 +6,6 @@
 
 #include "regularexpressiontests.h"
 
-#include <QRegExp>
 #include <QRegularExpression>
 #include <QTest>
 
@@ -74,9 +73,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterConversion()
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -138,9 +135,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterSpaceConversion()
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -182,9 +177,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterTwoConversion()
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -226,9 +219,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterDoublePointConversion(
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -277,9 +268,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterWithStartCharAndEndCon
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -321,9 +310,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterWithSharpConversion()
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -350,7 +337,6 @@ void RegularExpressionTests::shouldReplaceString()
     QFETCH(QString, replacewith);
     QFETCH(QString, regexp);
 
-    QCOMPARE(input.replace(QRegExp(regexp), replacewith), expected);
     QCOMPARE(input.replace(QRegularExpression(regexp), replacewith), expected);
 }
 
@@ -404,7 +390,6 @@ void RegularExpressionTests::shouldContainsString()
     QFETCH(QString, input);
     QFETCH(bool, contains);
     QFETCH(QString, regexp);
-    QCOMPARE(contains, input.contains(QRegExp(regexp)));
     QCOMPARE(contains, input.contains(QRegularExpression(regexp)));
 }
 
@@ -438,23 +423,9 @@ void RegularExpressionTests::shouldCaptureValue()
     QFETCH(QStringList, matchedElements);
     QFETCH(bool, insensitiveCase);
 
-    QRegExp regExp(regexp, insensitiveCase ? Qt::CaseInsensitive : Qt::CaseSensitive);
-    bool hasMatch = (regExp.indexIn(input) >= 0);
-    QCOMPARE(hasMatch, match);
-    if (match) {
-        const int major = regExp.cap(1).toInt();
-        const int minor = regExp.cap(2).toInt();
-        const int patch = regExp.cap(3).toInt();
-        const QString vendor = regExp.cap(4);
-        QCOMPARE(major, matchedElements.at(0).toInt());
-        QCOMPARE(minor, matchedElements.at(1).toInt());
-        QCOMPARE(patch, matchedElements.at(2).toInt());
-        QCOMPARE(vendor, matchedElements.at(3));
-    }
-
     QRegularExpression expression(regexp, insensitiveCase ? QRegularExpression::CaseInsensitiveOption : QRegularExpression::NoPatternOption);
     QRegularExpressionMatch matchExpression = expression.match(input);
-    hasMatch = matchExpression.hasMatch();
+    bool hasMatch = matchExpression.hasMatch();
     QCOMPARE(hasMatch, match);
     if (match) {
         const int major = matchExpression.captured(1).toInt();
@@ -474,9 +445,7 @@ void RegularExpressionTests::shouldVerifyQStringListFilterWithPmailSettingsConve
     QFETCH(QStringList, expected);
     QFETCH(QString, regexp);
 
-    QStringList newList = input.filter(QRegExp(regexp));
-    QCOMPARE(newList, expected);
-    newList = input.filter(QRegularExpression(regexp));
+    const QStringList newList = input.filter(QRegularExpression(regexp));
     QCOMPARE(newList, expected);
 }
 
@@ -496,7 +465,6 @@ void RegularExpressionTests::shouldRemoveString()
     QFETCH(QString, expected);
     QFETCH(QString, regexp);
 
-    QCOMPARE(input.remove(QRegExp(regexp)), expected);
     QCOMPARE(input.remove(QRegularExpression(regexp)), expected);
 }
 
