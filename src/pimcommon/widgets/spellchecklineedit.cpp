@@ -88,12 +88,12 @@ void SpellCheckLineEdit::insertFromMimeData(const QMimeData *source)
             pasteText.replace(QLatin1String("\n\n"), QLatin1String("\n"));
         }
 
-        QRegExp reTopSpace(QStringLiteral("^ *\n"));
+        const QRegularExpression reTopSpace(QStringLiteral("^ *\n"));
         while (pasteText.contains(reTopSpace)) {
             pasteText.remove(reTopSpace);
         }
 
-        QRegExp reBottomSpace(QStringLiteral("\n *$"));
+        const QRegularExpression reBottomSpace(QStringLiteral("\n *$"));
         while (pasteText.contains(reBottomSpace)) {
             pasteText.remove(reBottomSpace);
         }
