@@ -220,7 +220,7 @@ if (TARGET KF5::Purpose)
     )
 endif()
 
-target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/;${KDE_INSTALL_INCLUDEDIR_KF}/pimcommon>")
+target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/>")
 
 target_include_directories(KF5PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
@@ -434,7 +434,7 @@ install(FILES
     ${PimCommon_Camelcasetranslator_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
     ${PimCommon_CamelCasemisc_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/PimCommon
     COMPONENT Devel
     )
 
@@ -468,7 +468,7 @@ install(FILES
     ${PimCommon_logactivities_HEADERS}
     ${PimCommon_misc_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/pimcommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/pimcommon
     COMPONENT Devel
     )
 

@@ -7,5 +7,5 @@ Visibility=PIMCOMMON_EXPORT
 Mutators=true
 Singleton=true
 ItemAccessors=true
-IncludeFiles=qapplication.h,pimcommon_export.h
+IncludeFiles=qapplication.h,pimcommon/pimcommon_export.h
 

@@ -196,7 +196,7 @@ if (NOT FORCE_DISABLE_AKONADI_SEARCH)
 endif()
 
 
-target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/;${KDE_INSTALL_INCLUDEDIR_KF}/pimcommonakonadi>")
+target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/>")
 
 target_include_directories(KF5PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
@@ -373,7 +373,7 @@ install(FILES
     ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
     ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
     ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/PimCommonAkonadi
     COMPONENT Devel
     )
 
@@ -396,7 +396,7 @@ install(FILES
     ${PimCommonAkonadi_recentaddress_HEADERS}
 
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/pimcommonakonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
     )
 
