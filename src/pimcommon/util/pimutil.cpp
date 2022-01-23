@@ -121,7 +121,7 @@ void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
 QStringList PimCommon::Util::generateEmailList(const QStringList &list)
 {
     QString str;
-    const int numberOfElement{list.count()};
+    const auto numberOfElement{list.count()};
     for (int i = 0; i < numberOfElement; i++) {
         QString tmpStr = list.at(i);
         if (!tmpStr.trimmed().isEmpty()) {
