@@ -177,16 +177,12 @@ if (QT_MAJOR_VERSION STREQUAL "5")
     )
 endif()
 
-if (TARGET KF5::Purpose)
-    add_definitions(-DHAVE_PURPOSE)
-    target_sources(KF5PimCommon PRIVATE
-        widgets/purposemenuwidget.h
-        logactivities/logactivitiespurposemenuwidget.h
-        widgets/purposemenuwidget.cpp
-        logactivities/logactivitiespurposemenuwidget.cpp
-    )
-
-endif()
+target_sources(KF5PimCommon PRIVATE
+    widgets/purposemenuwidget.h
+    logactivities/logactivitiespurposemenuwidget.h
+    widgets/purposemenuwidget.cpp
+    logactivities/logactivitiespurposemenuwidget.cpp
+)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommon PROPERTIES UNITY_BUILD ON)
@@ -212,13 +208,11 @@ target_link_libraries(KF5PimCommon
     KF5::ItemViews
     KF5::NewStuff
     )
-if (TARGET KF5::Purpose)
-    target_link_libraries(KF5PimCommon
-        PRIVATE
-        KF5::Purpose
-        KF5::PurposeWidgets
-    )
-endif()
+target_link_libraries(KF5PimCommon
+    PRIVATE
+    KF5::Purpose
+    KF5::PurposeWidgets
+)
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/>")
 

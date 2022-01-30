@@ -74,11 +74,7 @@ find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Ldap ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG)
-else()
-    find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF5Purpose ${KF5_MIN_VERSION} CONFIG REQUIRED)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
