@@ -195,14 +195,13 @@ target_link_libraries(KF5PimCommon
     Qt${QT_MAJOR_VERSION}::Network
     KF5::KIOCore
     KF5::ConfigWidgets
+    KF5::PimTextEdit
     PRIVATE
     KF5::I18n
     KF5::Libkdepim
     KF5::Archive
     KF5::NewStuff
-    KF5::PimTextEdit
     KF5::XmlGui
-    KF5::PimTextEdit
     KF5::KIOWidgets
     Qt${QT_MAJOR_VERSION}::PrintSupport
     KF5::ItemViews
