@@ -25,8 +25,8 @@
 #include <KConfigGroup>
 #include <QUrl>
 
-#include <Akonadi/Contact/ContactGroupExpandJob>
-#include <Akonadi/Contact/ContactGroupSearchJob>
+#include <Akonadi/ContactGroupExpandJob>
+#include <Akonadi/ContactGroupSearchJob>
 #include <KColorScheme>
 #include <KContacts/ContactGroupTool>
 #include <KEmailAddress>
@@ -39,7 +39,7 @@
 #include <KLocalizedString>
 #include <KStandardShortcut>
 
-#include <ContactGroupExpandJob>
+#include <Akonadi/ContactGroupExpandJob>
 #include <KContacts/VCardDrag>
 #include <KMessageBox>
 #include <KSharedConfig>

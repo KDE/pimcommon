@@ -12,8 +12,8 @@
 #include "pimcommonakonadi_debug.h"
 
 #include <Akonadi/CollectionFetchJob>
-#include <Akonadi/Contact/ContactGroupSearchJob>
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactGroupSearchJob>
+#include <Akonadi/ContactSearchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Job>
 #include <Akonadi/Session>
@@ -30,8 +30,8 @@
 #include <AkonadiSearch/PIM/contactcompleter.h>
 #endif
 
+#include <Akonadi/ContactSearchJob>
 #include <addressline/addresslineedit/baloocompletionemail.h>
-#include <akonadi/contact/contactsearchjob.h>
 
 using namespace PimCommon;
 AddresseeLineEditPrivate::AddresseeLineEditPrivate(PimCommon::AddresseeLineEdit *qq, bool enableCompletion)

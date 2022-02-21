@@ -10,7 +10,7 @@
 
 #include <PimCommonAkonadi/AddresseeLineEdit>
 
-#include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <Akonadi/EmailAddressSelectionDialog>
 
 #include <KLocalizedString>
 

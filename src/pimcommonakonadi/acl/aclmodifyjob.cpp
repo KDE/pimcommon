@@ -18,8 +18,8 @@
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
 #include <Akonadi/CollectionModifyJob>
-#include <ContactGroupExpandJob>
-#include <ContactGroupSearchJob>
+#include <Akonadi/ContactGroupExpandJob>
+#include <Akonadi/ContactGroupSearchJob>
 #include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
