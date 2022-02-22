@@ -42,14 +42,14 @@ install(FILES
 
 
 
-macro(add_resource_iface _kcfgFile _ifaceName _className _fileName)
+macro(add_resource_iface _kcfgFile _ifaceName _className)
     kcfg_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/${_kcfgFile} ${_ifaceName})
     qt_add_dbus_interface(libpimcommon_SRCS
         ${CMAKE_CURRENT_BINARY_DIR}/${_ifaceName}.xml ${_fileName} ${_className}
         )
 endmacro()
 
-add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings ImapSettings imapresourcesettings)
+add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
 
 kconfig_add_kcfg_files(libpimcommon_SRCS
     settings/pimcommonsetting_base.kcfgc
