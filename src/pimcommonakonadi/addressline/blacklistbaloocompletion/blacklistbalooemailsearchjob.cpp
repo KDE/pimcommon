@@ -7,7 +7,7 @@
 
 #include "blacklistbalooemailsearchjob.h"
 
-#include <AkonadiSearch/PIM/contactcompleter.h>
+#include <PIM/contactcompleter.h>
 using namespace PimCommon;
 
 BlackListBalooEmailSearchJob::BlackListBalooEmailSearchJob(QObject *parent)
