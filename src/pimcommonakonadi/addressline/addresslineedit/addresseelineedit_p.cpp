@@ -27,7 +27,7 @@
 #include <QToolButton>
 #include <config-akonadi-search.h>
 #if !DISABLE_AKONADI_SEARCH
-#include <AkonadiSearch/PIM/contactcompleter.h>
+#include <PIM/contactcompleter.h>
 #endif
 
 #include <Akonadi/ContactSearchJob>
