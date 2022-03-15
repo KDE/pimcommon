@@ -201,7 +201,6 @@ target_link_libraries(KF5PimCommon
     KF5::NewStuff
     KF5::XmlGui
     KF5::KIOWidgets
-    Qt${QT_MAJOR_VERSION}::PrintSupport
     KF5::ItemViews
     KF5::NewStuff
     )
