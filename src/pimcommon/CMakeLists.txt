@@ -99,7 +99,6 @@ target_sources(KF5PimCommon PRIVATE
     widgets/configureimmutablewidgetutils.cpp
     widgets/kactionmenuchangecase.cpp
     widgets/spellchecklineedit.cpp
-    widgets/kpimprintpreviewdialog.cpp
     widgets/lineeditwithcompleterng.cpp
     widgets/customlogwidget.cpp
     customtools/customtoolsplugin.cpp
@@ -143,7 +142,6 @@ target_sources(KF5PimCommon PRIVATE
     translator/translatorwidget.h
     translator/translatorutil.h
     widgets/renamefiledialog.h
-    widgets/kpimprintpreviewdialog.h
     widgets/spellchecklineedit.h
     widgets/customtreeview.h
     widgets/lineeditwithcompleterng.h
@@ -376,7 +374,6 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     RenameFileDialog
     SimpleStringListEditor
     KActionMenuChangeCase
-    KPimPrintPreviewDialog
     LineEditWithCompleterNg
     CustomLogWidget
     PurposeMenuWidget
