@@ -109,9 +109,6 @@ target_sources(KF5PimCommon PRIVATE
     util/broadcaststatus.cpp
 
     shareserviceurl/shareserviceurlmanager.cpp
-    logactivities/logactivitiesmanager.cpp
-    logactivities/logactivitiesdialog.cpp
-    logactivities/logactivitieswidget.cpp
     network/networkmanager.cpp
     misc/emailvalidator.cpp
     settings/pimcommonsettings.cpp
@@ -152,9 +149,6 @@ target_sources(KF5PimCommon PRIVATE
     templatewidgets/templatemanager.h
     templatewidgets/templatelistwidget.h
     templatewidgets/templateeditdialog.h
-    logactivities/logactivitiesdialog.h
-    logactivities/logactivitieswidget.h
-    logactivities/logactivitiesmanager.h
     util/broadcaststatus.h
     util/pimutil.h
     settings/pimcommonsettings.h
@@ -177,9 +171,7 @@ endif()
 
 target_sources(KF5PimCommon PRIVATE
     widgets/purposemenuwidget.h
-    logactivities/logactivitiespurposemenuwidget.h
     widgets/purposemenuwidget.cpp
-    logactivities/logactivitiespurposemenuwidget.cpp
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
@@ -238,8 +230,6 @@ if (BUILD_TESTING)
     add_subdirectory(autocorrection/tests)
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
-    add_subdirectory(logactivities/autotests)
-    add_subdirectory(logactivities/tests)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(genericplugins/autotests)
     add_subdirectory(misc/autotests)
@@ -288,14 +278,6 @@ ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
     REQUIRED_HEADERS PimCommon_settings_HEADERS
     PREFIX PimCommon
     RELATIVE settings
-    )
-
-ecm_generate_headers(PimCommon_Camelcaselogactivities_HEADERS
-    HEADER_NAMES
-    LogActivitiesManager
-    REQUIRED_HEADERS PimCommon_logactivities_HEADERS
-    PREFIX PimCommon
-    RELATIVE logactivities
     )
 
 ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
@@ -399,7 +381,6 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 install(FILES
     ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
-    ${PimCommon_Camelcaselogactivities_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
@@ -454,7 +435,6 @@ install(FILES
     ${PimCommon_texteditor_commonwidget_HEADERS}
     ${PimCommon_translator_HEADERS}
     ${PimCommon_widgets_HEADERS}
-    ${PimCommon_logactivities_HEADERS}
     ${PimCommon_misc_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/pimcommon
@@ -500,7 +480,6 @@ if (BUILD_QCH)
         ${PimCommon_texteditor_commonwidget_HEADERS}
         ${PimCommon_translator_HEADERS}
         ${PimCommon_widgets_HEADERS}
-        ${PimCommon_logactivities_HEADERS}
         ${PimCommon_misc_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
