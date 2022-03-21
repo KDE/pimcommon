@@ -49,4 +49,3 @@ private:
     enum LogType { Title = 0, Error, Info, EndLine };
 };
 }
-

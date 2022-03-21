@@ -42,4 +42,3 @@ savePluginSettings(const QString &groupName, const QString &prefixSettingKey, co
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
 }
 }
-

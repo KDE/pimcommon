@@ -70,4 +70,3 @@ PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires
 {
     return None;
 }
-

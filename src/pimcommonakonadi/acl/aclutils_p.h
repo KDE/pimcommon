@@ -46,4 +46,3 @@ QString permissionsToUserString(KIMAP::Acl::Rights permissions);
 QString guessUserName(const QString &loginName, const QString &serverName);
 }
 }
-

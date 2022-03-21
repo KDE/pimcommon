@@ -31,4 +31,3 @@ private:
     QList<Akonadi::Collection::Id> mListCollection;
 };
 }
-

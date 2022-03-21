@@ -30,4 +30,3 @@ public:
     static QString labelName();
 };
 }
-

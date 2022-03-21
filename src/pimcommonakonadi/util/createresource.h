@@ -34,4 +34,3 @@ Q_SIGNALS:
     void createResourceError(const QString &);
 };
 }
-

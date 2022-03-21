@@ -34,4 +34,3 @@ private:
     int mBalooCompletionSource = 0;
 };
 }
-

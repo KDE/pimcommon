@@ -22,4 +22,3 @@ public:
 private:
     PimCommon::CustomToolsWidgetNg *mCustomTools;
 };
-

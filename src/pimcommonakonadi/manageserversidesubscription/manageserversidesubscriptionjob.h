@@ -36,4 +36,3 @@ private:
     std::unique_ptr<ManageServerSideSubscriptionJobPrivate> const d;
 };
 }
-

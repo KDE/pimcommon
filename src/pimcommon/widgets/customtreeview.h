@@ -44,4 +44,3 @@ private:
     QString mDefaultText;
 };
 }
-

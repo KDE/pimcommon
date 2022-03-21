@@ -106,4 +106,3 @@ private:
     std::unique_ptr<SimpleStringListEditorPrivate> const d;
 };
 }
-

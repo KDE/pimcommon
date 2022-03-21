@@ -19,4 +19,3 @@ private Q_SLOTS:
     void shouldAdaptPasteMails_data();
     void shouldAdaptPasteMails();
 };
-

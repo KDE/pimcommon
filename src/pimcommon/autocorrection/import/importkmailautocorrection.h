@@ -18,4 +18,3 @@ public:
     Q_REQUIRED_RESULT bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
 };
 }
-

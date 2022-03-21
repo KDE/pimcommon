@@ -43,4 +43,3 @@ private:
     std::unique_ptr<CompletionConfigureDialogPrivate> const d;
 };
 }
-

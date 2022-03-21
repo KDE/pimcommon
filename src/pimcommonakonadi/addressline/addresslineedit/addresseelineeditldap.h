@@ -59,4 +59,3 @@ private:
     AddresseeLineEditManager *mAddressLineStatic = nullptr;
 };
 }
-

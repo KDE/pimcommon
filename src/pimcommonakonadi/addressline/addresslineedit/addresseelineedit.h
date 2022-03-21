@@ -214,4 +214,3 @@ private:
     AddresseeLineEditPrivate *const d;
 };
 }
-

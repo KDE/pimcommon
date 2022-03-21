@@ -31,4 +31,3 @@ private:
     QCheckBox *mRecursiveChk = nullptr;
 };
 }
-

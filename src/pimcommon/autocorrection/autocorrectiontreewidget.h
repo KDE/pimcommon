@@ -24,4 +24,3 @@ Q_SIGNALS:
     void deleteSelectedItems();
 };
 }
-

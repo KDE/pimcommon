@@ -37,4 +37,3 @@ private:
     QPointer<KPIM::ProgressItem> const mItem;
 };
 }
-

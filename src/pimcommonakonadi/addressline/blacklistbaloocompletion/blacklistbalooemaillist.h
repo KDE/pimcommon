@@ -54,4 +54,3 @@ private:
     bool mFirstResult = false;
 };
 }
-

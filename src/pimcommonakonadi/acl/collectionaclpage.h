@@ -38,4 +38,3 @@ private:
 };
 AKONADI_COLLECTION_PROPERTIES_PAGE_FACTORY(CollectionAclPageFactory, CollectionAclPage)
 }
-

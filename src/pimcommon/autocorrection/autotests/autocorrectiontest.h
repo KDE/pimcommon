@@ -46,4 +46,3 @@ private Q_SLOTS:
 private:
     KSharedConfig::Ptr mConfig;
 };
-

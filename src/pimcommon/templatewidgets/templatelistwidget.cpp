@@ -178,9 +178,9 @@ public:
                 menu->addAction(defaultTemplate ? i18n("Show...") : i18n("Modify..."), q, [this]() {
                     slotModify();
                 });
-                menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")),
-                                i18n("Duplicate"), q,
-                                [this]() { slotDuplicate(); });
+                menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Duplicate"), q, [this]() {
+                    slotDuplicate();
+                });
             }
             if (lstSelectedItems.count() == 1 && !defaultTemplate) {
                 menu->addSeparator();

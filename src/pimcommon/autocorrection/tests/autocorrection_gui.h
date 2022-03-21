@@ -64,4 +64,3 @@ private:
     PimCommon::AutoCorrection *mAutoCorrection = nullptr;
     KSharedConfig::Ptr mConfig;
 };
-

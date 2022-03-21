@@ -46,4 +46,3 @@ private:
     bool mFolder = false;
 };
 }
-

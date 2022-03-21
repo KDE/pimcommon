@@ -34,4 +34,3 @@ Q_REQUIRED_RESULT PIMCOMMON_EXPORT bool isImapResource(const QString &identifier
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList generateEmailList(const QStringList &list);
 }
 }
-

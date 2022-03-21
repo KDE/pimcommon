@@ -34,4 +34,3 @@ private:
     std::unique_ptr<AddressessLineEditPluginManagerPrivate> const d;
 };
 }
-

@@ -39,4 +39,3 @@ private:
     std::unique_ptr<CompletionOrderEditorPrivate> const d;
 };
 } // namespace
-

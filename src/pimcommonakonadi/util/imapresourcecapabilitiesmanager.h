@@ -40,4 +40,3 @@ private:
     QHash<QString, bool> mImapResource;
 };
 }
-

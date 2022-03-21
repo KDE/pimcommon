@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define PIMCOMMONAKONADI_TESTS_EXPORT
 #endif
-

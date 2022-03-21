@@ -68,4 +68,3 @@ private:
     QMap<QString, QStringList> m_keyMap;
 };
 }
-

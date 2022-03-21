@@ -87,4 +87,3 @@ private:
     std::unique_ptr<AutoCorrectionWidgetPrivate> const d;
 };
 }
-

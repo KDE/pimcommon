@@ -61,4 +61,3 @@ protected:
     std::unique_ptr<BroadcastStatusPrivate> const d;
 };
 }
-

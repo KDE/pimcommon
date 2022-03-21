@@ -28,4 +28,3 @@ public:
     void fixup(QString &str) const override;
 };
 }
-

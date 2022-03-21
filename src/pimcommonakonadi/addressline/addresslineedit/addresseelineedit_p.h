@@ -143,4 +143,3 @@ private:
     bool mCanDeleteLineEdit = true;
 };
 }
-

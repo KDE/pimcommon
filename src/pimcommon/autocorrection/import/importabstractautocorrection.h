@@ -50,4 +50,3 @@ protected:
     QWidget *const mParent;
 };
 }
-

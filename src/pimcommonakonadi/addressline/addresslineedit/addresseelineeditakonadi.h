@@ -29,4 +29,3 @@ private:
     mutable Akonadi::Session *m_akonadiSession = nullptr;
 };
 }
-

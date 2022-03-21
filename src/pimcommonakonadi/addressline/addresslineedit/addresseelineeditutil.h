@@ -21,4 +21,3 @@ public:
     Q_REQUIRED_RESULT static QString adaptPasteMails(const QString &str);
 };
 }
-

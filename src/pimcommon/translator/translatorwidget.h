@@ -89,4 +89,3 @@ private:
     std::unique_ptr<TranslatorWidgetPrivate> const d;
 };
 }
-

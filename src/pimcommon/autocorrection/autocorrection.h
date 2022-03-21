@@ -142,4 +142,3 @@ private:
     QColor mLinkColor;
 };
 }
-

@@ -86,4 +86,3 @@ private:
     int m_maxCount;
 };
 }
-

@@ -91,4 +91,3 @@ public:
     QPair<QString, QString> pair(TranslatorUtil::languages lang);
 };
 }
-

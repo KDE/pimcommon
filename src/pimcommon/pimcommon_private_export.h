@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define PIMCOMMON_TESTS_EXPORT
 #endif
-
