@@ -37,14 +37,14 @@ option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, 
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
-set(LIBKDEPIM_LIB_VERSION "5.19.80")
+set(LIBKDEPIM_LIB_VERSION "5.20.40")
 set(QT_REQUIRED_VERSION "5.15.2")
-set(KIMAP_LIB_VERSION "5.19.80")
-set(KPIMTEXTEDIT_LIB_VERSION "5.19.80")
-set(KLDAP_LIB_VERSION "5.19.80")
+set(KIMAP_LIB_VERSION "5.20.40")
+set(KPIMTEXTEDIT_LIB_VERSION "5.20.40")
+set(KLDAP_LIB_VERSION "5.20.40")
 
-set(AKONADICONTACT_LIB_VERSION "5.19.80")
-set(AKONADI_VERSION "5.19.80")
+set(AKONADICONTACT_LIB_VERSION "5.20.40")
+set(AKONADI_VERSION "5.20.40")
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml)
 
@@ -88,7 +88,7 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 option(FORCE_DISABLE_AKONADI_SEARCH "Disable features and API that require akonadi-search, e.g. because xapian isn't available" OFF)
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-    set(AKONADI_SEARCH_VERSION "5.19.80")
+    set(AKONADI_SEARCH_VERSION "5.20.40")
     if (QT_MAJOR_VERSION STREQUAL "6")
         find_package(KF5AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG)
         set_package_properties(KF5AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://invent.kde.org/pim/akonadi-search" TYPE OPTIONAL PURPOSE "Provides search capabilities in KMail and Akonadi")
