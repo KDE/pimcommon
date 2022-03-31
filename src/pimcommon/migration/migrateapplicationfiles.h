@@ -10,6 +10,7 @@
 #include "pimcommon_export.h"
 #include <QObject>
 #include <memory>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 namespace PimCommon
 {
 class MigrateApplicationFilesPrivate;
@@ -53,3 +54,4 @@ private:
     std::unique_ptr<MigrateApplicationFilesPrivate> const d;
 };
 }
+#endif

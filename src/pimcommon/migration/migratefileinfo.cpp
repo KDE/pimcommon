@@ -6,7 +6,7 @@
 
 #include "migratefileinfo.h"
 using namespace PimCommon;
-
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 MigrateFileInfo::MigrateFileInfo() = default;
 
 bool MigrateFileInfo::isValid() const
@@ -63,3 +63,4 @@ void MigrateFileInfo::setFilePatterns(const QStringList &filePattern)
 {
     mFilePattern = filePattern;
 }
+#endif

@@ -5,6 +5,7 @@
 */
 
 #include "migrateapplicationfiles.h"
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include "pimcommon_debug.h"
 
 #include <KConfigGroup>
@@ -237,3 +238,4 @@ void MigrateApplicationFiles::insertMigrateInfo(const MigrateFileInfo &info)
         d->mMigrateInfoList.append(info);
     }
 }
+#endif
