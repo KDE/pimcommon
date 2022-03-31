@@ -85,15 +85,15 @@ public:
     void loadLocalFileName(const QString &localFileName, const QString &fname);
 
 private:
-    bool isFrenchLanguage() const;
+    Q_REQUIRED_RESULT bool isFrenchLanguage() const;
     void readConfig();
 
     void fixTwoUppercaseChars();
-    bool singleSpaces();
+    Q_REQUIRED_RESULT bool singleSpaces();
     void capitalizeWeekDays();
-    bool autoFractions();
+    Q_REQUIRED_RESULT bool autoFractions();
     void uppercaseFirstCharOfSentence();
-    int advancedAutocorrect();
+    Q_REQUIRED_RESULT int advancedAutocorrect();
     void replaceTypographicQuotes();
     void superscriptAppendix();
     void addNonBreakingSpace();
@@ -101,13 +101,13 @@ private:
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
     void selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition);
 
-    bool autoFormatURLs();
-    bool autoBoldUnderline();
+    Q_REQUIRED_RESULT bool autoFormatURLs();
+    Q_REQUIRED_RESULT bool autoBoldUnderline();
 
-    QString autoDetectURL(const QString &_word) const;
+    Q_REQUIRED_RESULT QString autoDetectURL(const QString &_word) const;
     void readAutoCorrectionXmlFile(bool forceGlobal = false);
-    bool excludeToUppercase(const QString &word) const;
-    QColor linkColor();
+    Q_REQUIRED_RESULT bool excludeToUppercase(const QString &word) const;
+    Q_REQUIRED_RESULT QColor linkColor();
 
     bool mSingleSpaces = true; // suppress double spaces.
     bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase
