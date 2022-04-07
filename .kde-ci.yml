@@ -12,6 +12,8 @@ Dependencies:
     'pim/kimap' : '@same'
     'pim/kpimtextedit' : '@same'
     'pim/libkdepim' : '@same'
+    'pim/kldap' : '@same'
+    'pim/akonadi-search' : '@same'
     'frameworks/kbookmarks': '@latest'
     'frameworks/kconfig': '@latest'
     'frameworks/kconfigwidgets': '@latest'
