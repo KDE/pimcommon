@@ -13,7 +13,6 @@ Dependencies:
     'pim/kpimtextedit' : '@same'
     'pim/libkdepim' : '@same'
     'pim/kldap' : '@same'
-    'pim/akonadi-search' : '@same'
     'frameworks/kbookmarks': '@latest'
     'frameworks/kconfig': '@latest'
     'frameworks/kconfigwidgets': '@latest'
@@ -37,3 +36,7 @@ Dependencies:
     'frameworks/kxmlgui': '@latest'
     'frameworks/kiconthemes': '@latest'
     'frameworks/kcalendarcore': '@latest'
+
+- 'on': ['Linux', 'FreeBSD', 'macOS']
+  'require':
+    'pim/akonadi-search' : '@same'
