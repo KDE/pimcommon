@@ -11,7 +11,12 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <knewstuffcore_version.h>
+#if KNEWSTUFFCORE_VERSION < QT_VERSION_CHECK(5, 94, 0)
 #include <KNS3/QtQuickDialogWrapper>
+#else
+#include <KNSWidgets/Action>
+#endif
 #include <KSharedConfig>
 #include <QIcon>
 #include <QMenu>
@@ -202,125 +207,132 @@ public:
         if (KAuthorized::authorize(QStringLiteral("ghns"))) {
             if (!knewstuffConfigName.isEmpty()) {
                 menu->addSeparator();
+#if KNEWSTUFFCORE_VERSION < QT_VERSION_CHECK(5, 94, 0)
                 menu->addAction(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Download new Templates..."), q, [this]() {
                     slotDownloadTemplates();
                 });
+#else
+                auto fileGHNS = new KNSWidgets::Action(i18n("Download new Templates..."), knewstuffConfigName, q);
+                menu->addAction(fileGHNS);
+            }
+#endif
+            }
+
+            menu->exec(q->mapToGlobal(pos));
+            delete menu;
+        }
+
+        void load()
+        {
+            q->clear();
+            const QVector<PimCommon::defaultTemplate> templatesLst = q->defaultTemplates();
+            for (const PimCommon::defaultTemplate &tmp : templatesLst) {
+                createListWidgetItem(tmp.name, tmp.text, true);
+            }
+            KConfigGroup group = config.data()->group("template");
+            if (group.hasKey(QStringLiteral("templateCount"))) {
+                loadTemplates(config.data());
+            }
+            dirty = false;
+        }
+
+        void loadTemplates(KConfig * configFile)
+        {
+            KConfigGroup group = configFile->group("template");
+            if (group.hasKey(QStringLiteral("templateCount"))) {
+                const int numberTemplate = group.readEntry("templateCount", 0);
+                for (int i = 0; i < numberTemplate; ++i) {
+                    KConfigGroup templateGroup = configFile->group(QStringLiteral("templateDefine_%1").arg(i));
+                    const QString name = templateGroup.readEntry("Name", QString());
+                    const QString text = templateGroup.readEntry("Text", QString());
+
+                    createListWidgetItem(name, text, false);
+                }
+            } else {
+                KMessageBox::error(q, i18n("\'%1\' is not a template file", configFile->name()), i18n("Load Template"));
             }
         }
 
-        menu->exec(q->mapToGlobal(pos));
-        delete menu;
-    }
-
-    void load()
-    {
-        q->clear();
-        const QVector<PimCommon::defaultTemplate> templatesLst = q->defaultTemplates();
-        for (const PimCommon::defaultTemplate &tmp : templatesLst) {
-            createListWidgetItem(tmp.name, tmp.text, true);
-        }
-        KConfigGroup group = config.data()->group("template");
-        if (group.hasKey(QStringLiteral("templateCount"))) {
-            loadTemplates(config.data());
-        }
-        dirty = false;
-    }
-
-    void loadTemplates(KConfig *configFile)
-    {
-        KConfigGroup group = configFile->group("template");
-        if (group.hasKey(QStringLiteral("templateCount"))) {
-            const int numberTemplate = group.readEntry("templateCount", 0);
-            for (int i = 0; i < numberTemplate; ++i) {
-                KConfigGroup templateGroup = configFile->group(QStringLiteral("templateDefine_%1").arg(i));
-                const QString name = templateGroup.readEntry("Name", QString());
-                const QString text = templateGroup.readEntry("Text", QString());
-
-                createListWidgetItem(name, text, false);
+        void saveTemplates(KConfig * configFile)
+        {
+            // clear everything
+            const QStringList lst = configFile->groupList();
+            for (const QString &group : lst) {
+                configFile->deleteGroup(group);
             }
-        } else {
-            KMessageBox::error(q, i18n("\'%1\' is not a template file", configFile->name()), i18n("Load Template"));
-        }
-    }
-
-    void saveTemplates(KConfig *configFile)
-    {
-        // clear everything
-        const QStringList lst = configFile->groupList();
-        for (const QString &group : lst) {
-            configFile->deleteGroup(group);
-        }
-        int numberOfTemplate = 0;
-        for (int i = 0; i < q->count(); ++i) {
-            QListWidgetItem *templateItem = q->item(i);
-            if (templateItem->data(TemplateListWidget::DefaultTemplate).toBool() == false) {
-                KConfigGroup group = configFile->group(QStringLiteral("templateDefine_%1").arg(numberOfTemplate));
-                group.writeEntry("Name", templateItem->text());
-                group.writeEntry("Text", templateItem->data(TemplateListWidget::Text));
-                ++numberOfTemplate;
+            int numberOfTemplate = 0;
+            for (int i = 0; i < q->count(); ++i) {
+                QListWidgetItem *templateItem = q->item(i);
+                if (templateItem->data(TemplateListWidget::DefaultTemplate).toBool() == false) {
+                    KConfigGroup group = configFile->group(QStringLiteral("templateDefine_%1").arg(numberOfTemplate));
+                    group.writeEntry("Name", templateItem->text());
+                    group.writeEntry("Text", templateItem->data(TemplateListWidget::Text));
+                    ++numberOfTemplate;
+                }
             }
-        }
-        KConfigGroup group = configFile->group("template");
-        group.writeEntry("templateCount", numberOfTemplate);
-        configFile->sync();
-    }
-
-    void slotDownloadTemplates()
-    {
-        KNS3::QtQuickDialogWrapper(knewstuffConfigName).exec();
-    }
-
-    void save()
-    {
-        if (!dirty) {
-            return;
+            KConfigGroup group = configFile->group("template");
+            group.writeEntry("templateCount", numberOfTemplate);
+            configFile->sync();
         }
 
-        saveTemplates(config.data());
-        dirty = false;
+        void slotDownloadTemplates()
+        {
+#if KNEWSTUFFCORE_VERSION < QT_VERSION_CHECK(5, 94, 0)
+            KNS3::QtQuickDialogWrapper(knewstuffConfigName).exec();
+#endif
+        }
+
+        void save()
+        {
+            if (!dirty) {
+                return;
+            }
+
+            saveTemplates(config.data());
+            dirty = false;
+        }
+
+        QString knewstuffConfigName;
+        bool dirty = false;
+        KSharedConfig::Ptr config;
+        TemplateListWidget *const q;
+    };
+
+    TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *parent)
+        : QListWidget(parent)
+        , d(new TemplateListWidgetPrivate(configName, this))
+    {
+        setContextMenuPolicy(Qt::CustomContextMenu);
+        setDragDropMode(QAbstractItemView::DragDrop);
+
+        connect(this, &TemplateListWidget::customContextMenuRequested, this, [this](QPoint p) {
+            d->slotContextMenu(p);
+        });
+        connect(this, &TemplateListWidget::doubleClicked, this, [this]() {
+            d->slotModify();
+        });
+        connect(this, &TemplateListWidget::insertNewTemplate, this, [this](const QString &tmp) {
+            d->slotInsertNewTemplate(tmp);
+        });
     }
 
-    QString knewstuffConfigName;
-    bool dirty = false;
-    KSharedConfig::Ptr config;
-    TemplateListWidget *const q;
-};
+    TemplateListWidget::~TemplateListWidget() = default;
 
-TemplateListWidget::TemplateListWidget(const QString &configName, QWidget *parent)
-    : QListWidget(parent)
-    , d(new TemplateListWidgetPrivate(configName, this))
-{
-    setContextMenuPolicy(Qt::CustomContextMenu);
-    setDragDropMode(QAbstractItemView::DragDrop);
+    void TemplateListWidget::loadTemplates()
+    {
+        d->load();
+    }
 
-    connect(this, &TemplateListWidget::customContextMenuRequested, this, [this](QPoint p) {
-        d->slotContextMenu(p);
-    });
-    connect(this, &TemplateListWidget::doubleClicked, this, [this]() {
-        d->slotModify();
-    });
-    connect(this, &TemplateListWidget::insertNewTemplate, this, [this](const QString &tmp) {
-        d->slotInsertNewTemplate(tmp);
-    });
-}
+    QVector<defaultTemplate> TemplateListWidget::defaultTemplates()
+    {
+        return {};
+    }
 
-TemplateListWidget::~TemplateListWidget() = default;
-
-void TemplateListWidget::loadTemplates()
-{
-    d->load();
-}
-
-QVector<defaultTemplate> TemplateListWidget::defaultTemplates()
-{
-    return {};
-}
-
-QStringList TemplateListWidget::mimeTypes() const
-{
-    const QStringList lst{QStringLiteral("text/plain")};
-    return lst;
-}
+    QStringList TemplateListWidget::mimeTypes() const
+    {
+        const QStringList lst{QStringLiteral("text/plain")};
+        return lst;
+    }
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 QMimeData *TemplateListWidget::mimeData(const QList<QListWidgetItem *> items) const

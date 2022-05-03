@@ -195,6 +195,7 @@ target_link_libraries(KF5PimCommon
     KF5::KIOWidgets
     KF5::ItemViews
     KF5::NewStuff
+    KF5::NewStuffWidgets
     )
 target_link_libraries(KF5PimCommon
     PRIVATE

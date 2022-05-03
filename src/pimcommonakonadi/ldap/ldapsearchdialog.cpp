@@ -27,6 +27,7 @@
 #include <QLabel>
 #include <QMenu>
 #include <QPair>
+#include <QPointer>
 #include <QPushButton>
 #include <QSortFilterProxyModel>
 #include <QTableView>
