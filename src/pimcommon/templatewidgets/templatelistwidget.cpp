@@ -15,7 +15,6 @@
 #include <KSharedConfig>
 #include <QIcon>
 #include <QMenu>
-#include <knewstuffcore_version.h>
 
 #include <QDropEvent>
 #include <QFileDialog>
