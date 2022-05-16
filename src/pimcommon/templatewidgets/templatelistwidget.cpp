@@ -11,15 +11,11 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <knewstuffcore_version.h>
-#if KNEWSTUFFCORE_VERSION < QT_VERSION_CHECK(5, 94, 0)
-#include <KNS3/QtQuickDialogWrapper>
-#else
 #include <KNSWidgets/Action>
-#endif
 #include <KSharedConfig>
 #include <QIcon>
 #include <QMenu>
+#include <knewstuffcore_version.h>
 
 #include <QDropEvent>
 #include <QFileDialog>
@@ -207,17 +203,10 @@ public:
         if (KAuthorized::authorize(QStringLiteral("ghns"))) {
             if (!knewstuffConfigName.isEmpty()) {
                 menu->addSeparator();
-#if KNEWSTUFFCORE_VERSION < QT_VERSION_CHECK(5, 94, 0)
-                menu->addAction(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")), i18n("Download new Templates..."), q, [this]() {
-                    slotDownloadTemplates();
-                });
-#else
                 auto fileGHNS = new KNSWidgets::Action(i18n("Download new Templates..."), knewstuffConfigName, q);
                 menu->addAction(fileGHNS);
             }
-#endif
-            }
-
+        }
             menu->exec(q->mapToGlobal(pos));
             delete menu;
         }
@@ -273,13 +262,6 @@ public:
             KConfigGroup group = configFile->group("template");
             group.writeEntry("templateCount", numberOfTemplate);
             configFile->sync();
-        }
-
-        void slotDownloadTemplates()
-        {
-#if KNEWSTUFFCORE_VERSION < QT_VERSION_CHECK(5, 94, 0)
-            KNS3::QtQuickDialogWrapper(knewstuffConfigName).exec();
-#endif
         }
 
         void save()
