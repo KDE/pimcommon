@@ -22,7 +22,11 @@ NetworkManager::NetworkManager(QObject *parent)
 #endif
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wdeprecated-declarations")
+    QT_WARNING_DISABLE_GCC("-Wdeprecated-declarations")
     connect(mNetworkConfigureManager, &QNetworkConfigurationManager::onlineStateChanged, this, &NetworkManager::networkStatusChanged);
+    QT_WARNING_POP
 #else
     QNetworkInformation::load(QNetworkInformation::Feature::Reachability);
     connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, [this](QNetworkInformation::Reachability newReachability) {
