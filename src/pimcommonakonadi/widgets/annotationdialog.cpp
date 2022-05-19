@@ -125,7 +125,7 @@ void AnnotationEditDialog::slotDeleteNote()
 {
     const int answer = KMessageBox::warningContinueCancel(this,
                                                           i18n("Do you really want to delete this note?"),
-                                                          i18nc("@title:window", "Delete Note?"),
+                                                          i18nc("@title:window", "Delete Note"),
                                                           KStandardGuiItem::del());
     if (answer == KMessageBox::Continue) {
         d->mItem.removeAttribute<Akonadi::EntityAnnotationsAttribute>();
