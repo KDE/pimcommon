@@ -28,7 +28,7 @@ NetworkManager::NetworkManager(QObject *parent)
     connect(mNetworkConfigureManager, &QNetworkConfigurationManager::onlineStateChanged, this, &NetworkManager::networkStatusChanged);
     QT_WARNING_POP
 #else
-    QNetworkInformation::load(QNetworkInformation::Feature::Reachability);
+    QNetworkInformation::instance()->load(QNetworkInformation::Feature::Reachability);
     connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, [this](QNetworkInformation::Reachability newReachability) {
         Q_EMIT networkStatusChanged(newReachability == QNetworkInformation::Reachability::Online);
     });
