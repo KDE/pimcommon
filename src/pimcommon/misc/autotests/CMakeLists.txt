@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-macro(add_pimcommon_misc_unittest _name)
-    ecm_add_test(${ARGN}
+macro(add_pimcommon_misc_unittest _source)
+    get_filename_component(_name ${_source} NAME_WE)
+    ecm_add_test(${_source} ${_name}.h
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-misc-"
         LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test
@@ -9,4 +10,4 @@ macro(add_pimcommon_misc_unittest _name)
 	KF5::PimCommon
     )
 endmacro()
-add_pimcommon_misc_unittest(emailvalidatortest emailvalidatortest.cpp)
+add_pimcommon_misc_unittest(emailvalidatortest.cpp)
