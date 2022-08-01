@@ -85,10 +85,14 @@ void KMailCompletion::postProcessMatches(QStringList *pMatches) const
 
     // KCompletion has found the keywords for us, we can now map them to mail-addr
     QSet<QString> mailAddrDistinct;
-    for (QStringList::ConstIterator sit(pMatches->begin()), sEnd(pMatches->end()); sit != sEnd; ++sit) {
-        const QStringList &mailAddr = m_keyMap[(*sit)]; // get all mailAddr for this keyword
-        for (QStringList::ConstIterator sit(mailAddr.begin()), sEnd(mailAddr.end()); sit != sEnd; ++sit) {
-            mailAddrDistinct.insert(*sit); // store mailAddr, QSet will make them unique
+    for (QStringList::ConstIterator sit2(pMatches->begin()), sEnd2(pMatches->end()); sit2 != sEnd2; ++sit2) {
+        const QStringList &mailAddr = m_keyMap[(*sit2)]; // get all mailAddr for this keyword
+        if (mailAddr.isEmpty()) {
+            mailAddrDistinct.insert(*sit2);
+        } else {
+            for (QStringList::ConstIterator sit(mailAddr.begin()), sEnd(mailAddr.end()); sit != sEnd; ++sit) {
+                mailAddrDistinct.insert(*sit); // store mailAddr, QSet will make them unique
+            }
         }
     }
     pMatches->clear(); // delete keywords
