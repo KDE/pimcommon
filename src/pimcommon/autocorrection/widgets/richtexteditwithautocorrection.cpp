@@ -75,11 +75,11 @@ void RichTextEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
                 const bool spacePressed = (e->key() == Qt::Key_Space);
                 const QChar insertChar = spacePressed ? QLatin1Char(' ') : QLatin1Char('\n');
                 if (richText && !isSpecial(initialTextFormat)) {
-                    if ((spacePressed && addSpace) || !spacePressed) {
+                    if (addSpace || !spacePressed) {
                         cur.insertText(insertChar, initialTextFormat);
                     }
                 } else {
-                    if ((spacePressed && addSpace) || !spacePressed) {
+                    if (addSpace || !spacePressed) {
                         cur.insertText(insertChar);
                     }
                 }
