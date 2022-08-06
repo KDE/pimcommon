@@ -182,11 +182,14 @@ generate_export_header(KF5PimCommon BASE_NAME pimcommon)
 
 target_link_libraries(KF5PimCommon
     PUBLIC
-    Qt${QT_MAJOR_VERSION}::Network
+    Qt${QT_MAJOR_VERSION}::Gui
+    Qt${QT_MAJOR_VERSION}::Widgets
+    Qt${QT_MAJOR_VERSION}::DBus
     KF5::KIOCore
     KF5::ConfigWidgets
     KF5::PimTextEdit
     PRIVATE
+    Qt${QT_MAJOR_VERSION}::Network
     KF5::I18n
     KF5::Libkdepim
     KF5::Archive
@@ -215,7 +218,7 @@ set_target_properties(KF5PimCommon PROPERTIES
 
 install(TARGETS
     KF5PimCommon
-    EXPORT KF5PimCommonTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS} 
+    EXPORT KF5PimCommonTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)

@@ -5,5 +5,9 @@
 include(CMakeFindDependencyMacro)
 find_dependency(KF5Config "@KF5_MIN_VERSION@")
 find_dependency(KF5PimTextEdit "@KPIMTEXTEDIT_LIB_VERSION@")
+find_dependency(KF5KIOCore "@KF5_MIN_VERSION@")
+find_dependency(Qt@QT_MAJOR_VERSION@Widgets "@QT_REQUIRED_VERSION@")
+find_dependency(Qt@QT_MAJOR_VERSION@DBus "@QT_REQUIRED_VERSION@")
+find_dependency(Qt@QT_MAJOR_VERSION@Gui "@QT_REQUIRED_VERSION@")
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTargets.cmake")
