@@ -1,6 +1,13 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-ecm_add_test(shareserviceurlmanagertest.cpp
-    NAME_PREFIX "pimcommon-shareserviceurl-"
-    LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF5::PimCommon
-)
+macro(add_pimcommon_shareserviceurl_unittest _source)
+    get_filename_component(_name ${_source} NAME_WE)
+    ecm_add_test(${_source} ${_name}.h
+        TEST_NAME ${_name}
+        NAME_PREFIX "pimcommon-shareserviceurl-"
+        LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test
+        Qt${QT_MAJOR_VERSION}::Widgets
+        KF5::PimCommon
+    )
+endmacro()
+add_pimcommon_shareserviceurl_unittest(shareserviceurlmanagertest.cpp)
