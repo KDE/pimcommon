@@ -8,7 +8,7 @@ if (QT_MAJOR_VERSION STREQUAL "5")
         ecm_add_test(${_source} ${_name}.h
             TEST_NAME ${_name}
             NAME_PREFIX "pimcommon-migration-"
-            LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test KF5::CoreAddons KF5::ConfigCore KF5::PimCommon
+            LINK_LIBRARIES Qt::Test KF5::CoreAddons KF5::ConfigCore KF5::PimCommon
         )
 endmacro()
 

@@ -182,14 +182,14 @@ generate_export_header(KF5PimCommon BASE_NAME pimcommon)
 
 target_link_libraries(KF5PimCommon
     PUBLIC
-    Qt${QT_MAJOR_VERSION}::Gui
-    Qt${QT_MAJOR_VERSION}::Widgets
-    Qt${QT_MAJOR_VERSION}::DBus
+    Qt::Gui
+    Qt::Widgets
+    Qt::DBus
     KF5::KIOCore
     KF5::ConfigWidgets
     KF5::PimTextEdit
     PRIVATE
-    Qt${QT_MAJOR_VERSION}::Network
+    Qt::Network
     KF5::I18n
     KF5::Libkdepim
     KF5::Archive

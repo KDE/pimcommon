@@ -4,11 +4,11 @@ macro(add_pimcommonakonadi_addressline_unittest _name)
     ecm_add_test(${ARGN}
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-addressline-"
-        LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test
+        LINK_LIBRARIES Qt::Test
         KF5::Contacts
-        Qt${QT_MAJOR_VERSION}::Widgets
+        Qt::Widgets
         KF5::PimCommonAkonadi
-        Qt${QT_MAJOR_VERSION}::DBus
+        Qt::DBus
         KF5::Codecs
         KF5::ConfigCore
         KF5::Completion
