@@ -34,7 +34,7 @@ public:
     void setPluginName(const QString &name);
     void setPluginDirectory(const QString &name);
     void initializePlugins();
-    virtual void initializeInterfaceRequires(AbstractGenericPluginInterface *interface);
+    virtual bool initializeInterfaceRequires(AbstractGenericPluginInterface *interface);
     static QString actionXmlExtension(PimCommon::ActionType::Type type);
 
     void initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient);

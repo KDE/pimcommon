@@ -83,9 +83,10 @@ void PluginInterface::createPluginInterface()
     }
 }
 
-void PluginInterface::initializeInterfaceRequires(PimCommon::AbstractGenericPluginInterface *interface)
+bool PluginInterface::initializeInterfaceRequires(PimCommon::AbstractGenericPluginInterface *interface)
 {
     Q_UNUSED(interface)
+    return true;
 }
 
 QString PluginInterface::actionXmlExtension(ActionType::Type type)
@@ -113,9 +114,10 @@ QString PluginInterface::actionXmlExtension(ActionType::Type type)
 
 void PluginInterface::slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface)
 {
-    initializeInterfaceRequires(interface);
     if (interface) {
-        interface->exec();
+        if (initializeInterfaceRequires(interface)) {
+            interface->exec();
+        }
     }
 }
 
