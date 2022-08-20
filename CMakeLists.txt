@@ -37,14 +37,14 @@ option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, 
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
-set(LIBKDEPIM_LIB_VERSION "5.21.0")
+set(LIBKDEPIM_LIB_VERSION "5.21.1")
 set(QT_REQUIRED_VERSION "5.15.2")
-set(KIMAP_LIB_VERSION "5.21.0")
-set(KPIMTEXTEDIT_LIB_VERSION "5.21.0")
-set(KLDAP_LIB_VERSION "5.21.0")
+set(KIMAP_LIB_VERSION "5.21.1")
+set(KPIMTEXTEDIT_LIB_VERSION "5.21.1")
+set(KLDAP_LIB_VERSION "5.21.1")
 
-set(AKONADICONTACT_LIB_VERSION "5.21.0")
-set(AKONADI_VERSION "5.21.0")
+set(AKONADICONTACT_LIB_VERSION "5.21.1")
+set(AKONADI_VERSION "5.21.1")
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml)
 
