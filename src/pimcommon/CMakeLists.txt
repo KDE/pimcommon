@@ -90,6 +90,8 @@ target_sources(KF5PimCommon PRIVATE
     translator/translatorwidget.cpp
     translator/translatordebugdialog.cpp
     translator/googletranslator.cpp
+    translator/translatorenginebase.h
+    translator/translatorenginebase.cpp
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp
     templatewidgets/templatemanager.cpp
