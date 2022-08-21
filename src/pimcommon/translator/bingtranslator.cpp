@@ -32,7 +32,6 @@ void BingTranslator::translate()
         const QUrl url(QStringLiteral("https://www.bing.com/translator"));
         QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->get(QNetworkRequest(url));
         connect(reply, &QNetworkReply::finished, this, [this, reply]() {
-            reply->deleteLater();
             parseCredentials(reply);
         });
         connect(reply, &QNetworkReply::errorOccurred, this, [this, reply](QNetworkReply::NetworkError error) {
@@ -149,5 +148,46 @@ void BingTranslator::translateText()
         reply->deleteLater();
     });
 
+    connect(reply, &QNetworkReply::finished, this, [this, reply]() {
+        reply->deleteLater();
+        parseTranslation(reply);
+    });
+}
+
+void BingTranslator::parseTranslation(QNetworkReply *reply)
+{
+#if 0
+
+    // Parse translation data
+
+    const QJsonDocument jsonResponse = QJsonDocument::fromJson(m_currentReply->readAll());
+    const QJsonObject responseObject = jsonResponse.array().first().toObject();
+
+    if (m_sourceLang == Auto)
+    {
+        const QString langCode = responseObject.value(QStringLiteral("detectedLanguage")).toObject().value(QStringLiteral("language")).toString();
+        m_sourceLang           = language(Bing, langCode);
+
+        if (m_sourceLang == NoLanguage)
+        {
+            resetData(ParsingError, i18n("Error: Unable to parse autodetected language"));
+            return;
+        }
+
+        if (m_onlyDetectLanguage)
+            return;
+    }
+
+    const QJsonObject translationsObject = responseObject.value(QStringLiteral("translations")).toArray().first().toObject();
+    m_translation                       += translationsObject.value(QStringLiteral("text")).toString();
+    m_translationTranslit               += translationsObject.value(QStringLiteral("transliteration")).toObject().value(QStringLiteral("text")).toString();
+
+#endif
+    reply->deleteLater();
+}
+
+QMap<QString, QMap<QString, QString>> PimCommon::BingTranslator::initListLanguage(QComboBox *from)
+{
     // TODO
+    return {};
 }

@@ -8,6 +8,7 @@
 
 #include <QNetworkReply>
 #include <QObject>
+class QComboBox;
 namespace PimCommon
 {
 class TranslatorEngineBase : public QObject
@@ -20,6 +21,7 @@ public:
     };
 
     virtual void translate() = 0;
+    Q_REQUIRED_RESULT virtual QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from) = 0;
 
     explicit TranslatorEngineBase(QObject *parent = nullptr);
     ~TranslatorEngineBase() override;

@@ -53,11 +53,11 @@ public:
     TranslatorTextEdit *inputText = nullptr;
     KPIMTextEdit::PlainTextEditorWidget *translatedText = nullptr;
     TranslatorResultTextEdit *translatorResultTextEdit = nullptr;
-    QComboBox *from = nullptr;
-    QComboBox *to = nullptr;
+    QComboBox *fromCombobox = nullptr;
+    QComboBox *toCombobox = nullptr;
     QPushButton *translate = nullptr;
     QPushButton *clear = nullptr;
-    PimCommon::GoogleTranslator *abstractTranslator = nullptr;
+    PimCommon::TranslatorEngineBase *abstractTranslator = nullptr;
     KBusyIndicatorWidget *progressIndicator = nullptr;
     QPushButton *invert = nullptr;
     QSplitter *splitter = nullptr;
@@ -67,12 +67,12 @@ public:
 
 void TranslatorWidget::TranslatorWidgetPrivate::fillToCombobox(const QString &lang)
 {
-    to->clear();
+    toCombobox->clear();
     const QMap<QString, QString> list = listLanguage.value(lang);
     QMap<QString, QString>::const_iterator i = list.constBegin();
     QMap<QString, QString>::const_iterator end = list.constEnd();
     while (i != end) {
-        to->addItem(i.key(), i.value());
+        toCombobox->addItem(i.key(), i.value());
         ++i;
     }
 }
@@ -82,7 +82,7 @@ void TranslatorWidget::TranslatorWidgetPrivate::initLanguage()
     if (!abstractTranslator) {
         return;
     }
-    listLanguage = abstractTranslator->initListLanguage(from);
+    listLanguage = abstractTranslator->initListLanguage(fromCombobox);
 }
 
 TranslatorResultTextEdit::TranslatorResultTextEdit(QWidget *parent)
@@ -165,8 +165,8 @@ void TranslatorWidget::writeConfig()
 {
     KConfigGroup myGroup(KSharedConfig::openConfig(), myTranslatorWidgetConfigGroupName);
     if (d->languageSettingsChanged) {
-        myGroup.writeEntry(QStringLiteral("FromLanguage"), d->from->itemData(d->from->currentIndex()).toString());
-        myGroup.writeEntry("ToLanguage", d->to->itemData(d->to->currentIndex()).toString());
+        myGroup.writeEntry(QStringLiteral("FromLanguage"), d->fromCombobox->itemData(d->fromCombobox->currentIndex()).toString());
+        myGroup.writeEntry("ToLanguage", d->toCombobox->itemData(d->toCombobox->currentIndex()).toString());
     }
     myGroup.writeEntry("mainSplitter", d->splitter->sizes());
     myGroup.sync();
@@ -180,13 +180,13 @@ void TranslatorWidget::readConfig()
     if (from.isEmpty()) {
         return;
     }
-    const int indexFrom = d->from->findData(from);
+    const int indexFrom = d->fromCombobox->findData(from);
     if (indexFrom != -1) {
-        d->from->setCurrentIndex(indexFrom);
+        d->fromCombobox->setCurrentIndex(indexFrom);
     }
-    const int indexTo = d->to->findData(to);
+    const int indexTo = d->toCombobox->findData(to);
     if (indexTo != -1) {
-        d->to->setCurrentIndex(indexTo);
+        d->toCombobox->setCurrentIndex(indexTo);
     }
     const QList<int> size = {100, 400};
     d->splitter->setSizes(myGroup.readEntry("mainSplitter", size));
@@ -218,18 +218,18 @@ void TranslatorWidget::init()
 
     auto label = new QLabel(i18nc("Translate from language", "From:"));
     hboxLayout->addWidget(label);
-    d->from = new QComboBox;
-    d->from->setMinimumWidth(50);
-    d->from->setObjectName(QStringLiteral("from"));
-    hboxLayout->addWidget(d->from);
+    d->fromCombobox = new QComboBox;
+    d->fromCombobox->setMinimumWidth(50);
+    d->fromCombobox->setObjectName(QStringLiteral("from"));
+    hboxLayout->addWidget(d->fromCombobox);
 
     label = new QLabel(i18nc("Translate to language", "To:"));
     hboxLayout->addWidget(label);
-    d->to = new QComboBox;
-    d->to->setMinimumWidth(50);
-    d->to->setObjectName(QStringLiteral("to"));
+    d->toCombobox = new QComboBox;
+    d->toCombobox->setMinimumWidth(50);
+    d->toCombobox->setObjectName(QStringLiteral("to"));
 
-    hboxLayout->addWidget(d->to);
+    hboxLayout->addWidget(d->toCombobox);
 
     auto separator = new KSeparator;
     separator->setOrientation(Qt::Vertical);
@@ -289,15 +289,15 @@ void TranslatorWidget::init()
     layout->addWidget(d->splitter);
 
     d->initLanguage();
-    d->from->setCurrentIndex(0); // Fill "to" combobox
+    d->fromCombobox->setCurrentIndex(0); // Fill "to" combobox
     slotFromLanguageChanged(0, true);
     slotTextChanged();
     readConfig();
-    connect(d->from, &QComboBox::currentIndexChanged, this, [this](int val) {
+    connect(d->fromCombobox, &QComboBox::currentIndexChanged, this, [this](int val) {
         slotFromLanguageChanged(val, false);
         slotConfigChanged();
     });
-    connect(d->to, &QComboBox::currentIndexChanged, this, [this]() {
+    connect(d->toCombobox, &QComboBox::currentIndexChanged, this, [this]() {
         slotConfigChanged();
         slotTranslate();
     });
@@ -320,15 +320,15 @@ void TranslatorWidget::slotTextChanged()
 
 void TranslatorWidget::slotFromLanguageChanged(int index, bool initialize)
 {
-    const QString lang = d->from->itemData(index).toString();
+    const QString lang = d->fromCombobox->itemData(index).toString();
     d->invert->setEnabled(lang != QLatin1String("auto"));
-    const QString to = d->to->itemData(d->to->currentIndex()).toString();
-    d->to->blockSignals(true);
+    const QString to = d->toCombobox->itemData(d->toCombobox->currentIndex()).toString();
+    d->toCombobox->blockSignals(true);
     d->fillToCombobox(lang);
-    d->to->blockSignals(false);
-    const int indexTo = d->to->findData(to);
+    d->toCombobox->blockSignals(false);
+    const int indexTo = d->toCombobox->findData(to);
     if (indexTo != -1) {
-        d->to->setCurrentIndex(indexTo);
+        d->toCombobox->setCurrentIndex(indexTo);
     }
     if (!initialize) {
         slotTranslate();
@@ -354,8 +354,8 @@ void TranslatorWidget::slotTranslate()
 
     d->translatorResultTextEdit->clear();
 
-    const QString from = d->from->itemData(d->from->currentIndex()).toString();
-    const QString to = d->to->itemData(d->to->currentIndex()).toString();
+    const QString from = d->fromCombobox->itemData(d->fromCombobox->currentIndex()).toString();
+    const QString to = d->toCombobox->itemData(d->toCombobox->currentIndex()).toString();
     d->translate->setEnabled(false);
     d->progressIndicator->show();
 
@@ -386,20 +386,20 @@ void TranslatorWidget::slotTranslateFailed(bool signalFailed, const QString &mes
 
 void TranslatorWidget::slotInvertLanguage()
 {
-    const QString fromLanguage = d->from->itemData(d->from->currentIndex()).toString();
+    const QString fromLanguage = d->fromCombobox->itemData(d->fromCombobox->currentIndex()).toString();
     // don't invert when fromLanguage == auto
     if (fromLanguage == QLatin1String("auto")) {
         return;
     }
 
-    const QString toLanguage = d->to->itemData(d->to->currentIndex()).toString();
-    const int indexFrom = d->from->findData(toLanguage);
+    const QString toLanguage = d->toCombobox->itemData(d->toCombobox->currentIndex()).toString();
+    const int indexFrom = d->fromCombobox->findData(toLanguage);
     if (indexFrom != -1) {
-        d->from->setCurrentIndex(indexFrom);
+        d->fromCombobox->setCurrentIndex(indexFrom);
     }
-    const int indexTo = d->to->findData(fromLanguage);
+    const int indexTo = d->toCombobox->findData(fromLanguage);
     if (indexTo != -1) {
-        d->to->setCurrentIndex(indexTo);
+        d->toCombobox->setCurrentIndex(indexTo);
     }
     slotTranslate();
 }

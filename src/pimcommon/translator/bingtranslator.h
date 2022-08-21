@@ -17,6 +17,7 @@ public:
     ~BingTranslator() override;
 
     void translate() override;
+    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from) override;
 
     static QByteArray sBingKey;
     static QByteArray sBingToken;
@@ -25,6 +26,7 @@ public:
 
 private:
     void parseCredentials(QNetworkReply *reply);
+    void parseTranslation(QNetworkReply *reply);
     void translateText();
 };
 }
