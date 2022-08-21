@@ -218,7 +218,7 @@ set_target_properties(KF5PimCommon PROPERTIES
 
 install(TARGETS
     KF5PimCommon
-    EXPORT KF5PimCommonTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5PimCommonTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)

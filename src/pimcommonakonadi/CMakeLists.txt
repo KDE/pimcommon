@@ -209,7 +209,7 @@ set_target_properties(KF5PimCommonAkonadi PROPERTIES
 
 install(TARGETS
     KF5PimCommonAkonadi
-    EXPORT KF5PimCommonAkonadiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS}
+    EXPORT KF5PimCommonAkonadiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)
