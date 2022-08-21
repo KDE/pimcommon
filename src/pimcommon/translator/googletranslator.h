@@ -28,8 +28,5 @@ public:
 private Q_SLOTS:
     void slotTranslateFinished(QNetworkReply *);
     void slotError(QNetworkReply::NetworkError /*error*/);
-
-private:
-    QNetworkAccessManager *const mNetworkAccessManager;
 };
 }

@@ -86,12 +86,16 @@ target_sources(KF5PimCommon PRIVATE
     configureplugins/configurepluginslistwidget.cpp
     configureplugins/configurepluginswidget.cpp
     configureplugins/configureplugindialog.cpp
+
     translator/translatorutil.cpp
     translator/translatorwidget.cpp
     translator/translatordebugdialog.cpp
     translator/googletranslator.cpp
     translator/translatorenginebase.h
     translator/translatorenginebase.cpp
+    translator/translatorengineaccessmanager.h
+    translator/translatorengineaccessmanager.cpp
+
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp
     templatewidgets/templatemanager.cpp

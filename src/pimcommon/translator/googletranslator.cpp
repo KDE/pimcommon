@@ -6,6 +6,7 @@
 
 #include "googletranslator.h"
 #include "pimcommon_debug.h"
+#include "translatorengineaccessmanager.h"
 #include "translatorutil.h"
 #include <KLocalizedString>
 #include <QJsonParseError>
@@ -18,12 +19,8 @@ using namespace PimCommon;
 
 GoogleTranslator::GoogleTranslator(QObject *parent)
     : TranslatorEngineBase(parent)
-    , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
-    mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
-    mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
-    mNetworkAccessManager->enableStrictTransportSecurityStore(true);
-    connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GoogleTranslator::slotTranslateFinished);
+    connect(TranslatorEngineAccessManager::self()->networkManager(), &QNetworkAccessManager::finished, this, &GoogleTranslator::slotTranslateFinished);
 }
 
 GoogleTranslator::~GoogleTranslator() = default;
@@ -134,7 +131,7 @@ void GoogleTranslator::translate()
     url.setPath(QStringLiteral("/translate_a/single"));
     const QNetworkRequest request(url);
 
-    QNetworkReply *reply = mNetworkAccessManager->get(request);
+    QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->get(request);
     connect(reply, &QNetworkReply::errorOccurred, this, &GoogleTranslator::slotError);
 }
 
