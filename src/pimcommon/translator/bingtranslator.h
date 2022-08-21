@@ -22,5 +22,8 @@ public:
     static QByteArray sBingToken;
     static QString sBingIg;
     static QString sBingIid;
+
+private:
+    void parseCredentials(QNetworkReply *reply);
 };
 }

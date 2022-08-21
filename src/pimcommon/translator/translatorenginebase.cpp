@@ -6,6 +6,8 @@
 
 #include "translatorenginebase.h"
 #include "translatordebugdialog.h"
+#include <KLocalizedString>
+
 using namespace PimCommon;
 TranslatorEngineBase::TranslatorEngineBase(QObject *parent)
     : QObject{parent}
@@ -54,4 +56,13 @@ void TranslatorEngineBase::debug()
 void TranslatorEngineBase::clear()
 {
     mJsonData.clear();
+}
+
+void TranslatorEngineBase::slotError(QNetworkReply::NetworkError error)
+{
+    QString messageError;
+    if (error == QNetworkReply::ServiceUnavailableError) {
+        messageError = i18n("Error: Engine systems have detected suspicious traffic from your computer network. Please try your request again later.");
+    }
+    Q_EMIT translateFailed(false, messageError);
 }

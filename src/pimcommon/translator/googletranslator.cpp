@@ -138,15 +138,6 @@ void GoogleTranslator::translate()
     });
 }
 
-void GoogleTranslator::slotError(QNetworkReply::NetworkError error)
-{
-    QString messageError;
-    if (error == QNetworkReply::ServiceUnavailableError) {
-        messageError = i18n("Error: Engine systems have detected suspicious traffic from your computer network. Please try your request again later.");
-    }
-    Q_EMIT translateFailed(false, messageError);
-}
-
 void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 {
     mResult.clear();

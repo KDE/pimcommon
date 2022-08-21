@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QNetworkReply>
 #include <QObject>
 namespace PimCommon
 {
@@ -44,6 +45,8 @@ protected:
     QString mTo;
     QString mResult;
     bool mDebug = false;
+
+    void slotError(QNetworkReply::NetworkError error);
 
 private:
     QWidget *mParentWidget = nullptr;
