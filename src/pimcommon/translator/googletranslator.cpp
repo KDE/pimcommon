@@ -6,7 +6,6 @@
 
 #include "googletranslator.h"
 #include "pimcommon_debug.h"
-#include "translatordebugdialog.h"
 #include "translatorutil.h"
 #include <KLocalizedString>
 #include <QJsonParseError>
@@ -18,42 +17,16 @@
 using namespace PimCommon;
 
 GoogleTranslator::GoogleTranslator(QObject *parent)
-    : QObject(parent)
+    : TranslatorEngineBase(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
     mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
     mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
     mNetworkAccessManager->enableStrictTransportSecurityStore(true);
-    mDebug = !qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING");
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &GoogleTranslator::slotTranslateFinished);
 }
 
 GoogleTranslator::~GoogleTranslator() = default;
-
-void GoogleTranslator::setParentWidget(QWidget *parent)
-{
-    mParentWidget = parent;
-}
-
-void GoogleTranslator::setInputText(const QString &text)
-{
-    mInputText = text;
-}
-
-void GoogleTranslator::setFrom(const QString &language)
-{
-    mFrom = language;
-}
-
-void GoogleTranslator::setTo(const QString &language)
-{
-    mTo = language;
-}
-
-QString GoogleTranslator::resultTranslate() const
-{
-    return mResult;
-}
 
 QMap<QString, QMap<QString, QString>> GoogleTranslator::initListLanguage(QComboBox *from)
 {
@@ -204,18 +177,4 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
         }
     }
     Q_EMIT translateDone();
-}
-
-void GoogleTranslator::debug()
-{
-    if (mDebug) {
-        TranslatorDebugDialog dlg(mParentWidget);
-        dlg.setDebug(mJsonDebug);
-        dlg.exec();
-    }
-}
-
-void GoogleTranslator::clear()
-{
-    mJsonData.clear();
 }

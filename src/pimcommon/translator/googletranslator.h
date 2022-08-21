@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "translatorenginebase.h"
+
 #include <QNetworkReply>
 #include <QObject>
 class QNetworkAccessManager;
@@ -13,42 +15,21 @@ class QComboBox;
 
 namespace PimCommon
 {
-class GoogleTranslator : public QObject
+class GoogleTranslator : public TranslatorEngineBase
 {
     Q_OBJECT
 public:
     explicit GoogleTranslator(QObject *parent = nullptr);
     ~GoogleTranslator() override;
 
-    void setParentWidget(QWidget *parent);
-
     Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from);
     void translate();
-    void debug();
-    void clear();
-
-    Q_REQUIRED_RESULT QString resultTranslate() const;
-    void setInputText(const QString &text);
-    void setFrom(const QString &language);
-    void setTo(const QString &language);
 
 private Q_SLOTS:
     void slotTranslateFinished(QNetworkReply *);
     void slotError(QNetworkReply::NetworkError /*error*/);
 
-Q_SIGNALS:
-    void translateDone();
-    void translateFailed(bool result, const QString &errorMessage = QString());
-
 private:
-    QString mInputText;
-    QString mFrom;
-    QString mTo;
-    QString mResult;
-    QString mJsonData;
-    QString mJsonDebug;
     QNetworkAccessManager *const mNetworkAccessManager;
-    QWidget *mParentWidget = nullptr;
-    bool mDebug = false;
 };
 }
