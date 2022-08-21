@@ -17,5 +17,10 @@ public:
     ~BingTranslator() override;
 
     void translate() override;
+
+    static QByteArray sBingKey;
+    static QByteArray sBingToken;
+    static QString sBingIg;
+    static QString sBingIid;
 };
 }
