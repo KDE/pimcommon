@@ -216,22 +216,22 @@ void TranslatorWidget::init()
     hboxLayout->addWidget(closeBtn);
     connect(closeBtn, &QToolButton::clicked, this, &TranslatorWidget::slotCloseWidget);
 
-    auto label = new QLabel(i18nc("Translate from language", "From:"));
+    auto label = new QLabel(i18nc("Translate from language", "From:"), this);
     hboxLayout->addWidget(label);
-    d->fromCombobox = new QComboBox;
+    d->fromCombobox = new QComboBox(this);
     d->fromCombobox->setMinimumWidth(50);
     d->fromCombobox->setObjectName(QStringLiteral("from"));
     hboxLayout->addWidget(d->fromCombobox);
 
-    label = new QLabel(i18nc("Translate to language", "To:"));
+    label = new QLabel(i18nc("Translate to language", "To:"), this);
     hboxLayout->addWidget(label);
-    d->toCombobox = new QComboBox;
+    d->toCombobox = new QComboBox(this);
     d->toCombobox->setMinimumWidth(50);
     d->toCombobox->setObjectName(QStringLiteral("to"));
 
     hboxLayout->addWidget(d->toCombobox);
 
-    auto separator = new KSeparator;
+    auto separator = new KSeparator(this);
     separator->setOrientation(Qt::Vertical);
     hboxLayout->addWidget(separator);
 
@@ -248,7 +248,7 @@ void TranslatorWidget::init()
     connect(d->clear, &QPushButton::clicked, this, &TranslatorWidget::slotClear);
     hboxLayout->addWidget(d->clear);
 
-    d->translate = new QPushButton(i18n("Translate"));
+    d->translate = new QPushButton(i18n("Translate"), this);
     d->translate->setObjectName(QStringLiteral("translate-button"));
 #ifndef QT_NO_ACCESSIBILITY
     d->translate->setAccessibleName(i18n("Translate"));
@@ -280,7 +280,7 @@ void TranslatorWidget::init()
     connect(d->inputText, &TranslatorTextEdit::translateText, this, &TranslatorWidget::slotTranslate);
 
     d->splitter->addWidget(editorWidget);
-    d->translatorResultTextEdit = new TranslatorResultTextEdit;
+    d->translatorResultTextEdit = new TranslatorResultTextEdit(this);
     d->translatedText = new KPIMTextEdit::PlainTextEditorWidget(d->translatorResultTextEdit, this);
     d->translatedText->setObjectName(QStringLiteral("translatedtext"));
     d->translatedText->setReadOnly(true);
