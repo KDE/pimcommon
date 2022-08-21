@@ -13,6 +13,13 @@ class TranslatorEngineBase : public QObject
 {
     Q_OBJECT
 public:
+    enum TranslatorEngine {
+        Google = 0,
+        Bing = 1,
+    };
+
+    virtual void translate() = 0;
+
     explicit TranslatorEngineBase(QObject *parent = nullptr);
     ~TranslatorEngineBase() override;
 

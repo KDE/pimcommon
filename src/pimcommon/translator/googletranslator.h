@@ -23,7 +23,7 @@ public:
     ~GoogleTranslator() override;
 
     Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from);
-    void translate();
+    void translate() override;
 
 private Q_SLOTS:
     void slotTranslateFinished(QNetworkReply *);

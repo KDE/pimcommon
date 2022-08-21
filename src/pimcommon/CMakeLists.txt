@@ -91,6 +91,8 @@ target_sources(KF5PimCommon PRIVATE
     translator/translatorwidget.cpp
     translator/translatordebugdialog.cpp
     translator/googletranslator.cpp
+    translator/bingtranslator.h
+    translator/bingtranslator.cpp
     translator/translatorenginebase.h
     translator/translatorenginebase.cpp
     translator/translatorengineaccessmanager.h
