@@ -209,10 +209,9 @@ void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 void GoogleTranslator::debug()
 {
     if (mDebug) {
-        QPointer<TranslatorDebugDialog> dlg = new TranslatorDebugDialog(mParentWidget);
-        dlg->setDebug(mJsonDebug);
-        dlg->exec();
-        delete dlg;
+        TranslatorDebugDialog dlg(mParentWidget);
+        dlg.setDebug(mJsonDebug);
+        dlg.exec();
     }
 }
 
