@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 
 #include <QNetworkReply>
+#include <QUrlQuery>
 using namespace PimCommon;
 
 QByteArray BingTranslator::sBingKey;
@@ -39,8 +40,8 @@ void BingTranslator::translate()
             reply->deleteLater();
         });
     } else {
+        translateText();
     }
-    // TODO
 }
 
 void BingTranslator::parseCredentials(QNetworkReply *reply)
@@ -96,4 +97,57 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
 
     sBingIid = QString::fromUtf8(webSiteData.mid(iidBeginPos, iidEndPos - iidBeginPos));
     reply->deleteLater();
+    translateText();
+}
+
+void BingTranslator::translateText()
+{
+    if (mFrom == mTo) {
+        Q_EMIT translateFailed(false, i18n("You used same language for from and to language."));
+        return;
+    }
+
+    mResult.clear();
+
+#if 0
+    const QByteArray postData = "&text="     + QUrl::toPercentEncoding(sourceText)
+                              + "&fromLang=" + languageApiCode(Bing, m_sourceLang).toUtf8()
+                              + "&to="       + languageApiCode(Bing, m_translationLang).toUtf8()
+                              + "&token="    + s_bingToken
+                              + "&key="      + s_bingKey;
+
+    QUrl url(QStringLiteral("https://www.bing.com/ttranslatev3"));
+    url.setQuery(QStringLiteral("IG=%1&IID=%2").arg(s_bingIg, s_bingIid));
+
+    // Setup request
+
+    QNetworkRequest request;
+    request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
+    request.setHeader(QNetworkRequest::UserAgentHeader, QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
+    request.setUrl(url);
+
+    // Make reply
+
+    m_currentReply = m_networkManager->post(request, postData);
+
+#endif
+
+    QUrlQuery urlQuery;
+    urlQuery.addQueryItem(QStringLiteral("IG"), sBingIg);
+    urlQuery.addQueryItem(QStringLiteral("IDD"), sBingIid);
+    QUrl url(QStringLiteral("https://www.bing.com/ttranslatev3"));
+    url.setQuery(urlQuery);
+
+    QNetworkRequest request(url);
+    request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
+    // request.setHeader(QNetworkRequest::UserAgentHeader,
+    // QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
+
+    QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->get(request);
+    connect(reply, &QNetworkReply::errorOccurred, this, [this, reply](QNetworkReply::NetworkError error) {
+        slotError(error);
+        reply->deleteLater();
+    });
+
+    // TODO
 }

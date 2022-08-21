@@ -25,5 +25,6 @@ public:
 
 private:
     void parseCredentials(QNetworkReply *reply);
+    void translateText();
 };
 }
