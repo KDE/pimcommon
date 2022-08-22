@@ -6,8 +6,10 @@
 */
 
 #include "translatorwidget.h"
+#include "bingtranslator.h"
 #include "googletranslator.h"
 #include "translatorutil.h"
+#include "yandextranslator.h"
 #include <KBusyIndicatorWidget>
 #include <PimCommon/NetworkManager>
 
@@ -63,6 +65,7 @@ public:
     QSplitter *splitter = nullptr;
     bool languageSettingsChanged = false;
     bool standalone = true;
+    PimCommon::TranslatorEngineBase::TranslatorEngine engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
 };
 
 void TranslatorWidget::TranslatorWidgetPrivate::fillToCombobox(const QString &lang)
@@ -194,7 +197,18 @@ void TranslatorWidget::readConfig()
 
 void TranslatorWidget::init()
 {
-    d->abstractTranslator = new GoogleTranslator();
+    switch (d->engineType) {
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Google:
+        d->abstractTranslator = new GoogleTranslator(this);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex:
+        d->abstractTranslator = new YandexTranslator(this);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Bing:
+        d->abstractTranslator = new BingTranslator(this);
+        break;
+    }
+
     d->abstractTranslator->setParentWidget(this);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);

@@ -18,6 +18,7 @@ public:
     enum TranslatorEngine {
         Google = 0,
         Bing = 1,
+        Yandex = 2,
     };
 
     virtual void translate() = 0;
