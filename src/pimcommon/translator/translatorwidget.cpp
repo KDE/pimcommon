@@ -87,7 +87,6 @@ void TranslatorWidget::TranslatorWidgetPrivate::initLanguage()
 
 TranslatorResultTextEdit::TranslatorResultTextEdit(QWidget *parent)
     : KPIMTextEdit::PlainTextEditor(parent)
-    , mResultFailed(false)
 {
     setReadOnly(true);
 }

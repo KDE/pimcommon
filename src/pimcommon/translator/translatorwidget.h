@@ -25,7 +25,7 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
 private:
-    bool mResultFailed;
+    bool mResultFailed = false;
 };
 
 /**
