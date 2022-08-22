@@ -305,6 +305,7 @@ ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
 ecm_generate_headers(PimCommon_Camelcasetranslator_HEADERS
     HEADER_NAMES
     TranslatorWidget
+    TranslatorEngineBase
     REQUIRED_HEADERS PimCommon_translator_HEADERS
     PREFIX PimCommon
     RELATIVE translator

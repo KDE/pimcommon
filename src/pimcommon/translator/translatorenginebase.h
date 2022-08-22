@@ -6,12 +6,13 @@
 
 #pragma once
 
+#include "pimcommon_export.h"
 #include <QNetworkReply>
 #include <QObject>
 class QComboBox;
 namespace PimCommon
 {
-class TranslatorEngineBase : public QObject
+class PIMCOMMON_EXPORT TranslatorEngineBase : public QObject
 {
     Q_OBJECT
 public:
@@ -19,6 +20,7 @@ public:
         Google = 0,
         Bing = 1,
         Yandex = 2,
+        LastEngine = Yandex,
     };
 
     virtual void translate() = 0;
