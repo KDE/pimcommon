@@ -46,12 +46,12 @@ void BingTranslator::translate()
 void BingTranslator::parseCredentials(QNetworkReply *reply)
 {
     const QByteArray webSiteData = reply->readAll();
+    reply->deleteLater();
     const QByteArray credentialsBeginString = QByteArrayLiteral("var params_RichTranslateHelper = [");
     const int credentialsBeginPos = webSiteData.indexOf(credentialsBeginString);
 
     if (credentialsBeginPos == -1) {
-        translateFailed(false, i18n("Error: Unable to find Bing credentials in web version."));
-        reply->deleteLater();
+        Q_EMIT translateFailed(false, i18n("Error: Unable to find Bing credentials in web version."));
         return;
     }
 
@@ -60,7 +60,6 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
 
     if (keyEndPos == -1) {
         translateFailed(false, i18n("Error: Unable to extract Bing key from web version."));
-        reply->deleteLater();
         return;
     }
 
@@ -69,8 +68,7 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
     const int tokenEndPos = webSiteData.indexOf('"', tokenBeginPos);
 
     if (tokenEndPos == -1) {
-        translateFailed(false, i18n("Error: Unable to extract Bing token from web version."));
-        reply->deleteLater();
+        Q_EMIT translateFailed(false, i18n("Error: Unable to extract Bing token from web version."));
         return;
     }
 
@@ -79,8 +77,7 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
     const int igEndPos = webSiteData.indexOf('"', igBeginPos + 2);
 
     if (igEndPos == -1) {
-        translateFailed(false, i18n("Error: Unable to extract additional Bing information from web version."));
-        reply->deleteLater();
+        Q_EMIT translateFailed(false, i18n("Error: Unable to extract additional Bing information from web version."));
         return;
     }
 
@@ -89,13 +86,11 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
     const int iidEndPos = webSiteData.indexOf('"', iidBeginPos + 2);
 
     if (iidEndPos == -1) {
-        translateFailed(false, i18n("Error: Unable to extract additional Bing information from web version."));
-        reply->deleteLater();
+        Q_EMIT translateFailed(false, i18n("Error: Unable to extract additional Bing information from web version."));
         return;
     }
 
     sBingIid = QString::fromUtf8(webSiteData.mid(iidBeginPos, iidEndPos - iidBeginPos));
-    reply->deleteLater();
     translateText();
 }
 
