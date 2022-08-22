@@ -86,4 +86,5 @@ void YandexTranslator::parseCredentials(QNetworkReply *reply)
 void YandexTranslator::translateText()
 {
     // TODO
+    Q_EMIT translateDone();
 }

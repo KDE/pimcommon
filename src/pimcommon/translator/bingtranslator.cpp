@@ -179,6 +179,7 @@ void BingTranslator::parseTranslation(QNetworkReply *reply)
 
 #endif
     reply->deleteLater();
+    Q_EMIT translateDone();
 }
 
 QMap<QString, QMap<QString, QString>> PimCommon::BingTranslator::initListLanguage(QComboBox *from)
