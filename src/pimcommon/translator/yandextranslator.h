@@ -23,6 +23,7 @@ public:
 private:
     static QString sYandexKey;
     void parseCredentials(QNetworkReply *reply);
+    void parseTranslation(QNetworkReply *reply);
     void translateText();
 };
 }

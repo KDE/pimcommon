@@ -85,6 +85,52 @@ void YandexTranslator::parseCredentials(QNetworkReply *reply)
 
 void YandexTranslator::translateText()
 {
+    if (mFrom == mTo) {
+        Q_EMIT translateFailed(false, i18n("You used same language for from and to language."));
+        return;
+    }
+
+    mResult.clear();
+#if 0
+    const QString sourceText = sender()->property(s_textProperty).toString();
+
+    QString lang;
+
+    if (m_sourceLang == Auto)
+    {
+        lang = languageApiCode(Yandex, m_translationLang);
+    }
+    else
+    {
+        lang = languageApiCode(Yandex, m_sourceLang) + QLatin1Char('-') + languageApiCode(Yandex, m_translationLang);
+    }
+
+    // Generate API url
+
+    QUrl url(QStringLiteral("https://translate.yandex.net/api/v1/tr.json/translate"));
+
+    url.setQuery(QStringLiteral("id=%1-2-0&srv=tr-text&text=%2&lang=%3")
+                     .arg(s_yandexKey,
+                          QString::fromUtf8(QUrl::toPercentEncoding(sourceText)),
+                          lang));
+
+    // Setup request
+
+    QNetworkRequest request;
+    request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
+    request.setUrl(url);
+
+    // Make reply
+
+    m_currentReply = m_networkManager->post(request, QByteArray());
+
+#endif
     // TODO
+}
+
+void YandexTranslator::parseTranslation(QNetworkReply *reply)
+{
+    // TODO
+    reply->deleteLater();
     Q_EMIT translateDone();
 }
