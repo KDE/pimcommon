@@ -59,7 +59,7 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
     const int keyEndPos = webSiteData.indexOf(',', keyBeginPos);
 
     if (keyEndPos == -1) {
-        translateFailed(false, i18n("Error: Unable to extract Bing key from web version."));
+        Q_EMIT translateFailed(false, i18n("Error: Unable to extract Bing key from web version."));
         return;
     }
 
