@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "translatorenginebase.h"
+#include "translator/translatorenginebase.h"
 namespace PimCommon
 {
 class YandexTranslator : public TranslatorEngineBase

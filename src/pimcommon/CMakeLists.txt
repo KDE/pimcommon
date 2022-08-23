@@ -88,21 +88,26 @@ target_sources(KF5PimCommon PRIVATE
     configureplugins/configureplugindialog.cpp
 
     translator/translatorutil.cpp
+    translator/translatorutil.h
     translator/translatorwidget.cpp
+    translator/translatorwidget.h
     translator/translatordebugdialog.cpp
-    translator/googletranslator.cpp
-    translator/bingtranslator.h
-    translator/bingtranslator.cpp
-    translator/translatorenginebase.h
+    translator/translatordebugdialog.h
     translator/translatorenginebase.cpp
+    translator/translatorenginebase.h
     translator/translatorengineaccessmanager.h
     translator/translatorengineaccessmanager.cpp
-    translator/yandextranslator.h
-    translator/yandextranslator.cpp
     translator/translatorconfigurewidget.cpp
     translator/translatorconfigurewidget.h
     translator/translatorconfiguredialog.h
     translator/translatorconfiguredialog.cpp
+
+    translator/engine/googletranslator.h
+    translator/engine/googletranslator.cpp
+    translator/engine/bingtranslator.h
+    translator/engine/bingtranslator.cpp
+    translator/engine/yandextranslator.h
+    translator/engine/yandextranslator.cpp
 
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp
@@ -148,10 +153,6 @@ target_sources(KF5PimCommon PRIVATE
     shareserviceurl/shareserviceurlmanager.h
     pimcommon_private_export.h
     network/networkmanager.h
-    translator/googletranslator.h
-    translator/translatordebugdialog.h
-    translator/translatorwidget.h
-    translator/translatorutil.h
     widgets/renamefiledialog.h
     widgets/spellchecklineedit.h
     widgets/customtreeview.h
@@ -309,7 +310,7 @@ ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
 ecm_generate_headers(PimCommon_Camelcasetranslator_HEADERS
     HEADER_NAMES
     TranslatorWidget
-    TranslatorEngineBase
+    TranslatorConfigureDialog
     REQUIRED_HEADERS PimCommon_translator_HEADERS
     PREFIX PimCommon
     RELATIVE translator

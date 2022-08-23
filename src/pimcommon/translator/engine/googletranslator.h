@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "translatorenginebase.h"
+#include "translator/translatorenginebase.h"
 
 #include <QNetworkReply>
 #include <QObject>

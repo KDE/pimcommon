@@ -6,8 +6,8 @@
 
 #include "googletranslator.h"
 #include "pimcommon_debug.h"
-#include "translatorengineaccessmanager.h"
-#include "translatorutil.h"
+#include "translator/translatorengineaccessmanager.h"
+#include "translator/translatorutil.h"
 #include <KLocalizedString>
 #include <QJsonParseError>
 #include <QNetworkAccessManager>

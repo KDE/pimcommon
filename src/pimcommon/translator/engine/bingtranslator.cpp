@@ -6,7 +6,7 @@
 */
 
 #include "bingtranslator.h"
-#include "translatorengineaccessmanager.h"
+#include "translator/translatorengineaccessmanager.h"
 
 #include <KLocalizedString>
 

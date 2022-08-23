@@ -6,10 +6,10 @@
 */
 
 #include "translatorwidget.h"
-#include "bingtranslator.h"
-#include "googletranslator.h"
+#include "engine/bingtranslator.h"
+#include "engine/googletranslator.h"
+#include "engine/yandextranslator.h"
 #include "translatorutil.h"
-#include "yandextranslator.h"
 #include <KBusyIndicatorWidget>
 #include <PimCommon/NetworkManager>
 
