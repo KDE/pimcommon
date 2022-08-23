@@ -16,9 +16,10 @@ TranslatorConfigureDialog::TranslatorConfigureDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Translator"));
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mTranslatorConfigureWidget->setObjectName(QStringLiteral("mTranslatorConfigureWidget"));
+    mainLayout->addWidget(mTranslatorConfigureWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));

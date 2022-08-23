@@ -6,11 +6,12 @@
 
 #pragma once
 
+#include "pimcommon_private_export.h"
 #include <QWidget>
 class QComboBox;
 namespace PimCommon
 {
-class TranslatorConfigureWidget : public QWidget
+class PIMCOMMON_TESTS_EXPORT TranslatorConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -18,6 +19,8 @@ public:
     ~TranslatorConfigureWidget() override;
 
 private:
+    void loadSettings();
+    void saveSettings();
     QComboBox *const mEngine;
 };
 }

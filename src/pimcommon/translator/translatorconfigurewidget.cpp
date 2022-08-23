@@ -29,6 +29,12 @@ TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     hboxLayout->addWidget(mEngine);
 }
 
-TranslatorConfigureWidget::~TranslatorConfigureWidget()
+TranslatorConfigureWidget::~TranslatorConfigureWidget() = default;
+
+void TranslatorConfigureWidget::saveSettings()
+{
+}
+
+void TranslatorConfigureWidget::loadSettings()
 {
 }
