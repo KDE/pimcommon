@@ -216,6 +216,7 @@ void TranslatorWidget::init()
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
     auto hboxLayout = new QHBoxLayout;
+    hboxLayout->setContentsMargins({});
     auto closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
@@ -278,8 +279,9 @@ void TranslatorWidget::init()
 
     d->progressIndicator = new KBusyIndicatorWidget(this);
     hboxLayout->addWidget(d->progressIndicator);
+    d->progressIndicator->setFixedHeight(d->toCombobox->height());
 
-    hboxLayout->addItem(new QSpacerItem(5, 5, QSizePolicy::MinimumExpanding, QSizePolicy::Minimum));
+    hboxLayout->addStretch();
 
     layout->addLayout(hboxLayout);
 
@@ -316,7 +318,7 @@ void TranslatorWidget::init()
     });
 
     hide();
-    setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed));
+    setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum));
     d->languageSettingsChanged = false;
 }
 
