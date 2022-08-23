@@ -135,8 +135,15 @@ void YandexTranslator::translateText()
 
     // Make reply
     QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->post(request, QByteArray());
+    connect(reply, &QNetworkReply::errorOccurred, this, [this, reply](QNetworkReply::NetworkError error) {
+        slotError(error);
+        reply->deleteLater();
+    });
 
-    // TODO
+    connect(reply, &QNetworkReply::finished, this, [this, reply]() {
+        reply->deleteLater();
+        parseTranslation(reply);
+    });
 }
 
 void YandexTranslator::parseTranslation(QNetworkReply *reply)

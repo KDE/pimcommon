@@ -10,6 +10,9 @@
 
 #include <KLocalizedString>
 
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QNetworkReply>
 #include <QUrlQuery>
 using namespace PimCommon;
@@ -103,6 +106,9 @@ void BingTranslator::translateText()
 
     mResult.clear();
 
+    const QByteArray postData =
+        "&text=" + QUrl::toPercentEncoding(mInputText) + "&fromLang=" + mFrom.toUtf8() + "&to=" + mTo.toUtf8() + "&token=" + sBingToken + "&key=" + sBingKey;
+
 #if 0
     const QByteArray postData = "&text="     + QUrl::toPercentEncoding(sourceText)
                               + "&fromLang=" + languageApiCode(Bing, m_sourceLang).toUtf8()
@@ -137,7 +143,7 @@ void BingTranslator::translateText()
     // request.setHeader(QNetworkRequest::UserAgentHeader,
     // QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
 
-    QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->get(request);
+    QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->post(request, postData);
     connect(reply, &QNetworkReply::errorOccurred, this, [this, reply](QNetworkReply::NetworkError error) {
         slotError(error);
         reply->deleteLater();
@@ -151,12 +157,11 @@ void BingTranslator::translateText()
 
 void BingTranslator::parseTranslation(QNetworkReply *reply)
 {
-#if 0
-
     // Parse translation data
-
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
     const QJsonObject responseObject = jsonResponse.array().first().toObject();
+#if 0
+
 
     if (m_sourceLang == Auto)
     {
