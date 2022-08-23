@@ -99,6 +99,10 @@ target_sources(KF5PimCommon PRIVATE
     translator/translatorengineaccessmanager.cpp
     translator/yandextranslator.h
     translator/yandextranslator.cpp
+    translator/translatorconfigurewidget.cpp
+    translator/translatorconfigurewidget.h
+    translator/translatorconfiguredialog.h
+    translator/translatorconfiguredialog.cpp
 
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp
