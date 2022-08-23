@@ -155,7 +155,7 @@ void BingTranslator::parseTranslation(QNetworkReply *reply)
 
     // Parse translation data
 
-    const QJsonDocument jsonResponse = QJsonDocument::fromJson(m_currentReply->readAll());
+    const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
     const QJsonObject responseObject = jsonResponse.array().first().toObject();
 
     if (m_sourceLang == Auto)

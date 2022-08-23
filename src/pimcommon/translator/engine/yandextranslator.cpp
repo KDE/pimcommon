@@ -91,6 +91,7 @@ void YandexTranslator::translateText()
     }
 
     mResult.clear();
+    QString lang;
 #if 0
     const QString sourceText = sender()->property(s_textProperty).toString();
 
@@ -106,7 +107,6 @@ void YandexTranslator::translateText()
     }
 
     // Generate API url
-
     QUrl url(QStringLiteral("https://translate.yandex.net/api/v1/tr.json/translate"));
 
     url.setQuery(QStringLiteral("id=%1-2-0&srv=tr-text&text=%2&lang=%3")
@@ -115,16 +115,27 @@ void YandexTranslator::translateText()
                           lang));
 
     // Setup request
-
     QNetworkRequest request;
     request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
     request.setUrl(url);
 
     // Make reply
-
     m_currentReply = m_networkManager->post(request, QByteArray());
 
 #endif
+    // Generate API url
+    QUrl url(QStringLiteral("https://translate.yandex.net/api/v1/tr.json/translate"));
+
+    url.setQuery(QStringLiteral("id=%1-2-0&srv=tr-text&text=%2&lang=%3").arg(sYandexKey, QString::fromUtf8(QUrl::toPercentEncoding(mInputText)), lang));
+
+    // Setup request
+    QNetworkRequest request;
+    request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
+    request.setUrl(url);
+
+    // Make reply
+    QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->post(request, QByteArray());
+
     // TODO
 }
 
