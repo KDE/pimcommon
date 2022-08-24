@@ -18,9 +18,10 @@ public:
     explicit TranslatorConfigureWidget(QWidget *parent = nullptr);
     ~TranslatorConfigureWidget() override;
 
-private:
-    void loadSettings();
     void saveSettings();
+    void loadSettings();
+
+private:
     void fillEngine();
     QComboBox *const mEngine;
 };

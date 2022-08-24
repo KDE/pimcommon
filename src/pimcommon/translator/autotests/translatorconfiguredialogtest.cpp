@@ -8,12 +8,14 @@
 #include "translator/translatorconfiguredialog.h"
 #include "translator/translatorconfigurewidget.h"
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(TranslatorConfigureDialogTest)
 TranslatorConfigureDialogTest::TranslatorConfigureDialogTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void TranslatorConfigureDialogTest::shouldHaveDefaultValues()

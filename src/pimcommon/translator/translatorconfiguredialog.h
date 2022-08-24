@@ -17,5 +17,6 @@ public:
 
 private:
     TranslatorConfigureWidget *const mTranslatorConfigureWidget;
+    void slotAccept();
 };
 }

@@ -26,8 +26,15 @@ TranslatorConfigureDialog::TranslatorConfigureDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &TranslatorConfigureDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &TranslatorConfigureDialog::slotAccept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TranslatorConfigureDialog::reject);
+    mTranslatorConfigureWidget->loadSettings();
 }
 
 TranslatorConfigureDialog::~TranslatorConfigureDialog() = default;
+
+void TranslatorConfigureDialog::slotAccept()
+{
+    mTranslatorConfigureWidget->saveSettings();
+    accept();
+}
