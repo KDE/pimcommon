@@ -5,7 +5,9 @@
 */
 
 #include "translatorconfigurewidget.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -41,8 +43,16 @@ void TranslatorConfigureWidget::fillEngine()
 
 void TranslatorConfigureWidget::saveSettings()
 {
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("Engine"));
+    myGroup.writeEntry(QStringLiteral("Engine"), mEngine->currentData().toString());
 }
 
 void TranslatorConfigureWidget::loadSettings()
 {
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("Engine"));
+    const QString engine = myGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default Google
+    const int index = mEngine->findData(engine);
+    if (index != -1) {
+        mEngine->setCurrentIndex(index);
+    }
 }
