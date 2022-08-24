@@ -7,11 +7,11 @@
 #pragma once
 #include <QObject>
 
-class TranslatorTest : public QObject
+class TranslatorWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    TranslatorTest();
+    TranslatorWidgetTest();
 
 private Q_SLOTS:
     void shouldHaveDefaultValuesOnCreation();

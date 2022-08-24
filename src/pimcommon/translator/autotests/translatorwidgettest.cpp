@@ -4,7 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "translatortest.h"
+#include "translatorwidgettest.h"
 #include "translator/translatorwidget.h"
 #include <KPIMTextEdit/PlainTextEditorWidget>
 
@@ -16,12 +16,14 @@
 #include <QTest>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
-TranslatorTest::TranslatorTest()
+QTEST_MAIN(TranslatorWidgetTest)
+
+TranslatorWidgetTest::TranslatorWidgetTest()
 {
     QStandardPaths::setTestModeEnabled(true);
 }
 
-void TranslatorTest::shouldHaveDefaultValuesOnCreation()
+void TranslatorWidgetTest::shouldHaveDefaultValuesOnCreation()
 {
     PimCommon::TranslatorWidget edit;
     auto from = edit.findChild<QComboBox *>(QStringLiteral("from"));
@@ -46,7 +48,7 @@ void TranslatorTest::shouldHaveDefaultValuesOnCreation()
     QCOMPARE(translate->isEnabled(), false);
 }
 
-void TranslatorTest::shouldEnableTranslateButtonWhenTextToTranslateIsNotEmpty()
+void TranslatorWidgetTest::shouldEnableTranslateButtonWhenTextToTranslateIsNotEmpty()
 {
     PimCommon::TranslatorWidget edit;
 
@@ -56,7 +58,7 @@ void TranslatorTest::shouldEnableTranslateButtonWhenTextToTranslateIsNotEmpty()
     QCOMPARE(translate->isEnabled(), true);
 }
 
-void TranslatorTest::shouldDisableTranslateButtonAndClearTextWhenClickOnClearButton()
+void TranslatorWidgetTest::shouldDisableTranslateButtonAndClearTextWhenClickOnClearButton()
 {
     PimCommon::TranslatorWidget edit;
     auto inputtext = edit.findChild<PimCommon::TranslatorTextEdit *>(QStringLiteral("inputtext"));
@@ -70,7 +72,7 @@ void TranslatorTest::shouldDisableTranslateButtonAndClearTextWhenClickOnClearBut
     QCOMPARE(translate->isEnabled(), false);
 }
 
-void TranslatorTest::shouldInvertLanguageWhenClickOnInvertButton()
+void TranslatorWidgetTest::shouldInvertLanguageWhenClickOnInvertButton()
 {
     PimCommon::TranslatorWidget edit;
     auto from = edit.findChild<QComboBox *>(QStringLiteral("from"));
@@ -88,7 +90,7 @@ void TranslatorTest::shouldInvertLanguageWhenClickOnInvertButton()
     QCOMPARE(toIndex != newToIndex, true);
 }
 
-void TranslatorTest::shouldHideWidgetWhenPressEscape()
+void TranslatorWidgetTest::shouldHideWidgetWhenPressEscape()
 {
     PimCommon::TranslatorWidget edit;
     edit.show();
@@ -97,7 +99,7 @@ void TranslatorTest::shouldHideWidgetWhenPressEscape()
     QCOMPARE(edit.isVisible(), false);
 }
 
-void TranslatorTest::shouldEmitTranslatorWasClosedSignalWhenCloseIt()
+void TranslatorWidgetTest::shouldEmitTranslatorWasClosedSignalWhenCloseIt()
 {
     PimCommon::TranslatorWidget edit;
     edit.show();
@@ -106,5 +108,3 @@ void TranslatorTest::shouldEmitTranslatorWasClosedSignalWhenCloseIt()
     QTest::keyClick(&edit, Qt::Key_Escape);
     QCOMPARE(spy.count(), 1);
 }
-
-QTEST_MAIN(TranslatorTest)

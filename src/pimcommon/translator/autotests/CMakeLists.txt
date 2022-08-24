@@ -10,6 +10,6 @@ macro(add_pimcommon_translator_unittest _source)
         KF5::PimCommon
     )
 endmacro()
-add_pimcommon_translator_unittest(translatortest.cpp)
+add_pimcommon_translator_unittest(translatorwidgettest.cpp)
 add_pimcommon_translator_unittest(translatorconfiguredialogtest.cpp)
 add_pimcommon_translator_unittest(translatorconfigurewidgettest.cpp)
