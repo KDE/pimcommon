@@ -21,6 +21,7 @@ public:
 private:
     void loadSettings();
     void saveSettings();
+    void fillEngine();
     QComboBox *const mEngine;
 };
 }
