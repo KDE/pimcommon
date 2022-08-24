@@ -413,10 +413,13 @@ void TranslatorWidget::slotTranslate()
     d->translate->setEnabled(false);
     d->progressIndicator->show();
 
-    d->abstractTranslator->setFrom(from);
-    d->abstractTranslator->setTo(to);
-    d->abstractTranslator->setInputText(d->inputText->toPlainText());
-    d->abstractTranslator->translate();
+    const QString inputText{d->inputText->toPlainText()};
+    if (!inputText.isEmpty() && !from.isEmpty() && !to.isEmpty()) {
+        d->abstractTranslator->setFrom(from);
+        d->abstractTranslator->setTo(to);
+        d->abstractTranslator->setInputText(inputText);
+        d->abstractTranslator->translate();
+    }
 }
 
 void TranslatorWidget::slotTranslateDone()
