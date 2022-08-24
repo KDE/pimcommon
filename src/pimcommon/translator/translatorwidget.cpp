@@ -9,6 +9,7 @@
 #include "engine/bingtranslator.h"
 #include "engine/googletranslator.h"
 #include "engine/yandextranslator.h"
+#include "pimcommon_debug.h"
 #include "translatorconfiguredialog.h"
 #include "translatorutil.h"
 #include <KBusyIndicatorWidget>
@@ -194,7 +195,23 @@ void TranslatorWidget::readConfig()
     const QList<int> size = {100, 400};
     d->splitter->setSizes(myGroup.readEntry("mainSplitter", size));
     d->invert->setEnabled(from != QLatin1String("auto"));
-    const QString engineType = myGroup.readEntry(QStringLiteral("Engine"));
+}
+
+void TranslatorWidget::loadEngineSettings()
+{
+    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
+    const QString engineType = myGeneralGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default google
+    if (engineType == QLatin1String("google")) {
+        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
+    } else if (engineType == QLatin1String("bing")) {
+        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Bing;
+    } else if (engineType == QLatin1String("yandex")) {
+        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex;
+    } else {
+        qCWarning(PIMCOMMON_LOG) << "Invalid translator engine " << engineType;
+        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
+    }
+    switchEngine();
 }
 
 void TranslatorWidget::init()
@@ -276,7 +293,9 @@ void TranslatorWidget::init()
     configureButton->setToolTip(i18n("Configure"));
     connect(configureButton, &QToolButton::clicked, this, [this]() {
         TranslatorConfigureDialog dlg(this);
-        dlg.exec();
+        if (dlg.exec()) {
+            loadEngineSettings();
+        }
     });
     hboxLayout->addWidget(configureButton);
 
@@ -301,6 +320,7 @@ void TranslatorWidget::init()
     layout->addWidget(d->splitter);
 
     d->fromCombobox->setCurrentIndex(0); // Fill "to" combobox
+    loadEngineSettings();
     switchEngine();
     slotFromLanguageChanged(0, true);
     slotTextChanged();

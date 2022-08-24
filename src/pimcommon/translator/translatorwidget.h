@@ -86,6 +86,7 @@ private:
     void init();
     void initLanguage();
     void switchEngine();
+    void loadEngineSettings();
     class TranslatorWidgetPrivate;
     std::unique_ptr<TranslatorWidgetPrivate> const d;
 };

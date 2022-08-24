@@ -43,13 +43,14 @@ void TranslatorConfigureWidget::fillEngine()
 
 void TranslatorConfigureWidget::saveSettings()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("Engine"));
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
     myGroup.writeEntry(QStringLiteral("Engine"), mEngine->currentData().toString());
+    myGroup.sync();
 }
 
 void TranslatorConfigureWidget::loadSettings()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("Engine"));
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
     const QString engine = myGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default Google
     const int index = mEngine->findData(engine);
     if (index != -1) {
