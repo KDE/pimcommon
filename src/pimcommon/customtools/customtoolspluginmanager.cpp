@@ -6,6 +6,7 @@
 
 #include "customtoolspluginmanager.h"
 #include "customtoolsplugin.h"
+#include "pimcommon_debug.h"
 
 #include <KPluginFactory>
 #include <KPluginMetaData>
@@ -76,7 +77,7 @@ void CustomToolsPluginManagerPrivate::initializePluginList()
             mPluginList.push_back(info);
             unique.insert(info.saveName());
         } else {
-            qWarning() << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
+            qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
     QVector<CustomToolsPluginInfo>::iterator end(mPluginList.end());
