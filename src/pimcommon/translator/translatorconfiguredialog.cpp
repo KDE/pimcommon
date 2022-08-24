@@ -20,6 +20,7 @@ TranslatorConfigureDialog::TranslatorConfigureDialog(QWidget *parent)
 
     mTranslatorConfigureWidget->setObjectName(QStringLiteral("mTranslatorConfigureWidget"));
     mainLayout->addWidget(mTranslatorConfigureWidget);
+    mainLayout->addStretch();
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
