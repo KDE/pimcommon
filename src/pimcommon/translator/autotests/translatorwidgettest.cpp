@@ -14,6 +14,7 @@
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
+#include <QToolButton>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
 QTEST_MAIN(TranslatorWidgetTest)
@@ -34,6 +35,10 @@ void TranslatorWidgetTest::shouldHaveDefaultValuesOnCreation()
     auto translate = edit.findChild<QPushButton *>(QStringLiteral("translate-button"));
     auto clear = edit.findChild<QPushButton *>(QStringLiteral("clear-button"));
     auto invert = edit.findChild<QPushButton *>(QStringLiteral("invert-button"));
+    auto configure = edit.findChild<QToolButton *>(QStringLiteral("configure_button"));
+    auto close = edit.findChild<QToolButton *>(QStringLiteral("close-button"));
+    QVERIFY(configure);
+    QVERIFY(close);
     QVERIFY(invert);
     QVERIFY(clear);
     QVERIFY(translate);
