@@ -9,6 +9,7 @@
 #include "engine/bingtranslator.h"
 #include "engine/googletranslator.h"
 #include "engine/yandextranslator.h"
+#include "translatorconfiguredialog.h"
 #include "translatorutil.h"
 #include <KBusyIndicatorWidget>
 #include <PimCommon/NetworkManager>
@@ -282,6 +283,17 @@ void TranslatorWidget::init()
     d->progressIndicator->setFixedHeight(d->toCombobox->height());
 
     hboxLayout->addStretch();
+
+    auto configureButton = new QToolButton(this);
+    configureButton->setObjectName(QStringLiteral("configure_button"));
+    configureButton->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
+    configureButton->setIconSize(QSize(16, 16));
+    configureButton->setToolTip(i18n("Configure"));
+    connect(configureButton, &QToolButton::clicked, this, [this]() {
+        TranslatorConfigureDialog dlg(this);
+        dlg.exec();
+    });
+    hboxLayout->addWidget(configureButton);
 
     layout->addLayout(hboxLayout);
 
