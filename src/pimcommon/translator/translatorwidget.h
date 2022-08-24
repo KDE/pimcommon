@@ -85,6 +85,7 @@ Q_SIGNALS:
 private:
     void init();
     void initLanguage();
+    void switchEngine();
     class TranslatorWidgetPrivate;
     std::unique_ptr<TranslatorWidgetPrivate> const d;
 };

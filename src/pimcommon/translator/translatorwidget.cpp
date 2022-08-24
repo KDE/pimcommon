@@ -198,21 +198,7 @@ void TranslatorWidget::readConfig()
 
 void TranslatorWidget::init()
 {
-    switch (d->engineType) {
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Google:
-        d->abstractTranslator = new GoogleTranslator(this);
-        break;
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex:
-        d->abstractTranslator = new YandexTranslator(this);
-        break;
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Bing:
-        d->abstractTranslator = new BingTranslator(this);
-        break;
-    }
-
-    d->abstractTranslator->setParentWidget(this);
-    connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
-    connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
+    switchEngine();
 
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
@@ -332,6 +318,27 @@ void TranslatorWidget::init()
     hide();
     setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum));
     d->languageSettingsChanged = false;
+}
+
+void TranslatorWidget::switchEngine()
+{
+    delete d->abstractTranslator;
+    switch (d->engineType) {
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Google:
+        d->abstractTranslator = new GoogleTranslator(this);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex:
+        d->abstractTranslator = new YandexTranslator(this);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Bing:
+        d->abstractTranslator = new BingTranslator(this);
+        break;
+    }
+
+    d->abstractTranslator->setParentWidget(this);
+    disconnect(d->abstractTranslator);
+    connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
+    connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
 }
 
 void TranslatorWidget::slotConfigChanged()
