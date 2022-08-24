@@ -31,6 +31,7 @@ BingTranslator::~BingTranslator() = default;
 
 void BingTranslator::translate()
 {
+    qDebug() << " BingTranslator::translate() ";
     if (sBingKey.isEmpty() || sBingToken.isEmpty()) {
         const QUrl url(QStringLiteral("https://www.bing.com/translator"));
         QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->get(QNetworkRequest(url));
@@ -94,6 +95,8 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
     }
 
     sBingIid = QString::fromUtf8(webSiteData.mid(iidBeginPos, iidEndPos - iidBeginPos));
+
+    qDebug() << "sBingIid " << sBingIid << " sBingIg " << sBingIg << " sBingToken " << sBingToken << " sBingKey " << sBingKey;
     translateText();
 }
 
