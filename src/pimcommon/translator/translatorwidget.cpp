@@ -194,12 +194,11 @@ void TranslatorWidget::readConfig()
     const QList<int> size = {100, 400};
     d->splitter->setSizes(myGroup.readEntry("mainSplitter", size));
     d->invert->setEnabled(from != QLatin1String("auto"));
+    const QString engineType = myGroup.readEntry(QStringLiteral("Engine"));
 }
 
 void TranslatorWidget::init()
 {
-    switchEngine();
-
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
     auto hboxLayout = new QHBoxLayout;
@@ -301,8 +300,8 @@ void TranslatorWidget::init()
 
     layout->addWidget(d->splitter);
 
-    d->initLanguage();
     d->fromCombobox->setCurrentIndex(0); // Fill "to" combobox
+    switchEngine();
     slotFromLanguageChanged(0, true);
     slotTextChanged();
     readConfig();
@@ -339,6 +338,7 @@ void TranslatorWidget::switchEngine()
     disconnect(d->abstractTranslator);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
+    d->initLanguage();
 }
 
 void TranslatorWidget::slotConfigChanged()
