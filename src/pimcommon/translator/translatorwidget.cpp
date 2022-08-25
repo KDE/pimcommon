@@ -87,6 +87,7 @@ void TranslatorWidget::TranslatorWidgetPrivate::initLanguage()
     if (!abstractTranslator) {
         return;
     }
+    fromCombobox->clear();
     listLanguage = abstractTranslator->initListLanguage(fromCombobox);
 }
 
