@@ -5,7 +5,6 @@
 */
 
 #include "translatorenginebase.h"
-#include "translatordebugdialog.h"
 #include <KLocalizedString>
 
 using namespace PimCommon;
@@ -15,14 +14,7 @@ TranslatorEngineBase::TranslatorEngineBase(QObject *parent)
     mDebug = !qEnvironmentVariableIsEmpty("KDEPIM_DEBUGGING");
 }
 
-TranslatorEngineBase::~TranslatorEngineBase()
-{
-}
-
-void TranslatorEngineBase::setParentWidget(QWidget *parent)
-{
-    mParentWidget = parent;
-}
+TranslatorEngineBase::~TranslatorEngineBase() = default;
 
 void TranslatorEngineBase::setInputText(const QString &text)
 {
@@ -44,12 +36,12 @@ QString TranslatorEngineBase::resultTranslate() const
     return mResult;
 }
 
-void TranslatorEngineBase::debug()
+QString TranslatorEngineBase::jsonDebug() const
 {
     if (mDebug) {
-        TranslatorDebugDialog dlg(mParentWidget);
-        dlg.setDebug(mJsonDebug);
-        dlg.exec();
+        return mJsonDebug;
+    } else {
+        return {};
     }
 }
 

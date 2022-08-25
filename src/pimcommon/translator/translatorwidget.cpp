@@ -11,6 +11,7 @@
 #include "engine/yandextranslator.h"
 #include "pimcommon_debug.h"
 #include "translatorconfiguredialog.h"
+#include "translatordebugdialog.h"
 #include "translatorutil.h"
 #include <KBusyIndicatorWidget>
 #include <PimCommon/NetworkManager>
@@ -52,7 +53,7 @@ public:
     void initLanguage();
     void fillToCombobox(const QString &lang);
 
-    QMap<QString, QMap<QString, QString>> listLanguage;
+    QVector<QPair<QString, QString>> listLanguage;
     QByteArray data;
     TranslatorTextEdit *inputText = nullptr;
     KPIMTextEdit::PlainTextEditorWidget *translatedText = nullptr;
@@ -73,12 +74,14 @@ public:
 void TranslatorWidget::TranslatorWidgetPrivate::fillToCombobox(const QString &lang)
 {
     toCombobox->clear();
-    const QMap<QString, QString> list = listLanguage.value(lang);
-    QMap<QString, QString>::const_iterator i = list.constBegin();
-    QMap<QString, QString>::const_iterator end = list.constEnd();
-    while (i != end) {
-        toCombobox->addItem(i.key(), i.value());
-        ++i;
+
+    const int fullListLanguageSize(listLanguage.count());
+    TranslatorUtil translatorUtil;
+    for (int i = 0; i < fullListLanguageSize; ++i) {
+        const QPair<QString, QString> currentLanguage = listLanguage.at(i);
+        if ((i != 0) && currentLanguage.second != lang) {
+            translatorUtil.addItemToFromComboBox(toCombobox, currentLanguage);
+        }
     }
 }
 
@@ -87,23 +90,15 @@ void TranslatorWidget::TranslatorWidgetPrivate::initLanguage()
     if (!abstractTranslator) {
         return;
     }
+    toCombobox->clear();
     fromCombobox->clear();
-    listLanguage.clear();
+    listLanguage = abstractTranslator->supportedLanguage();
 
-    const QVector<QPair<QString, QString>> listSupportedLanguage = abstractTranslator->supportedLanguage();
-    const int fullListLanguageSize(listSupportedLanguage.count());
+    const int fullListLanguageSize(listLanguage.count());
     TranslatorUtil translatorUtil;
     for (int i = 0; i < fullListLanguageSize; ++i) {
-        const QPair<QString, QString> currentLanguage = listSupportedLanguage.at(i);
+        const QPair<QString, QString> currentLanguage = listLanguage.at(i);
         translatorUtil.addItemToFromComboBox(fromCombobox, currentLanguage);
-
-        QMap<QString, QString> toList;
-        for (int j = 0; j < fullListLanguageSize; ++j) {
-            if (j != 0 && j != i) { // don't add auto and current language
-                translatorUtil.addPairToMap(toList, listSupportedLanguage.at(j));
-            }
-        }
-        listLanguage.insert(currentLanguage.second, toList);
     }
 }
 
@@ -371,7 +366,6 @@ void TranslatorWidget::switchEngine()
         break;
     }
 
-    d->abstractTranslator->setParentWidget(this);
     disconnect(d->abstractTranslator);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
@@ -524,5 +518,7 @@ void TranslatorWidget::slotClear()
 
 void TranslatorWidget::slotDebug()
 {
-    d->abstractTranslator->debug();
+    TranslatorDebugDialog dlg(this);
+    dlg.setDebug(d->abstractTranslator->jsonDebug());
+    dlg.exec();
 }

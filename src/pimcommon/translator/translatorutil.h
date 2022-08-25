@@ -19,7 +19,6 @@ class TranslatorUtil
 public:
     TranslatorUtil();
 
-    void addPairToMap(QMap<QString, QString> &map, const QPair<QString, QString> &pair);
     void addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair);
 
     enum languages {
@@ -86,6 +85,6 @@ public:
         cy,
         yi
     };
-    QPair<QString, QString> pair(TranslatorUtil::languages lang);
+    Q_REQUIRED_RESULT QPair<QString, QString> pair(TranslatorUtil::languages lang);
 };
 }

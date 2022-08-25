@@ -202,11 +202,6 @@ QPair<QString, QString> TranslatorUtil::pair(TranslatorUtil::languages lang)
     return ret;
 }
 
-void PimCommon::TranslatorUtil::addPairToMap(QMap<QString, QString> &map, const QPair<QString, QString> &pair)
-{
-    map.insert(pair.first, pair.second);
-}
-
 void PimCommon::TranslatorUtil::addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair)
 {
     combo->addItem(pair.first, pair.second);

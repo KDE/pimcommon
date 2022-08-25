@@ -28,15 +28,14 @@ public:
     explicit TranslatorEngineBase(QObject *parent = nullptr);
     ~TranslatorEngineBase() override;
 
-    void setParentWidget(QWidget *parent);
     Q_REQUIRED_RESULT QString resultTranslate() const;
     void setInputText(const QString &text);
     void setFrom(const QString &language);
     void setTo(const QString &language);
 
-    void debug();
     void clear();
 
+    Q_REQUIRED_RESULT QString jsonDebug() const;
 Q_SIGNALS:
     void translateDone();
     void translateFailed(bool result, const QString &errorMessage = QString());
@@ -51,8 +50,5 @@ protected:
     bool mDebug = false;
 
     void slotError(QNetworkReply::NetworkError error);
-
-private:
-    QWidget *mParentWidget = nullptr;
 };
 }
