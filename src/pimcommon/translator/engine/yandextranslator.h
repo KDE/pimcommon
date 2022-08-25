@@ -18,7 +18,7 @@ public:
     ~YandexTranslator() override;
 
     void translate() override;
-    Q_REQUIRED_RESULT QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from) override;
+    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() const override;
 
 private:
     static QString sYandexKey;

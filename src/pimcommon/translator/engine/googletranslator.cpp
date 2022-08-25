@@ -25,10 +25,8 @@ GoogleTranslator::GoogleTranslator(QObject *parent)
 
 GoogleTranslator::~GoogleTranslator() = default;
 
-QMap<QString, QMap<QString, QString>> GoogleTranslator::initListLanguage(QComboBox *from)
+QVector<QPair<QString, QString>> GoogleTranslator::supportedLanguage() const
 {
-    QMap<QString, QMap<QString, QString>> listLanguage;
-
     TranslatorUtil translatorUtil;
     QVector<QPair<QString, QString>> fullListLanguage;
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::automatic));
@@ -91,21 +89,7 @@ QMap<QString, QMap<QString, QString>> GoogleTranslator::initListLanguage(QComboB
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::vi));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cy));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::yi));
-    const int fullListLanguageSize(fullListLanguage.count());
-    for (int i = 0; i < fullListLanguageSize; ++i) {
-        const QPair<QString, QString> currentLanguage = fullListLanguage.at(i);
-        translatorUtil.addItemToFromComboBox(from, currentLanguage);
-
-        QMap<QString, QString> toList;
-        for (int j = 0; j < fullListLanguageSize; ++j) {
-            if (j != 0 && j != i) { // don't add auto and current language
-                translatorUtil.addPairToMap(toList, fullListLanguage.at(j));
-            }
-        }
-        listLanguage.insert(currentLanguage.second, toList);
-    }
-
-    return listLanguage;
+    return fullListLanguage;
 }
 
 void GoogleTranslator::translate()

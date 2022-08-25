@@ -88,7 +88,23 @@ void TranslatorWidget::TranslatorWidgetPrivate::initLanguage()
         return;
     }
     fromCombobox->clear();
-    listLanguage = abstractTranslator->initListLanguage(fromCombobox);
+    listLanguage.clear();
+
+    const QVector<QPair<QString, QString>> listSupportedLanguage = abstractTranslator->supportedLanguage();
+    const int fullListLanguageSize(listSupportedLanguage.count());
+    TranslatorUtil translatorUtil;
+    for (int i = 0; i < fullListLanguageSize; ++i) {
+        const QPair<QString, QString> currentLanguage = listSupportedLanguage.at(i);
+        translatorUtil.addItemToFromComboBox(fromCombobox, currentLanguage);
+
+        QMap<QString, QString> toList;
+        for (int j = 0; j < fullListLanguageSize; ++j) {
+            if (j != 0 && j != i) { // don't add auto and current language
+                translatorUtil.addPairToMap(toList, listSupportedLanguage.at(j));
+            }
+        }
+        listLanguage.insert(currentLanguage.second, toList);
+    }
 }
 
 TranslatorResultTextEdit::TranslatorResultTextEdit(QWidget *parent)

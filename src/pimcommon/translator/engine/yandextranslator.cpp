@@ -36,7 +36,7 @@ void YandexTranslator::translate()
     }
 }
 
-QMap<QString, QMap<QString, QString>> YandexTranslator::initListLanguage(QComboBox *from)
+QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage() const
 {
     return {};
 }

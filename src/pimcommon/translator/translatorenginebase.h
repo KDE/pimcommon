@@ -9,7 +9,6 @@
 #include "pimcommon_export.h"
 #include <QNetworkReply>
 #include <QObject>
-class QComboBox;
 namespace PimCommon
 {
 class PIMCOMMON_EXPORT TranslatorEngineBase : public QObject
@@ -24,7 +23,7 @@ public:
     };
 
     virtual void translate() = 0;
-    Q_REQUIRED_RESULT virtual QMap<QString, QMap<QString, QString>> initListLanguage(QComboBox *from) = 0;
+    Q_REQUIRED_RESULT virtual QVector<QPair<QString, QString>> supportedLanguage() const = 0;
 
     explicit TranslatorEngineBase(QObject *parent = nullptr);
     ~TranslatorEngineBase() override;

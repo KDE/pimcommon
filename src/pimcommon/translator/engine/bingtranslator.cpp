@@ -190,8 +190,7 @@ void BingTranslator::parseTranslation(QNetworkReply *reply)
     Q_EMIT translateDone();
 }
 
-QMap<QString, QMap<QString, QString>> PimCommon::BingTranslator::initListLanguage(QComboBox *from)
+QVector<QPair<QString, QString>> BingTranslator::supportedLanguage() const
 {
-    // TODO
     return {};
 }
