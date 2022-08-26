@@ -22,6 +22,8 @@ public:
         LastEngine = Yandex,
     };
 
+    Q_REQUIRED_RESULT virtual QString engineName() const = 0;
+
     virtual void translate() = 0;
     Q_REQUIRED_RESULT virtual QVector<QPair<QString, QString>> supportedLanguage() const = 0;
 

@@ -122,6 +122,11 @@ void GoogleTranslator::translate()
     });
 }
 
+QString GoogleTranslator::engineName() const
+{
+    return i18n("Google");
+}
+
 void GoogleTranslator::slotTranslateFinished(QNetworkReply *reply)
 {
     mResult.clear();

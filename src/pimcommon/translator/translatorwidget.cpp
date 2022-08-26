@@ -298,6 +298,8 @@ void TranslatorWidget::init()
 
     hboxLayout->addStretch();
 
+    // TODO add engine name
+
     auto configureButton = new QToolButton(this);
     configureButton->setObjectName(QStringLiteral("configure_button"));
     configureButton->setIcon(QIcon::fromTheme(QStringLiteral("configure")));

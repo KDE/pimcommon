@@ -17,6 +17,7 @@ public:
     ~BingTranslator() override;
 
     void translate() override;
+    Q_REQUIRED_RESULT QString engineName() const override;
     Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() const override;
     static QByteArray sBingKey;
     static QByteArray sBingToken;

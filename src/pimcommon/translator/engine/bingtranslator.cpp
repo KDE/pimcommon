@@ -47,6 +47,11 @@ void BingTranslator::translate()
     }
 }
 
+QString BingTranslator::engineName() const
+{
+    return i18n("Bing");
+}
+
 void BingTranslator::parseCredentials(QNetworkReply *reply)
 {
     const QByteArray webSiteData = reply->readAll();

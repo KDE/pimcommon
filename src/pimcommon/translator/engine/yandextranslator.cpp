@@ -105,6 +105,11 @@ QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage() const
     return fullListLanguage;
 }
 
+QString YandexTranslator::engineName() const
+{
+    return i18n("Yandex");
+}
+
 void YandexTranslator::parseCredentials(QNetworkReply *reply)
 {
     // Check availability of service

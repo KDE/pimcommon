@@ -24,6 +24,7 @@ public:
 
     void translate() override;
 
+    Q_REQUIRED_RESULT QString engineName() const override;
     Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() const override;
 private Q_SLOTS:
     void slotTranslateFinished(QNetworkReply *);
