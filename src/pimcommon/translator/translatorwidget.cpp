@@ -62,6 +62,7 @@ public:
     QComboBox *toCombobox = nullptr;
     QPushButton *translate = nullptr;
     QPushButton *clear = nullptr;
+    QLabel *engineNameLabel = nullptr;
     PimCommon::TranslatorEngineBase *abstractTranslator = nullptr;
     KBusyIndicatorWidget *progressIndicator = nullptr;
     QPushButton *invert = nullptr;
@@ -298,7 +299,8 @@ void TranslatorWidget::init()
 
     hboxLayout->addStretch();
 
-    // TODO add engine name
+    d->engineNameLabel = new QLabel(this);
+    hboxLayout->addWidget(d->engineNameLabel);
 
     auto configureButton = new QToolButton(this);
     configureButton->setObjectName(QStringLiteral("configure_button"));
@@ -372,6 +374,7 @@ void TranslatorWidget::switchEngine()
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
     connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
     d->initLanguage();
+    d->engineNameLabel->setText(QStringLiteral("[%1]").arg(d->abstractTranslator->engineName()));
 }
 
 void TranslatorWidget::slotConfigChanged()
