@@ -29,8 +29,8 @@ private:
 
     void importAutoCorrectionFile();
     void closeArchive();
-    bool loadDomElement(QDomDocument &doc, QFile *file);
-    bool importFile(Type type, const KArchiveDirectory *archiveDirectory);
+    Q_REQUIRED_RESULT bool loadDomElement(QDomDocument &doc, QFile *file);
+    Q_REQUIRED_RESULT bool importFile(Type type, const KArchiveDirectory *archiveDirectory);
     KZip *mArchive = nullptr;
     QTemporaryDir *mTempDir = nullptr;
 };

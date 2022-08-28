@@ -62,13 +62,22 @@ void ImportLibreOfficeAutocorrection::importAutoCorrectionFile()
     mTempDir = new QTemporaryDir();
     const KArchiveDirectory *archiveDirectory = mArchive->directory();
     // Replace word
-    importFile(DOCUMENT, archiveDirectory);
+    if (!importFile(DOCUMENT, archiveDirectory)) {
+        qCWarning(PIMCOMMON_LOG) << " Impossible to import DOCUMENT";
+        return;
+    }
 
     // No tread as end of line
-    importFile(SENTENCE, archiveDirectory);
+    if (!importFile(SENTENCE, archiveDirectory)) {
+        qCWarning(PIMCOMMON_LOG) << " Impossible to import SENTENCE";
+        return;
+    }
 
     // Two upper letter
-    importFile(WORD, archiveDirectory);
+    if (!importFile(WORD, archiveDirectory)) {
+        qCWarning(PIMCOMMON_LOG) << " Impossible to import WORD";
+        return;
+    }
 }
 
 bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirectory *archiveDirectory)
