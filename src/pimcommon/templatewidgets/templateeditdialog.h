@@ -32,8 +32,8 @@ private:
     void slotTemplateChanged();
     void readConfig();
     void writeConfig();
-    KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
-    QLineEdit *mTemplateNameEdit = nullptr;
+    KPIMTextEdit::PlainTextEditorWidget *const mTextEdit;
+    QLineEdit *const mTemplateNameEdit;
     QPushButton *mOkButton = nullptr;
 };
 }

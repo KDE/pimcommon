@@ -24,6 +24,8 @@ using namespace PimCommon;
 
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)
+    , mTextEdit(new KPIMTextEdit::PlainTextEditorWidget(this))
+    , mTemplateNameEdit(new QLineEdit(this))
 {
     setWindowTitle(defaultTemplate ? i18nc("@title:window", "Default template") : i18nc("@title:window", "Template"));
     auto mainLayout = new QVBoxLayout(this);
@@ -51,7 +53,6 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     auto label = new QLabel(i18n("Name:"));
     hbox->addWidget(label);
 
-    mTemplateNameEdit = new QLineEdit;
     new KPIM::LineEditCatchReturnKey(mTemplateNameEdit, this);
     mTemplateNameEdit->setClearButtonEnabled(!defaultTemplate);
     mTemplateNameEdit->setReadOnly(defaultTemplate);
@@ -59,7 +60,6 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
 
     vbox->addLayout(hbox);
 
-    mTextEdit = new KPIMTextEdit::PlainTextEditorWidget;
     mTextEdit->setReadOnly(defaultTemplate);
     vbox->addWidget(mTextEdit);
 
