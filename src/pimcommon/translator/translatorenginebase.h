@@ -20,7 +20,8 @@ public:
         Bing = 1,
         Yandex = 2,
         Lingva = 3,
-        LastEngine = Lingva,
+        LibreTranslate = 4,
+        LastEngine = LibreTranslate,
     };
 
     Q_REQUIRED_RESULT virtual QString engineName() const = 0;

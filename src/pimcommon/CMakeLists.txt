@@ -110,6 +110,8 @@ target_sources(KF5PimCommon PRIVATE
     translator/engine/yandextranslator.cpp
     translator/engine/lingvatranslator.h
     translator/engine/lingvatranslator.cpp
+    translator/engine/libretranslatetranslator.h
+    translator/engine/libretranslatetranslator.cpp
 
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp

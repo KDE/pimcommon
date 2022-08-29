@@ -7,6 +7,7 @@
 #include "translatorutil.h"
 #include "engine/bingtranslator.h"
 #include "engine/googletranslator.h"
+#include "engine/libretranslatetranslator.h"
 #include "engine/lingvatranslator.h"
 #include "engine/yandextranslator.h"
 #include <KLocalizedString>
@@ -225,6 +226,9 @@ PimCommon::TranslatorEngineBase *TranslatorUtil::switchEngine(PimCommon::Transla
         abstractTranslator = new BingTranslator(parent);
         break;
     case PimCommon::TranslatorEngineBase::TranslatorEngine::Lingva:
+        abstractTranslator = new LingvaTranslator(parent);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::LibreTranslate:
         abstractTranslator = new LingvaTranslator(parent);
         break;
     }
