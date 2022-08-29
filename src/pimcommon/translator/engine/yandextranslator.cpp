@@ -203,7 +203,7 @@ void YandexTranslator::parseTranslation(QNetworkReply *reply)
 #if 0
         if (m_sourceLang == NoLanguage)
         {
-            Q_EMIT translateFailed(false i18n("Error: Unable to parse autodetected language"));
+            Q_EMIT translateFailed(false, i18n("Error: Unable to parse autodetected language"));
             return;
         }
 #endif

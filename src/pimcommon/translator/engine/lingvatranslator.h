@@ -20,5 +20,9 @@ public:
     Q_REQUIRED_RESULT QString engineName() const override;
     void translate() override;
     Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() const override;
+
+private:
+    void translateText();
+    void parseTranslation(QNetworkReply *reply);
 };
 }

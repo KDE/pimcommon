@@ -30,3 +30,7 @@ QVector<QPair<QString, QString>> LibreTranslateTranslator::supportedLanguage() c
 {
     return {};
 }
+
+void LibreTranslateTranslator::translateText()
+{
+}

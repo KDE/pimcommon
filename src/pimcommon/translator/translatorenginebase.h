@@ -40,6 +40,9 @@ public:
     void clear();
 
     Q_REQUIRED_RESULT QString jsonDebug() const;
+
+    void setServerUrl(const QString &newServerUrl);
+
 Q_SIGNALS:
     void translateDone();
     void translateFailed(bool result, const QString &errorMessage = QString());
@@ -51,6 +54,9 @@ protected:
     QString mFrom;
     QString mTo;
     QString mResult;
+
+    QString mServerUrl;
+
     bool mDebug = false;
 
     void slotError(QNetworkReply::NetworkError error);

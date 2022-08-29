@@ -45,6 +45,11 @@ QString TranslatorEngineBase::jsonDebug() const
     }
 }
 
+void TranslatorEngineBase::setServerUrl(const QString &newServerUrl)
+{
+    mServerUrl = newServerUrl;
+}
+
 void TranslatorEngineBase::clear()
 {
     mJsonData.clear();

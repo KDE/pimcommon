@@ -66,7 +66,7 @@ public Q_SLOTS:
     void slotTranslate();
     void slotCloseWidget();
 
-private Q_SLOTS:
+private:
     void slotFromLanguageChanged(int, bool initialize = false);
     void slotTextChanged();
     void slotInvertLanguage();
