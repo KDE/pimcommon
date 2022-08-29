@@ -8,6 +8,7 @@
 #include "translatorwidget.h"
 #include "engine/bingtranslator.h"
 #include "engine/googletranslator.h"
+#include "engine/lingvatranslator.h"
 #include "engine/yandextranslator.h"
 #include "pimcommon_debug.h"
 #include "translatorconfiguredialog.h"
@@ -367,6 +368,9 @@ void TranslatorWidget::switchEngine()
         break;
     case PimCommon::TranslatorEngineBase::TranslatorEngine::Bing:
         d->abstractTranslator = new BingTranslator(this);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Lingva:
+        d->abstractTranslator = new LingvaTranslator(this);
         break;
     }
 

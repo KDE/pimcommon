@@ -39,6 +39,7 @@ void TranslatorConfigureWidget::fillEngine()
     mEngine->addItem(i18n("Google"), QStringLiteral("google"));
     mEngine->addItem(i18n("Bing"), QStringLiteral("bing"));
     mEngine->addItem(i18n("Yandex"), QStringLiteral("yandex"));
+    mEngine->addItem(i18n("Lingva"), QStringLiteral("lingva"));
 }
 
 void TranslatorConfigureWidget::saveSettings()

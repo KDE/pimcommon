@@ -19,7 +19,8 @@ public:
         Google = 0,
         Bing = 1,
         Yandex = 2,
-        LastEngine = Yandex,
+        Lingva = 3,
+        LastEngine = Lingva,
     };
 
     Q_REQUIRED_RESULT virtual QString engineName() const = 0;
