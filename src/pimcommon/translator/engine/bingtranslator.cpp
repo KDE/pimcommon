@@ -11,6 +11,7 @@
 
 #include <KLocalizedString>
 
+#include <QCoreApplication>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -56,6 +57,7 @@ QString BingTranslator::engineName() const
 
 void BingTranslator::parseCredentials(QNetworkReply *reply)
 {
+    qDebug() << " void BingTranslator::parseCredentials(QNetworkReply *reply)";
     const QByteArray webSiteData = reply->readAll();
     reply->deleteLater();
     const QByteArray credentialsBeginString = QByteArrayLiteral("var params_RichTranslateHelper = [");
@@ -127,8 +129,8 @@ void BingTranslator::translateText()
 
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
-    // request.setHeader(QNetworkRequest::UserAgentHeader,
-    // QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
+    request.setHeader(QNetworkRequest::UserAgentHeader,
+                      QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
 
     QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->post(request, postData);
     connect(reply, &QNetworkReply::errorOccurred, this, [this, reply](QNetworkReply::NetworkError error) {
@@ -144,8 +146,10 @@ void BingTranslator::translateText()
 
 void BingTranslator::parseTranslation(QNetworkReply *reply)
 {
+    qDebug() << " void BingTranslator::parseTranslation(QNetworkReply *reply)";
     // Parse translation data
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
+    qDebug() << " jsonResponse " << jsonResponse;
     const QJsonObject responseObject = jsonResponse.array().first().toObject();
     if (mFrom == QStringLiteral("auto")) {
         const QString langCode = responseObject.value(QStringLiteral("detectedLanguage")).toObject().value(QStringLiteral("language")).toString();
@@ -159,6 +163,7 @@ void BingTranslator::parseTranslation(QNetworkReply *reply)
 
     const QJsonObject translationsObject = responseObject.value(QStringLiteral("translations")).toArray().first().toObject();
     mResult += translationsObject.value(QStringLiteral("text")).toString();
+    qDebug() << " mResult " << mResult;
     // m_translationTranslit               += translationsObject.value(QStringLiteral("transliteration")).toObject().value(QStringLiteral("text")).toString();
     reply->deleteLater();
     Q_EMIT translateDone();
