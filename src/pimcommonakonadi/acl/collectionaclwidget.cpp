@@ -68,6 +68,7 @@ private:
 CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     : QWidget(parent)
     , mAclManager(new PimCommon::AclManager(this))
+    , mRecursiveChk(new QCheckBox(i18n("Apply permissions on all &subfolders."), this))
 {
     auto layout = new QHBoxLayout(this);
     auto listViewLayout = new QVBoxLayout;
@@ -76,7 +77,6 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     auto view = new AclListView;
     view->setObjectName(QStringLiteral("list_view"));
     listViewLayout->addWidget(view);
-    mRecursiveChk = new QCheckBox(i18n("Apply permissions on all &subfolders."), this);
     listViewLayout->addWidget(mRecursiveChk);
     connect(mRecursiveChk, &QCheckBox::clicked, this, &CollectionAclWidget::slotRecursivePermissionChanged);
 
