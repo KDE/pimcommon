@@ -5,6 +5,10 @@
 */
 
 #include "translatorutil.h"
+#include "engine/bingtranslator.h"
+#include "engine/googletranslator.h"
+#include "engine/lingvatranslator.h"
+#include "engine/yandextranslator.h"
 #include <KLocalizedString>
 #include <QComboBox>
 using namespace PimCommon;
@@ -202,7 +206,27 @@ QPair<QString, QString> TranslatorUtil::pair(TranslatorUtil::languages lang)
     return ret;
 }
 
-void PimCommon::TranslatorUtil::addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair)
+void TranslatorUtil::addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair)
 {
     combo->addItem(pair.first, pair.second);
+}
+
+PimCommon::TranslatorEngineBase *TranslatorUtil::switchEngine(PimCommon::TranslatorEngineBase::TranslatorEngine engineType, QObject *parent)
+{
+    PimCommon::TranslatorEngineBase *abstractTranslator = nullptr;
+    switch (engineType) {
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Google:
+        abstractTranslator = new GoogleTranslator(parent);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex:
+        abstractTranslator = new YandexTranslator(parent);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Bing:
+        abstractTranslator = new BingTranslator(parent);
+        break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::Lingva:
+        abstractTranslator = new LingvaTranslator(parent);
+        break;
+    }
+    return abstractTranslator;
 }

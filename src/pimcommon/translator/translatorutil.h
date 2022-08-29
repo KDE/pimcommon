@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "translatorenginebase.h"
 #include <QMap>
 #include <QPair>
 #include <QString>
@@ -86,5 +87,6 @@ public:
         yi
     };
     Q_REQUIRED_RESULT QPair<QString, QString> pair(TranslatorUtil::languages lang);
+    Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase *switchEngine(PimCommon::TranslatorEngineBase::TranslatorEngine engineType, QObject *parent);
 };
 }

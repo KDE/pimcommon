@@ -6,10 +6,6 @@
 */
 
 #include "translatorwidget.h"
-#include "engine/bingtranslator.h"
-#include "engine/googletranslator.h"
-#include "engine/lingvatranslator.h"
-#include "engine/yandextranslator.h"
 #include "pimcommon_debug.h"
 #include "translatorconfiguredialog.h"
 #include "translatordebugdialog.h"
@@ -358,25 +354,11 @@ void TranslatorWidget::init()
 
 void TranslatorWidget::switchEngine()
 {
-    delete d->abstractTranslator;
-    switch (d->engineType) {
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Google:
-        d->abstractTranslator = new GoogleTranslator(this);
-        break;
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex:
-        d->abstractTranslator = new YandexTranslator(this);
-        break;
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Bing:
-        d->abstractTranslator = new BingTranslator(this);
-        break;
-    case PimCommon::TranslatorEngineBase::TranslatorEngine::Lingva:
-        d->abstractTranslator = new LingvaTranslator(this);
-        break;
-    }
-
     disconnect(d->abstractTranslator);
-    connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateDone, this, &TranslatorWidget::slotTranslateDone);
-    connect(d->abstractTranslator, &PimCommon::GoogleTranslator::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
+    delete d->abstractTranslator;
+    d->abstractTranslator = TranslatorUtil::switchEngine(d->engineType, this);
+    connect(d->abstractTranslator, &PimCommon::TranslatorEngineBase::translateDone, this, &TranslatorWidget::slotTranslateDone);
+    connect(d->abstractTranslator, &PimCommon::TranslatorEngineBase::translateFailed, this, &TranslatorWidget::slotTranslateFailed);
     d->initLanguage();
     d->engineNameLabel->setText(QStringLiteral("[%1]").arg(d->abstractTranslator->engineName()));
 }
