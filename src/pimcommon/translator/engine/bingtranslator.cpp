@@ -7,6 +7,7 @@
 
 #include "bingtranslator.h"
 #include "translator/translatorengineaccessmanager.h"
+#include "translator/translatorutil.h"
 
 #include <KLocalizedString>
 
@@ -15,6 +16,7 @@
 #include <QJsonObject>
 #include <QNetworkReply>
 #include <QUrlQuery>
+
 using namespace PimCommon;
 
 QByteArray BingTranslator::sBingKey;
@@ -117,29 +119,6 @@ void BingTranslator::translateText()
     const QByteArray postData =
         "&text=" + QUrl::toPercentEncoding(mInputText) + "&fromLang=" + mFrom.toUtf8() + "&to=" + mTo.toUtf8() + "&token=" + sBingToken + "&key=" + sBingKey;
 
-#if 0
-    const QByteArray postData = "&text="     + QUrl::toPercentEncoding(sourceText)
-                              + "&fromLang=" + languageApiCode(Bing, m_sourceLang).toUtf8()
-                              + "&to="       + languageApiCode(Bing, m_translationLang).toUtf8()
-                              + "&token="    + s_bingToken
-                              + "&key="      + s_bingKey;
-
-    QUrl url(QStringLiteral("https://www.bing.com/ttranslatev3"));
-    url.setQuery(QStringLiteral("IG=%1&IID=%2").arg(s_bingIg, s_bingIid));
-
-    // Setup request
-
-    QNetworkRequest request;
-    request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
-    request.setHeader(QNetworkRequest::UserAgentHeader, QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
-    request.setUrl(url);
-
-    // Make reply
-
-    m_currentReply = m_networkManager->post(request, postData);
-
-#endif
-
     QUrlQuery urlQuery;
     urlQuery.addQueryItem(QStringLiteral("IG"), sBingIg);
     urlQuery.addQueryItem(QStringLiteral("IDD"), sBingIid);
@@ -168,34 +147,84 @@ void BingTranslator::parseTranslation(QNetworkReply *reply)
     // Parse translation data
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
     const QJsonObject responseObject = jsonResponse.array().first().toObject();
-#if 0
-
-
-    if (m_sourceLang == Auto)
-    {
+    if (mFrom == QStringLiteral("auto")) {
         const QString langCode = responseObject.value(QStringLiteral("detectedLanguage")).toObject().value(QStringLiteral("language")).toString();
-        m_sourceLang           = language(Bing, langCode);
-
-        if (m_sourceLang == NoLanguage)
-        {
-            resetData(ParsingError, i18n("Error: Unable to parse autodetected language"));
-            return;
-        }
-
-        if (m_onlyDetectLanguage)
-            return;
+        mFrom = langCode;
+        //        if (m_sourceLang == NoLanguage)
+        //        {
+        //            resetData(ParsingError, i18n("Error: Unable to parse autodetected language"));
+        //            return;
+        //        }
     }
 
     const QJsonObject translationsObject = responseObject.value(QStringLiteral("translations")).toArray().first().toObject();
-    m_translation                       += translationsObject.value(QStringLiteral("text")).toString();
-    m_translationTranslit               += translationsObject.value(QStringLiteral("transliteration")).toObject().value(QStringLiteral("text")).toString();
-
-#endif
+    mResult += translationsObject.value(QStringLiteral("text")).toString();
+    // m_translationTranslit               += translationsObject.value(QStringLiteral("transliteration")).toObject().value(QStringLiteral("text")).toString();
     reply->deleteLater();
     Q_EMIT translateDone();
 }
 
 QVector<QPair<QString, QString>> BingTranslator::supportedLanguage() const
 {
-    return {};
+    TranslatorUtil translatorUtil;
+    QVector<QPair<QString, QString>> fullListLanguage;
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::automatic));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::en));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::nl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::fr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::de));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::el));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::it));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ja));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ko));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::pt));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ru));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::es));
+
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::af));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sq));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ar));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hy));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::az));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::eu));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::be));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::bg));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ca));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cs));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::da));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::et));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::tl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::fi));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::gl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ka));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ht));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::iw));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hi));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hu));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::is));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::id));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ga));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::lv));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::lt));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::mk));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ms));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::mt));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::no));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::fa));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::pl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ro));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sk));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sw));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sv));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::th));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::tr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::uk));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ur));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::vi));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cy));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::yi));
+    return fullListLanguage;
 }
