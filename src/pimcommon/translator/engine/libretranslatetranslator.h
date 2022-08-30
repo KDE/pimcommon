@@ -23,5 +23,6 @@ public:
 
 private:
     void translateText();
+    void parseTranslation(QNetworkReply *reply);
 };
 }
