@@ -89,5 +89,6 @@ public:
     Q_REQUIRED_RESULT QPair<QString, QString> pair(TranslatorUtil::languages lang);
     Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase *switchEngine(PimCommon::TranslatorEngineBase::TranslatorEngine engineType, QObject *parent);
     static void fillComboboxSettings(QComboBox *combo);
+    Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase::TranslatorEngine loadEngineSettings();
 };
 }

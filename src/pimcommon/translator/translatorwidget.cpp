@@ -190,10 +190,10 @@ void TranslatorWidget::readConfig()
 {
     KConfigGroup myGroup(KSharedConfig::openConfig(), myTranslatorWidgetConfigGroupName);
     const QString from = myGroup.readEntry(QStringLiteral("FromLanguage"));
-    const QString to = myGroup.readEntry(QStringLiteral("ToLanguage"));
     if (from.isEmpty()) {
         return;
     }
+    const QString to = myGroup.readEntry(QStringLiteral("ToLanguage"));
     const int indexFrom = d->fromCombobox->findData(from);
     if (indexFrom != -1) {
         d->fromCombobox->setCurrentIndex(indexFrom);
@@ -209,18 +209,7 @@ void TranslatorWidget::readConfig()
 
 void TranslatorWidget::loadEngineSettings()
 {
-    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
-    const QString engineType = myGeneralGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default google
-    if (engineType == QLatin1String("google")) {
-        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
-    } else if (engineType == QLatin1String("bing")) {
-        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Bing;
-    } else if (engineType == QLatin1String("yandex")) {
-        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex;
-    } else {
-        qCWarning(PIMCOMMON_LOG) << "Invalid translator engine " << engineType;
-        d->engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
-    }
+    d->engineType = TranslatorUtil::loadEngineSettings();
     switchEngine();
 }
 

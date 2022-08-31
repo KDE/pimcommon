@@ -11,7 +11,9 @@
 #include "engine/lingvatranslator.h"
 #include "engine/yandextranslator.h"
 #include "pimcommon_debug.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QComboBox>
 using namespace PimCommon;
 
@@ -260,4 +262,22 @@ void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
             break;
         }
     }
+}
+
+PimCommon::TranslatorEngineBase::TranslatorEngine TranslatorUtil::loadEngineSettings()
+{
+    PimCommon::TranslatorEngineBase::TranslatorEngine engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
+    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
+    const QString engineTypeStr = myGeneralGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default google
+    if (engineTypeStr == QLatin1String("google")) {
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
+    } else if (engineTypeStr == QLatin1String("bing")) {
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Bing;
+    } else if (engineTypeStr == QLatin1String("yandex")) {
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex;
+    } else {
+        qCWarning(PIMCOMMON_LOG) << "Invalid translator engine " << engineTypeStr;
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
+    }
+    return engineType;
 }

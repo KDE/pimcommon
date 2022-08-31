@@ -23,14 +23,13 @@ public:
         LibreTranslate = 4,
         LastEngine = LibreTranslate,
     };
+    explicit TranslatorEngineBase(QObject *parent = nullptr);
+    ~TranslatorEngineBase() override;
 
     Q_REQUIRED_RESULT virtual QString engineName() const = 0;
 
     virtual void translate() = 0;
     Q_REQUIRED_RESULT virtual QVector<QPair<QString, QString>> supportedLanguage() const = 0;
-
-    explicit TranslatorEngineBase(QObject *parent = nullptr);
-    ~TranslatorEngineBase() override;
 
     Q_REQUIRED_RESULT QString resultTranslate() const;
     void setInputText(const QString &text);
