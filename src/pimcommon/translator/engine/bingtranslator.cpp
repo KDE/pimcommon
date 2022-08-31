@@ -132,6 +132,7 @@ void BingTranslator::translateText()
     request.setHeader(QNetworkRequest::UserAgentHeader,
                       QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
 
+    qDebug() << " url " << url;
     QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->post(request, postData);
     connect(reply, &QNetworkReply::errorOccurred, this, [this, reply](QNetworkReply::NetworkError error) {
         slotError(error);
