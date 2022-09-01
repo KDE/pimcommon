@@ -20,6 +20,12 @@ class TranslatorUtil
 public:
     TranslatorUtil();
 
+    struct TranslatorSettings {
+        QString engine;
+        QString from;
+        QString to;
+    };
+
     void addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair);
 
     enum languages {
