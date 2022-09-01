@@ -60,6 +60,12 @@ void TranslatorEngineBase::setApiKey(const QString &newApiKey)
     mApiKey = newApiKey;
 }
 
+void TranslatorEngineBase::loadSettings()
+{
+    // TODO
+    // Nothing here
+}
+
 void TranslatorEngineBase::clear()
 {
     mJsonData.clear();

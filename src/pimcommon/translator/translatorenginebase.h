@@ -46,6 +46,8 @@ public:
     Q_REQUIRED_RESULT const QString &apiKey() const;
     void setApiKey(const QString &newApiKey);
 
+    virtual void loadSettings();
+
 Q_SIGNALS:
     void translateDone();
     void translateFailed(bool result, const QString &errorMessage = QString());
