@@ -6,6 +6,7 @@
 
 #include "translatorutil.h"
 #include "engine/bingtranslator.h"
+#include "engine/deepltranslator.h"
 #include "engine/googletranslator.h"
 #include "engine/libretranslatetranslator.h"
 #include "engine/lingvatranslator.h"
@@ -234,6 +235,9 @@ PimCommon::TranslatorEngineBase *TranslatorUtil::switchEngine(PimCommon::Transla
     case PimCommon::TranslatorEngineBase::TranslatorEngine::LibreTranslate:
         abstractTranslator = new LingvaTranslator(parent);
         break;
+    case PimCommon::TranslatorEngineBase::TranslatorEngine::DeepL:
+        abstractTranslator = new DeepLTranslator(parent);
+        break;
     }
     return abstractTranslator;
 }
@@ -257,6 +261,9 @@ void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
         case PimCommon::TranslatorEngineBase::TranslatorEngine::LibreTranslate:
             combo->addItem(i18n("Libre Translate"), QStringLiteral("libretranslate"));
             break;
+        case PimCommon::TranslatorEngineBase::TranslatorEngine::DeepL:
+            combo->addItem(i18n("DeepL"), QStringLiteral("deepl"));
+            break;
         default:
             qCWarning(PIMCOMMON_LOG) << " Missing engine. It's a bug " << i;
             break;
@@ -275,6 +282,12 @@ PimCommon::TranslatorEngineBase::TranslatorEngine TranslatorUtil::loadEngineSett
         engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Bing;
     } else if (engineTypeStr == QLatin1String("yandex")) {
         engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Yandex;
+    } else if (engineTypeStr == QLatin1String("libretranslate")) {
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::LibreTranslate;
+    } else if (engineTypeStr == QLatin1String("deepl")) {
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::DeepL;
+    } else if (engineTypeStr == QLatin1String("lingva")) {
+        engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Lingva;
     } else {
         qCWarning(PIMCOMMON_LOG) << "Invalid translator engine " << engineTypeStr;
         engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;

@@ -21,7 +21,8 @@ public:
         Yandex = 2,
         Lingva = 3,
         LibreTranslate = 4,
-        LastEngine = LibreTranslate,
+        DeepL = 5,
+        LastEngine = DeepL,
     };
     explicit TranslatorEngineBase(QObject *parent = nullptr);
     ~TranslatorEngineBase() override;
@@ -42,6 +43,9 @@ public:
 
     void setServerUrl(const QString &newServerUrl);
 
+    Q_REQUIRED_RESULT const QString &apiKey() const;
+    void setApiKey(const QString &newApiKey);
+
 Q_SIGNALS:
     void translateDone();
     void translateFailed(bool result, const QString &errorMessage = QString());
@@ -55,6 +59,8 @@ protected:
     QString mResult;
 
     QString mServerUrl;
+
+    QString mApiKey;
 
     bool mDebug = false;
 

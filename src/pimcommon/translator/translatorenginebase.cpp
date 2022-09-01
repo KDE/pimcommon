@@ -50,6 +50,16 @@ void TranslatorEngineBase::setServerUrl(const QString &newServerUrl)
     mServerUrl = newServerUrl;
 }
 
+const QString &TranslatorEngineBase::apiKey() const
+{
+    return mApiKey;
+}
+
+void TranslatorEngineBase::setApiKey(const QString &newApiKey)
+{
+    mApiKey = newApiKey;
+}
+
 void TranslatorEngineBase::clear()
 {
     mJsonData.clear();
