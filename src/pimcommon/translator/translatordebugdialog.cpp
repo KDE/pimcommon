@@ -15,6 +15,11 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
+namespace
+{
+const char myTranslatorDebugDialogConfigGroupName[] = "TranslatorDebugDialog";
+}
+
 TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     : QDialog(parent)
     , mEdit(new KPIMTextEdit::PlainTextEditorWidget(this))
@@ -51,7 +56,7 @@ void TranslatorDebugDialog::setDebug(const QString &debugStr)
 
 void TranslatorDebugDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "TranslatorDebugDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myTranslatorDebugDialogConfigGroupName);
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
@@ -60,7 +65,7 @@ void TranslatorDebugDialog::readConfig()
 
 void TranslatorDebugDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "TranslatorDebugDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myTranslatorDebugDialogConfigGroupName);
     group.writeEntry("Size", size());
 }
 
