@@ -112,6 +112,8 @@ target_sources(KF5PimCommon PRIVATE
     translator/engine/lingvatranslator.cpp
     translator/engine/libretranslatetranslator.h
     translator/engine/libretranslatetranslator.cpp
+    translator/engine/deepltranslator.cpp
+    translator/engine/deepltranslator.h
 
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp
