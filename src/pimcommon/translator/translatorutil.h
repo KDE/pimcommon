@@ -90,5 +90,6 @@ public:
     Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase *switchEngine(PimCommon::TranslatorEngineBase::TranslatorEngine engineType, QObject *parent);
     static void fillComboboxSettings(QComboBox *combo);
     Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase::TranslatorEngine loadEngineSettings();
+    Q_REQUIRED_RESULT static QString loadEngine();
 };
 }

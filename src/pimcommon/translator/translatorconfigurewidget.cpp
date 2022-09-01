@@ -49,8 +49,7 @@ void TranslatorConfigureWidget::saveSettings()
 
 void TranslatorConfigureWidget::loadSettings()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
-    const QString engine = myGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default Google
+    const QString engine = TranslatorUtil::loadEngine();
     const int index = mEngine->findData(engine);
     if (index != -1) {
         mEngine->setCurrentIndex(index);

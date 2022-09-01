@@ -271,11 +271,17 @@ void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
     }
 }
 
+QString TranslatorUtil::loadEngine()
+{
+    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
+    const QString engineTypeStr = myGeneralGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default google
+    return engineTypeStr;
+}
+
 PimCommon::TranslatorEngineBase::TranslatorEngine TranslatorUtil::loadEngineSettings()
 {
     PimCommon::TranslatorEngineBase::TranslatorEngine engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
-    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
-    const QString engineTypeStr = myGeneralGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default google
+    const QString engineTypeStr = TranslatorUtil::loadEngine();
     if (engineTypeStr == QLatin1String("google")) {
         engineType = PimCommon::TranslatorEngineBase::TranslatorEngine::Google;
     } else if (engineTypeStr == QLatin1String("bing")) {
