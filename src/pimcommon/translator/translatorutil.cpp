@@ -300,3 +300,10 @@ PimCommon::TranslatorEngineBase::TranslatorEngine TranslatorUtil::loadEngineSett
     }
     return engineType;
 }
+
+void TranslatorUtil::saveEngineSettings(const QString &engineName)
+{
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
+    myGroup.writeEntry(QStringLiteral("Engine"), engineName);
+    myGroup.sync();
+}

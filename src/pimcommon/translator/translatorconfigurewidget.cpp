@@ -42,9 +42,7 @@ void TranslatorConfigureWidget::fillEngine()
 
 void TranslatorConfigureWidget::saveSettings()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
-    myGroup.writeEntry(QStringLiteral("Engine"), mEngine->currentData().toString());
-    myGroup.sync();
+    TranslatorUtil::saveEngineSettings(mEngine->currentData().toString());
 }
 
 void TranslatorConfigureWidget::loadSettings()

@@ -91,5 +91,6 @@ public:
     static void fillComboboxSettings(QComboBox *combo);
     Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase::TranslatorEngine loadEngineSettings();
     Q_REQUIRED_RESULT static QString loadEngine();
+    static void saveEngineSettings(const QString &engineName);
 };
 }
