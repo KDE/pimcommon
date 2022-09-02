@@ -30,6 +30,11 @@ QString PimCommon::DeepLTranslator::engineName() const
     return i18n("DeepL");
 }
 
+QString DeepLTranslator::apiUrl() const
+{
+    return mServerUrl;
+}
+
 void DeepLTranslator::translate()
 {
     if (mFrom == mTo) {
@@ -81,5 +86,7 @@ void DeepLTranslator::parseTranslation(QNetworkReply *reply)
 void DeepLTranslator::loadSettings()
 {
     KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("DeepLTranslator"));
+    mUseFreeLicense = myGroup.readEntry(QStringLiteral("freeLicense"), false);
+    mServerUrl = mUseFreeLicense ? QStringLiteral("https://api-free.deepl.com/v2/translate") : QStringLiteral("https://api.deepl.com/v2/translate");
     // TODO load API key ? stored in kwallet ?
 }

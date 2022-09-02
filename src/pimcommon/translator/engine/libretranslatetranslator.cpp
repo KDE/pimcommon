@@ -43,9 +43,7 @@ QVector<QPair<QString, QString>> LibreTranslateTranslator::supportedLanguage() c
 void LibreTranslateTranslator::translateText()
 {
     mResult.clear();
-    // TODO
     const QUrl url(QString::fromUtf8("%1/api/v1/%2/%3/%4").arg(mServerUrl).arg(mFrom).arg(mTo).arg(QString::fromUtf8(QUrl::toPercentEncoding(mInputText))));
-
     const QNetworkRequest request(url);
 
     QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->get(request);

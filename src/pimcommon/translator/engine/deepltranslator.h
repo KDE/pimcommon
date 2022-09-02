@@ -23,7 +23,9 @@ public:
     void loadSettings() override;
 
 private:
+    Q_REQUIRED_RESULT QString apiUrl() const;
     void translateText();
     void parseTranslation(QNetworkReply *reply);
+    bool mUseFreeLicense = false;
 };
 }
