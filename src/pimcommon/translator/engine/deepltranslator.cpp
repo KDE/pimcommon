@@ -9,7 +9,9 @@
 #include "pimcommon_debug.h"
 #include "translator/translatorengineaccessmanager.h"
 #include "translator/translatorutil.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonParseError>
@@ -78,5 +80,6 @@ void DeepLTranslator::parseTranslation(QNetworkReply *reply)
 
 void DeepLTranslator::loadSettings()
 {
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("DeepLTranslator"));
     // TODO
 }

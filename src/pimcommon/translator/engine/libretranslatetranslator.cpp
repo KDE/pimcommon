@@ -8,7 +8,9 @@
 #include "libretranslatetranslator.h"
 #include "translator/translatorengineaccessmanager.h"
 #include "translator/translatorutil.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QNetworkAccessManager>
 
 using namespace PimCommon;
@@ -74,5 +76,6 @@ void LibreTranslateTranslator::parseTranslation(QNetworkReply *reply)
 
 void LibreTranslateTranslator::loadSettings()
 {
-    // TODO
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("LibreTranslateTranslator"));
+    mServerUrl = myGroup.readEntry(QStringLiteral("ServerUrl"), QString());
 }
