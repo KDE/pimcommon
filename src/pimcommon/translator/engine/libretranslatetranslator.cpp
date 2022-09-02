@@ -72,7 +72,7 @@ void LibreTranslateTranslator::parseTranslation(QNetworkReply *reply)
     Q_EMIT translateDone();
 }
 
-void PimCommon::LibreTranslateTranslator::loadSettings()
+void LibreTranslateTranslator::loadSettings()
 {
     // TODO
 }
