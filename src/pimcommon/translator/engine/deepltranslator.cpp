@@ -81,5 +81,5 @@ void DeepLTranslator::parseTranslation(QNetworkReply *reply)
 void DeepLTranslator::loadSettings()
 {
     KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("DeepLTranslator"));
-    // TODO
+    // TODO load API key ? stored in kwallet ?
 }
