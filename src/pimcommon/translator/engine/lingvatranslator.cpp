@@ -75,3 +75,8 @@ void LingvaTranslator::parseTranslation(QNetworkReply *reply)
     reply->deleteLater();
     Q_EMIT translateDone();
 }
+
+void PimCommon::LingvaTranslator::loadSettings()
+{
+    // TODO
+}

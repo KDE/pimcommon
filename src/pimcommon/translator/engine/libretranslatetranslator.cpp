@@ -71,3 +71,8 @@ void LibreTranslateTranslator::parseTranslation(QNetworkReply *reply)
     reply->deleteLater();
     Q_EMIT translateDone();
 }
+
+void PimCommon::LibreTranslateTranslator::loadSettings()
+{
+    // TODO
+}

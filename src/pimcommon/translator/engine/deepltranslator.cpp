@@ -75,3 +75,8 @@ void DeepLTranslator::parseTranslation(QNetworkReply *reply)
     reply->deleteLater();
     Q_EMIT translateDone();
 }
+
+void PimCommon::DeepLTranslator::loadSettings()
+{
+    // TODO
+}

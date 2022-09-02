@@ -239,6 +239,7 @@ PimCommon::TranslatorEngineBase *TranslatorUtil::switchEngine(PimCommon::Transla
         abstractTranslator = new DeepLTranslator(parent);
         break;
     }
+    abstractTranslator->loadSettings();
     return abstractTranslator;
 }
 
