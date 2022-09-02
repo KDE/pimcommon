@@ -9,7 +9,9 @@
 #include "pimcommon_debug.h"
 #include "translator/translatorengineaccessmanager.h"
 #include "translator/translatorutil.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonParseError>
@@ -78,5 +80,6 @@ void LingvaTranslator::parseTranslation(QNetworkReply *reply)
 
 void LingvaTranslator::loadSettings()
 {
-    // TODO
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("LingvaTranslator"));
+    mServerUrl = myGroup.readEntry(QStringLiteral("ServerUrl"), QString());
 }
