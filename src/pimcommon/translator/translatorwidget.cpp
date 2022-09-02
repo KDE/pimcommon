@@ -177,18 +177,24 @@ TranslatorWidget::~TranslatorWidget()
 
 void TranslatorWidget::writeConfig()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), myTranslatorWidgetConfigGroupName);
     if (d->languageSettingsChanged) {
+        KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
         myGroup.writeEntry(QStringLiteral("FromLanguage"), d->fromCombobox->itemData(d->fromCombobox->currentIndex()).toString());
         myGroup.writeEntry("ToLanguage", d->toCombobox->itemData(d->toCombobox->currentIndex()).toString());
+        myGroup.sync();
     }
-    myGroup.writeEntry("mainSplitter", d->splitter->sizes());
-    myGroup.sync();
+    KConfigGroup myGroupUi(KSharedConfig::openStateConfig(), myTranslatorWidgetConfigGroupName);
+    myGroupUi.writeEntry("mainSplitter", d->splitter->sizes());
+    myGroupUi.sync();
 }
 
 void TranslatorWidget::readConfig()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), myTranslatorWidgetConfigGroupName);
+    KConfigGroup myGroupUi(KSharedConfig::openStateConfig(), myTranslatorWidgetConfigGroupName);
+    const QList<int> size = {100, 400};
+    d->splitter->setSizes(myGroupUi.readEntry("mainSplitter", size));
+
+    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
     const QString from = myGroup.readEntry(QStringLiteral("FromLanguage"));
     if (from.isEmpty()) {
         return;
@@ -202,8 +208,6 @@ void TranslatorWidget::readConfig()
     if (indexTo != -1) {
         d->toCombobox->setCurrentIndex(indexTo);
     }
-    const QList<int> size = {100, 400};
-    d->splitter->setSizes(myGroup.readEntry("mainSplitter", size));
     d->invert->setEnabled(from != QLatin1String("auto"));
 }
 
