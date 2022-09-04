@@ -11,6 +11,8 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QNetworkAccessManager>
 
 using namespace PimCommon;
@@ -64,10 +66,9 @@ void LibreTranslateTranslator::parseTranslation(QNetworkReply *reply)
         reply->deleteLater();
         return;
     }
-
-    //    const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
-    //    const QJsonObject responseObject = jsonResponse.object();
-    //    mResult = responseObject.value(QStringLiteral("translation")).toString();
+    const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
+    const QJsonObject responseObject = jsonResponse.object();
+    mResult = responseObject.value(QStringLiteral("translatedText")).toString();
     reply->deleteLater();
     Q_EMIT translateDone();
 }
