@@ -210,9 +210,6 @@ void YandexTranslator::parseTranslation(QNetworkReply *reply)
 #endif
     }
 
-    // Parse translation data
     mResult += jsonData.value(QStringLiteral("text")).toArray().at(0).toString();
-    // qDebug() << " result " << reply->readAll();
-    // TODO
     Q_EMIT translateDone();
 }
