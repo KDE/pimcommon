@@ -26,5 +26,5 @@ private:
     void readConfig();
     void writeConfig();
     KPIMTextEdit::PlainTextEditorWidget *const mEdit;
-    QPushButton *mUser1Button = nullptr;
+    QPushButton *const mUser1Button;
 };
