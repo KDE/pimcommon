@@ -6,6 +6,7 @@
 */
 
 #include "yandextranslator.h"
+#include "pimcommon_debug.h"
 #include "translator/translatorengineaccessmanager.h"
 #include "translator/translatorutil.h"
 #include <KLocalizedString>
@@ -121,7 +122,7 @@ void YandexTranslator::parseCredentials(QNetworkReply *reply)
                                     "from your computer network. Please try your request again later."));
         return;
     }
-    qDebug() << "webSiteData  " << webSiteData;
+    // qCDebug(PIMCOMMON_LOG) << "webSiteData  " << webSiteData;
     const QByteArray sidBeginString = "SID: '";
     const int sidBeginStringPos = webSiteData.indexOf(sidBeginString);
 
