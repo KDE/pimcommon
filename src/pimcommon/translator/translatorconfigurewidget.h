@@ -9,6 +9,7 @@
 #include "pimcommon_private_export.h"
 #include <QWidget>
 class QComboBox;
+class QStackedWidget;
 namespace PimCommon
 {
 class PIMCOMMON_TESTS_EXPORT TranslatorConfigureWidget : public QWidget
@@ -23,6 +24,9 @@ public:
 
 private:
     void fillEngine();
+    void switchEngine();
     QComboBox *const mEngine;
+    QStackedWidget *const mStackedWidget;
+    QWidget *const mEmptyWidget;
 };
 }

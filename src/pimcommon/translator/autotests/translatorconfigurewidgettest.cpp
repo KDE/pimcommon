@@ -8,6 +8,7 @@
 #include "translator/translatorconfigurewidget.h"
 #include <QComboBox>
 #include <QLabel>
+#include <QStackedWidget>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(TranslatorConfigureWidgetTest)
@@ -30,4 +31,7 @@ void TranslatorConfigureWidgetTest::shouldHaveDefaultValues()
     auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
+
+    auto mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("mStackedWidget"));
+    QVERIFY(mStackedWidget);
 }

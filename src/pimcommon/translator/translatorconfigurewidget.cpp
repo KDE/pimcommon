@@ -11,11 +11,14 @@
 #include <KSharedConfig>
 #include <QComboBox>
 #include <QLabel>
+#include <QStackedWidget>
 #include <QVBoxLayout>
 using namespace PimCommon;
 TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     : QWidget{parent}
     , mEngine(new QComboBox(this))
+    , mStackedWidget(new QStackedWidget(this))
+    , mEmptyWidget(new QWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -30,6 +33,12 @@ TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     label->setObjectName(QStringLiteral("label"));
     hboxLayout->addWidget(label);
     hboxLayout->addWidget(mEngine);
+
+    mStackedWidget->setObjectName(QStringLiteral("mStackedWidget"));
+    mainLayout->addWidget(mStackedWidget);
+
+    mStackedWidget->addWidget(mEmptyWidget);
+
     fillEngine();
 }
 
@@ -52,4 +61,9 @@ void TranslatorConfigureWidget::loadSettings()
     if (index != -1) {
         mEngine->setCurrentIndex(index);
     }
+}
+
+void TranslatorConfigureWidget::switchEngine()
+{
+    // TODO
 }
