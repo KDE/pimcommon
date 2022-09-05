@@ -47,7 +47,6 @@ public:
     void setApiKey(const QString &newApiKey);
 
     virtual void loadSettings();
-    virtual void saveSettings();
 
 Q_SIGNALS:
     void translateDone();

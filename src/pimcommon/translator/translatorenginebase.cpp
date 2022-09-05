@@ -66,12 +66,6 @@ void TranslatorEngineBase::loadSettings()
     // Nothing here
 }
 
-void TranslatorEngineBase::saveSettings()
-{
-    // TODO
-    // Nothing here
-}
-
 void TranslatorEngineBase::clear()
 {
     mJsonData.clear();
