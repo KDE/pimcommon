@@ -24,7 +24,13 @@ public:
     explicit GenericPluginInterface(QObject *parent = nullptr);
     ~GenericPluginInterface() override;
 
-    enum RequireType { None = 0, CurrentItems = 1, Items = 2, CurrentCollection = 3, Collections = 4 };
+    enum RequireType {
+        None = 0,
+        CurrentItems = 1,
+        Items = 2,
+        CurrentCollection = 3,
+        Collections = 4,
+    };
     Q_ENUM(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
 

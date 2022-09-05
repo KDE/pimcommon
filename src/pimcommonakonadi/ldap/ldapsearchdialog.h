@@ -36,7 +36,12 @@ class PIMCOMMONAKONADI_EXPORT LdapSearchDialog : public QDialog
     Q_OBJECT
 
 public:
-    enum FilterType { Name = 0, Email, HomeNumber, WorkNumber };
+    enum FilterType {
+        Name = 0,
+        Email,
+        HomeNumber,
+        WorkNumber,
+    };
 
     /**
      * Creates a new ldap search dialog.

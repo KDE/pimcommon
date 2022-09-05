@@ -44,8 +44,15 @@ public:
     Q_REQUIRED_RESULT bool isEmpty() const;
 
 private:
-    enum ItemType { ItemLogType = Qt::UserRole + 1 };
+    enum ItemType {
+        ItemLogType = Qt::UserRole + 1,
+    };
 
-    enum LogType { Title = 0, Error, Info, EndLine };
+    enum LogType {
+        Title = 0,
+        Error,
+        Info,
+        EndLine,
+    };
 };
 }

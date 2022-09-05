@@ -29,7 +29,10 @@ class PIMCOMMON_EXPORT AutoCorrectionWidget : public QWidget
     Q_OBJECT
 
 public:
-    enum ImportFileType { LibreOffice, KMail };
+    enum ImportFileType {
+        LibreOffice,
+        KMail,
+    };
 
     explicit AutoCorrectionWidget(QWidget *parent = nullptr);
     ~AutoCorrectionWidget() override;

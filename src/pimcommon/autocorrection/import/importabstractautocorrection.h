@@ -18,7 +18,10 @@ class PIMCOMMON_TESTS_EXPORT ImportAbstractAutocorrection
 {
     Q_GADGET
 public:
-    enum LoadAttribute { All = 0, SuperScript };
+    enum LoadAttribute {
+        All = 0,
+        SuperScript,
+    };
     Q_ENUM(LoadAttribute)
 
     explicit ImportAbstractAutocorrection(QWidget *parent);

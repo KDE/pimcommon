@@ -32,7 +32,11 @@ using namespace PimCommon;
 class AclModel : public QAbstractListModel
 {
 public:
-    enum Role { UserIdRole = Qt::UserRole + 1, PermissionsRole, PermissionsTextRole };
+    enum Role {
+        UserIdRole = Qt::UserRole + 1,
+        PermissionsRole,
+        PermissionsTextRole,
+    };
 
     AclModel(QObject *parent = nullptr)
         : QAbstractListModel(parent)

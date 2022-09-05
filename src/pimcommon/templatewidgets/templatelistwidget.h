@@ -48,7 +48,10 @@ protected:
     QMimeData *mimeData(const QList<QListWidgetItem *> &items) const override;
 #endif
     void dropEvent(QDropEvent *event) override;
-    enum TemplateData { Text = Qt::UserRole + 1, DefaultTemplate = Qt::UserRole + 2 };
+    enum TemplateData {
+        Text = Qt::UserRole + 1,
+        DefaultTemplate = Qt::UserRole + 2,
+    };
 
 Q_SIGNALS:
     void insertTemplate(const QString &);

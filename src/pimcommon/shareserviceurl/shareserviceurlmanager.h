@@ -26,7 +26,16 @@ class PIMCOMMON_EXPORT ShareServiceUrlManager : public QObject
 public:
     explicit ShareServiceUrlManager(QObject *parent = nullptr);
     ~ShareServiceUrlManager() override;
-    enum ServiceType { Fbook = 0, Twitter, MailTo, LinkedIn, Evernote, Pocket, LiveJournal, ServiceEndType };
+    enum ServiceType {
+        Fbook = 0,
+        Twitter,
+        MailTo,
+        LinkedIn,
+        Evernote,
+        Pocket,
+        LiveJournal,
+        ServiceEndType,
+    };
 
     Q_REQUIRED_RESULT KActionMenu *menu() const;
 
