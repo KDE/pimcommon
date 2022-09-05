@@ -41,7 +41,13 @@ void YandexTranslator::translate()
     }
 }
 
-QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage() const
+QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage()
+{
+    checkLoadedSupportedLanguage();
+    return sSupportedLanguage;
+}
+
+void YandexTranslator::loadSupportedLanguages()
 {
     TranslatorUtil translatorUtil;
     QVector<QPair<QString, QString>> fullListLanguage;
@@ -103,7 +109,7 @@ QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage() const
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::vi));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cy));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::yi));
-    return fullListLanguage;
+    sSupportedLanguage = fullListLanguage;
 }
 
 QString YandexTranslator::engineName() const

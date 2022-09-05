@@ -37,9 +37,15 @@ void LibreTranslateTranslator::translate()
     translateText();
 }
 
-QVector<QPair<QString, QString>> LibreTranslateTranslator::supportedLanguage() const
+QVector<QPair<QString, QString>> LibreTranslateTranslator::supportedLanguage()
 {
-    return {};
+    checkLoadedSupportedLanguage();
+    return sSupportedLanguage;
+}
+
+void LibreTranslateTranslator::loadSupportedLanguages()
+{
+    // TODO
 }
 
 void LibreTranslateTranslator::translateText()

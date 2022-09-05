@@ -30,7 +30,7 @@ public:
     Q_REQUIRED_RESULT virtual QString engineName() const = 0;
 
     virtual void translate() = 0;
-    Q_REQUIRED_RESULT virtual QVector<QPair<QString, QString>> supportedLanguage() const = 0;
+    Q_REQUIRED_RESULT virtual QVector<QPair<QString, QString>> supportedLanguage() = 0;
 
     Q_REQUIRED_RESULT QString resultTranslate() const;
     void setInputText(const QString &text);
@@ -53,6 +53,8 @@ Q_SIGNALS:
     void translateFailed(bool result, const QString &errorMessage = QString());
 
 protected:
+    void checkLoadedSupportedLanguage();
+    virtual void loadSupportedLanguages() = 0;
     QString mJsonData;
     QString mJsonDebug;
     QString mInputText;
@@ -67,5 +69,6 @@ protected:
     bool mDebug = false;
 
     void slotError(QNetworkReply::NetworkError error);
+    static inline QVector<QPair<QString, QString>> sSupportedLanguage;
 };
 }

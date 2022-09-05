@@ -18,8 +18,11 @@ public:
     ~YandexTranslator() override;
 
     void translate() override;
-    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() const override;
+    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() override;
     Q_REQUIRED_RESULT QString engineName() const override;
+
+protected:
+    void loadSupportedLanguages() override;
 
 private:
     static QString sYandexKey;

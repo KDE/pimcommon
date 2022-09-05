@@ -66,6 +66,13 @@ void TranslatorEngineBase::loadSettings()
     // Nothing here
 }
 
+void TranslatorEngineBase::checkLoadedSupportedLanguage()
+{
+    if (sSupportedLanguage.isEmpty()) {
+        loadSupportedLanguages();
+    }
+}
+
 void TranslatorEngineBase::clear()
 {
     mJsonData.clear();

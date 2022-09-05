@@ -170,7 +170,13 @@ void BingTranslator::parseTranslation(QNetworkReply *reply)
     Q_EMIT translateDone();
 }
 
-QVector<QPair<QString, QString>> BingTranslator::supportedLanguage() const
+QVector<QPair<QString, QString>> BingTranslator::supportedLanguage()
+{
+    checkLoadedSupportedLanguage();
+    return sSupportedLanguage;
+}
+
+void BingTranslator::loadSupportedLanguages()
 {
     TranslatorUtil translatorUtil;
     QVector<QPair<QString, QString>> fullListLanguage;
@@ -232,5 +238,5 @@ QVector<QPair<QString, QString>> BingTranslator::supportedLanguage() const
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::vi));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cy));
     fullListLanguage.append(translatorUtil.pair(TranslatorUtil::yi));
-    return fullListLanguage;
+    sSupportedLanguage = fullListLanguage;
 }

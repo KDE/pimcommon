@@ -18,11 +18,14 @@ public:
 
     void translate() override;
     Q_REQUIRED_RESULT QString engineName() const override;
-    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() const override;
+    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() override;
     static QByteArray sBingKey;
     static QByteArray sBingToken;
     static QString sBingIg;
     static QString sBingIid;
+
+protected:
+    void loadSupportedLanguages() override;
 
 private:
     void parseCredentials(QNetworkReply *reply);

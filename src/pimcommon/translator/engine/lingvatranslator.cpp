@@ -39,9 +39,15 @@ void LingvaTranslator::translate()
     translateText();
 }
 
-QVector<QPair<QString, QString>> LingvaTranslator::supportedLanguage() const
+QVector<QPair<QString, QString>> LingvaTranslator::supportedLanguage()
 {
-    return {};
+    checkLoadedSupportedLanguage();
+    return sSupportedLanguage;
+}
+
+void LingvaTranslator::loadSupportedLanguages()
+{
+    // TODO
 }
 
 void LingvaTranslator::translateText()
