@@ -24,9 +24,10 @@ public:
 
 private:
     void fillEngine();
-    void switchEngine();
+    void switchEngine(int index);
     QComboBox *const mEngine;
     QStackedWidget *const mStackedWidget;
     QWidget *const mEmptyWidget;
+    QWidget *const mLibreTranslateWidget;
 };
 }

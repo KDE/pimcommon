@@ -19,6 +19,7 @@ TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     , mEngine(new QComboBox(this))
     , mStackedWidget(new QStackedWidget(this))
     , mEmptyWidget(new QWidget(this))
+    , mLibreTranslateWidget(new QWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -37,8 +38,14 @@ TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     mStackedWidget->setObjectName(QStringLiteral("mStackedWidget"));
     mainLayout->addWidget(mStackedWidget);
 
+    mEmptyWidget->setObjectName(QStringLiteral("mEmptyWidget"));
     mStackedWidget->addWidget(mEmptyWidget);
 
+    mLibreTranslateWidget->setObjectName(QStringLiteral("mLibreTranslateWidget"));
+    mStackedWidget->addWidget(mLibreTranslateWidget);
+
+    connect(mEngine, &QComboBox::currentIndexChanged, this, &TranslatorConfigureWidget::switchEngine);
+    mStackedWidget->setCurrentWidget(mEmptyWidget);
     fillEngine();
 }
 
@@ -63,7 +70,7 @@ void TranslatorConfigureWidget::loadSettings()
     }
 }
 
-void TranslatorConfigureWidget::switchEngine()
+void TranslatorConfigureWidget::switchEngine(int index)
 {
     // TODO
 }
