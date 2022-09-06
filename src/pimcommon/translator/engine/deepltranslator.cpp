@@ -47,12 +47,14 @@ void DeepLTranslator::translate()
 QVector<QPair<QString, QString>> DeepLTranslator::supportedLanguage()
 {
     checkLoadedSupportedLanguage();
-    return sSupportedLanguage;
+    return mLanguages;
 }
 
 void DeepLTranslator::loadSupportedLanguages()
 {
-    // TODO
+    if (mLanguages.isEmpty()) {
+        // TODO
+    }
 }
 
 void DeepLTranslator::translateText()

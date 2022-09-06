@@ -68,9 +68,7 @@ void TranslatorEngineBase::loadSettings()
 
 void TranslatorEngineBase::checkLoadedSupportedLanguage()
 {
-    if (sSupportedLanguage.isEmpty()) {
-        loadSupportedLanguages();
-    }
+    loadSupportedLanguages();
 }
 
 void TranslatorEngineBase::clear()

@@ -42,12 +42,14 @@ void LingvaTranslator::translate()
 QVector<QPair<QString, QString>> LingvaTranslator::supportedLanguage()
 {
     checkLoadedSupportedLanguage();
-    return sSupportedLanguage;
+    return mLanguages;
 }
 
 void LingvaTranslator::loadSupportedLanguages()
 {
-    // TODO
+    if (mLanguages.isEmpty()) {
+        // TODO
+    }
 }
 
 void LingvaTranslator::translateText()

@@ -69,6 +69,5 @@ protected:
     bool mDebug = false;
 
     void slotError(QNetworkReply::NetworkError error);
-    static inline QVector<QPair<QString, QString>> sSupportedLanguage;
 };
 }

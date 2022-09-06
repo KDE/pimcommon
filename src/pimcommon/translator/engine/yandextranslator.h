@@ -29,5 +29,6 @@ private:
     void parseCredentials(QNetworkReply *reply);
     void parseTranslation(QNetworkReply *reply);
     void translateText();
+    static inline QVector<QPair<QString, QString>> mLanguages;
 };
 }
