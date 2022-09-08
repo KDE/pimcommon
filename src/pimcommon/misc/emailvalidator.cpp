@@ -24,7 +24,7 @@ QValidator::State EmailValidator::validate(QString &str, int &pos) const
     if (KEmailAddress::isValidSimpleAddress(str)) {
         return QValidator::Acceptable;
     }
-    QRegularExpression re(QStringLiteral("\\s"));
+    static QRegularExpression re(QStringLiteral("\\s"));
     QRegularExpressionMatch match = re.match(str);
     if (match.hasMatch()) {
         return QValidator::Invalid;
