@@ -65,3 +65,8 @@ ActionType::Type ActionType::type() const
 {
     return mType;
 }
+
+bool ActionType::operator==(const ActionType &other) const
+{
+    return mAction == other.mAction && mType == other.mType;
+}

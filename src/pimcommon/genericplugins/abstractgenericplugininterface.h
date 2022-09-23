@@ -37,6 +37,8 @@ public:
     Q_REQUIRED_RESULT QAction *action() const;
     Q_REQUIRED_RESULT Type type() const;
 
+    Q_REQUIRED_RESULT bool operator==(const ActionType &other) const;
+
 private:
     QAction *mAction = nullptr;
     Type mType = Tools;
