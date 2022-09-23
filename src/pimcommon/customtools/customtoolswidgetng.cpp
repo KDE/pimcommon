@@ -6,7 +6,6 @@
 
 #include "customtoolswidgetng.h"
 #include "customtoolsplugin.h"
-#include "customtoolspluginmanager.h"
 #include "customtoolsviewinterface.h"
 
 #include <KToggleAction>

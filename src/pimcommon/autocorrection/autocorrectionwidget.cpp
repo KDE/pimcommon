@@ -5,15 +5,12 @@
 */
 
 #include "autocorrectionwidget.h"
-#include "widgets/configureimmutablewidgetutils.h"
-using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include "autocorrection.h"
 #include "import/importabstractautocorrection.h"
 #include "import/importkmailautocorrection.h"
 #include "import/importlibreofficeautocorrection.h"
 #include "ui_autocorrectionwidget.h"
 
-#include "settings/pimcommonsettings.h"
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <Libkdepim/LineEditCatchReturnKey>
 

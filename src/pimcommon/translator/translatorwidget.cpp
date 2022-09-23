@@ -6,7 +6,6 @@
 */
 
 #include "translatorwidget.h"
-#include "pimcommon_debug.h"
 #include "translatorconfiguredialog.h"
 #include "translatordebugdialog.h"
 #include "translatorutil.h"
