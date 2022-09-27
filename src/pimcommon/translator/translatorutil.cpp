@@ -245,7 +245,7 @@ PimCommon::TranslatorEngineBase *TranslatorUtil::switchEngine(PimCommon::Transla
 
 void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
 {
-    for (int i = 0; i < PimCommon::TranslatorEngineBase::TranslatorEngine::LastEngine; ++i) {
+    for (int i = 0; i <= PimCommon::TranslatorEngineBase::TranslatorEngine::LastEngine; ++i) {
         switch (i) {
         case PimCommon::TranslatorEngineBase::TranslatorEngine::Google:
             combo->addItem(i18n("Google"), QStringLiteral("google"));
