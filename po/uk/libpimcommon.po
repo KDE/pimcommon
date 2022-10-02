@@ -1,0 +1,2881 @@
+# Translation of libpimcommon.po to Ukrainian
+# Copyright (C) 2012-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: libpimcommon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:46+0000\n"
+"PO-Revision-Date: 2022-09-02 09:11+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:112
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "Автовиправлення LibreOffice"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:116
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "Автовиправлення KMail/Calligra"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "Рядок-замінник збігається з рядком пошуку."
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Додати запис автовиправлення"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:435
+#, kde-format
+msgid "&Modify"
+msgstr "З&мінити"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:438
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#, kde-format
+msgid "&Add"
+msgstr "&Додати"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:546
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "Імпортувати автовиправлення LibreOffice"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "файл автовиправлення LibreOffice (*.data)"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "Імпортувати автовиправлення KMail"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "файл автовиправлення KMail (*.xml)"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:601
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr "Мову було змінено, хочете зберегти налаштування для попередньої мови?"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:602
+#, kde-format
+msgid "Save config"
+msgstr "Збереження налаштувань"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "Будь ласка, збережіть зміни, перш ніж експортувати параметри."
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:636
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Експортувати файл автовиправлення"
+
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#, kde-format
+msgid "Archive cannot be opened in read mode."
+msgstr "Не вдалося відкрити архів у режимі читання"
+
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#, kde-format
+msgid "Import LibreOffice Autocorrection File"
+msgstr "Імпортувати файл автовиправлення LibreOffice"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:21
+#, kde-format
+msgid "Enable autocorrection"
+msgstr "Увімкнути автовиправлення"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:30
+#, kde-format
+msgid "Replacement and exception for language:"
+msgstr "Заміна і виключення для мови:"
+
+#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
+#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#, kde-format
+msgid "Export..."
+msgstr "Експортувати…"
+
+#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
+#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#, kde-format
+msgid "Import..."
+msgstr "Імпортувати…"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:77
+#, kde-format
+msgid "Si&mple Autocorrection"
+msgstr "Пр&осте автовиправлення"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:83
+#, kde-format
+msgid ""
+"Detect when a new sentence is started and always ensure that the first "
+"character is an uppercase character"
+msgstr ""
+"Визначати початок нового речення і завжди виставляти верхній регістр для "
+"наступної літери"
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:87
+#, kde-format
+msgid ""
+"Convert &first letter of a sentence automatically to uppercase\n"
+"(e.g. \"my house. in this town\" to \"my house. In this town\")"
+msgstr ""
+"Автоматично виправляти п&ершу літеру речення на прописну літеру\n"
+"(наприклад, «мій дім. у цьому місті» на «мій дім. У цьому місті»)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:97
+#, kde-format
+msgid ""
+"All words are checked for the common mistake of holding the shift key down a "
+"bit too long. If some words must have two uppercase characters, then those "
+"exceptions should be added in the 'Exceptions' tab."
+msgstr ""
+"Всі слова перевірятимуться на звичайну помилку, що полягає у задовгому "
+"утримуванні клавіші Shift. Якщо деякі слова мають дві великі літери на "
+"початку, їх слід додати до списку на вкладці «Винятки»."
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:101
+#, kde-format
+msgid ""
+"Convert &two uppercase characters to one uppercase and one lowercase "
+"character\n"
+" (e.g. PErfect to Perfect)"
+msgstr ""
+"Перетворювати &дві початкові великі літери на одну велику і одну маленьку "
+"літери\n"
+" (наприклад, ЧУдовий на Чудовий)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:108
+#, kde-format
+msgid ""
+"Make sure that more than one space cannot be typed, as this is a common "
+"mistake which is quite hard to find in formatted text."
+msgstr ""
+"Переконатися, що надруковано підряд не більше двох пробілів, оскільки це є "
+"типовою помилкою під час набору, яку важко знайти у форматованому тексті."
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:111
+#, kde-format
+msgid "&Suppress double spaces"
+msgstr "Змінювати &подвійні пробіли"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:118
+#, kde-format
+msgid "Most standard fraction notations will be converted when available"
+msgstr "Більшість звичайних дробів буде перетворено за можливості"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:121
+#, kde-format
+msgid "Re&place 1/2... with ½..."
+msgstr "За&мінювати 1/2… на ½…"
+
+#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:128
+#, kde-format
+msgid "Capitalize name of days"
+msgstr "Назви днів великими літерами"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:135
+#, kde-format
+msgid ""
+"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
+"that matches the way an Internet browser would show a URL."
+msgstr ""
+"Визначати, коли набирається URL (Uniform Resource Locator — адреса у мережі "
+"інтернет), і встановлювати для неї форматування, що відповідає способу її "
+"показу у переглядачі мережі інтернет."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:138
+#, kde-format
+msgid "Autoformat &URLs (HTML mode)"
+msgstr "Автоматичне форматування &адрес (режим HTML)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:145
+#, kde-format
+msgid ""
+"When you use _underline_ or *bold*, the text between the underscores or "
+"asterisks will be converted to underlined or bold text."
+msgstr ""
+"Коли ви друкуєте _підкреслений_ або *жирний*, текст між знаками підкреслення "
+"і зірочками буде перетворено на текст з лінією підкреслення або текст у "
+"напівжирній гарнітурі."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:148
+#, kde-format
+msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+msgstr ""
+"Автоматично вмикати напів&жирний, перекреслений та підкреслений формати "
+"(режим HTML)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:155
+#, kde-format
+msgid "Replace 1st... with 1^st... (HTML mode)"
+msgstr "Замінювати 1st… на 1^st… (режим HTML)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:176
+#, kde-format
+msgid "Custom &Quotes"
+msgstr "Спеціальні &лапки"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:182
+#, kde-format
+msgid "Replace &double quotes with typographical quotes"
+msgstr "Замінювати &подвійні лапки типографськими"
+
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:193
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:233
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:360
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:374
+#, kde-format
+msgid "By Default"
+msgstr "Типові"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:206
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
+#, kde-format
+msgid "Ending Quote:"
+msgstr "Завершальні лапки:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:253
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:353
+#, kde-format
+msgid "Opening Quote:"
+msgstr "Початкові лапки:"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
+#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:267
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:388
+#, kde-format
+msgid "Default"
+msgstr "Типовий"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
+#, kde-format
+msgid "Replace &single quotes with typographical quotes"
+msgstr "Замін&ювати одинарні лапки типографськими"
+
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:327
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:346
+#, kde-format
+msgid "'"
+msgstr "'"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:367
+#, kde-format
+msgid "Ending Quotes:"
+msgstr "Завершальні лапки:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:412
+#, kde-format
+msgid "Add non breaking space before specific punctuation marks in French text"
+msgstr ""
+"Додавати нерозривний пробіл перед певними знаками пунктуації у тексті "
+"французькою"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:433
+#, kde-format
+msgid "Ad&vanced Autocorrection"
+msgstr "Д&одаткове автовиправлення"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#. i18n: ectx: property (text), widget (QPushButton, remove2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
+#, kde-format
+msgid "Remove"
+msgstr "Вилучити"
+
+#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:476
+#, kde-format
+msgid "&Enable word replacement"
+msgstr "&Увімкнути заміну слів"
+
+#. i18n: ectx: property (text), widget (QLabel, findLabel)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:485
+#, kde-format
+msgid "&Find"
+msgstr "&Знайти"
+
+#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
+#, kde-format
+msgid "Re&place"
+msgstr "За&мінити"
+
+#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:537
+#, kde-format
+msgid "Find"
+msgstr "Знайти"
+
+#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:542
+#, kde-format
+msgid "Replace"
+msgstr "Замінити"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:551
+#, kde-format
+msgid "E&xceptions"
+msgstr "Ви&нятки"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:559
+#, kde-format
+msgid "Do not treat as the end of a sentence:"
+msgstr "Не вважати кінцем речення:"
+
+#. i18n: ectx: property (text), widget (QPushButton, remove1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:582
+#, kde-format
+msgid "R&emove"
+msgstr "В&илучити"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:624
+#, kde-format
+msgid "Accept two uppercase letters in:"
+msgstr "Допускати дві великі літеру у словах:"
+
+#. i18n: ectx: property (text), widget (QPushButton, add2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#, kde-format
+msgid "Add"
+msgstr "Додати"
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#, kde-format
+msgid "..."
+msgstr "…"
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
+#: pimcommon/translator/translatorwidget.cpp:298
+#, kde-format
+msgid "Configure"
+msgstr "Налаштування"
+
+#: pimcommon/configureplugins/configurepluginswidget.cpp:43
+#, kde-format
+msgid "Restart is necessary for applying the changes."
+msgstr "Для застосування змін слід перезапустити програму."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#, kde-format
+msgid "Share On..."
+msgstr "Оприлюднити на…"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#, kde-format
+msgctxt "@action:inmenu Share On..."
+msgid "%1"
+msgstr "%1"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#, kde-format
+msgid "Facebook"
+msgstr "Facebook"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#, kde-format
+msgid "Twitter"
+msgstr "Twitter"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#, kde-format
+msgid "Mail"
+msgstr "Mail"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#, kde-format
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#, kde-format
+msgid "Evernote"
+msgstr "Evernote"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
+#, kde-format
+msgid "Pocket"
+msgstr "Pocket"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#, kde-format
+msgid "LiveJournal"
+msgstr "LiveJournal"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Default template"
+msgstr "Типовий шаблон"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Template"
+msgstr "Шаблон"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#, kde-format
+msgid "Name:"
+msgstr "Назва:"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#, kde-format
+msgid "Do you want to delete selected template?"
+msgstr "Хочете вилучити позначений шаблон?"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#, kde-format
+msgid "Delete template"
+msgstr "Вилучити шаблон"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#, kde-format
+msgid "Import Template"
+msgstr "Імпортувати шаблон"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#, kde-format
+msgid "Export Template"
+msgstr "Експортувати шаблон"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#, kde-format
+msgid "Insert template"
+msgstr "Вставити шаблон"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#, kde-format
+msgid "Add..."
+msgstr "Додати…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Show..."
+msgstr "Показати…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Modify..."
+msgstr "Змінити…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#, kde-format
+msgid "Duplicate"
+msgstr "Здублювати"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#, kde-format
+msgid "Download new Templates..."
+msgstr "Отримати нові шаблони…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "'%1' is not a template file"
+msgstr "«%1» не є файлом шаблону"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "Load Template"
+msgstr "Завантажити шаблон"
+
+#: pimcommon/translator/engine/bingtranslator.cpp:54
+#: pimcommon/translator/translatorutil.cpp:257
+#, kde-format
+msgid "Bing"
+msgstr "Bing"
+
+#: pimcommon/translator/engine/bingtranslator.cpp:65
+#, kde-format
+msgid "Error: Unable to find Bing credentials in web version."
+msgstr "Помилка: не вдалося знайти реєстраційні дані Bing у вебверсії."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:73
+#, kde-format
+msgid "Error: Unable to extract Bing key from web version."
+msgstr "Помилка: не вдалося видобути ключ Bing з вебверсії."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:82
+#, kde-format
+msgid "Error: Unable to extract Bing token from web version."
+msgstr "Помилка: не вдалося видобути жетон Bing з вебверсії."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:91
+#: pimcommon/translator/engine/bingtranslator.cpp:100
+#, kde-format
+msgid "Error: Unable to extract additional Bing information from web version."
+msgstr "Помилка: не вдалося видобути додаткові дані Bing з вебверсії."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:113
+#: pimcommon/translator/engine/deepltranslator.cpp:41
+#: pimcommon/translator/engine/googletranslator.cpp:106
+#: pimcommon/translator/engine/libretranslatetranslator.cpp:34
+#: pimcommon/translator/engine/lingvatranslator.cpp:36
+#: pimcommon/translator/engine/yandextranslator.cpp:167
+#, kde-format
+msgid "You used same language for from and to language."
+msgstr "Вами вказано однакові мови для початкового тексту і для перекладу"
+
+#: pimcommon/translator/engine/deepltranslator.cpp:30
+#: pimcommon/translator/translatorutil.cpp:266
+#, kde-format
+msgid "DeepL"
+msgstr "DeepL"
+
+#: pimcommon/translator/engine/googletranslator.cpp:135
+#: pimcommon/translator/translatorutil.cpp:251
+#, kde-format
+msgid "Google"
+msgstr "Google"
+
+#: pimcommon/translator/engine/libretranslatetranslator.cpp:28
+#: pimcommon/translator/translatorutil.cpp:263
+#, kde-format
+msgid "Libre Translate"
+msgstr "Libre Translate"
+
+#: pimcommon/translator/engine/lingvatranslator.cpp:30
+#: pimcommon/translator/translatorutil.cpp:260
+#, kde-format
+msgid "Lingva"
+msgstr "Lingva"
+
+#: pimcommon/translator/engine/yandextranslator.cpp:119
+#: pimcommon/translator/translatorutil.cpp:254
+#, kde-format
+msgid "Yandex"
+msgstr "Yandex"
+
+#: pimcommon/translator/engine/yandextranslator.cpp:129
+#: pimcommon/translator/translatorenginebase.cpp:83
+#, kde-format
+msgid ""
+"Error: Engine systems have detected suspicious traffic from your computer "
+"network. Please try your request again later."
+msgstr ""
+"Помилка: системами рушія виявлено підозріливий обмін даними з мережі вашого "
+"комп'ютера. Будь ласка, повторіть спробу запиту пізніше."
+
+#: pimcommon/translator/engine/yandextranslator.cpp:138
+#, kde-format
+msgid "Error: Unable to find Yandex SID in web version."
+msgstr "Помилка: не вдалося знайти SID Yandex у вебверсії."
+
+#: pimcommon/translator/engine/yandextranslator.cpp:146
+#, kde-format
+msgid "Error: Unable to extract Yandex SID from web version."
+msgstr "Помилка: не вдалося видобути SID Yandex з вебверсії."
+
+#: pimcommon/translator/engine/yandextranslator.cpp:215
+#, kde-format
+msgid "Error: Unable to parse autodetected language"
+msgstr "Помилка: не вдалося обробити дані щодо автоматично виявленої мови"
+
+#: pimcommon/translator/translatorconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Translator"
+msgstr "Налаштування перекладача"
+
+#: pimcommon/translator/translatorconfigurewidget.cpp:33
+#, kde-format
+msgid "Engine:"
+msgstr "Рушій:"
+
+#: pimcommon/translator/translatordebugdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Translator Debug"
+msgstr "Діагностика перекладача"
+
+#: pimcommon/translator/translatordebugdialog.cpp:35
+#, kde-format
+msgid "Save As..."
+msgstr "Зберегти як…"
+
+#: pimcommon/translator/translatordebugdialog.cpp:74
+#, kde-format
+msgid "All Files (*)"
+msgstr "усі файли (*)"
+
+#: pimcommon/translator/translatorutil.cpp:28
+#, kde-format
+msgid "Detect language"
+msgstr "Визначення мови"
+
+#: pimcommon/translator/translatorutil.cpp:31
+#, kde-format
+msgid "English"
+msgstr "англійська"
+
+#: pimcommon/translator/translatorutil.cpp:34
+#: pimcommon/translator/translatorutil.cpp:97
+#, kde-format
+msgid "Chinese (Simplified)"
+msgstr "китайська (спрощений запис)"
+
+#: pimcommon/translator/translatorutil.cpp:37
+#: pimcommon/translator/translatorutil.cpp:100
+#, kde-format
+msgid "Chinese (Traditional)"
+msgstr "китайська (традиційний запис)"
+
+#: pimcommon/translator/translatorutil.cpp:40
+#, kde-format
+msgid "Dutch"
+msgstr "голландська"
+
+#: pimcommon/translator/translatorutil.cpp:43
+#, kde-format
+msgid "French"
+msgstr "французька"
+
+#: pimcommon/translator/translatorutil.cpp:46
+#, kde-format
+msgid "German"
+msgstr "німецька"
+
+#: pimcommon/translator/translatorutil.cpp:49
+#, kde-format
+msgid "Greek"
+msgstr "грецька"
+
+#: pimcommon/translator/translatorutil.cpp:52
+#, kde-format
+msgid "Italian"
+msgstr "італійська"
+
+#: pimcommon/translator/translatorutil.cpp:55
+#, kde-format
+msgid "Japanese"
+msgstr "японська"
+
+#: pimcommon/translator/translatorutil.cpp:58
+#, kde-format
+msgid "Korean"
+msgstr "корейська"
+
+#: pimcommon/translator/translatorutil.cpp:61
+#, kde-format
+msgid "Portuguese"
+msgstr "португальська"
+
+#: pimcommon/translator/translatorutil.cpp:64
+#, kde-format
+msgid "Russian"
+msgstr "російська"
+
+#: pimcommon/translator/translatorutil.cpp:67
+#, kde-format
+msgid "Spanish"
+msgstr "іспанська"
+
+#: pimcommon/translator/translatorutil.cpp:70
+#, kde-format
+msgid "Afrikaans"
+msgstr "африкаанс"
+
+#: pimcommon/translator/translatorutil.cpp:73
+#, kde-format
+msgid "Albanian"
+msgstr "албанська"
+
+#: pimcommon/translator/translatorutil.cpp:76
+#, kde-format
+msgid "Arabic"
+msgstr "арабська"
+
+#: pimcommon/translator/translatorutil.cpp:79
+#, kde-format
+msgid "Armenian"
+msgstr "вірменська"
+
+#: pimcommon/translator/translatorutil.cpp:82
+#, kde-format
+msgid "Azerbaijani"
+msgstr "азербайджанська"
+
+#: pimcommon/translator/translatorutil.cpp:85
+#, kde-format
+msgid "Basque"
+msgstr "баскська"
+
+#: pimcommon/translator/translatorutil.cpp:88
+#, kde-format
+msgid "Belarusian"
+msgstr "білоруська"
+
+#: pimcommon/translator/translatorutil.cpp:91
+#, kde-format
+msgid "Bulgarian"
+msgstr "болгарська"
+
+#: pimcommon/translator/translatorutil.cpp:94
+#, kde-format
+msgid "Catalan"
+msgstr "каталанська"
+
+#: pimcommon/translator/translatorutil.cpp:103
+#, kde-format
+msgid "Croatian"
+msgstr "хорватська"
+
+#: pimcommon/translator/translatorutil.cpp:106
+#, kde-format
+msgid "Czech"
+msgstr "чеська"
+
+#: pimcommon/translator/translatorutil.cpp:109
+#, kde-format
+msgid "Danish"
+msgstr "данська"
+
+#: pimcommon/translator/translatorutil.cpp:112
+#, kde-format
+msgid "Estonian"
+msgstr "естонська"
+
+#: pimcommon/translator/translatorutil.cpp:115
+#, kde-format
+msgid "Filipino"
+msgstr "філіппінська"
+
+#: pimcommon/translator/translatorutil.cpp:118
+#, kde-format
+msgid "Finnish"
+msgstr "фінська"
+
+#: pimcommon/translator/translatorutil.cpp:121
+#, kde-format
+msgid "Galician"
+msgstr "галісійська"
+
+#: pimcommon/translator/translatorutil.cpp:124
+#, kde-format
+msgid "Georgian"
+msgstr "грузинська"
+
+#: pimcommon/translator/translatorutil.cpp:127
+#, kde-format
+msgid "Haitian Creole"
+msgstr "гаїтянська креольська"
+
+#: pimcommon/translator/translatorutil.cpp:130
+#, kde-format
+msgid "Hebrew"
+msgstr "іврит"
+
+#: pimcommon/translator/translatorutil.cpp:133
+#, kde-format
+msgid "Hindi"
+msgstr "хінді"
+
+#: pimcommon/translator/translatorutil.cpp:136
+#, kde-format
+msgid "Hungarian"
+msgstr "угорська"
+
+#: pimcommon/translator/translatorutil.cpp:139
+#, kde-format
+msgid "Icelandic"
+msgstr "ісландська"
+
+#: pimcommon/translator/translatorutil.cpp:142
+#, kde-format
+msgid "Indonesian"
+msgstr "індонезійська"
+
+#: pimcommon/translator/translatorutil.cpp:145
+#, kde-format
+msgid "Irish"
+msgstr "ірландська"
+
+#: pimcommon/translator/translatorutil.cpp:148
+#, kde-format
+msgid "Latvian"
+msgstr "латиська"
+
+#: pimcommon/translator/translatorutil.cpp:151
+#, kde-format
+msgid "Lithuanian"
+msgstr "литовська"
+
+#: pimcommon/translator/translatorutil.cpp:154
+#, kde-format
+msgid "Macedonian"
+msgstr "македонська"
+
+#: pimcommon/translator/translatorutil.cpp:157
+#, kde-format
+msgid "Malay"
+msgstr "малайська"
+
+#: pimcommon/translator/translatorutil.cpp:160
+#, kde-format
+msgid "Maltese"
+msgstr "мальтійська"
+
+#: pimcommon/translator/translatorutil.cpp:163
+#, kde-format
+msgid "Norwegian"
+msgstr "норвезька"
+
+#: pimcommon/translator/translatorutil.cpp:166
+#, kde-format
+msgid "Persian"
+msgstr "перська"
+
+#: pimcommon/translator/translatorutil.cpp:169
+#, kde-format
+msgid "Polish"
+msgstr "польська"
+
+#: pimcommon/translator/translatorutil.cpp:172
+#, kde-format
+msgid "Romanian"
+msgstr "румунська"
+
+#: pimcommon/translator/translatorutil.cpp:175
+#, kde-format
+msgid "Serbian"
+msgstr "сербська"
+
+#: pimcommon/translator/translatorutil.cpp:178
+#, kde-format
+msgid "Slovak"
+msgstr "словацька"
+
+#: pimcommon/translator/translatorutil.cpp:181
+#, kde-format
+msgid "Slovenian"
+msgstr "словенська"
+
+#: pimcommon/translator/translatorutil.cpp:184
+#, kde-format
+msgid "Swahili"
+msgstr "суахілі"
+
+#: pimcommon/translator/translatorutil.cpp:187
+#, kde-format
+msgid "Swedish"
+msgstr "шведська"
+
+#: pimcommon/translator/translatorutil.cpp:190
+#, kde-format
+msgid "Thai"
+msgstr "тайська"
+
+#: pimcommon/translator/translatorutil.cpp:193
+#, kde-format
+msgid "Turkish"
+msgstr "турецька"
+
+#: pimcommon/translator/translatorutil.cpp:196
+#, kde-format
+msgid "Ukrainian"
+msgstr "українська"
+
+#: pimcommon/translator/translatorutil.cpp:199
+#, kde-format
+msgid "Urdu"
+msgstr "урду"
+
+#: pimcommon/translator/translatorutil.cpp:202
+#, kde-format
+msgid "Vietnamese"
+msgstr "в'єтнамська"
+
+#: pimcommon/translator/translatorutil.cpp:205
+#, kde-format
+msgid "Welsh"
+msgstr "валлійська"
+
+#: pimcommon/translator/translatorutil.cpp:208
+#, kde-format
+msgid "Yiddish"
+msgstr "ідиш"
+
+#: pimcommon/translator/translatorwidget.cpp:127
+#, kde-format
+msgid "Problem when connecting to the translator web site."
+msgstr "Під час спроби з’єднатися з сайтом перекладу виникли проблеми."
+
+#: pimcommon/translator/translatorwidget.cpp:229
+#: pimcommon/translator/translatorwidget.cpp:232
+#, kde-format
+msgid "Close"
+msgstr "Закрити"
+
+#: pimcommon/translator/translatorwidget.cpp:238
+#, kde-format
+msgctxt "Translate from language"
+msgid "From:"
+msgstr "З:"
+
+#: pimcommon/translator/translatorwidget.cpp:245
+#, kde-format
+msgctxt "Translate to language"
+msgid "To:"
+msgstr "Мовою:"
+
+#: pimcommon/translator/translatorwidget.cpp:257
+#, kde-format
+msgctxt "Invert language choices so that from becomes to and to becomes from"
+msgid "Invert"
+msgstr "Обернути"
+
+#: pimcommon/translator/translatorwidget.cpp:262
+#: pimcommon/translator/translatorwidget.cpp:265
+#, kde-format
+msgid "Clear"
+msgstr "Спорожнити"
+
+#: pimcommon/translator/translatorwidget.cpp:270
+#: pimcommon/translator/translatorwidget.cpp:273
+#, kde-format
+msgid "Translate"
+msgstr "Перекласти"
+
+#: pimcommon/translator/translatorwidget.cpp:280
+#, kde-format
+msgid "Debug"
+msgstr "Діагностика"
+
+#: pimcommon/translator/translatorwidget.cpp:314
+#, kde-format
+msgid ""
+"Drag text that you want to translate. (Be careful text will be send to "
+"Google Server)."
+msgstr ""
+"Перетягніть текст, який слід перекласти. (Майте на увазі, що текст буде "
+"надіслано на сервер Google.)"
+
+#: pimcommon/translator/translatorwidget.cpp:395
+#, kde-format
+msgid "No network connection detected, we cannot translate text."
+msgstr "З’єднання з мережею недоступне, тому перекласти текст зараз не можна."
+
+#: pimcommon/translator/translatorwidget.cpp:395
+#, kde-format
+msgid "No network"
+msgstr "З’єднання недоступне"
+
+#: pimcommon/translator/translatorwidget.cpp:434
+#, kde-format
+msgid "Translate error"
+msgstr "Помилка під час перекладу"
+
+#: pimcommon/util/pimutil.cpp:48
+#, kde-format
+msgid ""
+"Could not write the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Не вдалося виконати запис до файла %1.\n"
+"Докладний опис помилки: «%2»."
+
+#: pimcommon/util/pimutil.cpp:52
+#, kde-format
+msgid "Save File Error"
+msgstr "Помилка під час збереження файла"
+
+#: pimcommon/util/pimutil.cpp:86
+#, kde-format
+msgid ""
+"Could not read the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Не вдалося виконати читання файла %1.\n"
+"Докладний опис помилки: «%2»."
+
+#: pimcommon/util/pimutil.cpp:90
+#, kde-format
+msgid "Load File Error"
+msgstr "Помилка під час завантаження файла"
+
+#: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
+#, kde-format
+msgid ""
+"<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
+"this is an error, please contact him.</p></qt>"
+msgstr ""
+"<qt><p>Значення цього параметра було встановлено вашим системним "
+"адміністратором.</p><p>Якщо ви вважаєте це помилкою, зверніться, будь ласка, "
+"до нього.</p></qt>"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:27
+#, kde-format
+msgid "Change Case"
+msgstr "Змінити регістр"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:28
+#, kde-format
+msgid "Uppercase"
+msgstr "Верхній регістр"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:31
+#, kde-format
+msgid "Sentence case"
+msgstr "Перше слово з прописної"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:34
+#, kde-format
+msgid "Lowercase"
+msgstr "Нижній регістр"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:37
+#, kde-format
+msgid "Reverse Case"
+msgstr "Обернений регістр"
+
+#: pimcommon/widgets/lineeditwithcompleterng.cpp:44
+#, kde-format
+msgid "Clear History"
+msgstr "Спорожнити журнал"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "There was a problem sharing the document: %1"
+msgstr "Під час спроби оприлюднити документ виникла проблема: %1"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "Share"
+msgstr "Оприлюднення"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:58
+#, kde-format
+msgid "File was shared."
+msgstr "Файл оприлюднено."
+
+#: pimcommon/widgets/purposemenuwidget.cpp:61
+#, kde-format
+msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
+msgstr "<qt>Новий запит можна знайти тут:<br /><a href='%1'>%1</a> </qt>"
+
+#: pimcommon/widgets/renamefiledialog.cpp:100
+#, kde-format
+msgctxt "@title:window"
+msgid "File Already Exists"
+msgstr "Файл вже існує"
+
+#: pimcommon/widgets/renamefiledialog.cpp:103
+#, kde-kuit-format
+msgid ""
+"A file named <filename>%1</filename> already exists. Do you want to "
+"overwrite it?"
+msgstr ""
+"Файл з назвою <filename>%1</filename> вже існує. Хочете його перезаписати?"
+
+#: pimcommon/widgets/renamefiledialog.cpp:113
+#, kde-format
+msgid "Suggest New &Name"
+msgstr "Запропонувати нову &назву"
+
+#: pimcommon/widgets/renamefiledialog.cpp:121
+#, kde-format
+msgid "&Ignore"
+msgstr "&Ігнорувати"
+
+#: pimcommon/widgets/renamefiledialog.cpp:124
+#, kde-format
+msgid "&Rename"
+msgstr "&Перейменувати"
+
+#: pimcommon/widgets/renamefiledialog.cpp:134
+#, kde-format
+msgid "Appl&y to All"
+msgstr "Зас&тосувати до всіх"
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "This filename \"%1\" already exists."
+msgstr "Файл з назвою «%1» вже існує."
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "File already exists"
+msgstr "Файл вже існує"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#, kde-format
+msgid "New entry:"
+msgstr "Новий запис:"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:57
+#, kde-format
+msgid "New Value"
+msgstr "Нове значення"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#, kde-format
+msgid "Do you want to remove selected text?"
+msgstr "Хочете вилучити позначений фрагмент тексту?"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#, kde-format
+msgid "&Add..."
+msgstr "&Додати…"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#, kde-format
+msgid "&Modify..."
+msgstr "З&мінити…"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#, kde-format
+msgid "&Remove"
+msgstr "Ви&лучити"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#, kde-format
+msgid "&Customize..."
+msgstr "&Налаштувати…"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#, kde-format
+msgid "&User identifier:"
+msgstr "&Ідентифікатор користувача:"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The User Identifier is the login of the user on the IMAP server. This can be "
+"a simple user name or the full email address of the user; the login for your "
+"own account on the server will tell you which one it is."
+msgstr ""
+"Ідентифікатор користувача — ім’я користувача сервера IMAP. Він може бути "
+"іменем користувача або повною адресою електронної пошти користувача. "
+"Значення можна визначити за реєстраційними даними вашого облікового запису "
+"на сервері."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#, kde-format
+msgctxt "select an email address"
+msgid "Se&lect..."
+msgstr "Ви&брати…"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#, kde-format
+msgid "Permissions"
+msgstr "Права доступу"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#, kde-format
+msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
+msgstr ""
+"<b>Зауваження: </b>для перейменування потрібні права доступу на запис до "
+"батьківської теки."
+
+#: pimcommonakonadi/acl/acllistview.cpp:50
+#, kde-format
+msgid "Folder cannot be administrated."
+msgstr "Адміністрування теки неможливе."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:159
+#, kde-format
+msgid "Add Entry..."
+msgstr "Додати запис…"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:164
+#, kde-format
+msgid "Edit Entry..."
+msgstr "Змінити запис…"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:170
+#, kde-format
+msgid "Remove Entry"
+msgstr "Вилучити запис"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:212
+#, kde-format
+msgctxt "@title:window"
+msgid "Add ACL"
+msgstr "Додавання ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:239
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit ACL"
+msgstr "Зміна ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:279
+#, kde-format
+msgid ""
+"Do you really want to remove your own permissions for this folder? You will "
+"not be able to access it afterwards."
+msgstr ""
+"Ви дійсно бажаєте вилучити власні дозволи для цієї теки? Після цього ви "
+"більше не зможете отримати доступ до неї."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#, kde-format
+msgid "Do you really want to remove these permissions for this folder?"
+msgstr "Ви дійсно бажаєте вилучити ці дозволи для цієї теки?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
+#, kde-format
+msgid ""
+"Do you really want to apply the folder's permissions to these subfolders?"
+msgstr "Ви справді хочете застосувати права доступу до теки до усіх її підтек?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#, kde-format
+msgid "Apply Permissions"
+msgstr "Застосувати права доступу"
+
+#: pimcommonakonadi/acl/aclutils.cpp:19
+msgctxt "Permissions"
+msgid "None"
+msgstr "Жодних"
+
+#: pimcommonakonadi/acl/aclutils.cpp:21
+msgctxt "Permissions"
+msgid "Read"
+msgstr "Читання"
+
+#: pimcommonakonadi/acl/aclutils.cpp:23
+msgctxt "Permissions"
+msgid "Append"
+msgstr "Додавання"
+
+#: pimcommonakonadi/acl/aclutils.cpp:27
+msgctxt "Permissions"
+msgid "Write"
+msgstr "Запис"
+
+#: pimcommonakonadi/acl/aclutils.cpp:31
+msgctxt "Permissions"
+msgid "All"
+msgstr "Всі дії"
+
+#: pimcommonakonadi/acl/aclutils.cpp:66
+#, kde-format
+msgid "Custom Permissions (%1)"
+msgstr "Нетипові права доступу (%1)"
+
+#: pimcommonakonadi/acl/collectionaclpage.cpp:32
+#, kde-format
+msgid "Access Control"
+msgstr "Керування доступом"
+
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
+#, kde-format
+msgid "Apply permissions on all &subfolders."
+msgstr "Застосувати права доступу до усіх &підтек."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#, kde-format
+msgid "vCard Import Failed"
+msgstr "Не вдалося імпортувати vCard"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#, kde-format
+msgid "<qt>Unable to access <b>%1</b>.</qt>"
+msgstr "<qt>Не вдалося отримати доступу до <b>%1</b>.</qt>"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#, kde-format
+msgid "Select email from contact"
+msgstr "Вибір адреси ел. пошти із запису контакту"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#, kde-format
+msgid "Show Organization Unit for LDAP results"
+msgstr "Показувати модуль установи для результатів із LDAP"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#, kde-format
+msgid "Configure Completion..."
+msgstr "Налаштувати автодоповнення…"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#, kde-format
+msgid "Automatically expand groups"
+msgstr "Автоматично розгортати групи"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#, kde-format
+msgid "Expand Groups..."
+msgstr "Розгорнути групи…"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
+#, kde-format
+msgid "Recent Addresses"
+msgstr "Нещодавні адреси."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#, kde-format
+msgctxt "@title:group"
+msgid "Contacts found in your data"
+msgstr "Записи контактів, виявлені у ваших даних"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#, kde-format
+msgid "LDAP server: %1"
+msgstr "Сервер LDAP: %1"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#, kde-format
+msgid "Search email:"
+msgstr "Шукати адресу ел. пошти:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr "Результати отримано за 3 символами"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:48
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
+#, kde-format
+msgid "Search"
+msgstr "Пошук"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr "Показати поштові повідомлення з «чорного» списку"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:75
+#, kde-format
+msgid "&Select"
+msgstr "&Позначити"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:80
+#, kde-format
+msgid "&Unselect"
+msgstr "З&няття позначення"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
+#, kde-format
+msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Інші результати…</a></qt>"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
+#, kde-format
+msgid "Search in result..."
+msgstr "Шукати у результатах…"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#, kde-format
+msgid "Exclude domain names:"
+msgstr "Виключити назви доменів:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#, kde-format
+msgid "Separate domain with '%1'"
+msgstr "Відокремити домен з «%1»"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#, kde-format
+msgid "No email found."
+msgstr "Адрес електронної пошти не знайдено."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#, kde-format
+msgid "1 email found"
+msgid_plural "%1 emails found"
+msgstr[0] "Знайдено %1 повідомлення"
+msgstr[1] "Знайдено %1 повідомлення"
+msgstr[2] "Знайдено %1 повідомлень"
+msgstr[3] "Знайдено одне повідомлення"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:121
+#, kde-format
+msgid "No result found"
+msgstr "Нічого не знайдено"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
+#, kde-format
+msgid ""
+"The list was changed. Do you want to save before to make another search ?"
+msgstr ""
+"До списку внесено зміни. Хочете зберегти їх до виконання іншого пошуку?"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
+#, kde-format
+msgid "Save"
+msgstr "Зберегти"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Completion"
+msgstr "Налаштувати автодоповнення…"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#, kde-format
+msgid "Completion Order"
+msgstr "Порядок доповнення"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#, kde-format
+msgid "Recent Address"
+msgstr "Недавня адреса"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#, kde-format
+msgid "Blacklist Email Address"
+msgstr "Додати адресу до «чорного» списку"
+
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Completion Order"
+msgstr "Редагування порядку доповнення"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
+#, kde-format
+msgid "LDAP server %1"
+msgstr "Сервер LDAP %1"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
+#, kde-format
+msgid "Move Up"
+msgstr "Пересунути вище"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
+#, kde-format
+msgid "Move Down"
+msgstr "Пересунути нижче"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgid_plural "Do you want to remove %1 email addresses?"
+msgstr[0] "Хочете вилучити цю %1 адресу електронної пошти?"
+msgstr[1] "Хочете вилучити ці %1 адреси електронної пошти?"
+msgstr[2] "Хочете вилучити ці %1 адрес електронної пошти?"
+msgstr[3] "Хочете вилучити цю адресу електронної пошти?"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
+#, kde-format
+msgctxt "type of folder content"
+msgid "Mail"
+msgstr "Пошта"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
+#, kde-format
+msgctxt "type of folder content"
+msgid "Calendar"
+msgstr "Календар"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
+#, kde-format
+msgctxt "type of folder content"
+msgid "Contacts"
+msgstr "Контакти"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
+#, kde-format
+msgctxt "type of folder content"
+msgid "Notes"
+msgstr "Нотатки"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
+#, kde-format
+msgctxt "type of folder content"
+msgid "Tasks"
+msgstr "Завдання"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
+#, kde-format
+msgctxt "type of folder content"
+msgid "Journal"
+msgstr "Журнал"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
+#, kde-format
+msgctxt "type of folder content"
+msgid "Configuration"
+msgstr "Налаштування"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
+#, kde-format
+msgctxt "type of folder content"
+msgid "Freebusy"
+msgstr "Вільний/Зайнятий час"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
+#, kde-format
+msgctxt "type of folder content"
+msgid "Files"
+msgstr "Файли"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#, kde-format
+msgctxt "type of folder content"
+msgid "Unknown"
+msgstr "Невідомо"
+
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
+#, kde-format
+msgid "&Folder contents:"
+msgstr "&Вміст теки:"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
+#, kde-format
+msgid "Nobody"
+msgstr "Ніхто"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
+#, kde-format
+msgid "Admins of This Folder"
+msgstr "Адміністратори цієї теки"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#, kde-format
+msgid "All Readers of This Folder"
+msgstr "Всі читачі цієї теки"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
+#, kde-format
+msgid ""
+"This setting defines which users sharing this folder should get \"busy\" "
+"periods in their freebusy lists and should see the alarms for the events or "
+"tasks in this folder. The setting applies to Calendar and Task folders only "
+"(for tasks, this setting is only used for alarms).\n"
+"\n"
+"Example use cases: if the boss shares a folder with his secretary, only the "
+"boss should be marked as busy for his meetings, so he should select \"Admins"
+"\", since the secretary has no admin rights on the folder.\n"
+"On the other hand if a working group shares a Calendar for group meetings, "
+"all readers of the folders should be marked as busy for meetings.\n"
+"A company-wide folder with optional events in it would use \"Nobody\" since "
+"it is not known who will go to those events."
+msgstr ""
+"Цей параметр визначає, хто з користувачів, які спільно використовують цю "
+"теку, буде отримувати інформацію про вільний/зайнятий час та бачити "
+"нагадування про події та завдання у цій теці. Цей параметр впливає лише на "
+"теки з календарем та завданнями (для завдань тільки нагадування).\n"
+"\n"
+"Приклади використання параметра: якщо керівник має спільний доступ до теки "
+"разом з секретарем, час зустрічей має бути вказано як «зайнятий» лише у "
+"розкладі керівника; тому керівникові слід вибрати пункт «адміністратори», "
+"оскільки секретар не має прав адміністратора для цієї теки.\n"
+"У іншому випадку, якщо робоча група має спільний календар для робочих "
+"зустрічей, то в розклад усіх читачів цієї теки потрібно заносити інформацію "
+"про зустрічі, як зайнятий час.\n"
+"Для теки з загальними подіями у компанії потрібно вибрати «ніхто», оскільки "
+"не відомо хто візьме участь у цих подіях."
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#, kde-format
+msgid "Generate free/&busy and activate alarms for:"
+msgstr "Створювати нагадування про події та вільний/за&йнятий час для:"
+
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#, kde-format
+msgid "Search..."
+msgstr "Шукати…"
+
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Multiple Folders"
+msgstr "Виберіть декілька тек"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Title"
+msgstr "Звертання"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
+#, kde-format
+msgid "Full Name"
+msgstr "Ім'я повністю"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Email"
+msgstr "Ел. пошта"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#, kde-format
+msgid "Home Number"
+msgstr "Домашній номер"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#, kde-format
+msgid "Work Number"
+msgstr "Робочий номер"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#, kde-format
+msgid "Mobile Number"
+msgstr "Номер мобільного"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#, kde-format
+msgid "Fax Number"
+msgstr "Номер факсу"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
+#, kde-format
+msgid "Pager"
+msgstr "Пейджер"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#, kde-format
+msgid "Street"
+msgstr "Вулиця"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "State"
+msgstr "Область"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#, kde-format
+msgid "Country"
+msgstr "Країна"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#, kde-format
+msgid "City"
+msgstr "Місто"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#, kde-format
+msgid "Organization"
+msgstr "Організація"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#, kde-format
+msgid "Company"
+msgstr "Компанія"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#, kde-format
+msgid "Department"
+msgstr "Відділ"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#, kde-format
+msgid "Zip Code"
+msgstr "Поштовий індекс"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#, kde-format
+msgid "Postal Address"
+msgstr "Поштова адреса"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#, kde-format
+msgid "Description"
+msgstr "Опис"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#, kde-format
+msgid "User ID"
+msgstr "Ід. користувача"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#, kde-format
+msgctxt "@title:column Column containing email addresses"
+msgid "Email"
+msgstr "Ел. пошта"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#, kde-format
+msgctxt "@title:column Column containing the residential state of the address"
+msgid "State"
+msgstr "Область"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#, kde-format
+msgctxt "@title:column Column containing title of the person"
+msgid "Title"
+msgstr "Звертання"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Contacts from LDAP"
+msgstr "Імпортувати контакти з LDAP"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
+#, kde-format
+msgid "Search for Addresses in Directory"
+msgstr "Пошук адрес у каталозі"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
+#, kde-format
+msgid "Search for:"
+msgstr "Шукати:"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#, kde-format
+msgctxt "In LDAP attribute"
+msgid "in"
+msgstr "у"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
+#, kde-format
+msgctxt "@item:inlistbox Name of the contact"
+msgid "Name"
+msgstr "Ім'я"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
+#, kde-format
+msgctxt "@item:inlistbox email address of the contact"
+msgid "Email"
+msgstr "Ел. пошта"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Home Number"
+msgstr "Домашній номер"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Work Number"
+msgstr "Робочий номер"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#, kde-format
+msgctxt "@action:button Start searching"
+msgid "&Search"
+msgstr "&Шукати"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#, kde-format
+msgid "Recursive search"
+msgstr "Рекурсивний пошук"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#, kde-format
+msgid "Contains"
+msgstr "Містить"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
+#, kde-format
+msgid "Starts With"
+msgstr "Починається з"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
+#, kde-format
+msgid "Search in result"
+msgstr "Шукати у результатах"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
+#, kde-format
+msgid "Searching..."
+msgstr "Шукаємо…"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
+#, kde-format
+msgid "Select All"
+msgstr "Позначити все"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
+#, kde-format
+msgid "Unselect All"
+msgstr "Зняти позначення з усіх"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
+#, kde-format
+msgid "Add Selected"
+msgstr "Додати позначені"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
+#, kde-format
+msgid "Configure LDAP Servers..."
+msgstr "Налаштовування серверів LDAP…"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
+#, kde-format
+msgid "Copy"
+msgstr "Копіювати"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
+#, kde-format
+msgid "You must select an LDAP server before searching."
+msgstr "Перед виконанням пошуку вам слід вибрати сервер LDAP."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#, kde-format
+msgctxt "arguments are host name, datetime"
+msgid "Imported from LDAP directory %1 on %2"
+msgstr "Імпортовано з каталогу LDAP %1 на %2"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure the Address Book LDAP Settings"
+msgstr "Налаштовування параметрів LDAP адресної книги"
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
+#, kde-format
+msgid ""
+"IMAP server not configured yet. Please configure the server in the IMAP "
+"account before setting up server-side subscription."
+msgstr ""
+"Не вказано параметри сервера IMAP. Будь ласка, вкажіть ці параметри у "
+"налаштуваннях облікового запису IMAP, перш ніж визначати підписки на боці "
+"сервера."
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
+#, kde-format
+msgid ""
+"Log in failed, please configure the IMAP account before setting up server-"
+"side subscription."
+msgstr ""
+"Помилка під час спроби увійти. Будь ласка, налаштуйте обліковий запис IMAP, "
+"перш ніж визначати підписку на боці сервера."
+
+#: pimcommonakonadi/util/createresource.cpp:64
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "Ресурси типу «%1» недоступні."
+
+#: pimcommonakonadi/util/createresource.cpp:75
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Ресурс «%1» вже налаштовано."
+
+#: pimcommonakonadi/util/createresource.cpp:81
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Створення екземпляра ресурсу для «%1»…"
+
+#: pimcommonakonadi/util/createresource.cpp:87
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Налаштовування екземпляра ресурсу…"
+
+#: pimcommonakonadi/util/createresource.cpp:90
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Не вдалося налаштувати екземпляр ресурсу."
+
+#: pimcommonakonadi/util/createresource.cpp:106
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "Не вдалося привести значення параметра «%1» до відповідного типу %2."
+
+#: pimcommonakonadi/util/createresource.cpp:112
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Не вдалося встановити значення параметра «%1»: %2"
+
+#: pimcommonakonadi/util/createresource.cpp:118
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Не вдалося зберегти параметри: %1"
+
+#: pimcommonakonadi/util/createresource.cpp:127
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Налаштовування ресурсу завершено."
+
+#: pimcommonakonadi/util/createresource.cpp:131
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Не вдалося створити екземпляр ресурсу: %1"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Note"
+msgstr "Редагування нотатки"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Note"
+msgstr "Вилучити нотатку"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Note"
+msgstr "Додавання нотатки"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#, kde-format
+msgid "Enter the text that should be stored as a note to the mail:"
+msgstr "Введіть текст, який має бути збережено як нотатку до пошти:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Note type:"
+msgstr "Тип нотатки:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Private note"
+msgstr "Конфіденційна нотатка"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Shared note"
+msgstr "Оприлюднена нотатка"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#, kde-format
+msgid "Do you really want to delete this note?"
+msgstr "Ви справді хочете вилучити цю нотатку?"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Note"
+msgstr "Вилучення нотатки"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "AnnotationEditDialogPrivate note"
+#~ msgstr "Нотатка AnnotationEditDialogPrivate"
+
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note?"
+#~ msgstr "Вилучити нотатку?"
+
+#~ msgid "Log activities"
+#~ msgstr "Записувати журнал дій"
+
+#~ msgctxt "@title:window"
+#~ msgid "Log activities"
+#~ msgstr "Записи журналу дій"
+
+#~ msgid "Share..."
+#~ msgstr "Оприлюднити…"
+
+#~ msgctxt "@title:window"
+#~ msgid "Save Log"
+#~ msgstr "Збереження журналу"
+
+#~ msgid "Change Value"
+#~ msgstr "Змінити значення"
+
+#~ msgid "Google Plus"
+#~ msgstr "Google Plus"
+
+#~ msgid "Change the visibility of the password"
+#~ msgstr "Змінити параметри видимості пароля"
+
+#~ msgid "Authorize"
+#~ msgstr "Надання уповноваження"
+
+#~ msgid "Username:"
+#~ msgstr "Користувач:"
+
+#~ msgid "Password:"
+#~ msgstr "Пароль:"
+
+#~ msgid "Authorization canceled."
+#~ msgstr "Спробу уповноваження було скасовано."
+
+#~ msgid "Unknown Error \"%1\""
+#~ msgstr "Невідома помилка, «%1»"
+
+#~ msgid "Box"
+#~ msgstr "Box"
+
+#~ msgid ""
+#~ "Box.com is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "Box.com — служба зберігання файлів, що обслуговується компанією Ovh, Inc. "
+#~ "і пропонує послуги хмарного сховища, синхронізації файлів та клієнтське "
+#~ "програмне забезпечення."
+
+#~ msgid "Folder"
+#~ msgstr "тека"
+
+#~ msgid "New name"
+#~ msgstr "Нова назва"
+
+#~ msgid "Some characters are not allowed."
+#~ msgstr "Використання деяких символів заборонено."
+
+#~ msgid "New name:"
+#~ msgstr "Нова назва:"
+
+#~ msgid "Some characters (%1) are not allowed."
+#~ msgstr "Використання деяких символів (%1) заборонено."
+
+#~ msgid "Delete"
+#~ msgstr "Вилучення"
+
+#~ msgid "Delete File"
+#~ msgstr "Вилучити файл"
+
+#~ msgid "Delete Folder"
+#~ msgstr "Вилучити теку"
+
+#~ msgid "Delete Files"
+#~ msgstr "Вилучення файлів"
+
+#~ msgid "Delete Folders"
+#~ msgstr "Вилучення тек"
+
+#~ msgid "Select file/folder to delete:"
+#~ msgstr "Виберіть файл або теку для вилучення:"
+
+#~ msgid "Download File"
+#~ msgstr "Отримання файла"
+
+#~ msgid "Download"
+#~ msgstr "Отримати"
+
+#~ msgid ""
+#~ "A download is still in progress. Do you want to cancel it and close "
+#~ "dialog?"
+#~ msgstr ""
+#~ "Отримання даних ще не завершено. Скасувати його і закрити діалогове вікно?"
+
+#~ msgid "Download in progress"
+#~ msgstr "Отримання даних ще не завершено"
+
+#~ msgid "File was correctly downloaded."
+#~ msgstr "Файл було отримано належним чином."
+
+#~ msgctxt "@title:window"
+#~ msgid "Download file"
+#~ msgstr "Отримання файла"
+
+#~ msgid "Error during download file."
+#~ msgstr "Помилка під час спроби отримання файла."
+
+#~ msgid "Filename already exists. Do you want to overwrite it?"
+#~ msgstr "Файл з такою назвою вже існує. Перезаписати його?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Overwrite file"
+#~ msgstr "Перезапис файла"
+
+#~ msgctxt "@title:window"
+#~ msgid "Properties"
+#~ msgstr "Властивості"
+
+#~ msgid "Dropbox access is not authorized. Error message: %1"
+#~ msgstr "Немає доступу до Dropbox. Повідомлення про помилку: %1"
+
+#~ msgid "Dropbox"
+#~ msgstr "Dropbox"
+
+#~ msgid ""
+#~ "Dropbox is a file hosting service operated by Dropbox, Inc. that offers "
+#~ "cloud storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "Dropbox — служба зберігання файлів, що обслуговується компанією Dropbox, "
+#~ "Inc. і пропонує послуги хмарного сховища, синхронізації файлів та "
+#~ "клієнтське програмне забезпечення."
+
+#~ msgid "Storage path:"
+#~ msgstr "Шлях до сховища:"
+
+#~ msgid "Hubic"
+#~ msgstr "Hubic"
+
+#~ msgid ""
+#~ "Hubic is a file hosting service operated by Ovh, Inc. that offers cloud "
+#~ "storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "Hubic — служба зберігання файлів, що обслуговується компанією Ovh, Inc. і "
+#~ "пропонує послуги хмарного сховища, синхронізації файлів та клієнтське "
+#~ "програмне забезпечення."
+
+#~ msgid "Request Token returns an error: %1"
+#~ msgstr "Процедурою ключа запиту повернуто повідомлення про помилку: %1"
+
+#~ msgid "Access Token returns an error: %1"
+#~ msgstr "Процедурою ключа доступу повернуто повідомлення про помилку: %1"
+
+#~ msgid "Upload File returns an error: %1"
+#~ msgstr "Під час вивантаження файла повернуто помилку: %1"
+
+#~ msgid "Create Folder returns an error: %1"
+#~ msgstr "Процедурою створення теки повернуто повідомлення про помилку: %1"
+
+#~ msgid "Get account info returns an error: %1"
+#~ msgstr ""
+#~ "Процедурою отримання даних щодо облікового запису повернуто повідомлення "
+#~ "про помилку: %1"
+
+#~ msgid "List folder returns an error: %1"
+#~ msgstr ""
+#~ "Процедурою побудови списку тек повернуто повідомлення про помилку: %1"
+
+#~ msgid "Share Link returns an error: %1"
+#~ msgstr "Службою оприлюднення посилань повернуто помилку: %1"
+
+#~ msgid "Create Service Folder returns an error: %1"
+#~ msgstr ""
+#~ "Процедурою створення службової теки повернуто повідомлення про помилку: %1"
+
+#~ msgid "Download file returns an error: %1"
+#~ msgstr ""
+#~ "Під час спроби отримання файла повернуто повідомлення про помилку: %1"
+
+#~ msgid "Delete File returns an error: %1"
+#~ msgstr "Під час вилучення файла повернуто помилку: %1"
+
+#~ msgid "Delete Folder returns an error: %1"
+#~ msgstr "Процедурою вилучення теки повернуто повідомлення про помилку: %1"
+
+#~ msgid "Rename Folder returns an error: %1"
+#~ msgstr ""
+#~ "Процедурою перейменовування теки повернуто повідомлення про помилку: %1"
+
+#~ msgid "Rename File returns an error: %1"
+#~ msgstr ""
+#~ "Під час спроби перейменувати файл отримано повідомлення про помилку: %1"
+
+#~ msgid "Move File returns an error: %1"
+#~ msgstr ""
+#~ "Під час спроби пересунути файл повернуто повідомлення про помилку: %1"
+
+#~ msgid "Move Folder returns an error: %1"
+#~ msgstr ""
+#~ "Процедурою пересовування теки повернуто повідомлення про помилку: %1"
+
+#~ msgid "Copy File returns an error: %1"
+#~ msgstr ""
+#~ "Під час спроби копіювання файла повернуто повідомлення про помилку: %1"
+
+#~ msgid "Copy Folder returns an error: %1"
+#~ msgstr ""
+#~ "Під час спроби копіювання теки повернуто повідомлення про помилку: %1"
+
+#~ msgid "All services were added."
+#~ msgstr "Додано усі служби."
+
+#~ msgid "Authenticate"
+#~ msgstr "Пройти розпізнавання"
+
+#~ msgid "Unable to get account information."
+#~ msgstr "Не вдалося отримати дані щодо облікового запису."
+
+#~ msgid "Account size:"
+#~ msgstr "Розмір облікового запису:"
+
+#~ msgid "Quota:"
+#~ msgstr "Квота:"
+
+#~ msgid "Do you want to delete this service '%1'?"
+#~ msgstr "Хочете вилучити цю службу «%1»?"
+
+#~ msgid "Delete Service"
+#~ msgstr "Вилучення служби"
+
+#~ msgid "Authentication Failed"
+#~ msgstr "Не вдалося пройти розпізнавання"
+
+#~ msgid "Name: %1"
+#~ msgstr "Назва: %1"
+
+#~ msgid "Account size: %1"
+#~ msgstr "Розмір облікового запису: %1"
+
+#~ msgid "Quota: %1"
+#~ msgstr "Квота: %1"
+
+#~ msgid "Shared: %1"
+#~ msgstr "Спільне: %1"
+
+#~ msgid "Storage service"
+#~ msgstr "Служба зберігання даних"
+
+#~ msgid "No Storage service configured"
+#~ msgstr "Служби зберігання даних не налаштовано"
+
+#~ msgid "Delete Folder..."
+#~ msgstr "Вилучити теку…"
+
+#~ msgid "Download File..."
+#~ msgstr "Отримати файл…"
+
+#~ msgid "Upload File..."
+#~ msgstr "Вивантажити файл…"
+
+#~ msgid "Share File..."
+#~ msgstr "Оприлюднити файл…"
+
+#~ msgid "Delete File..."
+#~ msgstr "Вилучити файл…"
+
+#~ msgid "Account Info..."
+#~ msgstr "Дані щодо облікового запису…"
+
+#~ msgid "There is still an upload in progress."
+#~ msgstr "Вивантаження ще не завершено."
+
+#~ msgid "File to upload"
+#~ msgstr "Файл для вивантаження"
+
+#~ msgid "Type:"
+#~ msgstr "Тип:"
+
+#~ msgctxt "Name of file or folder"
+#~ msgid "Name:"
+#~ msgstr "Назва:"
+
+#~ msgid "Last Modified:"
+#~ msgstr "Востаннє змінено:"
+
+#~ msgid "Created:"
+#~ msgstr "Створено:"
+
+#~ msgid "Size:"
+#~ msgstr "Розмір:"
+
+#~ msgid "WebDav"
+#~ msgstr "WebDav"
+
+#~ msgid "WebDav Settings"
+#~ msgstr "Параметри WebDAV"
+
+#~ msgid "Service Location (e.g. https://dav.example.com/)"
+#~ msgstr "Адреса служби (наприклад https://dav.example.com/)"
+
+#~ msgid "Public location (Optional)"
+#~ msgstr "Загальнодоступна адреса (необов’язкова)"
+
+#~ msgid "Directory"
+#~ msgstr "Каталог"
+
+#~ msgid "Webdav"
+#~ msgstr "WebDAV"
+
+#~ msgid ""
+#~ "The WebDAV service allows access to any Web application that uses the "
+#~ "WebDAV protocol, such as ownCloud, Kolab, and others."
+#~ msgstr ""
+#~ "За допомогою служби WebDAV ви можете отримувати доступу до усіх інтернет-"
+#~ "програм, у яких використовується протокол WebDAV, зокрема ownCloud, Kolab."
+
+#~ msgid "Default Download Folder:"
+#~ msgstr "Типова тека для отримання файлів:"
+
+#~ msgid "%1 on %2"
+#~ msgstr "%1 на %2"
+
+#~ msgid "Size"
+#~ msgstr "Розмір"
+
+#~ msgid "Created"
+#~ msgstr "Дата створення"
+
+#~ msgid "Last Modified"
+#~ msgstr "Дата зміни"
+
+#~ msgid "Up"
+#~ msgstr "Вище"
+
+#~ msgid "Properties"
+#~ msgstr "Властивості"
+
+#~ msgid "YouSendIt"
+#~ msgstr "YouSendIt"
+
+#~ msgid ""
+#~ "Authentication failed. Server returns this error:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Не вдалося пройти розпізнавання. Сервером повернуто повідомлення про "
+#~ "помилку:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "YouSendIt is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "YouSendIt — служба зберігання файлів, що обслуговується компанією Ovh, "
+#~ "Inc. і пропонує послуги хмарного сховища, синхронізації файлів та "
+#~ "клієнтське програмне забезпечення."
+
+#~ msgid "writable:"
+#~ msgstr "придатність до запису:"
+
+#~ msgid "Yes"
+#~ msgstr "Так"
+
+#~ msgid "No"
+#~ msgstr "Ні"
+
+#~ msgid "GoogleDrive"
+#~ msgstr "GoogleDrive"
+
+#~ msgid ""
+#~ "Googledrive is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "Google Drive — служба зберігання файлів, що обслуговується компанією Ovh, "
+#~ "Inc. і пропонує послуги хмарного сховища, синхронізації файлів та "
+#~ "клієнтське програмне забезпечення."
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete"
+#~ msgstr "Вилучити"
+
+#~ msgid "&Overwrite"
+#~ msgstr "П&ерезаписати"
+
+#~ msgid "Configure engine"
+#~ msgstr "Налаштувати рушій"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Виберіть службу скорочення адрес:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Сервером повідомлено про помилку:\n"
+#~ "«%1»"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Створюємо коротку адресу…"
+
+#~ msgid "Convert"
+#~ msgstr "Перетворити"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Вставити скорочену адресу"
+
+#~ msgid "Original url:"
+#~ msgstr "Початкова адреса:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Скопіювати до буфера"
+
+#~ msgid "Short url:"
+#~ msgstr "Скорочена адреса:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Відкрити скорочену адресу"
+
+#~ msgid "No network connection detected, we cannot shorten url."
+#~ msgstr ""
+#~ "З’єднання з мережею недоступне, тому створити коротку адресу зараз не "
+#~ "можна."
+
+#~ msgid "An error occurs: \"%1\""
+#~ msgstr "Сталася помилка: «%1»"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Створити скорочену адресу"
+
+#~ msgid "&Translator"
+#~ msgstr "&Перекладач"
+
+#~ msgid "Authentication Canceled."
+#~ msgstr "Розпізнавання скасовано."
+
+#~ msgid "Spell Checking Language"
+#~ msgstr "Мова для перевірки правопису"
+
+#~ msgid ""
+#~ "End of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Досягнуто кінця повідомлення.\n"
+#~ "Не вдалося знайти фрази «%1»."
+
+#~ msgctxt "Replace text"
+#~ msgid "Replace:"
+#~ msgstr "Замінити на:"
+
+#~ msgctxt "Find text"
+#~ msgid "F&ind:"
+#~ msgstr "З&найти:"
+
+#~ msgid "Text to search for"
+#~ msgstr "Текст, який слід шукати"
+
+#~ msgctxt "Find and go to the next search match"
+#~ msgid "Next"
+#~ msgstr "Далі"
+
+#~ msgid "Jump to next match"
+#~ msgstr "Перейти до наступного збігу"
+
+#~ msgctxt "Find and go to the previous search match"
+#~ msgid "Previous"
+#~ msgstr "Назад"
+
+#~ msgid "Jump to previous match"
+#~ msgstr "Перейти до попереднього збігу"
+
+#~ msgid "Options"
+#~ msgstr "Параметри"
+
+#~ msgid "Modify search behavior"
+#~ msgstr "Змінити поведінку пошуку"
+
+#~ msgid "Case sensitive"
+#~ msgstr "З врахуванням регістру"
+
+#~ msgid "Whole word"
+#~ msgstr "Тільки цілі слова"
+
+#~ msgid "Go to Line:"
+#~ msgstr "Перейти до рядка:"
+
+#~ msgid "Go"
+#~ msgstr "Перейти"
+
+#~ msgid "Replace..."
+#~ msgstr "Замінити…"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Перевірити правопис…"
+
+#~ msgid "Auto Spell Check"
+#~ msgstr "Автоматична перевірка правопису"
+
+#~ msgid "Speak Text"
+#~ msgstr "Декламувати текст"
+
+#~ msgid "Nothing to spell check."
+#~ msgstr "Немає матеріалів для перевірки правопису."
+
+#~ msgid "Allow Tabulations"
+#~ msgstr "Дозволити табуляції"
+
+#~ msgid "Stop"
+#~ msgstr "Зупинити"
+
+#~ msgid "Pause"
+#~ msgstr "Пауза"
+
+#~ msgid "Play"
+#~ msgstr "Відтворити"
+
+#~ msgid "Configure Text-To-Speech"
+#~ msgstr "Налаштувати синтез мовлення"
+
+#~ msgid "Volume:"
+#~ msgstr "Гучність:"
+
+#~ msgid "Rate:"
+#~ msgstr "Швидкість:"
+
+#~ msgid "Pitch:"
+#~ msgstr "Тон:"
+
+#~ msgid "Language:"
+#~ msgstr "Мова:"
+
+#~ msgid "Text Files (*.txt);;All Files (*)"
+#~ msgstr "текстові файли (*.txt);;усі файли (*)"
+
+#~ msgid "Search for '%1' with"
+#~ msgstr "Шукати «%1» за допомогою"
+
+#~ msgctxt "@action:inmenu Search for <text> with"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Використовувати протокол HTTPS"
+
+#~ msgid "Use Libravatar"
+#~ msgstr "Використовувати Libravatar"
+
+#~ msgid "Fallback to Gravatar"
+#~ msgstr "Резервний Gravatar"
+
+#~ msgid "Tinyurl"
+#~ msgstr "Tinyurl"
+
+#~ msgid "Migre.Me"
+#~ msgstr "Migre.Me"
+
+#~ msgid "TriopAB"
+#~ msgstr "TriopAB"
+
+#~ msgid "Ur1Ca"
+#~ msgstr "Ur1Ca"
+
+#~ msgid "IsGd"
+#~ msgstr "IsGd"
+
+#~ msgid "Do you want to remove account '%1'?"
+#~ msgstr "Хочете вилучити обліковий запис «%1»?"
+
+#~ msgid "Remove account?"
+#~ msgstr "Вилучити запис?"
+
+#~ msgid "Incoming accounts (add at least one):"
+#~ msgstr "Вхідні облікові записи (принаймні один):"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Додати…"
+
+#~ msgid "Restart"
+#~ msgstr "Перезапустити"
+
+#~ msgid "searchbutton"
+#~ msgstr "Кнопка пошуку"
+
+#~ msgid "No suggestions for %1"
+#~ msgstr "Пропозицій для %1 не знайдено"
+
+#~ msgid "Ignore"
+#~ msgstr "Ігнорувати"
+
+#~ msgid "Add to Dictionary"
+#~ msgstr "Додати до словника"
+
+#~| msgid "Add Autocorrection Entry"
+#~ msgid "AutoCorrectionTest_Gui"
+#~ msgstr "AutoCorrectionTest_Gui"
+
+#~| msgid "Export Autocorrection File"
+#~ msgid "Test for autocorrection widget"
+#~ msgstr "Тест для віджета автоматичного виправлення"
+
+#~ msgid "richtexteditwithautocorrectionTest_Gui"
+#~ msgstr "richtexteditwithautocorrectionTest_Gui"
+
+#~ msgid "Test for richtexteditwithautocorrection"
+#~ msgstr "Тест для richtexteditwithautocorrection"
+
+#~| msgid "Select Multiple Folders"
+#~ msgid "SelectMultiCollectiontest_Gui"
+#~ msgstr "SelectMultiCollectiontest_Gui"
+
+#~ msgid "Test for selectmulticollection dialog"
+#~ msgstr "Тест для діалогового вікна selectmulticollection"
+
+#~ msgid "ShortUrlTest_Gui"
+#~ msgstr "ShortUrlTest_Gui"
+
+#~ msgid "Test for short url widget"
+#~ msgstr "Тест для віджета скороченої адреси"
+
+#~ msgid "box_Gui"
+#~ msgstr "box_Gui"
+
+#~ msgid "Test for box"
+#~ msgstr "Тест для панелі"
+
+#~ msgid "dropboxToken_Gui"
+#~ msgstr "dropboxToken_Gui"
+
+#~ msgid "Test for short dropboxtoken"
+#~ msgstr "Тест для скороченого ключа dropbox"
+
+#~ msgid "gdrive_Gui"
+#~ msgstr "gdrive_Gui"
+
+#~ msgid "Test for gdrive"
+#~ msgstr "Тест для gdrive"
+
+#~ msgid "hubic_Gui"
+#~ msgstr "hubic_Gui"
+
+#~ msgid "Test for short hubic"
+#~ msgstr "Тест для скороченого hubic"
+
+#~| msgid "&Rename"
+#~ msgid "Filename"
+#~ msgstr "Назва файла"
+
+#~| msgid "name:"
+#~ msgid "Filename:"
+#~ msgstr "Назва файла:"
+
+#~| msgid "Folder"
+#~ msgid "Folder:"
+#~ msgstr "Тека:"
+
+#~| msgid "Storage service"
+#~ msgid "storageservice_Gui"
+#~ msgstr "storageservice_Gui"
+
+#~| msgid "Storage service"
+#~ msgid "Test for storageservice"
+#~ msgstr "Тест для storageservice"
+
+#~| msgid "Webdav"
+#~ msgid "webdav_Gui"
+#~ msgstr "webdav_Gui"
+
+#~ msgid "Test for webdav"
+#~ msgstr "Тест для webdav"
+
+#~ msgid "yousendit_Gui"
+#~ msgstr "yousendit_Gui"
+
+#~ msgid "Test for short yousendit"
+#~ msgstr "Тест для скороченого yousendit"
+
+#~ msgid "PlainTextEditorTest_Gui"
+#~ msgstr "PlainTextEditorTest_Gui"
+
+#~ msgid "Test for plaintexteditor widget"
+#~ msgstr "Тест для віджета plaintexteditor"
+
+#~ msgid "RichTextEditorTest_Gui"
+#~ msgstr "RichTextEditorTest_Gui"
+
+#~ msgid "Test for richtexteditor widget"
+#~ msgstr "Тест для віджета richtexteditor"
+
+#~ msgid "texttospeechconfigdialog_Gui"
+#~ msgstr "texttospeechconfigdialog_Gui"
+
+#~ msgid "Test for config dialog text to speech"
+#~ msgstr "Тест діалогового вікна налаштовування синтезу мовлення"
+
+#~ msgid "texttospeechconfig_Gui"
+#~ msgstr "texttospeechconfig_Gui"
+
+#~ msgid "Test for config text to speech"
+#~ msgstr "Тест налаштовування синтезу мовлення"
+
+#~ msgid "Speech text"
+#~ msgstr "Вимовити текст"
+
+#~ msgid "texttospeech_Gui"
+#~ msgstr "texttospeech_Gui"
+
+#~ msgid "Test for text to speech"
+#~ msgstr "Тест синтезу мовлення"
+
+#~ msgid "texttospeechwidget_Gui"
+#~ msgstr "texttospeechwidget_Gui"
+
+#~ msgid "Test for text to speech widget"
+#~ msgstr "Тест для віджета синтезу мовлення з тексту"
+
+#~| msgid "Translator Debug"
+#~ msgid "TranslatorTest_Gui"
+#~ msgstr "TranslatorTest_Gui"
+
+#~ msgid "Test for translator widget"
+#~ msgstr "Тест для віджета перекладу"
+
+#~ msgid "CustomTextEditTest_Gui"
+#~ msgstr "CustomTextEditTest_Gui"
+
+#~ msgid "Test for customtextedit widget"
+#~ msgstr "Тест для віджета customtextedit"
+
+#~ msgid "Switch component:"
+#~ msgstr "Перемкнути компонент:"
+
+#~| msgid "Short url:"
+#~ msgid "Short url"
+#~ msgstr "Скорочена адреса"
+
+#~ msgid "CustomToolWidgetsTest_Gui"
+#~ msgstr "CustomToolWidgetsTest_Gui"
+
+#~ msgid "Test for customtoolswidget"
+#~ msgstr "Тест для customtoolswidget"
+
+#~ msgid ""
+#~ "Beginning of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Досягнуто початку повідомлення.\n"
+#~ "Не вдалося знайти фрази «%1»."
+
+#~ msgid "Starting Jovie Text-to-Speech Service Failed"
+#~ msgstr "Не вдалося запусти службу озвучування тексту Jovie"
+
+#~ msgid "UbuntuOne"
+#~ msgstr "UbuntuOne"
+
+#~ msgid "Ubuntu One"
+#~ msgstr "Ubuntu One"
+
+#~ msgid ""
+#~ "UbuntuOne is a file hosting service operated by Canonical. that offers "
+#~ "cloud storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "UbuntuOne — служба зберігання файлів, що обслуговується компанією "
+#~ "Canonical і пропонує послуги хмарного сховища, синхронізації файлів та "
+#~ "клієнтське програмне забезпечення."
+
+#~ msgid "File is public:"
+#~ msgstr "Файл є загальнодоступним:"
+
+#~ msgid "Public link:"
+#~ msgstr "Відкрите посилання:"
+
+#~ msgid "Modify"
+#~ msgstr "Змінити"
+
+#~ msgid "Last Changed:"
+#~ msgstr "Востаннє змінено:"
+
+#~ msgid "Last Modifier:"
+#~ msgstr "Востаннє змінено:"
+
+#~ msgid "Size: %1"
+#~ msgstr "Розмір: %1"
+
+#~ msgid "name: %1"
+#~ msgstr "назва: %1"
+
+#~ msgid "Search with nepomukshow..."
+#~ msgstr "Шукати за допомогою nepomukshow…"
+
+#~ msgid "Nepomuk Debug"
+#~ msgstr "Діагностика Nepomuk"
+
+#~ msgid "Search info with nepomukshow..."
+#~ msgstr "Шукати дані за допомогою nepomukshow…"
+
+#~ msgid "Sorry you don't have \"nepomukshow\" installed on your computer."
+#~ msgstr "Вибачте, на вашому комп’ютері не встановлено «nepomukshow»."
+
+#~ msgid "Sorry there is a problem with virtuoso."
+#~ msgstr "Вибачте, виникла проблема з virtuoso."
+
+#~ msgid "Error on fetching item"
+#~ msgstr "Помилка під час спроби отримання запису"
+
+#~ msgid "Search with nepomukshow"
+#~ msgstr "Шукати за допомогою nepomukshow"
+
+#~ msgid "Nepomuk id:"
+#~ msgstr "Ід. Nepomuk:"
+
+#~ msgid "Nepomuk show result"
+#~ msgstr "Результат пошуку у Nepomuk"
+
+#~ msgid "WebDav allows to access to owncloud server."
+#~ msgstr "WebDav надає доступу до сервера owncloud."
+
+#~ msgid "List Folder Failed"
+#~ msgstr "Спроба побудувати список тек зазнала невдачі"
+
+#~ msgid "Account Info Failed"
+#~ msgstr "Помилка у даних щодо облікового запису"
+
+#~ msgid "Create folder failed"
+#~ msgstr "Не вдалося створити теку"

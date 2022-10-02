@@ -1,0 +1,2737 @@
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Lliehu
+# Tommi Nieminen <translator@legisign.org>, 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: libpimcommon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:46+0000\n"
+"PO-Revision-Date: 2022-06-17 20:25+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POT-Import-Date: 2012-12-01 22:25:14+0000\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:112
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "LibreOfficen automaattikorjaus"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:116
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "KMailin/Calligran automaattikorjaus"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "Korvattava merkkijono on sama kuin etsittävä jono."
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Lisää automaattikorjausmerkintä"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:435
+#, kde-format
+msgid "&Modify"
+msgstr "&Muuta"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:438
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#, kde-format
+msgid "&Add"
+msgstr "&Lisää"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:546
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "Tuo LibreOfficen automaattikorjaukset"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "LibreOfficen automaattikorjaustiedosto (*.data)"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "Tuo KMailin automaattikorjaukset"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "KMailin automaattikorjaustiedosto (*.xml)"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:601
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr "Kieltä muutettiin: haluatko tallentaa edellisen kielen asetukset?"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:602
+#, kde-format
+msgid "Save config"
+msgstr "Tallenna asetukset"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "Tallenna muutokset ennen asetusten vientiä."
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:636
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Vie automaattikorjaustiedosto"
+
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#, kde-format
+msgid "Archive cannot be opened in read mode."
+msgstr "Arkistoa ei saatu avattua luettavaksi."
+
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#, kde-format
+msgid "Import LibreOffice Autocorrection File"
+msgstr "Tuo LibreOfficen automaattikorjaustiedosto"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:21
+#, kde-format
+msgid "Enable autocorrection"
+msgstr "Käytä automaattikorjausta"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:30
+#, kde-format
+msgid "Replacement and exception for language:"
+msgstr "Korvaus- ja poikkeussäännöt kielelle:"
+
+#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
+#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#, kde-format
+msgid "Export..."
+msgstr "Vie…"
+
+#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
+#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#, kde-format
+msgid "Import..."
+msgstr "Tuo…"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:77
+#, kde-format
+msgid "Si&mple Autocorrection"
+msgstr "&Yksinkertainen automaattikorjaus"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:83
+#, kde-format
+msgid ""
+"Detect when a new sentence is started and always ensure that the first "
+"character is an uppercase character"
+msgstr ""
+"Havaitse uuden virkkeen alku ja tarkista, että virke alkaa isolla "
+"alkukirjaimella."
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:87
+#, kde-format
+msgid ""
+"Convert &first letter of a sentence automatically to uppercase\n"
+"(e.g. \"my house. in this town\" to \"my house. In this town\")"
+msgstr ""
+"Muuta virkkeen &ensimmäinen kirjain suuraakkoseksi\n"
+"(esim. ”asuntoni. tässä kaupungissa” → ”asuntoni. Tässä kaupungissa.”)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:97
+#, kde-format
+msgid ""
+"All words are checked for the common mistake of holding the shift key down a "
+"bit too long. If some words must have two uppercase characters, then those "
+"exceptions should be added in the 'Exceptions' tab."
+msgstr ""
+"Kaikkien sanojen osalta tarkistetaan, ettei vaihtonäppäintä ole vahingossa "
+"painettu liian pitkään. Jos sana alkaa kahdella suuraakkosella, se on "
+"lisättävä Poikkeukset-välilehdelle."
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:101
+#, kde-format
+msgid ""
+"Convert &two uppercase characters to one uppercase and one lowercase "
+"character\n"
+" (e.g. PErfect to Perfect)"
+msgstr ""
+"Muuta kaksi suuraakkosta yhdeksi suur- ja yhdeksi pienaakkoseksi\n"
+" (esim. KOrjaus muotoon Korjaus)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:108
+#, kde-format
+msgid ""
+"Make sure that more than one space cannot be typed, as this is a common "
+"mistake which is quite hard to find in formatted text."
+msgstr ""
+"Tarkista, ettei välilyöntejä ole useampaa peräkkäin, koska tämä on yleinen "
+"virhe, jota muotoillusta tekstistä on vaikea havaita."
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:111
+#, kde-format
+msgid "&Suppress double spaces"
+msgstr "&Estä peräkkäiset välilyönnit"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:118
+#, kde-format
+msgid "Most standard fraction notations will be converted when available"
+msgstr "Useimmat tavalliset murto-osamerkinnät muutetaan, kun mahdollista"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:121
+#, kde-format
+msgid "Re&place 1/2... with ½..."
+msgstr "&Muuta 1/2 muotoon ½…"
+
+#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:128
+#, kde-format
+msgid "Capitalize name of days"
+msgstr "Kirjoita &viikonpäivien nimet isolla alkukirjaimella"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:135
+#, kde-format
+msgid ""
+"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
+"that matches the way an Internet browser would show a URL."
+msgstr ""
+"Havaitse verkko-osoitteet (URL) ja muuta ne muotoon, jossa verkkoselainkin "
+"ne esittää."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:138
+#, kde-format
+msgid "Autoformat &URLs (HTML mode)"
+msgstr "Muotoile verkko-&osoitteet automaattisesti (HTML-tila)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:145
+#, kde-format
+msgid ""
+"When you use _underline_ or *bold*, the text between the underscores or "
+"asterisks will be converted to underlined or bold text."
+msgstr ""
+"Käyttäessäsi _alleviivausta_ tai *lihavointia*, merkkien välissä oleva "
+"teksti alleviivataan tai lihavoidaan."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:148
+#, kde-format
+msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+msgstr "&Lihavoi, alle- ja yliviivaa automaattisesti (HTML-tila)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:155
+#, kde-format
+msgid "Replace 1st... with 1^st... (HTML mode)"
+msgstr "Yläindeksoi ”st” merkinnöissä kuten ”1st” … (HTML-tila)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:176
+#, kde-format
+msgid "Custom &Quotes"
+msgstr "Mukautetut &lainausmerkit"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:182
+#, kde-format
+msgid "Replace &double quotes with typographical quotes"
+msgstr "Korvaa &lainausmerkit typografisilla (kaarevilla) lainausmerkeillä"
+
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:193
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:233
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:360
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:374
+#, kde-format
+msgid "By Default"
+msgstr "Oletus"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:206
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
+#, kde-format
+msgid "Ending Quote:"
+msgstr "Päättävä lainausmerkki:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:253
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:353
+#, kde-format
+msgid "Opening Quote:"
+msgstr "Alkava lainausmerkki:"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
+#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:267
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:388
+#, kde-format
+msgid "Default"
+msgstr "Oletus"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
+#, kde-format
+msgid "Replace &single quotes with typographical quotes"
+msgstr ""
+"Korvaa &puolilainausmerkit typografisilla (kaarevilla) puolilainausmerkeillä"
+
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:327
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:346
+#, kde-format
+msgid "'"
+msgstr "'"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:367
+#, kde-format
+msgid "Ending Quotes:"
+msgstr "Päättävät lainausmerkit:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:412
+#, kde-format
+msgid "Add non breaking space before specific punctuation marks in French text"
+msgstr ""
+"Lisää sitova sanaväli ennen tiettyjä välimerkkejä ranskankielisessä tekstissä"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:433
+#, kde-format
+msgid "Ad&vanced Autocorrection"
+msgstr "Automaattikorjauksen lisäasetukset"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#. i18n: ectx: property (text), widget (QPushButton, remove2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
+#, kde-format
+msgid "Remove"
+msgstr "Poista"
+
+#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:476
+#, kde-format
+msgid "&Enable word replacement"
+msgstr "Käytä &sanojen korvausta"
+
+#. i18n: ectx: property (text), widget (QLabel, findLabel)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:485
+#, kde-format
+msgid "&Find"
+msgstr "&Etsi"
+
+#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
+#, kde-format
+msgid "Re&place"
+msgstr "&Korvaa"
+
+#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:537
+#, kde-format
+msgid "Find"
+msgstr "Etsi"
+
+#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:542
+#, kde-format
+msgid "Replace"
+msgstr "Korvaa"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:551
+#, kde-format
+msgid "E&xceptions"
+msgstr "&Poikkeukset"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:559
+#, kde-format
+msgid "Do not treat as the end of a sentence:"
+msgstr "Älä tulkitse virkkeen lopuksi:"
+
+#. i18n: ectx: property (text), widget (QPushButton, remove1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:582
+#, kde-format
+msgid "R&emove"
+msgstr "&Poista"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:624
+#, kde-format
+msgid "Accept two uppercase letters in:"
+msgstr "Hyväksy kaksi isoa alkukirjainta:"
+
+#. i18n: ectx: property (text), widget (QPushButton, add2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#, kde-format
+msgid "Add"
+msgstr "Lisää"
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#, kde-format
+msgid "..."
+msgstr "…"
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
+#: pimcommon/translator/translatorwidget.cpp:298
+#, kde-format
+msgid "Configure"
+msgstr "Asetukset"
+
+#: pimcommon/configureplugins/configurepluginswidget.cpp:43
+#, kde-format
+msgid "Restart is necessary for applying the changes."
+msgstr "Muutosten käyttöönotto vaatii uudelleenkäynnistyksen."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#, kde-format
+msgid "Share On..."
+msgstr "Jaa…"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#, kde-format
+msgctxt "@action:inmenu Share On..."
+msgid "%1"
+msgstr "palvelussa %1|/|$[jakomuoto %1]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#, kde-format
+msgid "Facebook"
+msgstr "Facebook|/|$[aseta jakomuoto Facebookissa]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#, kde-format
+msgid "Twitter"
+msgstr "Twitter|/|$[aseta jakomuoto Twitterissä]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#, kde-format
+msgid "Mail"
+msgstr "Sähköposti|/|$[aseta jakomuoto Sähköpostissa]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#, kde-format
+msgid "LinkedIn"
+msgstr "LinkedIn|/|$[aseta jakomuoto LinkedInissä]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#, kde-format
+msgid "Evernote"
+msgstr "Evernote|/|$[aseta jakomuoto Evernotessa]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
+#, kde-format
+msgid "Pocket"
+msgstr "Pocket|/|$[aseta jakomuoto Pocketissa]"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#, kde-format
+msgid "LiveJournal"
+msgstr "LiveJournal|/|$[aseta jakomuoto LiveJournalissa]"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Default template"
+msgstr "Oletusmallipohja"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Template"
+msgstr "Mallipohja"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#, kde-format
+msgid "Name:"
+msgstr "Nimi:"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#, kde-format
+msgid "Do you want to delete selected template?"
+msgstr "Haluatko varmasti poistaa valitun mallipohjan?"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#, kde-format
+msgid "Delete template"
+msgstr "Poista mallipohja"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#, kde-format
+msgid "Import Template"
+msgstr "Tuo mallipohja"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#, kde-format
+msgid "Export Template"
+msgstr "Vie mallipohja"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#, kde-format
+msgid "Insert template"
+msgstr "Lisää mallipohja"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#, kde-format
+msgid "Add..."
+msgstr "Lisää…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Show..."
+msgstr "Näytä…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Modify..."
+msgstr "Muuta…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#, kde-format
+msgid "Duplicate"
+msgstr "Kahdenna"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#, kde-format
+msgid "Download new Templates..."
+msgstr "Lataa uusia mallipohjia…"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "'%1' is not a template file"
+msgstr "”%1” ei ole mallipohjatiedosto"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "Load Template"
+msgstr "Lataa mallipohja"
+
+#: pimcommon/translator/engine/bingtranslator.cpp:54
+#: pimcommon/translator/translatorutil.cpp:257
+#, kde-format
+msgid "Bing"
+msgstr ""
+
+#: pimcommon/translator/engine/bingtranslator.cpp:65
+#, kde-format
+msgid "Error: Unable to find Bing credentials in web version."
+msgstr ""
+
+#: pimcommon/translator/engine/bingtranslator.cpp:73
+#, kde-format
+msgid "Error: Unable to extract Bing key from web version."
+msgstr ""
+
+#: pimcommon/translator/engine/bingtranslator.cpp:82
+#, kde-format
+msgid "Error: Unable to extract Bing token from web version."
+msgstr ""
+
+#: pimcommon/translator/engine/bingtranslator.cpp:91
+#: pimcommon/translator/engine/bingtranslator.cpp:100
+#, kde-format
+msgid "Error: Unable to extract additional Bing information from web version."
+msgstr ""
+
+#: pimcommon/translator/engine/bingtranslator.cpp:113
+#: pimcommon/translator/engine/deepltranslator.cpp:41
+#: pimcommon/translator/engine/googletranslator.cpp:106
+#: pimcommon/translator/engine/libretranslatetranslator.cpp:34
+#: pimcommon/translator/engine/lingvatranslator.cpp:36
+#: pimcommon/translator/engine/yandextranslator.cpp:167
+#, kde-format
+msgid "You used same language for from and to language."
+msgstr "Käytit samaa lähde- ja kohdekieltä."
+
+#: pimcommon/translator/engine/deepltranslator.cpp:30
+#: pimcommon/translator/translatorutil.cpp:266
+#, kde-format
+msgid "DeepL"
+msgstr ""
+
+#: pimcommon/translator/engine/googletranslator.cpp:135
+#: pimcommon/translator/translatorutil.cpp:251
+#, kde-format
+msgid "Google"
+msgstr "Google"
+
+#: pimcommon/translator/engine/libretranslatetranslator.cpp:28
+#: pimcommon/translator/translatorutil.cpp:263
+#, fuzzy, kde-format
+#| msgid "Translate"
+msgid "Libre Translate"
+msgstr "Käännä"
+
+#: pimcommon/translator/engine/lingvatranslator.cpp:30
+#: pimcommon/translator/translatorutil.cpp:260
+#, kde-format
+msgid "Lingva"
+msgstr ""
+
+#: pimcommon/translator/engine/yandextranslator.cpp:119
+#: pimcommon/translator/translatorutil.cpp:254
+#, kde-format
+msgid "Yandex"
+msgstr ""
+
+#: pimcommon/translator/engine/yandextranslator.cpp:129
+#: pimcommon/translator/translatorenginebase.cpp:83
+#, kde-format
+msgid ""
+"Error: Engine systems have detected suspicious traffic from your computer "
+"network. Please try your request again later."
+msgstr ""
+
+#: pimcommon/translator/engine/yandextranslator.cpp:138
+#, kde-format
+msgid "Error: Unable to find Yandex SID in web version."
+msgstr ""
+
+#: pimcommon/translator/engine/yandextranslator.cpp:146
+#, kde-format
+msgid "Error: Unable to extract Yandex SID from web version."
+msgstr ""
+
+#: pimcommon/translator/engine/yandextranslator.cpp:215
+#, kde-format
+msgid "Error: Unable to parse autodetected language"
+msgstr ""
+
+#: pimcommon/translator/translatorconfiguredialog.cpp:24
+#, fuzzy, kde-format
+#| msgid "Translator"
+msgctxt "@title:window"
+msgid "Configure Translator"
+msgstr "Käännösohjelma"
+
+#: pimcommon/translator/translatorconfigurewidget.cpp:33
+#, kde-format
+msgid "Engine:"
+msgstr ""
+
+#: pimcommon/translator/translatordebugdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Translator Debug"
+msgstr "Käännösohjelman virheenpaikannus"
+
+#: pimcommon/translator/translatordebugdialog.cpp:35
+#, kde-format
+msgid "Save As..."
+msgstr "Tallenna nimellä…"
+
+#: pimcommon/translator/translatordebugdialog.cpp:74
+#, kde-format
+msgid "All Files (*)"
+msgstr "Kaikki tiedostot (*)"
+
+#: pimcommon/translator/translatorutil.cpp:28
+#, kde-format
+msgid "Detect language"
+msgstr "Tunnista kieli"
+
+#: pimcommon/translator/translatorutil.cpp:31
+#, kde-format
+msgid "English"
+msgstr "Englanti"
+
+#: pimcommon/translator/translatorutil.cpp:34
+#: pimcommon/translator/translatorutil.cpp:97
+#, kde-format
+msgid "Chinese (Simplified)"
+msgstr "Kiina (yksinkertaistettu)"
+
+#: pimcommon/translator/translatorutil.cpp:37
+#: pimcommon/translator/translatorutil.cpp:100
+#, kde-format
+msgid "Chinese (Traditional)"
+msgstr "Kiina (perinteinen)"
+
+#: pimcommon/translator/translatorutil.cpp:40
+#, kde-format
+msgid "Dutch"
+msgstr "Hollanti"
+
+#: pimcommon/translator/translatorutil.cpp:43
+#, kde-format
+msgid "French"
+msgstr "Ranska"
+
+#: pimcommon/translator/translatorutil.cpp:46
+#, kde-format
+msgid "German"
+msgstr "Saksa"
+
+#: pimcommon/translator/translatorutil.cpp:49
+#, kde-format
+msgid "Greek"
+msgstr "Kreikka"
+
+#: pimcommon/translator/translatorutil.cpp:52
+#, kde-format
+msgid "Italian"
+msgstr "Italia"
+
+#: pimcommon/translator/translatorutil.cpp:55
+#, kde-format
+msgid "Japanese"
+msgstr "Japani"
+
+#: pimcommon/translator/translatorutil.cpp:58
+#, kde-format
+msgid "Korean"
+msgstr "Korea"
+
+#: pimcommon/translator/translatorutil.cpp:61
+#, kde-format
+msgid "Portuguese"
+msgstr "Portugali"
+
+#: pimcommon/translator/translatorutil.cpp:64
+#, kde-format
+msgid "Russian"
+msgstr "Venäjä"
+
+#: pimcommon/translator/translatorutil.cpp:67
+#, kde-format
+msgid "Spanish"
+msgstr "Espanja"
+
+#: pimcommon/translator/translatorutil.cpp:70
+#, kde-format
+msgid "Afrikaans"
+msgstr "Afrikaans"
+
+#: pimcommon/translator/translatorutil.cpp:73
+#, kde-format
+msgid "Albanian"
+msgstr "Albania"
+
+#: pimcommon/translator/translatorutil.cpp:76
+#, kde-format
+msgid "Arabic"
+msgstr "Arabia"
+
+#: pimcommon/translator/translatorutil.cpp:79
+#, kde-format
+msgid "Armenian"
+msgstr "Armenia"
+
+#: pimcommon/translator/translatorutil.cpp:82
+#, kde-format
+msgid "Azerbaijani"
+msgstr "Azeri"
+
+#: pimcommon/translator/translatorutil.cpp:85
+#, kde-format
+msgid "Basque"
+msgstr "Baski"
+
+#: pimcommon/translator/translatorutil.cpp:88
+#, kde-format
+msgid "Belarusian"
+msgstr "Valkovenäjä"
+
+#: pimcommon/translator/translatorutil.cpp:91
+#, kde-format
+msgid "Bulgarian"
+msgstr "Bulgaria"
+
+#: pimcommon/translator/translatorutil.cpp:94
+#, kde-format
+msgid "Catalan"
+msgstr "Katalaani"
+
+#: pimcommon/translator/translatorutil.cpp:103
+#, kde-format
+msgid "Croatian"
+msgstr "Kroaatti"
+
+#: pimcommon/translator/translatorutil.cpp:106
+#, kde-format
+msgid "Czech"
+msgstr "Tšekki"
+
+#: pimcommon/translator/translatorutil.cpp:109
+#, kde-format
+msgid "Danish"
+msgstr "Tanska"
+
+#: pimcommon/translator/translatorutil.cpp:112
+#, kde-format
+msgid "Estonian"
+msgstr "Viro"
+
+#: pimcommon/translator/translatorutil.cpp:115
+#, kde-format
+msgid "Filipino"
+msgstr "Filippiini"
+
+#: pimcommon/translator/translatorutil.cpp:118
+#, kde-format
+msgid "Finnish"
+msgstr "Suomi"
+
+#: pimcommon/translator/translatorutil.cpp:121
+#, kde-format
+msgid "Galician"
+msgstr "Galicia"
+
+#: pimcommon/translator/translatorutil.cpp:124
+#, kde-format
+msgid "Georgian"
+msgstr "Georgia"
+
+#: pimcommon/translator/translatorutil.cpp:127
+#, kde-format
+msgid "Haitian Creole"
+msgstr "Haitin kreoli"
+
+#: pimcommon/translator/translatorutil.cpp:130
+#, kde-format
+msgid "Hebrew"
+msgstr "Heprea"
+
+#: pimcommon/translator/translatorutil.cpp:133
+#, kde-format
+msgid "Hindi"
+msgstr "Hindi"
+
+#: pimcommon/translator/translatorutil.cpp:136
+#, kde-format
+msgid "Hungarian"
+msgstr "Unkari"
+
+#: pimcommon/translator/translatorutil.cpp:139
+#, kde-format
+msgid "Icelandic"
+msgstr "Islanti"
+
+#: pimcommon/translator/translatorutil.cpp:142
+#, kde-format
+msgid "Indonesian"
+msgstr "Indonesia"
+
+#: pimcommon/translator/translatorutil.cpp:145
+#, kde-format
+msgid "Irish"
+msgstr "Iiri"
+
+#: pimcommon/translator/translatorutil.cpp:148
+#, kde-format
+msgid "Latvian"
+msgstr "Latvia"
+
+#: pimcommon/translator/translatorutil.cpp:151
+#, kde-format
+msgid "Lithuanian"
+msgstr "Liettua"
+
+#: pimcommon/translator/translatorutil.cpp:154
+#, kde-format
+msgid "Macedonian"
+msgstr "Makedonia"
+
+#: pimcommon/translator/translatorutil.cpp:157
+#, kde-format
+msgid "Malay"
+msgstr "Malaiji"
+
+#: pimcommon/translator/translatorutil.cpp:160
+#, kde-format
+msgid "Maltese"
+msgstr "Malta"
+
+#: pimcommon/translator/translatorutil.cpp:163
+#, kde-format
+msgid "Norwegian"
+msgstr "Norja"
+
+#: pimcommon/translator/translatorutil.cpp:166
+#, kde-format
+msgid "Persian"
+msgstr "Persia"
+
+#: pimcommon/translator/translatorutil.cpp:169
+#, kde-format
+msgid "Polish"
+msgstr "Puola"
+
+#: pimcommon/translator/translatorutil.cpp:172
+#, kde-format
+msgid "Romanian"
+msgstr "Romania"
+
+#: pimcommon/translator/translatorutil.cpp:175
+#, kde-format
+msgid "Serbian"
+msgstr "Serbia"
+
+#: pimcommon/translator/translatorutil.cpp:178
+#, kde-format
+msgid "Slovak"
+msgstr "Slovakki"
+
+#: pimcommon/translator/translatorutil.cpp:181
+#, kde-format
+msgid "Slovenian"
+msgstr "Sloveeni"
+
+#: pimcommon/translator/translatorutil.cpp:184
+#, kde-format
+msgid "Swahili"
+msgstr "Swahili"
+
+#: pimcommon/translator/translatorutil.cpp:187
+#, kde-format
+msgid "Swedish"
+msgstr "Ruotsi"
+
+#: pimcommon/translator/translatorutil.cpp:190
+#, kde-format
+msgid "Thai"
+msgstr "Thai"
+
+#: pimcommon/translator/translatorutil.cpp:193
+#, kde-format
+msgid "Turkish"
+msgstr "Turkki"
+
+#: pimcommon/translator/translatorutil.cpp:196
+#, kde-format
+msgid "Ukrainian"
+msgstr "Ukraina"
+
+#: pimcommon/translator/translatorutil.cpp:199
+#, kde-format
+msgid "Urdu"
+msgstr "Urdu"
+
+#: pimcommon/translator/translatorutil.cpp:202
+#, kde-format
+msgid "Vietnamese"
+msgstr "Vietnam"
+
+#: pimcommon/translator/translatorutil.cpp:205
+#, kde-format
+msgid "Welsh"
+msgstr "Kymri"
+
+#: pimcommon/translator/translatorutil.cpp:208
+#, kde-format
+msgid "Yiddish"
+msgstr "Jiddiš"
+
+#: pimcommon/translator/translatorwidget.cpp:127
+#, kde-format
+msgid "Problem when connecting to the translator web site."
+msgstr "Ongelma yhdistettäessä käännössivustoon."
+
+#: pimcommon/translator/translatorwidget.cpp:229
+#: pimcommon/translator/translatorwidget.cpp:232
+#, kde-format
+msgid "Close"
+msgstr "Sulje"
+
+#: pimcommon/translator/translatorwidget.cpp:238
+#, kde-format
+msgctxt "Translate from language"
+msgid "From:"
+msgstr "Kielestä:"
+
+#: pimcommon/translator/translatorwidget.cpp:245
+#, kde-format
+msgctxt "Translate to language"
+msgid "To:"
+msgstr "Kieleen:"
+
+#: pimcommon/translator/translatorwidget.cpp:257
+#, kde-format
+msgctxt "Invert language choices so that from becomes to and to becomes from"
+msgid "Invert"
+msgstr "Vaihda suuntaa"
+
+#: pimcommon/translator/translatorwidget.cpp:262
+#: pimcommon/translator/translatorwidget.cpp:265
+#, kde-format
+msgid "Clear"
+msgstr "Tyhjennä"
+
+#: pimcommon/translator/translatorwidget.cpp:270
+#: pimcommon/translator/translatorwidget.cpp:273
+#, kde-format
+msgid "Translate"
+msgstr "Käännä"
+
+#: pimcommon/translator/translatorwidget.cpp:280
+#, kde-format
+msgid "Debug"
+msgstr "Paikanna virheitä"
+
+#: pimcommon/translator/translatorwidget.cpp:314
+#, kde-format
+msgid ""
+"Drag text that you want to translate. (Be careful text will be send to "
+"Google Server)."
+msgstr ""
+"Vedä käännettävä teksti tähän. (Varoitus: teksti lähetetään Googlen "
+"palvelimelle.)"
+
+#: pimcommon/translator/translatorwidget.cpp:395
+#, kde-format
+msgid "No network connection detected, we cannot translate text."
+msgstr "Verkkoyhteyttä ei havaittu, tekstiä ei voi kääntää."
+
+#: pimcommon/translator/translatorwidget.cpp:395
+#, kde-format
+msgid "No network"
+msgstr "Ei verkkoyhteyttä"
+
+#: pimcommon/translator/translatorwidget.cpp:434
+#, kde-format
+msgid "Translate error"
+msgstr "Kääntämisvirhe"
+
+#: pimcommon/util/pimutil.cpp:48
+#, kde-format
+msgid ""
+"Could not write the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Tiedostoa %1 ei voitu kirjoittaa:\n"
+"Virheen tarkka kuvaus on ”%2”."
+
+#: pimcommon/util/pimutil.cpp:52
+#, kde-format
+msgid "Save File Error"
+msgstr "Tiedoston tallennusvirhe"
+
+#: pimcommon/util/pimutil.cpp:86
+#, kde-format
+msgid ""
+"Could not read the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Tiedostoa %1 ei voitu lukea:\n"
+"Virheen tarkka kuvaus on ”%2”."
+
+#: pimcommon/util/pimutil.cpp:90
+#, kde-format
+msgid "Load File Error"
+msgstr "Tiedoston latausvirhe"
+
+#: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
+#, kde-format
+msgid ""
+"<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
+"this is an error, please contact him.</p></qt>"
+msgstr ""
+"<qt><p>Ylläpitäjä on kiinnittänyt tämän asetuksen.</p><p>Jos kyseessä on "
+"virhe, ota yhteyttä ylläpitäjään.</p></qt>"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:27
+#, kde-format
+msgid "Change Case"
+msgstr "Vaihda aakkoslajia"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:28
+#, kde-format
+msgid "Uppercase"
+msgstr "Suuraakkoset"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:31
+#, kde-format
+msgid "Sentence case"
+msgstr "Virkkeen kirjoitusasu"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:34
+#, kde-format
+msgid "Lowercase"
+msgstr "Pienaakkoset"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:37
+#, kde-format
+msgid "Reverse Case"
+msgstr "Käänteinen aakkoslaji"
+
+#: pimcommon/widgets/lineeditwithcompleterng.cpp:44
+#, kde-format
+msgid "Clear History"
+msgstr "Tyhjennä historia"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "There was a problem sharing the document: %1"
+msgstr "Kohdattiin ongelma jaettaessa tiedostoa: %1"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "Share"
+msgstr "Jaa"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:58
+#, kde-format
+msgid "File was shared."
+msgstr "Tiedosto on jaettu."
+
+#: pimcommon/widgets/purposemenuwidget.cpp:61
+#, kde-format
+msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
+msgstr "<qt>Löydät uuden pyynnön osoitteesta:<br /><a href='%1'>%1</a> </qt>"
+
+#: pimcommon/widgets/renamefiledialog.cpp:100
+#, kde-format
+msgctxt "@title:window"
+msgid "File Already Exists"
+msgstr "Tiedosto on jo olemassa"
+
+#: pimcommon/widgets/renamefiledialog.cpp:103
+#, kde-kuit-format
+msgid ""
+"A file named <filename>%1</filename> already exists. Do you want to "
+"overwrite it?"
+msgstr ""
+"Tiedosto nimeltä <filename>%1</filename> on jo olemassa. Haluatko korvata "
+"sen?"
+
+#: pimcommon/widgets/renamefiledialog.cpp:113
+#, kde-format
+msgid "Suggest New &Name"
+msgstr "Ehdota &uutta nimeä"
+
+#: pimcommon/widgets/renamefiledialog.cpp:121
+#, kde-format
+msgid "&Ignore"
+msgstr "&Ohita"
+
+#: pimcommon/widgets/renamefiledialog.cpp:124
+#, kde-format
+msgid "&Rename"
+msgstr "M&uuta nimeä"
+
+#: pimcommon/widgets/renamefiledialog.cpp:134
+#, kde-format
+msgid "Appl&y to All"
+msgstr "K&äytä kaikkiin"
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "This filename \"%1\" already exists."
+msgstr "Tiedostonimi ”%1” on jo olemassa."
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "File already exists"
+msgstr "Tiedosto on jo olemassa"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#, kde-format
+msgid "New entry:"
+msgstr "Uusi tietue:"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:57
+#, kde-format
+msgid "New Value"
+msgstr "Uusi arvo"
+
+# *** TARKISTA: ID tuntuu johtavan harhaan. Viesti näytetään, kun painaa Poista-painiketta asetusten kohdassa KMailin asetukset > Kirjoittaminen > Merkistö jokin luettelon merkistöistä valittuna. Korjataan muuksi, jos tätä käytetään jossain muuallakin
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#, kde-format
+msgid "Do you want to remove selected text?"
+msgstr "Haluatko poistaa valitun merkistökoodauksen?"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#, kde-format
+msgid "&Add..."
+msgstr "&Lisää…"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#, kde-format
+msgid "&Modify..."
+msgstr "&Muuta…"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#, kde-format
+msgid "&Remove"
+msgstr "&Poista"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#, kde-format
+msgid "&Customize..."
+msgstr "M&ukauta…"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#, kde-format
+msgid "&User identifier:"
+msgstr "&Käyttäjätunniste:"
+
+# Puolipisteen jälkeinen selitysosuus ei kyllä selitä mitään (kummallakaan kielellä!) :D
+#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The User Identifier is the login of the user on the IMAP server. This can be "
+"a simple user name or the full email address of the user; the login for your "
+"own account on the server will tell you which one it is."
+msgstr ""
+"Käyttäjätunniste tarkoittaa IMAP-palvelimen käyttäjätunnusta. Se voi olla "
+"yksinkertainen tunnus tai käyttäjän koko sähköpostiosoite; "
+"kirjautumistunnuksesi palvelimeen kertoo, kumpi."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#, kde-format
+msgctxt "select an email address"
+msgid "Se&lect..."
+msgstr "&Valitse…"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#, kde-format
+msgid "Permissions"
+msgstr "Oikeudet"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#, kde-format
+msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
+msgstr ""
+"<b>Huomio:</b> Nimen muuttaminen edellyttää kirjoitusoikeuksia ylempään "
+"kansioon."
+
+#: pimcommonakonadi/acl/acllistview.cpp:50
+#, kde-format
+msgid "Folder cannot be administrated."
+msgstr "Kansiota ei voida hallinnoida."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:159
+#, kde-format
+msgid "Add Entry..."
+msgstr "Lisää merkintä…"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:164
+#, kde-format
+msgid "Edit Entry..."
+msgstr "Muokkaa merkintää…"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:170
+#, kde-format
+msgid "Remove Entry"
+msgstr "Poista merkintä"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:212
+#, kde-format
+msgctxt "@title:window"
+msgid "Add ACL"
+msgstr "Lisää ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:239
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit ACL"
+msgstr "Muokkaa ACL:ää"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:279
+#, kde-format
+msgid ""
+"Do you really want to remove your own permissions for this folder? You will "
+"not be able to access it afterwards."
+msgstr ""
+"Haluatko varmasti poistaa omat oikeutesi tähän kansioon? Et pääse siihen "
+"käsiksi enää myöhemmin."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#, kde-format
+msgid "Do you really want to remove these permissions for this folder?"
+msgstr "Haluatko varmasti poistaa nämä oikeudet tähän kansioon?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
+#, kde-format
+msgid ""
+"Do you really want to apply the folder's permissions to these subfolders?"
+msgstr "Haluatko varmasti käyttää kansion oikeuksia näihin alikansioihin?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#, kde-format
+msgid "Apply Permissions"
+msgstr "Käytä oikeuksia"
+
+#: pimcommonakonadi/acl/aclutils.cpp:19
+msgctxt "Permissions"
+msgid "None"
+msgstr "Ei mitään"
+
+#: pimcommonakonadi/acl/aclutils.cpp:21
+msgctxt "Permissions"
+msgid "Read"
+msgstr "Luku"
+
+#: pimcommonakonadi/acl/aclutils.cpp:23
+msgctxt "Permissions"
+msgid "Append"
+msgstr "Lisäys"
+
+#: pimcommonakonadi/acl/aclutils.cpp:27
+msgctxt "Permissions"
+msgid "Write"
+msgstr "Kirjoitus"
+
+#: pimcommonakonadi/acl/aclutils.cpp:31
+msgctxt "Permissions"
+msgid "All"
+msgstr "Kaikki"
+
+#: pimcommonakonadi/acl/aclutils.cpp:66
+#, kde-format
+msgid "Custom Permissions (%1)"
+msgstr "Mukautetut oikeudet (%1)"
+
+#: pimcommonakonadi/acl/collectionaclpage.cpp:32
+#, kde-format
+msgid "Access Control"
+msgstr "Käyttöluvat"
+
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
+#, kde-format
+msgid "Apply permissions on all &subfolders."
+msgstr "Käytä oikeuksia kaikkiin &alikansioihin."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#, kde-format
+msgid "vCard Import Failed"
+msgstr "vCard-tuonti epäonnistui"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#, kde-format
+msgid "<qt>Unable to access <b>%1</b>.</qt>"
+msgstr "<qt>Ei pääsyä kohteeseen <b>%1</b>.</qt>"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#, kde-format
+msgid "Select email from contact"
+msgstr "Valitse yhteystiedon sähköposti"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#, kde-format
+msgid "Show Organization Unit for LDAP results"
+msgstr "Näytä LDAP-tuloksille organisaatioyksikkö"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#, kde-format
+msgid "Configure Completion..."
+msgstr "Täydennysasetukset…"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#, kde-format
+msgid "Automatically expand groups"
+msgstr "Laajenna ryhmät automaattisesti"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#, kde-format
+msgid "Expand Groups..."
+msgstr "Laajenna ryhmät…"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
+#, kde-format
+msgid "Recent Addresses"
+msgstr "Viimeaikaiset osoitteet"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#, kde-format
+msgctxt "@title:group"
+msgid "Contacts found in your data"
+msgstr "Tiedoistasi löytyneet yhteystiedot"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#, kde-format
+msgid "LDAP server: %1"
+msgstr "LDAP-palvelin: %1"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#, kde-format
+msgid "Search email:"
+msgstr "Etsi sähköpostia:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr "Haku alkaa 3 merkistä"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:48
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
+#, kde-format
+msgid "Search"
+msgstr "Etsi"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr "Näytä estetyt sähköpostit"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:75
+#, kde-format
+msgid "&Select"
+msgstr "&Valitse"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:80
+#, kde-format
+msgid "&Unselect"
+msgstr "P&oista valinta"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
+#, kde-format
+msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Lisää tuloksia…</a></qt>"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
+#, kde-format
+msgid "Search in result..."
+msgstr "Etsi tuloksista…"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#, kde-format
+msgid "Exclude domain names:"
+msgstr "Sulje pois verkkoalueet:"
+
+# *** TARKISTA: Mitä %1 on, merkki vai jotain muuta?
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#, kde-format
+msgid "Separate domain with '%1'"
+msgstr "Erota verkkoalueet merkillä ”%1”"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#, kde-format
+msgid "No email found."
+msgstr "Sähköpostia ei löydy."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#, kde-format
+msgid "1 email found"
+msgid_plural "%1 emails found"
+msgstr[0] "Löytyi 1 sähköposti"
+msgstr[1] "Löytyi %1 sähköpostia"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:121
+#, kde-format
+msgid "No result found"
+msgstr "Tuloksia ei löytynyt"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
+#, kde-format
+msgid ""
+"The list was changed. Do you want to save before to make another search ?"
+msgstr ""
+"Luettelo on muuttunut. Haluatko tallentaa muutokset ennen seuraavaa hakua?"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
+#, kde-format
+msgid "Save"
+msgstr "Tallenna"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Completion"
+msgstr "Täydennysasetukset"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#, kde-format
+msgid "Completion Order"
+msgstr "Täydennysjärjestys"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#, kde-format
+msgid "Recent Address"
+msgstr "Viimeaikaiset osoitteet"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#, kde-format
+msgid "Blacklist Email Address"
+msgstr "Estä sähköpostiosoitteita"
+
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Completion Order"
+msgstr "Muuta täydennysjärjestystä"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
+#, kde-format
+msgid "LDAP server %1"
+msgstr "LDAP-palvelin %1"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
+#, kde-format
+msgid "Move Up"
+msgstr "Siirrä ylemmäs"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
+#, kde-format
+msgid "Move Down"
+msgstr "Siirrä alemmas"
+
+# *** TARKISTA: ID tuntuu johtavan harhaan. Viesti näytetään, kun painaa Poista-painiketta asetusten kohdassa KMailin asetukset > Kirjoittaminen > Merkistö jokin luettelon merkistöistä valittuna. Korjataan muuksi, jos tätä käytetään jossain muuallakin
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgid_plural "Do you want to remove %1 email addresses?"
+msgstr[0] "Haluatko poistaa tämän sähköpostiosoitteen?"
+msgstr[1] "Haluatko poistaa %1 sähköpostiosoitetta?"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
+#, kde-format
+msgctxt "type of folder content"
+msgid "Mail"
+msgstr "Sähköposti"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
+#, kde-format
+msgctxt "type of folder content"
+msgid "Calendar"
+msgstr "Kalenteri"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
+#, kde-format
+msgctxt "type of folder content"
+msgid "Contacts"
+msgstr "Yhteystiedot"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
+#, kde-format
+msgctxt "type of folder content"
+msgid "Notes"
+msgstr "Muistiinpanot"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
+#, kde-format
+msgctxt "type of folder content"
+msgid "Tasks"
+msgstr "Tehtävät"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
+#, kde-format
+msgctxt "type of folder content"
+msgid "Journal"
+msgstr "Päiväkirja"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
+#, kde-format
+msgctxt "type of folder content"
+msgid "Configuration"
+msgstr "Asetukset"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
+#, kde-format
+msgctxt "type of folder content"
+msgid "Freebusy"
+msgstr "Varaustiedot"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
+#, kde-format
+msgctxt "type of folder content"
+msgid "Files"
+msgstr "Tiedostot"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#, kde-format
+msgctxt "type of folder content"
+msgid "Unknown"
+msgstr "Tuntematon"
+
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
+#, kde-format
+msgid "&Folder contents:"
+msgstr "&Kansion sisältö:"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
+#, kde-format
+msgid "Nobody"
+msgstr "Ei kenellekään"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
+#, kde-format
+msgid "Admins of This Folder"
+msgstr "Kansion ylläpitäjille"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#, kde-format
+msgid "All Readers of This Folder"
+msgstr "Kaikille kansiota lukeville"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
+#, kde-format
+msgid ""
+"This setting defines which users sharing this folder should get \"busy\" "
+"periods in their freebusy lists and should see the alarms for the events or "
+"tasks in this folder. The setting applies to Calendar and Task folders only "
+"(for tasks, this setting is only used for alarms).\n"
+"\n"
+"Example use cases: if the boss shares a folder with his secretary, only the "
+"boss should be marked as busy for his meetings, so he should select \"Admins"
+"\", since the secretary has no admin rights on the folder.\n"
+"On the other hand if a working group shares a Calendar for group meetings, "
+"all readers of the folders should be marked as busy for meetings.\n"
+"A company-wide folder with optional events in it would use \"Nobody\" since "
+"it is not known who will go to those events."
+msgstr ""
+"Tämä asetus määrittää kansiota jakavat käyttäjät, joiden tulisi saada "
+"varausmerkinnät varaustietoihinsa ja nähdä kansion tapahtumien tai tehtävien "
+"hälytykset. Asetus vaikuttaa vain kalenteriin ja tehtäväkansioihin; "
+"tehtävissä asetus vaikuttaa vain hälytyksiin.\n"
+"\n"
+"Käyttöesimerkki: jos johtaja jakaa kansion sihteerinsä kanssa, vain johtaja "
+"tulisi merkitä varatuksi tapaamisiinsa, joten hänen tulee valita "
+"”Ylläpitäjät”, koska sihteerillä ei ole kansion ylläpito-oikeuksia.\n"
+"Toisaalta jos työryhmä jakaa kalenterin ryhmätapaamisia varten, kaikki "
+"kansiota lukevat tulee merkitä varatuiksi tapaamisajaksi.\n"
+"Vapaaehtoisia tapahtumia sisältävässä koko yrityksen kansiossa asetus olisi "
+"”ei kenellekään”, koska ei ole tiedossa, kuka tapahtumiin osallistuu."
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#, kde-format
+msgid "Generate free/&busy and activate alarms for:"
+msgstr "Luo &varaustiedot ja ota hälytykset käyttöön:"
+
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#, kde-format
+msgid "Search..."
+msgstr "Etsi…"
+
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Multiple Folders"
+msgstr "Valitse useita kansioita"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Title"
+msgstr "Otsikko"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
+#, kde-format
+msgid "Full Name"
+msgstr "Koko nimi"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Email"
+msgstr "Sähköposti"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#, kde-format
+msgid "Home Number"
+msgstr "Kotinumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#, kde-format
+msgid "Work Number"
+msgstr "Työnumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#, kde-format
+msgid "Mobile Number"
+msgstr "Mobiilinumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#, kde-format
+msgid "Fax Number"
+msgstr "Faksinumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
+#, kde-format
+msgid "Pager"
+msgstr "Hakulaite"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#, kde-format
+msgid "Street"
+msgstr "Katu"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "State"
+msgstr "Tila"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#, kde-format
+msgid "Country"
+msgstr "Maa"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#, kde-format
+msgid "City"
+msgstr "Kaupunki"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#, kde-format
+msgid "Organization"
+msgstr "Organisaatio"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#, kde-format
+msgid "Company"
+msgstr "Yritys"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#, kde-format
+msgid "Department"
+msgstr "Osasto"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#, kde-format
+msgid "Zip Code"
+msgstr "Postinumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#, kde-format
+msgid "Postal Address"
+msgstr "Postiosoite"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#, kde-format
+msgid "Description"
+msgstr "Kuvaus"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#, kde-format
+msgid "User ID"
+msgstr "Käyttäjätunniste"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#, kde-format
+msgctxt "@title:column Column containing email addresses"
+msgid "Email"
+msgstr "Sähköposti"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#, kde-format
+msgctxt "@title:column Column containing the residential state of the address"
+msgid "State"
+msgstr "Tila"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#, kde-format
+msgctxt "@title:column Column containing title of the person"
+msgid "Title"
+msgstr "Otsikko"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Contacts from LDAP"
+msgstr "Tuo yhteystietoja LDAPista"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
+#, kde-format
+msgid "Search for Addresses in Directory"
+msgstr "Etsi osoitteita hakemistosta"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
+#, kde-format
+msgid "Search for:"
+msgstr "Etsi:"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#, kde-format
+msgctxt "In LDAP attribute"
+msgid "in"
+msgstr "määritteestä"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
+#, kde-format
+msgctxt "@item:inlistbox Name of the contact"
+msgid "Name"
+msgstr "Nimi"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
+#, kde-format
+msgctxt "@item:inlistbox email address of the contact"
+msgid "Email"
+msgstr "Sähköposti"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Home Number"
+msgstr "Kotinumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Work Number"
+msgstr "Työnumero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#, kde-format
+msgctxt "@action:button Start searching"
+msgid "&Search"
+msgstr "&Etsi"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#, kde-format
+msgid "Recursive search"
+msgstr "Rekursiivinen haku"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#, kde-format
+msgid "Contains"
+msgstr "Sisältää"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
+#, kde-format
+msgid "Starts With"
+msgstr "Alkaa"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
+#, kde-format
+msgid "Search in result"
+msgstr "Etsi tuloksista"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
+#, kde-format
+msgid "Searching..."
+msgstr "Etsitään…"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
+#, kde-format
+msgid "Select All"
+msgstr "Valitse kaikki"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
+#, kde-format
+msgid "Unselect All"
+msgstr "Poista kaikki valinnat"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
+#, kde-format
+msgid "Add Selected"
+msgstr "Lisää valitut"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
+#, kde-format
+msgid "Configure LDAP Servers..."
+msgstr "LDAP-palvelinasetukset…"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
+#, kde-format
+msgid "Copy"
+msgstr "Kopioi"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
+#, kde-format
+msgid "You must select an LDAP server before searching."
+msgstr "LDAP-palvelin on valittava ennen hakua."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#, kde-format
+msgctxt "arguments are host name, datetime"
+msgid "Imported from LDAP directory %1 on %2"
+msgstr "Tuotu LDAP-hakemistosta %1 %2"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure the Address Book LDAP Settings"
+msgstr "Osoitekirjan LDAP-asetukset"
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
+#, kde-format
+msgid ""
+"IMAP server not configured yet. Please configure the server in the IMAP "
+"account before setting up server-side subscription."
+msgstr ""
+"IMAP-palvelinta ei ole vielä asetettu. Aseta IMAP-tilin palvelin ennen "
+"palvelinpuolen tilausten asettamista."
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
+#, kde-format
+msgid ""
+"Log in failed, please configure the IMAP account before setting up server-"
+"side subscription."
+msgstr ""
+"Kirjautuminen epäonnistui. Aseta IMAP-tili ennen palvelinpuolen tilausten "
+"asettamista."
+
+#: pimcommonakonadi/util/createresource.cpp:64
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "Tyypin ”%1” resurssi ei ole käytettävissä."
+
+#: pimcommonakonadi/util/createresource.cpp:75
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Resurssi ”%1” on jo asetettu."
+
+#: pimcommonakonadi/util/createresource.cpp:81
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Luodaan resurssi-instanssia kohteelle ”%1”…"
+
+#: pimcommonakonadi/util/createresource.cpp:87
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Asetetaan resurssi-instanssia…"
+
+#: pimcommonakonadi/util/createresource.cpp:90
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Resurssi-instanssia ei voida määrittää."
+
+#: pimcommonakonadi/util/createresource.cpp:106
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "Asetuksen ”%1” arvoa ei voi muuntaa vaadittuun tyyppiin %2."
+
+#: pimcommonakonadi/util/createresource.cpp:112
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Asetusta ”%1” ei voida asettaa: %2"
+
+#: pimcommonakonadi/util/createresource.cpp:118
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Asetuksia ei voitu tallentaa: %1"
+
+#: pimcommonakonadi/util/createresource.cpp:127
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Resurssin asetus valmis."
+
+#: pimcommonakonadi/util/createresource.cpp:131
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Note"
+msgstr "Muokkaa muistiinpanoa"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Note"
+msgstr "Poista muistiinpano"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Note"
+msgstr "Lisää muistiinpano"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#, kde-format
+msgid "Enter the text that should be stored as a note to the mail:"
+msgstr "Anna teksti, joka tulisi tallentaa viestiisi muistiinpanoksi:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Note type:"
+msgstr "Muistiinpanon tyyppi:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Private note"
+msgstr "Yksityinen muistiinpano"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Shared note"
+msgstr "Jaettu muistiinpano"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#, kde-format
+msgid "Do you really want to delete this note?"
+msgstr "Haluatko varmasti poistaa tämän muistiinpanon?"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Note"
+msgstr "Poista muistiinpano"
+
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note?"
+#~ msgstr "Poistetaanko muistiinpano?"
+
+#~ msgid "Log activities"
+#~ msgstr "Vie toimenpiteet lokiin"
+
+#~ msgctxt "@title:window"
+#~ msgid "Log activities"
+#~ msgstr "Vie toimenpiteet lokiin"
+
+#~ msgid "Share..."
+#~ msgstr "Jaa…"
+
+#~ msgctxt "@title:window"
+#~ msgid "Save Log"
+#~ msgstr "Tallenna loki"
+
+#~ msgid "Change Value"
+#~ msgstr "Muuta arvoa"
+
+#~ msgid "Google Plus"
+#~ msgstr "Google+|/|$[aseta jakomuoto 'Google+:ssa']"
+
+#~ msgid "Authorize"
+#~ msgstr "Tunnistaudu"
+
+#~ msgid "Username:"
+#~ msgstr "Käyttäjätunnus:"
+
+#~ msgid "Password:"
+#~ msgstr "Salasana:"
+
+#~ msgid "Authorization canceled."
+#~ msgstr "Tunnistautuminen peruttiin."
+
+#~ msgid "Unknown Error \"%1\""
+#~ msgstr "Tuntematon virhe ”%1”"
+
+#~ msgid "Box"
+#~ msgstr "Box"
+
+#~ msgid ""
+#~ "Box.com is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "Box.com on pilvitallennuksen, tiedostojen synkronoinnin ja "
+#~ "asiakasohjelman tarjoava tiedostopalvelu."
+
+#~ msgid "Folder"
+#~ msgstr "Kansio"
+
+#~ msgid "New name"
+#~ msgstr "Uusi nimi"
+
+#~ msgid "Some characters are not allowed."
+#~ msgstr "Joitakin merkkejä ei sallita."
+
+#~ msgid "New name:"
+#~ msgstr "Uusi nimi:"
+
+#~ msgid "Some characters (%1) are not allowed."
+#~ msgstr "Joitakin merkkejä (%1) ei sallita."
+
+#~ msgid "Delete"
+#~ msgstr "Poista"
+
+#~ msgid "Delete File"
+#~ msgstr "Poista tiedosto"
+
+#~ msgid "Delete Folder"
+#~ msgstr "Poista kansio"
+
+#~ msgid "Delete Files"
+#~ msgstr "Poista tiedostoja"
+
+#~ msgid "Delete Folders"
+#~ msgstr "Poista kansioita"
+
+#~ msgid "Select file/folder to delete:"
+#~ msgstr "Valitse poistettava tiedosto/kansio:"
+
+#~ msgid "Download File"
+#~ msgstr "Lataa tiedosto"
+
+#~ msgid "Download"
+#~ msgstr "Lataa"
+
+#~ msgid ""
+#~ "A download is still in progress. Do you want to cancel it and close "
+#~ "dialog?"
+#~ msgstr "Lataus on yhä käynnissä. Haluatko perua sen ja sulkea ikkunan?"
+
+#~ msgid "Download in progress"
+#~ msgstr "Lataus käynnissä"
+
+#~ msgid "File was correctly downloaded."
+#~ msgstr "Tiedosto ladattiin onnistuneesti."
+
+#~ msgctxt "@title:window"
+#~ msgid "Download file"
+#~ msgstr "Lataa tiedosto"
+
+#~ msgid "Error during download file."
+#~ msgstr "Virhe ladattaessa tiedostoa."
+
+#~ msgid "Filename already exists. Do you want to overwrite it?"
+#~ msgstr "Tiedostonimi on jo olemassa. Haluatko korvata sen?"
+
+#~ msgctxt "@title:window"
+#~ msgid "Overwrite file"
+#~ msgstr "Korvaa tiedosto"
+
+#~ msgctxt "@title:window"
+#~ msgid "Properties"
+#~ msgstr "Ominaisuudet"
+
+#~ msgid "Dropbox access is not authorized. Error message: %1"
+#~ msgstr "Dropboxin käyttöä ei ole valtuutettu. Virheviesti: %1"
+
+#~ msgid "Dropbox"
+#~ msgstr "Dropbox"
+
+#~ msgid ""
+#~ "Dropbox is a file hosting service operated by Dropbox, Inc. that offers "
+#~ "cloud storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "Dropbox (Dropbox Inc.) on pilvitallennuksen, tiedostojen synkronoinnin ja "
+#~ "asiakasohjelman tarjoava tiedostopalvelu."
+
+#~ msgid "Storage path:"
+#~ msgstr "Tallennuspolku:"
+
+#~ msgid "Hubic"
+#~ msgstr "Hubic"
+
+#~ msgid ""
+#~ "Hubic is a file hosting service operated by Ovh, Inc. that offers cloud "
+#~ "storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "Hubic (Ovh Inc.) on pilvitallennuksen, tiedostojen synkronoinnin ja "
+#~ "asiakasohjelman tarjoava tiedostopalvelu."
+
+#~ msgid "Request Token returns an error: %1"
+#~ msgstr "Request Token palautti virheen: %1"
+
+#~ msgid "Access Token returns an error: %1"
+#~ msgstr "Access Token palautti virheen: %1"
+
+#~ msgid "Upload File returns an error: %1"
+#~ msgstr "”Lähetä tiedosto” palauttaa virheen: %1"
+
+#~ msgid "Create Folder returns an error: %1"
+#~ msgstr "”Luo kansio” palauttaa virheen: %1"
+
+#~ msgid "Get account info returns an error: %1"
+#~ msgstr "”Nouda tilitiedot” palauttaa virheen: %1"
+
+#~ msgid "List folder returns an error: %1"
+#~ msgstr "”Listaa kansio” palauttaa virheen: %1"
+
+#~ msgid "Share Link returns an error: %1"
+#~ msgstr "”Jaa linkki” palauttaa virheen: %1"
+
+#~ msgid "Create Service Folder returns an error: %1"
+#~ msgstr "”Luo palvelukansio” palauttaa virheen: %1"
+
+#~ msgid "Download file returns an error: %1"
+#~ msgstr "”Lataa tiedosto” palauttaa virheen: %1"
+
+#~ msgid "Delete File returns an error: %1"
+#~ msgstr "”Poista tiedosto” palauttaa virheen: %1"
+
+#~ msgid "Delete Folder returns an error: %1"
+#~ msgstr "”Poista kansio” palauttaa virheen: %1"
+
+#~ msgid "Rename Folder returns an error: %1"
+#~ msgstr "”Muuta kansion nimeä” palauttaa virheen: %1"
+
+#~ msgid "Rename File returns an error: %1"
+#~ msgstr "”Muuta tiedoston nimeä” palauttaa virheen: %1"
+
+#~ msgid "Move File returns an error: %1"
+#~ msgstr "”Siirrä tiedosto” palauttaa virheen: %1"
+
+#~ msgid "Move Folder returns an error: %1"
+#~ msgstr "”Siirrä kansio” palauttaa virheen: %1"
+
+#~ msgid "Copy File returns an error: %1"
+#~ msgstr "”Kopioi tiedosto” palauttaa virheen: %1"
+
+#~ msgid "Copy Folder returns an error: %1"
+#~ msgstr "”Kopioi kansio” palauttaa virheen: %1"
+
+#~ msgid "All services were added."
+#~ msgstr "Kaikki palvelut lisättiin."
+
+#~ msgid "Authenticate"
+#~ msgstr "Tunnistaudu"
+
+#~ msgid "Unable to get account information."
+#~ msgstr "Tilin tietojen hakeminen epäonnistui."
+
+#~ msgid "Account size:"
+#~ msgstr "Tilin koko:"
+
+#~ msgid "Quota:"
+#~ msgstr "Tilarajoitus:"
+
+#~ msgid "Do you want to delete this service '%1'?"
+#~ msgstr "Haluatko poistaa palvelun ”%1”?"
+
+#~ msgid "Delete Service"
+#~ msgstr "Poista palvelu"
+
+#~ msgid "Authentication Failed"
+#~ msgstr "Tunnistautuminen epäonnistui"
+
+#~ msgid "Name: %1"
+#~ msgstr "Nimi: %1"
+
+#~ msgid "Account size: %1"
+#~ msgstr "Tilin koko: %1"
+
+#~ msgid "Quota: %1"
+#~ msgstr "Tilarajoitus: %1"
+
+#~ msgid "Shared: %1"
+#~ msgstr "Jaettu: %1"
+
+#~ msgid "Storage service"
+#~ msgstr "Tallennuspalvelu"
+
+#~ msgid "No Storage service configured"
+#~ msgstr "Tallennuspalveluja ei ole määritetty"
+
+#~ msgid "Delete Folder..."
+#~ msgstr "Poista kansio…"
+
+#~ msgid "Download File..."
+#~ msgstr "Lataa tiedosto…"
+
+#~ msgid "Upload File..."
+#~ msgstr "Lähetä tiedosto…"
+
+#~ msgid "Share File..."
+#~ msgstr "Jaa tiedosto…"
+
+#~ msgid "Delete File..."
+#~ msgstr "Poista tiedosto…"
+
+#~ msgid "Account Info..."
+#~ msgstr "Tilin tiedot…"
+
+#~ msgid "There is still an upload in progress."
+#~ msgstr "Yksi lähetys on vielä käynnissä."
+
+#~ msgid "File to upload"
+#~ msgstr "Lähetettävä tiedosto"
+
+#~ msgid "Type:"
+#~ msgstr "Tyyppi:"
+
+#~ msgctxt "Name of file or folder"
+#~ msgid "Name:"
+#~ msgstr "Nimi:"
+
+#~ msgid "Last Modified:"
+#~ msgstr "Viimeksi muutettu:"
+
+#~ msgid "Created:"
+#~ msgstr "Luotu:"
+
+#~ msgid "Size:"
+#~ msgstr "Koko:"
+
+#~ msgid "WebDav"
+#~ msgstr "WebDav"
+
+#~ msgid "WebDav Settings"
+#~ msgstr "WebDav-asetukset"
+
+#~ msgid "Service Location (e.g. https://dav.example.com/)"
+#~ msgstr "Palvelun sijainti (esim. https://dav.esimerkki.fi/)"
+
+#~ msgid "Public location (Optional)"
+#~ msgstr "Julkinen sijainti (valinnainen)"
+
+#~ msgid "Directory"
+#~ msgstr "Kansio"
+
+#~ msgid "Webdav"
+#~ msgstr "Webdav"
+
+#~ msgid ""
+#~ "The WebDAV service allows access to any Web application that uses the "
+#~ "WebDAV protocol, such as ownCloud, Kolab, and others."
+#~ msgstr ""
+#~ "WebDAV-palvelulla voi käyttää kaikkia web-sovelluksia, jotka tukee WebDAV-"
+#~ "yhteyskäytäntöä kuten ownCloudia, Kolabia ja muita."
+
+#~ msgid "Default Download Folder:"
+#~ msgstr "Lataamisen oletuskansio:"
+
+#~ msgid "%1 on %2"
+#~ msgstr "%1 kohteessa %2"
+
+#~ msgid "Size"
+#~ msgstr "Koko"
+
+#~ msgid "Created"
+#~ msgstr "Luotu"
+
+#~ msgid "Last Modified"
+#~ msgstr "Viimeksi muutettu"
+
+#~ msgid "Up"
+#~ msgstr "Ylemmäs"
+
+#~ msgid "Properties"
+#~ msgstr "Ominaisuudet"
+
+#~ msgid "YouSendIt"
+#~ msgstr "YouSendIt"
+
+#~ msgid ""
+#~ "Authentication failed. Server returns this error:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Tunnistautuminen epäonnistui. Palvelin palautti virheen:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "YouSendIt is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "YouSendIt on pilvitallennuksen, tiedostojen synkronoinnin ja "
+#~ "asiakasohjelman tarjoava tiedostopalvelu."
+
+#~ msgid "writable:"
+#~ msgstr "kirjoitettavissa:"
+
+#~ msgid "Yes"
+#~ msgstr "Kyllä"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "GoogleDrive"
+#~ msgstr "Google Drive"
+
+#~ msgid ""
+#~ "Googledrive is a file hosting that offers cloud storage, file "
+#~ "synchronization, and client software."
+#~ msgstr ""
+#~ "Google Drive on pilvitallennuksen, tiedostojen synkronoinnin ja "
+#~ "asiakasohjelman tarjoava tiedostopalvelu."
+
+#~ msgctxt "@action:button"
+#~ msgid "Delete"
+#~ msgstr "Poista"
+
+#~ msgid "&Overwrite"
+#~ msgstr "&Korvaa"
+
+#~ msgid "Configure engine"
+#~ msgstr "Tietomoottorin asetukset"
+
+#~ msgid "Select Short URL server:"
+#~ msgstr "Valitse lyhytosoitepalvelin:"
+
+#~ msgid ""
+#~ "Error reported by server:\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Palvelin ilmoitti virheestä:\n"
+#~ "%1"
+
+#~ msgid "In progress to generate short url..."
+#~ msgstr "Lyhytosoitteen luominen on meneillään…"
+
+#~ msgid "Convert"
+#~ msgstr "Muunna"
+
+#~ msgid "Insert Short URL"
+#~ msgstr "Lisää lyhytosoite"
+
+#~ msgid "Original url:"
+#~ msgstr "Alkuperäinen osoite:"
+
+#~ msgid "Copy to clipboard"
+#~ msgstr "Kopioi leikepöydälle"
+
+#~ msgid "Short url:"
+#~ msgstr "Lyhytosoite:"
+
+#~ msgid "Open Short URL"
+#~ msgstr "Avaa lyhytosoite"
+
+#~ msgid "No network connection detected, we cannot shorten url."
+#~ msgstr "Verkkoyhteyttä ei havaittu, osoitetta ei voi lyhentää."
+
+#~ msgid "An error occurs: \"%1\""
+#~ msgstr "Ilmeni virhe: ”%1”"
+
+#~ msgid "Generate Shortened URL"
+#~ msgstr "Luo lyhytosoite"
+
+#~ msgid "&Translator"
+#~ msgstr "&Käännösohjelma"
+
+#~ msgid "Authentication Canceled."
+#~ msgstr "Tunnistautuminen peruttiin."
+
+#~ msgid "Spell Checking Language"
+#~ msgstr "Oikeinkirjoituksen tarkistuksen kieli"
+
+#~ msgid ""
+#~ "End of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Viestin loppu saavutettu.\n"
+#~ "Lauseketta ”%1” ei löytynyt."
+
+#~ msgctxt "Replace text"
+#~ msgid "Replace:"
+#~ msgstr "Korvaa:"
+
+#~ msgctxt "Find text"
+#~ msgid "F&ind:"
+#~ msgstr "&Etsi:"
+
+#~ msgid "Text to search for"
+#~ msgstr "Etsittävä teksti"
+
+#~ msgctxt "Find and go to the next search match"
+#~ msgid "Next"
+#~ msgstr "Seuraava"
+
+#~ msgid "Jump to next match"
+#~ msgstr "Siirry seuraavaan osumaan"
+
+#~ msgctxt "Find and go to the previous search match"
+#~ msgid "Previous"
+#~ msgstr "Edellinen"
+
+#~ msgid "Jump to previous match"
+#~ msgstr "Siirry edelliseen osumaan"
+
+#~ msgid "Options"
+#~ msgstr "Valinnat"
+
+#~ msgid "Modify search behavior"
+#~ msgstr "Muuta hakuvalintoja"
+
+#~ msgid "Case sensitive"
+#~ msgstr "Erota pien- ja suuraakkoset"
+
+#~ msgid "Whole word"
+#~ msgstr "Koko sana"
+
+#~ msgid "Go to Line:"
+#~ msgstr "Siirry riville:"
+
+#~ msgid "Go"
+#~ msgstr "Siirry"
+
+#~ msgid "Replace..."
+#~ msgstr "Korvaa…"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Tarkista oikeinkirjoitus…"
+
+#~ msgid "Auto Spell Check"
+#~ msgstr "Automaattinen oikoluku"
+
+#~ msgid "Speak Text"
+#~ msgstr "Puhu teksti"
+
+#~ msgid "Nothing to spell check."
+#~ msgstr "Ei mitään oikoluettavaa."
+
+#~ msgid "Allow Tabulations"
+#~ msgstr "Salli sarkainsisennykset"
+
+#~ msgid "Stop"
+#~ msgstr "Pysäytä"
+
+#~ msgid "Pause"
+#~ msgstr "Tauko"
+
+#~ msgid "Play"
+#~ msgstr "Toista"
+
+#~ msgid "Configure Text-To-Speech"
+#~ msgstr "Puhesyntetisaattorin asetukset"
+
+#~ msgid "Volume:"
+#~ msgstr "Äänenvoimakkuus:"
+
+#~ msgid "Rate:"
+#~ msgstr "Nopeus:"
+
+#~ msgid "Pitch:"
+#~ msgstr "Äänenkorkeus::"
+
+#~ msgid "Language:"
+#~ msgstr "Kieli:"
+
+#~ msgid "Text Files (*.txt);;All Files (*)"
+#~ msgstr "Tekstitiedostot (*.txt);;Kaikki tiedostot (*)"
+
+#~ msgid "Search for '%1' with"
+#~ msgstr "Etsi ”%1”"
+
+#~ msgctxt "@action:inmenu Search for <text> with"
+#~ msgid "%1"
+#~ msgstr "hakukoneella %1|/|$[hakumuoto %1]"
+
+#~ msgid "Use HTTPS Protocol"
+#~ msgstr "Käytä HTTPS-yhteyskäytäntöä"
+
+#~ msgid "Use Libravatar"
+#~ msgstr "Käytä Libravataria"
+
+#~ msgid "Fallback to Gravatar"
+#~ msgstr "Käytä Gravataria varalla"
+
+#~ msgid "Tinyurl"
+#~ msgstr "Tinyurl"
+
+#~ msgid "Migre.Me"
+#~ msgstr "Migre.Me"
+
+#~ msgid "TriopAB"
+#~ msgstr "TriopAB"
+
+#~ msgid "Ur1Ca"
+#~ msgstr "Ur1Ca"
+
+#~ msgid "IsGd"
+#~ msgstr "IsGd"
+
+#~ msgid "Do you want to remove account '%1'?"
+#~ msgstr "Haluatko poistaa tilin ”%1”?"
+
+#~ msgid "Remove account?"
+#~ msgstr "Poistetaanko tili?"
+
+#~ msgid "Incoming accounts (add at least one):"
+#~ msgstr "Saapuvien viestien tilit (lisää ainakin yksi):"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Lisää…"
+
+#~ msgid "Restart"
+#~ msgstr "Käynnistä uudelleen"
+
+#~ msgid "searchbutton"
+#~ msgstr "hakupainike"
+
+#~ msgid "No suggestions for %1"
+#~ msgstr "Ei ehdotuksia: %1"
+
+#~ msgid "Ignore"
+#~ msgstr "Älä huomoi"
+
+#~ msgid "Add to Dictionary"
+#~ msgstr "Lisää sanastoon"
+
+#, fuzzy
+#~| msgid "Add Autocorrection Entry"
+#~ msgid "AutoCorrectionTest_Gui"
+#~ msgstr "Lisää automaattikorjausmerkintä"
+
+#, fuzzy
+#~| msgid "Export Autocorrection File"
+#~ msgid "Test for autocorrection widget"
+#~ msgstr "Vie automaattikorjaustiedosto"
+
+#, fuzzy
+#~| msgid "Select Multiple Folders"
+#~ msgid "SelectMultiCollectiontest_Gui"
+#~ msgstr "Valitse useita kansioita"
+
+#, fuzzy
+#~| msgid "&Rename"
+#~ msgid "Filename"
+#~ msgstr "M&uuta nimeä"
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgid "Filename:"
+#~ msgstr "Nimi:"
+
+#, fuzzy
+#~| msgid "Folder"
+#~ msgid "Folder:"
+#~ msgstr "Kansio"
+
+#, fuzzy
+#~| msgid "Storage service"
+#~ msgid "storageservice_Gui"
+#~ msgstr "Tallennuspalvelu"
+
+#, fuzzy
+#~| msgid "Storage service"
+#~ msgid "Test for storageservice"
+#~ msgstr "Tallennuspalvelu"
+
+#, fuzzy
+#~| msgid "Webdav"
+#~ msgid "webdav_Gui"
+#~ msgstr "Webdav"
+
+#, fuzzy
+#~| msgid "Translator Debug"
+#~ msgid "TranslatorTest_Gui"
+#~ msgstr "Kääntimen vianjäljitys"
+
+#, fuzzy
+#~| msgid "Short url:"
+#~ msgid "Short url"
+#~ msgstr "Lyhytosoite:"
+
+#~ msgid ""
+#~ "Beginning of message reached.\n"
+#~ "Phrase '%1' could not be found."
+#~ msgstr ""
+#~ "Viestin alku saavutettu.\n"
+#~ "Lauseketta ”%1” ei löytynyt."
+
+#~ msgid "Starting Jovie Text-to-Speech Service Failed"
+#~ msgstr "Jovie-puhesyntetisaattorin käynnistys epäonnistui"
+
+#~ msgid "Modify"
+#~ msgstr "Muuta"
+
+#~ msgid "UbuntuOne"
+#~ msgstr "UbuntuOne"
+
+#~ msgid "Ubuntu One"
+#~ msgstr "Ubuntu One"
+
+#~ msgid ""
+#~ "UbuntuOne is a file hosting service operated by Canonical. that offers "
+#~ "cloud storage, file synchronization, and client software."
+#~ msgstr ""
+#~ "UbuntuOne (Canonical) on pilvitallennuksen, tiedostojen synkronoinnin ja "
+#~ "asiakasohjelman tarjoava tiedostopalvelu."
+
+#~ msgid "File is public:"
+#~ msgstr "Tiedosto on julkinen:"
+
+#~ msgid "Public link:"
+#~ msgstr "Julkinen linkki:"
+
+#, fuzzy
+#~| msgid "Last Modified"
+#~ msgid "Last Modifier:"
+#~ msgstr "Viimeksi muokattu"
+
+#~ msgid "Size: %1"
+#~ msgstr "Koko: %1"
+
+#~ msgid "name: %1"
+#~ msgstr "nimi: %1"
+
+#~ msgid "Search with nepomukshow..."
+#~ msgstr "Etsi nepomukshow’lla…"
+
+#~ msgid "Nepomuk Debug"
+#~ msgstr "Nepomukin vianjäljitys"
+
+#~ msgid "Search info with nepomukshow..."
+#~ msgstr "Etsi tietoja nepomukshow’lla…"
+
+#~ msgid "Sorry you don't have \"nepomukshow\" installed on your computer."
+#~ msgstr "”nepomukshow” ei ole asennettuna tietokoneellasi."
+
+#~ msgid "Sorry there is a problem with virtuoso."
+#~ msgstr "Virtuoson suhteen on ongelma."
+
+#~ msgid "Error on fetching item"
+#~ msgstr "Virhe haettaessa kohdetta"
+
+#~ msgid "Search with nepomukshow"
+#~ msgstr "Etsi nepomukshow’lla"
+
+#~ msgid "Nepomuk id:"
+#~ msgstr "Nepomuk-tunniste:"
+
+#~ msgid "Nepomuk show result"
+#~ msgstr "Nepomuk show -tulokset"

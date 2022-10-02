@@ -1,0 +1,2062 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libpimcommon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-24 00:46+0000\n"
+"PO-Revision-Date: 2022-09-17 12:22+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: dir ACL Swahili Urdu Criolo Afrikaans Yiddish Sieve\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: Jovie Tinyurl TriopAB Resource PErfeito Uniform\n"
+"X-POFile-SpellExtra: Locator LibreOffice KMail nepomukshow Nepomukshow\n"
+"X-POFile-SpellExtra: DropBox Hubic Dropbox Ovh cloud Inc One Ubuntu\n"
+"X-POFile-SpellExtra: YouSendIt UbuntuOne Box GoogleDrive ownCloud Kolab\n"
+"X-POFile-SpellExtra: SelectMultiCollectiontestGui ShortUrlTestGui\n"
+"X-POFile-SpellExtra: CustomToolWidgetsTestGui TranslatorTestGui\n"
+"X-POFile-SpellExtra: PlainTextEditorTestGui AutoCorrectionTestGui\n"
+"X-POFile-SpellExtra: storageserviceGui texttospeechconfigdialogGui\n"
+"X-POFile-SpellExtra: CustomTextEditTestGui boxGui texttospeechconfigGui\n"
+"X-POFile-SpellExtra: gdriveGui RichTextEditorTestGui dropboxTokenGui\n"
+"X-POFile-SpellExtra: richtexteditwithautocorrectionTestGui\n"
+"X-POFile-SpellExtra: texttospeechwidgetGui yousenditGui hubicGui GDrive\n"
+"X-POFile-SpellExtra: webdavGui texttospeechGui Ca IsGd Ur gravatar\n"
+"X-POFile-SpellExtra: Libravatar Gravatar Plus Twitter Facebook Evernote\n"
+"X-POFile-SpellExtra: LinkedIn Pocket LiveJournal txt Pager Mails mails\n"
+"X-POFile-SpellExtra: AnnotationEditDialogPrivate Bing SID Yandex Libre\n"
+"X-POFile-SpellExtra: Translate Lingva DeepL\n"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:112
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "Correcção Automática do LibreOffice"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:116
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "Correcção Automática do KMail/Calligra"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "O texto \"Substituir\" é o mesmo que o \"Procurar\"."
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Adicionar o Item à Correcção Automática"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:435
+#, kde-format
+msgid "&Modify"
+msgstr "&Modificar"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:438
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#, kde-format
+msgid "&Add"
+msgstr "&Adicionar"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:546
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "Importar a Correcção Automática do LibreOffice"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "Ficheiro de Correcção Automática do LibreOffice (*.data)"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "Importar a Correcção Automática do KMail"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "Ficheiro de Correcção Automática do KMail (*.xml)"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:601
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr ""
+"A língua foi alterada; deseja gravar a configuração da língua anterior?"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:602
+#, kde-format
+msgid "Save config"
+msgstr "Gravar a configuração"
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "Por favor, grave as alterações antes de exportar as definições."
+
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:636
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Exportar o Ficheiro de Correcção Automática"
+
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#, kde-format
+msgid "Archive cannot be opened in read mode."
+msgstr "Não é possível aceder ao pacote no modo de leitura."
+
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#, kde-format
+msgid "Import LibreOffice Autocorrection File"
+msgstr "Importar o Ficheiro de Correcção Automática do LibreOffice"
+
+#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:21
+#, kde-format
+msgid "Enable autocorrection"
+msgstr "Activar a correcção automática"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:30
+#, kde-format
+msgid "Replacement and exception for language:"
+msgstr "Substituição e excepção para a língua:"
+
+#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
+#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#, kde-format
+msgid "Export..."
+msgstr "Exportar..."
+
+#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
+#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#, kde-format
+msgid "Import..."
+msgstr "Importar..."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:77
+#, kde-format
+msgid "Si&mple Autocorrection"
+msgstr "Correcção Automática Si&mples"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:83
+#, kde-format
+msgid ""
+"Detect when a new sentence is started and always ensure that the first "
+"character is an uppercase character"
+msgstr ""
+"Detecta quando começa uma nova frase e garante sempre que o primeiro "
+"carácter é maiúsculo"
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:87
+#, kde-format
+msgid ""
+"Convert &first letter of a sentence automatically to uppercase\n"
+"(e.g. \"my house. in this town\" to \"my house. In this town\")"
+msgstr ""
+"Converter a primeira letra de uma &frase automaticamente para maiúsculas\n"
+"(p.ex. \"a minha casa. nesta cidade\" para \"a minha casa. Nesta cidade\")"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:97
+#, kde-format
+msgid ""
+"All words are checked for the common mistake of holding the shift key down a "
+"bit too long. If some words must have two uppercase characters, then those "
+"exceptions should be added in the 'Exceptions' tab."
+msgstr ""
+"Todas as palavras são verificadas à procura do erro comum de manter a tecla "
+"Shift carregada demasiado tempo. Se algumas palavras tiverem duas letras "
+"maiúsculas, então essas excepções deverão ser adicionadas na página de "
+"'Excepções'."
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:101
+#, kde-format
+msgid ""
+"Convert &two uppercase characters to one uppercase and one lowercase "
+"character\n"
+" (e.g. PErfect to Perfect)"
+msgstr ""
+"Conver&ter duas letras maiúsculas para uma maiúscula e uma minúscula.\n"
+" (p.ex. PErfeito para Perfeito)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:108
+#, kde-format
+msgid ""
+"Make sure that more than one space cannot be typed, as this is a common "
+"mistake which is quite hard to find in formatted text."
+msgstr ""
+"Certifica-se que não se pode escrever mais que um espaço, dado que este é um "
+"erro comum que é difícil de encontrar no texto formatado."
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:111
+#, kde-format
+msgid "&Suppress double spaces"
+msgstr "&Suprimir os espaços duplos"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:118
+#, kde-format
+msgid "Most standard fraction notations will be converted when available"
+msgstr ""
+"A maior parte das notações de fracções serão convertidas, se estiverem "
+"disponíveis"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:121
+#, kde-format
+msgid "Re&place 1/2... with ½..."
+msgstr "Substituir o 1/2... &por ½..."
+
+#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:128
+#, kde-format
+msgid "Capitalize name of days"
+msgstr "Capitalizar os nomes dos dias"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:135
+#, kde-format
+msgid ""
+"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
+"that matches the way an Internet browser would show a URL."
+msgstr ""
+"Detecta quando um URL (Uniform Resource Locator) é escrito e oferece a "
+"formatação que corresponde à forma como um navegador Web iria mostrar um URL."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:138
+#, kde-format
+msgid "Autoformat &URLs (HTML mode)"
+msgstr "Formatar automaticamente os &URLs (modo de HTML)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:145
+#, kde-format
+msgid ""
+"When you use _underline_ or *bold*, the text between the underscores or "
+"asterisks will be converted to underlined or bold text."
+msgstr ""
+"Quando usar o _sublinhado_ ou *negrito*, o texto entre esses caracteres será "
+"convertido para texto sublinhado ou negrito, respectivamente."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:148
+#, kde-format
+msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+msgstr ""
+"Formatar automaticamente o &negrito, traçado e sublinhado (modo de HTML)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:155
+#, kde-format
+msgid "Replace 1st... with 1^st... (HTML mode)"
+msgstr "Substituir o 1o... por 1^o... (modo de HTML)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:176
+#, kde-format
+msgid "Custom &Quotes"
+msgstr "Aspas Personali&zadas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:182
+#, kde-format
+msgid "Replace &double quotes with typographical quotes"
+msgstr "S&ubstituir as aspas por aspas tipográficas"
+
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:193
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:233
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:360
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:374
+#, kde-format
+msgid "By Default"
+msgstr "Predefinição"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:206
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
+#, kde-format
+msgid "Ending Quote:"
+msgstr "Aspa de Fecho:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:253
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:353
+#, kde-format
+msgid "Opening Quote:"
+msgstr "Aspa de Abertura:"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
+#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:267
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:388
+#, kde-format
+msgid "Default"
+msgstr "Predefinição"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
+#, kde-format
+msgid "Replace &single quotes with typographical quotes"
+msgstr "&Substituir as plicas por plicas tipográficas"
+
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:327
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:346
+#, kde-format
+msgid "'"
+msgstr "'"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:367
+#, kde-format
+msgid "Ending Quotes:"
+msgstr "Aspas de Fecho:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:412
+#, kde-format
+msgid "Add non breaking space before specific punctuation marks in French text"
+msgstr ""
+"Adicionar um espaço inquebrável antes dos sinais de pontuação específicos"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:433
+#, kde-format
+msgid "Ad&vanced Autocorrection"
+msgstr "Correcção Automática A&vançada"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#. i18n: ectx: property (text), widget (QPushButton, remove2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
+#, kde-format
+msgid "Remove"
+msgstr "Remover"
+
+#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:476
+#, kde-format
+msgid "&Enable word replacement"
+msgstr "Activar a substituição d&e palavras"
+
+#. i18n: ectx: property (text), widget (QLabel, findLabel)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:485
+#, kde-format
+msgid "&Find"
+msgstr "&Procurar"
+
+#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
+#, kde-format
+msgid "Re&place"
+msgstr "Su&bstituir"
+
+#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:537
+#, kde-format
+msgid "Find"
+msgstr "Procurar"
+
+#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:542
+#, kde-format
+msgid "Replace"
+msgstr "Substituir"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:551
+#, kde-format
+msgid "E&xceptions"
+msgstr "E&xcepções"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:559
+#, kde-format
+msgid "Do not treat as the end of a sentence:"
+msgstr "Não tratar como fim de frase:"
+
+#. i18n: ectx: property (text), widget (QPushButton, remove1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:582
+#, kde-format
+msgid "R&emove"
+msgstr "R&emover"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:624
+#, kde-format
+msgid "Accept two uppercase letters in:"
+msgstr "Aceitar duas letras maiúsculas em:"
+
+#. i18n: ectx: property (text), widget (QPushButton, add2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#, kde-format
+msgid "Add"
+msgstr "Adicionar"
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
+#: pimcommon/translator/translatorwidget.cpp:298
+#, kde-format
+msgid "Configure"
+msgstr "Configurar"
+
+#: pimcommon/configureplugins/configurepluginswidget.cpp:43
+#, kde-format
+msgid "Restart is necessary for applying the changes."
+msgstr "É necessário reiniciar para aplicar as alterações."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#, kde-format
+msgid "Share On..."
+msgstr "Partilhar no..."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#, kde-format
+msgctxt "@action:inmenu Share On..."
+msgid "%1"
+msgstr "%1"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#, kde-format
+msgid "Facebook"
+msgstr "Facebook"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#, kde-format
+msgid "Twitter"
+msgstr "Twitter"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#, kde-format
+msgid "Mail"
+msgstr "E-mail"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#, kde-format
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#, kde-format
+msgid "Evernote"
+msgstr "Evernote"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
+#, kde-format
+msgid "Pocket"
+msgstr "Pocket"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#, kde-format
+msgid "LiveJournal"
+msgstr "LiveJournal"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Default template"
+msgstr "Modelo predefinido"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Template"
+msgstr "Modelo"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#, kde-format
+msgid "Name:"
+msgstr "Nome:"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#, kde-format
+msgid "Do you want to delete selected template?"
+msgstr "Deseja apagar o modelo seleccionado?"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#, kde-format
+msgid "Delete template"
+msgstr "Apagar o modelo"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#, kde-format
+msgid "Import Template"
+msgstr "Importar um Modelo"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#, kde-format
+msgid "Export Template"
+msgstr "Exportar o Modelo"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#, kde-format
+msgid "Insert template"
+msgstr "Inserir um modelo"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#, kde-format
+msgid "Add..."
+msgstr "Adicionar..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Show..."
+msgstr "Mostrar..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Modify..."
+msgstr "Modificar..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#, kde-format
+msgid "Duplicate"
+msgstr "Duplicar"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#, kde-format
+msgid "Download new Templates..."
+msgstr "Obter Novos Modelos..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "'%1' is not a template file"
+msgstr "O '%1' não é um ficheiro de modelo"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "Load Template"
+msgstr "Carregar um Modelo"
+
+#: pimcommon/translator/engine/bingtranslator.cpp:54
+#: pimcommon/translator/translatorutil.cpp:257
+#, kde-format
+msgid "Bing"
+msgstr "Bing"
+
+#: pimcommon/translator/engine/bingtranslator.cpp:65
+#, kde-format
+msgid "Error: Unable to find Bing credentials in web version."
+msgstr "Erro: não foi possível encontrar as credenciais do Bing na versão Web."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:73
+#, kde-format
+msgid "Error: Unable to extract Bing key from web version."
+msgstr "Erro: Não foi possível extrair a chave do Bing na versão Web."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:82
+#, kde-format
+msgid "Error: Unable to extract Bing token from web version."
+msgstr "Erro: Não foi possível extrair o código do Bing na versão Web."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:91
+#: pimcommon/translator/engine/bingtranslator.cpp:100
+#, kde-format
+msgid "Error: Unable to extract additional Bing information from web version."
+msgstr ""
+"Erro: Não foi possível extrair as informações adicionais do Bing na versão "
+"Web."
+
+#: pimcommon/translator/engine/bingtranslator.cpp:113
+#: pimcommon/translator/engine/deepltranslator.cpp:41
+#: pimcommon/translator/engine/googletranslator.cpp:106
+#: pimcommon/translator/engine/libretranslatetranslator.cpp:34
+#: pimcommon/translator/engine/lingvatranslator.cpp:36
+#: pimcommon/translator/engine/yandextranslator.cpp:167
+#, kde-format
+msgid "You used same language for from and to language."
+msgstr "Usou a mesma língua para a origem e o destino."
+
+#: pimcommon/translator/engine/deepltranslator.cpp:30
+#: pimcommon/translator/translatorutil.cpp:266
+#, kde-format
+msgid "DeepL"
+msgstr "DeepL"
+
+#: pimcommon/translator/engine/googletranslator.cpp:135
+#: pimcommon/translator/translatorutil.cpp:251
+#, kde-format
+msgid "Google"
+msgstr "Google"
+
+#: pimcommon/translator/engine/libretranslatetranslator.cpp:28
+#: pimcommon/translator/translatorutil.cpp:263
+#, kde-format
+msgid "Libre Translate"
+msgstr "Libre Translate"
+
+#: pimcommon/translator/engine/lingvatranslator.cpp:30
+#: pimcommon/translator/translatorutil.cpp:260
+#, kde-format
+msgid "Lingva"
+msgstr "Lingva"
+
+#: pimcommon/translator/engine/yandextranslator.cpp:119
+#: pimcommon/translator/translatorutil.cpp:254
+#, kde-format
+msgid "Yandex"
+msgstr "Yandex"
+
+#: pimcommon/translator/engine/yandextranslator.cpp:129
+#: pimcommon/translator/translatorenginebase.cpp:83
+#, kde-format
+msgid ""
+"Error: Engine systems have detected suspicious traffic from your computer "
+"network. Please try your request again later."
+msgstr ""
+"Erro: Os sistemas do motor detectaram tráfego suspeito na rede do seu "
+"computador. Por favor, tente de novo o seu pedido mais tarde."
+
+#: pimcommon/translator/engine/yandextranslator.cpp:138
+#, kde-format
+msgid "Error: Unable to find Yandex SID in web version."
+msgstr "Erro: Não foi possível detectar o SID do Yandex na versão Web."
+
+#: pimcommon/translator/engine/yandextranslator.cpp:146
+#, kde-format
+msgid "Error: Unable to extract Yandex SID from web version."
+msgstr "Erro: Não foi possível extrair o SID do Yandex na versão Web."
+
+#: pimcommon/translator/engine/yandextranslator.cpp:215
+#, kde-format
+msgid "Error: Unable to parse autodetected language"
+msgstr "Erro: Não foi possível processar a língua detectada automaticamente"
+
+#: pimcommon/translator/translatorconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Translator"
+msgstr "Configurar o Tradutor"
+
+#: pimcommon/translator/translatorconfigurewidget.cpp:33
+#, kde-format
+msgid "Engine:"
+msgstr "Motor:"
+
+#: pimcommon/translator/translatordebugdialog.cpp:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Translator Debug"
+msgstr "Depuração do Tradutor"
+
+#: pimcommon/translator/translatordebugdialog.cpp:35
+#, kde-format
+msgid "Save As..."
+msgstr "Gravar Como..."
+
+#: pimcommon/translator/translatordebugdialog.cpp:74
+#, kde-format
+msgid "All Files (*)"
+msgstr "Todos os Ficheiros (*)"
+
+#: pimcommon/translator/translatorutil.cpp:28
+#, kde-format
+msgid "Detect language"
+msgstr "Detectar a língua"
+
+#: pimcommon/translator/translatorutil.cpp:31
+#, kde-format
+msgid "English"
+msgstr "Inglês"
+
+#: pimcommon/translator/translatorutil.cpp:34
+#: pimcommon/translator/translatorutil.cpp:97
+#, kde-format
+msgid "Chinese (Simplified)"
+msgstr "Chinês (Simplificado)"
+
+#: pimcommon/translator/translatorutil.cpp:37
+#: pimcommon/translator/translatorutil.cpp:100
+#, kde-format
+msgid "Chinese (Traditional)"
+msgstr "Chinês (Tradicional)"
+
+#: pimcommon/translator/translatorutil.cpp:40
+#, kde-format
+msgid "Dutch"
+msgstr "Holandês"
+
+#: pimcommon/translator/translatorutil.cpp:43
+#, kde-format
+msgid "French"
+msgstr "Francês"
+
+#: pimcommon/translator/translatorutil.cpp:46
+#, kde-format
+msgid "German"
+msgstr "Alemão"
+
+#: pimcommon/translator/translatorutil.cpp:49
+#, kde-format
+msgid "Greek"
+msgstr "Grego"
+
+#: pimcommon/translator/translatorutil.cpp:52
+#, kde-format
+msgid "Italian"
+msgstr "Italiano"
+
+#: pimcommon/translator/translatorutil.cpp:55
+#, kde-format
+msgid "Japanese"
+msgstr "Japonês"
+
+#: pimcommon/translator/translatorutil.cpp:58
+#, kde-format
+msgid "Korean"
+msgstr "Coreano"
+
+#: pimcommon/translator/translatorutil.cpp:61
+#, kde-format
+msgid "Portuguese"
+msgstr "Português"
+
+#: pimcommon/translator/translatorutil.cpp:64
+#, kde-format
+msgid "Russian"
+msgstr "Russo"
+
+#: pimcommon/translator/translatorutil.cpp:67
+#, kde-format
+msgid "Spanish"
+msgstr "Espanhol"
+
+#: pimcommon/translator/translatorutil.cpp:70
+#, kde-format
+msgid "Afrikaans"
+msgstr "Afrikaans"
+
+#: pimcommon/translator/translatorutil.cpp:73
+#, kde-format
+msgid "Albanian"
+msgstr "Albanês"
+
+#: pimcommon/translator/translatorutil.cpp:76
+#, kde-format
+msgid "Arabic"
+msgstr "Árabe"
+
+#: pimcommon/translator/translatorutil.cpp:79
+#, kde-format
+msgid "Armenian"
+msgstr "Arménio"
+
+#: pimcommon/translator/translatorutil.cpp:82
+#, kde-format
+msgid "Azerbaijani"
+msgstr "Azerbaijano"
+
+#: pimcommon/translator/translatorutil.cpp:85
+#, kde-format
+msgid "Basque"
+msgstr "Basco"
+
+#: pimcommon/translator/translatorutil.cpp:88
+#, kde-format
+msgid "Belarusian"
+msgstr "Bielorrusso"
+
+#: pimcommon/translator/translatorutil.cpp:91
+#, kde-format
+msgid "Bulgarian"
+msgstr "Búlgaro"
+
+#: pimcommon/translator/translatorutil.cpp:94
+#, kde-format
+msgid "Catalan"
+msgstr "Catalão"
+
+#: pimcommon/translator/translatorutil.cpp:103
+#, kde-format
+msgid "Croatian"
+msgstr "Croata"
+
+#: pimcommon/translator/translatorutil.cpp:106
+#, kde-format
+msgid "Czech"
+msgstr "Checo"
+
+#: pimcommon/translator/translatorutil.cpp:109
+#, kde-format
+msgid "Danish"
+msgstr "Dinamarquês"
+
+#: pimcommon/translator/translatorutil.cpp:112
+#, kde-format
+msgid "Estonian"
+msgstr "Estoniano"
+
+#: pimcommon/translator/translatorutil.cpp:115
+#, kde-format
+msgid "Filipino"
+msgstr "Filipino"
+
+#: pimcommon/translator/translatorutil.cpp:118
+#, kde-format
+msgid "Finnish"
+msgstr "Finlandês"
+
+#: pimcommon/translator/translatorutil.cpp:121
+#, kde-format
+msgid "Galician"
+msgstr "Galego"
+
+#: pimcommon/translator/translatorutil.cpp:124
+#, kde-format
+msgid "Georgian"
+msgstr "Geórgio"
+
+#: pimcommon/translator/translatorutil.cpp:127
+#, kde-format
+msgid "Haitian Creole"
+msgstr "Criolo do Haiti"
+
+#: pimcommon/translator/translatorutil.cpp:130
+#, kde-format
+msgid "Hebrew"
+msgstr "Hebreu"
+
+#: pimcommon/translator/translatorutil.cpp:133
+#, kde-format
+msgid "Hindi"
+msgstr "Hindu"
+
+#: pimcommon/translator/translatorutil.cpp:136
+#, kde-format
+msgid "Hungarian"
+msgstr "Húngaro"
+
+#: pimcommon/translator/translatorutil.cpp:139
+#, kde-format
+msgid "Icelandic"
+msgstr "Islandês"
+
+#: pimcommon/translator/translatorutil.cpp:142
+#, kde-format
+msgid "Indonesian"
+msgstr "Indonésio"
+
+#: pimcommon/translator/translatorutil.cpp:145
+#, kde-format
+msgid "Irish"
+msgstr "Irlandês"
+
+#: pimcommon/translator/translatorutil.cpp:148
+#, kde-format
+msgid "Latvian"
+msgstr "Letão"
+
+#: pimcommon/translator/translatorutil.cpp:151
+#, kde-format
+msgid "Lithuanian"
+msgstr "Lituano"
+
+#: pimcommon/translator/translatorutil.cpp:154
+#, kde-format
+msgid "Macedonian"
+msgstr "Macedónio"
+
+#: pimcommon/translator/translatorutil.cpp:157
+#, kde-format
+msgid "Malay"
+msgstr "Malaio"
+
+#: pimcommon/translator/translatorutil.cpp:160
+#, kde-format
+msgid "Maltese"
+msgstr "Maltês"
+
+#: pimcommon/translator/translatorutil.cpp:163
+#, kde-format
+msgid "Norwegian"
+msgstr "Norueguês"
+
+#: pimcommon/translator/translatorutil.cpp:166
+#, kde-format
+msgid "Persian"
+msgstr "Persa"
+
+#: pimcommon/translator/translatorutil.cpp:169
+#, kde-format
+msgid "Polish"
+msgstr "Polaco"
+
+#: pimcommon/translator/translatorutil.cpp:172
+#, kde-format
+msgid "Romanian"
+msgstr "Romeno"
+
+#: pimcommon/translator/translatorutil.cpp:175
+#, kde-format
+msgid "Serbian"
+msgstr "Sérvio"
+
+#: pimcommon/translator/translatorutil.cpp:178
+#, kde-format
+msgid "Slovak"
+msgstr "Eslovaco"
+
+#: pimcommon/translator/translatorutil.cpp:181
+#, kde-format
+msgid "Slovenian"
+msgstr "Esloveno"
+
+#: pimcommon/translator/translatorutil.cpp:184
+#, kde-format
+msgid "Swahili"
+msgstr "Swahili"
+
+#: pimcommon/translator/translatorutil.cpp:187
+#, kde-format
+msgid "Swedish"
+msgstr "Sueco"
+
+#: pimcommon/translator/translatorutil.cpp:190
+#, kde-format
+msgid "Thai"
+msgstr "Tailandês"
+
+#: pimcommon/translator/translatorutil.cpp:193
+#, kde-format
+msgid "Turkish"
+msgstr "Turco"
+
+#: pimcommon/translator/translatorutil.cpp:196
+#, kde-format
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+#: pimcommon/translator/translatorutil.cpp:199
+#, kde-format
+msgid "Urdu"
+msgstr "Urdu"
+
+#: pimcommon/translator/translatorutil.cpp:202
+#, kde-format
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: pimcommon/translator/translatorutil.cpp:205
+#, kde-format
+msgid "Welsh"
+msgstr "Galês"
+
+#: pimcommon/translator/translatorutil.cpp:208
+#, kde-format
+msgid "Yiddish"
+msgstr "Yiddish"
+
+#: pimcommon/translator/translatorwidget.cpp:127
+#, kde-format
+msgid "Problem when connecting to the translator web site."
+msgstr "Ocorreu um problema na ligação à página Web do tradutor."
+
+#: pimcommon/translator/translatorwidget.cpp:229
+#: pimcommon/translator/translatorwidget.cpp:232
+#, kde-format
+msgid "Close"
+msgstr "Fechar"
+
+#: pimcommon/translator/translatorwidget.cpp:238
+#, kde-format
+msgctxt "Translate from language"
+msgid "From:"
+msgstr "De:"
+
+#: pimcommon/translator/translatorwidget.cpp:245
+#, kde-format
+msgctxt "Translate to language"
+msgid "To:"
+msgstr "Para:"
+
+#: pimcommon/translator/translatorwidget.cpp:257
+#, kde-format
+msgctxt "Invert language choices so that from becomes to and to becomes from"
+msgid "Invert"
+msgstr "Inverter"
+
+#: pimcommon/translator/translatorwidget.cpp:262
+#: pimcommon/translator/translatorwidget.cpp:265
+#, kde-format
+msgid "Clear"
+msgstr "Limpar"
+
+#: pimcommon/translator/translatorwidget.cpp:270
+#: pimcommon/translator/translatorwidget.cpp:273
+#, kde-format
+msgid "Translate"
+msgstr "Traduzir"
+
+#: pimcommon/translator/translatorwidget.cpp:280
+#, kde-format
+msgid "Debug"
+msgstr "Depuração"
+
+#: pimcommon/translator/translatorwidget.cpp:314
+#, kde-format
+msgid ""
+"Drag text that you want to translate. (Be careful text will be send to "
+"Google Server)."
+msgstr ""
+"Arraste o texto que deseja traduzir. (Atenção que o texto será enviado para "
+"os servidores da Google)."
+
+#: pimcommon/translator/translatorwidget.cpp:395
+#, kde-format
+msgid "No network connection detected, we cannot translate text."
+msgstr ""
+"Não foi detectada nenhuma ligação de rede; não é possível traduzir o texto."
+
+#: pimcommon/translator/translatorwidget.cpp:395
+#, kde-format
+msgid "No network"
+msgstr "Sem rede"
+
+#: pimcommon/translator/translatorwidget.cpp:434
+#, kde-format
+msgid "Translate error"
+msgstr "Erro de tradução"
+
+#: pimcommon/util/pimutil.cpp:48
+#, kde-format
+msgid ""
+"Could not write the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Não foi possível gravar o ficheiro %1:\n"
+"A \"%2\" é a descrição detalhada do erro."
+
+#: pimcommon/util/pimutil.cpp:52
+#, kde-format
+msgid "Save File Error"
+msgstr "Erro de Gravação do Ficheiro"
+
+#: pimcommon/util/pimutil.cpp:86
+#, kde-format
+msgid ""
+"Could not read the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Não foi possível ler o ficheiro %1:\n"
+"A \"%2\" é a descrição detalhada do erro."
+
+#: pimcommon/util/pimutil.cpp:90
+#, kde-format
+msgid "Load File Error"
+msgstr "Erro de Carregamento do Ficheiro"
+
+#: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
+#, kde-format
+msgid ""
+"<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
+"this is an error, please contact him.</p></qt>"
+msgstr ""
+"<qt><p>Esta definição foi corrigida pelo seu administrador.</p><p>Se achar "
+"que é um erro, por favor contacte-o.</p></qt>"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:27
+#, kde-format
+msgid "Change Case"
+msgstr "Mudar a Capitalização"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:28
+#, kde-format
+msgid "Uppercase"
+msgstr "Maiúsculas"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:31
+#, kde-format
+msgid "Sentence case"
+msgstr "Capitalização de frases"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:34
+#, kde-format
+msgid "Lowercase"
+msgstr "Minúsculas"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:37
+#, kde-format
+msgid "Reverse Case"
+msgstr "Capitalização Inversa"
+
+#: pimcommon/widgets/lineeditwithcompleterng.cpp:44
+#, kde-format
+msgid "Clear History"
+msgstr "Limpar o Histórico"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "There was a problem sharing the document: %1"
+msgstr "Ocorreu um problema ao partilhar o documento: %1"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "Share"
+msgstr "Partilhar"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:58
+#, kde-format
+msgid "File was shared."
+msgstr "O ficheiro foi partilhado."
+
+#: pimcommon/widgets/purposemenuwidget.cpp:61
+#, kde-format
+msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
+msgstr "<qt>Poderá encontrar o novo pedido em:<br /><a href='%1'>%1</a> </qt>"
+
+#: pimcommon/widgets/renamefiledialog.cpp:100
+#, kde-format
+msgctxt "@title:window"
+msgid "File Already Exists"
+msgstr "O Ficheiro Já Existe"
+
+#: pimcommon/widgets/renamefiledialog.cpp:103
+#, kde-kuit-format
+msgid ""
+"A file named <filename>%1</filename> already exists. Do you want to "
+"overwrite it?"
+msgstr ""
+"Já existe um ficheiro chamado <filename>%1</filename>. Deseja sobrepô-lo?"
+
+#: pimcommon/widgets/renamefiledialog.cpp:113
+#, kde-format
+msgid "Suggest New &Name"
+msgstr "Sugerir um &Novo Nome"
+
+#: pimcommon/widgets/renamefiledialog.cpp:121
+#, kde-format
+msgid "&Ignore"
+msgstr "&Ignorar"
+
+#: pimcommon/widgets/renamefiledialog.cpp:124
+#, kde-format
+msgid "&Rename"
+msgstr "Muda&r o Nome"
+
+#: pimcommon/widgets/renamefiledialog.cpp:134
+#, kde-format
+msgid "Appl&y to All"
+msgstr "Apl&icar a Tudo"
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "This filename \"%1\" already exists."
+msgstr "Este ficheiro \"%1\" já existe."
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "File already exists"
+msgstr "O ficheiro já existe"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#, kde-format
+msgid "New entry:"
+msgstr "Novo elemento:"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:57
+#, kde-format
+msgid "New Value"
+msgstr "Novo Valor"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#, kde-format
+msgid "Do you want to remove selected text?"
+msgstr "Deseja remover o texto seleccionado?"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#, kde-format
+msgid "&Add..."
+msgstr "&Adicionar..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#, kde-format
+msgid "&Modify..."
+msgstr "&Modificar..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#, kde-format
+msgid "&Remove"
+msgstr "&Remover"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#, kde-format
+msgid "&Customize..."
+msgstr "&Personalizar..."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#, kde-format
+msgid "&User identifier:"
+msgstr "Identificador do &utilizador:"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The User Identifier is the login of the user on the IMAP server. This can be "
+"a simple user name or the full email address of the user; the login for your "
+"own account on the server will tell you which one it is."
+msgstr ""
+"O Identificador do Utilizador é a conta do utilizador no servidor de IMAP. "
+"Poderá ser um nome de utilizador simples ou o endereço de e-mail completo do "
+"utilizador; o nome da sua própria conta no servidor dir-lhe-á qual é que é."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#, kde-format
+msgctxt "select an email address"
+msgid "Se&lect..."
+msgstr "Se&leccionar..."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#, kde-format
+msgid "Permissions"
+msgstr "Permissões"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#, kde-format
+msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
+msgstr ""
+"<b>Nota: </b>A mudança de nome precisa de permissões de escrita na pasta-mãe."
+
+#: pimcommonakonadi/acl/acllistview.cpp:50
+#, kde-format
+msgid "Folder cannot be administrated."
+msgstr "Não é possível administrar a pasta."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:159
+#, kde-format
+msgid "Add Entry..."
+msgstr "Adicionar um Item..."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:164
+#, kde-format
+msgid "Edit Entry..."
+msgstr "Editar o Item..."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:170
+#, kde-format
+msgid "Remove Entry"
+msgstr "Remover o Item"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:212
+#, kde-format
+msgctxt "@title:window"
+msgid "Add ACL"
+msgstr "Adicionar uma ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:239
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit ACL"
+msgstr "Editar a ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:279
+#, kde-format
+msgid ""
+"Do you really want to remove your own permissions for this folder? You will "
+"not be able to access it afterwards."
+msgstr ""
+"Deseja realmente remover as suas próprias permissões para essa pasta? Não "
+"será capaz de aceder a ela posteriormente."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#, kde-format
+msgid "Do you really want to remove these permissions for this folder?"
+msgstr "Deseja realmente remover estas permissões para essa pasta?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
+#, kde-format
+msgid ""
+"Do you really want to apply the folder's permissions to these subfolders?"
+msgstr "Deseja realmente aplicar as permissões da pasta a estas sub-pastas:"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#, kde-format
+msgid "Apply Permissions"
+msgstr "Aplicar as Permissões"
+
+#: pimcommonakonadi/acl/aclutils.cpp:19
+msgctxt "Permissions"
+msgid "None"
+msgstr "Nenhuma"
+
+#: pimcommonakonadi/acl/aclutils.cpp:21
+msgctxt "Permissions"
+msgid "Read"
+msgstr "Leitura"
+
+#: pimcommonakonadi/acl/aclutils.cpp:23
+msgctxt "Permissions"
+msgid "Append"
+msgstr "Adição"
+
+#: pimcommonakonadi/acl/aclutils.cpp:27
+msgctxt "Permissions"
+msgid "Write"
+msgstr "Escrita"
+
+#: pimcommonakonadi/acl/aclutils.cpp:31
+msgctxt "Permissions"
+msgid "All"
+msgstr "Tudo"
+
+#: pimcommonakonadi/acl/aclutils.cpp:66
+#, kde-format
+msgid "Custom Permissions (%1)"
+msgstr "Permissões Personalizadas (%1)"
+
+#: pimcommonakonadi/acl/collectionaclpage.cpp:32
+#, kde-format
+msgid "Access Control"
+msgstr "Controlo de Acesso"
+
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
+#, kde-format
+msgid "Apply permissions on all &subfolders."
+msgstr "Aplicar as permissões a todas as &sub-pastas."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#, kde-format
+msgid "vCard Import Failed"
+msgstr "Importação do vCard sem Sucesso"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#, kde-format
+msgid "<qt>Unable to access <b>%1</b>.</qt>"
+msgstr "<qt>Não é possível aceder a <b>%1</b>.</qt>"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#, kde-format
+msgid "Select email from contact"
+msgstr "Seleccionar o e-mail do contacto"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#, kde-format
+msgid "Show Organization Unit for LDAP results"
+msgstr "Mostrar a Unidade Organizacional dos Resultados LDAP"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#, kde-format
+msgid "Configure Completion..."
+msgstr "Configurar a Completação..."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#, kde-format
+msgid "Automatically expand groups"
+msgstr "Expandir automaticamente os grupos"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#, kde-format
+msgid "Expand Groups..."
+msgstr "Expandir os Grupos..."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
+#, kde-format
+msgid "Recent Addresses"
+msgstr "Endereços Recentes"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#, kde-format
+msgctxt "@title:group"
+msgid "Contacts found in your data"
+msgstr "Contactos encontrados nos seus dados"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#, kde-format
+msgid "LDAP server: %1"
+msgstr "Servidor de LDAP: %1"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#, kde-format
+msgid "Search email:"
+msgstr "Procurar o e-mail:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr "A pesquisa é efectuada a partir dos 3 caracteres"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:48
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
+#, kde-format
+msgid "Search"
+msgstr "Procurar"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr "Mostrar os E-Mails Proibidos"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:75
+#, kde-format
+msgid "&Select"
+msgstr "&Seleccionar"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:80
+#, kde-format
+msgid "&Unselect"
+msgstr "&Deseleccionar"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
+#, kde-format
+msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Mais resultados...</a></qt>"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
+#, kde-format
+msgid "Search in result..."
+msgstr "Procurar no resultado..."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#, kde-format
+msgid "Exclude domain names:"
+msgstr "Excluir os nomes dos domínios:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#, kde-format
+msgid "Separate domain with '%1'"
+msgstr "Separar o domínio com o '%1'"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#, kde-format
+msgid "No email found."
+msgstr "Não foi encontrado nenhum e-mail."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#, kde-format
+msgid "1 email found"
+msgid_plural "%1 emails found"
+msgstr[0] "1 e-mail encontrado"
+msgstr[1] "%1 e-mails encontrados"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:121
+#, kde-format
+msgid "No result found"
+msgstr "Sem resultados encontrados"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
+#, kde-format
+msgid ""
+"The list was changed. Do you want to save before to make another search ?"
+msgstr ""
+"A lista foi modificada. Deseja gravá-la antes de executar outra pesquisa ?"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
+#, kde-format
+msgid "Save"
+msgstr "Gravar"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Completion"
+msgstr "Configurar a Completação"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#, kde-format
+msgid "Completion Order"
+msgstr "Ordem de Completação"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#, kde-format
+msgid "Recent Address"
+msgstr "Endereço Recente"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#, kde-format
+msgid "Blacklist Email Address"
+msgstr "Endereço de E-Mail Proibido"
+
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:40
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Completion Order"
+msgstr "Editar a Ordem de Completação"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
+#, kde-format
+msgid "LDAP server %1"
+msgstr "Servidor de LDAP %1"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
+#, kde-format
+msgid "Move Up"
+msgstr "Subir"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
+#, kde-format
+msgid "Move Down"
+msgstr "Descer"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgid_plural "Do you want to remove %1 email addresses?"
+msgstr[0] "Deseja remover este endereço de e-mail?"
+msgstr[1] "Deseja remover os %1 endereços de e-mail seleccionados?"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
+#, kde-format
+msgctxt "type of folder content"
+msgid "Mail"
+msgstr "Correio"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
+#, kde-format
+msgctxt "type of folder content"
+msgid "Calendar"
+msgstr "Calendário"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
+#, kde-format
+msgctxt "type of folder content"
+msgid "Contacts"
+msgstr "Contactos"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
+#, kde-format
+msgctxt "type of folder content"
+msgid "Notes"
+msgstr "Notas"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
+#, kde-format
+msgctxt "type of folder content"
+msgid "Tasks"
+msgstr "Tarefas"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
+#, kde-format
+msgctxt "type of folder content"
+msgid "Journal"
+msgstr "Diário"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
+#, kde-format
+msgctxt "type of folder content"
+msgid "Configuration"
+msgstr "Configuração"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
+#, kde-format
+msgctxt "type of folder content"
+msgid "Freebusy"
+msgstr "Livre-Ocupado"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
+#, kde-format
+msgctxt "type of folder content"
+msgid "Files"
+msgstr "Ficheiros"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#, kde-format
+msgctxt "type of folder content"
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
+#, kde-format
+msgid "&Folder contents:"
+msgstr "Conteúdo da &pasta:"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
+#, kde-format
+msgid "Nobody"
+msgstr "Ninguém"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
+#, kde-format
+msgid "Admins of This Folder"
+msgstr "Administradores desta Pasta"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#, kde-format
+msgid "All Readers of This Folder"
+msgstr "Todos os Leitores desta Pasta"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
+#, kde-format
+msgid ""
+"This setting defines which users sharing this folder should get \"busy\" "
+"periods in their freebusy lists and should see the alarms for the events or "
+"tasks in this folder. The setting applies to Calendar and Task folders only "
+"(for tasks, this setting is only used for alarms).\n"
+"\n"
+"Example use cases: if the boss shares a folder with his secretary, only the "
+"boss should be marked as busy for his meetings, so he should select \"Admins"
+"\", since the secretary has no admin rights on the folder.\n"
+"On the other hand if a working group shares a Calendar for group meetings, "
+"all readers of the folders should be marked as busy for meetings.\n"
+"A company-wide folder with optional events in it would use \"Nobody\" since "
+"it is not known who will go to those events."
+msgstr ""
+"Esta configuração define quais os utilizadores, que partilham esta pasta, "
+"que deverão receber os períodos \"ocupados\" nas suas listas de livre-"
+"ocupado e que deverão ver os alarmes para os eventos ou tarefas nesta pasta. "
+"A configuração aplica-se apenas às pastas de Calendário e Tarefas (para as "
+"tarefas, esta configuração só é usada para os alarmes).\n"
+"Casos de uso de exemplo: se o patrão partilhar uma pasta com a sua "
+"secretária, só o patrão deverá estar marcado como ocupado para as suas "
+"reuniões, pelo que deverá seleccionar \"Administradores\", dado que a "
+"secretária não tem privilégios de administração sobre a pasta.\n"
+"Por outro lado, se um grupo de trabalho partilhar um Calendário para as "
+"reuniões de grupo, todos os leitores das pastas deverão estar marcados como "
+"ocupados para as reuniões.\n"
+"Uma pasta ao nível da empresa, com eventos opcionais nela, deveria usar o "
+"\"Ninguém\", dado que não se sabe quem irá a esses eventos."
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#, kde-format
+msgid "Generate free/&busy and activate alarms for:"
+msgstr "Gerar alarmes de livre/&ocupado e activar alarmes para:"
+
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#, kde-format
+msgid "Search..."
+msgstr "Procurar..."
+
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Multiple Folders"
+msgstr "Seleccionar Várias Pastas"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Title"
+msgstr "Título"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
+#, kde-format
+msgid "Full Name"
+msgstr "Nome Completo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Email"
+msgstr "E-mail"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#, kde-format
+msgid "Home Number"
+msgstr "Número de Casa"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#, kde-format
+msgid "Work Number"
+msgstr "Número do Emprego"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#, kde-format
+msgid "Mobile Number"
+msgstr "Número do Telemóvel"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#, kde-format
+msgid "Fax Number"
+msgstr "Número do Fax"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
+#, kde-format
+msgid "Pager"
+msgstr "'Pager'"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#, kde-format
+msgid "Street"
+msgstr "Rua"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "State"
+msgstr "Estado"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#, kde-format
+msgid "Country"
+msgstr "País"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#, kde-format
+msgid "City"
+msgstr "Cidade"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#, kde-format
+msgid "Organization"
+msgstr "Organização"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#, kde-format
+msgid "Company"
+msgstr "Companhia"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#, kde-format
+msgid "Department"
+msgstr "Departamento"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#, kde-format
+msgid "Zip Code"
+msgstr "Código Postal"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#, kde-format
+msgid "Postal Address"
+msgstr "Endereço Postal"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#, kde-format
+msgid "Description"
+msgstr "Descrição"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#, kde-format
+msgid "User ID"
+msgstr "ID do Utilizador"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#, kde-format
+msgctxt "@title:column Column containing email addresses"
+msgid "Email"
+msgstr "E-Mail"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#, kde-format
+msgctxt "@title:column Column containing the residential state of the address"
+msgid "State"
+msgstr "Estado"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#, kde-format
+msgctxt "@title:column Column containing title of the person"
+msgid "Title"
+msgstr "Título"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Contacts from LDAP"
+msgstr "Importar os Contactos do LDAP"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
+#, kde-format
+msgid "Search for Addresses in Directory"
+msgstr "Procurar por Endereços no Directório"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
+#, kde-format
+msgid "Search for:"
+msgstr "Procurar por:"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#, kde-format
+msgctxt "In LDAP attribute"
+msgid "in"
+msgstr "em"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
+#, kde-format
+msgctxt "@item:inlistbox Name of the contact"
+msgid "Name"
+msgstr "Nome"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
+#, kde-format
+msgctxt "@item:inlistbox email address of the contact"
+msgid "Email"
+msgstr "E-mail"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Home Number"
+msgstr "Número de Casa"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Work Number"
+msgstr "Número do Emprego"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#, kde-format
+msgctxt "@action:button Start searching"
+msgid "&Search"
+msgstr "&Procurar"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#, kde-format
+msgid "Recursive search"
+msgstr "Pesquisa recursiva"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#, kde-format
+msgid "Contains"
+msgstr "Contém"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
+#, kde-format
+msgid "Starts With"
+msgstr "Começa por"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
+#, kde-format
+msgid "Search in result"
+msgstr "Procurar no resultado"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
+#, kde-format
+msgid "Searching..."
+msgstr "A procurar..."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
+#, kde-format
+msgid "Select All"
+msgstr "Seleccionar Tudo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
+#, kde-format
+msgid "Unselect All"
+msgstr "Deseleccionar Tudo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
+#, kde-format
+msgid "Add Selected"
+msgstr "Adicionar os Seleccionados"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
+#, kde-format
+msgid "Configure LDAP Servers..."
+msgstr "Configurar os Servidores de LDAP..."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
+#, kde-format
+msgid "Copy"
+msgstr "Copiar"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
+#, kde-format
+msgid "You must select an LDAP server before searching."
+msgstr "Tem de seleccionar um servidor de LDAP antes de pesquisar."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#, kde-format
+msgctxt "arguments are host name, datetime"
+msgid "Imported from LDAP directory %1 on %2"
+msgstr "Importado do directório de LDAP %1 a %2"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure the Address Book LDAP Settings"
+msgstr "Configurar as Opções de LDAP do Livro de Endereços..."
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
+#, kde-format
+msgid ""
+"IMAP server not configured yet. Please configure the server in the IMAP "
+"account before setting up server-side subscription."
+msgstr ""
+"O servidor de IMAP ainda não foi configurado. Por favor, configure o "
+"servidor na conta de IMAP, antes de configurar a subscrição no servidor."
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
+#, kde-format
+msgid ""
+"Log in failed, please configure the IMAP account before setting up server-"
+"side subscription."
+msgstr ""
+"A autenticação foi mal-sucedida; por favor, configure a conta de IMAP antes "
+"de configurar a subscrição do lado do servidor."
+
+#: pimcommonakonadi/util/createresource.cpp:64
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "O tipo de recurso '%1' não está disponível."
+
+#: pimcommonakonadi/util/createresource.cpp:75
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "O recurso '%1' já está configurado."
+
+#: pimcommonakonadi/util/createresource.cpp:81
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "A criar a instância do recurso para '%1'..."
+
+#: pimcommonakonadi/util/createresource.cpp:87
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "A configurar a instância do recurso..."
+
+#: pimcommonakonadi/util/createresource.cpp:90
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Não foi possível configurar a instância do recurso."
+
+#: pimcommonakonadi/util/createresource.cpp:106
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr ""
+"Não foi possível converter o valor da opção '%1' para o tipo pedido '%2'."
+
+#: pimcommonakonadi/util/createresource.cpp:112
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Não foi possível definir a opção '%1': %2"
+
+#: pimcommonakonadi/util/createresource.cpp:118
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Não foi possível gravar a configuração: %1"
+
+#: pimcommonakonadi/util/createresource.cpp:127
+#, kde-format
+msgid "Resource setup completed."
+msgstr "A configuração do recurso terminou."
+
+#: pimcommonakonadi/util/createresource.cpp:131
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Não foi possível criar a instância do recurso: %1"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Note"
+msgstr "Editar a Nota"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Note"
+msgstr "Apagar a Nota"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Note"
+msgstr "Adicionar uma Nota"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#, kde-format
+msgid "Enter the text that should be stored as a note to the mail:"
+msgstr ""
+"Indique o texto que deve ser guardado como uma nota na mensagem de e-mail:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Note type:"
+msgstr "Tipo de nota:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Private note"
+msgstr "Nota privada"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Shared note"
+msgstr "Nota partilhada"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#, kde-format
+msgid "Do you really want to delete this note?"
+msgstr "Deseja realmente apagar esta nota?"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Note"
+msgstr "Apagar a Nota"
