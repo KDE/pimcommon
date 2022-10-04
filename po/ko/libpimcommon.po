@@ -7,9 +7,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-24 00:46+0000\n"
-"PO-Revision-Date: 2022-07-13 12:12+0200\n"
+"PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -550,28 +550,28 @@ msgstr "템플릿 불러오기"
 #: pimcommon/translator/translatorutil.cpp:257
 #, kde-format
 msgid "Bing"
-msgstr ""
+msgstr "Bing"
 
 #: pimcommon/translator/engine/bingtranslator.cpp:65
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
-msgstr ""
+msgstr "오류: 웹 버전에서 Bing 계정 정보를 찾을 수 없습니다."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:73
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
-msgstr ""
+msgstr "오류: 웹 버전에서 Bing 키를 추출할 수 없습니다."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:82
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
-msgstr ""
+msgstr "오류: 웹 버전에서 Bing 토큰을 추출할 수 없습니다."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:91
 #: pimcommon/translator/engine/bingtranslator.cpp:100
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
-msgstr ""
+msgstr "오류: 웹 버전에서 추가 Bing 정보를 추출할 수 없습니다."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:113
 #: pimcommon/translator/engine/deepltranslator.cpp:41
@@ -587,7 +587,7 @@ msgstr "원본과 대상 언어가 같습니다."
 #: pimcommon/translator/translatorutil.cpp:266
 #, kde-format
 msgid "DeepL"
-msgstr ""
+msgstr "DeepL"
 
 #: pimcommon/translator/engine/googletranslator.cpp:135
 #: pimcommon/translator/translatorutil.cpp:251
@@ -597,22 +597,21 @@ msgstr "Google"
 
 #: pimcommon/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommon/translator/translatorutil.cpp:263
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Libre Translate"
-msgstr "번역"
+msgstr "Libre Translate"
 
 #: pimcommon/translator/engine/lingvatranslator.cpp:30
 #: pimcommon/translator/translatorutil.cpp:260
 #, kde-format
 msgid "Lingva"
-msgstr ""
+msgstr "Lingva"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:119
 #: pimcommon/translator/translatorutil.cpp:254
 #, kde-format
 msgid "Yandex"
-msgstr ""
+msgstr "Yandex"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:129
 #: pimcommon/translator/translatorenginebase.cpp:83
@@ -621,33 +620,34 @@ msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
 "network. Please try your request again later."
 msgstr ""
+"오류: 엔진 시스템에서 이 컴퓨터로부터 수상한 트래픽을 감지했습니다. 나중에 다"
+"시 시도하십시오."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:138
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
-msgstr ""
+msgstr "오류: 웹 버전에서 Yandex SID를 찾을 수 없습니다."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:146
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
-msgstr ""
+msgstr "오류: 웹 버전에서 Yandex SID를 추출할 수 없습니다."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:215
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
-msgstr ""
+msgstr "오류: 자동 감지된 언어를 해석할 수 없음"
 
 #: pimcommon/translator/translatorconfiguredialog.cpp:24
-#, fuzzy, kde-format
-#| msgid "Translator"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
-msgstr "번역기"
+msgstr "번역기 설정"
 
 #: pimcommon/translator/translatorconfigurewidget.cpp:33
 #, kde-format
 msgid "Engine:"
-msgstr ""
+msgstr "엔진:"
 
 #: pimcommon/translator/translatordebugdialog.cpp:28
 #, kde-format
