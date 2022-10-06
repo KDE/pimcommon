@@ -53,7 +53,7 @@ msgstr "&Modifica"
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
-msgstr "&Afig"
+msgstr "Afi&g"
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:546
 #, kde-format
@@ -377,7 +377,7 @@ msgstr "Bu&sca"
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
 #, kde-format
 msgid "Re&place"
-msgstr "&Substituïx"
+msgstr "Su&bstituïx"
 
 #. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:537
@@ -1174,7 +1174,7 @@ msgstr "&Ignora"
 #: pimcommon/widgets/renamefiledialog.cpp:124
 #, kde-format
 msgid "&Rename"
-msgstr "&Canvia el nom"
+msgstr "Ca&nvia el nom"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
@@ -1211,7 +1211,7 @@ msgstr "Voleu eliminar el text seleccionat?"
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
 msgid "&Add..."
-msgstr "&Afig..."
+msgstr "Afi&g..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
