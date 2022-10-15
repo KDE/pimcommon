@@ -21,6 +21,7 @@
 #include <QMenu>
 #include <QPointer>
 #include <QTreeWidgetItem>
+#include <kwidgetsaddons_version.h>
 
 using namespace PimCommon;
 
@@ -597,12 +598,20 @@ void AutoCorrectionWidget::changeLanguage(int index)
         return;
     }
     if (d->mWasChanged) {
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        const int rc = KMessageBox::warningTwoActions(this,
+#else
         const int rc = KMessageBox::warningYesNo(this,
-                                                 i18n("Language was changed, do you want to save config for previous language?"),
-                                                 i18n("Save config"),
-                                                 KStandardGuiItem::save(),
-                                                 KStandardGuiItem::discard());
+#endif
+                                                      i18n("Language was changed, do you want to save config for previous language?"),
+                                                      i18n("Save config"),
+                                                      KStandardGuiItem::save(),
+                                                      KStandardGuiItem::discard());
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+        if (rc == KMessageBox::ButtonCode::PrimaryAction) {
+#else
         if (rc == KMessageBox::Yes) {
+#endif
             writeConfig();
         }
     }

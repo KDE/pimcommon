@@ -21,6 +21,7 @@
 #include <QMenu>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <kwidgetsaddons_version.h>
 
 //********************************************************
 // SimpleStringListEditor
@@ -305,8 +306,16 @@ void SimpleStringListEditor::slotRemove()
     if (selectedItems.isEmpty()) {
         return;
     }
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    const int answer = KMessageBox::warningTwoActions(this, d->mRemoveDialogLabel, i18n("Remove"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
+#else
     const int answer = KMessageBox::warningYesNo(this, d->mRemoveDialogLabel, i18n("Remove"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (answer == KMessageBox::ButtonCode::PrimaryAction) {
+#else
     if (answer == KMessageBox::Yes) {
+#endif
         for (QListWidgetItem *item : selectedItems) {
             delete d->mListBox->takeItem(d->mListBox->row(item));
         }
