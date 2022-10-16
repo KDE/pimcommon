@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:46+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -17,77 +17,77 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:112
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice 자동 고침"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:116
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra 자동 고침"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"바꿀 문자열\"이 \"찾을 문자열\"과 같습니다."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "자동 고침 항목 추가"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:435
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
 #, kde-format
 msgid "&Modify"
 msgstr "수정(&M)"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:438
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
 msgstr "추가(&A)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:546
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "LibreOffice 자동 고침 가져오기"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr "LibreOffice 자동 고침 파일 (*.data)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "KMail 자동 고침 가져오기"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 자동 고침 파일 (*.xml)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:601
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:606
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "언어가 변경되었습니다. 이전 언어의 설정을 저장하시겠습니까?"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:602
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:607
 #, kde-format
 msgid "Save config"
 msgstr "설정 저장"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:642
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "설정을 내보내기 전에 저장하십시오."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:636
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:642
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
@@ -116,14 +116,14 @@ msgstr "언어에 대한 바꾸기 및 예외:"
 
 #. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
-#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#: pimcommon/templatewidgets/templatelistwidget.cpp:203
 #, kde-format
 msgid "Export..."
 msgstr "내보내기..."
 
 #. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
-#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Import..."
 msgstr "가져오기..."
@@ -336,12 +336,13 @@ msgstr "고급 자동 고침(&V)"
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/widgets/simplestringlisteditor.cpp:310
+#: pimcommon/widgets/simplestringlisteditor.cpp:312
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:118
 #, kde-format
 msgid "Remove"
 msgstr "삭제"
@@ -402,7 +403,7 @@ msgstr "대문자 두 개 허용:"
 
 #. i18n: ectx: property (text), widget (QPushButton, add2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
 #, kde-format
 msgid "Add"
 msgstr "추가"
@@ -486,62 +487,62 @@ msgstr "템플릿"
 msgid "Name:"
 msgstr "이름:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#: pimcommon/templatewidgets/templatelistwidget.cpp:80
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "선택한 템플릿을 삭제하시겠습니까?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#: pimcommon/templatewidgets/templatelistwidget.cpp:81
 #, kde-format
 msgid "Delete template"
 msgstr "템플릿 삭제"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
 #, kde-format
 msgid "Import Template"
 msgstr "템플릿 가져오기"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#: pimcommon/templatewidgets/templatelistwidget.cpp:161
 #, kde-format
 msgid "Export Template"
 msgstr "템플릿 내보내기"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#: pimcommon/templatewidgets/templatelistwidget.cpp:175
 #, kde-format
 msgid "Insert template"
 msgstr "템플릿 삽입"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Add..."
 msgstr "추가..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #, kde-format
 msgid "Show..."
 msgstr "표시..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #, kde-format
 msgid "Modify..."
 msgstr "수정..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#: pimcommon/templatewidgets/templatelistwidget.cpp:190
 #, kde-format
 msgid "Duplicate"
 msgstr "복제"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#: pimcommon/templatewidgets/templatelistwidget.cpp:214
 #, kde-format
 msgid "Download new Templates..."
 msgstr "새 템플릿 다운로드..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:249
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "'%1'은(는) 템플릿 파일이 아님"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:249
 #, kde-format
 msgid "Load Template"
 msgstr "템플릿 불러오기"
@@ -1160,39 +1161,39 @@ msgstr "파일 \"%1\"이(가) 이미 존재합니다."
 msgid "File already exists"
 msgstr "파일이 이미 존재함"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:55
-#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
 #, kde-format
 msgid "New entry:"
 msgstr "새 항목:"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:56
 #: pimcommon/widgets/simplestringlisteditor.cpp:57
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New Value"
 msgstr "새 값"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#: pimcommon/widgets/simplestringlisteditor.cpp:60
 #, kde-format
 msgid "Do you want to remove selected text?"
 msgstr "선택한 텍스트를 삭제하시겠습니까?"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#: pimcommon/widgets/simplestringlisteditor.cpp:95
 #, kde-format
 msgid "&Add..."
 msgstr "추가(&A)..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#: pimcommon/widgets/simplestringlisteditor.cpp:106
 #, kde-format
 msgid "&Modify..."
 msgstr "수정(&M)..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#: pimcommon/widgets/simplestringlisteditor.cpp:119
 #, kde-format
 msgid "&Remove"
 msgstr "삭제(&R)"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#: pimcommon/widgets/simplestringlisteditor.cpp:156
 #, kde-format
 msgid "&Customize..."
 msgstr "사용자 정의(&C)..."
@@ -1500,7 +1501,7 @@ msgstr "위로 이동"
 msgid "Move Down"
 msgstr "아래로 이동"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:117
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"

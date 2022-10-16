@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:46+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-06-17 20:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -20,77 +20,77 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:112
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOfficen automaattikorjaus"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:116
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMailin/Calligran automaattikorjaus"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Korvattava merkkijono on sama kuin etsittävä jono."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Lisää automaattikorjausmerkintä"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:435
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
 #, kde-format
 msgid "&Modify"
 msgstr "&Muuta"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:438
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
 msgstr "&Lisää"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:546
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Tuo LibreOfficen automaattikorjaukset"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr "LibreOfficen automaattikorjaustiedosto (*.data)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Tuo KMailin automaattikorjaukset"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMailin automaattikorjaustiedosto (*.xml)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:601
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:606
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "Kieltä muutettiin: haluatko tallentaa edellisen kielen asetukset?"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:602
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:607
 #, kde-format
 msgid "Save config"
 msgstr "Tallenna asetukset"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:642
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Tallenna muutokset ennen asetusten vientiä."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:636
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:642
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Vie automaattikorjaustiedosto"
@@ -119,14 +119,14 @@ msgstr "Korvaus- ja poikkeussäännöt kielelle:"
 
 #. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
-#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#: pimcommon/templatewidgets/templatelistwidget.cpp:203
 #, kde-format
 msgid "Export..."
 msgstr "Vie…"
 
 #. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
-#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Import..."
 msgstr "Tuo…"
@@ -344,12 +344,13 @@ msgstr "Automaattikorjauksen lisäasetukset"
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/widgets/simplestringlisteditor.cpp:310
+#: pimcommon/widgets/simplestringlisteditor.cpp:312
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:118
 #, kde-format
 msgid "Remove"
 msgstr "Poista"
@@ -410,7 +411,7 @@ msgstr "Hyväksy kaksi isoa alkukirjainta:"
 
 #. i18n: ectx: property (text), widget (QPushButton, add2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
 #, kde-format
 msgid "Add"
 msgstr "Lisää"
@@ -494,62 +495,62 @@ msgstr "Mallipohja"
 msgid "Name:"
 msgstr "Nimi:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#: pimcommon/templatewidgets/templatelistwidget.cpp:80
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Haluatko varmasti poistaa valitun mallipohjan?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#: pimcommon/templatewidgets/templatelistwidget.cpp:81
 #, kde-format
 msgid "Delete template"
 msgstr "Poista mallipohja"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
 #, kde-format
 msgid "Import Template"
 msgstr "Tuo mallipohja"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#: pimcommon/templatewidgets/templatelistwidget.cpp:161
 #, kde-format
 msgid "Export Template"
 msgstr "Vie mallipohja"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#: pimcommon/templatewidgets/templatelistwidget.cpp:175
 #, kde-format
 msgid "Insert template"
 msgstr "Lisää mallipohja"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Add..."
 msgstr "Lisää…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #, kde-format
 msgid "Show..."
 msgstr "Näytä…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #, kde-format
 msgid "Modify..."
 msgstr "Muuta…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#: pimcommon/templatewidgets/templatelistwidget.cpp:190
 #, kde-format
 msgid "Duplicate"
 msgstr "Kahdenna"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#: pimcommon/templatewidgets/templatelistwidget.cpp:214
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Lataa uusia mallipohjia…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:249
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "”%1” ei ole mallipohjatiedosto"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:249
 #, kde-format
 msgid "Load Template"
 msgstr "Lataa mallipohja"
@@ -1172,40 +1173,40 @@ msgstr "Tiedostonimi ”%1” on jo olemassa."
 msgid "File already exists"
 msgstr "Tiedosto on jo olemassa"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:55
-#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
 #, kde-format
 msgid "New entry:"
 msgstr "Uusi tietue:"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:56
 #: pimcommon/widgets/simplestringlisteditor.cpp:57
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New Value"
 msgstr "Uusi arvo"
 
 # *** TARKISTA: ID tuntuu johtavan harhaan. Viesti näytetään, kun painaa Poista-painiketta asetusten kohdassa KMailin asetukset > Kirjoittaminen > Merkistö jokin luettelon merkistöistä valittuna. Korjataan muuksi, jos tätä käytetään jossain muuallakin
-#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#: pimcommon/widgets/simplestringlisteditor.cpp:60
 #, kde-format
 msgid "Do you want to remove selected text?"
 msgstr "Haluatko poistaa valitun merkistökoodauksen?"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#: pimcommon/widgets/simplestringlisteditor.cpp:95
 #, kde-format
 msgid "&Add..."
 msgstr "&Lisää…"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#: pimcommon/widgets/simplestringlisteditor.cpp:106
 #, kde-format
 msgid "&Modify..."
 msgstr "&Muuta…"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#: pimcommon/widgets/simplestringlisteditor.cpp:119
 #, kde-format
 msgid "&Remove"
 msgstr "&Poista"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#: pimcommon/widgets/simplestringlisteditor.cpp:156
 #, kde-format
 msgid "&Customize..."
 msgstr "M&ukauta…"
@@ -1521,7 +1522,7 @@ msgid "Move Down"
 msgstr "Siirrä alemmas"
 
 # *** TARKISTA: ID tuntuu johtavan harhaan. Viesti näytetään, kun painaa Poista-painiketta asetusten kohdassa KMailin asetukset > Kirjoittaminen > Merkistö jokin luettelon merkistöistä valittuna. Korjataan muuksi, jos tätä käytetään jossain muuallakin
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:117
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"

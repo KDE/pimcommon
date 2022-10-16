@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-24 00:46+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2013-09-15 12:14+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:112
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:116
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:356
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:435
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgid "&Modify"
@@ -45,7 +45,7 @@ msgstr "&Modifică..."
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:438
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, fuzzy, kde-format
@@ -53,43 +53,43 @@ msgstr "&Modifică..."
 msgid "&Add"
 msgstr "&Adaugă..."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:546
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:601
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:606
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:602
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:607
 #, kde-format
 msgid "Save config"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:642
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:633
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:636
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:642
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr ""
@@ -118,14 +118,14 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
-#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#: pimcommon/templatewidgets/templatelistwidget.cpp:203
 #, kde-format
 msgid "Export..."
 msgstr "Exportă..."
 
 #. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
-#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Import..."
 msgstr "Importă..."
@@ -326,12 +326,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/widgets/simplestringlisteditor.cpp:310
+#: pimcommon/widgets/simplestringlisteditor.cpp:312
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:118
 #, kde-format
 msgid "Remove"
 msgstr "Elimină"
@@ -394,7 +395,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, add2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
 #, fuzzy, kde-format
 #| msgid "Add..."
 msgid "Add"
@@ -483,64 +484,64 @@ msgstr "Șablon"
 msgid "Name:"
 msgstr "Denumire:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#: pimcommon/templatewidgets/templatelistwidget.cpp:80
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Doriți să ștergeți șablonul ales?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#: pimcommon/templatewidgets/templatelistwidget.cpp:81
 #, kde-format
 msgid "Delete template"
 msgstr "Șterge șablonul"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
 #, fuzzy, kde-format
 #| msgid "Insert template"
 msgid "Import Template"
 msgstr "Inserează șablon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#: pimcommon/templatewidgets/templatelistwidget.cpp:161
 #, fuzzy, kde-format
 #| msgid "Template"
 msgid "Export Template"
 msgstr "Șablon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#: pimcommon/templatewidgets/templatelistwidget.cpp:175
 #, kde-format
 msgid "Insert template"
 msgstr "Inserează șablon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Add..."
 msgstr "Adaugă..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #, kde-format
 msgid "Show..."
 msgstr "Arată..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #, kde-format
 msgid "Modify..."
 msgstr "Modifică..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#: pimcommon/templatewidgets/templatelistwidget.cpp:190
 #, kde-format
 msgid "Duplicate"
 msgstr ""
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#: pimcommon/templatewidgets/templatelistwidget.cpp:214
 #, kde-format
 msgid "Download new Templates..."
 msgstr ""
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:249
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr ""
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:249
 #, fuzzy, kde-format
 #| msgid "Template"
 msgid "Load Template"
@@ -1162,40 +1163,40 @@ msgstr "Denumirea de fișier „%1” există deja."
 msgid "File already exists"
 msgstr "Fișierul există deja."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:55
-#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
 #, kde-format
 msgid "New entry:"
 msgstr "Înregistrare nouă:"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:56
 #: pimcommon/widgets/simplestringlisteditor.cpp:57
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New Value"
 msgstr "Valoare nouă"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#: pimcommon/widgets/simplestringlisteditor.cpp:60
 #, fuzzy, kde-format
 #| msgid "Do you want to delete selected template?"
 msgid "Do you want to remove selected text?"
 msgstr "Doriți să ștergeți șablonul ales?"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#: pimcommon/widgets/simplestringlisteditor.cpp:95
 #, kde-format
 msgid "&Add..."
 msgstr "&Adaugă..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#: pimcommon/widgets/simplestringlisteditor.cpp:106
 #, kde-format
 msgid "&Modify..."
 msgstr "&Modifică..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#: pimcommon/widgets/simplestringlisteditor.cpp:119
 #, kde-format
 msgid "&Remove"
 msgstr "&Elimină"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#: pimcommon/widgets/simplestringlisteditor.cpp:156
 #, kde-format
 msgid "&Customize..."
 msgstr ""
@@ -1506,7 +1507,7 @@ msgstr ""
 msgid "Move Down"
 msgstr ""
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:117
 #, fuzzy, kde-format
 #| msgid "Do you want to delete selected template?"
 msgid "Do you want to remove this email address?"
