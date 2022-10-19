@@ -8,10 +8,10 @@
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KSeparator>
 #include <KStandardGuiItem>
 #include <QLineEdit>
 #include <QPushButton>
-#include <kseparator.h>
 
 #include <QCheckBox>
 #include <QFileInfo>
