@@ -539,7 +539,7 @@ void AutoCorrectionWidget::slotEnableDisableTwoUpperEntry()
 void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
 {
     if (act) {
-        auto type = act->data().value<AutoCorrectionWidget::ImportFileType>();
+        const auto type = act->data().value<AutoCorrectionWidget::ImportFileType>();
         QString title;
         QString filter;
         switch (type) {
