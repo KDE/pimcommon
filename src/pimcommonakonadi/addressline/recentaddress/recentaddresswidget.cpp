@@ -27,24 +27,25 @@
 using namespace PimCommon;
 RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     : QWidget(parent)
+    , mLineEdit(new QLineEdit(this))
+    , mNewButton(new QToolButton(this))
+    , mRemoveButton(new QToolButton(this))
+    , mListView(new QListWidget(this))
 {
     auto layout = new QVBoxLayout(this);
 
     auto lineLayout = new QHBoxLayout;
     layout->addLayout(lineLayout);
 
-    mLineEdit = new QLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("line_edit"));
     new KPIM::LineEditCatchReturnKey(mLineEdit, this);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
-    auto emailValidator = new PimCommon::EmailValidator(this);
-    mLineEdit->setValidator(emailValidator);
+    mLineEdit->setValidator(new PimCommon::EmailValidator(this));
     connect(mLineEdit, &QLineEdit::returnPressed, this, &RecentAddressWidget::slotAddItem);
 
     lineLayout->addWidget(mLineEdit);
 
-    mNewButton = new QToolButton(this);
     mNewButton->setToolTip(i18n("Add"));
     mNewButton->setObjectName(QStringLiteral("new_button"));
     mNewButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
@@ -53,7 +54,6 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     connect(mLineEdit, &QLineEdit::textChanged, this, &RecentAddressWidget::slotUpdateAddButton);
     lineLayout->addWidget(mNewButton);
 
-    mRemoveButton = new QToolButton(this);
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setToolTip(i18n("Remove"));
     mRemoveButton->setObjectName(QStringLiteral("remove_button"));
@@ -65,7 +65,6 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     shortcut->setKey(QKeySequence(Qt::Key_Delete));
     connect(shortcut, &QShortcut::activated, this, &RecentAddressWidget::slotRemoveItem);
 
-    mListView = new QListWidget(this);
     mListView->setObjectName(QStringLiteral("list_view"));
     mListView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListView->setSortingEnabled(true);

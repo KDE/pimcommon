@@ -40,10 +40,10 @@ private:
     void slotAddItem();
     void slotRemoveItem();
     void slotUpdateAddButton(const QString &str);
-    QToolButton *mNewButton = nullptr;
-    QToolButton *mRemoveButton = nullptr;
-    QListWidget *mListView = nullptr;
-    QLineEdit *mLineEdit = nullptr;
+    QLineEdit *const mLineEdit;
+    QToolButton *const mNewButton;
+    QToolButton *const mRemoveButton;
+    QListWidget *const mListView;
     bool mDirty = false;
 };
 }
