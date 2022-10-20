@@ -20,6 +20,102 @@ using namespace PimCommon;
 
 TranslatorUtil::TranslatorUtil() = default;
 
+QVector<QPair<QString, QString>> TranslatorUtil::bingSpecificLanguages()
+{
+    TranslatorUtil translatorUtil;
+    QVector<QPair<QString, QString>> langLanguage;
+#if 0
+    { QLatin1String("bs-BG"),  QLatin1String("bs-Latn")  },         //                                            NOTE: Bing translator only
+    { QLatin1String("sr-RS"),  QLatin1String("sr-Cyrl")  },         //                                            NOTE: Bing translator only
+    { QLatin1String("zh-CN"),  QLatin1String("zh-Hans")  },         // SimplifiedChinese                        ; NOTE: Bing translator only
+    { QLatin1String("zh-TW"),  QLatin1String("zh-Hant")  }          // TraditionalChinese                       ; NOTE: Bing translator only
+#endif
+    return langLanguage;
+}
+
+QVector<QPair<QString, QString>> TranslatorUtil::googleSpecificLanguages()
+{
+    TranslatorUtil translatorUtil;
+    QVector<QPair<QString, QString>> langLanguage;
+    langLanguage.append(translatorUtil.pair(TranslatorUtil::zh_cn_google)); // For google only
+    langLanguage.append(translatorUtil.pair(TranslatorUtil::zh_tw_google)); // For google only
+    return langLanguage;
+}
+
+QVector<QPair<QString, QString>> TranslatorUtil::yandexSpecificLanguages()
+{
+    TranslatorUtil translatorUtil;
+    QVector<QPair<QString, QString>> langLanguage;
+    langLanguage.append(translatorUtil.pair(TranslatorUtil::jv_yandex));
+    langLanguage.append(translatorUtil.pair(TranslatorUtil::zn_yandex));
+    return langLanguage;
+}
+
+QVector<QPair<QString, QString>> TranslatorUtil::genericLanguages()
+{
+    TranslatorUtil translatorUtil;
+    QVector<QPair<QString, QString>> fullListLanguage;
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::automatic));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::en));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::nl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::fr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::de));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::el));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::it));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ja));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ko));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::pt));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ru));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::es));
+
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::af));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sq));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ar));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hy));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::az));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::eu));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::be));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::bg));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ca));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cs));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::da));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::et));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::tl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::fi));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::gl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ka));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ht));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::iw));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hi));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::hu));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::is));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::id));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ga));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::lv));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::lt));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::mk));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ms));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::mt));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::no));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::fa));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::pl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ro));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sk));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sl));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sw));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::sv));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::th));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::tr));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::uk));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::ur));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::vi));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::cy));
+    fullListLanguage.append(translatorUtil.pair(TranslatorUtil::yi));
+    return fullListLanguage;
+}
+
 QPair<QString, QString> TranslatorUtil::pair(TranslatorUtil::languages lang)
 {
     QPair<QString, QString> ret;
@@ -272,10 +368,25 @@ void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
     }
 }
 
+QString TranslatorUtil::groupTranslateName()
+{
+    return QStringLiteral("Translate");
+}
+
+QString TranslatorUtil::engineTranslateName()
+{
+    return QStringLiteral("engine");
+}
+
+QString TranslatorUtil::defaultEngineName()
+{
+    return QStringLiteral("google");
+}
+
 QString TranslatorUtil::loadEngine()
 {
-    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
-    const QString engineTypeStr = myGeneralGroup.readEntry(QStringLiteral("Engine"), QStringLiteral("google")); // Default google
+    KConfigGroup myGeneralGroup(KSharedConfig::openConfig(), groupTranslateName());
+    const QString engineTypeStr = myGeneralGroup.readEntry(engineTranslateName(), defaultEngineName()); // Default google
     return engineTypeStr;
 }
 
@@ -304,7 +415,7 @@ PimCommon::TranslatorEngineBase::TranslatorEngine TranslatorUtil::loadEngineSett
 
 void TranslatorUtil::saveEngineSettings(const QString &engineName)
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("General"));
-    myGroup.writeEntry(QStringLiteral("Engine"), engineName);
+    KConfigGroup myGroup(KSharedConfig::openConfig(), groupTranslateName());
+    myGroup.writeEntry(engineTranslateName(), engineName);
     myGroup.sync();
 }

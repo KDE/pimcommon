@@ -90,13 +90,23 @@ public:
         ur,
         vi,
         cy,
-        yi
+        yi,
+        jv_yandex,
+        zn_yandex,
     };
+    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> genericLanguages();
+    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> googleSpecificLanguages();
+    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> yandexSpecificLanguages();
+    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> bingSpecificLanguages();
+
     Q_REQUIRED_RESULT QPair<QString, QString> pair(TranslatorUtil::languages lang);
     Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase *switchEngine(PimCommon::TranslatorEngineBase::TranslatorEngine engineType, QObject *parent);
     static void fillComboboxSettings(QComboBox *combo);
     Q_REQUIRED_RESULT static PimCommon::TranslatorEngineBase::TranslatorEngine loadEngineSettings();
     Q_REQUIRED_RESULT static QString loadEngine();
     static void saveEngineSettings(const QString &engineName);
+    Q_REQUIRED_RESULT static QString groupTranslateName();
+    Q_REQUIRED_RESULT static QString engineTranslateName();
+    Q_REQUIRED_RESULT static QString defaultEngineName();
 };
 }
