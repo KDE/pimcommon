@@ -59,8 +59,8 @@ void LineEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
     if (d->mAutoCorrection && d->mAutoCorrection->isEnabledAutoCorrection()) {
         if ((e->key() == Qt::Key_Space) || (e->key() == Qt::Key_Enter) || (e->key() == Qt::Key_Return)) {
             if (!textCursor().hasSelection()) {
-                // no Html format in subject.
                 int position = textCursor().position();
+                // no Html format in subject. => false
                 const bool addSpace = d->mAutoCorrection->autocorrect(false, *document(), position);
                 QTextCursor cur = textCursor();
                 cur.setPosition(position);
