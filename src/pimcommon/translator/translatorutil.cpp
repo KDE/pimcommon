@@ -233,7 +233,7 @@ PimCommon::TranslatorEngineBase *TranslatorUtil::switchEngine(PimCommon::Transla
         abstractTranslator = new LingvaTranslator(parent);
         break;
     case PimCommon::TranslatorEngineBase::TranslatorEngine::LibreTranslate:
-        abstractTranslator = new LingvaTranslator(parent);
+        abstractTranslator = new LibreTranslateTranslator(parent);
         break;
     case PimCommon::TranslatorEngineBase::TranslatorEngine::DeepL:
         abstractTranslator = new DeepLTranslator(parent);
