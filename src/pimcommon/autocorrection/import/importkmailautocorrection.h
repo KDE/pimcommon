@@ -13,8 +13,8 @@ namespace PimCommon
 class PIMCOMMON_TESTS_EXPORT ImportKMailAutocorrection : public ImportAbstractAutocorrection
 {
 public:
-    explicit ImportKMailAutocorrection(QWidget *parent = nullptr);
+    ImportKMailAutocorrection();
     ~ImportKMailAutocorrection() override;
-    Q_REQUIRED_RESULT bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
+    Q_REQUIRED_RESULT bool import(const QString &fileName, QString &errorMessage, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) override;
 };
 }

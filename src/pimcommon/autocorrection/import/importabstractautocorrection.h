@@ -24,10 +24,10 @@ public:
     };
     Q_ENUM(LoadAttribute)
 
-    explicit ImportAbstractAutocorrection(QWidget *parent);
+    ImportAbstractAutocorrection();
     virtual ~ImportAbstractAutocorrection();
 
-    virtual bool import(const QString &fileName, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) = 0;
+    virtual bool import(const QString &fileName, QString &errorMessage, ImportAbstractAutocorrection::LoadAttribute loadAttribute = All) = 0;
 
     Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
     Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
@@ -50,6 +50,5 @@ protected:
     QHash<QString, QString> mSuperScriptEntries;
     AutoCorrection::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrection::TypographicQuotes mTypographicDoubleQuotes;
-    QWidget *const mParent;
 };
 }

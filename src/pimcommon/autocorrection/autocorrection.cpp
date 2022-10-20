@@ -1097,7 +1097,8 @@ void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
         mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
     } else {
         ImportKMailAutocorrection import;
-        if (import.import(fname, ImportAbstractAutocorrection::All)) {
+        QString messageError;
+        if (import.import(fname, messageError, ImportAbstractAutocorrection::All)) {
             mUpperCaseExceptions = import.upperCaseExceptions();
             mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
             mAutocorrectEntries = import.autocorrectEntries();
@@ -1117,7 +1118,8 @@ void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
 void AutoCorrection::loadLocalFileName(const QString &localFileName, const QString &fname)
 {
     ImportKMailAutocorrection import;
-    if (import.import(localFileName, ImportAbstractAutocorrection::All)) {
+    QString messageError;
+    if (import.import(localFileName, messageError, ImportAbstractAutocorrection::All)) {
         mUpperCaseExceptions = import.upperCaseExceptions();
         mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
         mAutocorrectEntries = import.autocorrectEntries();
@@ -1126,7 +1128,7 @@ void AutoCorrection::loadLocalFileName(const QString &localFileName, const QStri
         // Don't import it in local
         // mSuperScriptEntries = import.superScriptEntries();
     }
-    if (!fname.isEmpty() && import.import(fname, ImportAbstractAutocorrection::SuperScript)) {
+    if (!fname.isEmpty() && import.import(fname, messageError, ImportAbstractAutocorrection::SuperScript)) {
         mSuperScriptEntries = import.superScriptEntries();
     }
     mMaxFindStringLenght = import.maxFindStringLenght();

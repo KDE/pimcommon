@@ -10,14 +10,13 @@
 #include <QXmlStreamReader>
 using namespace PimCommon;
 
-ImportKMailAutocorrection::ImportKMailAutocorrection(QWidget *parent)
-    : ImportAbstractAutocorrection(parent)
+ImportKMailAutocorrection::ImportKMailAutocorrection()
 {
 }
 
 ImportKMailAutocorrection::~ImportKMailAutocorrection() = default;
 
-bool ImportKMailAutocorrection::import(const QString &fileName, LoadAttribute loadAttribute)
+bool ImportKMailAutocorrection::import(const QString &fileName, QString &errorMessage, LoadAttribute loadAttribute)
 {
     QFile xmlFile(fileName);
     if (!xmlFile.open(QIODevice::ReadOnly)) {

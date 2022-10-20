@@ -8,8 +8,7 @@
 
 using namespace PimCommon;
 
-ImportAbstractAutocorrection::ImportAbstractAutocorrection(QWidget *parent)
-    : mParent(parent)
+ImportAbstractAutocorrection::ImportAbstractAutocorrection()
 {
 }
 

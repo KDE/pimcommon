@@ -35,7 +35,8 @@ void ImportKMailAutocorrectionTest::shouldLoadFile()
 {
     const QString originalFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QStringLiteral("/custom-fr.xml");
     PimCommon::ImportKMailAutocorrection import;
-    QVERIFY(import.import(originalFile));
+    QString messageError;
+    QVERIFY(import.import(originalFile, messageError));
     QCOMPARE(import.typographicSingleQuotes().begin, QStringLiteral("‘"));
     QCOMPARE(import.typographicSingleQuotes().end, QStringLiteral("’"));
     QCOMPARE(import.typographicDoubleQuotes().begin, QStringLiteral("“"));

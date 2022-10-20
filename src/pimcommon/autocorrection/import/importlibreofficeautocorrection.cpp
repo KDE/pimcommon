@@ -15,8 +15,7 @@
 
 using namespace PimCommon;
 
-ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection(QWidget *parent)
-    : ImportAbstractAutocorrection(parent)
+ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection()
 {
 }
 
@@ -39,7 +38,7 @@ void ImportLibreOfficeAutocorrection::closeArchive()
     mTempDir = nullptr;
 }
 
-bool ImportLibreOfficeAutocorrection::import(const QString &fileName, LoadAttribute loadAttribute)
+bool ImportLibreOfficeAutocorrection::import(const QString &fileName, QString &errorMessage, LoadAttribute loadAttribute)
 {
     // We Don't have it in LibreOffice
     if (loadAttribute == SuperScript) {
@@ -52,7 +51,7 @@ bool ImportLibreOfficeAutocorrection::import(const QString &fileName, LoadAttrib
         importAutoCorrectionFile();
         return true;
     } else {
-        KMessageBox::error(mParent, i18n("Archive cannot be opened in read mode."), i18n("Import LibreOffice Autocorrection File"));
+        errorMessage = i18n("Archive cannot be opened in read mode.");
         return false;
     }
 }

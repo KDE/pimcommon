@@ -557,15 +557,16 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
             PimCommon::ImportAbstractAutocorrection *importAutoCorrection = nullptr;
             switch (type) {
             case AutoCorrectionWidget::LibreOffice:
-                importAutoCorrection = new PimCommon::ImportLibreOfficeAutocorrection(this);
+                importAutoCorrection = new PimCommon::ImportLibreOfficeAutocorrection;
                 break;
             case AutoCorrectionWidget::KMail:
-                importAutoCorrection = new PimCommon::ImportKMailAutocorrection(this);
+                importAutoCorrection = new PimCommon::ImportKMailAutocorrection;
                 break;
             default:
                 return;
             }
-            if (importAutoCorrection->import(fileName, ImportAbstractAutocorrection::All)) {
+            QString messageError;
+            if (importAutoCorrection->import(fileName, messageError, ImportAbstractAutocorrection::All)) {
                 d->m_autocorrectEntries = importAutoCorrection->autocorrectEntries();
                 addAutoCorrectEntries();
 
@@ -579,6 +580,8 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
 
                 d->ui->abbreviationList->clear();
                 d->ui->abbreviationList->addItems(d->m_upperCaseExceptions.values());
+            } else {
+                KMessageBox::error(this, messageError, i18n("Import Autocorrection File"));
             }
             delete importAutoCorrection;
         }
