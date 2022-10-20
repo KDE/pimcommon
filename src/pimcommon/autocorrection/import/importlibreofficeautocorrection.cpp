@@ -51,6 +51,7 @@ bool ImportLibreOfficeAutocorrection::import(const QString &fileName, QString &e
         importAutoCorrectionFile();
         return true;
     } else {
+        qCWarning(PIMCOMMON_LOG) << "Impossible to open archive file";
         errorMessage = i18n("Archive cannot be opened in read mode.");
         return false;
     }
