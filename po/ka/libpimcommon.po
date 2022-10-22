@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-21 00:48+0000\n"
-"PO-Revision-Date: 2022-10-06 12:28+0200\n"
+"PO-Revision-Date: 2022-10-22 07:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -73,10 +73,9 @@ msgid "KMail Autocorrection File (*.xml)"
 msgstr ""
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:584
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection"
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "LibreOffice-ის ავტოკორექცია"
+msgstr "ავტოკორექციის ფაილის შემოტანა"
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:609
 #, kde-format
@@ -590,13 +589,13 @@ msgstr "Google"
 #: pimcommon/translator/translatorutil.cpp:359
 #, kde-format
 msgid "Libre Translate"
-msgstr ""
+msgstr "Libre Translate"
 
 #: pimcommon/translator/engine/lingvatranslator.cpp:30
 #: pimcommon/translator/translatorutil.cpp:356
 #, kde-format
 msgid "Lingva"
-msgstr ""
+msgstr "Lingva"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:60
 #: pimcommon/translator/translatorutil.cpp:350
@@ -652,7 +651,7 @@ msgstr "შენახვა, როგორც..."
 #: pimcommon/translator/translatordebugdialog.cpp:74
 #, kde-format
 msgid "All Files (*)"
-msgstr ""
+msgstr "ყველა ფაილი (*)"
 
 #: pimcommon/translator/translatorutil.cpp:124
 #, kde-format
@@ -1012,12 +1011,12 @@ msgstr ""
 #: pimcommon/translator/translatorwidget.cpp:395
 #, kde-format
 msgid "No network"
-msgstr ""
+msgstr "ქსელის გარეშე"
 
 #: pimcommon/translator/translatorwidget.cpp:434
 #, kde-format
 msgid "Translate error"
-msgstr ""
+msgstr "თარგმანის შეცდომა"
 
 #: pimcommon/util/pimutil.cpp:48
 #, kde-format
@@ -1043,7 +1042,7 @@ msgstr ""
 #: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgid "Load File Error"
-msgstr ""
+msgstr "ფაილის ჩატვირთვის შეცდომა"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1075,7 +1074,7 @@ msgstr "პატარა სიმბოლოები"
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgid "Reverse Case"
-msgstr ""
+msgstr "რეგისტრის შებრუნება"
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
@@ -1095,7 +1094,7 @@ msgstr "გაზიარება"
 #: pimcommon/widgets/purposemenuwidget.cpp:58
 #, kde-format
 msgid "File was shared."
-msgstr ""
+msgstr "ფაილი გაზიარდა."
 
 #: pimcommon/widgets/purposemenuwidget.cpp:61
 #, kde-format
@@ -1138,7 +1137,7 @@ msgstr "ყველაზე &გადატარება"
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "This filename \"%1\" already exists."
-msgstr ""
+msgstr "ეს ფაილის სახელი (%1) უკვე არსებობს."
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
@@ -1364,7 +1363,7 @@ msgstr "LDAP სერვერი: %1"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, kde-format
 msgid "Search email:"
-msgstr ""
+msgstr "ელფოსტის ძებნა:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
@@ -1395,7 +1394,7 @@ msgstr "მონიშვნის მოხსნა"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"more_result\">მეტი შედეგები...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
 #, kde-format
@@ -1415,7 +1414,7 @@ msgstr ""
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
 #, kde-format
 msgid "No email found."
-msgstr ""
+msgstr "ელფოსტა ვერ მოიძებნა."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
 #, kde-format
@@ -1444,17 +1443,17 @@ msgstr "შენახვა"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr ""
+msgstr "დასრულების მორგება"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
 #, kde-format
 msgid "Completion Order"
-msgstr ""
+msgstr "დასრულების მიმდევრობა"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
 #, kde-format
 msgid "Recent Address"
-msgstr ""
+msgstr "უახლესი მისამართი"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
 #, kde-format
@@ -1570,7 +1569,7 @@ msgstr "უცნობი"
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
 #, kde-format
 msgid "&Folder contents:"
-msgstr ""
+msgstr "&საქაღალდის შემცველობა:"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
 #, kde-format
@@ -1580,12 +1579,12 @@ msgstr "არავინ"
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
 #, kde-format
 msgid "Admins of This Folder"
-msgstr ""
+msgstr "ამ საქაღალდის ადმინისტრატორები"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "All Readers of This Folder"
-msgstr ""
+msgstr "ამ საქაღალდის ყველა მკითხველი"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
 #, kde-format
@@ -1618,7 +1617,7 @@ msgstr "ძებნა..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr ""
+msgstr "ერთზე მეტი საქაღალდის არჩევა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
@@ -1642,25 +1641,25 @@ msgstr "ელ-ფოსტა"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
 #, kde-format
 msgid "Home Number"
-msgstr ""
+msgstr "სახლის ტელეფონი"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
 #, kde-format
 msgid "Work Number"
-msgstr ""
+msgstr "სამსახურის ტელეფონი"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
 #, kde-format
 msgid "Mobile Number"
-msgstr ""
+msgstr "მობილურის ნომერი"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Fax Number"
-msgstr ""
+msgstr "ფაქსის ნომერი"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
@@ -1725,7 +1724,7 @@ msgstr "საფოსტო მისამართი"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "აღწერა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
@@ -1846,7 +1845,7 @@ msgstr "მონიშნულის დამატება"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr ""
+msgstr "LDAP სერვერების მორგება..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format

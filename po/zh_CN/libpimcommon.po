@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-21 00:48+0000\n"
-"PO-Revision-Date: 2022-10-19 13:23\n"
+"PO-Revision-Date: 2022-10-22 05:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -72,10 +72,9 @@ msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 自动更正文件 (*.xml)"
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:584
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "导出自动更正文件"
+msgstr ""
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:609
 #, kde-format
@@ -1989,7 +1988,7 @@ msgstr "便笺类型："
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Private note"
-msgstr ""
+msgstr "私人便笺"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:86
 #, kde-format
@@ -2007,6 +2006,3 @@ msgstr "您真的想要删除此便笺吗？"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "删除便笺"
-
-#~ msgid "Import LibreOffice Autocorrection File"
-#~ msgstr "导入 LibreOffice 自动更正文件"
