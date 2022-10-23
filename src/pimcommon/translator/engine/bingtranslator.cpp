@@ -103,7 +103,7 @@ void BingTranslator::parseCredentials(QNetworkReply *reply)
 
     sBingIid = QString::fromUtf8(webSiteData.mid(iidBeginPos, iidEndPos - iidBeginPos));
 
-    qDebug() << "sBingIid " << sBingIid << " sBingIg " << sBingIg << " sBingToken " << sBingToken << " sBingKey " << sBingKey;
+    // qDebug() << "sBingIid " << sBingIid << " sBingIg " << sBingIg << " sBingToken " << sBingToken << " sBingKey " << sBingKey;
     translateText();
 }
 
@@ -128,7 +128,7 @@ void BingTranslator::translateText()
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, QLatin1String("application/x-www-form-urlencoded"));
     request.setHeader(QNetworkRequest::UserAgentHeader,
-                      QString::fromUtf8("%1/%2").arg(QCoreApplication::applicationName()).arg(QCoreApplication::applicationVersion()));
+                      QStringLiteral("%1/%2").arg(QCoreApplication::applicationName(), QCoreApplication::applicationVersion()));
 
     qDebug() << " url " << url;
     QNetworkReply *reply = TranslatorEngineAccessManager::self()->networkManager()->post(request, postData);
