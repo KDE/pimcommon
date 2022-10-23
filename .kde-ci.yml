@@ -42,4 +42,4 @@ Dependencies:
     'pim/akonadi-search' : '@same'
 
 Options:
-  require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
+  require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5' ]
