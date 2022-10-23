@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-21 00:48+0000\n"
-"PO-Revision-Date: 2022-09-17 12:22+0100\n"
+"PO-Revision-Date: 2022-10-22 12:46+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -90,10 +90,9 @@ msgid "KMail Autocorrection File (*.xml)"
 msgstr "Ficheiro de Correcção Automática do KMail (*.xml)"
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:584
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "Exportar o Ficheiro de Correcção Automática"
+msgstr "Importar um Ficheiro de Correcção Automática"
 
 #: pimcommon/autocorrection/autocorrectionwidget.cpp:609
 #, kde-format
@@ -2062,6 +2061,3 @@ msgstr "Deseja realmente apagar esta nota?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Apagar a Nota"
-
-#~ msgid "Import LibreOffice Autocorrection File"
-#~ msgstr "Importar o Ficheiro de Correcção Automática do LibreOffice"
