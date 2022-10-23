@@ -419,3 +419,18 @@ void TranslatorUtil::saveEngineSettings(const QString &engineName)
     myGroup.writeEntry(engineTranslateName(), engineName);
     myGroup.sync();
 }
+
+bool TranslatorUtil::hasConfigureDialog(TranslatorEngineBase::TranslatorEngine engineType)
+{
+    switch (engineType) {
+    case TranslatorEngineBase::TranslatorEngine::Google:
+    case TranslatorEngineBase::TranslatorEngine::Yandex:
+    case TranslatorEngineBase::TranslatorEngine::Bing:
+        return false;
+    case TranslatorEngineBase::TranslatorEngine::Lingva:
+    case TranslatorEngineBase::TranslatorEngine::LibreTranslate:
+    case TranslatorEngineBase::TranslatorEngine::DeepL:
+        return true;
+    }
+    return false;
+}
