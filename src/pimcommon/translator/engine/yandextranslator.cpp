@@ -6,7 +6,6 @@
 */
 
 #include "yandextranslator.h"
-#include "pimcommon_debug.h"
 #include "translator/translatorengineaccessmanager.h"
 #include "translator/translatorutil.h"
 #include <KLocalizedString>
