@@ -41,12 +41,12 @@ AutoCorrection::TypographicQuotes ImportAbstractAutocorrection::typographicDoubl
 
 int ImportAbstractAutocorrection::maxFindStringLenght() const
 {
-    return mMaxFindStringLenght;
+    return mMaxFindStringLength;
 }
 
 int ImportAbstractAutocorrection::minFindStringLenght() const
 {
-    return mMinFindStringLenght;
+    return mMinFindStringLength;
 }
 
 QHash<QString, QString> ImportAbstractAutocorrection::superScriptEntries() const

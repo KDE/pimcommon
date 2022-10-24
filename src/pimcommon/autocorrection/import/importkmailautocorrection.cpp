@@ -23,8 +23,8 @@ bool ImportKMailAutocorrection::import(const QString &fileName, QString &errorMe
         return false;
     }
     QXmlStreamReader xml(&xmlFile);
-    mMaxFindStringLenght = 0;
-    mMinFindStringLenght = 0;
+    mMaxFindStringLength = 0;
+    mMinFindStringLength = 0;
     if (xml.readNextStartElement()) {
         while (xml.readNextStartElement()) {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
@@ -150,8 +150,8 @@ bool ImportKMailAutocorrection::import(const QString &fileName, QString &errorMe
                             const QString find = xml.attributes().value(QStringLiteral("find")).toString();
                             const QString replace = xml.attributes().value(QStringLiteral("replace")).toString();
                             const int findLenght(find.length());
-                            mMaxFindStringLenght = qMax(findLenght, mMaxFindStringLenght);
-                            mMinFindStringLenght = qMin(findLenght, mMinFindStringLenght);
+                            mMaxFindStringLength = qMax(findLenght, mMaxFindStringLength);
+                            mMinFindStringLength = qMin(findLenght, mMinFindStringLength);
                             mAutocorrectEntries.insert(find, replace);
                             xml.skipCurrentElement();
                         } else {

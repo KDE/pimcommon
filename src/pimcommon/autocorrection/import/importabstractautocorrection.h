@@ -42,8 +42,8 @@ public:
     Q_REQUIRED_RESULT int minFindStringLenght() const;
 
 protected:
-    int mMaxFindStringLenght = 0;
-    int mMinFindStringLenght = 0;
+    int mMaxFindStringLength = 0;
+    int mMinFindStringLength = 0;
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;

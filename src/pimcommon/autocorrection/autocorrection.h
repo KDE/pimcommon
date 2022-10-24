@@ -66,8 +66,6 @@ public:
     Q_REQUIRED_RESULT QString language() const;
     Q_REQUIRED_RESULT TypographicQuotes typographicSingleQuotes() const;
     Q_REQUIRED_RESULT TypographicQuotes typographicDoubleQuotes() const;
-    Q_REQUIRED_RESULT TypographicQuotes typographicDefaultSingleQuotes() const;
-    Q_REQUIRED_RESULT TypographicQuotes typographicDefaultDoubleQuotes() const;
     Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
     Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
     Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
@@ -125,8 +123,8 @@ private:
     bool mSuperScriptAppendix = false;
 
     bool mAddNonBreakingSpace = false;
-    int mMaxFindStringLenght = 0;
-    int mMinFindStringLenght = 0;
+    int mMaxFindStringLength = 0;
+    int mMinFindStringLength = 0;
     QString mWord;
     QTextCursor mCursor;
     QChar mNonBreakingSpace;

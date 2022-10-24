@@ -7,6 +7,7 @@
 
 #include "autocorrection.h"
 
+#include "autocorrection/autocorrectionutils.h"
 #include "import/importkmailautocorrection.h"
 #include "pimcommon_debug.h"
 #include "settings/pimcommonsettings.h"
@@ -30,10 +31,8 @@ AutoCorrection::AutoCorrection()
     // default double quote close 0x201d
     // default single quote open 0x2018
     // default single quote close 0x2019
-    mTypographicSingleQuotes.begin = QChar(0x2018);
-    mTypographicSingleQuotes.end = QChar(0x2019);
-    mTypographicDoubleQuotes.begin = QChar(0x201c);
-    mTypographicDoubleQuotes.end = QChar(0x201d);
+    mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+    mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
 
     readConfig();
 
@@ -51,7 +50,7 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
     cursor.setPosition(cursorPosition);
 
     QTextBlock block = cursor.block();
-    int pos = qMax(block.position(), cursorPosition - mMaxFindStringLenght);
+    int pos = qMax(block.position(), cursorPosition - mMaxFindStringLength);
 
     // TODO verify that pos == block.position() => it's a full line => not a piece of word
     // TODO if not => check if pos -1 is a space => not a piece of word
@@ -242,14 +241,14 @@ void AutoCorrection::setTwoUpperLetterExceptions(const QSet<QString> &exceptions
 
 void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entries)
 {
-    mMaxFindStringLenght = 0;
-    mMinFindStringLenght = 0;
+    mMaxFindStringLength = 0;
+    mMinFindStringLength = 0;
     QHashIterator<QString, QString> i(entries);
     while (i.hasNext()) {
         i.next();
         const int findStringLenght(i.key().length());
-        mMaxFindStringLenght = qMax(mMaxFindStringLenght, findStringLenght);
-        mMinFindStringLenght = qMin(mMinFindStringLenght, findStringLenght);
+        mMaxFindStringLength = qMax(mMaxFindStringLength, findStringLenght);
+        mMinFindStringLength = qMin(mMinFindStringLength, findStringLenght);
     }
     mAutocorrectEntries = entries;
 }
@@ -337,22 +336,6 @@ bool AutoCorrection::isSuperScript() const
 bool AutoCorrection::isAddNonBreakingSpace() const
 {
     return mAddNonBreakingSpace;
-}
-
-AutoCorrection::TypographicQuotes AutoCorrection::typographicDefaultSingleQuotes() const
-{
-    AutoCorrection::TypographicQuotes quote;
-    quote.begin = QChar(0x2018);
-    quote.end = QChar(0x2019);
-    return quote;
-}
-
-AutoCorrection::TypographicQuotes AutoCorrection::typographicDefaultDoubleQuotes() const
-{
-    AutoCorrection::TypographicQuotes quote;
-    quote.begin = QChar(0x201c);
-    quote.end = QChar(0x201d);
-    return quote;
 }
 
 QSet<QString> AutoCorrection::upperCaseExceptions() const
@@ -845,10 +828,10 @@ int AutoCorrection::advancedAutocorrect()
     QString actualWord = trimmedWord;
 
     const int actualWordLength(actualWord.length());
-    if (actualWordLength < mMinFindStringLenght) {
+    if (actualWordLength < mMinFindStringLength) {
         return -1;
     }
-    if (actualWordLength > mMaxFindStringLenght) {
+    if (actualWordLength > mMaxFindStringLength) {
         return -1;
     }
 
@@ -1093,8 +1076,8 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
 void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
 {
     if (fname.isEmpty()) {
-        mTypographicSingleQuotes = typographicDefaultSingleQuotes();
-        mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
+        mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+        mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
     } else {
         ImportKMailAutocorrection import;
         QString messageError;
@@ -1106,11 +1089,11 @@ void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
             mTypographicDoubleQuotes = import.typographicDoubleQuotes();
             mSuperScriptEntries = import.superScriptEntries();
             if (forceGlobal) {
-                mTypographicSingleQuotes = typographicDefaultSingleQuotes();
-                mTypographicDoubleQuotes = typographicDefaultDoubleQuotes();
+                mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+                mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
             }
-            mMaxFindStringLenght = import.maxFindStringLenght();
-            mMinFindStringLenght = import.minFindStringLenght();
+            mMaxFindStringLength = import.maxFindStringLenght();
+            mMinFindStringLength = import.minFindStringLenght();
         }
     }
 }
@@ -1131,8 +1114,8 @@ void AutoCorrection::loadLocalFileName(const QString &localFileName, const QStri
     if (!fname.isEmpty() && import.import(fname, messageError, ImportAbstractAutocorrection::SuperScript)) {
         mSuperScriptEntries = import.superScriptEntries();
     }
-    mMaxFindStringLenght = import.maxFindStringLenght();
-    mMinFindStringLenght = import.minFindStringLenght();
+    mMaxFindStringLength = import.maxFindStringLenght();
+    mMinFindStringLength = import.minFindStringLenght();
 }
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)

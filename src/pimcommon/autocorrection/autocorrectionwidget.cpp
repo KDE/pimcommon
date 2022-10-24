@@ -6,6 +6,7 @@
 
 #include "autocorrectionwidget.h"
 #include "autocorrection.h"
+#include "autocorrectionutils.h"
 #include "import/importabstractautocorrection.h"
 #include "import/importkmailautocorrection.h"
 #include "import/importlibreofficeautocorrection.h"
@@ -291,7 +292,7 @@ void AutoCorrectionWidget::selectSingleQuoteCharClose()
 
 void AutoCorrectionWidget::setDefaultSingleQuotes()
 {
-    d->m_singleQuotes = d->mAutoCorrection->typographicDefaultSingleQuotes();
+    d->m_singleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
     d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
     d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
     emitChanged();
@@ -327,7 +328,7 @@ void AutoCorrectionWidget::selectDoubleQuoteCharClose()
 
 void AutoCorrectionWidget::setDefaultDoubleQuotes()
 {
-    d->m_doubleQuotes = d->mAutoCorrection->typographicDefaultDoubleQuotes();
+    d->m_doubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
     d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
     d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
     emitChanged();
