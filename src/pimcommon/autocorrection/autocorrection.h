@@ -27,21 +27,18 @@ public:
 
     void setLanguage(const QString &lang, bool forceGlobal = false);
     Q_REQUIRED_RESULT QString language() const;
-    void setAutocorrectEntries(const QHash<QString, QString> &entries);
-
-    Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
-    Q_REQUIRED_RESULT bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);
 
     void writeConfig();
 
     bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
-    void writeAutoCorrectionXmlFile(const QString &filename = QString());
 
     void loadGlobalFileName(const QString &fname, bool forceGlobal);
     void loadLocalFileName(const QString &localFileName, const QString &fname);
 
     Q_REQUIRED_RESULT AutoCorrectionSettings autoCorrectionSettings() const;
     void setAutoCorrectionSettings(const AutoCorrectionSettings &newAutoCorrectionSettings);
+
+    void writeAutoCorrectionXmlFile(const QString &filename);
 
 private:
     void readConfig();
@@ -67,14 +64,11 @@ private:
     Q_REQUIRED_RESULT bool excludeToUppercase(const QString &word) const;
     Q_REQUIRED_RESULT QColor linkColor();
 
-    int mMaxFindStringLength = 0;
-    int mMinFindStringLength = 0;
     QString mWord;
     QTextCursor mCursor;
 
     QString mAutoCorrectLang;
     QStringList mCacheNameOfDays;
-    QHash<QString, QString> mAutocorrectEntries;
     QColor mLinkColor;
     // Settings
     AutoCorrectionSettings mAutoCorrectionSettings;

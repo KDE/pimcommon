@@ -79,6 +79,11 @@ public:
     Q_REQUIRED_RESULT QHash<QString, QString> superScriptEntries() const;
     void setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries);
 
+    void writeAutoCorrectionXmlFile(const QString &filename = QString());
+    int maxFindStringLength() const;
+
+    int minFindStringLength() const;
+
 private:
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
@@ -92,6 +97,9 @@ private:
     QString mAutoCorrectLang;
 
     QChar mNonBreakingSpace;
+
+    int mMaxFindStringLength = 0;
+    int mMinFindStringLength = 0;
 
     bool mSingleSpaces = true; // suppress double spaces.
     bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase

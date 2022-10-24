@@ -168,7 +168,7 @@ void AutoCorrectionWidget::loadAutoCorrectionAndException()
     enableDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
 
     /* tab 3 - Advanced Autocorrection */
-    d->m_autocorrectEntries = d->mAutoCorrection->autocorrectEntries();
+    d->m_autocorrectEntries = d->mAutoCorrection->autoCorrectionSettings().autocorrectEntries();
     addAutoCorrectEntries();
 
     enableAdvAutocorrection(d->ui->advancedAutocorrection->isChecked());
@@ -216,7 +216,7 @@ void AutoCorrectionWidget::writeConfig()
 
     settings.setAutoFractions(d->ui->autoReplaceNumber->isChecked());
 
-    d->mAutoCorrection->setAutocorrectEntries(d->m_autocorrectEntries);
+    settings.setAutocorrectEntries(d->m_autocorrectEntries);
     settings.setUpperCaseExceptions(d->m_upperCaseExceptions);
     settings.setTwoUpperLetterExceptions(d->m_twoUpperLetterExceptions);
 

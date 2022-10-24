@@ -391,7 +391,8 @@ void AutoCorrectionTest::shouldAutocorrectWord()
     QHash<QString, QString> entries;
     const QString convertWord = QStringLiteral("BLABLA");
     entries.insert(text, convertWord);
-    autocorrection.setAutocorrectEntries(entries);
+    settings.setAutocorrectEntries(entries);
+    autocorrection.setAutoCorrectionSettings(settings);
     text = QStringLiteral("FOO");
     doc.setPlainText(text);
     position = text.length();
@@ -522,8 +523,8 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord()
     PimCommon::AutoCorrectionSettings settings;
     settings.setEnabledAutoCorrection(true);
     settings.setAdvancedAutocorrect(true);
+    settings.setAutocorrectEntries(convertStringHash);
     autocorrection.setAutoCorrectionSettings(settings);
-    autocorrection.setAutocorrectEntries(convertStringHash);
 
     QTextDocument doc;
     doc.setPlainText(originalString);
@@ -620,7 +621,7 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
     PimCommon::AutoCorrectionSettings settings;
     settings.setEnabledAutoCorrection(enable);
     settings.setAdvancedAutocorrect(advancedAutocorrect);
-    autocorrection.setAutocorrectEntries(convertStringHash);
+    settings.setAutocorrectEntries(convertStringHash);
     settings.setUppercaseFirstCharOfSentence(uppercaseFirstCharOfSentence);
     settings.setFixTwoUppercaseChars(fixtoouppercase);
     autocorrection.setAutoCorrectionSettings(settings);
@@ -724,7 +725,7 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
 
     autocorrectionReference.loadGlobalFileName(refFile, true);
 
-    QCOMPARE(autocorrection.autocorrectEntries(), autocorrectionReference.autocorrectEntries());
+    QCOMPARE(autocorrection.autoCorrectionSettings().autocorrectEntries(), autocorrectionReference.autoCorrectionSettings().autocorrectEntries());
     QCOMPARE(autocorrection.autoCorrectionSettings().upperCaseExceptions(), autocorrectionReference.autoCorrectionSettings().upperCaseExceptions());
     QCOMPARE(autocorrection.autoCorrectionSettings().twoUpperLetterExceptions(), autocorrectionReference.autoCorrectionSettings().twoUpperLetterExceptions());
 }

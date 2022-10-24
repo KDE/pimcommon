@@ -42,7 +42,7 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
     cursor.setPosition(cursorPosition);
 
     QTextBlock block = cursor.block();
-    int pos = qMax(block.position(), cursorPosition - mMaxFindStringLength);
+    int pos = qMax(block.position(), cursorPosition - mAutoCorrectionSettings.maxFindStringLength());
 
     // TODO verify that pos == block.position() => it's a full line => not a piece of word
     // TODO if not => check if pos -1 is a space => not a piece of word
@@ -183,37 +183,6 @@ void AutoCorrection::writeConfig()
 {
     mAutoCorrectionSettings.writeConfig();
     PimCommon::PimCommonSettings::self()->requestSync();
-    writeAutoCorrectionXmlFile();
-}
-
-bool AutoCorrection::addAutoCorrect(const QString &currentWord, const QString &replaceWord)
-{
-    if (!mAutocorrectEntries.contains(currentWord)) {
-        mAutocorrectEntries.insert(currentWord, replaceWord);
-        writeAutoCorrectionXmlFile();
-        return true;
-    } else {
-        return false;
-    }
-}
-
-void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entries)
-{
-    mMaxFindStringLength = 0;
-    mMinFindStringLength = 0;
-    QHashIterator<QString, QString> i(entries);
-    while (i.hasNext()) {
-        i.next();
-        const int findStringLenght(i.key().length());
-        mMaxFindStringLength = qMax(mMaxFindStringLength, findStringLenght);
-        mMinFindStringLength = qMin(mMinFindStringLength, findStringLenght);
-    }
-    mAutocorrectEntries = entries;
-}
-
-QHash<QString, QString> AutoCorrection::autocorrectEntries() const
-{
-    return mAutocorrectEntries;
 }
 
 void AutoCorrection::superscriptAppendix()
@@ -684,7 +653,7 @@ int AutoCorrection::advancedAutocorrect()
     if (!mAutoCorrectionSettings.isAdvancedAutocorrect()) {
         return -1;
     }
-    if (mAutocorrectEntries.isEmpty()) {
+    if (mAutoCorrectionSettings.autocorrectEntries().isEmpty()) {
         return -1;
     }
 
@@ -696,10 +665,10 @@ int AutoCorrection::advancedAutocorrect()
     QString actualWord = trimmedWord;
 
     const int actualWordLength(actualWord.length());
-    if (actualWordLength < mMinFindStringLength) {
+    if (actualWordLength < mAutoCorrectionSettings.minFindStringLength()) {
         return -1;
     }
-    if (actualWordLength > mMaxFindStringLength) {
+    if (actualWordLength > mAutoCorrectionSettings.maxFindStringLength()) {
         return -1;
     }
 
@@ -716,7 +685,7 @@ int AutoCorrection::advancedAutocorrect()
 
     QString actualWordWithFirstUpperCase = actualWord;
     actualWordWithFirstUpperCase[0] = actualWordWithFirstUpperCase[0].toUpper();
-    QHashIterator<QString, QString> i(mAutocorrectEntries);
+    QHashIterator<QString, QString> i(mAutoCorrectionSettings.autocorrectEntries());
     while (i.hasNext()) {
         i.next();
         if (i.key().length() > actualWordLength) {
@@ -995,73 +964,7 @@ void AutoCorrection::loadLocalFileName(const QString &localFileName, const QStri
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 {
-    const QString fname = filename.isEmpty() ? QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/autocorrect/custom-")
-            + (mAutoCorrectLang == QLatin1String("en_US") ? QStringLiteral("autocorrect") : mAutoCorrectLang) + QLatin1String(".xml")
-                                             : filename;
-    QFileInfo fileInfo(fname);
-    QDir().mkpath(fileInfo.absolutePath());
-    QFile file(fname);
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        qCDebug(PIMCOMMON_LOG) << "We can't save in file :" << fname;
-        return;
-    }
-
-    QXmlStreamWriter streamWriter(&file);
-
-    streamWriter.setAutoFormatting(true);
-    streamWriter.setAutoFormattingIndent(2);
-    streamWriter.writeStartDocument();
-
-    streamWriter.writeDTD(QStringLiteral("<!DOCTYPE autocorrection>"));
-
-    streamWriter.writeStartElement(QStringLiteral("Word"));
-
-    streamWriter.writeStartElement(QStringLiteral("items"));
-    QHashIterator<QString, QString> i(mAutocorrectEntries);
-    while (i.hasNext()) {
-        i.next();
-        streamWriter.writeStartElement(QStringLiteral("item"));
-        streamWriter.writeAttribute(QStringLiteral("find"), i.key());
-        streamWriter.writeAttribute(QStringLiteral("replace"), i.value());
-        streamWriter.writeEndElement();
-    }
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("UpperCaseExceptions"));
-    QSet<QString>::const_iterator upper = mAutoCorrectionSettings.upperCaseExceptions().constBegin();
-    while (upper != mAutoCorrectionSettings.upperCaseExceptions().constEnd()) {
-        streamWriter.writeStartElement(QStringLiteral("word"));
-        streamWriter.writeAttribute(QStringLiteral("exception"), *upper);
-        ++upper;
-        streamWriter.writeEndElement();
-    }
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("TwoUpperLetterExceptions"));
-    QSet<QString>::const_iterator twoUpper = mAutoCorrectionSettings.twoUpperLetterExceptions().constBegin();
-    while (twoUpper != mAutoCorrectionSettings.twoUpperLetterExceptions().constEnd()) {
-        streamWriter.writeStartElement(QStringLiteral("word"));
-        streamWriter.writeAttribute(QStringLiteral("exception"), *twoUpper);
-        ++twoUpper;
-        streamWriter.writeEndElement();
-    }
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("DoubleQuote"));
-    streamWriter.writeStartElement(QStringLiteral("doublequote"));
-    streamWriter.writeAttribute(QStringLiteral("begin"), mAutoCorrectionSettings.typographicDoubleQuotes().begin);
-    streamWriter.writeAttribute(QStringLiteral("end"), mAutoCorrectionSettings.typographicDoubleQuotes().end);
-    streamWriter.writeEndElement();
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("SimpleQuote"));
-    streamWriter.writeStartElement(QStringLiteral("simplequote"));
-    streamWriter.writeAttribute(QStringLiteral("begin"), mAutoCorrectionSettings.typographicSingleQuotes().begin);
-    streamWriter.writeAttribute(QStringLiteral("end"), mAutoCorrectionSettings.typographicSingleQuotes().end);
-    streamWriter.writeEndElement();
-    streamWriter.writeEndElement();
-
-    streamWriter.writeEndDocument();
+    mAutoCorrectionSettings.writeAutoCorrectionXmlFile(filename);
 }
 
 QString AutoCorrection::language() const
