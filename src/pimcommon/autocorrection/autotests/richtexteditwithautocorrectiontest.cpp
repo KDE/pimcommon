@@ -19,7 +19,9 @@ void RichTextEditWithAutoCorrectionTest::shouldNotAutocorrectWhenDisabled()
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     entries.insert(originalWord, replaceWord);
-    richtext.autocorrection()->autoCorrectionSettings().setAutocorrectEntries(entries);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setAutocorrectEntries(entries);
+    richtext.autocorrection()->setAutoCorrectionSettings(settings);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);
@@ -34,9 +36,11 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWordWhenExactText()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    richtext.autocorrection()->autoCorrectionSettings().setAutocorrectEntries(entries);
-    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
-    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setAutocorrectEntries(entries);
+    settings.setEnabledAutoCorrection(true);
+    settings.setAdvancedAutocorrect(true);
+    richtext.autocorrection()->setAutoCorrectionSettings(settings);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);
@@ -51,9 +55,12 @@ void RichTextEditWithAutoCorrectionTest::shouldNotReplaceWordWhenInexactText()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    richtext.autocorrection()->autoCorrectionSettings().setAutocorrectEntries(entries);
-    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
-    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setAutocorrectEntries(entries);
+    settings.setEnabledAutoCorrection(true);
+    settings.setAdvancedAutocorrect(true);
+    richtext.autocorrection()->setAutoCorrectionSettings(settings);
+
     richtext.show();
     const QString nonExactText = QStringLiteral("BLIBLI");
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
@@ -69,9 +76,13 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWhenPressEnter()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    richtext.autocorrection()->autoCorrectionSettings().setAutocorrectEntries(entries);
-    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
-    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
+
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setAutocorrectEntries(entries);
+    settings.setEnabledAutoCorrection(true);
+    settings.setAdvancedAutocorrect(true);
+    richtext.autocorrection()->setAutoCorrectionSettings(settings);
+
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);
@@ -86,9 +97,11 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWhenPressReturn()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    richtext.autocorrection()->autoCorrectionSettings().setAutocorrectEntries(entries);
-    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
-    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setAutocorrectEntries(entries);
+    settings.setEnabledAutoCorrection(true);
+    settings.setAdvancedAutocorrect(true);
+    richtext.autocorrection()->setAutoCorrectionSettings(settings);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);
