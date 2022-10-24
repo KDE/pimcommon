@@ -8,6 +8,7 @@
 #include "autocorrectionutils.h"
 #include "pimcommon_export.h"
 #include <QObject>
+#include <QSet>
 namespace PimCommon
 {
 class PIMCOMMON_EXPORT AutoCorrectionSettings
@@ -58,9 +59,31 @@ public:
 
     void setUppercaseFirstCharOfSentence(bool newUppercaseFirstCharOfSentence);
 
+    void setUpperCaseExceptions(const QSet<QString> &exceptions);
+    void setTwoUpperLetterExceptions(const QSet<QString> &exceptions);
+    Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
+    Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
+
+    void setLanguage(const QString &lang, bool forceGlobal = false);
+    Q_REQUIRED_RESULT QString language() const;
+
+    Q_REQUIRED_RESULT bool isFrenchLanguage() const;
+    void setAutocorrectEntries(const QHash<QString, QString> &entries);
+
+    Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
+    Q_REQUIRED_RESULT bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);
+
 private:
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
+
+    QHash<QString, QString> mAutocorrectEntries;
+    QHash<QString, QString> mSuperScriptEntries;
+
+    QSet<QString> mUpperCaseExceptions;
+    QSet<QString> mTwoUpperLetterExceptions;
+
+    QString mAutoCorrectLang;
 
     bool mSingleSpaces = true; // suppress double spaces.
     bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase

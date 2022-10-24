@@ -26,24 +26,15 @@ public:
     ~AutoCorrection();
 
     void setLanguage(const QString &lang, bool forceGlobal = false);
-    void setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes singleQuote);
-    void setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes doubleQuote);
-    void setUpperCaseExceptions(const QSet<QString> &exceptions);
-    void setTwoUpperLetterExceptions(const QSet<QString> &exceptions);
+    Q_REQUIRED_RESULT QString language() const;
     void setAutocorrectEntries(const QHash<QString, QString> &entries);
 
-    Q_REQUIRED_RESULT QString language() const;
-    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes typographicSingleQuotes() const;
-    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes typographicDoubleQuotes() const;
-    Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
-    Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
     Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
-
-    bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
-    void writeConfig();
-
     Q_REQUIRED_RESULT bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);
 
+    void writeConfig();
+
+    bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
 
     void setNonBreakingSpace(QChar nonBreakingSpace);
@@ -87,12 +78,8 @@ private:
 
     QString mAutoCorrectLang;
     QStringList mCacheNameOfDays;
-    QSet<QString> mUpperCaseExceptions;
-    QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;
     QHash<QString, QString> mSuperScriptEntries;
-    AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
-    AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
     QColor mLinkColor;
     AutoCorrectionSettings mAutoCorrectionSettings;
 };

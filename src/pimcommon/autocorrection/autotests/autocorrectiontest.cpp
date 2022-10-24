@@ -57,8 +57,10 @@ void AutoCorrectionTest::shouldRestoreValue()
 void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
 {
     PimCommon::AutoCorrection autocorrection;
-    autocorrection.autoCorrectionSettings().setEnabledAutoCorrection(true);
-    autocorrection.autoCorrectionSettings().setUppercaseFirstCharOfSentence(true);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setEnabledAutoCorrection(true);
+    settings.setUppercaseFirstCharOfSentence(true);
+    autocorrection.setAutoCorrectionSettings(settings);
 
     // Uppercase here.
     QTextDocument doc;
@@ -134,7 +136,7 @@ void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
 
     QSet<QString> exception;
     exception.insert(QStringLiteral("ABc"));
-    autocorrection.setTwoUpperLetterExceptions(exception);
+    autocorrection.autoCorrectionSettings().setTwoUpperLetterExceptions(exception);
     text = QStringLiteral("ABc");
     doc.setPlainText(text);
     position = text.length();
@@ -151,7 +153,7 @@ void AutoCorrectionTest::shouldReplaceSingleQuote()
     simpleQuote.begin = QLatin1Char('A');
     simpleQuote.end = QLatin1Char('B');
 
-    autocorrection.setTypographicSingleQuotes(simpleQuote);
+    autocorrection.autoCorrectionSettings().setTypographicSingleQuotes(simpleQuote);
 
     QTextDocument doc;
     QString text = QStringLiteral("sss");
@@ -182,7 +184,7 @@ void AutoCorrectionTest::shouldReplaceDoubleQuote()
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
 
-    autocorrection.setTypographicDoubleQuotes(doubleQuote);
+    autocorrection.autoCorrectionSettings().setTypographicDoubleQuotes(doubleQuote);
 
     QTextDocument doc;
     QString text = QStringLiteral("sss");
@@ -212,7 +214,7 @@ void AutoCorrectionTest::shouldNotReplaceUppercaseLetter()
     autocorrection.autoCorrectionSettings().setFixTwoUppercaseChars(true);
     QSet<QString> exceptions;
     exceptions.insert(QStringLiteral("ABc"));
-    autocorrection.setTwoUpperLetterExceptions(exceptions);
+    autocorrection.autoCorrectionSettings().setTwoUpperLetterExceptions(exceptions);
 
     QTextDocument doc;
     QString text = QStringLiteral("foo ABc");
@@ -394,7 +396,7 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     autocorrection.autoCorrectionSettings().setUppercaseFirstCharOfSentence(true);
     QSet<QString> lst;
     lst.insert(QStringLiteral("Foo."));
-    autocorrection.setUpperCaseExceptions(lst);
+    autocorrection.autoCorrectionSettings().setUpperCaseExceptions(lst);
 
     // Uppercase here.
     QTextDocument doc;
@@ -404,7 +406,7 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), text);
 
-    autocorrection.setUpperCaseExceptions(QSet<QString>());
+    autocorrection.autoCorrectionSettings().setUpperCaseExceptions(QSet<QString>());
     doc.setPlainText(text);
     position = text.length();
     autocorrection.autocorrect(false, doc, position);
@@ -613,13 +615,13 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
-    autocorrection.setTypographicDoubleQuotes(doubleQuote);
+    autocorrection.autoCorrectionSettings().setTypographicDoubleQuotes(doubleQuote);
 
     PimCommon::AutoCorrectionUtils::TypographicQuotes simpleQuote;
     simpleQuote.begin = QLatin1Char('A');
     simpleQuote.end = QLatin1Char('B');
 
-    autocorrection.setTypographicSingleQuotes(simpleQuote);
+    autocorrection.autoCorrectionSettings().setTypographicSingleQuotes(simpleQuote);
 
     QTextDocument doc;
     QString text = QStringLiteral("sss");
@@ -688,8 +690,8 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     autocorrectionReference.loadGlobalFileName(refFile, true);
 
     QCOMPARE(autocorrection.autocorrectEntries(), autocorrectionReference.autocorrectEntries());
-    QCOMPARE(autocorrection.upperCaseExceptions(), autocorrectionReference.upperCaseExceptions());
-    QCOMPARE(autocorrection.twoUpperLetterExceptions(), autocorrectionReference.twoUpperLetterExceptions());
+    QCOMPARE(autocorrection.autoCorrectionSettings().upperCaseExceptions(), autocorrectionReference.autoCorrectionSettings().upperCaseExceptions());
+    QCOMPARE(autocorrection.autoCorrectionSettings().twoUpperLetterExceptions(), autocorrectionReference.autoCorrectionSettings().twoUpperLetterExceptions());
 }
 
 QTEST_MAIN(AutoCorrectionTest)

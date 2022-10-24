@@ -158,10 +158,10 @@ void AutoCorrectionWidget::loadConfig()
 void AutoCorrectionWidget::loadAutoCorrectionAndException()
 {
     /* tab 2 - Custom Quotes */
-    d->m_singleQuotes = d->mAutoCorrection->typographicSingleQuotes();
+    d->m_singleQuotes = d->mAutoCorrection->autoCorrectionSettings().typographicSingleQuotes();
     d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
     d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
-    d->m_doubleQuotes = d->mAutoCorrection->typographicDoubleQuotes();
+    d->m_doubleQuotes = d->mAutoCorrection->autoCorrectionSettings().typographicDoubleQuotes();
     d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
     d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
     enableSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
@@ -173,8 +173,8 @@ void AutoCorrectionWidget::loadAutoCorrectionAndException()
 
     enableAdvAutocorrection(d->ui->advancedAutocorrection->isChecked());
     /* tab 4 - Exceptions */
-    d->m_upperCaseExceptions = d->mAutoCorrection->upperCaseExceptions();
-    d->m_twoUpperLetterExceptions = d->mAutoCorrection->twoUpperLetterExceptions();
+    d->m_upperCaseExceptions = d->mAutoCorrection->autoCorrectionSettings().upperCaseExceptions();
+    d->m_twoUpperLetterExceptions = d->mAutoCorrection->autoCorrectionSettings().twoUpperLetterExceptions();
 
     d->ui->twoUpperLetterList->clear();
     d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.values());
@@ -203,27 +203,29 @@ void AutoCorrectionWidget::writeConfig()
     if (!d->mAutoCorrection) {
         return;
     }
-    d->mAutoCorrection->autoCorrectionSettings().setAutoBoldUnderline(d->ui->autoChangeFormat->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setAutoFormatUrl(d->ui->autoFormatUrl->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setEnabledAutoCorrection(d->ui->enabledAutocorrection->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setUppercaseFirstCharOfSentence(d->ui->upperCase->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setFixTwoUppercaseChars(d->ui->upperUpper->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setSingleSpaces(d->ui->ignoreDoubleSpace->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setCapitalizeWeekDays(d->ui->capitalizeDaysName->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setAdvancedAutocorrect(d->ui->advancedAutocorrection->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setSuperScript(d->ui->autoSuperScript->isChecked());
+    AutoCorrectionSettings settings;
+    settings.setAutoBoldUnderline(d->ui->autoChangeFormat->isChecked());
+    settings.setAutoFormatUrl(d->ui->autoFormatUrl->isChecked());
+    settings.setEnabledAutoCorrection(d->ui->enabledAutocorrection->isChecked());
+    settings.setUppercaseFirstCharOfSentence(d->ui->upperCase->isChecked());
+    settings.setFixTwoUppercaseChars(d->ui->upperUpper->isChecked());
+    settings.setSingleSpaces(d->ui->ignoreDoubleSpace->isChecked());
+    settings.setCapitalizeWeekDays(d->ui->capitalizeDaysName->isChecked());
+    settings.setAdvancedAutocorrect(d->ui->advancedAutocorrection->isChecked());
+    settings.setSuperScript(d->ui->autoSuperScript->isChecked());
 
-    d->mAutoCorrection->autoCorrectionSettings().setAutoFractions(d->ui->autoReplaceNumber->isChecked());
+    settings.setAutoFractions(d->ui->autoReplaceNumber->isChecked());
 
     d->mAutoCorrection->setAutocorrectEntries(d->m_autocorrectEntries);
-    d->mAutoCorrection->setUpperCaseExceptions(d->m_upperCaseExceptions);
-    d->mAutoCorrection->setTwoUpperLetterExceptions(d->m_twoUpperLetterExceptions);
+    settings.setUpperCaseExceptions(d->m_upperCaseExceptions);
+    settings.setTwoUpperLetterExceptions(d->m_twoUpperLetterExceptions);
 
-    d->mAutoCorrection->autoCorrectionSettings().setReplaceDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
-    d->mAutoCorrection->autoCorrectionSettings().setReplaceSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
-    d->mAutoCorrection->setTypographicSingleQuotes(d->m_singleQuotes);
-    d->mAutoCorrection->setTypographicDoubleQuotes(d->m_doubleQuotes);
-    d->mAutoCorrection->autoCorrectionSettings().setAddNonBreakingSpace(d->ui->addNonBreakingSpaceInFrench->isChecked());
+    settings.setReplaceDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
+    settings.setReplaceSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
+    settings.setTypographicSingleQuotes(d->m_singleQuotes);
+    settings.setTypographicDoubleQuotes(d->m_doubleQuotes);
+    settings.setAddNonBreakingSpace(d->ui->addNonBreakingSpaceInFrench->isChecked());
+    d->mAutoCorrection->setAutoCorrectionSettings(settings);
     d->mAutoCorrection->writeConfig();
     d->mWasChanged = false;
 }

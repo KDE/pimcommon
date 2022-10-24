@@ -10,6 +10,12 @@
 using namespace PimCommon;
 AutoCorrectionSettings::AutoCorrectionSettings()
 {
+    // default double quote open 0x201c
+    // default double quote close 0x201d
+    // default single quote open 0x2018
+    // default single quote close 0x2019
+    mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+    mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
 }
 
 AutoCorrectionSettings::~AutoCorrectionSettings() = default;
@@ -199,4 +205,76 @@ void AutoCorrectionSettings::setFixTwoUppercaseChars(bool newFixTwoUppercaseChar
 void AutoCorrectionSettings::setUppercaseFirstCharOfSentence(bool newUppercaseFirstCharOfSentence)
 {
     mUppercaseFirstCharOfSentence = newUppercaseFirstCharOfSentence;
+}
+
+void AutoCorrectionSettings::setUpperCaseExceptions(const QSet<QString> &exceptions)
+{
+    mUpperCaseExceptions = exceptions;
+}
+
+void AutoCorrectionSettings::setTwoUpperLetterExceptions(const QSet<QString> &exceptions)
+{
+    mTwoUpperLetterExceptions = exceptions;
+}
+
+QSet<QString> AutoCorrectionSettings::upperCaseExceptions() const
+{
+    return mUpperCaseExceptions;
+}
+
+QSet<QString> AutoCorrectionSettings::twoUpperLetterExceptions() const
+{
+    return mTwoUpperLetterExceptions;
+}
+
+QString AutoCorrectionSettings::language() const
+{
+    return mAutoCorrectLang;
+}
+
+void AutoCorrectionSettings::setLanguage(const QString &lang, bool forceGlobal)
+{
+    if (mAutoCorrectLang != lang || forceGlobal) {
+        mAutoCorrectLang = lang;
+        // Re-read xml file
+        // TODO readAutoCorrectionXmlFile(forceGlobal);
+    }
+}
+
+bool AutoCorrectionSettings::isFrenchLanguage() const
+{
+    return mAutoCorrectLang == QLatin1String("FR_fr") || mAutoCorrectLang == QLatin1String("fr");
+}
+
+bool AutoCorrectionSettings::addAutoCorrect(const QString &currentWord, const QString &replaceWord)
+{
+    if (!mAutocorrectEntries.contains(currentWord)) {
+        mAutocorrectEntries.insert(currentWord, replaceWord);
+        // TODO writeAutoCorrectionXmlFile();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void AutoCorrectionSettings::setAutocorrectEntries(const QHash<QString, QString> &entries)
+{
+    // TODO
+#if 0
+    mMaxFindStringLength = 0;
+    mMinFindStringLength = 0;
+    QHashIterator<QString, QString> i(entries);
+    while (i.hasNext()) {
+        i.next();
+        const int findStringLenght(i.key().length());
+        mMaxFindStringLength = qMax(mMaxFindStringLength, findStringLenght);
+        mMinFindStringLength = qMin(mMinFindStringLength, findStringLenght);
+    }
+    mAutocorrectEntries = entries;
+#endif
+}
+
+QHash<QString, QString> AutoCorrectionSettings::autocorrectEntries() const
+{
+    return mAutocorrectEntries;
 }

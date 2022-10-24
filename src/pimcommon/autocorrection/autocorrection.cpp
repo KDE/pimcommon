@@ -27,12 +27,6 @@ using namespace PimCommon;
 AutoCorrection::AutoCorrection()
 {
     mNonBreakingSpace = QChar(QChar::Nbsp);
-    // default double quote open 0x201c
-    // default double quote close 0x201d
-    // default single quote open 0x2018
-    // default single quote close 0x2019
-    mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
-    mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
 
     readConfig();
 
@@ -205,16 +199,6 @@ bool AutoCorrection::addAutoCorrect(const QString &currentWord, const QString &r
     }
 }
 
-void AutoCorrection::setUpperCaseExceptions(const QSet<QString> &exceptions)
-{
-    mUpperCaseExceptions = exceptions;
-}
-
-void AutoCorrection::setTwoUpperLetterExceptions(const QSet<QString> &exceptions)
-{
-    mTwoUpperLetterExceptions = exceptions;
-}
-
 void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entries)
 {
     mMaxFindStringLength = 0;
@@ -227,16 +211,6 @@ void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entrie
         mMinFindStringLength = qMin(mMinFindStringLength, findStringLenght);
     }
     mAutocorrectEntries = entries;
-}
-
-QSet<QString> AutoCorrection::upperCaseExceptions() const
-{
-    return mUpperCaseExceptions;
-}
-
-QSet<QString> AutoCorrection::twoUpperLetterExceptions() const
-{
-    return mTwoUpperLetterExceptions;
 }
 
 QHash<QString, QString> AutoCorrection::autocorrectEntries() const
@@ -560,7 +534,7 @@ void AutoCorrection::fixTwoUppercaseChars()
         return;
     }
 
-    if (mTwoUpperLetterExceptions.contains(mWord.trimmed())) {
+    if (mAutoCorrectionSettings.twoUpperLetterExceptions().contains(mWord.trimmed())) {
         return;
     }
 
@@ -663,7 +637,7 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
                 const QString prevWord = mCursor.selectedText();
 
                 // search for exception
-                if (mUpperCaseExceptions.contains(prevWord.trimmed())) {
+                if (mAutoCorrectionSettings.upperCaseExceptions().contains(prevWord.trimmed())) {
                     break;
                 }
                 if (excludeToUppercase(mWord)) {
@@ -841,9 +815,9 @@ void AutoCorrection::replaceTypographicQuotes()
                     QChar openingQuote;
 
                     if (doubleQuotes) {
-                        openingQuote = mTypographicDoubleQuotes.begin;
+                        openingQuote = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
                     } else {
-                        openingQuote = mTypographicSingleQuotes.begin;
+                        openingQuote = mAutoCorrectionSettings.typographicSingleQuotes().begin;
                     }
 
                     // case 3b
@@ -861,29 +835,29 @@ void AutoCorrection::replaceTypographicQuotes()
             if (doubleQuotes && mAutoCorrectionSettings.isReplaceDoubleQuotes()) {
                 if (ending) {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicDoubleQuotes.end));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mAutoCorrectionSettings.typographicDoubleQuotes().end));
                     } else {
-                        mWord[i - 1] = mTypographicDoubleQuotes.end;
+                        mWord[i - 1] = mAutoCorrectionSettings.typographicDoubleQuotes().end;
                     }
                 } else {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicDoubleQuotes.begin));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mAutoCorrectionSettings.typographicDoubleQuotes().begin));
                     } else {
-                        mWord[i - 1] = mTypographicDoubleQuotes.begin;
+                        mWord[i - 1] = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
                     }
                 }
             } else if (mAutoCorrectionSettings.isReplaceSingleQuotes()) {
                 if (ending) {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicSingleQuotes.end));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mAutoCorrectionSettings.typographicSingleQuotes().end));
                     } else {
-                        mWord[i - 1] = mTypographicSingleQuotes.end;
+                        mWord[i - 1] = mAutoCorrectionSettings.typographicSingleQuotes().end;
                     }
                 } else {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicSingleQuotes.begin));
+                        mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mAutoCorrectionSettings.typographicSingleQuotes().begin));
                     } else {
-                        mWord[i - 1] = mTypographicSingleQuotes.begin;
+                        mWord[i - 1] = mAutoCorrectionSettings.typographicSingleQuotes().begin;
                     }
                 }
             }
@@ -892,12 +866,12 @@ void AutoCorrection::replaceTypographicQuotes()
 
     // first character
     if (mWord.at(0) == QLatin1Char('"') && mAutoCorrectionSettings.isReplaceDoubleQuotes()) {
-        mWord[0] = mTypographicDoubleQuotes.begin;
+        mWord[0] = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
         if (addNonBreakingSpace) {
             mWord.insert(1, mNonBreakingSpace);
         }
     } else if (mWord.at(0) == QLatin1Char('\'') && mAutoCorrectionSettings.isReplaceSingleQuotes()) {
-        mWord[0] = mTypographicSingleQuotes.begin;
+        mWord[0] = mAutoCorrectionSettings.typographicSingleQuotes().begin;
         if (addNonBreakingSpace) {
             mWord.insert(1, mNonBreakingSpace);
         }
@@ -906,6 +880,7 @@ void AutoCorrection::replaceTypographicQuotes()
 
 void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
 {
+#if 0
     QString kdelang = QStringLiteral("en_US");
     const QStringList lst = QLocale::system().uiLanguages();
     if (!lst.isEmpty()) {
@@ -973,10 +948,12 @@ void AutoCorrection::readAutoCorrectionXmlFile(bool forceGlobal)
     } else {
         loadLocalFileName(localFileName, fname);
     }
+#endif
 }
 
 void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
 {
+#if 0
     if (fname.isEmpty()) {
         mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
         mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
@@ -998,10 +975,12 @@ void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
             mMinFindStringLength = import.minFindStringLenght();
         }
     }
+#endif
 }
 
 void AutoCorrection::loadLocalFileName(const QString &localFileName, const QString &fname)
 {
+#if 0
     ImportKMailAutocorrection import;
     QString messageError;
     if (import.import(localFileName, messageError, ImportAbstractAutocorrection::All)) {
@@ -1018,6 +997,7 @@ void AutoCorrection::loadLocalFileName(const QString &localFileName, const QStri
     }
     mMaxFindStringLength = import.maxFindStringLenght();
     mMinFindStringLength = import.minFindStringLenght();
+#endif
 }
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
@@ -1055,8 +1035,8 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
     streamWriter.writeEndElement();
 
     streamWriter.writeStartElement(QStringLiteral("UpperCaseExceptions"));
-    QSet<QString>::const_iterator upper = mUpperCaseExceptions.constBegin();
-    while (upper != mUpperCaseExceptions.constEnd()) {
+    QSet<QString>::const_iterator upper = mAutoCorrectionSettings.upperCaseExceptions().constBegin();
+    while (upper != mAutoCorrectionSettings.upperCaseExceptions().constEnd()) {
         streamWriter.writeStartElement(QStringLiteral("word"));
         streamWriter.writeAttribute(QStringLiteral("exception"), *upper);
         ++upper;
@@ -1065,8 +1045,8 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
     streamWriter.writeEndElement();
 
     streamWriter.writeStartElement(QStringLiteral("TwoUpperLetterExceptions"));
-    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
-    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
+    QSet<QString>::const_iterator twoUpper = mAutoCorrectionSettings.twoUpperLetterExceptions().constBegin();
+    while (twoUpper != mAutoCorrectionSettings.twoUpperLetterExceptions().constEnd()) {
         streamWriter.writeStartElement(QStringLiteral("word"));
         streamWriter.writeAttribute(QStringLiteral("exception"), *twoUpper);
         ++twoUpper;
@@ -1076,15 +1056,15 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 
     streamWriter.writeStartElement(QStringLiteral("DoubleQuote"));
     streamWriter.writeStartElement(QStringLiteral("doublequote"));
-    streamWriter.writeAttribute(QStringLiteral("begin"), mTypographicDoubleQuotes.begin);
-    streamWriter.writeAttribute(QStringLiteral("end"), mTypographicDoubleQuotes.end);
+    streamWriter.writeAttribute(QStringLiteral("begin"), mAutoCorrectionSettings.typographicDoubleQuotes().begin);
+    streamWriter.writeAttribute(QStringLiteral("end"), mAutoCorrectionSettings.typographicDoubleQuotes().end);
     streamWriter.writeEndElement();
     streamWriter.writeEndElement();
 
     streamWriter.writeStartElement(QStringLiteral("SimpleQuote"));
     streamWriter.writeStartElement(QStringLiteral("simplequote"));
-    streamWriter.writeAttribute(QStringLiteral("begin"), mTypographicSingleQuotes.begin);
-    streamWriter.writeAttribute(QStringLiteral("end"), mTypographicSingleQuotes.end);
+    streamWriter.writeAttribute(QStringLiteral("begin"), mAutoCorrectionSettings.typographicSingleQuotes().begin);
+    streamWriter.writeAttribute(QStringLiteral("end"), mAutoCorrectionSettings.typographicSingleQuotes().end);
     streamWriter.writeEndElement();
     streamWriter.writeEndElement();
 
@@ -1094,26 +1074,6 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 QString AutoCorrection::language() const
 {
     return mAutoCorrectLang;
-}
-
-AutoCorrectionUtils::TypographicQuotes AutoCorrection::typographicSingleQuotes() const
-{
-    return mTypographicSingleQuotes;
-}
-
-AutoCorrectionUtils::TypographicQuotes AutoCorrection::typographicDoubleQuotes() const
-{
-    return mTypographicDoubleQuotes;
-}
-
-void AutoCorrection::setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes singleQuote)
-{
-    mTypographicSingleQuotes = singleQuote;
-}
-
-void AutoCorrection::setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes doubleQuote)
-{
-    mTypographicDoubleQuotes = doubleQuote;
 }
 
 void AutoCorrection::setLanguage(const QString &lang, bool forceGlobal)
