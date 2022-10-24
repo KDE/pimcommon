@@ -37,8 +37,6 @@ public:
     bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
 
-    void setNonBreakingSpace(QChar nonBreakingSpace);
-
     void loadGlobalFileName(const QString &fname, bool forceGlobal);
     void loadLocalFileName(const QString &localFileName, const QString &fname);
 
@@ -46,7 +44,6 @@ public:
     void setAutoCorrectionSettings(const AutoCorrectionSettings &newAutoCorrectionSettings);
 
 private:
-    Q_REQUIRED_RESULT bool isFrenchLanguage() const;
     void readConfig();
 
     void fixTwoUppercaseChars();
@@ -74,13 +71,12 @@ private:
     int mMinFindStringLength = 0;
     QString mWord;
     QTextCursor mCursor;
-    QChar mNonBreakingSpace;
 
     QString mAutoCorrectLang;
     QStringList mCacheNameOfDays;
     QHash<QString, QString> mAutocorrectEntries;
-    QHash<QString, QString> mSuperScriptEntries;
     QColor mLinkColor;
+    // Settings
     AutoCorrectionSettings mAutoCorrectionSettings;
 };
 }

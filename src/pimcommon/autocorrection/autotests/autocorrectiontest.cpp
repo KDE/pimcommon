@@ -563,10 +563,10 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace()
     PimCommon::AutoCorrectionSettings settings;
     settings.setEnabledAutoCorrection(true);
     settings.setAddNonBreakingSpace(enableAddNonBreakingSpace);
-    autocorrection.setAutoCorrectionSettings(settings);
 
     autocorrection.setLanguage(language);
-    autocorrection.setNonBreakingSpace(QChar(QLatin1Char('b')));
+    settings.setNonBreakingSpace(QChar(QLatin1Char('b')));
+    autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
     doc.setPlainText(originalString);
@@ -641,10 +641,10 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     settings.setReplaceSingleQuotes(true);
     autocorrection.setLanguage(QStringLiteral("fr"));
     settings.setAddNonBreakingSpace(true);
-    autocorrection.setAutoCorrectionSettings(settings);
     // TODO fix me verify why it doesn't use no breaking space
     const QChar nbsp = QChar(/*QChar::Nbsp*/ QLatin1Char('b'));
-    autocorrection.setNonBreakingSpace(nbsp);
+    settings.setNonBreakingSpace(nbsp);
+    autocorrection.setAutoCorrectionSettings(settings);
 
     PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');

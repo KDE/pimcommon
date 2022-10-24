@@ -16,6 +16,7 @@ AutoCorrectionSettings::AutoCorrectionSettings()
     // default single quote close 0x2019
     mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
     mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+    mNonBreakingSpace = QChar(QChar::Nbsp);
 }
 
 AutoCorrectionSettings::~AutoCorrectionSettings() = default;
@@ -255,6 +256,26 @@ bool AutoCorrectionSettings::addAutoCorrect(const QString &currentWord, const QS
     } else {
         return false;
     }
+}
+
+QChar AutoCorrectionSettings::nonBreakingSpace() const
+{
+    return mNonBreakingSpace;
+}
+
+void AutoCorrectionSettings::setNonBreakingSpace(const QChar &newNonBreakingSpace)
+{
+    mNonBreakingSpace = newNonBreakingSpace;
+}
+
+QHash<QString, QString> AutoCorrectionSettings::superScriptEntries() const
+{
+    return mSuperScriptEntries;
+}
+
+void AutoCorrectionSettings::setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries)
+{
+    mSuperScriptEntries = newSuperScriptEntries;
 }
 
 void AutoCorrectionSettings::setAutocorrectEntries(const QHash<QString, QString> &entries)

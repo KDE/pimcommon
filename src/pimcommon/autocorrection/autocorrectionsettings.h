@@ -73,6 +73,12 @@ public:
     Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
     Q_REQUIRED_RESULT bool addAutoCorrect(const QString &currentWord, const QString &replaceWord);
 
+    Q_REQUIRED_RESULT QChar nonBreakingSpace() const;
+    void setNonBreakingSpace(const QChar &newNonBreakingSpace);
+
+    Q_REQUIRED_RESULT QHash<QString, QString> superScriptEntries() const;
+    void setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries);
+
 private:
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
@@ -84,6 +90,8 @@ private:
     QSet<QString> mTwoUpperLetterExceptions;
 
     QString mAutoCorrectLang;
+
+    QChar mNonBreakingSpace;
 
     bool mSingleSpaces = true; // suppress double spaces.
     bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase
