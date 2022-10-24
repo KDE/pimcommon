@@ -57,7 +57,6 @@ private:
     Q_REQUIRED_RESULT bool autoBoldUnderline();
 
     Q_REQUIRED_RESULT QString autoDetectURL(const QString &_word) const;
-    void readAutoCorrectionXmlFile(bool forceGlobal = false);
     Q_REQUIRED_RESULT bool excludeToUppercase(const QString &word) const;
     Q_REQUIRED_RESULT QColor linkColor();
 

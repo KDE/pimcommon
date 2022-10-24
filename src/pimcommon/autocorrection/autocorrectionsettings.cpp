@@ -5,12 +5,14 @@
 */
 
 #include "autocorrectionsettings.h"
+#include "autocorrection/import/importkmailautocorrection.h"
 #include "pimcommon_debug.h"
 #include "settings/pimcommonsettings.h"
 
 #include <QDir>
 #include <QFile>
 #include <QFileInfo>
+#include <QRegularExpression>
 #include <QStandardPaths>
 #include <QXmlStreamWriter>
 
@@ -173,7 +175,7 @@ void AutoCorrectionSettings::readConfig()
     mEnabled = PimCommon::PimCommonSettings::self()->enabled();
     mSuperScriptAppendix = PimCommon::PimCommonSettings::self()->superScript();
     mAddNonBreakingSpace = PimCommon::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
-    // TODO readAutoCorrectionXmlFile();
+    readAutoCorrectionXmlFile();
 }
 
 void AutoCorrectionSettings::writeConfig()
@@ -383,4 +385,120 @@ int AutoCorrectionSettings::maxFindStringLength() const
 int AutoCorrectionSettings::minFindStringLength() const
 {
     return mMinFindStringLength;
+}
+
+void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, const QString &fname)
+{
+    ImportKMailAutocorrection import;
+    QString messageError;
+    if (import.import(localFileName, messageError, ImportAbstractAutocorrection::All)) {
+        mUpperCaseExceptions = import.upperCaseExceptions();
+        mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+        mAutocorrectEntries = import.autocorrectEntries();
+        mTypographicSingleQuotes = import.typographicSingleQuotes();
+        mTypographicDoubleQuotes = import.typographicDoubleQuotes();
+        // Don't import it in local
+        // mSuperScriptEntries = import.superScriptEntries();
+    }
+    if (!fname.isEmpty() && import.import(fname, messageError, ImportAbstractAutocorrection::SuperScript)) {
+        mSuperScriptEntries = import.superScriptEntries();
+    }
+    mMaxFindStringLength = import.maxFindStringLenght();
+    mMinFindStringLength = import.minFindStringLenght();
+}
+
+void AutoCorrectionSettings::loadGlobalFileName(const QString &fname, bool forceGlobal)
+{
+    if (fname.isEmpty()) {
+        mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+        mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+    } else {
+        ImportKMailAutocorrection import;
+        QString messageError;
+        if (import.import(fname, messageError, ImportAbstractAutocorrection::All)) {
+            mUpperCaseExceptions = import.upperCaseExceptions();
+            mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+            mAutocorrectEntries = import.autocorrectEntries();
+            mTypographicSingleQuotes = import.typographicSingleQuotes();
+            mTypographicDoubleQuotes = import.typographicDoubleQuotes();
+            mSuperScriptEntries = import.superScriptEntries();
+            if (forceGlobal) {
+                mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+                mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+            }
+            mMaxFindStringLength = import.maxFindStringLenght();
+            mMinFindStringLength = import.minFindStringLenght();
+        }
+    }
+}
+
+void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
+{
+    QString kdelang = QStringLiteral("en_US");
+    const QStringList lst = QLocale::system().uiLanguages();
+    if (!lst.isEmpty()) {
+        kdelang = lst.at(0);
+        if (kdelang == QLatin1Char('C')) {
+            kdelang = QStringLiteral("en_US");
+        }
+    }
+    static QRegularExpression reg(QStringLiteral("@.*"));
+    kdelang.remove(reg);
+
+    mUpperCaseExceptions.clear();
+    mAutocorrectEntries.clear();
+    mTwoUpperLetterExceptions.clear();
+    mSuperScriptEntries.clear();
+
+    QString localFileName;
+    static QRegularExpression regpath(QRegularExpression(QStringLiteral("_.*")));
+    // Look at local file:
+    if (!forceGlobal) {
+        if (!mAutoCorrectLang.isEmpty()) {
+            localFileName =
+                QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + mAutoCorrectLang + QLatin1String(".xml"));
+        } else {
+            if (!kdelang.isEmpty()) {
+                localFileName =
+                    QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+            }
+            if (localFileName.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
+                kdelang.remove(regpath);
+                localFileName =
+                    QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+            }
+        }
+    }
+    QString fname;
+    // Load Global directly
+    if (!mAutoCorrectLang.isEmpty()) {
+        if (mAutoCorrectLang == QLatin1String("en_US")) {
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/autocorrect.xml"));
+        } else {
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/") + mAutoCorrectLang + QLatin1String(".xml"));
+        }
+    } else {
+        if (fname.isEmpty() && !kdelang.isEmpty()) {
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/") + kdelang + QLatin1String(".xml"));
+        }
+        if (fname.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
+            kdelang.remove(regpath);
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/") + kdelang + QLatin1String(".xml"));
+        }
+    }
+    if (fname.isEmpty()) {
+        fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/autocorrect.xml"));
+    }
+
+    if (mAutoCorrectLang.isEmpty()) {
+        mAutoCorrectLang = kdelang;
+    }
+    // qCDebug(PIMCOMMON_LOG)<<" fname :"<<fname;
+    // qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
+
+    if (localFileName.isEmpty()) {
+        loadGlobalFileName(fname, forceGlobal);
+    } else {
+        loadLocalFileName(localFileName, fname);
+    }
 }

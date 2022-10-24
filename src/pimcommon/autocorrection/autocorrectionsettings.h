@@ -80,11 +80,15 @@ public:
     void setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries);
 
     void writeAutoCorrectionXmlFile(const QString &filename = QString());
-    int maxFindStringLength() const;
+    Q_REQUIRED_RESULT int maxFindStringLength() const;
 
-    int minFindStringLength() const;
+    Q_REQUIRED_RESULT int minFindStringLength() const;
+
+    void loadLocalFileName(const QString &localFileName, const QString &fname);
+    void loadGlobalFileName(const QString &fname, bool forceGlobal);
 
 private:
+    void readAutoCorrectionXmlFile(bool forceGlobal = false);
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
 
