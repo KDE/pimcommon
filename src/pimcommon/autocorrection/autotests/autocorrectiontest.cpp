@@ -6,7 +6,6 @@
 
 #include "autocorrectiontest.h"
 #include "../autocorrection.h"
-#include "pimcommon_debug.h"
 #include "settings/pimcommonsettings.h"
 #include <QStandardPaths>
 #include <QTest>
