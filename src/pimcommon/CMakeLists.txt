@@ -78,6 +78,12 @@ target_sources(KF5PimCommon PRIVATE
     autocorrection/import/importabstractautocorrection.cpp
     autocorrection/widgets/lineeditwithautocorrection.cpp
     autocorrection/widgets/richtexteditwithautocorrection.cpp
+    autocorrection/autocorrectionutils.h
+    autocorrection/autocorrectionutils.cpp
+    autocorrection/autocorrectionsettings.h
+    autocorrection/autocorrectionsettings.cpp
+
+
     genericplugins/pluginutil.cpp
     genericplugins/genericpluginmanager.cpp
     genericplugins/genericplugin.cpp
