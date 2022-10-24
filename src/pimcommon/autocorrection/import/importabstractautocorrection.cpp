@@ -29,12 +29,12 @@ QHash<QString, QString> ImportAbstractAutocorrection::autocorrectEntries() const
     return mAutocorrectEntries;
 }
 
-AutoCorrection::TypographicQuotes ImportAbstractAutocorrection::typographicSingleQuotes() const
+AutoCorrectionUtils::TypographicQuotes ImportAbstractAutocorrection::typographicSingleQuotes() const
 {
     return mTypographicSingleQuotes;
 }
 
-AutoCorrection::TypographicQuotes ImportAbstractAutocorrection::typographicDoubleQuotes() const
+AutoCorrectionUtils::TypographicQuotes ImportAbstractAutocorrection::typographicDoubleQuotes() const
 {
     return mTypographicDoubleQuotes;
 }

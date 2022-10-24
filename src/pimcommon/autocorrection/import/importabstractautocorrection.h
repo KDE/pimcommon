@@ -34,8 +34,8 @@ public:
     Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
     Q_REQUIRED_RESULT QHash<QString, QString> superScriptEntries() const;
 
-    Q_REQUIRED_RESULT AutoCorrection::TypographicQuotes typographicSingleQuotes() const;
-    Q_REQUIRED_RESULT AutoCorrection::TypographicQuotes typographicDoubleQuotes() const;
+    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes typographicSingleQuotes() const;
+    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes typographicDoubleQuotes() const;
 
     Q_REQUIRED_RESULT int maxFindStringLenght() const;
 
@@ -48,7 +48,7 @@ protected:
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;
     QHash<QString, QString> mSuperScriptEntries;
-    AutoCorrection::TypographicQuotes mTypographicSingleQuotes;
-    AutoCorrection::TypographicQuotes mTypographicDoubleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
 };
 }

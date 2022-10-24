@@ -5,11 +5,17 @@
 */
 
 #pragma once
-#include "autocorrection.h"
-
+#include <QChar>
+namespace PimCommon
+{
 namespace AutoCorrectionUtils
 {
-Q_REQUIRED_RESULT PimCommon::AutoCorrection::TypographicQuotes typographicDefaultSingleQuotes();
-Q_REQUIRED_RESULT PimCommon::AutoCorrection::TypographicQuotes typographicDefaultDoubleQuotes();
-
+struct TypographicQuotes {
+    QChar begin;
+    QChar end;
 };
+
+Q_REQUIRED_RESULT TypographicQuotes typographicDefaultSingleQuotes();
+Q_REQUIRED_RESULT TypographicQuotes typographicDefaultDoubleQuotes();
+};
+}

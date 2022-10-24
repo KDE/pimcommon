@@ -37,8 +37,8 @@ public:
 
     ~AutoCorrectionWidgetPrivate() = default;
 
-    AutoCorrection::TypographicQuotes m_singleQuotes;
-    AutoCorrection::TypographicQuotes m_doubleQuotes;
+    AutoCorrectionUtils::TypographicQuotes m_singleQuotes;
+    AutoCorrectionUtils::TypographicQuotes m_doubleQuotes;
     QSet<QString> m_upperCaseExceptions;
     QSet<QString> m_twoUpperLetterExceptions;
     QHash<QString, QString> m_autocorrectEntries;

@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "autocorrectionutils.h"
 #include "pimcommon_export.h"
 #include <QHash>
 #include <QSet>
@@ -20,11 +21,6 @@ namespace PimCommon
 class PIMCOMMON_EXPORT AutoCorrection
 {
 public:
-    struct TypographicQuotes {
-        QChar begin;
-        QChar end;
-    };
-
     explicit AutoCorrection();
     ~AutoCorrection();
 
@@ -38,8 +34,8 @@ public:
     void setReplaceDoubleQuotes(bool b);
     void setReplaceSingleQuotes(bool b);
     void setAdvancedAutocorrect(bool b);
-    void setTypographicSingleQuotes(TypographicQuotes singleQuote);
-    void setTypographicDoubleQuotes(TypographicQuotes doubleQuote);
+    void setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes singleQuote);
+    void setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes doubleQuote);
     void setUpperCaseExceptions(const QSet<QString> &exceptions);
     void setTwoUpperLetterExceptions(const QSet<QString> &exceptions);
     void setAutocorrectEntries(const QHash<QString, QString> &entries);
@@ -64,8 +60,8 @@ public:
     Q_REQUIRED_RESULT bool isAddNonBreakingSpace() const;
 
     Q_REQUIRED_RESULT QString language() const;
-    Q_REQUIRED_RESULT TypographicQuotes typographicSingleQuotes() const;
-    Q_REQUIRED_RESULT TypographicQuotes typographicDoubleQuotes() const;
+    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes typographicSingleQuotes() const;
+    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes typographicDoubleQuotes() const;
     Q_REQUIRED_RESULT QSet<QString> upperCaseExceptions() const;
     Q_REQUIRED_RESULT QSet<QString> twoUpperLetterExceptions() const;
     Q_REQUIRED_RESULT QHash<QString, QString> autocorrectEntries() const;
@@ -135,8 +131,8 @@ private:
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;
     QHash<QString, QString> mSuperScriptEntries;
-    TypographicQuotes mTypographicSingleQuotes;
-    TypographicQuotes mTypographicDoubleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
     QColor mLinkColor;
 };
 }

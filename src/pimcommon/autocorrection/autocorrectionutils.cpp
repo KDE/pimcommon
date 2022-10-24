@@ -5,18 +5,18 @@
 */
 
 #include "autocorrectionutils.h"
-
-PimCommon::AutoCorrection::TypographicQuotes AutoCorrectionUtils::typographicDefaultSingleQuotes()
+using namespace PimCommon;
+AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::typographicDefaultSingleQuotes()
 {
-    PimCommon::AutoCorrection::TypographicQuotes quote;
+    TypographicQuotes quote;
     quote.begin = QChar(0x2018);
     quote.end = QChar(0x2019);
     return quote;
 }
 
-PimCommon::AutoCorrection::TypographicQuotes AutoCorrectionUtils::typographicDefaultDoubleQuotes()
+AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::typographicDefaultDoubleQuotes()
 {
-    PimCommon::AutoCorrection::TypographicQuotes quote;
+    TypographicQuotes quote;
     quote.begin = QChar(0x201c);
     quote.end = QChar(0x201d);
     return quote;

@@ -147,7 +147,7 @@ void AutoCorrectionTest::shouldReplaceSingleQuote()
     PimCommon::AutoCorrection autocorrection;
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setReplaceSingleQuotes(true);
-    PimCommon::AutoCorrection::TypographicQuotes simpleQuote;
+    PimCommon::AutoCorrectionUtils::TypographicQuotes simpleQuote;
     simpleQuote.begin = QLatin1Char('A');
     simpleQuote.end = QLatin1Char('B');
 
@@ -178,7 +178,7 @@ void AutoCorrectionTest::shouldReplaceDoubleQuote()
     PimCommon::AutoCorrection autocorrection;
     autocorrection.setEnabledAutoCorrection(true);
     autocorrection.setReplaceDoubleQuotes(true);
-    PimCommon::AutoCorrection::TypographicQuotes doubleQuote;
+    PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
 
@@ -610,12 +610,12 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     const QChar nbsp = QChar(/*QChar::Nbsp*/ QLatin1Char('b'));
     autocorrection.setNonBreakingSpace(nbsp);
 
-    PimCommon::AutoCorrection::TypographicQuotes doubleQuote;
+    PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
     autocorrection.setTypographicDoubleQuotes(doubleQuote);
 
-    PimCommon::AutoCorrection::TypographicQuotes simpleQuote;
+    PimCommon::AutoCorrectionUtils::TypographicQuotes simpleQuote;
     simpleQuote.begin = QLatin1Char('A');
     simpleQuote.end = QLatin1Char('B');
 

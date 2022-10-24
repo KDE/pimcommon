@@ -1194,14 +1194,24 @@ QString AutoCorrection::language() const
     return mAutoCorrectLang;
 }
 
-AutoCorrection::TypographicQuotes AutoCorrection::typographicSingleQuotes() const
+AutoCorrectionUtils::TypographicQuotes AutoCorrection::typographicSingleQuotes() const
 {
     return mTypographicSingleQuotes;
 }
 
-AutoCorrection::TypographicQuotes AutoCorrection::typographicDoubleQuotes() const
+AutoCorrectionUtils::TypographicQuotes AutoCorrection::typographicDoubleQuotes() const
 {
     return mTypographicDoubleQuotes;
+}
+
+void AutoCorrection::setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes singleQuote)
+{
+    mTypographicSingleQuotes = singleQuote;
+}
+
+void AutoCorrection::setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes doubleQuote)
+{
+    mTypographicDoubleQuotes = doubleQuote;
 }
 
 void AutoCorrection::setLanguage(const QString &lang, bool forceGlobal)
@@ -1256,16 +1266,6 @@ void AutoCorrection::setReplaceSingleQuotes(bool b)
 void AutoCorrection::setAdvancedAutocorrect(bool b)
 {
     mAdvancedAutocorrect = b;
-}
-
-void AutoCorrection::setTypographicSingleQuotes(AutoCorrection::TypographicQuotes singleQuote)
-{
-    mTypographicSingleQuotes = singleQuote;
-}
-
-void AutoCorrection::setTypographicDoubleQuotes(AutoCorrection::TypographicQuotes doubleQuote)
-{
-    mTypographicDoubleQuotes = doubleQuote;
 }
 
 bool AutoCorrection::isFrenchLanguage() const
