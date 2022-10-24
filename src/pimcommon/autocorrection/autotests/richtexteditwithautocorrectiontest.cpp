@@ -35,8 +35,8 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWordWhenExactText()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
     richtext.autocorrection()->setAutocorrectEntries(entries);
-    richtext.autocorrection()->setEnabledAutoCorrection(true);
-    richtext.autocorrection()->setAdvancedAutocorrect(true);
+    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);
@@ -52,8 +52,8 @@ void RichTextEditWithAutoCorrectionTest::shouldNotReplaceWordWhenInexactText()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
     richtext.autocorrection()->setAutocorrectEntries(entries);
-    richtext.autocorrection()->setEnabledAutoCorrection(true);
-    richtext.autocorrection()->setAdvancedAutocorrect(true);
+    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
     richtext.show();
     const QString nonExactText = QStringLiteral("BLIBLI");
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
@@ -70,8 +70,8 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWhenPressEnter()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
     richtext.autocorrection()->setAutocorrectEntries(entries);
-    richtext.autocorrection()->setEnabledAutoCorrection(true);
-    richtext.autocorrection()->setAdvancedAutocorrect(true);
+    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);
@@ -87,8 +87,8 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWhenPressReturn()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
     richtext.autocorrection()->setAutocorrectEntries(entries);
-    richtext.autocorrection()->setEnabledAutoCorrection(true);
-    richtext.autocorrection()->setAdvancedAutocorrect(true);
+    richtext.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    richtext.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
     QTest::keyClicks(&richtext, originalWord);

@@ -56,7 +56,7 @@ void LineEditWithAutoCorrection::setAutocorrectionLanguage(const QString &langua
 
 void LineEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
 {
-    if (d->mAutoCorrection && d->mAutoCorrection->isEnabledAutoCorrection()) {
+    if (d->mAutoCorrection && d->mAutoCorrection->autoCorrectionSettings().isEnabledAutoCorrection()) {
         if ((e->key() == Qt::Key_Space) || (e->key() == Qt::Key_Enter) || (e->key() == Qt::Key_Return)) {
             if (!textCursor().hasSelection()) {
                 int position = textCursor().position();

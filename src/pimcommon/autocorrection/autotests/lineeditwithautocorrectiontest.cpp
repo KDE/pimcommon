@@ -35,8 +35,8 @@ void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
     lineedit.autocorrection()->setAutocorrectEntries(entries);
-    lineedit.autocorrection()->setEnabledAutoCorrection(true);
-    lineedit.autocorrection()->setAdvancedAutocorrect(true);
+    lineedit.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    lineedit.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
     lineedit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineedit));
     QTest::keyClicks(&lineedit, originalWord);
@@ -52,8 +52,8 @@ void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
     lineedit.autocorrection()->setAutocorrectEntries(entries);
-    lineedit.autocorrection()->setEnabledAutoCorrection(true);
-    lineedit.autocorrection()->setAdvancedAutocorrect(true);
+    lineedit.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    lineedit.autocorrection()->autoCorrectionSettings().setAdvancedAutocorrect(true);
     lineedit.show();
     const QString nonExactText = QStringLiteral("BLIBLI");
     QVERIFY(QTest::qWaitForWindowExposed(&lineedit));
@@ -66,8 +66,8 @@ void LineEditWithAutocorrectionTest::shouldNotAddTwoSpace()
 {
     PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO ");
-    lineedit.autocorrection()->setSingleSpaces(true);
-    lineedit.autocorrection()->setEnabledAutoCorrection(true);
+    lineedit.autocorrection()->autoCorrectionSettings().setSingleSpaces(true);
+    lineedit.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
     lineedit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineedit));
     QTest::keyClicks(&lineedit, originalWord);

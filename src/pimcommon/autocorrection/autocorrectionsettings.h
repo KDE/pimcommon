@@ -50,6 +50,14 @@ public:
 
     void writeConfig();
 
+    void setAutoFractions(bool newAutoFractions);
+
+    void setSingleSpaces(bool newSingleSpaces);
+
+    void setFixTwoUppercaseChars(bool newFixTwoUppercaseChars);
+
+    void setUppercaseFirstCharOfSentence(bool newUppercaseFirstCharOfSentence);
+
 private:
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;

@@ -180,3 +180,23 @@ void AutoCorrectionSettings::writeConfig()
     PimCommon::PimCommonSettings::self()->requestSync();
     // TODO writeAutoCorrectionXmlFile();
 }
+
+void AutoCorrectionSettings::setAutoFractions(bool newAutoFractions)
+{
+    mAutoFractions = newAutoFractions;
+}
+
+void AutoCorrectionSettings::setSingleSpaces(bool newSingleSpaces)
+{
+    mSingleSpaces = newSingleSpaces;
+}
+
+void AutoCorrectionSettings::setFixTwoUppercaseChars(bool newFixTwoUppercaseChars)
+{
+    mFixTwoUppercaseChars = newFixTwoUppercaseChars;
+}
+
+void AutoCorrectionSettings::setUppercaseFirstCharOfSentence(bool newUppercaseFirstCharOfSentence)
+{
+    mUppercaseFirstCharOfSentence = newUppercaseFirstCharOfSentence;
+}

@@ -64,7 +64,7 @@ TextEditAutoCorrectionWidget::~TextEditAutoCorrectionWidget() = default;
 void TextEditAutoCorrectionWidget::keyPressEvent(QKeyEvent *e)
 {
     if ((e->key() == Qt::Key_Space) || (e->key() == Qt::Key_Enter) || (e->key() == Qt::Key_Return)) {
-        if (mAutoCorrection && mAutoCorrection->isEnabledAutoCorrection()) {
+        if (mAutoCorrection && mAutoCorrection->autoCorrectionSettings().isEnabledAutoCorrection()) {
             const QTextCharFormat initialTextFormat = textCursor().charFormat();
             int position = textCursor().position();
             mAutoCorrection->autocorrect(acceptRichText(), *document(), position);

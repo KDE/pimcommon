@@ -111,7 +111,7 @@ void AutoCorrection::selectPreviousWord(QTextCursor &cursor, int cursorPosition)
 
 bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &position)
 {
-    if (mEnabled) {
+    if (mAutoCorrectionSettings.isEnabledAutoCorrection()) {
         mCursor = QTextCursor(&document);
         mCursor.setPosition(position);
 
@@ -183,37 +183,13 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
 
 void AutoCorrection::readConfig()
 {
-    mAutoBoldUnderline = PimCommon::PimCommonSettings::self()->autoBoldUnderline();
-    mAutoFormatUrl = PimCommon::PimCommonSettings::self()->autoFormatUrl();
-    mUppercaseFirstCharOfSentence = PimCommon::PimCommonSettings::self()->uppercaseFirstCharOfSentence();
-    mFixTwoUppercaseChars = PimCommon::PimCommonSettings::self()->fixTwoUppercaseChars();
-    mSingleSpaces = PimCommon::PimCommonSettings::self()->singleSpaces();
-    mAutoFractions = PimCommon::PimCommonSettings::self()->autoFractions();
-    mCapitalizeWeekDays = PimCommon::PimCommonSettings::self()->capitalizeWeekDays();
-    mAdvancedAutocorrect = PimCommon::PimCommonSettings::self()->advancedAutocorrect();
-    mReplaceDoubleQuotes = PimCommon::PimCommonSettings::self()->replaceDoubleQuotes();
-    mReplaceSingleQuotes = PimCommon::PimCommonSettings::self()->replaceSingleQuotes();
-    mEnabled = PimCommon::PimCommonSettings::self()->enabled();
-    mSuperScriptAppendix = PimCommon::PimCommonSettings::self()->superScript();
-    mAddNonBreakingSpace = PimCommon::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
+    mAutoCorrectionSettings.readConfig();
     readAutoCorrectionXmlFile();
 }
 
 void AutoCorrection::writeConfig()
 {
-    PimCommon::PimCommonSettings::self()->setAutoBoldUnderline(mAutoBoldUnderline);
-    PimCommon::PimCommonSettings::self()->setAutoFormatUrl(mAutoFormatUrl);
-    PimCommon::PimCommonSettings::self()->setUppercaseFirstCharOfSentence(mUppercaseFirstCharOfSentence);
-    PimCommon::PimCommonSettings::self()->setFixTwoUppercaseChars(mFixTwoUppercaseChars);
-    PimCommon::PimCommonSettings::self()->setSingleSpaces(mSingleSpaces);
-    PimCommon::PimCommonSettings::self()->setAutoFractions(mAutoFractions);
-    PimCommon::PimCommonSettings::self()->setCapitalizeWeekDays(mCapitalizeWeekDays);
-    PimCommon::PimCommonSettings::self()->setAdvancedAutocorrect(mAdvancedAutocorrect);
-    PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotes(mReplaceDoubleQuotes);
-    PimCommon::PimCommonSettings::self()->setReplaceSingleQuotes(mReplaceSingleQuotes);
-    PimCommon::PimCommonSettings::self()->setEnabled(mEnabled);
-    PimCommon::PimCommonSettings::self()->setSuperScript(mSuperScriptAppendix);
-    PimCommon::PimCommonSettings::self()->setAddNonBreakingSpaceInFrench(mAddNonBreakingSpace);
+    mAutoCorrectionSettings.writeConfig();
     PimCommon::PimCommonSettings::self()->requestSync();
     writeAutoCorrectionXmlFile();
 }
@@ -253,91 +229,6 @@ void AutoCorrection::setAutocorrectEntries(const QHash<QString, QString> &entrie
     mAutocorrectEntries = entries;
 }
 
-void AutoCorrection::setAutoFormatUrl(bool b)
-{
-    mAutoFormatUrl = b;
-}
-
-void AutoCorrection::setAutoBoldUnderline(bool b)
-{
-    mAutoBoldUnderline = b;
-}
-
-void AutoCorrection::setSuperScript(bool b)
-{
-    mSuperScriptAppendix = b;
-}
-
-void AutoCorrection::setAddNonBreakingSpace(bool b)
-{
-    mAddNonBreakingSpace = b;
-}
-
-bool AutoCorrection::isEnabledAutoCorrection() const
-{
-    return mEnabled;
-}
-
-bool AutoCorrection::isUppercaseFirstCharOfSentence() const
-{
-    return mUppercaseFirstCharOfSentence;
-}
-
-bool AutoCorrection::isFixTwoUppercaseChars() const
-{
-    return mFixTwoUppercaseChars;
-}
-
-bool AutoCorrection::isSingleSpaces() const
-{
-    return mSingleSpaces;
-}
-
-bool AutoCorrection::isAutoFractions() const
-{
-    return mAutoFractions;
-}
-
-bool AutoCorrection::isCapitalizeWeekDays() const
-{
-    return mCapitalizeWeekDays;
-}
-
-bool AutoCorrection::isReplaceDoubleQuotes() const
-{
-    return mReplaceDoubleQuotes;
-}
-
-bool AutoCorrection::isReplaceSingleQuotes() const
-{
-    return mReplaceSingleQuotes;
-}
-
-bool AutoCorrection::isAdvancedAutocorrect() const
-{
-    return mAdvancedAutocorrect;
-}
-
-bool AutoCorrection::isAutoFormatUrl() const
-{
-    return mAutoFormatUrl;
-}
-
-bool AutoCorrection::isAutoBoldUnderline() const
-{
-    return mAutoBoldUnderline;
-}
-
-bool AutoCorrection::isSuperScript() const
-{
-    return mSuperScriptAppendix;
-}
-
-bool AutoCorrection::isAddNonBreakingSpace() const
-{
-    return mAddNonBreakingSpace;
-}
-
 QSet<QString> AutoCorrection::upperCaseExceptions() const
 {
     return mUpperCaseExceptions;
@@ -355,7 +246,7 @@ QHash<QString, QString> AutoCorrection::autocorrectEntries() const
 
 void AutoCorrection::superscriptAppendix()
 {
-    if (!mSuperScriptAppendix) {
+    if (!mAutoCorrectionSettings.isSuperScript()) {
         return;
     }
 
@@ -413,7 +304,7 @@ void AutoCorrection::superscriptAppendix()
 
 void AutoCorrection::addNonBreakingSpace()
 {
-    if (mAddNonBreakingSpace && isFrenchLanguage()) {
+    if (mAutoCorrectionSettings.isAddNonBreakingSpace() && isFrenchLanguage()) {
         const QTextBlock block = mCursor.block();
         const QString text = block.text();
         const QChar lastChar = text.at(mCursor.position() - 1 - block.position());
@@ -457,7 +348,7 @@ void AutoCorrection::addNonBreakingSpace()
 
 bool AutoCorrection::autoBoldUnderline()
 {
-    if (!mAutoBoldUnderline) {
+    if (!mAutoCorrectionSettings.isAutoBoldUnderline()) {
         return false;
     }
     const QString trimmed = mWord.trimmed();
@@ -520,9 +411,19 @@ QColor AutoCorrection::linkColor()
     return mLinkColor;
 }
 
+AutoCorrectionSettings AutoCorrection::autoCorrectionSettings() const
+{
+    return mAutoCorrectionSettings;
+}
+
+void AutoCorrection::setAutoCorrectionSettings(const AutoCorrectionSettings &newAutoCorrectionSettings)
+{
+    mAutoCorrectionSettings = newAutoCorrectionSettings;
+}
+
 bool AutoCorrection::autoFormatURLs()
 {
-    if (!mAutoFormatUrl) {
+    if (!mAutoCorrectionSettings.isAutoFormatUrl()) {
         return false;
     }
 
@@ -652,7 +553,7 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
 
 void AutoCorrection::fixTwoUppercaseChars()
 {
-    if (!mFixTwoUppercaseChars) {
+    if (!mAutoCorrectionSettings.isFixTwoUppercaseChars()) {
         return;
     }
     if (mWord.length() <= 2) {
@@ -678,7 +579,7 @@ void AutoCorrection::fixTwoUppercaseChars()
 // Return true if we can add space
 bool AutoCorrection::singleSpaces()
 {
-    if (!mSingleSpaces) {
+    if (!mAutoCorrectionSettings.isSingleSpaces()) {
         return true;
     }
     if (!mCursor.atBlockStart()) {
@@ -694,7 +595,7 @@ bool AutoCorrection::singleSpaces()
 
 void AutoCorrection::capitalizeWeekDays()
 {
-    if (!mCapitalizeWeekDays) {
+    if (!mAutoCorrectionSettings.isCapitalizeWeekDays()) {
         return;
     }
 
@@ -724,7 +625,7 @@ void AutoCorrection::setNonBreakingSpace(QChar nonBreakingSpace)
 
 void AutoCorrection::uppercaseFirstCharOfSentence()
 {
-    if (!mUppercaseFirstCharOfSentence) {
+    if (!mAutoCorrectionSettings.isUppercaseFirstCharOfSentence()) {
         return;
     }
 
@@ -783,7 +684,7 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
 
 bool AutoCorrection::autoFractions()
 {
-    if (!mAutoFractions) {
+    if (!mAutoCorrectionSettings.isAutoFractions()) {
         return false;
     }
 
@@ -813,7 +714,7 @@ bool AutoCorrection::autoFractions()
 
 int AutoCorrection::advancedAutocorrect()
 {
-    if (!mAdvancedAutocorrect) {
+    if (!mAutoCorrectionSettings.isAdvancedAutocorrect()) {
         return -1;
     }
     if (mAutocorrectEntries.isEmpty()) {
@@ -903,11 +804,12 @@ void AutoCorrection::replaceTypographicQuotes()
     /* this method is ported from lib/kotext/KoAutoFormat.cpp KoAutoFormat::doTypographicQuotes
      * from Calligra 1.x branch */
 
-    if (!(mReplaceDoubleQuotes && mWord.contains(QLatin1Char('"'))) && !(mReplaceSingleQuotes && mWord.contains(QLatin1Char('\'')))) {
+    if (!(mAutoCorrectionSettings.isReplaceDoubleQuotes() && mWord.contains(QLatin1Char('"')))
+        && !(mAutoCorrectionSettings.isReplaceSingleQuotes() && mWord.contains(QLatin1Char('\'')))) {
         return;
     }
 
-    const bool addNonBreakingSpace = (isFrenchLanguage() && isAddNonBreakingSpace());
+    const bool addNonBreakingSpace = (isFrenchLanguage() && mAutoCorrectionSettings.isAddNonBreakingSpace());
 
     // Need to determine if we want a starting or ending quote.
     // we use a starting quote in three cases:
@@ -956,7 +858,7 @@ void AutoCorrection::replaceTypographicQuotes()
                 ending = (c2 == QChar::Punctuation_InitialQuote);
             }
 
-            if (doubleQuotes && mReplaceDoubleQuotes) {
+            if (doubleQuotes && mAutoCorrectionSettings.isReplaceDoubleQuotes()) {
                 if (ending) {
                     if (addNonBreakingSpace) {
                         mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicDoubleQuotes.end));
@@ -970,7 +872,7 @@ void AutoCorrection::replaceTypographicQuotes()
                         mWord[i - 1] = mTypographicDoubleQuotes.begin;
                     }
                 }
-            } else if (mReplaceSingleQuotes) {
+            } else if (mAutoCorrectionSettings.isReplaceSingleQuotes()) {
                 if (ending) {
                     if (addNonBreakingSpace) {
                         mWord.replace(i - 1, 2, QString(mNonBreakingSpace + mTypographicSingleQuotes.end));
@@ -989,12 +891,12 @@ void AutoCorrection::replaceTypographicQuotes()
     }
 
     // first character
-    if (mWord.at(0) == QLatin1Char('"') && mReplaceDoubleQuotes) {
+    if (mWord.at(0) == QLatin1Char('"') && mAutoCorrectionSettings.isReplaceDoubleQuotes()) {
         mWord[0] = mTypographicDoubleQuotes.begin;
         if (addNonBreakingSpace) {
             mWord.insert(1, mNonBreakingSpace);
         }
-    } else if (mWord.at(0) == QLatin1Char('\'') && mReplaceSingleQuotes) {
+    } else if (mWord.at(0) == QLatin1Char('\'') && mAutoCorrectionSettings.isReplaceSingleQuotes()) {
         mWord[0] = mTypographicSingleQuotes.begin;
         if (addNonBreakingSpace) {
             mWord.insert(1, mNonBreakingSpace);
@@ -1221,51 +1123,6 @@ void AutoCorrection::setLanguage(const QString &lang, bool forceGlobal)
         // Re-read xml file
         readAutoCorrectionXmlFile(forceGlobal);
     }
-}
-
-void AutoCorrection::setEnabledAutoCorrection(bool b)
-{
-    mEnabled = b;
-}
-
-void AutoCorrection::setUppercaseFirstCharOfSentence(bool b)
-{
-    mUppercaseFirstCharOfSentence = b;
-}
-
-void AutoCorrection::setFixTwoUppercaseChars(bool b)
-{
-    mFixTwoUppercaseChars = b;
-}
-
-void AutoCorrection::setSingleSpaces(bool b)
-{
-    mSingleSpaces = b;
-}
-
-void AutoCorrection::setAutoFractions(bool b)
-{
-    mAutoFractions = b;
-}
-
-void AutoCorrection::setCapitalizeWeekDays(bool b)
-{
-    mCapitalizeWeekDays = b;
-}
-
-void AutoCorrection::setReplaceDoubleQuotes(bool b)
-{
-    mReplaceDoubleQuotes = b;
-}
-
-void AutoCorrection::setReplaceSingleQuotes(bool b)
-{
-    mReplaceSingleQuotes = b;
-}
-
-void AutoCorrection::setAdvancedAutocorrect(bool b)
-{
-    mAdvancedAutocorrect = b;
 }
 
 bool AutoCorrection::isFrenchLanguage() const
