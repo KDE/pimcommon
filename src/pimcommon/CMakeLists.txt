@@ -364,6 +364,9 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrection_HEADERS
     AutoCorrectionWidget
     AutoCorrectionLanguage
     AutoCorrection
+    AutoCorrectionSettings
+    AutoCorrectionUtils
+
     REQUIRED_HEADERS PimCommon_autocorrection_HEADERS
     PREFIX PimCommon
     RELATIVE autocorrection/
