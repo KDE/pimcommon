@@ -52,7 +52,9 @@ AutoCorrection *RichTextEditWithAutoCorrection::autocorrection() const
 
 void RichTextEditWithAutoCorrection::setAutocorrectionLanguage(const QString &language)
 {
-    d->mAutoCorrection->setLanguage(language);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setLanguage(language);
+    d->mAutoCorrection->setAutoCorrectionSettings(settings);
 }
 
 static bool isSpecial(const QTextCharFormat &charFormat)

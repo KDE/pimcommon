@@ -966,17 +966,3 @@ void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 {
     mAutoCorrectionSettings.writeAutoCorrectionXmlFile(filename);
 }
-
-QString AutoCorrection::language() const
-{
-    return mAutoCorrectLang;
-}
-
-void AutoCorrection::setLanguage(const QString &lang, bool forceGlobal)
-{
-    if (mAutoCorrectLang != lang || forceGlobal) {
-        mAutoCorrectLang = lang;
-        // Re-read xml file
-        readAutoCorrectionXmlFile(forceGlobal);
-    }
-}

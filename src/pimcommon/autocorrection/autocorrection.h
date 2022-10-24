@@ -25,9 +25,6 @@ public:
     explicit AutoCorrection();
     ~AutoCorrection();
 
-    void setLanguage(const QString &lang, bool forceGlobal = false);
-    Q_REQUIRED_RESULT QString language() const;
-
     void writeConfig();
 
     bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
@@ -67,7 +64,6 @@ private:
     QString mWord;
     QTextCursor mCursor;
 
-    QString mAutoCorrectLang;
     QStringList mCacheNameOfDays;
     QColor mLinkColor;
     // Settings

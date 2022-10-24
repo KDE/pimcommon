@@ -593,7 +593,9 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
 
 void AutoCorrectionWidget::setLanguage(const QString &lang)
 {
-    d->mAutoCorrection->setLanguage(lang);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setLanguage(lang);
+    d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }
@@ -622,7 +624,9 @@ void AutoCorrectionWidget::changeLanguage(int index)
         }
     }
     const QString lang = d->ui->autocorrectionLanguage->itemData(index).toString();
-    d->mAutoCorrection->setLanguage(lang);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setLanguage(lang);
+    d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }
@@ -636,7 +640,9 @@ void AutoCorrectionWidget::emitChanged()
 void AutoCorrectionWidget::loadGlobalAutoCorrectionAndException()
 {
     const QString lang = d->ui->autocorrectionLanguage->itemData(d->ui->autocorrectionLanguage->currentIndex()).toString();
-    d->mAutoCorrection->setLanguage(lang, true);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setLanguage(lang, true);
+    d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
     d->mWasChanged = true;
     Q_EMIT changed();

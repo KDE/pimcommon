@@ -51,7 +51,9 @@ void LineEditWithAutoCorrection::setAutocorrection(PimCommon::AutoCorrection *au
 
 void LineEditWithAutoCorrection::setAutocorrectionLanguage(const QString &language)
 {
-    d->mAutoCorrection->setLanguage(language);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setLanguage(language);
+    d->mAutoCorrection->setAutoCorrectionSettings(settings);
 }
 
 void LineEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)

@@ -565,7 +565,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace()
     settings.setEnabledAutoCorrection(true);
     settings.setAddNonBreakingSpace(enableAddNonBreakingSpace);
 
-    autocorrection.setLanguage(language);
+    settings.setLanguage(language);
     settings.setNonBreakingSpace(QChar(QLatin1Char('b')));
     autocorrection.setAutoCorrectionSettings(settings);
 
@@ -640,7 +640,7 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     settings.setEnabledAutoCorrection(true);
     settings.setReplaceDoubleQuotes(true);
     settings.setReplaceSingleQuotes(true);
-    autocorrection.setLanguage(QStringLiteral("fr"));
+    settings.setLanguage(QStringLiteral("fr"));
     settings.setAddNonBreakingSpace(true);
     // TODO fix me verify why it doesn't use no breaking space
     const QChar nbsp = QChar(/*QChar::Nbsp*/ QLatin1Char('b'));
