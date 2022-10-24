@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-21 00:48+0000\n"
+"POT-Creation-Date: 2022-10-24 00:49+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -576,16 +576,16 @@ msgid "Error: Unable to extract additional Bing information from web version."
 msgstr "오류: 웹 버전에서 추가 Bing 정보를 추출할 수 없습니다."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:113
-#: pimcommon/translator/engine/deepltranslator.cpp:41
+#: pimcommon/translator/engine/deepltranslator.cpp:40
 #: pimcommon/translator/engine/googletranslator.cpp:45
 #: pimcommon/translator/engine/libretranslatetranslator.cpp:34
-#: pimcommon/translator/engine/lingvatranslator.cpp:36
-#: pimcommon/translator/engine/yandextranslator.cpp:108
+#: pimcommon/translator/engine/lingvatranslator.cpp:35
+#: pimcommon/translator/engine/yandextranslator.cpp:107
 #, kde-format
 msgid "You used same language for from and to language."
 msgstr "원본과 대상 언어가 같습니다."
 
-#: pimcommon/translator/engine/deepltranslator.cpp:30
+#: pimcommon/translator/engine/deepltranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:362
 #, kde-format
 msgid "DeepL"
@@ -603,19 +603,19 @@ msgstr "Google"
 msgid "Libre Translate"
 msgstr "Libre Translate"
 
-#: pimcommon/translator/engine/lingvatranslator.cpp:30
+#: pimcommon/translator/engine/lingvatranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:356
 #, kde-format
 msgid "Lingva"
 msgstr "Lingva"
 
-#: pimcommon/translator/engine/yandextranslator.cpp:60
+#: pimcommon/translator/engine/yandextranslator.cpp:59
 #: pimcommon/translator/translatorutil.cpp:350
 #, kde-format
 msgid "Yandex"
 msgstr "Yandex"
 
-#: pimcommon/translator/engine/yandextranslator.cpp:70
+#: pimcommon/translator/engine/yandextranslator.cpp:69
 #: pimcommon/translator/translatorenginebase.cpp:83
 #, kde-format
 msgid ""
@@ -625,17 +625,17 @@ msgstr ""
 "오류: 엔진 시스템에서 이 컴퓨터로부터 수상한 트래픽을 감지했습니다. 나중에 다"
 "시 시도하십시오."
 
-#: pimcommon/translator/engine/yandextranslator.cpp:79
+#: pimcommon/translator/engine/yandextranslator.cpp:78
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr "오류: 웹 버전에서 Yandex SID를 찾을 수 없습니다."
 
-#: pimcommon/translator/engine/yandextranslator.cpp:87
+#: pimcommon/translator/engine/yandextranslator.cpp:86
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr "오류: 웹 버전에서 Yandex SID를 추출할 수 없습니다."
 
-#: pimcommon/translator/engine/yandextranslator.cpp:156
+#: pimcommon/translator/engine/yandextranslator.cpp:155
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr "오류: 자동 감지된 언어를 해석할 수 없음"

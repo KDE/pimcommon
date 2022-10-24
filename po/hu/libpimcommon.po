@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-21 00:48+0000\n"
+"POT-Creation-Date: 2022-10-24 00:49+0000\n"
 "PO-Revision-Date: 2021-10-17 16:22+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -584,16 +584,16 @@ msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
 
 #: pimcommon/translator/engine/bingtranslator.cpp:113
-#: pimcommon/translator/engine/deepltranslator.cpp:41
+#: pimcommon/translator/engine/deepltranslator.cpp:40
 #: pimcommon/translator/engine/googletranslator.cpp:45
 #: pimcommon/translator/engine/libretranslatetranslator.cpp:34
-#: pimcommon/translator/engine/lingvatranslator.cpp:36
-#: pimcommon/translator/engine/yandextranslator.cpp:108
+#: pimcommon/translator/engine/lingvatranslator.cpp:35
+#: pimcommon/translator/engine/yandextranslator.cpp:107
 #, kde-format
 msgid "You used same language for from and to language."
 msgstr "Ugyanazt a nyelvet használta a forrás és cél nyelvhez."
 
-#: pimcommon/translator/engine/deepltranslator.cpp:30
+#: pimcommon/translator/engine/deepltranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:362
 #, kde-format
 msgid "DeepL"
@@ -612,19 +612,19 @@ msgstr "Google"
 msgid "Libre Translate"
 msgstr "Fordítás"
 
-#: pimcommon/translator/engine/lingvatranslator.cpp:30
+#: pimcommon/translator/engine/lingvatranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:356
 #, kde-format
 msgid "Lingva"
 msgstr ""
 
-#: pimcommon/translator/engine/yandextranslator.cpp:60
+#: pimcommon/translator/engine/yandextranslator.cpp:59
 #: pimcommon/translator/translatorutil.cpp:350
 #, kde-format
 msgid "Yandex"
 msgstr ""
 
-#: pimcommon/translator/engine/yandextranslator.cpp:70
+#: pimcommon/translator/engine/yandextranslator.cpp:69
 #: pimcommon/translator/translatorenginebase.cpp:83
 #, kde-format
 msgid ""
@@ -632,17 +632,17 @@ msgid ""
 "network. Please try your request again later."
 msgstr ""
 
-#: pimcommon/translator/engine/yandextranslator.cpp:79
+#: pimcommon/translator/engine/yandextranslator.cpp:78
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr ""
 
-#: pimcommon/translator/engine/yandextranslator.cpp:87
+#: pimcommon/translator/engine/yandextranslator.cpp:86
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr ""
 
-#: pimcommon/translator/engine/yandextranslator.cpp:156
+#: pimcommon/translator/engine/yandextranslator.cpp:155
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr ""
