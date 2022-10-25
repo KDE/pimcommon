@@ -21,3 +21,10 @@ AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::typographicDefaultDo
     quote.end = QChar(0x201d);
     return quote;
 }
+
+QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t)
+{
+    d << "TypographicQuotes.begin " << t.begin;
+    d << "TypographicQuotes.end " << t.end;
+    return d;
+}

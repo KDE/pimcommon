@@ -502,3 +502,31 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
         loadLocalFileName(localFileName, fname);
     }
 }
+
+QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t)
+{
+    d << "mAddNonBreakingSpace " << t.nonBreakingSpace();
+    d << "mSuperScriptAppendix " << t.isSuperScript();
+    d << "mEnabled " << t.isEnabledAutoCorrection();
+    d << "mAutoBoldUnderline " << t.isAutoBoldUnderline();
+    d << "mAutoFormatUrl " << t.isAutoFormatUrl();
+    d << "mReplaceSingleQuotes " << t.isReplaceSingleQuotes();
+    d << "mReplaceDoubleQuotes " << t.isReplaceDoubleQuotes();
+    d << "mAdvancedAutocorrect " << t.isAdvancedAutocorrect();
+    d << "mCapitalizeWeekDays " << t.isCapitalizeWeekDays();
+    d << "mAutoFractions " << t.isAutoFractions();
+    d << "mFixTwoUppercaseChars " << t.isFixTwoUppercaseChars();
+    d << "mUppercaseFirstCharOfSentence " << t.isUppercaseFirstCharOfSentence();
+    d << "mSingleSpaces " << t.isSingleSpaces();
+    d << "mMaxFindStringLength " << t.maxFindStringLength();
+    d << "mMinFindStringLength " << t.minFindStringLength();
+    d << "mNonBreakingSpace " << t.nonBreakingSpace();
+    d << "mAutoCorrectLang " << t.language();
+    d << "mTwoUpperLetterExceptions " << t.twoUpperLetterExceptions();
+    d << "mUpperCaseExceptions " << t.upperCaseExceptions();
+    d << "mSuperScriptEntries " << t.superScriptEntries();
+    d << "mAutocorrectEntries " << t.autocorrectEntries();
+    d << "mTypographicDoubleQuotes " << t.typographicDoubleQuotes();
+    d << "mTypographicSingleQuotes " << t.typographicSingleQuotes();
+    return d;
+}

@@ -7,6 +7,7 @@
 #pragma once
 #include "autocorrectionutils.h"
 #include "pimcommon_export.h"
+#include <QDebug>
 #include <QObject>
 #include <QSet>
 namespace PimCommon
@@ -123,3 +124,4 @@ private:
     bool mAddNonBreakingSpace = false;
 };
 }
+PIMCOMMON_EXPORT QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t);

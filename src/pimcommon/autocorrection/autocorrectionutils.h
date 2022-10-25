@@ -5,7 +5,9 @@
 */
 
 #pragma once
+#include "pimcommon_export.h"
 #include <QChar>
+#include <QDebug>
 namespace PimCommon
 {
 namespace AutoCorrectionUtils
@@ -15,7 +17,8 @@ struct TypographicQuotes {
     QChar end;
 };
 
-Q_REQUIRED_RESULT TypographicQuotes typographicDefaultSingleQuotes();
-Q_REQUIRED_RESULT TypographicQuotes typographicDefaultDoubleQuotes();
+PIMCOMMON_EXPORT Q_REQUIRED_RESULT TypographicQuotes typographicDefaultSingleQuotes();
+PIMCOMMON_EXPORT Q_REQUIRED_RESULT TypographicQuotes typographicDefaultDoubleQuotes();
 };
 }
+PIMCOMMON_EXPORT QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t);
