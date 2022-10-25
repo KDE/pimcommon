@@ -247,7 +247,7 @@ void AutoCorrectionSettings::setLanguage(const QString &lang, bool forceGlobal)
     if (mAutoCorrectLang != lang || forceGlobal) {
         mAutoCorrectLang = lang;
         // Re-read xml file
-        // TODO readAutoCorrectionXmlFile(forceGlobal);
+        readAutoCorrectionXmlFile(forceGlobal);
     }
 }
 
