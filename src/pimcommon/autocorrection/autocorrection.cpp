@@ -8,7 +8,6 @@
 #include "autocorrection.h"
 
 #include "autocorrection/autocorrectionutils.h"
-#include "import/importkmailautocorrection.h"
 #include "pimcommon_debug.h"
 #include "settings/pimcommonsettings.h"
 #include <KColorScheme>
