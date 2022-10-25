@@ -137,20 +137,20 @@ void AutoCorrectionWidget::loadConfig()
     if (!d->mAutoCorrection) {
         return;
     }
-
-    d->ui->autoChangeFormat->setChecked(d->mAutoCorrection->autoCorrectionSettings().isAutoBoldUnderline());
-    d->ui->autoFormatUrl->setChecked(d->mAutoCorrection->autoCorrectionSettings().isAutoFormatUrl());
-    d->ui->enabledAutocorrection->setChecked(d->mAutoCorrection->autoCorrectionSettings().isEnabledAutoCorrection());
-    d->ui->upperCase->setChecked(d->mAutoCorrection->autoCorrectionSettings().isUppercaseFirstCharOfSentence());
-    d->ui->upperUpper->setChecked(d->mAutoCorrection->autoCorrectionSettings().isFixTwoUppercaseChars());
-    d->ui->ignoreDoubleSpace->setChecked(d->mAutoCorrection->autoCorrectionSettings().isSingleSpaces());
-    d->ui->autoReplaceNumber->setChecked(d->mAutoCorrection->autoCorrectionSettings().isAutoFractions());
-    d->ui->capitalizeDaysName->setChecked(d->mAutoCorrection->autoCorrectionSettings().isCapitalizeWeekDays());
-    d->ui->advancedAutocorrection->setChecked(d->mAutoCorrection->autoCorrectionSettings().isAdvancedAutocorrect());
-    d->ui->autoSuperScript->setChecked(d->mAutoCorrection->autoCorrectionSettings().isSuperScript());
-    d->ui->typographicDoubleQuotes->setChecked(d->mAutoCorrection->autoCorrectionSettings().isReplaceDoubleQuotes());
-    d->ui->typographicSingleQuotes->setChecked(d->mAutoCorrection->autoCorrectionSettings().isReplaceSingleQuotes());
-    d->ui->addNonBreakingSpaceInFrench->setChecked(d->mAutoCorrection->autoCorrectionSettings().isAddNonBreakingSpace());
+    const AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
+    d->ui->autoChangeFormat->setChecked(settings.isAutoBoldUnderline());
+    d->ui->autoFormatUrl->setChecked(settings.isAutoFormatUrl());
+    d->ui->enabledAutocorrection->setChecked(settings.isEnabledAutoCorrection());
+    d->ui->upperCase->setChecked(settings.isUppercaseFirstCharOfSentence());
+    d->ui->upperUpper->setChecked(settings.isFixTwoUppercaseChars());
+    d->ui->ignoreDoubleSpace->setChecked(settings.isSingleSpaces());
+    d->ui->autoReplaceNumber->setChecked(settings.isAutoFractions());
+    d->ui->capitalizeDaysName->setChecked(settings.isCapitalizeWeekDays());
+    d->ui->advancedAutocorrection->setChecked(settings.isAdvancedAutocorrect());
+    d->ui->autoSuperScript->setChecked(settings.isSuperScript());
+    d->ui->typographicDoubleQuotes->setChecked(settings.isReplaceDoubleQuotes());
+    d->ui->typographicSingleQuotes->setChecked(settings.isReplaceSingleQuotes());
+    d->ui->addNonBreakingSpaceInFrench->setChecked(settings.isAddNonBreakingSpace());
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }

@@ -180,7 +180,6 @@ void AutoCorrection::readConfig()
 void AutoCorrection::writeConfig()
 {
     mAutoCorrectionSettings.writeConfig();
-    PimCommon::PimCommonSettings::self()->requestSync();
 }
 
 void AutoCorrection::superscriptAppendix()
