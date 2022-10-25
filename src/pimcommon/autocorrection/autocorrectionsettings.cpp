@@ -26,6 +26,7 @@ AutoCorrectionSettings::AutoCorrectionSettings()
     mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
     mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
     mNonBreakingSpace = QChar(QChar::Nbsp);
+    readConfig();
 }
 
 AutoCorrectionSettings::~AutoCorrectionSettings() = default;

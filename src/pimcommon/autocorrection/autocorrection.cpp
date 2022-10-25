@@ -9,7 +9,6 @@
 
 #include "autocorrection/autocorrectionutils.h"
 #include "pimcommon_debug.h"
-#include "settings/pimcommonsettings.h"
 #include <KColorScheme>
 #include <QDir>
 #include <QFile>
@@ -25,8 +24,6 @@ using namespace PimCommon;
 
 AutoCorrection::AutoCorrection()
 {
-    readConfig();
-
     auto locale = QLocale::system();
     mCacheNameOfDays.reserve(7);
     for (int i = 1; i <= 7; ++i) {
