@@ -158,23 +158,24 @@ void AutoCorrectionWidget::loadConfig()
 void AutoCorrectionWidget::loadAutoCorrectionAndException()
 {
     /* tab 2 - Custom Quotes */
-    d->m_singleQuotes = d->mAutoCorrection->autoCorrectionSettings().typographicSingleQuotes();
+    const AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
+    d->m_singleQuotes = settings.typographicSingleQuotes();
     d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
     d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
-    d->m_doubleQuotes = d->mAutoCorrection->autoCorrectionSettings().typographicDoubleQuotes();
+    d->m_doubleQuotes = settings.typographicDoubleQuotes();
     d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
     d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
     enableSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
     enableDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
 
     /* tab 3 - Advanced Autocorrection */
-    d->m_autocorrectEntries = d->mAutoCorrection->autoCorrectionSettings().autocorrectEntries();
+    d->m_autocorrectEntries = settings.autocorrectEntries();
     addAutoCorrectEntries();
 
     enableAdvAutocorrection(d->ui->advancedAutocorrection->isChecked());
     /* tab 4 - Exceptions */
-    d->m_upperCaseExceptions = d->mAutoCorrection->autoCorrectionSettings().upperCaseExceptions();
-    d->m_twoUpperLetterExceptions = d->mAutoCorrection->autoCorrectionSettings().twoUpperLetterExceptions();
+    d->m_upperCaseExceptions = settings.upperCaseExceptions();
+    d->m_twoUpperLetterExceptions = settings.twoUpperLetterExceptions();
 
     d->ui->twoUpperLetterList->clear();
     d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.values());
@@ -203,7 +204,7 @@ void AutoCorrectionWidget::writeConfig()
     if (!d->mAutoCorrection) {
         return;
     }
-    AutoCorrectionSettings settings;
+    AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
     settings.setAutoBoldUnderline(d->ui->autoChangeFormat->isChecked());
     settings.setAutoFormatUrl(d->ui->autoFormatUrl->isChecked());
     settings.setEnabledAutoCorrection(d->ui->enabledAutocorrection->isChecked());
@@ -593,7 +594,7 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
 
 void AutoCorrectionWidget::setLanguage(const QString &lang)
 {
-    PimCommon::AutoCorrectionSettings settings;
+    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
     settings.setLanguage(lang);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
@@ -624,7 +625,7 @@ void AutoCorrectionWidget::changeLanguage(int index)
         }
     }
     const QString lang = d->ui->autocorrectionLanguage->itemData(index).toString();
-    PimCommon::AutoCorrectionSettings settings;
+    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
     settings.setLanguage(lang);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
@@ -640,7 +641,7 @@ void AutoCorrectionWidget::emitChanged()
 void AutoCorrectionWidget::loadGlobalAutoCorrectionAndException()
 {
     const QString lang = d->ui->autocorrectionLanguage->itemData(d->ui->autocorrectionLanguage->currentIndex()).toString();
-    PimCommon::AutoCorrectionSettings settings;
+    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
     settings.setLanguage(lang, true);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
