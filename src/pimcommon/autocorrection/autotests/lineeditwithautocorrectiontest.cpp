@@ -72,8 +72,10 @@ void LineEditWithAutocorrectionTest::shouldNotAddTwoSpace()
 {
     PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO ");
-    lineedit.autocorrection()->autoCorrectionSettings().setSingleSpaces(true);
-    lineedit.autocorrection()->autoCorrectionSettings().setEnabledAutoCorrection(true);
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setSingleSpaces(true);
+    settings.setEnabledAutoCorrection(true);
+    lineedit.autocorrection()->setAutoCorrectionSettings(settings);
     lineedit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&lineedit));
     QTest::keyClicks(&lineedit, originalWord);
