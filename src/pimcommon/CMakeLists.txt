@@ -69,20 +69,31 @@ ecm_qt_declare_logging_category(KF5PimCommon HEADER pimcommon_debug.h IDENTIFIER
 target_sources(KF5PimCommon PRIVATE
     ${libpimcommon_SRCS}
     autocorrection/autocorrection.cpp
-    autocorrection/autocorrectionwidget.cpp
-    autocorrection/autocorrectionlistwidget.cpp
-    autocorrection/autocorrectiontreewidget.cpp
-    autocorrection/autocorrectionlanguage.cpp
-    autocorrection/import/importlibreofficeautocorrection.cpp
-    autocorrection/import/importkmailautocorrection.cpp
-    autocorrection/import/importabstractautocorrection.cpp
-    autocorrection/widgets/lineeditwithautocorrection.cpp
-    autocorrection/widgets/richtexteditwithautocorrection.cpp
+    autocorrection/autocorrection.h
     autocorrection/autocorrectionutils.h
     autocorrection/autocorrectionutils.cpp
     autocorrection/autocorrectionsettings.h
     autocorrection/autocorrectionsettings.cpp
 
+    autocorrection/import/importlibreofficeautocorrection.cpp
+    autocorrection/import/importkmailautocorrection.cpp
+    autocorrection/import/importabstractautocorrection.cpp
+    autocorrection/import/importkmailautocorrection.h
+    autocorrection/import/importlibreofficeautocorrection.h
+    autocorrection/import/importabstractautocorrection.h
+
+    autocorrection/widgets/autocorrectionwidget.cpp
+    autocorrection/widgets/autocorrectionlistwidget.cpp
+    autocorrection/widgets/autocorrectiontreewidget.cpp
+    autocorrection/widgets/autocorrectionlanguage.cpp
+    autocorrection/widgets/lineeditwithautocorrection.cpp
+    autocorrection/widgets/richtexteditwithautocorrection.cpp
+    autocorrection/widgets/autocorrectionlistwidget.h
+    autocorrection/widgets/autocorrectionlanguage.h
+    autocorrection/widgets/autocorrectionwidget.h
+    autocorrection/widgets/richtexteditwithautocorrection.h
+    autocorrection/widgets/lineeditwithautocorrection.h
+    autocorrection/widgets/autocorrectiontreewidget.h
 
     genericplugins/pluginutil.cpp
     genericplugins/genericpluginmanager.cpp
@@ -145,16 +156,7 @@ target_sources(KF5PimCommon PRIVATE
     settings/pimcommonsettings.cpp
     widgets/icons.qrc
     misc/emailvalidator.h
-    autocorrection/autocorrectionlistwidget.h
-    autocorrection/autocorrectionlanguage.h
-    autocorrection/import/importkmailautocorrection.h
-    autocorrection/import/importlibreofficeautocorrection.h
-    autocorrection/import/importabstractautocorrection.h
-    autocorrection/autocorrectionwidget.h
-    autocorrection/autocorrection.h
-    autocorrection/widgets/richtexteditwithautocorrection.h
-    autocorrection/widgets/lineeditwithautocorrection.h
-    autocorrection/autocorrectiontreewidget.h
+
     customtools/customtoolswidgetng.h
     customtools/customtoolsplugin.h
     customtools/customtoolspluginmanager.h
@@ -354,6 +356,8 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     HEADER_NAMES
     RichTexteditWithAutoCorrection
     LineEditWithAutoCorrection
+    AutoCorrectionWidget
+    AutoCorrectionLanguage
     REQUIRED_HEADERS PimCommon_autocorrectionwidgets_HEADERS
     PREFIX PimCommon
     RELATIVE autocorrection/widgets/
@@ -361,8 +365,6 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
 
 ecm_generate_headers(PimCommon_Camelcaseautocorrection_HEADERS
     HEADER_NAMES
-    AutoCorrectionWidget
-    AutoCorrectionLanguage
     AutoCorrection
     AutoCorrectionSettings
     AutoCorrectionUtils

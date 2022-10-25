@@ -5,11 +5,11 @@
 */
 
 #include "autocorrectionwidget.h"
-#include "autocorrection.h"
-#include "autocorrectionutils.h"
-#include "import/importabstractautocorrection.h"
-#include "import/importkmailautocorrection.h"
-#include "import/importlibreofficeautocorrection.h"
+#include "autocorrection/autocorrection.h"
+#include "autocorrection/autocorrectionutils.h"
+#include "autocorrection/import/importabstractautocorrection.h"
+#include "autocorrection/import/importkmailautocorrection.h"
+#include "autocorrection/import/importlibreofficeautocorrection.h"
 #include "ui_autocorrectionwidget.h"
 
 #include <KPIMTextEdit/SelectSpecialCharDialog>

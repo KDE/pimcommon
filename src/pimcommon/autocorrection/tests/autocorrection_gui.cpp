@@ -6,7 +6,7 @@
 
 #include "autocorrection_gui.h"
 #include "autocorrection/autocorrection.h"
-#include "autocorrection/autocorrectionwidget.h"
+#include "autocorrection/widgets/autocorrectionwidget.h"
 #include "autocorrection/widgets/lineeditwithautocorrection.h"
 #include "settings/pimcommonsettings.h"
 
