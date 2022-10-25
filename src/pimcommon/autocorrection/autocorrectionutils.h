@@ -17,8 +17,8 @@ struct TypographicQuotes {
     QChar end;
 };
 
-PIMCOMMON_EXPORT Q_REQUIRED_RESULT TypographicQuotes typographicDefaultSingleQuotes();
-PIMCOMMON_EXPORT Q_REQUIRED_RESULT TypographicQuotes typographicDefaultDoubleQuotes();
+Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultSingleQuotes();
+Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultDoubleQuotes();
 };
 }
 PIMCOMMON_EXPORT QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t);
