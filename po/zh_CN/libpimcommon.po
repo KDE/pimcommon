@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:49+0000\n"
+"POT-Creation-Date: 2022-10-25 00:48+0000\n"
 "PO-Revision-Date: 2022-10-22 05:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,82 +17,82 @@ msgstr ""
 "X-Crowdin-File: /kf5-trunk/messages/pimcommon/libpimcommon.pot\n"
 "X-Crowdin-File-ID: 3761\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice 自动更正"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra 自动更正"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"替换\"字符串和\"查找\"字符串相同。"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "添加自动更正项目"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #, kde-format
 msgid "&Modify"
 msgstr "修改(&M)"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
 msgstr "添加(&A)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "导入 LibreOffice 自动更正"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr "LibreOffice 自动更正文件 (*.data)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "导入 KMail/Calligra 自动更正"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 自动更正文件 (*.xml)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:584
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr ""
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:609
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "语言已改变，您想要保存之前语言的配置吗？"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:610
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
 #, kde-format
 msgid "Save config"
 msgstr "保存设置"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "请在导出设置之前保存更改。"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:648
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "导出自动更正文件"

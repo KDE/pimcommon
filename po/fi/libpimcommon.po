@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:49+0000\n"
+"POT-Creation-Date: 2022-10-25 00:48+0000\n"
 "PO-Revision-Date: 2022-06-17 20:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -20,83 +20,83 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOfficen automaattikorjaus"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMailin/Calligran automaattikorjaus"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Korvattava merkkijono on sama kuin etsittävä jono."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Lisää automaattikorjausmerkintä"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #, kde-format
 msgid "&Modify"
 msgstr "&Muuta"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
 msgstr "&Lisää"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Tuo LibreOfficen automaattikorjaukset"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr "LibreOfficen automaattikorjaustiedosto (*.data)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Tuo KMailin automaattikorjaukset"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMailin automaattikorjaustiedosto (*.xml)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:584
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Vie automaattikorjaustiedosto"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:609
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "Kieltä muutettiin: haluatko tallentaa edellisen kielen asetukset?"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:610
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
 #, kde-format
 msgid "Save config"
 msgstr "Tallenna asetukset"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Tallenna muutokset ennen asetusten vientiä."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:648
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Vie automaattikorjaustiedosto"

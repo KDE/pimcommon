@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:49+0000\n"
-"PO-Revision-Date: 2022-09-02 13:47+0200\n"
+"POT-Creation-Date: 2022-10-25 00:48+0000\n"
+"PO-Revision-Date: 2022-10-21 13:34+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -21,84 +21,83 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Correcció automàtica de LibreOffice"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Correcció automàtica de KMail/Calligra"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "La cadena «Substituïx» és la mateixa que la cadena «Busca»."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Afig una entrada de correcció automàtica"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #, kde-format
 msgid "&Modify"
 msgstr "&Modifica"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
 msgstr "Afi&g"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importa la correcció automàtica de LibreOffice"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr "Fitxer de correcció automàtica de LibreOffice (*.data)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importa la correcció automàtica de KMail"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Fitxer de correcció automàtica de KMail (*.xml)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:584
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "Exporta un fitxer de correcció automàtica"
+msgstr "Importa un fitxer de correcció automàtica"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:609
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "L'idioma ha canviat. Voleu guardar la configuració de l'idioma anterior?"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:610
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
 #, kde-format
 msgid "Save config"
 msgstr "Guarda la configuració"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Guardeu els canvis abans d'exportar la configuració."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:648
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Exporta un fitxer de correcció automàtica"
@@ -2061,6 +2060,3 @@ msgstr "Segur que voleu suprimir esta nota?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Supressió de nota"
-
-#~ msgid "Import LibreOffice Autocorrection File"
-#~ msgstr "Importa el fitxer de correcció automàtica de LibreOffice"

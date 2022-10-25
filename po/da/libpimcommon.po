@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:49+0000\n"
+"POT-Creation-Date: 2022-10-25 00:48+0000\n"
 "PO-Revision-Date: 2020-11-17 19:30+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -17,84 +17,84 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:113
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice-autokorrektur"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:117
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail-/Calligra-autokorrektur"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"Erstat\"-strengen er magen til \"Find\"-strengen."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:357
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Tilføj autokorrektur-indgang"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:436
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
 #, kde-format
 msgid "&Modify"
 msgstr "Æ&ndr"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
 #, kde-format
 msgid "&Add"
 msgstr "&Tilføj"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:547
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importér LibreOffice-autokorrektur"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:548
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.data)"
 msgstr "LibreOffice-autokorrekturfil (*.data)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importér KMail-autokorrektur"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:552
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail autokorrekturfil (*.xml)"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:584
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Eksportér autokorrektur-fil"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:609
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Sproget blev ændret. Vil du gemme konfigurationen for det forrige sprog?"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:610
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
 #, kde-format
 msgid "Save config"
 msgstr "Gem konfiguration"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Gem ændringer før indstillinger eksporteres."
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:645
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:648
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
+#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Eksportér autokorrektur-fil"
