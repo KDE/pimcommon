@@ -7,7 +7,6 @@
 #pragma once
 
 #include "autocorrectionsettings.h"
-#include "autocorrectionutils.h"
 #include "pimcommon_export.h"
 #include <QHash>
 #include <QSet>
