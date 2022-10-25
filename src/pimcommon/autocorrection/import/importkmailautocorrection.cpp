@@ -18,6 +18,7 @@ ImportKMailAutocorrection::~ImportKMailAutocorrection() = default;
 
 bool ImportKMailAutocorrection::import(const QString &fileName, QString &errorMessage, LoadAttribute loadAttribute)
 {
+    Q_UNUSED(errorMessage);
     QFile xmlFile(fileName);
     if (!xmlFile.open(QIODevice::ReadOnly)) {
         return false;
