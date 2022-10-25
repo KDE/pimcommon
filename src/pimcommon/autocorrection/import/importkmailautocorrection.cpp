@@ -10,9 +10,7 @@
 #include <QXmlStreamReader>
 using namespace PimCommon;
 
-ImportKMailAutocorrection::ImportKMailAutocorrection()
-{
-}
+ImportKMailAutocorrection::ImportKMailAutocorrection() = default;
 
 ImportKMailAutocorrection::~ImportKMailAutocorrection() = default;
 

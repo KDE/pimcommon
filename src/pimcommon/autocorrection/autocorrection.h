@@ -29,7 +29,6 @@ public:
     bool autocorrect(bool htmlMode, QTextDocument &document, int &position);
 
     void loadGlobalFileName(const QString &fname, bool forceGlobal);
-    void loadLocalFileName(const QString &localFileName, const QString &fname);
 
     Q_REQUIRED_RESULT AutoCorrectionSettings autoCorrectionSettings() const;
     void setAutoCorrectionSettings(const AutoCorrectionSettings &newAutoCorrectionSettings);

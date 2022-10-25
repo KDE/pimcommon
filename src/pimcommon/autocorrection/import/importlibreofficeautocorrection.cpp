@@ -15,9 +15,7 @@
 
 using namespace PimCommon;
 
-ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection()
-{
-}
+ImportLibreOfficeAutocorrection::ImportLibreOfficeAutocorrection() = default;
 
 ImportLibreOfficeAutocorrection::~ImportLibreOfficeAutocorrection()
 {

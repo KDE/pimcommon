@@ -8,9 +8,7 @@
 
 using namespace PimCommon;
 
-ImportAbstractAutocorrection::ImportAbstractAutocorrection()
-{
-}
+ImportAbstractAutocorrection::ImportAbstractAutocorrection() = default;
 
 ImportAbstractAutocorrection::~ImportAbstractAutocorrection() = default;
 

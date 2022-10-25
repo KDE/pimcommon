@@ -7,10 +7,12 @@
 #pragma once
 
 #include <QHash>
+#include <QObject>
 #include <QSet>
 #include <QString>
 
-#include "autocorrection/autocorrection.h"
+#include "autocorrection/autocorrectionutils.h"
+
 #include "pimcommon_private_export.h"
 namespace PimCommon
 {

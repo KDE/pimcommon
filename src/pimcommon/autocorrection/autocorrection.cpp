@@ -8,7 +8,6 @@
 #include "autocorrection.h"
 
 #include "autocorrection/autocorrectionutils.h"
-#include "pimcommon_debug.h"
 #include <KColorScheme>
 #include <QDir>
 #include <QFile>
@@ -837,11 +836,6 @@ void AutoCorrection::replaceTypographicQuotes()
 void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
 {
     mAutoCorrectionSettings.loadGlobalFileName(fname, forceGlobal);
-}
-
-void AutoCorrection::loadLocalFileName(const QString &localFileName, const QString &fname)
-{
-    mAutoCorrectionSettings.loadLocalFileName(localFileName, fname);
 }
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
