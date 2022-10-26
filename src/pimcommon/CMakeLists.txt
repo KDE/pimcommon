@@ -82,6 +82,9 @@ target_sources(KF5PimCommon PRIVATE
     autocorrection/import/importlibreofficeautocorrection.h
     autocorrection/import/importabstractautocorrection.h
 
+    autocorrection/export/exportabstractautocorrection.h
+    autocorrection/export/exportabstractautocorrection.cpp
+
     autocorrection/widgets/autocorrectionwidget.cpp
     autocorrection/widgets/autocorrectionlistwidget.cpp
     autocorrection/widgets/autocorrectiontreewidget.cpp
