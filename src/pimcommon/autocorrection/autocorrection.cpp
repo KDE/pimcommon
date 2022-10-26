@@ -689,12 +689,12 @@ int AutoCorrection::advancedAutocorrect()
             int pos = mWord.lastIndexOf(i.key());
             if (pos == -1) {
                 pos = actualWord.toLower().lastIndexOf(i.key());
-            }
-            if (pos == -1) {
-                pos = actualWordWithFirstUpperCase.lastIndexOf(i.key());
-            }
-            if (pos == -1) {
-                continue;
+                if (pos == -1) {
+                    pos = actualWordWithFirstUpperCase.lastIndexOf(i.key());
+                    if (pos == -1) {
+                        continue;
+                    }
+                }
             }
             QString replacement = i.value();
 
