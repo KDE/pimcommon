@@ -9,7 +9,6 @@
 #include "addresseelineeditbaloo.h"
 #include "addresseelineeditldap.h"
 #include "kmailcompletion.h"
-#include "pimcommonakonadi_debug.h"
 
 #include <KColorScheme>
 #include <KConfigGroup>

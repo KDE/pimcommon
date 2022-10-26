@@ -6,7 +6,6 @@
 */
 
 #include "blacklistbalooemaillist.h"
-#include "pimcommonakonadi_debug.h"
 
 #include <KEmailAddress>
 #include <KLocalizedString>

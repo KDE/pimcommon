@@ -6,7 +6,6 @@
 */
 
 #include "baloocompletionemail.h"
-#include "pimcommonakonadi_debug.h"
 #include <KEmailAddress>
 #include <QMap>
 

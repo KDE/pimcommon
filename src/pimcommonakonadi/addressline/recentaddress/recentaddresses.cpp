@@ -7,7 +7,6 @@
  */
 #include "recentaddresses.h"
 
-#include "pimcommonakonadi_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <KEmailAddress>
