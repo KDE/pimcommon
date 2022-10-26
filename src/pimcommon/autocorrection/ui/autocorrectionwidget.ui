@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  SPDX-License-Identifier: GPL-2.0-or-later
-  SPDX-FileCopyrightText: 2016 Montel Laurent <montel@kde.org>
--->
 <ui version="4.0">
  <class>AutoCorrectionWidget</class>
  <widget class="QWidget" name="AutoCorrectionWidget">
@@ -70,7 +66,7 @@
    <item row="2" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tab_1">
       <attribute name="title">
