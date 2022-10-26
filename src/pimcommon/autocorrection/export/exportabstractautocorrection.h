@@ -19,7 +19,7 @@ class PIMCOMMON_TESTS_EXPORT ExportAbstractAutocorrection
 public:
     ExportAbstractAutocorrection();
     virtual ~ExportAbstractAutocorrection();
-    virtual bool exportData(const QString &fileName, QString &errorMessage) = 0;
+    virtual bool exportData(const QString &language, const QString &fileName, QString &errorMessage) = 0;
 
     void setUpperCaseExceptions(const QSet<QString> &newUpperCaseExceptions);
     void setTwoUpperLetterExceptions(const QSet<QString> &newTwoUpperLetterExceptions);
@@ -28,7 +28,7 @@ public:
     void setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes newTypographicSingleQuotes);
     void setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes newTypographicDoubleQuotes);
 
-private:
+protected:
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;

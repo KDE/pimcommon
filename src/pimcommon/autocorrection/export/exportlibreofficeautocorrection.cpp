@@ -12,7 +12,7 @@ ExportLibreOfficeAutocorrection::ExportLibreOfficeAutocorrection() = default;
 
 ExportLibreOfficeAutocorrection::~ExportLibreOfficeAutocorrection() = default;
 
-bool PimCommon::ExportLibreOfficeAutocorrection::exportData(const QString &fileName, QString &errorMessage)
+bool PimCommon::ExportLibreOfficeAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
 {
     // TODO
     return false;

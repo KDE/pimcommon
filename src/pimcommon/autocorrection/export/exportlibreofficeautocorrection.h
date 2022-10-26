@@ -16,6 +16,6 @@ public:
     ExportLibreOfficeAutocorrection();
     ~ExportLibreOfficeAutocorrection() override;
 
-    Q_REQUIRED_RESULT bool exportData(const QString &fileName, QString &errorMessage) override;
+    Q_REQUIRED_RESULT bool exportData(const QString &language, const QString &fileName, QString &errorMessage) override;
 };
 }
