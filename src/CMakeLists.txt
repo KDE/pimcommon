@@ -3,6 +3,4 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libpimcommon\")
 
 add_subdirectory(pimcommon)
-if (TARGET KF5::AkonadiCore)
-    add_subdirectory(pimcommonakonadi)
-endif()
+add_subdirectory(pimcommonakonadi)
