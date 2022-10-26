@@ -116,8 +116,12 @@ bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirect
                         switch (type) {
                         case DOCUMENT:
                             if (e.hasAttribute(QStringLiteral("block-list:abbreviated-name")) && e.hasAttribute(QStringLiteral("block-list:name"))) {
-                                mAutocorrectEntries.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")),
-                                                           e.attribute(QStringLiteral("block-list:name")));
+                                const QString find = e.attribute(QStringLiteral("block-list:abbreviated-name"));
+                                const QString replace = e.attribute(QStringLiteral("block-list:name"));
+                                mAutocorrectEntries.insert(find, replace);
+                                const int findLenght(find.length());
+                                mMaxFindStringLength = qMax(findLenght, mMaxFindStringLength);
+                                mMinFindStringLength = qMin(findLenght, mMinFindStringLength);
                             }
                             break;
                         case SENTENCE:
