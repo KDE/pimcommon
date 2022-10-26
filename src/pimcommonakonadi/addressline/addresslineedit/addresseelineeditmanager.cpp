@@ -16,6 +16,7 @@
 #include <KSharedConfig>
 #include <QCoreApplication>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include "pimcommonakonadi_debug.h"
 #include <QNetworkInformation>
 #else
 #include <QNetworkConfigurationManager>
