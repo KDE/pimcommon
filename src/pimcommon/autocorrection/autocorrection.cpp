@@ -664,18 +664,19 @@ int AutoCorrection::advancedAutocorrect()
     if (actualWordLength > mAutoCorrectionSettings.maxFindStringLength()) {
         return -1;
     }
-
     const int startPos = mCursor.selectionStart();
     const int length = mWord.length();
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
     const QChar lastChar = actualWord.at(actualWord.length() - 1);
     const ushort charUnicode = lastChar.unicode();
-    if (charUnicode == '.' || charUnicode == ',' || charUnicode == '?' || charUnicode == '!' || charUnicode == ':' || charUnicode == ';') {
+    if (charUnicode == '.' || charUnicode == ',' || charUnicode == '?' || charUnicode == '!' || charUnicode == ';') {
+        hasPunctuation = true;
+        actualWord.chop(1);
+    } else if (charUnicode == ':' && actualWord.at(0).unicode() != ':') {
         hasPunctuation = true;
         actualWord.chop(1);
     }
-
     QString actualWordWithFirstUpperCase = actualWord;
     actualWordWithFirstUpperCase[0] = actualWordWithFirstUpperCase[0].toUpper();
     QHashIterator<QString, QString> i(mAutoCorrectionSettings.autocorrectEntries());
