@@ -423,7 +423,7 @@ void AutoCorrectionSettings::loadGlobalFileName(const QString &fname, bool force
             fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));
             for (const auto &path : libreOfficeAutocorrectPaths) {
                 const QString filename = path + AutoCorrectionUtils::libreofficeFile(fixLangExtension);
-                qDebug() << " filename " << filename;
+                // qDebug() << " filename " << filename;
                 if (QFileInfo::exists(filename)) {
                     if (import.import(filename, errorMessage)) {
                         mUpperCaseExceptions = import.upperCaseExceptions();
@@ -518,8 +518,8 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
     if (mAutoCorrectLang.isEmpty()) {
         mAutoCorrectLang = kdelang;
     }
-    qDebug() << " fname :" << fname;
-    qDebug() << " localFileName:" << localFileName;
+    // qDebug() << " fname :" << fname;
+    // qDebug() << " localFileName:" << localFileName;
 
     if (localFileName.isEmpty()) {
         loadGlobalFileName(fname, forceGlobal);
