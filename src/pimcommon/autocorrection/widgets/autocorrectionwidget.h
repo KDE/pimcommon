@@ -41,7 +41,10 @@ public:
     void writeConfig();
     void resetToDefault();
 
-private Q_SLOTS:
+Q_SIGNALS:
+    void changed();
+
+private:
     /* tab 2 */
     void enableSingleQuotes(bool state);
     void enableDoubleQuotes(bool state);
@@ -77,10 +80,8 @@ private Q_SLOTS:
 
     void slotExportAutoCorrection();
 
-Q_SIGNALS:
-    void changed();
-
 private:
+    void slotChangeComboboxState(int index);
     void emitChanged();
     void addAutoCorrectEntries();
     void loadAutoCorrectionAndException();

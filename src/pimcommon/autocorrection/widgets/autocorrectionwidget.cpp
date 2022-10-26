@@ -122,9 +122,16 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(menu, &QMenu::triggered, this, &AutoCorrectionWidget::slotImportAutoCorrection);
 
     connect(d->ui->exportAutoCorrection, &QPushButton::clicked, this, &AutoCorrectionWidget::slotExportAutoCorrection);
+    connect(d->ui->tabWidget, &QTabWidget::tabBarClicked, this, &AutoCorrectionWidget::slotChangeComboboxState);
+    slotChangeComboboxState(d->ui->tabWidget->currentIndex());
 }
 
 AutoCorrectionWidget::~AutoCorrectionWidget() = default;
+
+void AutoCorrectionWidget::slotChangeComboboxState(int index)
+{
+    d->ui->autocorrectionLanguage->setEnabled(index > 1);
+}
 
 void AutoCorrectionWidget::setAutoCorrection(AutoCorrection *autoCorrect)
 {
