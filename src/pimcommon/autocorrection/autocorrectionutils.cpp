@@ -5,6 +5,9 @@
 */
 
 #include "autocorrectionutils.h"
+#include <QDir>
+#include <QFileInfo>
+#include <QStandardPaths>
 using namespace PimCommon;
 AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::typographicDefaultSingleQuotes()
 {
@@ -27,4 +30,23 @@ QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t)
     d << "TypographicQuotes.begin " << t.begin;
     d << "TypographicQuotes.end " << t.end;
     return d;
+}
+
+QString AutoCorrectionUtils::libreofficeFile(const QString &lang)
+{
+    return QStringLiteral("acor_%1.dat").arg(lang);
+}
+
+QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
+{
+    QStringList dirList;
+    auto maybeAddPath = [&dirList](const QString &path) {
+        if (QFileInfo::exists(path)) {
+            dirList.append(path);
+        }
+    };
+    dirList.append(
+        QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("libreoffice/4/user/autocorr/"), QStandardPaths::LocateDirectory));
+    maybeAddPath(QStringLiteral("/usr/lib64/libreoffice/share/autocorr/"));
+    return dirList;
 }
