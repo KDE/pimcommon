@@ -6,6 +6,7 @@
 
 #include "autocorrectionsettings.h"
 #include "autocorrection/import/importkmailautocorrection.h"
+#include "autocorrection/import/importlibreofficeautocorrection.h"
 #include "pimcommon_debug.h"
 #include "settings/pimcommonsettings.h"
 
@@ -413,6 +414,29 @@ void AutoCorrectionSettings::loadGlobalFileName(const QString &fname, bool force
     if (fname.isEmpty()) {
         mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
         mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+        // TODO load default Libreoffice
+        ImportLibreOfficeAutocorrection import;
+        const QStringList libreOfficeAutocorrectPaths = AutoCorrectionUtils::libreOfficeAutoCorrectionPath();
+        if (!libreOfficeAutocorrectPaths.isEmpty()) {
+            QString errorMessage;
+            QString fixLangExtension = mAutoCorrectLang;
+            fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));
+            for (const auto &path : libreOfficeAutocorrectPaths) {
+                const QString filename = path + AutoCorrectionUtils::libreofficeFile(fixLangExtension);
+                qDebug() << " filename " << filename;
+                if (QFileInfo::exists(filename)) {
+                    if (import.import(filename, errorMessage)) {
+                        mUpperCaseExceptions = import.upperCaseExceptions();
+                        mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+                        mAutocorrectEntries = import.autocorrectEntries();
+                        mSuperScriptEntries = import.superScriptEntries();
+                        mMaxFindStringLength = import.maxFindStringLenght();
+                        mMinFindStringLength = import.minFindStringLenght();
+                        break;
+                    }
+                }
+            }
+        }
     } else {
         ImportKMailAutocorrection import;
         QString messageError;
@@ -494,8 +518,8 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
     if (mAutoCorrectLang.isEmpty()) {
         mAutoCorrectLang = kdelang;
     }
-    // qCDebug(PIMCOMMON_LOG)<<" fname :"<<fname;
-    // qCDebug(PIMCOMMON_LOG)<<" LocalFile:"<<LocalFile;
+    qDebug() << " fname :" << fname;
+    qDebug() << " localFileName:" << localFileName;
 
     if (localFileName.isEmpty()) {
         loadGlobalFileName(fname, forceGlobal);
