@@ -149,7 +149,6 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             mCursor.insertText(mWord);
         }
         position = oldPosition;
-
         if (!done) {
             selectStringOnMaximumSearchString(mCursor, position);
             mWord = mCursor.selectedText();
@@ -649,12 +648,10 @@ int AutoCorrection::advancedAutocorrect()
     if (mAutoCorrectionSettings.autocorrectEntries().isEmpty()) {
         return -1;
     }
-
     const QString trimmedWord = mWord.trimmed();
     if (trimmedWord.isEmpty()) {
         return -1;
     }
-
     QString actualWord = trimmedWord;
 
     const int actualWordLength(actualWord.length());
