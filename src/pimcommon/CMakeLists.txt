@@ -84,6 +84,10 @@ target_sources(KF5PimCommon PRIVATE
 
     autocorrection/export/exportabstractautocorrection.h
     autocorrection/export/exportabstractautocorrection.cpp
+    autocorrection/export/exportkmailautocorrection.h
+    autocorrection/export/exportkmailautocorrection.cpp
+    autocorrection/export/exportlibreofficeautocorrection.h
+    autocorrection/export/exportlibreofficeautocorrection.cpp
 
     autocorrection/widgets/autocorrectionwidget.cpp
     autocorrection/widgets/autocorrectionlistwidget.cpp

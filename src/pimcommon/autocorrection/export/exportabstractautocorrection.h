@@ -19,7 +19,7 @@ class PIMCOMMON_TESTS_EXPORT ExportAbstractAutocorrection
 public:
     ExportAbstractAutocorrection();
     virtual ~ExportAbstractAutocorrection();
-    virtual bool exportData(const QString &fileName, QString &errorMessagel) = 0;
+    virtual bool exportData(const QString &fileName, QString &errorMessage) = 0;
 
     void setUpperCaseExceptions(const QSet<QString> &newUpperCaseExceptions);
     void setTwoUpperLetterExceptions(const QSet<QString> &newTwoUpperLetterExceptions);
