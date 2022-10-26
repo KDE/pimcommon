@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2022-10-22 07:18+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,87 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "LibreOffice-ის ავტოკორექცია"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
-#, kde-format
-msgid "&Modify"
-msgstr "&შეცვლა"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#, kde-format
-msgid "&Add"
-msgstr "&დამატება"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
-#, kde-format
-msgid "Import Autocorrection File"
-msgstr "ავტოკორექციის ფაილის შემოტანა"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
-#, kde-format
-msgid "Save config"
-msgstr "კონფიგურაციის შენახვა"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr ""
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:53
 #, kde-format
 msgid "Archive cannot be opened in read mode."
 msgstr ""
@@ -321,6 +241,15 @@ msgstr ""
 msgid "Ad&vanced Autocorrection"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#, kde-format
+msgid "&Add"
+msgstr "&დამატება"
+
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
@@ -396,6 +325,77 @@ msgstr ""
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "LibreOffice-ის ავტოკორექცია"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#, kde-format
+msgid "&Modify"
+msgstr "&შეცვლა"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#, kde-format
+msgid "Import Autocorrection File"
+msgstr "ავტოკორექციის ფაილის შემოტანა"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#, kde-format
+msgid "Save config"
+msgstr "კონფიგურაციის შენახვა"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format

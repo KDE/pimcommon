@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2022-10-21 16:21+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,89 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.08.2\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "Autocorrección de LibreOffice"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "Autocorrección de KMail/Calligra"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr "«Sustituir» cadena es lo mismo que «Buscar» cadena."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "Añadir entrada de autocorrección"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
-#, kde-format
-msgid "&Modify"
-msgstr "&Modificar"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#, kde-format
-msgid "&Add"
-msgstr "&Añadir"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "Importar autocorrección de LibreOffice"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
-msgstr "Archivo de autocorrección de LibreOffice (*.data)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "Importar autocorrección de KMail"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "Archivo de autocorrección de KMail (*.xml)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
-#, kde-format
-msgid "Import Autocorrection File"
-msgstr "Importar archivo de autocorrección"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr ""
-"Se cambió el idioma, ¿quiere usted guardar la configuración del idioma "
-"anterior?"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
-#, kde-format
-msgid "Save config"
-msgstr "Guardar configuración"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr "Por favor, guarde los cambios antes de exportar las preferencias."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "Exportar archivo de autocorrección"
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:53
 #, kde-format
 msgid "Archive cannot be opened in read mode."
 msgstr "El archivo no puede abrirse en modo lectura."
@@ -347,6 +265,15 @@ msgstr ""
 msgid "Ad&vanced Autocorrection"
 msgstr "Autocorrección a&vanzada"
 
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#, kde-format
+msgid "&Add"
+msgstr "&Añadir"
+
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
@@ -422,6 +349,79 @@ msgstr "Aceptar dos letras mayúsculas en"
 #, kde-format
 msgid "Add"
 msgstr "Añadir"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "Autocorrección de LibreOffice"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "Autocorrección de KMail/Calligra"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "«Sustituir» cadena es lo mismo que «Buscar» cadena."
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Añadir entrada de autocorrección"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#, kde-format
+msgid "&Modify"
+msgstr "&Modificar"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "Importar autocorrección de LibreOffice"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "Archivo de autocorrección de LibreOffice (*.data)"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "Importar autocorrección de KMail"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "Archivo de autocorrección de KMail (*.xml)"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#, kde-format
+msgid "Import Autocorrection File"
+msgstr "Importar archivo de autocorrección"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr ""
+"Se cambió el idioma, ¿quiere usted guardar la configuración del idioma "
+"anterior?"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#, kde-format
+msgid "Save config"
+msgstr "Guardar configuración"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "Por favor, guarde los cambios antes de exportar las preferencias."
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Exportar archivo de autocorrección"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format

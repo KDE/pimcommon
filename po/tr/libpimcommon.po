@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2022-10-21 10:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -20,88 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.08.1\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "LibreOffice Otomatik Düzeltme"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "KMail/Calligra Otomatik Düzeltme"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr "\"Değiştir\" dizisi \"Bul\" dizisiyle aynı."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "Otomatik Düzeltme Girdisi Ekle"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
-#, kde-format
-msgid "&Modify"
-msgstr "&Değiştir"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#, kde-format
-msgid "&Add"
-msgstr "&Ekle"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "LibreOffice Otomatik Düzeltmesini İçe Aktar"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
-msgstr "LibreOffice Otomatik Düzeltme Dosyası (*.data)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "KMail Otomatik Düzeltmesini İçe Aktar"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "KMail Otomatik Düzeltme Dosyasını (*.xml)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
-#, kde-format
-msgid "Import Autocorrection File"
-msgstr "Otomatik Düzeltme Dosyası İçe Aktar"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr ""
-"Dil değiştirilmiş, önceki dil için yapılandırmayı kaydetmek istiyor musunuz?"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
-#, kde-format
-msgid "Save config"
-msgstr "Yapılandırmayı kaydet"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr "Ayarları dışa aktarmadan önce lütfen değişiklikleri kaydedin."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "Otomatik Düzeltme Dosyasını Dışa Aktar"
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:53
 #, kde-format
 msgid "Archive cannot be opened in read mode."
 msgstr "Arşiv okuma kipinde açılamıyor."
@@ -342,6 +261,15 @@ msgstr ""
 msgid "Ad&vanced Autocorrection"
 msgstr "Ge&lişmiş Otomatik Düzeltme"
 
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#, kde-format
+msgid "&Add"
+msgstr "&Ekle"
+
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
@@ -417,6 +345,78 @@ msgstr "İki büyük harfin kabul edileceği yerler:"
 #, kde-format
 msgid "Add"
 msgstr "Ekle"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "LibreOffice Otomatik Düzeltme"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "KMail/Calligra Otomatik Düzeltme"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "\"Değiştir\" dizisi \"Bul\" dizisiyle aynı."
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Otomatik Düzeltme Girdisi Ekle"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#, kde-format
+msgid "&Modify"
+msgstr "&Değiştir"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "LibreOffice Otomatik Düzeltmesini İçe Aktar"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "LibreOffice Otomatik Düzeltme Dosyası (*.data)"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "KMail Otomatik Düzeltmesini İçe Aktar"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "KMail Otomatik Düzeltme Dosyasını (*.xml)"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#, kde-format
+msgid "Import Autocorrection File"
+msgstr "Otomatik Düzeltme Dosyası İçe Aktar"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr ""
+"Dil değiştirilmiş, önceki dil için yapılandırmayı kaydetmek istiyor musunuz?"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#, kde-format
+msgid "Save config"
+msgstr "Yapılandırmayı kaydet"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "Ayarları dışa aktarmadan önce lütfen değişiklikleri kaydedin."
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Otomatik Düzeltme Dosyasını Dışa Aktar"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format

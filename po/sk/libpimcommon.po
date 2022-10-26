@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2019-08-04 10:38+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,88 +16,7 @@ msgstr ""
 "X-Generator: Lokalize 19.07.90\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "Automatické opravy LibreOffice"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "Automatické opravy KMail/Calligra"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr "\"Nahradený\" reťazec je rovnaký ako \"Hľadaný\" reťazec."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "Pridať položku automatických opráv"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
-#, kde-format
-msgid "&Modify"
-msgstr "&Upraviť"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#, kde-format
-msgid "&Add"
-msgstr "&Pridať"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "Importovať automatické opravy LibreOffice"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
-msgstr "Súbor automatických opráv LibreOffice (*.data)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "Importovať automatické opravy KMail"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "Súbor automatických opráv KMail (*.xml)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
-msgid "Import Autocorrection File"
-msgstr "Exportovať súbor automatických opráv"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr "Jazyk sa zmenil, chcete uložiť nastavenie pre predošlý jazyk?"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
-#, kde-format
-msgid "Save config"
-msgstr "Uložiť nastavenie"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr "Pred exportovaním nastavení si prosím uložte zmeny."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "Exportovať súbor automatických opráv"
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:53
 #, kde-format
 msgid "Archive cannot be opened in read mode."
 msgstr "Archív sa nedá otvoriť v režime na čítanie."
@@ -338,6 +257,15 @@ msgstr "Pridať nezalomiteľnú medzeru pred znaky ; : ! ? vo francúzskom texte
 msgid "Ad&vanced Autocorrection"
 msgstr "&Pokročilé automatické opravy"
 
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#, kde-format
+msgid "&Add"
+msgstr "&Pridať"
+
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
@@ -413,6 +341,78 @@ msgstr "Povoliť dve veľké písmená v:"
 #, kde-format
 msgid "Add"
 msgstr "Pridať"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "Automatické opravy LibreOffice"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "Automatické opravy KMail/Calligra"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "\"Nahradený\" reťazec je rovnaký ako \"Hľadaný\" reťazec."
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Pridať položku automatických opráv"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#, kde-format
+msgid "&Modify"
+msgstr "&Upraviť"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "Importovať automatické opravy LibreOffice"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
+#, kde-format
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "Súbor automatických opráv LibreOffice (*.data)"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "Importovať automatické opravy KMail"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "Súbor automatických opráv KMail (*.xml)"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#, fuzzy, kde-format
+#| msgid "Export Autocorrection File"
+msgid "Import Autocorrection File"
+msgstr "Exportovať súbor automatických opráv"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr "Jazyk sa zmenil, chcete uložiť nastavenie pre predošlý jazyk?"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#, kde-format
+msgid "Save config"
+msgstr "Uložiť nastavenie"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "Pred exportovaním nastavení si prosím uložte zmeny."
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Exportovať súbor automatických opráv"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format

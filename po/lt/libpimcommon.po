@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-25 00:48+0000\n"
+"POT-Creation-Date: 2022-10-26 00:47+0000\n"
 "PO-Revision-Date: 2016-11-04 11:09+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -22,90 +22,7 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:114
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "LibreOffice automatinis taisymas"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:118
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "KMail/Calligra automatinis taisymas"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:360
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "Pridėti automatinio taisymo įrašą"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:439
-#, kde-format
-msgid "&Modify"
-msgstr "&Modifikuoti"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:442
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#, kde-format
-msgid "&Add"
-msgstr "&Pridėti"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:550
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "Importuoti LibreOffice automatinį taisymą"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:551
-#, fuzzy, kde-format
-#| msgid "Import LibreOffice Autocorrection File"
-msgid "LibreOffice Autocorrection File (*.data)"
-msgstr "Importuoti LibreOffice automatinio taisymo failą"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:554
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "Importuoti KMail automatinį taisymą"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:555
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "Eksportuoti automatinio taisymo failą"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:587
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
-msgid "Import Autocorrection File"
-msgstr "Eksportuoti automatinio taisymo failą"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:614
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:615
-#, kde-format
-msgid "Save config"
-msgstr "Išsaugoti konfigūraciją"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr ""
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:654
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:657
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "Eksportuoti automatinio taisymo failą"
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:55
+#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:53
 #, kde-format
 msgid "Archive cannot be opened in read mode."
 msgstr ""
@@ -333,6 +250,15 @@ msgstr ""
 msgid "Ad&vanced Autocorrection"
 msgstr "Išplėstinis auto taisymas"
 
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#, kde-format
+msgid "&Add"
+msgstr "&Pridėti"
+
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
@@ -408,6 +334,80 @@ msgstr "Leisti dvi didžiąsias raidės:"
 #, kde-format
 msgid "Add"
 msgstr "Pridėti"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "LibreOffice automatinis taisymas"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "KMail/Calligra automatinis taisymas"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "Pridėti automatinio taisymo įrašą"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#, kde-format
+msgid "&Modify"
+msgstr "&Modifikuoti"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "Importuoti LibreOffice automatinį taisymą"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
+#, fuzzy, kde-format
+#| msgid "Import LibreOffice Autocorrection File"
+msgid "LibreOffice Autocorrection File (*.data)"
+msgstr "Importuoti LibreOffice automatinio taisymo failą"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "Importuoti KMail automatinį taisymą"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#, fuzzy, kde-format
+#| msgid "Export Autocorrection File"
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "Eksportuoti automatinio taisymo failą"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#, fuzzy, kde-format
+#| msgid "Export Autocorrection File"
+msgid "Import Autocorrection File"
+msgstr "Eksportuoti automatinio taisymo failą"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#, kde-format
+msgid "Save config"
+msgstr "Išsaugoti konfigūraciją"
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "Eksportuoti automatinio taisymo failą"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, fuzzy, kde-format
