@@ -169,6 +169,8 @@ bool ExportLibreOfficeAutocorrection::exportManifest()
     streamWriter.writeEndDocument();
     temporaryShareFile.close();
 
+    // Add mimetype file
+    mZip->writeFile(QStringLiteral("mimetype"), "");
     mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("META-INF/manifest.xml"));
     return true;
 }
