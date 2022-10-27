@@ -28,19 +28,15 @@ bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const 
         return false;
     }
     if (!exportDocumentList()) {
-        qDebug() << " 111111111111";
         return false;
     }
     if (!exportSentenceExceptList()) {
-        qDebug() << " 1111111111112222222";
         return false;
     }
     if (!exportWordExceptList()) {
-        qDebug() << " 111111111111333333333";
         return false;
     }
     if (!exportManifest()) {
-        qDebug() << " 111111111111444444";
         return false;
     }
     mZip->close();
