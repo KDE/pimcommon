@@ -50,3 +50,21 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
     maybeAddPath(QStringLiteral("/usr/lib64/libreoffice/share/autocorr/"));
     return dirList;
 }
+
+QStringList AutoCorrectionUtils::searchAutoCorrectLibreOfficeFiles()
+{
+    QStringList files;
+    const QString path = QStringLiteral("/usr/lib64/libreoffice/share/autocorr/");
+    if (QFileInfo::exists(path)) {
+        QDir dir(path);
+        const QStringList entryList = dir.entryList(QDir::Files | QDir::NoDotAndDotDot);
+        for (const QString &file : entryList) {
+            QString curFile = file;
+            curFile.remove(path);
+            curFile.remove(QStringLiteral(".dat"));
+            curFile.remove(QStringLiteral("acor_"));
+            files.append(curFile);
+        }
+    }
+    return files;
+}

@@ -21,6 +21,7 @@ Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultSingleQuo
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultDoubleQuotes();
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QString libreofficeFile(const QString &lang);
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList libreOfficeAutoCorrectionPath();
+Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList searchAutoCorrectLibreOfficeFiles();
 };
 }
 PIMCOMMON_EXPORT QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t);
