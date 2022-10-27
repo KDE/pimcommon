@@ -157,6 +157,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QCheckBox" name="addNonBreakingSpaceInFrench">
+         <property name="text">
+          <string>Add non breaking space before specific punctuation marks in French text</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <spacer>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -405,13 +412,6 @@
           </layout>
          </item>
         </layout>
-       </item>
-       <item>
-        <widget class="QCheckBox" name="addNonBreakingSpaceInFrench">
-         <property name="text">
-          <string>Add non breaking space before specific punctuation marks in French text</string>
-         </property>
-        </widget>
        </item>
        <item>
         <spacer>
@@ -722,7 +722,6 @@
   <tabstop>singleQuote1</tabstop>
   <tabstop>singleQuote2</tabstop>
   <tabstop>singleDefault</tabstop>
-  <tabstop>addNonBreakingSpaceInFrench</tabstop>
   <tabstop>advancedAutocorrection</tabstop>
   <tabstop>find</tabstop>
   <tabstop>replace</tabstop>
