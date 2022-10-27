@@ -26,6 +26,7 @@ AutoCorrectionSettings::AutoCorrectionSettings()
     // default single quote close 0x2019
     mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
     mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+    mDoubleFrenchQuotes = AutoCorrectionUtils::typographicDefaultFrenchQuotes();
     mNonBreakingSpace = QChar(QChar::Nbsp);
     readConfig();
 }
@@ -536,6 +537,16 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
     } else {
         loadLocalFileName(localFileName, fname);
     }
+}
+
+AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::doubleFrenchQuotes() const
+{
+    return mDoubleFrenchQuotes;
+}
+
+void AutoCorrectionSettings::setDoubleFrenchQuotes(const AutoCorrectionUtils::TypographicQuotes &newDoubleFrenchQuotes)
+{
+    mDoubleFrenchQuotes = newDoubleFrenchQuotes;
 }
 
 QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t)

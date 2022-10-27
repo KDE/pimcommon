@@ -90,10 +90,14 @@ public:
     void loadLocalFileName(const QString &localFileName, const QString &fname);
     void loadGlobalFileName(const QString &fname, bool forceGlobal);
 
+    Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes doubleFrenchQuotes() const;
+    void setDoubleFrenchQuotes(const AutoCorrectionUtils::TypographicQuotes &newDoubleFrenchQuotes);
+
 private:
     void readAutoCorrectionXmlFile(bool forceGlobal = false);
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mDoubleFrenchQuotes;
 
     QHash<QString, QString> mAutocorrectEntries;
     QHash<QString, QString> mSuperScriptEntries;
