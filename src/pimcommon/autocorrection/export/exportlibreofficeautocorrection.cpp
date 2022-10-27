@@ -27,7 +27,7 @@ bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const 
         fileName.isEmpty() ? AutoCorrectionUtils::libreOfficeLocalAutoCorrectionPath() + QStringLiteral("acor_%1.dat").arg(language) : fileName;
     // qDebug() << " fname " << fname;
     mZip = new KZip(fname);
-    bool result = mZip->open(QIODevice::WriteOnly);
+    const bool result = mZip->open(QIODevice::WriteOnly);
     if (!result) {
         qCWarning(PIMCOMMON_LOG) << "Impossible to open " << fileName;
         return false;
@@ -61,7 +61,7 @@ bool ExportLibreOfficeAutocorrection::exportDocumentList()
     streamWriter.writeStartDocument();
 
     streamWriter.writeStartElement(QStringLiteral("block-list:block-list"));
-
+    streamWriter.writeAttribute(QStringLiteral("xmlns:block-list"), QStringLiteral("http://openoffice.org/2001/block-list"));
     QHashIterator<QString, QString> i(mAutocorrectEntries);
     while (i.hasNext()) {
         i.next();
@@ -89,6 +89,7 @@ bool ExportLibreOfficeAutocorrection::exportSentenceExceptList()
     streamWriter.writeStartDocument();
 
     streamWriter.writeStartElement(QStringLiteral("block-list:block-list"));
+    streamWriter.writeAttribute(QStringLiteral("xmlns:block-list"), QStringLiteral("http://openoffice.org/2001/block-list"));
 
     QSet<QString>::const_iterator upper = mUpperCaseExceptions.constBegin();
     while (upper != mUpperCaseExceptions.constEnd()) {
@@ -117,6 +118,7 @@ bool ExportLibreOfficeAutocorrection::exportWordExceptList()
     streamWriter.writeStartDocument();
 
     streamWriter.writeStartElement(QStringLiteral("block-list:block-list"));
+    streamWriter.writeAttribute(QStringLiteral("xmlns:block-list"), QStringLiteral("http://openoffice.org/2001/block-list"));
 
     QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
     while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
@@ -170,7 +172,9 @@ bool ExportLibreOfficeAutocorrection::exportManifest()
     temporaryShareFile.close();
 
     // Add mimetype file
+    mZip->setCompression(KZip::NoCompression);
     mZip->writeFile(QStringLiteral("mimetype"), "");
+    mZip->setCompression(KZip::DeflateCompression);
     mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("META-INF/manifest.xml"));
     return true;
 }
