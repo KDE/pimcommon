@@ -728,6 +728,7 @@ int AutoCorrection::advancedAutocorrect()
 
 void AutoCorrection::replaceTypographicQuotes()
 {
+    // TODO add french quotes support.
     /* this method is ported from lib/kotext/KoAutoFormat.cpp KoAutoFormat::doTypographicQuotes
      * from Calligra 1.x branch */
 
@@ -768,7 +769,11 @@ void AutoCorrection::replaceTypographicQuotes()
                     QChar openingQuote;
 
                     if (doubleQuotes) {
-                        openingQuote = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
+                        if (mAutoCorrectionSettings.isReplaceDoubleQuotesByFrenchQuotes()) {
+                            openingQuote = mAutoCorrectionSettings.doubleFrenchQuotes().begin;
+                        } else {
+                            openingQuote = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
+                        }
                     } else {
                         openingQuote = mAutoCorrectionSettings.typographicSingleQuotes().begin;
                     }
@@ -787,16 +792,22 @@ void AutoCorrection::replaceTypographicQuotes()
 
             if (doubleQuotes && mAutoCorrectionSettings.isReplaceDoubleQuotes()) {
                 if (ending) {
+                    const QChar endQuote = mAutoCorrectionSettings.isReplaceDoubleQuotesByFrenchQuotes()
+                        ? mAutoCorrectionSettings.doubleFrenchQuotes().end
+                        : mAutoCorrectionSettings.typographicDoubleQuotes().end;
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings.nonBreakingSpace() + mAutoCorrectionSettings.typographicDoubleQuotes().end));
+                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings.nonBreakingSpace() + endQuote));
                     } else {
-                        mWord[i - 1] = mAutoCorrectionSettings.typographicDoubleQuotes().end;
+                        mWord[i - 1] = endQuote;
                     }
                 } else {
+                    const QChar beginQuote = mAutoCorrectionSettings.isReplaceDoubleQuotesByFrenchQuotes()
+                        ? mAutoCorrectionSettings.doubleFrenchQuotes().begin
+                        : mAutoCorrectionSettings.typographicDoubleQuotes().begin;
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings.nonBreakingSpace() + mAutoCorrectionSettings.typographicDoubleQuotes().begin));
+                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings.nonBreakingSpace() + beginQuote));
                     } else {
-                        mWord[i - 1] = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
+                        mWord[i - 1] = beginQuote;
                     }
                 }
             } else if (mAutoCorrectionSettings.isReplaceSingleQuotes()) {
@@ -819,7 +830,9 @@ void AutoCorrection::replaceTypographicQuotes()
 
     // first character
     if (mWord.at(0) == QLatin1Char('"') && mAutoCorrectionSettings.isReplaceDoubleQuotes()) {
-        mWord[0] = mAutoCorrectionSettings.typographicDoubleQuotes().begin;
+        const QChar beginQuote = mAutoCorrectionSettings.isReplaceDoubleQuotesByFrenchQuotes() ? mAutoCorrectionSettings.doubleFrenchQuotes().begin
+                                                                                               : mAutoCorrectionSettings.typographicDoubleQuotes().begin;
+        mWord[0] = beginQuote;
         if (addNonBreakingSpace) {
             mWord.insert(1, mAutoCorrectionSettings.nonBreakingSpace());
         }

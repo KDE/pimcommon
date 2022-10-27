@@ -159,7 +159,7 @@ void AutoCorrectionWidget::loadConfig()
     d->ui->typographicDoubleQuotes->setChecked(settings.isReplaceDoubleQuotes());
     d->ui->typographicSingleQuotes->setChecked(settings.isReplaceSingleQuotes());
     d->ui->addNonBreakingSpaceInFrench->setChecked(settings.isAddNonBreakingSpace());
-    d->ui->replaceDoubleQuotesByFrenchQuotes->setChecked(settings.isAddNonBreakingSpace());
+    d->ui->replaceDoubleQuotesByFrenchQuotes->setChecked(settings.isReplaceDoubleQuotesByFrenchQuotes());
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }
@@ -235,6 +235,7 @@ void AutoCorrectionWidget::writeConfig()
     settings.setTypographicSingleQuotes(d->m_singleQuotes);
     settings.setTypographicDoubleQuotes(d->m_doubleQuotes);
     settings.setAddNonBreakingSpace(d->ui->addNonBreakingSpaceInFrench->isChecked());
+    settings.setReplaceDoubleQuotesByFrenchQuotes(d->ui->replaceDoubleQuotesByFrenchQuotes->isChecked());
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     d->mAutoCorrection->writeConfig();
     d->mWasChanged = false;
