@@ -17,5 +17,10 @@ public:
     ~ExportLibreOfficeAutocorrection() override;
 
     Q_REQUIRED_RESULT bool exportData(const QString &language, const QString &fileName, QString &errorMessage) override;
+
+private:
+    Q_REQUIRED_RESULT bool exportDocumentList();
+    Q_REQUIRED_RESULT bool exportSentenceExceptList();
+    Q_REQUIRED_RESULT bool exportWordExceptList();
 };
 }
