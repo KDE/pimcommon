@@ -105,6 +105,7 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->addNonBreakingSpaceInFrench, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     connect(d->ui->twoUpperLetter, &QLineEdit::returnPressed, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
     connect(d->ui->abbreviation, &QLineEdit::returnPressed, this, &AutoCorrectionWidget::addAbbreviationEntry);
+    connect(d->ui->replaceDoubleQuotesByFrenchQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
     slotEnableDisableAbreviationList();
     slotEnableDisableTwoUpperEntry();
 
@@ -158,6 +159,7 @@ void AutoCorrectionWidget::loadConfig()
     d->ui->typographicDoubleQuotes->setChecked(settings.isReplaceDoubleQuotes());
     d->ui->typographicSingleQuotes->setChecked(settings.isReplaceSingleQuotes());
     d->ui->addNonBreakingSpaceInFrench->setChecked(settings.isAddNonBreakingSpace());
+    d->ui->replaceDoubleQuotesByFrenchQuotes->setChecked(settings.isAddNonBreakingSpace());
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }

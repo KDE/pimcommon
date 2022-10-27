@@ -19,6 +19,7 @@ struct TypographicQuotes {
 
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultSingleQuotes();
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultDoubleQuotes();
+Q_REQUIRED_RESULT PIMCOMMON_EXPORT TypographicQuotes typographicDefaultFrenchQuotes();
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QString libreofficeFile(const QString &lang);
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList libreOfficeAutoCorrectionPath();
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList searchAutoCorrectLibreOfficeFiles();

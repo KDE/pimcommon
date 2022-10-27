@@ -137,9 +137,19 @@ bool AutoCorrectionSettings::isAddNonBreakingSpace() const
     return mAddNonBreakingSpace;
 }
 
+bool AutoCorrectionSettings::isReplaceDoubleQuotesByFrenchQuotes() const
+{
+    return mReplaceDoubleQuotesByFrenchQuotes;
+}
+
 void AutoCorrectionSettings::setEnabledAutoCorrection(bool b)
 {
     mEnabled = b;
+}
+
+void AutoCorrectionSettings::setReplaceDoubleQuotesByFrenchQuotes(bool b)
+{
+    mReplaceDoubleQuotesByFrenchQuotes = b;
 }
 
 PimCommon::AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::typographicSingleQuotes() const

@@ -25,6 +25,14 @@ AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::typographicDefaultDo
     return quote;
 }
 
+AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::typographicDefaultFrenchQuotes()
+{
+    TypographicQuotes quote;
+    quote.begin = QChar(0x00AB);
+    quote.end = QChar(0x00BB);
+    return quote;
+}
+
 QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t)
 {
     d << "TypographicQuotes.begin " << t.begin;

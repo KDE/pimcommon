@@ -32,6 +32,7 @@ public:
     Q_REQUIRED_RESULT bool isSuperScript() const;
 
     Q_REQUIRED_RESULT bool isAddNonBreakingSpace() const;
+    Q_REQUIRED_RESULT bool isReplaceDoubleQuotesByFrenchQuotes() const;
 
     Q_REQUIRED_RESULT PimCommon::AutoCorrectionUtils::TypographicQuotes typographicSingleQuotes() const;
     Q_REQUIRED_RESULT PimCommon::AutoCorrectionUtils::TypographicQuotes typographicDoubleQuotes() const;
@@ -47,6 +48,7 @@ public:
     void setReplaceSingleQuotes(bool b);
     void setAdvancedAutocorrect(bool b);
     void setEnabledAutoCorrection(bool b);
+    void setReplaceDoubleQuotesByFrenchQuotes(bool b);
 
     void readConfig();
 
@@ -122,6 +124,7 @@ private:
     bool mSuperScriptAppendix = false;
 
     bool mAddNonBreakingSpace = false;
+    bool mReplaceDoubleQuotesByFrenchQuotes = false;
 };
 }
 PIMCOMMON_EXPORT QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t);
