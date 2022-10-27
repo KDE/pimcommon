@@ -144,19 +144,30 @@ bool ExportLibreOfficeAutocorrection::exportManifest()
 
     streamWriter.writeStartElement(QStringLiteral("manifest:manifest"));
 
-    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
-    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
-        streamWriter.writeStartElement(QStringLiteral("manifest:file-entry"));
-        streamWriter.writeAttribute(QStringLiteral("manifest:full-path"), *twoUpper);
-        streamWriter.writeAttribute(QStringLiteral("manifest:media-type"), *twoUpper);
-        streamWriter.writeEndElement();
-        ++twoUpper;
-    }
+    streamWriter.writeStartElement(QStringLiteral("manifest:file-entry"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:full-path"), QStringLiteral("/"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:media-type"), QString());
+    streamWriter.writeEndElement();
+
+    streamWriter.writeStartElement(QStringLiteral("manifest:file-entry"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:full-path"), QStringLiteral("DocumentList.xml"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:media-type"), QString());
+    streamWriter.writeEndElement();
+
+    streamWriter.writeStartElement(QStringLiteral("manifest:file-entry"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:full-path"), QStringLiteral("SentenceExceptList.xml"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:media-type"), QString());
+    streamWriter.writeEndElement();
+
+    streamWriter.writeStartElement(QStringLiteral("manifest:file-entry"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:full-path"), QStringLiteral("WordExceptList.xml"));
+    streamWriter.writeAttribute(QStringLiteral("manifest:media-type"), QStringLiteral("text/xml"));
+    streamWriter.writeEndElement();
+
     streamWriter.writeEndElement();
     streamWriter.writeEndDocument();
     temporaryShareFile.close();
 
     mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("manifest.xml"));
-    // TODO
     return true;
 }
