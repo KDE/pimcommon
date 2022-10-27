@@ -323,14 +323,16 @@ QHash<QString, QString> AutoCorrectionSettings::autocorrectEntries() const
 
 void AutoCorrectionSettings::writeAutoCorrectionXmlFile(const QString &filename)
 {
-#if 0
+#if 1
     ExportLibreOfficeAutocorrection correct;
     correct.setAutocorrectEntries(mAutocorrectEntries);
     correct.setUpperCaseExceptions(mUpperCaseExceptions);
     correct.setTwoUpperLetterExceptions(mTwoUpperLetterExceptions);
     QString message;
-    qDebug() << " EXPORT : " << correct.exportData(QStringLiteral("bla"), QStringLiteral("blo"), message);
-#endif
+    if (!correct.exportData(mAutoCorrectLang, filename, message)) {
+        qCDebug(PIMCOMMON_LOG) << "We can't save in file :" << filename;
+    }
+#else
     const QString fname = filename.isEmpty() ? QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/autocorrect/custom-")
             + (mAutoCorrectLang == QLatin1String("en_US") ? QStringLiteral("autocorrect") : mAutoCorrectLang) + QLatin1String(".xml")
                                              : filename;
@@ -398,6 +400,7 @@ void AutoCorrectionSettings::writeAutoCorrectionXmlFile(const QString &filename)
     streamWriter.writeEndElement();
 
     streamWriter.writeEndDocument();
+#endif
 }
 
 int AutoCorrectionSettings::maxFindStringLength() const

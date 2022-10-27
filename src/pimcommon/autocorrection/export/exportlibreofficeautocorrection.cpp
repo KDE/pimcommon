@@ -7,6 +7,7 @@
 #include "exportlibreofficeautocorrection.h"
 #include "pimcommon_debug.h"
 #include <KZip>
+#include <QDir>
 #include <QTemporaryFile>
 #include <QXmlStreamWriter>
 
@@ -21,7 +22,11 @@ ExportLibreOfficeAutocorrection::~ExportLibreOfficeAutocorrection()
 
 bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
 {
-    mZip = new KZip(QStringLiteral("/tmp/blabla.dat"));
+    QDir().mkpath(AutoCorrectionUtils::libreOfficeLocalAutoCorrectionPath());
+    const QString fname =
+        fileName.isEmpty() ? AutoCorrectionUtils::libreOfficeLocalAutoCorrectionPath() + QStringLiteral("acor_%1.dat").arg(language) : fileName;
+    // qDebug() << " fname " << fname;
+    mZip = new KZip(fname);
     bool result = mZip->open(QIODevice::WriteOnly);
     if (!result) {
         qCWarning(PIMCOMMON_LOG) << "Impossible to open " << fileName;
@@ -164,6 +169,6 @@ bool ExportLibreOfficeAutocorrection::exportManifest()
     streamWriter.writeEndDocument();
     temporaryShareFile.close();
 
-    mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("manifest.xml"));
+    mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("META-INF/manifest.xml"));
     return true;
 }

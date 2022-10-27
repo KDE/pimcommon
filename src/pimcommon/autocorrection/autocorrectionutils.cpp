@@ -59,6 +59,11 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
     return dirList;
 }
 
+QString AutoCorrectionUtils::libreOfficeLocalAutoCorrectionPath()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/libreoffice/4/user/autocorr/");
+}
+
 QStringList AutoCorrectionUtils::searchAutoCorrectLibreOfficeFiles()
 {
     QStringList files;
