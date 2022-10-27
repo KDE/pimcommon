@@ -68,3 +68,36 @@ QStringList AutoCorrectionUtils::searchAutoCorrectLibreOfficeFiles()
     }
     return files;
 }
+
+QStringList AutoCorrectionUtils::autoCorrectLibreOfficeLanguageToString(const QStringList &langs)
+{
+    QStringList languagesStr;
+    const QList<QLocale> allLocales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    for (const QLocale &locale : allLocales) {
+        const QString languageCode = locale.name();
+        for (const QString &lang : langs) {
+            if (languageCode == lang) {
+                const QString nativeName = locale.nativeLanguageName();
+                // For some languages the native name might be empty.
+                // In this case use the non native language name as fallback.
+                // See: QTBUG-51323
+                const QString languageName = nativeName.isEmpty() ? QLocale::languageToString(locale.language()) : nativeName;
+                languagesStr.append(languageName);
+                break;
+            } else {
+                QString b = lang;
+                b.replace(QLatin1Char('-'), QLatin1Char('_'));
+                if (languageCode == b) {
+                    const QString nativeName = locale.nativeLanguageName();
+                    // For some languages the native name might be empty.
+                    // In this case use the non native language name as fallback.
+                    // See: QTBUG-51323
+                    const QString languageName = nativeName.isEmpty() ? QLocale::languageToString(locale.language()) : nativeName;
+                    languagesStr.append(languageName);
+                    break;
+                }
+            }
+        }
+    }
+    return languagesStr;
+}
