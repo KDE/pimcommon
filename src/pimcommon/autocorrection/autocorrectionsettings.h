@@ -88,12 +88,13 @@ public:
     Q_REQUIRED_RESULT int minFindStringLength() const;
 
     void loadLocalFileName(const QString &localFileName, const QString &fname);
-    void loadGlobalFileName(const QString &fname, bool forceGlobal);
+    void loadGlobalFileName(const QString &fname);
 
     Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes doubleFrenchQuotes() const;
     void setDoubleFrenchQuotes(const AutoCorrectionUtils::TypographicQuotes &newDoubleFrenchQuotes);
 
 private:
+    void migrateKMailXmlFile();
     void readAutoCorrectionXmlFile(bool forceGlobal = false);
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;

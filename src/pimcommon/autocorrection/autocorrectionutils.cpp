@@ -114,3 +114,40 @@ QStringList AutoCorrectionUtils::autoCorrectLibreOfficeLanguageToString(const QS
     }
     return languagesStr;
 }
+
+QString AutoCorrectionUtils::TypographicQuotes::toString() const
+{
+    return begin + end;
+}
+
+bool AutoCorrectionUtils::TypographicQuotes::isEmpty() const
+{
+    return begin.isNull() && end.isNull();
+}
+
+AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::TypographicQuotes::fromString(const QString &str)
+{
+    AutoCorrectionUtils::TypographicQuotes quotes;
+    if (str.size() == 2) {
+        quotes.begin = str.at(0);
+        quotes.end = str.at(1);
+    }
+    return quotes;
+}
+
+QString AutoCorrectionUtils::containsAutoCorrectionFile(const QString &lang)
+{
+    const QStringList libreOfficeAutocorrectPaths = AutoCorrectionUtils::libreOfficeAutoCorrectionPath();
+    if (!libreOfficeAutocorrectPaths.isEmpty()) {
+        QString fixLangExtension = lang;
+        fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));
+        for (const auto &path : libreOfficeAutocorrectPaths) {
+            const QString filename = path + AutoCorrectionUtils::libreofficeFile(fixLangExtension);
+            // qDebug() << " filename " << filename;
+            if (QFileInfo::exists(filename)) {
+                return filename;
+            }
+        }
+    }
+    return {};
+}

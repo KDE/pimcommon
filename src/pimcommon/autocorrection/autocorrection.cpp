@@ -844,9 +844,9 @@ void AutoCorrection::replaceTypographicQuotes()
     }
 }
 
-void AutoCorrection::loadGlobalFileName(const QString &fname, bool forceGlobal)
+void AutoCorrection::loadGlobalFileName(const QString &fname)
 {
-    mAutoCorrectionSettings.loadGlobalFileName(fname, forceGlobal);
+    mAutoCorrectionSettings.loadGlobalFileName(fname);
 }
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)

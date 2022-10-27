@@ -191,6 +191,14 @@ void AutoCorrectionSettings::readConfig()
     mEnabled = PimCommon::PimCommonSettings::self()->enabled();
     mSuperScriptAppendix = PimCommon::PimCommonSettings::self()->superScript();
     mAddNonBreakingSpace = PimCommon::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
+    mTypographicSingleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicSingleQuotes());
+    if (mTypographicSingleQuotes.isEmpty()) {
+        mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+    }
+    mTypographicDoubleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicDoubleQuotes());
+    if (mTypographicDoubleQuotes.isEmpty()) {
+        mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+    }
     readAutoCorrectionXmlFile();
 }
 
@@ -209,6 +217,8 @@ void AutoCorrectionSettings::writeConfig()
     PimCommon::PimCommonSettings::self()->setEnabled(mEnabled);
     PimCommon::PimCommonSettings::self()->setSuperScript(mSuperScriptAppendix);
     PimCommon::PimCommonSettings::self()->setAddNonBreakingSpaceInFrench(mAddNonBreakingSpace);
+    PimCommon::PimCommonSettings::self()->setTypographicSingleQuotes(mTypographicSingleQuotes.toString());
+    PimCommon::PimCommonSettings::self()->setTypographicDoubleQuotes(mTypographicDoubleQuotes.toString());
     PimCommon::PimCommonSettings::self()->requestSync();
     writeAutoCorrectionXmlFile();
 }
@@ -357,14 +367,13 @@ int AutoCorrectionSettings::minFindStringLength() const
 
 void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, const QString &fname)
 {
+    qDebug() << " import kmail " << localFileName;
     ImportKMailAutocorrection import;
     QString messageError;
     if (import.import(localFileName, messageError, ImportAbstractAutocorrection::All)) {
         mUpperCaseExceptions = import.upperCaseExceptions();
         mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
         mAutocorrectEntries = import.autocorrectEntries();
-        mTypographicSingleQuotes = import.typographicSingleQuotes();
-        mTypographicDoubleQuotes = import.typographicDoubleQuotes();
         // Don't import it in local
         // mSuperScriptEntries = import.superScriptEntries();
     }
@@ -375,56 +384,42 @@ void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, con
     mMinFindStringLength = import.minFindStringLenght();
 }
 
-void AutoCorrectionSettings::loadGlobalFileName(const QString &fname, bool forceGlobal)
+void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
 {
+    qDebug() << " fname " << fname;
     if (fname.isEmpty()) {
-        mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
-        mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
-        // TODO load default Libreoffice
-        ImportLibreOfficeAutocorrection import;
-        const QStringList libreOfficeAutocorrectPaths = AutoCorrectionUtils::libreOfficeAutoCorrectionPath();
-        if (!libreOfficeAutocorrectPaths.isEmpty()) {
+        const QString fileName = AutoCorrectionUtils::containsAutoCorrectionFile(mAutoCorrectLang);
+        if (!fileName.isEmpty()) {
             QString errorMessage;
-            QString fixLangExtension = mAutoCorrectLang;
-            fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));
-            for (const auto &path : libreOfficeAutocorrectPaths) {
-                const QString filename = path + AutoCorrectionUtils::libreofficeFile(fixLangExtension);
-                // qDebug() << " filename " << filename;
-                if (QFileInfo::exists(filename)) {
-                    if (import.import(filename, errorMessage)) {
-                        mUpperCaseExceptions = import.upperCaseExceptions();
-                        mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
-                        mAutocorrectEntries = import.autocorrectEntries();
-                        mSuperScriptEntries = import.superScriptEntries();
-                        mMaxFindStringLength = import.maxFindStringLenght();
-                        mMinFindStringLength = import.minFindStringLenght();
-                        break;
-                    }
-                }
+            ImportLibreOfficeAutocorrection import;
+            if (import.import(fileName, errorMessage)) {
+                mUpperCaseExceptions = import.upperCaseExceptions();
+                mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+                mAutocorrectEntries = import.autocorrectEntries();
+                mSuperScriptEntries = import.superScriptEntries();
+                mMaxFindStringLength = import.maxFindStringLenght();
+                mMinFindStringLength = import.minFindStringLenght();
             }
         }
     } else {
+        qDebug() << " import kmail " << fname;
         ImportKMailAutocorrection import;
         QString messageError;
         if (import.import(fname, messageError, ImportAbstractAutocorrection::All)) {
             mUpperCaseExceptions = import.upperCaseExceptions();
             mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
             mAutocorrectEntries = import.autocorrectEntries();
-            mTypographicSingleQuotes = import.typographicSingleQuotes();
-            mTypographicDoubleQuotes = import.typographicDoubleQuotes();
             mSuperScriptEntries = import.superScriptEntries();
-            if (forceGlobal) {
-                mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
-                mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
-            }
             mMaxFindStringLength = import.maxFindStringLenght();
             mMinFindStringLength = import.minFindStringLenght();
         }
     }
 }
 
-void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
+void AutoCorrectionSettings::migrateKMailXmlFile()
 {
+#if 0
+    // TODO
     QString kdelang = QStringLiteral("en_US");
     const QStringList lst = QLocale::system().uiLanguages();
     if (!lst.isEmpty()) {
@@ -435,11 +430,6 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
     }
     static QRegularExpression reg(QStringLiteral("@.*"));
     kdelang.remove(reg);
-
-    mUpperCaseExceptions.clear();
-    mAutocorrectEntries.clear();
-    mTwoUpperLetterExceptions.clear();
-    mSuperScriptEntries.clear();
 
     QString localFileName;
     static QRegularExpression regpath(QRegularExpression(QStringLiteral("_.*")));
@@ -484,11 +474,72 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
     if (mAutoCorrectLang.isEmpty()) {
         mAutoCorrectLang = kdelang;
     }
+#endif
+}
+
+void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
+{
+    mUpperCaseExceptions.clear();
+    mAutocorrectEntries.clear();
+    mTwoUpperLetterExceptions.clear();
+    mSuperScriptEntries.clear();
+
+    QString kdelang = QStringLiteral("en-US");
+    const QStringList lst = QLocale::system().uiLanguages();
+    if (!lst.isEmpty()) {
+        kdelang = lst.at(0);
+        if (kdelang == QLatin1Char('C')) {
+            kdelang = QStringLiteral("en-US");
+        }
+    }
+    static QRegularExpression reg(QStringLiteral("@.*"));
+    kdelang.remove(reg);
+
+    QString localFileName;
+    static QRegularExpression regpath(QRegularExpression(QStringLiteral("_.*")));
+    // Look at local file:
+    if (!forceGlobal) {
+        if (mAutoCorrectLang.isEmpty()) {
+            if (!kdelang.isEmpty()) {
+                localFileName =
+                    QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+            }
+            if (localFileName.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
+                kdelang.remove(regpath);
+                localFileName =
+                    QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/custom-") + kdelang + QLatin1String(".xml"));
+            }
+        }
+    }
+    QString fname;
+    // Load Global directly
+    if (!mAutoCorrectLang.isEmpty()) {
+        if (mAutoCorrectLang == QLatin1String("en_US")) {
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/autocorrect.xml"));
+        } else {
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/") + mAutoCorrectLang + QLatin1String(".xml"));
+        }
+    } else {
+        if (fname.isEmpty() && !kdelang.isEmpty()) {
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/") + kdelang + QLatin1String(".xml"));
+        }
+        if (fname.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
+            kdelang.remove(regpath);
+            fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QLatin1String("autocorrect/") + kdelang + QLatin1String(".xml"));
+        }
+    }
+    if (fname.isEmpty()) {
+        fname = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("autocorrect/autocorrect.xml"));
+    }
+
+    if (mAutoCorrectLang.isEmpty()) {
+        mAutoCorrectLang = kdelang;
+    }
     // qDebug() << " fname :" << fname;
     // qDebug() << " localFileName:" << localFileName;
 
     if (localFileName.isEmpty()) {
-        loadGlobalFileName(fname, forceGlobal);
+        loadGlobalFileName(fname);
     } else {
         loadLocalFileName(localFileName, fname);
     }

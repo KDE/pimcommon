@@ -717,13 +717,13 @@ void AutoCorrectionTest::shouldLoadSaveAutocorrection()
     const QString refFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-ref.xml");
     const QString generatedFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.xml");
 
-    autocorrection.loadGlobalFileName(originalFile, true);
+    autocorrection.loadGlobalFileName(originalFile);
     autocorrection.writeAutoCorrectionXmlFile(generatedFile);
 
     // make sure the xml is valid and we can feed ourself with our own generated file
-    autocorrection.loadGlobalFileName(generatedFile, true);
+    autocorrection.loadGlobalFileName(generatedFile);
 
-    autocorrectionReference.loadGlobalFileName(refFile, true);
+    autocorrectionReference.loadGlobalFileName(refFile);
 
     QCOMPARE(autocorrection.autoCorrectionSettings().autocorrectEntries(), autocorrectionReference.autoCorrectionSettings().autocorrectEntries());
     QCOMPARE(autocorrection.autoCorrectionSettings().upperCaseExceptions(), autocorrectionReference.autoCorrectionSettings().upperCaseExceptions());
