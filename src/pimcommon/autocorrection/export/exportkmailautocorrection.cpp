@@ -16,7 +16,7 @@ ExportKMailAutocorrection::ExportKMailAutocorrection() = default;
 
 ExportKMailAutocorrection::~ExportKMailAutocorrection() = default;
 
-bool PimCommon::ExportKMailAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
+bool ExportKMailAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
 {
     Q_UNUSED(errorMessage);
     const QString fname = fileName.isEmpty() ? QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/autocorrect/custom-")
