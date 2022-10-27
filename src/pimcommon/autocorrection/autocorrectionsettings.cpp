@@ -403,7 +403,7 @@ void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
         }
     } else {
         qDebug() << " import kmail " << fname;
-        ImportKMailAutocorrection import;
+        ImportLibreOfficeAutocorrection import;
         QString messageError;
         if (import.import(fname, messageError, ImportAbstractAutocorrection::All)) {
             mUpperCaseExceptions = import.upperCaseExceptions();
