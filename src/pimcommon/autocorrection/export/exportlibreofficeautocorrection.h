@@ -8,6 +8,7 @@
 
 #include "exportabstractautocorrection.h"
 #include "pimcommon_private_export.h"
+class KZip;
 namespace PimCommon
 {
 class PIMCOMMON_TESTS_EXPORT ExportLibreOfficeAutocorrection : public ExportAbstractAutocorrection
@@ -22,5 +23,7 @@ private:
     Q_REQUIRED_RESULT bool exportDocumentList();
     Q_REQUIRED_RESULT bool exportSentenceExceptList();
     Q_REQUIRED_RESULT bool exportWordExceptList();
+    Q_REQUIRED_RESULT bool exportManifest();
+    KZip *mZip = nullptr;
 };
 }

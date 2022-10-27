@@ -5,93 +5,158 @@
 */
 
 #include "exportlibreofficeautocorrection.h"
+#include "pimcommon_debug.h"
 #include <KZip>
+#include <QTemporaryFile>
+#include <QXmlStreamWriter>
 
 using namespace PimCommon;
 
 ExportLibreOfficeAutocorrection::ExportLibreOfficeAutocorrection() = default;
 
-ExportLibreOfficeAutocorrection::~ExportLibreOfficeAutocorrection() = default;
+ExportLibreOfficeAutocorrection::~ExportLibreOfficeAutocorrection()
+{
+    delete mZip;
+}
 
 bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
 {
-    // TODO
-    return false;
+    mZip = new KZip(QStringLiteral("/tmp/blabla.dat"));
+    bool result = mZip->open(QIODevice::WriteOnly);
+    if (!result) {
+        qCWarning(PIMCOMMON_LOG) << "Impossible to open " << fileName;
+        return false;
+    }
+    if (!exportDocumentList()) {
+        qDebug() << " 111111111111";
+        return false;
+    }
+    if (!exportSentenceExceptList()) {
+        qDebug() << " 1111111111112222222";
+        return false;
+    }
+    if (!exportWordExceptList()) {
+        qDebug() << " 111111111111333333333";
+        return false;
+    }
+    if (!exportManifest()) {
+        qDebug() << " 111111111111444444";
+        return false;
+    }
+    mZip->close();
+    delete mZip;
+    mZip = nullptr;
+    return true;
 }
 
 bool ExportLibreOfficeAutocorrection::exportDocumentList()
 {
-    // archiveFileName = QStringLiteral("DocumentList.xml");
-#if 0
-    QXmlStreamWriter streamWriter(&file);
+    QTemporaryFile temporaryShareFile;
+    temporaryShareFile.open();
+    QXmlStreamWriter streamWriter(&temporaryShareFile);
 
     streamWriter.setAutoFormatting(true);
     streamWriter.setAutoFormattingIndent(2);
     streamWriter.writeStartDocument();
 
-    streamWriter.writeDTD(QStringLiteral("<!DOCTYPE autocorrection>"));
+    streamWriter.writeStartElement(QStringLiteral("block-list:block-list"));
 
-    streamWriter.writeStartElement(QStringLiteral("Word"));
-
-    streamWriter.writeStartElement(QStringLiteral("items"));
     QHashIterator<QString, QString> i(mAutocorrectEntries);
     while (i.hasNext()) {
         i.next();
-        streamWriter.writeStartElement(QStringLiteral("item"));
-        streamWriter.writeAttribute(QStringLiteral("find"), i.key());
-        streamWriter.writeAttribute(QStringLiteral("replace"), i.value());
+        streamWriter.writeStartElement(QStringLiteral("block-list:block"));
+        streamWriter.writeAttribute(QStringLiteral("block-list:abbreviated-name"), i.key());
+        streamWriter.writeAttribute(QStringLiteral("block-list:name"), i.value());
         streamWriter.writeEndElement();
     }
     streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("UpperCaseExceptions"));
-    QSet<QString>::const_iterator upper = mUpperCaseExceptions.constBegin();
-    while (upper != mUpperCaseExceptions.constEnd()) {
-        streamWriter.writeStartElement(QStringLiteral("word"));
-        streamWriter.writeAttribute(QStringLiteral("exception"), *upper);
-        ++upper;
-        streamWriter.writeEndElement();
-    }
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("TwoUpperLetterExceptions"));
-    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
-    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
-        streamWriter.writeStartElement(QStringLiteral("word"));
-        streamWriter.writeAttribute(QStringLiteral("exception"), *twoUpper);
-        ++twoUpper;
-        streamWriter.writeEndElement();
-    }
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("DoubleQuote"));
-    streamWriter.writeStartElement(QStringLiteral("doublequote"));
-    streamWriter.writeAttribute(QStringLiteral("begin"), mTypographicDoubleQuotes.begin);
-    streamWriter.writeAttribute(QStringLiteral("end"), mTypographicDoubleQuotes.end);
-    streamWriter.writeEndElement();
-    streamWriter.writeEndElement();
-
-    streamWriter.writeStartElement(QStringLiteral("SimpleQuote"));
-    streamWriter.writeStartElement(QStringLiteral("simplequote"));
-    streamWriter.writeAttribute(QStringLiteral("begin"), mTypographicSingleQuotes.begin);
-    streamWriter.writeAttribute(QStringLiteral("end"), mTypographicSingleQuotes.end);
-    streamWriter.writeEndElement();
-    streamWriter.writeEndElement();
-
     streamWriter.writeEndDocument();
-
-#endif
-    return false;
+    temporaryShareFile.close();
+    mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("DocumentList.xml"));
+    return true;
 }
 
 bool ExportLibreOfficeAutocorrection::exportSentenceExceptList()
 {
-    // archiveFileName = QStringLiteral("SentenceExceptList.xml");
-    return false;
+    QTemporaryFile temporaryShareFile;
+    temporaryShareFile.open();
+
+    QXmlStreamWriter streamWriter(&temporaryShareFile);
+
+    streamWriter.setAutoFormatting(true);
+    streamWriter.setAutoFormattingIndent(2);
+    streamWriter.writeStartDocument();
+
+    streamWriter.writeStartElement(QStringLiteral("block-list:block-list"));
+
+    QSet<QString>::const_iterator upper = mUpperCaseExceptions.constBegin();
+    while (upper != mUpperCaseExceptions.constEnd()) {
+        streamWriter.writeStartElement(QStringLiteral("block-list:block"));
+        streamWriter.writeAttribute(QStringLiteral("block-list:abbreviated-name"), *upper);
+        streamWriter.writeEndElement();
+        ++upper;
+    }
+    streamWriter.writeEndElement();
+    streamWriter.writeEndDocument();
+    temporaryShareFile.close();
+
+    mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("SentenceExceptList.xml"));
+    return true;
 }
 
 bool ExportLibreOfficeAutocorrection::exportWordExceptList()
 {
-    // archiveFileName = QStringLiteral("WordExceptList.xml");
-    return false;
+    QTemporaryFile temporaryShareFile;
+    temporaryShareFile.open();
+
+    QXmlStreamWriter streamWriter(&temporaryShareFile);
+
+    streamWriter.setAutoFormatting(true);
+    streamWriter.setAutoFormattingIndent(2);
+    streamWriter.writeStartDocument();
+
+    streamWriter.writeStartElement(QStringLiteral("block-list:block-list"));
+
+    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
+    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
+        streamWriter.writeStartElement(QStringLiteral("block-list:block"));
+        streamWriter.writeAttribute(QStringLiteral("block-list:abbreviated-name"), *twoUpper);
+        streamWriter.writeEndElement();
+        ++twoUpper;
+    }
+    streamWriter.writeEndElement();
+    streamWriter.writeEndDocument();
+    temporaryShareFile.close();
+
+    mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("WordExceptList.xml"));
+    return true;
+}
+
+bool ExportLibreOfficeAutocorrection::exportManifest()
+{
+    QTemporaryFile temporaryShareFile;
+    temporaryShareFile.open();
+
+    QXmlStreamWriter streamWriter(&temporaryShareFile);
+    streamWriter.setAutoFormatting(true);
+    streamWriter.setAutoFormattingIndent(2);
+    streamWriter.writeStartDocument();
+
+    streamWriter.writeStartElement(QStringLiteral("manifest:manifest"));
+
+    QSet<QString>::const_iterator twoUpper = mTwoUpperLetterExceptions.constBegin();
+    while (twoUpper != mTwoUpperLetterExceptions.constEnd()) {
+        streamWriter.writeStartElement(QStringLiteral("manifest:file-entry"));
+        streamWriter.writeAttribute(QStringLiteral("manifest:full-path"), *twoUpper);
+        streamWriter.writeAttribute(QStringLiteral("manifest:media-type"), *twoUpper);
+        streamWriter.writeEndElement();
+        ++twoUpper;
+    }
+    streamWriter.writeEndElement();
+    streamWriter.writeEndDocument();
+    temporaryShareFile.close();
+
+    mZip->addLocalFile(temporaryShareFile.fileName(), QStringLiteral("manifest.xml"));
+    // TODO
+    return true;
 }
