@@ -402,7 +402,7 @@ void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
             }
         }
     } else {
-        qDebug() << " import kmail " << fname;
+        qDebug() << " import libreoffice file " << fname;
         ImportLibreOfficeAutocorrection import;
         QString messageError;
         if (import.import(fname, messageError, ImportAbstractAutocorrection::All)) {
