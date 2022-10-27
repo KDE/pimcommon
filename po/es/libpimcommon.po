@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:47+0000\n"
+"POT-Creation-Date: 2022-10-27 00:47+0000\n"
 "PO-Revision-Date: 2022-10-21 16:21+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -269,7 +269,7 @@ msgstr "Autocorrección a&vanzada"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
 #, kde-format
 msgid "&Add"
 msgstr "&Añadir"
@@ -360,65 +360,66 @@ msgstr "Autocorrección de LibreOffice"
 msgid "KMail/Calligra Autocorrection"
 msgstr "Autocorrección de KMail/Calligra"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "«Sustituir» cadena es lo mismo que «Buscar» cadena."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Añadir entrada de autocorrección"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:447
 #, kde-format
 msgid "&Modify"
 msgstr "&Modificar"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:558
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importar autocorrección de LibreOffice"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:559
+#, fuzzy, kde-format
+#| msgid "LibreOffice Autocorrection File (*.data)"
+msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Archivo de autocorrección de LibreOffice (*.data)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importar autocorrección de KMail"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:563
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Archivo de autocorrección de KMail (*.xml)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:595
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Importar archivo de autocorrección"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:622
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Se cambió el idioma, ¿quiere usted guardar la configuración del idioma "
 "anterior?"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:623
 #, kde-format
 msgid "Save config"
 msgstr "Guardar configuración"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Por favor, guarde los cambios antes de exportar las preferencias."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Exportar archivo de autocorrección"
@@ -1476,7 +1477,7 @@ msgid_plural "%1 emails found"
 msgstr[0] "1 mensaje encontrado"
 msgstr[1] "%1 mensajes encontrados"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:121
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:120
 #, kde-format
 msgid "No result found"
 msgstr "No se han encontrado resultados"

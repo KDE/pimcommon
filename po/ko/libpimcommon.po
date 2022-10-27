@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-26 00:47+0000\n"
+"POT-Creation-Date: 2022-10-27 00:47+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -256,7 +256,7 @@ msgstr "고급 자동 고침(&V)"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:443
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
 #, kde-format
 msgid "&Add"
 msgstr "추가(&A)"
@@ -347,64 +347,65 @@ msgstr "LibreOffice 자동 고침"
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra 자동 고침"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"바꿀 문자열\"이 \"찾을 문자열\"과 같습니다."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:361
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "자동 고침 항목 추가"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:440
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:447
 #, kde-format
 msgid "&Modify"
 msgstr "수정(&M)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:551
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:558
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "LibreOffice 자동 고침 가져오기"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:552
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:559
+#, fuzzy, kde-format
+#| msgid "LibreOffice Autocorrection File (*.data)"
+msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOffice 자동 고침 파일 (*.data)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:555
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "KMail 자동 고침 가져오기"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:556
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:563
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 자동 고침 파일 (*.xml)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:588
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:595
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:615
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:622
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "언어가 변경되었습니다. 이전 언어의 설정을 저장하시겠습니까?"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:616
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:623
 #, kde-format
 msgid "Save config"
 msgstr "설정 저장"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "설정을 내보내기 전에 저장하십시오."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:655
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:658
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
@@ -1444,7 +1445,7 @@ msgid "1 email found"
 msgid_plural "%1 emails found"
 msgstr[0] "이메일 %1개 찾음"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:121
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:120
 #, kde-format
 msgid "No result found"
 msgstr "결과 없음"
