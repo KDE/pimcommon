@@ -126,13 +126,13 @@ bool ImportLibreOfficeAutocorrection::importFile(Type type, const KArchiveDirect
                             break;
                         case SENTENCE:
                             if (e.hasAttribute(QStringLiteral("block-list:abbreviated-name"))) {
-                                mTwoUpperLetterExceptions.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")));
+                                mUpperCaseExceptions.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")));
                             }
 
                             break;
                         case WORD:
                             if (e.hasAttribute(QStringLiteral("block-list:abbreviated-name"))) {
-                                mUpperCaseExceptions.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")));
+                                mTwoUpperLetterExceptions.insert(e.attribute(QStringLiteral("block-list:abbreviated-name")));
                             }
                             break;
                         }
