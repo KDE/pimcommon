@@ -572,5 +572,6 @@ QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t)
     d << "mAutocorrectEntries " << t.autocorrectEntries();
     d << "mTypographicDoubleQuotes " << t.typographicDoubleQuotes();
     d << "mTypographicSingleQuotes " << t.typographicSingleQuotes();
+    d << "mReplaceDoubleQuotesByFrenchQuotes " << t.isReplaceDoubleQuotesByFrenchQuotes();
     return d;
 }
