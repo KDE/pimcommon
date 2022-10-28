@@ -191,6 +191,8 @@ void AutoCorrectionSettings::readConfig()
     mEnabled = PimCommon::PimCommonSettings::self()->enabled();
     mSuperScriptAppendix = PimCommon::PimCommonSettings::self()->superScript();
     mAddNonBreakingSpace = PimCommon::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
+    mReplaceDoubleQuotesByFrenchQuotes = PimCommon::PimCommonSettings::self()->replaceDoubleQuotesByFrenchQuotes();
+
     mTypographicSingleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicSingleQuotes());
     if (mTypographicSingleQuotes.isEmpty()) {
         mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
@@ -219,6 +221,7 @@ void AutoCorrectionSettings::writeConfig()
     PimCommon::PimCommonSettings::self()->setAddNonBreakingSpaceInFrench(mAddNonBreakingSpace);
     PimCommon::PimCommonSettings::self()->setTypographicSingleQuotes(mTypographicSingleQuotes.toString());
     PimCommon::PimCommonSettings::self()->setTypographicDoubleQuotes(mTypographicDoubleQuotes.toString());
+    PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(mReplaceDoubleQuotesByFrenchQuotes);
     PimCommon::PimCommonSettings::self()->requestSync();
     writeAutoCorrectionXmlFile();
 }
