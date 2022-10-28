@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-27 00:47+0000\n"
+"POT-Creation-Date: 2022-10-28 00:46+0000\n"
 "PO-Revision-Date: 2020-11-17 19:30+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -172,14 +172,29 @@ msgstr ""
 msgid "Replace 1st... with 1^st... (HTML mode)"
 msgstr "Erstat 1st... med 1^st... (HTML-tilstand)"
 
+#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:162
+#, kde-format
+msgid "Add non breaking space before specific punctuation marks in French text"
+msgstr ""
+"Tilføj mellemrum som ikke giver linjeskift før særlig tegnsætning i fransk "
+"tekst"
+
+#. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:169
+#, fuzzy, kde-format
+#| msgid "Replace &double quotes with typographical quotes"
+msgid "Replace double quotes by french quotes"
+msgstr "Erstat &anførselstegn med typografisk citationstegn"
+
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:176
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:190
 #, kde-format
 msgid "Custom &Quotes"
 msgstr "Brugervalgte &citationstegn"
 
 #. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:182
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:196
 #, kde-format
 msgid "Replace &double quotes with typographical quotes"
 msgstr "Erstat &anførselstegn med typografisk citationstegn"
@@ -188,10 +203,10 @@ msgstr "Erstat &anførselstegn med typografisk citationstegn"
 #. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
 #. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
 #. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:193
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:233
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:360
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:207
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:247
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:374
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:388
 #, fuzzy, kde-format
 #| msgid "Default"
 msgid "By Default"
@@ -199,81 +214,73 @@ msgstr "Standard"
 
 #. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
 #. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:206
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:220
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:233
 #, kde-format
 msgid "\""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:240
 #, kde-format
 msgid "Ending Quote:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:253
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:353
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:267
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:367
 #, kde-format
 msgid "Opening Quote:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
 #. i18n: ectx: property (text), widget (QPushButton, singleDefault)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:267
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:388
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:281
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:402
 #, kde-format
 msgid "Default"
 msgstr "Standard"
 
 #. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:305
 #, kde-format
 msgid "Replace &single quotes with typographical quotes"
 msgstr "Erstat &enkelte anførselstegn med typografiske citationstegn"
 
 #. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
 #. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:327
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:346
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:341
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:360
 #, kde-format
 msgid "'"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:367
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:381
 #, kde-format
 msgid "Ending Quotes:"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:412
-#, kde-format
-msgid "Add non breaking space before specific punctuation marks in French text"
-msgstr ""
-"Tilføj mellemrum som ikke giver linjeskift før særlig tegnsætning i fransk "
-"tekst"
-
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:433
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:440
 #, kde-format
 msgid "Ad&vanced Autocorrection"
 msgstr "A&vanceret autokorrektur"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:451
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:582
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:453
 #, kde-format
 msgid "&Add"
 msgstr "&Tilføj"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:461
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:654
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #: pimcommon/widgets/simplestringlisteditor.cpp:310
 #: pimcommon/widgets/simplestringlisteditor.cpp:312
@@ -286,136 +293,136 @@ msgid "Remove"
 msgstr "Fjern"
 
 #. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:476
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:483
 #, kde-format
 msgid "&Enable word replacement"
 msgstr "&Aktivér orderstatning"
 
 #. i18n: ectx: property (text), widget (QLabel, findLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:485
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:492
 #, kde-format
 msgid "&Find"
 msgstr "&Find"
 
 #. i18n: ectx: property (text), widget (QLabel, replaceLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:509
 #, kde-format
 msgid "Re&place"
 msgstr "E&rstat"
 
 #. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:537
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:544
 #, kde-format
 msgid "Find"
 msgstr "Find"
 
 #. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:542
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:549
 #, kde-format
 msgid "Replace"
 msgstr "Erstat"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:551
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:558
 #, kde-format
 msgid "E&xceptions"
 msgstr "&Undtagelser"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:559
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:566
 #, kde-format
 msgid "Do not treat as the end of a sentence:"
 msgstr "Behandl ikke som slutningen af en sætning:"
 
 #. i18n: ectx: property (text), widget (QPushButton, remove1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:582
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:589
 #, kde-format
 msgid "R&emove"
 msgstr "&Fjern"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:624
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:631
 #, kde-format
 msgid "Accept two uppercase letters in:"
 msgstr "Acceptér to store bogstaver i:"
 
 #. i18n: ectx: property (text), widget (QPushButton, add2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
 #, kde-format
 msgid "Add"
 msgstr "Tilføj"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:115
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice-autokorrektur"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:119
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail-/Calligra-autokorrektur"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:371
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"Erstat\"-strengen er magen til \"Find\"-strengen."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:371
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Tilføj autokorrektur-indgang"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:447
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
 #, kde-format
 msgid "&Modify"
 msgstr "Æ&ndr"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:558
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:561
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importér LibreOffice-autokorrektur"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:559
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOffice-autokorrekturfil (*.data)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:565
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importér KMail-autokorrektur"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:563
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:566
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail autokorrekturfil (*.xml)"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:595
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:598
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Eksportér autokorrektur-fil"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:622
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:625
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Sproget blev ændret. Vil du gemme konfigurationen for det forrige sprog?"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:623
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:626
 #, kde-format
 msgid "Save config"
 msgstr "Gem konfiguration"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Gem ændringer før indstillinger eksporteres."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
 #: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:668
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Eksportér autokorrektur-fil"
