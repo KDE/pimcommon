@@ -131,7 +131,7 @@ AutoCorrectionWidget::~AutoCorrectionWidget() = default;
 
 void AutoCorrectionWidget::slotChangeComboboxState(int index)
 {
-    d->ui->autocorrectionLanguage->setEnabled(index > 1);
+    d->ui->autocorrectionLanguage->setEnabled(index < 2);
 }
 
 void AutoCorrectionWidget::setAutoCorrection(AutoCorrection *autoCorrect)
