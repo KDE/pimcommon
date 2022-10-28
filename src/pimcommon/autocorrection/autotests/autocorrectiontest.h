@@ -40,9 +40,10 @@ private Q_SLOTS:
 
     void shouldAddNonBreakingSpaceBeforeAfterQuote();
 
+#if 0
     void shouldLoadSaveAutocorrection_data();
     void shouldLoadSaveAutocorrection();
-
+#endif
 private:
     KSharedConfig::Ptr mConfig;
 };
