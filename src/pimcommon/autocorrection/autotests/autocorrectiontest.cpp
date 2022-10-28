@@ -588,24 +588,33 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption_data()
     QTest::addColumn<bool>("uppercaseFirstCharOfSentence");
     QTest::addColumn<bool>("advancedAutocorrect");
     QTest::addColumn<bool>("fixtwouppercase");
+    QTest::addColumn<int>("position");
     mapAutoCorrect map;
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    map.insert(QStringLiteral(":j2:"), QStringLiteral("TV"));
 
-    QTest::newRow("disable") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << false << false << false << false;
-    QTest::newRow("enablebutdisablealloptions") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << false << false << false;
-    QTest::newRow("enableandenableuppercase") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << true << false << false;
+    QTest::newRow("disable") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << false << false << false << false << -1;
+    QTest::newRow("enablebutdisablealloptions") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << false << false << false
+                                                << -1;
+    QTest::newRow("enableandenableuppercase") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo boo") << map << true << true << false << false << -1;
     QTest::newRow("enableandenableuppercaseandadvanced")
-        << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true << false;
+        << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map << true << true << true << false << -1;
 
     QTest::newRow("enableandenableuppercaseandadvanced-2")
-        << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true << false;
+        << QStringLiteral("Boo boo. boo") << QStringLiteral("Boo boo. Bla") << map << true << true << true << false << -1;
     QTest::newRow("enableandenableuppercaseandadvanced-3")
-        << QStringLiteral("blablobli") << QStringLiteral("Blablobli") << map << true << true << true << false;
+        << QStringLiteral("blablobli") << QStringLiteral("Blablobli") << map << true << true << true << false << -1;
     QTest::newRow("enableandenableuppercaseandadvanced-4")
-        << QStringLiteral("blablobli. foo") << QStringLiteral("blablobli. Foo") << map << true << true << true << false;
+        << QStringLiteral("blablobli. foo") << QStringLiteral("blablobli. Foo") << map << true << true << true << false << -1;
 
-    QTest::newRow("enableandenablefixtowuppercase") << QStringLiteral("Boo boo. BOo") << QStringLiteral("Boo boo. Boo") << map << true << true << false << true;
-    QTest::newRow("enableandenablefixtowuppercase-2") << QStringLiteral("Boo BOo") << QStringLiteral("Boo Boo") << map << true << true << false << true;
+    QTest::newRow("enableandenablefixtowuppercase") << QStringLiteral("Boo boo. BOo") << QStringLiteral("Boo boo. Boo") << map << true << true << false << true
+                                                    << -1;
+    QTest::newRow("enableandenablefixtowuppercase-2") << QStringLiteral("Boo BOo") << QStringLiteral("Boo Boo") << map << true << true << false << true << -1;
+
+    QTest::newRow(":j2:") << QStringLiteral(":j2:") << QStringLiteral("TV") << map << true << false << true << false << -1;
+    QTest::newRow(":j2: bla") << QStringLiteral(":j2: bla") << QStringLiteral(":j2: bla") << map << true << false << true << false << -1;
+    QTest::newRow(":j2: bla 1") << QStringLiteral(":j2: bla") << QStringLiteral("TV bla") << map << true << false << true << false << 4;
+    QTest::newRow(":j2: bla 2") << QStringLiteral(":j2: :j2:") << QStringLiteral(":j2: TV") << map << true << false << true << false << -1;
     // TODO add more
 }
 
@@ -618,6 +627,7 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
     QFETCH(bool, uppercaseFirstCharOfSentence);
     QFETCH(bool, advancedAutocorrect);
     QFETCH(bool, fixtwouppercase);
+    QFETCH(int, position);
 
     PimCommon::AutoCorrection autocorrection;
     PimCommon::AutoCorrectionSettings settings;
@@ -630,7 +640,7 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
 
     QTextDocument doc;
     doc.setPlainText(originalString);
-    int position = originalString.length();
+    position = (position == -1) ? originalString.length() : position;
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), convertedString);
 }
