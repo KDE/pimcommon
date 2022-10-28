@@ -370,7 +370,6 @@ int AutoCorrectionSettings::minFindStringLength() const
 
 void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, const QString &fname)
 {
-    qDebug() << " import kmail " << localFileName;
     ImportLibreOfficeAutocorrection import;
     QString messageError;
     if (import.import(localFileName, messageError, ImportAbstractAutocorrection::All)) {
@@ -389,7 +388,6 @@ void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, con
 
 void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
 {
-    qDebug() << " fname " << fname;
     if (fname.isEmpty()) {
         const QString fileName = AutoCorrectionUtils::containsAutoCorrectionFile(mAutoCorrectLang);
         if (!fileName.isEmpty()) {
@@ -529,8 +527,8 @@ void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
     if (mAutoCorrectLang.isEmpty()) {
         mAutoCorrectLang = kdelang;
     }
-    qDebug() << " fname :" << fname;
-    qDebug() << " localFileName:" << localFileName;
+    // qDebug() << " fname :" << fname;
+    // qDebug() << " localFileName:" << localFileName;
 
     if (localFileName.isEmpty()) {
         loadGlobalFileName(fname);
