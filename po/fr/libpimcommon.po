@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-29 00:48+0000\n"
-"PO-Revision-Date: 2022-10-22 09:37+0200\n"
+"PO-Revision-Date: 2022-10-28 14:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -389,10 +389,9 @@ msgid "Import LibreOffice Autocorrection"
 msgstr "Importer l'auto-correction LibreOffice"
 
 #: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection File (*.data)"
+#, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "Fichier d'auto-correction LibreOffice (*.data)"
+msgstr "Fichier d'auto-corrections pour LibreOffice (*.dat)"
 
 #: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:565
 #, kde-format

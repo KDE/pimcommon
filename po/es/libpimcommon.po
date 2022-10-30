@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-29 00:48+0000\n"
-"PO-Revision-Date: 2022-10-27 12:25+0200\n"
+"PO-Revision-Date: 2022-10-29 19:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -278,10 +278,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
+#, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr "Sustituir comillas &dobles por comillas tipográficas"
+msgstr "Sustituir comillas dobles por comillas francesas"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:445

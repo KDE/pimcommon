@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-29 00:48+0000\n"
-"PO-Revision-Date: 2022-10-27 05:17+0200\n"
+"PO-Revision-Date: 2022-10-29 13:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -277,10 +277,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
+#, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr "Ordeztu aipu &bikoitzak aipu tipografikoekin"
+msgstr "Ordeztu aipu-kakotx bikoitzak aipu-kakotx frantsesekin"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:445

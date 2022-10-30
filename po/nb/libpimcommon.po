@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-27 00:47+0000\n"
+"POT-Creation-Date: 2022-10-29 00:48+0000\n"
 "PO-Revision-Date: 2022-05-29 19:41+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -51,228 +51,25 @@ msgstr "Eksporter …"
 msgid "Import..."
 msgstr "Importer …"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:77
-#, kde-format
-msgid "Si&mple Autocorrection"
-msgstr "E&nkel autoretting"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:83
-#, kde-format
-msgid ""
-"Detect when a new sentence is started and always ensure that the first "
-"character is an uppercase character"
-msgstr ""
-"Legg merke til når en ny setning begynner og pass alltid på at den første "
-"bokstaven er en stor bokstav"
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:87
-#, kde-format
-msgid ""
-"Convert &first letter of a sentence automatically to uppercase\n"
-"(e.g. \"my house. in this town\" to \"my house. In this town\")"
-msgstr ""
-"Gjør om &første bokstav i en setning automatisk til stor bokstav\n"
-"(f.eks.  «huset mitt. i denne byen» til «huset mitt. I denne byen»)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:97
-#, kde-format
-msgid ""
-"All words are checked for the common mistake of holding the shift key down a "
-"bit too long. If some words must have two uppercase characters, then those "
-"exceptions should be added in the 'Exceptions' tab."
-msgstr ""
-"Alle ord blir kontrollert for å se den vanlige feilen at Shift-tasten holdes "
-"nede litt for lenge. Hvis noen ord må ha to store bokstaver må de legges til "
-"i «Unntak»-fanen."
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:101
-#, kde-format
-msgid ""
-"Convert &two uppercase characters to one uppercase and one lowercase "
-"character\n"
-" (e.g. PErfect to Perfect)"
-msgstr ""
-"Gjør om &to store bokstaver til en stor og en liten bokstav\n"
-" (f.eks. PErfekt til Perfekt)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:108
-#, kde-format
-msgid ""
-"Make sure that more than one space cannot be typed, as this is a common "
-"mistake which is quite hard to find in formatted text."
-msgstr ""
-"Pass på at det ikke kan tastes mer enn ett mellomrom, siden dette er en "
-"vanlig feil som er ganske vanskelig å finne i formatert tekst."
-
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:111
-#, kde-format
-msgid "&Suppress double spaces"
-msgstr "&Undertrykk doble mellomrom"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:118
-#, kde-format
-msgid "Most standard fraction notations will be converted when available"
-msgstr ""
-"De fleste standardmåtene å skrive brøker blir gjort om når tilgjengelig"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:121
-#, kde-format
-msgid "Re&place 1/2... with ½..."
-msgstr "E&rstatt 1/2 … med ½ …"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:128
-#, kde-format
-msgid "Capitalize name of days"
-msgstr "Store forbokstaver i dagnavn"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:135
-#, kde-format
-msgid ""
-"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
-"that matches the way an Internet browser would show a URL."
-msgstr ""
-"Legg merke til når en URL (Uniform Resource Locator) skrives inn og formater "
-"den slik en nettleser ville vise en URL."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:138
-#, kde-format
-msgid "Autoformat &URLs (HTML mode)"
-msgstr "Autoformater &URLer (HTML modus)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:145
-#, kde-format
-msgid ""
-"When you use _underline_ or *bold*, the text between the underscores or "
-"asterisks will be converted to underlined or bold text."
-msgstr ""
-"Når du bruker _understrek_ eller *halvfet* blir teksten mellom understrekene "
-"eller stjernene gjort om til understreket eller halvfet tekst."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:148
-#, kde-format
-msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
-msgstr ""
-"Formater automatisk &halvfet, overstreking og understreking (HTML-modus)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:155
-#, kde-format
-msgid "Replace 1st... with 1^st... (HTML mode)"
-msgstr "Erstatt 1st … med 1^st … (HTML modus)"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:176
-#, kde-format
-msgid "Custom &Quotes"
-msgstr "Selvval&gte hermetegn"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:182
-#, kde-format
-msgid "Replace &double quotes with typographical quotes"
-msgstr "Erstatt &doble hermetegn med typografiske hermetegn (\"\" → «»)"
-
-#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
-#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
-#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
-#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:193
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:233
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:360
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:374
-#, kde-format
-msgid "By Default"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
-#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:206
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
-#, kde-format
-msgid "\""
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
-#, kde-format
-msgid "Ending Quote:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:253
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:353
-#, kde-format
-msgid "Opening Quote:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
-#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:267
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:388
-#, kde-format
-msgid "Default"
-msgstr "Standard"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
-#, kde-format
-msgid "Replace &single quotes with typographical quotes"
-msgstr "Erstatt &enkle hermetegn med typografiske hermetegn ('' → «»)"
-
-#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
-#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:327
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:346
-#, kde-format
-msgid "'"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:367
-#, kde-format
-msgid "Ending Quotes:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:412
-#, kde-format
-msgid "Add non breaking space before specific punctuation marks in French text"
-msgstr "Legg til ikke-brytende mellomrom før bestemte tegn i fransk tekst"
-
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:433
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:77
 #, kde-format
 msgid "Ad&vanced Autocorrection"
 msgstr "Avansert autoretting"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:444
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:575
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:88
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:453
 #, kde-format
 msgid "&Add"
 msgstr "&Legg til"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:454
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:647
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:98
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #: pimcommon/widgets/simplestringlisteditor.cpp:310
 #: pimcommon/widgets/simplestringlisteditor.cpp:312
@@ -285,133 +82,342 @@ msgid "Remove"
 msgstr "Fjern"
 
 #. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:476
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:120
 #, kde-format
 msgid "&Enable word replacement"
 msgstr "Slå på ord&erstatning"
 
 #. i18n: ectx: property (text), widget (QLabel, findLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:485
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:129
 #, kde-format
 msgid "&Find"
 msgstr "&Finn"
 
 #. i18n: ectx: property (text), widget (QLabel, replaceLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:146
 #, kde-format
 msgid "Re&place"
 msgstr "Ers&tatt"
 
 #. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:537
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:181
 #, kde-format
 msgid "Find"
 msgstr "Finn"
 
 #. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:542
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:186
 #, kde-format
 msgid "Replace"
 msgstr "Erstatt"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:551
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:195
 #, kde-format
 msgid "E&xceptions"
 msgstr "&Unntak"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:559
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:203
 #, kde-format
 msgid "Do not treat as the end of a sentence:"
 msgstr "Ikke behandle som slutt på setning:"
 
 #. i18n: ectx: property (text), widget (QPushButton, remove1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:582
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
 #, kde-format
 msgid "R&emove"
 msgstr "Fj&ern"
 
 #. i18n: ectx: property (text), widget (QLabel, label_5)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:624
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:268
 #, kde-format
 msgid "Accept two uppercase letters in:"
 msgstr "Godta to store bokstaver i:"
 
 #. i18n: ectx: property (text), widget (QPushButton, add2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:640
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:284
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
 #, kde-format
 msgid "Add"
 msgstr "Legg til"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:114
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:332
+#, kde-format
+msgid "Si&mple Autocorrection"
+msgstr "E&nkel autoretting"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:338
+#, kde-format
+msgid ""
+"Detect when a new sentence is started and always ensure that the first "
+"character is an uppercase character"
+msgstr ""
+"Legg merke til når en ny setning begynner og pass alltid på at den første "
+"bokstaven er en stor bokstav"
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:342
+#, kde-format
+msgid ""
+"Convert &first letter of a sentence automatically to uppercase\n"
+"(e.g. \"my house. in this town\" to \"my house. In this town\")"
+msgstr ""
+"Gjør om &første bokstav i en setning automatisk til stor bokstav\n"
+"(f.eks.  «huset mitt. i denne byen» til «huset mitt. I denne byen»)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:352
+#, kde-format
+msgid ""
+"All words are checked for the common mistake of holding the shift key down a "
+"bit too long. If some words must have two uppercase characters, then those "
+"exceptions should be added in the 'Exceptions' tab."
+msgstr ""
+"Alle ord blir kontrollert for å se den vanlige feilen at Shift-tasten holdes "
+"nede litt for lenge. Hvis noen ord må ha to store bokstaver må de legges til "
+"i «Unntak»-fanen."
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:356
+#, kde-format
+msgid ""
+"Convert &two uppercase characters to one uppercase and one lowercase "
+"character\n"
+" (e.g. PErfect to Perfect)"
+msgstr ""
+"Gjør om &to store bokstaver til en stor og en liten bokstav\n"
+" (f.eks. PErfekt til Perfekt)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:363
+#, kde-format
+msgid ""
+"Make sure that more than one space cannot be typed, as this is a common "
+"mistake which is quite hard to find in formatted text."
+msgstr ""
+"Pass på at det ikke kan tastes mer enn ett mellomrom, siden dette er en "
+"vanlig feil som er ganske vanskelig å finne i formatert tekst."
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:366
+#, kde-format
+msgid "&Suppress double spaces"
+msgstr "&Undertrykk doble mellomrom"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:373
+#, kde-format
+msgid "Most standard fraction notations will be converted when available"
+msgstr ""
+"De fleste standardmåtene å skrive brøker blir gjort om når tilgjengelig"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:376
+#, kde-format
+msgid "Re&place 1/2... with ½..."
+msgstr "E&rstatt 1/2 … med ½ …"
+
+#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:383
+#, kde-format
+msgid "Capitalize name of days"
+msgstr "Store forbokstaver i dagnavn"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:390
+#, kde-format
+msgid ""
+"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
+"that matches the way an Internet browser would show a URL."
+msgstr ""
+"Legg merke til når en URL (Uniform Resource Locator) skrives inn og formater "
+"den slik en nettleser ville vise en URL."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:393
+#, kde-format
+msgid "Autoformat &URLs (HTML mode)"
+msgstr "Autoformater &URLer (HTML modus)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:400
+#, kde-format
+msgid ""
+"When you use _underline_ or *bold*, the text between the underscores or "
+"asterisks will be converted to underlined or bold text."
+msgstr ""
+"Når du bruker _understrek_ eller *halvfet* blir teksten mellom understrekene "
+"eller stjernene gjort om til understreket eller halvfet tekst."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:403
+#, kde-format
+msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+msgstr ""
+"Formater automatisk &halvfet, overstreking og understreking (HTML-modus)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:410
+#, kde-format
+msgid "Replace 1st... with 1^st... (HTML mode)"
+msgstr "Erstatt 1st … med 1^st … (HTML modus)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:417
+#, kde-format
+msgid "Add non breaking space before specific punctuation marks in French text"
+msgstr "Legg til ikke-brytende mellomrom før bestemte tegn i fransk tekst"
+
+#. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:424
+#, kde-format
+msgid "Replace double quotes by french quotes"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:445
+#, kde-format
+msgid "Custom &Quotes"
+msgstr "Selvval&gte hermetegn"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:451
+#, kde-format
+msgid "Replace &double quotes with typographical quotes"
+msgstr "Erstatt &doble hermetegn med typografiske hermetegn (\"\" → «»)"
+
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:462
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:629
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:643
+#, kde-format
+msgid "By Default"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:475
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:488
+#, kde-format
+msgid "\""
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:495
+#, kde-format
+msgid "Ending Quote:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:522
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:622
+#, kde-format
+msgid "Opening Quote:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
+#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:536
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:657
+#, kde-format
+msgid "Default"
+msgstr "Standard"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:560
+#, kde-format
+msgid "Replace &single quotes with typographical quotes"
+msgstr "Erstatt &enkle hermetegn med typografiske hermetegn ('' → «»)"
+
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:596
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:615
+#, kde-format
+msgid "'"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:636
+#, kde-format
+msgid "Ending Quotes:"
+msgstr ""
+
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:115
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice autoretting"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:118
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:119
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra autoretting"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:371
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "«Erstatt»-strengen er den samme som «Finn»-strengen."
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:368
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:371
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Legg til oppføring for autoretting"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:447
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
 #, kde-format
 msgid "&Modify"
 msgstr "&Endre"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:558
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:561
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importer LibreOffice autoretting"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:559
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr ""
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:565
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importer KMail autoretting"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:563
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:566
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr ""
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:595
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:598
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr ""
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:622
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:625
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "Språket ble endret, vil du lagre oppsettet for det forrige språket?"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:623
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:626
 #, kde-format
 msgid "Save config"
 msgstr "Lagre oppsett"
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr ""
 
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:662
 #: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
+#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:668
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Eksporter autorettingsfil"
@@ -1626,8 +1632,8 @@ msgid ""
 "(for tasks, this setting is only used for alarms).\n"
 "\n"
 "Example use cases: if the boss shares a folder with his secretary, only the "
-"boss should be marked as busy for his meetings, so he should select \"Admins"
-"\", since the secretary has no admin rights on the folder.\n"
+"boss should be marked as busy for his meetings, so he should select "
+"\"Admins\", since the secretary has no admin rights on the folder.\n"
 "On the other hand if a working group shares a Calendar for group meetings, "
 "all readers of the folders should be marked as busy for meetings.\n"
 "A company-wide folder with optional events in it would use \"Nobody\" since "

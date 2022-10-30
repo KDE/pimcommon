@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-29 00:48+0000\n"
-"PO-Revision-Date: 2022-10-21 13:34+0200\n"
+"PO-Revision-Date: 2022-10-28 08:58+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -278,10 +278,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
+#, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr "Substituïx les cometes &dobles per cometes tipogràfiques"
+msgstr "Substituïx les cometes dobles per cometes franceses"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommon/autocorrection/ui/autocorrectionwidget.ui:445
@@ -389,10 +388,9 @@ msgid "Import LibreOffice Autocorrection"
 msgstr "Importa la correcció automàtica de LibreOffice"
 
 #: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection File (*.data)"
+#, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "Fitxer de correcció automàtica de LibreOffice (*.data)"
+msgstr "Fitxer de correcció automàtica de LibreOffice (*.dat)"
 
 #: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:565
 #, kde-format
