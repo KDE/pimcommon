@@ -545,7 +545,7 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
         switch (type) {
         case AutoCorrectionWidget::LibreOffice:
             title = i18n("Import LibreOffice Autocorrection");
-            filter = i18n("LibreOffice Autocorrection File (*.data)");
+            filter = i18n("LibreOffice Autocorrection File (*.dat)");
             break;
         case AutoCorrectionWidget::KMail:
             title = i18n("Import KMail Autocorrection");
