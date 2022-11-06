@@ -29,6 +29,7 @@ Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList searchAutoCorrectLibreOfficeFiles
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList autoCorrectLibreOfficeLanguageToString(const QStringList &langs);
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QString libreOfficeLocalAutoCorrectionPath();
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QString containsAutoCorrectionFile(const QString &lang);
+Q_REQUIRED_RESULT PIMCOMMON_EXPORT QString libreOfficeSystemPath();
 };
 }
 PIMCOMMON_EXPORT QDebug operator<<(QDebug d, PimCommon::AutoCorrectionUtils::TypographicQuotes t);
