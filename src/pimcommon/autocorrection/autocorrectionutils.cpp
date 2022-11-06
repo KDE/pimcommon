@@ -65,7 +65,7 @@ QString AutoCorrectionUtils::libreOfficeSystemPath()
     return QStringLiteral("/usr/lib64/libreoffice/share/autocorr/");
 }
 
-QString AutoCorrectionUtils::libreOfficeLocalAutoCorrectionPath()
+QString AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath()
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/libreoffice/4/user/autocorr/");
 }
