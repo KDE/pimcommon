@@ -386,101 +386,109 @@ bool AutoCorrection::autoFormatURLs()
 QString AutoCorrection::autoDetectURL(const QString &_word) const
 {
     QString word = _word;
-
     /* this method is ported from lib/kotext/KoAutoFormat.cpp KoAutoFormat::doAutoDetectUrl
      * from Calligra 1.x branch */
-    // qCDebug(PIMCOMMON_LOG) <<"link:" << word;
+    // qCDebug(PIMCOMMON_LOG) << "link:" << word;
 
-    bool secure = false;
-    int link_type = 0;
-    int pos = word.indexOf(QLatin1String("http://"));
-    int tmp_pos = word.indexOf(QLatin1String("https://"));
+    // we start by iterating through a list of schemes, and if no match is found,
+    // we proceed to 3 special cases
 
-    if (tmp_pos != -1 && pos == -1) {
-        secure = true;
+    // list of the schemes, starting with http:// as most probable
+    const QStringList schemes = QStringList() << QStringLiteral("http://") << QStringLiteral("https://") << QStringLiteral("mailto:/")
+                                              << QStringLiteral("ftp://") << QStringLiteral("file://") << QStringLiteral("git://") << QStringLiteral("sftp://")
+                                              << QStringLiteral("magnet:?") << QStringLiteral("smb://") << QStringLiteral("nfs://") << QStringLiteral("fish://")
+                                              << QStringLiteral("ssh://") << QStringLiteral("telnet://") << QStringLiteral("irc://") << QStringLiteral("sip:")
+                                              << QStringLiteral("news:") << QStringLiteral("gopher://") << QStringLiteral("nntp://") << QStringLiteral("geo:")
+                                              << QStringLiteral("udp://") << QStringLiteral("rsync://") << QStringLiteral("dns://");
+
+    enum LinkType {
+        UNCLASSIFIED,
+        SCHEME,
+        MAILTO,
+        WWW,
+        FTP,
+    };
+    LinkType linkType = UNCLASSIFIED;
+    int pos = 0;
+    int contentPos = 0;
+
+    // TODO: ideally there would be proper pattern matching,
+    // instead of just searching for some key string, like done with indexOf.
+    // This should reduce the amount of possible mismatches
+    for (const QString &scheme : schemes) {
+        pos = word.indexOf(scheme);
+        if (pos != -1) {
+            linkType = SCHEME;
+            contentPos = pos + scheme.length();
+            break; // break as soon as you get a match
+        }
     }
 
-    if (tmp_pos < pos && tmp_pos != -1) {
-        pos = tmp_pos;
+    if (linkType == UNCLASSIFIED) {
+        pos = word.indexOf(QLatin1String("www."), 0, Qt::CaseInsensitive);
+        if (pos != -1 && word.indexOf(QLatin1Char('.'), pos + 4) != -1) {
+            linkType = WWW;
+            contentPos = pos + 4;
+        }
     }
-
-    tmp_pos = word.indexOf(QLatin1String("mailto:/"));
-    if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
-        pos = tmp_pos;
+    if (linkType == UNCLASSIFIED) {
+        pos = word.indexOf(QLatin1String("ftp."), 0, Qt::CaseInsensitive);
+        if (pos != -1 && word.indexOf(QLatin1Char('.'), pos + 4) != -1) {
+            linkType = FTP;
+            contentPos = pos + 4;
+        }
     }
-    tmp_pos = word.indexOf(QLatin1String("ftp://"));
-    const int secureftp = word.indexOf(QLatin1String("ftps://"));
-    if (secureftp != -1 && tmp_pos == -1) {
-        secure = true;
-    }
-
-    if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
-        pos = tmp_pos;
-    }
-    tmp_pos = word.indexOf(QLatin1String("ftp."));
-
-    if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
-        pos = tmp_pos;
-        link_type = 3;
-    }
-    tmp_pos = word.indexOf(QLatin1String("file:/"));
-    if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
-        pos = tmp_pos;
-    }
-    tmp_pos = word.indexOf(QLatin1String("news:"));
-    if ((tmp_pos < pos || pos == -1) && tmp_pos != -1) {
-        pos = tmp_pos;
-    }
-    tmp_pos = word.indexOf(QLatin1String("www."));
-
-    if ((tmp_pos < pos || pos == -1) && tmp_pos != -1 && word.indexOf(QLatin1Char('.'), tmp_pos + 4) != -1) {
-        pos = tmp_pos;
-        link_type = 2;
-    }
-    tmp_pos = word.indexOf(QLatin1Char('@'));
-    if (pos == -1 && tmp_pos != -1) {
-        pos = tmp_pos - 1;
-        QChar c;
-
-        while (pos >= 0) {
-            c = word.at(pos);
-            if (c.isPunct() && c != QLatin1Char('.') && c != QLatin1Char('_')) {
-                break;
-            } else {
-                --pos;
+    if (linkType == UNCLASSIFIED) {
+        const int separatorPos = word.lastIndexOf(QLatin1Char('@'));
+        if (separatorPos != -1) {
+            pos = separatorPos - 1;
+            QChar c;
+            while (pos >= 0) {
+                c = word.at(pos);
+                if ((c.isPunct() && c != QLatin1Char('.') && c != QLatin1Char('_')) || (c == QLatin1Char('@'))) {
+                    pos = -2;
+                    break;
+                } else {
+                    --pos;
+                }
+            }
+            if (pos == -1) { // a valid address
+                ++pos;
+                contentPos = separatorPos + 1;
+                linkType = MAILTO;
             }
         }
-        if (pos == tmp_pos - 1) { // not a valid address
-            pos = -1;
-        } else {
-            ++pos;
-        }
-        link_type = 1;
     }
 
-    if (pos != -1) {
-        // A URL inside e.g. quotes (like "http://www.calligra.org" with the quotes) shouldn't include the quote in the URL.
-        while (!word.at(word.length() - 1).isLetter() && !word.at(word.length() - 1).isDigit() && word.at(word.length() - 1) != QLatin1Char('/')) {
-            word.chop(1);
+    if (linkType != UNCLASSIFIED) {
+        // A URL inside e.g. quotes (like "http://www.calligra.org" with the quotes)
+        // shouldn't include the quote in the URL.
+        int lastPos = word.length() - 1;
+        while (!word.at(lastPos).isLetter() && !word.at(lastPos).isDigit() && word.at(lastPos) != QLatin1Char('/')) {
+            --lastPos;
         }
+        // sanity check: was there no real content behind the key string?
+        if (lastPos < contentPos) {
+            return QString();
+        }
+        word.truncate(lastPos + 1);
         word.remove(0, pos);
-        QString newWord = word;
-
-        switch (link_type) {
-        case 1:
-            newWord = QLatin1String("mailto:") + word;
+        switch (linkType) {
+        case MAILTO:
+            word.prepend(QLatin1String("mailto:"));
             break;
-        case 2:
-            newWord = (secure ? QStringLiteral("https://") : QStringLiteral("http://")) + word;
+        case WWW:
+            word.prepend(QLatin1String("http://"));
             break;
-        case 3:
-            newWord = (secure ? QStringLiteral("ftps://") : QStringLiteral("ftp://")) + word;
+        case FTP:
+            word.prepend(QLatin1String("ftps://"));
+            break;
+        case SCHEME:
+        case UNCLASSIFIED:
             break;
         }
-        // qCDebug(PIMCOMMON_LOG) <<"newWord:" << newWord;
-        return newWord;
+        return word;
     }
-
     return {};
 }
 
