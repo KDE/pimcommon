@@ -5,9 +5,7 @@
 */
 
 #include "autocorrectionsettings.h"
-#include "autocorrection/export/exportkmailautocorrection.h"
 #include "autocorrection/export/exportlibreofficeautocorrection.h"
-#include "autocorrection/import/importkmailautocorrection.h"
 #include "autocorrection/import/importlibreofficeautocorrection.h"
 
 #include "pimcommon_debug.h"
