@@ -21,7 +21,7 @@ namespace PimCommon
 class PIMCOMMON_EXPORT AutoCorrection
 {
 public:
-    explicit AutoCorrection();
+    AutoCorrection();
     ~AutoCorrection();
 
     void writeConfig();
