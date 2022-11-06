@@ -712,6 +712,22 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), QString(doubleQuote.begin + nbsp + text + nbsp + doubleQuote.end));
 }
+
+void AutoCorrectionTest::shouldAutoFormatURLs()
+{
+    PimCommon::AutoCorrection autocorrection;
+    PimCommon::AutoCorrectionSettings settings;
+    settings.setAutoFormatUrl(true);
+    autocorrection.setAutoCorrectionSettings(settings);
+    // autocorrection.autocorrect(true, doc, position);
+
+    //    QTextCursor cursor(&doc);
+    //    cursor.setPosition(2);
+    //    QTextCharFormat charFormat = cursor.charFormat();
+    //    QCOMPARE(charFormat.font().underline(), false);
+    //    QCOMPARE(charFormat.font().bold(), true);
+    //    QCOMPARE(charFormat.font().strikeOut(), false);
+}
 #if 0
 void AutoCorrectionTest::shouldLoadSaveAutocorrection_data()
 {
