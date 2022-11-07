@@ -25,15 +25,11 @@ public:
     void setTwoUpperLetterExceptions(const QSet<QString> &newTwoUpperLetterExceptions);
     void setAutocorrectEntries(const QHash<QString, QString> &newAutocorrectEntries);
     void setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries);
-    void setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes newTypographicSingleQuotes);
-    void setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes newTypographicDoubleQuotes);
 
 protected:
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;
     QHash<QString, QString> mSuperScriptEntries;
-    AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
-    AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
 };
 }

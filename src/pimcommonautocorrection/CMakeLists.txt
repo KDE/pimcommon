@@ -72,8 +72,6 @@ target_sources(KF5PimCommonAutoCorrection PRIVATE
 
     autocorrection/export/exportabstractautocorrection.h
     autocorrection/export/exportabstractautocorrection.cpp
-    autocorrection/export/exportkmailautocorrection.h
-    autocorrection/export/exportkmailautocorrection.cpp
     autocorrection/export/exportlibreofficeautocorrection.h
     autocorrection/export/exportlibreofficeautocorrection.cpp
 
@@ -131,6 +129,7 @@ install(TARGETS
 
 if (BUILD_TESTING)
     add_subdirectory(autocorrection/autotests)
+    add_subdirectory(autocorrection/tests)
 endif()
 
 

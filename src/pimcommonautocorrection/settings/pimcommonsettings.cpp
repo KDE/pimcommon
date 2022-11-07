@@ -28,6 +28,8 @@ PimCommonSettings::PimCommonSettings()
     connect(mConfigSyncTimer, &QTimer::timeout, this, &PimCommonSettings::slotSyncNow);
 }
 
+PimCommonSettings::~PimCommonSettings() = default;
+
 void PimCommonSettings::requestSync()
 {
     if (!mConfigSyncTimer->isActive()) {
@@ -39,5 +41,3 @@ void PimCommonSettings::slotSyncNow()
 {
     config()->sync();
 }
-
-PimCommonSettings::~PimCommonSettings() = default;

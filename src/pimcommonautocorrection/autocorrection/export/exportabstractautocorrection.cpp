@@ -30,13 +30,3 @@ void ExportAbstractAutocorrection::setSuperScriptEntries(const QHash<QString, QS
 {
     mSuperScriptEntries = newSuperScriptEntries;
 }
-
-void ExportAbstractAutocorrection::setTypographicSingleQuotes(AutoCorrectionUtils::TypographicQuotes newTypographicSingleQuotes)
-{
-    mTypographicSingleQuotes = newTypographicSingleQuotes;
-}
-
-void ExportAbstractAutocorrection::setTypographicDoubleQuotes(AutoCorrectionUtils::TypographicQuotes newTypographicDoubleQuotes)
-{
-    mTypographicDoubleQuotes = newTypographicDoubleQuotes;
-}

@@ -60,7 +60,7 @@ private Q_SLOTS:
 
 private:
     TextEditAutoCorrectionWidget *mEdit = nullptr;
-    PimCommon::LineEditWithAutoCorrection *mSubject = nullptr;
-    PimCommon::AutoCorrection *mAutoCorrection = nullptr;
+    PimCommonAutoCorrection::LineEditWithAutoCorrection *mSubject = nullptr;
+    PimCommonAutoCorrection::AutoCorrection *mAutoCorrection = nullptr;
     KSharedConfig::Ptr mConfig;
 };
