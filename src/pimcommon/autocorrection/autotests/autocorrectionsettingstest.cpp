@@ -30,5 +30,7 @@ void AutoCorrectionSettingsTest::shouldHaveDefaultValues()
     QVERIFY(!settings.isAutoFormatUrl());
     QVERIFY(!settings.isAutoBoldUnderline());
     QVERIFY(!settings.isSuperScript());
+    QVERIFY(!settings.isReplaceDoubleQuotesByFrenchQuotes());
+    QVERIFY(!settings.isAddNonBreakingSpace());
     // TODO
 }
