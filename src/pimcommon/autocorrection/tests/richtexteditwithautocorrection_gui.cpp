@@ -6,8 +6,6 @@
 
 #include "autocorrection/widgets/richtexteditwithautocorrection.h"
 
-#include "pimcommon_debug.h"
-
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
