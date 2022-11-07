@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto w = new PimCommon::RichTextEditWithAutoCorrection;
+    auto w = new PimCommonAutoCorrection::RichTextEditWithAutoCorrection;
 
     w->show();
     app.exec();
