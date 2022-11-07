@@ -34,20 +34,20 @@ AutoCorrectionTest::~AutoCorrectionTest() = default;
 void AutoCorrectionTest::shouldHaveDefaultValue()
 {
     PimCommon::AutoCorrection autocorrection;
-    QVERIFY(!autocorrection.autoCorrectionSettings().isEnabledAutoCorrection());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isUppercaseFirstCharOfSentence());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isFixTwoUppercaseChars());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isSingleSpaces());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isAutoFractions());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isCapitalizeWeekDays());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isReplaceDoubleQuotes());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isReplaceSingleQuotes());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isAdvancedAutocorrect());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isAutoFormatUrl());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isAutoBoldUnderline());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isSuperScript());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isAddNonBreakingSpace());
-    QVERIFY(!autocorrection.autoCorrectionSettings().isReplaceDoubleQuotesByFrenchQuotes());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isEnabledAutoCorrection());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isUppercaseFirstCharOfSentence());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isFixTwoUppercaseChars());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isSingleSpaces());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isAutoFractions());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isCapitalizeWeekDays());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isReplaceDoubleQuotes());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isReplaceSingleQuotes());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isAdvancedAutocorrect());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isAutoFormatUrl());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isAutoBoldUnderline());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isSuperScript());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isAddNonBreakingSpace());
+    QVERIFY(!autocorrection.autoCorrectionSettings()->isReplaceDoubleQuotesByFrenchQuotes());
 }
 
 void AutoCorrectionTest::shouldRestoreValue()
@@ -59,9 +59,9 @@ void AutoCorrectionTest::shouldRestoreValue()
 void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setUppercaseFirstCharOfSentence(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setUppercaseFirstCharOfSentence(true);
     autocorrection.setAutoCorrectionSettings(settings);
 
     // Uppercase here.
@@ -98,9 +98,9 @@ void AutoCorrectionTest::shouldUpperCaseFirstCharOfSentence()
 void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setFixTwoUppercaseChars(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setFixTwoUppercaseChars(true);
     autocorrection.setAutoCorrectionSettings(settings);
 
     // Remove two uppercases
@@ -140,7 +140,7 @@ void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
 
     QSet<QString> exception;
     exception.insert(QStringLiteral("ABc"));
-    settings.setTwoUpperLetterExceptions(exception);
+    settings->setTwoUpperLetterExceptions(exception);
     autocorrection.setAutoCorrectionSettings(settings);
     text = QStringLiteral("ABc");
     doc.setPlainText(text);
@@ -152,16 +152,16 @@ void AutoCorrectionTest::shouldFixTwoUpperCaseChars()
 void AutoCorrectionTest::shouldReplaceSingleQuote()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setReplaceSingleQuotes(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setReplaceSingleQuotes(true);
     autocorrection.setAutoCorrectionSettings(settings);
 
     PimCommon::AutoCorrectionUtils::TypographicQuotes simpleQuote;
     simpleQuote.begin = QLatin1Char('A');
     simpleQuote.end = QLatin1Char('B');
 
-    settings.setTypographicSingleQuotes(simpleQuote);
+    settings->setTypographicSingleQuotes(simpleQuote);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -187,14 +187,14 @@ void AutoCorrectionTest::shouldReplaceSingleQuote()
 void AutoCorrectionTest::shouldReplaceDoubleQuote()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setReplaceDoubleQuotes(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setReplaceDoubleQuotes(true);
     PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
 
-    settings.setTypographicDoubleQuotes(doubleQuote);
+    settings->setTypographicDoubleQuotes(doubleQuote);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -221,13 +221,13 @@ void AutoCorrectionTest::shouldReplaceDoubleQuote()
 void AutoCorrectionTest::shouldNotReplaceUppercaseLetter()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setFixTwoUppercaseChars(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setFixTwoUppercaseChars(true);
     autocorrection.setAutoCorrectionSettings(settings);
     QSet<QString> exceptions;
     exceptions.insert(QStringLiteral("ABc"));
-    settings.setTwoUpperLetterExceptions(exceptions);
+    settings->setTwoUpperLetterExceptions(exceptions);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -241,9 +241,9 @@ void AutoCorrectionTest::shouldNotReplaceUppercaseLetter()
 void AutoCorrectionTest::shouldReplaceToTextFormat()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setAutoBoldUnderline(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setAutoBoldUnderline(true);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -317,9 +317,9 @@ void AutoCorrectionTest::shouldReplaceToTextFormat()
 void AutoCorrectionTest::shouldReplaceAutoFraction()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setAutoFractions(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setAutoFractions(true);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -343,9 +343,9 @@ void AutoCorrectionTest::shouldReplaceAutoFraction()
 void AutoCorrectionTest::shouldNotAddSpaceWhenWeAlreadyHaveASpace()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setSingleSpaces(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setSingleSpaces(true);
     autocorrection.setAutoCorrectionSettings(settings);
     QTextDocument doc;
     // We already a space => don't allow to add more
@@ -374,9 +374,9 @@ void AutoCorrectionTest::shouldNotAddSpaceWhenWeAlreadyHaveASpace()
 void AutoCorrectionTest::shouldAutocorrectWord()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setAdvancedAutocorrect(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setAdvancedAutocorrect(true);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -393,7 +393,7 @@ void AutoCorrectionTest::shouldAutocorrectWord()
     QHash<QString, QString> entries;
     const QString convertWord = QStringLiteral("BLABLA");
     entries.insert(text, convertWord);
-    settings.setAutocorrectEntries(entries);
+    settings->setAutocorrectEntries(entries);
     autocorrection.setAutoCorrectionSettings(settings);
     text = QStringLiteral("FOOAA");
     doc.setPlainText(text);
@@ -415,13 +415,13 @@ void AutoCorrectionTest::shouldAutocorrectWord()
 void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setUppercaseFirstCharOfSentence(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setUppercaseFirstCharOfSentence(true);
     autocorrection.setAutoCorrectionSettings(settings);
     QSet<QString> lst;
     lst.insert(QStringLiteral("Foo."));
-    settings.setUpperCaseExceptions(lst);
+    settings->setUpperCaseExceptions(lst);
     autocorrection.setAutoCorrectionSettings(settings);
 
     // Uppercase here.
@@ -432,7 +432,7 @@ void AutoCorrectionTest::shouldNotUpperCaseFirstCharOfSentence()
     autocorrection.autocorrect(false, doc, position);
     QCOMPARE(doc.toPlainText(), text);
 
-    settings.setUpperCaseExceptions(QSet<QString>());
+    settings->setUpperCaseExceptions(QSet<QString>());
     autocorrection.setAutoCorrectionSettings(settings);
 
     doc.setPlainText(text);
@@ -522,10 +522,10 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord()
     QFETCH(mapAutoCorrect, convertStringHash);
 
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setAdvancedAutocorrect(true);
-    settings.setAutocorrectEntries(convertStringHash);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setAdvancedAutocorrect(true);
+    settings->setAutocorrectEntries(convertStringHash);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -563,12 +563,12 @@ void AutoCorrectionTest::shouldAddNonBreakingSpace()
     QFETCH(bool, enableAddNonBreakingSpace);
 
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setAddNonBreakingSpace(enableAddNonBreakingSpace);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setAddNonBreakingSpace(enableAddNonBreakingSpace);
 
-    settings.setLanguage(language);
-    settings.setNonBreakingSpace(QChar(QLatin1Char('b')));
+    settings->setLanguage(language);
+    settings->setNonBreakingSpace(QChar(QLatin1Char('b')));
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -630,12 +630,12 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
     QFETCH(int, position);
 
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(enable);
-    settings.setAdvancedAutocorrect(advancedAutocorrect);
-    settings.setAutocorrectEntries(convertStringHash);
-    settings.setUppercaseFirstCharOfSentence(uppercaseFirstCharOfSentence);
-    settings.setFixTwoUppercaseChars(fixtwouppercase);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(enable);
+    settings->setAdvancedAutocorrect(advancedAutocorrect);
+    settings->setAutocorrectEntries(convertStringHash);
+    settings->setUppercaseFirstCharOfSentence(uppercaseFirstCharOfSentence);
+    settings->setFixTwoUppercaseChars(fixtwouppercase);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -648,27 +648,27 @@ void AutoCorrectionTest::shouldReplaceWithMultiOption()
 void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setEnabledAutoCorrection(true);
-    settings.setReplaceDoubleQuotes(true);
-    settings.setReplaceSingleQuotes(true);
-    settings.setLanguage(QStringLiteral("fr"));
-    settings.setAddNonBreakingSpace(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setEnabledAutoCorrection(true);
+    settings->setReplaceDoubleQuotes(true);
+    settings->setReplaceSingleQuotes(true);
+    settings->setLanguage(QStringLiteral("fr"));
+    settings->setAddNonBreakingSpace(true);
     // TODO fix me verify why it doesn't use no breaking space
     const QChar nbsp = QChar(/*QChar::Nbsp*/ QLatin1Char('b'));
-    settings.setNonBreakingSpace(nbsp);
+    settings->setNonBreakingSpace(nbsp);
     autocorrection.setAutoCorrectionSettings(settings);
 
     PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote;
     doubleQuote.begin = QLatin1Char('A');
     doubleQuote.end = QLatin1Char('B');
-    settings.setTypographicDoubleQuotes(doubleQuote);
+    settings->setTypographicDoubleQuotes(doubleQuote);
 
     PimCommon::AutoCorrectionUtils::TypographicQuotes simpleQuote;
     simpleQuote.begin = QLatin1Char('A');
     simpleQuote.end = QLatin1Char('B');
 
-    settings.setTypographicSingleQuotes(simpleQuote);
+    settings->setTypographicSingleQuotes(simpleQuote);
     autocorrection.setAutoCorrectionSettings(settings);
 
     QTextDocument doc;
@@ -716,8 +716,8 @@ void AutoCorrectionTest::shouldAddNonBreakingSpaceBeforeAfterQuote()
 void AutoCorrectionTest::shouldAutoFormatURLs()
 {
     PimCommon::AutoCorrection autocorrection;
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setAutoFormatUrl(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setAutoFormatUrl(true);
     autocorrection.setAutoCorrectionSettings(settings);
     // autocorrection.autocorrect(true, doc, position);
 

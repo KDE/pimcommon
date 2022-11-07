@@ -52,8 +52,8 @@ AutoCorrection *RichTextEditWithAutoCorrection::autocorrection() const
 
 void RichTextEditWithAutoCorrection::setAutocorrectionLanguage(const QString &language)
 {
-    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    settings.setLanguage(language);
+    PimCommon::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    settings->setLanguage(language);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
 }
 
@@ -65,7 +65,7 @@ static bool isSpecial(const QTextCharFormat &charFormat)
 
 void RichTextEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
 {
-    if (d->mAutoCorrection && d->mAutoCorrection->autoCorrectionSettings().isEnabledAutoCorrection()) {
+    if (d->mAutoCorrection && d->mAutoCorrection->autoCorrectionSettings()->isEnabledAutoCorrection()) {
         if ((e->key() == Qt::Key_Space) || (e->key() == Qt::Key_Enter) || (e->key() == Qt::Key_Return)) {
             if (!textCursor().hasSelection()) {
                 const QTextCharFormat initialTextFormat = textCursor().charFormat();

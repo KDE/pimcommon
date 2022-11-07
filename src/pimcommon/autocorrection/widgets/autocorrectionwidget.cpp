@@ -145,21 +145,21 @@ void AutoCorrectionWidget::loadConfig()
     if (!d->mAutoCorrection) {
         return;
     }
-    const AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    d->ui->autoChangeFormat->setChecked(settings.isAutoBoldUnderline());
-    d->ui->autoFormatUrl->setChecked(settings.isAutoFormatUrl());
-    d->ui->enabledAutocorrection->setChecked(settings.isEnabledAutoCorrection());
-    d->ui->upperCase->setChecked(settings.isUppercaseFirstCharOfSentence());
-    d->ui->upperUpper->setChecked(settings.isFixTwoUppercaseChars());
-    d->ui->ignoreDoubleSpace->setChecked(settings.isSingleSpaces());
-    d->ui->autoReplaceNumber->setChecked(settings.isAutoFractions());
-    d->ui->capitalizeDaysName->setChecked(settings.isCapitalizeWeekDays());
-    d->ui->advancedAutocorrection->setChecked(settings.isAdvancedAutocorrect());
-    d->ui->autoSuperScript->setChecked(settings.isSuperScript());
-    d->ui->typographicDoubleQuotes->setChecked(settings.isReplaceDoubleQuotes());
-    d->ui->typographicSingleQuotes->setChecked(settings.isReplaceSingleQuotes());
-    d->ui->addNonBreakingSpaceInFrench->setChecked(settings.isAddNonBreakingSpace());
-    d->ui->replaceDoubleQuotesByFrenchQuotes->setChecked(settings.isReplaceDoubleQuotesByFrenchQuotes());
+    AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    d->ui->autoChangeFormat->setChecked(settings->isAutoBoldUnderline());
+    d->ui->autoFormatUrl->setChecked(settings->isAutoFormatUrl());
+    d->ui->enabledAutocorrection->setChecked(settings->isEnabledAutoCorrection());
+    d->ui->upperCase->setChecked(settings->isUppercaseFirstCharOfSentence());
+    d->ui->upperUpper->setChecked(settings->isFixTwoUppercaseChars());
+    d->ui->ignoreDoubleSpace->setChecked(settings->isSingleSpaces());
+    d->ui->autoReplaceNumber->setChecked(settings->isAutoFractions());
+    d->ui->capitalizeDaysName->setChecked(settings->isCapitalizeWeekDays());
+    d->ui->advancedAutocorrection->setChecked(settings->isAdvancedAutocorrect());
+    d->ui->autoSuperScript->setChecked(settings->isSuperScript());
+    d->ui->typographicDoubleQuotes->setChecked(settings->isReplaceDoubleQuotes());
+    d->ui->typographicSingleQuotes->setChecked(settings->isReplaceSingleQuotes());
+    d->ui->addNonBreakingSpaceInFrench->setChecked(settings->isAddNonBreakingSpace());
+    d->ui->replaceDoubleQuotesByFrenchQuotes->setChecked(settings->isReplaceDoubleQuotesByFrenchQuotes());
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }
@@ -167,24 +167,24 @@ void AutoCorrectionWidget::loadConfig()
 void AutoCorrectionWidget::loadAutoCorrectionAndException()
 {
     /* tab 2 - Custom Quotes */
-    const AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    d->m_singleQuotes = settings.typographicSingleQuotes();
+    AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    d->m_singleQuotes = settings->typographicSingleQuotes();
     d->ui->simpleQuoteBeginReplace->setText(d->m_singleQuotes.begin);
     d->ui->simpleQuoteEndReplace->setText(d->m_singleQuotes.end);
-    d->m_doubleQuotes = settings.typographicDoubleQuotes();
+    d->m_doubleQuotes = settings->typographicDoubleQuotes();
     d->ui->doubleQuoteBeginReplace->setText(d->m_doubleQuotes.begin);
     d->ui->doubleQuoteEndReplace->setText(d->m_doubleQuotes.end);
     enableSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
     enableDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
 
     /* tab 3 - Advanced Autocorrection */
-    d->m_autocorrectEntries = settings.autocorrectEntries();
+    d->m_autocorrectEntries = settings->autocorrectEntries();
     addAutoCorrectEntries();
 
     enableAdvAutocorrection(d->ui->advancedAutocorrection->isChecked());
     /* tab 4 - Exceptions */
-    d->m_upperCaseExceptions = settings.upperCaseExceptions();
-    d->m_twoUpperLetterExceptions = settings.twoUpperLetterExceptions();
+    d->m_upperCaseExceptions = settings->upperCaseExceptions();
+    d->m_twoUpperLetterExceptions = settings->twoUpperLetterExceptions();
 
     d->ui->twoUpperLetterList->clear();
     d->ui->twoUpperLetterList->addItems(d->m_twoUpperLetterExceptions.values());
@@ -213,29 +213,29 @@ void AutoCorrectionWidget::writeConfig()
     if (!d->mAutoCorrection) {
         return;
     }
-    AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    settings.setAutoBoldUnderline(d->ui->autoChangeFormat->isChecked());
-    settings.setAutoFormatUrl(d->ui->autoFormatUrl->isChecked());
-    settings.setEnabledAutoCorrection(d->ui->enabledAutocorrection->isChecked());
-    settings.setUppercaseFirstCharOfSentence(d->ui->upperCase->isChecked());
-    settings.setFixTwoUppercaseChars(d->ui->upperUpper->isChecked());
-    settings.setSingleSpaces(d->ui->ignoreDoubleSpace->isChecked());
-    settings.setCapitalizeWeekDays(d->ui->capitalizeDaysName->isChecked());
-    settings.setAdvancedAutocorrect(d->ui->advancedAutocorrection->isChecked());
-    settings.setSuperScript(d->ui->autoSuperScript->isChecked());
+    AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    settings->setAutoBoldUnderline(d->ui->autoChangeFormat->isChecked());
+    settings->setAutoFormatUrl(d->ui->autoFormatUrl->isChecked());
+    settings->setEnabledAutoCorrection(d->ui->enabledAutocorrection->isChecked());
+    settings->setUppercaseFirstCharOfSentence(d->ui->upperCase->isChecked());
+    settings->setFixTwoUppercaseChars(d->ui->upperUpper->isChecked());
+    settings->setSingleSpaces(d->ui->ignoreDoubleSpace->isChecked());
+    settings->setCapitalizeWeekDays(d->ui->capitalizeDaysName->isChecked());
+    settings->setAdvancedAutocorrect(d->ui->advancedAutocorrection->isChecked());
+    settings->setSuperScript(d->ui->autoSuperScript->isChecked());
 
-    settings.setAutoFractions(d->ui->autoReplaceNumber->isChecked());
+    settings->setAutoFractions(d->ui->autoReplaceNumber->isChecked());
 
-    settings.setAutocorrectEntries(d->m_autocorrectEntries);
-    settings.setUpperCaseExceptions(d->m_upperCaseExceptions);
-    settings.setTwoUpperLetterExceptions(d->m_twoUpperLetterExceptions);
+    settings->setAutocorrectEntries(d->m_autocorrectEntries);
+    settings->setUpperCaseExceptions(d->m_upperCaseExceptions);
+    settings->setTwoUpperLetterExceptions(d->m_twoUpperLetterExceptions);
 
-    settings.setReplaceDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
-    settings.setReplaceSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
-    settings.setTypographicSingleQuotes(d->m_singleQuotes);
-    settings.setTypographicDoubleQuotes(d->m_doubleQuotes);
-    settings.setAddNonBreakingSpace(d->ui->addNonBreakingSpaceInFrench->isChecked());
-    settings.setReplaceDoubleQuotesByFrenchQuotes(d->ui->replaceDoubleQuotesByFrenchQuotes->isChecked());
+    settings->setReplaceDoubleQuotes(d->ui->typographicDoubleQuotes->isChecked());
+    settings->setReplaceSingleQuotes(d->ui->typographicSingleQuotes->isChecked());
+    settings->setTypographicSingleQuotes(d->m_singleQuotes);
+    settings->setTypographicDoubleQuotes(d->m_doubleQuotes);
+    settings->setAddNonBreakingSpace(d->ui->addNonBreakingSpaceInFrench->isChecked());
+    settings->setReplaceDoubleQuotesByFrenchQuotes(d->ui->replaceDoubleQuotesByFrenchQuotes->isChecked());
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     d->mAutoCorrection->writeConfig();
     d->mWasChanged = false;
@@ -604,8 +604,8 @@ void AutoCorrectionWidget::slotImportAutoCorrection(QAction *act)
 
 void AutoCorrectionWidget::setLanguage(const QString &lang)
 {
-    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    settings.setLanguage(lang);
+    PimCommon::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    settings->setLanguage(lang);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
@@ -635,8 +635,8 @@ void AutoCorrectionWidget::changeLanguage(int index)
         }
     }
     const QString lang = d->ui->autocorrectionLanguage->itemData(index).toString();
-    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    settings.setLanguage(lang);
+    PimCommon::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    settings->setLanguage(lang);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
@@ -651,8 +651,8 @@ void AutoCorrectionWidget::emitChanged()
 void AutoCorrectionWidget::loadGlobalAutoCorrectionAndException()
 {
     const QString lang = d->ui->autocorrectionLanguage->itemData(d->ui->autocorrectionLanguage->currentIndex()).toString();
-    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    settings.setLanguage(lang, true);
+    PimCommon::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    settings->setLanguage(lang, true);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     loadAutoCorrectionAndException();
     d->mWasChanged = true;

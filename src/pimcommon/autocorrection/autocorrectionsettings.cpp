@@ -19,16 +19,59 @@
 #include <QXmlStreamWriter>
 
 using namespace PimCommon;
+namespace PimCommon
+{
+class AutoCorrectionSettingsPrivate
+{
+public:
+    AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
+    AutoCorrectionUtils::TypographicQuotes mDoubleFrenchQuotes;
+
+    QHash<QString, QString> mAutocorrectEntries;
+    QHash<QString, QString> mSuperScriptEntries;
+
+    QSet<QString> mUpperCaseExceptions;
+    QSet<QString> mTwoUpperLetterExceptions;
+
+    QString mAutoCorrectLang;
+
+    QChar mNonBreakingSpace;
+
+    int mMaxFindStringLength = 0;
+    int mMinFindStringLength = 0;
+
+    bool mSingleSpaces = true; // suppress double spaces.
+    bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase
+    bool mFixTwoUppercaseChars = false; // convert two uppercase characters to one upper and one lowercase.
+    bool mAutoFractions = true; // replace 1/2 with ½
+    bool mCapitalizeWeekDays = false;
+    bool mAdvancedAutocorrect = false; // autocorrection from a list of entries
+
+    bool mReplaceDoubleQuotes = false; // replace double quotes with typographical quotes
+    bool mReplaceSingleQuotes = false; // replace single quotes with typographical quotes
+
+    bool mAutoFormatUrl = false;
+    bool mAutoBoldUnderline = false;
+    bool mEnabled = false;
+    bool mSuperScriptAppendix = false;
+
+    bool mAddNonBreakingSpace = false;
+    bool mReplaceDoubleQuotesByFrenchQuotes = false;
+};
+}
+
 AutoCorrectionSettings::AutoCorrectionSettings()
+    : d(new PimCommon::AutoCorrectionSettingsPrivate)
 {
     // default double quote open 0x201c
     // default double quote close 0x201d
     // default single quote open 0x2018
     // default single quote close 0x2019
-    mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
-    mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
-    mDoubleFrenchQuotes = AutoCorrectionUtils::typographicDefaultFrenchQuotes();
-    mNonBreakingSpace = QChar(QChar::Nbsp);
+    d->mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+    d->mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+    d->mDoubleFrenchQuotes = AutoCorrectionUtils::typographicDefaultFrenchQuotes();
+    d->mNonBreakingSpace = QChar(QChar::Nbsp);
     readConfig();
 }
 
@@ -36,243 +79,243 @@ AutoCorrectionSettings::~AutoCorrectionSettings() = default;
 
 void AutoCorrectionSettings::setCapitalizeWeekDays(bool b)
 {
-    mCapitalizeWeekDays = b;
+    d->mCapitalizeWeekDays = b;
 }
 
 void AutoCorrectionSettings::setReplaceDoubleQuotes(bool b)
 {
-    mReplaceDoubleQuotes = b;
+    d->mReplaceDoubleQuotes = b;
 }
 
 void AutoCorrectionSettings::setReplaceSingleQuotes(bool b)
 {
-    mReplaceSingleQuotes = b;
+    d->mReplaceSingleQuotes = b;
 }
 
 void AutoCorrectionSettings::setAdvancedAutocorrect(bool b)
 {
-    mAdvancedAutocorrect = b;
+    d->mAdvancedAutocorrect = b;
 }
 
 void AutoCorrectionSettings::setAutoFormatUrl(bool b)
 {
-    mAutoFormatUrl = b;
+    d->mAutoFormatUrl = b;
 }
 
 void AutoCorrectionSettings::setAutoBoldUnderline(bool b)
 {
-    mAutoBoldUnderline = b;
+    d->mAutoBoldUnderline = b;
 }
 
 void AutoCorrectionSettings::setSuperScript(bool b)
 {
-    mSuperScriptAppendix = b;
+    d->mSuperScriptAppendix = b;
 }
 
 void AutoCorrectionSettings::setAddNonBreakingSpace(bool b)
 {
-    mAddNonBreakingSpace = b;
+    d->mAddNonBreakingSpace = b;
 }
 
 bool AutoCorrectionSettings::isEnabledAutoCorrection() const
 {
-    return mEnabled;
+    return d->mEnabled;
 }
 
 bool AutoCorrectionSettings::isUppercaseFirstCharOfSentence() const
 {
-    return mUppercaseFirstCharOfSentence;
+    return d->mUppercaseFirstCharOfSentence;
 }
 
 bool AutoCorrectionSettings::isFixTwoUppercaseChars() const
 {
-    return mFixTwoUppercaseChars;
+    return d->mFixTwoUppercaseChars;
 }
 
 bool AutoCorrectionSettings::isSingleSpaces() const
 {
-    return mSingleSpaces;
+    return d->mSingleSpaces;
 }
 
 bool AutoCorrectionSettings::isAutoFractions() const
 {
-    return mAutoFractions;
+    return d->mAutoFractions;
 }
 
 bool AutoCorrectionSettings::isCapitalizeWeekDays() const
 {
-    return mCapitalizeWeekDays;
+    return d->mCapitalizeWeekDays;
 }
 
 bool AutoCorrectionSettings::isReplaceDoubleQuotes() const
 {
-    return mReplaceDoubleQuotes;
+    return d->mReplaceDoubleQuotes;
 }
 
 bool AutoCorrectionSettings::isReplaceSingleQuotes() const
 {
-    return mReplaceSingleQuotes;
+    return d->mReplaceSingleQuotes;
 }
 
 bool AutoCorrectionSettings::isAdvancedAutocorrect() const
 {
-    return mAdvancedAutocorrect;
+    return d->mAdvancedAutocorrect;
 }
 
 bool AutoCorrectionSettings::isAutoFormatUrl() const
 {
-    return mAutoFormatUrl;
+    return d->mAutoFormatUrl;
 }
 
 bool AutoCorrectionSettings::isAutoBoldUnderline() const
 {
-    return mAutoBoldUnderline;
+    return d->mAutoBoldUnderline;
 }
 
 bool AutoCorrectionSettings::isSuperScript() const
 {
-    return mSuperScriptAppendix;
+    return d->mSuperScriptAppendix;
 }
 
 bool AutoCorrectionSettings::isAddNonBreakingSpace() const
 {
-    return mAddNonBreakingSpace;
+    return d->mAddNonBreakingSpace;
 }
 
 bool AutoCorrectionSettings::isReplaceDoubleQuotesByFrenchQuotes() const
 {
-    return mReplaceDoubleQuotesByFrenchQuotes;
+    return d->mReplaceDoubleQuotesByFrenchQuotes;
 }
 
 void AutoCorrectionSettings::setEnabledAutoCorrection(bool b)
 {
-    mEnabled = b;
+    d->mEnabled = b;
 }
 
 void AutoCorrectionSettings::setReplaceDoubleQuotesByFrenchQuotes(bool b)
 {
-    mReplaceDoubleQuotesByFrenchQuotes = b;
+    d->mReplaceDoubleQuotesByFrenchQuotes = b;
 }
 
 PimCommon::AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::typographicSingleQuotes() const
 {
-    return mTypographicSingleQuotes;
+    return d->mTypographicSingleQuotes;
 }
 
 PimCommon::AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::typographicDoubleQuotes() const
 {
-    return mTypographicDoubleQuotes;
+    return d->mTypographicDoubleQuotes;
 }
 
 void AutoCorrectionSettings::setTypographicSingleQuotes(PimCommon::AutoCorrectionUtils::TypographicQuotes singleQuote)
 {
-    mTypographicSingleQuotes = singleQuote;
+    d->mTypographicSingleQuotes = singleQuote;
 }
 
 void AutoCorrectionSettings::setTypographicDoubleQuotes(PimCommon::AutoCorrectionUtils::TypographicQuotes doubleQuote)
 {
-    mTypographicDoubleQuotes = doubleQuote;
+    d->mTypographicDoubleQuotes = doubleQuote;
 }
 
 void AutoCorrectionSettings::readConfig()
 {
-    mAutoBoldUnderline = PimCommon::PimCommonSettings::self()->autoBoldUnderline();
-    mAutoFormatUrl = PimCommon::PimCommonSettings::self()->autoFormatUrl();
-    mUppercaseFirstCharOfSentence = PimCommon::PimCommonSettings::self()->uppercaseFirstCharOfSentence();
-    mFixTwoUppercaseChars = PimCommon::PimCommonSettings::self()->fixTwoUppercaseChars();
-    mSingleSpaces = PimCommon::PimCommonSettings::self()->singleSpaces();
-    mAutoFractions = PimCommon::PimCommonSettings::self()->autoFractions();
-    mCapitalizeWeekDays = PimCommon::PimCommonSettings::self()->capitalizeWeekDays();
-    mAdvancedAutocorrect = PimCommon::PimCommonSettings::self()->advancedAutocorrect();
-    mReplaceDoubleQuotes = PimCommon::PimCommonSettings::self()->replaceDoubleQuotes();
-    mReplaceSingleQuotes = PimCommon::PimCommonSettings::self()->replaceSingleQuotes();
-    mEnabled = PimCommon::PimCommonSettings::self()->enabled();
-    mSuperScriptAppendix = PimCommon::PimCommonSettings::self()->superScript();
-    mAddNonBreakingSpace = PimCommon::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
-    mReplaceDoubleQuotesByFrenchQuotes = PimCommon::PimCommonSettings::self()->replaceDoubleQuotesByFrenchQuotes();
+    d->mAutoBoldUnderline = PimCommon::PimCommonSettings::self()->autoBoldUnderline();
+    d->mAutoFormatUrl = PimCommon::PimCommonSettings::self()->autoFormatUrl();
+    d->mUppercaseFirstCharOfSentence = PimCommon::PimCommonSettings::self()->uppercaseFirstCharOfSentence();
+    d->mFixTwoUppercaseChars = PimCommon::PimCommonSettings::self()->fixTwoUppercaseChars();
+    d->mSingleSpaces = PimCommon::PimCommonSettings::self()->singleSpaces();
+    d->mAutoFractions = PimCommon::PimCommonSettings::self()->autoFractions();
+    d->mCapitalizeWeekDays = PimCommon::PimCommonSettings::self()->capitalizeWeekDays();
+    d->mAdvancedAutocorrect = PimCommon::PimCommonSettings::self()->advancedAutocorrect();
+    d->mReplaceDoubleQuotes = PimCommon::PimCommonSettings::self()->replaceDoubleQuotes();
+    d->mReplaceSingleQuotes = PimCommon::PimCommonSettings::self()->replaceSingleQuotes();
+    d->mEnabled = PimCommon::PimCommonSettings::self()->enabled();
+    d->mSuperScriptAppendix = PimCommon::PimCommonSettings::self()->superScript();
+    d->mAddNonBreakingSpace = PimCommon::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
+    d->mReplaceDoubleQuotesByFrenchQuotes = PimCommon::PimCommonSettings::self()->replaceDoubleQuotesByFrenchQuotes();
 
-    mTypographicSingleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicSingleQuotes());
-    if (mTypographicSingleQuotes.isEmpty()) {
-        mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
+    d->mTypographicSingleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicSingleQuotes());
+    if (d->mTypographicSingleQuotes.isEmpty()) {
+        d->mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
     }
-    mTypographicDoubleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicDoubleQuotes());
-    if (mTypographicDoubleQuotes.isEmpty()) {
-        mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
+    d->mTypographicDoubleQuotes = AutoCorrectionUtils::TypographicQuotes::fromString(PimCommon::PimCommonSettings::self()->typographicDoubleQuotes());
+    if (d->mTypographicDoubleQuotes.isEmpty()) {
+        d->mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
     }
     readAutoCorrectionFile();
 }
 
 void AutoCorrectionSettings::writeConfig()
 {
-    PimCommon::PimCommonSettings::self()->setAutoBoldUnderline(mAutoBoldUnderline);
-    PimCommon::PimCommonSettings::self()->setAutoFormatUrl(mAutoFormatUrl);
-    PimCommon::PimCommonSettings::self()->setUppercaseFirstCharOfSentence(mUppercaseFirstCharOfSentence);
-    PimCommon::PimCommonSettings::self()->setFixTwoUppercaseChars(mFixTwoUppercaseChars);
-    PimCommon::PimCommonSettings::self()->setSingleSpaces(mSingleSpaces);
-    PimCommon::PimCommonSettings::self()->setAutoFractions(mAutoFractions);
-    PimCommon::PimCommonSettings::self()->setCapitalizeWeekDays(mCapitalizeWeekDays);
-    PimCommon::PimCommonSettings::self()->setAdvancedAutocorrect(mAdvancedAutocorrect);
-    PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotes(mReplaceDoubleQuotes);
-    PimCommon::PimCommonSettings::self()->setReplaceSingleQuotes(mReplaceSingleQuotes);
-    PimCommon::PimCommonSettings::self()->setEnabled(mEnabled);
-    PimCommon::PimCommonSettings::self()->setSuperScript(mSuperScriptAppendix);
-    PimCommon::PimCommonSettings::self()->setAddNonBreakingSpaceInFrench(mAddNonBreakingSpace);
-    PimCommon::PimCommonSettings::self()->setTypographicSingleQuotes(mTypographicSingleQuotes.toString());
-    PimCommon::PimCommonSettings::self()->setTypographicDoubleQuotes(mTypographicDoubleQuotes.toString());
-    PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(mReplaceDoubleQuotesByFrenchQuotes);
+    PimCommon::PimCommonSettings::self()->setAutoBoldUnderline(d->mAutoBoldUnderline);
+    PimCommon::PimCommonSettings::self()->setAutoFormatUrl(d->mAutoFormatUrl);
+    PimCommon::PimCommonSettings::self()->setUppercaseFirstCharOfSentence(d->mUppercaseFirstCharOfSentence);
+    PimCommon::PimCommonSettings::self()->setFixTwoUppercaseChars(d->mFixTwoUppercaseChars);
+    PimCommon::PimCommonSettings::self()->setSingleSpaces(d->mSingleSpaces);
+    PimCommon::PimCommonSettings::self()->setAutoFractions(d->mAutoFractions);
+    PimCommon::PimCommonSettings::self()->setCapitalizeWeekDays(d->mCapitalizeWeekDays);
+    PimCommon::PimCommonSettings::self()->setAdvancedAutocorrect(d->mAdvancedAutocorrect);
+    PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotes(d->mReplaceDoubleQuotes);
+    PimCommon::PimCommonSettings::self()->setReplaceSingleQuotes(d->mReplaceSingleQuotes);
+    PimCommon::PimCommonSettings::self()->setEnabled(d->mEnabled);
+    PimCommon::PimCommonSettings::self()->setSuperScript(d->mSuperScriptAppendix);
+    PimCommon::PimCommonSettings::self()->setAddNonBreakingSpaceInFrench(d->mAddNonBreakingSpace);
+    PimCommon::PimCommonSettings::self()->setTypographicSingleQuotes(d->mTypographicSingleQuotes.toString());
+    PimCommon::PimCommonSettings::self()->setTypographicDoubleQuotes(d->mTypographicDoubleQuotes.toString());
+    PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(d->mReplaceDoubleQuotesByFrenchQuotes);
     PimCommon::PimCommonSettings::self()->requestSync();
     writeAutoCorrectionFile();
 }
 
 void AutoCorrectionSettings::setAutoFractions(bool newAutoFractions)
 {
-    mAutoFractions = newAutoFractions;
+    d->mAutoFractions = newAutoFractions;
 }
 
 void AutoCorrectionSettings::setSingleSpaces(bool newSingleSpaces)
 {
-    mSingleSpaces = newSingleSpaces;
+    d->mSingleSpaces = newSingleSpaces;
 }
 
 void AutoCorrectionSettings::setFixTwoUppercaseChars(bool newFixTwoUppercaseChars)
 {
-    mFixTwoUppercaseChars = newFixTwoUppercaseChars;
+    d->mFixTwoUppercaseChars = newFixTwoUppercaseChars;
 }
 
 void AutoCorrectionSettings::setUppercaseFirstCharOfSentence(bool newUppercaseFirstCharOfSentence)
 {
-    mUppercaseFirstCharOfSentence = newUppercaseFirstCharOfSentence;
+    d->mUppercaseFirstCharOfSentence = newUppercaseFirstCharOfSentence;
 }
 
 void AutoCorrectionSettings::setUpperCaseExceptions(const QSet<QString> &exceptions)
 {
-    mUpperCaseExceptions = exceptions;
+    d->mUpperCaseExceptions = exceptions;
 }
 
 void AutoCorrectionSettings::setTwoUpperLetterExceptions(const QSet<QString> &exceptions)
 {
-    mTwoUpperLetterExceptions = exceptions;
+    d->mTwoUpperLetterExceptions = exceptions;
 }
 
 QSet<QString> AutoCorrectionSettings::upperCaseExceptions() const
 {
-    return mUpperCaseExceptions;
+    return d->mUpperCaseExceptions;
 }
 
 QSet<QString> AutoCorrectionSettings::twoUpperLetterExceptions() const
 {
-    return mTwoUpperLetterExceptions;
+    return d->mTwoUpperLetterExceptions;
 }
 
 QString AutoCorrectionSettings::language() const
 {
-    return mAutoCorrectLang;
+    return d->mAutoCorrectLang;
 }
 
 void AutoCorrectionSettings::setLanguage(const QString &lang, bool forceGlobal)
 {
-    if (mAutoCorrectLang != lang || forceGlobal) {
-        mAutoCorrectLang = lang;
+    if (d->mAutoCorrectLang != lang || forceGlobal) {
+        d->mAutoCorrectLang = lang;
         // Re-read xml file
         readAutoCorrectionFile(forceGlobal);
     }
@@ -280,13 +323,13 @@ void AutoCorrectionSettings::setLanguage(const QString &lang, bool forceGlobal)
 
 bool AutoCorrectionSettings::isFrenchLanguage() const
 {
-    return mAutoCorrectLang == QLatin1String("FR_fr") || mAutoCorrectLang == QLatin1String("fr");
+    return d->mAutoCorrectLang == QLatin1String("FR_fr") || d->mAutoCorrectLang == QLatin1String("fr");
 }
 
 bool AutoCorrectionSettings::addAutoCorrect(const QString &currentWord, const QString &replaceWord)
 {
-    if (!mAutocorrectEntries.contains(currentWord)) {
-        mAutocorrectEntries.insert(currentWord, replaceWord);
+    if (!d->mAutocorrectEntries.contains(currentWord)) {
+        d->mAutocorrectEntries.insert(currentWord, replaceWord);
         writeAutoCorrectionFile();
         return true;
     } else {
@@ -296,52 +339,52 @@ bool AutoCorrectionSettings::addAutoCorrect(const QString &currentWord, const QS
 
 QChar AutoCorrectionSettings::nonBreakingSpace() const
 {
-    return mNonBreakingSpace;
+    return d->mNonBreakingSpace;
 }
 
 void AutoCorrectionSettings::setNonBreakingSpace(const QChar &newNonBreakingSpace)
 {
-    mNonBreakingSpace = newNonBreakingSpace;
+    d->mNonBreakingSpace = newNonBreakingSpace;
 }
 
 QHash<QString, QString> AutoCorrectionSettings::superScriptEntries() const
 {
-    return mSuperScriptEntries;
+    return d->mSuperScriptEntries;
 }
 
 void AutoCorrectionSettings::setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries)
 {
-    mSuperScriptEntries = newSuperScriptEntries;
+    d->mSuperScriptEntries = newSuperScriptEntries;
 }
 
 void AutoCorrectionSettings::setAutocorrectEntries(const QHash<QString, QString> &entries)
 {
-    mMaxFindStringLength = 0;
-    mMinFindStringLength = 0;
+    d->mMaxFindStringLength = 0;
+    d->mMinFindStringLength = 0;
     QHashIterator<QString, QString> i(entries);
     while (i.hasNext()) {
         i.next();
         const int findStringLenght(i.key().length());
-        mMaxFindStringLength = qMax(mMaxFindStringLength, findStringLenght);
-        mMinFindStringLength = qMin(mMinFindStringLength, findStringLenght);
+        d->mMaxFindStringLength = qMax(d->mMaxFindStringLength, findStringLenght);
+        d->mMinFindStringLength = qMin(d->mMinFindStringLength, findStringLenght);
     }
-    mAutocorrectEntries = entries;
+    d->mAutocorrectEntries = entries;
 }
 
 QHash<QString, QString> AutoCorrectionSettings::autocorrectEntries() const
 {
-    return mAutocorrectEntries;
+    return d->mAutocorrectEntries;
 }
 
 void AutoCorrectionSettings::writeAutoCorrectionFile(const QString &filename)
 {
 #if 1
     ExportLibreOfficeAutocorrection correct;
-    correct.setAutocorrectEntries(mAutocorrectEntries);
-    correct.setUpperCaseExceptions(mUpperCaseExceptions);
-    correct.setTwoUpperLetterExceptions(mTwoUpperLetterExceptions);
+    correct.setAutocorrectEntries(d->mAutocorrectEntries);
+    correct.setUpperCaseExceptions(d->mUpperCaseExceptions);
+    correct.setTwoUpperLetterExceptions(d->mTwoUpperLetterExceptions);
     QString message;
-    if (!correct.exportData(mAutoCorrectLang, filename, message)) {
+    if (!correct.exportData(d->mAutoCorrectLang, filename, message)) {
         qCDebug(PIMCOMMON_LOG) << "We can't save in file :" << filename;
     }
 #else
@@ -358,12 +401,12 @@ void AutoCorrectionSettings::writeAutoCorrectionFile(const QString &filename)
 
 int AutoCorrectionSettings::maxFindStringLength() const
 {
-    return mMaxFindStringLength;
+    return d->mMaxFindStringLength;
 }
 
 int AutoCorrectionSettings::minFindStringLength() const
 {
-    return mMinFindStringLength;
+    return d->mMinFindStringLength;
 }
 
 void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, const QString &fname)
@@ -371,33 +414,33 @@ void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, con
     ImportLibreOfficeAutocorrection import;
     QString messageError;
     if (import.import(localFileName, messageError, ImportAbstractAutocorrection::All)) {
-        mUpperCaseExceptions = import.upperCaseExceptions();
-        mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
-        mAutocorrectEntries = import.autocorrectEntries();
+        d->mUpperCaseExceptions = import.upperCaseExceptions();
+        d->mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+        d->mAutocorrectEntries = import.autocorrectEntries();
         // Don't import it in local
         // mSuperScriptEntries = import.superScriptEntries();
     }
     if (!fname.isEmpty() && import.import(fname, messageError, ImportAbstractAutocorrection::SuperScript)) {
-        mSuperScriptEntries = import.superScriptEntries();
+        d->mSuperScriptEntries = import.superScriptEntries();
     }
-    mMaxFindStringLength = import.maxFindStringLenght();
-    mMinFindStringLength = import.minFindStringLenght();
+    d->mMaxFindStringLength = import.maxFindStringLenght();
+    d->mMinFindStringLength = import.minFindStringLenght();
 }
 
 void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
 {
     if (fname.isEmpty()) {
-        const QString fileName = AutoCorrectionUtils::containsAutoCorrectionFile(mAutoCorrectLang);
+        const QString fileName = AutoCorrectionUtils::containsAutoCorrectionFile(d->mAutoCorrectLang);
         if (!fileName.isEmpty()) {
             QString errorMessage;
             ImportLibreOfficeAutocorrection import;
             if (import.import(fileName, errorMessage)) {
-                mUpperCaseExceptions = import.upperCaseExceptions();
-                mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
-                mAutocorrectEntries = import.autocorrectEntries();
-                mSuperScriptEntries = import.superScriptEntries();
-                mMaxFindStringLength = import.maxFindStringLenght();
-                mMinFindStringLength = import.minFindStringLenght();
+                d->mUpperCaseExceptions = import.upperCaseExceptions();
+                d->mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+                d->mAutocorrectEntries = import.autocorrectEntries();
+                d->mSuperScriptEntries = import.superScriptEntries();
+                d->mMaxFindStringLength = import.maxFindStringLenght();
+                d->mMinFindStringLength = import.minFindStringLenght();
             }
         }
     } else {
@@ -405,12 +448,12 @@ void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
         ImportLibreOfficeAutocorrection import;
         QString messageError;
         if (import.import(fname, messageError, ImportAbstractAutocorrection::All)) {
-            mUpperCaseExceptions = import.upperCaseExceptions();
-            mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
-            mAutocorrectEntries = import.autocorrectEntries();
-            mSuperScriptEntries = import.superScriptEntries();
-            mMaxFindStringLength = import.maxFindStringLenght();
-            mMinFindStringLength = import.minFindStringLenght();
+            d->mUpperCaseExceptions = import.upperCaseExceptions();
+            d->mTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+            d->mAutocorrectEntries = import.autocorrectEntries();
+            d->mSuperScriptEntries = import.superScriptEntries();
+            d->mMaxFindStringLength = import.maxFindStringLenght();
+            d->mMinFindStringLength = import.minFindStringLenght();
         }
     }
 }
@@ -478,10 +521,10 @@ void AutoCorrectionSettings::migrateKMailXmlFile()
 
 void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
 {
-    mUpperCaseExceptions.clear();
-    mAutocorrectEntries.clear();
-    mTwoUpperLetterExceptions.clear();
-    mSuperScriptEntries.clear();
+    d->mUpperCaseExceptions.clear();
+    d->mAutocorrectEntries.clear();
+    d->mTwoUpperLetterExceptions.clear();
+    d->mSuperScriptEntries.clear();
 
     QString kdelang = QStringLiteral("en-US");
     const QStringList lst = QLocale::system().uiLanguages();
@@ -498,7 +541,7 @@ void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
     static QRegularExpression regpath(QRegularExpression(QStringLiteral("_.*")));
     // Look at local file:
     if (!forceGlobal) {
-        if (mAutoCorrectLang.isEmpty()) {
+        if (d->mAutoCorrectLang.isEmpty()) {
             if (!kdelang.isEmpty()) {
                 localFileName = AutoCorrectionUtils::containsAutoCorrectionFile(kdelang);
             }
@@ -510,8 +553,8 @@ void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
     }
     QString fname;
     // Load Global directly
-    if (!mAutoCorrectLang.isEmpty()) {
-        localFileName = AutoCorrectionUtils::containsAutoCorrectionFile(mAutoCorrectLang);
+    if (!d->mAutoCorrectLang.isEmpty()) {
+        localFileName = AutoCorrectionUtils::containsAutoCorrectionFile(d->mAutoCorrectLang);
     } else {
         if (fname.isEmpty() && !kdelang.isEmpty()) {
             fname = AutoCorrectionUtils::containsAutoCorrectionFile(kdelang);
@@ -522,8 +565,8 @@ void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
         }
     }
 
-    if (mAutoCorrectLang.isEmpty()) {
-        mAutoCorrectLang = kdelang;
+    if (d->mAutoCorrectLang.isEmpty()) {
+        d->mAutoCorrectLang = kdelang;
     }
     // qDebug() << " fname :" << fname;
     // qDebug() << " localFileName:" << localFileName;
@@ -537,12 +580,12 @@ void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
 
 AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::doubleFrenchQuotes() const
 {
-    return mDoubleFrenchQuotes;
+    return d->mDoubleFrenchQuotes;
 }
 
 void AutoCorrectionSettings::setDoubleFrenchQuotes(const AutoCorrectionUtils::TypographicQuotes &newDoubleFrenchQuotes)
 {
-    mDoubleFrenchQuotes = newDoubleFrenchQuotes;
+    d->mDoubleFrenchQuotes = newDoubleFrenchQuotes;
 }
 
 QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t)

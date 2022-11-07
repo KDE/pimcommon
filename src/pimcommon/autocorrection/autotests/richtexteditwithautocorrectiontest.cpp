@@ -19,8 +19,8 @@ void RichTextEditWithAutoCorrectionTest::shouldNotAutocorrectWhenDisabled()
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     entries.insert(originalWord, replaceWord);
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setAutocorrectEntries(entries);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setAutocorrectEntries(entries);
     richtext.autocorrection()->setAutoCorrectionSettings(settings);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
@@ -36,10 +36,10 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWordWhenExactText()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setAutocorrectEntries(entries);
-    settings.setEnabledAutoCorrection(true);
-    settings.setAdvancedAutocorrect(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setAutocorrectEntries(entries);
+    settings->setEnabledAutoCorrection(true);
+    settings->setAdvancedAutocorrect(true);
     richtext.autocorrection()->setAutoCorrectionSettings(settings);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
@@ -55,10 +55,10 @@ void RichTextEditWithAutoCorrectionTest::shouldNotReplaceWordWhenInexactText()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setAutocorrectEntries(entries);
-    settings.setEnabledAutoCorrection(true);
-    settings.setAdvancedAutocorrect(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setAutocorrectEntries(entries);
+    settings->setEnabledAutoCorrection(true);
+    settings->setAdvancedAutocorrect(true);
     richtext.autocorrection()->setAutoCorrectionSettings(settings);
 
     richtext.show();
@@ -77,10 +77,10 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWhenPressEnter()
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
 
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setAutocorrectEntries(entries);
-    settings.setEnabledAutoCorrection(true);
-    settings.setAdvancedAutocorrect(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setAutocorrectEntries(entries);
+    settings->setEnabledAutoCorrection(true);
+    settings->setAdvancedAutocorrect(true);
     richtext.autocorrection()->setAutoCorrectionSettings(settings);
 
     richtext.show();
@@ -97,10 +97,10 @@ void RichTextEditWithAutoCorrectionTest::shouldReplaceWhenPressReturn()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-    PimCommon::AutoCorrectionSettings settings;
-    settings.setAutocorrectEntries(entries);
-    settings.setEnabledAutoCorrection(true);
-    settings.setAdvancedAutocorrect(true);
+    auto settings = new PimCommon::AutoCorrectionSettings;
+    settings->setAutocorrectEntries(entries);
+    settings->setEnabledAutoCorrection(true);
+    settings->setAdvancedAutocorrect(true);
     richtext.autocorrection()->setAutoCorrectionSettings(settings);
     richtext.show();
     QVERIFY(QTest::qWaitForWindowExposed(&richtext));
