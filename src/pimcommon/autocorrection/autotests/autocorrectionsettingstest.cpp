@@ -32,5 +32,4 @@ void AutoCorrectionSettingsTest::shouldHaveDefaultValues()
     QVERIFY(!settings.isSuperScript());
     QVERIFY(!settings.isReplaceDoubleQuotesByFrenchQuotes());
     QVERIFY(!settings.isAddNonBreakingSpace());
-    // TODO
 }

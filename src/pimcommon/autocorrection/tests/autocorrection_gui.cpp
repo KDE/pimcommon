@@ -10,8 +10,6 @@
 #include "autocorrection/widgets/lineeditwithautocorrection.h"
 #include "settings/pimcommonsettings.h"
 
-#include "pimcommon_debug.h"
-
 #include <QAction>
 #include <QApplication>
 #include <QCommandLineParser>

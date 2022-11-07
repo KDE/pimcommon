@@ -21,27 +21,47 @@
 
 using namespace PimCommon;
 
-AutoCorrection::AutoCorrection()
-    : mAutoCorrectionSettings(new AutoCorrectionSettings)
+namespace PimCommon
 {
-    const auto locale = QLocale::system();
-    mCacheNameOfDays.reserve(7);
-    for (int i = 1; i <= 7; ++i) {
-        mCacheNameOfDays.append(locale.dayName(i).toLower());
+class AutoCorrectionPrivate
+{
+public:
+    AutoCorrectionPrivate()
+        : mAutoCorrectionSettings(new AutoCorrectionSettings)
+    {
+        const auto locale = QLocale::system();
+        mCacheNameOfDays.reserve(7);
+        for (int i = 1; i <= 7; ++i) {
+            mCacheNameOfDays.append(locale.dayName(i).toLower());
+        }
     }
+    ~AutoCorrectionPrivate()
+    {
+        delete mAutoCorrectionSettings;
+    }
+    QString mWord;
+    QTextCursor mCursor;
+
+    QStringList mCacheNameOfDays;
+    QColor mLinkColor;
+    // Settings
+    AutoCorrectionSettings *mAutoCorrectionSettings = nullptr;
+};
 }
 
-AutoCorrection::~AutoCorrection()
+AutoCorrection::AutoCorrection()
+    : d(new AutoCorrectionPrivate())
 {
-    delete mAutoCorrectionSettings;
 }
+
+AutoCorrection::~AutoCorrection() = default;
 
 void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition)
 {
     cursor.setPosition(cursorPosition);
 
     QTextBlock block = cursor.block();
-    int pos = qMax(block.position(), cursorPosition - mAutoCorrectionSettings->maxFindStringLength());
+    int pos = qMax(block.position(), cursorPosition - d->mAutoCorrectionSettings->maxFindStringLength());
 
     // TODO verify that pos == block.position() => it's a full line => not a piece of word
     // TODO if not => check if pos -1 is a space => not a piece of word
@@ -102,9 +122,9 @@ void AutoCorrection::selectPreviousWord(QTextCursor &cursor, int cursorPosition)
 
 bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &position)
 {
-    if (mAutoCorrectionSettings->isEnabledAutoCorrection()) {
-        mCursor = QTextCursor(&document);
-        mCursor.setPosition(position);
+    if (d->mAutoCorrectionSettings->isEnabledAutoCorrection()) {
+        d->mCursor = QTextCursor(&document);
+        d->mCursor.setPosition(position);
 
         // If we already have a space not necessary to look at other autocorrect feature.
         if (!singleSpaces()) {
@@ -112,12 +132,12 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
         }
 
         int oldPosition = position;
-        selectPreviousWord(mCursor, position);
-        mWord = mCursor.selectedText();
-        if (mWord.isEmpty()) {
+        selectPreviousWord(d->mCursor, position);
+        d->mWord = d->mCursor.selectedText();
+        if (d->mWord.isEmpty()) {
             return true;
         }
-        mCursor.beginEditBlock();
+        d->mCursor.beginEditBlock();
         bool done = false;
         if (htmlMode) {
             done = autoFormatURLs();
@@ -144,58 +164,58 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             fixTwoUppercaseChars();
             capitalizeWeekDays();
             replaceTypographicQuotes();
-            if (mWord.length() <= 2) {
+            if (d->mWord.length() <= 2) {
                 addNonBreakingSpace();
             }
         }
 
-        if (mCursor.selectedText() != mWord) {
-            mCursor.insertText(mWord);
+        if (d->mCursor.selectedText() != d->mWord) {
+            d->mCursor.insertText(d->mWord);
         }
         position = oldPosition;
         if (!done) {
-            selectStringOnMaximumSearchString(mCursor, position);
-            mWord = mCursor.selectedText();
-            if (!mWord.isEmpty()) {
+            selectStringOnMaximumSearchString(d->mCursor, position);
+            d->mWord = d->mCursor.selectedText();
+            if (!d->mWord.isEmpty()) {
                 const int newPos = advancedAutocorrect();
                 if (newPos != -1) {
-                    if (mCursor.selectedText() != mWord) {
-                        mCursor.insertText(mWord);
+                    if (d->mCursor.selectedText() != d->mWord) {
+                        d->mCursor.insertText(d->mWord);
                     }
                     position = newPos;
                 }
             }
         }
-        mCursor.endEditBlock();
+        d->mCursor.endEditBlock();
     }
     return true;
 }
 
 void AutoCorrection::readConfig()
 {
-    mAutoCorrectionSettings->readConfig();
+    d->mAutoCorrectionSettings->readConfig();
 }
 
 void AutoCorrection::writeConfig()
 {
-    mAutoCorrectionSettings->writeConfig();
+    d->mAutoCorrectionSettings->writeConfig();
 }
 
 void AutoCorrection::superscriptAppendix()
 {
-    if (!mAutoCorrectionSettings->isSuperScript()) {
+    if (!d->mAutoCorrectionSettings->isSuperScript()) {
         return;
     }
 
-    const QString trimmed = mWord.trimmed();
+    const QString trimmed = d->mWord.trimmed();
     int startPos = -1;
     int endPos = -1;
     const int trimmedLenght(trimmed.length());
 
-    QHash<QString, QString>::const_iterator i = mAutoCorrectionSettings->superScriptEntries().constBegin();
-    while (i != mAutoCorrectionSettings->superScriptEntries().constEnd()) {
+    QHash<QString, QString>::const_iterator i = d->mAutoCorrectionSettings->superScriptEntries().constBegin();
+    while (i != d->mAutoCorrectionSettings->superScriptEntries().constEnd()) {
         if (i.key() == trimmed) {
-            startPos = mCursor.selectionStart() + 1;
+            startPos = d->mCursor.selectionStart() + 1;
             endPos = startPos - 1 + trimmedLenght;
             break;
         } else if (i.key() == QLatin1String("othernb")) {
@@ -219,7 +239,7 @@ void AutoCorrection::superscriptAppendix()
                     }
                 }
                 if (found && numberLength + i.value().length() == trimmedLenght) {
-                    startPos = mCursor.selectionStart() + pos;
+                    startPos = d->mCursor.selectionStart() + pos;
                     endPos = startPos - pos + trimmedLenght;
                     break;
                 }
@@ -229,7 +249,7 @@ void AutoCorrection::superscriptAppendix()
     }
 
     if (startPos != -1 && endPos != -1) {
-        QTextCursor cursor(mCursor);
+        QTextCursor cursor(d->mCursor);
         cursor.setPosition(startPos);
         cursor.setPosition(endPos, QTextCursor::KeepAnchor);
 
@@ -241,40 +261,40 @@ void AutoCorrection::superscriptAppendix()
 
 void AutoCorrection::addNonBreakingSpace()
 {
-    if (mAutoCorrectionSettings->isAddNonBreakingSpace() && mAutoCorrectionSettings->isFrenchLanguage()) {
-        const QTextBlock block = mCursor.block();
+    if (d->mAutoCorrectionSettings->isAddNonBreakingSpace() && d->mAutoCorrectionSettings->isFrenchLanguage()) {
+        const QTextBlock block = d->mCursor.block();
         const QString text = block.text();
-        const QChar lastChar = text.at(mCursor.position() - 1 - block.position());
+        const QChar lastChar = text.at(d->mCursor.position() - 1 - block.position());
 
         if (lastChar == QLatin1Char(':') || lastChar == QLatin1Char(';') || lastChar == QLatin1Char('!') || lastChar == QLatin1Char('?')
             || lastChar == QLatin1Char('%')) {
-            const int pos = mCursor.position() - 2 - block.position();
+            const int pos = d->mCursor.position() - 2 - block.position();
             if (pos >= 0) {
                 const QChar previousChar = text.at(pos);
                 if (previousChar.isSpace()) {
-                    QTextCursor cursor(mCursor);
+                    QTextCursor cursor(d->mCursor);
                     cursor.setPosition(pos);
                     cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
                     cursor.deleteChar();
-                    mCursor.insertText(mAutoCorrectionSettings->nonBreakingSpace());
+                    d->mCursor.insertText(d->mAutoCorrectionSettings->nonBreakingSpace());
                 }
             }
         } else {
             //°C (degrees)
-            const int pos = mCursor.position() - 2 - block.position();
+            const int pos = d->mCursor.position() - 2 - block.position();
             if (pos >= 0) {
                 const QChar previousChar = text.at(pos);
 
                 if (lastChar == QLatin1Char('C') && previousChar == QChar(0x000B0)) {
-                    const int pos = mCursor.position() - 3 - block.position();
+                    const int pos = d->mCursor.position() - 3 - block.position();
                     if (pos >= 0) {
                         const QChar previousChar = text.at(pos);
                         if (previousChar.isSpace()) {
-                            QTextCursor cursor(mCursor);
+                            QTextCursor cursor(d->mCursor);
                             cursor.setPosition(pos);
                             cursor.setPosition(pos + 1, QTextCursor::KeepAnchor);
                             cursor.deleteChar();
-                            mCursor.insertText(mAutoCorrectionSettings->nonBreakingSpace());
+                            d->mCursor.insertText(d->mAutoCorrectionSettings->nonBreakingSpace());
                         }
                     }
                 }
@@ -285,10 +305,10 @@ void AutoCorrection::addNonBreakingSpace()
 
 bool AutoCorrection::autoBoldUnderline()
 {
-    if (!mAutoCorrectionSettings->isAutoBoldUnderline()) {
+    if (!d->mAutoCorrectionSettings->isAutoBoldUnderline()) {
         return false;
     }
-    const QString trimmed = mWord.trimmed();
+    const QString trimmed = d->mWord.trimmed();
 
     if (trimmed.length() < 3) {
         return false;
@@ -300,7 +320,7 @@ bool AutoCorrection::autoBoldUnderline()
     const bool bold = (trimmedFirstChar == QLatin1Char('*') && trimmedLastChar == QLatin1Char('*'));
     const bool strikeOut = (trimmedFirstChar == QLatin1Char('-') && trimmedLastChar == QLatin1Char('-'));
     if (underline || bold || strikeOut) {
-        const int startPos = mCursor.selectionStart();
+        const int startPos = d->mCursor.selectionStart();
         const QString replacement = trimmed.mid(1, trimmed.length() - 2);
         bool foundLetterNumber = false;
 
@@ -317,20 +337,20 @@ bool AutoCorrection::autoBoldUnderline()
         if (!foundLetterNumber) {
             return false;
         }
-        mCursor.setPosition(startPos);
-        mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
-        mCursor.insertText(replacement);
-        mCursor.setPosition(startPos);
-        mCursor.setPosition(startPos + replacement.length(), QTextCursor::KeepAnchor);
+        d->mCursor.setPosition(startPos);
+        d->mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
+        d->mCursor.insertText(replacement);
+        d->mCursor.setPosition(startPos);
+        d->mCursor.setPosition(startPos + replacement.length(), QTextCursor::KeepAnchor);
 
         QTextCharFormat format;
-        format.setFontUnderline(underline ? true : mCursor.charFormat().fontUnderline());
-        format.setFontWeight(bold ? QFont::Bold : mCursor.charFormat().fontWeight());
-        format.setFontStrikeOut(strikeOut ? true : mCursor.charFormat().fontStrikeOut());
-        mCursor.mergeCharFormat(format);
+        format.setFontUnderline(underline ? true : d->mCursor.charFormat().fontUnderline());
+        format.setFontWeight(bold ? QFont::Bold : d->mCursor.charFormat().fontWeight());
+        format.setFontStrikeOut(strikeOut ? true : d->mCursor.charFormat().fontStrikeOut());
+        d->mCursor.mergeCharFormat(format);
 
-        // to avoid the selection being replaced by mWord
-        mWord = mCursor.selectedText();
+        // to avoid the selection being replaced by d->mWord
+        d->mWord = d->mCursor.selectedText();
         return true;
     } else {
         return false;
@@ -341,41 +361,41 @@ bool AutoCorrection::autoBoldUnderline()
 
 QColor AutoCorrection::linkColor()
 {
-    if (mLinkColor.isValid()) {
-        return mLinkColor;
+    if (d->mLinkColor.isValid()) {
+        return d->mLinkColor;
     }
-    mLinkColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color();
-    return mLinkColor;
+    d->mLinkColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color();
+    return d->mLinkColor;
 }
 
 AutoCorrectionSettings *AutoCorrection::autoCorrectionSettings() const
 {
-    return mAutoCorrectionSettings;
+    return d->mAutoCorrectionSettings;
 }
 
 void AutoCorrection::setAutoCorrectionSettings(AutoCorrectionSettings *newAutoCorrectionSettings)
 {
-    if (mAutoCorrectionSettings != newAutoCorrectionSettings) {
-        delete mAutoCorrectionSettings;
+    if (d->mAutoCorrectionSettings != newAutoCorrectionSettings) {
+        delete d->mAutoCorrectionSettings;
     }
-    mAutoCorrectionSettings = newAutoCorrectionSettings;
+    d->mAutoCorrectionSettings = newAutoCorrectionSettings;
 }
 
 bool AutoCorrection::autoFormatURLs()
 {
-    if (!mAutoCorrectionSettings->isAutoFormatUrl()) {
+    if (!d->mAutoCorrectionSettings->isAutoFormatUrl()) {
         return false;
     }
 
-    const QString link = autoDetectURL(mWord);
+    const QString link = autoDetectURL(d->mWord);
     if (link.isNull()) {
         return false;
     }
 
-    const QString trimmed = mWord.trimmed();
-    const int startPos = mCursor.selectionStart();
-    mCursor.setPosition(startPos);
-    mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
+    const QString trimmed = d->mWord.trimmed();
+    const int startPos = d->mCursor.selectionStart();
+    d->mCursor.setPosition(startPos);
+    d->mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
 
     QTextCharFormat format;
     format.setAnchorHref(link);
@@ -384,9 +404,9 @@ bool AutoCorrection::autoFormatURLs()
     format.setUnderlineStyle(QTextCharFormat::SingleUnderline);
     format.setUnderlineColor(linkColor());
     format.setForeground(linkColor());
-    mCursor.mergeCharFormat(format);
+    d->mCursor.mergeCharFormat(format);
 
-    mWord = mCursor.selectedText();
+    d->mWord = d->mCursor.selectedText();
     return true;
 }
 
@@ -501,25 +521,25 @@ QString AutoCorrection::autoDetectURL(const QString &_word) const
 
 void AutoCorrection::fixTwoUppercaseChars()
 {
-    if (!mAutoCorrectionSettings->isFixTwoUppercaseChars()) {
+    if (!d->mAutoCorrectionSettings->isFixTwoUppercaseChars()) {
         return;
     }
-    if (mWord.length() <= 2) {
-        return;
-    }
-
-    if (mAutoCorrectionSettings->twoUpperLetterExceptions().contains(mWord.trimmed())) {
+    if (d->mWord.length() <= 2) {
         return;
     }
 
-    const QChar firstChar = mWord.at(0);
-    const QChar secondChar = mWord.at(1);
+    if (d->mAutoCorrectionSettings->twoUpperLetterExceptions().contains(d->mWord.trimmed())) {
+        return;
+    }
+
+    const QChar firstChar = d->mWord.at(0);
+    const QChar secondChar = d->mWord.at(1);
 
     if (secondChar.isUpper() && firstChar.isUpper()) {
-        const QChar thirdChar = mWord.at(2);
+        const QChar thirdChar = d->mWord.at(2);
 
         if (thirdChar.isLower()) {
-            mWord.replace(1, 1, secondChar.toLower());
+            d->mWord.replace(1, 1, secondChar.toLower());
         }
     }
 }
@@ -527,14 +547,14 @@ void AutoCorrection::fixTwoUppercaseChars()
 // Return true if we can add space
 bool AutoCorrection::singleSpaces()
 {
-    if (!mAutoCorrectionSettings->isSingleSpaces()) {
+    if (!d->mAutoCorrectionSettings->isSingleSpaces()) {
         return true;
     }
-    if (!mCursor.atBlockStart()) {
+    if (!d->mCursor.atBlockStart()) {
         // then when the prev char is also a space, don't insert one.
-        const QTextBlock block = mCursor.block();
+        const QTextBlock block = d->mCursor.block();
         const QString text = block.text();
-        if (text.at(mCursor.position() - 1 - block.position()) == QLatin1Char(' ')) {
+        if (text.at(d->mCursor.position() - 1 - block.position()) == QLatin1Char(' ')) {
             return false;
         }
     }
@@ -543,15 +563,15 @@ bool AutoCorrection::singleSpaces()
 
 void AutoCorrection::capitalizeWeekDays()
 {
-    if (!mAutoCorrectionSettings->isCapitalizeWeekDays()) {
+    if (!d->mAutoCorrectionSettings->isCapitalizeWeekDays()) {
         return;
     }
 
-    const QString trimmed = mWord.trimmed();
-    for (const QString &name : std::as_const(mCacheNameOfDays)) {
+    const QString trimmed = d->mWord.trimmed();
+    for (const QString &name : std::as_const(d->mCacheNameOfDays)) {
         if (trimmed == name) {
-            const int pos = mWord.indexOf(name);
-            mWord.replace(pos, 1, name.at(0).toUpper());
+            const int pos = d->mWord.indexOf(name);
+            d->mWord.replace(pos, 1, name.at(0).toUpper());
             return;
         }
     }
@@ -568,23 +588,23 @@ bool AutoCorrection::excludeToUppercase(const QString &word) const
 
 void AutoCorrection::uppercaseFirstCharOfSentence()
 {
-    if (!mAutoCorrectionSettings->isUppercaseFirstCharOfSentence()) {
+    if (!d->mAutoCorrectionSettings->isUppercaseFirstCharOfSentence()) {
         return;
     }
 
-    int startPos = mCursor.selectionStart();
-    QTextBlock block = mCursor.block();
+    int startPos = d->mCursor.selectionStart();
+    QTextBlock block = d->mCursor.block();
 
-    mCursor.setPosition(block.position());
-    mCursor.setPosition(startPos, QTextCursor::KeepAnchor);
+    d->mCursor.setPosition(block.position());
+    d->mCursor.setPosition(startPos, QTextCursor::KeepAnchor);
 
-    int position = mCursor.selectionEnd();
+    int position = d->mCursor.selectionEnd();
 
-    const QString text = mCursor.selectedText();
+    const QString text = d->mCursor.selectedText();
 
     if (text.isEmpty()) { // start of a paragraph
-        if (!excludeToUppercase(mWord)) {
-            mWord.replace(0, 1, mWord.at(0).toUpper());
+        if (!excludeToUppercase(d->mWord)) {
+            d->mWord.replace(0, 1, d->mWord.at(0).toUpper());
         }
     } else {
         QString::ConstIterator constIter = text.constEnd();
@@ -602,18 +622,18 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
                     --position;
                     --constIter;
                 }
-                selectPreviousWord(mCursor, --position);
-                const QString prevWord = mCursor.selectedText();
+                selectPreviousWord(d->mCursor, --position);
+                const QString prevWord = d->mCursor.selectedText();
 
                 // search for exception
-                if (mAutoCorrectionSettings->upperCaseExceptions().contains(prevWord.trimmed())) {
+                if (d->mAutoCorrectionSettings->upperCaseExceptions().contains(prevWord.trimmed())) {
                     break;
                 }
-                if (excludeToUppercase(mWord)) {
+                if (excludeToUppercase(d->mWord)) {
                     break;
                 }
 
-                mWord.replace(0, 1, mWord.at(0).toUpper());
+                d->mWord.replace(0, 1, d->mWord.at(0).toUpper());
                 break;
             } else {
                 break;
@@ -621,17 +641,17 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
         }
     }
 
-    mCursor.setPosition(startPos);
-    mCursor.setPosition(startPos + mWord.length(), QTextCursor::KeepAnchor);
+    d->mCursor.setPosition(startPos);
+    d->mCursor.setPosition(startPos + d->mWord.length(), QTextCursor::KeepAnchor);
 }
 
 bool AutoCorrection::autoFractions()
 {
-    if (!mAutoCorrectionSettings->isAutoFractions()) {
+    if (!d->mAutoCorrectionSettings->isAutoFractions()) {
         return false;
     }
 
-    const QString trimmed = mWord.trimmed();
+    const QString trimmed = d->mWord.trimmed();
     if (trimmed.length() > 3) {
         const QChar x = trimmed.at(3);
         const uchar xunicode = x.unicode();
@@ -643,11 +663,11 @@ bool AutoCorrection::autoFractions()
     }
 
     if (trimmed.startsWith(QLatin1String("1/2"))) {
-        mWord.replace(0, 3, QStringLiteral("½"));
+        d->mWord.replace(0, 3, QStringLiteral("½"));
     } else if (trimmed.startsWith(QLatin1String("1/4"))) {
-        mWord.replace(0, 3, QStringLiteral("¼"));
+        d->mWord.replace(0, 3, QStringLiteral("¼"));
     } else if (trimmed.startsWith(QLatin1String("3/4"))) {
-        mWord.replace(0, 3, QStringLiteral("¾"));
+        d->mWord.replace(0, 3, QStringLiteral("¾"));
     } else {
         return false;
     }
@@ -657,27 +677,27 @@ bool AutoCorrection::autoFractions()
 
 int AutoCorrection::advancedAutocorrect()
 {
-    if (!mAutoCorrectionSettings->isAdvancedAutocorrect()) {
+    if (!d->mAutoCorrectionSettings->isAdvancedAutocorrect()) {
         return -1;
     }
-    if (mAutoCorrectionSettings->autocorrectEntries().isEmpty()) {
+    if (d->mAutoCorrectionSettings->autocorrectEntries().isEmpty()) {
         return -1;
     }
-    const QString trimmedWord = mWord.trimmed();
+    const QString trimmedWord = d->mWord.trimmed();
     if (trimmedWord.isEmpty()) {
         return -1;
     }
     QString actualWord = trimmedWord;
 
     const int actualWordLength(actualWord.length());
-    if (actualWordLength < mAutoCorrectionSettings->minFindStringLength()) {
+    if (actualWordLength < d->mAutoCorrectionSettings->minFindStringLength()) {
         return -1;
     }
-    if (actualWordLength > mAutoCorrectionSettings->maxFindStringLength()) {
+    if (actualWordLength > d->mAutoCorrectionSettings->maxFindStringLength()) {
         return -1;
     }
-    const int startPos = mCursor.selectionStart();
-    const int length = mWord.length();
+    const int startPos = d->mCursor.selectionStart();
+    const int length = d->mWord.length();
     // If the last char is punctuation, drop it for now
     bool hasPunctuation = false;
     const QChar lastChar = actualWord.at(actualWord.length() - 1);
@@ -691,14 +711,14 @@ int AutoCorrection::advancedAutocorrect()
     }
     QString actualWordWithFirstUpperCase = actualWord;
     actualWordWithFirstUpperCase[0] = actualWordWithFirstUpperCase[0].toUpper();
-    QHashIterator<QString, QString> i(mAutoCorrectionSettings->autocorrectEntries());
+    QHashIterator<QString, QString> i(d->mAutoCorrectionSettings->autocorrectEntries());
     while (i.hasNext()) {
         i.next();
         if (i.key().length() > actualWordLength) {
             continue;
         }
         if (actualWord.endsWith(i.key()) || actualWord.endsWith(i.key(), Qt::CaseInsensitive) || actualWordWithFirstUpperCase.endsWith(i.key())) {
-            int pos = mWord.lastIndexOf(i.key());
+            int pos = d->mWord.lastIndexOf(i.key());
             if (pos == -1) {
                 pos = actualWord.toLower().lastIndexOf(i.key());
                 if (pos == -1) {
@@ -725,16 +745,16 @@ int AutoCorrection::advancedAutocorrect()
                 replacement.append(lastChar);
             }
 
-            mWord.replace(pos, pos + trimmedWord.length(), replacement);
+            d->mWord.replace(pos, pos + trimmedWord.length(), replacement);
 
             // We do replacement here, since the length of new word might be different from length of
             // the old world. Length difference might affect other type of autocorrection
-            mCursor.setPosition(startPos);
-            mCursor.setPosition(startPos + length, QTextCursor::KeepAnchor);
-            mCursor.insertText(mWord);
-            mCursor.setPosition(startPos); // also restore the selection
-            const int newPosition = startPos + mWord.length();
-            mCursor.setPosition(newPosition, QTextCursor::KeepAnchor);
+            d->mCursor.setPosition(startPos);
+            d->mCursor.setPosition(startPos + length, QTextCursor::KeepAnchor);
+            d->mCursor.insertText(d->mWord);
+            d->mCursor.setPosition(startPos); // also restore the selection
+            const int newPosition = startPos + d->mWord.length();
+            d->mCursor.setPosition(newPosition, QTextCursor::KeepAnchor);
             return newPosition;
         }
     }
@@ -747,12 +767,12 @@ void AutoCorrection::replaceTypographicQuotes()
     /* this method is ported from lib/kotext/KoAutoFormat.cpp KoAutoFormat::doTypographicQuotes
      * from Calligra 1.x branch */
 
-    if (!(mAutoCorrectionSettings->isReplaceDoubleQuotes() && mWord.contains(QLatin1Char('"')))
-        && !(mAutoCorrectionSettings->isReplaceSingleQuotes() && mWord.contains(QLatin1Char('\'')))) {
+    if (!(d->mAutoCorrectionSettings->isReplaceDoubleQuotes() && d->mWord.contains(QLatin1Char('"')))
+        && !(d->mAutoCorrectionSettings->isReplaceSingleQuotes() && d->mWord.contains(QLatin1Char('\'')))) {
         return;
     }
 
-    const bool addNonBreakingSpace = (mAutoCorrectionSettings->isFrenchLanguage() && mAutoCorrectionSettings->isAddNonBreakingSpace());
+    const bool addNonBreakingSpace = (d->mAutoCorrectionSettings->isFrenchLanguage() && d->mAutoCorrectionSettings->isAddNonBreakingSpace());
 
     // Need to determine if we want a starting or ending quote.
     // we use a starting quote in three cases:
@@ -766,12 +786,12 @@ void AutoCorrection::replaceTypographicQuotes()
     //     b. and the previous quote of a different kind (so that we get empty quotations right)
 
     bool ending = true;
-    for (int i = mWord.length(); i > 1; --i) {
-        const QChar c = mWord.at(i - 1);
+    for (int i = d->mWord.length(); i > 1; --i) {
+        const QChar c = d->mWord.at(i - 1);
         if (c == QLatin1Char('"') || c == QLatin1Char('\'')) {
             const bool doubleQuotes = (c == QLatin1Char('"'));
             if (i > 2) {
-                QChar::Category c1 = mWord.at(i - 1).category();
+                QChar::Category c1 = d->mWord.at(i - 1).category();
 
                 // case 1 and 2
                 if (c1 == QChar::Separator_Space || c1 == QChar::Separator_Line || c1 == QChar::Separator_Paragraph || c1 == QChar::Punctuation_Open
@@ -784,61 +804,63 @@ void AutoCorrection::replaceTypographicQuotes()
                     QChar openingQuote;
 
                     if (doubleQuotes) {
-                        if (mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()) {
-                            openingQuote = mAutoCorrectionSettings->doubleFrenchQuotes().begin;
+                        if (d->mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()) {
+                            openingQuote = d->mAutoCorrectionSettings->doubleFrenchQuotes().begin;
                         } else {
-                            openingQuote = mAutoCorrectionSettings->typographicDoubleQuotes().begin;
+                            openingQuote = d->mAutoCorrectionSettings->typographicDoubleQuotes().begin;
                         }
                     } else {
-                        openingQuote = mAutoCorrectionSettings->typographicSingleQuotes().begin;
+                        openingQuote = d->mAutoCorrectionSettings->typographicSingleQuotes().begin;
                     }
 
                     // case 3b
-                    if (mWord.at(i - 1) != openingQuote) {
+                    if (d->mWord.at(i - 1) != openingQuote) {
                         ending = false;
                     }
                 }
             }
             // case 2a and 3a
             if (i > 3 && !ending) {
-                const QChar::Category c2 = (mWord.at(i - 2)).category();
+                const QChar::Category c2 = (d->mWord.at(i - 2)).category();
                 ending = (c2 == QChar::Punctuation_InitialQuote);
             }
 
-            if (doubleQuotes && mAutoCorrectionSettings->isReplaceDoubleQuotes()) {
+            if (doubleQuotes && d->mAutoCorrectionSettings->isReplaceDoubleQuotes()) {
                 if (ending) {
-                    const QChar endQuote = mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()
-                        ? mAutoCorrectionSettings->doubleFrenchQuotes().end
-                        : mAutoCorrectionSettings->typographicDoubleQuotes().end;
+                    const QChar endQuote = d->mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()
+                        ? d->mAutoCorrectionSettings->doubleFrenchQuotes().end
+                        : d->mAutoCorrectionSettings->typographicDoubleQuotes().end;
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings->nonBreakingSpace() + endQuote));
+                        d->mWord.replace(i - 1, 2, QString(d->mAutoCorrectionSettings->nonBreakingSpace() + endQuote));
                     } else {
-                        mWord[i - 1] = endQuote;
+                        d->mWord[i - 1] = endQuote;
                     }
                 } else {
-                    const QChar beginQuote = mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()
-                        ? mAutoCorrectionSettings->doubleFrenchQuotes().begin
-                        : mAutoCorrectionSettings->typographicDoubleQuotes().begin;
+                    const QChar beginQuote = d->mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()
+                        ? d->mAutoCorrectionSettings->doubleFrenchQuotes().begin
+                        : d->mAutoCorrectionSettings->typographicDoubleQuotes().begin;
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings->nonBreakingSpace() + beginQuote));
+                        d->mWord.replace(i - 1, 2, QString(d->mAutoCorrectionSettings->nonBreakingSpace() + beginQuote));
                     } else {
-                        mWord[i - 1] = beginQuote;
+                        d->mWord[i - 1] = beginQuote;
                     }
                 }
-            } else if (mAutoCorrectionSettings->isReplaceSingleQuotes()) {
+            } else if (d->mAutoCorrectionSettings->isReplaceSingleQuotes()) {
                 if (ending) {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1, 2, QString(mAutoCorrectionSettings->nonBreakingSpace() + mAutoCorrectionSettings->typographicSingleQuotes().end));
+                        d->mWord.replace(i - 1,
+                                         2,
+                                         QString(d->mAutoCorrectionSettings->nonBreakingSpace() + d->mAutoCorrectionSettings->typographicSingleQuotes().end));
                     } else {
-                        mWord[i - 1] = mAutoCorrectionSettings->typographicSingleQuotes().end;
+                        d->mWord[i - 1] = d->mAutoCorrectionSettings->typographicSingleQuotes().end;
                     }
                 } else {
                     if (addNonBreakingSpace) {
-                        mWord.replace(i - 1,
-                                      2,
-                                      QString(mAutoCorrectionSettings->nonBreakingSpace() + mAutoCorrectionSettings->typographicSingleQuotes().begin));
+                        d->mWord.replace(i - 1,
+                                         2,
+                                         QString(d->mAutoCorrectionSettings->nonBreakingSpace() + d->mAutoCorrectionSettings->typographicSingleQuotes().begin));
                     } else {
-                        mWord[i - 1] = mAutoCorrectionSettings->typographicSingleQuotes().begin;
+                        d->mWord[i - 1] = d->mAutoCorrectionSettings->typographicSingleQuotes().begin;
                     }
                 }
             }
@@ -846,27 +868,28 @@ void AutoCorrection::replaceTypographicQuotes()
     }
 
     // first character
-    if (mWord.at(0) == QLatin1Char('"') && mAutoCorrectionSettings->isReplaceDoubleQuotes()) {
-        const QChar beginQuote = mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes() ? mAutoCorrectionSettings->doubleFrenchQuotes().begin
-                                                                                                : mAutoCorrectionSettings->typographicDoubleQuotes().begin;
-        mWord[0] = beginQuote;
+    if (d->mWord.at(0) == QLatin1Char('"') && d->mAutoCorrectionSettings->isReplaceDoubleQuotes()) {
+        const QChar beginQuote = d->mAutoCorrectionSettings->isReplaceDoubleQuotesByFrenchQuotes()
+            ? d->mAutoCorrectionSettings->doubleFrenchQuotes().begin
+            : d->mAutoCorrectionSettings->typographicDoubleQuotes().begin;
+        d->mWord[0] = beginQuote;
         if (addNonBreakingSpace) {
-            mWord.insert(1, mAutoCorrectionSettings->nonBreakingSpace());
+            d->mWord.insert(1, d->mAutoCorrectionSettings->nonBreakingSpace());
         }
-    } else if (mWord.at(0) == QLatin1Char('\'') && mAutoCorrectionSettings->isReplaceSingleQuotes()) {
-        mWord[0] = mAutoCorrectionSettings->typographicSingleQuotes().begin;
+    } else if (d->mWord.at(0) == QLatin1Char('\'') && d->mAutoCorrectionSettings->isReplaceSingleQuotes()) {
+        d->mWord[0] = d->mAutoCorrectionSettings->typographicSingleQuotes().begin;
         if (addNonBreakingSpace) {
-            mWord.insert(1, mAutoCorrectionSettings->nonBreakingSpace());
+            d->mWord.insert(1, d->mAutoCorrectionSettings->nonBreakingSpace());
         }
     }
 }
 
 void AutoCorrection::loadGlobalFileName(const QString &fname)
 {
-    mAutoCorrectionSettings->loadGlobalFileName(fname);
+    d->mAutoCorrectionSettings->loadGlobalFileName(fname);
 }
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 {
-    mAutoCorrectionSettings->writeAutoCorrectionFile(filename);
+    d->mAutoCorrectionSettings->writeAutoCorrectionFile(filename);
 }

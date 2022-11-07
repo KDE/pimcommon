@@ -14,6 +14,7 @@
 
 namespace PimCommon
 {
+class AutoCorrectionPrivate;
 /**
  * @brief The AutoCorrection class
  * @author Laurent Montel <montel@kde.org>
@@ -57,13 +58,7 @@ private:
     Q_REQUIRED_RESULT QString autoDetectURL(const QString &_word) const;
     Q_REQUIRED_RESULT bool excludeToUppercase(const QString &word) const;
     Q_REQUIRED_RESULT QColor linkColor();
-
-    QString mWord;
-    QTextCursor mCursor;
-
-    QStringList mCacheNameOfDays;
-    QColor mLinkColor;
-    // Settings
-    AutoCorrectionSettings *mAutoCorrectionSettings = nullptr;
+    friend class AutoCorrectionPrivate;
+    std::unique_ptr<AutoCorrectionPrivate> const d;
 };
 }
