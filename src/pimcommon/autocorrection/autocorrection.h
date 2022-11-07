@@ -30,8 +30,8 @@ public:
 
     void loadGlobalFileName(const QString &fname);
 
-    Q_REQUIRED_RESULT AutoCorrectionSettings autoCorrectionSettings() const;
-    void setAutoCorrectionSettings(const AutoCorrectionSettings &newAutoCorrectionSettings);
+    Q_REQUIRED_RESULT AutoCorrectionSettings *autoCorrectionSettings() const;
+    void setAutoCorrectionSettings(AutoCorrectionSettings *newAutoCorrectionSettings);
 
     void writeAutoCorrectionXmlFile(const QString &filename);
 
@@ -64,6 +64,6 @@ private:
     QStringList mCacheNameOfDays;
     QColor mLinkColor;
     // Settings
-    AutoCorrectionSettings mAutoCorrectionSettings;
+    AutoCorrectionSettings *mAutoCorrectionSettings = nullptr;
 };
 }

@@ -12,6 +12,7 @@
 #include <QSet>
 namespace PimCommon
 {
+class AutoCorrectionSettingsPrivate;
 class PIMCOMMON_EXPORT AutoCorrectionSettings
 {
 public:
@@ -96,40 +97,9 @@ public:
 private:
     void migrateKMailXmlFile();
     void readAutoCorrectionFile(bool forceGlobal = false);
-    AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
-    AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
-    AutoCorrectionUtils::TypographicQuotes mDoubleFrenchQuotes;
 
-    QHash<QString, QString> mAutocorrectEntries;
-    QHash<QString, QString> mSuperScriptEntries;
-
-    QSet<QString> mUpperCaseExceptions;
-    QSet<QString> mTwoUpperLetterExceptions;
-
-    QString mAutoCorrectLang;
-
-    QChar mNonBreakingSpace;
-
-    int mMaxFindStringLength = 0;
-    int mMinFindStringLength = 0;
-
-    bool mSingleSpaces = true; // suppress double spaces.
-    bool mUppercaseFirstCharOfSentence = false; // convert first letter of a sentence automatically to uppercase
-    bool mFixTwoUppercaseChars = false; // convert two uppercase characters to one upper and one lowercase.
-    bool mAutoFractions = true; // replace 1/2 with ½
-    bool mCapitalizeWeekDays = false;
-    bool mAdvancedAutocorrect = false; // autocorrection from a list of entries
-
-    bool mReplaceDoubleQuotes = false; // replace double quotes with typographical quotes
-    bool mReplaceSingleQuotes = false; // replace single quotes with typographical quotes
-
-    bool mAutoFormatUrl = false;
-    bool mAutoBoldUnderline = false;
-    bool mEnabled = false;
-    bool mSuperScriptAppendix = false;
-
-    bool mAddNonBreakingSpace = false;
-    bool mReplaceDoubleQuotesByFrenchQuotes = false;
+    friend class AutoCorrectionSettingsPrivate;
+    std::unique_ptr<AutoCorrectionSettingsPrivate> const d;
 };
 }
 PIMCOMMON_EXPORT QDebug operator<<(QDebug d, const PimCommon::AutoCorrectionSettings &t);

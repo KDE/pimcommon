@@ -51,14 +51,14 @@ void LineEditWithAutoCorrection::setAutocorrection(PimCommon::AutoCorrection *au
 
 void LineEditWithAutoCorrection::setAutocorrectionLanguage(const QString &language)
 {
-    PimCommon::AutoCorrectionSettings settings = d->mAutoCorrection->autoCorrectionSettings();
-    settings.setLanguage(language);
+    PimCommon::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
+    settings->setLanguage(language);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
 }
 
 void LineEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
 {
-    if (d->mAutoCorrection && d->mAutoCorrection->autoCorrectionSettings().isEnabledAutoCorrection()) {
+    if (d->mAutoCorrection && d->mAutoCorrection->autoCorrectionSettings()->isEnabledAutoCorrection()) {
         if ((e->key() == Qt::Key_Space) || (e->key() == Qt::Key_Enter) || (e->key() == Qt::Key_Return)) {
             if (!textCursor().hasSelection()) {
                 int position = textCursor().position();
