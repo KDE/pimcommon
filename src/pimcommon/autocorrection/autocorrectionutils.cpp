@@ -53,8 +53,7 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
             dirList.append(path);
         }
     };
-    dirList.append(
-        QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, QStringLiteral("libreoffice/4/user/autocorr/"), QStandardPaths::LocateDirectory));
+    dirList.append(QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, libreOfficeLocalPath(), QStandardPaths::LocateDirectory));
     maybeAddPath(libreOfficeSystemPath());
     return dirList;
 }
@@ -65,9 +64,15 @@ QString AutoCorrectionUtils::libreOfficeSystemPath()
     return QStringLiteral("/usr/lib64/libreoffice/share/autocorr/");
 }
 
+QString AutoCorrectionUtils::libreOfficeLocalPath()
+{
+    // TODO add path for macos/windows etc.
+    return QStringLiteral("/libreoffice/4/user/autocorr/");
+}
+
 QString AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath()
 {
-    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QStringLiteral("/libreoffice/4/user/autocorr/");
+    return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + libreOfficeLocalPath();
 }
 
 QStringList AutoCorrectionUtils::searchAutoCorrectLibreOfficeFiles()
