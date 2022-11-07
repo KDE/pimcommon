@@ -380,7 +380,6 @@ QHash<QString, QString> AutoCorrectionSettings::autocorrectEntries() const
 
 void AutoCorrectionSettings::writeAutoCorrectionFile(const QString &filename)
 {
-#if 1
     ExportLibreOfficeAutocorrection correct;
     correct.setAutocorrectEntries(d->mAutocorrectEntries);
     correct.setUpperCaseExceptions(d->mUpperCaseExceptions);
@@ -389,16 +388,6 @@ void AutoCorrectionSettings::writeAutoCorrectionFile(const QString &filename)
     if (!correct.exportData(d->mAutoCorrectLang, filename, message)) {
         qCDebug(PIMCOMMONAUTOCORRECTION_LOG) << "We can't save in file :" << filename;
     }
-#else
-    ExportKMailAutocorrection correct;
-    correct.setAutocorrectEntries(mAutocorrectEntries);
-    correct.setUpperCaseExceptions(mUpperCaseExceptions);
-    correct.setTwoUpperLetterExceptions(mTwoUpperLetterExceptions);
-    QString message;
-    if (!correct.exportData(mAutoCorrectLang, filename, message)) {
-        qCDebug(PIMCOMMON_LOG) << "We can't save in file :" << filename;
-    }
-#endif
 }
 
 int AutoCorrectionSettings::maxFindStringLength() const
