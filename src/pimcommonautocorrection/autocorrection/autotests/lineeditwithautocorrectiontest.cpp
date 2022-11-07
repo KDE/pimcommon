@@ -6,7 +6,7 @@
 
 #include "lineeditwithautocorrectiontest.h"
 #include "../autocorrection.h"
-#include <PimCommon/LineEditWithAutoCorrection>
+#include <PimCommonAutoCorrection/LineEditWithAutoCorrection>
 #include <QTest>
 #include <qtestkeyboard.h>
 
