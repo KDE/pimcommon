@@ -51,15 +51,8 @@ endmacro()
 
 add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
 
-kconfig_add_kcfg_files(libpimcommon_SRCS
-    settings/pimcommonsetting_base.kcfgc
-    )
-
 add_library(KF5PimCommon )
 add_library(KF5::PimCommon ALIAS KF5PimCommon)
-ki18n_wrap_ui(KF5PimCommon
-    autocorrection/ui/autocorrectionwidget.ui
-    )
 ecm_qt_declare_logging_category(KF5PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
         DESCRIPTION "kdepim (pimcommon)"
         OLD_CATEGORY_NAMES log_pimcommon
@@ -68,40 +61,6 @@ ecm_qt_declare_logging_category(KF5PimCommon HEADER pimcommon_debug.h IDENTIFIER
 
 target_sources(KF5PimCommon PRIVATE
     ${libpimcommon_SRCS}
-    autocorrection/autocorrection.cpp
-    autocorrection/autocorrection.h
-    autocorrection/autocorrectionutils.h
-    autocorrection/autocorrectionutils.cpp
-    autocorrection/autocorrectionsettings.h
-    autocorrection/autocorrectionsettings.cpp
-
-    autocorrection/import/importlibreofficeautocorrection.cpp
-    autocorrection/import/importkmailautocorrection.cpp
-    autocorrection/import/importabstractautocorrection.cpp
-    autocorrection/import/importkmailautocorrection.h
-    autocorrection/import/importlibreofficeautocorrection.h
-    autocorrection/import/importabstractautocorrection.h
-
-    autocorrection/export/exportabstractautocorrection.h
-    autocorrection/export/exportabstractautocorrection.cpp
-    autocorrection/export/exportkmailautocorrection.h
-    autocorrection/export/exportkmailautocorrection.cpp
-    autocorrection/export/exportlibreofficeautocorrection.h
-    autocorrection/export/exportlibreofficeautocorrection.cpp
-
-    autocorrection/widgets/autocorrectionwidget.cpp
-    autocorrection/widgets/autocorrectionlistwidget.cpp
-    autocorrection/widgets/autocorrectiontreewidget.cpp
-    autocorrection/widgets/autocorrectionlanguage.cpp
-    autocorrection/widgets/lineeditwithautocorrection.cpp
-    autocorrection/widgets/richtexteditwithautocorrection.cpp
-    autocorrection/widgets/autocorrectionlistwidget.h
-    autocorrection/widgets/autocorrectionlanguage.h
-    autocorrection/widgets/autocorrectionwidget.h
-    autocorrection/widgets/richtexteditwithautocorrection.h
-    autocorrection/widgets/lineeditwithautocorrection.h
-    autocorrection/widgets/autocorrectiontreewidget.h
-
     genericplugins/pluginutil.cpp
     genericplugins/genericpluginmanager.cpp
     genericplugins/genericplugin.cpp
@@ -160,7 +119,6 @@ target_sources(KF5PimCommon PRIVATE
     shareserviceurl/shareserviceurlmanager.cpp
     network/networkmanager.cpp
     misc/emailvalidator.cpp
-    settings/pimcommonsettings.cpp
     widgets/icons.qrc
     misc/emailvalidator.h
 
@@ -187,7 +145,6 @@ target_sources(KF5PimCommon PRIVATE
     templatewidgets/templateeditdialog.h
     util/broadcaststatus.h
     util/pimutil.h
-    settings/pimcommonsettings.h
     genericplugins/genericplugin.h
     genericplugins/genericpluginmanager.h
     genericplugins/pluginutil.h
@@ -259,7 +216,6 @@ install(TARGETS
 
 if (BUILD_TESTING)
     add_subdirectory(translator/autotests)
-    add_subdirectory(autocorrection/autotests)
     add_subdirectory(widgets/autotests)
     if (QT_MAJOR_VERSION STREQUAL "5")
         add_subdirectory(migration/autotests)
@@ -267,7 +223,6 @@ if (BUILD_TESTING)
     add_subdirectory(shareserviceurl/autotests)
     add_subdirectory(translator/tests)
     add_subdirectory(widgets/tests)
-    add_subdirectory(autocorrection/tests)
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
     add_subdirectory(configureplugins/autotests)
@@ -312,14 +267,6 @@ ecm_generate_headers(PimCommon_CamelCase_HEADERS
     RELATIVE util
     )
 
-ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
-    HEADER_NAMES
-    PimCommonSettings
-    REQUIRED_HEADERS PimCommon_settings_HEADERS
-    PREFIX PimCommon
-    RELATIVE settings
-    )
-
 ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
     HEADER_NAMES
     ShareServiceUrlManager
@@ -358,28 +305,6 @@ if (QT_MAJOR_VERSION STREQUAL "5")
         RELATIVE migration
     )
 endif()
-
-ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
-    HEADER_NAMES
-    RichTexteditWithAutoCorrection
-    LineEditWithAutoCorrection
-    AutoCorrectionWidget
-    AutoCorrectionLanguage
-    REQUIRED_HEADERS PimCommon_autocorrectionwidgets_HEADERS
-    PREFIX PimCommon
-    RELATIVE autocorrection/widgets/
-    )
-
-ecm_generate_headers(PimCommon_Camelcaseautocorrection_HEADERS
-    HEADER_NAMES
-    AutoCorrection
-    AutoCorrectionSettings
-    AutoCorrectionUtils
-
-    REQUIRED_HEADERS PimCommon_autocorrection_HEADERS
-    PREFIX PimCommon
-    RELATIVE autocorrection/
-    )
 
 ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     HEADER_NAMES
@@ -428,15 +353,12 @@ install(FILES
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
-    ${PimCommon_Camelcaseautocorrection_HEADERS}
-    ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
     ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
     ${PimCommon_Camelcasemigrate_HEADERS}
     ${PimCommon_Camelcaseplaintexteditor_HEADERS}
     ${PimCommon_Camelcaserichtexteditor_HEADERS}
     ${PimCommon_Camelcasescript_HEADERS}
-    ${PimCommon_Camelcasesettings_HEADERS}
     ${PimCommon_Camelcaseshareserviceurl_HEADERS}
     ${PimCommon_Camelcasestorageservice_HEADERS}
     ${PimCommon_Camelcasestorageservicedialog_HEADERS}
@@ -455,20 +377,16 @@ install(FILES
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
     ${PimCommon_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_networkmanager_HEADERS}
-    ${PimCommon_autocorrection_HEADERS}
-    ${PimCommon_autocorrectionwidgets_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_job_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
     ${PimCommon_migrate_HEADERS}
     ${PimCommon_plaintexteditor_HEADERS}
     ${PimCommon_richtexteditor_HEADERS}
-    ${PimCommon_settings_HEADERS}
     ${PimCommon_shareserviceurl_HEADERS}
     ${PimCommon_storageservice_HEADERS}
     ${PimCommon_storageservicedialog_HEADERS}
@@ -505,8 +423,6 @@ if (BUILD_QCH)
         ${PimCommon_genericplugins_HEADERS}
         ${PimCommon_configureplugins_HEADERS}
         ${PimCommon_networkmanager_HEADERS}
-        ${PimCommon_autocorrection_HEADERS}
-        ${PimCommon_autocorrectionwidgets_HEADERS}
         ${PimCommon_customtools_HEADERS}
         ${PimCommon_job_HEADERS}
         ${PimCommon_managerserversidesubscription_HEADERS}
