@@ -859,5 +859,5 @@ void AutoCorrection::loadGlobalFileName(const QString &fname)
 
 void AutoCorrection::writeAutoCorrectionXmlFile(const QString &filename)
 {
-    mAutoCorrectionSettings.writeAutoCorrectionXmlFile(filename);
+    mAutoCorrectionSettings.writeAutoCorrectionFile(filename);
 }

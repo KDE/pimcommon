@@ -199,7 +199,7 @@ void AutoCorrectionSettings::readConfig()
     if (mTypographicDoubleQuotes.isEmpty()) {
         mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
     }
-    readAutoCorrectionXmlFile();
+    readAutoCorrectionFile();
 }
 
 void AutoCorrectionSettings::writeConfig()
@@ -221,7 +221,7 @@ void AutoCorrectionSettings::writeConfig()
     PimCommon::PimCommonSettings::self()->setTypographicDoubleQuotes(mTypographicDoubleQuotes.toString());
     PimCommon::PimCommonSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(mReplaceDoubleQuotesByFrenchQuotes);
     PimCommon::PimCommonSettings::self()->requestSync();
-    writeAutoCorrectionXmlFile();
+    writeAutoCorrectionFile();
 }
 
 void AutoCorrectionSettings::setAutoFractions(bool newAutoFractions)
@@ -274,7 +274,7 @@ void AutoCorrectionSettings::setLanguage(const QString &lang, bool forceGlobal)
     if (mAutoCorrectLang != lang || forceGlobal) {
         mAutoCorrectLang = lang;
         // Re-read xml file
-        readAutoCorrectionXmlFile(forceGlobal);
+        readAutoCorrectionFile(forceGlobal);
     }
 }
 
@@ -287,7 +287,7 @@ bool AutoCorrectionSettings::addAutoCorrect(const QString &currentWord, const QS
 {
     if (!mAutocorrectEntries.contains(currentWord)) {
         mAutocorrectEntries.insert(currentWord, replaceWord);
-        writeAutoCorrectionXmlFile();
+        writeAutoCorrectionFile();
         return true;
     } else {
         return false;
@@ -333,7 +333,7 @@ QHash<QString, QString> AutoCorrectionSettings::autocorrectEntries() const
     return mAutocorrectEntries;
 }
 
-void AutoCorrectionSettings::writeAutoCorrectionXmlFile(const QString &filename)
+void AutoCorrectionSettings::writeAutoCorrectionFile(const QString &filename)
 {
 #if 1
     ExportLibreOfficeAutocorrection correct;
@@ -476,7 +476,7 @@ void AutoCorrectionSettings::migrateKMailXmlFile()
 #endif
 }
 
-void AutoCorrectionSettings::readAutoCorrectionXmlFile(bool forceGlobal)
+void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
 {
     mUpperCaseExceptions.clear();
     mAutocorrectEntries.clear();

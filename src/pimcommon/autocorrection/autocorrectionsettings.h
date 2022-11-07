@@ -82,7 +82,7 @@ public:
     Q_REQUIRED_RESULT QHash<QString, QString> superScriptEntries() const;
     void setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries);
 
-    void writeAutoCorrectionXmlFile(const QString &filename = QString());
+    void writeAutoCorrectionFile(const QString &filename = QString());
     Q_REQUIRED_RESULT int maxFindStringLength() const;
 
     Q_REQUIRED_RESULT int minFindStringLength() const;
@@ -95,7 +95,7 @@ public:
 
 private:
     void migrateKMailXmlFile();
-    void readAutoCorrectionXmlFile(bool forceGlobal = false);
+    void readAutoCorrectionFile(bool forceGlobal = false);
     AutoCorrectionUtils::TypographicQuotes mTypographicSingleQuotes;
     AutoCorrectionUtils::TypographicQuotes mTypographicDoubleQuotes;
     AutoCorrectionUtils::TypographicQuotes mDoubleFrenchQuotes;
