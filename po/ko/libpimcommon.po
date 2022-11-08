@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-29 00:48+0000\n"
+"POT-Creation-Date: 2022-11-08 02:25+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -16,406 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:53
-#, kde-format
-msgid "Archive cannot be opened in read mode."
-msgstr "읽기 모드로 보관 파일을 열 수 없습니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:21
-#, kde-format
-msgid "Enable autocorrection"
-msgstr "자동 고침 사용"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:30
-#, kde-format
-msgid "Replacement and exception for language:"
-msgstr "언어에 대한 바꾸기 및 예외:"
-
-#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:44
-#: pimcommon/templatewidgets/templatelistwidget.cpp:203
-#, kde-format
-msgid "Export..."
-msgstr "내보내기..."
-
-#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:51
-#: pimcommon/templatewidgets/templatelistwidget.cpp:207
-#, kde-format
-msgid "Import..."
-msgstr "가져오기..."
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:77
-#, kde-format
-msgid "Ad&vanced Autocorrection"
-msgstr "고급 자동 고침(&V)"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:88
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:219
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:453
-#, kde-format
-msgid "&Add"
-msgstr "추가(&A)"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#. i18n: ectx: property (text), widget (QPushButton, remove2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:98
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:291
-#: pimcommon/templatewidgets/templatelistwidget.cpp:196
-#: pimcommon/widgets/simplestringlisteditor.cpp:310
-#: pimcommon/widgets/simplestringlisteditor.cpp:312
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:117
-#, kde-format
-msgid "Remove"
-msgstr "삭제"
-
-#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:120
-#, kde-format
-msgid "&Enable word replacement"
-msgstr "단어 대체 사용(&E)"
-
-#. i18n: ectx: property (text), widget (QLabel, findLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:129
-#, kde-format
-msgid "&Find"
-msgstr "찾기(&F)"
-
-#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:146
-#, kde-format
-msgid "Re&place"
-msgstr "바꾸기(&P)"
-
-#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:181
-#, kde-format
-msgid "Find"
-msgstr "찾기"
-
-#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:186
-#, kde-format
-msgid "Replace"
-msgstr "바꾸기"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:195
-#, kde-format
-msgid "E&xceptions"
-msgstr "예외(&X):"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:203
-#, kde-format
-msgid "Do not treat as the end of a sentence:"
-msgstr "문장의 끝으로 간주하지 않음:"
-
-#. i18n: ectx: property (text), widget (QPushButton, remove1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:226
-#, kde-format
-msgid "R&emove"
-msgstr "삭제(&E)"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:268
-#, kde-format
-msgid "Accept two uppercase letters in:"
-msgstr "대문자 두 개 허용:"
-
-#. i18n: ectx: property (text), widget (QPushButton, add2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:284
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
-#, kde-format
-msgid "Add"
-msgstr "추가"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:332
-#, kde-format
-msgid "Si&mple Autocorrection"
-msgstr "간단한 자동 고침(&M)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:338
-#, kde-format
-msgid ""
-"Detect when a new sentence is started and always ensure that the first "
-"character is an uppercase character"
-msgstr "새 문장의 시작을 확인하고 항상 첫 글자를 대문자로 유지"
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:342
-#, kde-format
-msgid ""
-"Convert &first letter of a sentence automatically to uppercase\n"
-"(e.g. \"my house. in this town\" to \"my house. In this town\")"
-msgstr ""
-"문장의 첫 글자를 자동으로 대문자로 변환(&F)\n"
-"(예: \"my house. in this town\"을 \"my house. In this town\"으로)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:352
-#, kde-format
-msgid ""
-"All words are checked for the common mistake of holding the shift key down a "
-"bit too long. If some words must have two uppercase characters, then those "
-"exceptions should be added in the 'Exceptions' tab."
-msgstr ""
-"모든 단어를 검사하여 Shift 키를 오래 누르고 있었는지를 검사합니다. 일부 단어"
-"가 두 개 이상의 대문자가 들어 있어야만 하면 예외 탭에서 추가할 수 있습니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:356
-#, kde-format
-msgid ""
-"Convert &two uppercase characters to one uppercase and one lowercase "
-"character\n"
-" (e.g. PErfect to Perfect)"
-msgstr ""
-"두 대문자 글자를 하나의 대문자와 하나의 소문자로 변환(&T)\n"
-" (예: PErfect를 Perfect로)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:363
-#, kde-format
-msgid ""
-"Make sure that more than one space cannot be typed, as this is a common "
-"mistake which is quite hard to find in formatted text."
-msgstr ""
-"서식 있는 텍스트에서 찾기 어려운 실수인 두 개 이상의 공백을 입력하는 것을 방"
-"지해 줍니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:366
-#, kde-format
-msgid "&Suppress double spaces"
-msgstr "공백 두 개 제거(&S)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:373
-#, kde-format
-msgid "Most standard fraction notations will be converted when available"
-msgstr "사용 가능한 경우 표준 분수 기호로 변환"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:376
-#, kde-format
-msgid "Re&place 1/2... with ½..."
-msgstr "1/2...를 ½...로 변환(&P)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:383
-#, kde-format
-msgid "Capitalize name of days"
-msgstr "요일 이름 첫 글자를 대문자화"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:390
-#, kde-format
-msgid ""
-"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
-"that matches the way an Internet browser would show a URL."
-msgstr ""
-"URL이 입력되었는지를 확인하고 인터넷 브라우저가 URL을 표시할 수 있도록 서식"
-"을 지정합니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:393
-#, kde-format
-msgid "Autoformat &URLs (HTML mode)"
-msgstr "URL 자동 서식 적용(HTML 모드)(&U)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:400
-#, kde-format
-msgid ""
-"When you use _underline_ or *bold*, the text between the underscores or "
-"asterisks will be converted to underlined or bold text."
-msgstr ""
-"_밑줄_이나 *굵게*를 사용하면 밑줄이나 별표 사이의 글자를 자동으로 밑줄 친 글"
-"자나 굵은 글자로 변환합니다."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:403
-#, kde-format
-msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
-msgstr "굵게, 취소선, 밑줄 서식 자동 적용(HTML 모드)(&B)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:410
-#, kde-format
-msgid "Replace 1st... with 1^st... (HTML mode)"
-msgstr "1st...를 1^st로 변환(HTML 모드)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:417
-#, kde-format
-msgid "Add non breaking space before specific punctuation marks in French text"
-msgstr "프랑스어 문자열에서 특정한 구분 기호 이전에 줄넘김 없는 공백 삽입"
-
-#. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
-msgid "Replace double quotes by french quotes"
-msgstr "큰 따옴표를 타이포그래피 따옴표로 변환(&D)"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:445
-#, kde-format
-msgid "Custom &Quotes"
-msgstr "사용자 정의 인용문(&Q)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:451
-#, kde-format
-msgid "Replace &double quotes with typographical quotes"
-msgstr "큰 따옴표를 타이포그래피 따옴표로 변환(&D)"
-
-#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
-#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
-#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
-#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:462
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:502
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:629
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:643
-#, kde-format
-msgid "By Default"
-msgstr "기본값"
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
-#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:475
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:488
-#, kde-format
-msgid "\""
-msgstr "\""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:495
-#, kde-format
-msgid "Ending Quote:"
-msgstr "닫는 따옴표:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:522
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:622
-#, kde-format
-msgid "Opening Quote:"
-msgstr "여는 따옴표:"
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
-#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:536
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:657
-#, kde-format
-msgid "Default"
-msgstr "기본값"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:560
-#, kde-format
-msgid "Replace &single quotes with typographical quotes"
-msgstr "작은 따옴표를 타이포그래피 따옴표로 변환(&S)"
-
-#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
-#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:596
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:615
-#, kde-format
-msgid "'"
-msgstr "'"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:636
-#, kde-format
-msgid "Ending Quotes:"
-msgstr "닫는 따옴표:"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:115
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "LibreOffice 자동 고침"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:119
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "KMail/Calligra 자동 고침"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:371
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr "\"바꿀 문자열\"이 \"찾을 문자열\"과 같습니다."
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:371
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "자동 고침 항목 추가"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:450
-#, kde-format
-msgid "&Modify"
-msgstr "수정(&M)"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:561
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "LibreOffice 자동 고침 가져오기"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:562
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection File (*.data)"
-msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "LibreOffice 자동 고침 파일 (*.data)"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:565
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "KMail 자동 고침 가져오기"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:566
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "KMail 자동 고침 파일 (*.xml)"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:598
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
-msgid "Import Autocorrection File"
-msgstr "자동 고침 파일 내보내기"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:625
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr "언어가 변경되었습니다. 이전 언어의 설정을 저장하시겠습니까?"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:626
-#, kde-format
-msgid "Save config"
-msgstr "설정 저장"
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr "설정을 내보내기 전에 저장하십시오."
-
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:665
-#: pimcommon/autocorrection/widgets/autocorrectionwidget.cpp:668
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "자동 고침 파일 내보내기"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -540,6 +140,35 @@ msgstr "수정..."
 #, kde-format
 msgid "Duplicate"
 msgstr "복제"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#. i18n: ectx: property (text), widget (QPushButton, remove2)
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/widgets/simplestringlisteditor.cpp:310
+#: pimcommon/widgets/simplestringlisteditor.cpp:312
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:117
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:98
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:291
+#, kde-format
+msgid "Remove"
+msgstr "삭제"
+
+#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
+#: pimcommon/templatewidgets/templatelistwidget.cpp:203
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:44
+#, kde-format
+msgid "Export..."
+msgstr "내보내기..."
+
+#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:51
+#, kde-format
+msgid "Import..."
+msgstr "가져오기..."
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:214
 #, kde-format
@@ -1510,6 +1139,13 @@ msgstr "위로 이동"
 msgid "Move Down"
 msgstr "아래로 이동"
 
+#. i18n: ectx: property (text), widget (QPushButton, add2)
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:284
+#, kde-format
+msgid "Add"
+msgstr "추가"
+
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:116
 #, kde-format
 msgid "Do you want to remove this email address?"
@@ -2027,6 +1663,370 @@ msgstr "이 메모를 삭제하시겠습니까?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "메모 삭제"
+
+#: pimcommonautocorrection/autocorrection/import/importlibreofficeautocorrection.cpp:53
+#, kde-format
+msgid "Archive cannot be opened in read mode."
+msgstr "읽기 모드로 보관 파일을 열 수 없습니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:21
+#, kde-format
+msgid "Enable autocorrection"
+msgstr "자동 고침 사용"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:30
+#, kde-format
+msgid "Replacement and exception for language:"
+msgstr "언어에 대한 바꾸기 및 예외:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:77
+#, kde-format
+msgid "Ad&vanced Autocorrection"
+msgstr "고급 자동 고침(&V)"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#. i18n: ectx: property (text), widget (QPushButton, add1)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:219
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:465
+#, kde-format
+msgid "&Add"
+msgstr "추가(&A)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:120
+#, kde-format
+msgid "&Enable word replacement"
+msgstr "단어 대체 사용(&E)"
+
+#. i18n: ectx: property (text), widget (QLabel, findLabel)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:129
+#, kde-format
+msgid "&Find"
+msgstr "찾기(&F)"
+
+#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:146
+#, kde-format
+msgid "Re&place"
+msgstr "바꾸기(&P)"
+
+#. i18n: ectx: property (text), widget (PimCommonAutoCorrection::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:181
+#, kde-format
+msgid "Find"
+msgstr "찾기"
+
+#. i18n: ectx: property (text), widget (PimCommonAutoCorrection::AutoCorrectionTreeWidget, treeWidget)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:186
+#, kde-format
+msgid "Replace"
+msgstr "바꾸기"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:195
+#, kde-format
+msgid "E&xceptions"
+msgstr "예외(&X):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:203
+#, kde-format
+msgid "Do not treat as the end of a sentence:"
+msgstr "문장의 끝으로 간주하지 않음:"
+
+#. i18n: ectx: property (text), widget (QPushButton, remove1)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:226
+#, kde-format
+msgid "R&emove"
+msgstr "삭제(&E)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:268
+#, kde-format
+msgid "Accept two uppercase letters in:"
+msgstr "대문자 두 개 허용:"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:332
+#, kde-format
+msgid "Si&mple Autocorrection"
+msgstr "간단한 자동 고침(&M)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:338
+#, kde-format
+msgid ""
+"Detect when a new sentence is started and always ensure that the first "
+"character is an uppercase character"
+msgstr "새 문장의 시작을 확인하고 항상 첫 글자를 대문자로 유지"
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:342
+#, kde-format
+msgid ""
+"Convert &first letter of a sentence automatically to uppercase\n"
+"(e.g. \"my house. in this town\" to \"my house. In this town\")"
+msgstr ""
+"문장의 첫 글자를 자동으로 대문자로 변환(&F)\n"
+"(예: \"my house. in this town\"을 \"my house. In this town\"으로)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:352
+#, kde-format
+msgid ""
+"All words are checked for the common mistake of holding the shift key down a "
+"bit too long. If some words must have two uppercase characters, then those "
+"exceptions should be added in the 'Exceptions' tab."
+msgstr ""
+"모든 단어를 검사하여 Shift 키를 오래 누르고 있었는지를 검사합니다. 일부 단어"
+"가 두 개 이상의 대문자가 들어 있어야만 하면 예외 탭에서 추가할 수 있습니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:356
+#, kde-format
+msgid ""
+"Convert &two uppercase characters to one uppercase and one lowercase "
+"character\n"
+" (e.g. PErfect to Perfect)"
+msgstr ""
+"두 대문자 글자를 하나의 대문자와 하나의 소문자로 변환(&T)\n"
+" (예: PErfect를 Perfect로)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:363
+#, kde-format
+msgid ""
+"Make sure that more than one space cannot be typed, as this is a common "
+"mistake which is quite hard to find in formatted text."
+msgstr ""
+"서식 있는 텍스트에서 찾기 어려운 실수인 두 개 이상의 공백을 입력하는 것을 방"
+"지해 줍니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:366
+#, kde-format
+msgid "&Suppress double spaces"
+msgstr "공백 두 개 제거(&S)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:373
+#, kde-format
+msgid "Most standard fraction notations will be converted when available"
+msgstr "사용 가능한 경우 표준 분수 기호로 변환"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:376
+#, kde-format
+msgid "Re&place 1/2... with ½..."
+msgstr "1/2...를 ½...로 변환(&P)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:383
+#, kde-format
+msgid "Capitalize name of days"
+msgstr "요일 이름 첫 글자를 대문자화"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:390
+#, kde-format
+msgid ""
+"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
+"that matches the way an Internet browser would show a URL."
+msgstr ""
+"URL이 입력되었는지를 확인하고 인터넷 브라우저가 URL을 표시할 수 있도록 서식"
+"을 지정합니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:393
+#, kde-format
+msgid "Autoformat &URLs (HTML mode)"
+msgstr "URL 자동 서식 적용(HTML 모드)(&U)"
+
+#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:400
+#, kde-format
+msgid ""
+"When you use _underline_ or *bold*, the text between the underscores or "
+"asterisks will be converted to underlined or bold text."
+msgstr ""
+"_밑줄_이나 *굵게*를 사용하면 밑줄이나 별표 사이의 글자를 자동으로 밑줄 친 글"
+"자나 굵은 글자로 변환합니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:403
+#, kde-format
+msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+msgstr "굵게, 취소선, 밑줄 서식 자동 적용(HTML 모드)(&B)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:410
+#, kde-format
+msgid "Replace 1st... with 1^st... (HTML mode)"
+msgstr "1st...를 1^st로 변환(HTML 모드)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:417
+#, kde-format
+msgid "Add non breaking space before specific punctuation marks in French text"
+msgstr "프랑스어 문자열에서 특정한 구분 기호 이전에 줄넘김 없는 공백 삽입"
+
+#. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
+#, fuzzy, kde-format
+#| msgid "Replace &double quotes with typographical quotes"
+msgid "Replace double quotes by french quotes"
+msgstr "큰 따옴표를 타이포그래피 따옴표로 변환(&D)"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:445
+#, kde-format
+msgid "Custom &Quotes"
+msgstr "사용자 정의 인용문(&Q)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:451
+#, kde-format
+msgid "Replace &double quotes with typographical quotes"
+msgstr "큰 따옴표를 타이포그래피 따옴표로 변환(&D)"
+
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
+#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:462
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:502
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:629
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:643
+#, kde-format
+msgid "By Default"
+msgstr "기본값"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:475
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:488
+#, kde-format
+msgid "\""
+msgstr "\""
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:495
+#, kde-format
+msgid "Ending Quote:"
+msgstr "닫는 따옴표:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:522
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:622
+#, kde-format
+msgid "Opening Quote:"
+msgstr "여는 따옴표:"
+
+#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
+#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:536
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:657
+#, kde-format
+msgid "Default"
+msgstr "기본값"
+
+#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:560
+#, kde-format
+msgid "Replace &single quotes with typographical quotes"
+msgstr "작은 따옴표를 타이포그래피 따옴표로 변환(&S)"
+
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
+#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:596
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:615
+#, kde-format
+msgid "'"
+msgstr "'"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:636
+#, kde-format
+msgid "Ending Quotes:"
+msgstr "닫는 따옴표:"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
+#, kde-format
+msgid "LibreOffice Autocorrection"
+msgstr "LibreOffice 자동 고침"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#, kde-format
+msgid "KMail/Calligra Autocorrection"
+msgstr "KMail/Calligra 자동 고침"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:383
+#, kde-format
+msgid "\"Replace\" string is the same as \"Find\" string."
+msgstr "\"바꿀 문자열\"이 \"찾을 문자열\"과 같습니다."
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:383
+#, kde-format
+msgid "Add Autocorrection Entry"
+msgstr "자동 고침 항목 추가"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:462
+#, kde-format
+msgid "&Modify"
+msgstr "수정(&M)"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
+#, kde-format
+msgid "Import LibreOffice Autocorrection"
+msgstr "LibreOffice 자동 고침 가져오기"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:574
+#, fuzzy, kde-format
+#| msgid "LibreOffice Autocorrection File (*.data)"
+msgid "LibreOffice Autocorrection File (*.dat)"
+msgstr "LibreOffice 자동 고침 파일 (*.data)"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
+#, kde-format
+msgid "Import KMail Autocorrection"
+msgstr "KMail 자동 고침 가져오기"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:578
+#, kde-format
+msgid "KMail Autocorrection File (*.xml)"
+msgstr "KMail 자동 고침 파일 (*.xml)"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:610
+#, fuzzy, kde-format
+#| msgid "Export Autocorrection File"
+msgid "Import Autocorrection File"
+msgstr "자동 고침 파일 내보내기"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
+#, kde-format
+msgid "Language was changed, do you want to save config for previous language?"
+msgstr "언어가 변경되었습니다. 이전 언어의 설정을 저장하시겠습니까?"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:638
+#, kde-format
+msgid "Save config"
+msgstr "설정 저장"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:677
+#, kde-format
+msgid "Please save changes before exporting settings."
+msgstr "설정을 내보내기 전에 저장하십시오."
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:677
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:680
+#, kde-format
+msgid "Export Autocorrection File"
+msgstr "자동 고침 파일 내보내기"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "LibreOffice 자동 고침 파일 가져오기"
