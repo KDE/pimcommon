@@ -50,7 +50,6 @@ ki18n_wrap_ui(KF5PimCommonAutoCorrection
     )
 ecm_qt_declare_logging_category(KF5PimCommonAutoCorrection HEADER pimcommonautocorrection_debug.h IDENTIFIER PIMCOMMONAUTOCORRECTION_LOG CATEGORY_NAME org.kde.pim.pimcommonautocorrection
         DESCRIPTION "kdepim (pimcommon AutoCorrection)"
-        OLD_CATEGORY_NAMES log_pimcommonautocorrection
         EXPORT PIMCOMMON
     )
 
