@@ -16,9 +16,11 @@ namespace PimCommonAutoCorrection
 {
 class AutoCorrection;
 class AutoCorrectionWidget;
+}
+namespace PimCommon
+{
 class LineEditWithAutoCorrection;
 }
-
 class ConfigureTestDialog : public QDialog
 {
     Q_OBJECT
@@ -60,7 +62,7 @@ private Q_SLOTS:
 
 private:
     TextEditAutoCorrectionWidget *mEdit = nullptr;
-    PimCommonAutoCorrection::LineEditWithAutoCorrection *mSubject = nullptr;
+    PimCommon::LineEditWithAutoCorrection *mSubject = nullptr;
     PimCommonAutoCorrection::AutoCorrection *mAutoCorrection = nullptr;
     KSharedConfig::Ptr mConfig;
 };

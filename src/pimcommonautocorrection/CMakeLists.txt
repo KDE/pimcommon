@@ -78,11 +78,9 @@ target_sources(KF5PimCommonAutoCorrection PRIVATE
     autocorrection/widgets/autocorrectionlistwidget.cpp
     autocorrection/widgets/autocorrectiontreewidget.cpp
     autocorrection/widgets/autocorrectionlanguage.cpp
-    autocorrection/widgets/lineeditwithautocorrection.cpp
     autocorrection/widgets/autocorrectionlistwidget.h
     autocorrection/widgets/autocorrectionlanguage.h
     autocorrection/widgets/autocorrectionwidget.h
-    autocorrection/widgets/lineeditwithautocorrection.h
     autocorrection/widgets/autocorrectiontreewidget.h
     autocorrection/widgets/selectspecialchardialog.h
     autocorrection/widgets/selectspecialchardialog.cpp
@@ -102,7 +100,6 @@ target_link_libraries(KF5PimCommonAutoCorrection
     Qt::Gui
     Qt::Widgets
     KF5::ConfigWidgets
-    KF5::PimCommon
     PRIVATE
     KF5::I18n
     KF5::Libkdepim
@@ -132,7 +129,6 @@ endif()
 
 ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     HEADER_NAMES
-    LineEditWithAutoCorrection
     AutoCorrectionWidget
     AutoCorrectionLanguage
     SelectSpecialCharDialog

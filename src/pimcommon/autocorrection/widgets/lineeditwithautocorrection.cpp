@@ -5,12 +5,12 @@
 */
 
 #include "autocorrection/widgets/lineeditwithautocorrection.h"
-#include "autocorrection/autocorrection.h"
+#include <PimCommonAutoCorrection/AutoCorrection>
 
 #include <QKeyEvent>
 
-using namespace PimCommonAutoCorrection;
-class PimCommonAutoCorrection::LineEditWithAutoCorrectionPrivate
+using namespace PimCommon;
+class PimCommon::LineEditWithAutoCorrectionPrivate
 {
 public:
     LineEditWithAutoCorrectionPrivate()
@@ -31,13 +31,13 @@ public:
 
 LineEditWithAutoCorrection::LineEditWithAutoCorrection(QWidget *parent, const QString &configFile)
     : PimCommon::SpellCheckLineEdit(parent, configFile)
-    , d(new PimCommonAutoCorrection::LineEditWithAutoCorrectionPrivate)
+    , d(new PimCommon::LineEditWithAutoCorrectionPrivate)
 {
 }
 
 LineEditWithAutoCorrection::~LineEditWithAutoCorrection() = default;
 
-AutoCorrection *LineEditWithAutoCorrection::autocorrection() const
+PimCommonAutoCorrection::AutoCorrection *LineEditWithAutoCorrection::autocorrection() const
 {
     return d->mAutoCorrection;
 }

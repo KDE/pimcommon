@@ -6,19 +6,22 @@
 
 #pragma once
 
-#include "pimcommonautocorrection_export.h"
+#include "pimcommon_export.h"
 
 #include <PimCommon/SpellCheckLineEdit>
-
 namespace PimCommonAutoCorrection
 {
 class AutoCorrection;
+}
+
+namespace PimCommon
+{
 class LineEditWithAutoCorrectionPrivate;
 /**
  * @brief The LineEditWithAutoCorrection class
  * @author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMONAUTOCORRECTION_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheckLineEdit
+class PIMCOMMON_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheckLineEdit
 {
     Q_OBJECT
 public:
