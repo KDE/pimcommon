@@ -185,16 +185,12 @@ target_link_libraries(KF5PimCommon
     Qt::Network
     KF5::I18n
     KF5::Libkdepim
-    KF5::Archive
     KF5::NewStuff
     KF5::XmlGui
     KF5::KIOWidgets
     KF5::ItemViews
     KF5::NewStuff
     KF5::NewStuffWidgets
-    )
-target_link_libraries(KF5PimCommon
-    PRIVATE
     KF5::Purpose
     KF5::PurposeWidgets
 )
