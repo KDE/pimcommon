@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.21.73")
+set(PIM_VERSION "5.22.43")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -112,7 +112,7 @@ endif(BUILD_TESTING)
 ########### Targets ###########
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.100.0)
- 
+
 
 
 add_subdirectory(src)
