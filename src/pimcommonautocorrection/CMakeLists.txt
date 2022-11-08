@@ -106,7 +106,6 @@ target_link_libraries(KF5PimCommonAutoCorrection
     KF5::PimTextEdit
     KF5::PimCommon
     PRIVATE
-    Qt::Network
     KF5::I18n
     KF5::Libkdepim
     KF5::Archive
