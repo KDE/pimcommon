@@ -150,6 +150,9 @@ target_sources(KF5PimCommon PRIVATE
     genericplugins/pluginutil.h
     genericplugins/abstractgenericplugininterface.h
     genericplugins/abstractgenericplugin.h
+
+    autocorrection/widgets/lineeditwithautocorrection.h
+    autocorrection/widgets/lineeditwithautocorrection.cpp
     )
 
 if (QT_MAJOR_VERSION STREQUAL "5")
@@ -181,6 +184,7 @@ target_link_libraries(KF5PimCommon
     KF5::KIOCore
     KF5::ConfigWidgets
     KF5::PimTextEdit
+    KF5::PimCommonAutoCorrection
     PRIVATE
     Qt::Network
     KF5::I18n
@@ -224,6 +228,8 @@ if (BUILD_TESTING)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(genericplugins/autotests)
     add_subdirectory(misc/autotests)
+    add_subdirectory(autocorrection/autotests)
+    add_subdirectory(autocorrection/tests)
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
@@ -237,6 +243,15 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     PREFIX PimCommon
     RELATIVE genericplugins
     )
+
+ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
+    HEADER_NAMES
+    LineEditWithAutoCorrection
+    REQUIRED_HEADERS PimCommon_autocorrectionwidgets_HEADERS
+    PREFIX PimCommon
+    RELATIVE autocorrection/widgets/
+    )
+
 
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     HEADER_NAMES
@@ -346,6 +361,7 @@ ecm_generate_pri_file(BASE_NAME PimCommon
 install(FILES
     ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
+    ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
@@ -374,6 +390,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
     ${PimCommon_HEADERS}
+    ${PimCommon_autocorrectionwidgets_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_networkmanager_HEADERS}

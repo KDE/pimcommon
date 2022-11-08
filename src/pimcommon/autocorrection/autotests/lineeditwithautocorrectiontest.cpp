@@ -5,8 +5,8 @@
 */
 
 #include "lineeditwithautocorrectiontest.h"
-#include "../autocorrection.h"
-#include <PimCommonAutoCorrection/LineEditWithAutoCorrection>
+#include <PimCommon/LineEditWithAutoCorrection>
+#include <PimCommonAutoCorrection/AutoCorrection>
 #include <QTest>
 #include <qtestkeyboard.h>
 
@@ -14,7 +14,7 @@ LineEditWithAutocorrectionTest::LineEditWithAutocorrectionTest() = default;
 
 void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()
 {
-    PimCommonAutoCorrection::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     QHash<QString, QString> entries;
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
@@ -31,7 +31,7 @@ void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()
 
 void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
 {
-    PimCommonAutoCorrection::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
@@ -50,7 +50,7 @@ void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
 
 void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()
 {
-    PimCommonAutoCorrection::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
@@ -70,7 +70,7 @@ void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()
 
 void LineEditWithAutocorrectionTest::shouldNotAddTwoSpace()
 {
-    PimCommonAutoCorrection::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
+    PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO ");
     auto settings = new PimCommonAutoCorrection::AutoCorrectionSettings;
     settings->setSingleSpaces(true);
