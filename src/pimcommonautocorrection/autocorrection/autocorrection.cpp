@@ -77,6 +77,7 @@ void AutoCorrection::selectStringOnMaximumSearchString(QTextCursor &cursor, int 
             bool foundWord = false;
             const int textLength(text.length());
             for (int i = currentPos; i < textLength; ++i) {
+                // TODO remove this limit otherwise we can't replace "foo bla" to "sss bli"
                 if (text.at(i).isSpace()) {
                     pos = qMin(cursorPosition, pos + 1 + block.position());
                     foundWord = true;
