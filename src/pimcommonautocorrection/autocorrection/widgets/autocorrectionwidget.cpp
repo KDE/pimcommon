@@ -12,7 +12,7 @@
 #include "autocorrection/import/importlibreofficeautocorrection.h"
 #include "ui_autocorrectionwidget.h"
 
-#include <KPIMTextEdit/SelectSpecialCharDialog>
+#include "autocorrection/widgets/selectspecialchardialog.h"
 #include <Libkdepim/LineEditCatchReturnKey>
 
 #include <KLocalizedString>
@@ -289,7 +289,7 @@ void AutoCorrectionWidget::enableDoubleQuotes(bool state)
 
 void AutoCorrectionWidget::selectSingleQuoteCharOpen()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
+    QPointer<PimCommonAutoCorrection::SelectSpecialCharDialog> dlg = new PimCommonAutoCorrection::SelectSpecialCharDialog(this);
     dlg->setCurrentChar(d->m_singleQuotes.begin);
     dlg->showSelectButton(false);
     dlg->autoInsertChar();
@@ -303,7 +303,7 @@ void AutoCorrectionWidget::selectSingleQuoteCharOpen()
 
 void AutoCorrectionWidget::selectSingleQuoteCharClose()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
+    QPointer<PimCommonAutoCorrection::SelectSpecialCharDialog> dlg = new PimCommonAutoCorrection::SelectSpecialCharDialog(this);
     dlg->showSelectButton(false);
     dlg->setCurrentChar(d->m_singleQuotes.end);
     dlg->autoInsertChar();
@@ -325,7 +325,7 @@ void AutoCorrectionWidget::setDefaultSingleQuotes()
 
 void AutoCorrectionWidget::selectDoubleQuoteCharOpen()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
+    QPointer<PimCommonAutoCorrection::SelectSpecialCharDialog> dlg = new PimCommonAutoCorrection::SelectSpecialCharDialog(this);
     dlg->showSelectButton(false);
     dlg->setCurrentChar(d->m_doubleQuotes.begin);
     dlg->autoInsertChar();
@@ -339,7 +339,7 @@ void AutoCorrectionWidget::selectDoubleQuoteCharOpen()
 
 void AutoCorrectionWidget::selectDoubleQuoteCharClose()
 {
-    QPointer<KPIMTextEdit::SelectSpecialCharDialog> dlg = new KPIMTextEdit::SelectSpecialCharDialog(this);
+    QPointer<PimCommonAutoCorrection::SelectSpecialCharDialog> dlg = new PimCommonAutoCorrection::SelectSpecialCharDialog(this);
     dlg->showSelectButton(false);
     dlg->setCurrentChar(d->m_doubleQuotes.end);
     dlg->autoInsertChar();
