@@ -13,6 +13,9 @@ libraries:
    cmake: "KF5::PimCommon"
  - qmake: PimCommonAkonadi
    cmake: "KF5::PimCommonAkonadi"
+ - qmake: PimCommonAutoCorrection
+   cmake: "KF5::PimCommonAutoCorrection"
+
 cmakename: KF5PimCommon
 # FIXME kapidox does not support more than one cmake module per repo yet
 #cmakename: KF5PimCommonAkonadi
