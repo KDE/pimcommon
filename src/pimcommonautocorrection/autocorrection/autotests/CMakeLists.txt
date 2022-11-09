@@ -13,7 +13,7 @@ macro(add_pimcommon_autocorrect_unittest _source)
 endmacro()
 
 add_pimcommon_autocorrect_unittest(autocorrectiontest.cpp)
-#add_pimcommon_autocorrect_unittest(richtexteditwithautocorrectiontest.cpp)
+add_pimcommon_autocorrect_unittest(autocorrectiontextedittest.cpp)
 add_pimcommon_autocorrect_unittest(importkmailautocorrectiontest.cpp)
 add_pimcommon_autocorrect_unittest(autocorrectionsettingstest.cpp)
 add_pimcommon_autocorrect_unittest(autocorrectionutilstest.cpp)
