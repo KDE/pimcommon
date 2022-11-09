@@ -7,11 +7,11 @@
 #pragma once
 #include <QObject>
 
-class RichTextEditWithAutoCorrectionTest : public QObject
+class AutoCorrectionTextEditTest : public QObject
 {
     Q_OBJECT
 public:
-    RichTextEditWithAutoCorrectionTest();
+    AutoCorrectionTextEditTest();
 private Q_SLOTS:
     void shouldNotAutocorrectWhenDisabled();
     void shouldReplaceWordWhenExactText();

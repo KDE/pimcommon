@@ -4,7 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "autocorrection/widgets/richtexteditwithautocorrection.h"
+#include "autocorrection/widgets/autocorrectiontextedit.h"
 
 #include <QApplication>
 #include <QCommandLineParser>
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto w = new PimCommonAutoCorrection::RichTextEditWithAutoCorrection;
+    auto w = new PimCommonAutoCorrection::AutoCorrectionTextEdit;
 
     w->show();
     app.exec();
