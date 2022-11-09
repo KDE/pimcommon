@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2022-09-10 10:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -2043,6 +2043,24 @@ msgstr "Please save changes before exporting settings."
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Export Autocorrection File"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select email from contact"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "Select email from contact"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Select"
+msgid "Select"
+msgstr "&Select"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Import LibreOffice Autocorrection File"

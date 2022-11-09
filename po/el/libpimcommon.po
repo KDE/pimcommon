@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -2101,6 +2101,24 @@ msgstr ""
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Εξαγωγή αρχείου αυτόματης διόρθωσης"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select file to download:"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "Επιλέξτε αρχείο για λήψη:"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select"
+msgstr "Αντικατάσταση όλων"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Εισαγωγή αρχείου αυτόματης διόρθωσης LibreOffice"

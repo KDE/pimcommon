@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -2076,6 +2076,24 @@ msgstr "Palun salvesta muudatused enne seadistuste eksportimist."
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Automaatkorrektuuri faili eksport"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select file to download:"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "Allalaaditav fail:"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select"
+msgstr "Asenda kõik"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "LibreOffice'i automaatkorrektuuri faili import"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 00:47+0000\n"
+"POT-Creation-Date: 2022-11-09 00:49+0000\n"
 "PO-Revision-Date: 2016-11-04 11:09+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -2064,6 +2064,24 @@ msgstr ""
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Eksportuoti automatinio taisymo failą"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select file to download:"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "Parinkite failą atsisiuntimui:"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select"
+msgstr "Pakeisti viską"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Importuoti LibreOffice automatinio taisymo failą"
