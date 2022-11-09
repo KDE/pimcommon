@@ -26,16 +26,16 @@ class SelectSpecialCharDialogPrivate
 public:
     explicit SelectSpecialCharDialogPrivate(SelectSpecialCharDialog *qq)
         : q(qq)
+        , mCharSelect(new KCharSelect(q, nullptr, KCharSelect::CharacterTable | KCharSelect::BlockCombos))
+        , mButtonBox(new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q))
     {
         q->setWindowTitle(i18nc("@title:window", "Select Special Characters"));
 
         auto lay = new QVBoxLayout(q);
 
-        mCharSelect = new KCharSelect(q, nullptr, KCharSelect::CharacterTable | KCharSelect::BlockCombos);
         q->connect(mCharSelect, &KCharSelect::charSelected, q, &SelectSpecialCharDialog::charSelected);
         lay->addWidget(mCharSelect);
 
-        mButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, q);
         QPushButton *okButton = mButtonBox->button(QDialogButtonBox::Ok);
         okButton->setText(i18n("Insert"));
         okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -59,10 +59,10 @@ public:
 
     void _k_slotInsertChar();
 
-    KCharSelect *mCharSelect = nullptr;
-    QDialogButtonBox *mButtonBox = nullptr;
-    QPushButton *mSelectButton = nullptr;
     SelectSpecialCharDialog *const q;
+    KCharSelect *const mCharSelect;
+    QDialogButtonBox *const mButtonBox;
+    QPushButton *mSelectButton = nullptr;
 };
 
 void SelectSpecialCharDialogPrivate::_k_slotInsertChar()
