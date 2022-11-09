@@ -42,12 +42,12 @@ void ImportKMailAutocorrectionTest::shouldLoadFile()
     QCOMPARE(import.typographicDoubleQuotes().begin, QStringLiteral("“"));
     QCOMPARE(import.typographicDoubleQuotes().end, QStringLiteral("”"));
 
-    auto resultTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
+    const auto resultTwoUpperLetterExceptions = import.twoUpperLetterExceptions();
     QCOMPARE(resultTwoUpperLetterExceptions.count(), 21);
 
-    auto resultUpperCaseExceptions = import.upperCaseExceptions();
+    const auto resultUpperCaseExceptions = import.upperCaseExceptions();
     QCOMPARE(resultUpperCaseExceptions.count(), 45);
 
-    auto resultAutocorrectEntries = import.autocorrectEntries();
+    const auto resultAutocorrectEntries = import.autocorrectEntries();
     QCOMPARE(resultAutocorrectEntries.count(), 1221);
 }
