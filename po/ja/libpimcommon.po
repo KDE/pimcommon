@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 02:25+0000\n"
+"POT-Creation-Date: 2022-11-09 02:24+0000\n"
 "PO-Revision-Date: 2012-10-25 00:10-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -1983,4 +1983,20 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:680
 #, kde-format
 msgid "Export Autocorrection File"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, kde-format
+msgid "Select"
 msgstr ""

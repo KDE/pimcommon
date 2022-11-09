@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 02:25+0000\n"
+"POT-Creation-Date: 2022-11-09 02:24+0000\n"
 "PO-Revision-Date: 2022-06-17 20:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -2050,6 +2050,24 @@ msgstr "Tallenna muutokset ennen asetusten vientiä."
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Vie automaattikorjaustiedosto"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select email from contact"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "Valitse yhteystiedon sähköposti"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Select"
+msgid "Select"
+msgstr "&Valitse"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Tuo LibreOfficen automaattikorjaustiedosto"

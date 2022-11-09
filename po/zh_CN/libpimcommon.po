@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 02:25+0000\n"
+"POT-Creation-Date: 2022-11-09 02:24+0000\n"
 "PO-Revision-Date: 2022-11-06 01:06\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -2012,3 +2012,21 @@ msgstr "请在导出设置之前保存更改。"
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "导出自动更正文件"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgid "Select"
+msgstr "选择(&L)..."

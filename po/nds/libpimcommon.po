@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 02:25+0000\n"
+"POT-Creation-Date: 2022-11-09 02:24+0000\n"
 "PO-Revision-Date: 2014-04-03 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -2086,6 +2086,24 @@ msgstr ""
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Autokorrektuur-Datei exporteren"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select file to download:"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "Datei utsöken, de Du daalladen wullt:"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select"
+msgstr "All utwesseln"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "LibreOffice-Autokorrektuurdatei importeren"

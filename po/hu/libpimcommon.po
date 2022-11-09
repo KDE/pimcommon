@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-08 02:25+0000\n"
+"POT-Creation-Date: 2022-11-09 02:24+0000\n"
 "PO-Revision-Date: 2021-10-17 16:22+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -2049,6 +2049,24 @@ msgstr "Mentse a változtatásokat a beállítások exportálása előtt."
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Automatikus javítás fájl exportálása"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#, fuzzy, kde-format
+#| msgid "Select email from contact"
+msgctxt "@title:window"
+msgid "Select Special Characters"
+msgstr "E-mail kiválasztása a névjegyekből"
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
+#, kde-format
+msgid "Insert"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
+#, fuzzy, kde-format
+#| msgid "&Select"
+msgid "Select"
+msgstr "&Kijelölés"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "LibreOffice automatikus javítás fájl importálása"
