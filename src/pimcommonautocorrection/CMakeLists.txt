@@ -84,6 +84,8 @@ target_sources(KF5PimCommonAutoCorrection PRIVATE
     autocorrection/widgets/autocorrectiontreewidget.h
     autocorrection/widgets/selectspecialchardialog.h
     autocorrection/widgets/selectspecialchardialog.cpp
+    autocorrection/widgets/autocorrectiontextedit.cpp
+    autocorrection/widgets/autocorrectiontextedit.h
     settings/pimcommonsettings.h
     settings/pimcommonsettings.cpp
 
@@ -132,6 +134,7 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     AutoCorrectionWidget
     AutoCorrectionLanguage
     SelectSpecialCharDialog
+    AutoCorrectionTextEdit
     REQUIRED_HEADERS PimCommon_autocorrectionwidgets_HEADERS
     PREFIX PimCommonAutoCorrection
     RELATIVE autocorrection/widgets/
