@@ -86,6 +86,8 @@ target_sources(KF5PimCommonAutoCorrection PRIVATE
     autocorrection/widgets/selectspecialchardialog.cpp
     autocorrection/widgets/autocorrectiontextedit.cpp
     autocorrection/widgets/autocorrectiontextedit.h
+    autocorrection/widgets/autocorrectionlineedit.cpp
+    autocorrection/widgets/autocorrectionlineedit.h
     settings/pimcommonsettings.h
     settings/pimcommonsettings.cpp
 
