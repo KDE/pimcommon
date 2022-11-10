@@ -25,8 +25,3 @@ void ExportAbstractAutocorrection::setAutocorrectEntries(const QHash<QString, QS
 {
     mAutocorrectEntries = newAutocorrectEntries;
 }
-
-void ExportAbstractAutocorrection::setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries)
-{
-    mSuperScriptEntries = newSuperScriptEntries;
-}

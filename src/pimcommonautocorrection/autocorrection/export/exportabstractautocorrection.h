@@ -24,12 +24,10 @@ public:
     void setUpperCaseExceptions(const QSet<QString> &newUpperCaseExceptions);
     void setTwoUpperLetterExceptions(const QSet<QString> &newTwoUpperLetterExceptions);
     void setAutocorrectEntries(const QHash<QString, QString> &newAutocorrectEntries);
-    void setSuperScriptEntries(const QHash<QString, QString> &newSuperScriptEntries);
 
 protected:
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
     QHash<QString, QString> mAutocorrectEntries;
-    QHash<QString, QString> mSuperScriptEntries;
 };
 }
