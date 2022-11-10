@@ -7,7 +7,7 @@
 #pragma once
 
 #include "importabstractautocorrection.h"
-
+#include "pimcommonautocorrection_private_export.h"
 class QTemporaryDir;
 class KZip;
 class QDomDocument;
@@ -16,7 +16,7 @@ class KArchiveDirectory;
 
 namespace PimCommonAutoCorrection
 {
-class ImportLibreOfficeAutocorrection : public ImportAbstractAutocorrection
+class PIMCOMMONAUTOCORRECTION_TESTS_EXPORT ImportLibreOfficeAutocorrection : public ImportAbstractAutocorrection
 {
 public:
     ImportLibreOfficeAutocorrection();
