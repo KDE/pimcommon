@@ -44,7 +44,6 @@ public:
 
     QStringList mCacheNameOfDays;
     QColor mLinkColor;
-    // Settings
     AutoCorrectionSettings *mAutoCorrectionSettings = nullptr;
 };
 }
@@ -311,18 +310,19 @@ bool AutoCorrection::autoBoldUnderline()
     }
     const QString trimmed = d->mWord.trimmed();
 
-    if (trimmed.length() < 3) {
+    const int trimmedLength{trimmed.length()};
+    if (trimmedLength < 3) {
         return false;
     }
 
     const QChar trimmedFirstChar(trimmed.at(0));
-    const QChar trimmedLastChar(trimmed.at(trimmed.length() - 1));
+    const QChar trimmedLastChar(trimmed.at(trimmedLength - 1));
     const bool underline = (trimmedFirstChar == QLatin1Char('_') && trimmedLastChar == QLatin1Char('_'));
     const bool bold = (trimmedFirstChar == QLatin1Char('*') && trimmedLastChar == QLatin1Char('*'));
     const bool strikeOut = (trimmedFirstChar == QLatin1Char('-') && trimmedLastChar == QLatin1Char('-'));
     if (underline || bold || strikeOut) {
         const int startPos = d->mCursor.selectionStart();
-        const QString replacement = trimmed.mid(1, trimmed.length() - 2);
+        const QString replacement = trimmed.mid(1, trimmedLength - 2);
         bool foundLetterNumber = false;
 
         QString::ConstIterator constIter = replacement.constBegin();
@@ -339,7 +339,7 @@ bool AutoCorrection::autoBoldUnderline()
             return false;
         }
         d->mCursor.setPosition(startPos);
-        d->mCursor.setPosition(startPos + trimmed.length(), QTextCursor::KeepAnchor);
+        d->mCursor.setPosition(startPos + trimmedLength, QTextCursor::KeepAnchor);
         d->mCursor.insertText(replacement);
         d->mCursor.setPosition(startPos);
         d->mCursor.setPosition(startPos + replacement.length(), QTextCursor::KeepAnchor);
@@ -653,13 +653,14 @@ bool AutoCorrection::autoFractions()
     }
 
     const QString trimmed = d->mWord.trimmed();
-    if (trimmed.length() > 3) {
+    const int trimmedLength{trimmed.length()};
+    if (trimmedLength > 3) {
         const QChar x = trimmed.at(3);
         const uchar xunicode = x.unicode();
         if (!(xunicode == '.' || xunicode == ',' || xunicode == '?' || xunicode == '!' || xunicode == ':' || xunicode == ';')) {
             return false;
         }
-    } else if (trimmed.length() < 3) {
+    } else if (trimmedLength < 3) {
         return false;
     }
 
