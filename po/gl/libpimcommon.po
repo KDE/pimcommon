@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:49+0000\n"
+"POT-Creation-Date: 2022-11-10 00:47+0000\n"
 "PO-Revision-Date: 2020-01-05 19:11+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -2093,7 +2093,7 @@ msgstr "Garde os cambios antes de exportar a configuración."
 msgid "Export Autocorrection File"
 msgstr "Exportar o ficheiro de corrección automática"
 
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Select file to download:"
 msgctxt "@title:window"

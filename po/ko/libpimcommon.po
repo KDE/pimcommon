@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:49+0000\n"
+"POT-Creation-Date: 2022-11-10 00:47+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -2028,7 +2028,7 @@ msgstr "설정을 내보내기 전에 저장하십시오."
 msgid "Export Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
 
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Select email from contact"
 msgctxt "@title:window"

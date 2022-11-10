@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:49+0000\n"
-"PO-Revision-Date: 2022-10-28 20:49+0300\n"
+"POT-Creation-Date: 2022-11-10 00:47+0000\n"
+"PO-Revision-Date: 2022-11-09 07:03+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -2057,23 +2057,21 @@ msgstr "Будь ласка, збережіть зміни, перш ніж ек
 msgid "Export Autocorrection File"
 msgstr "Експортувати файл автовиправлення"
 
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
-#, fuzzy, kde-format
-#| msgid "Select email from contact"
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Special Characters"
-msgstr "Вибір адреси ел. пошти із запису контакту"
+msgstr "Виберіть спеціальні символи"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
 #, kde-format
 msgid "Insert"
-msgstr ""
+msgstr "Вставити"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Позначити"
+msgstr "Вибрати"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Імпортувати файл автовиправлення LibreOffice"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 00:49+0000\n"
+"POT-Creation-Date: 2022-11-10 00:47+0000\n"
 "PO-Revision-Date: 2021-10-17 16:22+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -2050,7 +2050,7 @@ msgstr "Mentse a változtatásokat a beállítások exportálása előtt."
 msgid "Export Autocorrection File"
 msgstr "Automatikus javítás fájl exportálása"
 
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Select email from contact"
 msgctxt "@title:window"
