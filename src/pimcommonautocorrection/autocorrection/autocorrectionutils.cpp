@@ -165,6 +165,8 @@ QString AutoCorrectionUtils::containsAutoCorrectionFile(const QString &lang)
 
 QStringList AutoCorrectionUtils::wordsFromSentence(const QString &string)
 {
+    QStringList lst;
+    lst << string;
     // TODO split mWord
-    return {};
+    return lst;
 }
