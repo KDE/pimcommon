@@ -16,4 +16,6 @@ public:
     ~AutoCorrectionUtilsTest() override = default;
 private Q_SLOTS:
     void shouldConvertToLibreOfficeFilename();
+    void shouldSplitString();
+    void shouldSplitString_data();
 };

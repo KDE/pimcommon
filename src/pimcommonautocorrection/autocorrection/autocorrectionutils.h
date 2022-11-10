@@ -31,6 +31,7 @@ Q_REQUIRED_RESULT PIMCOMMONAUTOCORRECTION_EXPORT QString libreOfficeWritableLoca
 Q_REQUIRED_RESULT PIMCOMMONAUTOCORRECTION_EXPORT QString containsAutoCorrectionFile(const QString &lang);
 Q_REQUIRED_RESULT PIMCOMMONAUTOCORRECTION_EXPORT QString libreOfficeSystemPath();
 Q_REQUIRED_RESULT PIMCOMMONAUTOCORRECTION_EXPORT QString libreOfficeLocalPath();
+Q_REQUIRED_RESULT PIMCOMMONAUTOCORRECTION_EXPORT QStringList wordsFromSentence(const QString &string);
 };
 }
 PIMCOMMONAUTOCORRECTION_EXPORT QDebug operator<<(QDebug d, PimCommonAutoCorrection::AutoCorrectionUtils::TypographicQuotes t);
