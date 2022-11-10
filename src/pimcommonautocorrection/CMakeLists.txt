@@ -40,7 +40,7 @@ install(FILES
     )
 
 kconfig_add_kcfg_files(pimcommonautocorrection_settings_SRCS
-    settings/pimcommonsetting_base.kcfgc
+    settings/pimcommonautocorrectionsetting_base.kcfgc
     )
 
 add_library(KF5PimCommonAutoCorrection )
@@ -88,8 +88,8 @@ target_sources(KF5PimCommonAutoCorrection PRIVATE
     autocorrection/widgets/autocorrectiontextedit.h
     autocorrection/widgets/autocorrectionlineedit.cpp
     autocorrection/widgets/autocorrectionlineedit.h
-    settings/pimcommonsettings.h
-    settings/pimcommonsettings.cpp
+    settings/pimcommonautocorrectionsettings.h
+    settings/pimcommonautocorrectionsettings.cpp
 
     )
 
@@ -155,7 +155,7 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrection_HEADERS
 
 ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
     HEADER_NAMES
-    PimCommonSettings
+    PimCommonAutoCorrectionSettings
     REQUIRED_HEADERS PimCommon_settings_HEADERS
     PREFIX PimCommonAutoCorrection
     RELATIVE settings
@@ -177,7 +177,7 @@ install(FILES
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonautocorrection_export.h
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonsetting_base.h
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonautocorrectionsetting_base.h
     ${PimCommon_HEADERS}
     ${PimCommon_autocorrection_HEADERS}
     ${PimCommon_autocorrectionwidgets_HEADERS}

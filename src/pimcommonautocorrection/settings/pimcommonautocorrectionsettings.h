@@ -7,21 +7,21 @@
 #pragma once
 
 #include "pimcommonautocorrection_export.h"
-#include "pimcommonsetting_base.h"
+#include "pimcommonautocorrectionsetting_base.h"
 
 class QTimer;
 
 namespace PimCommonAutoCorrection
 {
 /**
- * @brief The PimCommonSettings class
+ * @brief The PimCommonAutoCorrectionSettings class
  * @author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMONAUTOCORRECTION_EXPORT PimCommonSettings : public PimCommonAutoCorrection::PimCommonSettingsBase
+class PIMCOMMONAUTOCORRECTION_EXPORT PimCommonAutoCorrectionSettings : public PimCommonAutoCorrection::PimCommonAutoCorrectionSettingsBase
 {
     Q_OBJECT
 public:
-    static PimCommonSettings *self();
+    static PimCommonAutoCorrectionSettings *self();
 
     /** Call this slot instead of directly @ref KConfig::sync() to
       minimize the overall config writes. Calling this slot will
@@ -34,9 +34,9 @@ private Q_SLOTS:
     void slotSyncNow();
 
 private:
-    PimCommonSettings();
-    ~PimCommonSettings() override;
-    static PimCommonSettings *mSelf;
+    PimCommonAutoCorrectionSettings();
+    ~PimCommonAutoCorrectionSettings() override;
+    static PimCommonAutoCorrectionSettings *mSelf;
 
     QTimer *mConfigSyncTimer = nullptr;
 };

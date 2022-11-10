@@ -1,7 +1,7 @@
 #SPDX-License-Identifier: GPL-2.0-or-later
 #SPDX-FileCopyrightText: none
-File=pimcommon.kcfg
-ClassName=PimCommonSettingsBase
+File=pimcommonautocorrection.kcfg
+ClassName=PimCommonAutoCorrectionSettingsBase
 NameSpace=PimCommonAutoCorrection
 Visibility=PIMCOMMONAUTOCORRECTION_EXPORT
 Mutators=true

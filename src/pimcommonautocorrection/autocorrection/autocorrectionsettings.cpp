@@ -9,7 +9,7 @@
 #include "autocorrection/import/importlibreofficeautocorrection.h"
 
 #include "pimcommonautocorrection_debug.h"
-#include "settings/pimcommonsettings.h"
+#include "settings/pimcommonautocorrectionsettings.h"
 
 #include <QDir>
 #include <QFile>
@@ -219,28 +219,28 @@ void AutoCorrectionSettings::setTypographicDoubleQuotes(PimCommonAutoCorrection:
 
 void AutoCorrectionSettings::readConfig()
 {
-    d->mAutoBoldUnderline = PimCommonAutoCorrection::PimCommonSettings::self()->autoBoldUnderline();
-    d->mAutoFormatUrl = PimCommonAutoCorrection::PimCommonSettings::self()->autoFormatUrl();
-    d->mUppercaseFirstCharOfSentence = PimCommonAutoCorrection::PimCommonSettings::self()->uppercaseFirstCharOfSentence();
-    d->mFixTwoUppercaseChars = PimCommonAutoCorrection::PimCommonSettings::self()->fixTwoUppercaseChars();
-    d->mSingleSpaces = PimCommonAutoCorrection::PimCommonSettings::self()->singleSpaces();
-    d->mAutoFractions = PimCommonAutoCorrection::PimCommonSettings::self()->autoFractions();
-    d->mCapitalizeWeekDays = PimCommonAutoCorrection::PimCommonSettings::self()->capitalizeWeekDays();
-    d->mAdvancedAutocorrect = PimCommonAutoCorrection::PimCommonSettings::self()->advancedAutocorrect();
-    d->mReplaceDoubleQuotes = PimCommonAutoCorrection::PimCommonSettings::self()->replaceDoubleQuotes();
-    d->mReplaceSingleQuotes = PimCommonAutoCorrection::PimCommonSettings::self()->replaceSingleQuotes();
-    d->mEnabled = PimCommonAutoCorrection::PimCommonSettings::self()->enabled();
-    d->mSuperScriptAppendix = PimCommonAutoCorrection::PimCommonSettings::self()->superScript();
-    d->mAddNonBreakingSpace = PimCommonAutoCorrection::PimCommonSettings::self()->addNonBreakingSpaceInFrench();
-    d->mReplaceDoubleQuotesByFrenchQuotes = PimCommonAutoCorrection::PimCommonSettings::self()->replaceDoubleQuotesByFrenchQuotes();
+    d->mAutoBoldUnderline = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->autoBoldUnderline();
+    d->mAutoFormatUrl = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->autoFormatUrl();
+    d->mUppercaseFirstCharOfSentence = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->uppercaseFirstCharOfSentence();
+    d->mFixTwoUppercaseChars = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->fixTwoUppercaseChars();
+    d->mSingleSpaces = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->singleSpaces();
+    d->mAutoFractions = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->autoFractions();
+    d->mCapitalizeWeekDays = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->capitalizeWeekDays();
+    d->mAdvancedAutocorrect = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->advancedAutocorrect();
+    d->mReplaceDoubleQuotes = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->replaceDoubleQuotes();
+    d->mReplaceSingleQuotes = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->replaceSingleQuotes();
+    d->mEnabled = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->enabled();
+    d->mSuperScriptAppendix = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->superScript();
+    d->mAddNonBreakingSpace = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->addNonBreakingSpaceInFrench();
+    d->mReplaceDoubleQuotesByFrenchQuotes = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->replaceDoubleQuotesByFrenchQuotes();
 
     d->mTypographicSingleQuotes =
-        AutoCorrectionUtils::TypographicQuotes::fromString(PimCommonAutoCorrection::PimCommonSettings::self()->typographicSingleQuotes());
+        AutoCorrectionUtils::TypographicQuotes::fromString(PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->typographicSingleQuotes());
     if (d->mTypographicSingleQuotes.isEmpty()) {
         d->mTypographicSingleQuotes = AutoCorrectionUtils::typographicDefaultSingleQuotes();
     }
     d->mTypographicDoubleQuotes =
-        AutoCorrectionUtils::TypographicQuotes::fromString(PimCommonAutoCorrection::PimCommonSettings::self()->typographicDoubleQuotes());
+        AutoCorrectionUtils::TypographicQuotes::fromString(PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->typographicDoubleQuotes());
     if (d->mTypographicDoubleQuotes.isEmpty()) {
         d->mTypographicDoubleQuotes = AutoCorrectionUtils::typographicDefaultDoubleQuotes();
     }
@@ -249,23 +249,23 @@ void AutoCorrectionSettings::readConfig()
 
 void AutoCorrectionSettings::writeConfig()
 {
-    PimCommonAutoCorrection::PimCommonSettings::self()->setAutoBoldUnderline(d->mAutoBoldUnderline);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setAutoFormatUrl(d->mAutoFormatUrl);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setUppercaseFirstCharOfSentence(d->mUppercaseFirstCharOfSentence);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setFixTwoUppercaseChars(d->mFixTwoUppercaseChars);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setSingleSpaces(d->mSingleSpaces);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setAutoFractions(d->mAutoFractions);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setCapitalizeWeekDays(d->mCapitalizeWeekDays);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setAdvancedAutocorrect(d->mAdvancedAutocorrect);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setReplaceDoubleQuotes(d->mReplaceDoubleQuotes);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setReplaceSingleQuotes(d->mReplaceSingleQuotes);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setEnabled(d->mEnabled);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setSuperScript(d->mSuperScriptAppendix);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setAddNonBreakingSpaceInFrench(d->mAddNonBreakingSpace);
-    PimCommonAutoCorrection::PimCommonSettings::self()->setTypographicSingleQuotes(d->mTypographicSingleQuotes.toString());
-    PimCommonAutoCorrection::PimCommonSettings::self()->setTypographicDoubleQuotes(d->mTypographicDoubleQuotes.toString());
-    PimCommonAutoCorrection::PimCommonSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(d->mReplaceDoubleQuotesByFrenchQuotes);
-    PimCommonAutoCorrection::PimCommonSettings::self()->requestSync();
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setAutoBoldUnderline(d->mAutoBoldUnderline);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setAutoFormatUrl(d->mAutoFormatUrl);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setUppercaseFirstCharOfSentence(d->mUppercaseFirstCharOfSentence);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setFixTwoUppercaseChars(d->mFixTwoUppercaseChars);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setSingleSpaces(d->mSingleSpaces);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setAutoFractions(d->mAutoFractions);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setCapitalizeWeekDays(d->mCapitalizeWeekDays);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setAdvancedAutocorrect(d->mAdvancedAutocorrect);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setReplaceDoubleQuotes(d->mReplaceDoubleQuotes);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setReplaceSingleQuotes(d->mReplaceSingleQuotes);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setEnabled(d->mEnabled);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setSuperScript(d->mSuperScriptAppendix);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setAddNonBreakingSpaceInFrench(d->mAddNonBreakingSpace);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setTypographicSingleQuotes(d->mTypographicSingleQuotes.toString());
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setTypographicDoubleQuotes(d->mTypographicDoubleQuotes.toString());
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(d->mReplaceDoubleQuotesByFrenchQuotes);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->requestSync();
     writeAutoCorrectionFile();
 }
 
