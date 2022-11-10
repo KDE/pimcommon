@@ -17,3 +17,17 @@ void AutoCorrectionUtilsTest::shouldConvertToLibreOfficeFilename()
 {
     QCOMPARE(PimCommonAutoCorrection::AutoCorrectionUtils::libreofficeFile(QStringLiteral("Fr_fr")), QStringLiteral("acor_Fr_fr.dat"));
 }
+
+void AutoCorrectionUtilsTest::shouldSplitString()
+{
+    QFETCH(QString, words);
+    QFETCH(QStringList, result);
+    QCOMPARE(PimCommonAutoCorrection::AutoCorrectionUtils::wordsFromSentence(words), result);
+}
+
+void AutoCorrectionUtilsTest::shouldSplitString_data()
+{
+    QTest::addColumn<QString>("words");
+    QTest::addColumn<QStringList>("result");
+    // TODO
+}

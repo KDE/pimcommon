@@ -162,3 +162,9 @@ QString AutoCorrectionUtils::containsAutoCorrectionFile(const QString &lang)
     }
     return {};
 }
+
+QStringList AutoCorrectionUtils::wordsFromSentence(const QString &string)
+{
+    // TODO split mWord
+    return {};
+}
