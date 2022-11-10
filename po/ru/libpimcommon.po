@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-09 02:24+0000\n"
+"POT-Creation-Date: 2022-11-10 02:30+0000\n"
 "PO-Revision-Date: 2022-10-11 12:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -2078,7 +2078,7 @@ msgstr "Сохраните внесённые изменения перед эк
 msgid "Export Autocorrection File"
 msgstr "Экспорт параметров автоисправления"
 
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:30
+#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Select email from contact"
 msgctxt "@title:window"
