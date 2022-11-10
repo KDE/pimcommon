@@ -8,7 +8,7 @@
 #include "autocorrection/widgets/autocorrectionlineedit.h"
 #include "autocorrection/widgets/autocorrectiontextedit.h"
 #include "autocorrection/widgets/autocorrectionwidget.h"
-#include "settings/pimcommonsettings.h"
+#include "settings/pimcommonautocorrectionsettings.h"
 #include <PimCommonAutoCorrection/AutoCorrection>
 
 #include <QAction>
@@ -55,8 +55,8 @@ AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
     : QWidget(parent)
     , mConfig(KSharedConfig::openConfig(QStringLiteral("autocorrectionguirc")))
 {
-    PimCommonAutoCorrection::PimCommonSettings::self()->setSharedConfig(mConfig);
-    PimCommonAutoCorrection::PimCommonSettings::self()->load();
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setSharedConfig(mConfig);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->load();
 
     mAutoCorrection = new PimCommonAutoCorrection::AutoCorrection;
     auto lay = new QVBoxLayout(this);
@@ -92,7 +92,7 @@ void AutocorrectionTestWidget::slotConfigure()
 {
     QPointer<ConfigureTestDialog> dlg = new ConfigureTestDialog(mAutoCorrection, this);
     if (dlg->exec()) {
-        PimCommonAutoCorrection::PimCommonSettings::self()->save();
+        PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->save();
     }
     delete dlg;
 }

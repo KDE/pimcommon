@@ -6,7 +6,7 @@
 
 #include "autocorrectiontest.h"
 #include "../autocorrection.h"
-#include "settings/pimcommonsettings.h"
+#include "settings/pimcommonautocorrectionsettings.h"
 #include <QStandardPaths>
 #include <QTest>
 #include <QTextDocument>
@@ -25,8 +25,8 @@ AutoCorrectionTest::AutoCorrectionTest()
 {
     QStandardPaths::setTestModeEnabled(true);
     mConfig = KSharedConfig::openConfig(QStringLiteral("autocorrectiontestrc"));
-    PimCommonAutoCorrection::PimCommonSettings::self()->setSharedConfig(mConfig);
-    PimCommonAutoCorrection::PimCommonSettings::self()->load();
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setSharedConfig(mConfig);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->load();
 }
 
 AutoCorrectionTest::~AutoCorrectionTest() = default;
