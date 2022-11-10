@@ -29,5 +29,6 @@ void AutoCorrectionUtilsTest::shouldSplitString_data()
 {
     QTest::addColumn<QString>("words");
     QTest::addColumn<QStringList>("result");
+    QTest::addRow("empty") << QString() << QStringList();
     // TODO
 }
