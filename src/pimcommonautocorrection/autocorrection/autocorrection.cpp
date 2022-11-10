@@ -310,7 +310,7 @@ bool AutoCorrection::autoBoldUnderline()
     }
     const QString trimmed = d->mWord.trimmed();
 
-    const int trimmedLength{trimmed.length()};
+    const auto trimmedLength{trimmed.length()};
     if (trimmedLength < 3) {
         return false;
     }
@@ -653,7 +653,7 @@ bool AutoCorrection::autoFractions()
     }
 
     const QString trimmed = d->mWord.trimmed();
-    const int trimmedLength{trimmed.length()};
+    const auto trimmedLength{trimmed.length()};
     if (trimmedLength > 3) {
         const QChar x = trimmed.at(3);
         const uchar xunicode = x.unicode();
