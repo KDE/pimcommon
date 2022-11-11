@@ -41,4 +41,5 @@ void AutoCorrectionUtilsTest::shouldSplitString_data()
     QTest::addRow("2 words") << QStringLiteral("blabla foo") << QStringList({QStringLiteral("blabla foo"), QStringLiteral("foo")});
     QTest::addRow("3 words") << QStringLiteral("blabla foo la")
                              << QStringList({QStringLiteral("blabla foo la"), QStringLiteral("foo la"), QStringLiteral("la")});
+    QTest::addRow("1 word") << QStringLiteral("l'blabla") << QStringList({QStringLiteral("l'blabla")});
 }

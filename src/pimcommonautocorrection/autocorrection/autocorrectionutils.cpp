@@ -177,7 +177,7 @@ QStringList AutoCorrectionUtils::wordsFromSentence(const QString &string)
                     const auto pos = tmpString.count() - i - 1;
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
                     value = tmpString.right(pos);
-                    qDebug() << " value !!! " << value;
+                    // qDebug() << " value !!! " << value;
 #else
                     value = tmpString.last(pos);
 #endif
