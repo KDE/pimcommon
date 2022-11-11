@@ -52,7 +52,6 @@ private:
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
     void selectStringOnMaximumSearchString(QTextCursor &cursor, int cursorPosition);
 
-    Q_REQUIRED_RESULT QStringList listOfWords() const;
     Q_REQUIRED_RESULT bool autoFormatURLs();
     Q_REQUIRED_RESULT bool autoBoldUnderline();
 
