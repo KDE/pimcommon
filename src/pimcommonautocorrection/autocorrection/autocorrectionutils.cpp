@@ -166,7 +166,32 @@ QString AutoCorrectionUtils::containsAutoCorrectionFile(const QString &lang)
 QStringList AutoCorrectionUtils::wordsFromSentence(const QString &string)
 {
     QStringList lst;
-    lst << string;
-    // TODO split mWord
+    if (!string.isEmpty()) {
+        lst.append(string);
+        QString tmpString = string;
+        while (!tmpString.isEmpty()) {
+            bool foundStr = false;
+            for (auto i = 0; i < tmpString.count(); i++) {
+                if (tmpString.at(i).isSpace()) {
+                    QString value;
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+                    value = tmpString.right(tmpString.count() - i - 1);
+                    qDebug() << " value !!! " << value;
+#else
+                    value = tmpString.last(tmpString.count() - i - 1);
+#endif
+                    if (!value.trimmed().isEmpty()) {
+                        lst.append(value);
+                    }
+                    tmpString = value;
+                    foundStr = true;
+                    break;
+                }
+            }
+            if (!foundStr) {
+                break;
+            }
+        }
+    }
     return lst;
 }

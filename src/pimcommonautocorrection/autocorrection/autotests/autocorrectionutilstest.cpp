@@ -22,7 +22,13 @@ void AutoCorrectionUtilsTest::shouldSplitString()
 {
     QFETCH(QString, words);
     QFETCH(QStringList, result);
-    QCOMPARE(PimCommonAutoCorrection::AutoCorrectionUtils::wordsFromSentence(words), result);
+    const QStringList resultLst{PimCommonAutoCorrection::AutoCorrectionUtils::wordsFromSentence(words)};
+    const bool equal = (resultLst == result);
+    if (!equal) {
+        qDebug() << "resultLst" << resultLst;
+        qDebug() << "expected" << result;
+    }
+    QVERIFY(equal);
 }
 
 void AutoCorrectionUtilsTest::shouldSplitString_data()
@@ -30,5 +36,8 @@ void AutoCorrectionUtilsTest::shouldSplitString_data()
     QTest::addColumn<QString>("words");
     QTest::addColumn<QStringList>("result");
     QTest::addRow("empty") << QString() << QStringList();
-    // TODO
+    QTest::addRow("1 word") << QStringLiteral("blabla") << QStringList({QStringLiteral("blabla")});
+    QTest::addRow("2 words") << QStringLiteral("blabla foo") << QStringList({QStringLiteral("blabla foo"), QStringLiteral("foo")});
+    QTest::addRow("3 words") << QStringLiteral("blabla foo la")
+                             << QStringList({QStringLiteral("blabla foo la"), QStringLiteral("foo la"), QStringLiteral("la")});
 }
