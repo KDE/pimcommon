@@ -37,6 +37,7 @@ void AutoCorrectionUtilsTest::shouldSplitString_data()
     QTest::addColumn<QStringList>("result");
     QTest::addRow("empty") << QString() << QStringList();
     QTest::addRow("1 word") << QStringLiteral("blabla") << QStringList({QStringLiteral("blabla")});
+    QTest::addRow("no word") << QStringLiteral(" ") << QStringList();
     QTest::addRow("2 words") << QStringLiteral("blabla foo") << QStringList({QStringLiteral("blabla foo"), QStringLiteral("foo")});
     QTest::addRow("3 words") << QStringLiteral("blabla foo la")
                              << QStringList({QStringLiteral("blabla foo la"), QStringLiteral("foo la"), QStringLiteral("la")});
