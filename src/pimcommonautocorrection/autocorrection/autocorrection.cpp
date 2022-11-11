@@ -191,12 +191,6 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
     return true;
 }
 
-QStringList AutoCorrection::listOfWords() const
-{
-    // TODO split mWord
-    return {};
-}
-
 void AutoCorrection::readConfig()
 {
     d->mAutoCorrectionSettings->readConfig();
