@@ -27,7 +27,7 @@ bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const 
     fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));
     const QString fname =
         fileName.isEmpty() ? AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath() + QStringLiteral("acor_%1.dat").arg(fixLangExtension) : fileName;
-    qDebug() << " fname " << fname;
+    // qDebug() << " fname " << fname;
     mZip = new KZip(fname);
     const bool result = mZip->open(QIODevice::WriteOnly);
     if (!result) {
