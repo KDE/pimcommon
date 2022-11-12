@@ -728,33 +728,3 @@ void AutoCorrectionTest::shouldAutoFormatURLs()
     //    QCOMPARE(charFormat.font().bold(), true);
     //    QCOMPARE(charFormat.font().strikeOut(), false);
 }
-#if 0
-void AutoCorrectionTest::shouldLoadSaveAutocorrection_data()
-{
-    QTest::addColumn<QString>("filename");
-    QTest::newRow("empty") << QStringLiteral("empty");
-    QTest::newRow("custom-fr") << QStringLiteral("custom-fr");
-}
-
-void AutoCorrectionTest::shouldLoadSaveAutocorrection()
-{
-    QFETCH(QString, filename);
-    PimCommonAutoCorrection::AutoCorrection autocorrection;
-    PimCommonAutoCorrection::AutoCorrection autocorrectionReference;
-    const QString originalFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral(".xml");
-    const QString refFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-ref.xml");
-    const QString generatedFile = QLatin1String(AUTOCORRECTION_DATA_DIR) + QLatin1Char('/') + filename + QStringLiteral("-generated.xml");
-
-    autocorrection.loadGlobalFileName(originalFile);
-    autocorrection.writeAutoCorrectionXmlFile(generatedFile);
-
-    // make sure the xml is valid and we can feed ourself with our own generated file
-    autocorrection.loadGlobalFileName(generatedFile);
-
-    autocorrectionReference.loadGlobalFileName(refFile);
-
-    QCOMPARE(autocorrection.autoCorrectionSettings().autocorrectEntries(), autocorrectionReference.autoCorrectionSettings().autocorrectEntries());
-    QCOMPARE(autocorrection.autoCorrectionSettings().upperCaseExceptions(), autocorrectionReference.autoCorrectionSettings().upperCaseExceptions());
-    QCOMPARE(autocorrection.autoCorrectionSettings().twoUpperLetterExceptions(), autocorrectionReference.autoCorrectionSettings().twoUpperLetterExceptions());
-}
-#endif
