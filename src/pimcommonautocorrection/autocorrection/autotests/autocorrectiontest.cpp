@@ -511,8 +511,22 @@ void AutoCorrectionTest::shouldAutocorrectMultiWord_data()
 
     map.clear();
     map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
-    map.insert(QStringLiteral("booOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo"), QStringLiteral("bla"));
     QTest::newRow("dontreplaceall") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo boo bla") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("boo"), QStringLiteral("bla"));
+    map.insert(QStringLiteral("boo boo"), QStringLiteral("bli"));
+    QTest::newRow("replace-1") << QStringLiteral("Boo boo boo") << QStringLiteral("Boo bli") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("au delà"), QStringLiteral("au-delà"));
+    map.insert(QStringLiteral("boo boo"), QStringLiteral("bli"));
+    QTest::newRow("replace-2") << QStringLiteral("voilà au delà") << QStringLiteral("voilà au-delà") << map;
+
+    map.clear();
+    map.insert(QStringLiteral("au delà"), QStringLiteral("au-delà"));
+    map.insert(QStringLiteral("avant JC"), QStringLiteral("avant J.-C."));
+    QTest::newRow("replace-3") << QStringLiteral("il est né avant JC") << QStringLiteral("il est né avant J.-C.") << map;
 }
 
 void AutoCorrectionTest::shouldAutocorrectMultiWord()
