@@ -177,12 +177,17 @@ bool AutoCorrection::autocorrect(bool htmlMode, QTextDocument &document, int &po
             selectStringOnMaximumSearchString(d->mCursor, position);
             d->mWord = d->mCursor.selectedText();
             if (!d->mWord.isEmpty()) {
-                const int newPos = advancedAutocorrect();
-                if (newPos != -1) {
-                    if (d->mCursor.selectedText() != d->mWord) {
-                        d->mCursor.insertText(d->mWord);
+                const QStringList lst = AutoCorrectionUtils::wordsFromSentence(d->mWord);
+                for (const auto &string : lst) {
+                    d->mWord = string;
+                    const int newPos = advancedAutocorrect();
+                    if (newPos != -1) {
+                        if (d->mCursor.selectedText() != d->mWord) {
+                            d->mCursor.insertText(d->mWord);
+                        }
+                        position = newPos;
+                        break;
                     }
-                    position = newPos;
                 }
             }
         }
