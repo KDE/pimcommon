@@ -546,7 +546,7 @@ void AutoCorrection::fixTwoUppercaseChars()
 }
 
 // Return true if we can add space
-bool AutoCorrection::singleSpaces()
+bool AutoCorrection::singleSpaces() const
 {
     if (!d->mAutoCorrectionSettings->isSingleSpaces()) {
         return true;
@@ -646,7 +646,7 @@ void AutoCorrection::uppercaseFirstCharOfSentence()
     d->mCursor.setPosition(startPos + d->mWord.length(), QTextCursor::KeepAnchor);
 }
 
-bool AutoCorrection::autoFractions()
+bool AutoCorrection::autoFractions() const
 {
     if (!d->mAutoCorrectionSettings->isAutoFractions()) {
         return false;
