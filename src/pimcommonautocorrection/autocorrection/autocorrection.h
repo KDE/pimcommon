@@ -40,9 +40,9 @@ private:
     void readConfig();
 
     void fixTwoUppercaseChars();
-    Q_REQUIRED_RESULT bool singleSpaces();
+    Q_REQUIRED_RESULT bool singleSpaces() const;
     void capitalizeWeekDays();
-    Q_REQUIRED_RESULT bool autoFractions();
+    Q_REQUIRED_RESULT bool autoFractions() const;
     void uppercaseFirstCharOfSentence();
     Q_REQUIRED_RESULT int advancedAutocorrect();
     void replaceTypographicQuotes();
