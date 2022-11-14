@@ -9,11 +9,10 @@
 
 #include "pimcommontexttranslator_export.h"
 #include <KIO/Job>
-#include <KPIMTextEdit/PlainTextEditor>
-#include <KPIMTextEdit/PlainTextEditorWidget>
+#include <QPlainTextEdit>
 namespace PimCommonTextTranslator
 {
-class TranslatorResultTextEdit : public KPIMTextEdit::PlainTextEditor
+class TranslatorResultTextEdit : public QPlainTextEdit
 {
     Q_OBJECT
 public:
@@ -32,7 +31,7 @@ private:
  * @brief The TranslatorTextEdit class
  * @author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorTextEdit : public KPIMTextEdit::PlainTextEditor
+class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorTextEdit : public QPlainTextEdit
 {
     Q_OBJECT
 public:
