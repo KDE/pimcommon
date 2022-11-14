@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QDialog>
+#include <QUrl>
 
 class QPlainTextEdit;
 namespace PimCommonTextTranslator
@@ -23,6 +24,8 @@ public:
 private:
     void slotSaveAs();
     void readConfig();
+    void saveTextAs(const QString &text, const QString &filter, QWidget *parent, const QUrl &url = {}, const QString &caption = {});
+    Q_REQUIRED_RESULT bool saveToFile(const QString &filename, const QString &text);
     void writeConfig();
     QPlainTextEdit *const mEdit;
     QPushButton *const mUser1Button;

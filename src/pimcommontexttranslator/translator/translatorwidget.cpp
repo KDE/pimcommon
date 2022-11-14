@@ -6,11 +6,11 @@
 */
 
 #include "translatorwidget.h"
+#include "networkmanager.h"
 #include "translatorconfiguredialog.h"
 #include "translatordebugdialog.h"
 #include "translatorutil.h"
 #include <KBusyIndicatorWidget>
-#include <PimCommon/NetworkManager>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -391,7 +391,7 @@ void TranslatorWidget::setTextToTranslate(const QString &text)
 
 void TranslatorWidget::slotTranslate()
 {
-    if (!PimCommon::NetworkManager::self()->isOnline()) {
+    if (!PimCommonTextTranslator::NetworkManager::self()->isOnline()) {
         KMessageBox::information(this, i18n("No network connection detected, we cannot translate text."), i18n("No network"));
         return;
     }

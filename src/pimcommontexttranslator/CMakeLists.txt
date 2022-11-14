@@ -66,6 +66,8 @@ target_sources(KF5PimCommonTextTranslator PRIVATE
     translator/translatorconfigurewidget.h
     translator/translatorconfiguredialog.h
     translator/translatorconfiguredialog.cpp
+    translator/networkmanager.cpp
+    translator/networkmanager.h
 
     translator/engine/googletranslator.h
     translator/engine/googletranslator.cpp
@@ -96,7 +98,7 @@ target_link_libraries(KF5PimCommonTextTranslator
     Qt::Gui
     Qt::Widgets
     KF5::KIOCore
-    KF5::PimCommon
+    KF5::PimTextEdit
     PRIVATE
     Qt::Network
     KF5::I18n
@@ -130,7 +132,7 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
 
 ecm_generate_pri_file(BASE_NAME PimCommonTextTranslator
     LIB_NAME KF5PimCommonTextTranslator
-    DEPS "PimCommon" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator
+    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator
     )
 
 install(FILES

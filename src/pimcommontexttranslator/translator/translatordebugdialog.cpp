@@ -5,14 +5,17 @@
 */
 
 #include "translatordebugdialog.h"
-#include "util/pimutil.h"
 #include <QPlainTextEdit>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
+#include <QFileDialog>
+#include <QPointer>
 #include <QPushButton>
+#include <QTextStream>
 #include <QVBoxLayout>
 
 namespace
@@ -69,8 +72,44 @@ void TranslatorDebugDialog::writeConfig()
     group.writeEntry("Size", size());
 }
 
+void TranslatorDebugDialog::saveTextAs(const QString &text, const QString &filter, QWidget *parent, const QUrl &url, const QString &caption)
+{
+    QPointer<QFileDialog> fdlg(new QFileDialog(parent, QString(), url.path(), filter));
+    if (!caption.isEmpty()) {
+        fdlg->setWindowTitle(caption);
+    }
+    fdlg->setAcceptMode(QFileDialog::AcceptSave);
+    if (fdlg->exec() == QDialog::Accepted) {
+        const QString fileName = fdlg->selectedFiles().at(0);
+        if (!saveToFile(fileName, text)) {
+            KMessageBox::error(parent,
+                               i18n("Could not write the file %1:\n"
+                                    "\"%2\" is the detailed error description.",
+                                    fileName,
+                                    QString::fromLocal8Bit(strerror(errno))),
+                               i18n("Save File Error"));
+        }
+    }
+    delete fdlg;
+}
+
+bool TranslatorDebugDialog::saveToFile(const QString &filename, const QString &text)
+{
+    QFile file(filename);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        return false;
+    }
+    QTextStream out(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    out.setCodec("UTF-8");
+#endif
+    out << text;
+    file.close();
+    return true;
+}
+
 void TranslatorDebugDialog::slotSaveAs()
 {
     const QString filter = i18n("All Files (*)");
-    PimCommon::Util::saveTextAs(mEdit->toPlainText(), filter, this);
+    saveTextAs(mEdit->toPlainText(), filter, this);
 }
