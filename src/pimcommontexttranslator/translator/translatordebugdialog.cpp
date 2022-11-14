@@ -6,7 +6,7 @@
 
 #include "translatordebugdialog.h"
 #include "util/pimutil.h"
-#include <KPIMTextEdit/PlainTextEditorWidget>
+#include <QPlainTextEdit>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -22,7 +22,7 @@ const char myTranslatorDebugDialogConfigGroupName[] = "TranslatorDebugDialog";
 using namespace PimCommonTextTranslator;
 TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     : QDialog(parent)
-    , mEdit(new KPIMTextEdit::PlainTextEditorWidget(this))
+    , mEdit(new QPlainTextEdit(this))
     , mUser1Button(new QPushButton(this))
 {
     setWindowTitle(i18nc("@title:window", "Translator Debug"));
@@ -40,7 +40,7 @@ TranslatorDebugDialog::TranslatorDebugDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
 
     readConfig();
-    mUser1Button->setEnabled(!mEdit->isEmpty());
+    mUser1Button->setEnabled(!mEdit->toPlainText().isEmpty());
 }
 
 TranslatorDebugDialog::~TranslatorDebugDialog()

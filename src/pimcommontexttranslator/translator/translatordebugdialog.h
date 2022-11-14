@@ -8,10 +8,7 @@
 
 #include <QDialog>
 
-namespace KPIMTextEdit
-{
-class PlainTextEditorWidget;
-}
+class QPlainTextEdit;
 namespace PimCommonTextTranslator
 {
 class TranslatorDebugDialog : public QDialog
@@ -27,7 +24,7 @@ private:
     void slotSaveAs();
     void readConfig();
     void writeConfig();
-    KPIMTextEdit::PlainTextEditorWidget *const mEdit;
+    QPlainTextEdit *const mEdit;
     QPushButton *const mUser1Button;
 };
 }

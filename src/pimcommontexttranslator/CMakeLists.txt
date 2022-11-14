@@ -100,7 +100,6 @@ target_link_libraries(KF5PimCommonTextTranslator
     PRIVATE
     Qt::Network
     KF5::I18n
-    KF5::PimTextEdit
     KF5::WidgetsAddons
     )
 
