@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "pimcommon_export.h"
+#include "pimcommon_private_export.h"
 #include <QNetworkReply>
 #include <QObject>
 namespace PimCommon
 {
-class PIMCOMMON_EXPORT TranslatorEngineBase : public QObject
+class PIMCOMMON_TESTS_EXPORT TranslatorEngineBase : public QObject
 {
     Q_OBJECT
 public:
