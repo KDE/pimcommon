@@ -15,6 +15,8 @@ libraries:
    cmake: "KF5::PimCommonAkonadi"
  - qmake: PimCommonAutoCorrection
    cmake: "KF5::PimCommonAutoCorrection"
+ - qmake: PimCommonTextTranslator
+   cmake: "KF5::PimCommonTextTranslator"
 
 cmakename: KF5PimCommon
 # FIXME kapidox does not support more than one cmake module per repo yet
