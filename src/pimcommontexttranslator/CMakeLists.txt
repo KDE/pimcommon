@@ -111,17 +111,16 @@ install(FILES
 #    COMPONENT Devel
 #    )
 
-#install(FILES
-#    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonautocorrection_export.h
-#    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonautocorrectionsetting_base.h
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontexttranslator_export.h
 #    ${PimCommon_HEADERS}
 #    ${PimCommon_autocorrection_HEADERS}
 #    ${PimCommon_autocorrectionwidgets_HEADERS}
 #    ${PimCommon_settings_HEADERS}
 
-#    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAutoCorrection/pimcommonautocorrection
-#    COMPONENT Devel
-#    )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/pimcommontexttranslator
+    COMPONENT Devel
+    )
 
 install(FILES
     ${PRI_FILENAME}
