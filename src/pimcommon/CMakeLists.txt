@@ -70,34 +70,6 @@ target_sources(KF5PimCommon PRIVATE
     configureplugins/configurepluginswidget.cpp
     configureplugins/configureplugindialog.cpp
 
-    translator/translatorutil.cpp
-    translator/translatorutil.h
-    translator/translatorwidget.cpp
-    translator/translatorwidget.h
-    translator/translatordebugdialog.cpp
-    translator/translatordebugdialog.h
-    translator/translatorenginebase.cpp
-    translator/translatorenginebase.h
-    translator/translatorengineaccessmanager.h
-    translator/translatorengineaccessmanager.cpp
-    translator/translatorconfigurewidget.cpp
-    translator/translatorconfigurewidget.h
-    translator/translatorconfiguredialog.h
-    translator/translatorconfiguredialog.cpp
-
-    translator/engine/googletranslator.h
-    translator/engine/googletranslator.cpp
-    translator/engine/bingtranslator.h
-    translator/engine/bingtranslator.cpp
-    translator/engine/yandextranslator.h
-    translator/engine/yandextranslator.cpp
-    translator/engine/lingvatranslator.h
-    translator/engine/lingvatranslator.cpp
-    translator/engine/libretranslatetranslator.h
-    translator/engine/libretranslatetranslator.cpp
-    translator/engine/deepltranslator.cpp
-    translator/engine/deepltranslator.h
-
     templatewidgets/templatelistwidget.cpp
     templatewidgets/templateeditdialog.cpp
     templatewidgets/templatemanager.cpp
@@ -215,13 +187,11 @@ install(TARGETS
     )
 
 if (BUILD_TESTING)
-    add_subdirectory(translator/autotests)
     add_subdirectory(widgets/autotests)
     if (QT_MAJOR_VERSION STREQUAL "5")
         add_subdirectory(migration/autotests)
     endif()
     add_subdirectory(shareserviceurl/autotests)
-    add_subdirectory(translator/tests)
     add_subdirectory(widgets/tests)
     add_subdirectory(customtools/autotests)
     add_subdirectory(autotests)
@@ -284,15 +254,6 @@ ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
     REQUIRED_HEADERS PimCommon_shareserviceurl_HEADERS
     PREFIX PimCommon
     RELATIVE shareserviceurl
-    )
-
-ecm_generate_headers(PimCommon_Camelcasetranslator_HEADERS
-    HEADER_NAMES
-    TranslatorWidget
-    TranslatorConfigureDialog
-    REQUIRED_HEADERS PimCommon_translator_HEADERS
-    PREFIX PimCommon
-    RELATIVE translator
     )
 
 ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
@@ -372,14 +333,8 @@ install(FILES
     ${PimCommon_Camelcaserichtexteditor_HEADERS}
     ${PimCommon_Camelcasescript_HEADERS}
     ${PimCommon_Camelcaseshareserviceurl_HEADERS}
-    ${PimCommon_Camelcasestorageservice_HEADERS}
-    ${PimCommon_Camelcasestorageservicedialog_HEADERS}
-    ${PimCommon_Camelcasestorageserviceinterface_HEADERS}
-    ${PimCommon_Camelcasestorageservicesettings_HEADERS}
-    ${PimCommon_Camelcasestorageservicewidgets_HEADERS}
     ${PimCommon_Camelcasetemplatelist_HEADERS}
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
-    ${PimCommon_Camelcasetranslator_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
     ${PimCommon_CamelCasemisc_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/PimCommon
@@ -401,14 +356,8 @@ install(FILES
     ${PimCommon_plaintexteditor_HEADERS}
     ${PimCommon_richtexteditor_HEADERS}
     ${PimCommon_shareserviceurl_HEADERS}
-    ${PimCommon_storageservice_HEADERS}
-    ${PimCommon_storageservicedialog_HEADERS}
-    ${PimCommon_storageserviceinterface_HEADERS}
-    ${PimCommon_storageservicesettings_HEADERS}
-    ${PimCommon_storageservicewidgets_HEADERS}
     ${PimCommon_templatelist_HEADERS}
     ${PimCommon_texteditor_commonwidget_HEADERS}
-    ${PimCommon_translator_HEADERS}
     ${PimCommon_widgets_HEADERS}
     ${PimCommon_misc_HEADERS}
 

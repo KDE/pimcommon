@@ -39,6 +39,10 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/ COMPONENT Devel
     )
 
+if(BUILD_DESIGNERPLUGIN)
+    add_subdirectory(designer)
+endif()
+
 add_library(KF5PimCommonTextTranslator )
 add_library(KF5::PimCommonTextTranslator ALIAS KF5PimCommonTextTranslator)
 ecm_qt_declare_logging_category(KF5PimCommonTextTranslator HEADER pimcommontexttranslator_debug.h
@@ -48,7 +52,38 @@ ecm_qt_declare_logging_category(KF5PimCommonTextTranslator HEADER pimcommontextt
     )
 
 target_sources(KF5PimCommonTextTranslator PRIVATE
+    translator/translatorutil.cpp
+    translator/translatorutil.h
+    translator/translatorwidget.cpp
+    translator/translatorwidget.h
+    translator/translatordebugdialog.cpp
+    translator/translatordebugdialog.h
+    translator/translatorenginebase.cpp
+    translator/translatorenginebase.h
+    translator/translatorengineaccessmanager.h
+    translator/translatorengineaccessmanager.cpp
+    translator/translatorconfigurewidget.cpp
+    translator/translatorconfigurewidget.h
+    translator/translatorconfiguredialog.h
+    translator/translatorconfiguredialog.cpp
+
+    translator/engine/googletranslator.h
+    translator/engine/googletranslator.cpp
+    translator/engine/bingtranslator.h
+    translator/engine/bingtranslator.cpp
+    translator/engine/yandextranslator.h
+    translator/engine/yandextranslator.cpp
+    translator/engine/lingvatranslator.h
+    translator/engine/lingvatranslator.cpp
+    translator/engine/libretranslatetranslator.h
+    translator/engine/libretranslatetranslator.cpp
+    translator/engine/deepltranslator.cpp
+    translator/engine/deepltranslator.h
     )
+if (BUILD_TESTING)
+    add_subdirectory(translator/autotests)
+    add_subdirectory(translator/tests)
+endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommonTextTranslator PROPERTIES UNITY_BUILD ON)
@@ -60,8 +95,13 @@ target_link_libraries(KF5PimCommonTextTranslator
     PUBLIC
     Qt::Gui
     Qt::Widgets
+    KF5::KIOCore
+    KF5::PimCommon
     PRIVATE
+    Qt::Network
     KF5::I18n
+    KF5::PimTextEdit
+    KF5::WidgetsAddons
     )
 
 target_include_directories(KF5PimCommonTextTranslator INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/>")
@@ -79,23 +119,19 @@ install(TARGETS
     EXPORT KF5PimCommonTextTranslatorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-#if (BUILD_TESTING)
-#    add_subdirectory(autocorrection/autotests)
-#    add_subdirectory(autocorrection/tests)
-#endif()
+ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
+    HEADER_NAMES
+    TranslatorWidget
+    TranslatorConfigureDialog
+    REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
+    PREFIX PimCommonTextTranslator
+    RELATIVE translator
+    )
 
-
-#ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
-#    HEADER_NAMES
-#    PimCommonAutoCorrectionSettings
-#    REQUIRED_HEADERS PimCommon_settings_HEADERS
-#    PREFIX PimCommonAutoCorrection
-#    RELATIVE settings
-#    )
 
 ecm_generate_pri_file(BASE_NAME PimCommonTextTranslator
     LIB_NAME KF5PimCommonTextTranslator
-    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator
+    DEPS "PimCommon" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator
     )
 
 install(FILES
@@ -103,21 +139,16 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/ COMPONENT Devel
     )
 
-#install(FILES
-#    ${PimCommon_Camelcaseautocorrection_HEADERS}
-#    ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
-#    ${PimCommon_Camelcasesettings_HEADERS}
-#    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAutoCorrection/PimCommonAutoCorrection
-#    COMPONENT Devel
-#    )
+install(FILES
+    ${PimCommonTextTranslator_translator_HEADERS}
+    ${PimCommonTextTranslator_Camelcasetranslator_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/PimCommonTextTranslator
+    COMPONENT Devel
+    )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommontexttranslator_export.h
-#    ${PimCommon_HEADERS}
-#    ${PimCommon_autocorrection_HEADERS}
-#    ${PimCommon_autocorrectionwidgets_HEADERS}
-#    ${PimCommon_settings_HEADERS}
-
+    ${PimCommonTextTranslator_translator_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/pimcommontexttranslator
     COMPONENT Devel
     )
@@ -135,8 +166,7 @@ if (BUILD_QCH)
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
-        #${PimCommon_autocorrection_HEADERS}
-        #${PimCommon_autocorrectionwidgets_HEADERS}
+        ${PimCommonTextTranslator_translator_HEADERS}
         LINK_QCHS
             Qt5Core_QCH
             Qt5Gui_QCH
