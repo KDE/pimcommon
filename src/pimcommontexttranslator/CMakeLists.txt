@@ -99,7 +99,7 @@ ecm_generate_pri_file(BASE_NAME PimCommonTextTranslator
     )
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonatexttranslator_version.h
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontexttranslator_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/ COMPONENT Devel
     )
 
