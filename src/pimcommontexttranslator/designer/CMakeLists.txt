@@ -14,7 +14,7 @@ ecm_add_qtdesignerplugin(pimcommonitexttranslatorwidgets
     WIDGETS
     PimCommonTextTranslator::TranslatorWidget
     LINK_LIBRARIES
-    KF5::PimCommonTextTranslator KF5::PimTextEdit
+    KF5::PimCommonTextTranslator
     INSTALL_DESTINATION "${KDE_INSTALL_QTPLUGINDIR}/designer"
     COMPONENT Devel
     )
