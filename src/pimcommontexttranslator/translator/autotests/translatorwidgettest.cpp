@@ -5,7 +5,7 @@
 */
 
 #include "translatorwidgettest.h"
-#include "translator/translatorwidget.h"
+#include "translator/widgets/translatorwidget.h"
 
 #include <QPushButton>
 

@@ -5,8 +5,8 @@
 */
 
 #include "translatorconfiguredialogtest.h"
-#include "translator/translatorconfiguredialog.h"
-#include "translator/translatorconfigurewidget.h"
+#include "translator/widgets/translatorconfiguredialog.h"
+#include "translator/widgets/translatorconfigurewidget.h"
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>

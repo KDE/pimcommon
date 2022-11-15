@@ -52,22 +52,24 @@ ecm_qt_declare_logging_category(KF5PimCommonTextTranslator HEADER pimcommontextt
     )
 
 target_sources(KF5PimCommonTextTranslator PRIVATE
-    translator/translatorutil.cpp
-    translator/translatorutil.h
-    translator/translatorwidget.cpp
-    translator/translatorwidget.h
-    translator/translatordebugdialog.cpp
-    translator/translatordebugdialog.h
+    translator/misc/translatorutil.cpp
+    translator/misc/translatorutil.h
+
+    translator/widgets/translatorwidget.cpp
+    translator/widgets/translatorwidget.h
+    translator/widgets/translatordebugdialog.cpp
+    translator/widgets/translatordebugdialog.h
+    translator/widgets/translatorconfigurewidget.cpp
+    translator/widgets/translatorconfigurewidget.h
+    translator/widgets/translatorconfiguredialog.h
+    translator/widgets/translatorconfiguredialog.cpp
+
+    translator/networkmanager.cpp
+    translator/networkmanager.h
     translator/translatorenginebase.cpp
     translator/translatorenginebase.h
     translator/translatorengineaccessmanager.h
     translator/translatorengineaccessmanager.cpp
-    translator/translatorconfigurewidget.cpp
-    translator/translatorconfigurewidget.h
-    translator/translatorconfiguredialog.h
-    translator/translatorconfiguredialog.cpp
-    translator/networkmanager.cpp
-    translator/networkmanager.h
 
     translator/engine/googletranslator.h
     translator/engine/googletranslator.cpp
@@ -125,7 +127,7 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
     TranslatorConfigureDialog
     REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
     PREFIX PimCommonTextTranslator
-    RELATIVE translator
+    RELATIVE translator/widgets/
     )
 
 

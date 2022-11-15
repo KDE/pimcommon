@@ -5,7 +5,7 @@
 */
 
 #include "translatorconfigurewidgettest.h"
-#include "translator/translatorconfigurewidget.h"
+#include "translator/widgets/translatorconfigurewidget.h"
 #include <QComboBox>
 #include <QLabel>
 #include <QStackedWidget>

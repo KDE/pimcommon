@@ -4,7 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "translator/translatorwidget.h"
+#include "translator/widgets/translatorwidget.h"
 
 #include <QApplication>
 #include <QCommandLineParser>

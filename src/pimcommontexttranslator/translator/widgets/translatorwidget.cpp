@@ -6,10 +6,10 @@
 */
 
 #include "translatorwidget.h"
-#include "networkmanager.h"
+#include "translator/misc/translatorutil.h"
+#include "translator/networkmanager.h"
 #include "translatorconfiguredialog.h"
 #include "translatordebugdialog.h"
-#include "translatorutil.h"
 #include <KBusyIndicatorWidget>
 
 #include <KConfigGroup>

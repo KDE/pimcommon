@@ -5,13 +5,13 @@
 */
 
 #include "translatorutil.h"
-#include "engine/bingtranslator.h"
-#include "engine/deepltranslator.h"
-#include "engine/googletranslator.h"
-#include "engine/libretranslatetranslator.h"
-#include "engine/lingvatranslator.h"
-#include "engine/yandextranslator.h"
 #include "pimcommontexttranslator_debug.h"
+#include "translator/engine/bingtranslator.h"
+#include "translator/engine/deepltranslator.h"
+#include "translator/engine/googletranslator.h"
+#include "translator/engine/libretranslatetranslator.h"
+#include "translator/engine/lingvatranslator.h"
+#include "translator/engine/yandextranslator.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
