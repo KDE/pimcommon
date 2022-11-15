@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:47+0000\n"
+"POT-Creation-Date: 2022-11-15 00:47+0000\n"
 "PO-Revision-Date: 2022-11-09 09:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -27,7 +27,7 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#: pimcommon/translator/translatorwidget.cpp:298
+#: pimcommontexttranslator/translator/translatorwidget.cpp:297
 #, kde-format
 msgid "Configure"
 msgstr "Configura"
@@ -189,495 +189,8 @@ msgstr "«%1» no és un fitxer de plantilla"
 msgid "Load Template"
 msgstr "Carrega plantilla"
 
-#: pimcommon/translator/engine/bingtranslator.cpp:54
-#: pimcommon/translator/translatorutil.cpp:353
-#, kde-format
-msgid "Bing"
-msgstr "Bing"
-
-#: pimcommon/translator/engine/bingtranslator.cpp:65
-#, kde-format
-msgid "Error: Unable to find Bing credentials in web version."
-msgstr "Error: No s'han pogut trobar les credencials de Bing en la versió web."
-
-#: pimcommon/translator/engine/bingtranslator.cpp:73
-#, kde-format
-msgid "Error: Unable to extract Bing key from web version."
-msgstr "Error: No s'ha pogut extreure la clau de Bing de la versió web."
-
-#: pimcommon/translator/engine/bingtranslator.cpp:82
-#, kde-format
-msgid "Error: Unable to extract Bing token from web version."
-msgstr "Error: No s'ha pogut extreure el testimoni de Bing de la versió web."
-
-#: pimcommon/translator/engine/bingtranslator.cpp:91
-#: pimcommon/translator/engine/bingtranslator.cpp:100
-#, kde-format
-msgid "Error: Unable to extract additional Bing information from web version."
-msgstr ""
-"Error: No s'ha pogut extreure la informació addicional de Bing de la versió "
-"web."
-
-#: pimcommon/translator/engine/bingtranslator.cpp:113
-#: pimcommon/translator/engine/deepltranslator.cpp:40
-#: pimcommon/translator/engine/googletranslator.cpp:45
-#: pimcommon/translator/engine/libretranslatetranslator.cpp:34
-#: pimcommon/translator/engine/lingvatranslator.cpp:35
-#: pimcommon/translator/engine/yandextranslator.cpp:107
-#, kde-format
-msgid "You used same language for from and to language."
-msgstr "Heu usat el mateix idioma per a l'origen i la destinació."
-
-#: pimcommon/translator/engine/deepltranslator.cpp:29
-#: pimcommon/translator/translatorutil.cpp:362
-#, kde-format
-msgid "DeepL"
-msgstr "DeepL"
-
-#: pimcommon/translator/engine/googletranslator.cpp:74
-#: pimcommon/translator/translatorutil.cpp:347
-#, kde-format
-msgid "Google"
-msgstr "Google"
-
-#: pimcommon/translator/engine/libretranslatetranslator.cpp:28
-#: pimcommon/translator/translatorutil.cpp:359
-#, kde-format
-msgid "Libre Translate"
-msgstr "Libre Translate"
-
-#: pimcommon/translator/engine/lingvatranslator.cpp:29
-#: pimcommon/translator/translatorutil.cpp:356
-#, kde-format
-msgid "Lingva"
-msgstr "Lingva"
-
-#: pimcommon/translator/engine/yandextranslator.cpp:59
-#: pimcommon/translator/translatorutil.cpp:350
-#, kde-format
-msgid "Yandex"
-msgstr "Yandex"
-
-#: pimcommon/translator/engine/yandextranslator.cpp:69
-#: pimcommon/translator/translatorenginebase.cpp:83
-#, kde-format
-msgid ""
-"Error: Engine systems have detected suspicious traffic from your computer "
-"network. Please try your request again later."
-msgstr ""
-"Error: Els sistemes del motor han detectat trànsit sospitós des de la xarxa "
-"d'aquest ordinador. Torneu-ho a provar més tard."
-
-#: pimcommon/translator/engine/yandextranslator.cpp:78
-#, kde-format
-msgid "Error: Unable to find Yandex SID in web version."
-msgstr "Error: No s'ha pogut trobar el SID de Yandex en la versió web."
-
-#: pimcommon/translator/engine/yandextranslator.cpp:86
-#, kde-format
-msgid "Error: Unable to extract Yandex SID from web version."
-msgstr "Error: No s'ha pogut extreure el SID de Yandex de la versió web."
-
-#: pimcommon/translator/engine/yandextranslator.cpp:155
-#, kde-format
-msgid "Error: Unable to parse autodetected language"
-msgstr "Error: No s'ha pogut analitzar l'idioma detectat automàticament"
-
-#: pimcommon/translator/translatorconfiguredialog.cpp:24
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Translator"
-msgstr "Configura el traductor"
-
-#: pimcommon/translator/translatorconfigurewidget.cpp:33
-#, kde-format
-msgid "Engine:"
-msgstr "Motor:"
-
-#: pimcommon/translator/translatordebugdialog.cpp:28
-#, kde-format
-msgctxt "@title:window"
-msgid "Translator Debug"
-msgstr "Depuració del traductor"
-
-#: pimcommon/translator/translatordebugdialog.cpp:35
-#, kde-format
-msgid "Save As..."
-msgstr "Desa com a..."
-
-#: pimcommon/translator/translatordebugdialog.cpp:74
-#, kde-format
-msgid "All Files (*)"
-msgstr "Tots els fitxers (*)"
-
-#: pimcommon/translator/translatorutil.cpp:124
-#, kde-format
-msgid "Detect language"
-msgstr "Detecta l'idioma"
-
-#: pimcommon/translator/translatorutil.cpp:127
-#, kde-format
-msgid "English"
-msgstr "Anglès"
-
-#: pimcommon/translator/translatorutil.cpp:130
-#: pimcommon/translator/translatorutil.cpp:193
-#, kde-format
-msgid "Chinese (Simplified)"
-msgstr "Xinès (simplificat)"
-
-#: pimcommon/translator/translatorutil.cpp:133
-#: pimcommon/translator/translatorutil.cpp:196
-#, kde-format
-msgid "Chinese (Traditional)"
-msgstr "Xinès (tradicional)"
-
-#: pimcommon/translator/translatorutil.cpp:136
-#, kde-format
-msgid "Dutch"
-msgstr "Neerlandès"
-
-#: pimcommon/translator/translatorutil.cpp:139
-#, kde-format
-msgid "French"
-msgstr "Francès"
-
-#: pimcommon/translator/translatorutil.cpp:142
-#, kde-format
-msgid "German"
-msgstr "Alemany"
-
-#: pimcommon/translator/translatorutil.cpp:145
-#, kde-format
-msgid "Greek"
-msgstr "Grec"
-
-#: pimcommon/translator/translatorutil.cpp:148
-#, kde-format
-msgid "Italian"
-msgstr "Italià"
-
-#: pimcommon/translator/translatorutil.cpp:151
-#, kde-format
-msgid "Japanese"
-msgstr "Japonès"
-
-#: pimcommon/translator/translatorutil.cpp:154
-#, kde-format
-msgid "Korean"
-msgstr "Coreà"
-
-#: pimcommon/translator/translatorutil.cpp:157
-#, kde-format
-msgid "Portuguese"
-msgstr "Portuguès"
-
-#: pimcommon/translator/translatorutil.cpp:160
-#, kde-format
-msgid "Russian"
-msgstr "Rus"
-
-#: pimcommon/translator/translatorutil.cpp:163
-#, kde-format
-msgid "Spanish"
-msgstr "Espanyol"
-
-#: pimcommon/translator/translatorutil.cpp:166
-#, kde-format
-msgid "Afrikaans"
-msgstr "Afrikaans"
-
-#: pimcommon/translator/translatorutil.cpp:169
-#, kde-format
-msgid "Albanian"
-msgstr "Albanès"
-
-#: pimcommon/translator/translatorutil.cpp:172
-#, kde-format
-msgid "Arabic"
-msgstr "Àrab"
-
-#: pimcommon/translator/translatorutil.cpp:175
-#, kde-format
-msgid "Armenian"
-msgstr "Armeni"
-
-#: pimcommon/translator/translatorutil.cpp:178
-#, kde-format
-msgid "Azerbaijani"
-msgstr "Àzeri"
-
-#: pimcommon/translator/translatorutil.cpp:181
-#, kde-format
-msgid "Basque"
-msgstr "Basc"
-
-#: pimcommon/translator/translatorutil.cpp:184
-#, kde-format
-msgid "Belarusian"
-msgstr "Bielorús"
-
-#: pimcommon/translator/translatorutil.cpp:187
-#, kde-format
-msgid "Bulgarian"
-msgstr "Búlgar"
-
-#: pimcommon/translator/translatorutil.cpp:190
-#, kde-format
-msgid "Catalan"
-msgstr "Català"
-
-#: pimcommon/translator/translatorutil.cpp:199
-#, kde-format
-msgid "Croatian"
-msgstr "Croat"
-
-#: pimcommon/translator/translatorutil.cpp:202
-#, kde-format
-msgid "Czech"
-msgstr "Txec"
-
-#: pimcommon/translator/translatorutil.cpp:205
-#, kde-format
-msgid "Danish"
-msgstr "Danès"
-
-#: pimcommon/translator/translatorutil.cpp:208
-#, kde-format
-msgid "Estonian"
-msgstr "Estonià"
-
-#: pimcommon/translator/translatorutil.cpp:211
-#, kde-format
-msgid "Filipino"
-msgstr "Filipí"
-
-#: pimcommon/translator/translatorutil.cpp:214
-#, kde-format
-msgid "Finnish"
-msgstr "Finès"
-
-#: pimcommon/translator/translatorutil.cpp:217
-#, kde-format
-msgid "Galician"
-msgstr "Gallec"
-
-#: pimcommon/translator/translatorutil.cpp:220
-#, kde-format
-msgid "Georgian"
-msgstr "Georgià"
-
-#: pimcommon/translator/translatorutil.cpp:223
-#, kde-format
-msgid "Haitian Creole"
-msgstr "Crioll haitià"
-
-#: pimcommon/translator/translatorutil.cpp:226
-#, kde-format
-msgid "Hebrew"
-msgstr "Hebreu"
-
-#: pimcommon/translator/translatorutil.cpp:229
-#, kde-format
-msgid "Hindi"
-msgstr "Hindi"
-
-#: pimcommon/translator/translatorutil.cpp:232
-#, kde-format
-msgid "Hungarian"
-msgstr "Hongarès"
-
-#: pimcommon/translator/translatorutil.cpp:235
-#, kde-format
-msgid "Icelandic"
-msgstr "Islandès"
-
-#: pimcommon/translator/translatorutil.cpp:238
-#, kde-format
-msgid "Indonesian"
-msgstr "Indonesi"
-
-#: pimcommon/translator/translatorutil.cpp:241
-#, kde-format
-msgid "Irish"
-msgstr "Irlandès"
-
-#: pimcommon/translator/translatorutil.cpp:244
-#, kde-format
-msgid "Latvian"
-msgstr "Letó"
-
-#: pimcommon/translator/translatorutil.cpp:247
-#, kde-format
-msgid "Lithuanian"
-msgstr "Lituà"
-
-#: pimcommon/translator/translatorutil.cpp:250
-#, kde-format
-msgid "Macedonian"
-msgstr "Macedoni"
-
-#: pimcommon/translator/translatorutil.cpp:253
-#, kde-format
-msgid "Malay"
-msgstr "Malai"
-
-#: pimcommon/translator/translatorutil.cpp:256
-#, kde-format
-msgid "Maltese"
-msgstr "Maltès"
-
-#: pimcommon/translator/translatorutil.cpp:259
-#, kde-format
-msgid "Norwegian"
-msgstr "Noruec"
-
-#: pimcommon/translator/translatorutil.cpp:262
-#, kde-format
-msgid "Persian"
-msgstr "Persa"
-
-#: pimcommon/translator/translatorutil.cpp:265
-#, kde-format
-msgid "Polish"
-msgstr "Polonès"
-
-#: pimcommon/translator/translatorutil.cpp:268
-#, kde-format
-msgid "Romanian"
-msgstr "Romanès"
-
-#: pimcommon/translator/translatorutil.cpp:271
-#, kde-format
-msgid "Serbian"
-msgstr "Serbi"
-
-#: pimcommon/translator/translatorutil.cpp:274
-#, kde-format
-msgid "Slovak"
-msgstr "Eslovac"
-
-#: pimcommon/translator/translatorutil.cpp:277
-#, kde-format
-msgid "Slovenian"
-msgstr "Eslovè"
-
-#: pimcommon/translator/translatorutil.cpp:280
-#, kde-format
-msgid "Swahili"
-msgstr "Suahili"
-
-#: pimcommon/translator/translatorutil.cpp:283
-#, kde-format
-msgid "Swedish"
-msgstr "Suec"
-
-#: pimcommon/translator/translatorutil.cpp:286
-#, kde-format
-msgid "Thai"
-msgstr "Tailandès"
-
-#: pimcommon/translator/translatorutil.cpp:289
-#, kde-format
-msgid "Turkish"
-msgstr "Turc"
-
-#: pimcommon/translator/translatorutil.cpp:292
-#, kde-format
-msgid "Ukrainian"
-msgstr "Ucraïnès"
-
-#: pimcommon/translator/translatorutil.cpp:295
-#, kde-format
-msgid "Urdu"
-msgstr "Urdú"
-
-#: pimcommon/translator/translatorutil.cpp:298
-#, kde-format
-msgid "Vietnamese"
-msgstr "Vietnamita"
-
-#: pimcommon/translator/translatorutil.cpp:301
-#, kde-format
-msgid "Welsh"
-msgstr "Gal·lès"
-
-#: pimcommon/translator/translatorutil.cpp:304
-#, kde-format
-msgid "Yiddish"
-msgstr "Jiddisch"
-
-#: pimcommon/translator/translatorwidget.cpp:127
-#, kde-format
-msgid "Problem when connecting to the translator web site."
-msgstr "Problema en connectar amb el lloc web del traductor."
-
-#: pimcommon/translator/translatorwidget.cpp:229
-#: pimcommon/translator/translatorwidget.cpp:232
-#, kde-format
-msgid "Close"
-msgstr "Tanca"
-
-#: pimcommon/translator/translatorwidget.cpp:238
-#, kde-format
-msgctxt "Translate from language"
-msgid "From:"
-msgstr "Des de:"
-
-#: pimcommon/translator/translatorwidget.cpp:245
-#, kde-format
-msgctxt "Translate to language"
-msgid "To:"
-msgstr "A:"
-
-#: pimcommon/translator/translatorwidget.cpp:257
-#, kde-format
-msgctxt "Invert language choices so that from becomes to and to becomes from"
-msgid "Invert"
-msgstr "Inverteix"
-
-#: pimcommon/translator/translatorwidget.cpp:262
-#: pimcommon/translator/translatorwidget.cpp:265
-#, kde-format
-msgid "Clear"
-msgstr "Neteja"
-
-#: pimcommon/translator/translatorwidget.cpp:270
-#: pimcommon/translator/translatorwidget.cpp:273
-#, kde-format
-msgid "Translate"
-msgstr "Tradueix"
-
-#: pimcommon/translator/translatorwidget.cpp:280
-#, kde-format
-msgid "Debug"
-msgstr "Depura"
-
-#: pimcommon/translator/translatorwidget.cpp:314
-#, kde-format
-msgid ""
-"Drag text that you want to translate. (Be careful text will be send to "
-"Google Server)."
-msgstr ""
-"Deixeu anar el text que voleu traduir. (Aneu amb compte, el text s'enviarà "
-"al servidor de Google)."
-
-#: pimcommon/translator/translatorwidget.cpp:395
-#, kde-format
-msgid "No network connection detected, we cannot translate text."
-msgstr "No s'ha detectat cap connexió de xarxa, no s'ha pogut traduir el text."
-
-#: pimcommon/translator/translatorwidget.cpp:395
-#, kde-format
-msgid "No network"
-msgstr "Sense xarxa"
-
-#: pimcommon/translator/translatorwidget.cpp:434
-#, kde-format
-msgid "Translate error"
-msgstr "Error de traducció"
-
 #: pimcommon/util/pimutil.cpp:48
+#: pimcommontexttranslator/translator/translatordebugdialog.cpp:86
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -687,6 +200,7 @@ msgstr ""
 "«%2» és la descripció detallada de l'error."
 
 #: pimcommon/util/pimutil.cpp:52
+#: pimcommontexttranslator/translator/translatordebugdialog.cpp:90
 #, kde-format
 msgid "Save File Error"
 msgstr "Error en desar el fitxer"
@@ -2071,3 +1585,491 @@ msgstr "Insereix"
 #, kde-format
 msgid "Select"
 msgstr "Selecciona"
+
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
+#: pimcommontexttranslator/translator/translatorutil.cpp:354
+#, kde-format
+msgid "Bing"
+msgstr "Bing"
+
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:65
+#, kde-format
+msgid "Error: Unable to find Bing credentials in web version."
+msgstr "Error: No s'han pogut trobar les credencials de Bing en la versió web."
+
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:73
+#, kde-format
+msgid "Error: Unable to extract Bing key from web version."
+msgstr "Error: No s'ha pogut extreure la clau de Bing de la versió web."
+
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:82
+#, kde-format
+msgid "Error: Unable to extract Bing token from web version."
+msgstr "Error: No s'ha pogut extreure el testimoni de Bing de la versió web."
+
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:91
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:100
+#, kde-format
+msgid "Error: Unable to extract additional Bing information from web version."
+msgstr ""
+"Error: No s'ha pogut extreure la informació addicional de Bing de la versió "
+"web."
+
+#: pimcommontexttranslator/translator/engine/bingtranslator.cpp:113
+#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:40
+#: pimcommontexttranslator/translator/engine/googletranslator.cpp:45
+#: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:34
+#: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:35
+#: pimcommontexttranslator/translator/engine/yandextranslator.cpp:107
+#, kde-format
+msgid "You used same language for from and to language."
+msgstr "Heu usat el mateix idioma per a l'origen i la destinació."
+
+#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
+#: pimcommontexttranslator/translator/translatorutil.cpp:363
+#, kde-format
+msgid "DeepL"
+msgstr "DeepL"
+
+#: pimcommontexttranslator/translator/engine/googletranslator.cpp:74
+#: pimcommontexttranslator/translator/translatorutil.cpp:348
+#, kde-format
+msgid "Google"
+msgstr "Google"
+
+#: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
+#: pimcommontexttranslator/translator/translatorutil.cpp:360
+#, kde-format
+msgid "Libre Translate"
+msgstr "Libre Translate"
+
+#: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
+#: pimcommontexttranslator/translator/translatorutil.cpp:357
+#, kde-format
+msgid "Lingva"
+msgstr "Lingva"
+
+#: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
+#: pimcommontexttranslator/translator/translatorutil.cpp:351
+#, kde-format
+msgid "Yandex"
+msgstr "Yandex"
+
+#: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
+#: pimcommontexttranslator/translator/translatorenginebase.cpp:83
+#, kde-format
+msgid ""
+"Error: Engine systems have detected suspicious traffic from your computer "
+"network. Please try your request again later."
+msgstr ""
+"Error: Els sistemes del motor han detectat trànsit sospitós des de la xarxa "
+"d'aquest ordinador. Torneu-ho a provar més tard."
+
+#: pimcommontexttranslator/translator/engine/yandextranslator.cpp:78
+#, kde-format
+msgid "Error: Unable to find Yandex SID in web version."
+msgstr "Error: No s'ha pogut trobar el SID de Yandex en la versió web."
+
+#: pimcommontexttranslator/translator/engine/yandextranslator.cpp:86
+#, kde-format
+msgid "Error: Unable to extract Yandex SID from web version."
+msgstr "Error: No s'ha pogut extreure el SID de Yandex de la versió web."
+
+#: pimcommontexttranslator/translator/engine/yandextranslator.cpp:155
+#, kde-format
+msgid "Error: Unable to parse autodetected language"
+msgstr "Error: No s'ha pogut analitzar l'idioma detectat automàticament"
+
+#: pimcommontexttranslator/translator/translatorconfiguredialog.cpp:24
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Translator"
+msgstr "Configura el traductor"
+
+#: pimcommontexttranslator/translator/translatorconfigurewidget.cpp:33
+#, kde-format
+msgid "Engine:"
+msgstr "Motor:"
+
+#: pimcommontexttranslator/translator/translatordebugdialog.cpp:31
+#, kde-format
+msgctxt "@title:window"
+msgid "Translator Debug"
+msgstr "Depuració del traductor"
+
+#: pimcommontexttranslator/translator/translatordebugdialog.cpp:38
+#, kde-format
+msgid "Save As..."
+msgstr "Desa com a..."
+
+#: pimcommontexttranslator/translator/translatordebugdialog.cpp:113
+#, kde-format
+msgid "All Files (*)"
+msgstr "Tots els fitxers (*)"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:124
+#, kde-format
+msgid "Detect language"
+msgstr "Detecta l'idioma"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:127
+#, kde-format
+msgid "English"
+msgstr "Anglès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:130
+#: pimcommontexttranslator/translator/translatorutil.cpp:193
+#, kde-format
+msgid "Chinese (Simplified)"
+msgstr "Xinès (simplificat)"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:133
+#: pimcommontexttranslator/translator/translatorutil.cpp:196
+#, kde-format
+msgid "Chinese (Traditional)"
+msgstr "Xinès (tradicional)"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:136
+#, kde-format
+msgid "Dutch"
+msgstr "Neerlandès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:139
+#, kde-format
+msgid "French"
+msgstr "Francès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:142
+#, kde-format
+msgid "German"
+msgstr "Alemany"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:145
+#, kde-format
+msgid "Greek"
+msgstr "Grec"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:148
+#, kde-format
+msgid "Italian"
+msgstr "Italià"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:151
+#, kde-format
+msgid "Japanese"
+msgstr "Japonès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:154
+#, kde-format
+msgid "Korean"
+msgstr "Coreà"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:157
+#, kde-format
+msgid "Portuguese"
+msgstr "Portuguès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:160
+#, kde-format
+msgid "Russian"
+msgstr "Rus"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:163
+#, kde-format
+msgid "Spanish"
+msgstr "Espanyol"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:166
+#, kde-format
+msgid "Afrikaans"
+msgstr "Afrikaans"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:169
+#, kde-format
+msgid "Albanian"
+msgstr "Albanès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:172
+#, kde-format
+msgid "Arabic"
+msgstr "Àrab"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:175
+#, kde-format
+msgid "Armenian"
+msgstr "Armeni"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:178
+#, kde-format
+msgid "Azerbaijani"
+msgstr "Àzeri"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:181
+#, kde-format
+msgid "Basque"
+msgstr "Basc"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:184
+#, kde-format
+msgid "Belarusian"
+msgstr "Bielorús"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:187
+#, kde-format
+msgid "Bulgarian"
+msgstr "Búlgar"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:190
+#, kde-format
+msgid "Catalan"
+msgstr "Català"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:199
+#, kde-format
+msgid "Croatian"
+msgstr "Croat"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:202
+#, kde-format
+msgid "Czech"
+msgstr "Txec"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:205
+#, kde-format
+msgid "Danish"
+msgstr "Danès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:208
+#, kde-format
+msgid "Estonian"
+msgstr "Estonià"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:211
+#, kde-format
+msgid "Filipino"
+msgstr "Filipí"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:214
+#, kde-format
+msgid "Finnish"
+msgstr "Finès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:217
+#, kde-format
+msgid "Galician"
+msgstr "Gallec"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:220
+#, kde-format
+msgid "Georgian"
+msgstr "Georgià"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:223
+#, kde-format
+msgid "Haitian Creole"
+msgstr "Crioll haitià"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:226
+#, kde-format
+msgid "Hebrew"
+msgstr "Hebreu"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:229
+#, kde-format
+msgid "Hindi"
+msgstr "Hindi"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:232
+#, kde-format
+msgid "Hungarian"
+msgstr "Hongarès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:235
+#, kde-format
+msgid "Icelandic"
+msgstr "Islandès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:238
+#, kde-format
+msgid "Indonesian"
+msgstr "Indonesi"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:241
+#, kde-format
+msgid "Irish"
+msgstr "Irlandès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:244
+#, kde-format
+msgid "Latvian"
+msgstr "Letó"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:247
+#, kde-format
+msgid "Lithuanian"
+msgstr "Lituà"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:250
+#, kde-format
+msgid "Macedonian"
+msgstr "Macedoni"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:253
+#, kde-format
+msgid "Malay"
+msgstr "Malai"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:256
+#, kde-format
+msgid "Maltese"
+msgstr "Maltès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:259
+#, kde-format
+msgid "Norwegian"
+msgstr "Noruec"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:262
+#, kde-format
+msgid "Persian"
+msgstr "Persa"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:265
+#, kde-format
+msgid "Polish"
+msgstr "Polonès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:268
+#, kde-format
+msgid "Romanian"
+msgstr "Romanès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:271
+#, kde-format
+msgid "Serbian"
+msgstr "Serbi"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:274
+#, kde-format
+msgid "Slovak"
+msgstr "Eslovac"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:277
+#, kde-format
+msgid "Slovenian"
+msgstr "Eslovè"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:280
+#, kde-format
+msgid "Swahili"
+msgstr "Suahili"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:283
+#, kde-format
+msgid "Swedish"
+msgstr "Suec"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:286
+#, kde-format
+msgid "Thai"
+msgstr "Tailandès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:289
+#, kde-format
+msgid "Turkish"
+msgstr "Turc"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:292
+#, kde-format
+msgid "Ukrainian"
+msgstr "Ucraïnès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:295
+#, kde-format
+msgid "Urdu"
+msgstr "Urdú"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:298
+#, kde-format
+msgid "Vietnamese"
+msgstr "Vietnamita"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:301
+#, kde-format
+msgid "Welsh"
+msgstr "Gal·lès"
+
+#: pimcommontexttranslator/translator/translatorutil.cpp:304
+#, kde-format
+msgid "Yiddish"
+msgstr "Jiddisch"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:126
+#, kde-format
+msgid "Problem when connecting to the translator web site."
+msgstr "Problema en connectar amb el lloc web del traductor."
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:228
+#: pimcommontexttranslator/translator/translatorwidget.cpp:231
+#, kde-format
+msgid "Close"
+msgstr "Tanca"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:237
+#, kde-format
+msgctxt "Translate from language"
+msgid "From:"
+msgstr "Des de:"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:244
+#, kde-format
+msgctxt "Translate to language"
+msgid "To:"
+msgstr "A:"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:256
+#, kde-format
+msgctxt "Invert language choices so that from becomes to and to becomes from"
+msgid "Invert"
+msgstr "Inverteix"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:261
+#: pimcommontexttranslator/translator/translatorwidget.cpp:264
+#, kde-format
+msgid "Clear"
+msgstr "Neteja"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:269
+#: pimcommontexttranslator/translator/translatorwidget.cpp:272
+#, kde-format
+msgid "Translate"
+msgstr "Tradueix"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:279
+#, kde-format
+msgid "Debug"
+msgstr "Depura"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:312
+#, kde-format
+msgid ""
+"Drag text that you want to translate. (Be careful text will be send to "
+"Google Server)."
+msgstr ""
+"Deixeu anar el text que voleu traduir. (Aneu amb compte, el text s'enviarà "
+"al servidor de Google)."
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:392
+#, kde-format
+msgid "No network connection detected, we cannot translate text."
+msgstr "No s'ha detectat cap connexió de xarxa, no s'ha pogut traduir el text."
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:392
+#, kde-format
+msgid "No network"
+msgstr "Sense xarxa"
+
+#: pimcommontexttranslator/translator/translatorwidget.cpp:431
+#, kde-format
+msgid "Translate error"
+msgstr "Error de traducció"
