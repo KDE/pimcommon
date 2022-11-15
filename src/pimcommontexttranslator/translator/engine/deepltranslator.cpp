@@ -7,7 +7,6 @@
 
 #include "deepltranslator.h"
 #include "translator/translatorengineaccessmanager.h"
-#include "translator/translatorutil.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
