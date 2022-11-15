@@ -114,6 +114,7 @@ target_link_libraries(KF5PimCommonTextTranslator
     KF5::I18n
     KF5::WidgetsAddons
     KF5::ItemViews
+    KF5::ConfigCore
     )
 
 target_include_directories(KF5PimCommonTextTranslator INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/>")
