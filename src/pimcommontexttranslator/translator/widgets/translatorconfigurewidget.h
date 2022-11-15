@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "pimcommontexttranslator_private_export.h"
+#include "pimcommontexttranslator_export.h"
 #include <QWidget>
 class QComboBox;
 class QStackedWidget;
 namespace PimCommonTextTranslator
 {
-class PIMCOMMONTEXTTRANSLATOR_TESTS_EXPORT TranslatorConfigureWidget : public QWidget
+class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -6,13 +6,14 @@
 
 #pragma once
 
+#include "pimcommontexttranslator_export.h"
 #include <QWidget>
 class QListWidget;
 class KListWidgetSearchLine;
 class QLabel;
 namespace PimCommonTextTranslator
 {
-class TranslatorConfigureLanguageListWidget : public QWidget
+class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureLanguageListWidget : public QWidget
 {
     Q_OBJECT
 public:
