@@ -98,7 +98,6 @@ target_link_libraries(KF5PimCommonTextTranslator
     Qt::Gui
     Qt::Widgets
     KF5::KIOCore
-    KF5::PimTextEdit
     PRIVATE
     Qt::Network
     KF5::I18n
