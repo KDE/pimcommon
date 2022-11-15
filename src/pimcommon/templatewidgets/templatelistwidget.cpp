@@ -21,7 +21,6 @@
 #include <QListWidgetItem>
 #include <QMimeData>
 #include <QPointer>
-#include <kwidgetsaddons_version.h>
 
 namespace PimCommon
 {
@@ -72,20 +71,12 @@ public:
 
     void slotRemove()
     {
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         const int answer = KMessageBox::questionTwoActions(q,
-#else
-        const int answer = KMessageBox::questionYesNo(q,
-#endif
                                                            i18n("Do you want to delete selected template?"),
                                                            i18n("Delete template"),
                                                            KStandardGuiItem::del(),
                                                            KStandardGuiItem::cancel());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-        if (answer == KMessageBox::Yes) {
-#endif
             const QList<QListWidgetItem *> lstSelectedItems = q->selectedItems();
             for (QListWidgetItem *item : lstSelectedItems) {
                 if (item->data(TemplateListWidget::DefaultTemplate).toBool() == false) {

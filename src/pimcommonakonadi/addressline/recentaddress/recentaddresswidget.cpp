@@ -108,20 +108,12 @@ void RecentAddressWidget::slotRemoveItem()
         return;
     }
     const int answer =
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
         KMessageBox::questionTwoActions(this,
-#else
-        KMessageBox::questionYesNo(this,
-#endif
                                         i18np("Do you want to remove this email address?", "Do you want to remove %1 email addresses?", selectedItems.count()),
                                         i18n("Remove"),
                                         KStandardGuiItem::remove(),
                                         KStandardGuiItem::cancel());
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     if (answer == KMessageBox::ButtonCode::PrimaryAction) {
-#else
-    if (answer == KMessageBox::Yes) {
-#endif
         for (QListWidgetItem *item : selectedItems) {
             delete mListView->takeItem(mListView->row(item));
         }
