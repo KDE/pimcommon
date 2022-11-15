@@ -95,6 +95,7 @@ target_sources(KF5PimCommonTextTranslator PRIVATE
 if (BUILD_TESTING)
     add_subdirectory(translator/autotests)
     add_subdirectory(translator/tests)
+    add_subdirectory(translator/widgets/autotests)
 endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
