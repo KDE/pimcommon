@@ -10,6 +10,6 @@ macro(add_pimcommontranslatorwidget_test _source)
     set_target_properties(${_name} PROPERTIES DISABLE_PRECOMPILE_HEADERS ON)
 endmacro()
 
-#add_pimcommontranslatorwidget_test(translatorconfigurewidgettest.cpp)
+add_pimcommontranslatorwidget_test(translatorconfigurelistswidgettest.cpp)
 add_pimcommontranslatorwidget_test(translatorconfigurelanguagelistwidgettest.cpp)
 #add_pimcommontranslatorwidget_test(translatormenutest.cpp)

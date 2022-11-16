@@ -21,8 +21,8 @@ TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
     : QWidget{parent}
     , mEngine(new QComboBox(this))
     , mConfigureEngine(new QToolButton(this))
-    , mFromLanguageWidget(new PimCommonTextTranslator::TranslatorConfigureLanguageListWidget(i18n("From:"), this))
-    , mToLanguageWidget(new PimCommonTextTranslator::TranslatorConfigureLanguageListWidget(i18n("To:"), this))
+    , mFromLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("From:"), this))
+    , mToLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("To:"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
