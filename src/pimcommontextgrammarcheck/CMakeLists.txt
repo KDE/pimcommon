@@ -52,10 +52,10 @@ target_sources(KF5PimCommonTextGrammar PRIVATE
     common/grammarerror.h
     common/grammaraction.h
     common/grammaraction.cpp
-#    common/grammarresulttextedit.cpp
-#    common/grammarresultwidget.cpp
-#    common/grammarresulttextedit.h
-#    common/grammarresultwidget.h
+    common/grammarresultwidget.cpp
+    common/grammarresultwidget.h
+    common/grammarresulttextedit.cpp
+    common/grammarresulttextedit.h
     common/grammarresultutil.h
     common/grammarresultutil.cpp
     )
@@ -72,13 +72,10 @@ target_link_libraries(KF5PimCommonTextGrammar
     PUBLIC
     Qt::Gui
     Qt::Widgets
-    KF5::KIOCore
     PRIVATE
-    Qt::Network
     KF5::I18n
     KF5::WidgetsAddons
-    KF5::ItemViews
-    KF5::ConfigCore
+    KF5::ConfigWidgets
     )
 
 target_include_directories(KF5PimCommonTextGrammar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/>")

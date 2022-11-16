@@ -5,10 +5,9 @@
 */
 
 #include "grammarresulttextedit.h"
-#include "grammarcommon_debug.h"
 #include "grammarresultutil.h"
+#include "pimcommontextgrammar_debug.h"
 #include <KStatefulBrush>
-#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 
 #include <KLocalizedString>
 #include <KStandardAction>
@@ -20,7 +19,7 @@
 #include <QContextMenuEvent>
 #include <QMenu>
 #include <QPainter>
-
+using namespace PimCommonTextGrammar;
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)
 {
@@ -87,7 +86,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
     if (popup) {
         QTextCursor cursor = cursorForPosition(event->pos());
         if (cursor.charFormat().hasProperty(GrammarResultUtil::TextInfo::ReplaceFormatInfo)) {
-            const auto act = cursor.charFormat().property(GrammarResultUtil::TextInfo::ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
+            const auto act = cursor.charFormat().property(GrammarResultUtil::TextInfo::ReplaceFormatInfo).value<PimCommonTextGrammar::GrammarAction>();
             const QStringList sugg = act.suggestions();
             if (!sugg.isEmpty()) {
                 popup->addSeparator();
@@ -109,7 +108,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
                     }
                 }
             } else {
-                qCDebug(LIBGRAMMARCOMMON_LOG) << " no suggestion " << act;
+                qCDebug(PIMCOMMONTEXTGRAMMAR_LOG) << " no suggestion " << act;
             }
         }
         popup->addSeparator();
@@ -132,9 +131,9 @@ void GrammarResultTextEdit::slotOpenGrammarUrlInfo(const QString &url)
     QDesktopServices::openUrl(QUrl(url));
 }
 
-void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord)
+void GrammarResultTextEdit::slotReplaceWord(const PimCommonTextGrammar::GrammarAction &act, const QString &replacementWord)
 {
-    MessageComposer::PluginGrammarAction actWithReplacement = act;
+    PimCommonTextGrammar::GrammarAction actWithReplacement = act;
     actWithReplacement.setReplacement(replacementWord);
     GrammarResultUtil::replaceWord(actWithReplacement, replacementWord, document());
     Q_EMIT replaceText(actWithReplacement);

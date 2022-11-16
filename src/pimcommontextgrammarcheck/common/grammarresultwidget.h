@@ -9,12 +9,11 @@
 #include "grammarerror.h"
 #include "pimcommontextgrammar_export.h"
 #include <QWidget>
-namespace MessageComposer
-{
-class PluginGrammarAction;
-}
-class GrammarResultTextEdit;
 class QHBoxLayout;
+namespace PimCommonTextGrammar
+{
+class GrammarAction;
+class GrammarResultTextEdit;
 class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarResultWidget : public QWidget
 {
     Q_OBJECT
@@ -23,9 +22,9 @@ public:
     ~GrammarResultWidget() override;
     void setText(const QString &str);
     virtual void checkGrammar() = 0;
-    void applyGrammarResult(const QVector<GrammarError> &infos);
+    void applyGrammarResult(const QVector<PimCommonTextGrammar::GrammarError> &infos);
 Q_SIGNALS:
-    void replaceText(const MessageComposer::PluginGrammarAction &act);
+    void replaceText(const PimCommonTextGrammar::GrammarAction &act);
     void checkAgain();
     void closeChecker();
     void configure();
@@ -38,3 +37,4 @@ protected:
 private:
     Q_DISABLE_COPY(GrammarResultWidget)
 };
+}
