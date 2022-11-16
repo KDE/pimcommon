@@ -6,7 +6,7 @@
 
 #include "networkmanager.h"
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include "pimcommon_debug.h"
+#include "pimcommontexttranslator_debug.h"
 #include <QNetworkInformation>
 #else
 #include <QNetworkConfigurationManager>
@@ -53,7 +53,7 @@ bool NetworkManager::isOnline() const
     if (QNetworkInformation::load(QNetworkInformation::Feature::Reachability)) {
         return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online;
     } else {
-        qCWarning(PIMCOMMON_LOG) << "Couldn't find a working backend for QNetworkInformation";
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Couldn't find a working backend for QNetworkInformation";
         return false;
     }
 #else
