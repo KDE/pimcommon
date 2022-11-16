@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-15 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:48+0000\n"
 "PO-Revision-Date: 2022-10-11 12:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -30,7 +30,7 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#: pimcommontexttranslator/translator/translatorwidget.cpp:297
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:297
 #, kde-format
 msgid "Configure"
 msgstr "Настройка"
@@ -110,60 +110,59 @@ msgstr "Шаблон"
 msgid "Name:"
 msgstr "Название:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:80
+#: pimcommon/templatewidgets/templatelistwidget.cpp:75
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Вы хотите удалить выбранный шаблон?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:81
+#: pimcommon/templatewidgets/templatelistwidget.cpp:76
 #, kde-format
 msgid "Delete template"
 msgstr "Удаление шаблона"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#: pimcommon/templatewidgets/templatelistwidget.cpp:143
 #, kde-format
 msgid "Import Template"
 msgstr "Импорт шаблона"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:161
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
 #, kde-format
 msgid "Export Template"
 msgstr "Экспорт шаблона"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:175
+#: pimcommon/templatewidgets/templatelistwidget.cpp:166
 #, kde-format
 msgid "Insert template"
 msgstr "Вставить шаблон"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#: pimcommon/templatewidgets/templatelistwidget.cpp:172
 #, kde-format
 msgid "Add..."
 msgstr "Добавить..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
 #, kde-format
 msgid "Show..."
 msgstr "Показать..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
 #, kde-format
 msgid "Modify..."
 msgstr "Изменить..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:190
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Duplicate"
 msgstr "Создать копию"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #. i18n: ectx: property (text), widget (QPushButton, remove2)
-#: pimcommon/templatewidgets/templatelistwidget.cpp:196
-#: pimcommon/widgets/simplestringlisteditor.cpp:310
-#: pimcommon/widgets/simplestringlisteditor.cpp:312
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:117
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:113
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:98
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:291
 #, kde-format
@@ -171,36 +170,36 @@ msgid "Remove"
 msgstr "Удалить"
 
 #. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
-#: pimcommon/templatewidgets/templatelistwidget.cpp:203
+#: pimcommon/templatewidgets/templatelistwidget.cpp:194
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:44
 #, kde-format
 msgid "Export..."
 msgstr "Экспорт..."
 
 #. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
-#: pimcommon/templatewidgets/templatelistwidget.cpp:207
+#: pimcommon/templatewidgets/templatelistwidget.cpp:198
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:51
 #, kde-format
 msgid "Import..."
 msgstr "Импорт..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:214
+#: pimcommon/templatewidgets/templatelistwidget.cpp:205
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Получить новые шаблоны..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:249
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "«%1» не является файлом шаблона."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:249
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
 #, kde-format
 msgid "Load Template"
 msgstr "Загрузка шаблона"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -210,7 +209,7 @@ msgstr ""
 "Подробное описание ошибки: «%2»."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
 #, kde-format
 msgid "Save File Error"
 msgstr "Ошибка записи в файл"
@@ -332,39 +331,39 @@ msgstr "Файл с именем «%1» уже существует."
 msgid "File already exists"
 msgstr "Файл уже существует"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:56
-#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New entry:"
 msgstr "Новая запись:"
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
 #: pimcommon/widgets/simplestringlisteditor.cpp:57
-#: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New Value"
 msgstr "Новое значение"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:60
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
 #, kde-format
 msgid "Do you want to remove selected text?"
 msgstr "Удалить выбранный текст?"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:95
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
 msgid "&Add..."
 msgstr "&Добавить..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:106
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgid "&Modify..."
 msgstr "&Изменить..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:119
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
 msgid "&Remove"
 msgstr "&Удалить"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:156
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
 msgstr "&Настроить..."
@@ -687,7 +686,7 @@ msgstr "Вниз"
 msgid "Add"
 msgstr "Добавить"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:116
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
@@ -836,6 +835,7 @@ msgstr "Создавать сведения о занятости и актив�
 
 # BUGME: ctxt: placeholder for search box --aspotashev
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:30
 #, kde-format
 msgid "Search..."
 msgstr "Поиск..."
@@ -1247,7 +1247,7 @@ msgstr "До&полнительно"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:219
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:465
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:464
 #, kde-format
 msgid "&Add"
 msgstr "&Добавить"
@@ -1522,75 +1522,75 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "Закрывающие кавычки:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Параметры автоисправления LibreOffice..."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:130
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Параметры автоисправления KMail/Calligra..."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:383
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Заменяющий текст совпадает с исходной строкой."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:383
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Добавление правила автоисправления"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:462
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:461
 #, kde-format
 msgid "&Modify"
 msgstr "&Изменить"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:572
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Импорт параметров автоисправления LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:574
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Файлы параметров автоисправления LibreOffice (*.data)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:576
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Импорт параметров автоисправления KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:578
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Файлы параметров автоисправления KMail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:610
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:609
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Экспорт параметров автоисправления"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:632
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "Выбран другой язык, сохранить конфигурацию для предыдущего языка?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:638
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:633
 #, kde-format
 msgid "Save config"
 msgstr "Сохранение конфигурации"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:677
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Сохраните внесённые изменения перед экспортом настроек."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:677
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:680
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:671
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Экспорт параметров автоисправления"
@@ -1614,7 +1614,8 @@ msgid "Select"
 msgstr "&Выбрать"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
-#: pimcommontexttranslator/translator/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
 msgstr ""
@@ -1641,8 +1642,8 @@ msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:113
-#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:40
-#: pimcommontexttranslator/translator/engine/googletranslator.cpp:45
+#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:39
+#: pimcommontexttranslator/translator/engine/googletranslator.cpp:44
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:34
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:35
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:107
@@ -1650,32 +1651,37 @@ msgstr ""
 msgid "You used same language for from and to language."
 msgstr "Вы выбрали в качестве исходного и целевого языка один язык."
 
-#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
-#: pimcommontexttranslator/translator/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:28
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
 msgstr ""
 
-#: pimcommontexttranslator/translator/engine/googletranslator.cpp:74
-#: pimcommontexttranslator/translator/translatorutil.cpp:348
+#: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:348
+#: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
 msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
-#: pimcommontexttranslator/translator/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, fuzzy, kde-format
 msgid "Libre Translate"
 msgstr "Перевести"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
-#: pimcommontexttranslator/translator/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
 msgstr ""
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
-#: pimcommontexttranslator/translator/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
 msgstr ""
@@ -1703,378 +1709,378 @@ msgstr ""
 msgid "Error: Unable to parse autodetected language"
 msgstr ""
 
-#: pimcommontexttranslator/translator/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:124
+#, kde-format
+msgid "Detect language"
+msgstr "Определить язык"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
+#, kde-format
+msgid "English"
+msgstr "Английский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:130
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:193
+#, kde-format
+msgid "Chinese (Simplified)"
+msgstr "Китайский (упрощённое письмо)"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:133
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:196
+#, kde-format
+msgid "Chinese (Traditional)"
+msgstr "Китайский (традиционное письмо)"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:136
+#, kde-format
+msgid "Dutch"
+msgstr "Голландский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:139
+#, kde-format
+msgid "French"
+msgstr "Французский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:142
+#, kde-format
+msgid "German"
+msgstr "Немецкий"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:145
+#, kde-format
+msgid "Greek"
+msgstr "Греческий"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:148
+#, kde-format
+msgid "Italian"
+msgstr "Итальянский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:151
+#, kde-format
+msgid "Japanese"
+msgstr "Японский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:154
+#, kde-format
+msgid "Korean"
+msgstr "Корейский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:157
+#, kde-format
+msgid "Portuguese"
+msgstr "Португальский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:160
+#, kde-format
+msgid "Russian"
+msgstr "Русский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:163
+#, kde-format
+msgid "Spanish"
+msgstr "Испанский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:166
+#, kde-format
+msgid "Afrikaans"
+msgstr "Африканский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:169
+#, kde-format
+msgid "Albanian"
+msgstr "Албанский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:172
+#, kde-format
+msgid "Arabic"
+msgstr "Арабский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:175
+#, kde-format
+msgid "Armenian"
+msgstr "Армянский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:178
+#, kde-format
+msgid "Azerbaijani"
+msgstr "Азербайджанский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:181
+#, kde-format
+msgid "Basque"
+msgstr "Баскский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:184
+#, kde-format
+msgid "Belarusian"
+msgstr "Белорусский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:187
+#, kde-format
+msgid "Bulgarian"
+msgstr "Болгарский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:190
+#, kde-format
+msgid "Catalan"
+msgstr "Каталонский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:199
+#, kde-format
+msgid "Croatian"
+msgstr "Хорватский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:202
+#, kde-format
+msgid "Czech"
+msgstr "Чешский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:205
+#, kde-format
+msgid "Danish"
+msgstr "Датский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:208
+#, kde-format
+msgid "Estonian"
+msgstr "Эстонский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:211
+#, kde-format
+msgid "Filipino"
+msgstr "Филиппинский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:214
+#, kde-format
+msgid "Finnish"
+msgstr "Финский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:217
+#, kde-format
+msgid "Galician"
+msgstr "Галисийский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:220
+#, kde-format
+msgid "Georgian"
+msgstr "Грузинский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:223
+#, kde-format
+msgid "Haitian Creole"
+msgstr "Гаитянский креольский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:226
+#, kde-format
+msgid "Hebrew"
+msgstr "Иврит"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:229
+#, kde-format
+msgid "Hindi"
+msgstr "Хинди"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:232
+#, kde-format
+msgid "Hungarian"
+msgstr "Венгерский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:235
+#, kde-format
+msgid "Icelandic"
+msgstr "Исландский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:238
+#, kde-format
+msgid "Indonesian"
+msgstr "Индонезийский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:241
+#, kde-format
+msgid "Irish"
+msgstr "Ирландский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:244
+#, kde-format
+msgid "Latvian"
+msgstr "Латышский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:247
+#, kde-format
+msgid "Lithuanian"
+msgstr "Литовский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:250
+#, kde-format
+msgid "Macedonian"
+msgstr "Македонский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:253
+#, kde-format
+msgid "Malay"
+msgstr "Малайский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:256
+#, kde-format
+msgid "Maltese"
+msgstr "Мальтийский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:259
+#, kde-format
+msgid "Norwegian"
+msgstr "Норвежский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:262
+#, kde-format
+msgid "Persian"
+msgstr "Фарси"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:265
+#, kde-format
+msgid "Polish"
+msgstr "Польский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:268
+#, kde-format
+msgid "Romanian"
+msgstr "Румынский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:271
+#, kde-format
+msgid "Serbian"
+msgstr "Сербский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:274
+#, kde-format
+msgid "Slovak"
+msgstr "Словацкий"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:277
+#, kde-format
+msgid "Slovenian"
+msgstr "Словенский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:280
+#, kde-format
+msgid "Swahili"
+msgstr "Суахили"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:283
+#, kde-format
+msgid "Swedish"
+msgstr "Шведский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:286
+#, kde-format
+msgid "Thai"
+msgstr "Таи"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:289
+#, kde-format
+msgid "Turkish"
+msgstr "Турецкий"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:292
+#, kde-format
+msgid "Ukrainian"
+msgstr "Украинский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:295
+#, kde-format
+msgid "Urdu"
+msgstr "Урду"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:298
+#, kde-format
+msgid "Vietnamese"
+msgstr "Вьетнамский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:301
+#, kde-format
+msgid "Welsh"
+msgstr "Валлийский"
+
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:304
+#, kde-format
+msgid "Yiddish"
+msgstr "Идиш"
+
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "Машинный перевод"
 
-#: pimcommontexttranslator/translator/translatorconfigurewidget.cpp:33
+#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:33
 #, kde-format
 msgid "Engine:"
 msgstr ""
 
 # BUGME: needs @title:window --aspotashev
-#: pimcommontexttranslator/translator/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
 #, kde-format
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "Отладка системы машинного перевода"
 
-#: pimcommontexttranslator/translator/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
 #, kde-format
 msgid "Save As..."
 msgstr "Сохранить как..."
 
-#: pimcommontexttranslator/translator/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
 #, kde-format
 msgid "All Files (*)"
 msgstr "Все файлы (*)"
 
-#: pimcommontexttranslator/translator/translatorutil.cpp:124
-#, kde-format
-msgid "Detect language"
-msgstr "Определить язык"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:127
-#, kde-format
-msgid "English"
-msgstr "Английский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:130
-#: pimcommontexttranslator/translator/translatorutil.cpp:193
-#, kde-format
-msgid "Chinese (Simplified)"
-msgstr "Китайский (упрощённое письмо)"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:133
-#: pimcommontexttranslator/translator/translatorutil.cpp:196
-#, kde-format
-msgid "Chinese (Traditional)"
-msgstr "Китайский (традиционное письмо)"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:136
-#, kde-format
-msgid "Dutch"
-msgstr "Голландский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:139
-#, kde-format
-msgid "French"
-msgstr "Французский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:142
-#, kde-format
-msgid "German"
-msgstr "Немецкий"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:145
-#, kde-format
-msgid "Greek"
-msgstr "Греческий"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:148
-#, kde-format
-msgid "Italian"
-msgstr "Итальянский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:151
-#, kde-format
-msgid "Japanese"
-msgstr "Японский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:154
-#, kde-format
-msgid "Korean"
-msgstr "Корейский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:157
-#, kde-format
-msgid "Portuguese"
-msgstr "Португальский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:160
-#, kde-format
-msgid "Russian"
-msgstr "Русский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:163
-#, kde-format
-msgid "Spanish"
-msgstr "Испанский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:166
-#, kde-format
-msgid "Afrikaans"
-msgstr "Африканский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:169
-#, kde-format
-msgid "Albanian"
-msgstr "Албанский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:172
-#, kde-format
-msgid "Arabic"
-msgstr "Арабский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:175
-#, kde-format
-msgid "Armenian"
-msgstr "Армянский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:178
-#, kde-format
-msgid "Azerbaijani"
-msgstr "Азербайджанский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:181
-#, kde-format
-msgid "Basque"
-msgstr "Баскский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:184
-#, kde-format
-msgid "Belarusian"
-msgstr "Белорусский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:187
-#, kde-format
-msgid "Bulgarian"
-msgstr "Болгарский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:190
-#, kde-format
-msgid "Catalan"
-msgstr "Каталонский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:199
-#, kde-format
-msgid "Croatian"
-msgstr "Хорватский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:202
-#, kde-format
-msgid "Czech"
-msgstr "Чешский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:205
-#, kde-format
-msgid "Danish"
-msgstr "Датский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:208
-#, kde-format
-msgid "Estonian"
-msgstr "Эстонский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:211
-#, kde-format
-msgid "Filipino"
-msgstr "Филиппинский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:214
-#, kde-format
-msgid "Finnish"
-msgstr "Финский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:217
-#, kde-format
-msgid "Galician"
-msgstr "Галисийский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:220
-#, kde-format
-msgid "Georgian"
-msgstr "Грузинский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:223
-#, kde-format
-msgid "Haitian Creole"
-msgstr "Гаитянский креольский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:226
-#, kde-format
-msgid "Hebrew"
-msgstr "Иврит"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:229
-#, kde-format
-msgid "Hindi"
-msgstr "Хинди"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:232
-#, kde-format
-msgid "Hungarian"
-msgstr "Венгерский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:235
-#, kde-format
-msgid "Icelandic"
-msgstr "Исландский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:238
-#, kde-format
-msgid "Indonesian"
-msgstr "Индонезийский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:241
-#, kde-format
-msgid "Irish"
-msgstr "Ирландский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:244
-#, kde-format
-msgid "Latvian"
-msgstr "Латышский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:247
-#, kde-format
-msgid "Lithuanian"
-msgstr "Литовский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:250
-#, kde-format
-msgid "Macedonian"
-msgstr "Македонский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:253
-#, kde-format
-msgid "Malay"
-msgstr "Малайский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:256
-#, kde-format
-msgid "Maltese"
-msgstr "Мальтийский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:259
-#, kde-format
-msgid "Norwegian"
-msgstr "Норвежский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:262
-#, kde-format
-msgid "Persian"
-msgstr "Фарси"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:265
-#, kde-format
-msgid "Polish"
-msgstr "Польский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:268
-#, kde-format
-msgid "Romanian"
-msgstr "Румынский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:271
-#, kde-format
-msgid "Serbian"
-msgstr "Сербский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:274
-#, kde-format
-msgid "Slovak"
-msgstr "Словацкий"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:277
-#, kde-format
-msgid "Slovenian"
-msgstr "Словенский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:280
-#, kde-format
-msgid "Swahili"
-msgstr "Суахили"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:283
-#, kde-format
-msgid "Swedish"
-msgstr "Шведский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:286
-#, kde-format
-msgid "Thai"
-msgstr "Таи"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:289
-#, kde-format
-msgid "Turkish"
-msgstr "Турецкий"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:292
-#, kde-format
-msgid "Ukrainian"
-msgstr "Украинский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:295
-#, kde-format
-msgid "Urdu"
-msgstr "Урду"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:298
-#, kde-format
-msgid "Vietnamese"
-msgstr "Вьетнамский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:301
-#, kde-format
-msgid "Welsh"
-msgstr "Валлийский"
-
-#: pimcommontexttranslator/translator/translatorutil.cpp:304
-#, kde-format
-msgid "Yiddish"
-msgstr "Идиш"
-
-#: pimcommontexttranslator/translator/translatorwidget.cpp:126
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:126
 #, kde-format
 msgid "Problem when connecting to the translator web site."
 msgstr "Ошибка подключения к сайту перевода."
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:228
-#: pimcommontexttranslator/translator/translatorwidget.cpp:231
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:231
 #, kde-format
 msgid "Close"
 msgstr "Закрыть"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:237
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:237
 #, kde-format
 msgctxt "Translate from language"
 msgid "From:"
 msgstr "С языка:"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:244
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:244
 #, kde-format
 msgctxt "Translate to language"
 msgid "To:"
 msgstr "На язык:"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:256
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:256
 #, kde-format
 msgctxt "Invert language choices so that from becomes to and to becomes from"
 msgid "Invert"
 msgstr "Наоборот"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:261
-#: pimcommontexttranslator/translator/translatorwidget.cpp:264
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:261
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:264
 #, kde-format
 msgid "Clear"
 msgstr "Очистить"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:269
-#: pimcommontexttranslator/translator/translatorwidget.cpp:272
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:269
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:272
 #, kde-format
 msgid "Translate"
 msgstr "Перевести"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:279
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:279
 #, kde-format
 msgid "Debug"
 msgstr "Отладка"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:312
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:312
 #, kde-format
 msgid ""
 "Drag text that you want to translate. (Be careful text will be send to "
@@ -2083,17 +2089,17 @@ msgstr ""
 "Перетащите сюда текст, который нужно перевести. Предупреждение: этот текст "
 "будет передан на сервера Google."
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:392
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:392
 #, kde-format
 msgid "No network connection detected, we cannot translate text."
 msgstr "Не удалось перевести текст из-за отсутствия подключения к сети."
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:392
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:392
 #, kde-format
 msgid "No network"
 msgstr "Нет подключения к сети"
 
-#: pimcommontexttranslator/translator/translatorwidget.cpp:431
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:431
 #, kde-format
 msgid "Translate error"
 msgstr "Ошибка перевода"
