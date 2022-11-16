@@ -50,6 +50,8 @@ ecm_qt_declare_logging_category(KF5PimCommonTextGrammar HEADER pimcommontextgram
 target_sources(KF5PimCommonTextGrammar PRIVATE
     common/grammarerror.cpp
     common/grammarerror.h
+    common/grammaraction.h
+    common/grammaraction.cpp
 #    common/grammarresulttextedit.cpp
 #    common/grammarresultwidget.cpp
 #    common/grammarresulttextedit.h
@@ -58,9 +60,6 @@ target_sources(KF5PimCommonTextGrammar PRIVATE
 #    common/grammarresultutil.cpp
     )
 #if (BUILD_TESTING)
-#    add_subdirectory(translator/autotests)
-#    add_subdirectory(translator/tests)
-#    add_subdirectory(translator/widgets/autotests)
 #endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
@@ -97,17 +96,13 @@ install(TARGETS
     EXPORT KF5PimCommonTextGrammarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-#ecm_generate_headers(PimCommonTextGrammar_Camelcasetranslator_HEADERS
-#    HEADER_NAMES
-#    TranslatorWidget
-#    TranslatorConfigureDialog
-#    TranslatorConfigureLanguageListWidget
-#    TranslatorConfigureListsWidget
-#    REQUIRED_HEADERS PimCommonTextGrammar_translator_HEADERS
-#    PREFIX PimCommonTextGrammar
-#    RELATIVE translator/widgets/
-#    )
-
+ecm_generate_headers(PimCommonTextGrammar_Camelcasetranslator_HEADERS
+    HEADER_NAMES
+    GrammarAction
+    REQUIRED_HEADERS PimCommonTextGrammar_translator_HEADERS
+    PREFIX PimCommonTextGrammar
+    RELATIVE common/
+    )
 
 ecm_generate_pri_file(BASE_NAME PimCommonTextGrammar
     LIB_NAME KF5PimCommonTextGrammar
