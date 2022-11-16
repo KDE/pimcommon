@@ -9,6 +9,10 @@
 namespace PimCommonTextTranslator
 {
 class TranslatorConfigureWidget;
+/**
+ * @brief The TranslatorConfigureDialog class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureDialog : public QDialog
 {
 public:

@@ -13,6 +13,10 @@ class KListWidgetSearchLine;
 class QLabel;
 namespace PimCommonTextTranslator
 {
+/**
+ * @brief The TranslatorConfigureLanguageListWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureLanguageListWidget : public QWidget
 {
     Q_OBJECT
