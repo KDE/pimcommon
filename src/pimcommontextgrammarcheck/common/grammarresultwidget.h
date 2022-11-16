@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include "grammarcommon_export.h"
 #include "grammarerror.h"
+#include "pimcommontextgrammar_export.h"
 #include <QWidget>
 namespace MessageComposer
 {
@@ -15,7 +15,7 @@ class PluginGrammarAction;
 }
 class GrammarResultTextEdit;
 class QHBoxLayout;
-class GRAMMARCOMMON_EXPORT GrammarResultWidget : public QWidget
+class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarResultWidget : public QWidget
 {
     Q_OBJECT
 public:

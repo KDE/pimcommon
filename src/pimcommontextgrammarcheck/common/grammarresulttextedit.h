@@ -6,14 +6,14 @@
 
 #pragma once
 
-#include "grammarcommon_export.h"
 #include "grammarerror.h"
+#include "pimcommontextgrammar_export.h"
 #include <QTextEdit>
 namespace MessageComposer
 {
 class PluginGrammarAction;
 }
-class GRAMMARCOMMON_EXPORT GrammarResultTextEdit : public QTextEdit
+class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarResultTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:

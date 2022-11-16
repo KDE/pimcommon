@@ -48,6 +48,14 @@ ecm_qt_declare_logging_category(KF5PimCommonTextGrammar HEADER pimcommontextgram
     )
 
 target_sources(KF5PimCommonTextGrammar PRIVATE
+    common/grammarerror.cpp
+    common/grammarerror.h
+#    common/grammarresulttextedit.cpp
+#    common/grammarresultwidget.cpp
+#    common/grammarresulttextedit.h
+#    common/grammarresultwidget.h
+#    common/grammarresultutil.h
+#    common/grammarresultutil.cpp
     )
 #if (BUILD_TESTING)
 #    add_subdirectory(translator/autotests)

@@ -5,8 +5,8 @@
 */
 
 #include "grammarerror.h"
-#include "grammarcommon_debug.h"
 
+using namespace PimCommonTextGrammar;
 GrammarError::GrammarError() = default;
 
 GrammarError::~GrammarError() = default;
