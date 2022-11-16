@@ -13,6 +13,10 @@ class QToolButton;
 namespace PimCommonTextTranslator
 {
 class TranslatorConfigureLanguageListWidget;
+/**
+ * @brief The TranslatorConfigureListsWidget class
+ * @author Laurent Montel <montel@kde.org>
+ */
 class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureListsWidget : public QWidget
 {
     Q_OBJECT
@@ -27,9 +31,7 @@ private:
     void fillEngine();
     void slotEngineChanged(int index);
     void slotConfigureEngine();
-    QComboBox *const mEngine;
-    QToolButton *const mConfigureEngine;
-    PimCommonTextTranslator::TranslatorConfigureLanguageListWidget *const mFromLanguageWidget;
-    PimCommonTextTranslator::TranslatorConfigureLanguageListWidget *const mToLanguageWidget;
+    class TranslatorConfigureListsWidgetPrivate;
+    std::unique_ptr<TranslatorConfigureListsWidgetPrivate> const d;
 };
 }

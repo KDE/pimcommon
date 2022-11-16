@@ -17,20 +17,33 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 using namespace PimCommonTextTranslator;
+class Q_DECL_HIDDEN PimCommonTextTranslator::TranslatorConfigureListsWidget::TranslatorConfigureListsWidgetPrivate
+{
+public:
+    TranslatorConfigureListsWidgetPrivate(TranslatorConfigureListsWidget *parent)
+        : mEngine(new QComboBox(parent))
+        , mConfigureEngine(new QToolButton(parent))
+        , mFromLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("From:"), parent))
+        , mToLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("To:"), parent))
+    {
+    }
+    QComboBox *const mEngine;
+    QToolButton *const mConfigureEngine;
+    PimCommonTextTranslator::TranslatorConfigureLanguageListWidget *const mFromLanguageWidget;
+    PimCommonTextTranslator::TranslatorConfigureLanguageListWidget *const mToLanguageWidget;
+};
+
 TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
     : QWidget{parent}
-    , mEngine(new QComboBox(this))
-    , mConfigureEngine(new QToolButton(this))
-    , mFromLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("From:"), this))
-    , mToLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("To:"), this))
+    , d(new TranslatorConfigureListsWidgetPrivate(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mEngine->setObjectName(QStringLiteral("mEngine"));
-    mConfigureEngine->setObjectName(QStringLiteral("mConfigureEngine"));
-    mConfigureEngine->setEnabled(false); // Disable by default
-    mConfigureEngine->setIcon(QIcon::fromTheme(QStringLiteral("settings-configure")));
-    connect(mConfigureEngine, &QToolButton::clicked, this, &TranslatorConfigureListsWidget::slotConfigureEngine);
+    d->mEngine->setObjectName(QStringLiteral("mEngine"));
+    d->mConfigureEngine->setObjectName(QStringLiteral("mConfigureEngine"));
+    d->mConfigureEngine->setEnabled(false); // Disable by default
+    d->mConfigureEngine->setIcon(QIcon::fromTheme(QStringLiteral("settings-configure")));
+    connect(d->mConfigureEngine, &QToolButton::clicked, this, &TranslatorConfigureListsWidget::slotConfigureEngine);
 
     auto hboxLayout = new QHBoxLayout;
     hboxLayout->setObjectName(QStringLiteral("hboxLayout"));
@@ -40,8 +53,8 @@ TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
     auto label = new QLabel(i18n("Engine:"), this);
     label->setObjectName(QStringLiteral("label"));
     hboxLayout->addWidget(label);
-    hboxLayout->addWidget(mEngine);
-    hboxLayout->addWidget(mConfigureEngine);
+    hboxLayout->addWidget(d->mEngine);
+    hboxLayout->addWidget(d->mConfigureEngine);
     hboxLayout->addStretch(0);
 
     auto hLanguageListboxLayout = new QHBoxLayout;
@@ -49,12 +62,12 @@ TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
     hLanguageListboxLayout->setContentsMargins({});
     mainLayout->addLayout(hLanguageListboxLayout);
 
-    mFromLanguageWidget->setObjectName(QStringLiteral("mFromLanguageWidget"));
-    mToLanguageWidget->setObjectName(QStringLiteral("mToLanguageWidget"));
-    hLanguageListboxLayout->addWidget(mFromLanguageWidget);
-    hLanguageListboxLayout->addWidget(mToLanguageWidget);
+    d->mFromLanguageWidget->setObjectName(QStringLiteral("mFromLanguageWidget"));
+    d->mToLanguageWidget->setObjectName(QStringLiteral("mToLanguageWidget"));
+    hLanguageListboxLayout->addWidget(d->mFromLanguageWidget);
+    hLanguageListboxLayout->addWidget(d->mToLanguageWidget);
 
-    connect(mEngine, &QComboBox::currentIndexChanged, this, &TranslatorConfigureListsWidget::slotEngineChanged);
+    connect(d->mEngine, &QComboBox::currentIndexChanged, this, &TranslatorConfigureListsWidget::slotEngineChanged);
 
     fillEngine();
 }
@@ -63,57 +76,57 @@ TranslatorConfigureListsWidget::~TranslatorConfigureListsWidget() = default;
 
 void TranslatorConfigureListsWidget::fillEngine()
 {
-    TranslatorConfigureUtil::fillComboboxSettings(mEngine);
+    TranslatorConfigureUtil::fillComboboxSettings(d->mEngine);
 }
 
 void TranslatorConfigureListsWidget::save()
 {
-    const QString engine = mEngine->currentData().toString();
+    const QString engine = d->mEngine->currentData().toString();
     KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
     groupTranslate.writeEntry(TranslatorUtil::engineTranslateName(), engine);
-    groupTranslate.writeEntry(QStringLiteral("From"), mFromLanguageWidget->selectedLanguages());
-    groupTranslate.writeEntry(QStringLiteral("To"), mToLanguageWidget->selectedLanguages());
+    groupTranslate.writeEntry(QStringLiteral("From"), d->mFromLanguageWidget->selectedLanguages());
+    groupTranslate.writeEntry(QStringLiteral("To"), d->mToLanguageWidget->selectedLanguages());
 }
 
 void TranslatorConfigureListsWidget::load()
 {
     KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
     const QString engine = groupTranslate.readEntry(TranslatorUtil::engineTranslateName(), TranslatorUtil::defaultEngineName()); // Google by default
-    const int index = mEngine->findData(engine);
+    const int index = d->mEngine->findData(engine);
     if (index != -1) {
-        mEngine->setCurrentIndex(index);
+        d->mEngine->setCurrentIndex(index);
     }
-    mFromLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("From"), QStringList()));
-    mToLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("To"), QStringList()));
+    d->mFromLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("From"), QStringList()));
+    d->mToLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("To"), QStringList()));
 }
 
 void TranslatorConfigureListsWidget::slotEngineChanged(int index)
 {
-    const QStringList fromLanguages = mFromLanguageWidget->selectedLanguages();
-    const QStringList toLanguages = mToLanguageWidget->selectedLanguages();
+    const QStringList fromLanguages = d->mFromLanguageWidget->selectedLanguages();
+    const QStringList toLanguages = d->mToLanguageWidget->selectedLanguages();
 
-    const QString engine = mEngine->itemData(index).toString();
+    const QString engine = d->mEngine->itemData(index).toString();
     const QVector<QPair<QString, QString>> listLanguage = PimCommonTextTranslator::TranslatorUtil::supportedLanguages(engine);
-    mFromLanguageWidget->clear();
-    mToLanguageWidget->clear();
+    d->mFromLanguageWidget->clear();
+    d->mToLanguageWidget->clear();
 
     const int fullListLanguageSize(listLanguage.count());
     for (int i = 0; i < fullListLanguageSize; ++i) {
         const QPair<QString, QString> currentLanguage = listLanguage.at(i);
-        mFromLanguageWidget->addItem(currentLanguage);
+        d->mFromLanguageWidget->addItem(currentLanguage);
         if ((i != 0)) { // Remove auto
-            mToLanguageWidget->addItem(currentLanguage);
+            d->mToLanguageWidget->addItem(currentLanguage);
         }
     }
     // Restore if possible
-    mFromLanguageWidget->setSelectedLanguages(fromLanguages);
-    mToLanguageWidget->setSelectedLanguages(toLanguages);
-    mConfigureEngine->setEnabled(TranslatorUtil::hasConfigureDialog(PimCommonTextTranslator::TranslatorUtil::convertStringToTranslatorEngine(engine)));
+    d->mFromLanguageWidget->setSelectedLanguages(fromLanguages);
+    d->mToLanguageWidget->setSelectedLanguages(toLanguages);
+    d->mConfigureEngine->setEnabled(TranslatorUtil::hasConfigureDialog(PimCommonTextTranslator::TranslatorUtil::convertStringToTranslatorEngine(engine)));
 }
 
 void TranslatorConfigureListsWidget::slotConfigureEngine()
 {
-    const QString engine = mEngine->currentData().toString();
+    const QString engine = d->mEngine->currentData().toString();
     if (TranslatorUtil::hasConfigureDialog(PimCommonTextTranslator::TranslatorUtil::convertStringToTranslatorEngine(engine))) { }
     // TODO
 }
