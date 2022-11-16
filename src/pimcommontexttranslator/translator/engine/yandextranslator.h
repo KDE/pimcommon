@@ -21,8 +21,7 @@ public:
     Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() override;
     Q_REQUIRED_RESULT QString engineName() const override;
 
-protected:
-    void loadSupportedLanguages() override;
+    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> languages();
 
 private:
     static QString sYandexKey;

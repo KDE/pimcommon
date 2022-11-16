@@ -40,18 +40,18 @@ void YandexTranslator::translate()
     }
 }
 
-QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage()
-{
-    checkLoadedSupportedLanguage();
-    return mLanguages;
-}
-
-void YandexTranslator::loadSupportedLanguages()
+QVector<QPair<QString, QString>> YandexTranslator::languages()
 {
     if (mLanguages.isEmpty()) {
         mLanguages = TranslatorUtil::genericLanguages();
         mLanguages += TranslatorUtil::yandexSpecificLanguages();
     }
+    return mLanguages;
+}
+
+QVector<QPair<QString, QString>> YandexTranslator::supportedLanguage()
+{
+    return languages();
 }
 
 QString YandexTranslator::engineName() const

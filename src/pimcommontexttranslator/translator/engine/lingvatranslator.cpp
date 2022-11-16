@@ -40,15 +40,7 @@ void LingvaTranslator::translate()
 
 QVector<QPair<QString, QString>> LingvaTranslator::supportedLanguage()
 {
-    checkLoadedSupportedLanguage();
-    return mLanguages;
-}
-
-void LingvaTranslator::loadSupportedLanguages()
-{
-    if (mLanguages.isEmpty()) {
-        mLanguages = TranslatorUtil::genericLanguages();
-    }
+    return languages();
 }
 
 void LingvaTranslator::translateText()
@@ -89,4 +81,12 @@ void LingvaTranslator::loadSettings()
 {
     KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("LingvaTranslator"));
     mServerUrl = myGroup.readEntry(QStringLiteral("ServerUrl"), QStringLiteral("https://lingva.ml"));
+}
+
+QVector<QPair<QString, QString>> LingvaTranslator::languages()
+{
+    if (mLanguages.isEmpty()) {
+        mLanguages = TranslatorUtil::genericLanguages();
+    }
+    return mLanguages;
 }

@@ -5,7 +5,6 @@
 */
 
 #pragma once
-
 class QComboBox;
 namespace PimCommonTextTranslator
 {

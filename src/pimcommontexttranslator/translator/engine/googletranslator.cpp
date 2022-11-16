@@ -26,16 +26,16 @@ GoogleTranslator::~GoogleTranslator() = default;
 
 QVector<QPair<QString, QString>> GoogleTranslator::supportedLanguage()
 {
-    checkLoadedSupportedLanguage();
-    return mLanguages;
+    return languages();
 }
 
-void GoogleTranslator::loadSupportedLanguages()
+QVector<QPair<QString, QString>> GoogleTranslator::languages()
 {
     if (mLanguages.isEmpty()) {
         mLanguages = TranslatorUtil::genericLanguages();
         mLanguages += TranslatorUtil::googleSpecificLanguages();
     }
+    return mLanguages;
 }
 
 void GoogleTranslator::translate()

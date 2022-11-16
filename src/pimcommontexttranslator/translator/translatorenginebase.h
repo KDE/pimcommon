@@ -53,8 +53,6 @@ Q_SIGNALS:
     void translateFailed(bool result, const QString &errorMessage = QString());
 
 protected:
-    void checkLoadedSupportedLanguage();
-    virtual void loadSupportedLanguages() = 0;
     QString mJsonData;
     QString mJsonDebug;
     QString mInputText;

@@ -21,9 +21,7 @@ public:
     void translate() override;
     Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguage() override;
     void loadSettings() override;
-
-protected:
-    void loadSupportedLanguages() override;
+    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> languages();
 
 private:
     Q_REQUIRED_RESULT QString apiUrl() const;

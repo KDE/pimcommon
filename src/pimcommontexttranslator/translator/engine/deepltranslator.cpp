@@ -6,6 +6,7 @@
 */
 
 #include "deepltranslator.h"
+#include "translator/misc/translatorutil.h"
 #include "translator/translatorengineaccessmanager.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -44,15 +45,15 @@ void DeepLTranslator::translate()
 
 QVector<QPair<QString, QString>> DeepLTranslator::supportedLanguage()
 {
-    checkLoadedSupportedLanguage();
-    return mLanguages;
+    return languages();
 }
 
-void DeepLTranslator::loadSupportedLanguages()
+QVector<QPair<QString, QString>> DeepLTranslator::languages()
 {
     if (mLanguages.isEmpty()) {
-        // TODO
+        mLanguages = TranslatorUtil::genericLanguages();
     }
+    return mLanguages;
 }
 
 void DeepLTranslator::translateText()
