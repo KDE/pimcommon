@@ -5,18 +5,20 @@
 */
 
 #pragma once
+#include "grammaraction.h"
 #include "grammarerror.h"
 #include "pimcommontextgrammar_export.h"
 
-#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
-
 #include <QTextFormat>
-
+namespace PimCommonTextGrammar
+{
 namespace GrammarResultUtil
 {
 enum TextInfo {
     ReplaceFormatInfo = QTextFormat::UserProperty + 1,
 };
-PIMCOMMONTEXTGRAMMAR_EXPORT void applyGrammarResult(const QVector<GrammarError> &infos, QTextDocument *document, const QColor &negativeTextColor);
-PIMCOMMONTEXTGRAMMAR_EXPORT void replaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord, QTextDocument *document);
+PIMCOMMONTEXTGRAMMAR_EXPORT void
+applyGrammarResult(const QVector<PimCommonTextGrammar::GrammarError> &infos, QTextDocument *document, const QColor &negativeTextColor);
+PIMCOMMONTEXTGRAMMAR_EXPORT void replaceWord(const PimCommonTextGrammar::GrammarAction &act, const QString &replacementWord, QTextDocument *document);
+}
 }

@@ -56,8 +56,8 @@ target_sources(KF5PimCommonTextGrammar PRIVATE
 #    common/grammarresultwidget.cpp
 #    common/grammarresulttextedit.h
 #    common/grammarresultwidget.h
-#    common/grammarresultutil.h
-#    common/grammarresultutil.cpp
+    common/grammarresultutil.h
+    common/grammarresultutil.cpp
     )
 #if (BUILD_TESTING)
 #endif()
