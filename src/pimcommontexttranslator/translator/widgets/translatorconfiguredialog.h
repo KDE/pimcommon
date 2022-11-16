@@ -16,9 +16,9 @@ public:
     ~TranslatorConfigureDialog() override;
 
 private:
-    TranslatorConfigureWidget *const mTranslatorConfigureWidget;
     void slotAccept();
     void readConfig();
     void writeConfig();
+    TranslatorConfigureWidget *const mTranslatorConfigureWidget;
 };
 }

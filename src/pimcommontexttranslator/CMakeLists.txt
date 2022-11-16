@@ -138,6 +138,8 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
     HEADER_NAMES
     TranslatorWidget
     TranslatorConfigureDialog
+    TranslatorConfigureLanguageListWidget
+    TranslatorConfigureListsWidget
     REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
     PREFIX PimCommonTextTranslator
     RELATIVE translator/widgets/
