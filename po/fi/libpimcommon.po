@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:48+0000\n"
+"POT-Creation-Date: 2022-11-17 00:47+0000\n"
 "PO-Revision-Date: 2022-06-17 20:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1585,6 +1585,389 @@ msgstr ""
 msgid "Select"
 msgstr "&Valitse"
 
+#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:39
+#, kde-format
+msgid "Any text to check."
+msgstr ""
+
+#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:93
+#, fuzzy, kde-format
+#| msgid "Replace"
+msgid "Replacement"
+msgstr "Korvaa"
+
+#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:102
+#, kde-format
+msgid "Online Grammar Information"
+msgstr ""
+
+#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:115
+#, kde-format
+msgid "Check Again"
+msgstr ""
+
+#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:118
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgid "Configure..."
+msgstr "Asetukset"
+
+#: pimcommontextgrammarcheck/common/grammarresultutil.cpp:49
+#, fuzzy, kde-format
+#| msgid "Size: %1"
+msgid "See on: %1"
+msgstr "Koko: %1"
+
+#: pimcommontextgrammarcheck/common/grammarresultwidget.cpp:32
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
+#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:231
+#, kde-format
+msgid "Close"
+msgstr "Sulje"
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/plugin/grammalecteinterface.cpp:77
+#, kde-format
+msgid "&Check Grammar (Grammalecte)"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/plugin/grammalecteplugin.cpp:37
+#, kde-format
+msgid "Grammalecte Plugin"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigdialog.cpp:24
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure Completion"
+msgctxt "@title:window"
+msgid "Configure Grammalecte"
+msgstr "Täydennysasetukset"
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:34
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:35
+#, fuzzy, kde-format
+#| msgid "WebDav Settings"
+msgid "Grammar Settings"
+msgstr "WebDav-asetukset"
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:60
+#, kde-format
+msgid ""
+"Impossible to get options. Please verify that you have grammalected "
+"installed."
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:61
+#, kde-format
+msgid "Error during Extracting Options"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:110
+#, kde-format
+msgid "Press Button for Reloading Settings"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:117
+#, fuzzy, kde-format
+#| msgid "WebDav Settings"
+msgid "Reload Settings"
+msgstr "WebDav-asetukset"
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:134
+#, kde-format
+msgid "Python Path:"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:138
+#, kde-format
+msgid "Add full 'grammalecte-cli.py' path"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:139
+#, kde-format
+msgid "Grammalecte Path:"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:54
+#, kde-format
+msgid "Python path is missing."
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:58
+#, kde-format
+msgid "Grammalecte path not found."
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:65
+#, kde-format
+msgid "Grammalecte program file not found."
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:69
+#, kde-format
+msgid "Grammalecte cli file not found."
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:73
+#, fuzzy, kde-format
+#| msgid "Translate error"
+msgid "Grammalecte error"
+msgstr "Kääntämisvirhe"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolinterface.cpp:81
+#, kde-format
+msgid "&Check Grammar (LanguageTool)"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolinterface.cpp:95
+#, kde-format
+msgid ""
+"You do not use local instance.\n"
+"Your text will send on a external web site (https://languagetool.org/).\n"
+"Do you want to continue?"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolinterface.cpp:96
+#, kde-format
+msgid "Check Grammar with LanguageTool"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolplugin.cpp:36
+#, kde-format
+msgid "LanguageTool Plugin"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:31
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
+#, kde-format
+msgid "English"
+msgstr "Englanti"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:32
+#, kde-format
+msgid "Asturian"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:33
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:184
+#, kde-format
+msgid "Belarusian"
+msgstr "Valkovenäjä"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:34
+#, kde-format
+msgid "Breton"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:35
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:190
+#, kde-format
+msgid "Catalan"
+msgstr "Katalaani"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:36
+#, kde-format
+msgid "Chinese"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:37
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:205
+#, kde-format
+msgid "Danish"
+msgstr "Tanska"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:38
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:136
+#, kde-format
+msgid "Dutch"
+msgstr "Hollanti"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:39
+#, kde-format
+msgid "English (Australian)"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:40
+#, kde-format
+msgid "English (Canadian)"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:41
+#, kde-format
+msgid "Esperanto"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:42
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:139
+#, kde-format
+msgid "French"
+msgstr "Ranska"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:43
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:217
+#, kde-format
+msgid "Galician"
+msgstr "Galicia"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:44
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:142
+#, kde-format
+msgid "German"
+msgstr "Saksa"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:45
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:145
+#, kde-format
+msgid "Greek"
+msgstr "Kreikka"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:46
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:148
+#, kde-format
+msgid "Italian"
+msgstr "Italia"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:47
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:151
+#, kde-format
+msgid "Japanese"
+msgstr "Japani"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:48
+#, kde-format
+msgid "Khmer"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:49
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:262
+#, kde-format
+msgid "Persian"
+msgstr "Persia"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:50
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:265
+#, kde-format
+msgid "Polish"
+msgstr "Puola"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:51
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:157
+#, kde-format
+msgid "Portuguese"
+msgstr "Portugali"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:52
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:268
+#, kde-format
+msgid "Romanian"
+msgstr "Romania"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:53
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:160
+#, kde-format
+msgid "Russian"
+msgstr "Venäjä"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:54
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:274
+#, kde-format
+msgid "Slovak"
+msgstr "Slovakki"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:55
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:277
+#, kde-format
+msgid "Slovenian"
+msgstr "Sloveeni"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:56
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:163
+#, kde-format
+msgid "Spanish"
+msgstr "Espanja"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:57
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:283
+#, kde-format
+msgid "Swedish"
+msgstr "Ruotsi"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:58
+#, kde-format
+msgid "Tagalog"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:59
+#, kde-format
+msgid "Tamil"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:60
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:292
+#, kde-format
+msgid "Ukrainian"
+msgstr "Ukraina"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigdialog.cpp:25
+#, fuzzy, kde-format
+#| msgid "Configure engine"
+msgctxt "@title:window"
+msgid "Configure LanguageTool"
+msgstr "Tietomoottorin asetukset"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:24
+#, kde-format
+msgid "Use Local Instance"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:26
+#, kde-format
+msgid "Instance Path:"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:54
+#, kde-format
+msgid "Language:"
+msgstr "Kieli:"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:66
+#, kde-format
+msgid "Refresh"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolresultwidget.cpp:60
+#, fuzzy, kde-format
+#| msgid "An error occurs: \"%1\""
+msgid "An error was reported: %1"
+msgstr "Ilmeni virhe: ”%1”"
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolresultwidget.cpp:60
+#, kde-format
+msgid "Failed to check grammar."
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolresultwidget.cpp:76
+#, kde-format
+msgid "Check"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolupdatecombobox.cpp:75
+#, kde-format
+msgid ""
+"An error occurred attempting to load the list of available languages:\n"
+"%1"
+msgstr ""
+
+#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolupdatecombobox.cpp:75
+#, fuzzy, kde-format
+#| msgid "Language:"
+msgid "List of Languages"
+msgstr "Kieli:"
+
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
@@ -1614,7 +1997,7 @@ msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:113
-#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:39
+#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:40
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:44
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:34
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:35
@@ -1623,7 +2006,7 @@ msgstr ""
 msgid "You used same language for from and to language."
 msgstr "Käytit samaa lähde- ja kohdekieltä."
 
-#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:28
+#: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
@@ -1660,7 +2043,7 @@ msgid "Yandex"
 msgstr ""
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
-#: pimcommontexttranslator/translator/translatorenginebase.cpp:83
+#: pimcommontexttranslator/translator/translatorenginebase.cpp:78
 #, kde-format
 msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
@@ -1687,11 +2070,6 @@ msgstr ""
 msgid "Detect language"
 msgstr "Tunnista kieli"
 
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
-#, kde-format
-msgid "English"
-msgstr "Englanti"
-
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:130
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:193
 #, kde-format
@@ -1704,55 +2082,10 @@ msgstr "Kiina (yksinkertaistettu)"
 msgid "Chinese (Traditional)"
 msgstr "Kiina (perinteinen)"
 
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:136
-#, kde-format
-msgid "Dutch"
-msgstr "Hollanti"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:139
-#, kde-format
-msgid "French"
-msgstr "Ranska"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:142
-#, kde-format
-msgid "German"
-msgstr "Saksa"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:145
-#, kde-format
-msgid "Greek"
-msgstr "Kreikka"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:148
-#, kde-format
-msgid "Italian"
-msgstr "Italia"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:151
-#, kde-format
-msgid "Japanese"
-msgstr "Japani"
-
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:154
 #, kde-format
 msgid "Korean"
 msgstr "Korea"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:157
-#, kde-format
-msgid "Portuguese"
-msgstr "Portugali"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:160
-#, kde-format
-msgid "Russian"
-msgstr "Venäjä"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:163
-#, kde-format
-msgid "Spanish"
-msgstr "Espanja"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:166
 #, kde-format
@@ -1784,20 +2117,10 @@ msgstr "Azeri"
 msgid "Basque"
 msgstr "Baski"
 
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:184
-#, kde-format
-msgid "Belarusian"
-msgstr "Valkovenäjä"
-
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:187
 #, kde-format
 msgid "Bulgarian"
 msgstr "Bulgaria"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:190
-#, kde-format
-msgid "Catalan"
-msgstr "Katalaani"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:199
 #, kde-format
@@ -1808,11 +2131,6 @@ msgstr "Kroaatti"
 #, kde-format
 msgid "Czech"
 msgstr "Tšekki"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:205
-#, kde-format
-msgid "Danish"
-msgstr "Tanska"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:208
 #, kde-format
@@ -1828,11 +2146,6 @@ msgstr "Filippiini"
 #, kde-format
 msgid "Finnish"
 msgstr "Suomi"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:217
-#, kde-format
-msgid "Galician"
-msgstr "Galicia"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:220
 #, kde-format
@@ -1904,45 +2217,15 @@ msgstr "Malta"
 msgid "Norwegian"
 msgstr "Norja"
 
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:262
-#, kde-format
-msgid "Persian"
-msgstr "Persia"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:265
-#, kde-format
-msgid "Polish"
-msgstr "Puola"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:268
-#, kde-format
-msgid "Romanian"
-msgstr "Romania"
-
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:271
 #, kde-format
 msgid "Serbian"
 msgstr "Serbia"
 
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:274
-#, kde-format
-msgid "Slovak"
-msgstr "Slovakki"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:277
-#, kde-format
-msgid "Slovenian"
-msgstr "Sloveeni"
-
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:280
 #, kde-format
 msgid "Swahili"
 msgstr "Swahili"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:283
-#, kde-format
-msgid "Swedish"
-msgstr "Ruotsi"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:286
 #, kde-format
@@ -1953,11 +2236,6 @@ msgstr "Thai"
 #, kde-format
 msgid "Turkish"
 msgstr "Turkki"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:292
-#, kde-format
-msgid "Ukrainian"
-msgstr "Ukraina"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:295
 #, kde-format
@@ -1986,6 +2264,21 @@ msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "Käännösohjelma"
 
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
+#, fuzzy, kde-format
+#| msgctxt "Translate from language"
+#| msgid "From:"
+msgid "From:"
+msgstr "Kielestä:"
+
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
+#, fuzzy, kde-format
+#| msgctxt "Translate to language"
+#| msgid "To:"
+msgid "To:"
+msgstr "Kieleen:"
+
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:53
 #: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:33
 #, kde-format
 msgid "Engine:"
@@ -2011,12 +2304,6 @@ msgstr "Kaikki tiedostot (*)"
 #, kde-format
 msgid "Problem when connecting to the translator web site."
 msgstr "Ongelma yhdistettäessä käännössivustoon."
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:231
-#, kde-format
-msgid "Close"
-msgstr "Sulje"
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:237
 #, kde-format
@@ -2359,9 +2646,6 @@ msgstr "Kääntämisvirhe"
 #~ msgid "WebDav"
 #~ msgstr "WebDav"
 
-#~ msgid "WebDav Settings"
-#~ msgstr "WebDav-asetukset"
-
 #~ msgid "Service Location (e.g. https://dav.example.com/)"
 #~ msgstr "Palvelun sijainti (esim. https://dav.esimerkki.fi/)"
 
@@ -2445,9 +2729,6 @@ msgstr "Kääntämisvirhe"
 #~ msgid "&Overwrite"
 #~ msgstr "&Korvaa"
 
-#~ msgid "Configure engine"
-#~ msgstr "Tietomoottorin asetukset"
-
 #~ msgid "Select Short URL server:"
 #~ msgstr "Valitse lyhytosoitepalvelin:"
 
@@ -2481,9 +2762,6 @@ msgstr "Kääntämisvirhe"
 
 #~ msgid "No network connection detected, we cannot shorten url."
 #~ msgstr "Verkkoyhteyttä ei havaittu, osoitetta ei voi lyhentää."
-
-#~ msgid "An error occurs: \"%1\""
-#~ msgstr "Ilmeni virhe: ”%1”"
 
 #~ msgid "Generate Shortened URL"
 #~ msgstr "Luo lyhytosoite"
@@ -2585,9 +2863,6 @@ msgstr "Kääntämisvirhe"
 
 #~ msgid "Pitch:"
 #~ msgstr "Äänenkorkeus::"
-
-#~ msgid "Language:"
-#~ msgstr "Kieli:"
 
 #~ msgid "Text Files (*.txt);;All Files (*)"
 #~ msgstr "Tekstitiedostot (*.txt);;Kaikki tiedostot (*)"
@@ -2741,9 +3016,6 @@ msgstr "Kääntämisvirhe"
 #~| msgid "Last Modified"
 #~ msgid "Last Modifier:"
 #~ msgstr "Viimeksi muokattu"
-
-#~ msgid "Size: %1"
-#~ msgstr "Koko: %1"
 
 #~ msgid "name: %1"
 #~ msgstr "nimi: %1"
