@@ -27,7 +27,7 @@
 #include <QDBusReply>
 
 using namespace PimCommon;
-//#define SEARCHCONTACT_AKONADI 1
+// #define SEARCHCONTACT_AKONADI 1
 
 AclModifyJob::AclModifyJob(QObject *parent)
     : QObject(parent)
