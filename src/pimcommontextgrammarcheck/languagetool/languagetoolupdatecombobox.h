@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "liblanguagetool_private_export.h"
+#include "pimcommontextgrammarcheckprivate_export.h"
 #include <QObject>
 namespace PimCommonTextGrammar
 {
 class LanguageToolComboBox;
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject
+class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject
 {
     Q_OBJECT
 public:

@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolgetlistoflanguagejob.h"
-#include "liblanguagetool_debug.h"
+#include "pimcommontextgrammar_debug.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
@@ -28,7 +28,7 @@ bool LanguageToolGetListOfLanguageJob::canStart() const
 void LanguageToolGetListOfLanguageJob::start()
 {
     if (!canStart()) {
-        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start LanguageToolGetListOfLanguageJob";
+        qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Impossible to start LanguageToolGetListOfLanguageJob";
         deleteLater();
         return;
     }
@@ -42,7 +42,7 @@ void LanguageToolGetListOfLanguageJob::start()
 void LanguageToolGetListOfLanguageJob::slotFinish(QNetworkReply *reply)
 {
     if (reply->error() != QNetworkReply::NoError) {
-        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << " Error reply - " << reply->errorString();
+        qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << " Error reply - " << reply->errorString();
         Q_EMIT error(reply->errorString());
     }
 }

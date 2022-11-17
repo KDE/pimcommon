@@ -6,14 +6,14 @@
 
 #pragma once
 
-#include "grammarresultwidget.h"
+#include "common/grammarresultwidget.h"
 #include "languagetoolgrammarerror.h"
-#include "libkmaillanguagetool_export.h"
+#include "pimcommontextgrammar_export.h"
 namespace PimCommonTextGrammar
 {
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolResultWidget : public GrammarResultWidget
+class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
 public:

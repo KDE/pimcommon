@@ -9,7 +9,7 @@
 #include "languagetoolgetlistoflanguagejob.h"
 #include "languagetoollistoflanguagesparser.h"
 #include "languagetoolmanager.h"
-#include "liblanguagetool_debug.h"
+#include "pimcommontextgrammar_debug.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -71,7 +71,7 @@ void LanguageToolUpdateComboBox::setLanguageToolCombobox(LanguageToolComboBox *l
 
 void LanguageToolUpdateComboBox::slotGetLanguagesError(const QString &error)
 {
-    qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Error during loading languages from server : " << error;
+    qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Error during loading languages from server : " << error;
     KMessageBox::error(parentWidget(), i18n("An error occurred attempting to load the list of available languages:\n%1", error), i18n("List of Languages"));
 }
 

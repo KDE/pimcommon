@@ -7,11 +7,11 @@
 #pragma once
 
 #include "languageinfo.h"
-#include "liblanguagetool_private_export.h"
+#include "pimcommontextgrammarcheckprivate_export.h"
 #include <QVector>
 namespace PimCommonTextGrammar
 {
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolListOfLanguagesParser
+class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolListOfLanguagesParser
 {
 public:
     LanguageToolListOfLanguagesParser();

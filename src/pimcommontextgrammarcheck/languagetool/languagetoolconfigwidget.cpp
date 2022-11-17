@@ -6,11 +6,9 @@
 
 #include "languagetoolconfigwidget.h"
 #include "languagetoolcombobox.h"
-#include "languagetoolgetlistoflanguagejob.h"
-#include "languagetoollistoflanguagesparser.h"
 #include "languagetoolmanager.h"
 #include "languagetoolupdatecombobox.h"
-#include "liblanguagetool_debug.h"
+// #include "pimcommontextgrammar_debug.h"
 #include <KLocalizedString>
 
 #include <QCheckBox>

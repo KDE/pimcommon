@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolresultwidget.h"
-#include "grammarresulttextedit.h"
+#include "common/grammarresulttextedit.h"
 #include "languagetoolcombobox.h"
 #include "languagetoolmanager.h"
 #include "languagetoolparser.h"

@@ -63,26 +63,26 @@ target_sources(KF5PimCommonTextGrammar PRIVATE
     languagetool/languageinfo.h
     languagetool/languagetoolcombobox.cpp
     languagetool/languagetoolcombobox.h
-#    languagetool/languagetoolconfigdialog.cpp
-#    languagetool/languagetoolconfigdialog.h
-#    languagetool/languagetoolconfigwidget.cpp
-#    languagetool/languagetoolconfigwidget.h
-#    languagetool/languagetoolgetlistoflanguagejob.cpp
-#    languagetool/languagetoolgetlistoflanguagejob.h
-#    languagetool/languagetoolgrammarerror.cpp
-#    languagetool/languagetoolgrammarerror.h
-#    languagetool/languagetoollistoflanguagesparser.cpp
-#    languagetool/languagetoollistoflanguagesparser.h
-#    languagetool/languagetoolmanager.cpp
-#    languagetool/languagetoolmanager.h
-#    languagetool/languagetoolparser.cpp
-#    languagetool/languagetoolparser.h
-#    languagetool/languagetoolresultjob.cpp
-#    languagetool/languagetoolresultjob.h
-#    languagetool/languagetoolresultwidget.cpp
-#    languagetool/languagetoolresultwidget.h
-#    languagetool/languagetoolupdatecombobox.cpp
-#    languagetool/languagetoolupdatecombobox.h
+    languagetool/languagetoolconfigdialog.cpp
+    languagetool/languagetoolconfigdialog.h
+    languagetool/languagetoolconfigwidget.cpp
+    languagetool/languagetoolconfigwidget.h
+    languagetool/languagetoolgetlistoflanguagejob.cpp
+    languagetool/languagetoolgetlistoflanguagejob.h
+    languagetool/languagetoolgrammarerror.cpp
+    languagetool/languagetoolgrammarerror.h
+    languagetool/languagetoollistoflanguagesparser.cpp
+    languagetool/languagetoollistoflanguagesparser.h
+    languagetool/languagetoolmanager.cpp
+    languagetool/languagetoolmanager.h
+    languagetool/languagetoolparser.cpp
+    languagetool/languagetoolparser.h
+    languagetool/languagetoolresultjob.cpp
+    languagetool/languagetoolresultjob.h
+    languagetool/languagetoolresultwidget.cpp
+    languagetool/languagetoolresultwidget.h
+    languagetool/languagetoolupdatecombobox.cpp
+    languagetool/languagetoolupdatecombobox.h
 
     )
 #if (BUILD_TESTING)
@@ -99,6 +99,7 @@ target_link_libraries(KF5PimCommonTextGrammar
     Qt::Gui
     Qt::Widgets
     PRIVATE
+    Qt::Network
     KF5::I18n
     KF5::WidgetsAddons
     KF5::ConfigWidgets

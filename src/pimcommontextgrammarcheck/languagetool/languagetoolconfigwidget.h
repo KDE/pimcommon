@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "libkmaillanguagetool_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QWidget>
 class QCheckBox;
 class QLineEdit;
@@ -15,7 +15,7 @@ namespace PimCommonTextGrammar
 {
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
+class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolConfigWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -5,12 +5,12 @@
 */
 
 #pragma once
-#include "libkmaillanguagetool_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QDialog>
 namespace PimCommonTextGrammar
 {
 class LanguageToolConfigWidget;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigDialog : public QDialog
+class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolConfigDialog : public QDialog
 {
     Q_OBJECT
 public:

@@ -6,7 +6,7 @@
 
 #include "languagetoolgrammarerror.h"
 #include "languagetoolmanager.h"
-#include "liblanguagetool_debug.h"
+#include "pimcommontextgrammar_debug.h"
 
 #include <QJsonArray>
 using namespace PimCommonTextGrammar;
@@ -28,7 +28,7 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
         const QJsonArray urlArray = rulesObj[QStringLiteral("urls")].toArray();
         if (!urlArray.isEmpty()) {
             if (urlArray.count() > 1) {
-                qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "LanguageToolGrammarError::parse : more than 1 url found. Perhaps need to adapt api ";
+                qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "LanguageToolGrammarError::parse : more than 1 url found. Perhaps need to adapt api ";
             }
             mUrl = urlArray.at(0)[QLatin1String("value")].toString();
             // qDebug() << " mUrl" << mUrl;

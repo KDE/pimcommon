@@ -6,16 +6,16 @@
 
 #pragma once
 
-#include "liblanguagetool_private_export.h"
+#include "pimcommontextgrammarcheckprivate_export.h"
 
-#include <grammarerror.h>
+#include "common/grammarerror.h"
 namespace PimCommonTextGrammar
 {
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolParser
+class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolParser
 {
 public:
     LanguageToolParser();
     ~LanguageToolParser();
-    Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
+    Q_REQUIRED_RESULT QVector<PimCommonTextGrammar::GrammarError> parseResult(const QJsonObject &obj) const;
 };
 }
