@@ -141,13 +141,13 @@ install(TARGETS
     EXPORT KF5PimCommonTextGrammarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-ecm_generate_headers(PimCommonTextGrammar_Camelcasetranslator_HEADERS
+ecm_generate_headers(PimCommonTextGrammar_Camelcasecommon_HEADERS
     HEADER_NAMES
     GrammarAction
     GrammarError
     GrammarResultTextEdit
     GrammarResultWidget
-    REQUIRED_HEADERS PimCommonTextGrammar_translator_HEADERS
+    REQUIRED_HEADERS PimCommonTextGrammar_common_HEADERS
     PREFIX PimCommonTextGrammar
     RELATIVE common/
     )
@@ -163,15 +163,15 @@ install(FILES
     )
 
 install(FILES
-    ${PimCommonTextGrammar_translator_HEADERS}
-    ${PimCommonTextGrammar_Camelcasetranslator_HEADERS}
+    ${PimCommonTextGrammar_common_HEADERS}
+    ${PimCommonTextGrammar_Camelcasecommon_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/PimCommonTextGrammar
     COMPONENT Devel
     )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammar_export.h
-    ${PimCommonTextGrammar_translator_HEADERS}
+    ${PimCommonTextGrammar_common_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/pimcommontextgrammar
     COMPONENT Devel
     )
