@@ -36,6 +36,6 @@ void LanguageToolParserTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    PimCommonTextGrammar::LanguageToolParser parser;
+    PimCommonTextGrammarCheck::LanguageToolParser parser;
     QCOMPARE(parser.parseResult(fields).count(), numberOfElement);
 }

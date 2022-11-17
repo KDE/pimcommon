@@ -6,14 +6,14 @@
 
 #pragma once
 
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QColor>
 #include <QDebug>
 #include <QJsonObject>
 #include <QString>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarError
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammarError
 {
 public:
     GrammarError();
@@ -63,6 +63,6 @@ protected:
     int mLength = -1;
 };
 }
-Q_DECLARE_METATYPE(PimCommonTextGrammar::GrammarError)
-Q_DECLARE_TYPEINFO(PimCommonTextGrammar::GrammarError, Q_MOVABLE_TYPE);
-PIMCOMMONTEXTGRAMMAR_EXPORT QDebug operator<<(QDebug d, const PimCommonTextGrammar::GrammarError &t);
+Q_DECLARE_METATYPE(PimCommonTextGrammarCheck::GrammarError)
+Q_DECLARE_TYPEINFO(PimCommonTextGrammarCheck::GrammarError, Q_MOVABLE_TYPE);
+PIMCOMMONTEXTGRAMMARCHECK_EXPORT QDebug operator<<(QDebug d, const PimCommonTextGrammarCheck::GrammarError &t);

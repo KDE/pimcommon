@@ -37,6 +37,6 @@ void GrammalecteParserTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    PimCommonTextGrammar::GrammalecteParser parser;
+    PimCommonTextGrammarCheck::GrammalecteParser parser;
     QCOMPARE(parser.parseResult(fields).count(), numberOfElement);
 }

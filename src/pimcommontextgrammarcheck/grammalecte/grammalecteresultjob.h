@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "pimcommontextgrammarcheckprivate_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QObject>
 #include <QProcess>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteResultJob : public QObject
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammalecteResultJob : public QObject
 {
     Q_OBJECT
 public:

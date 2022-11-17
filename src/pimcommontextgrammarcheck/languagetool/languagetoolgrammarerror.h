@@ -9,7 +9,7 @@
 #include "common/grammarerror.h"
 #include "pimcommontextgrammarcheckprivate_export.h"
 #include <QStringList>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolGrammarError : public GrammarError
 {
@@ -24,5 +24,5 @@ private:
     bool mTesting = false;
 };
 }
-Q_DECLARE_METATYPE(PimCommonTextGrammar::LanguageToolGrammarError)
-Q_DECLARE_TYPEINFO(PimCommonTextGrammar::LanguageToolGrammarError, Q_MOVABLE_TYPE);
+Q_DECLARE_METATYPE(PimCommonTextGrammarCheck::LanguageToolGrammarError)
+Q_DECLARE_TYPEINFO(PimCommonTextGrammarCheck::LanguageToolGrammarError, Q_MOVABLE_TYPE);

@@ -6,16 +6,16 @@
 
 #pragma once
 
-#include "grammalectegenerateconfigoptionjob.h"
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
+#include <PimCommonTextGrammarCheck/GrammalecteGenerateConfigOptionJob>
 #include <QWidget>
 class QCheckBox;
 class KUrlRequester;
 class QStackedWidget;
 class QScrollArea;
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_EXPORT GrammalecteConfigWidget : public QWidget
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -19,12 +19,12 @@ GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
 
 void GrammarResultWidgetTest::shouldHaveDefaultValue()
 {
-    PimCommonTextGrammar::GrammalecteResultWidget w;
+    PimCommonTextGrammarCheck::GrammalecteResultWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mResult = w.findChild<PimCommonTextGrammar::GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    auto mResult = w.findChild<PimCommonTextGrammarCheck::GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 
     auto closeBtn = w.findChild<QToolButton *>(QStringLiteral("close-button"));

@@ -6,7 +6,7 @@
 
 #include "grammaraction.h"
 
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 
 GrammarAction::GrammarAction() = default;
 

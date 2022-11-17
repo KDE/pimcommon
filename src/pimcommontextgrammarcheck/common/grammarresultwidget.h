@@ -7,14 +7,14 @@
 #pragma once
 
 #include "grammarerror.h"
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QWidget>
 class QHBoxLayout;
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class GrammarAction;
 class GrammarResultTextEdit;
-class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarResultWidget : public QWidget
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammarResultWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -22,9 +22,9 @@ public:
     ~GrammarResultWidget() override;
     void setText(const QString &str);
     virtual void checkGrammar() = 0;
-    void applyGrammarResult(const QVector<PimCommonTextGrammar::GrammarError> &infos);
+    void applyGrammarResult(const QVector<PimCommonTextGrammarCheck::GrammarError> &infos);
 Q_SIGNALS:
-    void replaceText(const PimCommonTextGrammar::GrammarAction &act);
+    void replaceText(const PimCommonTextGrammarCheck::GrammarAction &act);
     void checkAgain();
     void closeChecker();
     void configure();

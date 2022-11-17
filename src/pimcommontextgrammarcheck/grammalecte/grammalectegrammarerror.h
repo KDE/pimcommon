@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include "common/grammarerror.h"
 #include "pimcommontextgrammarcheckprivate_export.h"
-namespace PimCommonTextGrammar
+#include <PimCommonTextGrammarCheck/GrammarError>
+namespace PimCommonTextGrammarCheck
 {
 class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteGrammarError : public GrammarError
 {
@@ -22,5 +22,5 @@ private:
     Q_REQUIRED_RESULT static QColor parseColor(const QJsonObject &obj);
 };
 }
-Q_DECLARE_METATYPE(PimCommonTextGrammar::GrammalecteGrammarError)
-Q_DECLARE_TYPEINFO(PimCommonTextGrammar::GrammalecteGrammarError, Q_MOVABLE_TYPE);
+Q_DECLARE_METATYPE(PimCommonTextGrammarCheck::GrammalecteGrammarError)
+Q_DECLARE_TYPEINFO(PimCommonTextGrammarCheck::GrammalecteGrammarError, Q_MOVABLE_TYPE);

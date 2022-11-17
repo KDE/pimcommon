@@ -17,7 +17,7 @@ GrammarResultJobTest::GrammarResultJobTest(QObject *parent)
 
 void GrammarResultJobTest::shouldHaveDefaultValue()
 {
-    PimCommonTextGrammar::GrammalecteResultJob job;
+    PimCommonTextGrammarCheck::GrammalecteResultJob job;
     QVERIFY(!job.canStart());
     QVERIFY(job.text().isEmpty());
     QVERIFY(job.pythonPath().isEmpty());
@@ -27,7 +27,7 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
 
 void GrammarResultJobTest::shouldBeAbleToStart()
 {
-    PimCommonTextGrammar::GrammalecteResultJob job;
+    PimCommonTextGrammarCheck::GrammalecteResultJob job;
     // Args can be empty if we use default values
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("ff"));

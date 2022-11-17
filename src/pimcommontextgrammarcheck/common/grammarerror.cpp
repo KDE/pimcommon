@@ -6,7 +6,7 @@
 
 #include "grammarerror.h"
 
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 GrammarError::GrammarError() = default;
 
 GrammarError::~GrammarError() = default;

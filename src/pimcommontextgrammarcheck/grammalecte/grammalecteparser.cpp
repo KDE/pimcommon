@@ -5,11 +5,12 @@
 */
 
 #include "grammalecteparser.h"
+#include "grammalectegrammarerror.h"
 #include "pimcommontextgrammar_debug.h"
 #include <QJsonArray>
 #include <QJsonValue>
 
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 
 GrammalecteParser::GrammalecteParser() = default;
 
@@ -32,7 +33,7 @@ QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) con
             const QJsonArray grammarErrorArray = grammaObject.value(QLatin1String("lGrammarErrors")).toArray();
             for (const QJsonValue &error : grammarErrorArray) {
                 // qDebug() << " grammarErrorArray"<<error;
-                GrammalecteGrammarError info;
+                PimCommonTextGrammarCheck::GrammalecteGrammarError info;
                 if (error.type() == QJsonValue::Object) {
                     info.parse(error.toObject(), blockId);
                     if (info.isValid()) {

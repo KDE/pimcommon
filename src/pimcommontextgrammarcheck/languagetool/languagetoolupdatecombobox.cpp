@@ -15,7 +15,7 @@
 #include <KMessageBox>
 #include <QJsonArray>
 #include <QJsonDocument>
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 LanguageToolUpdateComboBox::LanguageToolUpdateComboBox(QObject *parent)
     : QObject(parent)
 {

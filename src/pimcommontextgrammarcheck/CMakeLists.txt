@@ -1,53 +1,53 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonTextGrammar")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonTextGrammarCheck")
 
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5PimCommonTextGrammar_QCH
-        FILE KF5PimCommonTextGrammarQchTargets.cmake
+        TARGETS KF5PimCommonTextGrammarCheck_QCH
+        FILE KF5PimCommonTextGrammarCheckQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextGrammarQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextGrammarCheckQchTargets.cmake\")")
 endif()
 
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonTextGrammarConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarConfig.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonTextGrammarCheckConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarCheckConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammar_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarConfigVersion.cmake"
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammarcheck_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarCheckConfigVersion.cmake"
     SOVERSION 5
     )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarCheckConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarCheckConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KF5PimCommonTextGrammarTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonTextGrammarTargets.cmake NAMESPACE KF5::)
+install(EXPORT KF5PimCommonTextGrammarCheckTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonTextGrammarCheckTargets.cmake NAMESPACE KF5::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammar_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/ COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/ COMPONENT Devel
     )
 
-add_library(KF5PimCommonTextGrammar )
-add_library(KF5::PimCommonTextGrammar ALIAS KF5PimCommonTextGrammar)
-ecm_qt_declare_logging_category(KF5PimCommonTextGrammar HEADER pimcommontextgrammar_debug.h
+add_library(KF5PimCommonTextGrammarCheck )
+add_library(KF5::PimCommonTextGrammarCheck ALIAS KF5PimCommonTextGrammarCheck)
+ecm_qt_declare_logging_category(KF5PimCommonTextGrammarCheck HEADER pimcommontextgrammar_debug.h
     IDENTIFIER PIMCOMMONTEXTGRAMMAR_LOG CATEGORY_NAME org.kde.pim.pimcommontextgrammar
         DESCRIPTION "kdepim (pimcommon Grammar)"
         EXPORT PIMCOMMON
     )
 
-target_sources(KF5PimCommonTextGrammar PRIVATE
+target_sources(KF5PimCommonTextGrammarCheck PRIVATE
     common/grammarerror.cpp
     common/grammarerror.h
     common/grammaraction.h
@@ -109,12 +109,12 @@ if (BUILD_TESTING)
 endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KF5PimCommonTextGrammar PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KF5PimCommonTextGrammarCheck PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KF5PimCommonTextGrammar BASE_NAME pimcommontextgrammar)
+generate_export_header(KF5PimCommonTextGrammarCheck BASE_NAME pimcommontextgrammarcheck)
 
 
-target_link_libraries(KF5PimCommonTextGrammar
+target_link_libraries(KF5PimCommonTextGrammarCheck
     PUBLIC
     Qt::Gui
     Qt::Widgets
@@ -126,19 +126,19 @@ target_link_libraries(KF5PimCommonTextGrammar
     KF5::KIOWidgets
     )
 
-target_include_directories(KF5PimCommonTextGrammar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/>")
+target_include_directories(KF5PimCommonTextGrammarCheck INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/>")
 
-target_include_directories(KF5PimCommonTextGrammar PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
+target_include_directories(KF5PimCommonTextGrammarCheck PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
-set_target_properties(KF5PimCommonTextGrammar PROPERTIES
+set_target_properties(KF5PimCommonTextGrammarCheck PROPERTIES
     VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
-    EXPORT_NAME PimCommonTextGrammar
+    EXPORT_NAME PimCommonTextGrammarCheck
     )
 
 install(TARGETS
-    KF5PimCommonTextGrammar
-    EXPORT KF5PimCommonTextGrammarTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    KF5PimCommonTextGrammarCheck
+    EXPORT KF5PimCommonTextGrammarCheckTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 ecm_generate_headers(PimCommonTextGrammar_Camelcasecommon_HEADERS
@@ -148,7 +148,7 @@ ecm_generate_headers(PimCommonTextGrammar_Camelcasecommon_HEADERS
     GrammarResultTextEdit
     GrammarResultWidget
     REQUIRED_HEADERS PimCommonTextGrammar_common_HEADERS
-    PREFIX PimCommonTextGrammar
+    PREFIX PimCommonTextGrammarCheck
     RELATIVE common/
     )
 
@@ -158,8 +158,10 @@ ecm_generate_headers(PimCommonTextGrammar_Camelcasegrammalecte_HEADERS
     GrammalecteConfigWidget
     GrammalecteManager
     GrammalecteResultWidget
+    GrammalecteGenerateConfigOptionJob
+    GrammalecteResultJob
     REQUIRED_HEADERS PimCommonTextGrammar_grammalecte_HEADERS
-    PREFIX PimCommonTextGrammar
+    PREFIX PimCommonTextGrammarCheck
     RELATIVE grammalecte/
     )
 
@@ -172,19 +174,19 @@ ecm_generate_headers(PimCommonTextGrammar_Camelcaselanguagetool_HEADERS
     LanguageToolManager
     LanguageToolResultWidget
     REQUIRED_HEADERS PimCommonTextGrammar_languagetool_HEADERS
-    PREFIX PimCommonTextGrammar
+    PREFIX PimCommonTextGrammarCheck
     RELATIVE languagetool/
     )
 
 
-ecm_generate_pri_file(BASE_NAME PimCommonTextGrammar
-    LIB_NAME KF5PimCommonTextGrammar
-    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar
+ecm_generate_pri_file(BASE_NAME PimCommonTextGrammarCheck
+    LIB_NAME KF5PimCommonTextGrammarCheck
+    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck
     )
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammar_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/ COMPONENT Devel
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammarcheck_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/ COMPONENT Devel
     )
 
 install(FILES
@@ -197,16 +199,16 @@ install(FILES
     ${PimCommonTextGrammar_languagetool_HEADERS}
     ${PimCommonTextGrammar_Camelcaselanguagetool_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/PimCommonTextGrammar
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/PimCommonTextGrammarCheck
     COMPONENT Devel
     )
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammar_export.h
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammarcheck_export.h
     ${PimCommonTextGrammar_common_HEADERS}
     ${PimCommonTextGrammar_grammalecte_HEADERS}
     ${PimCommonTextGrammar_languagetool_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/pimcommontextgrammar
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/pimcommontextgrammarcheck
     COMPONENT Devel
     )
 
@@ -217,9 +219,9 @@ install(FILES
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5PimCommonTextGrammar_QCH
-        NAME KF5PimCommonTextGrammar
-        BASE_NAME KF5PimCommonTextGrammar
+        KF5PimCommonTextGrammarCheck_QCH
+        NAME KF5PimCommonTextGrammarCheck
+        BASE_NAME KF5PimCommonTextGrammarCheck
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API

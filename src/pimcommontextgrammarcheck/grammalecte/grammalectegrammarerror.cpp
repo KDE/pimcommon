@@ -9,7 +9,7 @@
 
 #include <QJsonArray>
 
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 
 GrammalecteGrammarError::GrammalecteGrammarError() = default;
 

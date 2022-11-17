@@ -12,7 +12,7 @@ namespace
 {
 static const char myConfigGroupName[] = "Grammalecte";
 }
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 GrammalecteManager::GrammalecteManager(QObject *parent)
     : QObject(parent)
 {

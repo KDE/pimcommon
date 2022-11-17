@@ -12,7 +12,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QJsonDocument>
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 GrammalecteResultWidget::GrammalecteResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
 {

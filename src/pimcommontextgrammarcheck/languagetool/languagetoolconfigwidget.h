@@ -6,16 +6,16 @@
 
 #pragma once
 
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QWidget>
 class QCheckBox;
 class QLineEdit;
 class QLabel;
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;
-class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolConfigWidget : public QWidget
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT LanguageToolConfigWidget : public QWidget
 {
     Q_OBJECT
 public:

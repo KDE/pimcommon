@@ -15,7 +15,7 @@ namespace
 {
 static const char myLanguageToolManagerGroupName[] = "LanguageTool";
 }
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 LanguageToolManager::LanguageToolManager(QObject *parent)
     : QObject(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))

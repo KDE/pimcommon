@@ -15,7 +15,7 @@ LanguageToolResultJobTest::LanguageToolResultJobTest(QObject *parent)
 
 void LanguageToolResultJobTest::shouldHaveDefaultValue()
 {
-    PimCommonTextGrammar::LanguageToolResultJob job;
+    PimCommonTextGrammarCheck::LanguageToolResultJob job;
     QVERIFY(!job.networkAccessManager());
     QVERIFY(job.arguments().isEmpty());
     QVERIFY(!job.canStart());
@@ -26,7 +26,7 @@ void LanguageToolResultJobTest::shouldHaveDefaultValue()
 
 void LanguageToolResultJobTest::shouldBeAbleToStart()
 {
-    PimCommonTextGrammar::LanguageToolResultJob job;
+    PimCommonTextGrammarCheck::LanguageToolResultJob job;
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("foo"));
     QVERIFY(!job.canStart());

@@ -11,7 +11,7 @@
 class QNetworkRequest;
 class QNetworkReply;
 class QNetworkAccessManager;
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolResultJob : public QObject
 {

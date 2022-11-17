@@ -4,14 +4,14 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #pragma once
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QDebug>
 #include <QString>
 #include <QStringList>
 
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarAction
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammarAction
 {
 public:
     GrammarAction();
@@ -43,5 +43,5 @@ private:
     int mBlockId = -1;
 };
 }
-Q_DECLARE_METATYPE(PimCommonTextGrammar::GrammarAction)
-PIMCOMMONTEXTGRAMMAR_EXPORT QDebug operator<<(QDebug d, const PimCommonTextGrammar::GrammarAction &t);
+Q_DECLARE_METATYPE(PimCommonTextGrammarCheck::GrammarAction)
+PIMCOMMONTEXTGRAMMARCHECK_EXPORT QDebug operator<<(QDebug d, const PimCommonTextGrammarCheck::GrammarAction &t);

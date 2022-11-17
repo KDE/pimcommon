@@ -7,12 +7,12 @@
 #pragma once
 
 #include "grammarerror.h"
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QTextEdit>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class GrammarAction;
-class PIMCOMMONTEXTGRAMMAR_EXPORT GrammarResultTextEdit : public QTextEdit
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammarResultTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:
@@ -28,14 +28,14 @@ protected:
 
     bool event(QEvent *ev) override;
 Q_SIGNALS:
-    void replaceText(const PimCommonTextGrammar::GrammarAction &act);
+    void replaceText(const PimCommonTextGrammarCheck::GrammarAction &act);
     void checkAgain();
     void closeChecker();
     void configure();
 
 private:
     Q_DISABLE_COPY(GrammarResultTextEdit)
-    void slotReplaceWord(const PimCommonTextGrammar::GrammarAction &act, const QString &replacementWord);
+    void slotReplaceWord(const PimCommonTextGrammarCheck::GrammarAction &act, const QString &replacementWord);
     void slotOpenGrammarUrlInfo(const QString &url);
     void generalPaletteChanged();
     QColor mTextColor;

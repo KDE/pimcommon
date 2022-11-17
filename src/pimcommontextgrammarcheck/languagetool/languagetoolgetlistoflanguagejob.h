@@ -6,14 +6,14 @@
 
 #pragma once
 
-#include "pimcommontextgrammar_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QNetworkRequest>
 #include <QObject>
 class QNetworkAccessManager;
 class QNetworkReply;
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolGetListOfLanguageJob : public QObject
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT LanguageToolGetListOfLanguageJob : public QObject
 {
     Q_OBJECT
 public:

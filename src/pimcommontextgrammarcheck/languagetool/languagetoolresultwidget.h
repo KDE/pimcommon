@@ -7,12 +7,12 @@
 #pragma once
 
 #include "common/grammarresultwidget.h"
-#include "pimcommontextgrammar_export.h"
-namespace PimCommonTextGrammar
+#include "pimcommontextgrammarcheck_export.h"
+namespace PimCommonTextGrammarCheck
 {
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;
-class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolResultWidget : public GrammarResultWidget
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
 public:

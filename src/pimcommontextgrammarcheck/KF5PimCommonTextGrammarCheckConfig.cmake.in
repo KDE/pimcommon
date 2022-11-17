@@ -3,4 +3,4 @@
 
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-include("${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextGrammarTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextGrammarCheckTargets.cmake")

@@ -25,7 +25,7 @@ GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
 
 void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
 {
-    PimCommonTextGrammar::GrammalecteConfigWidget w(nullptr, true);
+    PimCommonTextGrammarCheck::GrammalecteConfigWidget w(nullptr, true);
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());

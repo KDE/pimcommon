@@ -18,7 +18,7 @@
 #include <QHBoxLayout>
 #include <QJsonDocument>
 #include <QToolButton>
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
     , mLanguageToolUpdateCombobox(new LanguageToolUpdateComboBox(this))

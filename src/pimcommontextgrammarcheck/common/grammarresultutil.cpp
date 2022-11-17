@@ -10,11 +10,13 @@
 #include <KLocalizedString>
 #include <QTextBlock>
 #include <QTextDocument>
-using namespace PimCommonTextGrammar;
+using namespace PimCommonTextGrammarCheck;
 
-void GrammarResultUtil::applyGrammarResult(const QVector<PimCommonTextGrammar::GrammarError> &infos, QTextDocument *document, const QColor &negativeTextColor)
+void GrammarResultUtil::applyGrammarResult(const QVector<PimCommonTextGrammarCheck::GrammarError> &infos,
+                                           QTextDocument *document,
+                                           const QColor &negativeTextColor)
 {
-    for (const PimCommonTextGrammar::GrammarError &info : infos) {
+    for (const PimCommonTextGrammarCheck::GrammarError &info : infos) {
         int blockNumberId = info.blockId();
         int startSelectionIndex = info.start();
         // Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
@@ -49,7 +51,7 @@ void GrammarResultUtil::applyGrammarResult(const QVector<PimCommonTextGrammar::G
                 toolTip += QLatin1Char('\n') + i18n("See on: %1", info.url());
             }
             format.setToolTip(toolTip);
-            PimCommonTextGrammar::GrammarAction act;
+            PimCommonTextGrammarCheck::GrammarAction act;
             act.setLength(info.length());
             act.setStart(startSelectionIndex);
             act.setSuggestions(info.suggestions());
@@ -68,7 +70,7 @@ void GrammarResultUtil::applyGrammarResult(const QVector<PimCommonTextGrammar::G
     }
 }
 
-void GrammarResultUtil::replaceWord(const PimCommonTextGrammar::GrammarAction &act, const QString &replacementWord, QTextDocument *document)
+void GrammarResultUtil::replaceWord(const PimCommonTextGrammarCheck::GrammarAction &act, const QString &replacementWord, QTextDocument *document)
 {
     QTextBlock block = document->findBlockByNumber(act.blockId() - 1);
     if (block.isValid()) {
@@ -90,7 +92,7 @@ void GrammarResultUtil::replaceWord(const PimCommonTextGrammar::GrammarAction &a
                 qCDebug(PIMCOMMONTEXTGRAMMAR_LOG) << " Position  " << i;
                 QTextCharFormat currentCharFormat = cur.charFormat();
                 if (currentCharFormat.hasProperty(GrammarResultUtil::TextInfo::ReplaceFormatInfo)) {
-                    auto act = cur.charFormat().property(GrammarResultUtil::TextInfo::ReplaceFormatInfo).value<PimCommonTextGrammar::GrammarAction>();
+                    auto act = cur.charFormat().property(GrammarResultUtil::TextInfo::ReplaceFormatInfo).value<PimCommonTextGrammarCheck::GrammarAction>();
                     qCDebug(PIMCOMMONTEXTGRAMMAR_LOG) << "BEFORE Update GrammarResultUtil::TextInfo::ReplaceFormatInfo " << act;
                     act.setStart(act.start() + diff);
                     qCDebug(PIMCOMMONTEXTGRAMMAR_LOG) << "AFTER Update GrammarResultUtil::TextInfo::ReplaceFormatInfo " << act.start();

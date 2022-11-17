@@ -8,7 +8,7 @@
 
 #include "pimcommontextgrammarcheckprivate_export.h"
 #include <QObject>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class LanguageToolComboBox;
 class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject

@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "common/grammarresultwidget.h"
 #include "grammalecteresultjob.h"
-#include "pimcommontextgrammar_export.h"
-namespace PimCommonTextGrammar
+#include "pimcommontextgrammarcheck_export.h"
+#include <PimCommonTextGrammarCheck/GrammarResultWidget>
+namespace PimCommonTextGrammarCheck
 {
 class GrammalecteResultJob;
-class PIMCOMMONTEXTGRAMMAR_EXPORT GrammalecteResultWidget : public GrammarResultWidget
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammalecteResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
 public:

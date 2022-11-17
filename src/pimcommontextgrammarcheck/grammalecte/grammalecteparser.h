@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "grammalectegrammarerror.h"
 #include "pimcommontextgrammarcheckprivate_export.h"
+#include <PimCommonTextGrammarCheck/GrammarError>
 #include <QJsonObject>
 #include <QVector>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteParser
 {

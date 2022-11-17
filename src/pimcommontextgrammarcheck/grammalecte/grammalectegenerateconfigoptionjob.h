@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "pimcommontextgrammarcheckprivate_export.h"
+#include "pimcommontextgrammarcheck_export.h"
 #include <QObject>
 #include <QProcess>
 #include <QVector>
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteGenerateConfigOptionJob : public QObject
+class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammalecteGenerateConfigOptionJob : public QObject
 {
     Q_OBJECT
 public:
@@ -52,4 +52,4 @@ private:
     QProcess *mProcess = nullptr;
 };
 }
-Q_DECLARE_TYPEINFO(PimCommonTextGrammar::GrammalecteGenerateConfigOptionJob::Option, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(PimCommonTextGrammarCheck::GrammalecteGenerateConfigOptionJob::Option, Q_MOVABLE_TYPE);

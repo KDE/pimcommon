@@ -10,7 +10,7 @@
 
 #include "common/grammaraction.h"
 class QNetworkAccessManager;
-namespace PimCommonTextGrammar
+namespace PimCommonTextGrammarCheck
 {
 class LanguageToolResultWidget;
 }
@@ -23,7 +23,7 @@ public:
     ~LanguageToolWidget() override;
 
 private:
-    void slotReplaceText(const PimCommonTextGrammar::GrammarAction &act);
+    void slotReplaceText(const PimCommonTextGrammarCheck::GrammarAction &act);
     void slotCheckGrammar();
     void slotError();
     void slotGetListOfLanguages();
@@ -31,6 +31,6 @@ private:
     void slotGetLanguagesError();
     void slotGetLanguagesFinished(const QString &result);
     QTextEdit *mInput = nullptr;
-    PimCommonTextGrammar::LanguageToolResultWidget *mResultWidget = nullptr;
+    PimCommonTextGrammarCheck::LanguageToolResultWidget *mResultWidget = nullptr;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
