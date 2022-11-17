@@ -7,13 +7,15 @@
 #pragma once
 
 #include "grammalectegenerateconfigoptionjob.h"
-#include "libkmailgrammalecte_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QWidget>
 class QCheckBox;
 class KUrlRequester;
 class QStackedWidget;
 class QScrollArea;
-class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigWidget : public QWidget
+namespace PimCommonTextGrammar
+{
+class PIMCOMMONTEXTGRAMMAR_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -40,3 +42,4 @@ private:
     KUrlRequester *mGrammalectePath = nullptr;
     const bool mDisableDialogBox = false;
 };
+}

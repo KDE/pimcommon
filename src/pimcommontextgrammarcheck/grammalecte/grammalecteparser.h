@@ -7,13 +7,16 @@
 #pragma once
 
 #include "grammalectegrammarerror.h"
-#include "libgrammalect_private_export.h"
+#include "pimcommontextgrammarcheckprivate_export.h"
 #include <QJsonObject>
 #include <QVector>
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteParser
+namespace PimCommonTextGrammar
+{
+class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteParser
 {
 public:
     GrammalecteParser();
     ~GrammalecteParser();
     Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
+}

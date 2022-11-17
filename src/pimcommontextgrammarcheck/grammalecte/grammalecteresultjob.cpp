@@ -5,11 +5,11 @@
 */
 
 #include "grammalecteresultjob.h"
-#include "libgrammalecte_debug.h"
+#include "pimcommontextgrammar_debug.h"
 
 #include <QFileInfo>
 #include <QTemporaryFile>
-
+using namespace PimCommonTextGrammar;
 GrammalecteResultJob::GrammalecteResultJob(QObject *parent)
     : QObject(parent)
 {
@@ -44,7 +44,7 @@ void GrammalecteResultJob::start()
 
         mProcess->start();
         if (!mProcess->waitForStarted()) {
-            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
+            qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Impossible to start grammarresultjob";
             Q_EMIT error(ErrorType::Unknown);
             deleteLater();
         }
@@ -74,7 +74,7 @@ void GrammalecteResultJob::receivedStdErr()
 void GrammalecteResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Error during running GrammarResultJob: " << mLastError;
+        qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Error during running GrammarResultJob: " << mLastError;
     } else {
         Q_EMIT finished(mResult);
     }

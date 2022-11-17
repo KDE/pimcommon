@@ -6,9 +6,11 @@
 
 #pragma once
 
-#include "grammarerror.h"
-#include "libgrammalect_private_export.h"
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGrammarError : public GrammarError
+#include "common/grammarerror.h"
+#include "pimcommontextgrammarcheckprivate_export.h"
+namespace PimCommonTextGrammar
+{
+class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteGrammarError : public GrammarError
 {
 public:
     GrammalecteGrammarError();
@@ -19,5 +21,6 @@ private:
     Q_REQUIRED_RESULT static QStringList parseSuggestion(const QJsonObject &obj);
     Q_REQUIRED_RESULT static QColor parseColor(const QJsonObject &obj);
 };
-Q_DECLARE_METATYPE(GrammalecteGrammarError)
-Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
+}
+Q_DECLARE_METATYPE(PimCommonTextGrammar::GrammalecteGrammarError)
+Q_DECLARE_TYPEINFO(PimCommonTextGrammar::GrammalecteGrammarError, Q_MOVABLE_TYPE);

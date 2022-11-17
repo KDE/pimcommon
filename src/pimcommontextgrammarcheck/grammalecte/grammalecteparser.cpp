@@ -5,9 +5,11 @@
 */
 
 #include "grammalecteparser.h"
-#include "libgrammalecte_debug.h"
+#include "pimcommontextgrammar_debug.h"
 #include <QJsonArray>
 #include <QJsonValue>
+
+using namespace PimCommonTextGrammar;
 
 GrammalecteParser::GrammalecteParser() = default;
 
@@ -17,7 +19,7 @@ QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) con
 {
     QVector<GrammarError> infos;
     if (!obj.contains(QLatin1String("grammalecte"))) {
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Error in json " << obj;
+        qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Error in json " << obj;
         return infos;
     }
     const QJsonArray array = obj.value(QLatin1String("data")).toArray();
@@ -37,11 +39,11 @@ QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) con
                         infos.append(info);
                     }
                 } else {
-                    qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte error" << error;
+                    qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Problem when parsing grammalecte error" << error;
                 }
             }
         } else {
-            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte result" << current;
+            qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Problem when parsing grammalecte result" << current;
         }
     }
     return infos;

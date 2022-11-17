@@ -84,6 +84,22 @@ target_sources(KF5PimCommonTextGrammar PRIVATE
     languagetool/languagetoolupdatecombobox.cpp
     languagetool/languagetoolupdatecombobox.h
 
+    grammalecte/grammalecteconfigdialog.cpp
+    grammalecte/grammalecteconfigdialog.h
+    grammalecte/grammalecteconfigwidget.cpp
+    grammalecte/grammalecteconfigwidget.h
+    grammalecte/grammalectegenerateconfigoptionjob.cpp
+    grammalecte/grammalectegenerateconfigoptionjob.h
+    grammalecte/grammalectegrammarerror.cpp
+    grammalecte/grammalectegrammarerror.h
+    grammalecte/grammalectemanager.cpp
+    grammalecte/grammalectemanager.h
+    grammalecte/grammalecteparser.cpp
+    grammalecte/grammalecteparser.h
+    grammalecte/grammalecteresultjob.cpp
+    grammalecte/grammalecteresultjob.h
+    grammalecte/grammalecteresultwidget.cpp
+    grammalecte/grammalecteresultwidget.h
     )
 #if (BUILD_TESTING)
 #endif()
@@ -103,6 +119,7 @@ target_link_libraries(KF5PimCommonTextGrammar
     KF5::I18n
     KF5::WidgetsAddons
     KF5::ConfigWidgets
+    KF5::KIOWidgets
     )
 
 target_include_directories(KF5PimCommonTextGrammar INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/>")

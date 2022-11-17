@@ -5,9 +5,11 @@
 */
 
 #include "grammalectegrammarerror.h"
-#include "libgrammalecte_debug.h"
+#include "pimcommontextgrammar_debug.h"
 
 #include <QJsonArray>
+
+using namespace PimCommonTextGrammar;
 
 GrammalecteGrammarError::GrammalecteGrammarError() = default;
 
@@ -40,7 +42,7 @@ QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
         //        }
         col = QColor(array.at(0).toInt(), array.at(1).toInt(), array.at(2).toInt());
     } else {
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Parsing color: Array is not correct:" << array;
+        qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Parsing color: Array is not correct:" << array;
     }
     return col;
 }

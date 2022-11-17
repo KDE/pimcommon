@@ -5,10 +5,12 @@
 */
 
 #pragma once
-#include "libkmailgrammalecte_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QDialog>
+namespace PimCommonTextGrammar
+{
 class GrammalecteConfigWidget;
-class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigDialog : public QDialog
+class PIMCOMMONTEXTGRAMMAR_EXPORT GrammalecteConfigDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -21,3 +23,4 @@ private:
     void readConfig();
     GrammalecteConfigWidget *const mConfigWidget;
 };
+}

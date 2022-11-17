@@ -6,9 +6,11 @@
 
 #pragma once
 
-#include "libkmailgrammalecte_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QObject>
-class LIBKMAILGRAMMALECTE_EXPORT GrammalecteManager : public QObject
+namespace PimCommonTextGrammar
+{
+class PIMCOMMONTEXTGRAMMAR_EXPORT GrammalecteManager : public QObject
 {
     Q_OBJECT
 public:
@@ -34,3 +36,4 @@ private:
     QString mPythonPath;
     QString mGrammalectePath;
 };
+}

@@ -17,6 +17,7 @@ namespace
 {
 static const char myConfigGrammalecteConfigDialog[] = "GrammalecteConfigDialog";
 }
+using namespace PimCommonTextGrammar;
 GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMessageBox)
     : QDialog(parent)
     , mConfigWidget(new GrammalecteConfigWidget(this, disableMessageBox))

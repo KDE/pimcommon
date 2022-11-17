@@ -6,15 +6,14 @@
 
 #pragma once
 
+#include "common/grammarresultwidget.h"
 #include "grammalectegrammarerror.h"
 #include "grammalecteresultjob.h"
-#include "grammarresultwidget.h"
-#include "libkmailgrammalecte_export.h"
-namespace MessageComposer
+#include "pimcommontextgrammar_export.h"
+namespace PimCommonTextGrammar
 {
-}
 class GrammalecteResultJob;
-class LIBKMAILGRAMMALECTE_EXPORT GrammalecteResultWidget : public GrammarResultWidget
+class PIMCOMMONTEXTGRAMMAR_EXPORT GrammalecteResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
 public:
@@ -26,3 +25,4 @@ private:
     void slotCheckGrammarFinished(const QString &result);
     void slotError(GrammalecteResultJob::ErrorType error);
 };
+}

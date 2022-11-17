@@ -20,6 +20,7 @@
 #include <QVBoxLayout>
 
 #include <KUrlRequester>
+using namespace PimCommonTextGrammar;
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMessageBox)
     : QWidget(parent)
     , mDisableDialogBox(disableMessageBox)
