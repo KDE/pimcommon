@@ -9,7 +9,7 @@
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
-
+using namespace PimCommonTextGrammar;
 LanguageToolResultJob::LanguageToolResultJob(QObject *parent)
     : QObject(parent)
 {

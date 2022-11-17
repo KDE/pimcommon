@@ -6,10 +6,12 @@
 
 #pragma once
 
-#include "libkmaillanguagetool_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QComboBox>
+namespace PimCommonTextGrammar
+{
 class LanguageInfo;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolComboBox : public QComboBox
+class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolComboBox : public QComboBox
 {
     Q_OBJECT
 public:
@@ -25,3 +27,4 @@ private:
     void fillComboBox();
     Q_DISABLE_COPY(LanguageToolComboBox)
 };
+}

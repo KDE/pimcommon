@@ -11,6 +11,8 @@
 #include <QObject>
 class QNetworkAccessManager;
 class QNetworkReply;
+namespace PimCommonTextGrammar
+{
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolGetListOfLanguageJob : public QObject
 {
     Q_OBJECT
@@ -44,3 +46,4 @@ private:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     QString mUrl;
 };
+}

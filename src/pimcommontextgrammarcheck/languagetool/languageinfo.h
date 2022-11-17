@@ -5,10 +5,12 @@
 */
 
 #pragma once
-#include "liblanguagetool_private_export.h"
+// #include "liblanguagetool_private_export.h"
 
 #include <QObject>
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageInfo
+namespace PimCommonTextGrammar
+{
+class /*LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT*/ LanguageInfo
 {
 public:
     LanguageInfo();
@@ -34,5 +36,6 @@ private:
     QString mLongCode;
     QString mCode;
 };
-Q_DECLARE_METATYPE(LanguageInfo)
-Q_DECLARE_TYPEINFO(LanguageInfo, Q_MOVABLE_TYPE);
+}
+Q_DECLARE_METATYPE(PimCommonTextGrammar::LanguageInfo)
+Q_DECLARE_TYPEINFO(PimCommonTextGrammar::LanguageInfo, Q_MOVABLE_TYPE);

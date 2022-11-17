@@ -8,6 +8,8 @@
 
 #include <QJsonObject>
 
+using namespace PimCommonTextGrammar;
+
 LanguageInfo::LanguageInfo() = default;
 
 LanguageInfo::~LanguageInfo() = default;

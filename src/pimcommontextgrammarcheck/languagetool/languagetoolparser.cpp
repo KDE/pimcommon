@@ -9,6 +9,8 @@
 
 #include <QJsonArray>
 
+using namespace PimCommonTextGrammar;
+
 LanguageToolParser::LanguageToolParser() = default;
 
 LanguageToolParser::~LanguageToolParser() = default;

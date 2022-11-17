@@ -9,9 +9,8 @@
 #include "grammarresultwidget.h"
 #include "languagetoolgrammarerror.h"
 #include "libkmaillanguagetool_export.h"
-namespace MessageComposer
+namespace PimCommonTextGrammar
 {
-}
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolResultWidget : public GrammarResultWidget
@@ -32,3 +31,4 @@ private:
     LanguageToolComboBox *mLanguageToolComboBox = nullptr;
     LanguageToolUpdateComboBox *const mLanguageToolUpdateCombobox;
 };
+}

@@ -6,12 +6,14 @@
 
 #pragma once
 
-#include "libkmaillanguagetool_export.h"
+#include "pimcommontextgrammar_export.h"
 #include <QHash>
 #include <QObject>
 class QColor;
 class QNetworkAccessManager;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolManager : public QObject
+namespace PimCommonTextGrammar
+{
+class PIMCOMMONTEXTGRAMMAR_EXPORT LanguageToolManager : public QObject
 {
     Q_OBJECT
 public:
@@ -51,3 +53,4 @@ private:
     QNetworkAccessManager *const mNetworkAccessManager;
     bool mUseLocalInstance = false;
 };
+}

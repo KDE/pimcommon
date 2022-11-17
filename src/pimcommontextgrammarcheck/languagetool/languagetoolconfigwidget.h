@@ -11,6 +11,8 @@
 class QCheckBox;
 class QLineEdit;
 class QLabel;
+namespace PimCommonTextGrammar
+{
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
@@ -35,3 +37,4 @@ private:
     LanguageToolComboBox *const mLanguageToolCombobox;
     LanguageToolUpdateComboBox *const mLanguageToolUpdateCombobox;
 };
+}

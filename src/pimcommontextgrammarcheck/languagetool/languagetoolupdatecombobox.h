@@ -8,7 +8,8 @@
 
 #include "liblanguagetool_private_export.h"
 #include <QObject>
-
+namespace PimCommonTextGrammar
+{
 class LanguageToolComboBox;
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject
 {
@@ -34,3 +35,4 @@ private:
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;
     QWidget *mParentWidget = nullptr;
 };
+}

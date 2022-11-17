@@ -18,7 +18,7 @@
 #include <QLineEdit>
 #include <QToolButton>
 #include <QVBoxLayout>
-
+using namespace PimCommonTextGrammar;
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
     , mUseLocalInstance(new QCheckBox(i18n("Use Local Instance"), this))

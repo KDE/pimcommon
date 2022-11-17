@@ -6,10 +6,11 @@
 
 #pragma once
 
-#include "grammarerror.h"
+#include "common/grammarerror.h"
 #include "liblanguagetool_private_export.h"
 #include <QStringList>
-
+namespace PimCommonTextGrammar
+{
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolGrammarError : public GrammarError
 {
 public:
@@ -22,5 +23,6 @@ private:
     Q_REQUIRED_RESULT static QStringList parseSuggestion(const QJsonObject &obj);
     bool mTesting = false;
 };
+}
 Q_DECLARE_METATYPE(LanguageToolGrammarError)
 Q_DECLARE_TYPEINFO(LanguageToolGrammarError, Q_MOVABLE_TYPE);

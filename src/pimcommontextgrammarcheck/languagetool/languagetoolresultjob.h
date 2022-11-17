@@ -11,6 +11,8 @@
 class QNetworkRequest;
 class QNetworkReply;
 class QNetworkAccessManager;
+namespace PimCommonTextGrammar
+{
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolResultJob : public QObject
 {
     Q_OBJECT
@@ -58,3 +60,4 @@ private:
     QString mLanguage;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
+}

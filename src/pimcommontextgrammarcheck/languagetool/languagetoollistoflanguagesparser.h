@@ -9,6 +9,8 @@
 #include "languageinfo.h"
 #include "liblanguagetool_private_export.h"
 #include <QVector>
+namespace PimCommonTextGrammar
+{
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolListOfLanguagesParser
 {
 public:
@@ -16,3 +18,4 @@ public:
     ~LanguageToolListOfLanguagesParser();
     Q_REQUIRED_RESULT QVector<LanguageInfo> parseResult(const QJsonArray &obj) const;
 };
+}

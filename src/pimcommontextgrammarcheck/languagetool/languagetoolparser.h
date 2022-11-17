@@ -9,7 +9,8 @@
 #include "liblanguagetool_private_export.h"
 
 #include <grammarerror.h>
-
+namespace PimCommonTextGrammar
+{
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolParser
 {
 public:
@@ -17,3 +18,4 @@ public:
     ~LanguageToolParser();
     Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
+}

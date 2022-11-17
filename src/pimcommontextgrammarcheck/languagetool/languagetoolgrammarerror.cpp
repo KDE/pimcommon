@@ -9,7 +9,7 @@
 #include "liblanguagetool_debug.h"
 
 #include <QJsonArray>
-
+using namespace PimCommonTextGrammar;
 LanguageToolGrammarError::LanguageToolGrammarError() = default;
 
 LanguageToolGrammarError::~LanguageToolGrammarError() = default;

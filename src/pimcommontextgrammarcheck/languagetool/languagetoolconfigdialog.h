@@ -7,6 +7,8 @@
 #pragma once
 #include "libkmaillanguagetool_export.h"
 #include <QDialog>
+namespace PimCommonTextGrammar
+{
 class LanguageToolConfigWidget;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigDialog : public QDialog
 {
@@ -21,3 +23,4 @@ private:
     void readConfig();
     LanguageToolConfigWidget *const mConfigWidget;
 };
+}
