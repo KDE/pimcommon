@@ -152,6 +152,18 @@ ecm_generate_headers(PimCommonTextGrammar_Camelcasecommon_HEADERS
     RELATIVE common/
     )
 
+ecm_generate_headers(PimCommonTextGrammar_Camelcasegrammalecte_HEADERS
+    HEADER_NAMES
+    GrammalecteConfigDialog
+    GrammalecteConfigWidget
+    GrammalecteManager
+    GrammalecteResultWidget
+    REQUIRED_HEADERS PimCommonTextGrammar_grammalecte_HEADERS
+    PREFIX PimCommonTextGrammar
+    RELATIVE grammalecte/
+    )
+
+
 ecm_generate_pri_file(BASE_NAME PimCommonTextGrammar
     LIB_NAME KF5PimCommonTextGrammar
     DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar
@@ -165,6 +177,9 @@ install(FILES
 install(FILES
     ${PimCommonTextGrammar_common_HEADERS}
     ${PimCommonTextGrammar_Camelcasecommon_HEADERS}
+
+    ${PimCommonTextGrammar_grammalecte_HEADERS}
+    ${PimCommonTextGrammar_Camelcasegrammalecte_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammar/PimCommonTextGrammar
     COMPONENT Devel
     )
