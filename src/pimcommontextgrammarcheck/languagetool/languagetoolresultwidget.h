@@ -7,7 +7,6 @@
 #pragma once
 
 #include "common/grammarresultwidget.h"
-#include "languagetoolgrammarerror.h"
 #include "pimcommontextgrammar_export.h"
 namespace PimCommonTextGrammar
 {
