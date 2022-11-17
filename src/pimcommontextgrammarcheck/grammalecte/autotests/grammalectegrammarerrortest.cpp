@@ -5,7 +5,7 @@
 */
 
 #include "grammalectegrammarerrortest.h"
-#include "grammalectegrammarerror.h"
+#include "grammalecte/grammalectegrammarerror.h"
 #include <QJsonDocument>
 #include <QStandardPaths>
 #include <QTest>
@@ -19,7 +19,7 @@ GrammalecteGrammarErrorTest::GrammalecteGrammarErrorTest(QObject *parent)
 
 void GrammalecteGrammarErrorTest::shouldHaveDefaultValue()
 {
-    GrammalecteGrammarError info;
+    PimCommonTextGrammar::GrammalecteGrammarError info;
     QCOMPARE(info.length(), -1);
     QCOMPARE(info.start(), -1);
     QCOMPARE(info.blockId(), -1);
@@ -33,9 +33,9 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
 {
     QTest::addColumn<QString>("fileName");
     QTest::addColumn<int>("nbBlock");
-    QTest::addColumn<GrammalecteGrammarError>("error");
-    QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << GrammalecteGrammarError();
-    GrammalecteGrammarError err;
+    QTest::addColumn<PimCommonTextGrammar::GrammalecteGrammarError>("error");
+    QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << PimCommonTextGrammar::GrammalecteGrammarError();
+    PimCommonTextGrammar::GrammalecteGrammarError err;
     err.setBlockId(1);
     err.setStart(15);
     err.setLength(5);
@@ -53,7 +53,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson()
 {
     QFETCH(QString, fileName);
     QFETCH(int, nbBlock);
-    QFETCH(GrammalecteGrammarError, error);
+    QFETCH(PimCommonTextGrammar::GrammalecteGrammarError, error);
     const QString originalJsonFile = QLatin1String(GRAMMALECTE_DATA_DIR) + QLatin1Char('/') + fileName + QStringLiteral(".json");
     QFile f(originalJsonFile);
     QVERIFY(f.open(QIODevice::ReadOnly));
@@ -61,7 +61,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    GrammalecteGrammarError parser;
+    PimCommonTextGrammar::GrammalecteGrammarError parser;
     parser.parse(fields, nbBlock);
     const bool compare = (parser == error);
     if (!compare) {

@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolupdatecomboboxtest.h"
-#include "languagetoolupdatecombobox.h"
+#include "languagetool/languagetoolupdatecombobox.h"
 #include <QTest>
 QTEST_MAIN(LanguageToolUpdateComboBoxTest)
 
@@ -16,7 +16,7 @@ LanguageToolUpdateComboBoxTest::LanguageToolUpdateComboBoxTest(QObject *parent)
 
 void LanguageToolUpdateComboBoxTest::shouldHaveDefaultValues()
 {
-    LanguageToolUpdateComboBox w;
+    PimCommonTextGrammar::LanguageToolUpdateComboBox w;
     QVERIFY(!w.languageToolCombobox());
     QVERIFY(!w.parentWidget());
 }

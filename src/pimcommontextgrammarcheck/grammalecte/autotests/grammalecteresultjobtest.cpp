@@ -5,7 +5,7 @@
 */
 
 #include "grammalecteresultjobtest.h"
-#include "grammalecteresultjob.h"
+#include "grammalecte/grammalecteresultjob.h"
 #include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(GrammarResultJobTest)
@@ -17,7 +17,7 @@ GrammarResultJobTest::GrammarResultJobTest(QObject *parent)
 
 void GrammarResultJobTest::shouldHaveDefaultValue()
 {
-    GrammalecteResultJob job;
+    PimCommonTextGrammar::GrammalecteResultJob job;
     QVERIFY(!job.canStart());
     QVERIFY(job.text().isEmpty());
     QVERIFY(job.pythonPath().isEmpty());
@@ -27,7 +27,7 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
 
 void GrammarResultJobTest::shouldBeAbleToStart()
 {
-    GrammalecteResultJob job;
+    PimCommonTextGrammar::GrammalecteResultJob job;
     // Args can be empty if we use default values
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("ff"));

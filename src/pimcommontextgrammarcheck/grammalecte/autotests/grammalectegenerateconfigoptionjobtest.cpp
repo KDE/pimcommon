@@ -5,7 +5,7 @@
 */
 
 #include "grammalectegenerateconfigoptionjobtest.h"
-#include "grammalectegenerateconfigoptionjob.h"
+#include "grammalecte/grammalectegenerateconfigoptionjob.h"
 #include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(GrammalecteGenerateConfigOptionJobTest)
@@ -18,10 +18,10 @@ GrammalecteGenerateConfigOptionJobTest::GrammalecteGenerateConfigOptionJobTest(Q
 
 void GrammalecteGenerateConfigOptionJobTest::shouldHaveDefaultValue()
 {
-    GrammalecteGenerateConfigOptionJob job;
+    PimCommonTextGrammar::GrammalecteGenerateConfigOptionJob job;
     QVERIFY(!job.canStart());
 
-    GrammalecteGenerateConfigOptionJob::Option opt;
+    PimCommonTextGrammar::GrammalecteGenerateConfigOptionJob::Option opt;
     QVERIFY(opt.optionName.isEmpty());
     QVERIFY(opt.description.isEmpty());
     QVERIFY(!opt.defaultValue);
@@ -29,7 +29,7 @@ void GrammalecteGenerateConfigOptionJobTest::shouldHaveDefaultValue()
 
 void GrammalecteGenerateConfigOptionJobTest::shouldBeAbleToStart()
 {
-    GrammalecteGenerateConfigOptionJob job;
+    PimCommonTextGrammar::GrammalecteGenerateConfigOptionJob job;
     QVERIFY(!job.canStart());
     job.setPythonPath(QStringLiteral("ff"));
     QVERIFY(!job.canStart());

@@ -5,8 +5,8 @@
 */
 
 #include "languagetoolconfigwidgettest.h"
-#include "languagetoolcombobox.h"
-#include "languagetoolconfigwidget.h"
+#include "languagetool/languagetoolcombobox.h"
+#include "languagetool/languagetoolconfigwidget.h"
 #include <QCheckBox>
 #include <QLabel>
 #include <QLineEdit>
@@ -25,7 +25,7 @@ LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
 
 void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
 {
-    LanguageToolConfigWidget w;
+    PimCommonTextGrammar::LanguageToolConfigWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
@@ -51,7 +51,7 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     QVERIFY(languageLabel);
     QVERIFY(!languageLabel->text().isEmpty());
 
-    auto mLanguageToolCombobox = w.findChild<LanguageToolComboBox *>(QStringLiteral("languagecombobox"));
+    auto mLanguageToolCombobox = w.findChild<PimCommonTextGrammar::LanguageToolComboBox *>(QStringLiteral("languagecombobox"));
     QVERIFY(mLanguageToolCombobox);
 
     auto refreshButton = w.findChild<QToolButton *>(QStringLiteral("refreshbutton"));
@@ -61,7 +61,7 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
 
 void LanguageToolConfigWidgetTest::shouldUpdateWidgets()
 {
-    LanguageToolConfigWidget w;
+    PimCommonTextGrammar::LanguageToolConfigWidget w;
 
     auto mUseLocalInstance = w.findChild<QCheckBox *>(QStringLiteral("uselocalinstance"));
 

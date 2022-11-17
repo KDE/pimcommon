@@ -101,8 +101,12 @@ target_sources(KF5PimCommonTextGrammar PRIVATE
     grammalecte/grammalecteresultwidget.cpp
     grammalecte/grammalecteresultwidget.h
     )
-#if (BUILD_TESTING)
-#endif()
+if (BUILD_TESTING)
+    add_subdirectory(grammalecte/autotests)
+    add_subdirectory(grammalecte/tests)
+    add_subdirectory(languagetool/autotests)
+    add_subdirectory(languagetool/tests)
+endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommonTextGrammar PROPERTIES UNITY_BUILD ON)

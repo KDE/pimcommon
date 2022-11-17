@@ -5,12 +5,12 @@
 */
 
 #include "grammalecteconfigdialogtest.h"
-#include "grammalecteconfigdialog.h"
+#include "grammalecte/grammalecteconfigdialog.h"
+#include "grammalecte/grammalecteconfigwidget.h"
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
-#include <grammalecteconfigwidget.h>
 QTEST_MAIN(GrammalecteConfigDialogTest)
 GrammalecteConfigDialogTest::GrammalecteConfigDialogTest(QObject *parent)
     : QObject(parent)
@@ -20,13 +20,13 @@ GrammalecteConfigDialogTest::GrammalecteConfigDialogTest(QObject *parent)
 
 void GrammalecteConfigDialogTest::shouldHaveDefaultValue()
 {
-    GrammalecteConfigDialog w(nullptr, true);
+    PimCommonTextGrammar::GrammalecteConfigDialog w(nullptr, true);
     QVERIFY(!w.windowTitle().isEmpty());
 
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto mConfigWidget = w.findChild<GrammalecteConfigWidget *>(QStringLiteral("configwidget"));
+    auto mConfigWidget = w.findChild<PimCommonTextGrammar::GrammalecteConfigWidget *>(QStringLiteral("configwidget"));
     QVERIFY(mConfigWidget);
 
     auto box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));

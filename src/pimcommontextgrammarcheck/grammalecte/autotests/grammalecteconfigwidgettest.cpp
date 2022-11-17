@@ -5,7 +5,7 @@
 */
 
 #include "grammalecteconfigwidgettest.h"
-#include "grammalecteconfigwidget.h"
+#include "grammalecte/grammalecteconfigwidget.h"
 #include <KUrlRequester>
 #include <QFormLayout>
 #include <QLabel>
@@ -25,7 +25,7 @@ GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
 
 void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
 {
-    GrammalecteConfigWidget w(nullptr, true);
+    PimCommonTextGrammar::GrammalecteConfigWidget w(nullptr, true);
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());

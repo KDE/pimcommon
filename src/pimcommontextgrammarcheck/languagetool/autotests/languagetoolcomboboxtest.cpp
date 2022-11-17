@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolcomboboxtest.h"
-#include "languagetoolcombobox.h"
+#include "languagetool/languagetoolcombobox.h"
 #include <QTest>
 QTEST_MAIN(LanguageToolComboBoxTest)
 LanguageToolComboBoxTest::LanguageToolComboBoxTest(QObject *parent)
@@ -15,6 +15,6 @@ LanguageToolComboBoxTest::LanguageToolComboBoxTest(QObject *parent)
 
 void LanguageToolComboBoxTest::shouldHaveDefaultValue()
 {
-    LanguageToolComboBox w;
+    PimCommonTextGrammar::LanguageToolComboBox w;
     QCOMPARE(w.count(), 30);
 }

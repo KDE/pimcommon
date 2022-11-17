@@ -5,8 +5,8 @@
 */
 
 #include "languagetoolconfigdialogtest.h"
-#include "languagetoolconfigdialog.h"
-#include "languagetoolconfigwidget.h"
+#include "languagetool/languagetoolconfigdialog.h"
+#include "languagetool/languagetoolconfigwidget.h"
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
@@ -20,13 +20,13 @@ LanguageToolConfigDialogTest::LanguageToolConfigDialogTest(QObject *parent)
 
 void LanguageToolConfigDialogTest::shouldHaveDefaultValue()
 {
-    LanguageToolConfigDialog w(nullptr);
+    PimCommonTextGrammar::LanguageToolConfigDialog w(nullptr);
     QVERIFY(!w.windowTitle().isEmpty());
 
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto mConfigWidget = w.findChild<LanguageToolConfigWidget *>(QStringLiteral("configwidget"));
+    auto mConfigWidget = w.findChild<PimCommonTextGrammar::LanguageToolConfigWidget *>(QStringLiteral("configwidget"));
     QVERIFY(mConfigWidget);
 
     auto box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));

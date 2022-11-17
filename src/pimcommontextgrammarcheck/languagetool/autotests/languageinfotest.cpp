@@ -5,7 +5,7 @@
 */
 
 #include "languageinfotest.h"
-#include "languageinfo.h"
+#include "languagetool/languageinfo.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(LanguageInfoTest)
 
@@ -16,7 +16,7 @@ LanguageInfoTest::LanguageInfoTest(QObject *parent)
 
 void LanguageInfoTest::shouldHaveDefaultValues()
 {
-    LanguageInfo w;
+    PimCommonTextGrammar::LanguageInfo w;
     QVERIFY(w.name().isEmpty());
     QVERIFY(w.code().isEmpty());
     QVERIFY(w.longCode().isEmpty());

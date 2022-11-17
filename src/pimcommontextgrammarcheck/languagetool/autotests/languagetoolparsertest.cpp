@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolparsertest.h"
-#include "languagetoolparser.h"
+#include "languagetool/languagetoolparser.h"
 #include <QJsonDocument>
 #include <QStandardPaths>
 #include <QTest>
@@ -36,6 +36,6 @@ void LanguageToolParserTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    LanguageToolParser parser;
+    PimCommonTextGrammar::LanguageToolParser parser;
     QCOMPARE(parser.parseResult(fields).count(), numberOfElement);
 }

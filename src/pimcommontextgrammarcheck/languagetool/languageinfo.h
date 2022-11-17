@@ -5,12 +5,12 @@
 */
 
 #pragma once
-// #include "liblanguagetool_private_export.h"
+#include "pimcommontextgrammarcheckprivate_export.h"
 
 #include <QObject>
 namespace PimCommonTextGrammar
 {
-class /*LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT*/ LanguageInfo
+class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageInfo
 {
 public:
     LanguageInfo();

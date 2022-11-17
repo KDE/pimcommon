@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolgetlistoflanguagejobtest.h"
-#include "languagetoolgetlistoflanguagejob.h"
+#include "languagetool/languagetoolgetlistoflanguagejob.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(LanguageToolGetListOfLanguageJobTest)
 LanguageToolGetListOfLanguageJobTest::LanguageToolGetListOfLanguageJobTest(QObject *parent)
@@ -15,7 +15,7 @@ LanguageToolGetListOfLanguageJobTest::LanguageToolGetListOfLanguageJobTest(QObje
 
 void LanguageToolGetListOfLanguageJobTest::shouldHaveDefaultValues()
 {
-    LanguageToolGetListOfLanguageJob w;
+    PimCommonTextGrammar::LanguageToolGetListOfLanguageJob w;
     QVERIFY(!w.canStart());
     QVERIFY(w.listOfLanguagePath().isEmpty());
     QVERIFY(w.url().isEmpty());
@@ -23,7 +23,7 @@ void LanguageToolGetListOfLanguageJobTest::shouldHaveDefaultValues()
 
 void LanguageToolGetListOfLanguageJobTest::shouldBeAbleToStart()
 {
-    LanguageToolGetListOfLanguageJob job;
+    PimCommonTextGrammar::LanguageToolGetListOfLanguageJob job;
     QVERIFY(!job.canStart());
     job.setUrl(QStringLiteral("foo"));
     QVERIFY(!job.canStart());

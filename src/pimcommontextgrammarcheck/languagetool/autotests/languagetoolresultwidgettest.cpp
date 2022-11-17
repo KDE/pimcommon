@@ -5,10 +5,10 @@
 */
 
 #include "languagetoolresultwidgettest.h"
-#include "languagetoolresultwidget.h"
+#include "common/grammarresulttextedit.h"
+#include "languagetool/languagetoolresultwidget.h"
 #include <QTest>
 #include <QVBoxLayout>
-#include <grammarresulttextedit.h>
 QTEST_MAIN(LanguageToolResultWidgetTest)
 LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
     : QObject(parent)
@@ -17,11 +17,11 @@ LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
 
 void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
 {
-    LanguageToolResultWidget w;
+    PimCommonTextGrammar::LanguageToolResultWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    auto mResult = w.findChild<PimCommonTextGrammar::GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 }

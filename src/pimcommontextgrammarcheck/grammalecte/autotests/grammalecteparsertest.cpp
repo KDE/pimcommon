@@ -5,7 +5,7 @@
 */
 
 #include "grammalecteparsertest.h"
-#include "grammalecteparser.h"
+#include "grammalecte/grammalecteparser.h"
 #include <QJsonDocument>
 #include <QStandardPaths>
 #include <QTest>
@@ -37,6 +37,6 @@ void GrammalecteParserTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    GrammalecteParser parser;
+    PimCommonTextGrammar::GrammalecteParser parser;
     QCOMPARE(parser.parseResult(fields).count(), numberOfElement);
 }

@@ -6,10 +6,14 @@
 
 #pragma once
 
-#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
+
+#include "common/grammaraction.h"
 class QNetworkAccessManager;
+namespace PimCommonTextGrammar
+{
 class LanguageToolResultWidget;
+}
 class QTextEdit;
 class LanguageToolWidget : public QWidget
 {
@@ -19,7 +23,7 @@ public:
     ~LanguageToolWidget() override;
 
 private:
-    void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
+    void slotReplaceText(const PimCommonTextGrammar::GrammarAction &act);
     void slotCheckGrammar();
     void slotError();
     void slotGetListOfLanguages();
@@ -27,6 +31,6 @@ private:
     void slotGetLanguagesError();
     void slotGetLanguagesFinished(const QString &result);
     QTextEdit *mInput = nullptr;
-    LanguageToolResultWidget *mResultWidget = nullptr;
+    PimCommonTextGrammar::LanguageToolResultWidget *mResultWidget = nullptr;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };

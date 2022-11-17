@@ -6,10 +6,13 @@
 
 #pragma once
 
-#include "grammalectegenerateconfigoptionjob.h"
-#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
+#include "common/grammaraction.h"
+#include "grammalecte/grammalectegenerateconfigoptionjob.h"
 #include <QWidget>
+namespace PimCommonTextGrammar
+{
 class GrammalecteResultWidget;
+}
 class QTextEdit;
 class GrammalecteWidget : public QWidget
 {
@@ -19,11 +22,11 @@ public:
     ~GrammalecteWidget() override;
 
 private:
-    void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
+    void slotReplaceText(const PimCommonTextGrammar::GrammarAction &act);
     void slotCheckGrammar();
     void slotGetSettings();
-    void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
+    void slotGetSettingsFinished(const QVector<PimCommonTextGrammar::GrammalecteGenerateConfigOptionJob::Option> &result);
     void slotResultFinished(const QString &result);
     QTextEdit *mInput = nullptr;
-    GrammalecteResultWidget *mResultWidget = nullptr;
+    PimCommonTextGrammar::GrammalecteResultWidget *mResultWidget = nullptr;
 };

@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolresultjobtest.h"
-#include "languagetoolresultjob.h"
+#include "languagetool/languagetoolresultjob.h"
 #include <QTest>
 QTEST_MAIN(LanguageToolResultJobTest)
 LanguageToolResultJobTest::LanguageToolResultJobTest(QObject *parent)
@@ -15,7 +15,7 @@ LanguageToolResultJobTest::LanguageToolResultJobTest(QObject *parent)
 
 void LanguageToolResultJobTest::shouldHaveDefaultValue()
 {
-    LanguageToolResultJob job;
+    PimCommonTextGrammar::LanguageToolResultJob job;
     QVERIFY(!job.networkAccessManager());
     QVERIFY(job.arguments().isEmpty());
     QVERIFY(!job.canStart());
@@ -26,7 +26,7 @@ void LanguageToolResultJobTest::shouldHaveDefaultValue()
 
 void LanguageToolResultJobTest::shouldBeAbleToStart()
 {
-    LanguageToolResultJob job;
+    PimCommonTextGrammar::LanguageToolResultJob job;
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("foo"));
     QVERIFY(!job.canStart());

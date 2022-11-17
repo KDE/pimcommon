@@ -5,8 +5,8 @@
 */
 
 #include "grammalecteresultwidgettest.h"
-#include "grammalecteresultwidget.h"
-#include "grammarresulttextedit.h"
+#include "common/grammarresulttextedit.h"
+#include "grammalecte/grammalecteresultwidget.h"
 #include <QTest>
 #include <QToolButton>
 #include <QVBoxLayout>
@@ -19,12 +19,12 @@ GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
 
 void GrammarResultWidgetTest::shouldHaveDefaultValue()
 {
-    GrammalecteResultWidget w;
+    PimCommonTextGrammar::GrammalecteResultWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    auto mResult = w.findChild<PimCommonTextGrammar::GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 
     auto closeBtn = w.findChild<QToolButton *>(QStringLiteral("close-button"));
