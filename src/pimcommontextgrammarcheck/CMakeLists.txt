@@ -96,6 +96,9 @@ install(TARGETS
 ecm_generate_headers(PimCommonTextGrammar_Camelcasetranslator_HEADERS
     HEADER_NAMES
     GrammarAction
+    GrammarError
+    GrammarResultTextEdit
+    GrammarResultWidget
     REQUIRED_HEADERS PimCommonTextGrammar_translator_HEADERS
     PREFIX PimCommonTextGrammar
     RELATIVE common/
