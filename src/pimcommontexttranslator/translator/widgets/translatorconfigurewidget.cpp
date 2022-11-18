@@ -14,18 +14,33 @@
 #include <QStackedWidget>
 #include <QVBoxLayout>
 using namespace PimCommonTextTranslator;
+
+class Q_DECL_HIDDEN PimCommonTextTranslator::TranslatorConfigureWidget::TranslatorConfigureWidgetPrivate
+{
+public:
+    TranslatorConfigureWidgetPrivate(TranslatorConfigureWidget *parent)
+        : mEngine(new QComboBox(parent))
+        , mStackedWidget(new QStackedWidget(parent))
+        , mEmptyWidget(new QWidget(parent))
+        , mLibreTranslateWidget(new QWidget(parent))
+    {
+    }
+
+    QComboBox *const mEngine;
+    QStackedWidget *const mStackedWidget;
+    QWidget *const mEmptyWidget;
+    QWidget *const mLibreTranslateWidget;
+};
+
 TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     : QWidget{parent}
-    , mEngine(new QComboBox(this))
-    , mStackedWidget(new QStackedWidget(this))
-    , mEmptyWidget(new QWidget(this))
-    , mLibreTranslateWidget(new QWidget(this))
+    , d(new TranslatorConfigureWidgetPrivate(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mEngine->setObjectName(QStringLiteral("mEngine"));
+    d->mEngine->setObjectName(QStringLiteral("mEngine"));
     auto hboxLayout = new QHBoxLayout;
     hboxLayout->setContentsMargins({});
     mainLayout->addLayout(hboxLayout);
@@ -33,19 +48,19 @@ TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     auto label = new QLabel(i18n("Engine:"), this);
     label->setObjectName(QStringLiteral("label"));
     hboxLayout->addWidget(label);
-    hboxLayout->addWidget(mEngine);
+    hboxLayout->addWidget(d->mEngine);
 
-    mStackedWidget->setObjectName(QStringLiteral("mStackedWidget"));
-    mainLayout->addWidget(mStackedWidget);
+    d->mStackedWidget->setObjectName(QStringLiteral("mStackedWidget"));
+    mainLayout->addWidget(d->mStackedWidget);
 
-    mEmptyWidget->setObjectName(QStringLiteral("mEmptyWidget"));
-    mStackedWidget->addWidget(mEmptyWidget);
+    d->mEmptyWidget->setObjectName(QStringLiteral("mEmptyWidget"));
+    d->mStackedWidget->addWidget(d->mEmptyWidget);
 
-    mLibreTranslateWidget->setObjectName(QStringLiteral("mLibreTranslateWidget"));
-    mStackedWidget->addWidget(mLibreTranslateWidget);
+    d->mLibreTranslateWidget->setObjectName(QStringLiteral("mLibreTranslateWidget"));
+    d->mStackedWidget->addWidget(d->mLibreTranslateWidget);
 
-    connect(mEngine, &QComboBox::currentIndexChanged, this, &TranslatorConfigureWidget::switchEngine);
-    mStackedWidget->setCurrentWidget(mEmptyWidget);
+    connect(d->mEngine, &QComboBox::currentIndexChanged, this, &TranslatorConfigureWidget::switchEngine);
+    d->mStackedWidget->setCurrentWidget(d->mEmptyWidget);
     fillEngine();
 }
 
@@ -53,20 +68,20 @@ TranslatorConfigureWidget::~TranslatorConfigureWidget() = default;
 
 void TranslatorConfigureWidget::fillEngine()
 {
-    TranslatorUtil::fillComboboxSettings(mEngine);
+    TranslatorUtil::fillComboboxSettings(d->mEngine);
 }
 
 void TranslatorConfigureWidget::saveSettings()
 {
-    TranslatorUtil::saveEngineSettings(mEngine->currentData().toString());
+    TranslatorUtil::saveEngineSettings(d->mEngine->currentData().toString());
 }
 
 void TranslatorConfigureWidget::loadSettings()
 {
     const QString engine = TranslatorUtil::loadEngine();
-    const int index = mEngine->findData(engine);
+    const int index = d->mEngine->findData(engine);
     if (index != -1) {
-        mEngine->setCurrentIndex(index);
+        d->mEngine->setCurrentIndex(index);
     }
 }
 

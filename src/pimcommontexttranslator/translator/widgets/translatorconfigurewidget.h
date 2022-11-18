@@ -25,9 +25,7 @@ public:
 private:
     void fillEngine();
     void switchEngine(int index);
-    QComboBox *const mEngine;
-    QStackedWidget *const mStackedWidget;
-    QWidget *const mEmptyWidget;
-    QWidget *const mLibreTranslateWidget;
+    class TranslatorConfigureWidgetPrivate;
+    std::unique_ptr<TranslatorConfigureWidgetPrivate> const d;
 };
 }
