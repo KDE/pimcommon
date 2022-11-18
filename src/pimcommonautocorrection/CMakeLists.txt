@@ -48,8 +48,15 @@ add_library(KF5::PimCommonAutoCorrection ALIAS KF5PimCommonAutoCorrection)
 ki18n_wrap_ui(KF5PimCommonAutoCorrection
     autocorrection/ui/autocorrectionwidget.ui
     )
-ecm_qt_declare_logging_category(KF5PimCommonAutoCorrection HEADER pimcommonautocorrection_debug.h IDENTIFIER PIMCOMMONAUTOCORRECTION_LOG CATEGORY_NAME org.kde.pim.pimcommonautocorrection
+ecm_qt_declare_logging_category(KF5PimCommonAutoCorrection HEADER pimcommonautocorrection_debug.h
+    IDENTIFIER PIMCOMMONAUTOCORRECTION_LOG CATEGORY_NAME org.kde.pim.pimcommonautocorrection
         DESCRIPTION "kdepim (pimcommon AutoCorrection)"
+        EXPORT PIMCOMMON
+    )
+
+ecm_qt_declare_logging_category(KF5PimCommonAutoCorrection HEADER pimcommonautocorrectionautocorrect_debug.h
+    IDENTIFIER PIMCOMMONAUTOCORRECTION_AUTOCORRECT_LOG CATEGORY_NAME org.kde.pim.pimcommonautocorrection.autocorrect
+        DESCRIPTION "kdepim (pimcommon AutoCorrection autocorrect text)"
         EXPORT PIMCOMMON
     )
 
