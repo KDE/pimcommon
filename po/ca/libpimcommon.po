@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-17 00:47+0000\n"
-"PO-Revision-Date: 2022-11-09 09:09+0100\n"
+"POT-Creation-Date: 2022-11-18 00:46+0000\n"
+"PO-Revision-Date: 2022-11-17 14:38+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -1589,34 +1589,32 @@ msgstr "Selecciona"
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:39
 #, kde-format
 msgid "Any text to check."
-msgstr ""
+msgstr "Qualsevol text a comprovar."
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace"
+#, kde-format
 msgid "Replacement"
-msgstr "Substitueix"
+msgstr "Substitució"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:102
 #, kde-format
 msgid "Online Grammar Information"
-msgstr ""
+msgstr "Informació en línia de la gramàtica"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:115
 #, kde-format
 msgid "Check Again"
-msgstr ""
+msgstr "Comprova una altra vegada"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:118
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure..."
-msgstr "Configura"
+msgstr "Configura..."
 
-#: pimcommontextgrammarcheck/common/grammarresultutil.cpp:49
+#: pimcommontextgrammarcheck/common/grammarresultutil.cpp:51
 #, kde-format
 msgid "See on: %1"
-msgstr ""
+msgstr "Vegeu a: %1"
 
 #: pimcommontextgrammarcheck/common/grammarresultwidget.cpp:32
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
@@ -1625,345 +1623,312 @@ msgstr ""
 msgid "Close"
 msgstr "Tanca"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/plugin/grammalecteinterface.cpp:77
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigdialog.cpp:25
 #, kde-format
-msgid "&Check Grammar (Grammalecte)"
-msgstr ""
-
-#: pimcommontextgrammarcheck/plugins/grammalecte/plugin/grammalecteplugin.cpp:37
-#, kde-format
-msgid "Grammalecte Plugin"
-msgstr ""
-
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigdialog.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Completion"
 msgctxt "@title:window"
 msgid "Configure Grammalecte"
-msgstr "Configuració de la compleció"
+msgstr "Configuració del Grammalecte"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:34
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:35
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "General"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:35
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:36
 #, kde-format
 msgid "Grammar Settings"
-msgstr ""
+msgstr "Configuració de la gramàtica"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:60
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:61
 #, kde-format
 msgid ""
 "Impossible to get options. Please verify that you have grammalected "
 "installed."
 msgstr ""
+"No ha estat possible obtenir les opcions. Verifiqueu que teniu instal·lat el "
+"«grammalected»."
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:61
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:62
 #, kde-format
 msgid "Error during Extracting Options"
-msgstr ""
+msgstr "Error durant les opcions d'extracció"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:110
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:111
 #, kde-format
 msgid "Press Button for Reloading Settings"
-msgstr ""
+msgstr "Premeu el botó per a tornar a carregar la configuració"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:117
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:118
 #, kde-format
 msgid "Reload Settings"
-msgstr ""
+msgstr "Torna a carregar la configuració"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:134
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:135
 #, kde-format
 msgid "Python Path:"
-msgstr ""
+msgstr "Camí de Python:"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:138
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:139
 #, kde-format
 msgid "Add full 'grammalecte-cli.py' path"
-msgstr ""
+msgstr "Afegiu tot el camí a «grammalecte-cli.py»"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteconfigwidget.cpp:139
+#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:140
 #, kde-format
 msgid "Grammalecte Path:"
-msgstr ""
+msgstr "Camí del Grammalecte:"
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:54
+#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:54
 #, kde-format
 msgid "Python path is missing."
-msgstr ""
+msgstr "Manca el camí de Python."
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:58
+#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:58
 #, kde-format
 msgid "Grammalecte path not found."
-msgstr ""
+msgstr "No s'ha trobat el camí del Grammalecte."
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:65
+#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:65
 #, kde-format
 msgid "Grammalecte program file not found."
-msgstr ""
+msgstr "No s'ha trobat el fitxer de programa del Grammalecte."
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:69
+#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:69
 #, kde-format
 msgid "Grammalecte cli file not found."
-msgstr ""
+msgstr "No s'ha trobat el fitxer cli del Grammalecte."
 
-#: pimcommontextgrammarcheck/plugins/grammalecte/src/grammalecteresultwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Translate error"
+#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:73
+#, kde-format
 msgid "Grammalecte error"
-msgstr "Error de traducció"
+msgstr "Error del Grammalecte"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolinterface.cpp:81
-#, kde-format
-msgid "&Check Grammar (LanguageTool)"
-msgstr ""
-
-#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolinterface.cpp:95
-#, kde-format
-msgid ""
-"You do not use local instance.\n"
-"Your text will send on a external web site (https://languagetool.org/).\n"
-"Do you want to continue?"
-msgstr ""
-
-#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolinterface.cpp:96
-#, kde-format
-msgid "Check Grammar with LanguageTool"
-msgstr ""
-
-#: pimcommontextgrammarcheck/plugins/languagetool/plugin/languagetoolplugin.cpp:36
-#, kde-format
-msgid "LanguageTool Plugin"
-msgstr ""
-
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:31
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
 #, kde-format
 msgid "English"
 msgstr "Anglès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:32
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:32
 #, kde-format
 msgid "Asturian"
-msgstr ""
+msgstr "Asturià"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:33
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:33
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:184
 #, kde-format
 msgid "Belarusian"
 msgstr "Bielorús"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:34
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:34
 #, kde-format
 msgid "Breton"
-msgstr ""
+msgstr "Bretó"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:35
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:35
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:190
 #, kde-format
 msgid "Catalan"
 msgstr "Català"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:36
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:36
 #, kde-format
 msgid "Chinese"
-msgstr ""
+msgstr "Xinès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:37
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:37
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:205
 #, kde-format
 msgid "Danish"
 msgstr "Danès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:38
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:38
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:136
 #, kde-format
 msgid "Dutch"
 msgstr "Neerlandès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:39
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:39
 #, kde-format
 msgid "English (Australian)"
-msgstr ""
+msgstr "Anglès (australià)"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:40
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:40
 #, kde-format
 msgid "English (Canadian)"
-msgstr ""
+msgstr "Anglès (canadenc)"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:41
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:41
 #, kde-format
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:42
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:42
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:139
 #, kde-format
 msgid "French"
 msgstr "Francès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:43
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:43
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:217
 #, kde-format
 msgid "Galician"
 msgstr "Gallec"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:44
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:44
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:142
 #, kde-format
 msgid "German"
 msgstr "Alemany"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:45
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:45
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:145
 #, kde-format
 msgid "Greek"
 msgstr "Grec"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:46
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:46
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:148
 #, kde-format
 msgid "Italian"
 msgstr "Italià"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:47
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:47
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:151
 #, kde-format
 msgid "Japanese"
 msgstr "Japonès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:48
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:48
 #, kde-format
 msgid "Khmer"
-msgstr ""
+msgstr "Khmer"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:49
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:49
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:262
 #, kde-format
 msgid "Persian"
 msgstr "Persa"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:50
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:50
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:265
 #, kde-format
 msgid "Polish"
 msgstr "Polonès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:51
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:51
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:157
 #, kde-format
 msgid "Portuguese"
 msgstr "Portuguès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:52
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:52
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:268
 #, kde-format
 msgid "Romanian"
 msgstr "Romanès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:53
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:53
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:160
 #, kde-format
 msgid "Russian"
 msgstr "Rus"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:54
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:274
 #, kde-format
 msgid "Slovak"
 msgstr "Eslovac"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:55
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:55
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:277
 #, kde-format
 msgid "Slovenian"
 msgstr "Eslovè"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:56
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:56
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:163
 #, kde-format
 msgid "Spanish"
 msgstr "Espanyol"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:57
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:57
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:283
 #, kde-format
 msgid "Swedish"
 msgstr "Suec"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:58
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:58
 #, kde-format
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagal"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:59
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:59
 #, kde-format
 msgid "Tamil"
-msgstr ""
+msgstr "Tàmil"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolcombobox.cpp:60
+#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:60
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:292
 #, kde-format
 msgid "Ukrainian"
 msgstr "Ucraïnès"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigdialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Translator"
+#: pimcommontextgrammarcheck/languagetool/languagetoolconfigdialog.cpp:26
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure LanguageTool"
-msgstr "Configura el traductor"
+msgstr "Configuració del LanguageTool"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:24
+#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:22
 #, kde-format
 msgid "Use Local Instance"
-msgstr ""
+msgstr "Usa una instància local"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:26
+#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:24
 #, kde-format
 msgid "Instance Path:"
-msgstr ""
+msgstr "Camí de la instància:"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:54
+#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:52
 #, kde-format
 msgid "Language:"
-msgstr ""
+msgstr "Idioma:"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolconfigwidget.cpp:66
+#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:64
 #, kde-format
 msgid "Refresh"
-msgstr ""
+msgstr "Actualitza"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolresultwidget.cpp:60
+#: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "An error was reported: %1"
-msgstr ""
+msgstr "S'ha notificat un error: %1"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolresultwidget.cpp:60
+#: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "Failed to check grammar."
-msgstr ""
+msgstr "Ha fallat en comprovar la gramàtica."
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolresultwidget.cpp:76
+#: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:76
 #, kde-format
 msgid "Check"
-msgstr ""
+msgstr "Comprova"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolupdatecombobox.cpp:75
+#: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid ""
 "An error occurred attempting to load the list of available languages:\n"
 "%1"
 msgstr ""
+"S'ha produït un error en intentar carregar la llista dels idiomes "
+"disponibles:\n"
+"%1"
 
-#: pimcommontextgrammarcheck/plugins/languagetool/src/languagetoolupdatecombobox.cpp:75
+#: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
-msgstr ""
+msgstr "Llista d'idiomes"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
@@ -2264,16 +2229,12 @@ msgid "Configure Translator"
 msgstr "Configura el traductor"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "Translate from language"
-#| msgid "From:"
+#, kde-format
 msgid "From:"
 msgstr "Des de:"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "Translate to language"
-#| msgid "To:"
+#, kde-format
 msgid "To:"
 msgstr "A:"
 
@@ -2362,3 +2323,27 @@ msgstr "Sense xarxa"
 #, kde-format
 msgid "Translate error"
 msgstr "Error de traducció"
+
+#~ msgid "&Check Grammar (Grammalecte)"
+#~ msgstr "&Comprova la gramàtica (Grammalecte)"
+
+#~ msgid "Grammalecte Plugin"
+#~ msgstr "Connector Grammalecte"
+
+#~ msgid "&Check Grammar (LanguageTool)"
+#~ msgstr "&Comprova la gramàtica (LanguageTool)"
+
+#~ msgid ""
+#~ "You do not use local instance.\n"
+#~ "Your text will send on a external web site (https://languagetool.org/).\n"
+#~ "Do you want to continue?"
+#~ msgstr ""
+#~ "No utilitzeu cap instància local.\n"
+#~ "El text s'enviarà a un lloc web extern (https://languagetool.org/).\n"
+#~ "Voleu continuar?"
+
+#~ msgid "Check Grammar with LanguageTool"
+#~ msgstr "Comprova la gramàtica amb el LanguageTool"
+
+#~ msgid "LanguageTool Plugin"
+#~ msgstr "Connector del LanguageTool"
