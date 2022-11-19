@@ -8,7 +8,7 @@
 #include "common/grammarresulttextedit.h"
 #include "grammalectemanager.h"
 #include "grammalecteparser.h"
-#include "pimcommontextgrammar_debug.h"
+#include "pimcommontextgrammarcheck_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QJsonDocument>

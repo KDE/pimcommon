@@ -41,9 +41,9 @@ install(FILES
 
 add_library(KF5PimCommonTextGrammarCheck )
 add_library(KF5::PimCommonTextGrammarCheck ALIAS KF5PimCommonTextGrammarCheck)
-ecm_qt_declare_logging_category(KF5PimCommonTextGrammarCheck HEADER pimcommontextgrammar_debug.h
-    IDENTIFIER PIMCOMMONTEXTGRAMMAR_LOG CATEGORY_NAME org.kde.pim.pimcommontextgrammar
-        DESCRIPTION "kdepim (pimcommon Grammar)"
+ecm_qt_declare_logging_category(KF5PimCommonTextGrammarCheck HEADER pimcommontextgrammarcheck_debug.h
+    IDENTIFIER PIMCOMMONTEXTGRAMMAR_LOG CATEGORY_NAME org.kde.pim.pimcommontextgrammarcheck
+        DESCRIPTION "kdepim (pimcommon Text Grammar Check)"
         EXPORT PIMCOMMON
     )
 

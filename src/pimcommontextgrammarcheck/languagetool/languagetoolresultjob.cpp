@@ -5,7 +5,7 @@
 */
 
 #include "languagetoolresultjob.h"
-#include "pimcommontextgrammar_debug.h"
+#include "pimcommontextgrammarcheck_debug.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>

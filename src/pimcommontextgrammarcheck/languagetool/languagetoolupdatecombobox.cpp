@@ -9,7 +9,7 @@
 #include "languagetoolgetlistoflanguagejob.h"
 #include "languagetoollistoflanguagesparser.h"
 #include "languagetoolmanager.h"
-#include "pimcommontextgrammar_debug.h"
+#include "pimcommontextgrammarcheck_debug.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>

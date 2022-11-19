@@ -5,7 +5,7 @@
 */
 
 #include "grammalecteresultjob.h"
-#include "pimcommontextgrammar_debug.h"
+#include "pimcommontextgrammarcheck_debug.h"
 
 #include <QFileInfo>
 #include <QTemporaryFile>

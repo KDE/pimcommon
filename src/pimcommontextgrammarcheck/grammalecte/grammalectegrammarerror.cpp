@@ -5,7 +5,7 @@
 */
 
 #include "grammalectegrammarerror.h"
-#include "pimcommontextgrammar_debug.h"
+#include "pimcommontextgrammarcheck_debug.h"
 
 #include <QJsonArray>
 
