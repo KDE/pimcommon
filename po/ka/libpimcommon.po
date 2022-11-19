@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-18 00:46+0000\n"
-"PO-Revision-Date: 2022-11-10 06:45+0100\n"
+"POT-Creation-Date: 2022-11-19 00:47+0000\n"
+"PO-Revision-Date: 2022-11-18 07:48+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -269,6 +269,8 @@ msgstr "ფაილი გაზიარდა."
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr ""
+"<qt>ახალი მოთხოვნის პოვნა შეგიძლიათ მისამართზე:<br /><a href='%1'>%1</a> </"
+"qt>"
 
 #: pimcommon/widgets/renamefiledialog.cpp:100
 #, kde-format
@@ -573,7 +575,7 @@ msgstr "წინა შედეგებში ძებნა..."
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
 #, kde-format
 msgid "Exclude domain names:"
-msgstr ""
+msgstr "გამოსარიცხი დომენის სახელები:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
 #, kde-format
@@ -931,7 +933,7 @@ msgstr "სათაური"
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
-msgstr ""
+msgstr "კონტაქტების LDAP-დან შემოტანა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
@@ -947,7 +949,7 @@ msgstr "ძებნა:"
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr ""
+msgstr "-ში"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, kde-format
@@ -1068,17 +1070,17 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr ""
+msgstr "რესურსი '%1' უკვე გაშვებულია."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr ""
+msgstr "მიმდინარეობს რესურსის გაშვებული ასლის შექმნა '%1'-სთვის..."
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr ""
+msgstr "რესურსის გაშვებული ასლის მორგება..."
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
@@ -1093,7 +1095,7 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:112
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr ""
+msgstr "'%1' პარამეტრის დაყენების შეცდომა: %2"
 
 #: pimcommonakonadi/util/createresource.cpp:118
 #, kde-format
@@ -1458,7 +1460,7 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
 #, kde-format
 msgid "Add Autocorrection Entry"
-msgstr ""
+msgstr "ავტოკორექციის ჩანაწერის დამატება"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:461
 #, kde-format
@@ -1468,7 +1470,7 @@ msgstr "&შეცვლა"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:572
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
-msgstr ""
+msgstr "LibreOffice-ის ავტოკორექციის შემოტანა"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
 #, kde-format
@@ -1478,12 +1480,12 @@ msgstr "LibreOffice-ის ავტოკორექციის ფაილ�
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:576
 #, kde-format
 msgid "Import KMail Autocorrection"
-msgstr ""
+msgstr "KMail-ის ავტოკორექციის შემოტანა"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
-msgstr ""
+msgstr "KMail -ის ავტოკორექციის ფაილი (*.xml)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:609
 #, kde-format
@@ -1515,12 +1517,12 @@ msgstr "ავტოკორექციის ფაილის გატა�
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Special Characters"
-msgstr ""
+msgstr "აირჩიეთ სპეციალური სიმბოლოები"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
 #, kde-format
 msgid "Insert"
-msgstr ""
+msgstr "ჩასმა"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
 #, kde-format
@@ -1530,34 +1532,32 @@ msgstr "აირჩიეთ"
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:39
 #, kde-format
 msgid "Any text to check."
-msgstr ""
+msgstr "შესამოწმებელი ტექსტი."
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace"
+#, kde-format
 msgid "Replacement"
-msgstr "ჩანაცვლება"
+msgstr "შემცვლელი"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:102
 #, kde-format
 msgid "Online Grammar Information"
-msgstr ""
+msgstr "გრამატიკის ონლაინ ინფორმაცია"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:115
 #, kde-format
 msgid "Check Again"
-msgstr ""
+msgstr "თავიდან შემოწმება"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:118
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure..."
-msgstr "მორგება"
+msgstr "მორგება..."
 
 #: pimcommontextgrammarcheck/common/grammarresultutil.cpp:51
 #, kde-format
 msgid "See on: %1"
-msgstr ""
+msgstr "იხილეთ: %1"
 
 #: pimcommontextgrammarcheck/common/grammarresultwidget.cpp:32
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
@@ -1567,22 +1567,20 @@ msgid "Close"
 msgstr "დახურვა"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigdialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Completion"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Grammalecte"
-msgstr "დასრულების მორგება"
+msgstr "Grammalecte-ის მორგება"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:35
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "ძირითადი"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:36
 #, kde-format
 msgid "Grammar Settings"
-msgstr ""
+msgstr "გრამატიკის მორგება"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:61
 #, kde-format
@@ -1590,62 +1588,62 @@ msgid ""
 "Impossible to get options. Please verify that you have grammalected "
 "installed."
 msgstr ""
+"პარამეტრების მიღების პრობლემა. დარწმუნდით, რომ grammalected დაყენებულია."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:62
 #, kde-format
 msgid "Error during Extracting Options"
-msgstr ""
+msgstr "შეცდომა პარამეტრების გამოტანისას"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:111
 #, kde-format
 msgid "Press Button for Reloading Settings"
-msgstr ""
+msgstr "პარამეტრების თავიდან ჩასატვირთად დააწექით ღლაკს"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:118
 #, kde-format
 msgid "Reload Settings"
-msgstr ""
+msgstr "პარამეტრების თავიდან ჩატვირთვა"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:135
 #, kde-format
 msgid "Python Path:"
-msgstr ""
+msgstr "პითონის ბილიკი:"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:139
 #, kde-format
 msgid "Add full 'grammalecte-cli.py' path"
-msgstr ""
+msgstr "სრული ბილიკი ფაილამდე 'grammalecte-cli.py'"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:140
 #, kde-format
 msgid "Grammalecte Path:"
-msgstr ""
+msgstr "Grammalecte-ის ბილიკი:"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:54
 #, kde-format
 msgid "Python path is missing."
-msgstr ""
+msgstr "პითონის ბილიკი მითითებული არაა."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:58
 #, kde-format
 msgid "Grammalecte path not found."
-msgstr ""
+msgstr "Grammalecte-ის ბილიკი ვერ ვიპოვე."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:65
 #, kde-format
 msgid "Grammalecte program file not found."
-msgstr ""
+msgstr "Grammalecte-ის გამშვები ფაილი ვერ ვიპოვე."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:69
 #, kde-format
 msgid "Grammalecte cli file not found."
-msgstr ""
+msgstr "Grammalecte-ის CLI გამშვები ფაილები ვერ ვიპოვე."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Translate error"
+#, kde-format
 msgid "Grammalecte error"
-msgstr "თარგმანის შეცდომა"
+msgstr "Grammalecte-ის შეცდომა"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
@@ -1656,7 +1654,7 @@ msgstr "ინგლისური"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:32
 #, kde-format
 msgid "Asturian"
-msgstr ""
+msgstr "ასთურიანული"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:33
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:184
@@ -1667,7 +1665,7 @@ msgstr "ბელორუსული"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:34
 #, kde-format
 msgid "Breton"
-msgstr ""
+msgstr "ბრეტონული"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:35
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:190
@@ -1678,7 +1676,7 @@ msgstr "კატალანური"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:36
 #, kde-format
 msgid "Chinese"
-msgstr ""
+msgstr "ჩინური"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:37
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:205
@@ -1695,17 +1693,17 @@ msgstr "ჰოლანდიური"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:39
 #, kde-format
 msgid "English (Australian)"
-msgstr ""
+msgstr "ავსტრალიური ინგლისური"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:40
 #, kde-format
 msgid "English (Canadian)"
-msgstr ""
+msgstr "კანადური ინგლისური"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:41
 #, kde-format
 msgid "Esperanto"
-msgstr ""
+msgstr "ესპერანტო"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:42
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:139
@@ -1746,7 +1744,7 @@ msgstr "იაპონური"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:48
 #, kde-format
 msgid "Khmer"
-msgstr ""
+msgstr "კხმერული"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:49
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:262
@@ -1805,12 +1803,12 @@ msgstr "შვედური"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:58
 #, kde-format
 msgid "Tagalog"
-msgstr ""
+msgstr "ტაგალოგური"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:59
 #, kde-format
 msgid "Tamil"
-msgstr ""
+msgstr "თამილური"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:60
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:292
@@ -1819,47 +1817,45 @@ msgid "Ukrainian"
 msgstr "უკრაინული"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigdialog.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Translator"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure LanguageTool"
-msgstr "თარჯიმანის მორგება"
+msgstr "LanguageTool-ის მორგება"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:22
 #, kde-format
 msgid "Use Local Instance"
-msgstr ""
+msgstr "ლოკალური გაშვებული ასლის გამოყენება"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:24
 #, kde-format
 msgid "Instance Path:"
-msgstr ""
+msgstr "გაშვებული ასლის ბილიკი:"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:52
 #, kde-format
 msgid "Language:"
-msgstr ""
+msgstr "ენა:"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:64
 #, kde-format
 msgid "Refresh"
-msgstr ""
+msgstr "განახლება"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "An error was reported: %1"
-msgstr ""
+msgstr "შეცდომა: %1"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "Failed to check grammar."
-msgstr ""
+msgstr "გრამატიკის შემოწმების შეცდომა."
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:76
 #, kde-format
 msgid "Check"
-msgstr ""
+msgstr "შემოწმება"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
@@ -1867,11 +1863,13 @@ msgid ""
 "An error occurred attempting to load the list of available languages:\n"
 "%1"
 msgstr ""
+"შეცდომა ხელმისაწვდომი ენების გადმოწერის მცდელობისას:\n"
+"%1"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
-msgstr ""
+msgstr "ენების სია"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
@@ -2168,21 +2166,17 @@ msgid "Configure Translator"
 msgstr "თარჯიმანის მორგება"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "Translate from language"
-#| msgid "From:"
+#, kde-format
 msgid "From:"
 msgstr "ვისგან:"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "Translate to language"
-#| msgid "To:"
+#, kde-format
 msgid "To:"
 msgstr "ვის:"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:53
-#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:33
+#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:48
 #, kde-format
 msgid "Engine:"
 msgstr "ძრავი:"
