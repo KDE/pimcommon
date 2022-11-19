@@ -11,7 +11,7 @@
 #include <QStringList>
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolGrammarError : public GrammarError
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT LanguageToolGrammarError : public GrammarError
 {
 public:
     LanguageToolGrammarError();

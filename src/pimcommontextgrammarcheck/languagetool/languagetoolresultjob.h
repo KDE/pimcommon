@@ -13,7 +13,7 @@ class QNetworkReply;
 class QNetworkAccessManager;
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolResultJob : public QObject
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT LanguageToolResultJob : public QObject
 {
     Q_OBJECT
 public:

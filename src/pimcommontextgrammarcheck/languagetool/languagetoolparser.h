@@ -11,7 +11,7 @@
 #include "common/grammarerror.h"
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolParser
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT LanguageToolParser
 {
 public:
     LanguageToolParser();

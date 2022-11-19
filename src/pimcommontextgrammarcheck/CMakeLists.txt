@@ -35,7 +35,7 @@ install(FILES
 install(EXPORT KF5PimCommonTextGrammarCheckTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonTextGrammarCheckTargets.cmake NAMESPACE KF5::)
 
 install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammar_version.h
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommontextgrammarcheck_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/ COMPONENT Devel
     )
 

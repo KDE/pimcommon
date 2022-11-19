@@ -10,7 +10,7 @@
 #include <QObject>
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageInfo
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT LanguageInfo
 {
 public:
     LanguageInfo();

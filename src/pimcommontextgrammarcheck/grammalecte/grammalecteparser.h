@@ -12,7 +12,7 @@
 #include <QVector>
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteParser
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT GrammalecteParser
 {
 public:
     GrammalecteParser();

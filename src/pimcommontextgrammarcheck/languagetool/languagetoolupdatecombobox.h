@@ -11,7 +11,7 @@
 namespace PimCommonTextGrammarCheck
 {
 class LanguageToolComboBox;
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject
 {
     Q_OBJECT
 public:

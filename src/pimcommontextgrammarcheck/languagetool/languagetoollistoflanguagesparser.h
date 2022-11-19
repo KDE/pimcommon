@@ -11,7 +11,7 @@
 #include <QVector>
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT LanguageToolListOfLanguagesParser
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT LanguageToolListOfLanguagesParser
 {
 public:
     LanguageToolListOfLanguagesParser();

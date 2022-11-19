@@ -10,7 +10,7 @@
 #include <PimCommonTextGrammarCheck/GrammarError>
 namespace PimCommonTextGrammarCheck
 {
-class PIMCOMMONTEXTGRAMMAR_TESTS_EXPORT GrammalecteGrammarError : public GrammarError
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT GrammalecteGrammarError : public GrammarError
 {
 public:
     GrammalecteGrammarError();
