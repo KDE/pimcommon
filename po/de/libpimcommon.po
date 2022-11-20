@@ -1912,7 +1912,8 @@ msgid "Instance Path:"
 msgstr ""
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Language:"
 msgid "Language:"
 msgstr "Sprache:"
 
