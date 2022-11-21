@@ -20,7 +20,7 @@ void LanguageToolGrammarErrorTest::shouldParseJson_data()
     QTest::addColumn<int>("nbBlock");
     QTest::addColumn<PimCommonTextGrammarCheck::LanguageToolGrammarError>("error");
     PimCommonTextGrammarCheck::LanguageToolGrammarError err;
-    err.setBlockId(2);
+    err.setBlockId(1);
     err.setStart(3);
     err.setLength(8);
     err.setColor(QColor(Qt::red));
