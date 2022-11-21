@@ -2,15 +2,6 @@
 # SPDX-FileCopyrightText: none
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommon")
 
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KF5PimCommon_QCH
-        FILE KF5PimCommonQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonQchTargets.cmake\")")
-endif()
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonConfig.cmake.in"
@@ -417,4 +408,11 @@ if (BUILD_QCH)
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
     )
+    ecm_install_qch_export(
+        TARGETS KF5PimCommon_QCH
+        FILE KF5PimCommonQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonQchTargets.cmake\")")
 endif()

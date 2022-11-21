@@ -2,15 +2,7 @@
 # SPDX-FileCopyrightText: none
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonTextTranslator")
 
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KF5PimCommonTextTranslator_QCH
-        FILE KF5PimCommonTextTranslatorQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextTranslatorQchTargets.cmake\")")
-endif()
+
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonTextTranslatorConfig.cmake.in"
@@ -196,4 +188,11 @@ if (BUILD_QCH)
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
     )
+    ecm_install_qch_export(
+        TARGETS KF5PimCommonTextTranslator_QCH
+        FILE KF5PimCommonTextTranslatorQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextTranslatorQchTargets.cmake\")")
 endif()

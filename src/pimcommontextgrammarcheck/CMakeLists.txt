@@ -2,16 +2,6 @@
 # SPDX-FileCopyrightText: none
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonTextGrammarCheck")
 
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KF5PimCommonTextGrammarCheck_QCH
-        FILE KF5PimCommonTextGrammarCheckQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextGrammarCheckQchTargets.cmake\")")
-endif()
-
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonTextGrammarCheckConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonTextGrammarCheckConfig.cmake"
@@ -225,7 +215,9 @@ if (BUILD_QCH)
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
-        ${PimCommonTextGrammar_translator_HEADERS}
+        ${PimCommonTextGrammar_common_HEADERS}
+        ${PimCommonTextGrammar_grammalecte_HEADERS}
+        ${PimCommonTextGrammar_languagetool_HEADERS}
         LINK_QCHS
             Qt5Core_QCH
             Qt5Gui_QCH
@@ -238,4 +230,11 @@ if (BUILD_QCH)
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
     )
+    ecm_install_qch_export(
+        TARGETS KF5PimCommonTextGrammarCheck_QCH
+        FILE KF5PimCommonTextGrammarCheckQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonTextGrammarCheckQchTargets.cmake\")")
 endif()
