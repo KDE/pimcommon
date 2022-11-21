@@ -1,5 +1,5 @@
 name: pimcommon
-description: PimCommon Library 
+description: PimCommon Library which contains PimCommon, PimCommonAkonadi, PimCommonAutoCorrection, PimCommonTextTranslator and PimCommonTextGrammarCheck
 maintainer: mlaurent
 public_lib: true
 group: kdepim
