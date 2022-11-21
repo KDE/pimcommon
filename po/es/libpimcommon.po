@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-19 00:47+0000\n"
-"PO-Revision-Date: 2022-11-19 23:27+0100\n"
+"PO-Revision-Date: 2022-11-21 00:23+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.11.80\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -1594,23 +1594,22 @@ msgstr "Seleccionar"
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:39
 #, kde-format
 msgid "Any text to check."
-msgstr ""
+msgstr "Cualquier texto para comprobar."
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace"
+#, kde-format
 msgid "Replacement"
-msgstr "Sustituir"
+msgstr "Sustitución"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:102
 #, kde-format
 msgid "Online Grammar Information"
-msgstr ""
+msgstr "Información de gramática en línea"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:115
 #, kde-format
 msgid "Check Again"
-msgstr ""
+msgstr "Volver a comprobar"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:118
 #, kde-format
@@ -1620,7 +1619,7 @@ msgstr "Configurar..."
 #: pimcommontextgrammarcheck/common/grammarresultutil.cpp:51
 #, kde-format
 msgid "See on: %1"
-msgstr ""
+msgstr "Ver en: %1"
 
 #: pimcommontextgrammarcheck/common/grammarresultwidget.cpp:32
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
@@ -1630,12 +1629,10 @@ msgid "Close"
 msgstr "Cerrar"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigdialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Completion"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Grammalecte"
-msgstr "Configurar terminación automática"
+msgstr "Configurar Grammalecte"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:35
 #, kde-format
@@ -1645,7 +1642,7 @@ msgstr "General"
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:36
 #, kde-format
 msgid "Grammar Settings"
-msgstr ""
+msgstr "Preferencias de gramática"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:61
 #, kde-format
@@ -1653,21 +1650,23 @@ msgid ""
 "Impossible to get options. Please verify that you have grammalected "
 "installed."
 msgstr ""
+"No se pueden obtener las opciones. Compruebe que tiene instalado "
+"grammalected."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:62
 #, kde-format
 msgid "Error during Extracting Options"
-msgstr ""
+msgstr "Error durante la extracción de opciones"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:111
 #, kde-format
 msgid "Press Button for Reloading Settings"
-msgstr ""
+msgstr "Pulse el botón para volver a cargar las preferencias"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:118
 #, kde-format
 msgid "Reload Settings"
-msgstr ""
+msgstr "Volver a cargar preferencias"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:135
 #, kde-format
@@ -1687,28 +1686,27 @@ msgstr "Ruta de Grammalecte:"
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:54
 #, kde-format
 msgid "Python path is missing."
-msgstr ""
+msgstr "Falta la ruta de Python."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:58
 #, kde-format
 msgid "Grammalecte path not found."
-msgstr ""
+msgstr "No se ha encontrado la ruta de Grammalecte."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:65
 #, kde-format
 msgid "Grammalecte program file not found."
-msgstr ""
+msgstr "No se ha encontrado el programa Grammalecte."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:69
 #, kde-format
 msgid "Grammalecte cli file not found."
-msgstr ""
+msgstr "Interfaz de Grammalecte no encontrada."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Translate error"
+#, kde-format
 msgid "Grammalecte error"
-msgstr "Error de traducción"
+msgstr "Error de Grammalecte"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
@@ -1890,12 +1888,12 @@ msgstr "Configurar LanguageTool"
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:22
 #, kde-format
 msgid "Use Local Instance"
-msgstr ""
+msgstr "Usar instancia local"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:24
 #, kde-format
 msgid "Instance Path:"
-msgstr ""
+msgstr "Ruta de la instancia:"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:52
 #, kde-format
@@ -1910,12 +1908,12 @@ msgstr "Actualizar"
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "An error was reported: %1"
-msgstr ""
+msgstr "Se ha informado de un error: %1"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "Failed to check grammar."
-msgstr ""
+msgstr "No se ha podido comprobar la gramática."
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:76
 #, kde-format
@@ -1928,6 +1926,8 @@ msgid ""
 "An error occurred attempting to load the list of available languages:\n"
 "%1"
 msgstr ""
+"Ha ocurrido un error al intentar cargar la lista de idiomas disponibles:\n"
+"%1"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
@@ -2237,16 +2237,12 @@ msgid "Configure Translator"
 msgstr "Configurar traductor"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "Translate from language"
-#| msgid "From:"
+#, kde-format
 msgid "From:"
 msgstr "Desde:"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "Translate to language"
-#| msgid "To:"
+#, kde-format
 msgid "To:"
 msgstr "Hasta:"
 
