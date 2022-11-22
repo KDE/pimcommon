@@ -335,6 +335,9 @@ PimCommonTextTranslator::TranslatorEngineBase *TranslatorUtil::switchEngine(PimC
     case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::DeepL:
         abstractTranslator = new DeepLTranslator(parent);
         break;
+    case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::OfflineTranslator:
+        // TODO abstractTranslator = new DeepLTranslator(parent);
+        break;
     }
     abstractTranslator->loadSettings();
     return abstractTranslator;
@@ -361,6 +364,9 @@ void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
             break;
         case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::DeepL:
             combo->addItem(i18n("DeepL"), QStringLiteral("deepl"));
+            break;
+        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::OfflineTranslator:
+            combo->addItem(i18n("Offline"), QStringLiteral("offlinetranslator"));
             break;
         default:
             qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << " Missing engine. It's a bug " << i;
@@ -407,6 +413,8 @@ PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine TranslatorUtil::
         engineType = PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::DeepL;
     } else if (engineTypeStr == QLatin1String("lingva")) {
         engineType = PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::Lingva;
+    } else if (engineTypeStr == QLatin1String("offlinetranslator")) {
+        engineType = PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::OfflineTranslator;
     } else {
         qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Invalid translator engine " << engineTypeStr;
         engineType = PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::Google;
@@ -431,6 +439,7 @@ bool TranslatorUtil::hasConfigureDialog(TranslatorEngineBase::TranslatorEngine e
     case TranslatorEngineBase::TranslatorEngine::Lingva:
     case TranslatorEngineBase::TranslatorEngine::LibreTranslate:
     case TranslatorEngineBase::TranslatorEngine::DeepL:
+    case TranslatorEngineBase::TranslatorEngine::OfflineTranslator:
         return true;
     }
     return false;
@@ -451,6 +460,8 @@ PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine TranslatorUtil::
         engineType = TranslatorEngineBase::TranslatorEngine::DeepL;
     } else if (engineTypeStr == QLatin1String("lingva")) {
         engineType = TranslatorEngineBase::TranslatorEngine::Lingva;
+    } else if (engineTypeStr == QLatin1String("offlinetranslator")) {
+        engineType = TranslatorEngineBase::TranslatorEngine::OfflineTranslator;
     } else {
         qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Invalid translator engine " << engineTypeStr;
         engineType = TranslatorEngineBase::TranslatorEngine::Google;
@@ -473,6 +484,8 @@ QVector<QPair<QString, QString>> TranslatorUtil::supportedLanguages(const QStrin
         languagesList = PimCommonTextTranslator::DeepLTranslator::languages();
     } else if (engineTypeStr == QLatin1String("lingva")) {
         languagesList = PimCommonTextTranslator::LingvaTranslator::languages();
+    } else if (engineTypeStr == QLatin1String("offlinetranslator")) {
+        // TODO languagesList = PimCommonTextTranslator::LingvaTranslator::languages();
     } else {
         qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Invalid translator engine " << engineTypeStr;
         languagesList = PimCommonTextTranslator::GoogleTranslator::languages();
