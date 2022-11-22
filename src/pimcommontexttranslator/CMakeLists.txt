@@ -126,17 +126,32 @@ install(TARGETS
     EXPORT KF5PimCommonTextTranslatorTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
-ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
+ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslatorwidgets_HEADERS
     HEADER_NAMES
     TranslatorWidget
     TranslatorConfigureDialog
     TranslatorConfigureLanguageListWidget
     TranslatorConfigureListsWidget
-    REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
+    REQUIRED_HEADERS PimCommonTextTranslator_translatorwidgets_HEADERS
     PREFIX PimCommonTextTranslator
     RELATIVE translator/widgets/
     )
 
+ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
+    HEADER_NAMES
+    TranslatorEngineBase
+    REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
+    PREFIX PimCommonTextTranslator
+    RELATIVE translator
+    )
+
+ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslatormisc_HEADERS
+    HEADER_NAMES
+    TranslatorUtil
+    REQUIRED_HEADERS PimCommonTextTranslator_translatormisc_HEADERS
+    PREFIX PimCommonTextTranslator
+    RELATIVE translator/misc/
+    )
 
 ecm_generate_pri_file(BASE_NAME PimCommonTextTranslator
     LIB_NAME KF5PimCommonTextTranslator
@@ -149,6 +164,12 @@ install(FILES
     )
 
 install(FILES
+    ${PimCommonTextTranslator_Camelcasetranslatorwidgets_HEADERS}
+    ${PimCommonTextTranslator_translatorwidgets_HEADERS}
+
+    ${PimCommonTextTranslator_Camelcasetranslatormisc_HEADERS}
+    ${PimCommonTextTranslator_translatormisc_HEADERS}
+
     ${PimCommonTextTranslator_translator_HEADERS}
     ${PimCommonTextTranslator_Camelcasetranslator_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/PimCommonTextTranslator
@@ -158,6 +179,8 @@ install(FILES
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommontexttranslator_export.h
     ${PimCommonTextTranslator_translator_HEADERS}
+    ${PimCommonTextTranslator_translatorwidgets_HEADERS}
+    ${PimCommonTextTranslator_translatormisc_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/pimcommontexttranslator
     COMPONENT Devel
     )

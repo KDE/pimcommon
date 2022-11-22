@@ -6,14 +6,15 @@
 
 #pragma once
 
-#include "translator/translatorenginebase.h"
+#include "pimcommontexttranslator_export.h"
+#include <PimCommonTextTranslator/TranslatorEngineBase>
 #include <QMap>
 #include <QPair>
 #include <QString>
 
 class QComboBox;
 
-namespace PimCommonTextTranslator
+namespace PIMCOMMONTEXTTRANSLATOR_EXPORT PimCommonTextTranslator
 {
 class TranslatorUtil
 {
