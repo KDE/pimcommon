@@ -22,7 +22,8 @@ public:
         Lingva = 3,
         LibreTranslate = 4,
         DeepL = 5,
-        LastEngine = DeepL,
+        OfflineTranslator = 6,
+        LastEngine = OfflineTranslator,
     };
     explicit TranslatorEngineBase(QObject *parent = nullptr);
     ~TranslatorEngineBase() override;
