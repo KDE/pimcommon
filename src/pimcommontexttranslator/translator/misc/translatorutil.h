@@ -14,9 +14,9 @@
 
 class QComboBox;
 
-namespace PIMCOMMONTEXTTRANSLATOR_EXPORT PimCommonTextTranslator
+namespace PimCommonTextTranslator
 {
-class TranslatorUtil
+class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorUtil
 {
 public:
     TranslatorUtil();
