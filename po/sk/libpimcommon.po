@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-19 00:47+0000\n"
+"POT-Creation-Date: 2022-11-23 00:49+0000\n"
 "PO-Revision-Date: 2019-08-04 10:38+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -1971,7 +1971,7 @@ msgid "List of Languages"
 msgstr "Jazyk:"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
@@ -2009,21 +2009,21 @@ msgid "You used same language for from and to language."
 msgstr "Použili ste rovnaký jazyk pre pôvodný a nový jazyk."
 
 #: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:366
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
 msgstr ""
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:348
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
 msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, fuzzy, kde-format
 #| msgid "Translate"
@@ -2031,14 +2031,14 @@ msgid "Libre Translate"
 msgstr "Preložiť"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
 msgstr ""
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
@@ -2259,6 +2259,11 @@ msgstr "Waleština"
 msgid "Yiddish"
 msgstr "Jidiš"
 
+#: pimcommontexttranslator/translator/misc/translatorutil.cpp:369
+#, kde-format
+msgid "Offline"
+msgstr ""
+
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, fuzzy, kde-format
 #| msgid "Translator"
@@ -2302,6 +2307,12 @@ msgstr "Uložiť ako..."
 #, kde-format
 msgid "All Files (*)"
 msgstr "Všetky súbory (*)"
+
+#: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
+#, fuzzy, kde-format
+#| msgid "Translate"
+msgid "Translate..."
+msgstr "Preložiť"
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:126
 #, kde-format
