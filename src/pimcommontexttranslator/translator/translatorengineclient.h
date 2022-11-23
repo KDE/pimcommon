@@ -24,6 +24,8 @@ public:
      */
     virtual QString name() const = 0;
 
+    virtual QString translatedName() const = 0;
+
     virtual TranslatorEnginePlugin *createTranslator() = 0;
 
     Q_REQUIRED_RESULT virtual QVector<QPair<QString, QString>> supportedLanguages() = 0;
