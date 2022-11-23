@@ -12,6 +12,6 @@ ecm_qt_declare_logging_category(yandextranslator_PART_SRCS
 )
 
 add_library(translator_yandex MODULE ${yandextranslator_PART_SRCS})
-target_link_libraries(translator_yandex PRIVATE KF5::PimCommonTextTranslator)
+target_link_libraries(translator_yandex PRIVATE KF5::PimCommonTextTranslator KF5::I18n)
 
 install(TARGETS translator_yandex  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)

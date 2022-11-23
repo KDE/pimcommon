@@ -5,6 +5,7 @@
 */
 
 #include "googleengineclient.h"
+#include <KLocalizedString>
 
 GoogleEngineClient::GoogleEngineClient(QObject *parent)
     : PimCommonTextTranslator::TranslatorEngineClient{parent}
@@ -15,14 +16,12 @@ GoogleEngineClient::~GoogleEngineClient() = default;
 
 QString GoogleEngineClient::name() const
 {
-    // TODO
-    return {};
+    return QStringLiteral("google");
 }
 
 QString GoogleEngineClient::translatedName() const
 {
-    // TODO
-    return {};
+    return i18n("Google");
 }
 
 PimCommonTextTranslator::TranslatorEnginePlugin *GoogleEngineClient::createTranslator()

@@ -12,6 +12,6 @@ ecm_qt_declare_logging_category(libretranslatetranslator_PART_SRCS
 )
 
 add_library(translator_libretranslate MODULE ${libretranslatetranslator_PART_SRCS})
-target_link_libraries(translator_libretranslate PRIVATE KF5::PimCommonTextTranslator)
+target_link_libraries(translator_libretranslate PRIVATE KF5::PimCommonTextTranslator KF5::I18n)
 
 install(TARGETS translator_libretranslate  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)
