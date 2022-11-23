@@ -2,6 +2,8 @@
 # SPDX-FileCopyrightText: none
 
 set(googletranslator_PART_SRCS
+    googleengineclient.h
+    googleengineclient.cpp
 )
 ecm_qt_declare_logging_category(googletranslator_PART_SRCS
     HEADER googletranslator_debug.h
