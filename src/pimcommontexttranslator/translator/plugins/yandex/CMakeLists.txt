@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(yandextranslator_PART_SRCS
     IDENTIFIER TRANSLATOR_yandex
     CATEGORY_NAME org.kde.pim.pimcommontexttranslator.yandex
     DESCRIPTION "PimCommon yandex translator"
-    EXPORT SONNET
+    EXPORT PIMCOMMON
 )
 
 add_library(translator_yandex MODULE ${yandextranslator_PART_SRCS})

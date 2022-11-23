@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(lingvatranslator_PART_SRCS
     IDENTIFIER TRANSLATOR_lingva
     CATEGORY_NAME org.kde.pim.pimcommontexttranslator.lingva
     DESCRIPTION "PimCommon lingva translator"
-    EXPORT SONNET
+    EXPORT PIMCOMMON
 )
 
 add_library(translator_lingva MODULE ${lingvatranslator_PART_SRCS})

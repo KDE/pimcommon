@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(googletranslator_PART_SRCS
     IDENTIFIER TRANSLATOR_GOOGLE
     CATEGORY_NAME org.kde.pim.pimcommontexttranslator.google
     DESCRIPTION "PimCommon google translator"
-    EXPORT SONNET
+    EXPORT PIMCOMMON
 )
 
 add_library(translator_google MODULE ${googletranslator_PART_SRCS})

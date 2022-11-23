@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(bingtranslator_PART_SRCS
     IDENTIFIER TRANSLATOR_bing
     CATEGORY_NAME org.kde.pim.pimcommontexttranslator.bing
     DESCRIPTION "PimCommon bing translator"
-    EXPORT SONNET
+    EXPORT PIMCOMMON
 )
 
 add_library(translator_bing MODULE ${bingtranslator_PART_SRCS})

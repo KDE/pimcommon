@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(deepltranslator_PART_SRCS
     IDENTIFIER TRANSLATOR_deepl
     CATEGORY_NAME org.kde.pim.pimcommontexttranslator.deepl
     DESCRIPTION "PimCommon deepl translator"
-    EXPORT SONNET
+    EXPORT PIMCOMMON
 )
 
 add_library(translator_deepl MODULE ${deepltranslator_PART_SRCS})

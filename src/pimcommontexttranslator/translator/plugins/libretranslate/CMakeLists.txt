@@ -8,7 +8,7 @@ ecm_qt_declare_logging_category(libretranslatetranslator_PART_SRCS
     IDENTIFIER TRANSLATOR_libretranslate
     CATEGORY_NAME org.kde.pim.pimcommontexttranslator.libretranslate
     DESCRIPTION "PimCommon libretranslate translator"
-    EXPORT SONNET
+    EXPORT PIMCOMMON
 )
 
 add_library(translator_libretranslate MODULE ${libretranslatetranslator_PART_SRCS})
