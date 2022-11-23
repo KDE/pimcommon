@@ -97,6 +97,8 @@ if (BUILD_TESTING)
     add_subdirectory(translator/tests)
     add_subdirectory(translator/widgets/autotests)
 endif()
+add_subdirectory(translator/plugins)
+
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5PimCommonTextTranslator PROPERTIES UNITY_BUILD ON)

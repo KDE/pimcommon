@@ -1,0 +1,6 @@
+add_subdirectory(bing)  
+add_subdirectory(deepl)
+add_subdirectory(google)
+add_subdirectory(libretranslate)
+add_subdirectory(lingva)
+add_subdirectory(yandex)
