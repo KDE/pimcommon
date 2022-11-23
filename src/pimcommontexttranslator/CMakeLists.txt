@@ -76,6 +76,9 @@ target_sources(KF5PimCommonTextTranslator PRIVATE
     translator/translatorengineplugin.cpp
     translator/translatorengineplugin.h
 
+    translator/translatorengineclient.h
+    translator/translatorengineclient.cpp
+
     translator/engine/googletranslator.h
     translator/engine/googletranslator.cpp
     translator/engine/bingtranslator.h
@@ -145,6 +148,7 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
     HEADER_NAMES
     TranslatorEngineBase
     TranslatorEnginePlugin
+    TranslatorEngineClient
     REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
     PREFIX PimCommonTextTranslator
     RELATIVE translator
