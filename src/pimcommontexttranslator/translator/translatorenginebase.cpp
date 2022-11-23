@@ -6,7 +6,7 @@
 
 #include "translatorenginebase.h"
 #include <KLocalizedString>
-
+// TODO Create plugins
 using namespace PimCommonTextTranslator;
 TranslatorEngineBase::TranslatorEngineBase(QObject *parent)
     : QObject{parent}
