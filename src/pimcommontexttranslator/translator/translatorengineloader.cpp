@@ -5,9 +5,22 @@
 */
 
 #include "translatorengineloader.h"
+#include "pimcommontexttranslator_debug.h"
+#include "translatorengineclient.h"
+#include <QCoreApplication>
+#include <QDir>
+#include <QPluginLoader>
 using namespace PimCommonTextTranslator;
+class PimCommonTextTranslator::TranslatorEngineLoaderPrivate
+{
+public:
+    QSet<QString> loadedPlugins;
+    QHash<QString, TranslatorEngineClient *> translatorClients;
+};
+
 TranslatorEngineLoader::TranslatorEngineLoader(QObject *parent)
     : QObject{parent}
+    , d(new PimCommonTextTranslator::TranslatorEngineLoaderPrivate)
 {
 }
 
@@ -15,4 +28,50 @@ TranslatorEngineLoader::~TranslatorEngineLoader() = default;
 
 void TranslatorEngineLoader::loadPlugins()
 {
+    const QStringList libPaths = QCoreApplication::libraryPaths();
+    const QString pathSuffix(QStringLiteral("/kf" QT_STRINGIFY(QT_VERSION_MAJOR)) + QStringLiteral("/translator/"));
+    for (const QString &libPath : libPaths) {
+        QDir dir(libPath + pathSuffix);
+        if (!dir.exists()) {
+            continue;
+        }
+        for (const QString &fileName : dir.entryList(QDir::Files)) {
+            loadPlugin(dir.absoluteFilePath(fileName));
+        }
+    }
+    if (d->loadedPlugins.isEmpty()) {
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "No translator plugins available!";
+    }
+}
+
+void TranslatorEngineLoader::loadPlugin(const QString &pluginPath)
+{
+    QPluginLoader plugin(pluginPath);
+    const QString pluginIID = plugin.metaData()[QStringLiteral("IID")].toString();
+    if (!pluginIID.isEmpty()) {
+        if (d->loadedPlugins.contains(pluginIID)) {
+            qCDebug(PIMCOMMONTEXTTRANSLATOR_LOG) << "Skipping already loaded" << pluginPath;
+            return;
+        }
+        d->loadedPlugins.insert(pluginIID);
+    }
+
+    if (!plugin.load()) { // We do this separately for better error handling
+        qCDebug(PIMCOMMONTEXTTRANSLATOR_LOG) << "Unable to load plugin" << pluginPath << "Error:" << plugin.errorString();
+        d->loadedPlugins.remove(pluginIID);
+        return;
+    }
+    TranslatorEngineClient *client = qobject_cast<TranslatorEngineClient *>(plugin.instance());
+    if (!client) {
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Invalid plugin loaded" << pluginPath;
+        plugin.unload(); // don't leave it in memory
+        return;
+    }
+    d->translatorClients.insert(client->name(), client);
+}
+
+TranslatorEnginePlugin *TranslatorEngineLoader::createTranslator(const QString &clientName) const
+{
+    // TODO
+    return nullptr;
 }
