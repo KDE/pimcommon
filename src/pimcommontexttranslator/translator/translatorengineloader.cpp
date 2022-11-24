@@ -12,3 +12,7 @@ TranslatorEngineLoader::TranslatorEngineLoader(QObject *parent)
 }
 
 TranslatorEngineLoader::~TranslatorEngineLoader() = default;
+
+void TranslatorEngineLoader::loadPlugins()
+{
+}

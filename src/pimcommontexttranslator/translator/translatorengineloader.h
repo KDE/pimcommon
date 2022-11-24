@@ -15,5 +15,8 @@ class TranslatorEngineLoader : public QObject
 public:
     explicit TranslatorEngineLoader(QObject *parent = nullptr);
     ~TranslatorEngineLoader() override;
+
+private:
+    void loadPlugins();
 };
 }
