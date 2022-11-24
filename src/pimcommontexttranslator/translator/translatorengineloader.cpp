@@ -70,8 +70,13 @@ void TranslatorEngineLoader::loadPlugin(const QString &pluginPath)
     d->translatorClients.insert(client->name(), client);
 }
 
-TranslatorEnginePlugin *TranslatorEngineLoader::createTranslator(const QString &clientName) const
+TranslatorEnginePlugin *TranslatorEngineLoader::createTranslator(const QString &clientName)
 {
-    // TODO
-    return nullptr;
+    auto clientsItr = d->translatorClients.constFind(clientName);
+    if (clientsItr == d->translatorClients.constEnd()) {
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Client name not found: " << clientName;
+        Q_EMIT loadingTranslatorFailed();
+        return nullptr;
+    }
+    return (*clientsItr)->createTranslator();
 }

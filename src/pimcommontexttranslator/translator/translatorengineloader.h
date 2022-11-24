@@ -20,13 +20,14 @@ public:
     explicit TranslatorEngineLoader(QObject *parent = nullptr);
     ~TranslatorEngineLoader() override;
 
-    Q_REQUIRED_RESULT TranslatorEnginePlugin *createTranslator(const QString &clientName) const;
+    Q_REQUIRED_RESULT TranslatorEnginePlugin *createTranslator(const QString &clientName);
+
+Q_SIGNALS:
+    void loadingTranslatorFailed();
 
 private:
     void loadPlugins();
     void loadPlugin(const QString &pluginPath);
-
-private:
     std::unique_ptr<TranslatorEngineLoaderPrivate> const d;
 };
 }
