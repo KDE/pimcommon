@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-23 00:49+0000\n"
+"POT-Creation-Date: 2022-11-24 00:46+0000\n"
 "PO-Revision-Date: 2022-09-10 10:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -1217,7 +1217,7 @@ msgstr "Ad&vanced Autocorrection"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:219
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:464
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Add"
 msgstr "&Add"
@@ -1486,76 +1486,76 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "Ending Quotes:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice Autocorrection"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:130
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra Autocorrection"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"Replace\" string is the same as \"Find\" string."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Add Autocorrection Entry"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:461
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
 #, kde-format
 msgid "&Modify"
 msgstr "&Modify"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:572
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Import LibreOffice Autocorrection"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOffice Autocorrection File (*.data)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:576
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Import KMail Autocorrection"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail Autocorrection File (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:609
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Export Autocorrection File"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:632
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Language was changed, do you want to save config for previous language?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:633
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
 #, kde-format
 msgid "Save config"
 msgstr "Save config"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Please save changes before exporting settings."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:671
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Export Autocorrection File"
@@ -1975,6 +1975,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"

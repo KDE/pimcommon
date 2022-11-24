@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-23 00:49+0000\n"
+"POT-Creation-Date: 2022-11-24 00:46+0000\n"
 "PO-Revision-Date: 2022-11-17 08:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1224,7 +1224,7 @@ msgstr "Zuzenketa automatiko a&urreratua"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:219
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:464
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Add"
 msgstr "&Gehitu"
@@ -1496,74 +1496,74 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "Aipua amaiera:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice, zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:130
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "«Ordeztu» katea «Aurkitu» katearen berdina da."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Gehitu zuzenketa automatikoko sarrera"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:461
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
 #, kde-format
 msgid "&Modify"
 msgstr "&Aldatu"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:572
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Inportatu LibreOfficeko zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOfficeko zuzenketa automatikorako fitxategia (*.dat)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:576
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Inportatu KMaileko zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMaileko zuzenketa automatikorako fitxategia (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:609
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Inportatu zuzenketa automatikorako fitxategia"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:632
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Hizkuntza aldatu da, aurreko hizkuntzaren konfigurazioa gorde nahi duzu?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:633
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
 #, kde-format
 msgid "Save config"
 msgstr "Gorde konfigurazioa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Mesedez, gorde aldaketak ezarpenak esportatu aurretik."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:671
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Esportatu zuzenketa automatikorako fitxategia"
@@ -1975,6 +1975,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"

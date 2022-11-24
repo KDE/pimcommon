@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-23 00:49+0000\n"
+"POT-Creation-Date: 2022-11-24 00:46+0000\n"
 "PO-Revision-Date: 2022-11-19 19:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1232,7 +1232,7 @@ msgstr "Napredno samodejno popravljanje"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:219
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:464
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Add"
 msgstr "Dod&aj"
@@ -1497,74 +1497,74 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "Končni citati:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Samodejno popravljanje za LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:130
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Samodejno popravljanje za KMail/Calligra"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Niz za zamenjavo je enak kot iskani niz."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Dodaj vnos za samodejno popravljanje"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:461
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
 #, kde-format
 msgid "&Modify"
 msgstr "Spre&meni"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:572
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Uvozi samodejno popravljanje za LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Datoteka samodejnega popravljanja za LibreOffice (*.dat)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:576
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Uvozi samodejno popravljanje za KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Datoteka samodejnega popravljanja za KMail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:609
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Uvozi datoteko samodejnega popravljanja"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:632
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Jezik je bil spremenjen. Ali želite shraniti nastavitve za predhodni jezik?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:633
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
 #, kde-format
 msgid "Save config"
 msgstr "Shrani nastavitve"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Shranite spremembe pred izvažanjem nastavitev."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:671
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Izvozi datoteko samodejnega popravljanja"
@@ -1974,6 +1974,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
