@@ -22,6 +22,7 @@ TranslatorEngineLoader::TranslatorEngineLoader(QObject *parent)
     : QObject{parent}
     , d(new PimCommonTextTranslator::TranslatorEngineLoaderPrivate)
 {
+    loadPlugins();
 }
 
 TranslatorEngineLoader::~TranslatorEngineLoader() = default;
