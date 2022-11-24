@@ -5,6 +5,8 @@
 */
 
 #include "googleengineclient.h"
+#include "googleengineplugin.h"
+#include "translator/misc/translatorutil.h"
 #include <KLocalizedString>
 
 GoogleEngineClient::GoogleEngineClient(QObject *parent)
@@ -26,12 +28,14 @@ QString GoogleEngineClient::translatedName() const
 
 PimCommonTextTranslator::TranslatorEnginePlugin *GoogleEngineClient::createTranslator()
 {
-    // TODO
-    return nullptr;
+    return new GoogleEnginePlugin();
 }
 
 QVector<QPair<QString, QString>> GoogleEngineClient::supportedLanguages()
 {
-    // TODO
-    return {};
+    if (mLanguages.isEmpty()) {
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+        mLanguages += PimCommonTextTranslator::TranslatorUtil::googleSpecificLanguages();
+    }
+    return mLanguages;
 }

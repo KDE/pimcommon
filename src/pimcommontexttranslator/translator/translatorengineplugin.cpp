@@ -5,6 +5,7 @@
 */
 
 #include "translatorengineplugin.h"
+#include <KLocalizedString>
 using namespace PimCommonTextTranslator;
 
 class PimCommonTextTranslator::TranslatorEnginePluginPrivate
@@ -15,8 +16,9 @@ public:
     QString mTo;
 };
 
-TranslatorEnginePlugin::TranslatorEnginePlugin()
-    : d(new PimCommonTextTranslator::TranslatorEnginePluginPrivate)
+TranslatorEnginePlugin::TranslatorEnginePlugin(QObject *parent)
+    : QObject(parent)
+    , d(new PimCommonTextTranslator::TranslatorEnginePluginPrivate)
 {
 }
 
@@ -50,4 +52,22 @@ QString TranslatorEnginePlugin::from() const
 QString TranslatorEnginePlugin::to() const
 {
     return d->mTo;
+}
+
+void TranslatorEnginePlugin::slotError(QNetworkReply::NetworkError error)
+{
+    QString messageError;
+    if (error == QNetworkReply::ServiceUnavailableError) {
+        messageError = i18n("Error: Engine systems have detected suspicious traffic from your computer network. Please try your request again later.");
+    }
+    Q_EMIT translateFailed(false, messageError);
+}
+
+bool TranslatorEnginePlugin::verifyFromAndToLanguage()
+{
+    if (d->mTo == d->mFrom) {
+        Q_EMIT translateFailed(false, i18n("You used same language for from and to language."));
+        return true;
+    }
+    return false;
 }

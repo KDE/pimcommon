@@ -151,6 +151,7 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
     TranslatorEngineBase
     TranslatorEnginePlugin
     TranslatorEngineClient
+    TranslatorEngineAccessManager
     REQUIRED_HEADERS PimCommonTextTranslator_translator_HEADERS
     PREFIX PimCommonTextTranslator
     RELATIVE translator

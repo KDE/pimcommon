@@ -7,12 +7,17 @@
 #pragma once
 
 #include <PimCommonTextTranslator/TranslatorEnginePlugin>
-
+class QNetworkReply;
 class GoogleEnginePlugin : public PimCommonTextTranslator::TranslatorEnginePlugin
 {
 public:
-    GoogleEnginePlugin();
+    explicit GoogleEnginePlugin(QObject *parent = nullptr);
     ~GoogleEnginePlugin() override;
 
     void translate() override;
+
+private:
+    void slotTranslateFinished(QNetworkReply *reply);
+    QString mJsonData;
+    QString mResult;
 };

@@ -7,17 +7,20 @@
 #pragma once
 
 #include "pimcommontexttranslator_export.h"
+#include <QNetworkReply>
+#include <QObject>
 #include <QString>
 #include <memory>
 
 namespace PimCommonTextTranslator
 {
 class TranslatorEnginePluginPrivate;
-class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorEnginePlugin
+class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorEnginePlugin : public QObject
 {
+    Q_OBJECT
 public:
-    TranslatorEnginePlugin();
-    virtual ~TranslatorEnginePlugin();
+    explicit TranslatorEnginePlugin(QObject *parent = nullptr);
+    ~TranslatorEnginePlugin() override;
 
     virtual void translate() = 0;
 
@@ -29,6 +32,14 @@ public:
     Q_REQUIRED_RESULT QString inputText() const;
     Q_REQUIRED_RESULT QString from() const;
     Q_REQUIRED_RESULT QString to() const;
+
+Q_SIGNALS:
+    void translateDone();
+    void translateFailed(bool result, const QString &errorMessage = QString());
+
+protected:
+    void slotError(QNetworkReply::NetworkError error);
+    Q_REQUIRED_RESULT bool verifyFromAndToLanguage();
 
 private:
     std::unique_ptr<TranslatorEnginePluginPrivate> const d;
