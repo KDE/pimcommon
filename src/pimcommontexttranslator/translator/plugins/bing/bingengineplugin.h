@@ -16,4 +16,14 @@ public:
     ~BingEnginePlugin() override;
 
     void translate() override;
+
+private:
+    void parseCredentials(QNetworkReply *reply);
+    void translateText();
+    void parseTranslation(QNetworkReply *reply);
+    static QByteArray sBingKey;
+    static QByteArray sBingToken;
+    static QString sBingIg;
+    static QString sBingIid;
+    QString mResult;
 };

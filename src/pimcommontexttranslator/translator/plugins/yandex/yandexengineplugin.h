@@ -16,4 +16,11 @@ public:
     ~YandexEnginePlugin() override;
 
     void translate() override;
+
+private:
+    void parseCredentials(QNetworkReply *reply);
+    void translateText();
+    void parseTranslation(QNetworkReply *reply);
+    static QString sYandexKey;
+    QString mResult;
 };

@@ -11,6 +11,8 @@
 class BingEngineClient : public PimCommonTextTranslator::TranslatorEngineClient
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.Translator.bing")
+    Q_INTERFACES(PimCommonTextTranslator::TranslatorEngineClient)
 public:
     explicit BingEngineClient(QObject *parent = nullptr);
     ~BingEngineClient() override;

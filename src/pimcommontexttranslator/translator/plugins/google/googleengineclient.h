@@ -11,6 +11,8 @@
 class GoogleEngineClient : public PimCommonTextTranslator::TranslatorEngineClient
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.Translator.google")
+    Q_INTERFACES(PimCommonTextTranslator::TranslatorEngineClient)
 public:
     explicit GoogleEngineClient(QObject *parent = nullptr);
     ~GoogleEngineClient() override;

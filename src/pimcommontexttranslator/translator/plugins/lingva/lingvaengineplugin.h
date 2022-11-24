@@ -16,4 +16,11 @@ public:
     ~LingvaEnginePlugin() override;
 
     void translate() override;
+
+private:
+    void loadSettings();
+    void translateText();
+    void parseTranslation(QNetworkReply *reply);
+    QString mServerUrl;
+    QString mResult;
 };

@@ -16,4 +16,14 @@ public:
     ~DeeplEnginePlugin() override;
 
     void translate() override;
+
+private:
+    void loadSettings();
+    void translateText();
+    void parseTranslation(QNetworkReply *reply);
+    QString mServerUrl;
+    QString mResult;
+    // TODO load it ? kwallet ?
+    QString mApiKey;
+    bool mUseFreeLicense = false;
 };

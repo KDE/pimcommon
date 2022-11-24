@@ -11,6 +11,8 @@
 class LibreTranslateEngineClient : public PimCommonTextTranslator::TranslatorEngineClient
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.Translator.libretranslate")
+    Q_INTERFACES(PimCommonTextTranslator::TranslatorEngineClient)
 public:
     explicit LibreTranslateEngineClient(QObject *parent = nullptr);
     ~LibreTranslateEngineClient() override;

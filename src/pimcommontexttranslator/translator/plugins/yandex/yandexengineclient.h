@@ -11,6 +11,8 @@
 class YandexEngineClient : public PimCommonTextTranslator::TranslatorEngineClient
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.Translator.yandex")
+    Q_INTERFACES(PimCommonTextTranslator::TranslatorEngineClient)
 public:
     explicit YandexEngineClient(QObject *parent = nullptr);
     ~YandexEngineClient() override;

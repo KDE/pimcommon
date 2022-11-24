@@ -11,6 +11,8 @@
 class DeeplEngineClient : public PimCommonTextTranslator::TranslatorEngineClient
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.kde.Translator.deepl")
+    Q_INTERFACES(PimCommonTextTranslator::TranslatorEngineClient)
 public:
     explicit DeeplEngineClient(QObject *parent = nullptr);
     ~DeeplEngineClient() override;

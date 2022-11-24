@@ -16,4 +16,13 @@ public:
     ~LibreTranslateEnginePlugin() override;
 
     void translate() override;
+
+private:
+    void loadSettings();
+    void parseTranslation(QNetworkReply *reply);
+    void translateText();
+    QString mServerUrl;
+    QString mResult;
+    // TODO load it ? kwallet ?
+    QString mApiKey;
 };
