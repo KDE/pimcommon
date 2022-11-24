@@ -22,6 +22,13 @@ public:
 
     Q_REQUIRED_RESULT TranslatorEnginePlugin *createTranslator(const QString &clientName);
 
+    // engine name, i18n
+    Q_REQUIRED_RESULT QMap<QString, QString> translatorEngineInfos() const;
+
+    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguages(const QString &clientName) const;
+
+    Q_REQUIRED_RESULT bool hasConfigurationDialog(const QString &clientName) const;
+
 Q_SIGNALS:
     void loadingTranslatorFailed();
 

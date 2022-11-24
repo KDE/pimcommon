@@ -81,3 +81,36 @@ TranslatorEnginePlugin *TranslatorEngineLoader::createTranslator(const QString &
     }
     return (*clientsItr)->createTranslator();
 }
+
+QMap<QString, QString> TranslatorEngineLoader::translatorEngineInfos() const
+{
+    QMap<QString, QString> map;
+    QHashIterator<QString, TranslatorEngineClient *> i(d->translatorClients);
+    while (i.hasNext()) {
+        i.next();
+        map.insert(i.key(), i.value()->translatedName());
+    }
+    return map;
+}
+
+QVector<QPair<QString, QString>> TranslatorEngineLoader::supportedLanguages(const QString &clientName) const
+{
+    QVector<QPair<QString, QString>> supportedLanguages;
+    auto clientsItr = d->translatorClients.constFind(clientName);
+    if (clientsItr == d->translatorClients.constEnd()) {
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Client name not found: " << clientName;
+        return supportedLanguages;
+    }
+    supportedLanguages = (*clientsItr)->supportedLanguages();
+    return supportedLanguages;
+}
+
+bool TranslatorEngineLoader::hasConfigurationDialog(const QString &clientName) const
+{
+    auto clientsItr = d->translatorClients.constFind(clientName);
+    if (clientsItr == d->translatorClients.constEnd()) {
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Client name not found: " << clientName;
+        return false;
+    }
+    return (*clientsItr)->hasConfigurationDialog();
+}

@@ -66,7 +66,7 @@ void TranslatorEnginePlugin::slotError(QNetworkReply::NetworkError error)
 bool TranslatorEnginePlugin::verifyFromAndToLanguage()
 {
     if (d->mTo == d->mFrom) {
-        Q_EMIT translateFailed(false, i18n("You used same language for from and to language."));
+        Q_EMIT translateFailed(false, i18n("You used same language for \'from\' and \'to\' language."));
         return true;
     }
     return false;
