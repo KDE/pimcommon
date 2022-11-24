@@ -2,6 +2,10 @@
 # SPDX-FileCopyrightText: none
 
 set(libretranslatetranslator_PART_SRCS
+    libretranslateengineclient.cpp
+    libretranslateengineclient.h
+    libretranslateengineplugin.cpp
+    libretranslateengineplugin.h
 )
 ecm_qt_declare_logging_category(libretranslatetranslator_PART_SRCS
     HEADER libretranslatetranslator_debug.h

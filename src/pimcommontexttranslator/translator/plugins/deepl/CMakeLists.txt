@@ -2,6 +2,10 @@
 # SPDX-FileCopyrightText: none
 
 set(deepltranslator_PART_SRCS
+    deeplengineclient.cpp
+    deeplengineclient.h
+    deeplengineplugin.cpp
+    deeplengineplugin.h
 )
 ecm_qt_declare_logging_category(deepltranslator_PART_SRCS
     HEADER deepltranslator_debug.h

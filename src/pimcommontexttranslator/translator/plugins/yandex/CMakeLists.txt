@@ -2,6 +2,10 @@
 # SPDX-FileCopyrightText: none
 
 set(yandextranslator_PART_SRCS
+    yandexengineclient.cpp
+    yandexengineclient.h
+    yandexengineplugin.cpp
+    yandexengineplugin.h
 )
 ecm_qt_declare_logging_category(yandextranslator_PART_SRCS
     HEADER yandextranslator_debug.h

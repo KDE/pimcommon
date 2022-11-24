@@ -2,6 +2,10 @@
 # SPDX-FileCopyrightText: none
 
 set(lingvatranslator_PART_SRCS
+    lingvaengineclient.cpp
+    lingvaengineclient.h
+    lingvaengineplugin.cpp
+    lingvaengineplugin.h
 )
 ecm_qt_declare_logging_category(lingvatranslator_PART_SRCS
     HEADER lingvatranslator_debug.h

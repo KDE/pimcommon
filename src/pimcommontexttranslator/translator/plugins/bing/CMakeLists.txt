@@ -2,6 +2,10 @@
 # SPDX-FileCopyrightText: none
 
 set(bingtranslator_PART_SRCS
+    bingengineclient.cpp
+    bingengineclient.h
+    bingengineplugin.cpp
+    bingengineplugin.h
 )
 ecm_qt_declare_logging_category(bingtranslator_PART_SRCS
     HEADER bingtranslator_debug.h
