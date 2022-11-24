@@ -6,8 +6,8 @@
 
 #include "bingengineplugin.h"
 
-BingEnginePlugin::BingEnginePlugin()
-    : PimCommonTextTranslator::TranslatorEnginePlugin()
+BingEnginePlugin::BingEnginePlugin(QObject *parent)
+    : PimCommonTextTranslator::TranslatorEnginePlugin(parent)
 {
 }
 

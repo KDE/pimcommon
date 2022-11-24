@@ -6,8 +6,8 @@
 
 #include "lingvaengineplugin.h"
 
-LingvaEnginePlugin::LingvaEnginePlugin()
-    : PimCommonTextTranslator::TranslatorEnginePlugin()
+LingvaEnginePlugin::LingvaEnginePlugin(QObject *parent)
+    : PimCommonTextTranslator::TranslatorEnginePlugin(parent)
 {
 }
 

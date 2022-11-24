@@ -6,8 +6,8 @@
 
 #include "libretranslateengineplugin.h"
 
-LibreTranslateEnginePlugin::LibreTranslateEnginePlugin()
-    : PimCommonTextTranslator::TranslatorEnginePlugin()
+LibreTranslateEnginePlugin::LibreTranslateEnginePlugin(QObject *parent)
+    : PimCommonTextTranslator::TranslatorEnginePlugin(parent)
 {
 }
 

@@ -6,8 +6,8 @@
 
 #include "deeplengineplugin.h"
 
-DeeplEnginePlugin::DeeplEnginePlugin()
-    : PimCommonTextTranslator::TranslatorEnginePlugin()
+DeeplEnginePlugin::DeeplEnginePlugin(QObject *parent)
+    : PimCommonTextTranslator::TranslatorEnginePlugin(parent)
 {
 }
 

@@ -10,8 +10,9 @@
 
 class DeeplEnginePlugin : public PimCommonTextTranslator::TranslatorEnginePlugin
 {
+    Q_OBJECT
 public:
-    DeeplEnginePlugin();
+    explicit DeeplEnginePlugin(QObject *parent);
     ~DeeplEnginePlugin() override;
 
     void translate() override;

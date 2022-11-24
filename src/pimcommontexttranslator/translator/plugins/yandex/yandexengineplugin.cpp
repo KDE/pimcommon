@@ -6,8 +6,8 @@
 
 #include "yandexengineplugin.h"
 
-YandexEnginePlugin::YandexEnginePlugin()
-    : PimCommonTextTranslator::TranslatorEnginePlugin()
+YandexEnginePlugin::YandexEnginePlugin(QObject *parent)
+    : PimCommonTextTranslator::TranslatorEnginePlugin(parent)
 {
 }
 

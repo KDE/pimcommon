@@ -10,8 +10,9 @@
 
 class BingEnginePlugin : public PimCommonTextTranslator::TranslatorEnginePlugin
 {
+    Q_OBJECT
 public:
-    BingEnginePlugin();
+    explicit BingEnginePlugin(QObject *parent);
     ~BingEnginePlugin() override;
 
     void translate() override;
