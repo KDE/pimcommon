@@ -12,7 +12,7 @@ class LibreTranslateEnginePlugin : public PimCommonTextTranslator::TranslatorEng
 {
     Q_OBJECT
 public:
-    explicit LibreTranslateEnginePlugin(QObject *parent);
+    explicit LibreTranslateEnginePlugin(QObject *parent = nullptr);
     ~LibreTranslateEnginePlugin() override;
 
     void translate() override;

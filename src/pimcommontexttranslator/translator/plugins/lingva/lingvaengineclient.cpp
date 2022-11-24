@@ -5,6 +5,8 @@
 */
 
 #include "lingvaengineclient.h"
+#include "lingvaengineplugin.h"
+#include "translator/misc/translatorutil.h"
 #include <KLocalizedString>
 
 LingvaEngineClient::LingvaEngineClient(QObject *parent)
@@ -16,22 +18,23 @@ LingvaEngineClient::~LingvaEngineClient() = default;
 
 QString LingvaEngineClient::name() const
 {
-    return QStringLiteral("google");
+    return QStringLiteral("lingva");
 }
 
 QString LingvaEngineClient::translatedName() const
 {
-    return i18n("Google");
+    return i18n("Lingva");
 }
 
 PimCommonTextTranslator::TranslatorEnginePlugin *LingvaEngineClient::createTranslator()
 {
-    // TODO
-    return nullptr;
+    return new LingvaEnginePlugin();
 }
 
 QVector<QPair<QString, QString>> LingvaEngineClient::supportedLanguages()
 {
-    // TODO
-    return {};
+    if (mLanguages.isEmpty()) {
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+    }
+    return mLanguages;
 }

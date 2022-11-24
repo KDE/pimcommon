@@ -5,6 +5,8 @@
 */
 
 #include "yandexengineclient.h"
+#include "translator/misc/translatorutil.h"
+#include "yandexengineplugin.h"
 #include <KLocalizedString>
 
 YandexEngineClient::YandexEngineClient(QObject *parent)
@@ -16,22 +18,24 @@ YandexEngineClient::~YandexEngineClient() = default;
 
 QString YandexEngineClient::name() const
 {
-    return QStringLiteral("google");
+    return QStringLiteral("yandex");
 }
 
 QString YandexEngineClient::translatedName() const
 {
-    return i18n("Google");
+    return i18n("Yandex");
 }
 
 PimCommonTextTranslator::TranslatorEnginePlugin *YandexEngineClient::createTranslator()
 {
-    // TODO
-    return nullptr;
+    return new YandexEnginePlugin();
 }
 
 QVector<QPair<QString, QString>> YandexEngineClient::supportedLanguages()
 {
-    // TODO
-    return {};
+    if (mLanguages.isEmpty()) {
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+        mLanguages += PimCommonTextTranslator::TranslatorUtil::yandexSpecificLanguages();
+    }
+    return mLanguages;
 }

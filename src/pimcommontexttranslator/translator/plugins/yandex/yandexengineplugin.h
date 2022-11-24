@@ -12,7 +12,7 @@ class YandexEnginePlugin : public PimCommonTextTranslator::TranslatorEnginePlugi
 {
     Q_OBJECT
 public:
-    explicit YandexEnginePlugin(QObject *parent);
+    explicit YandexEnginePlugin(QObject *parent = nullptr);
     ~YandexEnginePlugin() override;
 
     void translate() override;

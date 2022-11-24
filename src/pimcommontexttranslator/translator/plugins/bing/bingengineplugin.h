@@ -12,7 +12,7 @@ class BingEnginePlugin : public PimCommonTextTranslator::TranslatorEnginePlugin
 {
     Q_OBJECT
 public:
-    explicit BingEnginePlugin(QObject *parent);
+    explicit BingEnginePlugin(QObject *parent = nullptr);
     ~BingEnginePlugin() override;
 
     void translate() override;

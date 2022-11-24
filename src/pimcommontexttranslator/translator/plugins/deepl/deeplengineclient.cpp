@@ -5,6 +5,8 @@
 */
 
 #include "deeplengineclient.h"
+#include "deeplengineplugin.h"
+#include "translator/misc/translatorutil.h"
 #include <KLocalizedString>
 
 DeeplEngineClient::DeeplEngineClient(QObject *parent)
@@ -16,22 +18,23 @@ DeeplEngineClient::~DeeplEngineClient() = default;
 
 QString DeeplEngineClient::name() const
 {
-    return QStringLiteral("google");
+    return QStringLiteral("deepl");
 }
 
 QString DeeplEngineClient::translatedName() const
 {
-    return i18n("Google");
+    return i18n("DeepL");
 }
 
 PimCommonTextTranslator::TranslatorEnginePlugin *DeeplEngineClient::createTranslator()
 {
-    // TODO
-    return nullptr;
+    return new DeeplEnginePlugin();
 }
 
 QVector<QPair<QString, QString>> DeeplEngineClient::supportedLanguages()
 {
-    // TODO
-    return {};
+    if (mLanguages.isEmpty()) {
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+    }
+    return mLanguages;
 }

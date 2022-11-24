@@ -5,6 +5,8 @@
 */
 
 #include "libretranslateengineclient.h"
+#include "libretranslateengineplugin.h"
+#include "translator/misc/translatorutil.h"
 #include <KLocalizedString>
 
 LibreTranslateEngineClient::LibreTranslateEngineClient(QObject *parent)
@@ -16,22 +18,23 @@ LibreTranslateEngineClient::~LibreTranslateEngineClient() = default;
 
 QString LibreTranslateEngineClient::name() const
 {
-    return QStringLiteral("google");
+    return QStringLiteral("libretranslate");
 }
 
 QString LibreTranslateEngineClient::translatedName() const
 {
-    return i18n("Google");
+    return i18n("Libre Translate");
 }
 
 PimCommonTextTranslator::TranslatorEnginePlugin *LibreTranslateEngineClient::createTranslator()
 {
-    // TODO
-    return nullptr;
+    return new LibreTranslateEnginePlugin();
 }
 
 QVector<QPair<QString, QString>> LibreTranslateEngineClient::supportedLanguages()
 {
-    // TODO
-    return {};
+    if (mLanguages.isEmpty()) {
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+    }
+    return mLanguages;
 }

@@ -12,7 +12,7 @@ class DeeplEnginePlugin : public PimCommonTextTranslator::TranslatorEnginePlugin
 {
     Q_OBJECT
 public:
-    explicit DeeplEnginePlugin(QObject *parent);
+    explicit DeeplEnginePlugin(QObject *parent = nullptr);
     ~DeeplEnginePlugin() override;
 
     void translate() override;

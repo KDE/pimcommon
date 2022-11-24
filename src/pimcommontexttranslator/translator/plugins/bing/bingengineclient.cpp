@@ -5,6 +5,8 @@
 */
 
 #include "bingengineclient.h"
+#include "bingengineplugin.h"
+#include "translator/misc/translatorutil.h"
 #include <KLocalizedString>
 
 BingEngineClient::BingEngineClient(QObject *parent)
@@ -16,22 +18,23 @@ BingEngineClient::~BingEngineClient() = default;
 
 QString BingEngineClient::name() const
 {
-    return QStringLiteral("google");
+    return QStringLiteral("bing");
 }
 
 QString BingEngineClient::translatedName() const
 {
-    return i18n("Google");
+    return i18n("Bing");
 }
 
 PimCommonTextTranslator::TranslatorEnginePlugin *BingEngineClient::createTranslator()
 {
-    // TODO
-    return nullptr;
+    return new BingEnginePlugin();
 }
 
 QVector<QPair<QString, QString>> BingEngineClient::supportedLanguages()
 {
-    // TODO
-    return {};
+    if (mLanguages.isEmpty()) {
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+    }
+    return mLanguages;
 }
