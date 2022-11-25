@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-24 00:46+0000\n"
+"POT-Creation-Date: 2022-11-25 00:48+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -1916,28 +1916,34 @@ msgstr "언어:"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/plugins/bing/bingengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
 msgstr "Bing"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:65
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:57
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
 msgstr "오류: 웹 버전에서 Bing 계정 정보를 찾을 수 없습니다."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:73
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:65
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
 msgstr "오류: 웹 버전에서 Bing 키를 추출할 수 없습니다."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:82
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:74
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
 msgstr "오류: 웹 버전에서 Bing 토큰을 추출할 수 없습니다."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:91
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:100
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:83
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:92
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr "오류: 웹 버전에서 추가 Bing 정보를 추출할 수 없습니다."
@@ -1954,6 +1960,7 @@ msgstr "원본과 대상 언어가 같습니다."
 
 #: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:366
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
@@ -1961,7 +1968,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
-#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
@@ -1969,6 +1976,7 @@ msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, kde-format
 msgid "Libre Translate"
@@ -1976,6 +1984,7 @@ msgstr "Libre Translate"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
@@ -1983,13 +1992,16 @@ msgstr "Lingva"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
 msgstr "Yandex"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:51
 #: pimcommontexttranslator/translator/translatorenginebase.cpp:78
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:61
 #, kde-format
 msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
@@ -1999,16 +2011,19 @@ msgstr ""
 "시 시도하십시오."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:78
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:60
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr "오류: 웹 버전에서 Yandex SID를 찾을 수 없습니다."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:86
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:68
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr "오류: 웹 버전에서 Yandex SID를 추출할 수 없습니다."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:155
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:136
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr "오류: 자동 감지된 언어를 해석할 수 없음"
@@ -2209,6 +2224,12 @@ msgstr "이디시어"
 #, kde-format
 msgid "Offline"
 msgstr ""
+
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:69
+#, fuzzy, kde-format
+#| msgid "You used same language for from and to language."
+msgid "You used same language for 'from' and 'to' language."
+msgstr "원본과 대상 언어가 같습니다."
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format

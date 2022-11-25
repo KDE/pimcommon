@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-23 00:49+0000\n"
-"PO-Revision-Date: 2022-11-21 00:23+0100\n"
+"POT-Creation-Date: 2022-11-25 00:48+0000\n"
+"PO-Revision-Date: 2022-11-24 02:24+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1228,7 +1228,7 @@ msgstr "Autocorrección a&vanzada"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:219
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:464
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Add"
 msgstr "&Añadir"
@@ -1502,75 +1502,75 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "Cierre de comillas:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Autocorrección de LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:130
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Autocorrección de KMail/Calligra"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "«Sustituir» cadena es lo mismo que «Buscar» cadena."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:382
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Añadir entrada de autocorrección"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:461
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
 #, kde-format
 msgid "&Modify"
 msgstr "&Modificar"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:572
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importar autocorrección de LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:573
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Archivo de autocorrección de LibreOffice (*.dat)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:576
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importar autocorrección de KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Archivo de autocorrección de KMail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:609
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Importar archivo de autocorrección"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:632
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Se cambió el idioma, ¿quiere usted guardar la configuración del idioma "
 "anterior?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:633
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
 #, kde-format
 msgid "Save config"
 msgstr "Guardar configuración"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Por favor, guarde los cambios antes de exportar las preferencias."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:668
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:671
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Exportar archivo de autocorrección"
@@ -1936,12 +1936,14 @@ msgstr "Lista de idiomas"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/plugins/bing/bingengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
 msgstr "Bing"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:65
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:57
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
 msgstr ""
@@ -1949,17 +1951,21 @@ msgstr ""
 "versión web."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:73
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:65
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
 msgstr "Error: No ha sido posible extraer la clave de Bing de la versión web."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:82
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:74
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
 msgstr "Error: No ha sido posible extraer el tóken de Bing de la versión web."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:91
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:100
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:83
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:92
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
@@ -1978,6 +1984,7 @@ msgstr "Usted usó el mismo idioma para los idiomas desde y hasta."
 
 #: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:366
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
@@ -1985,6 +1992,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
@@ -1992,6 +2000,7 @@ msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, kde-format
 msgid "Libre Translate"
@@ -1999,6 +2008,7 @@ msgstr "Libre Translate"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
@@ -2006,13 +2016,16 @@ msgstr "Lingva"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
 msgstr "Yandex"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:51
 #: pimcommontexttranslator/translator/translatorenginebase.cpp:78
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:61
 #, kde-format
 msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
@@ -2022,17 +2035,20 @@ msgstr ""
 "red de equipos. Vuelva a realizar su petición más tarde."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:78
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:60
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr ""
 "Error: No ha sido posible encontrar el SID de Yandex en la versión web."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:86
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:68
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr "Error: No ha sido posible extraer el SID de Yandex de la versión web."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:155
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:136
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr ""
@@ -2233,7 +2249,13 @@ msgstr "Yidis"
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:369
 #, kde-format
 msgid "Offline"
-msgstr ""
+msgstr "Sin conexión"
+
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:69
+#, fuzzy, kde-format
+#| msgid "You used same language for from and to language."
+msgid "You used same language for 'from' and 'to' language."
+msgstr "Usted usó el mismo idioma para los idiomas desde y hasta."
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format
@@ -2274,10 +2296,9 @@ msgid "All Files (*)"
 msgstr "Todos los archivos (*)"
 
 #: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Translate..."
-msgstr "Traducir"
+msgstr "Traducir..."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:126
 #, kde-format

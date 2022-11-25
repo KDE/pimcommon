@@ -11,15 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-24 00:46+0000\n"
-"PO-Revision-Date: 2022-11-09 20:29+0100\n"
+"POT-Creation-Date: 2022-11-25 00:48+0000\n"
+"PO-Revision-Date: 2022-11-23 23:07+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.11.80\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -1602,23 +1602,22 @@ msgstr "Sélectionner"
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:39
 #, kde-format
 msgid "Any text to check."
-msgstr ""
+msgstr "Tout texte à vérifier."
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace"
+#, kde-format
 msgid "Replacement"
-msgstr "Remplacer"
+msgstr "Remplacement"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:102
 #, kde-format
 msgid "Online Grammar Information"
-msgstr ""
+msgstr "Informations grammaticale en ligne"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:115
 #, kde-format
 msgid "Check Again"
-msgstr ""
+msgstr "Vérifier à nouveau"
 
 #: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:118
 #, kde-format
@@ -1626,10 +1625,9 @@ msgid "Configure..."
 msgstr "Configurer..."
 
 #: pimcommontextgrammarcheck/common/grammarresultutil.cpp:51
-#, fuzzy, kde-format
-#| msgid "Shared: %1"
+#, kde-format
 msgid "See on: %1"
-msgstr "Partagé : %1"
+msgstr "Voir sur : %1"
 
 #: pimcommontextgrammarcheck/common/grammarresultwidget.cpp:32
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:228
@@ -1639,23 +1637,20 @@ msgid "Close"
 msgstr "Fermer"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigdialog.cpp:25
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Completion"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Grammalecte"
-msgstr "Configurer le complètement"
+msgstr "Configurer Grammalecte"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:35
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "WebDav Settings"
+#, kde-format
 msgid "Grammar Settings"
-msgstr "Configuration WebDav"
+msgstr "Configuration de la grammaire"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:61
 #, kde-format
@@ -1663,63 +1658,63 @@ msgid ""
 "Impossible to get options. Please verify that you have grammalected "
 "installed."
 msgstr ""
+"Impossible d'obtenir les options. Veuillez vérifier votre installation de "
+"Grammalecte."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:62
 #, kde-format
 msgid "Error during Extracting Options"
-msgstr ""
+msgstr "Erreur lors des options d'extraction"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:111
 #, kde-format
 msgid "Press Button for Reloading Settings"
-msgstr ""
+msgstr "Appuyer sur le bouton pour le rechargement de la configuration"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "WebDav Settings"
+#, kde-format
 msgid "Reload Settings"
-msgstr "Configuration WebDav"
+msgstr "Recharger la configuration"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:135
 #, kde-format
 msgid "Python Path:"
-msgstr ""
+msgstr "Emplacement de Python :"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:139
 #, kde-format
 msgid "Add full 'grammalecte-cli.py' path"
-msgstr ""
+msgstr "Ajouter l'emplacement complet « grammalecte-cli.py »"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:140
 #, kde-format
 msgid "Grammalecte Path:"
-msgstr ""
+msgstr "Emplacement de Grammalecte :"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:54
 #, kde-format
 msgid "Python path is missing."
-msgstr ""
+msgstr "L'emplacement de Python est manquant."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:58
 #, kde-format
 msgid "Grammalecte path not found."
-msgstr ""
+msgstr "Impossible de trouver l'emplacement de Grammalecte."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:65
 #, kde-format
 msgid "Grammalecte program file not found."
-msgstr ""
+msgstr "Impossible de trouver le programme Grammalecte."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:69
 #, kde-format
 msgid "Grammalecte cli file not found."
-msgstr ""
+msgstr "Impossible de trouver le fichier « cli » pour Grammalecte."
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Translate error"
+#, kde-format
 msgid "Grammalecte error"
-msgstr "Erreur de traduction"
+msgstr "Erreur de Grammalecte"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:127
@@ -1730,7 +1725,7 @@ msgstr "Anglais"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:32
 #, kde-format
 msgid "Asturian"
-msgstr ""
+msgstr "Asturien"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:33
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:184
@@ -1741,7 +1736,7 @@ msgstr "Biélorusse"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:34
 #, kde-format
 msgid "Breton"
-msgstr ""
+msgstr "Breton"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:35
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:190
@@ -1752,7 +1747,7 @@ msgstr "Catalan"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:36
 #, kde-format
 msgid "Chinese"
-msgstr ""
+msgstr "Chinois"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:37
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:205
@@ -1769,17 +1764,17 @@ msgstr "Néerlandais"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:39
 #, kde-format
 msgid "English (Australian)"
-msgstr ""
+msgstr "Anglais (Australie)"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:40
 #, kde-format
 msgid "English (Canadian)"
-msgstr ""
+msgstr "Anglais (Canada)"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:41
 #, kde-format
 msgid "Esperanto"
-msgstr ""
+msgstr "Esperanto"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:42
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:139
@@ -1820,7 +1815,7 @@ msgstr "Japonais"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:48
 #, kde-format
 msgid "Khmer"
-msgstr ""
+msgstr "Khmer"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:49
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:262
@@ -1879,12 +1874,12 @@ msgstr "Suédois"
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:58
 #, kde-format
 msgid "Tagalog"
-msgstr ""
+msgstr "Tagalog"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:59
 #, kde-format
 msgid "Tamil"
-msgstr ""
+msgstr "Tamoul"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:60
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:292
@@ -1893,47 +1888,45 @@ msgid "Ukrainian"
 msgstr "Ukrainien"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigdialog.cpp:26
-#, fuzzy, kde-format
-#| msgid "Configure engine"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure LanguageTool"
-msgstr "Configurer le moteur"
+msgstr "Configurer LanguageTool"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:22
 #, kde-format
 msgid "Use Local Instance"
-msgstr ""
+msgstr "Utiliser l'instance locale"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:24
 #, kde-format
 msgid "Instance Path:"
-msgstr ""
+msgstr "Emplacement de l'instance :"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:52
 #, kde-format
 msgid "Language:"
-msgstr ""
+msgstr "Langue :"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:64
 #, kde-format
 msgid "Refresh"
-msgstr ""
+msgstr "Rafraîchir"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
-#, fuzzy, kde-format
-#| msgid "An error occurs: \"%1\""
+#, kde-format
 msgid "An error was reported: %1"
 msgstr "Une erreur s'est produite : %1"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
 #, kde-format
 msgid "Failed to check grammar."
-msgstr ""
+msgstr "Impossible de vérifier la grammaire."
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:76
 #, kde-format
 msgid "Check"
-msgstr ""
+msgstr "Vérifier"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
@@ -1941,20 +1934,25 @@ msgid ""
 "An error occurred attempting to load the list of available languages:\n"
 "%1"
 msgstr ""
+"Une erreur est survenue lors d'une tentative de chargement de la liste des "
+"langues disponibles :\n"
+"%1"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
 #, kde-format
 msgid "List of Languages"
-msgstr ""
+msgstr "Liste des langues"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/plugins/bing/bingengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
 msgstr "Bing"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:65
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:57
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
 msgstr ""
@@ -1962,12 +1960,14 @@ msgstr ""
 "Internet."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:73
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:65
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
 msgstr ""
 "Erreur : impossible d'extraire une clé Bing à partir de la version Internet."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:82
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:74
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
 msgstr ""
@@ -1975,6 +1975,8 @@ msgstr ""
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:91
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:100
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:83
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:92
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
@@ -1994,6 +1996,7 @@ msgstr ""
 
 #: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:366
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
@@ -2001,7 +2004,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
-#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
@@ -2009,6 +2012,7 @@ msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, kde-format
 msgid "Libre Translate"
@@ -2016,6 +2020,7 @@ msgstr "Libre Translate"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
@@ -2023,13 +2028,16 @@ msgstr "Lingva"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
 msgstr "Yandex"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:51
 #: pimcommontexttranslator/translator/translatorenginebase.cpp:78
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:61
 #, kde-format
 msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
@@ -2039,12 +2047,14 @@ msgstr ""
 "réseau de votre ordinateur. Veuillez relancer votre demande plus tard."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:78
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:60
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr ""
 "Erreur : impossible de trouver des « Yandex SID » dans la version Internet."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:86
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:68
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr ""
@@ -2052,6 +2062,7 @@ msgstr ""
 "Internet."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:155
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:136
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr "Erreur : impossible d'analyser la langue détectée automatiquement"
@@ -2251,7 +2262,14 @@ msgstr "Yiddish"
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:369
 #, kde-format
 msgid "Offline"
+msgstr "Hors connexion"
+
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:69
+#, fuzzy, kde-format
+#| msgid "You used same language for from and to language."
+msgid "You used same language for 'from' and 'to' language."
 msgstr ""
+"Vous avez utilisé la même langue pour la langue « depuis » et « vers »."
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format
@@ -2260,16 +2278,12 @@ msgid "Configure Translator"
 msgstr "Configurer un traducteur"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
-#, fuzzy, kde-format
-#| msgctxt "Translate from language"
-#| msgid "From:"
+#, kde-format
 msgid "From:"
 msgstr "De :"
 
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "Translate to language"
-#| msgid "To:"
+#, kde-format
 msgid "To:"
 msgstr "À :"
 
@@ -2296,10 +2310,9 @@ msgid "All Files (*)"
 msgstr "Tous les fichiers (*)"
 
 #: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Translate..."
-msgstr "Traduire"
+msgstr "Traduire..."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:126
 #, kde-format

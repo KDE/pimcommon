@@ -11,16 +11,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-24 00:46+0000\n"
-"PO-Revision-Date: 2022-11-19 19:42+0100\n"
+"POT-Creation-Date: 2022-11-25 00:48+0000\n"
+"PO-Revision-Date: 2022-11-24 07:46+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.1.1\n"
 
@@ -1928,28 +1928,34 @@ msgstr "Seznam jezikov"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/plugins/bing/bingengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
 msgstr "Bing"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:65
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:57
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
 msgstr "Napaka: Ni mogoče najti Bingovih poverilnic v spletni verziji."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:73
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:65
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
 msgstr "Napaka: Ni mogoče izvleči Bingovega ključa iz spletne verzije."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:82
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:74
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
 msgstr "Napaka: Ni mogoče izvleči Bingovega žetona iz spletne verzije."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:91
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:100
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:83
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:92
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
@@ -1967,6 +1973,7 @@ msgstr "Jezika »iz« in »v« sta enaka."
 
 #: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:366
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
@@ -1974,7 +1981,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
-#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
@@ -1982,6 +1989,7 @@ msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, kde-format
 msgid "Libre Translate"
@@ -1989,6 +1997,7 @@ msgstr "Libre Translate"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
@@ -1996,13 +2005,16 @@ msgstr "Lingva"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
 msgstr "Yandex"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:51
 #: pimcommontexttranslator/translator/translatorenginebase.cpp:78
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:61
 #, kde-format
 msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
@@ -2012,16 +2024,19 @@ msgstr ""
 "poskusite vaš zahtevek kasneje."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:78
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:60
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr "Napaka: Ni mogoče najti Yandexov SID v spletni verziji."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:86
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:68
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr "Napaka: Ni mogoče izvleči Yandexov SID iz spletne verzije."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:155
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:136
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr "Napaka: Ni mogoče razčleniti samodejno zaznanega jezika"
@@ -2221,7 +2236,13 @@ msgstr "jidiš"
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:369
 #, kde-format
 msgid "Offline"
-msgstr ""
+msgstr "Nepovezano"
+
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:69
+#, fuzzy, kde-format
+#| msgid "You used same language for from and to language."
+msgid "You used same language for 'from' and 'to' language."
+msgstr "Jezika »iz« in »v« sta enaka."
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format
@@ -2262,10 +2283,9 @@ msgid "All Files (*)"
 msgstr "Vse datoteke (*)"
 
 #: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Translate..."
-msgstr "Prevedi"
+msgstr "Prevedi..."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:126
 #, kde-format

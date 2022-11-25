@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-24 00:46+0000\n"
-"PO-Revision-Date: 2022-11-17 08:00+0100\n"
+"POT-Creation-Date: 2022-11-25 00:48+0000\n"
+"PO-Revision-Date: 2022-11-24 05:09+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -1929,28 +1929,34 @@ msgstr "Hizkuntzen zerrenda"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:54
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:357
+#: pimcommontexttranslator/translator/plugins/bing/bingengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:24
 #, kde-format
 msgid "Bing"
 msgstr "Bing"
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:65
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:57
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
 msgstr "Errorea: Ez da Bing-en egiaztagiriak web bertsioan aurkitzeko gai."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:73
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:65
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
 msgstr "Errorea: Ez da Bing-en gakoa web bertsiotik ateratzeko gai."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:82
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:74
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
 msgstr "Errorea: Ez da Bing-en tokena web bertsiotik ateratzeko gai."
 
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:91
 #: pimcommontexttranslator/translator/engine/bingtranslator.cpp:100
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:83
+#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:92
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
@@ -1968,6 +1974,7 @@ msgstr "Hizkuntza bera erabili duzu jatorri eta helburu gisa."
 
 #: pimcommontexttranslator/translator/engine/deepltranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:366
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:33
 #, kde-format
 msgid "DeepL"
@@ -1975,7 +1982,7 @@ msgstr "DeepL"
 
 #: pimcommontexttranslator/translator/engine/googletranslator.cpp:73
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:351
-#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:24
+#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:18
 #, kde-format
 msgid "Google"
@@ -1983,6 +1990,7 @@ msgstr "Google"
 
 #: pimcommontexttranslator/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:363
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:30
 #, kde-format
 msgid "Libre Translate"
@@ -1990,6 +1998,7 @@ msgstr "Libre Translate"
 
 #: pimcommontexttranslator/translator/engine/lingvatranslator.cpp:29
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:360
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:27
 #, kde-format
 msgid "Lingva"
@@ -1997,13 +2006,16 @@ msgstr "Lingva"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:59
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:354
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineclient.cpp:26
 #: pimcommontexttranslator/translator/widgets/translatorconfigureutil.cpp:21
 #, kde-format
 msgid "Yandex"
 msgstr "Yandex"
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:69
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:51
 #: pimcommontexttranslator/translator/translatorenginebase.cpp:78
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:61
 #, kde-format
 msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
@@ -2013,16 +2025,19 @@ msgstr ""
 "dute. Mesedez saiatu zure eskaerak beranduago berriz egiten."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:78
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:60
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
 msgstr "Errorea: Ez da Yandex SID web bertsioan aurkitzeko gai."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:86
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:68
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
 msgstr "Errorea: Ez da Yandex SID web bertsiotik ateratzeko gai."
 
 #: pimcommontexttranslator/translator/engine/yandextranslator.cpp:155
+#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:136
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
 msgstr ""
@@ -2224,7 +2239,13 @@ msgstr "Yiddish"
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:369
 #, kde-format
 msgid "Offline"
-msgstr ""
+msgstr "Lerroz kanpo"
+
+#: pimcommontexttranslator/translator/translatorengineplugin.cpp:69
+#, fuzzy, kde-format
+#| msgid "You used same language for from and to language."
+msgid "You used same language for 'from' and 'to' language."
+msgstr "Hizkuntza bera erabili duzu jatorri eta helburu gisa."
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format
@@ -2265,10 +2286,9 @@ msgid "All Files (*)"
 msgstr "Fitxategi guztiak (*)"
 
 #: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Translate..."
-msgstr "Itzuli"
+msgstr "Itzuli..."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:126
 #, kde-format
