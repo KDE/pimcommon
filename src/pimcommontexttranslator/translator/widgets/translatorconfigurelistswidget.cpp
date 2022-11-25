@@ -111,7 +111,7 @@ void TranslatorConfigureListsWidget::slotEngineChanged(int index)
     const QStringList toLanguages = d->mToLanguageWidget->selectedLanguages();
 
     const QString engine = d->mEngineComboBox->itemData(index).toString();
-    const QVector<QPair<QString, QString>> listLanguage = PimCommonTextTranslator::TranslatorUtil::supportedLanguages(engine);
+    const QVector<QPair<QString, QString>> listLanguage = PimCommonTextTranslator::TranslatorEngineLoader::self()->supportedLanguages(engine);
     d->mFromLanguageWidget->clear();
     d->mToLanguageWidget->clear();
 

@@ -111,6 +111,5 @@ public:
     Q_REQUIRED_RESULT static QString defaultEngineName();
     Q_REQUIRED_RESULT static bool hasConfigureDialog(TranslatorEngineBase::TranslatorEngine engineType);
     Q_REQUIRED_RESULT static PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine convertStringToTranslatorEngine(const QString &engineTypeStr);
-    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> supportedLanguages(const QString &engineTypeStr);
 };
 }

@@ -436,27 +436,3 @@ PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine TranslatorUtil::
     }
     return engineType;
 }
-
-QVector<QPair<QString, QString>> TranslatorUtil::supportedLanguages(const QString &engineTypeStr)
-{
-    QVector<QPair<QString, QString>> languagesList;
-    if (engineTypeStr == QLatin1String("google")) {
-        languagesList = PimCommonTextTranslator::GoogleTranslator::languages();
-    } else if (engineTypeStr == QLatin1String("bing")) {
-        languagesList = PimCommonTextTranslator::BingTranslator::languages();
-    } else if (engineTypeStr == QLatin1String("yandex")) {
-        languagesList = PimCommonTextTranslator::YandexTranslator::languages();
-    } else if (engineTypeStr == QLatin1String("libretranslate")) {
-        languagesList = PimCommonTextTranslator::LibreTranslateTranslator::languages();
-    } else if (engineTypeStr == QLatin1String("deepl")) {
-        languagesList = PimCommonTextTranslator::DeepLTranslator::languages();
-    } else if (engineTypeStr == QLatin1String("lingva")) {
-        languagesList = PimCommonTextTranslator::LingvaTranslator::languages();
-    } else if (engineTypeStr == QLatin1String("offlinetranslator")) {
-        // TODO languagesList = PimCommonTextTranslator::LingvaTranslator::languages();
-    } else {
-        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Invalid translator engine " << engineTypeStr;
-        languagesList = PimCommonTextTranslator::GoogleTranslator::languages();
-    }
-    return languagesList;
-}
