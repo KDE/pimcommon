@@ -17,6 +17,8 @@ class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorEngineLoader : public QObject
 {
     Q_OBJECT
 public:
+    static TranslatorEngineLoader *self();
+
     explicit TranslatorEngineLoader(QObject *parent = nullptr);
     ~TranslatorEngineLoader() override;
 

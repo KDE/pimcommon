@@ -18,6 +18,12 @@ public:
     QHash<QString, TranslatorEngineClient *> translatorClients;
 };
 
+TranslatorEngineLoader *TranslatorEngineLoader::self()
+{
+    static TranslatorEngineLoader s_self;
+    return &s_self;
+}
+
 TranslatorEngineLoader::TranslatorEngineLoader(QObject *parent)
     : QObject{parent}
     , d(new PimCommonTextTranslator::TranslatorEngineLoaderPrivate)
