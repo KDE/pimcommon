@@ -21,13 +21,13 @@ class Q_DECL_HIDDEN PimCommonTextTranslator::TranslatorConfigureListsWidget::Tra
 {
 public:
     TranslatorConfigureListsWidgetPrivate(TranslatorConfigureListsWidget *parent)
-        : mEngine(new QComboBox(parent))
+        : mEngineComboBox(new QComboBox(parent))
         , mConfigureEngine(new QToolButton(parent))
         , mFromLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("From:"), parent))
         , mToLanguageWidget(new TranslatorConfigureLanguageListWidget(i18n("To:"), parent))
     {
     }
-    QComboBox *const mEngine;
+    QComboBox *const mEngineComboBox;
     QToolButton *const mConfigureEngine;
     PimCommonTextTranslator::TranslatorConfigureLanguageListWidget *const mFromLanguageWidget;
     PimCommonTextTranslator::TranslatorConfigureLanguageListWidget *const mToLanguageWidget;
@@ -39,7 +39,7 @@ TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    d->mEngine->setObjectName(QStringLiteral("mEngine"));
+    d->mEngineComboBox->setObjectName(QStringLiteral("mEngine"));
     d->mConfigureEngine->setObjectName(QStringLiteral("mConfigureEngine"));
     d->mConfigureEngine->setEnabled(false); // Disable by default
     d->mConfigureEngine->setIcon(QIcon::fromTheme(QStringLiteral("settings-configure")));
@@ -53,7 +53,7 @@ TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
     auto label = new QLabel(i18n("Engine:"), this);
     label->setObjectName(QStringLiteral("label"));
     hboxLayout->addWidget(label);
-    hboxLayout->addWidget(d->mEngine);
+    hboxLayout->addWidget(d->mEngineComboBox);
     hboxLayout->addWidget(d->mConfigureEngine);
     hboxLayout->addStretch(0);
 
@@ -67,7 +67,7 @@ TranslatorConfigureListsWidget::TranslatorConfigureListsWidget(QWidget *parent)
     hLanguageListboxLayout->addWidget(d->mFromLanguageWidget);
     hLanguageListboxLayout->addWidget(d->mToLanguageWidget);
 
-    connect(d->mEngine, &QComboBox::currentIndexChanged, this, &TranslatorConfigureListsWidget::slotEngineChanged);
+    connect(d->mEngineComboBox, &QComboBox::currentIndexChanged, this, &TranslatorConfigureListsWidget::slotEngineChanged);
 
     fillEngine();
 }
@@ -76,12 +76,12 @@ TranslatorConfigureListsWidget::~TranslatorConfigureListsWidget() = default;
 
 void TranslatorConfigureListsWidget::fillEngine()
 {
-    TranslatorConfigureUtil::fillComboboxSettings(d->mEngine);
+    TranslatorConfigureUtil::fillComboboxSettings(d->mEngineComboBox);
 }
 
 void TranslatorConfigureListsWidget::save()
 {
-    const QString engine = d->mEngine->currentData().toString();
+    const QString engine = d->mEngineComboBox->currentData().toString();
     KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
     groupTranslate.writeEntry(TranslatorUtil::engineTranslateName(), engine);
     groupTranslate.writeEntry(QStringLiteral("From"), d->mFromLanguageWidget->selectedLanguages());
@@ -92,9 +92,9 @@ void TranslatorConfigureListsWidget::load()
 {
     KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
     const QString engine = groupTranslate.readEntry(TranslatorUtil::engineTranslateName(), TranslatorUtil::defaultEngineName()); // Google by default
-    const int index = d->mEngine->findData(engine);
+    const int index = d->mEngineComboBox->findData(engine);
     if (index != -1) {
-        d->mEngine->setCurrentIndex(index);
+        d->mEngineComboBox->setCurrentIndex(index);
     }
     d->mFromLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("From"), QStringList()));
     d->mToLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("To"), QStringList()));
@@ -105,7 +105,7 @@ void TranslatorConfigureListsWidget::slotEngineChanged(int index)
     const QStringList fromLanguages = d->mFromLanguageWidget->selectedLanguages();
     const QStringList toLanguages = d->mToLanguageWidget->selectedLanguages();
 
-    const QString engine = d->mEngine->itemData(index).toString();
+    const QString engine = d->mEngineComboBox->itemData(index).toString();
     const QVector<QPair<QString, QString>> listLanguage = PimCommonTextTranslator::TranslatorUtil::supportedLanguages(engine);
     d->mFromLanguageWidget->clear();
     d->mToLanguageWidget->clear();
@@ -126,7 +126,7 @@ void TranslatorConfigureListsWidget::slotEngineChanged(int index)
 
 void TranslatorConfigureListsWidget::slotConfigureEngine()
 {
-    const QString engine = d->mEngine->currentData().toString();
+    const QString engine = d->mEngineComboBox->currentData().toString();
     if (TranslatorUtil::hasConfigureDialog(PimCommonTextTranslator::TranslatorUtil::convertStringToTranslatorEngine(engine))) { }
     // TODO
 }
