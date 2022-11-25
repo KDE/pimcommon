@@ -25,5 +25,4 @@ private:
     static QByteArray sBingToken;
     static QString sBingIg;
     static QString sBingIid;
-    QString mResult;
 };

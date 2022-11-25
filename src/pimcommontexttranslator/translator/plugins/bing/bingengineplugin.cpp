@@ -104,8 +104,7 @@ void BingEnginePlugin::translateText()
     if (verifyFromAndToLanguage()) {
         return;
     }
-
-    mResult.clear();
+    clear();
 
     const QByteArray postData =
         "&text=" + QUrl::toPercentEncoding(inputText()) + "&fromLang=" + from().toUtf8() + "&to=" + to().toUtf8() + "&token=" + sBingToken + "&key=" + sBingKey;
@@ -150,8 +149,8 @@ void BingEnginePlugin::parseTranslation(QNetworkReply *reply)
     }
 
     const QJsonObject translationsObject = responseObject.value(QStringLiteral("translations")).toArray().first().toObject();
-    mResult += translationsObject.value(QStringLiteral("text")).toString();
-    qDebug() << " mResult " << mResult;
+    appendResult(translationsObject.value(QStringLiteral("text")).toString());
+    qDebug() << " mResult " << result();
     // m_translationTranslit               += translationsObject.value(QStringLiteral("transliteration")).toObject().value(QStringLiteral("text")).toString();
     reply->deleteLater();
     Q_EMIT translateDone();

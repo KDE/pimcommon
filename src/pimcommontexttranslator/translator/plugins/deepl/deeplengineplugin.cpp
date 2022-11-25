@@ -30,7 +30,7 @@ void DeeplEnginePlugin::translate()
 
 void DeeplEnginePlugin::translateText()
 {
-    mResult.clear();
+    clear();
 
     const QUrl url(QStringLiteral("%1/api/v1/%2/%3/%4").arg(mServerUrl, from(), to(), QString::fromUtf8(QUrl::toPercentEncoding(inputText()))));
 
@@ -57,7 +57,7 @@ void DeeplEnginePlugin::parseTranslation(QNetworkReply *reply)
 
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
     const QJsonObject responseObject = jsonResponse.object();
-    mResult = responseObject.value(QStringLiteral("translation")).toString();
+    setResult(responseObject.value(QStringLiteral("translation")).toString());
     reply->deleteLater();
     Q_EMIT translateDone();
 }

@@ -38,3 +38,8 @@ QVector<QPair<QString, QString>> LingvaEngineClient::supportedLanguages()
     }
     return mLanguages;
 }
+
+bool LingvaEngineClient::hasConfigurationDialog() const
+{
+    return true;
+}

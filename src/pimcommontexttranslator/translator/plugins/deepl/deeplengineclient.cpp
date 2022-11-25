@@ -38,3 +38,8 @@ QVector<QPair<QString, QString>> DeeplEngineClient::supportedLanguages()
     }
     return mLanguages;
 }
+
+bool DeeplEngineClient::hasConfigurationDialog() const
+{
+    return true;
+}

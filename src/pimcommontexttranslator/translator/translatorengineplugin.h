@@ -28,16 +28,21 @@ public:
     void setInputText(const QString &text);
     void setFrom(const QString &language);
     void setTo(const QString &language);
+    void setResult(const QString &result);
 
     Q_REQUIRED_RESULT QString inputText() const;
     Q_REQUIRED_RESULT QString from() const;
     Q_REQUIRED_RESULT QString to() const;
+    Q_REQUIRED_RESULT QString result() const;
+
+    void clear();
 
 Q_SIGNALS:
     void translateDone();
     void translateFailed(bool result, const QString &errorMessage = QString());
 
 protected:
+    void appendResult(const QString &result);
     void slotError(QNetworkReply::NetworkError error);
     Q_REQUIRED_RESULT bool verifyFromAndToLanguage();
 

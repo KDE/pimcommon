@@ -30,7 +30,7 @@ void LibreTranslateEnginePlugin::translate()
 
 void LibreTranslateEnginePlugin::translateText()
 {
-    mResult.clear();
+    clear();
 
     QByteArray postData = "&q=" + QUrl::toPercentEncoding(inputText()) + "&source=" + from().toUtf8() + "&target=" + to().toUtf8();
     if (!mApiKey.isEmpty()) {
@@ -60,7 +60,7 @@ void LibreTranslateEnginePlugin::parseTranslation(QNetworkReply *reply)
     }
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
     const QJsonObject responseObject = jsonResponse.object();
-    mResult = responseObject.value(QStringLiteral("translatedText")).toString();
+    setResult(responseObject.value(QStringLiteral("translatedText")).toString());
     reply->deleteLater();
     Q_EMIT translateDone();
 }

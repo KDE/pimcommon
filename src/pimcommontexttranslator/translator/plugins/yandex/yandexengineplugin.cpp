@@ -89,7 +89,7 @@ void YandexEnginePlugin::translateText()
         return;
     }
 
-    mResult.clear();
+    clear();
     QString lang;
     if (from() == QStringLiteral("auto")) {
         lang = to();
@@ -139,6 +139,6 @@ void YandexEnginePlugin::parseTranslation(QNetworkReply *reply)
 #endif
     }
 
-    mResult += jsonData.value(QStringLiteral("text")).toArray().at(0).toString();
+    appendResult(jsonData.value(QStringLiteral("text")).toArray().at(0).toString());
     Q_EMIT translateDone();
 }

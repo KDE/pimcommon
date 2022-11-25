@@ -31,7 +31,7 @@ void GoogleEnginePlugin::translate()
         return;
     }
 
-    mResult.clear();
+    clear();
 
     QUrlQuery urlQuery;
     urlQuery.addQueryItem(QStringLiteral("client"), QStringLiteral("gtx"));
@@ -56,7 +56,7 @@ void GoogleEnginePlugin::translate()
 
 void GoogleEnginePlugin::slotTranslateFinished(QNetworkReply *reply)
 {
-    mResult.clear();
+    clear();
     mJsonData = QString::fromUtf8(reply->readAll());
     reply->deleteLater();
     //  jsonData contains arrays like this: ["foo",,"bar"]
@@ -84,7 +84,7 @@ void GoogleEnginePlugin::slotTranslateFinished(QNetworkReply *reply)
             if (level1.toList().size() <= 2) {
                 continue;
             }
-            mResult += level1.toList().at(0).toString();
+            appendResult(level1.toList().at(0).toString());
         }
     }
     Q_EMIT translateDone();

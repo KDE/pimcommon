@@ -38,3 +38,8 @@ QVector<QPair<QString, QString>> LibreTranslateEngineClient::supportedLanguages(
     }
     return mLanguages;
 }
+
+bool LibreTranslateEngineClient::hasConfigurationDialog() const
+{
+    return true;
+}

@@ -14,6 +14,7 @@ public:
     QString mText;
     QString mFrom;
     QString mTo;
+    QString mResult;
 };
 
 TranslatorEnginePlugin::TranslatorEnginePlugin(QObject *parent)
@@ -39,6 +40,21 @@ void TranslatorEnginePlugin::setTo(const QString &language)
     d->mTo = language;
 }
 
+void TranslatorEnginePlugin::setResult(const QString &result)
+{
+    d->mResult = result;
+}
+
+void TranslatorEnginePlugin::clear()
+{
+    d->mResult.clear();
+}
+
+void TranslatorEnginePlugin::appendResult(const QString &result)
+{
+    d->mResult += result;
+}
+
 QString TranslatorEnginePlugin::inputText() const
 {
     return d->mText;
@@ -52,6 +68,11 @@ QString TranslatorEnginePlugin::from() const
 QString TranslatorEnginePlugin::to() const
 {
     return d->mTo;
+}
+
+QString TranslatorEnginePlugin::result() const
+{
+    return d->mResult;
 }
 
 void TranslatorEnginePlugin::slotError(QNetworkReply::NetworkError error)
