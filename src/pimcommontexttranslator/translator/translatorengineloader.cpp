@@ -77,7 +77,7 @@ void TranslatorEngineLoader::loadPlugin(const QString &pluginPath)
     d->translatorClients.insert(client->name(), client);
 }
 
-TranslatorEnginePlugin *TranslatorEngineLoader::createTranslator(const QString &clientName)
+TranslatorEngineClient *TranslatorEngineLoader::createTranslatorClient(const QString &clientName)
 {
     auto clientsItr = d->translatorClients.constFind(clientName);
     if (clientsItr == d->translatorClients.constEnd()) {
@@ -85,7 +85,7 @@ TranslatorEnginePlugin *TranslatorEngineLoader::createTranslator(const QString &
         Q_EMIT loadingTranslatorFailed();
         return nullptr;
     }
-    return (*clientsItr)->createTranslator();
+    return (*clientsItr);
 }
 
 QMap<QString, QString> TranslatorEngineLoader::translatorEngineInfos() const

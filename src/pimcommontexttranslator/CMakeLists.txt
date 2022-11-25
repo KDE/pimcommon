@@ -66,8 +66,6 @@ target_sources(KF5PimCommonTextTranslator PRIVATE
 
     translator/networkmanager.cpp
     translator/networkmanager.h
-    translator/translatorenginebase.cpp
-    translator/translatorenginebase.h
     translator/translatorengineaccessmanager.h
     translator/translatorengineaccessmanager.cpp
 
@@ -79,19 +77,6 @@ target_sources(KF5PimCommonTextTranslator PRIVATE
 
     translator/translatorengineloader.cpp
     translator/translatorengineloader.h
-
-    translator/engine/googletranslator.h
-    translator/engine/googletranslator.cpp
-    translator/engine/bingtranslator.h
-    translator/engine/bingtranslator.cpp
-    translator/engine/yandextranslator.h
-    translator/engine/yandextranslator.cpp
-    translator/engine/lingvatranslator.h
-    translator/engine/lingvatranslator.cpp
-    translator/engine/libretranslatetranslator.h
-    translator/engine/libretranslatetranslator.cpp
-    translator/engine/deepltranslator.cpp
-    translator/engine/deepltranslator.h
     )
 if (BUILD_TESTING)
     add_subdirectory(translator/autotests)
@@ -149,7 +134,6 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslatorwidgets_HEADERS
 
 ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslator_HEADERS
     HEADER_NAMES
-    TranslatorEngineBase
     TranslatorEnginePlugin
     TranslatorEngineClient
     TranslatorEngineAccessManager

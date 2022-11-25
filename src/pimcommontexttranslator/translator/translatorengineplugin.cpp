@@ -23,6 +23,11 @@ TranslatorEnginePlugin::TranslatorEnginePlugin(QObject *parent)
 {
 }
 
+QString TranslatorEnginePlugin::resultTranslate() const
+{
+    return result();
+}
+
 TranslatorEnginePlugin::~TranslatorEnginePlugin() = default;
 
 void TranslatorEnginePlugin::setInputText(const QString &text)

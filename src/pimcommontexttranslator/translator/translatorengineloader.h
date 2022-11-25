@@ -12,7 +12,7 @@
 namespace PimCommonTextTranslator
 {
 class TranslatorEngineLoaderPrivate;
-class TranslatorEnginePlugin;
+class TranslatorEngineClient;
 class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorEngineLoader : public QObject
 {
     Q_OBJECT
@@ -22,7 +22,7 @@ public:
     explicit TranslatorEngineLoader(QObject *parent = nullptr);
     ~TranslatorEngineLoader() override;
 
-    Q_REQUIRED_RESULT TranslatorEnginePlugin *createTranslator(const QString &clientName);
+    Q_REQUIRED_RESULT PimCommonTextTranslator::TranslatorEngineClient *createTranslatorClient(const QString &clientName);
 
     // engine name, i18n
     Q_REQUIRED_RESULT QMap<QString, QString> translatorEngineInfos() const;

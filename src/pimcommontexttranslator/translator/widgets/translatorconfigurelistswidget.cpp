@@ -126,12 +126,13 @@ void TranslatorConfigureListsWidget::slotEngineChanged(int index)
     // Restore if possible
     d->mFromLanguageWidget->setSelectedLanguages(fromLanguages);
     d->mToLanguageWidget->setSelectedLanguages(toLanguages);
-    d->mConfigureEngine->setEnabled(TranslatorUtil::hasConfigureDialog(PimCommonTextTranslator::TranslatorUtil::convertStringToTranslatorEngine(engine)));
+    d->mConfigureEngine->setEnabled(PimCommonTextTranslator::TranslatorEngineLoader::self()->hasConfigurationDialog(engine));
 }
 
 void TranslatorConfigureListsWidget::slotConfigureEngine()
 {
     const QString engine = d->mEngineComboBox->currentData().toString();
-    if (TranslatorUtil::hasConfigureDialog(PimCommonTextTranslator::TranslatorUtil::convertStringToTranslatorEngine(engine))) { }
-    // TODO
+    if (PimCommonTextTranslator::TranslatorEngineLoader::self()->hasConfigurationDialog(engine)) {
+        // TODO
+    }
 }
