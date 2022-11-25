@@ -16,6 +16,6 @@ ecm_qt_declare_logging_category(translator_deepl
     EXPORT PIMCOMMON
 )
 
-target_link_libraries(translator_deepl PRIVATE KF5::PimCommonTextTranslator KF5::I18n)
+target_link_libraries(translator_deepl PRIVATE KF5::PimCommonTextTranslator KF5::I18n KF5::ConfigCore)
 
 install(TARGETS translator_deepl  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)
