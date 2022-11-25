@@ -103,7 +103,6 @@ public:
     Q_REQUIRED_RESULT QPair<QString, QString> pair(TranslatorUtil::languages lang);
     Q_REQUIRED_RESULT static PimCommonTextTranslator::TranslatorEngineBase *
     switchEngine(PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine engineType, QObject *parent);
-    static void fillComboboxSettings(QComboBox *combo);
     Q_REQUIRED_RESULT static PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine loadEngineSettings();
     Q_REQUIRED_RESULT static QString loadEngine();
     static void saveEngineSettings(const QString &engineName);

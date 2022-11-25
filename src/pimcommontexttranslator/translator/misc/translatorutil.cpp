@@ -343,38 +343,6 @@ PimCommonTextTranslator::TranslatorEngineBase *TranslatorUtil::switchEngine(PimC
     return abstractTranslator;
 }
 
-void TranslatorUtil::fillComboboxSettings(QComboBox *combo)
-{
-    for (int i = 0; i <= PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::LastEngine; ++i) {
-        switch (i) {
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::Google:
-            combo->addItem(i18n("Google"), QStringLiteral("google"));
-            break;
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::Yandex:
-            combo->addItem(i18n("Yandex"), QStringLiteral("yandex"));
-            break;
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::Bing:
-            combo->addItem(i18n("Bing"), QStringLiteral("bing"));
-            break;
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::Lingva:
-            combo->addItem(i18n("Lingva"), QStringLiteral("lingva"));
-            break;
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::LibreTranslate:
-            combo->addItem(i18n("Libre Translate"), QStringLiteral("libretranslate"));
-            break;
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::DeepL:
-            combo->addItem(i18n("DeepL"), QStringLiteral("deepl"));
-            break;
-        case PimCommonTextTranslator::TranslatorEngineBase::TranslatorEngine::OfflineTranslator:
-            combo->addItem(i18n("Offline"), QStringLiteral("offlinetranslator"));
-            break;
-        default:
-            qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << " Missing engine. It's a bug " << i;
-            break;
-        }
-    }
-}
-
 QString TranslatorUtil::groupTranslateName()
 {
     return QStringLiteral("Translate");

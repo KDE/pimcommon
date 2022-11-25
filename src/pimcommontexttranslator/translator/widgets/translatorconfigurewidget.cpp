@@ -6,6 +6,7 @@
 
 #include "translatorconfigurewidget.h"
 #include "translator/misc/translatorutil.h"
+#include "translator/translatorengineloader.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
@@ -68,7 +69,12 @@ TranslatorConfigureWidget::~TranslatorConfigureWidget() = default;
 
 void TranslatorConfigureWidget::fillEngine()
 {
-    TranslatorUtil::fillComboboxSettings(d->mEngineComboBox);
+    const QMap<QString, QString> map = PimCommonTextTranslator::TranslatorEngineLoader::self()->translatorEngineInfos();
+    QMapIterator<QString, QString> iMap(map);
+    while (iMap.hasNext()) {
+        iMap.next();
+        d->mEngineComboBox->addItem(iMap.value(), iMap.key());
+    }
 }
 
 void TranslatorConfigureWidget::saveSettings()
