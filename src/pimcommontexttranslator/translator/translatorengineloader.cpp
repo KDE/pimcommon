@@ -120,3 +120,12 @@ bool TranslatorEngineLoader::hasConfigurationDialog(const QString &clientName) c
     }
     return (*clientsItr)->hasConfigurationDialog();
 }
+
+QString TranslatorEngineLoader::fallbackFirstEngine() const
+{
+    if (!d->translatorClients.isEmpty()) {
+        return *d->translatorClients.keyBegin();
+    }
+    qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "No plugin found ! ";
+    return QString();
+}
