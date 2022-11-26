@@ -11,7 +11,6 @@
 #include <KPluginFactory>
 #include <KPluginMetaData>
 
-#include <QDebug>
 #include <QFileInfo>
 #include <QSet>
 
