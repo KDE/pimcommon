@@ -217,6 +217,7 @@ void TranslatorWidget::readConfig()
 void TranslatorWidget::loadEngineSettings()
 {
     d->engineName = TranslatorUtil::loadEngine();
+    // TODO fallback if name is empty ?
     switchEngine();
 }
 
