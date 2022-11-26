@@ -516,7 +516,11 @@ void TranslatorWidget::slotClear()
 
 void TranslatorWidget::slotDebug()
 {
-    TranslatorDebugDialog dlg(this);
-    dlg.setDebug(d->translatorPlugin->jsonDebug());
-    dlg.exec();
+    if (d->translatorPlugin) {
+        TranslatorDebugDialog dlg(this);
+        dlg.setDebug(d->translatorPlugin->jsonDebug());
+        dlg.exec();
+    } else {
+        qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << " Translator plugin invalid";
+    }
 }
