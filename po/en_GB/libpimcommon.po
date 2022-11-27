@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-09-10 10:55+0100\n"
+"PO-Revision-Date: 2022-11-26 15:10+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.0\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -1891,10 +1891,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
+#, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr "Replace &double quotes with typographical quotes"
+msgstr "Replace double quotes by french quotes"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:445
@@ -2001,10 +2000,9 @@ msgid "Import LibreOffice Autocorrection"
 msgstr "Import LibreOffice Autocorrection"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:574
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection File (*.data)"
+#, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "LibreOffice Autocorrection File (*.data)"
+msgstr "LibreOffice Autocorrection File (*.dat)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
 #, kde-format
@@ -2017,10 +2015,9 @@ msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail Autocorrection File (*.xml)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:610
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "Export Autocorrection File"
+msgstr "Import Autocorrection File"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
 #, kde-format
@@ -2045,22 +2042,20 @@ msgid "Export Autocorrection File"
 msgstr "Export Autocorrection File"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select email from contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Special Characters"
-msgstr "Select email from contact"
+msgstr "Select Special Characters"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
 #, kde-format
 msgid "Insert"
-msgstr ""
+msgstr "Insert"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Select"
+msgstr "Select"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Import LibreOffice Autocorrection File"
