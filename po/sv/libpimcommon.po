@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-09-25 20:15+0200\n"
+"PO-Revision-Date: 2022-11-27 11:30+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -1895,10 +1895,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
+#, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr "Ersätt &dubbla citattecken med typografiska citattecken"
+msgstr "Ersätt dubbla citattecken med franska citattecken"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:445
@@ -2005,10 +2004,9 @@ msgid "Import LibreOffice Autocorrection"
 msgstr "Importera LibreOffice automatisk korrigering"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:574
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection File (*.data)"
+#, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "LibreOffice korrigeringsfil (*.data)"
+msgstr "LibreOffice automatisk korrigeringsfil (*.dat)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
 #, kde-format
@@ -2021,10 +2019,9 @@ msgid "KMail Autocorrection File (*.xml)"
 msgstr "Kmail korrigeringsfil (*.xml)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:610
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "Exportera automatisk korrigeringsfil"
+msgstr "Importera automatisk korrigeringsfil"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
 #, kde-format
@@ -2048,22 +2045,20 @@ msgid "Export Autocorrection File"
 msgstr "Exportera automatisk korrigeringsfil"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select email from contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Special Characters"
-msgstr "Välj e-postadress från kontakt"
+msgstr "Välj specialtecken"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
 #, kde-format
 msgid "Insert"
-msgstr ""
+msgstr "Infoga"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Markera"
+msgstr "Välj"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Importera automatisk korrigeringsfil från LibreOffice"
