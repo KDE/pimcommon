@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-27 00:47+0000\n"
-"PO-Revision-Date: 2022-11-18 09:29+0000\n"
+"PO-Revision-Date: 2022-11-28 18:14+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -2213,8 +2213,7 @@ msgid "Error: Unable to parse autodetected language"
 msgstr "Erro: Não foi possível processar a língua detectada automaticamente"
 
 #: pimcommontexttranslator/translator/translatorengineplugin.cpp:106
-#, fuzzy, kde-format
-#| msgid "You used same language for from and to language."
+#, kde-format
 msgid "You used same language for 'from' and 'to' language."
 msgstr "Usou a mesma língua para a origem e o destino."
 
@@ -2257,10 +2256,9 @@ msgid "All Files (*)"
 msgstr "Todos os Ficheiros (*)"
 
 #: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Translate..."
-msgstr "Traduzir"
+msgstr "Traduzir..."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:131
 #, kde-format
@@ -2326,31 +2324,3 @@ msgstr "Sem rede"
 #, kde-format
 msgid "Translate error"
 msgstr "Erro de tradução"
-
-#~ msgid "You used same language for from and to language."
-#~ msgstr "Usou a mesma língua para a origem e o destino."
-
-#~ msgid "&Check Grammar (Grammalecte)"
-#~ msgstr "&Verificar a Gramática (Grammalecte)"
-
-#~ msgid "Grammalecte Plugin"
-#~ msgstr "'Plugin' do Grammalecte"
-
-#~ msgid "&Check Grammar (LanguageTool)"
-#~ msgstr "&Verificar a Gramática (LanguageTool)"
-
-#~ msgid ""
-#~ "You do not use local instance.\n"
-#~ "Your text will send on a external web site (https://languagetool.org/).\n"
-#~ "Do you want to continue?"
-#~ msgstr ""
-#~ "Não está a usar uma instância local.\n"
-#~ "O seu texto será enviado para uma página Web externa (https://"
-#~ "languagetool.org/).\n"
-#~ "Deseja continuar?"
-
-#~ msgid "Check Grammar with LanguageTool"
-#~ msgstr "Verificar a Gramática com o LanguageTool"
-
-#~ msgid "LanguageTool Plugin"
-#~ msgstr "'Plugin' do LanguageTool"
