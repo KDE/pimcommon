@@ -32,25 +32,14 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/ COMPONENT Devel
     )
 
-
-
-
-
-set(libpimcommonakonadi_SRCS)
-
-
-ecm_qt_declare_logging_category(libpimcommonakonadi_SRCS HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
+add_library(KF5PimCommonAkonadi )
+add_library(KF5::PimCommonAkonadi ALIAS KF5PimCommonAkonadi)
+ecm_qt_declare_logging_category(KF5PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
         DESCRIPTION "kdepim (pimcommonakonadi)"
         EXPORT PIMCOMMON
     )
 
-
-
-add_library(KF5PimCommonAkonadi )
-add_library(KF5::PimCommonAkonadi ALIAS KF5PimCommonAkonadi)
-
 target_sources(KF5PimCommonAkonadi PRIVATE
-    ${libpimcommonakonadi_SRCS}
     folderdialog/selectmulticollectionwidget.cpp
     folderdialog/selectmulticollectiondialog.cpp
     folderdialog/checkedcollectionwidget.cpp
