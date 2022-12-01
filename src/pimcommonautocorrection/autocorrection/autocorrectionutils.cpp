@@ -53,13 +53,7 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
             dirList.append(path);
         }
     };
-#ifdef Q_OS_WIN
-    const QString writeablePath =
-        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation).remove(QStringLiteral("ruqola")) + AutoCorrectionUtils::libreOfficeLocalPath();
-    dirList.append(writeablePath);
-#else
-    dirList.append(QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, libreOfficeLocalPath(), QStandardPaths::LocateDirectory));
-#endif
+    maybeAddPath(libreOfficeWritableLocalAutoCorrectionPath());
     maybeAddPath(libreOfficeSystemPath());
     return dirList;
 }
@@ -81,7 +75,13 @@ QString AutoCorrectionUtils::libreOfficeLocalPath()
 
 QString AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath()
 {
+#ifdef Q_OS_WIN
+    const QString writeablePath =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation).remove(QStringLiteral("ruqola")) + AutoCorrectionUtils::libreOfficeLocalPath();
+    return writeablePath;
+#else
     return QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + libreOfficeLocalPath();
+#endif
 }
 
 QStringList AutoCorrectionUtils::searchAutoCorrectLibreOfficeFiles()
