@@ -53,7 +53,13 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
             dirList.append(path);
         }
     };
+#ifdef Q_OS_WIN
+    const QString writeablePath =
+        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation).remove(QStringLiteral("ruqola")) + AutoCorrectionUtils::libreOfficeLocalPath();
+    dirList.append(writeablePath);
+#else
     dirList.append(QStandardPaths::locateAll(QStandardPaths::GenericConfigLocation, libreOfficeLocalPath(), QStandardPaths::LocateDirectory));
+#endif
     maybeAddPath(libreOfficeSystemPath());
     return dirList;
 }
@@ -61,12 +67,15 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
 QString AutoCorrectionUtils::libreOfficeSystemPath()
 {
     // TODO add path for macos/windows etc.
+#ifdef Q_OS_WIN
+    return QStringLiteral("c:/Program Files/LibreOffice/share/autocorr/");
+#else
     return QStringLiteral("/usr/lib64/libreoffice/share/autocorr/");
+#endif
 }
 
 QString AutoCorrectionUtils::libreOfficeLocalPath()
 {
-    // TODO add path for macos/windows etc.
     return QStringLiteral("/libreoffice/4/user/autocorr/");
 }
 
