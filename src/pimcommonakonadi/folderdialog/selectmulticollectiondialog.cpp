@@ -10,9 +10,11 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace PimCommon;
 
@@ -23,6 +25,11 @@ public:
 
     SelectMultiCollectionWidget *mSelectMultiCollection = nullptr;
 };
+
+namespace
+{
+static const char myConfigSelectMultiCollectionDialog[] = "SelectMultiCollectionDialog";
+}
 
 SelectMultiCollectionDialog::SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent)
     : QDialog(parent)
@@ -60,19 +67,19 @@ void SelectMultiCollectionDialog::initialize(const QString &mimetype, const QLis
     readConfig();
 }
 
-void SelectMultiCollectionDialog::readConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectMultiCollectionDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
-}
-
 void SelectMultiCollectionDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectMultiCollectionDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectMultiCollectionDialog);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+}
+
+void SelectMultiCollectionDialog::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(800, 600));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectMultiCollectionDialog);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 QVector<Akonadi::Collection> SelectMultiCollectionDialog::selectedCollection() const

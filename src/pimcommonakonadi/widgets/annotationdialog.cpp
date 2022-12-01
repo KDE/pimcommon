@@ -20,10 +20,12 @@
 #include <QIcon>
 
 #include <KConfigGroup>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace PimCommon;
 
@@ -37,6 +39,11 @@ public:
     QComboBox *mNoteType = nullptr;
     bool mHasAnnotation = false;
 };
+
+namespace
+{
+static const char myConfigAnnotationEditDialog[] = "AnnotationEditDialog";
+}
 
 AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *parent)
     : QDialog(parent)
@@ -134,19 +141,17 @@ void AnnotationEditDialog::slotDeleteNote()
     }
 }
 
-void AnnotationEditDialog::readConfig()
-{
-    KSharedConfig::Ptr cfg = KSharedConfig::openConfig();
-    KConfigGroup group(cfg, "AnnotationEditDialog");
-    QSize size = group.readEntry("Size", QSize());
-    if (!size.isEmpty()) {
-        resize(size);
-    }
-}
-
 void AnnotationEditDialog::writeConfig()
 {
-    KSharedConfig::Ptr cfg = KSharedConfig::openConfig();
-    KConfigGroup group(cfg, "AnnotationEditDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAnnotationEditDialog);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
+}
+
+void AnnotationEditDialog::readConfig()
+{
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(400, 300));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAnnotationEditDialog);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
