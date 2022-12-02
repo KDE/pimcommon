@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-11-26 17:19+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -821,7 +821,7 @@ msgstr "Sortu libre/lan&petuta eta aktibatu alarma hauei:"
 msgid "Search..."
 msgstr "Bilatu..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
@@ -1145,53 +1145,53 @@ msgstr "Baliabidearen ezarpena osatu da."
 msgid "Failed to create resource instance: %1"
 msgstr "Baliabidearen instantzia sortzea huts egin du: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Note"
 msgstr "Editatu Oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#: pimcommonakonadi/widgets/annotationdialog.cpp:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Note"
 msgstr "Ezabatu Oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#: pimcommonakonadi/widgets/annotationdialog.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Note"
 msgstr "Gehitu Oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "Sartu ohar gisa gorde beharreko testua e-postan:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Note type:"
 msgstr "Ohar mota:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#: pimcommonakonadi/widgets/annotationdialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Private note"
 msgstr "Ohar pribatua"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#: pimcommonakonadi/widgets/annotationdialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Shared note"
 msgstr "Partekatutako oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, kde-format
 msgid "Do you really want to delete this note?"
 msgstr "Benetan ezabatu nahi duzu ohar hau?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#: pimcommonakonadi/widgets/annotationdialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
@@ -1224,7 +1224,7 @@ msgstr "Zuzenketa automatiko a&urreratua"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
 #, kde-format
 msgid "&Add"
 msgstr "&Gehitu"
@@ -1496,6 +1496,34 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "Aipua amaiera:"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
+#, kde-format
+msgid "Path"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
+#, fuzzy, kde-format
+#| msgid "Instance Path:"
+msgid "System Path:"
+msgstr "Instantziaren bide-izena:"
+
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, writablePath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#, kde-format
+msgid "TextLabel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#, fuzzy, kde-format
+#| msgid "Grammalecte Path:"
+msgid "Writable Path:"
+msgstr "«Grammalecte»ren bide-izena:"
+
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
@@ -1506,64 +1534,64 @@ msgstr "LibreOffice, zuzenketa automatikoa"
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "«Ordeztu» katea «Aurkitu» katearen berdina da."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Gehitu zuzenketa automatikoko sarrera"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Modify"
 msgstr "&Aldatu"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Inportatu LibreOfficeko zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOfficeko zuzenketa automatikorako fitxategia (*.dat)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Inportatu KMaileko zuzenketa automatikoa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMaileko zuzenketa automatikorako fitxategia (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Inportatu zuzenketa automatikorako fitxategia"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Hizkuntza aldatu da, aurreko hizkuntzaren konfigurazioa gorde nahi duzu?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
 #, kde-format
 msgid "Save config"
 msgstr "Gorde konfigurazioa"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Mesedez, gorde aldaketak ezarpenak esportatu aurretik."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Esportatu zuzenketa automatikorako fitxategia"

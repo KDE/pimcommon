@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -807,7 +807,7 @@ msgstr "다음에 대하여 바쁨/한가함 상태 생성 및 알람 활성화(
 msgid "Search..."
 msgstr "찾기..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
@@ -1130,53 +1130,53 @@ msgstr "자원 설정이 완료되었습니다."
 msgid "Failed to create resource instance: %1"
 msgstr "자원 인스턴스를 만들 수 없음: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Note"
 msgstr "메모 편집"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#: pimcommonakonadi/widgets/annotationdialog.cpp:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Note"
 msgstr "메모 삭제"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#: pimcommonakonadi/widgets/annotationdialog.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Note"
 msgstr "메모 추가"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "메일에 덧붙일 메모 텍스트를 입력하십시오:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Note type:"
 msgstr "메모 종류:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#: pimcommonakonadi/widgets/annotationdialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Private note"
 msgstr "개인 메모"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#: pimcommonakonadi/widgets/annotationdialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Shared note"
 msgstr "공유 메모"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, kde-format
 msgid "Do you really want to delete this note?"
 msgstr "이 메모를 삭제하시겠습니까?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#: pimcommonakonadi/widgets/annotationdialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
@@ -1209,7 +1209,7 @@ msgstr "고급 자동 고침(&V)"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
 #, kde-format
 msgid "&Add"
 msgstr "추가(&A)"
@@ -1473,6 +1473,34 @@ msgstr "'"
 msgid "Ending Quotes:"
 msgstr "닫는 따옴표:"
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
+#, kde-format
+msgid "Path"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
+#, fuzzy, kde-format
+#| msgid "Storage path:"
+msgid "System Path:"
+msgstr "저장소 경로:"
+
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, writablePath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#, kde-format
+msgid "TextLabel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#, fuzzy, kde-format
+#| msgid "writable:"
+msgid "Writable Path:"
+msgstr "쓰기 가능:"
+
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
@@ -1483,65 +1511,65 @@ msgstr "LibreOffice 자동 고침"
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra 자동 고침"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"바꿀 문자열\"이 \"찾을 문자열\"과 같습니다."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "자동 고침 항목 추가"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Modify"
 msgstr "수정(&M)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "LibreOffice 자동 고침 가져오기"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOffice 자동 고침 파일 (*.data)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "KMail 자동 고침 가져오기"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 자동 고침 파일 (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "언어가 변경되었습니다. 이전 언어의 설정을 저장하시겠습니까?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
 #, kde-format
 msgid "Save config"
 msgstr "설정 저장"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "설정을 내보내기 전에 저장하십시오."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
@@ -2438,9 +2466,6 @@ msgstr "번역 오류"
 #~ "Dropbox는 Dropbox, Inc.에서 제공하는 클라우드 저장소, 파일 동기화, 클라이"
 #~ "언트 소프트웨어를 제공하는 파일 호스팅입니다."
 
-#~ msgid "Storage path:"
-#~ msgstr "저장소 경로:"
-
 #~ msgid "Hubic"
 #~ msgstr "Hubic"
 
@@ -2640,9 +2665,6 @@ msgstr "번역 오류"
 #~ msgstr ""
 #~ "YouSendIt은 클라우드 저장소, 파일 동기화, 클라이언트 소프트웨어를 제공하"
 #~ "는 파일 호스팅입니다."
-
-#~ msgid "writable:"
-#~ msgstr "쓰기 가능:"
 
 #~ msgid "Yes"
 #~ msgstr "예"

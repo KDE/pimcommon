@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:47+0000\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -842,7 +842,7 @@ msgstr ""
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, fuzzy, kde-format
 #| msgid "Select Multiple Folders"
 msgctxt "@title:window"
@@ -1177,58 +1177,58 @@ msgstr "Η ρύθμιση του πόρου ολοκληρώθηκε."
 msgid "Failed to create resource instance: %1"
 msgstr "Αποτυχία δημιουργίας αντικειμένου πόρου: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, fuzzy, kde-format
 #| msgid "Delete Folder"
 msgctxt "@title:window"
 msgid "Edit Note"
 msgstr "Διαγραφή φακέλου"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#: pimcommonakonadi/widgets/annotationdialog.cpp:69
 #, fuzzy, kde-format
 #| msgid "Delete Folder"
 msgctxt "@action:button"
 msgid "Delete Note"
 msgstr "Διαγραφή φακέλου"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#: pimcommonakonadi/widgets/annotationdialog.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Note"
 msgstr ""
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr ""
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Note type:"
 msgstr ""
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#: pimcommonakonadi/widgets/annotationdialog.cpp:92
 #, fuzzy, kde-format
 #| msgid "Shared:"
 msgctxt "@item:inlistbox"
 msgid "Private note"
 msgstr "Κοινόχρηστο:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#: pimcommonakonadi/widgets/annotationdialog.cpp:93
 #, fuzzy, kde-format
 #| msgid "Shared:"
 msgctxt "@item:inlistbox"
 msgid "Shared note"
 msgstr "Κοινόχρηστο:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, fuzzy, kde-format
 #| msgid "Do you want to delete this service '%1'?"
 msgid "Do you really want to delete this note?"
 msgstr "Επιθυμείτε πραγματικά τη διαγραφή της υπηρεσίας '%1';"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#: pimcommonakonadi/widgets/annotationdialog.cpp:135
 #, fuzzy, kde-format
 #| msgid "Delete Folder"
 msgctxt "@title:window"
@@ -1262,7 +1262,7 @@ msgstr "Πρ&οηγμένη αυτόματη διόρθωση"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
 #, kde-format
 msgid "&Add"
 msgstr "&Προσθήκη"
@@ -1540,6 +1540,34 @@ msgstr ""
 msgid "Ending Quotes:"
 msgstr ""
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
+#, kde-format
+msgid "Path"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
+#, fuzzy, kde-format
+#| msgid "Storage path:"
+msgid "System Path:"
+msgstr "Διαδρομή αποθήκευσης"
+
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, writablePath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#, kde-format
+msgid "TextLabel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#, fuzzy, kde-format
+#| msgid "writable:"
+msgid "Writable Path:"
+msgstr "εγγράψιμο:"
+
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
@@ -1550,68 +1578,68 @@ msgstr "Αυτόματη διόρθωση LibreOffice"
 msgid "KMail/Calligra Autocorrection"
 msgstr "Αυτόματη διόρθωση KMail/Calligra"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Η συμβολοσειρά «Αντικατάσταση» είναι ίδια με τη συμβολοσειρά «Εύρεση»."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Προσθήκη καταχώρησης αυτόματης διόρθωσης"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Modify"
 msgstr "Τρ&οποποίηση"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Εισαγωγή αυτόματης διόρθωσης LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, fuzzy, kde-format
 #| msgid "Import LibreOffice Autocorrection File"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Εισαγωγή αρχείου αυτόματης διόρθωσης LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Εισαγωγή αυτόματης διόρθωσης KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Εξαγωγή αρχείου αυτόματης διόρθωσης"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Εξαγωγή αρχείου αυτόματης διόρθωσης"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Η γλώσσα άλλαξε, θέλετε να αποθηκεύσετε τη διαμόρφωση για την προηγούμενη "
 "γλώσσα;"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
 #, kde-format
 msgid "Save config"
 msgstr "Αποθήκευση διαμόρφωσης"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Εξαγωγή αρχείου αυτόματης διόρθωσης"
@@ -2513,9 +2541,6 @@ msgstr "Σφάλμα μετάφρασης"
 #~ "προσφέρει αποθήκευση στο σύννεφο, συγχρονισμό αρχείων και λογισμικό "
 #~ "πελάτη."
 
-#~ msgid "Storage path:"
-#~ msgstr "Διαδρομή αποθήκευσης"
-
 #~ msgid "Hubic"
 #~ msgstr "Hubic"
 
@@ -2718,9 +2743,6 @@ msgstr "Σφάλμα μετάφρασης"
 #~ msgstr ""
 #~ "Το YouSendIt είναι μια υπηρεσία φιλοξενίας αρχείων που προσφέρει "
 #~ "αποθήκευση στο σύννεφο, συγχρονισμό αρχείων και λογισμικό πελάτη."
-
-#~ msgid "writable:"
-#~ msgstr "εγγράψιμο:"
 
 #~ msgid "Yes"
 #~ msgstr "Ναι"

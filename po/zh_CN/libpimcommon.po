@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-27 00:47+0000\n"
-"PO-Revision-Date: 2022-11-19 14:48\n"
+"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"PO-Revision-Date: 2022-12-01 06:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -802,7 +802,7 @@ msgstr "为其生成闲/忙并激活闹钟(&B)："
 msgid "Search..."
 msgstr "搜索..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:48
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
@@ -1122,53 +1122,53 @@ msgstr "资源设置完成。"
 msgid "Failed to create resource instance: %1"
 msgstr "创建资源实例失败：%1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:59
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Note"
 msgstr "编辑便笺"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:62
+#: pimcommonakonadi/widgets/annotationdialog.cpp:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Note"
 msgstr "删除便笺"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#: pimcommonakonadi/widgets/annotationdialog.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Note"
 msgstr "添加便签"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:71
+#: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "输入要附加到邮件中的便笺文字："
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:81
+#: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Note type:"
 msgstr "便笺类型："
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:85
+#: pimcommonakonadi/widgets/annotationdialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Private note"
 msgstr "私人便笺"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:86
+#: pimcommonakonadi/widgets/annotationdialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Shared note"
 msgstr "分享便笺"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:127
+#: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, kde-format
 msgid "Do you really want to delete this note?"
 msgstr "您真的想要删除此便笺吗？"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:128
+#: pimcommonakonadi/widgets/annotationdialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
@@ -1201,7 +1201,7 @@ msgstr "高级自动更正(&V)"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
 #, kde-format
 msgid "&Add"
 msgstr "添加(&A)"
@@ -1462,6 +1462,32 @@ msgstr ""
 msgid "Ending Quotes:"
 msgstr ""
 
+#. i18n: ectx: attribute (title), widget (QWidget, tab)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
+#, kde-format
+msgid "Path"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
+#, kde-format
+msgid "System Path:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, writablePath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#, kde-format
+msgid "TextLabel"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#, kde-format
+msgid "Writable Path:"
+msgstr ""
+
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
 msgid "LibreOffice Autocorrection"
@@ -1472,63 +1498,63 @@ msgstr "LibreOffice 自动更正"
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra 自动更正"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"替换\"字符串和\"查找\"字符串相同。"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:398
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "添加自动更正项目"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:477
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
 #, kde-format
 msgid "&Modify"
 msgstr "修改(&M)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:588
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "导入 LibreOffice 自动更正"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:589
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "导入 KMail/Calligra 自动更正"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:593
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 自动更正文件 (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:625
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:648
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "语言已改变，您想要保存之前语言的配置吗？"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:649
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
 #, kde-format
 msgid "Save config"
 msgstr "保存设置"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "请在导出设置之前保存更改。"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:684
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "导出自动更正文件"
@@ -2155,10 +2181,9 @@ msgid "Error: Unable to parse autodetected language"
 msgstr ""
 
 #: pimcommontexttranslator/translator/translatorengineplugin.cpp:106
-#, fuzzy, kde-format
-#| msgid "You used same language for from and to language."
+#, kde-format
 msgid "You used same language for 'from' and 'to' language."
-msgstr "您为来源和目标语言使用了同样的语言。"
+msgstr ""
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format
@@ -2199,10 +2224,9 @@ msgid "All Files (*)"
 msgstr "所有文件 (*)"
 
 #: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Translate..."
-msgstr "翻译"
+msgstr ""
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:131
 #, kde-format
@@ -2265,6 +2289,3 @@ msgstr "无网络"
 #, kde-format
 msgid "Translate error"
 msgstr "翻译错误"
-
-#~ msgid "You used same language for from and to language."
-#~ msgstr "您为来源和目标语言使用了同样的语言。"
