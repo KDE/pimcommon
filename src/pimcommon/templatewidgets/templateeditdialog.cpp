@@ -14,14 +14,19 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace PimCommon;
-
+namespace
+{
+static const char myTemplateEditDialogConfigGroupName[] = "TemplateEditDialog";
+}
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)
     , mTextEdit(new KPIMTextEdit::PlainTextEditorWidget(this))
@@ -80,19 +85,19 @@ TemplateEditDialog::~TemplateEditDialog()
     writeConfig();
 }
 
-void TemplateEditDialog::writeConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), "TemplateEditDialog");
-    group.writeEntry("Size", size());
-}
-
 void TemplateEditDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "TemplateEditDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(600, 400));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myTemplateEditDialogConfigGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
+}
+
+void TemplateEditDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openStateConfig(), myTemplateEditDialogConfigGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void TemplateEditDialog::slotTemplateChanged()

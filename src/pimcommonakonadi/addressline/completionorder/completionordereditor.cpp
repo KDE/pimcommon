@@ -17,12 +17,17 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace PimCommon;
-
+namespace
+{
+static const char myCompletionOrderEditorGroupName[] = "CompletionOrderEditor";
+}
 class PimCommon::CompletionOrderEditorPrivate
 {
 public:
@@ -65,18 +70,17 @@ CompletionOrderEditor::~CompletionOrderEditor()
 
 void CompletionOrderEditor::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionOrderEditor");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myCompletionOrderEditorGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void CompletionOrderEditor::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionOrderEditor");
-    group.writeEntry("Size", size());
-    group.sync();
+    KConfigGroup group(KSharedConfig::openStateConfig(), myCompletionOrderEditorGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void CompletionOrderEditor::slotOk()

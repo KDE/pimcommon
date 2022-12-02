@@ -10,9 +10,11 @@
 #include <KLDAP/LdapClientSearch>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QTabWidget>
 #include <QVBoxLayout>
+#include <QWindow>
 
 #include <addressline/completionorder/completionorderwidget.h>
 #include <config-akonadi-search.h>
@@ -22,7 +24,10 @@
 #include <addressline/recentaddress/recentaddresswidget.h>
 
 using namespace PimCommon;
-
+namespace
+{
+static const char myCompletionConfigureDialogGroupName[] = "CompletionConfigureDialog";
+}
 class PimCommon::CompletionConfigureDialogPrivate
 {
 public:
@@ -76,18 +81,17 @@ CompletionConfigureDialog::~CompletionConfigureDialog()
 
 void CompletionConfigureDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionConfigureDialog");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myCompletionConfigureDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void CompletionConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CompletionConfigureDialog");
-    group.writeEntry("Size", size());
-    group.sync();
+    KConfigGroup group(KSharedConfig::openStateConfig(), myCompletionConfigureDialogGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void CompletionConfigureDialog::setRecentAddresses(const QStringList &lst)
