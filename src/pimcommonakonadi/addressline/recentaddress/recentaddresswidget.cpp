@@ -22,7 +22,6 @@
 
 #include <Libkdepim/LineEditCatchReturnKey>
 #include <PimCommon/EmailValidator>
-#include <kwidgetsaddons_version.h>
 
 using namespace PimCommon;
 RecentAddressWidget::RecentAddressWidget(QWidget *parent)
