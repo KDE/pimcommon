@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:47+0000\n"
 "PO-Revision-Date: 2019-05-14 22:35+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -83,21 +83,21 @@ msgstr ""
 msgid "LiveJournal"
 msgstr ""
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, fuzzy, kde-format
 #| msgid "Default template"
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "預設樣本"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@title:window"
 msgid "Template"
 msgstr "樣本"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
 msgstr "名稱："
@@ -639,29 +639,29 @@ msgstr ""
 msgid "Save"
 msgstr "儲存設定"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "設定"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
 msgid "Completion Order"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
 #, kde-format
 msgid "Recent Address"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:38
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
@@ -1504,13 +1504,13 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
 #, kde-format
 msgid "Writable Path:"
 msgstr ""

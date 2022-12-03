@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:47+0000\n"
 "PO-Revision-Date: 2020-11-17 19:30+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -79,21 +79,21 @@ msgstr "Pocket"
 msgid "LiveJournal"
 msgstr "LiveJournal"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, fuzzy, kde-format
 #| msgid "Default template"
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Standardskabelon"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Skabelon"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
 msgstr "Navn:"
@@ -620,28 +620,28 @@ msgstr "Listen blev ændret. Vil du gemme før du foretager en ny søgning?"
 msgid "Save"
 msgstr "Gem"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Indstil fuldførelse"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
 msgid "Completion Order"
 msgstr "Redigér fuldførelsesrækkefølge"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
 #, kde-format
 msgid "Recent Address"
 msgstr "Nylige adresser"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr "Sortlist e-mail-adresse"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:38
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
@@ -1513,13 +1513,13 @@ msgstr "Sti til lagring:"
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
 #, fuzzy, kde-format
 #| msgid "writable:"
 msgid "Writable Path:"

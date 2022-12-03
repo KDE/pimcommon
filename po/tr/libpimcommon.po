@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-11-25 19:26+0300\n"
+"POT-Creation-Date: 2022-12-03 00:47+0000\n"
+"PO-Revision-Date: 2022-12-02 19:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -82,19 +82,19 @@ msgstr "Pocket"
 msgid "LiveJournal"
 msgstr "LiveJournal"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Öntanımlı şablon"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Şablon"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
 msgstr "Ad:"
@@ -625,28 +625,28 @@ msgstr ""
 msgid "Save"
 msgstr "Kaydet"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Tamamlamayı Yapılandır"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
 msgid "Completion Order"
 msgstr "Tamamlama Sırası"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
 #, kde-format
 msgid "Recent Address"
 msgstr "Son Adres"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr "E-posta Adreslerini Kara Listeye Al"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:38
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
@@ -1497,29 +1497,27 @@ msgstr "Bitiş Tırnakları:"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
 #, kde-format
 msgid "Path"
-msgstr ""
+msgstr "Yol"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, fuzzy, kde-format
-#| msgid "Instance Path:"
+#, kde-format
 msgid "System Path:"
-msgstr "Örnek Yolu:"
+msgstr "Sistem Yolu:"
 
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "MetinEtiketi"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
-#, fuzzy, kde-format
-#| msgid "Grammalecte Path:"
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
+#, kde-format
 msgid "Writable Path:"
-msgstr "Grammalecte Yolu:"
+msgstr "Yazılabilir Yol:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format

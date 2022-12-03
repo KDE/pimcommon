@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
+"POT-Creation-Date: 2022-12-03 00:47+0000\n"
 "PO-Revision-Date: 2019-08-04 10:38+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -78,21 +78,21 @@ msgstr "Pocket"
 msgid "LiveJournal"
 msgstr "LiveJournal"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, fuzzy, kde-format
 #| msgid "Default template"
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Predvolená šablóna"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Šablóna"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
 msgstr "Názov:"
@@ -635,7 +635,7 @@ msgstr ""
 msgid "Save"
 msgstr "Uložiť záznam"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
 #, fuzzy, kde-format
 #| msgctxt "type of folder content"
 #| msgid "Configuration"
@@ -643,23 +643,23 @@ msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Nastavenie"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
 msgid "Completion Order"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
 #, fuzzy, kde-format
 #| msgid "Open Address Book"
 msgid "Recent Address"
 msgstr "Otvoriť adresár"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:38
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
@@ -1545,13 +1545,13 @@ msgstr "Úložná cesta:"
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
 #, fuzzy, kde-format
 #| msgid "writable:"
 msgid "Writable Path:"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-02 00:48+0000\n"
-"PO-Revision-Date: 2022-11-25 13:54+0100\n"
+"POT-Creation-Date: 2022-12-03 00:47+0000\n"
+"PO-Revision-Date: 2022-12-02 15:15+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -83,19 +83,19 @@ msgstr "Pocket"
 msgid "LiveJournal"
 msgstr "LiveJournal"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Plantilla predeterminada"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:30
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Plantilla"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:53
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
 msgstr "Nom:"
@@ -624,28 +624,28 @@ msgstr "La llista ha canviat. Voleu desar-la abans de fer una altra cerca?"
 msgid "Save"
 msgstr "Desa"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:43
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Configuració de la compleció"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
 msgid "Completion Order"
 msgstr "Ordre de la compleció"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:56
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
 #, kde-format
 msgid "Recent Address"
 msgstr "Adreces recents"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr "Llista negra d'adreces de correu electrònic"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:38
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
@@ -1503,29 +1503,27 @@ msgstr "Cometes finals:"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
 #, kde-format
 msgid "Path"
-msgstr ""
+msgstr "Camí"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, fuzzy, kde-format
-#| msgid "Instance Path:"
+#, kde-format
 msgid "System Path:"
-msgstr "Camí de la instància:"
+msgstr "Camí del sistema:"
 
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:734
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "EtiquetaDeText"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:727
-#, fuzzy, kde-format
-#| msgid "Grammalecte Path:"
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
+#, kde-format
 msgid "Writable Path:"
-msgstr "Camí del Grammalecte:"
+msgstr "Camí que s'hi pot escriure:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
@@ -2339,9 +2337,3 @@ msgstr "Sense xarxa"
 #, kde-format
 msgid "Translate error"
 msgstr "Error de traducció"
-
-#~ msgid "You used same language for from and to language."
-#~ msgstr "Heu usat el mateix idioma per a l'origen i la destinació."
-
-#~ msgid "Offline"
-#~ msgstr "Desconnectat"
