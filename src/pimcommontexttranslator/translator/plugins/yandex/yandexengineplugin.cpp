@@ -122,6 +122,9 @@ void YandexEnginePlugin::translateText()
 void YandexEnginePlugin::parseTranslation(QNetworkReply *reply)
 {
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
+    if (/*mDebug*/ 1) { // TODO fix me
+        setJsonDebug(QString::fromUtf8(jsonResponse.toJson(QJsonDocument::Indented)));
+    }
     const QJsonObject jsonData = jsonResponse.object();
     reply->deleteLater();
 

@@ -58,6 +58,10 @@ void LingvaEnginePlugin::parseTranslation(QNetworkReply *reply)
     }
 
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
+    if (/*mDebug*/ 1) { // TODO fix me
+        setJsonDebug(QString::fromUtf8(jsonResponse.toJson(QJsonDocument::Indented)));
+    }
+
     const QJsonObject responseObject = jsonResponse.object();
     setResult(responseObject.value(QStringLiteral("translation")).toString());
     reply->deleteLater();
