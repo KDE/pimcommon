@@ -150,7 +150,7 @@ void BingEnginePlugin::parseTranslation(QNetworkReply *reply)
 
     const QJsonObject translationsObject = responseObject.value(QStringLiteral("translations")).toArray().first().toObject();
     appendResult(translationsObject.value(QStringLiteral("text")).toString());
-    if (/*mDebug*/ 1) { // TODO fix me
+    if (hasDebug()) {
         setJsonDebug(QString::fromUtf8(jsonResponse.toJson(QJsonDocument::Indented)));
     }
 

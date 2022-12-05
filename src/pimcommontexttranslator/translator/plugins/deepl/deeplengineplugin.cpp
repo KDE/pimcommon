@@ -56,7 +56,7 @@ void DeeplEnginePlugin::parseTranslation(QNetworkReply *reply)
     }
 
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
-    if (/*mDebug*/ 1) { // TODO fix me
+    if (hasDebug()) {
         setJsonDebug(QString::fromUtf8(jsonResponse.toJson(QJsonDocument::Indented)));
     }
     const QJsonObject responseObject = jsonResponse.object();

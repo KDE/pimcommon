@@ -59,7 +59,7 @@ void LibreTranslateEnginePlugin::parseTranslation(QNetworkReply *reply)
         return;
     }
     const QJsonDocument jsonResponse = QJsonDocument::fromJson(reply->readAll());
-    if (/*mDebug*/ 1) { // TODO fix me
+    if (hasDebug()) {
         setJsonDebug(QString::fromUtf8(jsonResponse.toJson(QJsonDocument::Indented)));
     }
 
