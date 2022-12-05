@@ -14,4 +14,6 @@ class LibreTranslateEngineConfigureWidgetTest : public QObject
 public:
     explicit LibreTranslateEngineConfigureWidgetTest(QObject *parent = nullptr);
     ~LibreTranslateEngineConfigureWidgetTest() override = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };

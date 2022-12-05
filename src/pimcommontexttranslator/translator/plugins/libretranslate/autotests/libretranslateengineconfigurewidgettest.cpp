@@ -5,9 +5,16 @@
 */
 
 #include "libretranslateengineconfigurewidgettest.h"
+#include "../libretranslateengineconfigurewidget.h"
 #include <QTest>
 QTEST_MAIN(LibreTranslateEngineConfigureWidgetTest)
 LibreTranslateEngineConfigureWidgetTest::LibreTranslateEngineConfigureWidgetTest(QObject *parent)
     : QObject{parent}
 {
+}
+
+void LibreTranslateEngineConfigureWidgetTest::shouldHaveDefaultValues()
+{
+    LibreTranslateEngineConfigureWidget w;
+    // TODO
 }
