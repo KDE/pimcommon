@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:47+0000\n"
-"PO-Revision-Date: 2022-11-23 23:07+0100\n"
+"PO-Revision-Date: 2022-12-04 08:04+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.11.80\n"
+"X-Generator: Lokalize 22.11.90\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -1513,14 +1513,13 @@ msgstr "Quotes de fin :"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
 #, kde-format
 msgid "Path"
-msgstr ""
+msgstr "Emplacement"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, fuzzy, kde-format
-#| msgid "Instance Path:"
+#, kde-format
 msgid "System Path:"
-msgstr "Emplacement de l'instance :"
+msgstr "Emplacement du système :"
 
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
@@ -1528,14 +1527,13 @@ msgstr "Emplacement de l'instance :"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "Étiquette de texte"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
-#, fuzzy, kde-format
-#| msgid "writable:"
+#, kde-format
 msgid "Writable Path:"
-msgstr "Inscriptible :"
+msgstr "Emplacement accessible en écriture :"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format
@@ -2249,11 +2247,10 @@ msgid "Error: Unable to parse autodetected language"
 msgstr "Erreur : impossible d'analyser la langue détectée automatiquement"
 
 #: pimcommontexttranslator/translator/translatorengineplugin.cpp:106
-#, fuzzy, kde-format
-#| msgid "You used same language for from and to language."
+#, kde-format
 msgid "You used same language for 'from' and 'to' language."
 msgstr ""
-"Vous avez utilisé la même langue pour la langue « depuis » et « vers »."
+"Vous avez utilisé la même langue pour les langues « depuis » et « vers »."
 
 #: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
 #, kde-format

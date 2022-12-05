@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:47+0000\n"
-"PO-Revision-Date: 2022-11-28 18:14+0000\n"
+"PO-Revision-Date: 2022-12-04 13:21+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -35,7 +35,7 @@ msgstr ""
 "X-POFile-SpellExtra: AnnotationEditDialogPrivate Bing SID Yandex Libre\n"
 "X-POFile-SpellExtra: Translate Lingva DeepL dat Online Grammalecte\n"
 "X-POFile-SpellExtra: grammalected grammalecte cli py LanguageTool Khmer\n"
-"X-POFile-SpellExtra: Tagalog\n"
+"X-POFile-SpellExtra: Tagalog TextLabel\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -1515,14 +1515,13 @@ msgstr "Aspas de Fecho:"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
 #, kde-format
 msgid "Path"
-msgstr ""
+msgstr "Localização"
 
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, fuzzy, kde-format
-#| msgid "Instance Path:"
+#, kde-format
 msgid "System Path:"
-msgstr "Localização da Instância:"
+msgstr "Localização no Sistema:"
 
 #. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
@@ -1530,14 +1529,13 @@ msgstr "Localização da Instância:"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
-msgstr ""
+msgstr "TextLabel"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
-#, fuzzy, kde-format
-#| msgid "Grammalecte Path:"
+#, kde-format
 msgid "Writable Path:"
-msgstr "Localização do Grammalecte:"
+msgstr "Localização de Escrita:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
 #, kde-format

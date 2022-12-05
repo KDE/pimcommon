@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-04 00:47+0000\n"
-"PO-Revision-Date: 2022-12-03 06:57+0100\n"
+"PO-Revision-Date: 2022-12-04 07:23+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -1034,7 +1034,7 @@ msgstr "კოპირება"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
 msgid "You must select an LDAP server before searching."
-msgstr ""
+msgstr "ძებნამდე LDAP სერვერის არჩევა აუცილებელია."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
 #, kde-format
@@ -1531,7 +1531,7 @@ msgstr "კონფიგურაციის შენახვა"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #, kde-format
 msgid "Please save changes before exporting settings."
-msgstr ""
+msgstr "პარამეტრების გატანამდე, გთხოვთ, შეინახეთ ცვლილებები."
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
@@ -2114,6 +2114,7 @@ msgstr "შეცდომა: ვებ ვერსიიდან Bing-ის
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
+"შეცდომა: ვებ ვერსიიდან Bing-ის დამატებითი ინფორმაციის გამოღება შეუძლებელია."
 
 #: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
 #, kde-format
