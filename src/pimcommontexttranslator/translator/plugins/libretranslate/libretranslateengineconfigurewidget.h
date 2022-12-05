@@ -7,11 +7,14 @@
 #pragma once
 
 #include <QWidget>
-
+class QLineEdit;
 class LibreTranslateEngineConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit LibreTranslateEngineConfigureWidget(QWidget *parent = nullptr);
     ~LibreTranslateEngineConfigureWidget() override;
+
+private:
+    QLineEdit *const mServerUrl;
 };
