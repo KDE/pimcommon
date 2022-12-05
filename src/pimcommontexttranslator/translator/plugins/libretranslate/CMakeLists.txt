@@ -7,6 +7,10 @@ target_sources(translator_libretranslate PRIVATE
     libretranslateengineclient.h
     libretranslateengineplugin.cpp
     libretranslateengineplugin.h
+    libretranslateengineconfiguredialog.h
+    libretranslateengineconfiguredialog.cpp
+    libretranslateengineconfigurewidget.h
+    libretranslateengineconfigurewidget.cpp
 )
 ecm_qt_declare_logging_category(translator_libretranslate
     HEADER libretranslatetranslator_debug.h
