@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 
-add_library(translator_libretranslate MODULE ${libretranslatetranslator_PART_SRCS})
+add_library(translator_libretranslate MODULE)
 target_sources(translator_libretranslate PRIVATE
     libretranslateengineclient.cpp
     libretranslateengineclient.h

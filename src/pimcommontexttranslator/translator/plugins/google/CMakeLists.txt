@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 
-add_library(translator_google MODULE ${googletranslator_PART_SRCS})
+add_library(translator_google MODULE)
 target_sources(translator_google PRIVATE
     googleengineclient.h
     googleengineclient.cpp

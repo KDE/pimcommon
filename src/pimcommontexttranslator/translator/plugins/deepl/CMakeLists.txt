@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 
-add_library(translator_deepl MODULE ${deepltranslator_PART_SRCS})
+add_library(translator_deepl MODULE)
 target_sources(translator_deepl PRIVATE
     deeplengineclient.cpp
     deeplengineclient.h

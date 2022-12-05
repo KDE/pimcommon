@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 
-add_library(translator_yandex MODULE ${yandextranslator_PART_SRCS})
+add_library(translator_yandex MODULE)
 target_sources(translator_yandex PRIVATE
     yandexengineclient.cpp
     yandexengineclient.h

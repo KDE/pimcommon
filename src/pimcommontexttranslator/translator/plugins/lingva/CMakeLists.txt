@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 
-add_library(translator_lingva MODULE ${lingvatranslator_PART_SRCS})
+add_library(translator_lingva MODULE)
 target_sources(translator_lingva PRIVATE
     lingvaengineclient.cpp
     lingvaengineclient.h
