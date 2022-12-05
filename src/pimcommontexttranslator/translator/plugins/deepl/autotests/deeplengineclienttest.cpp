@@ -19,5 +19,6 @@ void DeeplEngineClientTest::shouldHaveDefaultValues()
     DeeplEngineClient client;
     QCOMPARE(client.name(), QStringLiteral("deepl"));
     QVERIFY(client.createTranslator());
+    QVERIFY(!client.translatedName().isEmpty());
     QVERIFY(!client.supportedLanguages().isEmpty());
 }

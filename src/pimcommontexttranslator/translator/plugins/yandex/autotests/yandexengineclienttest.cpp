@@ -19,5 +19,6 @@ void YandexEngineClientTest::shouldHaveDefaultValues()
     YandexEngineClient client;
     QCOMPARE(client.name(), QStringLiteral("yandex"));
     QVERIFY(client.createTranslator());
+    QVERIFY(!client.translatedName().isEmpty());
     QVERIFY(!client.supportedLanguages().isEmpty());
 }

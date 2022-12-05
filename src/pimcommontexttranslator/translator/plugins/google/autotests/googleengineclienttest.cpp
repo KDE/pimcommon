@@ -19,5 +19,6 @@ void GoogleEngineClientTest::shouldHaveDefaultValues()
     GoogleEngineClient client;
     QCOMPARE(client.name(), QStringLiteral("google"));
     QVERIFY(client.createTranslator());
+    QVERIFY(!client.translatedName().isEmpty());
     QVERIFY(!client.supportedLanguages().isEmpty());
 }

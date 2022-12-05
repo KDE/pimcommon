@@ -19,5 +19,6 @@ void LibreTranslateEngineClientTest::shouldHaveDefaultValues()
     LibreTranslateEngineClient client;
     QCOMPARE(client.name(), QStringLiteral("libretranslate"));
     QVERIFY(client.createTranslator());
+    QVERIFY(!client.translatedName().isEmpty());
     QVERIFY(!client.supportedLanguages().isEmpty());
 }
