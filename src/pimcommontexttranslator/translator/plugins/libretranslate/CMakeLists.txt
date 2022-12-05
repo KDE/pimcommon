@@ -23,3 +23,7 @@ ecm_qt_declare_logging_category(translator_libretranslate
 target_link_libraries(translator_libretranslate PRIVATE KF5::PimCommonTextTranslator KF5::I18n KF5::ConfigCore)
 
 install(TARGETS translator_libretranslate  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)
+
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
