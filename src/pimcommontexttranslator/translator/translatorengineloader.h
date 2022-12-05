@@ -33,6 +33,8 @@ public:
 
     Q_REQUIRED_RESULT QString fallbackFirstEngine() const;
 
+    void showConfigureDialog(const QString &clientName);
+
 Q_SIGNALS:
     void loadingTranslatorFailed();
 

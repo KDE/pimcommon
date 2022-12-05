@@ -22,4 +22,5 @@ public:
     Q_REQUIRED_RESULT PimCommonTextTranslator::TranslatorEnginePlugin *createTranslator() override;
     Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguages() override;
     Q_REQUIRED_RESULT bool hasConfigurationDialog() const override;
+    void showConfigureDialog() override;
 };

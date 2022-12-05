@@ -32,6 +32,8 @@ public:
 
     Q_REQUIRED_RESULT virtual bool hasConfigurationDialog() const;
 
+    virtual void showConfigureDialog();
+
 protected:
     QVector<QPair<QString, QString>> mLanguages;
 };
