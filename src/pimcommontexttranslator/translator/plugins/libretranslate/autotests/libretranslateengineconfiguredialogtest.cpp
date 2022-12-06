@@ -5,9 +5,16 @@
 */
 
 #include "libretranslateengineconfiguredialogtest.h"
+#include "../libretranslateengineconfiguredialog.h"
 #include <QTest>
 QTEST_MAIN(LibreTranslateEngineConfigureDialogTest)
 LibreTranslateEngineConfigureDialogTest::LibreTranslateEngineConfigureDialogTest(QObject *parent)
     : QObject{parent}
 {
+}
+
+void LibreTranslateEngineConfigureDialogTest::shouldHaveDefaultValues()
+{
+    LibreTranslateEngineConfigureDialog d;
+    // TODO
 }
