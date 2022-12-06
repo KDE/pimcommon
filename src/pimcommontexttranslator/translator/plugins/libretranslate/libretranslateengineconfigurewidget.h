@@ -15,6 +15,8 @@ public:
     explicit LibreTranslateEngineConfigureWidget(QWidget *parent = nullptr);
     ~LibreTranslateEngineConfigureWidget() override;
 
+    Q_REQUIRED_RESULT QString serverUrl() const;
+
 private:
     QLineEdit *const mServerUrl;
 };

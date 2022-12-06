@@ -6,19 +6,24 @@
 
 #include "libretranslateengineconfigurewidget.h"
 #include <KLocalizedString>
+#include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <QVBoxLayout>
 
 LibreTranslateEngineConfigureWidget::LibreTranslateEngineConfigureWidget(QWidget *parent)
     : QWidget{parent}
     , mServerUrl(new QLineEdit(this))
 {
-    auto mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mServerUrl->setObjectName(QStringLiteral("mServerUrl"));
-    // TODO
+    mainLayout->addRow(i18n("Server Url:"), mServerUrl);
 }
 
 LibreTranslateEngineConfigureWidget::~LibreTranslateEngineConfigureWidget() = default;
+
+QString LibreTranslateEngineConfigureWidget::serverUrl() const
+{
+    return mServerUrl->text();
+}
