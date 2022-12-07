@@ -33,7 +33,9 @@ QString LibreTranslateEngineClient::translatedName() const
 
 PimCommonTextTranslator::TranslatorEnginePlugin *LibreTranslateEngineClient::createTranslator()
 {
-    return new LibreTranslateEnginePlugin();
+    auto enginePlugin = new LibreTranslateEnginePlugin();
+    connect(this, &LibreTranslateEngineClient::configureChanged, enginePlugin, &LibreTranslateEnginePlugin::slotConfigureChanged);
+    return enginePlugin;
 }
 
 QVector<QPair<QString, QString>> LibreTranslateEngineClient::supportedLanguages()

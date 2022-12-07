@@ -29,6 +29,11 @@ void LibreTranslateEnginePlugin::translate()
     translateText();
 }
 
+void LibreTranslateEnginePlugin::slotConfigureChanged()
+{
+    loadSettings();
+}
+
 void LibreTranslateEnginePlugin::translateText()
 {
     clear();
