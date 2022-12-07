@@ -6,7 +6,10 @@
 
 #include "deeplengineconfiguredialogtest.h"
 #include "../deeplengineconfiguredialog.h"
+#include "../deeplengineconfigurewidget.h"
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(DeeplEngineConfigureDialogTest)
 DeeplEngineConfigureDialogTest::DeeplEngineConfigureDialogTest(QObject *parent)
     : QObject{parent}
@@ -16,5 +19,12 @@ DeeplEngineConfigureDialogTest::DeeplEngineConfigureDialogTest(QObject *parent)
 void DeeplEngineConfigureDialogTest::shouldHaveDefaultValues()
 {
     DeeplEngineConfigureDialog d;
-    // TODO
+    auto mConfigureWidget = d.findChild<DeeplEngineConfigureWidget *>(QStringLiteral("mConfigureWidget"));
+    QVERIFY(mConfigureWidget);
+
+    auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+
+    auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
 }
