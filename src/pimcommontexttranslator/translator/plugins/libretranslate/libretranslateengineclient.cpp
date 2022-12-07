@@ -49,6 +49,9 @@ bool LibreTranslateEngineClient::hasConfigurationDialog() const
 void LibreTranslateEngineClient::showConfigureDialog()
 {
     QPointer<LibreTranslateEngineConfigureDialog> dlg = new LibreTranslateEngineConfigureDialog();
-    dlg->exec();
+    // TODO load
+    if (dlg->exec()) {
+        // TODO save
+    }
     delete dlg;
 }
