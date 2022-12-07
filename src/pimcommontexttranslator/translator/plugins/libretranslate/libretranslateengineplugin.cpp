@@ -5,6 +5,7 @@
 */
 
 #include "libretranslateengineplugin.h"
+#include "libretranslateengineutil.h"
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -71,6 +72,6 @@ void LibreTranslateEnginePlugin::parseTranslation(QNetworkReply *reply)
 
 void LibreTranslateEnginePlugin::loadSettings()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), QStringLiteral("LibreTranslateTranslator"));
-    mServerUrl = myGroup.readEntry(QStringLiteral("ServerUrl"), QString());
+    KConfigGroup myGroup(KSharedConfig::openConfig(), PimCommonTextTranslator::LibreTranslateEngineUtil::groupName());
+    mServerUrl = myGroup.readEntry(PimCommonTextTranslator::LibreTranslateEngineUtil::serverUrlKey(), QString());
 }
