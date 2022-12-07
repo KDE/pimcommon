@@ -20,3 +20,11 @@ ecm_add_test(libretranslateengineconfiguredialogtest.cpp libretranslateenginecon
     NAME_PREFIX pimcommon-
     LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommonTextTranslator KF5::I18n
 )
+
+######
+ecm_add_test(libretranslateengineutiltest.cpp libretranslateengineutiltest.h
+    ../libretranslateengineutil.cpp
+    TEST_NAME libretranslateengineutiltest
+    NAME_PREFIX pimcommon-
+    LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommonTextTranslator KF5::I18n
+)

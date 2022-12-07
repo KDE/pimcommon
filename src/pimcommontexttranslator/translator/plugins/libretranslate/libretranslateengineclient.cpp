@@ -7,8 +7,11 @@
 #include "libretranslateengineclient.h"
 #include "libretranslateengineconfiguredialog.h"
 #include "libretranslateengineplugin.h"
+#include "libretranslateengineutil.h"
 #include "translator/misc/translatorutil.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QPointer>
 
 LibreTranslateEngineClient::LibreTranslateEngineClient(QObject *parent)
@@ -49,9 +52,11 @@ bool LibreTranslateEngineClient::hasConfigurationDialog() const
 void LibreTranslateEngineClient::showConfigureDialog()
 {
     QPointer<LibreTranslateEngineConfigureDialog> dlg = new LibreTranslateEngineConfigureDialog();
-    // TODO load
+    KConfigGroup myGroup(KSharedConfig::openConfig(), PimCommonTextTranslator::LibreTranslateEngineUtil::groupName());
+    dlg->setServerUrl(myGroup.readEntry(PimCommonTextTranslator::LibreTranslateEngineUtil::serverUrlKey(), QString()));
     if (dlg->exec()) {
         // TODO save
+        Q_EMIT configureChanged();
     }
     delete dlg;
 }
