@@ -14,6 +14,6 @@ LibreTranslateEngineUtilTest::LibreTranslateEngineUtilTest(QObject *parent)
 
 void LibreTranslateEngineUtilTest::shouldHaveDefaultValues()
 {
-    QCOMPARE(PimCommonTextTranslator::LibreTranslateEngineUtil::groupName(), QStringLiteral("LibreTranslateTranslator"));
-    QCOMPARE(PimCommonTextTranslator::LibreTranslateEngineUtil::serverUrlKey(), QStringLiteral("ServerUrl"));
+    QCOMPARE(LibreTranslateEngineUtil::groupName(), QStringLiteral("LibreTranslateTranslator"));
+    QCOMPARE(LibreTranslateEngineUtil::serverUrlKey(), QStringLiteral("ServerUrl"));
 }

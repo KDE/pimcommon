@@ -7,11 +7,8 @@
 #pragma once
 #include <QString>
 
-namespace PimCommonTextTranslator
-{
 namespace LibreTranslateEngineUtil
 {
 Q_REQUIRED_RESULT QString groupName();
 Q_REQUIRED_RESULT QString serverUrlKey();
 };
-}

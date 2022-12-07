@@ -77,6 +77,6 @@ void LibreTranslateEnginePlugin::parseTranslation(QNetworkReply *reply)
 
 void LibreTranslateEnginePlugin::loadSettings()
 {
-    KConfigGroup myGroup(KSharedConfig::openConfig(), PimCommonTextTranslator::LibreTranslateEngineUtil::groupName());
-    mServerUrl = myGroup.readEntry(PimCommonTextTranslator::LibreTranslateEngineUtil::serverUrlKey(), QString());
+    KConfigGroup myGroup(KSharedConfig::openConfig(), LibreTranslateEngineUtil::groupName());
+    mServerUrl = myGroup.readEntry(LibreTranslateEngineUtil::serverUrlKey(), QString());
 }

@@ -54,8 +54,8 @@ bool LibreTranslateEngineClient::hasConfigurationDialog() const
 void LibreTranslateEngineClient::showConfigureDialog()
 {
     QPointer<LibreTranslateEngineConfigureDialog> dlg = new LibreTranslateEngineConfigureDialog();
-    KConfigGroup myGroup(KSharedConfig::openConfig(), PimCommonTextTranslator::LibreTranslateEngineUtil::groupName());
-    dlg->setServerUrl(myGroup.readEntry(PimCommonTextTranslator::LibreTranslateEngineUtil::serverUrlKey(), QString()));
+    KConfigGroup myGroup(KSharedConfig::openConfig(), LibreTranslateEngineUtil::groupName());
+    dlg->setServerUrl(myGroup.readEntry(LibreTranslateEngineUtil::serverUrlKey(), QString()));
     if (dlg->exec()) {
         // TODO save
         Q_EMIT configureChanged();

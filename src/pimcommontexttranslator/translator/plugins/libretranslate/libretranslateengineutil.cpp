@@ -6,12 +6,12 @@
 
 #include "libretranslateengineutil.h"
 
-QString PimCommonTextTranslator::LibreTranslateEngineUtil::groupName()
+QString LibreTranslateEngineUtil::groupName()
 {
     return QStringLiteral("LibreTranslateTranslator");
 }
 
-QString PimCommonTextTranslator::LibreTranslateEngineUtil::serverUrlKey()
+QString LibreTranslateEngineUtil::serverUrlKey()
 {
     return QStringLiteral("ServerUrl");
 }
