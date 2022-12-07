@@ -7,6 +7,10 @@ target_sources(translator_deepl PRIVATE
     deeplengineclient.h
     deeplengineplugin.cpp
     deeplengineplugin.h
+    deeplengineconfiguredialog.h
+    deeplengineconfiguredialog.cpp
+    deeplengineconfigurewidget.h
+    deeplengineconfigurewidget.cpp
 )
 ecm_qt_declare_logging_category(translator_deepl
     HEADER deepltranslator_debug.h
