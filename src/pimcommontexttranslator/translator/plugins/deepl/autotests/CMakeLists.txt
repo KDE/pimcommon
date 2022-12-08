@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2022 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 ecm_add_test(deeplengineclienttest.cpp deeplengineclienttest.h ../deeplengineclient.cpp ../deeplengineplugin.cpp ../deeplengineutil.cpp
     ../deeplengineconfiguredialog.cpp
     ../deeplengineconfigurewidget.cpp
