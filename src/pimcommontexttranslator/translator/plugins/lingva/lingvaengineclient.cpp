@@ -5,9 +5,14 @@
 */
 
 #include "lingvaengineclient.h"
+#include "lingvaenginedialog.h"
 #include "lingvaengineplugin.h"
+#include "lingvaengineutil.h"
 #include "translator/misc/translatorutil.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <QPointer>
 
 LingvaEngineClient::LingvaEngineClient(QObject *parent)
     : PimCommonTextTranslator::TranslatorEngineClient{parent}
@@ -46,5 +51,12 @@ bool LingvaEngineClient::hasConfigurationDialog() const
 
 void LingvaEngineClient::showConfigureDialog()
 {
-    // TODO
+    QPointer<LingvaEngineDialog> dlg = new LingvaEngineDialog();
+    KConfigGroup myGroup(KSharedConfig::openConfig(), LingvaEngineUtil::groupName());
+    // TODO dlg->setServerUrl(myGroup.readEntry(LingvaEngineUtil::serverUrlKey(), QString()));
+    if (dlg->exec()) {
+        // TODO save
+        Q_EMIT configureChanged();
+    }
+    delete dlg;
 }
