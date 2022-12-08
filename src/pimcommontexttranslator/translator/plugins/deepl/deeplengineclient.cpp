@@ -33,7 +33,9 @@ QString DeeplEngineClient::translatedName() const
 
 PimCommonTextTranslator::TranslatorEnginePlugin *DeeplEngineClient::createTranslator()
 {
-    return new DeeplEnginePlugin();
+    auto enginePlugin = new DeeplEnginePlugin();
+    connect(this, &DeeplEngineClient::configureChanged, enginePlugin, &DeeplEnginePlugin::slotConfigureChanged);
+    return enginePlugin;
 }
 
 QVector<QPair<QString, QString>> DeeplEngineClient::supportedLanguages()

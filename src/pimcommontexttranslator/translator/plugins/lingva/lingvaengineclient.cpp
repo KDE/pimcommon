@@ -33,7 +33,9 @@ QString LingvaEngineClient::translatedName() const
 
 PimCommonTextTranslator::TranslatorEnginePlugin *LingvaEngineClient::createTranslator()
 {
-    return new LingvaEnginePlugin();
+    auto enginePlugin = new LingvaEnginePlugin();
+    connect(this, &LingvaEngineClient::configureChanged, enginePlugin, &LingvaEnginePlugin::slotConfigureChanged);
+    return enginePlugin;
 }
 
 QVector<QPair<QString, QString>> LingvaEngineClient::supportedLanguages()
@@ -53,7 +55,7 @@ void LingvaEngineClient::showConfigureDialog()
 {
     QPointer<LingvaEngineDialog> dlg = new LingvaEngineDialog();
     KConfigGroup myGroup(KSharedConfig::openConfig(), LingvaEngineUtil::groupName());
-    // TODO dlg->setServerUrl(myGroup.readEntry(LingvaEngineUtil::serverUrlKey(), QString()));
+    dlg->setServerUrl(myGroup.readEntry(LingvaEngineUtil::serverUrlKey(), QString()));
     if (dlg->exec()) {
         // TODO save
         Q_EMIT configureChanged();

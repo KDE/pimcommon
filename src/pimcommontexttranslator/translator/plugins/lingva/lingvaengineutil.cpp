@@ -15,3 +15,8 @@ QString LingvaEngineUtil::serverUrlKey()
 {
     return QStringLiteral("ServerUrl");
 }
+
+QString LingvaEngineUtil::defaultServerUrl()
+{
+    return QStringLiteral("https://lingva.ml");
+}
