@@ -54,7 +54,7 @@ void DeeplEngineClient::showConfigureDialog()
     QPointer<DeeplEngineConfigureDialog> dlg = new DeeplEngineConfigureDialog();
     KConfigGroup myGroup(KSharedConfig::openConfig(), DeeplEngineUtil::groupName());
     // TODO
-    // dlg->setServerUrl(myGroup.readEntry(DeeplEngineUtil::freeLicenseKey(), QString()));
+    dlg->setUseFreeLicenceKey(myGroup.readEntry(DeeplEngineUtil::freeLicenseKey(), false));
     if (dlg->exec()) {
         // TODO save
         Q_EMIT configureChanged();
