@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:48+0000\n"
-"PO-Revision-Date: 2022-12-02 11:33+0100\n"
+"POT-Creation-Date: 2022-12-08 00:47+0000\n"
+"PO-Revision-Date: 2022-12-07 11:14+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -2179,7 +2179,7 @@ msgstr "Fout: kan Bing-token niet uit webversie extraheren."
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr "Fout: kan additionele Bing-informatie niet uit webversie extraheren."
 
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:31
 #, kde-format
 msgid "DeepL"
 msgstr "DeepL"
@@ -2189,7 +2189,7 @@ msgstr "DeepL"
 msgid "Google"
 msgstr "Google"
 
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:28
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:31
 #, kde-format
 msgid "Libre Translate"
 msgstr "Libre Translate"
@@ -2197,7 +2197,7 @@ msgstr "Libre Translate"
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:21
 #, kde-format
 msgid "Server Url:"
-msgstr ""
+msgstr "URL-adres server:"
 
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #, kde-format

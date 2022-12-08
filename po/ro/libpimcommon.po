@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:48+0000\n"
+"POT-Creation-Date: 2022-12-08 00:47+0000\n"
 "PO-Revision-Date: 2013-09-15 12:14+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -2149,7 +2149,7 @@ msgstr ""
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
 
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:31
 #, kde-format
 msgid "DeepL"
 msgstr ""
@@ -2159,7 +2159,7 @@ msgstr ""
 msgid "Google"
 msgstr ""
 
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:28
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:31
 #, fuzzy, kde-format
 #| msgid "Translate"
 msgid "Libre Translate"

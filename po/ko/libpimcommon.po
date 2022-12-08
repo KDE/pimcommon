@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:48+0000\n"
+"POT-Creation-Date: 2022-12-08 00:47+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -2160,7 +2160,7 @@ msgstr "오류: 웹 버전에서 Bing 토큰을 추출할 수 없습니다."
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr "오류: 웹 버전에서 추가 Bing 정보를 추출할 수 없습니다."
 
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:31
 #, kde-format
 msgid "DeepL"
 msgstr "DeepL"
@@ -2170,7 +2170,7 @@ msgstr "DeepL"
 msgid "Google"
 msgstr "Google"
 
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:28
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:31
 #, kde-format
 msgid "Libre Translate"
 msgstr "Libre Translate"

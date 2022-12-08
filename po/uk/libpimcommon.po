@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-07 00:48+0000\n"
-"PO-Revision-Date: 2022-12-02 16:12+0200\n"
+"POT-Creation-Date: 2022-12-08 00:47+0000\n"
+"PO-Revision-Date: 2022-12-07 07:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -2176,7 +2176,7 @@ msgstr "Помилка: не вдалося видобути жетон Bing з 
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr "Помилка: не вдалося видобути додаткові дані Bing з вебверсії."
 
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:26
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:31
 #, kde-format
 msgid "DeepL"
 msgstr "DeepL"
@@ -2186,7 +2186,7 @@ msgstr "DeepL"
 msgid "Google"
 msgstr "Google"
 
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:28
+#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:31
 #, kde-format
 msgid "Libre Translate"
 msgstr "Libre Translate"
@@ -2194,7 +2194,7 @@ msgstr "Libre Translate"
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:21
 #, kde-format
 msgid "Server Url:"
-msgstr ""
+msgstr "Адреса сервера:"
 
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
 #, kde-format
