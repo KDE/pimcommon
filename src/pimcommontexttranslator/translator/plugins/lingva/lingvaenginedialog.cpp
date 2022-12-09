@@ -7,6 +7,7 @@
 #include "lingvaenginedialog.h"
 #include "lingvaenginewidget.h"
 
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
@@ -14,6 +15,7 @@ LingvaEngineDialog::LingvaEngineDialog(QWidget *parent)
     : QDialog(parent)
     , mConfigureWidget(new LingvaEngineWidget(this))
 {
+    setWindowTitle(i18nc("@title:window", "Configure Engine"));
     mConfigureWidget->setObjectName(QStringLiteral("mConfigureWidget"));
 
     auto mainLayout = new QVBoxLayout(this);

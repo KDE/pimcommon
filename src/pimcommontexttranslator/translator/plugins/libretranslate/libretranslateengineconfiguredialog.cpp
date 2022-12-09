@@ -14,6 +14,8 @@ LibreTranslateEngineConfigureDialog::LibreTranslateEngineConfigureDialog(QWidget
     : QDialog(parent)
     , mConfigureWidget(new LibreTranslateEngineConfigureWidget(this))
 {
+    setWindowTitle(i18nc("@title:window", "Configure Engine"));
+
     mConfigureWidget->setObjectName(QStringLiteral("mConfigureWidget"));
 
     auto mainLayout = new QVBoxLayout(this);
