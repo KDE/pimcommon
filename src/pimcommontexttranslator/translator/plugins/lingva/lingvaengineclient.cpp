@@ -57,7 +57,9 @@ void LingvaEngineClient::showConfigureDialog()
     KConfigGroup myGroup(KSharedConfig::openConfig(), LingvaEngineUtil::groupName());
     dlg->setServerUrl(myGroup.readEntry(LingvaEngineUtil::serverUrlKey(), QString()));
     if (dlg->exec()) {
-        // TODO save
+        const QString serverUrl = dlg->serverUrl();
+        myGroup.writeEntry(LingvaEngineUtil::serverUrlKey(), serverUrl);
+        myGroup.sync();
         Q_EMIT configureChanged();
     }
     delete dlg;
