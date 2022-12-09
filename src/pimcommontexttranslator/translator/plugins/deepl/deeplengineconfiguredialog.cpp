@@ -22,6 +22,8 @@ DeeplEngineConfigureDialog::DeeplEngineConfigureDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &DeeplEngineConfigureDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &DeeplEngineConfigureDialog::reject);
 }
 
 DeeplEngineConfigureDialog::~DeeplEngineConfigureDialog() = default;

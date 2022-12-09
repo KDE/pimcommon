@@ -23,6 +23,8 @@ LingvaEngineDialog::LingvaEngineDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &LingvaEngineDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &LingvaEngineDialog::reject);
 }
 
 LingvaEngineDialog::~LingvaEngineDialog() = default;
