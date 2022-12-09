@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:47+0000\n"
 "PO-Revision-Date: 2022-06-22 16:13-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -2182,6 +2182,11 @@ msgstr ""
 msgid "DeepL"
 msgstr ""
 
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfigurewidget.cpp:14
+#, kde-format
+msgid "Use Free License Key"
+msgstr ""
+
 #: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #, fuzzy, kde-format
 #| msgid "Google Plus"
@@ -2195,11 +2200,12 @@ msgid "Libre Translate"
 msgstr "Traduzir"
 
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:21
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaenginewidget.cpp:21
 #, kde-format
 msgid "Server Url:"
 msgstr ""
 
-#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:31
 #, kde-format
 msgid "Lingva"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-08 00:47+0000\n"
+"POT-Creation-Date: 2022-12-09 00:47+0000\n"
 "PO-Revision-Date: 2022-10-29 18:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -2167,6 +2167,11 @@ msgstr "خطأ: غير قادر على استخراج معلومات إضافي�
 msgid "DeepL"
 msgstr "DeepL"
 
+#: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfigurewidget.cpp:14
+#, kde-format
+msgid "Use Free License Key"
+msgstr ""
+
 #: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #, kde-format
 msgid "Google"
@@ -2178,11 +2183,12 @@ msgid "Libre Translate"
 msgstr "مترجم لايبر"
 
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:21
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaenginewidget.cpp:21
 #, kde-format
 msgid "Server Url:"
 msgstr ""
 
-#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:26
+#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:31
 #, kde-format
 msgid "Lingva"
 msgstr "Lingva"
