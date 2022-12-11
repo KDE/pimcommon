@@ -12,7 +12,7 @@ namespace PimCommonAutoCorrection
 {
 namespace AutoCorrectionUtils
 {
-struct TypographicQuotes {
+struct PIMCOMMONAUTOCORRECTION_EXPORT TypographicQuotes {
     QChar begin;
     QChar end;
     Q_REQUIRED_RESULT QString toString() const;
