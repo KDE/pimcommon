@@ -60,6 +60,9 @@ target_sources(KF5PimCommonTextTranslator PRIVATE
     translator/widgets/translatorconfigurelistswidget.h
     translator/widgets/translatorconfigurelanguagelistwidget.cpp
     translator/widgets/translatorconfigurelanguagelistwidget.h
+    translator/widgets/translatorconfigurecombowidget.h
+    translator/widgets/translatorconfigurecombowidget.cpp
+
     translator/widgets/translatormenu.cpp
     translator/widgets/translatormenu.h
 
