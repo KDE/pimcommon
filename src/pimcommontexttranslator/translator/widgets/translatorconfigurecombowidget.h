@@ -8,6 +8,8 @@
 
 #include "pimcommontexttranslator_export.h"
 #include <QWidget>
+class QComboBox;
+class QToolButton;
 namespace PimCommonTextTranslator
 {
 class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureComboWidget : public QWidget
@@ -16,5 +18,10 @@ class PIMCOMMONTEXTTRANSLATOR_EXPORT TranslatorConfigureComboWidget : public QWi
 public:
     explicit TranslatorConfigureComboWidget(QWidget *parent = nullptr);
     ~TranslatorConfigureComboWidget() override;
+
+private:
+    void slotConfigureEngine();
+    QComboBox *const mEngineComboBox;
+    QToolButton *const mConfigureEngine;
 };
 }
