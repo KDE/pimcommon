@@ -11,6 +11,9 @@ using namespace PimCommonTextTranslator;
 TranslatorConfigureComboWidget::TranslatorConfigureComboWidget(QWidget *parent)
     : QWidget{parent}
 {
+    auto mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setContentsMargins(QMargins{});
 }
 
 TranslatorConfigureComboWidget::~TranslatorConfigureComboWidget() = default;
