@@ -92,5 +92,6 @@ void TranslatorConfigureWidget::loadSettings()
 
 void TranslatorConfigureWidget::switchEngine(int index)
 {
-    // TODO
+    const QString engineName = d->mEngineComboBox->itemData(index).toString();
+    PimCommonTextTranslator::TranslatorEngineLoader::self()->showConfigureDialog(engineName);
 }
