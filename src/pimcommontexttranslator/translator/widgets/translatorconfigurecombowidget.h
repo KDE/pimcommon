@@ -22,6 +22,9 @@ public:
     void load();
     void save();
 
+Q_SIGNALS:
+    void engineChanged(const QString &engineName);
+
 private:
     void fillEngine();
     void slotConfigureEngine();

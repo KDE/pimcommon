@@ -60,6 +60,7 @@ void TranslatorConfigureComboWidget::slotEngineChanged(int index)
 {
     const QString engine = mEngineComboBox->itemData(index).toString();
     mConfigureEngine->setEnabled(PimCommonTextTranslator::TranslatorEngineLoader::self()->hasConfigurationDialog(engine));
+    Q_EMIT engineChanged(engine);
 }
 
 void TranslatorConfigureComboWidget::load()
