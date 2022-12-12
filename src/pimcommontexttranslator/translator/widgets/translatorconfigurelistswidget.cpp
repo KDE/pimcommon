@@ -69,6 +69,7 @@ void TranslatorConfigureListsWidget::save()
     KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
     groupTranslate.writeEntry(QStringLiteral("From"), d->mFromLanguageWidget->selectedLanguages());
     groupTranslate.writeEntry(QStringLiteral("To"), d->mToLanguageWidget->selectedLanguages());
+    d->mEngineConfigureComboWidget->save();
 }
 
 void TranslatorConfigureListsWidget::load()
@@ -76,6 +77,7 @@ void TranslatorConfigureListsWidget::load()
     KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
     d->mFromLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("From"), QStringList()));
     d->mToLanguageWidget->setSelectedLanguages(groupTranslate.readEntry(QStringLiteral("To"), QStringList()));
+    d->mEngineConfigureComboWidget->load();
 }
 
 void TranslatorConfigureListsWidget::slotEngineChanged(const QString &engine)
