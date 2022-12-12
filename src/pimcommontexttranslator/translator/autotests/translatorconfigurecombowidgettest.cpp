@@ -6,15 +6,29 @@
 
 #include "translatorconfigurecombowidgettest.h"
 #include "translator/widgets/translatorconfigurecombowidget.h"
+#include <QComboBox>
+#include <QHBoxLayout>
+#include <QStandardPaths>
 #include <QTest>
+#include <QToolButton>
 QTEST_MAIN(TranslatorConfigureComboWidgetTest)
 TranslatorConfigureComboWidgetTest::TranslatorConfigureComboWidgetTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void TranslatorConfigureComboWidgetTest::shouldHaveDefaultValues()
 {
     PimCommonTextTranslator::TranslatorConfigureComboWidget d;
-    // TODO
+    auto mEngineComboBox = d.findChild<QComboBox *>(QStringLiteral("mEngineComboBox"));
+    QVERIFY(mEngineComboBox);
+    auto mConfigureEngine = d.findChild<QToolButton *>(QStringLiteral("mConfigureEngine"));
+    QVERIFY(mConfigureEngine);
+
+    auto mainLayout = d.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins{});
+
+    QVERIFY(!mConfigureEngine->isEnabled());
 }

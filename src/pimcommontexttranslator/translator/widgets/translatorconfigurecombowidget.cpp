@@ -5,7 +5,10 @@
 */
 
 #include "translatorconfigurecombowidget.h"
+#include "translator/misc/translatorutil.h"
 #include "translator/translatorengineloader.h"
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QComboBox>
 #include <QHBoxLayout>
 #include <QToolButton>
@@ -28,6 +31,9 @@ TranslatorConfigureComboWidget::TranslatorConfigureComboWidget(QWidget *parent)
     mConfigureEngine->setEnabled(false); // Disable by default
     mConfigureEngine->setIcon(QIcon::fromTheme(QStringLiteral("settings-configure")));
     connect(mConfigureEngine, &QToolButton::clicked, this, &TranslatorConfigureComboWidget::slotConfigureEngine);
+    connect(mEngineComboBox, &QComboBox::currentIndexChanged, this, &TranslatorConfigureComboWidget::slotEngineChanged);
+
+    fillEngine();
 }
 
 TranslatorConfigureComboWidget::~TranslatorConfigureComboWidget() = default;
@@ -38,4 +44,37 @@ void TranslatorConfigureComboWidget::slotConfigureEngine()
     if (PimCommonTextTranslator::TranslatorEngineLoader::self()->hasConfigurationDialog(engine)) {
         PimCommonTextTranslator::TranslatorEngineLoader::self()->showConfigureDialog(engine);
     }
+}
+
+void TranslatorConfigureComboWidget::fillEngine()
+{
+    const QMap<QString, QString> map = PimCommonTextTranslator::TranslatorEngineLoader::self()->translatorEngineInfos();
+    QMapIterator<QString, QString> iMap(map);
+    while (iMap.hasNext()) {
+        iMap.next();
+        mEngineComboBox->addItem(iMap.value(), iMap.key());
+    }
+}
+
+void TranslatorConfigureComboWidget::slotEngineChanged(int index)
+{
+    const QString engine = mEngineComboBox->itemData(index).toString();
+    mConfigureEngine->setEnabled(PimCommonTextTranslator::TranslatorEngineLoader::self()->hasConfigurationDialog(engine));
+}
+
+void TranslatorConfigureComboWidget::load()
+{
+    KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
+    const QString engine = groupTranslate.readEntry(TranslatorUtil::engineTranslateName(), TranslatorUtil::defaultEngineName()); // Google by default
+    const int index = mEngineComboBox->findData(engine);
+    if (index != -1) {
+        mEngineComboBox->setCurrentIndex(index);
+    }
+}
+
+void TranslatorConfigureComboWidget::save()
+{
+    const QString engine = mEngineComboBox->currentData().toString();
+    KConfigGroup groupTranslate(KSharedConfig::openConfig(), TranslatorUtil::groupTranslateName());
+    groupTranslate.writeEntry(TranslatorUtil::engineTranslateName(), engine);
 }

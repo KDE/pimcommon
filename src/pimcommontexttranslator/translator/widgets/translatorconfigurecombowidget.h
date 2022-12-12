@@ -19,8 +19,13 @@ public:
     explicit TranslatorConfigureComboWidget(QWidget *parent = nullptr);
     ~TranslatorConfigureComboWidget() override;
 
+    void load();
+    void save();
+
 private:
+    void fillEngine();
     void slotConfigureEngine();
+    void slotEngineChanged(int index);
     QComboBox *const mEngineComboBox;
     QToolButton *const mConfigureEngine;
 };
