@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-11-17 18:32+0300\n"
+"PO-Revision-Date: 2022-12-11 20:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -332,7 +332,7 @@ msgstr "Geleneksel Çince"
 #: pimcommon/translator/translatorutil.cpp:136
 #, kde-format
 msgid "Dutch"
-msgstr "Flamanca"
+msgstr "Hollandaca"
 
 #: pimcommon/translator/translatorutil.cpp:139
 #, kde-format
@@ -382,7 +382,7 @@ msgstr "İspanyolca"
 #: pimcommon/translator/translatorutil.cpp:166
 #, kde-format
 msgid "Afrikaans"
-msgstr "Afrika Dili"
+msgstr "Afrikaanca"
 
 #: pimcommon/translator/translatorutil.cpp:169
 #, kde-format
@@ -402,17 +402,17 @@ msgstr "Ermenice"
 #: pimcommon/translator/translatorutil.cpp:178
 #, kde-format
 msgid "Azerbaijani"
-msgstr "Azerbeycanca"
+msgstr "Azerbaycanca"
 
 #: pimcommon/translator/translatorutil.cpp:181
 #, kde-format
 msgid "Basque"
-msgstr "Bask Dili"
+msgstr "Baskça"
 
 #: pimcommon/translator/translatorutil.cpp:184
 #, kde-format
 msgid "Belarusian"
-msgstr "Belarus Dili"
+msgstr "Beyaz Rusça"
 
 #: pimcommon/translator/translatorutil.cpp:187
 #, kde-format
@@ -437,7 +437,7 @@ msgstr "Çekçe"
 #: pimcommon/translator/translatorutil.cpp:205
 #, kde-format
 msgid "Danish"
-msgstr "Danimarka Dili"
+msgstr "Danca"
 
 #: pimcommon/translator/translatorutil.cpp:208
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "Fince"
 #: pimcommon/translator/translatorutil.cpp:217
 #, kde-format
 msgid "Galician"
-msgstr "Galce"
+msgstr "Galiçyaca"
 
 #: pimcommon/translator/translatorutil.cpp:220
 #, kde-format
@@ -487,17 +487,17 @@ msgstr "Macarca"
 #: pimcommon/translator/translatorutil.cpp:235
 #, kde-format
 msgid "Icelandic"
-msgstr "İzlanda Dili"
+msgstr "İzlandaca"
 
 #: pimcommon/translator/translatorutil.cpp:238
 #, kde-format
 msgid "Indonesian"
-msgstr "Endonezya Dili"
+msgstr "Endonezce"
 
 #: pimcommon/translator/translatorutil.cpp:241
 #, kde-format
 msgid "Irish"
-msgstr "İrlanda Dili"
+msgstr "İrlandaca"
 
 #: pimcommon/translator/translatorutil.cpp:244
 #, kde-format
@@ -542,7 +542,7 @@ msgstr "Lehçe"
 #: pimcommon/translator/translatorutil.cpp:268
 #, kde-format
 msgid "Romanian"
-msgstr "Romence"
+msgstr "Rumence"
 
 #: pimcommon/translator/translatorutil.cpp:271
 #, kde-format
@@ -572,7 +572,7 @@ msgstr "İsveççe"
 #: pimcommon/translator/translatorutil.cpp:286
 #, kde-format
 msgid "Thai"
-msgstr "Tay Dili"
+msgstr "Tayca"
 
 #: pimcommon/translator/translatorutil.cpp:289
 #, kde-format
@@ -1802,9 +1802,9 @@ msgid ""
 "bit too long. If some words must have two uppercase characters, then those "
 "exceptions should be added in the 'Exceptions' tab."
 msgstr ""
-"Tüm kelimeler shift tuşunu biraz uzun tutmaktan kaynaklanan hataları bulmak "
-"için denetlenmiştir. Eğer bazı kelimeler iki büyük harf taşıyorlarsa, bu "
-"özel durumlar 'İstisnalar' sekmesine eklenmelidir."
+"Tüm sözcükler Shift düğmesini biraz uzun tutmaktan kaynaklanan hataları "
+"bulmak için denetlenmiştir. Eğer bazı sözcükler iki büyük harf taşıyorlarsa "
+"bu özel durumlar 'İstisnalar' sekmesine eklenmelidir."
 
 #. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:356
