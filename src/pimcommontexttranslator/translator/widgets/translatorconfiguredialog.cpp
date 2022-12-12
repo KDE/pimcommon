@@ -6,17 +6,9 @@
 
 #include "translatorconfiguredialog.h"
 #include "translatorconfigurewidget.h"
-#include <KConfigGroup>
 #include <KLocalizedString>
-#include <KSharedConfig>
-#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
-#include <QWindow>
-namespace
-{
-const char myTranslatorConfigureDialogConfigGroupName[] = "TranslatorConfigureDialog";
-}
 
 using namespace PimCommonTextTranslator;
 TranslatorConfigureDialog::TranslatorConfigureDialog(QWidget *parent)
@@ -38,32 +30,12 @@ TranslatorConfigureDialog::TranslatorConfigureDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &TranslatorConfigureDialog::slotAccept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &TranslatorConfigureDialog::reject);
     mTranslatorConfigureWidget->loadSettings();
-    readConfig();
 }
 
-TranslatorConfigureDialog::~TranslatorConfigureDialog()
-{
-    writeConfig();
-}
+TranslatorConfigureDialog::~TranslatorConfigureDialog() = default;
 
 void TranslatorConfigureDialog::slotAccept()
 {
     mTranslatorConfigureWidget->saveSettings();
     accept();
-}
-
-void TranslatorConfigureDialog::readConfig()
-{
-    create(); // ensure a window is created
-    windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myTranslatorConfigureDialogConfigGroupName);
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
-}
-
-void TranslatorConfigureDialog::writeConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), myTranslatorConfigureDialogConfigGroupName);
-    KWindowConfig::saveWindowSize(windowHandle(), group);
-    group.sync();
 }
