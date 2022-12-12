@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2019-08-04 10:38+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -186,7 +186,7 @@ msgid "Load Template"
 msgstr "Načítať šablónu"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -196,7 +196,7 @@ msgstr ""
 "\"%2\" je detailný popis chyby."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "Chyba ukladania súboru"
@@ -2291,7 +2291,7 @@ msgstr ""
 msgid "You used same language for 'from' and 'to' language."
 msgstr "Použili ste rovnaký jazyk pre pôvodný a nový jazyk."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
 #, fuzzy, kde-format
 #| msgid "Translator"
 msgctxt "@title:window"
@@ -2318,19 +2318,19 @@ msgstr "Do:"
 msgid "Engine:"
 msgstr ""
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Translator Debug"
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "Ladenie prekladača"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
 #, kde-format
 msgid "Save As..."
 msgstr "Uložiť ako..."
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
 #, kde-format
 msgid "All Files (*)"
 msgstr "Všetky súbory (*)"

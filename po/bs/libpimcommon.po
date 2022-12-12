@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -194,7 +194,7 @@ msgid "Load Template"
 msgstr "Predložak"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -204,7 +204,7 @@ msgstr ""
 "\"%2\" je detaljan opis greške."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "Greška prilikom spremanja datoteke"
@@ -2236,7 +2236,7 @@ msgstr ""
 msgid "You used same language for 'from' and 'to' language."
 msgstr "Koristite isti jezik sa kojeg prevodite i na koji prevodite"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
@@ -2262,19 +2262,19 @@ msgstr "Za:"
 msgid "Engine:"
 msgstr ""
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Translator Debug"
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "Otklanjanje neispravnosti prijevoda"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
 #, kde-format
 msgid "Save As..."
 msgstr "Snimi kao..."
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
 #, fuzzy, kde-format
 #| msgid "all files (*)"
 msgid "All Files (*)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -195,7 +195,7 @@ msgid "Load Template"
 msgstr "Πρότυπο"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -205,7 +205,7 @@ msgstr ""
 "\"%2\" είναι η λεπτομερής περιγραφή σφάλματος."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "Σφάλμα αποθήκευσης αρχείου"
@@ -2303,7 +2303,7 @@ msgstr ""
 msgid "You used same language for 'from' and 'to' language."
 msgstr "Χρησιμοποιήσατε ίδια γλώσσα πηγής και προορισμού."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
 #, fuzzy, kde-format
 #| msgid "&Translator"
 msgctxt "@title:window"
@@ -2330,19 +2330,19 @@ msgstr "Προς:"
 msgid "Engine:"
 msgstr ""
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
 #, fuzzy, kde-format
 #| msgid "Translator Debug"
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "Αποσφαλμάτωση μεταφραστή"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
 #, kde-format
 msgid "Save As..."
 msgstr "Αποθήκευση ως..."
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
 #, fuzzy, kde-format
 #| msgid "all files (*)"
 msgid "All Files (*)"

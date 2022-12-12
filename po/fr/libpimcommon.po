@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:46+0000\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
 "PO-Revision-Date: 2022-12-08 09:01+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -193,7 +193,7 @@ msgid "Load Template"
 msgstr "Charger un modèle"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -203,7 +203,7 @@ msgstr ""
 "« %2 » est la description détaillée de l'erreur."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "Erreur d'enregistrement"
@@ -2272,7 +2272,7 @@ msgid "You used same language for 'from' and 'to' language."
 msgstr ""
 "Vous avez utilisé la même langue pour les langues « depuis » et « vers »."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
@@ -2294,18 +2294,18 @@ msgstr "À :"
 msgid "Engine:"
 msgstr "Moteur :"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "Déboguer le traducteur"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
 #, kde-format
 msgid "Save As..."
 msgstr "Enregistrer sous..."
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
 #, kde-format
 msgid "All Files (*)"
 msgstr "Tous les fichiers (*)"

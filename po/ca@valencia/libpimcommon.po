@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:46+0000\n"
-"PO-Revision-Date: 2022-12-07 13:23+0100\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
+"PO-Revision-Date: 2022-12-10 08:36+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -189,7 +189,7 @@ msgid "Load Template"
 msgstr "Carrega plantilla"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -199,7 +199,7 @@ msgstr ""
 "«%2» és la descripció detallada de l'error."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "S'ha produït un error en guardar el fitxer"
@@ -1870,7 +1870,7 @@ msgstr "Eslovac"
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:271
 #, kde-format
 msgid "Slovenian"
-msgstr "Eslovè"
+msgstr "Eslové"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:56
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:157
@@ -2190,16 +2190,15 @@ msgstr "DeepL"
 #: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfiguredialog.cpp:17
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfiguredialog.cpp:17
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaenginedialog.cpp:18
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Engine"
-msgstr "Configura"
+msgstr "Configura el motor"
 
 #: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfigurewidget.cpp:14
 #, kde-format
 msgid "Use Free License Key"
-msgstr ""
+msgstr "Utilitza una clau de llicència lliure"
 
 #: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #, kde-format
@@ -2262,7 +2261,7 @@ msgstr ""
 msgid "You used same language for 'from' and 'to' language."
 msgstr "Heu utilitzat el mateix idioma a «Des de» i «A»."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
@@ -2284,18 +2283,18 @@ msgstr "A:"
 msgid "Engine:"
 msgstr "Motor:"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "Depuració del traductor"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
 #, kde-format
 msgid "Save As..."
 msgstr "Anomena i guarda..."
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
 #, kde-format
 msgid "All Files (*)"
 msgstr "Tots els fitxers (*)"

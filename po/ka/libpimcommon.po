@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-10 00:46+0000\n"
-"PO-Revision-Date: 2022-12-04 07:23+0100\n"
+"POT-Creation-Date: 2022-12-12 00:48+0000\n"
+"PO-Revision-Date: 2022-12-11 06:41+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -186,7 +186,7 @@ msgid "Load Template"
 msgstr "შაბლონის ჩატვირთვა"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:86
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -196,7 +196,7 @@ msgstr ""
 "\"%2\" შეცდომის დეტალურ აღწერას წარმოადგენს."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:90
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "ფაილის შენახვის შეცდომა"
@@ -207,6 +207,8 @@ msgid ""
 "Could not read the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
+"ფაილის %1 წაკითხვის შეცდომა:\n"
+"\"%2\" შეცდომის დეტალური აღწერაა."
 
 #: pimcommon/util/pimutil.cpp:90
 #, kde-format
@@ -219,6 +221,8 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
+"<qt><p>ეს პარამეტრი თქვენი ადმინისტრატორის მიერ ჩასწორდა.</p><p>თუ ფიქრობთ, "
+"რომ ეს შეცდომაა, დაუკავშირდით მას.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -284,6 +288,8 @@ msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
 msgstr ""
+"ფაილი სახელით <filename>%1</filename> უკვე არსებობს. გნებავთ, თავზე "
+"გადავაწერო?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
@@ -1040,7 +1046,7 @@ msgstr "ძებნამდე LDAP სერვერის არჩევ�
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
-msgstr ""
+msgstr "LDAP დირექტორიის %1-დან %2-ზე შემოტანა დასრულდა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
 #, kde-format
@@ -1366,7 +1372,7 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:436
 #, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr ""
+msgstr "ორმაგი ბრჭყალების ფრანგული ბრჭყალებთ ჩანაცვლება"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:457
@@ -1378,7 +1384,7 @@ msgstr "&ბრჭყალების მორგება"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:463
 #, kde-format
 msgid "Replace &double quotes with typographical quotes"
-msgstr ""
+msgstr "&ორმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
 
 #. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
 #. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
@@ -1426,7 +1432,7 @@ msgstr "ნაგულისხმები"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:572
 #, kde-format
 msgid "Replace &single quotes with typographical quotes"
-msgstr ""
+msgstr "&ერთმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
 
 #. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
 #. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
@@ -1481,7 +1487,7 @@ msgstr "KMail/Calligra -ის ავტოკორექცია"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr ""
+msgstr "\"ჩანასაცვლებელი\" სტრიქონი \"მოსაძებნი\" სტრიქონის ტოლია."
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
 #, kde-format
@@ -1521,7 +1527,7 @@ msgstr "ავტოკორექციის ფაილის შემო�
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
-msgstr ""
+msgstr "ენა შეიცვალა. გნებავთ კონფიგურაცია წინა ენაში შეინახოთ?"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
 #, kde-format
@@ -2124,16 +2130,15 @@ msgstr "DeepL"
 #: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfiguredialog.cpp:17
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfiguredialog.cpp:17
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaenginedialog.cpp:18
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Engine"
-msgstr "მორგება"
+msgstr "ძრავის მორგება"
 
 #: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfigurewidget.cpp:14
 #, kde-format
 msgid "Use Free License Key"
-msgstr ""
+msgstr "უფასო ლიცენზიის გასაღების გამოყენება"
 
 #: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #, kde-format
@@ -2149,7 +2154,7 @@ msgstr "Libre Translate"
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaenginewidget.cpp:22
 #, kde-format
 msgid "Server Url:"
-msgstr ""
+msgstr "სერვერის URL:"
 
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:31
 #, kde-format
@@ -2168,6 +2173,8 @@ msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
 "network. Please try your request again later."
 msgstr ""
+"შეცდომა: ძრავის სისტემებმა თქვენი კომპიუტერის ქსელიდან საეჭვო ტრაფიკი "
+"დააფიქსირა. მოთხოვნა მოგვიანებით სცადეთ."
 
 #: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:60
 #, kde-format
@@ -2187,9 +2194,9 @@ msgstr "შეცდომა: ავტომატურად აღმოჩ
 #: pimcommontexttranslator/translator/translatorengineplugin.cpp:108
 #, kde-format
 msgid "You used same language for 'from' and 'to' language."
-msgstr ""
+msgstr "'საიდან' და 'სადამდე' ენები ერთი და იგივეა."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
@@ -2211,18 +2218,18 @@ msgstr "ვის:"
 msgid "Engine:"
 msgstr "ძრავი:"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:31
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
 #, kde-format
 msgctxt "@title:window"
 msgid "Translator Debug"
 msgstr "თარჯიმანის გამართვა"
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:38
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
 #, kde-format
 msgid "Save As..."
 msgstr "შენახვა, როგორც..."
 
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:113
+#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
 #, kde-format
 msgid "All Files (*)"
 msgstr "ყველა ფაილი (*)"
@@ -2235,7 +2242,7 @@ msgstr "თარგმნა..."
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:131
 #, kde-format
 msgid "Problem when connecting to the translator web site."
-msgstr ""
+msgstr "მთარგმნელ ვებგვერდთან მიერთების პრობლემა."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:243
 #, kde-format
