@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-12-03 09:04+0100\n"
+"PO-Revision-Date: 2022-12-12 09:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -212,6 +212,7 @@ msgstr "შეცდომა: ვებ ვერსიიდან Bing-ის
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
+"შეცდომა: ვებ ვერსიიდან Bing-ის დამატებითი ინფორმაციის გამოღება შეუძლებელია."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:113
 #: pimcommon/translator/engine/deepltranslator.cpp:40
@@ -260,6 +261,8 @@ msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
 "network. Please try your request again later."
 msgstr ""
+"შეცდომა: ძრავის სისტემებმა თქვენი კომპიუტერის ქსელიდან საეჭვო ტრაფიკი "
+"დააფიქსირა. მოთხოვნა მოგვიანებით სცადეთ."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:78
 #, kde-format
@@ -603,7 +606,7 @@ msgstr "იდიში"
 #: pimcommon/translator/translatorwidget.cpp:127
 #, kde-format
 msgid "Problem when connecting to the translator web site."
-msgstr ""
+msgstr "მთარგმნელ ვებგვერდთან მიერთების პრობლემა."
 
 #: pimcommon/translator/translatorwidget.cpp:229
 #: pimcommon/translator/translatorwidget.cpp:232
@@ -688,6 +691,8 @@ msgid ""
 "Could not read the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
+"ფაილის %1 წაკითხვის შეცდომა:\n"
+"\"%2\" შეცდომის დეტალური აღწერაა."
 
 #: pimcommon/util/pimutil.cpp:90
 #, kde-format
@@ -700,6 +705,8 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
+"<qt><p>ეს პარამეტრი თქვენი ადმინისტრატორის მიერ ჩასწორდა.</p><p>თუ ფიქრობთ, "
+"რომ ეს შეცდომაა, დაუკავშირდით მას.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -765,6 +772,8 @@ msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
 msgstr ""
+"ფაილი სახელით <filename>%1</filename> უკვე არსებობს. გნებავთ, თავზე "
+"გადავაწერო?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
@@ -1514,13 +1523,13 @@ msgstr "კოპირება"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
 msgid "You must select an LDAP server before searching."
-msgstr ""
+msgstr "ძებნამდე LDAP სერვერის არჩევა აუცილებელია."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
-msgstr ""
+msgstr "LDAP დირექტორიის %1-დან %2-ზე შემოტანა დასრულდა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
 #, kde-format
@@ -1846,7 +1855,7 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
 #, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr ""
+msgstr "ორმაგი ბრჭყალების ფრანგული ბრჭყალებთ ჩანაცვლება"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:445
@@ -1858,7 +1867,7 @@ msgstr "&ბრჭყალების მორგება"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:451
 #, kde-format
 msgid "Replace &double quotes with typographical quotes"
-msgstr ""
+msgstr "&ორმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
 
 #. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
 #. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
@@ -1906,7 +1915,7 @@ msgstr "ნაგულისხმები"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:560
 #, kde-format
 msgid "Replace &single quotes with typographical quotes"
-msgstr ""
+msgstr "&ერთმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
 
 #. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
 #. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
@@ -1935,7 +1944,7 @@ msgstr "KMail/Calligra -ის ავტოკორექცია"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:383
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr ""
+msgstr "\"ჩანასაცვლებელი\" სტრიქონი \"მოსაძებნი\" სტრიქონის ტოლია."
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:383
 #, kde-format
@@ -1975,7 +1984,7 @@ msgstr "ავტოკორექციის ფაილის შემო�
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
-msgstr ""
+msgstr "ენა შეიცვალა. გნებავთ კონფიგურაცია წინა ენაში შეინახოთ?"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:638
 #, kde-format
@@ -1985,7 +1994,7 @@ msgstr "კონფიგურაციის შენახვა"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:677
 #, kde-format
 msgid "Please save changes before exporting settings."
-msgstr ""
+msgstr "პარამეტრების გატანამდე, გთხოვთ, შეინახეთ ცვლილებები."
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:677
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:680
