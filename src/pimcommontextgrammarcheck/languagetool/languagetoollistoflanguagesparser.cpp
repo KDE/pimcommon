@@ -23,7 +23,7 @@ QVector<LanguageInfo> LanguageToolListOfLanguagesParser::parseResult(const QJson
             LanguageInfo lang;
             lang.parse(languageToolObject);
             if (lang.isValid()) {
-                lstLanguageInfo.append(lang);
+                lstLanguageInfo.append(std::move(lang));
             }
         }
     }

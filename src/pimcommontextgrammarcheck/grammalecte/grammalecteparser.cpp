@@ -37,7 +37,7 @@ QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) con
                 if (error.type() == QJsonValue::Object) {
                     info.parse(error.toObject(), blockId);
                     if (info.isValid()) {
-                        infos.append(info);
+                        infos.append(std::move(info));
                     }
                 } else {
                     qCWarning(PIMCOMMONTEXTGRAMMAR_LOG) << "Problem when parsing grammalecte error" << error;

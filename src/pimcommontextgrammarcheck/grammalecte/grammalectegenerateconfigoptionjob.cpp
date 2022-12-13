@@ -113,7 +113,7 @@ QVector<GrammalecteGenerateConfigOptionJob::Option> GrammalecteGenerateConfigOpt
                 opt.description = description;
                 opt.optionName = optionName;
                 opt.defaultValue = (value == QLatin1String("True"));
-                opts.append(opt);
+                opts.append(std::move(opt));
             }
         }
     }
