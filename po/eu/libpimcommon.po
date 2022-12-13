@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-12 00:48+0000\n"
+"POT-Creation-Date: 2022-12-13 00:57+0000\n"
 "PO-Revision-Date: 2022-12-11 17:41+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque\n"
@@ -2248,24 +2248,24 @@ msgstr ""
 msgid "You used same language for 'from' and 'to' language."
 msgstr "Hizkuntza bera erabili duzu 'jatorri' eta 'helburu' gisa."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "Konfiguratu itzultzailea"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
 #, kde-format
 msgid "From:"
 msgstr "Nondik:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:25
 #, kde-format
 msgid "To:"
 msgstr "Nori:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:53
-#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:48
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
+#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:41
 #, kde-format
 msgid "Engine:"
 msgstr "Motorra:"

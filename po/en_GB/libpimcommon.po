@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-12 00:48+0000\n"
+"POT-Creation-Date: 2022-12-13 00:57+0000\n"
 "PO-Revision-Date: 2022-09-10 10:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -2250,28 +2250,28 @@ msgstr "Error: Unable to parse auto-detected language"
 msgid "You used same language for 'from' and 'to' language."
 msgstr "You used same language for from and to language."
 
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:26
+#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "Configure Translator"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:26
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
 #, fuzzy, kde-format
 #| msgctxt "Translate from language"
 #| msgid "From:"
 msgid "From:"
 msgstr "From:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:27
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:25
 #, fuzzy, kde-format
 #| msgctxt "Translate to language"
 #| msgid "To:"
 msgid "To:"
 msgstr "To:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:53
-#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:48
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
+#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:41
 #, kde-format
 msgid "Engine:"
 msgstr "Engine:"
