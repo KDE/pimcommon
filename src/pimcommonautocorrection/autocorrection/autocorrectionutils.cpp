@@ -170,9 +170,16 @@ AutoCorrectionUtils::TypographicQuotes AutoCorrectionUtils::TypographicQuotes::f
     return quotes;
 }
 
-QString AutoCorrectionUtils::containsAutoCorrectionFile(const QString &lang)
+QString AutoCorrectionUtils::containsAutoCorrectionFile(const QString &lang, const QString &customSystemPath, const QString &customWritablePath)
 {
-    const QStringList libreOfficeAutocorrectPaths = AutoCorrectionUtils::libreOfficeAutoCorrectionPath();
+    QStringList libreOfficeAutocorrectPaths;
+    if (!customWritablePath.isEmpty()) {
+        libreOfficeAutocorrectPaths.append(customWritablePath);
+    }
+    if (!customSystemPath.isEmpty()) {
+        libreOfficeAutocorrectPaths.append(customSystemPath);
+    }
+    libreOfficeAutocorrectPaths += AutoCorrectionUtils::libreOfficeAutoCorrectionPath();
     if (!libreOfficeAutocorrectPaths.isEmpty()) {
         QString fixLangExtension = lang;
         fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));

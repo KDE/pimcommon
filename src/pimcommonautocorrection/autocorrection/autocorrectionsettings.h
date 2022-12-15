@@ -102,6 +102,7 @@ public:
 private:
     void migrateKMailXmlFile();
     void readAutoCorrectionFile(bool forceGlobal = false);
+    Q_REQUIRED_RESULT QString containsAutoCorrectionFile(const QString &fileName);
 
     friend class AutoCorrectionSettingsPrivate;
     std::unique_ptr<AutoCorrectionSettingsPrivate> const d;

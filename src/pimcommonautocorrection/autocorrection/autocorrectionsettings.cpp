@@ -425,7 +425,7 @@ void AutoCorrectionSettings::loadLocalFileName(const QString &localFileName, con
 void AutoCorrectionSettings::loadGlobalFileName(const QString &fname)
 {
     if (fname.isEmpty()) {
-        const QString fileName = AutoCorrectionUtils::containsAutoCorrectionFile(d->mAutoCorrectLang);
+        const QString fileName = containsAutoCorrectionFile(d->mAutoCorrectLang);
         if (!fileName.isEmpty()) {
             QString errorMessage;
             ImportLibreOfficeAutocorrection import;
@@ -538,25 +538,25 @@ void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
     if (!forceGlobal) {
         if (d->mAutoCorrectLang.isEmpty()) {
             if (!kdelang.isEmpty()) {
-                localFileName = AutoCorrectionUtils::containsAutoCorrectionFile(kdelang);
+                localFileName = containsAutoCorrectionFile(kdelang);
             }
             if (localFileName.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
                 kdelang.remove(regpath);
-                localFileName = AutoCorrectionUtils::containsAutoCorrectionFile(kdelang);
+                localFileName = containsAutoCorrectionFile(kdelang);
             }
         }
     }
     QString fname;
     // Load Global directly
     if (!d->mAutoCorrectLang.isEmpty()) {
-        localFileName = AutoCorrectionUtils::containsAutoCorrectionFile(d->mAutoCorrectLang);
+        localFileName = containsAutoCorrectionFile(d->mAutoCorrectLang);
     } else {
         if (fname.isEmpty() && !kdelang.isEmpty()) {
-            fname = AutoCorrectionUtils::containsAutoCorrectionFile(kdelang);
+            fname = containsAutoCorrectionFile(kdelang);
         }
         if (fname.isEmpty() && kdelang.contains(QLatin1Char('_'))) {
             kdelang.remove(regpath);
-            fname = AutoCorrectionUtils::containsAutoCorrectionFile(kdelang);
+            fname = containsAutoCorrectionFile(kdelang);
         }
     }
 
@@ -571,6 +571,11 @@ void AutoCorrectionSettings::readAutoCorrectionFile(bool forceGlobal)
     } else {
         loadLocalFileName(localFileName, fname);
     }
+}
+
+QString AutoCorrectionSettings::containsAutoCorrectionFile(const QString &fileName)
+{
+    return AutoCorrectionUtils::containsAutoCorrectionFile(fileName, d->mCustomSystemPath, d->mCustomWritablePath);
 }
 
 AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::doubleFrenchQuotes() const
