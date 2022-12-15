@@ -22,11 +22,11 @@ ExportLibreOfficeAutocorrection::~ExportLibreOfficeAutocorrection()
 
 bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
 {
-    QDir().mkpath(AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath());
+    const QString libreOfficeWritableLocalAutoCorrectionPath = AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath();
+    QDir().mkpath(libreOfficeWritableLocalAutoCorrectionPath);
     QString fixLangExtension = language;
     fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));
-    const QString fname =
-        fileName.isEmpty() ? AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath() + QStringLiteral("acor_%1.dat").arg(fixLangExtension) : fileName;
+    const QString fname = fileName.isEmpty() ? libreOfficeWritableLocalAutoCorrectionPath + QStringLiteral("acor_%1.dat").arg(fixLangExtension) : fileName;
     // qDebug() << " fname " << fname;
     mZip = new KZip(fname);
     const bool result = mZip->open(QIODevice::WriteOnly);
