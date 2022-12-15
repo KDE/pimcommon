@@ -190,6 +190,10 @@ void AutoCorrectionWidget::loadConfig()
     d->ui->typographicSingleQuotes->setChecked(settings->isReplaceSingleQuotes());
     d->ui->addNonBreakingSpaceInFrench->setChecked(settings->isAddNonBreakingSpace());
     d->ui->replaceDoubleQuotesByFrenchQuotes->setChecked(settings->isReplaceDoubleQuotesByFrenchQuotes());
+
+    d->ui->customWritablePath->setText(settings->customWritablePath());
+    d->ui->customSystemPath->setText(settings->customSystemPath());
+
     loadAutoCorrectionAndException();
     d->mWasChanged = false;
 }
@@ -266,6 +270,10 @@ void AutoCorrectionWidget::writeConfig()
     settings->setTypographicDoubleQuotes(d->m_doubleQuotes);
     settings->setAddNonBreakingSpace(d->ui->addNonBreakingSpaceInFrench->isChecked());
     settings->setReplaceDoubleQuotesByFrenchQuotes(d->ui->replaceDoubleQuotesByFrenchQuotes->isChecked());
+
+    settings->setCustomWritablePath(d->ui->customWritablePath->text());
+    settings->setCustomSystemPath(d->ui->customSystemPath->text());
+
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
     d->mAutoCorrection->writeConfig();
     d->mWasChanged = false;
