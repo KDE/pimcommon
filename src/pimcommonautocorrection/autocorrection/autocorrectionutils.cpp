@@ -60,7 +60,6 @@ QStringList AutoCorrectionUtils::libreOfficeAutoCorrectionPath()
 
 QString AutoCorrectionUtils::libreOfficeSystemPath()
 {
-    // TODO add path for macos/windows etc.
 #ifdef Q_OS_WIN
     return QStringLiteral("c:/Program Files/LibreOffice/share/autocorr/");
 #else

@@ -31,6 +31,9 @@ public:
     QSet<QString> mUpperCaseExceptions;
     QSet<QString> mTwoUpperLetterExceptions;
 
+    QString mCustomWritablePath;
+    QString mCustomSystemPath;
+
     QString mAutoCorrectLang;
 
     QChar mNonBreakingSpace;
@@ -230,6 +233,8 @@ void AutoCorrectionSettings::readConfig()
     d->mSuperScriptAppendix = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->superScript();
     d->mAddNonBreakingSpace = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->addNonBreakingSpaceInFrench();
     d->mReplaceDoubleQuotesByFrenchQuotes = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->replaceDoubleQuotesByFrenchQuotes();
+    d->mCustomSystemPath = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->customSystemPath();
+    d->mCustomWritablePath = PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->customWritablePath();
 
     d->mTypographicSingleQuotes =
         AutoCorrectionUtils::TypographicQuotes::fromString(PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->typographicSingleQuotes());
@@ -262,6 +267,8 @@ void AutoCorrectionSettings::writeConfig()
     PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setTypographicSingleQuotes(d->mTypographicSingleQuotes.toString());
     PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setTypographicDoubleQuotes(d->mTypographicDoubleQuotes.toString());
     PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setReplaceDoubleQuotesByFrenchQuotes(d->mReplaceDoubleQuotesByFrenchQuotes);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setCustomWritablePath(d->mCustomWritablePath);
+    PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setCustomSystemPath(d->mCustomSystemPath);
     PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->requestSync();
     writeAutoCorrectionFile();
 }
@@ -574,6 +581,26 @@ AutoCorrectionUtils::TypographicQuotes AutoCorrectionSettings::doubleFrenchQuote
 void AutoCorrectionSettings::setDoubleFrenchQuotes(const AutoCorrectionUtils::TypographicQuotes &newDoubleFrenchQuotes)
 {
     d->mDoubleFrenchQuotes = newDoubleFrenchQuotes;
+}
+
+QString AutoCorrectionSettings::customWritablePath() const
+{
+    return d->mCustomWritablePath;
+}
+
+void AutoCorrectionSettings::setCustomWritablePath(const QString &path)
+{
+    d->mCustomWritablePath = path;
+}
+
+QString AutoCorrectionSettings::customSystemPath() const
+{
+    return d->mCustomSystemPath;
+}
+
+void AutoCorrectionSettings::setCustomSystemPath(const QString &path)
+{
+    d->mCustomSystemPath = path;
 }
 
 QDebug operator<<(QDebug d, const PimCommonAutoCorrection::AutoCorrectionSettings &t)

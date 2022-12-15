@@ -93,6 +93,12 @@ public:
     Q_REQUIRED_RESULT AutoCorrectionUtils::TypographicQuotes doubleFrenchQuotes() const;
     void setDoubleFrenchQuotes(const AutoCorrectionUtils::TypographicQuotes &newDoubleFrenchQuotes);
 
+    Q_REQUIRED_RESULT QString customWritablePath() const;
+    void setCustomWritablePath(const QString &path);
+
+    Q_REQUIRED_RESULT QString customSystemPath() const;
+    void setCustomSystemPath(const QString &path);
+
 private:
     void migrateKMailXmlFile();
     void readAutoCorrectionFile(bool forceGlobal = false);
