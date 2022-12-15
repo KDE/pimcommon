@@ -75,6 +75,7 @@ QString AutoCorrectionUtils::libreOfficeSystemPath()
 QString AutoCorrectionUtils::libreOfficeLocalPath()
 {
 #ifdef Q_OS_MACOS
+    // It seems that they don't use lowercase
     return QStringLiteral("/LibreOffice/4/user/autocorr/");
 #else
     return QStringLiteral("/libreoffice/4/user/autocorr/");
