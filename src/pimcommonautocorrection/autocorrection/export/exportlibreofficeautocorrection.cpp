@@ -5,6 +5,7 @@
 */
 
 #include "exportlibreofficeautocorrection.h"
+#include "autocorrection/autocorrectionutils.h"
 #include "pimcommonautocorrection_debug.h"
 #include <KZip>
 #include <QDir>
@@ -20,9 +21,10 @@ ExportLibreOfficeAutocorrection::~ExportLibreOfficeAutocorrection()
     delete mZip;
 }
 
-bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage)
+bool ExportLibreOfficeAutocorrection::exportData(const QString &language, const QString &fileName, QString &errorMessage, const QString &writablePath)
 {
-    const QString libreOfficeWritableLocalAutoCorrectionPath = AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath();
+    const QString libreOfficeWritableLocalAutoCorrectionPath =
+        writablePath.isEmpty() ? AutoCorrectionUtils::libreOfficeWritableLocalAutoCorrectionPath() : writablePath;
     QDir().mkpath(libreOfficeWritableLocalAutoCorrectionPath);
     QString fixLangExtension = language;
     fixLangExtension.replace(QLatin1Char('_'), QLatin1Char('-'));

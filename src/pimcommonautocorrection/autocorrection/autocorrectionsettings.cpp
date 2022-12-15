@@ -389,7 +389,7 @@ void AutoCorrectionSettings::writeAutoCorrectionFile(const QString &filename)
     correct.setUpperCaseExceptions(d->mUpperCaseExceptions);
     correct.setTwoUpperLetterExceptions(d->mTwoUpperLetterExceptions);
     QString message;
-    if (!correct.exportData(d->mAutoCorrectLang, filename, message)) {
+    if (!correct.exportData(d->mAutoCorrectLang, filename, message, d->mCustomWritablePath)) {
         qCDebug(PIMCOMMONAUTOCORRECTION_LOG) << "We can't save in file :" << filename;
     }
 }
