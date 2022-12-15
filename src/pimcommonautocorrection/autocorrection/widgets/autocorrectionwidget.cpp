@@ -118,6 +118,10 @@ AutoCorrectionWidget::AutoCorrectionWidget(QWidget *parent)
     connect(d->ui->twoUpperLetter, &QLineEdit::returnPressed, this, &AutoCorrectionWidget::addTwoUpperLetterEntry);
     connect(d->ui->abbreviation, &QLineEdit::returnPressed, this, &AutoCorrectionWidget::addAbbreviationEntry);
     connect(d->ui->replaceDoubleQuotesByFrenchQuotes, &QCheckBox::clicked, this, &AutoCorrectionWidget::emitChanged);
+
+    connect(d->ui->customWritablePath, &KUrlRequester::textChanged, this, &AutoCorrectionWidget::emitChanged);
+    connect(d->ui->customSystemPath, &KUrlRequester::textChanged, this, &AutoCorrectionWidget::emitChanged);
+
     slotEnableDisableAbreviationList();
     slotEnableDisableTwoUpperEntry();
 
