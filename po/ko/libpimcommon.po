@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-15 00:49+0000\n"
+"POT-Creation-Date: 2022-12-16 00:51+0000\n"
 "PO-Revision-Date: 2022-10-03 16:22+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -1209,7 +1209,7 @@ msgstr "고급 자동 고침(&V)"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:495
 #, kde-format
 msgid "&Add"
 msgstr "추가(&A)"
@@ -1479,97 +1479,111 @@ msgstr "닫는 따옴표:"
 msgid "Path"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, fuzzy, kde-format
-#| msgid "Storage path:"
-msgid "System Path:"
-msgstr "저장소 경로:"
-
-#. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:723
+#, fuzzy, kde-format
+#| msgid "Storage path:"
+msgid "Custom System Path:"
+msgstr "저장소 경로:"
+
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:780
 #, fuzzy, kde-format
 #| msgid "writable:"
 msgid "Writable Path:"
 msgstr "쓰기 가능:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:787
+#, fuzzy, kde-format
+#| msgid "Storage path:"
+msgid "System Path:"
+msgstr "저장소 경로:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:794
+#, fuzzy, kde-format
+#| msgid "writable:"
+msgid "Custom Writable Path:"
+msgstr "쓰기 가능:"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice 자동 고침"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:135
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMail/Calligra 자동 고침"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "\"바꿀 문자열\"이 \"찾을 문자열\"과 같습니다."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "자동 고침 항목 추가"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:492
 #, kde-format
 msgid "&Modify"
 msgstr "수정(&M)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:603
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "LibreOffice 자동 고침 가져오기"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:604
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOffice 자동 고침 파일 (*.data)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:607
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "KMail 자동 고침 가져오기"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:608
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMail 자동 고침 파일 (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:640
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "자동 고침 파일 내보내기"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:663
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "언어가 변경되었습니다. 이전 언어의 설정을 저장하시겠습니까?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:664
 #, kde-format
 msgid "Save config"
 msgstr "설정 저장"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "설정을 내보내기 전에 저장하십시오."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:702
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "자동 고침 파일 내보내기"

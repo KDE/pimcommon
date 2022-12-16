@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-15 00:49+0000\n"
+"POT-Creation-Date: 2022-12-16 00:51+0000\n"
 "PO-Revision-Date: 2022-12-09 14:37+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1225,7 +1225,7 @@ msgstr "Correzione automatica a&vanzata"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:495
 #, kde-format
 msgid "&Add"
 msgstr "&Aggiungi"
@@ -1503,95 +1503,109 @@ msgstr "Virgolette di chiusura:"
 msgid "Path"
 msgstr "Percorso"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, kde-format
-msgid "System Path:"
-msgstr "Percorso di sistema:"
-
-#. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
 msgstr "EtichettaDiTesto"
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:723
+#, fuzzy, kde-format
+#| msgid "System Path:"
+msgid "Custom System Path:"
+msgstr "Percorso di sistema:"
+
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:780
 #, kde-format
 msgid "Writable Path:"
 msgstr "Percorso scrivibile:"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:787
+#, kde-format
+msgid "System Path:"
+msgstr "Percorso di sistema:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:794
+#, fuzzy, kde-format
+#| msgid "Writable Path:"
+msgid "Custom Writable Path:"
+msgstr "Percorso scrivibile:"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Correzione automatica di LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:135
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Correzione automatica di KMail/Calligra"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "La stringa da usare come sostituta è identica a quella da sostituire."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Aggiungi regola di correzione automatica"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:492
 #, kde-format
 msgid "&Modify"
 msgstr "&Modifica"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:603
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importa correzione automatica di LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:604
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "File di correzione automatica di LibreOffice (*.dat)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:607
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importa correzione automatica di KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:608
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "File di correzione automatica di KMail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:640
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Importa il file di correzione automatica"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:663
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "La lingua è stata cambiata, vuoi salvare la configurazione per la lingua "
 "precedente?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:664
 #, kde-format
 msgid "Save config"
 msgstr "Salva configurazione"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Salva le modifiche prima di esportare le impostazioni."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:702
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Esporta file di correzione automatica"

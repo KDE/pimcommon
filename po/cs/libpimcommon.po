@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-15 00:49+0000\n"
+"POT-Creation-Date: 2022-12-16 00:51+0000\n"
 "PO-Revision-Date: 2021-10-19 17:12+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1214,7 +1214,7 @@ msgstr "Pokročilá automatická opra&va"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:483
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:495
 #, kde-format
 msgid "&Add"
 msgstr "Přid&at"
@@ -1488,95 +1488,107 @@ msgstr "Ukončující uvozovky:"
 msgid "Path"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, kde-format
-msgid "System Path:"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, systemPath)
 #. i18n: ectx: property (text), widget (QLabel, writablePath)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
 #, kde-format
 msgid "TextLabel"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:723
+#, kde-format
+msgid "Custom System Path:"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:730
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:780
 #, kde-format
 msgid "Writable Path:"
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:127
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:787
+#, kde-format
+msgid "System Path:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_11)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:794
+#, kde-format
+msgid "Custom Writable Path:"
+msgstr ""
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Automatické opravu LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:135
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Automatické opravy KMail/Calligra"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:401
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:480
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:492
 #, kde-format
 msgid "&Modify"
 msgstr "Z&měnit"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:591
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:603
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Importovat automatické opravy LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:592
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:604
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Soubor automatických oprav LibreOffice (*.data)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:595
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:607
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Importovat automatické opravy KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:596
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:608
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Soubor automatických oprav KMail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:628
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:640
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Exportovat soubor automatických oprav"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:651
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:663
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:652
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:664
 #, kde-format
 msgid "Save config"
 msgstr "Uložit nastavení"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Před uložením nastavení prosím nejdříve uložte změny."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:687
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:690
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:702
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Exportovat soubor automatických oprav"
