@@ -571,7 +571,7 @@ msgstr "Eslovac"
 #: pimcommon/translator/translatorutil.cpp:277
 #, kde-format
 msgid "Slovenian"
-msgstr "Eslovè"
+msgstr "Eslové"
 
 #: pimcommon/translator/translatorutil.cpp:280
 #, kde-format
@@ -1284,8 +1284,8 @@ msgid ""
 "(for tasks, this setting is only used for alarms).\n"
 "\n"
 "Example use cases: if the boss shares a folder with his secretary, only the "
-"boss should be marked as busy for his meetings, so he should select \"Admins"
-"\", since the secretary has no admin rights on the folder.\n"
+"boss should be marked as busy for his meetings, so he should select "
+"\"Admins\", since the secretary has no admin rights on the folder.\n"
 "On the other hand if a working group shares a Calendar for group meetings, "
 "all readers of the folders should be marked as busy for meetings.\n"
 "A company-wide folder with optional events in it would use \"Nobody\" since "
