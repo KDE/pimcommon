@@ -7,12 +7,18 @@
 #include "configureplugindialog.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <PimCommon/PimUtil>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace PimCommon;
+namespace
+{
+static const char myConfigurePluginDialogGroupName[] = "ConfigurePluginDialog";
+}
 
 ConfigurePluginDialog::ConfigurePluginDialog(QWidget *parent)
     : QDialog(parent)
@@ -80,11 +86,11 @@ void ConfigurePluginDialog::slotAccepted()
 
 void ConfigurePluginDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfigurePluginDialog");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigurePluginDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ConfigurePluginDialog::saveConfig()
