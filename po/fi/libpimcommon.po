@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2022-12-22 00:48+0000\n"
 "PO-Revision-Date: 2022-06-17 20:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -2291,7 +2291,7 @@ msgstr "Kielestä:"
 msgid "To:"
 msgstr "Kieleen:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:47
 #: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:41
 #, kde-format
 msgid "Engine:"

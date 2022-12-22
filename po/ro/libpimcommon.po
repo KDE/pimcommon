@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-17 00:51+0000\n"
+"POT-Creation-Date: 2022-12-22 00:48+0000\n"
 "PO-Revision-Date: 2013-09-15 12:14+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -2258,7 +2258,7 @@ msgstr "Din:"
 msgid "To:"
 msgstr "În:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:47
 #: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:41
 #, kde-format
 msgid "Engine:"
