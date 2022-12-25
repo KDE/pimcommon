@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:48+0000\n"
-"PO-Revision-Date: 2022-12-16 07:04+0100\n"
+"PO-Revision-Date: 2022-12-24 06:38+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -387,6 +387,8 @@ msgstr "წვდომები"
 #, kde-format
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
+"<b>შენიშვნა: </b>სახელის გადარქმევა მშობელ საქაღალდეში ჩაწერის უფლებას "
+"მოითხოვს."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -790,7 +792,7 @@ msgstr ""
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
-msgstr ""
+msgstr "თავისუფალი /&დაკავებულობის გენერირება და განგაშების ჩართვა:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
 #: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:30
@@ -1060,6 +1062,8 @@ msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
 "account before setting up server-side subscription."
 msgstr ""
+"IMAP სერვერი ჯერ მორგებული არაა. სერვერის მხრის გამოწერების მოსარგებად "
+"სწორად მორგებული IMAP სერვერია საჭირო."
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
 #, kde-format
@@ -1067,6 +1071,8 @@ msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
 "side subscription."
 msgstr ""
+"შესვლის შეცდომა. სერვერის-მხარეს გამოწერებისთვის IMAP ანგარიშის მორგებაა "
+"საჭირო."
 
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
@@ -1096,7 +1102,7 @@ msgstr "რესურსის გაშვებული ასლის მ
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr ""
+msgstr "პარამეტრის '%1' მნიშვნელობის საჭირო ტიპში '%2' გადაყვანის შეცდომა."
 
 #: pimcommonakonadi/util/createresource.cpp:112
 #, kde-format
@@ -1269,6 +1275,8 @@ msgid ""
 "Detect when a new sentence is started and always ensure that the first "
 "character is an uppercase character"
 msgstr ""
+"ახალი წინადადების დაწყების პოვნა და დარწმუნება, რომ ის მაღალი რეგისტრის "
+"სიმბოლოთი იწყება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, upperCase)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:354
@@ -1277,6 +1285,9 @@ msgid ""
 "Convert &first letter of a sentence automatically to uppercase\n"
 "(e.g. \"my house. in this town\" to \"my house. In this town\")"
 msgstr ""
+"წინადადების &პირველი სიმბოლოს მაღალ რეგისტრში გადაყვანა\n"
+"(არ ეხება ქართულს. ინგლისური: \"my house. in this town\" გარდაიქმნება \"my "
+"house. In this town\")"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:364
@@ -1360,7 +1371,7 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:422
 #, kde-format
 msgid "Replace 1st... with 1^st... (HTML mode)"
-msgstr ""
+msgstr "1st-ის ... 1^st-ით ჩანაცვლება... (HTML რეჟიმი)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:429
@@ -2301,7 +2312,7 @@ msgstr ""
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:414
 #, kde-format
 msgid "No network connection detected, we cannot translate text."
-msgstr ""
+msgstr "ქსელთან მიერთება აღმოჩენილი არაა. ტექსტს ვერ ვთარგმნით."
 
 #: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:414
 #, kde-format
