@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-12-12 09:55+0100\n"
+"PO-Revision-Date: 2022-12-24 07:09+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -222,7 +222,7 @@ msgstr ""
 #: pimcommon/translator/engine/yandextranslator.cpp:107
 #, kde-format
 msgid "You used same language for from and to language."
-msgstr ""
+msgstr "'საიდან' და 'სადამდე' ენები ერთი და იგივეა."
 
 #: pimcommon/translator/engine/deepltranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:362
@@ -659,7 +659,7 @@ msgstr ""
 #: pimcommon/translator/translatorwidget.cpp:395
 #, kde-format
 msgid "No network connection detected, we cannot translate text."
-msgstr ""
+msgstr "ქსელთან მიერთება აღმოჩენილი არაა. ტექსტს ვერ ვთარგმნით."
 
 #: pimcommon/translator/translatorwidget.cpp:395
 #, kde-format
@@ -871,6 +871,8 @@ msgstr "წვდომები"
 #, kde-format
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
+"<b>შენიშვნა: </b>სახელის გადარქმევა მშობელ საქაღალდეში ჩაწერის უფლებას "
+"მოითხოვს."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -914,13 +916,13 @@ msgstr ""
 #: pimcommonakonadi/acl/aclmanager.cpp:286
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr ""
+msgstr "მართლა გნებავთ ამ საქაღალდის ამ წვდომების წაშლა?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:241
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
-msgstr ""
+msgstr "გნებავთ საქაღალდის წვდომები ამ ქვესაქაღალდეებზე გადაატაროთ?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
@@ -1274,7 +1276,7 @@ msgstr ""
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
-msgstr ""
+msgstr "თავისუფალი /&დაკავებულობის გენერირება და განგაშების ჩართვა:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
 #, kde-format
@@ -1543,6 +1545,8 @@ msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
 "account before setting up server-side subscription."
 msgstr ""
+"IMAP სერვერი ჯერ მორგებული არაა. სერვერის მხრის გამოწერების მოსარგებად "
+"სწორად მორგებული IMAP სერვერია საჭირო."
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
 #, kde-format
@@ -1550,6 +1554,8 @@ msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
 "side subscription."
 msgstr ""
+"შესვლის შეცდომა. სერვერის-მხარეს გამოწერებისთვის IMAP ანგარიშის მორგებაა "
+"საჭირო."
 
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
@@ -1579,7 +1585,7 @@ msgstr "რესურსის გაშვებული ასლის მ
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr ""
+msgstr "პარამეტრის '%1' მნიშვნელობის საჭირო ტიპში '%2' გადაყვანის შეცდომა."
 
 #: pimcommonakonadi/util/createresource.cpp:112
 #, kde-format
@@ -1622,7 +1628,7 @@ msgstr "კომენტარის დამატება"
 #: pimcommonakonadi/widgets/annotationdialog.cpp:71
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr ""
+msgstr "შეიყვანეთ ტექსტი, რომელიც ელფოსტის შენიშვნის სახით იქნება შენახული:"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:81
 #, kde-format
@@ -1737,7 +1743,7 @@ msgstr "&წაშლა"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:268
 #, kde-format
 msgid "Accept two uppercase letters in:"
-msgstr ""
+msgstr "ორი მაღალი რეგისტრის სიმბოლოს მიღება:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:332
@@ -1752,6 +1758,8 @@ msgid ""
 "Detect when a new sentence is started and always ensure that the first "
 "character is an uppercase character"
 msgstr ""
+"ახალი წინადადების დაწყების პოვნა და დარწმუნება, რომ ის მაღალი რეგისტრის "
+"სიმბოლოთი იწყება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, upperCase)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:342
@@ -1760,6 +1768,9 @@ msgid ""
 "Convert &first letter of a sentence automatically to uppercase\n"
 "(e.g. \"my house. in this town\" to \"my house. In this town\")"
 msgstr ""
+"წინადადების &პირველი სიმბოლოს მაღალ რეგისტრში გადაყვანა\n"
+"(არ ეხება ქართულს. ინგლისური: \"my house. in this town\" გარდაიქმნება \"my "
+"house. In this town\")"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:352
@@ -1843,7 +1854,7 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:410
 #, kde-format
 msgid "Replace 1st... with 1^st... (HTML mode)"
-msgstr ""
+msgstr "1st-ის ... 1^st-ით ჩანაცვლება... (HTML რეჟიმი)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:417
