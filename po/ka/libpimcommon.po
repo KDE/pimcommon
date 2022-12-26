@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-12-24 07:09+0100\n"
+"PO-Revision-Date: 2022-12-25 08:21+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -655,6 +655,8 @@ msgid ""
 "Drag text that you want to translate. (Be careful text will be send to "
 "Google Server)."
 msgstr ""
+"გადმოათრიეთ ტექსტი, რომელიც გნებავთ თარგმნოთ. (ფრთხილად, ის Google -ის "
+"სერვერებზე იქნება გადაგზავნილი)."
 
 #: pimcommon/translator/translatorwidget.cpp:395
 #, kde-format
@@ -855,6 +857,9 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
+"IMAP სერვერზე შესასვლელად საჭირო მომხმარებლის სახელი. შეიძლება იყოს "
+"მომხმარებლის სახელი ან სრული ელფოსტის მისამართი. თქვენს პირად ანგარიშში "
+"შესვლისას გამოყენებული მომხმარებელი მიგანიშნებთ, რომელი გამოიყენება."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
@@ -912,6 +917,8 @@ msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
 msgstr ""
+"ნამდვილად გსურთ ამ საქაღალდისთვის საკუთარი წვდომის წაშლა? მასზე წვდომა აღარ "
+"გექნებათ."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:286
 #, kde-format
@@ -1095,7 +1102,7 @@ msgstr "შედეგი ვერ მოიძებნა"
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
-msgstr ""
+msgstr "სია შეიცვალა. გნებავთ მისი შენახვა შემდეგი ძებნამდე?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
 #, kde-format
@@ -1797,6 +1804,8 @@ msgid ""
 "Make sure that more than one space cannot be typed, as this is a common "
 "mistake which is quite hard to find in formatted text."
 msgstr ""
+"დარწმუნდით, რომ ერთზე მეტი ჰარე არ აგიკრეფიათ, რადგან ეს გავრცელებული "
+"შეცდომაა, რომლის პოვნაც ფორმატირებულ ტექსტში ძალიან რთულია."
 
 #. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:366
@@ -1809,6 +1818,7 @@ msgstr "&ორმაგი ჰარეების შეკვეცა"
 #, kde-format
 msgid "Most standard fraction notations will be converted when available"
 msgstr ""
+"სტანდარტული ფრაქციის ნოტაციების უმეტესობა გადაკეთდება, როდესაც ხელმისაწვდომია"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:376
@@ -1849,6 +1859,7 @@ msgstr ""
 #, kde-format
 msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
 msgstr ""
+"ფორმატირებისას ავტომატური &გასქელება, გადასმა და ხაზგასმა (HTML რეჟიმი)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:410
@@ -1860,7 +1871,7 @@ msgstr "1st-ის ... 1^st-ით ჩანაცვლება... (HTML რ�
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:417
 #, kde-format
 msgid "Add non breaking space before specific punctuation marks in French text"
-msgstr ""
+msgstr "ფრანგულ ტექსტში პუნქტუაციის ნიშნებამდე არაგადატანადი ჰარეების დამატება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
