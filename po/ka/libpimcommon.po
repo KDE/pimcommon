@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-22 00:48+0000\n"
-"PO-Revision-Date: 2022-12-25 07:43+0100\n"
+"PO-Revision-Date: 2022-12-26 02:03+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -786,13 +786,28 @@ msgid ""
 "(for tasks, this setting is only used for alarms).\n"
 "\n"
 "Example use cases: if the boss shares a folder with his secretary, only the "
-"boss should be marked as busy for his meetings, so he should select "
-"\"Admins\", since the secretary has no admin rights on the folder.\n"
+"boss should be marked as busy for his meetings, so he should select \"Admins"
+"\", since the secretary has no admin rights on the folder.\n"
 "On the other hand if a working group shares a Calendar for group meetings, "
 "all readers of the folders should be marked as busy for meetings.\n"
 "A company-wide folder with optional events in it would use \"Nobody\" since "
 "it is not known who will go to those events."
 msgstr ""
+"ეს პარამეტრი განსაზღვრავს, თუ რომელი მომხმარებლები, რომლებიც იზიარებენ ამ "
+"საქაღალდეს, უნდა მიიღონ \"დაკავებული\" პერიოდები თავიანთ თავისუფალ სიებში და "
+"უნდა ნახონ სიგნალიზაცია ამ საქაღალდეში მოვლენების ან ამოცანების შესახებ. "
+"პარამეტრი ვრცელდება მხოლოდ კალენდრისა და სამუშაო საქაღალდებზე "
+"(ამოცანებისთვის, ეს პარამეტრი გამოიყენება მხოლოდ სიგნალიზაციისთვის).\n"
+"\n"
+"მაგალითის გამოყენების შემთხვევები: თუ ბოსი თავის მდივანს უზიარებს "
+"საქაღალდეს, მხოლოდ ბოსი უნდა აღინიშნოს, როგორც დაკავებული მისი "
+"შეხვედრებისთვის, ამიტომ მან უნდა აირჩიოს \"ადმინისტრატორები\", რადგან "
+"მდივანს არ აქვს ადმინისტრატორის უფლებები საქაღალდეზე.\n"
+"მეორეს მხრივ, თუ სამუშაო ჯგუფი იზიარებს კალენდარს ჯგუფური შეხვედრებისთვის, "
+"საქაღალდეების ყველა მკითხველი უნდა აღინიშნოს, როგორც შეხვედრებისთვის "
+"დაკავებული.\n"
+"კომპანიის მასშტაბით საქაღალდე, რომელშიც არჩევითი მოვლენებია, გამოიყენებს "
+"\"არავინ\", რადგან არ არის ცნობილი ვინ წავა ამ ღონისძიებებზე."
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
 #, kde-format
@@ -1302,6 +1317,9 @@ msgid ""
 "bit too long. If some words must have two uppercase characters, then those "
 "exceptions should be added in the 'Exceptions' tab."
 msgstr ""
+"ყველა სიტყვა მოწმდება ზოგად შეცდომაზე, როცა Shift ღილაკზე საჭიროზე მეტხანს "
+"უჭირავთ. თუ რომელიმე სიტყვას ორი მაღალი რეგისტრის სიმბოლო გააჩნია, ეს "
+"გამონაკლისები 'გამონაკლისების ჩანართზე' შეგიძლიათ დაამატოთ."
 
 #. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:368
@@ -1311,6 +1329,9 @@ msgid ""
 "character\n"
 " (e.g. PErfect to Perfect)"
 msgstr ""
+"გადაიყვანეთ &ორი მაღალი რეგისტრის სიმბოლო ერთი მაღალი და ერთ დაბალი "
+"რეგისტრის მქონე სიმბოლოებში\n"
+"(მაგ: PErfect ->Perfect)"
 
 #. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:375
@@ -1354,6 +1375,8 @@ msgid ""
 "Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
 "that matches the way an Internet browser would show a URL."
 msgstr ""
+"აღმოჩენა, როცა ბმულს კრეფთ და მოგეწოდებათ ფორმატირება, რომელსაც ბრაუზერი "
+"იყენებს, როცა URL-ს კრეფთ."
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:405
@@ -1368,6 +1391,8 @@ msgid ""
 "When you use _underline_ or *bold*, the text between the underscores or "
 "asterisks will be converted to underlined or bold text."
 msgstr ""
+"როცა იყენებთ _ხაზგასმას_ ან *გასქელებას*, ტექსტი ქვედა ხაზებს ან "
+"ვარსკვლავებს შორის ხაზგასმულ ან სქელ ტექსტად გამოჩნდება."
 
 #. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:415
