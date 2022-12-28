@@ -99,9 +99,8 @@ target_link_libraries(KF5PimCommonTextTranslator
     PUBLIC
     Qt::Gui
     Qt::Widgets
-    KF5::KIOCore
-    PRIVATE
     Qt::Network
+    PRIVATE
     KF5::I18n
     KF5::WidgetsAddons
     KF5::ItemViews
