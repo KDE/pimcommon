@@ -28,7 +28,8 @@ GrammalecteUrlRequesterWidget::GrammalecteUrlRequesterWidget(QWidget *parent)
     mainLayout->addWidget(selectUrlButton);
 
     connect(selectUrlButton, &QToolButton::clicked, this, [this]() {
-        // TODO
+        const QString path = QFileDialog::getOpenFileName(this, i18n("Select Path"));
+        mLineEdit->setText(path);
     });
 }
 
