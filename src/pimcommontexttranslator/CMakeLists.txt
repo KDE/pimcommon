@@ -155,7 +155,7 @@ ecm_generate_headers(PimCommonTextTranslator_Camelcasetranslatormisc_HEADERS
 
 ecm_generate_pri_file(BASE_NAME PimCommonTextTranslator
     LIB_NAME KF5PimCommonTextTranslator
-    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator
+    DEPS "network" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator
     )
 
 install(FILES

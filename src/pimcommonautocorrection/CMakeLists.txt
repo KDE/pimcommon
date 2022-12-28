@@ -161,7 +161,7 @@ ecm_generate_headers(PimCommon_Camelcasesettings_HEADERS
 
 ecm_generate_pri_file(BASE_NAME PimCommonAutoCorrection
     LIB_NAME KF5PimCommonAutoCorrection
-    DEPS "" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAutoCorrection
+    DEPS "KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAutoCorrection
     )
 
 
