@@ -24,6 +24,7 @@ GrammalecteUrlRequesterWidget::GrammalecteUrlRequesterWidget(QWidget *parent)
     mainLayout->addWidget(mLineEdit);
 
     auto selectUrlButton = new QToolButton(this);
+    selectUrlButton->setText(QStringLiteral("..."));
     selectUrlButton->setObjectName(QStringLiteral("selectUrlButton"));
     mainLayout->addWidget(selectUrlButton);
 
