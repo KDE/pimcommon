@@ -21,6 +21,8 @@ public:
     void setPath(const QString &path);
     Q_REQUIRED_RESULT QString path() const;
 
+    void setPlaceholderText(const QString &text);
+
 private:
     QLineEdit *const mLineEdit;
 };

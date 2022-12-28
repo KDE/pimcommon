@@ -6,7 +6,7 @@
 
 #include "grammalecteconfigwidgettest.h"
 #include "grammalecte/grammalecteconfigwidget.h"
-#include <KUrlRequester>
+#include "grammalecte/grammalecteurlrequesterwidget.h"
 #include <QFormLayout>
 #include <QLabel>
 #include <QScrollArea>
@@ -38,13 +38,13 @@ void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
     auto lay = generalWidget->findChild<QFormLayout *>(QStringLiteral("generallayout"));
     QVERIFY(lay);
 
-    auto mPythonPath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("pythonpath"));
+    auto mPythonPath = generalWidget->findChild<PimCommonTextGrammarCheck::GrammalecteUrlRequesterWidget *>(QStringLiteral("pythonpath"));
     QVERIFY(mPythonPath);
-    QVERIFY(!mPythonPath->text().isEmpty());
+    QVERIFY(!mPythonPath->path().isEmpty());
 
-    auto mGrammalectePath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("grammalectepath"));
+    auto mGrammalectePath = generalWidget->findChild<PimCommonTextGrammarCheck::GrammalecteUrlRequesterWidget *>(QStringLiteral("grammalectepath"));
     QVERIFY(mGrammalectePath);
-    QVERIFY(mGrammalectePath->text().isEmpty());
+    QVERIFY(mGrammalectePath->path().isEmpty());
 
     auto mStackedWidget = mTab->findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(mStackedWidget);

@@ -45,3 +45,8 @@ QString GrammalecteUrlRequesterWidget::path() const
 {
     return mLineEdit->text();
 }
+
+void GrammalecteUrlRequesterWidget::setPlaceholderText(const QString &text)
+{
+    mLineEdit->setPlaceholderText(text);
+}

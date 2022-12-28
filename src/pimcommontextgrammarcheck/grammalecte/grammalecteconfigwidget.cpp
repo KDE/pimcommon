@@ -6,6 +6,7 @@
 
 #include "grammalecteconfigwidget.h"
 #include "grammalectemanager.h"
+#include "grammalecteurlrequesterwidget.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -19,7 +20,6 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 
-#include <KUrlRequester>
 using namespace PimCommonTextGrammarCheck;
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMessageBox)
     : QWidget(parent)
@@ -46,8 +46,8 @@ GrammalecteConfigWidget::~GrammalecteConfigWidget()
 void GrammalecteConfigWidget::loadGrammarSettings()
 {
     auto job = new GrammalecteGenerateConfigOptionJob(this);
-    job->setPythonPath(mPythonPath->text());
-    job->setGrammarlecteCliPath(mGrammalectePath->text());
+    job->setPythonPath(mPythonPath->path());
+    job->setGrammarlecteCliPath(mGrammalectePath->path());
     connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteConfigWidget::slotGetSettingsFinished);
     connect(job, &GrammalecteGenerateConfigOptionJob::error, this, &GrammalecteConfigWidget::slotGetSettingsError);
     job->start();
@@ -130,11 +130,11 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
     auto lay = new QFormLayout(w);
     lay->setObjectName(QStringLiteral("generallayout"));
 
-    mPythonPath = new KUrlRequester(this);
+    mPythonPath = new PimCommonTextGrammarCheck::GrammalecteUrlRequesterWidget(this);
     mPythonPath->setObjectName(QStringLiteral("pythonpath"));
     lay->addRow(i18n("Python Path:"), mPythonPath);
 
-    mGrammalectePath = new KUrlRequester(this);
+    mGrammalectePath = new PimCommonTextGrammarCheck::GrammalecteUrlRequesterWidget(this);
     mGrammalectePath->setObjectName(QStringLiteral("grammalectepath"));
     mGrammalectePath->setPlaceholderText(i18n("Add full 'grammalecte-cli.py' path"));
     lay->addRow(i18n("Grammalecte Path:"), mGrammalectePath);
@@ -144,8 +144,8 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
 
 void GrammalecteConfigWidget::loadSettings()
 {
-    mPythonPath->setText(GrammalecteManager::self()->pythonPath());
-    mGrammalectePath->setText(GrammalecteManager::self()->grammalectePath());
+    mPythonPath->setPath(GrammalecteManager::self()->pythonPath());
+    mGrammalectePath->setPath(GrammalecteManager::self()->grammalectePath());
     mSaveOptions = GrammalecteManager::self()->options();
 }
 
@@ -157,8 +157,8 @@ void GrammalecteConfigWidget::saveSettings()
             result += checkBox->property("optionname").toString();
         }
     }
-    GrammalecteManager::self()->setPythonPath(mPythonPath->text());
-    GrammalecteManager::self()->setGrammalectePath(mGrammalectePath->text());
+    GrammalecteManager::self()->setPythonPath(mPythonPath->path());
+    GrammalecteManager::self()->setGrammalectePath(mGrammalectePath->path());
     GrammalecteManager::self()->setOptions(result);
     GrammalecteManager::self()->saveSettings();
 }

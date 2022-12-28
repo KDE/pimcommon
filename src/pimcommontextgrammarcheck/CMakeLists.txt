@@ -115,7 +115,6 @@ target_link_libraries(KF5PimCommonTextGrammarCheck
     KF5::I18n
     KF5::WidgetsAddons
     KF5::ConfigWidgets
-    KF5::KIOWidgets
     )
 
 target_include_directories(KF5PimCommonTextGrammarCheck INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/>")

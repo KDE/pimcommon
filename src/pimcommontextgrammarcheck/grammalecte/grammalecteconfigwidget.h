@@ -15,6 +15,7 @@ class QStackedWidget;
 class QScrollArea;
 namespace PimCommonTextGrammarCheck
 {
+class GrammalecteUrlRequesterWidget;
 class PIMCOMMONTEXTGRAMMARCHECK_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
@@ -38,8 +39,8 @@ private:
     QWidget *mGrammarTabWidget = nullptr;
     QWidget *mReloadSettingsWidget = nullptr;
     QScrollArea *mScrollArea = nullptr;
-    KUrlRequester *mPythonPath = nullptr;
-    KUrlRequester *mGrammalectePath = nullptr;
+    GrammalecteUrlRequesterWidget *mPythonPath = nullptr;
+    GrammalecteUrlRequesterWidget *mGrammalectePath = nullptr;
     const bool mDisableDialogBox = false;
 };
 }
