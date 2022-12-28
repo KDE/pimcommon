@@ -6,11 +6,12 @@
 
 #pragma once
 
+#include "pimcommontextgrammarcheckprivate_export.h"
 #include <QWidget>
 class QLineEdit;
 namespace PimCommonTextGrammarCheck
 {
-class GrammalecteUrlRequesterWidget : public QWidget
+class PIMCOMMONTEXTGRAMMARCHECK_TESTS_EXPORT GrammalecteUrlRequesterWidget : public QWidget
 {
     Q_OBJECT
 public:
