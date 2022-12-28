@@ -90,6 +90,8 @@ target_sources(KF5PimCommonTextGrammarCheck PRIVATE
     grammalecte/grammalecteresultjob.h
     grammalecte/grammalecteresultwidget.cpp
     grammalecte/grammalecteresultwidget.h
+    grammalecte/grammalecteurlrequesterwidget.h
+    grammalecte/grammalecteurlrequesterwidget.cpp
     )
 if (BUILD_TESTING)
     add_subdirectory(grammalecte/autotests)
