@@ -17,6 +17,9 @@ public:
     explicit GrammalecteUrlRequesterWidget(QWidget *parent = nullptr);
     ~GrammalecteUrlRequesterWidget() override;
 
+    void setPath(const QString &path);
+    Q_REQUIRED_RESULT QString path() const;
+
 private:
     QLineEdit *const mLineEdit;
 };

@@ -33,3 +33,13 @@ GrammalecteUrlRequesterWidget::GrammalecteUrlRequesterWidget(QWidget *parent)
 }
 
 GrammalecteUrlRequesterWidget::~GrammalecteUrlRequesterWidget() = default;
+
+void GrammalecteUrlRequesterWidget::setPath(const QString &path)
+{
+    mLineEdit->setText(path);
+}
+
+QString GrammalecteUrlRequesterWidget::path() const
+{
+    return mLineEdit->text();
+}
