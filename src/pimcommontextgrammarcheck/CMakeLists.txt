@@ -113,7 +113,6 @@ target_link_libraries(KF5PimCommonTextGrammarCheck
     PRIVATE
     Qt::Network
     KF5::I18n
-    KF5::WidgetsAddons
     KF5::ConfigWidgets
     )
 
