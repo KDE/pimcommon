@@ -13,7 +13,6 @@ macro(add_pimcommonakonadi_addressline_unittest _name)
         KF5::ConfigCore
         KF5::Completion
         KF5::I18n
-        KF5::WidgetsAddons
     )
 endmacro()
 
