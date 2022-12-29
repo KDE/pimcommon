@@ -103,7 +103,6 @@ target_link_libraries(KF5PimCommonTextTranslator
     PRIVATE
     KF5::I18n
     KF5::WidgetsAddons
-    KF5::ItemViews
     KF5::ConfigGui
     )
 
