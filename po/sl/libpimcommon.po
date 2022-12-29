@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:48+0000\n"
+"POT-Creation-Date: 2022-12-29 00:53+0000\n"
 "PO-Revision-Date: 2022-12-17 07:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -24,7 +24,11 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
+#. i18n: ectx: property (text), widget (QToolButton, customSystemPathToolButton)
+#. i18n: ectx: property (text), widget (QToolButton, customWritablePathToolButton)
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:785
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:806
 #, kde-format
 msgid "..."
 msgstr "..."
@@ -1232,7 +1236,7 @@ msgstr "Napredno samodejno popravljanje"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:495
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:505
 #, kde-format
 msgid "&Add"
 msgstr "Dod&aj"
@@ -1503,31 +1507,31 @@ msgstr "Končni citati:"
 msgid "Path"
 msgstr "Pot"
 
-#. i18n: ectx: property (text), widget (QLabel, writablePath)
-#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
+#, kde-format
+msgid "System Path:"
+msgstr "Sistemska pot:"
+
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, writablePath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:750
 #, kde-format
 msgid "TextLabel"
 msgstr "BesedilnaOznaka"
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:723
-#, kde-format
-msgid "Custom System Path:"
-msgstr "Sistemska pot po meri:"
-
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:780
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:743
 #, kde-format
 msgid "Writable Path:"
 msgstr "Zapisljiva pot:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:787
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:773
 #, kde-format
-msgid "System Path:"
-msgstr "Sistemska pot:"
+msgid "Custom System Path:"
+msgstr "Sistemska pot po meri:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:794
@@ -1535,74 +1539,86 @@ msgstr "Sistemska pot:"
 msgid "Custom Writable Path:"
 msgstr "Zapisljiva pot po meri:"
 
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
+#, fuzzy, kde-format
+#| msgid "Custom Writable Path:"
+msgid "Select Custom Writable Path"
+msgstr "Zapisljiva pot po meri:"
+
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#, fuzzy, kde-format
+#| msgid "Custom System Path:"
+msgid "Select Custom System Path"
+msgstr "Sistemska pot po meri:"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "Samodejno popravljanje za LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:135
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:145
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "Samodejno popravljanje za KMail/Calligra"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:423
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Niz za zamenjavo je enak kot iskani niz."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:423
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Dodaj vnos za samodejno popravljanje"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:492
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:502
 #, kde-format
 msgid "&Modify"
 msgstr "Spre&meni"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:603
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:613
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "Uvozi samodejno popravljanje za LibreOffice"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:604
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:614
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "Datoteka samodejnega popravljanja za LibreOffice (*.dat)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:607
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:617
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "Uvozi samodejno popravljanje za KMail"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:608
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:618
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "Datoteka samodejnega popravljanja za KMail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:640
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:650
 #, kde-format
 msgid "Import Autocorrection File"
 msgstr "Uvozi datoteko samodejnega popravljanja"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:663
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:673
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr ""
 "Jezik je bil spremenjen. Ali želite shraniti nastavitve za predhodni jezik?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:664
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:674
 #, kde-format
 msgid "Save config"
 msgstr "Shrani nastavitve"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:709
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Shranite spremembe pred izvažanjem nastavitev."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:702
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:709
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:712
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Izvozi datoteko samodejnega popravljanja"
@@ -1737,6 +1753,12 @@ msgstr "Datoteke Grammalecte cli ni mogoče najti."
 #, kde-format
 msgid "Grammalecte error"
 msgstr "Napaka Grammalecte"
+
+#: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
+#, fuzzy, kde-format
+#| msgid "Select"
+msgid "Select Path"
+msgstr "Izberi"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:120

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-22 00:48+0000\n"
+"POT-Creation-Date: 2022-12-29 00:53+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -17,7 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
 
+#. i18n: ectx: property (text), widget (QToolButton, customSystemPathToolButton)
+#. i18n: ectx: property (text), widget (QToolButton, customWritablePathToolButton)
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:785
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:806
 #, kde-format
 msgid "..."
 msgstr "..."
@@ -1247,7 +1251,7 @@ msgstr "Tä&psem automaatkorrektuur"
 #. i18n: ectx: property (text), widget (QPushButton, add1)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:495
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:505
 #, kde-format
 msgid "&Add"
 msgstr "Lis&a"
@@ -1526,33 +1530,33 @@ msgstr ""
 msgid "Path"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, writablePath)
-#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, label_6)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:737
+#, fuzzy, kde-format
+#| msgid "Storage path:"
+msgid "System Path:"
+msgstr "Salvesti asukoht:"
+
+#. i18n: ectx: property (text), widget (QLabel, systemPath)
+#. i18n: ectx: property (text), widget (QLabel, writablePath)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:750
 #, kde-format
 msgid "TextLabel"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:723
-#, fuzzy, kde-format
-#| msgid "Storage path:"
-msgid "Custom System Path:"
-msgstr "Salvesti asukoht:"
-
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:780
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:743
 #, fuzzy, kde-format
 #| msgid "writable:"
 msgid "Writable Path:"
 msgstr "Kirjutatav:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:787
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:773
 #, fuzzy, kde-format
 #| msgid "Storage path:"
-msgid "System Path:"
+msgid "Custom System Path:"
 msgstr "Salvesti asukoht:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_11)
@@ -1562,75 +1566,87 @@ msgstr "Salvesti asukoht:"
 msgid "Custom Writable Path:"
 msgstr "Kirjutatav:"
 
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
+#, fuzzy, kde-format
+#| msgid "writable:"
+msgid "Select Custom Writable Path"
+msgstr "Kirjutatav:"
+
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
+#, fuzzy, kde-format
+#| msgid "Storage path:"
+msgid "Select Custom System Path"
+msgstr "Salvesti asukoht:"
+
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
 #, kde-format
 msgid "LibreOffice Autocorrection"
 msgstr "LibreOffice'i automaatkorrektuur"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:135
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:145
 #, kde-format
 msgid "KMail/Calligra Autocorrection"
 msgstr "KMaili/Calligra automaatkorrektuur"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:423
 #, kde-format
 msgid "\"Replace\" string is the same as \"Find\" string."
 msgstr "Asendusstring on sama mis otsingustring."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:413
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:423
 #, kde-format
 msgid "Add Autocorrection Entry"
 msgstr "Automaatkorrektuuri kirje lisamine"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:492
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:502
 #, kde-format
 msgid "&Modify"
 msgstr "&Muuda"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:603
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:613
 #, kde-format
 msgid "Import LibreOffice Autocorrection"
 msgstr "LibreOffice'i automaatkorrektuuri import"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:604
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:614
 #, fuzzy, kde-format
 #| msgid "LibreOffice Autocorrection File (*.data)"
 msgid "LibreOffice Autocorrection File (*.dat)"
 msgstr "LibreOffice'i automaatkorrektuuri fail (*.data)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:607
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:617
 #, kde-format
 msgid "Import KMail Autocorrection"
 msgstr "KMaili automaatkorrektuuri import"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:608
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:618
 #, kde-format
 msgid "KMail Autocorrection File (*.xml)"
 msgstr "KMaili automaatkorrektuuri fail (*.xml)"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:640
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:650
 #, fuzzy, kde-format
 #| msgid "Export Autocorrection File"
 msgid "Import Autocorrection File"
 msgstr "Automaatkorrektuuri faili eksport"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:663
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:673
 #, kde-format
 msgid "Language was changed, do you want to save config for previous language?"
 msgstr "Keel on muudetud, kas salvestada eelmise keele seadistus?"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:664
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:674
 #, kde-format
 msgid "Save config"
 msgstr "Seadistuse salvestamine"
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:709
 #, kde-format
 msgid "Please save changes before exporting settings."
 msgstr "Palun salvesta muudatused enne seadistuste eksportimist."
 
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:699
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:702
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:709
+#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:712
 #, kde-format
 msgid "Export Autocorrection File"
 msgstr "Automaatkorrektuuri faili eksport"
@@ -1775,6 +1791,12 @@ msgstr ""
 #| msgid "Translate error"
 msgid "Grammalecte error"
 msgstr "Tõrge tõlkimisel"
+
+#: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select Path"
+msgstr "Asenda kõik"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:120
