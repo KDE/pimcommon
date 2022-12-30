@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-29 00:53+0000\n"
-"PO-Revision-Date: 2022-12-26 02:03+0100\n"
+"POT-Creation-Date: 2022-12-30 00:54+0000\n"
+"PO-Revision-Date: 2022-12-29 10:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -819,7 +819,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "თავისუფალი /&დაკავებულობის გენერირება და განგაშების ჩართვა:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:30
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:35
 #, kde-format
 msgid "Search..."
 msgstr "ძებნა..."
@@ -1536,16 +1536,14 @@ msgid "Custom Writable Path:"
 msgstr "ხელით მითითებული ჩაწერადი ბილიკი:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Custom Writable Path:"
+#, kde-format
 msgid "Select Custom Writable Path"
-msgstr "ხელით მითითებული ჩაწერადი ბილიკი:"
+msgstr "ხელით მითითებული ჩაწერადი ბილიკი"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Custom System Path:"
+#, kde-format
 msgid "Select Custom System Path"
-msgstr "ხელით მითითებული სისტემის ბილიკი:"
+msgstr "ხელით მითითებული სისტემის ბილიკი"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
 #, kde-format
@@ -1751,10 +1749,9 @@ msgid "Grammalecte error"
 msgstr "Grammalecte-ის შეცდომა"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgid "Select Path"
-msgstr "აირჩიეთ"
+msgstr "აირჩიეთ ბილიკი"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:120

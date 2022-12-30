@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-29 00:53+0000\n"
-"PO-Revision-Date: 2022-12-16 11:15+0100\n"
+"POT-Creation-Date: 2022-12-30 00:54+0000\n"
+"PO-Revision-Date: 2022-12-29 12:34+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -818,7 +818,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Vrij/&bezet genereren en herinneringen activeren voor:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:30
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:35
 #, kde-format
 msgid "Search..."
 msgstr "Zoeken..."
@@ -1546,16 +1546,14 @@ msgid "Custom Writable Path:"
 msgstr "Aangepast beschrijfbaarpad:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Custom Writable Path:"
+#, kde-format
 msgid "Select Custom Writable Path"
-msgstr "Aangepast beschrijfbaarpad:"
+msgstr "Aangepast beschrijfbaarpad selecteren:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Custom System Path:"
+#, kde-format
 msgid "Select Custom System Path"
-msgstr "Aangepast systeempad:"
+msgstr "Aangepast systeempad selecteren:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
 #, kde-format
@@ -1763,10 +1761,9 @@ msgid "Grammalecte error"
 msgstr "Fout met grammalecte:"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgid "Select Path"
-msgstr "Selecteren"
+msgstr "Pad selecteren"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:120

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-29 00:53+0000\n"
-"PO-Revision-Date: 2022-12-16 22:26+0100\n"
+"POT-Creation-Date: 2022-12-30 00:54+0000\n"
+"PO-Revision-Date: 2022-12-30 00:41+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -820,7 +820,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Genera libero/occu&pato e attiva gli avvertimenti per:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:30
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:35
 #, kde-format
 msgid "Search..."
 msgstr "Cerca..."
@@ -1540,16 +1540,14 @@ msgid "Custom Writable Path:"
 msgstr "Percorso scrivibile personalizzato:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Custom Writable Path:"
+#, kde-format
 msgid "Select Custom Writable Path"
-msgstr "Percorso scrivibile personalizzato:"
+msgstr "Seleziona percorso scrivibile personalizzato"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Custom System Path:"
+#, kde-format
 msgid "Select Custom System Path"
-msgstr "Percorso di sistema personalizzato:"
+msgstr "Seleziona percorso di sistema personalizzato"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
 #, kde-format
@@ -1757,10 +1755,9 @@ msgid "Grammalecte error"
 msgstr "Errore di Grammalecte"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgid "Select Path"
-msgstr "Seleziona"
+msgstr "Seleziona percorso"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:120

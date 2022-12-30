@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-29 00:53+0000\n"
-"PO-Revision-Date: 2022-12-16 08:35+0200\n"
+"POT-Creation-Date: 2022-12-30 00:54+0000\n"
+"PO-Revision-Date: 2022-12-29 08:34+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -824,7 +824,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Створювати нагадування про події та вільний/за&йнятий час для:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:30
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:35
 #, kde-format
 msgid "Search..."
 msgstr "Шукати…"
@@ -1545,16 +1545,14 @@ msgid "Custom Writable Path:"
 msgstr "Нетиповий придатний до запису шлях:"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Custom Writable Path:"
+#, kde-format
 msgid "Select Custom Writable Path"
-msgstr "Нетиповий придатний до запису шлях:"
+msgstr "Виберіть нетиповий придатний до запису шлях"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
-#, fuzzy, kde-format
-#| msgid "Custom System Path:"
+#, kde-format
 msgid "Select Custom System Path"
-msgstr "Нетиповий шлях у системі:"
+msgstr "Виберіть нетиповий шлях у системі"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
 #, kde-format
@@ -1761,10 +1759,9 @@ msgid "Grammalecte error"
 msgstr "Помилка Grammalecte"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select"
+#, kde-format
 msgid "Select Path"
-msgstr "Вибрати"
+msgstr "Виберіть шлях"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:120
