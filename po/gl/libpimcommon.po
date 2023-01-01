@@ -235,7 +235,8 @@ msgstr ""
 
 #: pimcommon/translator/engine/googletranslator.cpp:74
 #: pimcommon/translator/translatorutil.cpp:347
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Google"
 msgid "Google"
 msgstr "Google"
 
