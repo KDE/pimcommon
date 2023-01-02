@@ -35,7 +35,6 @@ QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> GoogleEngineCli
 {
     if (mLanguages.isEmpty()) {
         mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
-        PimCommonTextTranslator::TranslatorUtil translatorUtil;
         // QVector<QPair<QString, QString>> langLanguage;
         // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_cn_google)); // For google only
         // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_tw_google)); // For google only
