@@ -31,13 +31,14 @@ PimCommonTextTranslator::TranslatorEnginePlugin *YandexEngineClient::createTrans
     return new YandexEnginePlugin();
 }
 
-QVector<QPair<QString, QString>> YandexEngineClient::supportedLanguages()
+QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> YandexEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
-        PimCommonTextTranslator::TranslatorUtil translatorUtil;
-        mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::jv_yandex));
-        mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::zn_yandex));
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
+        // TODO
+        // PimCommonTextTranslator::TranslatorUtil translatorUtil;
+        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::jv_yandex));
+        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::zn_yandex));
     }
     return mLanguages;
 }

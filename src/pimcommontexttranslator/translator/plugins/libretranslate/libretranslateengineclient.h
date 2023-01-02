@@ -20,7 +20,7 @@ public:
     Q_REQUIRED_RESULT QString name() const override;
     Q_REQUIRED_RESULT QString translatedName() const override;
     Q_REQUIRED_RESULT PimCommonTextTranslator::TranslatorEnginePlugin *createTranslator() override;
-    Q_REQUIRED_RESULT QVector<QPair<QString, QString>> supportedLanguages() override;
+    Q_REQUIRED_RESULT QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> supportedLanguages() override;
     Q_REQUIRED_RESULT bool hasConfigurationDialog() const override;
     void showConfigureDialog() override;
 };

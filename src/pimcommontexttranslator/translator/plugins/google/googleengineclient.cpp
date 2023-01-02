@@ -31,14 +31,14 @@ PimCommonTextTranslator::TranslatorEnginePlugin *GoogleEngineClient::createTrans
     return new GoogleEnginePlugin();
 }
 
-QVector<QPair<QString, QString>> GoogleEngineClient::supportedLanguages()
+QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> GoogleEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
         PimCommonTextTranslator::TranslatorUtil translatorUtil;
-        QVector<QPair<QString, QString>> langLanguage;
-        mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_cn_google)); // For google only
-        mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_tw_google)); // For google only
+        // QVector<QPair<QString, QString>> langLanguage;
+        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_cn_google)); // For google only
+        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_tw_google)); // For google only
     }
     return mLanguages;
 }

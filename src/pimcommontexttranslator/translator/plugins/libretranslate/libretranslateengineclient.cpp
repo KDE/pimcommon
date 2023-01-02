@@ -38,10 +38,10 @@ PimCommonTextTranslator::TranslatorEnginePlugin *LibreTranslateEngineClient::cre
     return enginePlugin;
 }
 
-QVector<QPair<QString, QString>> LibreTranslateEngineClient::supportedLanguages()
+QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> LibreTranslateEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
     }
     return mLanguages;
 }

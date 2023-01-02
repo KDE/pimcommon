@@ -25,10 +25,8 @@ public:
         QString to;
     };
 
-    void addItemToFromComboBox(QComboBox *combo, const QPair<QString, QString> &pair);
-
-    enum languages {
-        automatic,
+    enum Language : int {
+        automatic = 0,
         en,
         zh,
         zt,
@@ -42,7 +40,6 @@ public:
         pt,
         ru,
         es,
-
         af,
         sq,
         ar,
@@ -52,8 +49,6 @@ public:
         be,
         bg,
         ca,
-        zh_cn_google, // For google only
-        zh_tw_google, // For google only
         hr,
         cs,
         da,
@@ -90,16 +85,19 @@ public:
         vi,
         cy,
         yi,
-        jv_yandex,
-        zn_yandex,
+        lastLanguage = yi
     };
-    Q_REQUIRED_RESULT static QVector<QPair<QString, QString>> genericLanguages();
+    void addItemToFromComboBox(QComboBox *combo, const QString &languageCode, const QString &translatedStr);
 
-    Q_REQUIRED_RESULT QPair<QString, QString> pair(TranslatorUtil::languages lang);
+    Q_REQUIRED_RESULT static QMap<TranslatorUtil::Language, QString> translatedLanguages();
+
     Q_REQUIRED_RESULT static QString loadEngine();
     static void saveEngineSettings(const QString &engineName);
     Q_REQUIRED_RESULT static QString groupTranslateName();
     Q_REQUIRED_RESULT static QString engineTranslateName();
     Q_REQUIRED_RESULT static QString defaultEngineName();
+    Q_REQUIRED_RESULT static QString translatedLanguage(TranslatorUtil::Language lang);
+    Q_REQUIRED_RESULT static QString languageCode(TranslatorUtil::Language lang);
+    Q_REQUIRED_RESULT static QString searchI18nFromLanguage(const QString &langCode);
 };
 }

@@ -31,10 +31,10 @@ PimCommonTextTranslator::TranslatorEnginePlugin *BingEngineClient::createTransla
     return new BingEnginePlugin();
 }
 
-QVector<QPair<QString, QString>> BingEngineClient::supportedLanguages()
+QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> BingEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::genericLanguages();
+        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
 #if 0
     { QLatin1String("bs-BG"),  QLatin1String("bs-Latn")  },         //                                            NOTE: Bing translator only
     { QLatin1String("sr-RS"),  QLatin1String("sr-Cyrl")  },         //                                            NOTE: Bing translator only
