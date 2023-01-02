@@ -567,7 +567,7 @@ msgstr "Busca"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
 #, kde-format
 msgid "Show Blacklisted Emails"
-msgstr "Mostra els correus electrònics a la llista negra"
+msgstr "Mostra els correus electrònics en la llista negra"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:75
 #, kde-format
