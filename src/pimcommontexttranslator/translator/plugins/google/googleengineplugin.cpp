@@ -55,10 +55,10 @@ void GoogleEnginePlugin::translate()
     });
 }
 
-QString GoogleEnginePlugin::languageCode(PimCommonTextTranslator::TranslatorUtil::Language lang)
+QString GoogleEnginePlugin::languageCode(const QString &langStr)
 {
     // TODO
-    return {};
+    return langStr;
 }
 
 void GoogleEnginePlugin::slotTranslateFinished(QNetworkReply *reply)

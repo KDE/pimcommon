@@ -163,8 +163,14 @@ void BingEnginePlugin::parseTranslation(QNetworkReply *reply)
     Q_EMIT translateDone();
 }
 
-QString BingEnginePlugin::languageCode(PimCommonTextTranslator::TranslatorUtil::Language lang)
+QString BingEnginePlugin::languageCode(const QString &langStr)
 {
+#if 0
+    { QLatin1String("bs-BG"),  QLatin1String("bs-Latn")  },         //                                            NOTE: Bing translator only
+    { QLatin1String("sr-RS"),  QLatin1String("sr-Cyrl")  },         //                                            NOTE: Bing translator only
+    { QLatin1String("zh-CN"),  QLatin1String("zh-Hans")  },         // SimplifiedChinese                        ; NOTE: Bing translator only
+    { QLatin1String("zh-TW"),  QLatin1String("zh-Hant")  }          // TraditionalChinese                       ; NOTE: Bing translator only
+#endif
     // TODO
-    return {};
+    return langStr;
 }

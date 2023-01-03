@@ -151,3 +151,9 @@ void YandexEnginePlugin::parseTranslation(QNetworkReply *reply)
     appendResult(jsonData.value(QStringLiteral("text")).toArray().at(0).toString());
     Q_EMIT translateDone();
 }
+
+QString YandexEnginePlugin::languageCode(const QString &langStr)
+{
+    // TODO
+    return langStr;
+}
