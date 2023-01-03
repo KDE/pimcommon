@@ -34,11 +34,16 @@ PimCommonTextTranslator::TranslatorEnginePlugin *YandexEngineClient::createTrans
 QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> YandexEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
+        mLanguages = fillLanguages();
         // TODO
         // PimCommonTextTranslator::TranslatorUtil translatorUtil;
         // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::jv_yandex));
         // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::zn_yandex));
     }
     return mLanguages;
+}
+
+bool YandexEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
+{
+    return true;
 }

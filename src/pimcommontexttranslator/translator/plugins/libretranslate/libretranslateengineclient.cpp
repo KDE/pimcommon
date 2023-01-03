@@ -41,7 +41,7 @@ PimCommonTextTranslator::TranslatorEnginePlugin *LibreTranslateEngineClient::cre
 QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> LibreTranslateEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
+        mLanguages = fillLanguages();
     }
     return mLanguages;
 }
@@ -63,4 +63,9 @@ void LibreTranslateEngineClient::showConfigureDialog()
         Q_EMIT configureChanged();
     }
     delete dlg;
+}
+
+bool LibreTranslateEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
+{
+    return true;
 }

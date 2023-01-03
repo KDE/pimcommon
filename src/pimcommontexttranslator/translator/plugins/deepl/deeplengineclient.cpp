@@ -41,9 +41,14 @@ PimCommonTextTranslator::TranslatorEnginePlugin *DeeplEngineClient::createTransl
 QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> DeeplEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
+        mLanguages = fillLanguages();
     }
     return mLanguages;
+}
+
+bool DeeplEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
+{
+    return true;
 }
 
 bool DeeplEngineClient::hasConfigurationDialog() const

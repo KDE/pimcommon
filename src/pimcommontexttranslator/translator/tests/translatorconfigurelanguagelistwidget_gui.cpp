@@ -29,7 +29,7 @@ TranslatorConfigureLanguageListWidget_gui::TranslatorConfigureLanguageListWidget
         qDebug() << " select " << w->selectedLanguages();
     });
     connect(buttonBox, &QDialogButtonBox::accepted, this, &TranslatorConfigureLanguageListWidget_gui::accept);
-    const auto languages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
+    const QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> languages; // = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
 
     QMapIterator<PimCommonTextTranslator::TranslatorUtil::Language, QString> i(languages);
     PimCommonTextTranslator::TranslatorUtil translatorUtil;

@@ -40,6 +40,8 @@ Q_SIGNALS:
     void configureChanged();
 
 protected:
+    Q_REQUIRED_RESULT QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> fillLanguages();
+    Q_REQUIRED_RESULT virtual bool isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const = 0;
     QMap<TranslatorUtil::Language, QString> mLanguages;
 };
 }

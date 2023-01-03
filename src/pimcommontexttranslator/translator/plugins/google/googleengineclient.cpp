@@ -34,10 +34,12 @@ PimCommonTextTranslator::TranslatorEnginePlugin *GoogleEngineClient::createTrans
 QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> GoogleEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
-        // QVector<QPair<QString, QString>> langLanguage;
-        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_cn_google)); // For google only
-        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::zh_tw_google)); // For google only
+        mLanguages = fillLanguages();
     }
     return mLanguages;
+}
+
+bool GoogleEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
+{
+    return true;
 }

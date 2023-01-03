@@ -34,7 +34,12 @@ PimCommonTextTranslator::TranslatorEnginePlugin *BingEngineClient::createTransla
 QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> BingEngineClient::supportedLanguages()
 {
     if (mLanguages.isEmpty()) {
-        mLanguages = PimCommonTextTranslator::TranslatorUtil::translatedLanguages();
+        mLanguages = fillLanguages();
     }
     return mLanguages;
+}
+
+bool BingEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
+{
+    return true;
 }

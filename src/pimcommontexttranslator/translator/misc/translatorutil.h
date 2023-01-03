@@ -91,6 +91,7 @@ public:
     };
     void addItemToFromComboBox(QComboBox *combo, const QString &languageCode, const QString &translatedStr);
 
+    // Only for test
     Q_REQUIRED_RESULT static QMap<TranslatorUtil::Language, QString> translatedLanguages();
 
     Q_REQUIRED_RESULT static QString loadEngine();
