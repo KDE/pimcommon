@@ -30,7 +30,8 @@ QString TranslatorUtil::translatedLanguage(TranslatorUtil::Language lang)
         ret = i18n("Detect language");
         break;
     case hmong:
-        return i18n("Hmong");
+        ret = i18n("Hmong");
+        break;
     case bs:
         ret = i18n("Bosnian");
         break;

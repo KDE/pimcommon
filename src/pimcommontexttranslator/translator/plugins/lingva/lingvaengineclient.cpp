@@ -67,5 +67,12 @@ void LingvaEngineClient::showConfigureDialog()
 
 bool LingvaEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
 {
+    switch (lang) {
+    case PimCommonTextTranslator::TranslatorUtil::ka:
+    case PimCommonTextTranslator::TranslatorUtil::tl:
+        return false;
+    default:
+        break;
+    }
     return true;
 }

@@ -41,5 +41,12 @@ QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> GoogleEngineCli
 
 bool GoogleEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
 {
+    switch (lang) {
+    case PimCommonTextTranslator::TranslatorUtil::ka:
+    case PimCommonTextTranslator::TranslatorUtil::tl:
+        return false;
+    default:
+        break;
+    }
     return true;
 }

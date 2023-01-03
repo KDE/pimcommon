@@ -41,5 +41,20 @@ QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> BingEngineClien
 
 bool BingEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
 {
+    switch (lang) {
+    case PimCommonTextTranslator::TranslatorUtil::sq:
+    case PimCommonTextTranslator::TranslatorUtil::hy:
+    case PimCommonTextTranslator::TranslatorUtil::az:
+    case PimCommonTextTranslator::TranslatorUtil::eu:
+    case PimCommonTextTranslator::TranslatorUtil::be:
+    case PimCommonTextTranslator::TranslatorUtil::gl:
+    case PimCommonTextTranslator::TranslatorUtil::ka:
+    case PimCommonTextTranslator::TranslatorUtil::ga:
+    case PimCommonTextTranslator::TranslatorUtil::mk:
+    case PimCommonTextTranslator::TranslatorUtil::yi:
+        return false;
+    default:
+        break;
+    }
     return true;
 }

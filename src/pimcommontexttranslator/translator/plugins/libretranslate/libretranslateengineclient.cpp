@@ -67,5 +67,49 @@ void LibreTranslateEngineClient::showConfigureDialog()
 
 bool LibreTranslateEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
 {
+    switch (lang) {
+    case PimCommonTextTranslator::TranslatorUtil::sq:
+    case PimCommonTextTranslator::TranslatorUtil::af:
+    case PimCommonTextTranslator::TranslatorUtil::hy:
+    case PimCommonTextTranslator::TranslatorUtil::az:
+    case PimCommonTextTranslator::TranslatorUtil::eu:
+    case PimCommonTextTranslator::TranslatorUtil::be:
+    case PimCommonTextTranslator::TranslatorUtil::bs:
+    case PimCommonTextTranslator::TranslatorUtil::bg:
+    case PimCommonTextTranslator::TranslatorUtil::ca:
+    case PimCommonTextTranslator::TranslatorUtil::hr:
+    case PimCommonTextTranslator::TranslatorUtil::cs:
+    case PimCommonTextTranslator::TranslatorUtil::da:
+    case PimCommonTextTranslator::TranslatorUtil::nl:
+    case PimCommonTextTranslator::TranslatorUtil::et:
+    case PimCommonTextTranslator::TranslatorUtil::tl:
+    case PimCommonTextTranslator::TranslatorUtil::fi:
+    case PimCommonTextTranslator::TranslatorUtil::gl:
+    case PimCommonTextTranslator::TranslatorUtil::ka:
+    case PimCommonTextTranslator::TranslatorUtil::el:
+    case PimCommonTextTranslator::TranslatorUtil::iw:
+    case PimCommonTextTranslator::TranslatorUtil::hmong:
+    case PimCommonTextTranslator::TranslatorUtil::hu:
+    case PimCommonTextTranslator::TranslatorUtil::is:
+    case PimCommonTextTranslator::TranslatorUtil::lt:
+    case PimCommonTextTranslator::TranslatorUtil::mk:
+    case PimCommonTextTranslator::TranslatorUtil::ms:
+    case PimCommonTextTranslator::TranslatorUtil::mt:
+    case PimCommonTextTranslator::TranslatorUtil::no:
+    case PimCommonTextTranslator::TranslatorUtil::fa:
+    case PimCommonTextTranslator::TranslatorUtil::ro:
+    case PimCommonTextTranslator::TranslatorUtil::sk:
+    case PimCommonTextTranslator::TranslatorUtil::sl:
+    case PimCommonTextTranslator::TranslatorUtil::sw:
+    case PimCommonTextTranslator::TranslatorUtil::sv:
+    case PimCommonTextTranslator::TranslatorUtil::th:
+    case PimCommonTextTranslator::TranslatorUtil::uk:
+    case PimCommonTextTranslator::TranslatorUtil::ur:
+    case PimCommonTextTranslator::TranslatorUtil::cy:
+    case PimCommonTextTranslator::TranslatorUtil::yi:
+        return false;
+    default:
+        break;
+    }
     return true;
 }

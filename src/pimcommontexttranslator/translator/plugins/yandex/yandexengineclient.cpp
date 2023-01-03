@@ -35,15 +35,17 @@ QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> YandexEngineCli
 {
     if (mLanguages.isEmpty()) {
         mLanguages = fillLanguages();
-        // TODO
-        // PimCommonTextTranslator::TranslatorUtil translatorUtil;
-        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::jv_yandex));
-        // mLanguages.append(translatorUtil.pair(PimCommonTextTranslator::TranslatorUtil::TranslatorUtil::zn_yandex));
     }
     return mLanguages;
 }
 
 bool YandexEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
 {
+    switch (lang) {
+    case PimCommonTextTranslator::TranslatorUtil::tl:
+        return false;
+    default:
+        break;
+    }
     return true;
 }
