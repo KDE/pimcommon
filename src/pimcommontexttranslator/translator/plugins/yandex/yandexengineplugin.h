@@ -17,6 +17,7 @@ public:
 
     void translate() override;
 
+    QString extracted();
     Q_REQUIRED_RESULT QString languageCode(const QString &langStr) override;
 
 private:

@@ -29,6 +29,11 @@ QString TranslatorUtil::translatedLanguage(TranslatorUtil::Language lang)
     case automatic:
         ret = i18n("Detect language");
         break;
+    case hmong:
+        return i18n("Hmong");
+    case bs:
+        ret = i18n("Bosnian");
+        break;
     case en:
         ret = i18n("English");
         break;
@@ -224,14 +229,17 @@ QString TranslatorUtil::languageCode(TranslatorUtil::Language lang)
     case automatic:
         ret = QStringLiteral("auto");
         break;
+    case hmong:
+        ret = QStringLiteral("hmn");
+        break;
     case en:
         ret = QStringLiteral("en");
         break;
     case zh:
-        ret = QStringLiteral("zh");
+        ret = QStringLiteral("zh-CN");
         break;
     case zt:
-        ret = QStringLiteral("zt");
+        ret = QStringLiteral("zh-TW");
         break;
     case nl:
         ret = QStringLiteral("nl");
@@ -318,7 +326,7 @@ QString TranslatorUtil::languageCode(TranslatorUtil::Language lang)
         ret = QStringLiteral("ht");
         break;
     case iw:
-        ret = QStringLiteral("iw");
+        ret = QStringLiteral("he");
         break;
     case hi:
         ret = QStringLiteral("hi");
@@ -398,6 +406,8 @@ QString TranslatorUtil::languageCode(TranslatorUtil::Language lang)
     case yi:
         ret = QStringLiteral("yi");
         break;
+    case bs:
+        return QStringLiteral("bs");
     }
     return ret;
 }

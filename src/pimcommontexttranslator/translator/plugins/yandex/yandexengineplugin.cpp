@@ -93,9 +93,9 @@ void YandexEnginePlugin::translateText()
     clear();
     QString lang;
     if (from() == QStringLiteral("auto")) {
-        lang = to();
+        lang = languageCode(to());
     } else {
-        lang = from() + QLatin1Char('-') + to();
+        lang = languageCode(from()) + QLatin1Char('-') + languageCode(to());
     }
     // qDebug() << " lang " << lang;
     // Generate API url
@@ -154,6 +154,10 @@ void YandexEnginePlugin::parseTranslation(QNetworkReply *reply)
 
 QString YandexEnginePlugin::languageCode(const QString &langStr)
 {
-    // TODO
+    if (langStr == QLatin1String("zh")) {
+        return QStringLiteral("zn");
+    } else if (langStr == QLatin1String("ja")) {
+        return QStringLiteral("jv");
+    }
     return langStr;
 }

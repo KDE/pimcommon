@@ -36,8 +36,8 @@ void GoogleEnginePlugin::translate()
 
     QUrlQuery urlQuery;
     urlQuery.addQueryItem(QStringLiteral("client"), QStringLiteral("gtx"));
-    urlQuery.addQueryItem(QStringLiteral("sl"), from());
-    urlQuery.addQueryItem(QStringLiteral("tl"), to());
+    urlQuery.addQueryItem(QStringLiteral("sl"), languageCode(from()));
+    urlQuery.addQueryItem(QStringLiteral("tl"), languageCode(to()));
     urlQuery.addQueryItem(QStringLiteral("dt"), QStringLiteral("t"));
     urlQuery.addQueryItem(QStringLiteral("q"), inputText());
 
@@ -57,7 +57,9 @@ void GoogleEnginePlugin::translate()
 
 QString GoogleEnginePlugin::languageCode(const QString &langStr)
 {
-    // TODO
+    if (langStr == QLatin1String("iw")) {
+        return QStringLiteral("iw");
+    }
     return langStr;
 }
 

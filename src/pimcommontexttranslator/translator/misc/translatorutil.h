@@ -28,6 +28,8 @@ public:
     enum Language : int {
         automatic = 0,
         en,
+        bs,
+        hmong,
         zh,
         zt,
         nl,

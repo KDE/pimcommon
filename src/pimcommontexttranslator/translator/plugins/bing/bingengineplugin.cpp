@@ -107,8 +107,8 @@ void BingEnginePlugin::translateText()
     }
     clear();
 
-    const QByteArray postData =
-        "&text=" + QUrl::toPercentEncoding(inputText()) + "&fromLang=" + from().toUtf8() + "&to=" + to().toUtf8() + "&token=" + sBingToken + "&key=" + sBingKey;
+    const QByteArray postData = "&text=" + QUrl::toPercentEncoding(inputText()) + "&fromLang=" + languageCode(from()).toUtf8()
+        + "&to=" + languageCode(to()).toUtf8() + "&token=" + sBingToken + "&key=" + sBingKey;
 
     qCDebug(TRANSLATOR_BING_LOG) << " postData " << postData;
     QUrlQuery urlQuery;
@@ -165,12 +165,18 @@ void BingEnginePlugin::parseTranslation(QNetworkReply *reply)
 
 QString BingEnginePlugin::languageCode(const QString &langStr)
 {
-#if 0
-    { QLatin1String("bs-BG"),  QLatin1String("bs-Latn")  },         //                                            NOTE: Bing translator only
-    { QLatin1String("sr-RS"),  QLatin1String("sr-Cyrl")  },         //                                            NOTE: Bing translator only
-    { QLatin1String("zh-CN"),  QLatin1String("zh-Hans")  },         // SimplifiedChinese                        ; NOTE: Bing translator only
-    { QLatin1String("zh-TW"),  QLatin1String("zh-Hant")  }          // TraditionalChinese                       ; NOTE: Bing translator only
-#endif
-    // TODO
+    if (langStr == QLatin1String("auto")) {
+        return QStringLiteral("auto-detect");
+    } else if (langStr == QLatin1String("sr")) {
+        return QStringLiteral("sr-Cyrl");
+    } else if (langStr == QLatin1String("bs")) {
+        return QStringLiteral("bs-Latn");
+    } else if (langStr == QLatin1String("hmn")) {
+        return QStringLiteral("mww");
+    } else if (langStr == QLatin1String("zh")) {
+        return QStringLiteral("zh-Hans");
+    } else if (langStr == QLatin1String("zt")) {
+        return QStringLiteral("zh-Hant");
+    }
     return langStr;
 }
