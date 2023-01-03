@@ -162,3 +162,9 @@ void BingEnginePlugin::parseTranslation(QNetworkReply *reply)
     reply->deleteLater();
     Q_EMIT translateDone();
 }
+
+QString BingEnginePlugin::languageCode(PimCommonTextTranslator::TranslatorUtil::Language lang)
+{
+    // TODO
+    return {};
+}

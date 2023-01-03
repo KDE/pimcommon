@@ -17,6 +17,8 @@ public:
 
     void translate() override;
 
+    Q_REQUIRED_RESULT QString languageCode(PimCommonTextTranslator::TranslatorUtil::Language lang) override;
+
 private:
     void parseCredentials(QNetworkReply *reply);
     void translateText();
