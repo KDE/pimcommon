@@ -111,11 +111,8 @@ void BingEnginePlugin::translateText()
         + "&to=" + languageCode(to()).toUtf8() + "&token=" + sBingToken + "&key=" + sBingKey;
 
     qCDebug(TRANSLATOR_BING_LOG) << " postData " << postData;
-    QUrlQuery urlQuery;
-    urlQuery.addQueryItem(QStringLiteral("IG"), sBingIg);
-    urlQuery.addQueryItem(QStringLiteral("IDD"), sBingIid);
     QUrl url(QStringLiteral("https://www.bing.com/ttranslatev3"));
-    url.setQuery(urlQuery);
+    url.setQuery(QStringLiteral("IG=%1&IID=%2").arg(sBingIg, sBingIid));
     qCDebug(TRANSLATOR_BING_LOG) << " url " << url;
 
     QNetworkRequest request(url);
