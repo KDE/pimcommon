@@ -19,6 +19,7 @@ LibreTranslateEngineConfigureWidget::LibreTranslateEngineConfigureWidget(QWidget
     , mRequiredApiKey(new QCheckBox(i18n("Server required Api Key"), this))
 {
     auto mainLayout = new QFormLayout(this);
+    mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mServerUrl->setObjectName(QStringLiteral("mServerUrl"));
