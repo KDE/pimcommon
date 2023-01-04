@@ -7,6 +7,7 @@
 #include "libretranslateengineconfigurewidget.h"
 #include <KLocalizedString>
 #include <QCheckBox>
+#include <QCompleter>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -31,6 +32,20 @@ LibreTranslateEngineConfigureWidget::LibreTranslateEngineConfigureWidget(QWidget
     mApiKey->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Api Key:"), mApiKey);
     connect(mRequiredApiKey, &QCheckBox::clicked, this, &LibreTranslateEngineConfigureWidget::updateApiKeyState);
+
+    const QStringList listServer{
+        QStringLiteral("https://libretranslate.com"),
+        QStringLiteral("https://libretranslate.de"),
+        QStringLiteral("https://translate.argosopentech.com"),
+        QStringLiteral("https://translate.api.skitzen.com"),
+        QStringLiteral("https://translate.fortytwo-it.com"),
+        QStringLiteral("https://translate.terraprint.co"),
+        QStringLiteral("https://lt.vern.cc"),
+    };
+
+    auto completer = new QCompleter(listServer, this);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    mServerUrl->setCompleter(completer);
 }
 
 LibreTranslateEngineConfigureWidget::~LibreTranslateEngineConfigureWidget() = default;
