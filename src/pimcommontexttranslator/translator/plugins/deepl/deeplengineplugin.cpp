@@ -12,6 +12,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <PimCommonTextTranslator/TranslatorEngineAccessManager>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QUrlQuery>
@@ -74,7 +75,13 @@ void DeeplEnginePlugin::parseTranslation(QNetworkReply *reply)
         setJsonDebug(QString::fromUtf8(jsonResponse.toJson(QJsonDocument::Indented)));
     }
     const QJsonObject responseObject = jsonResponse.object();
-    setResult(responseObject.value(QStringLiteral("translation")).toString());
+    // QJsonObject({"translations":[{"detected_source_language":"EN","text":"Bonjour le monde"}]})
+    qDebug() << " responseObject " << responseObject;
+    const QJsonArray arrayTranslation = responseObject.value(QStringLiteral("translations")).toArray();
+    qDebug() << " arrayTranslation " << arrayTranslation;
+    const QJsonObject obj = arrayTranslation.at(0).toObject();
+
+    setResult(obj.value(QStringLiteral("text")).toString());
     reply->deleteLater();
     qCDebug(TRANSLATOR_DEEPL_LOG) << " result " << result();
     Q_EMIT translateDone();
