@@ -49,6 +49,7 @@ QMap<PimCommonTextTranslator::TranslatorUtil::Language, QString> DeeplEngineClie
 bool DeeplEngineClient::isSupported(PimCommonTextTranslator::TranslatorUtil::Language lang) const
 {
     switch (lang) {
+    case PimCommonTextTranslator::TranslatorUtil::automatic:
     case PimCommonTextTranslator::TranslatorUtil::bg:
     case PimCommonTextTranslator::TranslatorUtil::cs:
     case PimCommonTextTranslator::TranslatorUtil::da:
