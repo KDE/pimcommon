@@ -47,6 +47,7 @@ void DeeplEnginePlugin::translateText()
     url.setQuery(query);
 
     QNetworkRequest request(url);
+    request.setRawHeader(QByteArrayLiteral("Authorization"), mApiKey.toLocal8Bit());
     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
 
     QNetworkReply *reply = PimCommonTextTranslator::TranslatorEngineAccessManager::self()->networkManager()->post(request, QByteArray());
