@@ -44,7 +44,8 @@ void DeeplEnginePlugin::translateText()
     QUrl url(mServerUrl);
     QUrlQuery query;
     query.addQueryItem(QStringLiteral("text"), inputText());
-    query.addQueryItem(QStringLiteral("target_lang"), to());
+    query.addQueryItem(QStringLiteral("source_lang"), languageCode(from()));
+    query.addQueryItem(QStringLiteral("target_lang"), languageCode(to()));
     url.setQuery(query);
 
     QNetworkRequest request(url);
@@ -99,4 +100,14 @@ void DeeplEnginePlugin::loadSettings()
 void DeeplEnginePlugin::slotConfigureChanged()
 {
     loadSettings();
+}
+
+QString DeeplEnginePlugin::languageCode(const QString &langStr)
+{
+    if (langStr == QLatin1String("auto")) {
+        return QStringLiteral("auto-detect");
+    } else if (langStr == QLatin1String("zh-CN")) {
+        return QStringLiteral("zh");
+    }
+    return langStr;
 }
