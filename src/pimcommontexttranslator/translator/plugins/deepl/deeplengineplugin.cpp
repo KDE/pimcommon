@@ -9,6 +9,7 @@
 #include "deepltranslator_debug.h"
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <PimCommonTextTranslator/TranslatorEngineAccessManager>
 #include <QJsonDocument>
@@ -26,6 +27,10 @@ DeeplEnginePlugin::~DeeplEnginePlugin() = default;
 void DeeplEnginePlugin::translate()
 {
     if (verifyFromAndToLanguage()) {
+        return;
+    }
+    if (mApiKey.isEmpty()) {
+        Q_EMIT translateFailed(false, i18n("Server needs Api Key."));
         return;
     }
     translateText();
