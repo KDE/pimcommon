@@ -76,9 +76,9 @@ void DeeplEnginePlugin::parseTranslation(QNetworkReply *reply)
     }
     const QJsonObject responseObject = jsonResponse.object();
     // QJsonObject({"translations":[{"detected_source_language":"EN","text":"Bonjour le monde"}]})
-    qDebug() << " responseObject " << responseObject;
+    qCDebug(TRANSLATOR_DEEPL_LOG) << " responseObject " << responseObject;
     const QJsonArray arrayTranslation = responseObject.value(QStringLiteral("translations")).toArray();
-    qDebug() << " arrayTranslation " << arrayTranslation;
+    qCDebug(TRANSLATOR_DEEPL_LOG) << " arrayTranslation " << arrayTranslation;
     const QJsonObject obj = arrayTranslation.at(0).toObject();
 
     setResult(obj.value(QStringLiteral("text")).toString());
