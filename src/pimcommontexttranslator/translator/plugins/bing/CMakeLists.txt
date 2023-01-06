@@ -19,7 +19,7 @@ target_sources(translator_bing PRIVATE
 
 target_link_libraries(translator_bing PRIVATE KF5::PimCommonTextTranslator KF5::I18n)
 
-install(TARGETS translator_bing  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)
+install(TARGETS translator_bing  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/translator/)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()

@@ -18,7 +18,7 @@ ecm_qt_declare_logging_category(translator_yandex
 
 target_link_libraries(translator_yandex PRIVATE KF5::PimCommonTextTranslator KF5::I18n)
 
-install(TARGETS translator_yandex  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)
+install(TARGETS translator_yandex  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/translator/)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()

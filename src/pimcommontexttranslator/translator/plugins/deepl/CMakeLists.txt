@@ -25,7 +25,7 @@ target_sources(translator_deepl PRIVATE
 
 target_link_libraries(translator_deepl PRIVATE KF5::PimCommonTextTranslator KF5::I18n KF5::ConfigCore)
 
-install(TARGETS translator_deepl  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/translator/)
+install(TARGETS translator_deepl  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/translator/)
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
