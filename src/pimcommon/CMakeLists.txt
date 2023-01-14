@@ -160,6 +160,7 @@ target_link_libraries(KF5PimCommon
     KF5::NewStuffWidgets
     KF5::Purpose
     KF5::PurposeWidgets
+    KF5::Codecs
 )
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/>")
