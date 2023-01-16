@@ -147,7 +147,6 @@ target_link_libraries(KF5PimCommon
     KF5::KIOCore
     KF5::ConfigWidgets
     KF5::PimTextEdit
-    KF5::PimCommonAutoCorrection
     PRIVATE
     Qt::Network
     KF5::I18n
@@ -162,6 +161,15 @@ target_link_libraries(KF5PimCommon
     KF5::PurposeWidgets
     KF5::Codecs
 )
+if (USE_KTEXTADDONS_LIB)
+    target_link_libraries(KF5PimCommon PUBLIC
+        KF5::TextAutoCorrection
+    )
+else()
+    target_link_libraries(KF5PimCommon PUBLIC
+        KF5::PimCommonAutoCorrection
+    )
+endif()
 
 target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/>")
 

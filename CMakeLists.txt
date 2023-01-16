@@ -84,6 +84,9 @@ endif()
 option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
+option(USE_KTEXTADDONS_LIB "Use ktextaddons lib (experimental)" OFF)
+set(KTEXTADDONS_MIN_VERSION "1.0.0")
+
 option(FORCE_DISABLE_AKONADI_SEARCH "Disable features and API that require akonadi-search, e.g. because xapian isn't available" OFF)
 if (UNIX)
     if (NOT FORCE_DISABLE_AKONADI_SEARCH)
@@ -113,7 +116,10 @@ endif(BUILD_TESTING)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.102.0)
 
-
+if (USE_KTEXTADDONS_LIB)
+    find_package(KF5TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+    add_definitions(-DHAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT)
+endif()
 
 add_subdirectory(src)
 ecm_qt_install_logging_categories(

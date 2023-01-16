@@ -5,10 +5,16 @@
 */
 
 #include "autocorrection_gui.h"
+#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
+#include <TextAutoCorrection/AutoCorrection>
+#include <TextAutoCorrection/AutoCorrectionWidget>
+#include <textautocorrection/textautocorrectionsettings.h>
+#else
 #include "autocorrection/widgets/autocorrectionwidget.h"
 #include "settings/pimcommonautocorrectionsettings.h"
-#include <PimCommon/LineEditWithAutoCorrection>
 #include <PimCommonAutoCorrection/AutoCorrection>
+#endif
+#include <PimCommon/LineEditWithAutoCorrection>
 
 #include <QAction>
 #include <QApplication>
@@ -20,7 +26,11 @@
 #include <QToolBar>
 #include <QVBoxLayout>
 
+#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
+ConfigureTestDialog::ConfigureTestDialog(TextAutoCorrection::AutoCorrection *autoCorrection, QWidget *parent)
+#else
 ConfigureTestDialog::ConfigureTestDialog(PimCommonAutoCorrection::AutoCorrection *autoCorrection, QWidget *parent)
+#endif
     : QDialog(parent)
 {
     setWindowTitle(QStringLiteral("Configure Autocorrection"));
@@ -34,7 +44,11 @@ ConfigureTestDialog::ConfigureTestDialog(PimCommonAutoCorrection::AutoCorrection
 
     buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
+#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
+    mWidget = new TextAutoCorrection::AutoCorrectionWidget(this);
+#else
     mWidget = new PimCommonAutoCorrection::AutoCorrectionWidget(this);
+#endif
     mainLayout->addWidget(mWidget);
     mainLayout->addWidget(buttonBox);
 
@@ -50,7 +64,11 @@ void ConfigureTestDialog::slotSaveSettings()
     mWidget->writeConfig();
 }
 
+#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
+TextEditAutoCorrectionWidget::TextEditAutoCorrectionWidget(TextAutoCorrection::AutoCorrection *autoCorrection, QWidget *parent)
+#else
 TextEditAutoCorrectionWidget::TextEditAutoCorrectionWidget(PimCommonAutoCorrection::AutoCorrection *autoCorrection, QWidget *parent)
+#endif
     : QTextEdit(parent)
     , mAutoCorrection(autoCorrection)
 {
@@ -82,10 +100,16 @@ AutocorrectionTestWidget::AutocorrectionTestWidget(QWidget *parent)
     : QWidget(parent)
     , mConfig(KSharedConfig::openConfig(QStringLiteral("autocorrectionguirc")))
 {
+#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
+    TextAutoCorrection::TextAutoCorrectionSettings::self()->setSharedConfig(mConfig);
+    TextAutoCorrection::TextAutoCorrectionSettings::self()->load();
+    mAutoCorrection = new TextAutoCorrection::AutoCorrection;
+#else
     PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->setSharedConfig(mConfig);
     PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->load();
-
     mAutoCorrection = new PimCommonAutoCorrection::AutoCorrection;
+#endif
+
     auto lay = new QVBoxLayout(this);
     auto bar = new QToolBar;
     lay->addWidget(bar);
@@ -118,7 +142,11 @@ void AutocorrectionTestWidget::slotConfigure()
 {
     QPointer<ConfigureTestDialog> dlg = new ConfigureTestDialog(mAutoCorrection, this);
     if (dlg->exec()) {
+#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
+        TextAutoCorrection::TextAutoCorrectionSettings::self()->save();
+#else
         PimCommonAutoCorrection::PimCommonAutoCorrectionSettings::self()->save();
+#endif
     }
     delete dlg;
 }
