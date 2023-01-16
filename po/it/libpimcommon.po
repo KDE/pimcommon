@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-06 00:49+0000\n"
-"PO-Revision-Date: 2022-12-30 00:41+0100\n"
+"PO-Revision-Date: 2023-01-07 15:56+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #. i18n: ectx: property (text), widget (QToolButton, customSystemPathToolButton)
 #. i18n: ectx: property (text), widget (QToolButton, customWritablePathToolButton)
@@ -1994,13 +1994,12 @@ msgstr "Rileva lingua"
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:33
 #, kde-format
 msgid "Hmong"
-msgstr ""
+msgstr "Hmong"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:36
-#, fuzzy, kde-format
-#| msgid "Romanian"
+#, kde-format
 msgid "Bosnian"
-msgstr "Rumeno"
+msgstr "Bosniaco"
 
 #: pimcommontexttranslator/translator/misc/translatorutil.cpp:42
 #, kde-format
@@ -2237,13 +2236,13 @@ msgstr "Usa chiave di licenza gratuita"
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:34
 #, kde-format
 msgid "Api Key:"
-msgstr ""
+msgstr "Chiave API:"
 
 #: pimcommontexttranslator/translator/plugins/deepl/deeplengineplugin.cpp:36
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineplugin.cpp:39
 #, kde-format
 msgid "Server needs Api Key."
-msgstr ""
+msgstr "Il server richiede una chiave per l'API."
 
 #: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
 #, kde-format
@@ -2258,7 +2257,7 @@ msgstr "Libre Translate"
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:19
 #, kde-format
 msgid "Server required Api Key"
-msgstr ""
+msgstr "Il server ha richiesto una chiave per l'API"
 
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:27
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaenginewidget.cpp:23
@@ -2269,7 +2268,7 @@ msgstr "URL del server:"
 #: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineplugin.cpp:35
 #, kde-format
 msgid "Server url is not defined."
-msgstr ""
+msgstr "L'URL del server non è definita."
 
 #: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:31
 #, kde-format
