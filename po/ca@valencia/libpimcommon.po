@@ -427,7 +427,7 @@ msgstr "Afig una ACL"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr "Edició de l'ACL"
+msgstr "Editeu l'ACL"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:279
 #, kde-format
@@ -631,7 +631,7 @@ msgstr "Guarda"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr "Configuració de la compleció"
+msgstr "Configureu la compleció"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "Llista negra d'adreces de correu electrònic"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
-msgstr "Edició de l'ordre de la compleció"
+msgstr "Editeu l'ordre de la compleció"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
 #, kde-format
@@ -1679,7 +1679,7 @@ msgstr "Tanca"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Grammalecte"
-msgstr "Configuració de Grammalecte"
+msgstr "Configureu Grammalecte"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:35
 #, kde-format
@@ -1689,7 +1689,7 @@ msgstr "General"
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:36
 #, kde-format
 msgid "Grammar Settings"
-msgstr "Configuració de la gramàtica"
+msgstr "Configureu la gramàtica"
 
 #: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:61
 #, kde-format
@@ -1935,7 +1935,7 @@ msgstr "Ucraïnés"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure LanguageTool"
-msgstr "Configuració de LanguageTool"
+msgstr "Configureu LanguageTool"
 
 #: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:22
 #, kde-format
