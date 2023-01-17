@@ -921,7 +921,7 @@ msgstr "Afig una ACL"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr "Edició de l'ACL"
+msgstr "Editeu l'ACL"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:279
 #, kde-format
@@ -1125,7 +1125,7 @@ msgstr "Guarda"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr "Configuració de la compleció"
+msgstr "Configureu la compleció"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:52
 #, kde-format
@@ -1146,7 +1146,7 @@ msgstr "Llista negra d'adreces de correu electrònic"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
-msgstr "Edició de l'ordre de la compleció"
+msgstr "Editeu l'ordre de la compleció"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
 #, kde-format
