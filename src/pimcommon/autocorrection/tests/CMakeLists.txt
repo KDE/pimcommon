@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-add_executable(autocorrection_gui autocorrection_gui.cpp)
+add_executable(autocorrection_gui autocorrection_gui.cpp autocorrection_gui.h)
 target_link_libraries(autocorrection_gui
   KF5::PimCommon
   KF5::I18n
