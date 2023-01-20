@@ -3,9 +3,9 @@
 
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-find_dependency(KF5Config "@KF5_MIN_VERSION@")
+find_dependency(KF5Config "@KF_MIN_VERSION@")
 find_dependency(KF5PimTextEdit "@KPIMTEXTEDIT_LIB_VERSION@")
-find_dependency(KF5KIO "@KF5_MIN_VERSION@")
+find_dependency(KF5KIO "@KF_MIN_VERSION@")
 find_dependency(Qt@QT_MAJOR_VERSION@Widgets "@QT_REQUIRED_VERSION@")
 find_dependency(Qt@QT_MAJOR_VERSION@DBus "@QT_REQUIRED_VERSION@")
 find_dependency(Qt@QT_MAJOR_VERSION@Gui "@QT_REQUIRED_VERSION@")
