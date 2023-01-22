@@ -9,7 +9,6 @@
 #include "translator/translatorengineloader.h"
 #include "translatorconfigurecombowidget.h"
 #include "translatorconfigurelanguagelistwidget.h"
-#include "translatorconfigurelistswidget.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
