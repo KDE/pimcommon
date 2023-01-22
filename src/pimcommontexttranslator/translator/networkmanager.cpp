@@ -28,7 +28,7 @@ NetworkManager::NetworkManager(QObject *parent)
     connect(mNetworkConfigureManager, &QNetworkConfigurationManager::onlineStateChanged, this, &NetworkManager::networkStatusChanged);
     QT_WARNING_POP
 #else
-    QNetworkInformation::instance()->load(QNetworkInformation::Feature::Reachability);
+    QNetworkInformation::instance()->loadBackendByFeatures(QNetworkInformation::Feature::Reachability);
     connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, [this](QNetworkInformation::Reachability newReachability) {
         Q_EMIT networkStatusChanged(newReachability == QNetworkInformation::Reachability::Online);
     });
@@ -50,7 +50,7 @@ NetworkManager *NetworkManager::self()
 bool NetworkManager::isOnline() const
 {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 1, 0)
-    if (QNetworkInformation::load(QNetworkInformation::Feature::Reachability)) {
+    if (QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability)) {
         return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online;
     } else {
         qCWarning(PIMCOMMONTEXTTRANSLATOR_LOG) << "Couldn't find a working backend for QNetworkInformation";
