@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-06 00:49+0000\n"
+"POT-Creation-Date: 2023-01-23 00:58+0000\n"
 "PO-Revision-Date: 2022-10-29 18:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -2302,21 +2302,21 @@ msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "اضبط المترجم"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:23
 #, fuzzy, kde-format
 #| msgctxt "Translate from language"
 #| msgid "From:"
 msgid "From:"
 msgstr "من:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:25
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
 #, fuzzy, kde-format
 #| msgctxt "Translate to language"
 #| msgid "To:"
 msgid "To:"
 msgstr "إلى:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:47
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
 #: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:39
 #, kde-format
 msgid "Engine:"

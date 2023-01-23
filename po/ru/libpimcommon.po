@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-06 00:49+0000\n"
+"POT-Creation-Date: 2023-01-23 00:58+0000\n"
 "PO-Revision-Date: 2022-10-11 12:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -2355,21 +2355,21 @@ msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "Машинный перевод"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:23
 #, fuzzy, kde-format
 #| msgctxt "Translate from language"
 #| msgid "From:"
 msgid "From:"
 msgstr "С языка:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:25
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
 #, fuzzy, kde-format
 #| msgctxt "Translate to language"
 #| msgid "To:"
 msgid "To:"
 msgstr "На язык:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:47
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
 #: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:39
 #, kde-format
 msgid "Engine:"

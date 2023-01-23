@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-06 00:49+0000\n"
+"POT-Creation-Date: 2023-01-23 00:58+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -2372,21 +2372,21 @@ msgctxt "@title:window"
 msgid "Configure Translator"
 msgstr "&Μεταφραστής"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:23
 #, fuzzy, kde-format
 #| msgctxt "Translate from language"
 #| msgid "From:"
 msgid "From:"
 msgstr "Από:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:25
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
 #, fuzzy, kde-format
 #| msgctxt "Translate to language"
 #| msgid "To:"
 msgid "To:"
 msgstr "Προς:"
 
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:47
+#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
 #: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:39
 #, kde-format
 msgid "Engine:"
