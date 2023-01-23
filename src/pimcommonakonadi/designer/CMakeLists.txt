@@ -15,7 +15,7 @@ ecm_add_qtdesignerplugin(pimcommonakonadiwidgets
     PimCommon::AddresseeLineEdit
     LINK_LIBRARIES
     KF5::PimCommonAkonadi
-    KF5::Completion
+    KF${KF_MAJOR_VERSION}::Completion
     INSTALL_DESTINATION "${KDE_INSTALL_QTPLUGINDIR}/designer"
     COMPONENT Devel
     )

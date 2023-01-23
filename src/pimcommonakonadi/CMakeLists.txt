@@ -153,22 +153,22 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::PimCommon
     KF5::AkonadiCore
     KF5::AkonadiWidgets
-    KF5::Contacts
+    KF${KF_MAJOR_VERSION}::Contacts
     KF5::AkonadiContact
-    KF5::KIOCore
-    KF5::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
     KF5::IMAP
     KF5::Libkdepim
     PRIVATE
-    KF5::I18n
-    KF5::Codecs
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::Codecs
     KF5::PimTextEdit
-    KF5::XmlGui
+    KF${KF_MAJOR_VERSION}::XmlGui
     KF5::PimTextEdit
-    KF5::KIOWidgets
-    KF5::KCMUtils
+    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::KCMUtils
     KF5::Ldap
-    KF5::ItemViews
+    KF${KF_MAJOR_VERSION}::ItemViews
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)

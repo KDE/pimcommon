@@ -112,8 +112,8 @@ target_link_libraries(KF5PimCommonTextGrammarCheck
     Qt::Widgets
     PRIVATE
     Qt::Network
-    KF5::I18n
-    KF5::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
     )
 
 target_include_directories(KF5PimCommonTextGrammarCheck INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextGrammarCheck/>")

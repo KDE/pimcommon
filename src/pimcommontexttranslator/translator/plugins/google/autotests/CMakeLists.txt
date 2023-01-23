@@ -3,5 +3,5 @@
 ecm_add_test(googleengineclienttest.cpp googleengineclienttest.h ../googleengineclient.cpp ../googleengineplugin.cpp ${translator_debug_google_SRCS}
     TEST_NAME googleengineclienttest
     NAME_PREFIX pimcommon-
-    LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommonTextTranslator KF5::I18n
+    LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommonTextTranslator KF${KF_MAJOR_VERSION}::I18n
 )

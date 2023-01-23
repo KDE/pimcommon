@@ -101,9 +101,9 @@ target_link_libraries(KF5PimCommonTextTranslator
     Qt::Widgets
     Qt::Network
     PRIVATE
-    KF5::I18n
-    KF5::WidgetsAddons
-    KF5::ConfigGui
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::ConfigGui
     )
 
 target_include_directories(KF5PimCommonTextTranslator INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonTextTranslator/>")

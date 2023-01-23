@@ -26,7 +26,7 @@ target_sources(translator_libretranslate PRIVATE
     libretranslateengineutil.cpp
 )
 
-target_link_libraries(translator_libretranslate PRIVATE KF5::PimCommonTextTranslator KF5::I18n KF5::ConfigCore)
+target_link_libraries(translator_libretranslate PRIVATE KF5::PimCommonTextTranslator KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::ConfigCore)
 
 install(TARGETS translator_libretranslate  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/translator/)
 

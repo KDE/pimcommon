@@ -144,22 +144,22 @@ target_link_libraries(KF5PimCommon
     Qt::Gui
     Qt::Widgets
     Qt::DBus
-    KF5::KIOCore
-    KF5::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::KIOCore
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
     KF5::PimTextEdit
     PRIVATE
     Qt::Network
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
     KF5::Libkdepim
-    KF5::NewStuff
-    KF5::XmlGui
-    KF5::KIOWidgets
-    KF5::ItemViews
-    KF5::NewStuff
-    KF5::NewStuffWidgets
-    KF5::Purpose
-    KF5::PurposeWidgets
-    KF5::Codecs
+    KF${KF_MAJOR_VERSION}::NewStuff
+    KF${KF_MAJOR_VERSION}::XmlGui
+    KF${KF_MAJOR_VERSION}::KIOWidgets
+    KF${KF_MAJOR_VERSION}::ItemViews
+    KF${KF_MAJOR_VERSION}::NewStuff
+    KF${KF_MAJOR_VERSION}::NewStuffWidgets
+    KF${KF_MAJOR_VERSION}::Purpose
+    KF${KF_MAJOR_VERSION}::PurposeWidgets
+    KF${KF_MAJOR_VERSION}::Codecs
 )
 if (USE_KTEXTADDONS_LIB)
     target_link_libraries(KF5PimCommon PUBLIC

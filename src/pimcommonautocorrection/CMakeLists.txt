@@ -101,11 +101,11 @@ target_link_libraries(KF5PimCommonAutoCorrection
     PUBLIC
     Qt::Gui
     Qt::Widgets
-    KF5::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
     PRIVATE
-    KF5::I18n
+    KF${KF_MAJOR_VERSION}::I18n
     KF5::Libkdepim
-    KF5::Archive
+    KF${KF_MAJOR_VERSION}::Archive
     )
 
 target_include_directories(KF5PimCommonAutoCorrection INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAutoCorrection/>")

@@ -17,7 +17,7 @@ target_sources(translator_bing PRIVATE
     bingengineplugin.h
 )
 
-target_link_libraries(translator_bing PRIVATE KF5::PimCommonTextTranslator KF5::I18n)
+target_link_libraries(translator_bing PRIVATE KF5::PimCommonTextTranslator KF${KF_MAJOR_VERSION}::I18n)
 
 install(TARGETS translator_bing  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/translator/)
 if (BUILD_TESTING)

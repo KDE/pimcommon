@@ -3,7 +3,7 @@
 add_executable(autocorrection_gui autocorrection_gui.cpp autocorrection_gui.h)
 target_link_libraries(autocorrection_gui
   KF5::PimCommon
-  KF5::I18n
+  KF${KF_MAJOR_VERSION}::I18n
 )
 
 if (USE_KTEXTADDONS_LIB)

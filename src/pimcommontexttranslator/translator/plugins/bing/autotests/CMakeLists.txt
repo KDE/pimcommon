@@ -3,5 +3,5 @@
 ecm_add_test(bingengineclienttest.cpp bingengineclienttest.h ../bingengineclient.cpp ../bingengineplugin.cpp ${translator_debug_bing_SRCS}
     TEST_NAME bingengineclienttest
     NAME_PREFIX pimcommon-
-    LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommonTextTranslator KF5::I18n
+    LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommonTextTranslator KF${KF_MAJOR_VERSION}::I18n
 )

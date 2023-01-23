@@ -10,7 +10,7 @@ macro(add_grammalecte_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_grammalecte-${_name})
-    target_link_libraries( ${_name} Qt::Test KF5::XmlGui KF5::I18n KF5::PimCommonTextGrammarCheck)
+    target_link_libraries( ${_name} Qt::Test KF${KF_MAJOR_VERSION}::XmlGui KF${KF_MAJOR_VERSION}::I18n KF5::PimCommonTextGrammarCheck)
 endmacro ()
 
 add_grammalecte_unittest(grammalecteparsertest.cpp)

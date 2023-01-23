@@ -4,9 +4,9 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 find_dependency(KF5Akonadi "@AKONADI_VERSION@")
-find_dependency(KF5Contacts "@KF_MIN_VERSION@")
+find_dependency(KF@KF_MAJOR_VERSION@Contacts "@KF_MIN_VERSION@")
 find_dependency(KF5AkonadiContact "@AKONADICONTACT_LIB_VERSION@")
-find_dependency(KF5Config "@KF_MIN_VERSION@")
+find_dependency(KF@KF_MAJOR_VERSION@Config "@KF_MIN_VERSION@")
 find_dependency(KF5PimCommon "@PIM_VERSION@")
 find_dependency(KF5IMAP "@KIMAP_LIB_VERSION@")
 
