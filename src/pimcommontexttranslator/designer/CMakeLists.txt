@@ -10,7 +10,7 @@ ecm_qtdesignerplugin_widget(PimCommonTextTranslator::TranslatorWidget
 
 ecm_add_qtdesignerplugin(pimcommonitexttranslatorwidgets
 	NAME PimCommonTextTranslatorWidgets
-    OUTPUT_NAME pimcommontexttranslatorwidgets
+    OUTPUT_NAME pimcommon${QT_MAJOR_VERSION}texttranslatorwidgets
     WIDGETS
     PimCommonTextTranslator::TranslatorWidget
     LINK_LIBRARIES
