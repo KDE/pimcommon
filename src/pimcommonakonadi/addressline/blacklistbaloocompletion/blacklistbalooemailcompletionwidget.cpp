@@ -162,7 +162,7 @@ void BlackListBalooEmailCompletionWidget::slotSelectEmails()
 
 void BlackListBalooEmailCompletionWidget::slotSearchLineEditChanged(const QString &text)
 {
-    mSearchButton->setEnabled(text.trimmed().count() > 2);
+    mSearchButton->setEnabled(text.trimmed().length() > 2);
     hideMoreResultAndChangeLimit();
 }
 

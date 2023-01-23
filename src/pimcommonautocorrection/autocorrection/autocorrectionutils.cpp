@@ -205,10 +205,10 @@ QStringList AutoCorrectionUtils::wordsFromSentence(const QString &string)
         QString tmpString = string;
         while (!tmpString.trimmed().isEmpty()) {
             bool foundStr = false;
-            for (auto i = 0; i < tmpString.count(); i++) {
+            for (auto i = 0; i < tmpString.length(); i++) {
                 if (tmpString.at(i).isSpace()) {
                     QString value;
-                    const auto pos = tmpString.count() - i - 1;
+                    const auto pos = tmpString.length() - i - 1;
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
                     value = tmpString.right(pos);
                     // qDebug() << " value !!! " << value;
