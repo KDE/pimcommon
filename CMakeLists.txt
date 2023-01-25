@@ -89,7 +89,7 @@ endif()
 option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
-option(USE_KTEXTADDONS_LIB "Use ktextaddons lib (experimental)" OFF)
+option(USE_KTEXTADDONS_LIB "Use ktextaddons lib (experimental)" ON)
 set(KTEXTADDONS_MIN_VERSION "1.0.0")
 
 option(FORCE_DISABLE_AKONADI_SEARCH "Disable features and API that require akonadi-search, e.g. because xapian isn't available" OFF)
