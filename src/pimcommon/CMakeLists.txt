@@ -163,7 +163,7 @@ target_link_libraries(KF5PimCommon
 )
 if (USE_KTEXTADDONS_LIB)
     target_link_libraries(KF5PimCommon PUBLIC
-        KF5::TextAutoCorrection
+        KF${KF_MAJOR_VERSION}::TextAutoCorrection
     )
 else()
     target_link_libraries(KF5PimCommon PUBLIC

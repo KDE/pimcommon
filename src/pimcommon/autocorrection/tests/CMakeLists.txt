@@ -8,7 +8,7 @@ target_link_libraries(autocorrection_gui
 
 if (USE_KTEXTADDONS_LIB)
     target_link_libraries(autocorrection_gui
-        KF5::TextAutoCorrection
+        KF${KF_MAJOR_VERSION}::TextAutoCorrection
     )
 else()
     target_link_libraries(autocorrection_gui

@@ -123,7 +123,7 @@ endif(BUILD_TESTING)
 ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.102.0)
 
 if (USE_KTEXTADDONS_LIB)
-    find_package(KF5TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+    find_package(KF${KF_MAJOR_VERSION}TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
     add_definitions(-DHAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT)
 endif()
 

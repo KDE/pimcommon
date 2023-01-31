@@ -9,7 +9,7 @@ macro(add_pimcommon_autocorrect_unittest _source)
   target_link_libraries(${_name}  Qt::Test KF5::PimCommon)
   if (USE_KTEXTADDONS_LIB)
       target_link_libraries(${_name}
-          KF5::TextAutoCorrection
+          KF${KF_MAJOR_VERSION}::TextAutoCorrection
       )
   else()
       target_link_libraries(${_name}
