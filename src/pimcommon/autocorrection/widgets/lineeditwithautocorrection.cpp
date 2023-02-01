@@ -5,11 +5,7 @@
 */
 
 #include "autocorrection/widgets/lineeditwithautocorrection.h"
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
 #include <TextAutoCorrection/AutoCorrection>
-#else
-#include <PimCommonAutoCorrection/AutoCorrection>
-#endif
 
 #include <QKeyEvent>
 
@@ -18,11 +14,7 @@ class PimCommon::LineEditWithAutoCorrectionPrivate
 {
 public:
     LineEditWithAutoCorrectionPrivate()
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
         : mAutoCorrection(new TextAutoCorrection::AutoCorrection())
-#else
-        : mAutoCorrection(new PimCommonAutoCorrection::AutoCorrection())
-#endif
     {
     }
 
@@ -32,11 +24,7 @@ public:
             delete mAutoCorrection;
         }
     }
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     TextAutoCorrection::AutoCorrection *mAutoCorrection = nullptr;
-#else
-    PimCommonAutoCorrection::AutoCorrection *mAutoCorrection = nullptr;
-#endif
     bool mNeedToDeleteAutoCorrection = true;
 };
 
@@ -48,20 +36,12 @@ LineEditWithAutoCorrection::LineEditWithAutoCorrection(QWidget *parent, const QS
 
 LineEditWithAutoCorrection::~LineEditWithAutoCorrection() = default;
 
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
 TextAutoCorrection::AutoCorrection *LineEditWithAutoCorrection::autocorrection() const
-#else
-PimCommonAutoCorrection::AutoCorrection *LineEditWithAutoCorrection::autocorrection() const
-#endif
 {
     return d->mAutoCorrection;
 }
 
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
 void LineEditWithAutoCorrection::setAutocorrection(TextAutoCorrection::AutoCorrection *autocorrect)
-#else
-void LineEditWithAutoCorrection::setAutocorrection(PimCommonAutoCorrection::AutoCorrection *autocorrect)
-#endif
 {
     d->mNeedToDeleteAutoCorrection = false;
     delete d->mAutoCorrection;
@@ -70,11 +50,7 @@ void LineEditWithAutoCorrection::setAutocorrection(PimCommonAutoCorrection::Auto
 
 void LineEditWithAutoCorrection::setAutocorrectionLanguage(const QString &language)
 {
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     TextAutoCorrection::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
-#else
-    PimCommonAutoCorrection::AutoCorrectionSettings *settings = d->mAutoCorrection->autoCorrectionSettings();
-#endif
     settings->setLanguage(language);
     d->mAutoCorrection->setAutoCorrectionSettings(settings);
 }

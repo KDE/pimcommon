@@ -6,16 +6,7 @@ macro(add_pimcommon_autocorrect_unittest _source)
   add_executable( ${_name} ${_test} ${_name}.h)
   add_test(NAME ${_name} COMMAND ${_name} )
   ecm_mark_as_test(pimcommon-autocorrection-${_name})
-  target_link_libraries(${_name}  Qt::Test KF5::PimCommon)
-  if (USE_KTEXTADDONS_LIB)
-      target_link_libraries(${_name}
-          KF${KF_MAJOR_VERSION}::TextAutoCorrection
-      )
-  else()
-      target_link_libraries(${_name}
-          KF5::PimCommonAutoCorrection
-      )
-  endif()
+  target_link_libraries(${_name}  Qt::Test KF5::PimCommon KF${KF_MAJOR_VERSION}::TextAutoCorrection)
 endmacro()
 
 add_pimcommon_autocorrect_unittest(lineeditwithautocorrectiontest.cpp)

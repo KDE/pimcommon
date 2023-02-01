@@ -6,12 +6,8 @@
 
 #include "lineeditwithautocorrectiontest.h"
 #include <PimCommon/LineEditWithAutoCorrection>
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
-#include <TextAutoCorrection/AutoCorrection>
-#else
-#include <PimCommonAutoCorrection/AutoCorrection>
-#endif
 #include <QTest>
+#include <TextAutoCorrection/AutoCorrection>
 #include <qtestkeyboard.h>
 
 LineEditWithAutocorrectionTest::LineEditWithAutocorrectionTest() = default;
@@ -23,11 +19,7 @@ void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()
     const QString originalWord = QStringLiteral("FOOFOO");
     const QString replaceWord = QStringLiteral("BLABLA");
     entries.insert(originalWord, replaceWord);
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     auto settings = new TextAutoCorrection::AutoCorrectionSettings;
-#else
-    auto settings = new PimCommonAutoCorrection::AutoCorrectionSettings;
-#endif
     settings->setAutocorrectEntries(entries);
     lineedit.autocorrection()->setAutoCorrectionSettings(settings);
     lineedit.show();
@@ -44,11 +36,7 @@ void LineEditWithAutocorrectionTest::shouldReplaceWordWhenExactText()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     auto settings = new TextAutoCorrection::AutoCorrectionSettings;
-#else
-    auto settings = new PimCommonAutoCorrection::AutoCorrectionSettings;
-#endif
     settings->setAutocorrectEntries(entries);
     settings->setEnabledAutoCorrection(true);
     settings->setAdvancedAutocorrect(true);
@@ -67,11 +55,7 @@ void LineEditWithAutocorrectionTest::shouldNotReplaceWordWhenInexactText()
     const QString replaceWord = QStringLiteral("BLABLA");
     QHash<QString, QString> entries;
     entries.insert(originalWord, replaceWord);
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     auto settings = new TextAutoCorrection::AutoCorrectionSettings;
-#else
-    auto settings = new PimCommonAutoCorrection::AutoCorrectionSettings;
-#endif
     settings->setAutocorrectEntries(entries);
     settings->setEnabledAutoCorrection(true);
     settings->setAdvancedAutocorrect(true);
@@ -88,11 +72,7 @@ void LineEditWithAutocorrectionTest::shouldNotAddTwoSpace()
 {
     PimCommon::LineEditWithAutoCorrection lineedit(nullptr, QStringLiteral("lineeditwithautocorrecttestrc"));
     const QString originalWord = QStringLiteral("FOOFOO ");
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     auto settings = new TextAutoCorrection::AutoCorrectionSettings;
-#else
-    auto settings = new PimCommonAutoCorrection::AutoCorrectionSettings;
-#endif
     settings->setSingleSpaces(true);
     settings->setEnabledAutoCorrection(true);
     lineedit.autocorrection()->setAutoCorrectionSettings(settings);

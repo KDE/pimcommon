@@ -9,17 +9,10 @@
 #include "pimcommon_export.h"
 
 #include <PimCommon/SpellCheckLineEdit>
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
 namespace TextAutoCorrection
 {
 class AutoCorrection;
 }
-#else
-namespace PimCommonAutoCorrection
-{
-class AutoCorrection;
-}
-#endif
 
 namespace PimCommon
 {
@@ -35,13 +28,8 @@ public:
     explicit LineEditWithAutoCorrection(QWidget *parent, const QString &configFile);
     ~LineEditWithAutoCorrection() override;
 
-#ifdef HAVE_KTEXTADDONS_TEXT_AUTOCORRECTION_SUPPORT
     Q_REQUIRED_RESULT TextAutoCorrection::AutoCorrection *autocorrection() const;
     void setAutocorrection(TextAutoCorrection::AutoCorrection *autocorrect);
-#else
-    void setAutocorrection(PimCommonAutoCorrection::AutoCorrection *autocorrect);
-    Q_REQUIRED_RESULT PimCommonAutoCorrection::AutoCorrection *autocorrection() const;
-#endif
 
     void setAutocorrectionLanguage(const QString &language);
 
