@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-23 00:58+0000\n"
+"POT-Creation-Date: 2023-02-02 00:59+0000\n"
 "PO-Revision-Date: 2023-01-05 05:10+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,17 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#. i18n: ectx: property (text), widget (QToolButton, customSystemPathToolButton)
-#. i18n: ectx: property (text), widget (QToolButton, customWritablePathToolButton)
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:785
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:806
 #, kde-format
 msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:305
 #, kde-format
 msgid "Configure"
 msgstr "მორგება"
@@ -146,30 +141,22 @@ msgstr "ჩასწორება..."
 msgid "Duplicate"
 msgstr "დუბლიკაცია"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#. i18n: ectx: property (text), widget (QPushButton, remove2)
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:98
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:303
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
 
-#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
 #: pimcommon/templatewidgets/templatelistwidget.cpp:194
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:44
 #, kde-format
 msgid "Export..."
 msgstr "გატანა..."
 
-#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
 #: pimcommon/templatewidgets/templatelistwidget.cpp:198
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:51
 #, kde-format
 msgid "Import..."
 msgstr "შემოტანა..."
@@ -190,7 +177,6 @@ msgid "Load Template"
 msgstr "შაბლონის ჩატვირთვა"
 
 #: pimcommon/util/pimutil.cpp:48
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:88
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -200,7 +186,6 @@ msgstr ""
 "\"%2\" შეცდომის დეტალურ აღწერას წარმოადგენს."
 
 #: pimcommon/util/pimutil.cpp:52
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:92
 #, kde-format
 msgid "Save File Error"
 msgstr "ფაილის შენახვის შეცდომა"
@@ -669,9 +654,7 @@ msgstr "აწევა"
 msgid "Move Down"
 msgstr "ჩამოწევა"
 
-#. i18n: ectx: property (text), widget (QPushButton, add2)
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:296
 #, kde-format
 msgid "Add"
 msgstr "დამატება"
@@ -819,7 +802,6 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "თავისუფალი /&დაკავებულობის გენერირება და განგაშების ჩართვა:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelanguagelistwidget.cpp:35
 #, kde-format
 msgid "Search..."
 msgstr "ძებნა..."
@@ -1200,1209 +1182,700 @@ msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "შენიშვნის წაშლა"
 
-#: pimcommonautocorrection/autocorrection/import/importlibreofficeautocorrection.cpp:52
-#, kde-format
-msgid "Archive cannot be opened in read mode."
-msgstr "შეცდომა არქივის მხოლოდ-წაკითხვის რეჟიმში გახსნისას."
-
-#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:21
-#, kde-format
-msgid "Enable autocorrection"
-msgstr "ავტოკორექციის ჩართვა"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:30
-#, kde-format
-msgid "Replacement and exception for language:"
-msgstr "ჩანაცვლება და გამონაკლისები ენისთვის:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:77
-#, kde-format
-msgid "Ad&vanced Autocorrection"
-msgstr "&დამატებითი ავტოკორექცია"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:88
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:228
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:505
-#, kde-format
-msgid "&Add"
-msgstr "&დამატება"
-
-#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:120
-#, kde-format
-msgid "&Enable word replacement"
-msgstr "სიტყვების &ჩანაცვლებების ჩართვა"
-
-#. i18n: ectx: property (text), widget (QLabel, findLabel)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:129
-#, kde-format
-msgid "&Find"
-msgstr "&ძებნა"
-
-#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:149
-#, kde-format
-msgid "Re&place"
-msgstr "&ჩანაცვლება"
-
-#. i18n: ectx: property (text), widget (PimCommonAutoCorrection::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:187
-#, kde-format
-msgid "Find"
-msgstr "მოძებნა"
-
-#. i18n: ectx: property (text), widget (PimCommonAutoCorrection::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:192
-#, kde-format
-msgid "Replace"
-msgstr "ჩანაცვლება"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:201
-#, kde-format
-msgid "E&xceptions"
-msgstr "&გამონაკლისები"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:209
-#, kde-format
-msgid "Do not treat as the end of a sentence:"
-msgstr "წინადადების ბოლოდ არ ჩაითვლება:"
-
-#. i18n: ectx: property (text), widget (QPushButton, remove1)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:235
-#, kde-format
-msgid "R&emove"
-msgstr "&წაშლა"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:277
-#, kde-format
-msgid "Accept two uppercase letters in:"
-msgstr "ორი მაღალი რეგისტრის სიმბოლოს მიღება:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:344
-#, kde-format
-msgid "Si&mple Autocorrection"
-msgstr "&მარტივი ავტოკორექცია"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:350
-#, kde-format
-msgid ""
-"Detect when a new sentence is started and always ensure that the first "
-"character is an uppercase character"
-msgstr ""
-"ახალი წინადადების დაწყების პოვნა და დარწმუნება, რომ ის მაღალი რეგისტრის "
-"სიმბოლოთი იწყება"
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:354
-#, kde-format
-msgid ""
-"Convert &first letter of a sentence automatically to uppercase\n"
-"(e.g. \"my house. in this town\" to \"my house. In this town\")"
-msgstr ""
-"წინადადების &პირველი სიმბოლოს მაღალ რეგისტრში გადაყვანა\n"
-"(არ ეხება ქართულს. ინგლისური: \"my house. in this town\" გარდაიქმნება \"my "
-"house. In this town\")"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:364
-#, kde-format
-msgid ""
-"All words are checked for the common mistake of holding the shift key down a "
-"bit too long. If some words must have two uppercase characters, then those "
-"exceptions should be added in the 'Exceptions' tab."
-msgstr ""
-"ყველა სიტყვა მოწმდება ზოგად შეცდომაზე, როცა Shift ღილაკზე საჭიროზე მეტხანს "
-"უჭირავთ. თუ რომელიმე სიტყვას ორი მაღალი რეგისტრის სიმბოლო გააჩნია, ეს "
-"გამონაკლისები 'გამონაკლისების ჩანართზე' შეგიძლიათ დაამატოთ."
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:368
-#, kde-format
-msgid ""
-"Convert &two uppercase characters to one uppercase and one lowercase "
-"character\n"
-" (e.g. PErfect to Perfect)"
-msgstr ""
-"გადაიყვანეთ &ორი მაღალი რეგისტრის სიმბოლო ერთი მაღალი და ერთ დაბალი "
-"რეგისტრის მქონე სიმბოლოებში\n"
-"(მაგ: PErfect ->Perfect)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:375
-#, kde-format
-msgid ""
-"Make sure that more than one space cannot be typed, as this is a common "
-"mistake which is quite hard to find in formatted text."
-msgstr ""
-"დარწმუნდით, რომ ერთზე მეტი ჰარე არ აგიკრეფიათ, რადგან ეს გავრცელებული "
-"შეცდომაა, რომლის პოვნაც ფორმატირებულ ტექსტში ძალიან რთულია."
-
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:378
-#, kde-format
-msgid "&Suppress double spaces"
-msgstr "&ორმაგი ჰარეების შეკვეცა"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:385
-#, kde-format
-msgid "Most standard fraction notations will be converted when available"
-msgstr ""
-"სტანდარტული ფრაქციის ნოტაციების უმეტესობა გადაკეთდება, როდესაც ხელმისაწვდომია"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:388
-#, kde-format
-msgid "Re&place 1/2... with ½..."
-msgstr "1/2-ის ½-ით ცანაცვლება...."
-
-#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:395
-#, kde-format
-msgid "Capitalize name of days"
-msgstr "დღის სახელების მაღალ რეგისტრში გადაყვანა"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:402
-#, kde-format
-msgid ""
-"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
-"that matches the way an Internet browser would show a URL."
-msgstr ""
-"აღმოჩენა, როცა ბმულს კრეფთ და მოგეწოდებათ ფორმატირება, რომელსაც ბრაუზერი "
-"იყენებს, როცა URL-ს კრეფთ."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:405
-#, kde-format
-msgid "Autoformat &URLs (HTML mode)"
-msgstr "&URL-ების ავტოფორმატი (HTML რეჟიმი)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:412
-#, kde-format
-msgid ""
-"When you use _underline_ or *bold*, the text between the underscores or "
-"asterisks will be converted to underlined or bold text."
-msgstr ""
-"როცა იყენებთ _ხაზგასმას_ ან *გასქელებას*, ტექსტი ქვედა ხაზებს ან "
-"ვარსკვლავებს შორის ხაზგასმულ ან სქელ ტექსტად გამოჩნდება."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:415
-#, kde-format
-msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
-msgstr ""
-"ფორმატირებისას ავტომატური &გასქელება, გადასმა და ხაზგასმა (HTML რეჟიმი)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:422
-#, kde-format
-msgid "Replace 1st... with 1^st... (HTML mode)"
-msgstr "1st-ის ... 1^st-ით ჩანაცვლება... (HTML რეჟიმი)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:429
-#, kde-format
-msgid "Add non breaking space before specific punctuation marks in French text"
-msgstr "ფრანგულ ტექსტში პუნქტუაციის ნიშნებამდე არაგადატანადი ჰარეების დამატება"
-
-#. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:436
-#, kde-format
-msgid "Replace double quotes by french quotes"
-msgstr "ორმაგი ბრჭყალების ფრანგული ბრჭყალებთ ჩანაცვლება"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:457
-#, kde-format
-msgid "Custom &Quotes"
-msgstr "&ბრჭყალების მორგება"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:463
-#, kde-format
-msgid "Replace &double quotes with typographical quotes"
-msgstr "&ორმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
-
-#. i18n: ectx: property (text), widget (QLabel, doubleQuoteBeginReplace)
-#. i18n: ectx: property (text), widget (QLabel, doubleQuoteEndReplace)
-#. i18n: ectx: property (text), widget (QLabel, simpleQuoteBeginReplace)
-#. i18n: ectx: property (text), widget (QLabel, simpleQuoteEndReplace)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:474
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:514
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:641
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:655
-#, kde-format
-msgid "By Default"
-msgstr "ნაგულისხმებად"
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleQuote1)
-#. i18n: ectx: property (text), widget (QPushButton, doubleQuote2)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:487
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:500
-#, kde-format
-msgid "\""
-msgstr "\""
-
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:507
-#, kde-format
-msgid "Ending Quote:"
-msgstr "დამხურავ ბრჭყალი:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_2)
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:534
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:634
-#, kde-format
-msgid "Opening Quote:"
-msgstr "გამხსნელი ბრჭყალი:"
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
-#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:548
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:669
-#, kde-format
-msgid "Default"
-msgstr "ნაგულისხმები"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:572
-#, kde-format
-msgid "Replace &single quotes with typographical quotes"
-msgstr "&ერთმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
-
-#. i18n: ectx: property (text), widget (QPushButton, singleQuote1)
-#. i18n: ectx: property (text), widget (QPushButton, singleQuote2)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:608
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:627
-#, kde-format
-msgid "'"
-msgstr "'"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:648
-#, kde-format
-msgid "Ending Quotes:"
-msgstr "დამასრულებელი ბრჭყალები:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:707
-#, kde-format
-msgid "Path"
-msgstr "ბილიკი"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:713
-#, kde-format
-msgid "System Path:"
-msgstr "სისტემის ბილიკი:"
-
-#. i18n: ectx: property (text), widget (QLabel, systemPath)
-#. i18n: ectx: property (text), widget (QLabel, writablePath)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:720
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:750
-#, kde-format
-msgid "TextLabel"
-msgstr "ტექსტური ჭდე"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:743
-#, kde-format
-msgid "Writable Path:"
-msgstr "ჩაწერადი ბილიკი:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:773
-#, kde-format
-msgid "Custom System Path:"
-msgstr "ხელით მითითებული სისტემის ბილიკი:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_11)
-#: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:794
-#, kde-format
-msgid "Custom Writable Path:"
-msgstr "ხელით მითითებული ჩაწერადი ბილიკი:"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:126
-#, kde-format
-msgid "Select Custom Writable Path"
-msgstr "ხელით მითითებული ჩაწერადი ბილიკი"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:131
-#, kde-format
-msgid "Select Custom System Path"
-msgstr "ხელით მითითებული სისტემის ბილიკი"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:141
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "LibreOffice-ის ავტოკორექცია"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:145
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "KMail/Calligra -ის ავტოკორექცია"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:423
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr "\"ჩანასაცვლებელი\" სტრიქონი \"მოსაძებნი\" სტრიქონის ტოლია."
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:423
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "ავტოკორექციის ჩანაწერის დამატება"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:502
-#, kde-format
-msgid "&Modify"
-msgstr "&შეცვლა"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:613
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "LibreOffice-ის ავტოკორექციის შემოტანა"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:614
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "LibreOffice-ის ავტოკორექციის ფაილი (*.dat)"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:617
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "KMail-ის ავტოკორექციის შემოტანა"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:618
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "KMail -ის ავტოკორექციის ფაილი (*.xml)"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:650
-#, kde-format
-msgid "Import Autocorrection File"
-msgstr "ავტოკორექციის ფაილის შემოტანა"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:673
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr "ენა შეიცვალა. გნებავთ კონფიგურაცია წინა ენაში შეინახოთ?"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:674
-#, kde-format
-msgid "Save config"
-msgstr "კონფიგურაციის შენახვა"
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:709
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr "პარამეტრების გატანამდე, გთხოვთ, შეინახეთ ცვლილებები."
-
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:709
-#: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:712
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "ავტოკორექციის ფაილის გატანა"
-
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
-#, kde-format
-msgctxt "@title:window"
-msgid "Select Special Characters"
-msgstr "აირჩიეთ სპეციალური სიმბოლოები"
-
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
-#, kde-format
-msgid "Insert"
-msgstr "ჩასმა"
-
-#: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
-#, kde-format
-msgid "Select"
-msgstr "აირჩიეთ"
-
-#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:39
-#, kde-format
-msgid "Any text to check."
-msgstr "შესამოწმებელი ტექსტი."
-
-#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:93
-#, kde-format
-msgid "Replacement"
-msgstr "შემცვლელი"
-
-#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:102
-#, kde-format
-msgid "Online Grammar Information"
-msgstr "გრამატიკის ონლაინ ინფორმაცია"
-
-#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:115
-#, kde-format
-msgid "Check Again"
-msgstr "თავიდან შემოწმება"
-
-#: pimcommontextgrammarcheck/common/grammarresulttextedit.cpp:118
-#, kde-format
-msgid "Configure..."
-msgstr "მორგება..."
-
-#: pimcommontextgrammarcheck/common/grammarresultutil.cpp:51
-#, kde-format
-msgid "See on: %1"
-msgstr "იხილეთ: %1"
-
-#: pimcommontextgrammarcheck/common/grammarresultwidget.cpp:32
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:236
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:239
-#, kde-format
-msgid "Close"
-msgstr "დახურვა"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigdialog.cpp:25
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Grammalecte"
-msgstr "Grammalecte-ის მორგება"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:35
-#, kde-format
-msgid "General"
-msgstr "ძირითადი"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:36
-#, kde-format
-msgid "Grammar Settings"
-msgstr "გრამატიკის მორგება"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:61
-#, kde-format
-msgid ""
-"Impossible to get options. Please verify that you have grammalected "
-"installed."
-msgstr ""
-"პარამეტრების მიღების პრობლემა. დარწმუნდით, რომ grammalected დაყენებულია."
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:62
-#, kde-format
-msgid "Error during Extracting Options"
-msgstr "შეცდომა პარამეტრების გამოტანისას"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:111
-#, kde-format
-msgid "Press Button for Reloading Settings"
-msgstr "პარამეტრების თავიდან ჩასატვირთად დააწექით ღლაკს"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:118
-#, kde-format
-msgid "Reload Settings"
-msgstr "პარამეტრების თავიდან ჩატვირთვა"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:135
-#, kde-format
-msgid "Python Path:"
-msgstr "პითონის ბილიკი:"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:139
-#, kde-format
-msgid "Add full 'grammalecte-cli.py' path"
-msgstr "სრული ბილიკი ფაილამდე 'grammalecte-cli.py'"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteconfigwidget.cpp:140
-#, kde-format
-msgid "Grammalecte Path:"
-msgstr "Grammalecte-ის ბილიკი:"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:54
-#, kde-format
-msgid "Python path is missing."
-msgstr "პითონის ბილიკი მითითებული არაა."
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:58
-#, kde-format
-msgid "Grammalecte path not found."
-msgstr "Grammalecte-ის ბილიკი ვერ ვიპოვე."
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:65
-#, kde-format
-msgid "Grammalecte program file not found."
-msgstr "Grammalecte-ის გამშვები ფაილი ვერ ვიპოვე."
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:69
-#, kde-format
-msgid "Grammalecte cli file not found."
-msgstr "Grammalecte-ის CLI გამშვები ფაილები ვერ ვიპოვე."
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteresultwidget.cpp:73
-#, kde-format
-msgid "Grammalecte error"
-msgstr "Grammalecte-ის შეცდომა"
-
-#: pimcommontextgrammarcheck/grammalecte/grammalecteurlrequesterwidget.cpp:32
-#, kde-format
-msgid "Select Path"
-msgstr "აირჩიეთ ბილიკი"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:31
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:39
-#, kde-format
-msgid "English"
-msgstr "ინგლისური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:32
-#, kde-format
-msgid "Asturian"
-msgstr "ასთურიანული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:33
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:96
-#, kde-format
-msgid "Belarusian"
-msgstr "ბელორუსული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:34
-#, kde-format
-msgid "Breton"
-msgstr "ბრეტონული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:35
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:102
-#, kde-format
-msgid "Catalan"
-msgstr "კატალანური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:36
-#, kde-format
-msgid "Chinese"
-msgstr "ჩინური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:37
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:111
-#, kde-format
-msgid "Danish"
-msgstr "დანიური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:38
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:48
-#, kde-format
-msgid "Dutch"
-msgstr "ჰოლანდიური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:39
-#, kde-format
-msgid "English (Australian)"
-msgstr "ავსტრალიური ინგლისური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:40
-#, kde-format
-msgid "English (Canadian)"
-msgstr "კანადური ინგლისური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:41
-#, kde-format
-msgid "Esperanto"
-msgstr "ესპერანტო"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:42
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:51
-#, kde-format
-msgid "French"
-msgstr "ფრანგული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:43
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:123
-#, kde-format
-msgid "Galician"
-msgstr "გალური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:44
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:54
-#, kde-format
-msgid "German"
-msgstr "გერმანული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:45
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:57
-#, kde-format
-msgid "Greek"
-msgstr "ბერძნული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:46
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:60
-#, kde-format
-msgid "Italian"
-msgstr "იტალიური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:47
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:63
-#, kde-format
-msgid "Japanese"
-msgstr "იაპონური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:48
-#, kde-format
-msgid "Khmer"
-msgstr "კხმერული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:49
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:168
-#, kde-format
-msgid "Persian"
-msgstr "სპარსული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:50
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:171
-#, kde-format
-msgid "Polish"
-msgstr "პოლონური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:51
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:69
-#, kde-format
-msgid "Portuguese"
-msgstr "პორტუგალიური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:52
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:174
-#, kde-format
-msgid "Romanian"
-msgstr "რუმინული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:53
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:72
-#, kde-format
-msgid "Russian"
-msgstr "რუსული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:54
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:180
-#, kde-format
-msgid "Slovak"
-msgstr "სლოვაკური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:55
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:183
-#, kde-format
-msgid "Slovenian"
-msgstr "სლოვენური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:56
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:75
-#, kde-format
-msgid "Spanish"
-msgstr "ესპანური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:57
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:189
-#, kde-format
-msgid "Swedish"
-msgstr "შვედური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:58
-#, kde-format
-msgid "Tagalog"
-msgstr "ტაგალოგური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:59
-#, kde-format
-msgid "Tamil"
-msgstr "თამილური"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolcombobox.cpp:60
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:198
-#, kde-format
-msgid "Ukrainian"
-msgstr "უკრაინული"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolconfigdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure LanguageTool"
-msgstr "LanguageTool-ის მორგება"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:22
-#, kde-format
-msgid "Use Local Instance"
-msgstr "ლოკალური გაშვებული ასლის გამოყენება"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:24
-#, kde-format
-msgid "Instance Path:"
-msgstr "გაშვებული ასლის ბილიკი:"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:52
-#, kde-format
-msgid "Language:"
-msgstr "ენა:"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolconfigwidget.cpp:64
-#, kde-format
-msgid "Refresh"
-msgstr "განახლება"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "An error was reported: %1"
-msgstr "შეცდომა: %1"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:60
-#, kde-format
-msgid "Failed to check grammar."
-msgstr "გრამატიკის შემოწმების შეცდომა."
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolresultwidget.cpp:76
-#, kde-format
-msgid "Check"
-msgstr "შემოწმება"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid ""
-"An error occurred attempting to load the list of available languages:\n"
-"%1"
-msgstr ""
-"შეცდომა ხელმისაწვდომი ენების გადმოწერის მცდელობისას:\n"
-"%1"
-
-#: pimcommontextgrammarcheck/languagetool/languagetoolupdatecombobox.cpp:75
-#, kde-format
-msgid "List of Languages"
-msgstr "ენების სია"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:30
-#, kde-format
-msgid "Detect language"
-msgstr "ნაგულისხმები ენა"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:33
-#, kde-format
-msgid "Hmong"
-msgstr "Hmong"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:36
-#, kde-format
-msgid "Bosnian"
-msgstr "ბოსნიური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:42
-#, kde-format
-msgid "Chinese (Simplified)"
-msgstr "ჩინური (გამარტივებული)"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:45
-#, kde-format
-msgid "Chinese (Traditional)"
-msgstr "ჩინური (ტრადიციული)"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:66
-#, kde-format
-msgid "Korean"
-msgstr "კორეული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:78
-#, kde-format
-msgid "Afrikaans"
-msgstr "აფრიკაანსი"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:81
-#, kde-format
-msgid "Albanian"
-msgstr "ალბანური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:84
-#, kde-format
-msgid "Arabic"
-msgstr "არაბული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:87
-#, kde-format
-msgid "Armenian"
-msgstr "სომხური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:90
-#, kde-format
-msgid "Azerbaijani"
-msgstr "აზერბაიჯანული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:93
-#, kde-format
-msgid "Basque"
-msgstr "ბასკური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:99
-#, kde-format
-msgid "Bulgarian"
-msgstr "ბულგარული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:105
-#, kde-format
-msgid "Croatian"
-msgstr "ხორვატული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:108
-#, kde-format
-msgid "Czech"
-msgstr "ჩეხური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:114
-#, kde-format
-msgid "Estonian"
-msgstr "ესტონური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:117
-#, kde-format
-msgid "Filipino"
-msgstr "ფილიპინები"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:120
-#, kde-format
-msgid "Finnish"
-msgstr "ფინური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:126
-#, kde-format
-msgid "Georgian"
-msgstr "ქართული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:129
-#, kde-format
-msgid "Haitian Creole"
-msgstr "ჰაიტიელი კრეოლები"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:132
-#, kde-format
-msgid "Hebrew"
-msgstr "ივრითი"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:135
-#, kde-format
-msgid "Hindi"
-msgstr "ინდური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:138
-#, kde-format
-msgid "Hungarian"
-msgstr "უნგრული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:141
-#, kde-format
-msgid "Icelandic"
-msgstr "ისლანდიური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:144
-#, kde-format
-msgid "Indonesian"
-msgstr "ინდონეზიური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:147
-#, kde-format
-msgid "Irish"
-msgstr "ირლანდიური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:150
-#, kde-format
-msgid "Latvian"
-msgstr "ლატვიური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:153
-#, kde-format
-msgid "Lithuanian"
-msgstr "ლიტვური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:156
-#, kde-format
-msgid "Macedonian"
-msgstr "მაკედონური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:159
-#, kde-format
-msgid "Malay"
-msgstr "მალაიური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:162
-#, kde-format
-msgid "Maltese"
-msgstr "მალტური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:165
-#, kde-format
-msgid "Norwegian"
-msgstr "ნორვეგიული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:177
-#, kde-format
-msgid "Serbian"
-msgstr "სერბული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:186
-#, kde-format
-msgid "Swahili"
-msgstr "სუაჰილი"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:192
-#, kde-format
-msgid "Thai"
-msgstr "ტაილანდური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:195
-#, kde-format
-msgid "Turkish"
-msgstr "თურქული"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:201
-#, kde-format
-msgid "Urdu"
-msgstr "ურდუ"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:204
-#, kde-format
-msgid "Vietnamese"
-msgstr "ვიეტნამური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:207
-#, kde-format
-msgid "Welsh"
-msgstr "უელსური"
-
-#: pimcommontexttranslator/translator/misc/translatorutil.cpp:210
-#, kde-format
-msgid "Yiddish"
-msgstr "იდიში"
-
-#: pimcommontexttranslator/translator/plugins/bing/bingengineclient.cpp:26
-#, kde-format
-msgid "Bing"
-msgstr "Bing"
-
-#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:60
-#, kde-format
-msgid "Error: Unable to find Bing credentials in web version."
-msgstr "შეცდომა: ვებ ვერსიაში Bing-ის ავტორიზაციის დეტალები ვერ ვიპოვე."
-
-#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:68
-#, kde-format
-msgid "Error: Unable to extract Bing key from web version."
-msgstr "შეცდომა: ვებ ვერსიიდან Bing-ის გასაღების გამოღება შეუძლებელია."
-
-#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:77
-#, kde-format
-msgid "Error: Unable to extract Bing token from web version."
-msgstr "შეცდომა: ვებ ვერსიიდან Bing-ის კოდის გამოღება შეუძლებელია."
-
-#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:86
-#: pimcommontexttranslator/translator/plugins/bing/bingengineplugin.cpp:95
-#, kde-format
-msgid "Error: Unable to extract additional Bing information from web version."
-msgstr ""
-"შეცდომა: ვებ ვერსიიდან Bing-ის დამატებითი ინფორმაციის გამოღება შეუძლებელია."
-
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineclient.cpp:31
-#, kde-format
-msgid "DeepL"
-msgstr "DeepL"
-
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfiguredialog.cpp:17
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfiguredialog.cpp:17
-#: pimcommontexttranslator/translator/plugins/lingva/lingvaenginedialog.cpp:18
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Engine"
-msgstr "ძრავის მორგება"
-
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfigurewidget.cpp:15
-#, kde-format
-msgid "Use Free License Key"
-msgstr "უფასო ლიცენზიის გასაღების გამოყენება"
-
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineconfigurewidget.cpp:27
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:34
-#, kde-format
-msgid "Api Key:"
-msgstr "API გასაღები:"
-
-#: pimcommontexttranslator/translator/plugins/deepl/deeplengineplugin.cpp:36
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineplugin.cpp:39
-#, kde-format
-msgid "Server needs Api Key."
-msgstr "სერვერს API გასაღები ესაჭიროება."
-
-#: pimcommontexttranslator/translator/plugins/google/googleengineclient.cpp:26
-#, kde-format
-msgid "Google"
-msgstr "Google"
-
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineclient.cpp:31
-#, kde-format
-msgid "Libre Translate"
-msgstr "Libre Translate"
-
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:19
-#, kde-format
-msgid "Server required Api Key"
-msgstr "სერვერისთვის საჭირო API გასაღები"
-
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineconfigurewidget.cpp:27
-#: pimcommontexttranslator/translator/plugins/lingva/lingvaenginewidget.cpp:23
-#, kde-format
-msgid "Server Url:"
-msgstr "სერვერის URL:"
-
-#: pimcommontexttranslator/translator/plugins/libretranslate/libretranslateengineplugin.cpp:35
-#, kde-format
-msgid "Server url is not defined."
-msgstr "სერვერის URL მითითებული არაა."
-
-#: pimcommontexttranslator/translator/plugins/lingva/lingvaengineclient.cpp:31
-#, kde-format
-msgid "Lingva"
-msgstr "Lingva"
-
-#: pimcommontexttranslator/translator/plugins/yandex/yandexengineclient.cpp:26
-#, kde-format
-msgid "Yandex"
-msgstr "Yandex"
-
-#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:54
-#: pimcommontexttranslator/translator/translatorengineplugin.cpp:100
-#, kde-format
-msgid ""
-"Error: Engine systems have detected suspicious traffic from your computer "
-"network. Please try your request again later."
-msgstr ""
-"შეცდომა: ძრავის სისტემებმა თქვენი კომპიუტერის ქსელიდან საეჭვო ტრაფიკი "
-"დააფიქსირა. მოთხოვნა მოგვიანებით სცადეთ."
-
-#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:63
-#, kde-format
-msgid "Error: Unable to find Yandex SID in web version."
-msgstr "შეცდომა: ვების ვერსიაში Yandex SID ვერ ვიპოვე."
-
-#: pimcommontexttranslator/translator/plugins/yandex/yandexengineplugin.cpp:71
-#, kde-format
-msgid "Error: Unable to extract Yandex SID from web version."
-msgstr "შეცდომა: ვებ ვერსიიდან Yandex SID-ის ამოღების შეცდომა."
-
-#: pimcommontexttranslator/translator/translatorengineplugin.cpp:108
-#, kde-format
-msgid "You used same language for 'from' and 'to' language."
-msgstr "'საიდან' და 'სადამდე' ენები ერთი და იგივეა."
-
-#: pimcommontexttranslator/translator/widgets/translatorconfiguredialog.cpp:18
-#, kde-format
-msgctxt "@title:window"
-msgid "Configure Translator"
-msgstr "თარჯიმანის მორგება"
-
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:23
-#, kde-format
-msgid "From:"
-msgstr "ვისგან:"
-
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:24
-#, kde-format
-msgid "To:"
-msgstr "ვის:"
-
-#: pimcommontexttranslator/translator/widgets/translatorconfigurelistswidget.cpp:46
-#: pimcommontexttranslator/translator/widgets/translatorconfigurewidget.cpp:39
-#, kde-format
-msgid "Engine:"
-msgstr "ძრავი:"
-
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:32
-#, kde-format
-msgctxt "@title:window"
-msgid "Translator Debug"
-msgstr "თარჯიმანის გამართვა"
-
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:39
-#, kde-format
-msgid "Save As..."
-msgstr "შენახვა, როგორც..."
-
-#: pimcommontexttranslator/translator/widgets/translatordebugdialog.cpp:115
-#, kde-format
-msgid "All Files (*)"
-msgstr "ყველა ფაილი (*)"
-
-#: pimcommontexttranslator/translator/widgets/translatormenu.cpp:22
-#, kde-format
-msgid "Translate..."
-msgstr "თარგმნა..."
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:133
-#, kde-format
-msgid "Problem when connecting to the translator web site."
-msgstr "მთარგმნელ ვებგვერდთან მიერთების პრობლემა."
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:245
-#, kde-format
-msgctxt "Translate from language"
-msgid "From:"
-msgstr "ვისგან:"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:252
-#, kde-format
-msgctxt "Translate to language"
-msgid "To:"
-msgstr "ვის:"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:264
-#, kde-format
-msgctxt "Invert language choices so that from becomes to and to becomes from"
-msgid "Invert"
-msgstr "ინვერსია"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:269
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:272
-#, kde-format
-msgid "Clear"
-msgstr "გაწმენდა"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:277
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:280
-#, kde-format
-msgid "Translate"
-msgstr "თარგმნა"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:287
-#, kde-format
-msgid "Debug"
-msgstr "პროგრამის შეცდომის პოვნა"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:320
-#, kde-format
-msgid ""
-"Drag text that you want to translate. (Be careful text will be send to "
-"Google Server)."
-msgstr ""
-"გადმოათრიეთ ტექსტი, რომელიც გნებავთ თარგმნოთ. (ფრთხილად, ის Google -ის "
-"სერვერებზე იქნება გადაგზავნილი)."
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:416
-#, kde-format
-msgid "No network connection detected, we cannot translate text."
-msgstr "ქსელთან მიერთება აღმოჩენილი არაა. ტექსტს ვერ ვთარგმნით."
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:416
-#, kde-format
-msgid "No network"
-msgstr "ქსელის გარეშე"
-
-#: pimcommontexttranslator/translator/widgets/translatorwidget.cpp:455
-#, kde-format
-msgid "Translate error"
-msgstr "თარგმანის შეცდომა"
+#~ msgid "Archive cannot be opened in read mode."
+#~ msgstr "შეცდომა არქივის მხოლოდ-წაკითხვის რეჟიმში გახსნისას."
+
+#~ msgid "Enable autocorrection"
+#~ msgstr "ავტოკორექციის ჩართვა"
+
+#~ msgid "Replacement and exception for language:"
+#~ msgstr "ჩანაცვლება და გამონაკლისები ენისთვის:"
+
+#~ msgid "Ad&vanced Autocorrection"
+#~ msgstr "&დამატებითი ავტოკორექცია"
+
+#~ msgid "&Add"
+#~ msgstr "&დამატება"
+
+#~ msgid "&Enable word replacement"
+#~ msgstr "სიტყვების &ჩანაცვლებების ჩართვა"
+
+#~ msgid "&Find"
+#~ msgstr "&ძებნა"
+
+#~ msgid "Re&place"
+#~ msgstr "&ჩანაცვლება"
+
+#~ msgid "Find"
+#~ msgstr "მოძებნა"
+
+#~ msgid "Replace"
+#~ msgstr "ჩანაცვლება"
+
+#~ msgid "E&xceptions"
+#~ msgstr "&გამონაკლისები"
+
+#~ msgid "Do not treat as the end of a sentence:"
+#~ msgstr "წინადადების ბოლოდ არ ჩაითვლება:"
+
+#~ msgid "R&emove"
+#~ msgstr "&წაშლა"
+
+#~ msgid "Accept two uppercase letters in:"
+#~ msgstr "ორი მაღალი რეგისტრის სიმბოლოს მიღება:"
+
+#~ msgid "Si&mple Autocorrection"
+#~ msgstr "&მარტივი ავტოკორექცია"
+
+#~ msgid ""
+#~ "Detect when a new sentence is started and always ensure that the first "
+#~ "character is an uppercase character"
+#~ msgstr ""
+#~ "ახალი წინადადების დაწყების პოვნა და დარწმუნება, რომ ის მაღალი რეგისტრის "
+#~ "სიმბოლოთი იწყება"
+
+#~ msgid ""
+#~ "Convert &first letter of a sentence automatically to uppercase\n"
+#~ "(e.g. \"my house. in this town\" to \"my house. In this town\")"
+#~ msgstr ""
+#~ "წინადადების &პირველი სიმბოლოს მაღალ რეგისტრში გადაყვანა\n"
+#~ "(არ ეხება ქართულს. ინგლისური: \"my house. in this town\" გარდაიქმნება "
+#~ "\"my house. In this town\")"
+
+#~ msgid ""
+#~ "All words are checked for the common mistake of holding the shift key "
+#~ "down a bit too long. If some words must have two uppercase characters, "
+#~ "then those exceptions should be added in the 'Exceptions' tab."
+#~ msgstr ""
+#~ "ყველა სიტყვა მოწმდება ზოგად შეცდომაზე, როცა Shift ღილაკზე საჭიროზე "
+#~ "მეტხანს უჭირავთ. თუ რომელიმე სიტყვას ორი მაღალი რეგისტრის სიმბოლო "
+#~ "გააჩნია, ეს გამონაკლისები 'გამონაკლისების ჩანართზე' შეგიძლიათ დაამატოთ."
+
+#~ msgid ""
+#~ "Convert &two uppercase characters to one uppercase and one lowercase "
+#~ "character\n"
+#~ " (e.g. PErfect to Perfect)"
+#~ msgstr ""
+#~ "გადაიყვანეთ &ორი მაღალი რეგისტრის სიმბოლო ერთი მაღალი და ერთ დაბალი "
+#~ "რეგისტრის მქონე სიმბოლოებში\n"
+#~ "(მაგ: PErfect ->Perfect)"
+
+#~ msgid ""
+#~ "Make sure that more than one space cannot be typed, as this is a common "
+#~ "mistake which is quite hard to find in formatted text."
+#~ msgstr ""
+#~ "დარწმუნდით, რომ ერთზე მეტი ჰარე არ აგიკრეფიათ, რადგან ეს გავრცელებული "
+#~ "შეცდომაა, რომლის პოვნაც ფორმატირებულ ტექსტში ძალიან რთულია."
+
+#~ msgid "&Suppress double spaces"
+#~ msgstr "&ორმაგი ჰარეების შეკვეცა"
+
+#~ msgid "Most standard fraction notations will be converted when available"
+#~ msgstr ""
+#~ "სტანდარტული ფრაქციის ნოტაციების უმეტესობა გადაკეთდება, როდესაც "
+#~ "ხელმისაწვდომია"
+
+#~ msgid "Re&place 1/2... with ½..."
+#~ msgstr "1/2-ის ½-ით ცანაცვლება...."
+
+#~ msgid "Capitalize name of days"
+#~ msgstr "დღის სახელების მაღალ რეგისტრში გადაყვანა"
+
+#~ msgid ""
+#~ "Detect when a URL (Uniform Resource Locator) is typed and provide "
+#~ "formatting that matches the way an Internet browser would show a URL."
+#~ msgstr ""
+#~ "აღმოჩენა, როცა ბმულს კრეფთ და მოგეწოდებათ ფორმატირება, რომელსაც ბრაუზერი "
+#~ "იყენებს, როცა URL-ს კრეფთ."
+
+#~ msgid "Autoformat &URLs (HTML mode)"
+#~ msgstr "&URL-ების ავტოფორმატი (HTML რეჟიმი)"
+
+#~ msgid ""
+#~ "When you use _underline_ or *bold*, the text between the underscores or "
+#~ "asterisks will be converted to underlined or bold text."
+#~ msgstr ""
+#~ "როცა იყენებთ _ხაზგასმას_ ან *გასქელებას*, ტექსტი ქვედა ხაზებს ან "
+#~ "ვარსკვლავებს შორის ხაზგასმულ ან სქელ ტექსტად გამოჩნდება."
+
+#~ msgid ""
+#~ "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+#~ msgstr ""
+#~ "ფორმატირებისას ავტომატური &გასქელება, გადასმა და ხაზგასმა (HTML რეჟიმი)"
+
+#~ msgid "Replace 1st... with 1^st... (HTML mode)"
+#~ msgstr "1st-ის ... 1^st-ით ჩანაცვლება... (HTML რეჟიმი)"
+
+#~ msgid ""
+#~ "Add non breaking space before specific punctuation marks in French text"
+#~ msgstr ""
+#~ "ფრანგულ ტექსტში პუნქტუაციის ნიშნებამდე არაგადატანადი ჰარეების დამატება"
+
+#~ msgid "Replace double quotes by french quotes"
+#~ msgstr "ორმაგი ბრჭყალების ფრანგული ბრჭყალებთ ჩანაცვლება"
+
+#~ msgid "Custom &Quotes"
+#~ msgstr "&ბრჭყალების მორგება"
+
+#~ msgid "Replace &double quotes with typographical quotes"
+#~ msgstr "&ორმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
+
+#~ msgid "By Default"
+#~ msgstr "ნაგულისხმებად"
+
+#~ msgid "\""
+#~ msgstr "\""
+
+#~ msgid "Ending Quote:"
+#~ msgstr "დამხურავ ბრჭყალი:"
+
+#~ msgid "Opening Quote:"
+#~ msgstr "გამხსნელი ბრჭყალი:"
+
+#~ msgid "Default"
+#~ msgstr "ნაგულისხმები"
+
+#~ msgid "Replace &single quotes with typographical quotes"
+#~ msgstr "&ერთმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
+
+#~ msgid "'"
+#~ msgstr "'"
+
+#~ msgid "Ending Quotes:"
+#~ msgstr "დამასრულებელი ბრჭყალები:"
+
+#~ msgid "Path"
+#~ msgstr "ბილიკი"
+
+#~ msgid "System Path:"
+#~ msgstr "სისტემის ბილიკი:"
+
+#~ msgid "TextLabel"
+#~ msgstr "ტექსტური ჭდე"
+
+#~ msgid "Writable Path:"
+#~ msgstr "ჩაწერადი ბილიკი:"
+
+#~ msgid "Custom System Path:"
+#~ msgstr "ხელით მითითებული სისტემის ბილიკი:"
+
+#~ msgid "Custom Writable Path:"
+#~ msgstr "ხელით მითითებული ჩაწერადი ბილიკი:"
+
+#~ msgid "Select Custom Writable Path"
+#~ msgstr "ხელით მითითებული ჩაწერადი ბილიკი"
+
+#~ msgid "Select Custom System Path"
+#~ msgstr "ხელით მითითებული სისტემის ბილიკი"
+
+#~ msgid "LibreOffice Autocorrection"
+#~ msgstr "LibreOffice-ის ავტოკორექცია"
+
+#~ msgid "KMail/Calligra Autocorrection"
+#~ msgstr "KMail/Calligra -ის ავტოკორექცია"
+
+#~ msgid "\"Replace\" string is the same as \"Find\" string."
+#~ msgstr "\"ჩანასაცვლებელი\" სტრიქონი \"მოსაძებნი\" სტრიქონის ტოლია."
+
+#~ msgid "Add Autocorrection Entry"
+#~ msgstr "ავტოკორექციის ჩანაწერის დამატება"
+
+#~ msgid "&Modify"
+#~ msgstr "&შეცვლა"
+
+#~ msgid "Import LibreOffice Autocorrection"
+#~ msgstr "LibreOffice-ის ავტოკორექციის შემოტანა"
+
+#~ msgid "LibreOffice Autocorrection File (*.dat)"
+#~ msgstr "LibreOffice-ის ავტოკორექციის ფაილი (*.dat)"
+
+#~ msgid "Import KMail Autocorrection"
+#~ msgstr "KMail-ის ავტოკორექციის შემოტანა"
+
+#~ msgid "KMail Autocorrection File (*.xml)"
+#~ msgstr "KMail -ის ავტოკორექციის ფაილი (*.xml)"
+
+#~ msgid "Import Autocorrection File"
+#~ msgstr "ავტოკორექციის ფაილის შემოტანა"
+
+#~ msgid ""
+#~ "Language was changed, do you want to save config for previous language?"
+#~ msgstr "ენა შეიცვალა. გნებავთ კონფიგურაცია წინა ენაში შეინახოთ?"
+
+#~ msgid "Save config"
+#~ msgstr "კონფიგურაციის შენახვა"
+
+#~ msgid "Please save changes before exporting settings."
+#~ msgstr "პარამეტრების გატანამდე, გთხოვთ, შეინახეთ ცვლილებები."
+
+#~ msgid "Export Autocorrection File"
+#~ msgstr "ავტოკორექციის ფაილის გატანა"
+
+#~ msgctxt "@title:window"
+#~ msgid "Select Special Characters"
+#~ msgstr "აირჩიეთ სპეციალური სიმბოლოები"
+
+#~ msgid "Insert"
+#~ msgstr "ჩასმა"
+
+#~ msgid "Select"
+#~ msgstr "აირჩიეთ"
+
+#~ msgid "Any text to check."
+#~ msgstr "შესამოწმებელი ტექსტი."
+
+#~ msgid "Replacement"
+#~ msgstr "შემცვლელი"
+
+#~ msgid "Online Grammar Information"
+#~ msgstr "გრამატიკის ონლაინ ინფორმაცია"
+
+#~ msgid "Check Again"
+#~ msgstr "თავიდან შემოწმება"
+
+#~ msgid "Configure..."
+#~ msgstr "მორგება..."
+
+#~ msgid "See on: %1"
+#~ msgstr "იხილეთ: %1"
+
+#~ msgid "Close"
+#~ msgstr "დახურვა"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Grammalecte"
+#~ msgstr "Grammalecte-ის მორგება"
+
+#~ msgid "General"
+#~ msgstr "ძირითადი"
+
+#~ msgid "Grammar Settings"
+#~ msgstr "გრამატიკის მორგება"
+
+#~ msgid ""
+#~ "Impossible to get options. Please verify that you have grammalected "
+#~ "installed."
+#~ msgstr ""
+#~ "პარამეტრების მიღების პრობლემა. დარწმუნდით, რომ grammalected დაყენებულია."
+
+#~ msgid "Error during Extracting Options"
+#~ msgstr "შეცდომა პარამეტრების გამოტანისას"
+
+#~ msgid "Press Button for Reloading Settings"
+#~ msgstr "პარამეტრების თავიდან ჩასატვირთად დააწექით ღლაკს"
+
+#~ msgid "Reload Settings"
+#~ msgstr "პარამეტრების თავიდან ჩატვირთვა"
+
+#~ msgid "Python Path:"
+#~ msgstr "პითონის ბილიკი:"
+
+#~ msgid "Add full 'grammalecte-cli.py' path"
+#~ msgstr "სრული ბილიკი ფაილამდე 'grammalecte-cli.py'"
+
+#~ msgid "Grammalecte Path:"
+#~ msgstr "Grammalecte-ის ბილიკი:"
+
+#~ msgid "Python path is missing."
+#~ msgstr "პითონის ბილიკი მითითებული არაა."
+
+#~ msgid "Grammalecte path not found."
+#~ msgstr "Grammalecte-ის ბილიკი ვერ ვიპოვე."
+
+#~ msgid "Grammalecte program file not found."
+#~ msgstr "Grammalecte-ის გამშვები ფაილი ვერ ვიპოვე."
+
+#~ msgid "Grammalecte cli file not found."
+#~ msgstr "Grammalecte-ის CLI გამშვები ფაილები ვერ ვიპოვე."
+
+#~ msgid "Grammalecte error"
+#~ msgstr "Grammalecte-ის შეცდომა"
+
+#~ msgid "Select Path"
+#~ msgstr "აირჩიეთ ბილიკი"
+
+#~ msgid "English"
+#~ msgstr "ინგლისური"
+
+#~ msgid "Asturian"
+#~ msgstr "ასთურიანული"
+
+#~ msgid "Belarusian"
+#~ msgstr "ბელორუსული"
+
+#~ msgid "Breton"
+#~ msgstr "ბრეტონული"
+
+#~ msgid "Catalan"
+#~ msgstr "კატალანური"
+
+#~ msgid "Chinese"
+#~ msgstr "ჩინური"
+
+#~ msgid "Danish"
+#~ msgstr "დანიური"
+
+#~ msgid "Dutch"
+#~ msgstr "ჰოლანდიური"
+
+#~ msgid "English (Australian)"
+#~ msgstr "ავსტრალიური ინგლისური"
+
+#~ msgid "English (Canadian)"
+#~ msgstr "კანადური ინგლისური"
+
+#~ msgid "Esperanto"
+#~ msgstr "ესპერანტო"
+
+#~ msgid "French"
+#~ msgstr "ფრანგული"
+
+#~ msgid "Galician"
+#~ msgstr "გალური"
+
+#~ msgid "German"
+#~ msgstr "გერმანული"
+
+#~ msgid "Greek"
+#~ msgstr "ბერძნული"
+
+#~ msgid "Italian"
+#~ msgstr "იტალიური"
+
+#~ msgid "Japanese"
+#~ msgstr "იაპონური"
+
+#~ msgid "Khmer"
+#~ msgstr "კხმერული"
+
+#~ msgid "Persian"
+#~ msgstr "სპარსული"
+
+#~ msgid "Polish"
+#~ msgstr "პოლონური"
+
+#~ msgid "Portuguese"
+#~ msgstr "პორტუგალიური"
+
+#~ msgid "Romanian"
+#~ msgstr "რუმინული"
+
+#~ msgid "Russian"
+#~ msgstr "რუსული"
+
+#~ msgid "Slovak"
+#~ msgstr "სლოვაკური"
+
+#~ msgid "Slovenian"
+#~ msgstr "სლოვენური"
+
+#~ msgid "Spanish"
+#~ msgstr "ესპანური"
+
+#~ msgid "Swedish"
+#~ msgstr "შვედური"
+
+#~ msgid "Tagalog"
+#~ msgstr "ტაგალოგური"
+
+#~ msgid "Tamil"
+#~ msgstr "თამილური"
+
+#~ msgid "Ukrainian"
+#~ msgstr "უკრაინული"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure LanguageTool"
+#~ msgstr "LanguageTool-ის მორგება"
+
+#~ msgid "Use Local Instance"
+#~ msgstr "ლოკალური გაშვებული ასლის გამოყენება"
+
+#~ msgid "Instance Path:"
+#~ msgstr "გაშვებული ასლის ბილიკი:"
+
+#~ msgid "Language:"
+#~ msgstr "ენა:"
+
+#~ msgid "Refresh"
+#~ msgstr "განახლება"
+
+#~ msgid "An error was reported: %1"
+#~ msgstr "შეცდომა: %1"
+
+#~ msgid "Failed to check grammar."
+#~ msgstr "გრამატიკის შემოწმების შეცდომა."
+
+#~ msgid "Check"
+#~ msgstr "შემოწმება"
+
+#~ msgid ""
+#~ "An error occurred attempting to load the list of available languages:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "შეცდომა ხელმისაწვდომი ენების გადმოწერის მცდელობისას:\n"
+#~ "%1"
+
+#~ msgid "List of Languages"
+#~ msgstr "ენების სია"
+
+#~ msgid "Detect language"
+#~ msgstr "ნაგულისხმები ენა"
+
+#~ msgid "Hmong"
+#~ msgstr "Hmong"
+
+#~ msgid "Bosnian"
+#~ msgstr "ბოსნიური"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "ჩინური (გამარტივებული)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "ჩინური (ტრადიციული)"
+
+#~ msgid "Korean"
+#~ msgstr "კორეული"
+
+#~ msgid "Afrikaans"
+#~ msgstr "აფრიკაანსი"
+
+#~ msgid "Albanian"
+#~ msgstr "ალბანური"
+
+#~ msgid "Arabic"
+#~ msgstr "არაბული"
+
+#~ msgid "Armenian"
+#~ msgstr "სომხური"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "აზერბაიჯანული"
+
+#~ msgid "Basque"
+#~ msgstr "ბასკური"
+
+#~ msgid "Bulgarian"
+#~ msgstr "ბულგარული"
+
+#~ msgid "Croatian"
+#~ msgstr "ხორვატული"
+
+#~ msgid "Czech"
+#~ msgstr "ჩეხური"
+
+#~ msgid "Estonian"
+#~ msgstr "ესტონური"
+
+#~ msgid "Filipino"
+#~ msgstr "ფილიპინები"
+
+#~ msgid "Finnish"
+#~ msgstr "ფინური"
+
+#~ msgid "Georgian"
+#~ msgstr "ქართული"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "ჰაიტიელი კრეოლები"
+
+#~ msgid "Hebrew"
+#~ msgstr "ივრითი"
+
+#~ msgid "Hindi"
+#~ msgstr "ინდური"
+
+#~ msgid "Hungarian"
+#~ msgstr "უნგრული"
+
+#~ msgid "Icelandic"
+#~ msgstr "ისლანდიური"
+
+#~ msgid "Indonesian"
+#~ msgstr "ინდონეზიური"
+
+#~ msgid "Irish"
+#~ msgstr "ირლანდიური"
+
+#~ msgid "Latvian"
+#~ msgstr "ლატვიური"
+
+#~ msgid "Lithuanian"
+#~ msgstr "ლიტვური"
+
+#~ msgid "Macedonian"
+#~ msgstr "მაკედონური"
+
+#~ msgid "Malay"
+#~ msgstr "მალაიური"
+
+#~ msgid "Maltese"
+#~ msgstr "მალტური"
+
+#~ msgid "Norwegian"
+#~ msgstr "ნორვეგიული"
+
+#~ msgid "Serbian"
+#~ msgstr "სერბული"
+
+#~ msgid "Swahili"
+#~ msgstr "სუაჰილი"
+
+#~ msgid "Thai"
+#~ msgstr "ტაილანდური"
+
+#~ msgid "Turkish"
+#~ msgstr "თურქული"
+
+#~ msgid "Urdu"
+#~ msgstr "ურდუ"
+
+#~ msgid "Vietnamese"
+#~ msgstr "ვიეტნამური"
+
+#~ msgid "Welsh"
+#~ msgstr "უელსური"
+
+#~ msgid "Yiddish"
+#~ msgstr "იდიში"
+
+#~ msgid "Bing"
+#~ msgstr "Bing"
+
+#~ msgid "Error: Unable to find Bing credentials in web version."
+#~ msgstr "შეცდომა: ვებ ვერსიაში Bing-ის ავტორიზაციის დეტალები ვერ ვიპოვე."
+
+#~ msgid "Error: Unable to extract Bing key from web version."
+#~ msgstr "შეცდომა: ვებ ვერსიიდან Bing-ის გასაღების გამოღება შეუძლებელია."
+
+#~ msgid "Error: Unable to extract Bing token from web version."
+#~ msgstr "შეცდომა: ვებ ვერსიიდან Bing-ის კოდის გამოღება შეუძლებელია."
+
+#~ msgid ""
+#~ "Error: Unable to extract additional Bing information from web version."
+#~ msgstr ""
+#~ "შეცდომა: ვებ ვერსიიდან Bing-ის დამატებითი ინფორმაციის გამოღება "
+#~ "შეუძლებელია."
+
+#~ msgid "DeepL"
+#~ msgstr "DeepL"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Engine"
+#~ msgstr "ძრავის მორგება"
+
+#~ msgid "Use Free License Key"
+#~ msgstr "უფასო ლიცენზიის გასაღების გამოყენება"
+
+#~ msgid "Api Key:"
+#~ msgstr "API გასაღები:"
+
+#~ msgid "Server needs Api Key."
+#~ msgstr "სერვერს API გასაღები ესაჭიროება."
+
+#~ msgid "Google"
+#~ msgstr "Google"
+
+#~ msgid "Libre Translate"
+#~ msgstr "Libre Translate"
+
+#~ msgid "Server required Api Key"
+#~ msgstr "სერვერისთვის საჭირო API გასაღები"
+
+#~ msgid "Server Url:"
+#~ msgstr "სერვერის URL:"
+
+#~ msgid "Server url is not defined."
+#~ msgstr "სერვერის URL მითითებული არაა."
+
+#~ msgid "Lingva"
+#~ msgstr "Lingva"
+
+#~ msgid "Yandex"
+#~ msgstr "Yandex"
+
+#~ msgid ""
+#~ "Error: Engine systems have detected suspicious traffic from your computer "
+#~ "network. Please try your request again later."
+#~ msgstr ""
+#~ "შეცდომა: ძრავის სისტემებმა თქვენი კომპიუტერის ქსელიდან საეჭვო ტრაფიკი "
+#~ "დააფიქსირა. მოთხოვნა მოგვიანებით სცადეთ."
+
+#~ msgid "Error: Unable to find Yandex SID in web version."
+#~ msgstr "შეცდომა: ვების ვერსიაში Yandex SID ვერ ვიპოვე."
+
+#~ msgid "Error: Unable to extract Yandex SID from web version."
+#~ msgstr "შეცდომა: ვებ ვერსიიდან Yandex SID-ის ამოღების შეცდომა."
+
+#~ msgid "You used same language for 'from' and 'to' language."
+#~ msgstr "'საიდან' და 'სადამდე' ენები ერთი და იგივეა."
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Translator"
+#~ msgstr "თარჯიმანის მორგება"
+
+#~ msgid "From:"
+#~ msgstr "ვისგან:"
+
+#~ msgid "To:"
+#~ msgstr "ვის:"
+
+#~ msgid "Engine:"
+#~ msgstr "ძრავი:"
+
+#~ msgctxt "@title:window"
+#~ msgid "Translator Debug"
+#~ msgstr "თარჯიმანის გამართვა"
+
+#~ msgid "Save As..."
+#~ msgstr "შენახვა, როგორც..."
+
+#~ msgid "All Files (*)"
+#~ msgstr "ყველა ფაილი (*)"
+
+#~ msgid "Translate..."
+#~ msgstr "თარგმნა..."
+
+#~ msgid "Problem when connecting to the translator web site."
+#~ msgstr "მთარგმნელ ვებგვერდთან მიერთების პრობლემა."
+
+#~ msgctxt "Translate from language"
+#~ msgid "From:"
+#~ msgstr "ვისგან:"
+
+#~ msgctxt "Translate to language"
+#~ msgid "To:"
+#~ msgstr "ვის:"
+
+#~ msgctxt ""
+#~ "Invert language choices so that from becomes to and to becomes from"
+#~ msgid "Invert"
+#~ msgstr "ინვერსია"
+
+#~ msgid "Clear"
+#~ msgstr "გაწმენდა"
+
+#~ msgid "Translate"
+#~ msgstr "თარგმნა"
+
+#~ msgid "Debug"
+#~ msgstr "პროგრამის შეცდომის პოვნა"
+
+#~ msgid ""
+#~ "Drag text that you want to translate. (Be careful text will be send to "
+#~ "Google Server)."
+#~ msgstr ""
+#~ "გადმოათრიეთ ტექსტი, რომელიც გნებავთ თარგმნოთ. (ფრთხილად, ის Google -ის "
+#~ "სერვერებზე იქნება გადაგზავნილი)."
+
+#~ msgid "No network connection detected, we cannot translate text."
+#~ msgstr "ქსელთან მიერთება აღმოჩენილი არაა. ტექსტს ვერ ვთარგმნით."
+
+#~ msgid "No network"
+#~ msgstr "ქსელის გარეშე"
+
+#~ msgid "Translate error"
+#~ msgstr "თარგმანის შეცდომა"
 
 #~ msgid "Error: Unable to parse autodetected language"
 #~ msgstr "შეცდომა: ავტომატურად აღმოჩენილი ენის დამუშავების შეცდომა"
