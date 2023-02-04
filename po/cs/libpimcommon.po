@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vit Pelcak <vit@pelcak.org>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+# Vit Pelcak <vit@pelcak.org>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2021-10-19 17:12+0200\n"
+"PO-Revision-Date: 2023-02-03 16:22+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -189,28 +189,28 @@ msgstr "Načíst šablonu"
 #: pimcommon/translator/translatorutil.cpp:353
 #, kde-format
 msgid "Bing"
-msgstr ""
+msgstr "Bing"
 
 #: pimcommon/translator/engine/bingtranslator.cpp:65
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
-msgstr ""
+msgstr "Chyba: Nelze najít přihlašovací údaje Bing ve webové verzi."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:73
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
-msgstr ""
+msgstr "Chyba: Nelze získat klíč Bing z webové verze."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:82
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
-msgstr ""
+msgstr "Chyba: Nelze získat token Bing z webové verze."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:91
 #: pimcommon/translator/engine/bingtranslator.cpp:100
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
-msgstr ""
+msgstr "Chyba: Nelze získat dodatečné informace Bing z webové verze."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:113
 #: pimcommon/translator/engine/deepltranslator.cpp:40
@@ -226,7 +226,7 @@ msgstr "Použili jste stejný jazyk pro překlad z a do."
 #: pimcommon/translator/translatorutil.cpp:362
 #, kde-format
 msgid "DeepL"
-msgstr ""
+msgstr "DeepL"
 
 #: pimcommon/translator/engine/googletranslator.cpp:74
 #: pimcommon/translator/translatorutil.cpp:347
@@ -238,19 +238,20 @@ msgstr "Google"
 #: pimcommon/translator/translatorutil.cpp:359
 #, kde-format
 msgid "Libre Translate"
-msgstr ""
+msgstr "Libre Translate"
 
+# AO
 #: pimcommon/translator/engine/lingvatranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:356
 #, kde-format
 msgid "Lingva"
-msgstr ""
+msgstr "Lingva"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:59
 #: pimcommon/translator/translatorutil.cpp:350
 #, kde-format
 msgid "Yandex"
-msgstr ""
+msgstr "Yandex"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:69
 #: pimcommon/translator/translatorenginebase.cpp:83
@@ -263,23 +264,23 @@ msgstr ""
 #: pimcommon/translator/engine/yandextranslator.cpp:78
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
-msgstr ""
+msgstr "Chyba: Nelze najít Yandex SID ve webové verzi."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:86
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
-msgstr ""
+msgstr "Chyba: Nelze získat Yandex SID z webové verze."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:155
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
-msgstr ""
+msgstr "Chyba: Nelze zpracovat automaticky detekovaný jazyk"
 
 #: pimcommon/translator/translatorconfiguredialog.cpp:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
-msgstr ""
+msgstr "Nastavit překladač"
 
 #: pimcommon/translator/translatorconfigurewidget.cpp:33
 #, kde-format
@@ -1684,7 +1685,7 @@ msgstr "Povolit automatickou opravu"
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:30
 #, kde-format
 msgid "Replacement and exception for language:"
-msgstr ""
+msgstr "Náhrada a výjimka pro jazyk:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_3)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:77
@@ -1887,7 +1888,7 @@ msgstr ""
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
 #, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr ""
+msgstr "Nahradit dvojité uvozovky francouzskými"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:445
@@ -1996,7 +1997,7 @@ msgstr "Importovat automatické opravy LibreOffice"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:574
 #, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr ""
+msgstr "Soubor automatických oprav LibreOffice (*.dat)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
 #, kde-format
@@ -2011,7 +2012,7 @@ msgstr "Soubor automatických oprav KMail (*.xml)"
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:610
 #, kde-format
 msgid "Import Autocorrection File"
-msgstr ""
+msgstr "Importovat soubor automatických oprav"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
 #, kde-format
