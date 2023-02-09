@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-12-27 09:58+0100\n"
+"PO-Revision-Date: 2023-02-08 11:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -909,7 +909,7 @@ msgstr "ახალი ACL"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr "ACL_ის ჩასწორება"
+msgstr "ACL-ის ჩასწორება"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:279
 #, kde-format
