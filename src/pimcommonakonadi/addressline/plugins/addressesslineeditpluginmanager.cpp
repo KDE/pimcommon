@@ -36,7 +36,7 @@ QString pluginVersion()
 class PimCommon::AddressessLineEditPluginManagerPrivate
 {
 public:
-    AddressessLineEditPluginManagerPrivate(AddressessLineEditPluginManager *qq)
+    explicit AddressessLineEditPluginManagerPrivate(AddressessLineEditPluginManager *qq)
         : q(qq)
     {
         initializePlugins();

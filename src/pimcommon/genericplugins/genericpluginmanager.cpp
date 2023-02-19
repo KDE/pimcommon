@@ -38,7 +38,7 @@ QString pluginVersion()
 class PimCommon::GenericPluginManagerPrivate
 {
 public:
-    GenericPluginManagerPrivate(GenericPluginManager *qq)
+    explicit GenericPluginManagerPrivate(GenericPluginManager *qq)
         : q(qq)
     {
     }

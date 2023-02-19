@@ -101,11 +101,11 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     d->mButtonGroup = new QButtonGroup(groupBox);
 
     for (unsigned int i = 0; i < AclUtils::standardPermissionsCount(); ++i) {
-        const KIMAP::Acl::Rights permissions = AclUtils::permissionsForIndex(i);
+        const KIMAP::Acl::Rights aclRightPermissions = AclUtils::permissionsForIndex(i);
 
-        auto radioButton = new QRadioButton(AclUtils::permissionsToUserString(permissions), groupBox);
+        auto radioButton = new QRadioButton(AclUtils::permissionsToUserString(aclRightPermissions), groupBox);
         d->mButtonLayout->addWidget(radioButton);
-        d->mButtonGroup->addButton(radioButton, permissions);
+        d->mButtonGroup->addButton(radioButton, aclRightPermissions);
     }
 
     d->mButtonLayout->addStretch(1);
