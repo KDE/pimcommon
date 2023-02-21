@@ -151,7 +151,7 @@ target_link_libraries(KF5PimCommon
     PRIVATE
     Qt::Network
     KF${KF_MAJOR_VERSION}::I18n
-    KF5::Libkdepim
+    KPim${KF_MAJOR_VERSION}::Libkdepim
     KF${KF_MAJOR_VERSION}::NewStuff
     KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::KIOWidgets
