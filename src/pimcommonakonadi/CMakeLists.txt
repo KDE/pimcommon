@@ -172,7 +172,7 @@ target_link_libraries(KF5PimCommonAkonadi
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-    target_link_libraries(KF5PimCommonAkonadi PRIVATE KF5::AkonadiSearchPIM)
+    target_link_libraries(KF5PimCommonAkonadi PRIVATE KPim${KF_MAJOR_VERSION}::AkonadiSearchPIM)
 endif()
 
 
