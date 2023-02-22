@@ -167,7 +167,7 @@ target_link_libraries(KF5PimCommonAkonadi
     KF5::PimTextEdit
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::KCMUtils
-    KF5::Ldap
+    KPim${KF_MAJOR_VERSION}::Ldap
     KF${KF_MAJOR_VERSION}::ItemViews
     )
 
