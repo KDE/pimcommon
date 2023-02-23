@@ -13,7 +13,7 @@ ecm_add_qtdesignerplugin(pimcommonwidgets
     WIDGETS
     PimCommon::SimpleStringListEditor
     LINK_LIBRARIES
-    KF5::PimCommon KF5::PimTextEdit
+    KF5::PimCommon KPim${KF_MAJOR_VERSION}::PimTextEdit
     INSTALL_DESTINATION "${KDE_INSTALL_QTPLUGINDIR}/designer"
     COMPONENT Devel
     )

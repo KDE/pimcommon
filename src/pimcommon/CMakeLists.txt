@@ -146,7 +146,7 @@ target_link_libraries(KF5PimCommon
     Qt::DBus
     KF${KF_MAJOR_VERSION}::KIOCore
     KF${KF_MAJOR_VERSION}::ConfigWidgets
-    KF5::PimTextEdit
+    KPim${KF_MAJOR_VERSION}::PimTextEdit
     KF${KF_MAJOR_VERSION}::TextAutoCorrection
     PRIVATE
     Qt::Network
