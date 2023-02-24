@@ -157,7 +157,7 @@ target_link_libraries(KF5PimCommonAkonadi
     KPim${KF_MAJOR_VERSION}::AkonadiContact
     KF${KF_MAJOR_VERSION}::KIOCore
     KF${KF_MAJOR_VERSION}::ConfigWidgets
-    KF5::IMAP
+    KPim${KF_MAJOR_VERSION}::IMAP
     KPim${KF_MAJOR_VERSION}::Libkdepim
     PRIVATE
     KF${KF_MAJOR_VERSION}::I18n
