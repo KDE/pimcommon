@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2012, 2013, 2014, 2015, 2016, 2018.
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2020, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 02:30+0000\n"
-"PO-Revision-Date: 2022-06-22 16:13-0300\n"
+"PO-Revision-Date: 2023-02-24 15:41-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -191,28 +191,29 @@ msgstr "Carregar modelo"
 #: pimcommon/translator/translatorutil.cpp:353
 #, kde-format
 msgid "Bing"
-msgstr ""
+msgstr "Bing"
 
 #: pimcommon/translator/engine/bingtranslator.cpp:65
 #, kde-format
 msgid "Error: Unable to find Bing credentials in web version."
-msgstr ""
+msgstr "Erro: não foi possível encontrar as credenciais do Bing na versão web."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:73
 #, kde-format
 msgid "Error: Unable to extract Bing key from web version."
-msgstr ""
+msgstr "Erro: não foi possível extrair a chave do Bing da versão web."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:82
 #, kde-format
 msgid "Error: Unable to extract Bing token from web version."
-msgstr ""
+msgstr "Erro: não foi possível extrair o token do Bing da versão web."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:91
 #: pimcommon/translator/engine/bingtranslator.cpp:100
 #, kde-format
 msgid "Error: Unable to extract additional Bing information from web version."
 msgstr ""
+"Erro: não foi possível extrair informações adicionais do Bing da versão web."
 
 #: pimcommon/translator/engine/bingtranslator.cpp:113
 #: pimcommon/translator/engine/deepltranslator.cpp:40
@@ -228,33 +229,31 @@ msgstr "Você usou o mesmo idioma nos campos \"de\" e \"para\"."
 #: pimcommon/translator/translatorutil.cpp:362
 #, kde-format
 msgid "DeepL"
-msgstr ""
+msgstr "DeepL"
 
 #: pimcommon/translator/engine/googletranslator.cpp:74
 #: pimcommon/translator/translatorutil.cpp:347
-#, fuzzy, kde-format
-#| msgid "Google Plus"
+#, kde-format
 msgid "Google"
-msgstr "Google Plus"
+msgstr "Google"
 
 #: pimcommon/translator/engine/libretranslatetranslator.cpp:28
 #: pimcommon/translator/translatorutil.cpp:359
-#, fuzzy, kde-format
-#| msgid "Translate"
+#, kde-format
 msgid "Libre Translate"
-msgstr "Traduzir"
+msgstr "Libre Translate"
 
 #: pimcommon/translator/engine/lingvatranslator.cpp:29
 #: pimcommon/translator/translatorutil.cpp:356
 #, kde-format
 msgid "Lingva"
-msgstr ""
+msgstr "Lingva"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:59
 #: pimcommon/translator/translatorutil.cpp:350
 #, kde-format
 msgid "Yandex"
-msgstr ""
+msgstr "Yandex"
 
 #: pimcommon/translator/engine/yandextranslator.cpp:69
 #: pimcommon/translator/translatorenginebase.cpp:83
@@ -263,40 +262,40 @@ msgid ""
 "Error: Engine systems have detected suspicious traffic from your computer "
 "network. Please try your request again later."
 msgstr ""
+"Erro: os sistemas do mecanismo detectaram tráfego suspeito da sua rede de "
+"computadores. Tente sua solicitação novamente mais tarde."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:78
 #, kde-format
 msgid "Error: Unable to find Yandex SID in web version."
-msgstr ""
+msgstr "Erro: não foi possível encontrar o SID do Yandex na versão web."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:86
 #, kde-format
 msgid "Error: Unable to extract Yandex SID from web version."
-msgstr ""
+msgstr "Erro: não foi possível extrair o SID do Yandex da versão web."
 
 #: pimcommon/translator/engine/yandextranslator.cpp:155
 #, kde-format
 msgid "Error: Unable to parse autodetected language"
-msgstr ""
+msgstr "Erro: não foi possível analisar o idioma detectado automaticamente"
 
 #: pimcommon/translator/translatorconfiguredialog.cpp:24
-#, fuzzy, kde-format
-#| msgctxt "type of folder content"
-#| msgid "Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Translator"
-msgstr "Configuração"
+msgstr "Configurar tradutor"
 
 #: pimcommon/translator/translatorconfigurewidget.cpp:33
 #, kde-format
 msgid "Engine:"
-msgstr ""
+msgstr "Mecanismo:"
 
 #: pimcommon/translator/translatordebugdialog.cpp:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Translator Debug"
-msgstr "Depuração do Tradutor"
+msgstr "Depuração do tradutor"
 
 #: pimcommon/translator/translatordebugdialog.cpp:35
 #, kde-format
@@ -1903,10 +1902,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, replaceDoubleQuotesByFrenchQuotes)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:424
-#, fuzzy, kde-format
-#| msgid "Replace &double quotes with typographical quotes"
+#, kde-format
 msgid "Replace double quotes by french quotes"
-msgstr "Substituir aspas &duplas por aspas tipográficas"
+msgstr "Substituir aspas duplas por aspas angulares"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: pimcommonautocorrection/autocorrection/ui/autocorrectionwidget.ui:445
@@ -2013,10 +2011,9 @@ msgid "Import LibreOffice Autocorrection"
 msgstr "Importar a autocorreção do LibreOffice"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:574
-#, fuzzy, kde-format
-#| msgid "LibreOffice Autocorrection File (*.data)"
+#, kde-format
 msgid "LibreOffice Autocorrection File (*.dat)"
-msgstr "Arquivo de autocorreção do LibreOffice (*.data)"
+msgstr "Arquivo de autocorreção do LibreOffice (*.dat)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:577
 #, kde-format
@@ -2029,10 +2026,9 @@ msgid "KMail Autocorrection File (*.xml)"
 msgstr "Arquivo de autocorreção do KMail (*.xml)"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:610
-#, fuzzy, kde-format
-#| msgid "Export Autocorrection File"
+#, kde-format
 msgid "Import Autocorrection File"
-msgstr "Exportar arquivo de autocorreção"
+msgstr "Importar arquivo de autocorreção"
 
 #: pimcommonautocorrection/autocorrection/widgets/autocorrectionwidget.cpp:637
 #, kde-format
@@ -2057,22 +2053,20 @@ msgid "Export Autocorrection File"
 msgstr "Exportar arquivo de autocorreção"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:32
-#, fuzzy, kde-format
-#| msgid "Select email from contact"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Special Characters"
-msgstr "Selecionar e-mail a partir do contato"
+msgstr "Selecionar caracteres especiais"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:40
 #, kde-format
 msgid "Insert"
-msgstr ""
+msgstr "Inserir"
 
 #: pimcommonautocorrection/autocorrection/widgets/selectspecialchardialog.cpp:53
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Selecionar"
+msgstr "Selecionar"
 
 #~ msgid "Import LibreOffice Autocorrection File"
 #~ msgstr "Importar arquivo de autocorreção do LibreOffice"
