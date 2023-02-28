@@ -104,7 +104,7 @@ else()
     endif()
 endif()
 
-if (NOT KF5AkonadiSearch_FOUND)
+if (NOT KPim${KF_MAJOR_VERSION}AkonadiSearch_FOUND)
     set(FORCE_DISABLE_AKONADI_SEARCH TRUE)
 endif()
 
