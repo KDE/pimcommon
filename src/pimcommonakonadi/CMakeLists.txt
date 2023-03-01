@@ -151,8 +151,8 @@ generate_export_header(KF5PimCommonAkonadi BASE_NAME pimcommonakonadi)
 target_link_libraries(KF5PimCommonAkonadi
     PUBLIC
     KF5::PimCommon
-    KF5::AkonadiCore
-    KF5::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KF${KF_MAJOR_VERSION}::Contacts
     KPim${KF_MAJOR_VERSION}::AkonadiContact
     KF${KF_MAJOR_VERSION}::KIOCore
