@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-03-04 00:48+0000\n"
 "PO-Revision-Date: 2019-08-04 10:38+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -243,22 +243,22 @@ msgstr "Obrátená veľkosť písmen"
 msgid "Clear History"
 msgstr "Vyčistiť históriu"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Pri zdieľaní dokumentu sa vyskytol problém: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "Share"
 msgstr "Zdieľať"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:63
 #, kde-format
 msgid "File was shared."
 msgstr "Súbor bol zdieľaný."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:66
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Novú žiadosť nájdete na adrese:<br /><a href='%1'>%1</a> </qt>"

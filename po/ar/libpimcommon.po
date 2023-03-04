@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-03-04 00:48+0000\n"
 "PO-Revision-Date: 2022-10-29 18:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -244,22 +244,22 @@ msgstr "اعكس الحالة"
 msgid "Clear History"
 msgstr "امسح التّأريخ"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "حدثت مشكلة في مشاركة المستند: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "Share"
 msgstr "شارك"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:63
 #, kde-format
 msgid "File was shared."
 msgstr "ت"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:66
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>ستجد الطلب الجديد في: <a href='%1'>%1</a> </qt>"

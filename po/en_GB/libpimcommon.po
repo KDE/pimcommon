@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-02 00:59+0000\n"
+"POT-Creation-Date: 2023-03-04 00:48+0000\n"
 "PO-Revision-Date: 2022-12-31 16:41+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -242,22 +242,22 @@ msgstr "Reverse Case"
 msgid "Clear History"
 msgstr "Clear History"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "There was a problem sharing the document: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "Share"
 msgstr "Share"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:63
 #, kde-format
 msgid "File was shared."
 msgstr "File was shared."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:66
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
