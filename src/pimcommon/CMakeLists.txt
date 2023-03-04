@@ -152,11 +152,10 @@ target_link_libraries(KF5PimCommon
     Qt::Network
     KF${KF_MAJOR_VERSION}::I18n
     KPim${KF_MAJOR_VERSION}::Libkdepim
-    KF${KF_MAJOR_VERSION}::NewStuff
     KF${KF_MAJOR_VERSION}::XmlGui
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::NewStuff
+    KF${KF_MAJOR_VERSION}::NewStuffCore
     KF${KF_MAJOR_VERSION}::NewStuffWidgets
     KF${KF_MAJOR_VERSION}::Purpose
     KF${KF_MAJOR_VERSION}::PurposeWidgets
