@@ -68,7 +68,7 @@ msgstr "لِنكدإن"
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
 #, kde-format
 msgid "Evernote"
-msgstr "إڤِرنُوت"
+msgstr "إفِرنُوت"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "پوكِت"
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
 #, kde-format
 msgid "LiveJournal"
-msgstr "لايڤ‌جورنِل"
+msgstr "لايف‌جورنِل"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
