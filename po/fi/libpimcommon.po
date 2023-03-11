@@ -1,7 +1,7 @@
 # KDE Finnish translation sprint participants:
 # Author: Artnay
 # Author: Lliehu
-# Tommi Nieminen <translator@legisign.org>, 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022.
+# Tommi Nieminen <translator@legisign.org>, 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
 # Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-POT-Import-Date: 2012-12-01 22:25:14+0000\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
