@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-04 00:48+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-03-11 04:55\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/pimcommon/libpimcommon.pot\n"
-"X-Crowdin-File-ID: 3761\n"
+"X-Crowdin-File: /kf5-stable/messages/pimcommon/libpimcommon.pot\n"
+"X-Crowdin-File-ID: 3083\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -1159,3 +1159,398 @@ msgstr "您真的想要删除此便笺吗？"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "删除便笺"
+
+#~ msgid "You used same language for from and to language."
+#~ msgstr "您为来源和目标语言使用了同样的语言。"
+
+#~ msgctxt "@title:window"
+#~ msgid "Translator Debug"
+#~ msgstr "翻译器调试"
+
+#~ msgid "Save As..."
+#~ msgstr "另存为..."
+
+#~ msgid "All Files (*)"
+#~ msgstr "所有文件 (*)"
+
+#~ msgid "Detect language"
+#~ msgstr "检测语言"
+
+#~ msgid "English"
+#~ msgstr "英语"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "简体中文"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "繁体中文"
+
+#~ msgid "Dutch"
+#~ msgstr "荷兰语"
+
+#~ msgid "French"
+#~ msgstr "法语"
+
+#~ msgid "German"
+#~ msgstr "德语"
+
+#~ msgid "Greek"
+#~ msgstr "希腊语"
+
+#~ msgid "Italian"
+#~ msgstr "意大利语"
+
+#~ msgid "Japanese"
+#~ msgstr "日语"
+
+#~ msgid "Korean"
+#~ msgstr "韩语"
+
+#~ msgid "Portuguese"
+#~ msgstr "葡萄牙语"
+
+#~ msgid "Russian"
+#~ msgstr "俄语"
+
+#~ msgid "Spanish"
+#~ msgstr "西班牙语"
+
+#~ msgid "Afrikaans"
+#~ msgstr "南非荷兰语"
+
+#~ msgid "Albanian"
+#~ msgstr "阿尔巴尼亚语"
+
+#~ msgid "Arabic"
+#~ msgstr "阿拉伯语"
+
+#~ msgid "Armenian"
+#~ msgstr "亚美尼亚文"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "阿塞拜疆语"
+
+#~ msgid "Basque"
+#~ msgstr "巴斯克语"
+
+#~ msgid "Belarusian"
+#~ msgstr "白俄罗斯语"
+
+#~ msgid "Bulgarian"
+#~ msgstr "保加利亚语"
+
+#~ msgid "Catalan"
+#~ msgstr "加泰罗尼亚语"
+
+#~ msgid "Croatian"
+#~ msgstr "克罗地亚语"
+
+#~ msgid "Czech"
+#~ msgstr "捷克语"
+
+#~ msgid "Danish"
+#~ msgstr "丹麦语"
+
+#~ msgid "Estonian"
+#~ msgstr "爱沙尼亚语"
+
+#~ msgid "Filipino"
+#~ msgstr "菲律宾语"
+
+#~ msgid "Finnish"
+#~ msgstr "芬兰语"
+
+#~ msgid "Galician"
+#~ msgstr "加利西亚语"
+
+#~ msgid "Georgian"
+#~ msgstr "格鲁吉亚文"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "海地克利奥尔语"
+
+#~ msgid "Hebrew"
+#~ msgstr "希伯来语"
+
+#~ msgid "Hindi"
+#~ msgstr "印度语"
+
+#~ msgid "Hungarian"
+#~ msgstr "匈牙利语"
+
+#~ msgid "Icelandic"
+#~ msgstr "冰岛语"
+
+#~ msgid "Indonesian"
+#~ msgstr "印度尼西亚语"
+
+#~ msgid "Irish"
+#~ msgstr "爱尔兰语"
+
+#~ msgid "Latvian"
+#~ msgstr "拉脱维亚语"
+
+#~ msgid "Lithuanian"
+#~ msgstr "立陶宛语"
+
+#~ msgid "Macedonian"
+#~ msgstr "马其顿语"
+
+#~ msgid "Malay"
+#~ msgstr "马来语"
+
+#~ msgid "Maltese"
+#~ msgstr "马耳他语"
+
+#~ msgid "Norwegian"
+#~ msgstr "挪威语"
+
+#~ msgid "Persian"
+#~ msgstr "波斯语"
+
+#~ msgid "Polish"
+#~ msgstr "波兰语"
+
+#~ msgid "Romanian"
+#~ msgstr "罗马尼亚语"
+
+#~ msgid "Serbian"
+#~ msgstr "塞尔维亚语"
+
+#~ msgid "Slovak"
+#~ msgstr "斯洛伐克语"
+
+#~ msgid "Slovenian"
+#~ msgstr "斯洛文尼亚语"
+
+#~ msgid "Swahili"
+#~ msgstr "斯瓦希里语"
+
+#~ msgid "Swedish"
+#~ msgstr "瑞典语"
+
+#~ msgid "Thai"
+#~ msgstr "泰文"
+
+#~ msgid "Turkish"
+#~ msgstr "土耳其语"
+
+#~ msgid "Ukrainian"
+#~ msgstr "乌克兰语"
+
+#~ msgid "Urdu"
+#~ msgstr "乌尔都语"
+
+#~ msgid "Vietnamese"
+#~ msgstr "越南语"
+
+#~ msgid "Welsh"
+#~ msgstr "威尔士语"
+
+#~ msgid "Yiddish"
+#~ msgstr "依地语"
+
+#~ msgid "Problem when connecting to the translator web site."
+#~ msgstr "连接到翻译网站出错。"
+
+#~ msgid "Close"
+#~ msgstr "关闭"
+
+#~ msgctxt "Translate from language"
+#~ msgid "From:"
+#~ msgstr "从："
+
+#~ msgctxt "Translate to language"
+#~ msgid "To:"
+#~ msgstr "到："
+
+#~ msgctxt ""
+#~ "Invert language choices so that from becomes to and to becomes from"
+#~ msgid "Invert"
+#~ msgstr "反转"
+
+#~ msgid "Clear"
+#~ msgstr "清除"
+
+#~ msgid "Translate"
+#~ msgstr "翻译"
+
+#~ msgid "Debug"
+#~ msgstr "调试"
+
+#~ msgid "No network connection detected, we cannot translate text."
+#~ msgstr "未检测到网络连接，无法翻译文本。"
+
+#~ msgid "No network"
+#~ msgstr "无网络"
+
+#~ msgid "Translate error"
+#~ msgstr "翻译错误"
+
+#~ msgid "Archive cannot be opened in read mode."
+#~ msgstr "归档无法在读取模式打开。"
+
+#~ msgid "Enable autocorrection"
+#~ msgstr "启用自动更正"
+
+#~ msgid "Replacement and exception for language:"
+#~ msgstr "语言的替换和例外："
+
+#~ msgid "Ad&vanced Autocorrection"
+#~ msgstr "高级自动更正(&V)"
+
+#~ msgid "&Add"
+#~ msgstr "添加(&A)"
+
+#~ msgid "&Enable word replacement"
+#~ msgstr "启用单词替换(&E)"
+
+#~ msgid "&Find"
+#~ msgstr "查找(&F)"
+
+#~ msgid "Re&place"
+#~ msgstr "替换(&P)"
+
+#~ msgid "Find"
+#~ msgstr "查找"
+
+#~ msgid "Replace"
+#~ msgstr "替换"
+
+#~ msgid "E&xceptions"
+#~ msgstr "例外(&X)"
+
+#~ msgid "Do not treat as the end of a sentence:"
+#~ msgstr "不当作句子结束："
+
+#~ msgid "R&emove"
+#~ msgstr "删除(&E)"
+
+#~ msgid "Accept two uppercase letters in:"
+#~ msgstr "接受两个大写字母："
+
+#~ msgid "Si&mple Autocorrection"
+#~ msgstr "简单自动更正(&M)"
+
+#~ msgid ""
+#~ "Detect when a new sentence is started and always ensure that the first "
+#~ "character is an uppercase character"
+#~ msgstr "检测一句话的开始，并且总是确保一句的第一个字符是大写字母"
+
+#~ msgid ""
+#~ "Convert &first letter of a sentence automatically to uppercase\n"
+#~ "(e.g. \"my house. in this town\" to \"my house. In this town\")"
+#~ msgstr ""
+#~ "将句首的第一个字母转换为大写(如将“my house. in this town”转换为“my house. "
+#~ "In this town”)"
+
+#~ msgid ""
+#~ "All words are checked for the common mistake of holding the shift key "
+#~ "down a bit too long. If some words must have two uppercase characters, "
+#~ "then those exceptions should be added in the 'Exceptions' tab."
+#~ msgstr ""
+#~ "对全部单词都检查是否可能出现 Shift 键按键的时间太长的情况。如果某些单词真"
+#~ "的应该有两个大写字母，则应该将这些例外添加到“例外”标签中。"
+
+#~ msgid ""
+#~ "Convert &two uppercase characters to one uppercase and one lowercase "
+#~ "character\n"
+#~ " (e.g. PErfect to Perfect)"
+#~ msgstr ""
+#~ "将两个连续的大写字母更改为一个大写一个小写(如 PErfect 转换为 Perfect)"
+
+#~ msgid ""
+#~ "Make sure that more than one space cannot be typed, as this is a common "
+#~ "mistake which is quite hard to find in formatted text."
+#~ msgstr ""
+#~ "确保无法输入多个空格，因为这种笔误的情况很多而且很难在已经应用格式的大段文"
+#~ "字中发现。"
+
+#~ msgid "&Suppress double spaces"
+#~ msgstr "压缩重复空格(&S)"
+
+#~ msgid "Most standard fraction notations will be converted when available"
+#~ msgstr "大多数分数都会进行自动转换"
+
+#~ msgid "Re&place 1/2... with ½..."
+#~ msgstr "将 1/2 替换为 ½(&P)..."
+
+#~ msgid "Capitalize name of days"
+#~ msgstr "将天数名称大写"
+
+#~ msgid ""
+#~ "Detect when a URL (Uniform Resource Locator) is typed and provide "
+#~ "formatting that matches the way an Internet browser would show a URL."
+#~ msgstr ""
+#~ "检测输入的 URL(统一资源定位符)，将其格式更改为与 Internet 浏览器中显示的一"
+#~ "样。"
+
+#~ msgid "Autoformat &URLs (HTML mode)"
+#~ msgstr "对 &URL 进行自动格式化 (HTML 模式)"
+
+#~ msgid ""
+#~ "When you use _underline_ or *bold*, the text between the underscores or "
+#~ "asterisks will be converted to underlined or bold text."
+#~ msgstr ""
+#~ "当您使用_下划线_或*粗体*时，下划线和星号之间的文字将会被转换为带下划线和加"
+#~ "粗的文字。"
+
+#~ msgid ""
+#~ "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+#~ msgstr "加粗，删除线和下划线替换为真正格式 (HTML 模式)"
+
+#~ msgid "Replace 1st... with 1^st... (HTML mode)"
+#~ msgstr "替换 1st... 为 1^st... (HTML 模式)"
+
+#~ msgid ""
+#~ "Add non breaking space before specific punctuation marks in French text"
+#~ msgstr "在法语的某些特定标点之前添加不换行空格"
+
+#~ msgid "Custom &Quotes"
+#~ msgstr "自定义引号(&Q)"
+
+#~ msgid "Replace &double quotes with typographical quotes"
+#~ msgstr "将双引号替换为弯引号(&D)"
+
+#~ msgid "Default"
+#~ msgstr "默认"
+
+#~ msgid "Replace &single quotes with typographical quotes"
+#~ msgstr "将单引号替换为弯引号(&S)"
+
+#~ msgid "LibreOffice Autocorrection"
+#~ msgstr "LibreOffice 自动更正"
+
+#~ msgid "KMail/Calligra Autocorrection"
+#~ msgstr "KMail/Calligra 自动更正"
+
+#~ msgid "\"Replace\" string is the same as \"Find\" string."
+#~ msgstr "\"替换\"字符串和\"查找\"字符串相同。"
+
+#~ msgid "Add Autocorrection Entry"
+#~ msgstr "添加自动更正项目"
+
+#~ msgid "&Modify"
+#~ msgstr "修改(&M)"
+
+#~ msgid "Import LibreOffice Autocorrection"
+#~ msgstr "导入 LibreOffice 自动更正"
+
+#~ msgid "Import KMail Autocorrection"
+#~ msgstr "导入 KMail/Calligra 自动更正"
+
+#~ msgid "KMail Autocorrection File (*.xml)"
+#~ msgstr "KMail 自动更正文件 (*.xml)"
+
+#~ msgid ""
+#~ "Language was changed, do you want to save config for previous language?"
+#~ msgstr "语言已改变，您想要保存之前语言的配置吗？"
+
+#~ msgid "Save config"
+#~ msgstr "保存设置"
+
+#~ msgid "Please save changes before exporting settings."
+#~ msgstr "请在导出设置之前保存更改。"
+
+#~ msgid "Export Autocorrection File"
+#~ msgstr "导出自动更正文件"
