@@ -4,7 +4,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommon")
 
 
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonConfig.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )

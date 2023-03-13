@@ -6,7 +6,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonAkonadi"
 
 
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5PimCommonAkonadiConfig.cmake.in"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
