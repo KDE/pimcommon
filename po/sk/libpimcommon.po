@@ -1,19 +1,19 @@
 # translation of libpimcommon.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017.
+# Roman Paholik <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2023.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-04 00:48+0000\n"
-"PO-Revision-Date: 2019-08-04 10:38+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
-"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-03-12 11:50+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 19.07.90\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
@@ -78,15 +78,13 @@ msgid "LiveJournal"
 msgstr "LiveJournal"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Default template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Predvolená šablóna"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Šablóna"
@@ -343,7 +341,7 @@ msgstr "O&dstrániť"
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
-msgstr ""
+msgstr "Prispôsobiť..."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
@@ -481,7 +479,7 @@ msgstr "Použiť oprávnenia pre všetky podpriečinky."
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
 #, kde-format
 msgid "vCard Import Failed"
-msgstr ""
+msgstr "Import vCard zlyhal"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
@@ -500,10 +498,9 @@ msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
-#, fuzzy, kde-format
-#| msgid "Configure..."
+#, kde-format
 msgid "Configure Completion..."
-msgstr "Nastaviť..."
+msgstr "Nastaviť dopĺňanie..."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
 #, kde-format
@@ -533,7 +530,7 @@ msgstr ""
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
 #, kde-format
 msgid "LDAP server: %1"
-msgstr ""
+msgstr "LDAP server: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, fuzzy, kde-format
@@ -551,7 +548,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgid "Search"
-msgstr "&Hľadať"
+msgstr "Hľadať"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
 #, kde-format
@@ -562,13 +559,12 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "&Select"
-msgstr "Nahradiť všetko"
+msgstr "&Vybrať"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:80
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "&Unselect"
-msgstr "Nahradiť všetko"
+msgstr "Odznačiť"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
 #, kde-format
@@ -609,7 +605,7 @@ msgstr[2] ""
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No result found"
-msgstr "Nenašiel sa gravatar."
+msgstr "Nenájdený žiadny výsledok."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
 #, kde-format
@@ -622,15 +618,13 @@ msgstr ""
 #| msgctxt "@title:window"
 #| msgid "Save Log"
 msgid "Save"
-msgstr "Uložiť záznam"
+msgstr "Uložiť"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
-#, fuzzy, kde-format
-#| msgctxt "type of folder content"
-#| msgid "Configuration"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr "Nastavenie"
+msgstr "Nastaviť dopĺňanie"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
 #, kde-format
@@ -657,17 +651,17 @@ msgstr ""
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
 #, kde-format
 msgid "LDAP server %1"
-msgstr ""
+msgstr "LDAP server %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
-#, kde-format
+#, fuzzy, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "Posunúť hore"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
-#, kde-format
+#, fuzzy, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "Posunúť dole"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
 #, kde-format
@@ -675,13 +669,12 @@ msgid "Add"
 msgstr "Pridať"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:111
-#, fuzzy, kde-format
-#| msgid "Do you want to remove selected text?"
+#, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
-msgstr[0] "Chcete odstrániť vybratý text?"
-msgstr[1] "Chcete odstrániť vybratý text?"
-msgstr[2] "Chcete odstrániť vybratý text?"
+msgstr[0] "Chcete odstrániť túto e-mailovú adresu?"
+msgstr[1] "Chcete odstrániť tieto %1 e-mailové adresy?"
+msgstr[2] "Chcete odstrániť týchto %1 e-mailových adries?"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
@@ -831,24 +824,23 @@ msgid "Select Multiple Folders"
 msgstr "Vybrať viacero priečinkov"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
-msgstr ""
+msgstr "Názov"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
-#, fuzzy, kde-format
-#| msgid "Folder Name"
+#, kde-format
 msgid "Full Name"
-msgstr "Názov priečinka"
+msgstr "Celé meno"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
 #, fuzzy, kde-format
 #| msgid "Email:"
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr "E-mail:"
+msgstr "E-mail"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
@@ -872,97 +864,97 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Fax Number"
-msgstr ""
+msgstr "Číslo faxu"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
-#, kde-format
+#, fuzzy, kde-format
 msgid "Pager"
-msgstr ""
+msgstr "Prepínač plôch"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Street"
-msgstr ""
+msgstr "Ulica"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
-msgstr ""
+msgstr "Stav"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
-#, kde-format
+#, fuzzy, kde-format
 msgid "Country"
-msgstr ""
+msgstr "Krajina"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "City"
-msgstr ""
+msgstr "Mesto"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Organization"
-msgstr ""
+msgstr "Organizácia"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
-#, kde-format
+#, fuzzy, kde-format
 msgid "Company"
-msgstr ""
+msgstr "Spoločnosť"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
-#, kde-format
+#, fuzzy, kde-format
 msgid "Department"
-msgstr ""
+msgstr "Oddelenie"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
-msgstr ""
+msgstr "PSČ"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
-msgstr ""
+msgstr "Poštová adresa"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
-#, kde-format
+#, fuzzy, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Popis"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "User ID"
-msgstr ""
+msgstr "ID užívateľa"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
 #, fuzzy, kde-format
 #| msgid "Email:"
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr "E-mail:"
+msgstr "E-mail"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
-msgstr ""
+msgstr "Stav"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
-msgstr ""
+msgstr "Názov"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
@@ -976,17 +968,16 @@ msgid "Search for Addresses in Directory"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "&Search"
+#, kde-format
 msgid "Search for:"
-msgstr "&Hľadať"
+msgstr "Hľadať:"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
 #, fuzzy, kde-format
 #| msgid "Find"
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr "Nájsť"
+msgstr "v"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, fuzzy, kde-format
@@ -1000,7 +991,7 @@ msgstr "Názov"
 #| msgid "Email:"
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr "E-mail:"
+msgstr "E-mail"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
@@ -1027,16 +1018,14 @@ msgid "Recursive search"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
-#, fuzzy, kde-format
-#| msgctxt "type of folder content"
-#| msgid "Contacts"
+#, kde-format
 msgid "Contains"
-msgstr "Kontakty"
+msgstr "Obsahuje"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
 #, kde-format
 msgid "Starts With"
-msgstr ""
+msgstr "Začína s"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
 #, kde-format
@@ -1047,25 +1036,24 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Searching..."
-msgstr "Hľadať..."
+msgstr "Hľadá sa..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "Select All"
-msgstr "Nahradiť všetko"
+msgstr "Vybrať všetko"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "Unselect All"
-msgstr "Nahradiť všetko"
+msgstr "Odznačiť všetko"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
-#, fuzzy, kde-format
-#| msgid "Add Service"
+#, kde-format
 msgid "Add Selected"
-msgstr "Pridať službu"
+msgstr "Pridať vybrané"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, fuzzy, kde-format
@@ -1074,9 +1062,9 @@ msgid "Configure LDAP Servers..."
 msgstr "Nastaviť webové skratky..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
-#, kde-format
+#, fuzzy, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Kopírovať"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
@@ -1149,10 +1137,9 @@ msgid "Could not set setting '%1': %2"
 msgstr "Nemôžem nastaviť nastavenie '%1': %2"
 
 #: pimcommonakonadi/util/createresource.cpp:118
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Nemôžem nastaviť nastavenie '%1': %2"
+msgstr "Nemôžem uložiť nastavenie %1"
 
 #: pimcommonakonadi/util/createresource.cpp:127
 #, kde-format
@@ -1211,9 +1198,7 @@ msgid "Do you really want to delete this note?"
 msgstr "Naozaj chcete odstrániť túto poznámku?"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete Note"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Odstrániť poznámku"
