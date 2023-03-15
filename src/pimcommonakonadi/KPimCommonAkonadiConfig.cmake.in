@@ -9,15 +9,5 @@ find_dependency(KPim@KF_MAJOR_VERSION@AkonadiContact "@AKONADICONTACT_LIB_VERSIO
 find_dependency(KF@KF_MAJOR_VERSION@Config "@KF_MIN_VERSION@")
 find_dependency(KPim@KF_MAJOR_VERSION@PimCommon "@PIM_VERSION@")
 find_dependency(KPim@KF_MAJOR_VERSION@IMAP "@KIMAP_LIB_VERSION@")
-if (@PIMCOMMONiAKONADI_KF5_COMPAT@)
-    message(WARNING "\n"
-                    "************* DEPRECATION WARNING *************\n"
-		    "Using find_package(KF5PimCommonAkonadi) and KF5::PimCommonAkonadi targets is deprecated. "
-		    "Please use find_package(KPim@KF_MAJOR_VERSION@CommonAkonadi) and KPim@KF_MAJOR_VERSION@::CommonAkonadi instead. This backwards "
-                    "compatibility will be removed in the next major version.\n"
-                    "***********************************************\n")
-endif()
-
-
 include("${CMAKE_CURRENT_LIST_DIR}/KPim@KF_MAJOR_VERSION@PimCommonAkonadiTargets.cmake")
 @PACKAGE_INCLUDE_QCHTARGETS@
