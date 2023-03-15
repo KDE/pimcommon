@@ -5,7 +5,7 @@ macro(add_pimcommon_regularexpression_unittest _source)
     ecm_add_test(${_source} ${_name}.h
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-regularexpression-"
-        LINK_LIBRARIES Qt::Test Qt::Gui KF5::PimCommon
+        LINK_LIBRARIES Qt::Test Qt::Gui KPim${KF_MAJOR_VERSION}::PimCommon
     )
 endmacro()
 
