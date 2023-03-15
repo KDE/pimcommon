@@ -3,9 +3,9 @@
 ########### next target ###############
 add_executable(testaddresseelineedit testaddresseelineedit.cpp)
 
-target_link_libraries(testaddresseelineedit KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion)
+target_link_libraries(testaddresseelineedit KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion)
 
 
 ########### next target ###############
 add_executable(completionconfiguredialog_gui completionconfiguredialog_gui.cpp)
-target_link_libraries(completionconfiguredialog_gui KF5::PimCommonAkonadi KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion)
+target_link_libraries(completionconfiguredialog_gui KPim${KF_MAJOR_VERSION}::PimCommonAkonadi KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::Completion)

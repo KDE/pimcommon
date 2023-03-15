@@ -2,44 +2,45 @@
 # SPDX-FileCopyrightText: none
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonAkonadi")
-
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadi")
+set(PIMCOMMONAKONADI_KF5_COMPAT FALSE)
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
     SOVERSION 5
     )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KF5PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonAkonadiTargets.cmake NAMESPACE KF5::)
+install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/ COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/ COMPONENT Devel
     )
 
-add_library(KF5PimCommonAkonadi )
-add_library(KF5::PimCommonAkonadi ALIAS KF5PimCommonAkonadi)
-ecm_qt_declare_logging_category(KF5PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
+add_library(KPim${KF_MAJOR_VERSION}PimCommonAkonadi )
+add_library(KPim${KF_MAJOR_VERSION}::PimCommonAkonadi ALIAS KPim${KF_MAJOR_VERSION}PimCommonAkonadi)
+ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
         DESCRIPTION "kdepim (pimcommonakonadi)"
         EXPORT PIMCOMMON
     )
 
-target_sources(KF5PimCommonAkonadi PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE
     folderdialog/selectmulticollectionwidget.cpp
     folderdialog/selectmulticollectiondialog.cpp
     folderdialog/checkedcollectionwidget.cpp
@@ -127,7 +128,7 @@ target_sources(KF5PimCommonAkonadi PRIVATE
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-target_sources(KF5PimCommonAkonadi PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE
     addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
@@ -143,14 +144,14 @@ endif()
 
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KF5PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
 endif()
 
-generate_export_header(KF5PimCommonAkonadi BASE_NAME pimcommonakonadi)
+generate_export_header(KPim${KF_MAJOR_VERSION}PimCommonAkonadi BASE_NAME pimcommonakonadi)
 
-target_link_libraries(KF5PimCommonAkonadi
+target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommonAkonadi
     PUBLIC
-    KF5::PimCommon
+    KPim${KF_MAJOR_VERSION}::PimCommon
     KPim${KF_MAJOR_VERSION}::AkonadiCore
     KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KF${KF_MAJOR_VERSION}::Contacts
@@ -172,15 +173,15 @@ target_link_libraries(KF5PimCommonAkonadi
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-    target_link_libraries(KF5PimCommonAkonadi PRIVATE KPim${KF_MAJOR_VERSION}::AkonadiSearchPIM)
+    target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE KPim${KF_MAJOR_VERSION}::AkonadiSearchPIM)
 endif()
 
 
-target_include_directories(KF5PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/>")
+target_include_directories(KPim${KF_MAJOR_VERSION}PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/>")
 
-target_include_directories(KF5PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
+target_include_directories(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
-set_target_properties(KF5PimCommonAkonadi PROPERTIES
+set_target_properties(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PROPERTIES
     VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommonAkonadi
@@ -188,8 +189,8 @@ set_target_properties(KF5PimCommonAkonadi PROPERTIES
 
 
 install(TARGETS
-    KF5PimCommonAkonadi
-    EXPORT KF5PimCommonAkonadiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim${KF_MAJOR_VERSION}PimCommonAkonadi
+    EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)
@@ -333,8 +334,8 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     )
 
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
-    LIB_NAME KF5PimCommonAkonadi
-    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi
+    LIB_NAME KPim${KF_MAJOR_VERSION}PimCommonAkonadi
+    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi
     )
 
 
@@ -353,7 +354,7 @@ install(FILES
     ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
     ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
     ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/PimCommonAkonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/PimCommonAkonadi
     COMPONENT Devel
     )
 
@@ -376,7 +377,7 @@ install(FILES
     ${PimCommonAkonadi_recentaddress_HEADERS}
 
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommonAkonadi/pimcommonakonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
     )
 
@@ -386,9 +387,9 @@ install(FILES
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5PimCommonAkonadi_QCH
-        NAME KF5PimCommonAkonadi
-        BASE_NAME KF5PimCommonAkonadi
+        KPim${KF_MAJOR_VERSION}PimCommonAkonadi_QCH
+        NAME KPim${KF_MAJOR_VERSION}PimCommonAkonadi
+        BASE_NAME KPim${KF_MAJOR_VERSION}PimCommonAkonadi
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -422,10 +423,44 @@ if (BUILD_QCH)
         COMPONENT Devel
     )
     ecm_install_qch_export(
-        TARGETS KF5PimCommonAkonadi_QCH
-        FILE KF5PimCommonAkonadiQchTargets.cmake
+        TARGETS KPim${KF_MAJOR_VERSION}PimCommonAkonadi_QCH
+        FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonAkonadiQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake\")")
+endif()
+
+if (BUILD_WITH_COMPAT_LIBS)
+if (QT_MAJOR_VERSION STREQUAL "5")
+##
+# TODO: Backwards compatiblity. Remove in next major version
+##
+set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommonAkonadi")
+set(PIMCOMMONAKONADI_KF5_COMPAT TRUE)
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonAkonadiConfig.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
+    RENAME "KF5PimCommonConfigAkonadiVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+if (0)
+install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    FILE KPim${KF_MAJOR_VERSION}CommoAkonadinTargets.cmake
+    NAMESPACE KF5::
+)
+endif()
+endif()
 endif()

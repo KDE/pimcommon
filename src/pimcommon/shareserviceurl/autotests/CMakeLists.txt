@@ -7,7 +7,7 @@ macro(add_pimcommon_shareserviceurl_unittest _source)
         NAME_PREFIX "pimcommon-shareserviceurl-"
         LINK_LIBRARIES Qt::Test
         Qt::Widgets
-        KF5::PimCommon
+        KPim${KF_MAJOR_VERSION}::PimCommon
     )
 endmacro()
 add_pimcommon_shareserviceurl_unittest(shareserviceurlmanagertest.cpp)
