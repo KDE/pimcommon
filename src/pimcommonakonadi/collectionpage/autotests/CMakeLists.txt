@@ -4,7 +4,7 @@ macro(add_pimcommon_collectionpage_test _name)
     ecm_add_test(${ARGN}
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-collectionpage-"
-        LINK_LIBRARIES Qt::Test Qt::Gui KPim${KF_MAJOR_VERSION}::AkonadiCore KF5::PimCommonAkonadi
+        LINK_LIBRARIES Qt::Test Qt::Gui KPim${KF_MAJOR_VERSION}::AkonadiCore KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
     )
 endmacro()
 

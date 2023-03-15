@@ -7,7 +7,7 @@ macro(add_pimcommonakonadi_addressline_unittest _name)
         LINK_LIBRARIES Qt::Test
         KF${KF_MAJOR_VERSION}::Contacts
         Qt::Widgets
-        KF5::PimCommonAkonadi
+        KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
         Qt::DBus
         KF${KF_MAJOR_VERSION}::Codecs
         KF${KF_MAJOR_VERSION}::ConfigCore

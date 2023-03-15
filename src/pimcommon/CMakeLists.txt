@@ -1,33 +1,33 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommon")
-
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommon")
+set(PIMCOMMON_KF5_COMPAT FALSE)
 
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
     SOVERSION 5
     )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KF5PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5PimCommonTargets.cmake NAMESPACE KF5::)
+install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}PimCommonTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/ COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
     )
 
 
@@ -42,15 +42,15 @@ endmacro()
 
 add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
 
-add_library(KF5PimCommon )
-add_library(KF5::PimCommon ALIAS KF5PimCommon)
-ecm_qt_declare_logging_category(KF5PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
+add_library(KPim${KF_MAJOR_VERSION}PimCommon )
+add_library(KPim${KF_MAJOR_VERSION}::PimCommon ALIAS KPim${KF_MAJOR_VERSION}PimCommon)
+ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
         DESCRIPTION "kdepim (pimcommon)"
         OLD_CATEGORY_NAMES log_pimcommon
         EXPORT PIMCOMMON
     )
 
-target_sources(KF5PimCommon PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
     ${libpimcommon_SRCS}
     genericplugins/pluginutil.cpp
     genericplugins/genericpluginmanager.cpp
@@ -119,7 +119,7 @@ target_sources(KF5PimCommon PRIVATE
     )
 
 if (QT_MAJOR_VERSION STREQUAL "5")
-    target_sources(KF5PimCommon PRIVATE
+    target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
         migration/migrateapplicationfiles.cpp
         migration/migrateapplicationfiles.h
 
@@ -128,18 +128,18 @@ if (QT_MAJOR_VERSION STREQUAL "5")
     )
 endif()
 
-target_sources(KF5PimCommon PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KF5PimCommon PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim${KF_MAJOR_VERSION}PimCommon PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KF5PimCommon BASE_NAME pimcommon)
+generate_export_header(KPim${KF_MAJOR_VERSION}PimCommon BASE_NAME pimcommon)
 
 
-target_link_libraries(KF5PimCommon
+target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
     PUBLIC
     Qt::Gui
     Qt::Widgets
@@ -162,19 +162,19 @@ target_link_libraries(KF5PimCommon
     KF${KF_MAJOR_VERSION}::Codecs
 )
 
-target_include_directories(KF5PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/>")
+target_include_directories(KPim${KF_MAJOR_VERSION}PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/>")
 
-target_include_directories(KF5PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
+target_include_directories(KPim${KF_MAJOR_VERSION}PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
-set_target_properties(KF5PimCommon PROPERTIES
+set_target_properties(KPim${KF_MAJOR_VERSION}PimCommon PROPERTIES
     VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommon
     )
 
 install(TARGETS
-    KF5PimCommon
-    EXPORT KF5PimCommonTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim${KF_MAJOR_VERSION}PimCommon
+    EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)
@@ -306,7 +306,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     )
 ecm_generate_pri_file(BASE_NAME PimCommon
     LIB_NAME KF5PimCommon
-    DEPS "network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon
+    DEPS "network KIOCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon
     )
 
 
@@ -328,7 +328,7 @@ install(FILES
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
     ${PimCommon_CamelCasemisc_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/PimCommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/PimCommon
     COMPONENT Devel
     )
 
@@ -352,7 +352,7 @@ install(FILES
     ${PimCommon_widgets_HEADERS}
     ${PimCommon_misc_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/pimcommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/pimcommon
     COMPONENT Devel
     )
 
@@ -366,9 +366,9 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5PimCommon_QCH
-        NAME KF5PimCommon
-        BASE_NAME KF5PimCommon
+        KPim${KF_MAJOR_VERSION}PimCommon_QCH
+        NAME KPim${KF_MAJOR_VERSION}PimCommon
+        BASE_NAME KPim${KF_MAJOR_VERSION}PimCommon
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -409,10 +409,44 @@ if (BUILD_QCH)
         COMPONENT Devel
     )
     ecm_install_qch_export(
-        TARGETS KF5PimCommon_QCH
-        FILE KF5PimCommonQchTargets.cmake
+        TARGETS KPim${KF_MAJOR_VERSION}PimCommon_QCH
+        FILE KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5PimCommonQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake\")")
+endif()
+
+if (BUILD_WITH_COMPAT_LIBS)
+if (QT_MAJOR_VERSION STREQUAL "5")
+##
+# TODO: Backwards compatiblity. Remove in next major version
+##
+set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5PimCommon")
+set(PIMCOMMON_KF5_COMPAT TRUE)
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5PimCommonConfig.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
+    RENAME "KF5PimCommonConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+if (0)
+install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    FILE KPim${KF_MAJOR_VERSION}PimCommonTargets.cmake
+    NAMESPACE KF5::
+)
+endif()
+endif()
 endif()
