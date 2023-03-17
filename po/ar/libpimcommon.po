@@ -73,7 +73,7 @@ msgstr "إفِرنُوت"
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
 #, kde-format
 msgid "Pocket"
-msgstr "پوكِت"
+msgstr "بوكِت"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
 #, kde-format
