@@ -144,7 +144,7 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
     Qt::Widgets
     Qt::DBus
     KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
     KPim${KF_MAJOR_VERSION}::PimTextEdit
     KF${KF_MAJOR_VERSION}::TextAutoCorrection
     PRIVATE
