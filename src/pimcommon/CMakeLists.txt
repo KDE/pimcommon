@@ -1,28 +1,5 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommon")
-
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-
-
-ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
-    SOVERSION 5
-    )
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
-install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}PimCommonTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
@@ -407,12 +384,36 @@ if (BUILD_QCH)
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
     )
-    ecm_install_qch_export(
-        TARGETS KPim${KF_MAJOR_VERSION}PimCommon_QCH
-        FILE KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake\")")
 endif()
 
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommon")
+if (BUILD_QCH)
+ecm_install_qch_export(
+    TARGETS KPim${KF_MAJOR_VERSION}PimCommon_QCH
+    FILE KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+)
+set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake\")")
+endif()
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+
+
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
+    SOVERSION 5
+    )
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}PimCommonTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)

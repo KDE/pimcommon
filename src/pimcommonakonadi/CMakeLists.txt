@@ -2,36 +2,6 @@
 # SPDX-FileCopyrightText: none
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadi")
-
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-
-
-ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
-    SOVERSION 5
-    )
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
-install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
-
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/ COMPONENT Devel
-    )
-
 add_library(KPim${KF_MAJOR_VERSION}PimCommonAkonadi )
 add_library(KPim${KF_MAJOR_VERSION}::PimCommonAkonadi ALIAS KPim${KF_MAJOR_VERSION}PimCommonAkonadi)
 ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
@@ -420,11 +390,43 @@ if (BUILD_QCH)
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
     )
-    ecm_install_qch_export(
-        TARGETS KPim${KF_MAJOR_VERSION}PimCommonAkonadi_QCH
-        FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake\")")
+
 endif()
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadi")
+if (BUILD_QCH)
+ecm_install_qch_export(
+    TARGETS KPim${KF_MAJOR_VERSION}PimCommonAkonadi_QCH
+    FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+)
+set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake\")")
+endif()
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+
+
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
+    SOVERSION 5
+    )
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
+
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/ COMPONENT Devel
+    )
+
