@@ -40,6 +40,7 @@ private:
     void slotAddItem();
     void slotRemoveItem();
     void slotUpdateAddButton(const QString &str);
+    void slotCustomContextMenuRequested(const QPoint &pos);
     QLineEdit *const mLineEdit;
     QToolButton *const mNewButton;
     QToolButton *const mRemoveButton;

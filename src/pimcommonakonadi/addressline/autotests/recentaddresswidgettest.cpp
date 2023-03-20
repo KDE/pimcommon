@@ -38,6 +38,7 @@ void RecentAddressWidgetTest::shouldHaveDefaultValue()
     auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QVERIFY(listview);
     QCOMPARE(listview->count(), 0);
+    QCOMPARE(listview->contextMenuPolicy(), Qt::CustomContextMenu);
 }
 
 void RecentAddressWidgetTest::shouldAddAddresses()

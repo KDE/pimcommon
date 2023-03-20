@@ -16,6 +16,7 @@
 
 #include <QKeyEvent>
 #include <QListWidget>
+#include <QMenu>
 #include <QShortcut>
 #include <QToolButton>
 #include <QVBoxLayout>
@@ -67,7 +68,9 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     mListView->setObjectName(QStringLiteral("list_view"));
     mListView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListView->setSortingEnabled(true);
+    mListView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(mListView, &QListWidget::itemSelectionChanged, this, &RecentAddressWidget::updateButtonState);
+    connect(mListView, &QListWidget::customContextMenuRequested, this, &RecentAddressWidget::slotCustomContextMenuRequested);
     layout->addWidget(mListView);
     mDirty = false;
 }
@@ -77,6 +80,23 @@ RecentAddressWidget::~RecentAddressWidget() = default;
 void RecentAddressWidget::slotUpdateAddButton(const QString &str)
 {
     mNewButton->setEnabled(!str.trimmed().isEmpty());
+}
+
+void RecentAddressWidget::slotCustomContextMenuRequested(const QPoint &pos)
+{
+    const QList<QListWidgetItem *> selectedItems = mListView->selectedItems();
+    if (selectedItems.isEmpty()) {
+        return;
+    }
+    QListWidgetItem *item = mListView->itemAt(pos);
+    if (item) {
+        QMenu menu(this);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
+                       i18np("Remove Key", "Remove Keys", selectedItems.count()),
+                       this,
+                       &RecentAddressWidget::slotRemoveItem);
+        menu.exec(QCursor::pos());
+    }
 }
 
 void RecentAddressWidget::slotAddItem()
