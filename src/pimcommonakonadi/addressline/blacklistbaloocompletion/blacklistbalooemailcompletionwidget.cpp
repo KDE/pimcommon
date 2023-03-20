@@ -190,7 +190,7 @@ void BlackListBalooEmailCompletionWidget::save()
     }
     if (needToSave) {
         group.writeEntry("ExcludeEmailsRegexp", newExcludeEmailsRegExp);
-        // TODO mEmailList->setExcludeDomain(newExcludeDomain);
+        mEmailList->setExcludeEmailsRegularExpressions(newExcludeEmailsRegExp);
         mOriginalExcludeEmailRegexp = newExcludeEmailsRegExp;
 
         group.writeEntry("ExcludeDomain", newExcludeDomain);
