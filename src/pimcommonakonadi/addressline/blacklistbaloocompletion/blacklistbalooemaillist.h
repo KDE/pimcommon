@@ -38,7 +38,7 @@ public:
 
     Q_REQUIRED_RESULT QHash<QString, bool> blackListItemChanged() const;
 
-    void setExcludeDomain(const QStringList &domain);
+    void setExcludeDomains(const QStringList &domain);
     Q_REQUIRED_RESULT int setEmailFound(const QStringList &);
 
 protected:
@@ -49,7 +49,7 @@ protected:
 private:
     void generalPaletteChanged();
     QStringList mEmailBlackList;
-    QStringList mExcludeDomain;
+    QStringList mExcludeDomains;
     QColor mTextColor;
     bool mFirstResult = false;
 };

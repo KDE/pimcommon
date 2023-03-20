@@ -155,12 +155,12 @@ void BlackListBalooEmailCompletionWidget::load()
     KConfigGroup group(config, "AddressLineEdit");
 
     const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
-    mEmailList->setExcludeDomain(lstExcludeEmailsRegularExpressions);
+    mEmailList->setExcludeDomains(lstExcludeEmailsRegularExpressions);
     mExcludeEmailFromRegularExpressionLineEdit->setText(lstExcludeEmailsRegularExpressions.join(QLatin1Char(',')));
     mOriginalExcludeEmailRegexp = lstExcludeEmailsRegularExpressions;
 
     const QStringList lstExcludeDomains = group.readEntry("ExcludeDomain", QStringList());
-    mEmailList->setExcludeDomain(lstExcludeDomains);
+    mEmailList->setExcludeDomains(lstExcludeDomains);
     mExcludeDomainLineEdit->setText(lstExcludeDomains.join(QLatin1Char(',')));
     mOriginalExcludeDomain = lstExcludeDomains;
     slotSelectionChanged();
@@ -194,7 +194,7 @@ void BlackListBalooEmailCompletionWidget::save()
         mOriginalExcludeEmailRegexp = newExcludeEmailsRegExp;
 
         group.writeEntry("ExcludeDomain", newExcludeDomain);
-        mEmailList->setExcludeDomain(newExcludeDomain);
+        mEmailList->setExcludeDomains(newExcludeDomain);
         mOriginalExcludeDomain = newExcludeDomain;
         group.sync();
     }

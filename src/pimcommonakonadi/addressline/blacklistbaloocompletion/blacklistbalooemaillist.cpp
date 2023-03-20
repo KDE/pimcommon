@@ -49,9 +49,9 @@ QHash<QString, bool> BlackListBalooEmailList::blackListItemChanged() const
     return result;
 }
 
-void BlackListBalooEmailList::setExcludeDomain(const QStringList &domain)
+void BlackListBalooEmailList::setExcludeDomains(const QStringList &domain)
 {
-    mExcludeDomain = domain;
+    mExcludeDomains = domain;
 }
 
 int BlackListBalooEmailList::setEmailFound(const QStringList &list)
@@ -69,7 +69,7 @@ int BlackListBalooEmailList::setEmailFound(const QStringList &list)
 
         const QString mailToLower = mail.toLower();
         const QString emailToLower = email.toLower();
-        for (const QString &domain : std::as_const(mExcludeDomain)) {
+        for (const QString &domain : std::as_const(mExcludeDomains)) {
             if (email.endsWith(domain)) {
                 excludeDomain = true;
                 break;

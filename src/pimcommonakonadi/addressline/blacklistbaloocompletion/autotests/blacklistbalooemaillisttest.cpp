@@ -81,14 +81,14 @@ void BlackListBalooEmailListTest::shouldNotAddDuplicateEmails()
 void BlackListBalooEmailListTest::shouldExcludeDomain()
 {
     PimCommon::BlackListBalooEmailList blackList;
-    blackList.setExcludeDomain(QStringList() << QStringLiteral("kde.org") << QStringLiteral("toto.fr"));
+    blackList.setExcludeDomains(QStringList() << QStringLiteral("kde.org") << QStringLiteral("toto.fr"));
     QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bli@fr.fr") << QStringLiteral("bli@toto.fr");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 1);
 
     QCOMPARE(blackList.count(), 1);
 
-    blackList.setExcludeDomain(QStringList() << QStringLiteral("kde.org") << QStringLiteral("toto.fr"));
+    blackList.setExcludeDomains(QStringList() << QStringLiteral("kde.org") << QStringLiteral("toto.fr"));
     emails = QStringList() << QStringLiteral("<foo@kde.org>") << QStringLiteral("bli@fr.fr") << QStringLiteral("bli@toto.fr");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 1);
