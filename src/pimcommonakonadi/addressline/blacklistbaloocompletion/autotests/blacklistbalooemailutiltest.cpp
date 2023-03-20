@@ -36,7 +36,7 @@ void BlackListBalooEmailUtilTest::shouldCreateNewList()
     util.initialBlackList(lst);
     QHash<QString, bool> newList;
     newList.insert(QStringLiteral("foo"), false);
-    util.newBlackList(newList);
+    util.setNewBlackList(newList);
     QCOMPARE(util.createNewBlackList(), QStringList() << QStringLiteral("foo1") << QStringLiteral("foo2"));
 }
 
@@ -47,14 +47,14 @@ void BlackListBalooEmailUtilTest::shouldAddNewElements()
     newList.insert(QStringLiteral("foo"), false);
     newList.insert(QStringLiteral("foo1"), false);
     newList.insert(QStringLiteral("foo2"), false);
-    util.newBlackList(newList);
+    util.setNewBlackList(newList);
     QCOMPARE(util.createNewBlackList().count(), 0);
 
     newList.clear();
     newList.insert(QStringLiteral("foo"), true);
     newList.insert(QStringLiteral("foo1"), true);
     newList.insert(QStringLiteral("foo2"), true);
-    util.newBlackList(newList);
+    util.setNewBlackList(newList);
     QCOMPARE(util.createNewBlackList().count(), 3);
 }
 

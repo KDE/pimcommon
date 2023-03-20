@@ -17,7 +17,7 @@ void BlackListBalooEmailUtil::initialBlackList(const QStringList &blackList)
     mInitialList = blackList;
 }
 
-void BlackListBalooEmailUtil::newBlackList(const QHash<QString, bool> &list)
+void BlackListBalooEmailUtil::setNewBlackList(const QHash<QString, bool> &list)
 {
     mNewBlackList = list;
 }

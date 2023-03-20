@@ -18,7 +18,7 @@ public:
     BlackListBalooEmailUtil();
     ~BlackListBalooEmailUtil();
     void initialBlackList(const QStringList &blackList);
-    void newBlackList(const QHash<QString, bool> &);
+    void setNewBlackList(const QHash<QString, bool> &);
     Q_REQUIRED_RESULT QStringList createNewBlackList();
 
 private:

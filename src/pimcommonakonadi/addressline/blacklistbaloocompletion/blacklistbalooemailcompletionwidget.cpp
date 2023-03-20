@@ -214,7 +214,7 @@ void BlackListBalooEmailCompletionWidget::slotSaveChanges()
     QStringList blackList = group.readEntry("BalooBackList", QStringList());
     PimCommon::BlackListBalooEmailUtil util;
     util.initialBlackList(blackList);
-    util.newBlackList(result);
+    util.setNewBlackList(result);
     blackList = util.createNewBlackList();
     group.writeEntry("BalooBackList", blackList);
     group.sync();
