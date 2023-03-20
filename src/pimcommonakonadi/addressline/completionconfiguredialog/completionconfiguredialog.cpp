@@ -12,6 +12,7 @@
 #include <KSharedConfig>
 #include <KWindowConfig>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QTabWidget>
 #include <QVBoxLayout>
 #include <QWindow>
@@ -66,9 +67,10 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
     d->mTabWidget->addTab(d->mBlackListBalooWidget, i18n("Blacklist Email Address"));
 #endif
 
-    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &CompletionConfigureDialog::slotSave);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &CompletionConfigureDialog::slotSaveAndClose);
+    connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &CompletionConfigureDialog::slotSave);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
@@ -122,13 +124,18 @@ void CompletionConfigureDialog::storeAddresses(KConfig *config)
     d->mRecentaddressWidget->storeAddresses(config);
 }
 
+void CompletionConfigureDialog::slotSaveAndClose()
+{
+    slotSave();
+    accept();
+}
+
 void CompletionConfigureDialog::slotSave()
 {
 #if !DISABLE_AKONADI_SEARCH
     d->mBlackListBalooWidget->save();
 #endif
     d->mCompletionOrderWidget->save();
-    accept();
 }
 
 void CompletionConfigureDialog::setEmailBlackList(const QStringList &lst)

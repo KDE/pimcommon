@@ -52,6 +52,7 @@ private:
     QLabel *const mMoreResult;
     KListWidgetSearchLine *mSearchInResultLineEdit = nullptr;
     BlackListBalooEmailWarning *const mBlackListWarning;
+    QLineEdit *const mExcludeEmailFromRegularExpressionLineEdit;
     int mLimit = 500;
 };
 }

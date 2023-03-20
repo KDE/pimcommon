@@ -37,6 +37,7 @@ public:
     void storeAddresses(KConfig *config);
 
 private:
+    void slotSaveAndClose();
     void slotSave();
     void readConfig();
     void writeConfig();

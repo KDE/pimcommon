@@ -30,6 +30,7 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
 
     auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+    QCOMPARE(buttonBox->standardButtons(), {QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel});
 
     auto tabWidget = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tabWidget);

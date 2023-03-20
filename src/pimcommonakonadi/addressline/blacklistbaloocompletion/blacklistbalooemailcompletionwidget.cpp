@@ -36,6 +36,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     , mShowAllBlackListedEmails(new QPushButton(i18n("Show Blacklisted Emails"), this))
     , mMoreResult(new QLabel(i18n("<qt><a href=\"more_result\">More result...</a></qt>"), this))
     , mBlackListWarning(new BlackListBalooEmailWarning(this))
+    , mExcludeEmailFromRegularExpressionLineEdit(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
 
@@ -120,6 +121,20 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mExcludeDomainLineEdit->setClearButtonEnabled(true);
     new KPIM::LineEditCatchReturnKey(mExcludeDomainLineEdit, this);
     mExcludeDomainLineEdit->setPlaceholderText(i18n("Separate domain with \'%1\'", QLatin1Char(',')));
+
+    auto excludeEmailRegularExpressionLayout = new QHBoxLayout;
+    excludeEmailRegularExpressionLayout->setContentsMargins({});
+    mainLayout->addLayout(excludeEmailRegularExpressionLayout);
+
+    auto excludeEmailRegularExpressionLabel = new QLabel(i18n("Exclude email with Regular Expression:"), this);
+    excludeEmailRegularExpressionLabel->setObjectName(QStringLiteral("email_regularexpression_label"));
+    excludeEmailRegularExpressionLayout->addWidget(excludeEmailRegularExpressionLabel);
+
+    excludeEmailRegularExpressionLayout->addWidget(mExcludeEmailFromRegularExpressionLineEdit);
+    mExcludeEmailFromRegularExpressionLineEdit->setObjectName(QStringLiteral("exclude_email_lineedit"));
+    mExcludeEmailFromRegularExpressionLineEdit->setClearButtonEnabled(true);
+    new KPIM::LineEditCatchReturnKey(mExcludeEmailFromRegularExpressionLineEdit, this);
+    mExcludeEmailFromRegularExpressionLineEdit->setPlaceholderText(i18n("Separate regular expression with \'%1\'", QLatin1Char(',')));
 
     connect(mEmailList, &QListWidget::itemSelectionChanged, this, &BlackListBalooEmailCompletionWidget::slotSelectionChanged);
     slotSelectionChanged();
@@ -245,12 +260,14 @@ void BlackListBalooEmailCompletionWidget::save()
         QStringList blackList = group.readEntry("BalooBackList", QStringList());
         PimCommon::BlackListBalooEmailUtil util;
         util.initialBlackList(blackList);
-        util.newBlackList(result);
+        util.setNewBlackList(result);
         blackList = util.createNewBlackList();
         group.writeEntry("BalooBackList", blackList);
     }
     if (needToSave) {
         group.writeEntry("ExcludeDomain", newExcludeDomain);
+        mEmailList->setExcludeDomain(newExcludeDomain);
+        mOriginalExcludeDomain = newExcludeDomain;
         group.sync();
     }
     config->reparseConfiguration();
