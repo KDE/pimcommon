@@ -104,7 +104,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     searchLineLayout->addStretch(0);
     mNumberOfEmailsFound->setObjectName(QStringLiteral("numberofemailsfound"));
 
-    searchLineLayout->addWidget(mNumberOfEmailsFound);
+    searchLineLayout->addWidget(mNumberOfEmailsFound, 1);
     searchLineLayout->addWidget(mSearchInResultLineEdit);
 
     auto excludeDomainLayout = new QHBoxLayout;
