@@ -41,6 +41,7 @@ private:
     void slotShowAllBlacklistedEmail();
     void hideMoreResultAndChangeLimit();
     QStringList mOriginalExcludeDomain;
+    QStringList mOriginalExcludeEmailRegexp;
     QLabel *const mNumberOfEmailsFound;
     QLineEdit *const mSearchLineEdit;
     QLineEdit *const mExcludeDomainLineEdit;

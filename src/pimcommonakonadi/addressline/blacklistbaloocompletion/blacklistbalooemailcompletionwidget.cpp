@@ -155,11 +155,9 @@ void BlackListBalooEmailCompletionWidget::load()
     KConfigGroup group(config, "AddressLineEdit");
 
     const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
-#if 0
     mEmailList->setExcludeDomain(lstExcludeEmailsRegularExpressions);
-    mExcludeDomainLineEdit->setText(lstExcludeEmailsRegularExpressions.join(QLatin1Char(',')));
-    mOriginalExcludeDomain = lstExcludeDomains;
-#endif
+    mExcludeEmailFromRegularExpressionLineEdit->setText(lstExcludeEmailsRegularExpressions.join(QLatin1Char(',')));
+    mOriginalExcludeEmailRegexp = lstExcludeEmailsRegularExpressions;
 
     const QStringList lstExcludeDomains = group.readEntry("ExcludeDomain", QStringList());
     mEmailList->setExcludeDomain(lstExcludeDomains);
@@ -170,9 +168,14 @@ void BlackListBalooEmailCompletionWidget::load()
 
 void BlackListBalooEmailCompletionWidget::save()
 {
+    const QString excludeEmailsRegexp = mExcludeEmailFromRegularExpressionLineEdit->text().remove(QLatin1Char(' '));
+    const QStringList newExcludeEmailsRegExp = excludeEmailsRegexp.split(QLatin1Char(','), Qt::SkipEmptyParts);
+    bool needToSave = (mOriginalExcludeEmailRegexp != newExcludeEmailsRegExp);
+
     const QString excludeDomains = mExcludeDomainLineEdit->text().remove(QLatin1Char(' '));
     const QStringList newExcludeDomain = excludeDomains.split(QLatin1Char(','), Qt::SkipEmptyParts);
-    bool needToSave = (mOriginalExcludeDomain != newExcludeDomain);
+    needToSave |= (mOriginalExcludeDomain != newExcludeDomain);
+
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     KConfigGroup group(config, "AddressLineEdit");
     const QHash<QString, bool> result = mEmailList->blackListItemChanged();
@@ -186,6 +189,10 @@ void BlackListBalooEmailCompletionWidget::save()
         group.writeEntry("BalooBackList", blackList);
     }
     if (needToSave) {
+        group.writeEntry("ExcludeEmailsRegexp", newExcludeEmailsRegExp);
+        // TODO mEmailList->setExcludeDomain(newExcludeDomain);
+        mOriginalExcludeEmailRegexp = newExcludeEmailsRegExp;
+
         group.writeEntry("ExcludeDomain", newExcludeDomain);
         mEmailList->setExcludeDomain(newExcludeDomain);
         mOriginalExcludeDomain = newExcludeDomain;
