@@ -86,10 +86,10 @@ QString PimCommon::RenameFileDialog::RenameFileDialogPrivate::suggestName(const 
         exists = QFileInfo::exists(baseURL.toLocalFile() + QLatin1Char('/') + suggestedName);
     }
 
-    if (!exists) {
-        return suggestedName;
-    } else { // already exists -> recurse
+    if (exists) { // already exists -> recurse
         return suggestName(baseURL, suggestedName);
+    } else {
+        return suggestedName;
     }
 }
 
