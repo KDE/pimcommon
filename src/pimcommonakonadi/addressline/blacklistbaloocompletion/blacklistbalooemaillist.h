@@ -41,6 +41,8 @@ public:
     void setExcludeDomains(const QStringList &domain);
     Q_REQUIRED_RESULT int setEmailFound(const QStringList &);
 
+    void setExcludeEmailsRegularExpressions(const QStringList &newExcludeEmailsRegularExpressions);
+
 protected:
     void paintEvent(QPaintEvent *event) override;
 
@@ -48,6 +50,7 @@ protected:
 
 private:
     void generalPaletteChanged();
+    QStringList mExcludeEmailsRegularExpressions;
     QStringList mEmailBlackList;
     QStringList mExcludeDomains;
     QColor mTextColor;

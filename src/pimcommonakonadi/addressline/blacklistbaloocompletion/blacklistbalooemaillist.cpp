@@ -103,6 +103,11 @@ void BlackListBalooEmailList::generalPaletteChanged()
     mTextColor = color;
 }
 
+void BlackListBalooEmailList::setExcludeEmailsRegularExpressions(const QStringList &newExcludeEmailsRegularExpressions)
+{
+    mExcludeEmailsRegularExpressions = newExcludeEmailsRegularExpressions;
+}
+
 void BlackListBalooEmailList::paintEvent(QPaintEvent *event)
 {
     if (mFirstResult && (!model() || model()->rowCount() == 0)) {
