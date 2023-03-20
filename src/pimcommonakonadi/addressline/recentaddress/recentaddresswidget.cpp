@@ -92,7 +92,7 @@ void RecentAddressWidget::slotCustomContextMenuRequested(const QPoint &pos)
     if (item) {
         QMenu menu(this);
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),
-                       i18np("Remove Key", "Remove Keys", selectedItems.count()),
+                       i18np("Remove Email", "Remove Emails", selectedItems.count()),
                        this,
                        &RecentAddressWidget::slotRemoveItem);
         menu.exec(QCursor::pos());
