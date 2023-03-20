@@ -28,7 +28,7 @@ public:
     ~PurposeMenuWidget() override;
 
     virtual QByteArray text() = 0;
-    QMenu *menu() const;
+    Q_REQUIRED_RESULT QMenu *menu() const;
 
 private:
     void slotInitializeShareMenu();

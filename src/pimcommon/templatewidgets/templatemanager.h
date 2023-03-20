@@ -39,7 +39,7 @@ private:
     void slotDirectoryChanged();
     void loadTemplates(bool init = false);
     void initTemplatesDirectories(const QString &templatesRelativePath);
-    TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
+    Q_REQUIRED_RESULT TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
 
     std::unique_ptr<TemplateManagerPrivate> const d;
 };
