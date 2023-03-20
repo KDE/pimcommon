@@ -6,7 +6,11 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
     )
 
-
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
+    SOVERSION 5
+    )
 
 
 macro(add_resource_iface _kcfgFile _ifaceName _className)
@@ -403,11 +407,7 @@ configure_package_config_file(
     )
 
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
-    SOVERSION 5
-    )
+
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"

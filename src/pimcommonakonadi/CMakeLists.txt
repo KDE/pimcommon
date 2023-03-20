@@ -2,6 +2,11 @@
 # SPDX-FileCopyrightText: none
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
+    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
+    SOVERSION 5
+    )
 add_library(KPim${KF_MAJOR_VERSION}PimCommonAkonadi )
 add_library(KPim${KF_MAJOR_VERSION}::PimCommonAkonadi ALIAS KPim${KF_MAJOR_VERSION}PimCommonAkonadi)
 ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
@@ -409,11 +414,7 @@ configure_package_config_file(
     )
 
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
-    VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
-    SOVERSION 5
-    )
+
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
