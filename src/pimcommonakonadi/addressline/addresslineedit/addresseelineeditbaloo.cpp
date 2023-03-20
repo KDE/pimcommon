@@ -50,7 +50,7 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
     mBalooBlackList = group.readEntry("BalooBackList", QStringList());
     mDomainExcludeList = group.readEntry("ExcludeDomain", QStringList());
     mBalooCompletionEmail->setBlackList(mBalooBlackList);
-    mBalooCompletionEmail->setExcludeDomain(mDomainExcludeList);
+    mBalooCompletionEmail->setExcludeDomains(mDomainExcludeList);
 }
 
 QStringList AddresseeLineEditBaloo::cleanupEmailList(const QStringList &inputList)

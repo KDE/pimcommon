@@ -18,9 +18,9 @@ void BalooCompletionEmail::setEmailList(const QStringList &lst)
     mListEmail = lst;
 }
 
-void BalooCompletionEmail::setExcludeDomain(const QStringList &lst)
+void BalooCompletionEmail::setExcludeDomains(const QStringList &lst)
 {
-    mExcludeDomain = lst;
+    mExcludeDomains = lst;
 }
 
 void BalooCompletionEmail::setBlackList(const QStringList &lst)
@@ -42,7 +42,7 @@ QStringList BalooCompletionEmail::cleanupEmailList()
                 address = email;
             }
             bool excludeMail = false;
-            for (const QString &excludeDomain : std::as_const(mExcludeDomain)) {
+            for (const QString &excludeDomain : std::as_const(mExcludeDomains)) {
                 if (!excludeDomain.isEmpty()) {
                     if (address.endsWith(excludeDomain)) {
                         excludeMail = true;

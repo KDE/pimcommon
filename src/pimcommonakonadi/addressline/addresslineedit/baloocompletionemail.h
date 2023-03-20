@@ -15,7 +15,7 @@ class PIMCOMMONAKONADI_TESTS_EXPORT BalooCompletionEmail
 public:
     BalooCompletionEmail();
     void setEmailList(const QStringList &lst);
-    void setExcludeDomain(const QStringList &lst);
+    void setExcludeDomains(const QStringList &lst);
 
     void setBlackList(const QStringList &lst);
 
@@ -24,7 +24,7 @@ public:
 private:
     Q_REQUIRED_RESULT QString stripEmail(const QString &email, QString &address);
     QStringList mListEmail;
-    QStringList mExcludeDomain;
+    QStringList mExcludeDomains;
     QStringList mBlackList;
 };
 }

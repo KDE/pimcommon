@@ -96,7 +96,7 @@ void BalooCompletionEmailTest::shouldExcludeDomain()
     emailList << QStringLiteral("foo5@kde.org");
     emailList << QStringLiteral("foo6@kde.org");
     completion.setEmailList(emailList);
-    completion.setExcludeDomain(QStringList() << QStringLiteral("kde.org"));
+    completion.setExcludeDomains(QStringList() << QStringLiteral("kde.org"));
     QVERIFY(completion.cleanupEmailList().isEmpty());
 
     const QString newAddress = QStringLiteral("foo6@linux.org");
@@ -104,7 +104,7 @@ void BalooCompletionEmailTest::shouldExcludeDomain()
     completion.setEmailList(emailList);
     QCOMPARE(completion.cleanupEmailList(), (QStringList() << newAddress));
 
-    completion.setExcludeDomain(QStringList() << QStringLiteral("kde.org") << QStringLiteral("linux.org"));
+    completion.setExcludeDomains(QStringList() << QStringLiteral("kde.org") << QStringLiteral("linux.org"));
     QVERIFY(completion.cleanupEmailList().isEmpty());
 }
 
@@ -120,7 +120,7 @@ void BalooCompletionEmailTest::shouldReturnEmailListWhenDomainListIsNotNull()
     emailList << QStringLiteral("foo6@kde.org");
     emailList.sort();
     completion.setEmailList(emailList);
-    completion.setExcludeDomain(QStringList() << QString());
+    completion.setExcludeDomains(QStringList() << QString());
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
