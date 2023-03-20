@@ -10,7 +10,6 @@
 #include <QPainter>
 #include <QTextDocument>
 
-#include "pimcommon_debug.h"
 using namespace PimCommon;
 
 LogItemDelegate::LogItemDelegate(QObject *parent)
