@@ -20,6 +20,8 @@ void BlackListBalooEmailListTest::shouldHaveDefaultValue()
 {
     PimCommon::BlackListBalooEmailList blackList;
     QVERIFY(blackList.count() == 0);
+    QVERIFY(blackList.isSortingEnabled());
+    QCOMPARE(blackList.selectionMode(), QAbstractItemView::ExtendedSelection);
 }
 
 void BlackListBalooEmailListTest::shouldFillListEmail()
