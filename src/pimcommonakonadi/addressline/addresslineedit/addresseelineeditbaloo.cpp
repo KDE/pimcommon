@@ -47,14 +47,18 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     config->reparseConfiguration();
     KConfigGroup group(config, "AddressLineEdit");
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
     mBalooBlackList = group.readEntry("BalooBackList", QStringList());
     mDomainExcludeList = group.readEntry("ExcludeDomain", QStringList());
-    mBalooCompletionEmail->setBlackList(mBalooBlackList);
-    mBalooCompletionEmail->setExcludeDomains(mDomainExcludeList);
+    info.mBlackList = mBalooBlackList;
+    info.mExcludeDomains = mDomainExcludeList;
+    mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
 }
 
 QStringList AddresseeLineEditBaloo::cleanupEmailList(const QStringList &inputList)
 {
-    mBalooCompletionEmail->setEmailList(inputList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info = mBalooCompletionEmail->balooCompletionEmailInfo();
+    info.mListEmail = inputList;
+    mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
     return mBalooCompletionEmail->cleanupEmailList();
 }

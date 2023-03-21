@@ -31,7 +31,9 @@ void BalooCompletionEmailTest::shouldReturnSameListWhenNotExclude()
     emailList << QStringLiteral("foo4");
     emailList << QStringLiteral("foo5");
     emailList << QStringLiteral("foo6");
-    completion.setEmailList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
@@ -45,14 +47,18 @@ void BalooCompletionEmailTest::shouldReturnSameListIfBlackListDoesntInterceptEma
     emailList << QStringLiteral("foo4");
     emailList << QStringLiteral("foo5");
     emailList << QStringLiteral("foo6");
-    completion.setEmailList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
 
     QStringList blackList;
     blackList << QStringLiteral("bla");
     blackList << QStringLiteral("bla2");
     blackList << QStringLiteral("bla3");
     blackList << QStringLiteral("bla4");
-    completion.setBlackList(blackList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info2;
+    info2.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info2);
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
@@ -66,7 +72,9 @@ void BalooCompletionEmailTest::shouldReturnUniqueEmail()
     emailList << QStringLiteral("foo");
     emailList << QStringLiteral("foo1");
     emailList << QStringLiteral("foo2");
-    completion.setEmailList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList(), (QStringList() << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo2")));
 }
 
@@ -80,8 +88,10 @@ void BalooCompletionEmailTest::shouldReturnEmptyListWhenAllBlackListed()
     emailList << QStringLiteral("foo4");
     emailList << QStringLiteral("foo5");
     emailList << QStringLiteral("foo6");
-    completion.setEmailList(emailList);
-    completion.setBlackList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    info.mBlackList = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QVERIFY(completion.cleanupEmailList().isEmpty());
 }
 
@@ -95,16 +105,20 @@ void BalooCompletionEmailTest::shouldExcludeDomain()
     emailList << QStringLiteral("foo4@kde.org");
     emailList << QStringLiteral("foo5@kde.org");
     emailList << QStringLiteral("foo6@kde.org");
-    completion.setEmailList(emailList);
-    completion.setExcludeDomains(QStringList() << QStringLiteral("kde.org"));
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    info.mExcludeDomains = QStringList() << QStringLiteral("kde.org");
+    completion.setBalooCompletionEmailInfo(info);
     QVERIFY(completion.cleanupEmailList().isEmpty());
 
     const QString newAddress = QStringLiteral("foo6@linux.org");
     emailList << newAddress;
-    completion.setEmailList(emailList);
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList(), (QStringList() << newAddress));
 
-    completion.setExcludeDomains(QStringList() << QStringLiteral("kde.org") << QStringLiteral("linux.org"));
+    info.mExcludeDomains = QStringList() << QStringLiteral("kde.org") << QStringLiteral("linux.org");
+    completion.setBalooCompletionEmailInfo(info);
     QVERIFY(completion.cleanupEmailList().isEmpty());
 }
 
@@ -119,8 +133,10 @@ void BalooCompletionEmailTest::shouldReturnEmailListWhenDomainListIsNotNull()
     emailList << QStringLiteral("foo5@kde.org");
     emailList << QStringLiteral("foo6@kde.org");
     emailList.sort();
-    completion.setEmailList(emailList);
-    completion.setExcludeDomains(QStringList() << QString());
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    info.mExcludeDomains = QStringList() << QString();
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
@@ -139,7 +155,9 @@ void BalooCompletionEmailTest::shouldDontDuplicateEmailWhenUseCase()
     caseEmailList << QStringLiteral("Foo");
     caseEmailList << QStringLiteral("fOo2");
     caseEmailList << QStringLiteral("FOo3");
-    completion.setEmailList((QStringList() << emailList << caseEmailList));
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
@@ -150,7 +168,10 @@ void BalooCompletionEmailTest::shouldExcludeDuplicateEntryWithDisplayName()
     emailList << QStringLiteral("John Doe <doe@example.com>");
     emailList << QStringLiteral("\"John Doe\" <doe@example.com>");
     emailList << QStringLiteral("\"\'John Doe\'\" <doe@example.com>");
-    completion.setEmailList(emailList);
+
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList().count(), 1);
 }
 
@@ -165,7 +186,9 @@ void BalooCompletionEmailTest::shouldExcludeDuplicateEntryWithDisplayNameAddAddr
     emailList << QStringLiteral("John Doe <Doe@example.com>");
     emailList << QStringLiteral("John Doe <DOE@example.com>");
     emailList << QStringLiteral("John Doe <dOE@example.com>");
-    completion.setEmailList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList().count(), 1);
 }
 
@@ -180,7 +203,9 @@ void BalooCompletionEmailTest::shouldExcludeDuplicateEntryWithDifferentDisplayNa
     emailList << QStringLiteral("Doe John <Doe@example.com>");
     emailList << QStringLiteral("John <DOE@example.com>");
     emailList << QStringLiteral("Doe <dOE@example.com>");
-    completion.setEmailList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList().count(), 1);
 }
 
@@ -192,7 +217,9 @@ void BalooCompletionEmailTest::shouldExcludeEmptyNameWithDisplayNameForSameAddre
     emailList << QStringLiteral("Doe John <Doe@example.com>");
     emailList << QStringLiteral("John <DOE@example.com>");
     emailList << QStringLiteral("Doe <dOE@example.com>");
-    completion.setEmailList(emailList);
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
     QCOMPARE(completion.cleanupEmailList().count(), 1);
 }
 

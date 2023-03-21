@@ -13,36 +13,21 @@ using namespace PimCommon;
 
 BalooCompletionEmail::BalooCompletionEmail() = default;
 
-void BalooCompletionEmail::setEmailList(const QStringList &lst)
-{
-    mListEmail = lst;
-}
-
-void BalooCompletionEmail::setExcludeDomains(const QStringList &lst)
-{
-    mExcludeDomains = lst;
-}
-
-void BalooCompletionEmail::setBlackList(const QStringList &lst)
-{
-    mBlackList = lst;
-}
-
 QStringList BalooCompletionEmail::cleanupEmailList()
 {
-    if (mListEmail.isEmpty()) {
-        return mListEmail;
+    if (mBalooCompletionEmailInfo.mListEmail.isEmpty()) {
+        return mBalooCompletionEmailInfo.mListEmail;
     }
     QMap<QString, QString> hashEmail;
-    for (QString email : std::as_const(mListEmail)) {
-        if (!mBlackList.contains(email)) {
+    for (QString email : std::as_const(mBalooCompletionEmailInfo.mListEmail)) {
+        if (!mBalooCompletionEmailInfo.mBlackList.contains(email)) {
             QString address;
             email = stripEmail(email, address);
             if (address.isEmpty()) {
                 address = email;
             }
             bool excludeMail = false;
-            for (const QString &excludeDomain : std::as_const(mExcludeDomains)) {
+            for (const QString &excludeDomain : std::as_const(mBalooCompletionEmailInfo.mExcludeDomains)) {
                 if (!excludeDomain.isEmpty()) {
                     if (address.endsWith(excludeDomain)) {
                         excludeMail = true;
@@ -89,4 +74,14 @@ QString BalooCompletionEmail::stripEmail(const QString &email, QString &address)
     } else {
         return email;
     }
+}
+
+BalooCompletionEmail::BalooCompletionEmailInfo BalooCompletionEmail::balooCompletionEmailInfo() const
+{
+    return mBalooCompletionEmailInfo;
+}
+
+void BalooCompletionEmail::setBalooCompletionEmailInfo(const BalooCompletionEmailInfo &newBalooCompletionEmailInfo)
+{
+    mBalooCompletionEmailInfo = newBalooCompletionEmailInfo;
 }

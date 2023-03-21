@@ -14,17 +14,19 @@ class PIMCOMMONAKONADI_TESTS_EXPORT BalooCompletionEmail
 {
 public:
     BalooCompletionEmail();
-    void setEmailList(const QStringList &lst);
-    void setExcludeDomains(const QStringList &lst);
-
-    void setBlackList(const QStringList &lst);
+    struct BalooCompletionEmailInfo {
+        QStringList mListEmail;
+        QStringList mExcludeDomains;
+        QStringList mBlackList;
+    };
 
     Q_REQUIRED_RESULT QStringList cleanupEmailList();
 
+    Q_REQUIRED_RESULT BalooCompletionEmailInfo balooCompletionEmailInfo() const;
+    void setBalooCompletionEmailInfo(const BalooCompletionEmailInfo &newBalooCompletionEmailInfo);
+
 private:
     Q_REQUIRED_RESULT QString stripEmail(const QString &email, QString &address);
-    QStringList mListEmail;
-    QStringList mExcludeDomains;
-    QStringList mBlackList;
+    BalooCompletionEmailInfo mBalooCompletionEmailInfo;
 };
 }
