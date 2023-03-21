@@ -21,4 +21,5 @@ void AddresseeLineEditBalooTest::shouldHaveDefaultValues()
     PimCommon::AddresseeLineEditBaloo b;
     QVERIFY(b.balooBlackList().isEmpty());
     QVERIFY(b.domainExcludeList().isEmpty());
+    QCOMPARE(b.balooCompletionSource(), 0);
 }
