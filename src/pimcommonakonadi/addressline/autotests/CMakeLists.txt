@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-macro(add_pimcommonakonadi_addressline_unittest _name)
-    ecm_add_test(${ARGN}
+macro(add_pimcommonakonadi_addressline_unittest  _source)
+    get_filename_component(_name ${_source} NAME_WE)
+    ecm_add_test(${_source} ${_name}.h
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-addressline-"
         LINK_LIBRARIES Qt::Test
@@ -16,22 +17,9 @@ macro(add_pimcommonakonadi_addressline_unittest _name)
     )
 endmacro()
 
-add_pimcommonakonadi_addressline_unittest(recentaddresswidgettest
-    recentaddresswidgettest.cpp
-)
-add_pimcommonakonadi_addressline_unittest(addresseelineeditutiltest
-    addresseelineeditutiltest.cpp
-)
-
-add_pimcommonakonadi_addressline_unittest(baloocompletionemailtest
-    baloocompletionemailtest.cpp
-)
-add_pimcommonakonadi_addressline_unittest(completionconfiguredialogtest
-    completionconfiguredialogtest.cpp
-)
-add_pimcommonakonadi_addressline_unittest(completionorderwidgettest
-    completionorderwidgettest.cpp
-)
-add_pimcommonakonadi_addressline_unittest(addresseelineeditbalootest
-    addresseelineeditbalootest.cpp
-)
+add_pimcommonakonadi_addressline_unittest(recentaddresswidgettest.cpp)
+add_pimcommonakonadi_addressline_unittest(addresseelineeditutiltest.cpp)
+add_pimcommonakonadi_addressline_unittest(baloocompletionemailtest.cpp)
+add_pimcommonakonadi_addressline_unittest(completionconfiguredialogtest.cpp)
+add_pimcommonakonadi_addressline_unittest(completionorderwidgettest.cpp)
+add_pimcommonakonadi_addressline_unittest(addresseelineeditbalootest.cpp)
