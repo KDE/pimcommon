@@ -6,7 +6,7 @@
 */
 
 #include "recentaddresswidgettest.h"
-#include "../recentaddress/recentaddresswidget.h"
+#include "addressline/recentaddress/recentaddresswidget.h"
 #include <QLineEdit>
 #include <QListWidget>
 #include <QTest>

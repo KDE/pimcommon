@@ -6,7 +6,7 @@
 */
 
 #include "completionorderwidgettest.h"
-#include "../completionorder/completionorderwidget.h"
+#include "addressline/completionorder/completionorderwidget.h"
 #include <QPushButton>
 #include <QTest>
 #include <QTreeWidget>

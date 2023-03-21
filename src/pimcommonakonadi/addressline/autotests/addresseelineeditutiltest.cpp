@@ -5,7 +5,7 @@
 */
 
 #include "addresseelineeditutiltest.h"
-#include "../addresslineedit/addresseelineeditutil.h"
+#include "addressline/addresslineedit/addresseelineeditutil.h"
 #include <QTest>
 
 AddresseeLineEditUtilTest::AddresseeLineEditUtilTest(QObject *parent)

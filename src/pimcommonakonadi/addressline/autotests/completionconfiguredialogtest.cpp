@@ -6,7 +6,7 @@
 */
 
 #include "completionconfiguredialogtest.h"
-#include "../completionconfiguredialog/completionconfiguredialog.h"
+#include "addressline/completionconfiguredialog/completionconfiguredialog.h"
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTabWidget>
