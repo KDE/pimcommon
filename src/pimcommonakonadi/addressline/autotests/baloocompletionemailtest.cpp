@@ -43,7 +43,7 @@ void BalooCompletionEmailTest::shouldReturnSameListWhenNotExclude()
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
-void BalooCompletionEmailTest::shouldReturnInterceptEmail()
+void BalooCompletionEmailTest::shouldExcludeEmails()
 {
     {
         PimCommon::BalooCompletionEmail completion;

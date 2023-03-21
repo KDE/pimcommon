@@ -30,5 +30,5 @@ private Q_SLOTS:
     void shouldExcludeDuplicateEntryWithDifferentDisplayNameAddAddressWithDifferentCase();
     void shouldExcludeEmptyNameWithDisplayNameForSameAddress();
     void shouldReturnSameListIfBlackListInterceptEmail();
-    void shouldReturnInterceptEmail();
+    void shouldExcludeEmails();
 };
