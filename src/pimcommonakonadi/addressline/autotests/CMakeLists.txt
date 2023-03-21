@@ -32,3 +32,6 @@ add_pimcommonakonadi_addressline_unittest(completionconfiguredialogtest
 add_pimcommonakonadi_addressline_unittest(completionorderwidgettest
     completionorderwidgettest.cpp
 )
+add_pimcommonakonadi_addressline_unittest(addresseelineeditbalootest
+    addresseelineeditbalootest.cpp
+)
