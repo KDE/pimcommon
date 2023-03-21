@@ -155,7 +155,7 @@ void BlackListBalooEmailCompletionWidget::load()
     KConfigGroup group(config, "AddressLineEdit");
 
     const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
-    mEmailList->setExcludeDomains(lstExcludeEmailsRegularExpressions);
+    mEmailList->setExcludeEmailsRegularExpressions(lstExcludeEmailsRegularExpressions);
     mExcludeEmailFromRegularExpressionLineEdit->setText(lstExcludeEmailsRegularExpressions.join(QLatin1Char(',')));
     mOriginalExcludeEmailRegexp = lstExcludeEmailsRegularExpressions;
 
