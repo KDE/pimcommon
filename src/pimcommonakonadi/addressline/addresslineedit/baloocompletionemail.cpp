@@ -8,6 +8,7 @@
 #include "baloocompletionemail.h"
 #include <KEmailAddress>
 #include <QMap>
+#include <QRegularExpression>
 
 using namespace PimCommon;
 
@@ -35,6 +36,18 @@ QStringList BalooCompletionEmail::cleanupEmailList()
                     }
                 }
             }
+            if (!excludeMail) {
+                // Make it static
+                for (const QString &excludeEmailRegularExpression : std::as_const(mBalooCompletionEmailInfo.mExcludeEmailsRegularExpressions)) {
+                    if (!excludeEmailRegularExpression.isEmpty()) {
+                        if (address.contains(QRegularExpression(excludeEmailRegularExpression))) {
+                            excludeMail = true;
+                            continue;
+                        }
+                    }
+                }
+            }
+
             const QString addressLower = address.toLower();
             if (!excludeMail && !hashEmail.contains(addressLower)) {
                 hashEmail.insert(addressLower, email);
