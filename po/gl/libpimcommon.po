@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 00:48+0000\n"
+"POT-Creation-Date: 2023-03-21 03:07+0000\n"
 "PO-Revision-Date: 2020-01-05 19:11+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -586,23 +586,23 @@ msgstr ""
 msgid "Search in result..."
 msgstr "Buscar…"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:113
 #, kde-format
 msgid "Exclude domain names:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:122
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:197
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No email found."
 msgstr "Non se atopou ningún gravatar."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:199
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"

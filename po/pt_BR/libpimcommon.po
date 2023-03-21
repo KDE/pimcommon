@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 00:48+0000\n"
+"POT-Creation-Date: 2023-03-21 03:07+0000\n"
 "PO-Revision-Date: 2022-06-22 16:13-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -574,22 +574,22 @@ msgstr "<qt><a href=\"more_result\">Mais resultados...</a></qt>"
 msgid "Search in result..."
 msgstr "Procurar no resultado..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:113
 #, kde-format
 msgid "Exclude domain names:"
 msgstr "Excluir nomes de domínio:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:122
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr "Domínio separado com '%1'"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:197
 #, kde-format
 msgid "No email found."
 msgstr "Nenhum e-mail encontrado."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:199
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
