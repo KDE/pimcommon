@@ -18,7 +18,13 @@ BalooCompletionEmailTest::~BalooCompletionEmailTest() = default;
 void BalooCompletionEmailTest::returnEmptyListWhenEmailListIsEmpty()
 {
     PimCommon::BalooCompletionEmail completion;
+
     QVERIFY(completion.cleanupEmailList().isEmpty());
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    QVERIFY(info.mListEmail.isEmpty());
+    QVERIFY(info.mBlackList.isEmpty());
+    QVERIFY(info.mExcludeEmailsRegularExpressions.isEmpty());
+    QVERIFY(info.mListEmail.isEmpty());
 }
 
 void BalooCompletionEmailTest::shouldReturnSameListWhenNotExclude()
