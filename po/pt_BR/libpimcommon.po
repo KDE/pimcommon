@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:48+0000\n"
+"POT-Creation-Date: 2023-03-21 00:49+0000\n"
 "PO-Revision-Date: 2022-06-22 16:13-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -146,8 +146,8 @@ msgstr "Duplicar"
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
 msgid "Remove"
 msgstr "Remover"
@@ -533,70 +533,81 @@ msgstr "Contatos encontrados nos seus dados"
 msgid "LDAP server: %1"
 msgstr "Servidor LDAP: %1"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
-#, kde-format
-msgid "Search email:"
-msgstr "Pesquisar e-mail:"
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, kde-format
-msgid "Research is done from 3 characters"
-msgstr "A pesquisa é feita a partir de 3 caracteres"
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:48
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:33
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
 #, kde-format
 msgid "Search"
 msgstr "Pesquisar"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
-#, kde-format
-msgid "Show Blacklisted Emails"
-msgstr "Mostrar e-mails da lista de proibições"
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:75
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
 #, kde-format
 msgid "&Select"
 msgstr "&Selecionar"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:80
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, kde-format
 msgid "&Unselect"
 msgstr "&Desmarcar"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr "Mostrar e-mails da lista de proibições"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Mais resultados...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:46
+#, kde-format
+msgid "Search email:"
+msgstr "Pesquisar e-mail:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:50
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr "A pesquisa é feita a partir de 3 caracteres"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:102
 #, kde-format
 msgid "Search in result..."
 msgstr "Procurar no resultado..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:115
 #, kde-format
 msgid "Exclude domain names:"
 msgstr "Excluir nomes de domínio:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:123
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr "Domínio separado com '%1'"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:129
+#, kde-format
+msgid "Exclude email with Regular Expression:"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
+#, fuzzy, kde-format
+#| msgid "Separate domain with '%1'"
+msgid "Separate regular expression with '%1'"
+msgstr "Domínio separado com '%1'"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
 #, kde-format
 msgid "No email found."
 msgstr "Nenhum e-mail encontrado."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:272
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
 msgstr[0] "1 e-mail encontrado"
 msgstr[1] "%1 e-mails encontrados"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:120
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
 #, kde-format
 msgid "No result found"
 msgstr "Nenhum resultado encontrado"
@@ -612,23 +623,23 @@ msgstr "A lista foi alterada. Deseja salvá-la antes de fazer outra pesquisa?"
 msgid "Save"
 msgstr "Salvar"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Configurar autocompletar"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
 #, kde-format
 msgid "Completion Order"
 msgstr "Ordem de preenchimento"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
 #, kde-format
 msgid "Recent Address"
 msgstr "Endereço recente"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr "Proibir endereço de e-mail"
@@ -654,12 +665,20 @@ msgstr "Mover para cima"
 msgid "Move Down"
 msgstr "Mover para baixo"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
 #, kde-format
 msgid "Add"
 msgstr "Adicionar"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:111
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgid "Remove Email"
+msgid_plural "Remove Emails"
+msgstr[0] "Remover entrada"
+msgstr[1] "Remover entrada"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"

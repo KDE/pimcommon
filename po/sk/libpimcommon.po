@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:48+0000\n"
+"POT-Creation-Date: 2023-03-21 00:49+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -143,8 +143,8 @@ msgstr "Duplikovať"
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:57
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:112
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"
@@ -532,68 +532,78 @@ msgstr ""
 msgid "LDAP server: %1"
 msgstr "LDAP server: %1"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
-#, fuzzy, kde-format
-#| msgid "&Search"
-msgid "Search email:"
-msgstr "&Hľadať"
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, kde-format
-msgid "Research is done from 3 characters"
-msgstr ""
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:48
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:33
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgid "Search"
 msgstr "Hľadať"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
-#, kde-format
-msgid "Show Blacklisted Emails"
-msgstr ""
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:75
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "&Select"
 msgstr "&Vybrať"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:80
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, kde-format
 msgid "&Unselect"
 msgstr "Odznačiť"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:85
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:46
+#, fuzzy, kde-format
+#| msgid "&Search"
+msgid "Search email:"
+msgstr "&Hľadať"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:50
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:102
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search in result..."
 msgstr "Hľadať..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:112
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:115
 #, kde-format
 msgid "Exclude domain names:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:121
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:123
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:196
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:129
+#, kde-format
+msgid "Exclude email with Regular Expression:"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
+#, kde-format
+msgid "Separate regular expression with '%1'"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No email found."
 msgstr "Nenašiel sa gravatar."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:198
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:272
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -601,7 +611,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:120
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No result found"
@@ -620,24 +630,24 @@ msgstr ""
 msgid "Save"
 msgstr "Uložiť"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:48
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Nastaviť dopĺňanie"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:57
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
 #, kde-format
 msgid "Completion Order"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:61
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
 #, fuzzy, kde-format
 #| msgid "Open Address Book"
 msgid "Recent Address"
 msgstr "Otvoriť adresár"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:66
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr ""
@@ -663,12 +673,21 @@ msgstr "Posunúť hore"
 msgid "Move Down"
 msgstr "Posunúť dole"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:48
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
 #, kde-format
 msgid "Add"
 msgstr "Pridať"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:111
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgid "Remove Email"
+msgid_plural "Remove Emails"
+msgstr[0] "Odstrániť položku"
+msgstr[1] "Odstrániť položku"
+msgstr[2] "Odstrániť položku"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
