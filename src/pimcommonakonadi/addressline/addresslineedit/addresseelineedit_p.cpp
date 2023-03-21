@@ -32,14 +32,17 @@
 
 #include <Akonadi/ContactSearchJob>
 #include <addressline/addresslineedit/baloocompletionemail.h>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 using namespace PimCommon;
 AddresseeLineEditPrivate::AddresseeLineEditPrivate(PimCommon::AddresseeLineEdit *qq, bool enableCompletion)
     : QObject(qq)
     , q(qq)
+    , mDelayedQueryTimer(new QTimer(this))
     , mUseCompletion(enableCompletion)
 {
-    mDelayedQueryTimer = new QTimer(this);
     mDelayedQueryTimer->setSingleShot(true);
     connect(mDelayedQueryTimer, &QTimer::timeout, this, &AddresseeLineEditPrivate::slotTriggerDelayedQueries);
 }
@@ -375,7 +378,7 @@ void AddresseeLineEditPrivate::slotTriggerDelayedQueries()
 void AddresseeLineEditPrivate::startSearches()
 {
     if (!mDelayedQueryTimer->isActive()) {
-        mDelayedQueryTimer->start(50);
+        mDelayedQueryTimer->start(50ms);
     }
 }
 

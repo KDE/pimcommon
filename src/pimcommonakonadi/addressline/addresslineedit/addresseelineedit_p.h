@@ -124,7 +124,7 @@ private Q_SLOTS:
 private:
     AddresseeLineEdit *const q;
     QToolButton *mToolButton = nullptr;
-    QTimer *mDelayedQueryTimer = nullptr;
+    QTimer *const mDelayedQueryTimer;
     QString mPreviousAddresses;
     QString mSearchString;
     QList<KJob *> mMightBeGroupJobs;
