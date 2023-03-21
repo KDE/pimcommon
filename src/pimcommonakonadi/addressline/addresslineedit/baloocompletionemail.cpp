@@ -16,7 +16,7 @@ BalooCompletionEmail::BalooCompletionEmail() = default;
 QStringList BalooCompletionEmail::cleanupEmailList()
 {
     if (mBalooCompletionEmailInfo.mListEmail.isEmpty()) {
-        return mBalooCompletionEmailInfo.mListEmail;
+        return {};
     }
     QMap<QString, QString> hashEmail;
     for (QString email : std::as_const(mBalooCompletionEmailInfo.mListEmail)) {
