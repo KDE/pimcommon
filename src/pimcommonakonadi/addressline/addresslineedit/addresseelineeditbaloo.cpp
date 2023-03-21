@@ -50,6 +50,9 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
     PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     const QStringList domainExcludeList = group.readEntry("ExcludeDomain", QStringList());
+    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
+
+    info.mExcludeEmailsRegularExpressions = lstExcludeEmailsRegularExpressions;
     info.mBlackList = balooBlackList;
     info.mExcludeDomains = domainExcludeList;
     mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
