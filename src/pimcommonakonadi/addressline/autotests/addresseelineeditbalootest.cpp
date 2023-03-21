@@ -6,12 +6,14 @@
 
 #include "addresseelineeditbalootest.h"
 #include "addressline/addresslineedit/addresseelineeditbaloo.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(AddresseeLineEditBalooTest)
 
 AddresseeLineEditBalooTest::AddresseeLineEditBalooTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void AddresseeLineEditBalooTest::shouldHaveDefaultValues()
