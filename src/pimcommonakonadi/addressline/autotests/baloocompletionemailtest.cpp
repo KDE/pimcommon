@@ -139,6 +139,34 @@ void BalooCompletionEmailTest::shouldExcludeEmails()
         returnList << QStringLiteral("foo4@blo.com");
         QCOMPARE(completion.cleanupEmailList(), returnList);
     }
+    {
+        PimCommon::BalooCompletionEmail completion;
+        QStringList emailList;
+        emailList << QStringLiteral("foo@kde.org");
+        emailList << QStringLiteral("foo2@kde.org");
+        emailList << QStringLiteral("foo3@bli.com");
+        emailList << QStringLiteral("foo4@blo.com");
+        emailList << QStringLiteral("foo5@bli.com");
+        emailList << QStringLiteral("foo6@ff.com");
+        emailList << QStringLiteral("notifications@github.com");
+        emailList << QStringLiteral("incoming+000554@gitlab.com");
+        emailList << QStringLiteral("blabla@kde.org");
+        PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+        info.mListEmail = emailList;
+        QStringList excludeEmailsRegularExpressionsList;
+        excludeEmailsRegularExpressionsList << QStringLiteral("foo.*@kde\\.org");
+        excludeEmailsRegularExpressionsList << QStringLiteral("foo6@ff\\.com");
+        excludeEmailsRegularExpressionsList << QStringLiteral("notifications@github\\.com");
+        excludeEmailsRegularExpressionsList << QStringLiteral("incoming\\+.+@gitlab\\.com");
+        info.mExcludeEmailsRegularExpressions = excludeEmailsRegularExpressionsList;
+
+        info.mExcludeDomains = QStringList() << QStringLiteral("bli.com");
+        completion.setBalooCompletionEmailInfo(info);
+
+        QStringList returnList;
+        returnList << QStringLiteral("blabla@kde.org") << QStringLiteral("foo4@blo.com");
+        QCOMPARE(completion.cleanupEmailList(), returnList);
+    }
 }
 
 void BalooCompletionEmailTest::shouldReturnSameListIfBlackListInterceptEmail()
