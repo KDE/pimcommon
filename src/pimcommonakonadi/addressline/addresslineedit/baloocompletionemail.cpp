@@ -13,7 +13,7 @@
 using namespace PimCommon;
 
 BalooCompletionEmail::BalooCompletionEmail() = default;
-
+QList<QRegularExpression> BalooCompletionEmail::mExcludeEmailsRegularExpressions = {};
 QStringList BalooCompletionEmail::cleanupEmailList()
 {
     if (mBalooCompletionEmailInfo.mListEmail.isEmpty()) {
@@ -37,13 +37,10 @@ QStringList BalooCompletionEmail::cleanupEmailList()
                 }
             }
             if (!excludeMail) {
-                // Make it static
-                for (const QString &excludeEmailRegularExpression : std::as_const(mBalooCompletionEmailInfo.mExcludeEmailsRegularExpressions)) {
-                    if (!excludeEmailRegularExpression.isEmpty()) {
-                        if (address.contains(QRegularExpression(excludeEmailRegularExpression))) {
-                            excludeMail = true;
-                            continue;
-                        }
+                for (const QRegularExpression &excludeEmailRegularExpression : std::as_const(mExcludeEmailsRegularExpressions)) {
+                    if (address.contains(excludeEmailRegularExpression)) {
+                        excludeMail = true;
+                        continue;
                     }
                 }
             }
@@ -97,4 +94,11 @@ BalooCompletionEmail::BalooCompletionEmailInfo BalooCompletionEmail::balooComple
 void BalooCompletionEmail::setBalooCompletionEmailInfo(const BalooCompletionEmailInfo &newBalooCompletionEmailInfo)
 {
     mBalooCompletionEmailInfo = newBalooCompletionEmailInfo;
+    mExcludeEmailsRegularExpressions.clear();
+    for (const auto &str : std::as_const(mBalooCompletionEmailInfo.mExcludeEmailsRegularExpressions)) {
+        const QRegularExpression exp(str);
+        if (exp.isValid()) {
+            mExcludeEmailsRegularExpressions.append(exp);
+        }
+    }
 }

@@ -7,6 +7,7 @@
 
 #pragma once
 #include "pimcommonakonadi_private_export.h"
+#include <QRegularExpression>
 #include <QStringList>
 namespace PimCommon
 {
@@ -29,5 +30,6 @@ public:
 private:
     Q_REQUIRED_RESULT QString stripEmail(const QString &email, QString &address);
     BalooCompletionEmailInfo mBalooCompletionEmailInfo;
+    static QList<QRegularExpression> mExcludeEmailsRegularExpressions;
 };
 }
