@@ -34,12 +34,12 @@ void AddresseeLineEditBaloo::setBalooCompletionSource(int value)
 
 QStringList AddresseeLineEditBaloo::balooBlackList() const
 {
-    return mBalooBlackList;
+    return mBalooCompletionEmail->balooCompletionEmailInfo().mBlackList;
 }
 
 QStringList AddresseeLineEditBaloo::domainExcludeList() const
 {
-    return mDomainExcludeList;
+    return mBalooCompletionEmail->balooCompletionEmailInfo().mExcludeDomains;
 }
 
 void AddresseeLineEditBaloo::loadBalooBlackList()
@@ -48,10 +48,10 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
     config->reparseConfiguration();
     KConfigGroup group(config, "AddressLineEdit");
     PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
-    mBalooBlackList = group.readEntry("BalooBackList", QStringList());
-    mDomainExcludeList = group.readEntry("ExcludeDomain", QStringList());
-    info.mBlackList = mBalooBlackList;
-    info.mExcludeDomains = mDomainExcludeList;
+    const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
+    const QStringList domainExcludeList = group.readEntry("ExcludeDomain", QStringList());
+    info.mBlackList = balooBlackList;
+    info.mExcludeDomains = domainExcludeList;
     mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
 }
 

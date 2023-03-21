@@ -18,6 +18,7 @@ public:
         QStringList mListEmail;
         QStringList mExcludeDomains;
         QStringList mBlackList;
+        QStringList mExcludeEmailsRegularExpressions;
     };
 
     Q_REQUIRED_RESULT QStringList cleanupEmailList();

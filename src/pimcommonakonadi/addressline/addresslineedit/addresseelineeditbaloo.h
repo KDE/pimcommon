@@ -5,13 +5,13 @@
 */
 
 #pragma once
-
+#include "pimcommonakonadi_private_export.h"
 #include <QStringList>
 
 namespace PimCommon
 {
 class BalooCompletionEmail;
-class AddresseeLineEditBaloo
+class PIMCOMMONAKONADI_TESTS_EXPORT AddresseeLineEditBaloo
 {
 public:
     AddresseeLineEditBaloo();
@@ -19,18 +19,14 @@ public:
 
     Q_REQUIRED_RESULT int balooCompletionSource() const;
     void setBalooCompletionSource(int value);
+    void loadBalooBlackList();
+    Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
 
     Q_REQUIRED_RESULT QStringList balooBlackList() const;
     Q_REQUIRED_RESULT QStringList domainExcludeList() const;
 
-    void loadBalooBlackList();
-    Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
-
 private:
     PimCommon::BalooCompletionEmail *const mBalooCompletionEmail;
-    QStringList mBalooBlackList;
-    QStringList mDomainExcludeList;
-
     int mBalooCompletionSource = 0;
 };
 }
