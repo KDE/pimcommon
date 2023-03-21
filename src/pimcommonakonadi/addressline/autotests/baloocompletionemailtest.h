@@ -29,4 +29,5 @@ private Q_SLOTS:
     void shouldExcludeDuplicateEntryWithDisplayNameAddAddressWithDifferentCase();
     void shouldExcludeDuplicateEntryWithDifferentDisplayNameAddAddressWithDifferentCase();
     void shouldExcludeEmptyNameWithDisplayNameForSameAddress();
+    void shouldReturnSameListIfBlackListInterceptEmail();
 };

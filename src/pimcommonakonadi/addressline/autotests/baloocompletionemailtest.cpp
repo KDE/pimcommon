@@ -43,6 +43,38 @@ void BalooCompletionEmailTest::shouldReturnSameListWhenNotExclude()
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
 
+void BalooCompletionEmailTest::shouldReturnSameListIfBlackListInterceptEmail()
+{
+    PimCommon::BalooCompletionEmail completion;
+    QStringList emailList;
+    emailList << QStringLiteral("foo");
+    emailList << QStringLiteral("foo2");
+    emailList << QStringLiteral("foo3");
+    emailList << QStringLiteral("foo4");
+    emailList << QStringLiteral("foo5");
+    emailList << QStringLiteral("foo6");
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    info.mListEmail = emailList;
+    completion.setBalooCompletionEmailInfo(info);
+
+    QStringList blackList;
+    blackList << QStringLiteral("foo");
+    blackList << QStringLiteral("bla2");
+    blackList << QStringLiteral("bla3");
+    blackList << QStringLiteral("bla4");
+    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info2;
+    info2.mListEmail = emailList;
+    info2.mBlackList = blackList;
+    completion.setBalooCompletionEmailInfo(info2);
+    QStringList returnList;
+    returnList << QStringLiteral("foo2");
+    returnList << QStringLiteral("foo3");
+    returnList << QStringLiteral("foo4");
+    returnList << QStringLiteral("foo5");
+    returnList << QStringLiteral("foo6");
+    QCOMPARE(completion.cleanupEmailList(), returnList);
+}
+
 void BalooCompletionEmailTest::shouldReturnSameListIfBlackListDoesntInterceptEmail()
 {
     PimCommon::BalooCompletionEmail completion;
@@ -64,6 +96,7 @@ void BalooCompletionEmailTest::shouldReturnSameListIfBlackListDoesntInterceptEma
     blackList << QStringLiteral("bla4");
     PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info2;
     info2.mListEmail = emailList;
+    info2.mBlackList = blackList;
     completion.setBalooCompletionEmailInfo(info2);
     QCOMPARE(completion.cleanupEmailList(), emailList);
 }
