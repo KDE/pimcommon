@@ -29,6 +29,11 @@ BlackListBalooEmailWarning::BlackListBalooEmailWarning(QWidget *parent)
     searchAction->setObjectName(QStringLiteral("search"));
     connect(searchAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSearch);
     addAction(searchAction);
+
+    auto cancelAction = new QAction(i18n("Cancel"), this);
+    cancelAction->setObjectName(QStringLiteral("cancel"));
+    connect(cancelAction, &QAction::triggered, this, &BlackListBalooEmailWarning::animatedHide);
+    addAction(cancelAction);
 }
 
 BlackListBalooEmailWarning::~BlackListBalooEmailWarning() = default;

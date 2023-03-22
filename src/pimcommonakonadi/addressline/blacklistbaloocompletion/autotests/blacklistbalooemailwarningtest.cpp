@@ -30,6 +30,9 @@ void BlackListBalooEmailWarningTest::shouldHaveDefaultValue()
 
     auto search = warning.findChild<QAction *>(QStringLiteral("search"));
     QVERIFY(search);
+
+    auto cancelAction = warning.findChild<QAction *>(QStringLiteral("cancel"));
+    QVERIFY(cancelAction);
 }
 
 void BlackListBalooEmailWarningTest::shouldEmitSaveChanges()
