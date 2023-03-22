@@ -18,6 +18,7 @@ BlackListBalooEmailList::BlackListBalooEmailList(QWidget *parent)
 {
     setSelectionMode(QAbstractItemView::ExtendedSelection);
     setSortingEnabled(true);
+    setContextMenuPolicy(Qt::CustomContextMenu);
 }
 
 BlackListBalooEmailList::~BlackListBalooEmailList() = default;

@@ -20,6 +20,7 @@
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
+#include <QMenu>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -138,6 +139,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
 
     connect(mEmailList, &QListWidget::itemSelectionChanged, this, &BlackListBalooEmailCompletionWidget::slotSelectionChanged);
     slotSelectionChanged();
+    connect(mEmailList, &QListWidget::customContextMenuRequested, this, &BlackListBalooEmailCompletionWidget::slotCustomContextMenuRequested);
 }
 
 BlackListBalooEmailCompletionWidget::~BlackListBalooEmailCompletionWidget() = default;
@@ -147,6 +149,18 @@ void BlackListBalooEmailCompletionWidget::slotSelectionChanged()
     const bool selectionIsNotEmpty = !mEmailList->selectedItems().isEmpty();
     mSelectButton->setEnabled(selectionIsNotEmpty);
     mUnselectButton->setEnabled(selectionIsNotEmpty);
+}
+
+void BlackListBalooEmailCompletionWidget::slotCustomContextMenuRequested(const QPoint &pos)
+{
+    const bool selectionIsNotEmpty = !mEmailList->selectedItems().isEmpty();
+    if (selectionIsNotEmpty) {
+        // TODO
+        QMenu menu(this);
+        menu.addAction(i18n("Select"), this, &BlackListBalooEmailCompletionWidget::slotSelectEmails);
+        menu.addAction(i18n("Unselect"), this, &BlackListBalooEmailCompletionWidget::slotUnselectEmails);
+        menu.exec(mapToGlobal(pos));
+    }
 }
 
 void BlackListBalooEmailCompletionWidget::load()

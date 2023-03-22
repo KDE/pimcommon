@@ -40,6 +40,7 @@ private:
     void slotSaveChanges();
     void slotShowAllBlacklistedEmail();
     void hideMoreResultAndChangeLimit();
+    void slotCustomContextMenuRequested(const QPoint &pos);
     QStringList mOriginalExcludeDomain;
     QStringList mOriginalExcludeEmailRegexp;
     QLabel *const mNumberOfEmailsFound;
