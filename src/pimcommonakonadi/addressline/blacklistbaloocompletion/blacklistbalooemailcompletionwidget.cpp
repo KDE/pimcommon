@@ -155,9 +155,9 @@ void BlackListBalooEmailCompletionWidget::slotCustomContextMenuRequested(const Q
 {
     const bool selectionIsNotEmpty = !mEmailList->selectedItems().isEmpty();
     if (selectionIsNotEmpty) {
-        // TODO
         QMenu menu(this);
         menu.addAction(i18n("Select"), this, &BlackListBalooEmailCompletionWidget::slotSelectEmails);
+        menu.addSeparator();
         menu.addAction(i18n("Unselect"), this, &BlackListBalooEmailCompletionWidget::slotUnselectEmails);
         menu.exec(mapToGlobal(pos));
     }
