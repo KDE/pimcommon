@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:49+0000\n"
+"POT-Creation-Date: 2023-03-22 00:49+0000\n"
 "PO-Revision-Date: 2020-01-05 19:11+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -527,9 +527,9 @@ msgstr ""
 msgid "Recent Addresses"
 msgstr "Abrir o caderno de enderezos"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -619,7 +619,7 @@ msgid_plural "%1 emails found"
 msgstr[0] ""
 msgstr[1] ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No result found"

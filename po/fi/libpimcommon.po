@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:49+0000\n"
+"POT-Creation-Date: 2023-03-22 00:49+0000\n"
 "PO-Revision-Date: 2022-06-17 20:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -522,9 +522,9 @@ msgstr "Laajenna ryhmät…"
 msgid "Recent Addresses"
 msgstr "Viimeaikaiset osoitteet"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -611,7 +611,7 @@ msgid_plural "%1 emails found"
 msgstr[0] "Löytyi 1 sähköposti"
 msgstr[1] "Löytyi %1 sähköpostia"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
 #, kde-format
 msgid "No result found"
 msgstr "Tuloksia ei löytynyt"

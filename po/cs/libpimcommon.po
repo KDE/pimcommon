@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:49+0000\n"
+"POT-Creation-Date: 2023-03-22 00:49+0000\n"
 "PO-Revision-Date: 2021-10-19 17:12+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -515,9 +515,9 @@ msgstr "Rozbalit skupiny..."
 msgid "Recent Addresses"
 msgstr "Nedávné adresy"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -585,10 +585,9 @@ msgid "Exclude email with Regular Expression:"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Oddělená doména s '%1'"
+msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
 #, kde-format
@@ -603,7 +602,7 @@ msgstr[0] "Nalezen 1 e-mail"
 msgstr[1] "Nalezeny %1 e-maily"
 msgstr[2] "Nalezeno %1 e-mailů"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
 #, kde-format
 msgid "No result found"
 msgstr "Nebyl nalezen žádný výsledek"
@@ -668,13 +667,12 @@ msgid "Add"
 msgstr "Přidat"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Odstranit položku"
-msgstr[1] "Odstranit položku"
-msgstr[2] "Odstranit položku"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
 #, kde-format

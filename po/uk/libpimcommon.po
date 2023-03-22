@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:49+0000\n"
-"PO-Revision-Date: 2023-01-05 08:45+0200\n"
+"POT-Creation-Date: 2023-03-22 00:49+0000\n"
+"PO-Revision-Date: 2023-03-21 06:46+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -521,9 +521,9 @@ msgstr "Розгорнути групи…"
 msgid "Recent Addresses"
 msgstr "Нещодавні адреси."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -588,13 +588,12 @@ msgstr "Відокремити домен з «%1»"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:129
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Виключити адресу ел. пошти за формальним виразом:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Відокремити домен з «%1»"
+msgstr "Відокремлення формального виразу — «%1»"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
 #, kde-format
@@ -610,7 +609,7 @@ msgstr[1] "Знайдено %1 повідомлення"
 msgstr[2] "Знайдено %1 повідомлень"
 msgstr[3] "Знайдено одне повідомлення"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
 #, kde-format
 msgid "No result found"
 msgstr "Нічого не знайдено"
@@ -675,14 +674,13 @@ msgid "Add"
 msgstr "Додати"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Вилучити запис"
-msgstr[1] "Вилучити запис"
-msgstr[2] "Вилучити запис"
-msgstr[3] "Вилучити запис"
+msgstr[0] "Вилучити ел. пошти"
+msgstr[1] "Вилучити ел. пошти"
+msgstr[2] "Вилучити ел. пошти"
+msgstr[3] "Вилучити ел. пошту"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
 #, kde-format

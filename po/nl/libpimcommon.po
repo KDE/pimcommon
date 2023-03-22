@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-21 00:49+0000\n"
-"PO-Revision-Date: 2023-01-15 15:16+0100\n"
+"POT-Creation-Date: 2023-03-22 00:49+0000\n"
+"PO-Revision-Date: 2023-03-21 10:54+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -519,9 +519,9 @@ msgstr "Groepen uitvouwen..."
 msgid "Recent Addresses"
 msgstr "Recente adressen"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:106
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -586,13 +586,12 @@ msgstr "Domein scheiden met '%1'"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:129
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "E-mail met reguliere expressie uitsluiten:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Domein scheiden met '%1'"
+msgstr "Reguliere expressie scheiden met '%1'"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
 #, kde-format
@@ -606,7 +605,7 @@ msgid_plural "%1 emails found"
 msgstr[0] "1 e-mail gevonden"
 msgstr[1] "%1 e-mails gevonden"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:125
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
 #, kde-format
 msgid "No result found"
 msgstr "Geen resultaat gevonden"
@@ -670,12 +669,11 @@ msgid "Add"
 msgstr "Toevoegen"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Item verwijderen"
-msgstr[1] "Item verwijderen"
+msgstr[0] "E-mailbericht verwijderen"
+msgstr[1] "E-mailberichten verwijderen"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
 #, kde-format
