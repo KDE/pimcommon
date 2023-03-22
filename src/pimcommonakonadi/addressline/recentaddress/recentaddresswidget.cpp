@@ -42,11 +42,12 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
     mLineEdit->setValidator(new PimCommon::EmailValidator(this));
+    mLineEdit->setPlaceholderText(i18n("New email..."));
     connect(mLineEdit, &QLineEdit::returnPressed, this, &RecentAddressWidget::slotAddItem);
 
     lineLayout->addWidget(mLineEdit);
 
-    mNewButton->setToolTip(i18n("Add"));
+    mNewButton->setToolTip(i18n("Add Email"));
     mNewButton->setObjectName(QStringLiteral("new_button"));
     mNewButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mNewButton->setEnabled(false);
