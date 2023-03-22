@@ -23,12 +23,10 @@ public:
     ~LineEditWithCompleterNg() override;
 
     void addCompletionItem(const QString &str);
+    void slotClearHistory();
 
 protected:
     void contextMenuEvent(QContextMenuEvent *e) override;
-
-public Q_SLOTS:
-    void slotClearHistory();
 
 private:
     QStringListModel *const mCompleterListModel;
