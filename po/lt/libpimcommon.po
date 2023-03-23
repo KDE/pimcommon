@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 00:49+0000\n"
+"POT-Creation-Date: 2023-03-23 00:48+0000\n"
 "PO-Revision-Date: 2016-11-04 11:09+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -156,8 +156,8 @@ msgstr "Dubliuoti"
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Pašalinti"
@@ -541,78 +541,90 @@ msgstr ""
 msgid "LDAP server: %1"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:33
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search"
 msgstr "Ieškoti..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "&Select"
 msgstr "Pakeisti viską"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "&Unselect"
 msgstr "Pakeisti viską"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "Show Blacklisted Emails"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:46
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search email:"
 msgstr "Ieškoti..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:50
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
 #, kde-format
 msgid "Research is done from 3 characters"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:102
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search in result..."
 msgstr "Ieškoti..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:115
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
 #, kde-format
 msgid "Exclude domain names:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:123
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:129
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
 #, kde-format
 msgid "Separate regular expression with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Select"
+msgstr "Pakeisti viską"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#, fuzzy, kde-format
+#| msgid "Replace All"
+msgid "Unselect"
+msgstr "Pakeisti viską"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
 msgid "No email found."
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:272
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -621,7 +633,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
 msgid "No result found"
 msgstr ""
@@ -637,6 +649,11 @@ msgstr ""
 #| msgid "Save config"
 msgid "Save"
 msgstr "Išsaugoti konfigūraciją"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
+#, kde-format
+msgid "Cancel"
+msgstr ""
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, fuzzy, kde-format
@@ -682,12 +699,18 @@ msgstr ""
 msgid "Move Down"
 msgstr ""
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
-msgid "Add"
-msgstr "Pridėti"
+msgid "New email..."
+msgstr ""
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
+#, fuzzy, kde-format
+#| msgid "Email:"
+msgid "Add Email"
+msgstr "El. paštas:"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
 #, fuzzy, kde-format
 #| msgid "Remove Entry"
 msgid "Remove Email"
@@ -697,7 +720,7 @@ msgstr[1] "Pašalinti įrašą"
 msgstr[2] "Pašalinti įrašą"
 msgstr[3] "Pašalinti įrašą"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, fuzzy, kde-format
 #| msgid "Do you want to delete selected template?"
 msgid "Do you want to remove this email address?"
@@ -1229,6 +1252,9 @@ msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Ištrinti pastabą"
 
+#~ msgid "Add"
+#~ msgstr "Pridėti"
+
 #~ msgid "Enable autocorrection"
 #~ msgstr "Įjungti automatinį taisymą"
 
@@ -1391,11 +1417,6 @@ msgstr "Ištrinti pastabą"
 #~ msgctxt "@title:window"
 #~ msgid "Select Special Characters"
 #~ msgstr "Parinkite failą atsisiuntimui:"
-
-#, fuzzy
-#~| msgid "Replace All"
-#~ msgid "Select"
-#~ msgstr "Pakeisti viską"
 
 #, fuzzy
 #~| msgid "Replace"

@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 00:49+0000\n"
-"PO-Revision-Date: 2023-01-05 05:17+0100\n"
+"POT-Creation-Date: 2023-03-23 00:48+0000\n"
+"PO-Revision-Date: 2023-03-21 10:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -148,8 +148,8 @@ msgstr "Duplica"
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:286
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:58
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Elimina"
@@ -533,81 +533,92 @@ msgstr "Contactes trobats en les vostres dades"
 msgid "LDAP server: %1"
 msgstr "Servidor LDAP: %1"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:33
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
 #, kde-format
 msgid "Search"
 msgstr "Busca"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, kde-format
 msgid "&Select"
 msgstr "&Selecciona"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
 #, kde-format
 msgid "&Unselect"
 msgstr "&Desselecciona"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "Show Blacklisted Emails"
 msgstr "Mostra els correus electrònics en la llista negra"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Més resultats...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:46
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
 #, kde-format
 msgid "Search email:"
 msgstr "Busca en el correu:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:50
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
 #, kde-format
 msgid "Research is done from 3 characters"
 msgstr "La recerca es porta a terme a partir de 3 caràcters"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:102
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
 #, kde-format
 msgid "Search in result..."
 msgstr "Busca en el resultat..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:115
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
 #, kde-format
 msgid "Exclude domain names:"
 msgstr "Exclou els noms del domini:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:123
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr "Dominis separats per «%1»"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:129
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Exclou correu amb l'expressió regular:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:137
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Dominis separats per «%1»"
+msgstr "Separa les expressions regulars amb «%1»"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:270
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
+#, fuzzy, kde-format
+#| msgid "&Select"
+msgid "Select"
+msgstr "&Selecciona"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#, fuzzy, kde-format
+#| msgid "&Unselect"
+msgid "Unselect"
+msgstr "&Desselecciona"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
 msgid "No email found."
 msgstr "No s'ha trobat cap correu electrònic."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:272
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
 msgstr[0] "S'ha trobat 1 correu electrònic"
 msgstr[1] "S'han trobat %1 correus electrònics"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:136
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
 msgid "No result found"
 msgstr "No s'ha trobat cap resultat"
@@ -622,6 +633,11 @@ msgstr "La llista ha canviat. Voleu guardar-la abans de fer una altra busca?"
 #, kde-format
 msgid "Save"
 msgstr "Guarda"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
+#, kde-format
+msgid "Cancel"
+msgstr ""
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -665,20 +681,26 @@ msgstr "Mou amunt"
 msgid "Move Down"
 msgstr "Mou avall"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:49
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
-msgid "Add"
-msgstr "Afig"
+msgid "New email..."
+msgstr ""
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:95
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
 #, fuzzy, kde-format
-#| msgid "Remove Entry"
+#| msgctxt "@item LDAP search key"
+#| msgid "Email"
+msgid "Add Email"
+msgstr "Correu electrònic"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Elimina l'entrada"
-msgstr[1] "Elimina l'entrada"
+msgstr[0] "Elimina el correu electrònic"
+msgstr[1] "Elimina els correus electrònics"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:131
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
@@ -1203,712 +1225,5 @@ msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Supressió de nota"
 
-#~ msgid "Archive cannot be opened in read mode."
-#~ msgstr "No s'ha pogut obrir l'arxiu en mode de lectura."
-
-#~ msgid "Enable autocorrection"
-#~ msgstr "Activa la correcció automàtica"
-
-#~ msgid "Replacement and exception for language:"
-#~ msgstr "Substitució i excepció per a l'idioma:"
-
-#~ msgid "Ad&vanced Autocorrection"
-#~ msgstr "Correcció automàtica a&vançada"
-
-#~ msgid "&Add"
-#~ msgstr "Afi&g"
-
-#~ msgid "&Enable word replacement"
-#~ msgstr "Habilita la substitució d&e la paraula"
-
-#~ msgid "&Find"
-#~ msgstr "Bu&sca"
-
-#~ msgid "Re&place"
-#~ msgstr "Su&bstituïx"
-
-#~ msgid "Find"
-#~ msgstr "Busca"
-
-#~ msgid "Replace"
-#~ msgstr "Substituïx"
-
-#~ msgid "E&xceptions"
-#~ msgstr "E&xcepcions"
-
-#~ msgid "Do not treat as the end of a sentence:"
-#~ msgstr "No tractes com a final de frase:"
-
-#~ msgid "R&emove"
-#~ msgstr "&Elimina"
-
-#~ msgid "Accept two uppercase letters in:"
-#~ msgstr "Accepta dues majúscules en:"
-
-#~ msgid "Si&mple Autocorrection"
-#~ msgstr "Correcció automàtica si&mple"
-
-#~ msgid ""
-#~ "Detect when a new sentence is started and always ensure that the first "
-#~ "character is an uppercase character"
-#~ msgstr ""
-#~ "Detecta quan s'inicia una frase nova i sempre s'assegura que el primer "
-#~ "caràcter es trobe en majúscules"
-
-#~ msgid ""
-#~ "Convert &first letter of a sentence automatically to uppercase\n"
-#~ "(e.g. \"my house. in this town\" to \"my house. In this town\")"
-#~ msgstr ""
-#~ "Convertix la &primera lletra d'una frase automàticament a majúscula\n"
-#~ "(per exemple, «casa meua. en este poble» a «casa meua. En este poble»)"
-
-#~ msgid ""
-#~ "All words are checked for the common mistake of holding the shift key "
-#~ "down a bit too long. If some words must have two uppercase characters, "
-#~ "then those exceptions should be added in the 'Exceptions' tab."
-#~ msgstr ""
-#~ "Totes les paraules es revisen per l'errada comuna de polsar la tecla de "
-#~ "majúscules durant massa temps. Si algunes paraules han d'estar en "
-#~ "majúscules, s'han d'afegir estes excepcions a la pestanya «Excepcions»."
-
-#~ msgid ""
-#~ "Convert &two uppercase characters to one uppercase and one lowercase "
-#~ "character\n"
-#~ " (e.g. PErfect to Perfect)"
-#~ msgstr ""
-#~ "Con&vertix dos caràcters en majúscules en un en majúscules i un en "
-#~ "minúscules\n"
-#~ " (p. ex.: PErfecte a Perfecte)"
-
-#~ msgid ""
-#~ "Make sure that more than one space cannot be typed, as this is a common "
-#~ "mistake which is quite hard to find in formatted text."
-#~ msgstr ""
-#~ "Assegura que no es pot escriure més d'un espai, ja que este és un error "
-#~ "comú bastant difícil de trobar en el text amb format."
-
-#~ msgid "&Suppress double spaces"
-#~ msgstr "Sup&rimix els espais dobles"
-
-#~ msgid "Most standard fraction notations will be converted when available"
-#~ msgstr ""
-#~ "La majoria de les notacions de fraccions estàndard es convertiran quan "
-#~ "estiguen disponibles"
-
-#~ msgid "Re&place 1/2... with ½..."
-#~ msgstr "Su&bstituïx 1/2... per ½..."
-
-#~ msgid "Capitalize name of days"
-#~ msgstr "Posa en majúscules els noms dels dies"
-
-#~ msgid ""
-#~ "Detect when a URL (Uniform Resource Locator) is typed and provide "
-#~ "formatting that matches the way an Internet browser would show a URL."
-#~ msgstr ""
-#~ "Detecta quan s'escriu un URL (Uniform Resource Locator) i proporciona un "
-#~ "format per tal que un navegador d'Internet puga mostrar un URL."
-
-#~ msgid "Autoformat &URLs (HTML mode)"
-#~ msgstr "Dona format automàticament als &URL (mode HTML)"
-
-#~ msgid ""
-#~ "When you use _underline_ or *bold*, the text between the underscores or "
-#~ "asterisks will be converted to underlined or bold text."
-#~ msgstr ""
-#~ "Quan utilitzeu _subratllat_ o *negreta*, el text entre els guions baixos "
-#~ "o els asteriscs es convertiran en texts subratllats o en negreta."
-
-#~ msgid ""
-#~ "Automatically do &bold, strikeout and underline formatting (HTML mode)"
-#~ msgstr ""
-#~ "Automàticament dona format en negreta, ratllat i su&bratllat (mode HTML)"
-
-#~ msgid "Replace 1st... with 1^st... (HTML mode)"
-#~ msgstr "Substituïx 1st... per 1^st... (mode HTML)"
-
-#~ msgid ""
-#~ "Add non breaking space before specific punctuation marks in French text"
-#~ msgstr ""
-#~ "Afig un espai no divisible abans de les marques específiques de puntuació "
-#~ "en textos en francés"
-
-#~ msgid "Replace double quotes by french quotes"
-#~ msgstr "Substituïx les cometes dobles per cometes franceses"
-
-#~ msgid "Custom &Quotes"
-#~ msgstr "Co&metes personalitzades"
-
-#~ msgid "Replace &double quotes with typographical quotes"
-#~ msgstr "Substituïx les cometes &dobles per cometes tipogràfiques"
-
-#~ msgid "By Default"
-#~ msgstr "De manera predeterminada"
-
-#~ msgid "\""
-#~ msgstr "\""
-
-#~ msgid "Ending Quote:"
-#~ msgstr "Cometes finals:"
-
-#~ msgid "Opening Quote:"
-#~ msgstr "Cometes inicials:"
-
-#~ msgid "Default"
-#~ msgstr "Predeterminat"
-
-#~ msgid "Replace &single quotes with typographical quotes"
-#~ msgstr "Substituïx les cometes &simples per cometes tipogràfiques"
-
-# skip-rule: t-apo_fim
-#~ msgid "'"
-#~ msgstr "'"
-
-#~ msgid "Ending Quotes:"
-#~ msgstr "Cometes finals:"
-
-#~ msgid "Path"
-#~ msgstr "Camí"
-
-#~ msgid "System Path:"
-#~ msgstr "Camí del sistema:"
-
-#~ msgid "TextLabel"
-#~ msgstr "EtiquetaDeText"
-
-#~ msgid "Writable Path:"
-#~ msgstr "Camí que s'hi pot escriure:"
-
-#~ msgid "Custom System Path:"
-#~ msgstr "Camí personalitzat del sistema:"
-
-#~ msgid "Custom Writable Path:"
-#~ msgstr "Camí personalitzat que s'hi pot escriure:"
-
-#~ msgid "Select Custom Writable Path"
-#~ msgstr "Seleccioneu el camí personalitzat que s'hi pot escriure"
-
-#~ msgid "Select Custom System Path"
-#~ msgstr "Seleccioneu el camí personalitzat del sistema"
-
-#~ msgid "LibreOffice Autocorrection"
-#~ msgstr "Correcció automàtica de LibreOffice"
-
-#~ msgid "KMail/Calligra Autocorrection"
-#~ msgstr "Correcció automàtica de KMail/Calligra"
-
-#~ msgid "\"Replace\" string is the same as \"Find\" string."
-#~ msgstr "La cadena «Substituïx» és la mateixa que la cadena «Busca»."
-
-#~ msgid "Add Autocorrection Entry"
-#~ msgstr "Afig una entrada de correcció automàtica"
-
-#~ msgid "&Modify"
-#~ msgstr "&Modifica"
-
-#~ msgid "Import LibreOffice Autocorrection"
-#~ msgstr "Importa la correcció automàtica de LibreOffice"
-
-#~ msgid "LibreOffice Autocorrection File (*.dat)"
-#~ msgstr "Fitxer de correcció automàtica de LibreOffice (*.dat)"
-
-#~ msgid "Import KMail Autocorrection"
-#~ msgstr "Importa la correcció automàtica de KMail"
-
-#~ msgid "KMail Autocorrection File (*.xml)"
-#~ msgstr "Fitxer de correcció automàtica de KMail (*.xml)"
-
-#~ msgid "Import Autocorrection File"
-#~ msgstr "Importa un fitxer de correcció automàtica"
-
-#~ msgid ""
-#~ "Language was changed, do you want to save config for previous language?"
-#~ msgstr ""
-#~ "L'idioma ha canviat. Voleu guardar la configuració de l'idioma anterior?"
-
-#~ msgid "Save config"
-#~ msgstr "Guarda la configuració"
-
-#~ msgid "Please save changes before exporting settings."
-#~ msgstr "Guardeu els canvis abans d'exportar la configuració."
-
-#~ msgid "Export Autocorrection File"
-#~ msgstr "Exporta un fitxer de correcció automàtica"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Special Characters"
-#~ msgstr "Seleccioneu els caràcters especials"
-
-#~ msgid "Insert"
-#~ msgstr "Inserix"
-
-#~ msgid "Select"
-#~ msgstr "Selecciona"
-
-#~ msgid "Any text to check."
-#~ msgstr "Qualsevol text que calga comprovar."
-
-#~ msgid "Replacement"
-#~ msgstr "Substitució"
-
-#~ msgid "Online Grammar Information"
-#~ msgstr "Informació en línia de la gramàtica"
-
-#~ msgid "Check Again"
-#~ msgstr "Comprova una altra vegada"
-
-#~ msgid "Configure..."
-#~ msgstr "Configura..."
-
-#~ msgid "See on: %1"
-#~ msgstr "Vegeu a: %1"
-
-#~ msgid "Close"
-#~ msgstr "Tanca"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Grammalecte"
-#~ msgstr "Configureu Grammalecte"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Grammar Settings"
-#~ msgstr "Configureu la gramàtica"
-
-#~ msgid ""
-#~ "Impossible to get options. Please verify that you have grammalected "
-#~ "installed."
-#~ msgstr ""
-#~ "No ha sigut possible obtindre les opcions. Verifiqueu que teniu "
-#~ "instal·lat «grammalected»."
-
-#~ msgid "Error during Extracting Options"
-#~ msgstr "Error durant les opcions d'extracció"
-
-#~ msgid "Press Button for Reloading Settings"
-#~ msgstr "Premeu el botó per a tornar a carregar la configuració"
-
-#~ msgid "Reload Settings"
-#~ msgstr "Torna a carregar la configuració"
-
-#~ msgid "Python Path:"
-#~ msgstr "Camí de Python:"
-
-#~ msgid "Add full 'grammalecte-cli.py' path"
-#~ msgstr "Afegiu tot el camí cap a «grammalecte-cli.py»"
-
-#~ msgid "Grammalecte Path:"
-#~ msgstr "Camí de Grammalecte:"
-
-#~ msgid "Python path is missing."
-#~ msgstr "Falta el camí de Python."
-
-#~ msgid "Grammalecte path not found."
-#~ msgstr "No s'ha trobat el camí de Grammalecte."
-
-#~ msgid "Grammalecte program file not found."
-#~ msgstr "No s'ha trobat el fitxer de programa de Grammalecte."
-
-#~ msgid "Grammalecte cli file not found."
-#~ msgstr "No s'ha trobat el fitxer cli de Grammalecte."
-
-#~ msgid "Grammalecte error"
-#~ msgstr "S'ha produït un error de Grammalecte"
-
-#~ msgid "Select Path"
-#~ msgstr "Seleccioneu el camí"
-
-#~ msgid "English"
-#~ msgstr "Anglés"
-
-#~ msgid "Asturian"
-#~ msgstr "Asturià"
-
-#~ msgid "Belarusian"
-#~ msgstr "Bielorús"
-
-#~ msgid "Breton"
-#~ msgstr "Bretó"
-
-#~ msgid "Catalan"
-#~ msgstr "Català"
-
-#~ msgid "Chinese"
-#~ msgstr "Xinés"
-
-#~ msgid "Danish"
-#~ msgstr "Danés"
-
-#~ msgid "Dutch"
-#~ msgstr "Neerlandés"
-
-#~ msgid "English (Australian)"
-#~ msgstr "Anglés (australià)"
-
-#~ msgid "English (Canadian)"
-#~ msgstr "Anglés (canadenc)"
-
-#~ msgid "Esperanto"
-#~ msgstr "Esperanto"
-
-#~ msgid "French"
-#~ msgstr "Francés"
-
-#~ msgid "Galician"
-#~ msgstr "Gallec"
-
-#~ msgid "German"
-#~ msgstr "Alemany"
-
-#~ msgid "Greek"
-#~ msgstr "Grec"
-
-#~ msgid "Italian"
-#~ msgstr "Italià"
-
-#~ msgid "Japanese"
-#~ msgstr "Japonés"
-
-#~ msgid "Khmer"
-#~ msgstr "Khmer"
-
-#~ msgid "Persian"
-#~ msgstr "Persa"
-
-#~ msgid "Polish"
-#~ msgstr "Polonés"
-
-#~ msgid "Portuguese"
-#~ msgstr "Portugués"
-
-#~ msgid "Romanian"
-#~ msgstr "Romanés"
-
-#~ msgid "Russian"
-#~ msgstr "Rus"
-
-#~ msgid "Slovak"
-#~ msgstr "Eslovac"
-
-#~ msgid "Slovenian"
-#~ msgstr "Eslové"
-
-#~ msgid "Spanish"
-#~ msgstr "Espanyol"
-
-#~ msgid "Swedish"
-#~ msgstr "Suec"
-
-#~ msgid "Tagalog"
-#~ msgstr "Tagal"
-
-#~ msgid "Tamil"
-#~ msgstr "Tàmil"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ucraïnés"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure LanguageTool"
-#~ msgstr "Configureu LanguageTool"
-
-#~ msgid "Use Local Instance"
-#~ msgstr "Utilitza una instància local"
-
-#~ msgid "Instance Path:"
-#~ msgstr "Camí de la instància:"
-
-#~ msgid "Language:"
-#~ msgstr "Idioma:"
-
-#~ msgid "Refresh"
-#~ msgstr "Actualitza"
-
-#~ msgid "An error was reported: %1"
-#~ msgstr "S'ha notificat un error: %1"
-
-#~ msgid "Failed to check grammar."
-#~ msgstr "No s'ha pogut comprovar la gramàtica."
-
-#~ msgid "Check"
-#~ msgstr "Comprova"
-
-#~ msgid ""
-#~ "An error occurred attempting to load the list of available languages:\n"
-#~ "%1"
-#~ msgstr ""
-#~ "S'ha produït un error en intentar carregar la llista dels idiomes "
-#~ "disponibles:\n"
-#~ "%1"
-
-#~ msgid "List of Languages"
-#~ msgstr "Llista d'idiomes"
-
-#~ msgid "Detect language"
-#~ msgstr "Detecta l'idioma"
-
-#~ msgid "Hmong"
-#~ msgstr "Hmong"
-
-#~ msgid "Bosnian"
-#~ msgstr "Bosnià"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Xinés (simplificat)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Xinés (tradicional)"
-
-#~ msgid "Korean"
-#~ msgstr "Coreà"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikaans"
-
-#~ msgid "Albanian"
-#~ msgstr "Albanés"
-
-#~ msgid "Arabic"
-#~ msgstr "Àrab"
-
-#~ msgid "Armenian"
-#~ msgstr "Armeni"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Àzeri"
-
-#~ msgid "Basque"
-#~ msgstr "Basc"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Búlgar"
-
-#~ msgid "Croatian"
-#~ msgstr "Croat"
-
-#~ msgid "Czech"
-#~ msgstr "Txec"
-
-#~ msgid "Estonian"
-#~ msgstr "Estonià"
-
-#~ msgid "Filipino"
-#~ msgstr "Filipí"
-
-#~ msgid "Finnish"
-#~ msgstr "Finés"
-
-#~ msgid "Georgian"
-#~ msgstr "Georgià"
-
-#~ msgid "Haitian Creole"
-#~ msgstr "Crioll haitià"
-
-#~ msgid "Hebrew"
-#~ msgstr "Hebreu"
-
-#~ msgid "Hindi"
-#~ msgstr "Hindi"
-
-#~ msgid "Hungarian"
-#~ msgstr "Hongarés"
-
-#~ msgid "Icelandic"
-#~ msgstr "Islandés"
-
-#~ msgid "Indonesian"
-#~ msgstr "Indonesi"
-
-#~ msgid "Irish"
-#~ msgstr "Irlandés"
-
-#~ msgid "Latvian"
-#~ msgstr "Letó"
-
-#~ msgid "Lithuanian"
-#~ msgstr "Lituà"
-
-#~ msgid "Macedonian"
-#~ msgstr "Macedoni"
-
-#~ msgid "Malay"
-#~ msgstr "Malai"
-
-#~ msgid "Maltese"
-#~ msgstr "Maltés"
-
-#~ msgid "Norwegian"
-#~ msgstr "Noruec"
-
-#~ msgid "Serbian"
-#~ msgstr "Serbi"
-
-#~ msgid "Swahili"
-#~ msgstr "Suahili"
-
-#~ msgid "Thai"
-#~ msgstr "Tailandés"
-
-#~ msgid "Turkish"
-#~ msgstr "Turc"
-
-#~ msgid "Urdu"
-#~ msgstr "Urdú"
-
-#~ msgid "Vietnamese"
-#~ msgstr "Vietnamita"
-
-#~ msgid "Welsh"
-#~ msgstr "Gal·lés"
-
-#~ msgid "Yiddish"
-#~ msgstr "Jiddisch"
-
-#~ msgid "Bing"
-#~ msgstr "Bing"
-
-#~ msgid "Error: Unable to find Bing credentials in web version."
-#~ msgstr ""
-#~ "S'ha produït un error: No s'han pogut trobar les credencials de Bing en "
-#~ "la versió web."
-
-#~ msgid "Error: Unable to extract Bing key from web version."
-#~ msgstr ""
-#~ "S'ha produït un error: No s'ha pogut extraure la clau de Bing des de la "
-#~ "versió web."
-
-#~ msgid "Error: Unable to extract Bing token from web version."
-#~ msgstr ""
-#~ "S'ha produït un error: No s'ha pogut extraure el testimoni de Bing des de "
-#~ "la versió web."
-
-#~ msgid ""
-#~ "Error: Unable to extract additional Bing information from web version."
-#~ msgstr ""
-#~ "S'ha produït un error: No s'ha pogut extraure la informació addicional de "
-#~ "Bing des de la versió web."
-
-#~ msgid "DeepL"
-#~ msgstr "DeepL"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Engine"
-#~ msgstr "Configura el motor"
-
-#~ msgid "Use Free License Key"
-#~ msgstr "Utilitza una clau de llicència lliure"
-
-#~ msgid "Api Key:"
-#~ msgstr "Clau de la API:"
-
-#~ msgid "Server needs Api Key."
-#~ msgstr "El servidor necessita una clau de la API."
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Libre Translate"
-#~ msgstr "Libre Translate"
-
-#~ msgid "Server required Api Key"
-#~ msgstr "Clau de la API requerida pel servidor"
-
-#~ msgid "Server Url:"
-#~ msgstr "URL del servidor:"
-
-#~ msgid "Server url is not defined."
-#~ msgstr "No s'ha definit l'URL del servidor."
-
-#~ msgid "Lingva"
-#~ msgstr "Lingva"
-
-#~ msgid "Yandex"
-#~ msgstr "Yandex"
-
-#~ msgid ""
-#~ "Error: Engine systems have detected suspicious traffic from your computer "
-#~ "network. Please try your request again later."
-#~ msgstr ""
-#~ "S'ha produït un error: Els sistemes del motor han detectat trànsit "
-#~ "sospitós des de la xarxa d'este ordinador. Torneu-ho a provar més tard."
-
-#~ msgid "Error: Unable to find Yandex SID in web version."
-#~ msgstr ""
-#~ "S'ha produït un error: No s'ha pogut trobar l'SID de Yandex en la versió "
-#~ "web."
-
-#~ msgid "Error: Unable to extract Yandex SID from web version."
-#~ msgstr ""
-#~ "S'ha produït un error: No s'ha pogut extraure l'SID de Yandex de la "
-#~ "versió web."
-
-#~ msgid "You used same language for 'from' and 'to' language."
-#~ msgstr "Heu utilitzat el mateix idioma a «Des de» i «A»."
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Translator"
-#~ msgstr "Configura el traductor"
-
-#~ msgid "From:"
-#~ msgstr "Des de:"
-
-#~ msgid "To:"
-#~ msgstr "A:"
-
-#~ msgid "Engine:"
-#~ msgstr "Motor:"
-
-#~ msgctxt "@title:window"
-#~ msgid "Translator Debug"
-#~ msgstr "Depuració del traductor"
-
-#~ msgid "Save As..."
-#~ msgstr "Anomena i guarda..."
-
-#~ msgid "All Files (*)"
-#~ msgstr "Tots els fitxers (*)"
-
-#~ msgid "Translate..."
-#~ msgstr "Traduïx..."
-
-#~ msgid "Problem when connecting to the translator web site."
-#~ msgstr "Problema en connectar amb el lloc web del traductor."
-
-#~ msgctxt "Translate from language"
-#~ msgid "From:"
-#~ msgstr "Des de:"
-
-#~ msgctxt "Translate to language"
-#~ msgid "To:"
-#~ msgstr "A:"
-
-#~ msgctxt ""
-#~ "Invert language choices so that from becomes to and to becomes from"
-#~ msgid "Invert"
-#~ msgstr "Invertix"
-
-#~ msgid "Clear"
-#~ msgstr "Neteja"
-
-#~ msgid "Translate"
-#~ msgstr "Traduïx"
-
-#~ msgid "Debug"
-#~ msgstr "Depura"
-
-#~ msgid ""
-#~ "Drag text that you want to translate. (Be careful text will be send to "
-#~ "Google Server)."
-#~ msgstr ""
-#~ "Deixeu anar el text que voleu traduir. (Aneu amb compte, el text "
-#~ "s'enviarà al servidor de Google)."
-
-#~ msgid "No network connection detected, we cannot translate text."
-#~ msgstr ""
-#~ "No s'ha detectat cap connexió de xarxa, no s'ha pogut traduir el text."
-
-#~ msgid "No network"
-#~ msgstr "Sense xarxa"
-
-#~ msgid "Translate error"
-#~ msgstr "S'ha produït un error de traducció"
+#~ msgid "Add"
+#~ msgstr "Afig"
