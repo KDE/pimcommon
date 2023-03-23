@@ -138,7 +138,6 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommonAkonadi
     KF${KF_MAJOR_VERSION}::Codecs
     KPim${KF_MAJOR_VERSION}::PimTextEdit
     KF${KF_MAJOR_VERSION}::XmlGui
-    KPim${KF_MAJOR_VERSION}::PimTextEdit
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KF${KF_MAJOR_VERSION}::KCMUtils
     KPim${KF_MAJOR_VERSION}::Ldap
