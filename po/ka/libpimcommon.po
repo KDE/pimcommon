@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2023-03-21 06:52+0100\n"
+"PO-Revision-Date: 2023-03-24 06:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -600,8 +600,7 @@ msgid "Select"
 msgstr "აირჩიეთ"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
 msgstr "მონიშვნის მოხსნა"
 
@@ -636,7 +635,7 @@ msgstr "შენახვა"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "გუქმება"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -683,14 +682,12 @@ msgstr "ჩამოწევა"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "ახალი ელფოსტა..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "ელ-ფოსტა"
+msgstr "ელფოსტის დამატება"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
 #, kde-format
@@ -868,7 +865,7 @@ msgstr "სრული სახელი"
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr "ელ-ფოსტა"
+msgstr "ელფოტა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
@@ -969,7 +966,7 @@ msgstr "მომხმარებლის ID"
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr "ელ-ფოსტა"
+msgstr "ელფოტა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
@@ -1015,7 +1012,7 @@ msgstr "სახელი"
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr "ელ-ფოსტა"
+msgstr "ელფოტა"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
