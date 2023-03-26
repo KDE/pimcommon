@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2023-03-21 10:12+0100\n"
+"PO-Revision-Date: 2023-03-23 09:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -595,16 +595,14 @@ msgid "Separate regular expression with '%1'"
 msgstr "Separa les expressions regulars amb «%1»"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Selecciona"
+msgstr "Selecciona"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Desselecciona"
+msgstr "Desselecciona"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -637,7 +635,7 @@ msgstr "Guarda"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -684,14 +682,12 @@ msgstr "Mou avall"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Correu nou..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "Correu electrònic"
+msgstr "Afig un correu electrònic"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
 #, kde-format
@@ -1224,6 +1220,3 @@ msgstr "Segur que voleu suprimir esta nota?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Supressió de nota"
-
-#~ msgid "Add"
-#~ msgstr "Afig"
