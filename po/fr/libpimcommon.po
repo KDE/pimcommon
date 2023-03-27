@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2023-03-23 21:31+0100\n"
+"PO-Revision-Date: 2023-03-25 09:20+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -610,10 +610,9 @@ msgid "Select"
 msgstr "Sélectionner"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Désélectionner"
+msgstr "Désélectionner"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -648,7 +647,7 @@ msgstr "Enregistrer"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -695,14 +694,12 @@ msgstr "Déplacer vers le bas"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Nouveau courriel..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "Courriel"
+msgstr "Ajouter un courriel"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
 #, kde-format

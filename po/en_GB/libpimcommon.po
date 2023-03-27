@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2022-12-31 16:41+0000\n"
+"PO-Revision-Date: 2023-03-26 14:36+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -583,13 +583,12 @@ msgstr "Separate domain with '%1'"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Exclude email with Regular Expression:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Separate domain with '%1'"
+msgstr "Separate regular expression with '%1'"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
 #, kde-format
@@ -597,10 +596,9 @@ msgid "Select"
 msgstr "Select"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Unselect"
+msgstr "Unselect"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -634,7 +632,7 @@ msgstr "Save"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -681,21 +679,18 @@ msgstr "Move Down"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "New email..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "Email"
+msgstr "Add Email"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Remove Entry"
+msgstr[0] "Remove Email"
 msgstr[1] "Remove Entry"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132

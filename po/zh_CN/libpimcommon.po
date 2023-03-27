@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2023-03-11 04:52\n"
+"PO-Revision-Date: 2023-03-26 02:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -585,11 +585,9 @@ msgid "Separate regular expression with '%1'"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "select an email address"
-#| msgid "Se&lect..."
+#, kde-format
 msgid "Select"
-msgstr "选择(&L)..."
+msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, kde-format
@@ -676,18 +674,15 @@ msgid "New email..."
 msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox email address of the contact"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "电子邮件"
+msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "删除条目"
+msgstr[0] ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
@@ -1200,6 +1195,3 @@ msgstr "您真的想要删除此便笺吗？"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "删除便笺"
-
-#~ msgid "Add"
-#~ msgstr "添加"
