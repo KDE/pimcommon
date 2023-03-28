@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2023-03-21 11:37+0000\n"
+"PO-Revision-Date: 2023-03-27 23:29+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -610,10 +610,9 @@ msgid "Separate regular expression with '%1'"
 msgstr "Separar a expressão regular com o '%1'"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Seleccionar"
+msgstr "Seleccionar"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, kde-format
@@ -699,14 +698,12 @@ msgstr "Descer"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Novo e-mail..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "E-mail"
+msgstr "Adicionar um E-mail"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
 #, kde-format
@@ -1238,6 +1235,3 @@ msgstr "Deseja realmente apagar esta nota?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Apagar a Nota"
-
-#~ msgid "Add"
-#~ msgstr "Adicionar"
