@@ -78,8 +78,8 @@ public:
     void clear();
 
 private:
-    explicit RecentAddresses(KConfig *config = nullptr);
-    void adjustSize();
+    PIMCOMMONAKONADI_NO_EXPORT explicit RecentAddresses(KConfig *config = nullptr);
+    PIMCOMMONAKONADI_NO_EXPORT void adjustSize();
 
     KContacts::Addressee::List m_addresseeList;
 

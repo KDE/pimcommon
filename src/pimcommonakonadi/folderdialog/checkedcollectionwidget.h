@@ -46,7 +46,7 @@ Q_SIGNALS:
     void collectionRemoved(const Akonadi::Collection &);
 
 private:
-    void slotSetCollectionFilter(const QString &filter);
+    PIMCOMMONAKONADI_NO_EXPORT void slotSetCollectionFilter(const QString &filter);
     std::unique_ptr<CheckedCollectionWidgetPrivate> const d;
 };
 }

@@ -37,10 +37,10 @@ protected:
     bool eventFilter(QObject *o, QEvent *e) override;
 
 private:
-    void slotAddItem();
-    void slotRemoveItem();
-    void slotUpdateAddButton(const QString &str);
-    void slotCustomContextMenuRequested(const QPoint &pos);
+    PIMCOMMONAKONADI_NO_EXPORT void slotAddItem();
+    PIMCOMMONAKONADI_NO_EXPORT void slotRemoveItem();
+    PIMCOMMONAKONADI_NO_EXPORT void slotUpdateAddButton(const QString &str);
+    PIMCOMMONAKONADI_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &pos);
     QLineEdit *const mLineEdit;
     QToolButton *const mNewButton;
     QToolButton *const mRemoveButton;

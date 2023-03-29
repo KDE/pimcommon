@@ -27,9 +27,10 @@ public:
     Q_REQUIRED_RESULT QVector<Akonadi::Collection> selectedCollection() const;
 
 private:
-    void initialize(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection = QList<Akonadi::Collection::Id>());
-    void writeConfig();
-    void readConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void initialize(const QString &mimetype,
+                                               const QList<Akonadi::Collection::Id> &selectedCollection = QList<Akonadi::Collection::Id>());
+    PIMCOMMONAKONADI_NO_EXPORT void writeConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void readConfig();
     std::unique_ptr<SelectMultiCollectionDialogPrivate> const d;
 };
 }

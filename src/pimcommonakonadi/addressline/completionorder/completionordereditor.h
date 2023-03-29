@@ -31,9 +31,9 @@ public:
     ~CompletionOrderEditor() override;
 
 private:
-    void slotOk();
-    void readConfig();
-    void writeConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void slotOk();
+    PIMCOMMONAKONADI_NO_EXPORT void readConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void writeConfig();
     std::unique_ptr<CompletionOrderEditorPrivate> const d;
 };
 } // namespace

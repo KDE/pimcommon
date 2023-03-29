@@ -31,12 +31,12 @@ public:
     Q_REQUIRED_RESULT bool hasAnnotationSupport(const QString &identifier) const;
 
 private:
-    void slotInstanceAdded(const Akonadi::AgentInstance &instance);
-    void slotInstanceRemoved(const Akonadi::AgentInstance &instance);
-    void slotCapabilities(QDBusPendingCallWatcher *watcher);
+    PIMCOMMONAKONADI_NO_EXPORT void slotInstanceAdded(const Akonadi::AgentInstance &instance);
+    PIMCOMMONAKONADI_NO_EXPORT void slotInstanceRemoved(const Akonadi::AgentInstance &instance);
+    PIMCOMMONAKONADI_NO_EXPORT void slotCapabilities(QDBusPendingCallWatcher *watcher);
 
-    void init();
-    void searchCapabilities(const QString &identifier);
+    PIMCOMMONAKONADI_NO_EXPORT void init();
+    PIMCOMMONAKONADI_NO_EXPORT void searchCapabilities(const QString &identifier);
     QHash<QString, bool> mImapResource;
 };
 }

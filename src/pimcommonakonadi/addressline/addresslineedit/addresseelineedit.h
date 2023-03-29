@@ -207,8 +207,8 @@ protected:
     void loadContacts();
 
 private:
-    void addContact(const QStringList &emails, const KContacts::Addressee &addr, int weight, int source, QString append = QString());
-    void groupExpandResult(KJob *job);
+    PIMCOMMONAKONADI_NO_EXPORT void addContact(const QStringList &emails, const KContacts::Addressee &addr, int weight, int source, QString append = QString());
+    PIMCOMMONAKONADI_NO_EXPORT void groupExpandResult(KJob *job);
     bool eventFilter(QObject *, QEvent *) override;
 
     AddresseeLineEditPrivate *const d;

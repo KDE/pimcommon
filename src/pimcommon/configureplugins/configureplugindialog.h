@@ -36,11 +36,11 @@ protected:
     Q_REQUIRED_RESULT QDialogButtonBox *buttonBox() const;
 
 private:
-    void slotHelpClicked();
-    void slotAccepted();
-    void slotRestoreDefaultClicked();
-    void saveConfig();
-    void readConfig();
+    PIMCOMMON_NO_EXPORT void slotHelpClicked();
+    PIMCOMMON_NO_EXPORT void slotAccepted();
+    PIMCOMMON_NO_EXPORT void slotRestoreDefaultClicked();
+    PIMCOMMON_NO_EXPORT void saveConfig();
+    PIMCOMMON_NO_EXPORT void readConfig();
     QDialogButtonBox *mButtonBox = nullptr;
 };
 }

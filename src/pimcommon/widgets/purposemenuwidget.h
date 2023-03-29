@@ -31,8 +31,8 @@ public:
     Q_REQUIRED_RESULT QMenu *menu() const;
 
 private:
-    void slotInitializeShareMenu();
-    void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
+    PIMCOMMON_NO_EXPORT void slotInitializeShareMenu();
+    PIMCOMMON_NO_EXPORT void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
     Purpose::Menu *mShareMenu = nullptr;
     QTemporaryFile *mTemporaryShareFile = nullptr;
     QWidget *const mParentWidget;

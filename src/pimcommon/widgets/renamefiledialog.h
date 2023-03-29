@@ -36,11 +36,11 @@ public:
     Q_REQUIRED_RESULT QUrl newName() const;
 
 private:
-    void slotOverwritePressed();
-    void slotIgnorePressed();
-    void slotRenamePressed();
-    void slotApplyAllPressed();
-    void slotSuggestNewNamePressed();
+    PIMCOMMON_NO_EXPORT void slotOverwritePressed();
+    PIMCOMMON_NO_EXPORT void slotIgnorePressed();
+    PIMCOMMON_NO_EXPORT void slotRenamePressed();
+    PIMCOMMON_NO_EXPORT void slotApplyAllPressed();
+    PIMCOMMON_NO_EXPORT void slotSuggestNewNamePressed();
     //@cond PRIVATE
     class RenameFileDialogPrivate;
     std::unique_ptr<RenameFileDialogPrivate> const d;

@@ -36,10 +36,10 @@ public:
     ~TemplateManager() override;
 
 private:
-    void slotDirectoryChanged();
-    void loadTemplates(bool init = false);
-    void initTemplatesDirectories(const QString &templatesRelativePath);
-    Q_REQUIRED_RESULT TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
+    PIMCOMMON_NO_EXPORT void slotDirectoryChanged();
+    PIMCOMMON_NO_EXPORT void loadTemplates(bool init = false);
+    PIMCOMMON_NO_EXPORT void initTemplatesDirectories(const QString &templatesRelativePath);
+    Q_REQUIRED_RESULT PIMCOMMON_NO_EXPORT TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
 
     std::unique_ptr<TemplateManagerPrivate> const d;
 };

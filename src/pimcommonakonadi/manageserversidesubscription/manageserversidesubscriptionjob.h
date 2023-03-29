@@ -32,7 +32,7 @@ public:
     void setParentWidget(QWidget *parentWidget);
 
 private:
-    void slotConfigureSubscriptionFinished(QDBusPendingCallWatcher *watcher);
+    PIMCOMMONAKONADI_NO_EXPORT void slotConfigureSubscriptionFinished(QDBusPendingCallWatcher *watcher);
     std::unique_ptr<ManageServerSideSubscriptionJobPrivate> const d;
 };
 }

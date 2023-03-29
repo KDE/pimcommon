@@ -49,7 +49,7 @@ public:
     PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
     void clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient);
 private Q_SLOTS:
-    void slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
+    PIMCOMMONAKONADI_NO_EXPORT void slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
 
 private:
     std::unique_ptr<PluginInterfacePrivate> const d;

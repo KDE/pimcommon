@@ -37,10 +37,10 @@ public:
     void storeAddresses(KConfig *config);
 
 private:
-    void slotSaveAndClose();
-    void slotSave();
-    void readConfig();
-    void writeConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void slotSaveAndClose();
+    PIMCOMMONAKONADI_NO_EXPORT void slotSave();
+    PIMCOMMONAKONADI_NO_EXPORT void readConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void writeConfig();
     std::unique_ptr<CompletionConfigureDialogPrivate> const d;
 };
 }

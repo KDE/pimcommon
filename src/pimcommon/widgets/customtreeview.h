@@ -29,8 +29,8 @@ public:
     void setShowDefaultText(bool b);
 
 private:
-    void generalPaletteChanged();
-    void generalFontChanged();
+    PIMCOMMON_NO_EXPORT void generalPaletteChanged();
+    PIMCOMMON_NO_EXPORT void generalFontChanged();
 
 protected:
     void paintEvent(QPaintEvent *event) override;

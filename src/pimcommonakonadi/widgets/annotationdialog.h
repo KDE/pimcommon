@@ -40,10 +40,10 @@ public:
     ~AnnotationEditDialog() override;
 
 private:
-    void readConfig();
-    void writeConfig();
-    void slotAccepted();
-    void slotDeleteNote();
+    PIMCOMMONAKONADI_NO_EXPORT void readConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void writeConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void slotAccepted();
+    PIMCOMMONAKONADI_NO_EXPORT void slotDeleteNote();
     //@cond PRIVATE
     class AnnotationEditDialogPrivate;
     std::unique_ptr<AnnotationEditDialogPrivate> const d;

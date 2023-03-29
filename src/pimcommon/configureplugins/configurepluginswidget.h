@@ -35,11 +35,11 @@ Q_SIGNALS:
     void changed();
 
 private:
-    void initialize();
-    void readConfig();
-    void writeConfig();
-    void slotConfigChanged();
-    void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
+    PIMCOMMON_NO_EXPORT void initialize();
+    PIMCOMMON_NO_EXPORT void readConfig();
+    PIMCOMMON_NO_EXPORT void writeConfig();
+    PIMCOMMON_NO_EXPORT void slotConfigChanged();
+    PIMCOMMON_NO_EXPORT void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
 
     QSplitter *mSplitter = nullptr;
     ConfigurePluginsListWidget *mConfigureListWidget = nullptr;

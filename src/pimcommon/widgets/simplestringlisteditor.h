@@ -101,8 +101,8 @@ protected Q_SLOTS:
     void slotSelectionChanged();
 
 private:
-    void slotContextMenu(const QPoint &);
-    bool containsString(const QString &str);
+    PIMCOMMON_NO_EXPORT void slotContextMenu(const QPoint &);
+    PIMCOMMON_NO_EXPORT bool containsString(const QString &str);
     std::unique_ptr<SimpleStringListEditorPrivate> const d;
 };
 }
