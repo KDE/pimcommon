@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2023-01-07 15:56+0100\n"
+"PO-Revision-Date: 2023-03-29 00:11+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -586,13 +586,12 @@ msgstr "Separa i domini con «%1»"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Escludi messaggi di posta tramite espressione regolare:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Separa i domini con «%1»"
+msgstr "Separa le espressioni regolari con «%1»"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
 #, kde-format
@@ -600,10 +599,9 @@ msgid "Select"
 msgstr "Seleziona"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Deseleziona"
+msgstr "Deseleziona"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -638,7 +636,7 @@ msgstr "Salva"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -685,22 +683,19 @@ msgstr "Sposta in basso"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Nuovo messaggio di posta..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "Posta elettronica"
+msgstr "Aggiungi messaggio di posta"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Rimuovi voce"
-msgstr[1] "Rimuovi voce"
+msgstr[0] "Rimuovi messaggio di posta"
+msgstr[1] "Rimuovi messaggi di posta"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
