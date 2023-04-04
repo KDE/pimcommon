@@ -4,17 +4,17 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
-    SOVERSION 5
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
+    SOVERSION 6
     )
-add_library(KPim${KF_MAJOR_VERSION}PimCommonAkonadi )
-add_library(KPim${KF_MAJOR_VERSION}::PimCommonAkonadi ALIAS KPim${KF_MAJOR_VERSION}PimCommonAkonadi)
-ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
+add_library(KPim6PimCommonAkonadi )
+add_library(KPim6::PimCommonAkonadi ALIAS KPim6PimCommonAkonadi)
+ecm_qt_declare_logging_category(KPim6PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
         DESCRIPTION "kdepim (pimcommonakonadi)"
         EXPORT PIMCOMMON
     )
 
-target_sources(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE
+target_sources(KPim6PimCommonAkonadi PRIVATE
     folderdialog/selectmulticollectionwidget.cpp
     folderdialog/selectmulticollectiondialog.cpp
     folderdialog/checkedcollectionwidget.cpp
@@ -102,7 +102,7 @@ target_sources(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-target_sources(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE
+target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
@@ -118,42 +118,42 @@ endif()
 
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
 endif()
 
-generate_export_header(KPim${KF_MAJOR_VERSION}PimCommonAkonadi BASE_NAME pimcommonakonadi)
+generate_export_header(KPim6PimCommonAkonadi BASE_NAME pimcommonakonadi)
 
-target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommonAkonadi
+target_link_libraries(KPim6PimCommonAkonadi
     PUBLIC
-    KPim${KF_MAJOR_VERSION}::PimCommon
-    KPim${KF_MAJOR_VERSION}::AkonadiCore
-    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
-    KF${KF_MAJOR_VERSION}::Contacts
-    KPim${KF_MAJOR_VERSION}::AkonadiContact
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KPim${KF_MAJOR_VERSION}::IMAP
-    KPim${KF_MAJOR_VERSION}::Libkdepim
+    KPim6::PimCommon
+    KPim6::AkonadiCore
+    KPim6::AkonadiWidgets
+    KF6::Contacts
+    KPim6::AkonadiContact
+    KF6::KIOCore
+    KPim6::IMAP
+    KPim6::Libkdepim
     PRIVATE
-    KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::Codecs
-    KPim${KF_MAJOR_VERSION}::PimTextEdit
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF${KF_MAJOR_VERSION}::KCMUtils
-    KPim${KF_MAJOR_VERSION}::Ldap
-    KF${KF_MAJOR_VERSION}::ItemViews
+    KF6::I18n
+    KF6::Codecs
+    KPim6::PimTextEdit
+    KF6::XmlGui
+    KF6::KIOWidgets
+    KF6::KCMUtils
+    KPim6::Ldap
+    KF6::ItemViews
     )
 
 if (NOT FORCE_DISABLE_AKONADI_SEARCH)
-    target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PRIVATE KPim${KF_MAJOR_VERSION}::AkonadiSearchPIM)
+    target_link_libraries(KPim6PimCommonAkonadi PRIVATE KPim6::AkonadiSearchPIM)
 endif()
 
 
-target_include_directories(KPim${KF_MAJOR_VERSION}PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/>")
+target_include_directories(KPim6PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/>")
 
-target_include_directories(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
+target_include_directories(KPim6PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
-set_target_properties(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PROPERTIES
+set_target_properties(KPim6PimCommonAkonadi PROPERTIES
     VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommonAkonadi
@@ -161,8 +161,8 @@ set_target_properties(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PROPERTIES
 
 
 install(TARGETS
-    KPim${KF_MAJOR_VERSION}PimCommonAkonadi
-    EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6PimCommonAkonadi
+    EXPORT KPim6PimCommonAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)
@@ -306,8 +306,8 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     )
 
 ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
-    LIB_NAME KPim${KF_MAJOR_VERSION}PimCommonAkonadi
-    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KWidgetsAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi
+    LIB_NAME KPim6PimCommonAkonadi
+    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KWidgetsAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi
     )
 
 
@@ -326,7 +326,7 @@ install(FILES
     ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
     ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
     ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/PimCommonAkonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
     COMPONENT Devel
     )
 
@@ -349,7 +349,7 @@ install(FILES
     ${PimCommonAkonadi_recentaddress_HEADERS}
 
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/pimcommonakonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
     )
 
@@ -359,9 +359,9 @@ install(FILES
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim${KF_MAJOR_VERSION}PimCommonAkonadi_QCH
-        NAME KPim${KF_MAJOR_VERSION}PimCommonAkonadi
-        BASE_NAME KPim${KF_MAJOR_VERSION}PimCommonAkonadi
+        KPim6PimCommonAkonadi_QCH
+        NAME KPim6PimCommonAkonadi
+        BASE_NAME KPim6PimCommonAkonadi
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -383,9 +383,9 @@ if (BUILD_QCH)
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt${QT_MAJOR_VERSION}Core_QCH
-            Qt${QT_MAJOR_VERSION}Gui_QCH
-            Qt${QT_MAJOR_VERSION}Widgets_QCH
+            Qt6Core_QCH
+            Qt6Gui_QCH
+            Qt6Widgets_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
@@ -396,19 +396,19 @@ if (BUILD_QCH)
     )
 
 endif()
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadi")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonAkonadi")
 if (BUILD_QCH)
 ecm_install_qch_export(
-    TARGETS KPim${KF_MAJOR_VERSION}PimCommonAkonadi_QCH
-    FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake
+    TARGETS KPim6PimCommonAkonadi_QCH
+    FILE KPim6PimCommonAkonadiQchTargets.cmake
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
-set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiQchTargets.cmake\")")
+set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonAkonadiQchTargets.cmake\")")
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 
@@ -416,17 +416,17 @@ configure_package_config_file(
 
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonAkonadiConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    FILE KPim${KF_MAJOR_VERSION}PimCommonAkonadiTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
+install(EXPORT KPim6PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPim6PimCommonAkonadiTargets.cmake NAMESPACE KPim6::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommonAkonadi/ COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/ COMPONENT Devel
     )
 

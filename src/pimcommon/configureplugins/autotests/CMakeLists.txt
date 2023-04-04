@@ -3,12 +3,12 @@
 add_executable( configurepluginswidgettest configurepluginswidgettest.cpp configurepluginswidgettest.h)
 add_test(NAME configurepluginswidgettest COMMAND configurepluginswidgettest )
 ecm_mark_as_test(kmail-configurepluginswidgettest)
-target_link_libraries( configurepluginswidgettest Qt::Test KF${KF_MAJOR_VERSION}::I18n Qt::Widgets
-    KF${KF_MAJOR_VERSION}::ConfigCore KF${KF_MAJOR_VERSION}::TextWidgets KPim${KF_MAJOR_VERSION}::PimCommon)
+target_link_libraries( configurepluginswidgettest Qt::Test KF6::I18n Qt::Widgets
+    KF6::ConfigCore KF6::TextWidgets KPim6::PimCommon)
 
 
 add_executable( configurepluginslistwidgettest configurepluginslistwidgettest.cpp configurepluginslistwidgettest.h)
 add_test(NAME configurepluginslistwidgettest COMMAND configurepluginslistwidgettest )
 ecm_mark_as_test(kmail-configurepluginslistwidgettest)
-target_link_libraries( configurepluginslistwidgettest Qt::Test KF${KF_MAJOR_VERSION}::I18n Qt::Widgets
-    KF${KF_MAJOR_VERSION}::ConfigCore KF${KF_MAJOR_VERSION}::TextWidgets KPim${KF_MAJOR_VERSION}::PimCommon KF${KF_MAJOR_VERSION}::ItemViews)
+target_link_libraries( configurepluginslistwidgettest Qt::Test KF6::I18n Qt::Widgets
+    KF6::ConfigCore KF6::TextWidgets KPim6::PimCommon KF6::ItemViews)

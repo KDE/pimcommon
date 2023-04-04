@@ -6,14 +6,14 @@ macro(add_pimcommonakonadi_addressline_unittest  _source)
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-addressline-"
         LINK_LIBRARIES Qt::Test
-        KF${KF_MAJOR_VERSION}::Contacts
+        KF6::Contacts
         Qt::Widgets
-        KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
+        KPim6::PimCommonAkonadi
         Qt::DBus
-        KF${KF_MAJOR_VERSION}::Codecs
-        KF${KF_MAJOR_VERSION}::ConfigCore
-        KF${KF_MAJOR_VERSION}::Completion
-        KF${KF_MAJOR_VERSION}::I18n
+        KF6::Codecs
+        KF6::ConfigCore
+        KF6::Completion
+        KF6::I18n
     )
 endmacro()
 

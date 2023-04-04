@@ -10,16 +10,16 @@ irc: akonadi
 
 libraries:
  - qmake: PimCommon
-   cmake: "KF5::PimCommon"
+   cmake: "KPim6::PimCommon"
  - qmake: PimCommonAkonadi
-   cmake: "KF5::PimCommonAkonadi"
+   cmake: "KPim6::PimCommonAkonadi"
  - qmake: PimCommonAutoCorrection
-   cmake: "KF5::PimCommonAutoCorrection"
+   cmake: "KPim6::PimCommonAutoCorrection"
  - qmake: PimCommonTextTranslator
-   cmake: "KF5::PimCommonTextTranslator"
+   cmake: "KPim6::PimCommonTextTranslator"
  - qmake: PimCommonTextGrammarCheck
-   cmake: "KF5::PimCommonTextGrammarCheck"
+   cmake: "KPim6::PimCommonTextGrammarCheck"
 
-cmakename: KF5PimCommon
+cmakename: KPim6PimCommon
 # FIXME kapidox does not support more than one cmake module per repo yet
-#cmakename: KF5PimCommonAkonadi
+#cmakename: KPim6PimCommonAkonadi

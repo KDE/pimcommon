@@ -7,7 +7,7 @@ macro(add_pimcommon_widget_unittest _source)
         NAME_PREFIX "pimcommon-widget-"
         LINK_LIBRARIES Qt::Test
         Qt::Widgets
-        KPim${KF_MAJOR_VERSION}::PimCommon
+        KPim6::PimCommon
     )
 endmacro()
 add_pimcommon_widget_unittest(kactionmenuchangecasetest.cpp)

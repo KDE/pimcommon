@@ -5,7 +5,7 @@ macro(add_pimcommon_collectionpage_test _source)
     ecm_add_test(${_source} ${_name}.h
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-collectionpage-"
-        LINK_LIBRARIES Qt::Test Qt::Gui KPim${KF_MAJOR_VERSION}::AkonadiCore KPim${KF_MAJOR_VERSION}::PimCommonAkonadi
+        LINK_LIBRARIES Qt::Test Qt::Gui KPim6::AkonadiCore KPim6::PimCommonAkonadi
     )
 endmacro()
 

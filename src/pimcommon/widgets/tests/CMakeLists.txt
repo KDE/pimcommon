@@ -4,12 +4,12 @@
 add_executable(testspellchecklineedit testspellchecklineedit.cpp)
 ecm_mark_as_test(testspellchecklineedit)
 
-target_link_libraries(testspellchecklineedit KPim${KF_MAJOR_VERSION}::PimCommon KPim${KF_MAJOR_VERSION}::PimTextEdit KF${KF_MAJOR_VERSION}::I18n)
+target_link_libraries(testspellchecklineedit KPim6::PimCommon KPim6::PimTextEdit KF6::I18n)
 ######
 add_executable(customtoolswidgetng_gui customtoolswidgetng_gui.cpp)
 target_link_libraries(customtoolswidgetng_gui
-  KPim${KF_MAJOR_VERSION}::PimCommon
-  KF${KF_MAJOR_VERSION}::XmlGui
-  KF${KF_MAJOR_VERSION}::I18n
+  KPim6::PimCommon
+  KF6::XmlGui
+  KF6::I18n
 )
 

@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: none
 add_executable(autocorrection_gui autocorrection_gui.cpp autocorrection_gui.h)
 target_link_libraries(autocorrection_gui
-  KPim${KF_MAJOR_VERSION}::PimCommon
-  KF${KF_MAJOR_VERSION}::I18n
-  KF${KF_MAJOR_VERSION}::TextAutoCorrection
+  KPim6::PimCommon
+  KF6::I18n
+  KF6::TextAutoCorrection
 )

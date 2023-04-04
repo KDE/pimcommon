@@ -3,13 +3,13 @@
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/ COMPONENT Devel
     )
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
-    SOVERSION 5
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfigVersion.cmake"
+    SOVERSION 6
     )
 
 
@@ -22,15 +22,15 @@ endmacro()
 
 add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
 
-add_library(KPim${KF_MAJOR_VERSION}PimCommon )
-add_library(KPim${KF_MAJOR_VERSION}::PimCommon ALIAS KPim${KF_MAJOR_VERSION}PimCommon)
-ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
+add_library(KPim6PimCommon )
+add_library(KPim6::PimCommon ALIAS KPim6PimCommon)
+ecm_qt_declare_logging_category(KPim6PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
         DESCRIPTION "kdepim (pimcommon)"
         OLD_CATEGORY_NAMES log_pimcommon
         EXPORT PIMCOMMON
     )
 
-target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
+target_sources(KPim6PimCommon PRIVATE
     ${libpimcommon_SRCS}
     genericplugins/pluginutil.cpp
     genericplugins/genericpluginmanager.cpp
@@ -99,7 +99,7 @@ target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
     )
 
 if (QT_MAJOR_VERSION STREQUAL "5")
-    target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
+    target_sources(KPim6PimCommon PRIVATE
         migration/migrateapplicationfiles.cpp
         migration/migrateapplicationfiles.h
 
@@ -108,53 +108,53 @@ if (QT_MAJOR_VERSION STREQUAL "5")
     )
 endif()
 
-target_sources(KPim${KF_MAJOR_VERSION}PimCommon PRIVATE
+target_sources(KPim6PimCommon PRIVATE
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim${KF_MAJOR_VERSION}PimCommon PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim6PimCommon PROPERTIES UNITY_BUILD ON)
 endif()
-generate_export_header(KPim${KF_MAJOR_VERSION}PimCommon BASE_NAME pimcommon)
+generate_export_header(KPim6PimCommon BASE_NAME pimcommon)
 
 
-target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
+target_link_libraries(KPim6PimCommon
     PUBLIC
     Qt::Gui
     Qt::Widgets
     Qt::DBus
-    KF${KF_MAJOR_VERSION}::KIOCore
-    KF${KF_MAJOR_VERSION}::WidgetsAddons
-    KPim${KF_MAJOR_VERSION}::PimTextEdit
-    KF${KF_MAJOR_VERSION}::TextAutoCorrection
+    KF6::KIOCore
+    KF6::WidgetsAddons
+    KPim6::PimTextEdit
+    KF6::TextAutoCorrection
     PRIVATE
     Qt::Network
-    KF${KF_MAJOR_VERSION}::I18n
-    KPim${KF_MAJOR_VERSION}::Libkdepim
-    KF${KF_MAJOR_VERSION}::XmlGui
-    KF${KF_MAJOR_VERSION}::KIOWidgets
-    KF${KF_MAJOR_VERSION}::ItemViews
-    KF${KF_MAJOR_VERSION}::NewStuffCore
-    KF${KF_MAJOR_VERSION}::NewStuffWidgets
-    KF${KF_MAJOR_VERSION}::Purpose
-    KF${KF_MAJOR_VERSION}::PurposeWidgets
-    KF${KF_MAJOR_VERSION}::Codecs
+    KF6::I18n
+    KPim6::Libkdepim
+    KF6::XmlGui
+    KF6::KIOWidgets
+    KF6::ItemViews
+    KF6::NewStuffCore
+    KF6::NewStuffWidgets
+    KF6::Purpose
+    KF6::PurposeWidgets
+    KF6::Codecs
 )
 
-target_include_directories(KPim${KF_MAJOR_VERSION}PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/>")
+target_include_directories(KPim6PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>")
 
-target_include_directories(KPim${KF_MAJOR_VERSION}PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
+target_include_directories(KPim6PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
-set_target_properties(KPim${KF_MAJOR_VERSION}PimCommon PROPERTIES
+set_target_properties(KPim6PimCommon PROPERTIES
     VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommon
     )
 
 install(TARGETS
-    KPim${KF_MAJOR_VERSION}PimCommon
-    EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    KPim6PimCommon
+    EXPORT KPim6PimCommonTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
     )
 
 if (BUILD_TESTING)
@@ -285,8 +285,8 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     RELATIVE configureplugins
     )
 ecm_generate_pri_file(BASE_NAME PimCommon
-    LIB_NAME KF5PimCommon
-    DEPS "network KIOCore KWidgetsAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon
+    LIB_NAME KF6PimCommon
+    DEPS "network KIOCore KWidgetsAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon
     )
 
 
@@ -308,7 +308,7 @@ install(FILES
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
     ${PimCommon_CamelCasemisc_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/PimCommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/PimCommon
     COMPONENT Devel
     )
 
@@ -332,7 +332,7 @@ install(FILES
     ${PimCommon_widgets_HEADERS}
     ${PimCommon_misc_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/pimcommon
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
     )
 
@@ -346,9 +346,9 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KPim${KF_MAJOR_VERSION}PimCommon_QCH
-        NAME KPim${KF_MAJOR_VERSION}PimCommon
-        BASE_NAME KPim${KF_MAJOR_VERSION}PimCommon
+        KPim6PimCommon_QCH
+        NAME KPim6PimCommon
+        BASE_NAME KPim6PimCommon
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -377,9 +377,9 @@ if (BUILD_QCH)
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
-            Qt${QT_MAJOR_VERSION}Core_QCH
-            Qt${QT_MAJOR_VERSION}Gui_QCH
-            Qt${QT_MAJOR_VERSION}Widgets_QCH
+            Qt6Core_QCH
+            Qt6Gui_QCH
+            Qt6Widgets_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
         BLANK_MACROS
@@ -390,19 +390,19 @@ if (BUILD_QCH)
     )
 endif()
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}PimCommon")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommon")
 if (BUILD_QCH)
 ecm_install_qch_export(
-    TARGETS KPim${KF_MAJOR_VERSION}PimCommon_QCH
-    FILE KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake
+    TARGETS KPim6PimCommon_QCH
+    FILE KPim6PimCommonQchTargets.cmake
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
-set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}PimCommonQchTargets.cmake\")")
+set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonQchTargets.cmake\")")
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 
@@ -410,10 +410,10 @@ configure_package_config_file(
 
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}PimCommonConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KPim${KF_MAJOR_VERSION}PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}PimCommonTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
+install(EXPORT KPim6PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6PimCommonTargets.cmake NAMESPACE KPim6::)
