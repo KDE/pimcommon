@@ -82,7 +82,7 @@ void SelectMultiCollectionDialog::readConfig()
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
-QVector<Akonadi::Collection> SelectMultiCollectionDialog::selectedCollection() const
+QList<Akonadi::Collection> SelectMultiCollectionDialog::selectedCollection() const
 {
     return d->mSelectMultiCollection->selectedCollection();
 }

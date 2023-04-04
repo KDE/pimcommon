@@ -147,7 +147,7 @@ protected:
     }
 
 private:
-    QVector<QPair<QByteArray, KIMAP::Acl::Rights>> mRights;
+    QList<QPair<QByteArray, KIMAP::Acl::Rights>> mRights;
 };
 
 class Q_DECL_HIDDEN PimCommon::AclManager::AclManagerPrivate

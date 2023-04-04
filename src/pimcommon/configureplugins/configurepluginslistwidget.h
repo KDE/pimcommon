@@ -57,16 +57,16 @@ protected:
         bool mHasConfigureSupport = false;
         bool mEnableFromUserSettings = false;
     };
-    void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems);
-    void fillTopItems(const QVector<PimCommon::PluginUtilData> &lst,
+    void savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems);
+    void fillTopItems(const QList<PimCommon::PluginUtilData> &lst,
                       const QString &topLevelItemName,
                       const QString &groupName,
                       const QString &prefixKey,
-                      QVector<PluginItem *> &itemsList,
+                      QList<PluginItem *> &itemsList,
                       const QString &configureGroupName = QString(),
                       bool checkable = true);
-    void resetToUserSettings(const QVector<PluginItem *> &items);
-    void changeState(const QVector<PluginItem *> &items);
+    void resetToUserSettings(const QList<PluginItem *> &items);
+    void changeState(const QList<PluginItem *> &items);
 
     QTreeWidget *const mListWidget;
 

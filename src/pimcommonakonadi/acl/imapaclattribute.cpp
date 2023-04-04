@@ -13,7 +13,7 @@
 #include "imapaclattribute.h"
 
 #include <QByteArray>
-#include <QVector>
+#include <QList>
 
 using namespace PimCommon;
 
@@ -144,7 +144,7 @@ void ImapAclAttribute::deserialize(const QByteArray &data)
     d->mOldRights.clear();
     d->mMyRights = KIMAP::Acl::None;
 
-    QVector<QByteArray> parts;
+    QList<QByteArray> parts;
     int lastPos = 0;
     int pos;
     while ((pos = data.indexOf(" %% ", lastPos)) != -1) {

@@ -34,9 +34,9 @@ public:
     Q_ENUM(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
 
-    void setActionTypes(const QVector<ActionType> &type);
+    void setActionTypes(const QList<ActionType> &type);
     void addActionType(ActionType type);
-    Q_REQUIRED_RESULT QVector<ActionType> actionTypes() const;
+    Q_REQUIRED_RESULT QList<ActionType> actionTypes() const;
 
     virtual void setCurrentItems(const Akonadi::Item::List &items);
     virtual void setItems(const Akonadi::Item::List &items);

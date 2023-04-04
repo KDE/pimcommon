@@ -43,7 +43,7 @@ void CustomToolsWidgetNg::addCustomToolViewInterface(PimCommon::CustomToolsViewI
     d->mStackedWidget->addWidget(plugin);
 }
 
-void CustomToolsWidgetNg::initializeView(KActionCollection *ac, const QVector<CustomToolsPlugin *> &localPluginsList)
+void CustomToolsWidgetNg::initializeView(KActionCollection *ac, const QList<CustomToolsPlugin *> &localPluginsList)
 {
     for (CustomToolsPlugin *plugin : localPluginsList) {
         PimCommon::CustomToolsViewInterface *localCreateView = plugin->createView(ac, this);

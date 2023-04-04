@@ -44,19 +44,19 @@ public:
     }
 
     void loadPlugin(GenericPluginInfo *item);
-    Q_REQUIRED_RESULT QVector<GenericPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QList<GenericPlugin *> pluginsList() const;
     bool initializePlugins();
     QString pluginDirectory;
     QString pluginName;
-    QVector<GenericPluginInfo> mPluginList;
+    QList<GenericPluginInfo> mPluginList;
 
-    Q_REQUIRED_RESULT QVector<PluginUtilData> pluginsDataList() const;
+    Q_REQUIRED_RESULT QList<PluginUtilData> pluginsDataList() const;
     Q_REQUIRED_RESULT QString configGroupName() const;
     Q_REQUIRED_RESULT QString configPrefixSettingKey() const;
     GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:
-    QVector<PluginUtilData> mPluginDataList;
+    QList<PluginUtilData> mPluginDataList;
     GenericPluginManager *const q;
 };
 
@@ -79,10 +79,10 @@ bool GenericPluginManagerPrivate::initializePlugins()
     if (pluginDirectory.isEmpty() || pluginName.isEmpty()) {
         return false;
     }
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(pluginDirectory);
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(pluginDirectory);
 
     const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
-    QVectorIterator<KPluginMetaData> i(plugins);
+    QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
     while (i.hasPrevious()) {
         GenericPluginInfo info;
@@ -105,23 +105,23 @@ bool GenericPluginManagerPrivate::initializePlugins()
             qCWarning(PIMCOMMON_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
-    QVector<GenericPluginInfo>::iterator end(mPluginList.end());
-    for (QVector<GenericPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    QList<GenericPluginInfo>::iterator end(mPluginList.end());
+    for (QList<GenericPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
     return true;
 }
 
-QVector<PluginUtilData> GenericPluginManagerPrivate::pluginsDataList() const
+QList<PluginUtilData> GenericPluginManagerPrivate::pluginsDataList() const
 {
     return mPluginDataList;
 }
 
-QVector<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
+QList<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
 {
-    QVector<PimCommon::GenericPlugin *> lst;
-    QVector<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<PimCommon::GenericPlugin *> lst;
+    QList<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if (auto plugin = (*it).plugin) {
             lst << plugin;
         }
@@ -141,8 +141,8 @@ void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
 
 GenericPlugin *GenericPluginManagerPrivate::pluginFromIdentifier(const QString &id)
 {
-    QVector<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<GenericPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<GenericPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if ((*it).pluginData.mIdentifier == id) {
             return (*it).plugin;
         }
@@ -183,12 +183,12 @@ QString GenericPluginManager::pluginName() const
     return d->pluginName;
 }
 
-QVector<GenericPlugin *> GenericPluginManager::pluginsList() const
+QList<GenericPlugin *> GenericPluginManager::pluginsList() const
 {
     return d->pluginsList();
 }
 
-QVector<PluginUtilData> GenericPluginManager::pluginsDataList() const
+QList<PluginUtilData> GenericPluginManager::pluginsDataList() const
 {
     return d->pluginsDataList();
 }

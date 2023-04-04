@@ -283,7 +283,7 @@ const QStringList PimCommon::AddresseeLineEditPrivate::adjustedCompletionItems(b
 
     if (AddresseeLineEditManager::self()->completion()->order() == KCompletion::Weighted) {
         // Sort the sections
-        QVector<SourceWithWeight> sourcesAndWeights;
+        QList<SourceWithWeight> sourcesAndWeights;
         const int numberOfCompletionSources(AddresseeLineEditManager::self()->completionSources.count());
         sourcesAndWeights.reserve(numberOfCompletionSources);
         for (int i = 0; i < numberOfCompletionSources; ++i) {

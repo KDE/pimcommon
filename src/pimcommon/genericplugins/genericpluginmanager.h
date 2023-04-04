@@ -8,8 +8,8 @@
 
 #include "pimcommon_export.h"
 #include <PimCommon/PluginUtil>
+#include <QList>
 #include <QObject>
-#include <QVector>
 
 namespace PimCommon
 {
@@ -45,8 +45,8 @@ public:
     void setPluginName(const QString &pluginName);
     Q_REQUIRED_RESULT QString pluginName() const;
 
-    Q_REQUIRED_RESULT QVector<PimCommon::GenericPlugin *> pluginsList() const;
-    Q_REQUIRED_RESULT QVector<PimCommon::PluginUtilData> pluginsDataList() const;
+    Q_REQUIRED_RESULT QList<PimCommon::GenericPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QList<PimCommon::PluginUtilData> pluginsDataList() const;
 
     Q_REQUIRED_RESULT QString configGroupName() const;
     Q_REQUIRED_RESULT QString configPrefixSettingKey() const;

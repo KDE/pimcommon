@@ -26,7 +26,7 @@ public:
     QString mPluginDirectory;
     QWidget *mParentWidget = nullptr;
     KActionCollection *mActionCollection = nullptr;
-    QVector<PimCommon::GenericPluginInterface *> mListGenericInterface;
+    QList<PimCommon::GenericPluginInterface *> mListGenericInterface;
     GenericPluginManager *mGenericPluginManager = nullptr;
 };
 
@@ -210,7 +210,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
     return listType;
 }
 
-QVector<PimCommon::PluginUtilData> PluginInterface::pluginsDataList() const
+QList<PimCommon::PluginUtilData> PluginInterface::pluginsDataList() const
 {
     return d->mGenericPluginManager->pluginsDataList();
 }

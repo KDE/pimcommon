@@ -46,16 +46,16 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT QVector<PimCommon::CustomToolsPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QList<PimCommon::CustomToolsPlugin *> pluginsList() const;
     void initializePluginList();
     void loadPlugin(CustomToolsPluginInfo *item);
-    QVector<CustomToolsPluginInfo> mPluginList;
+    QList<CustomToolsPluginInfo> mPluginList;
     CustomToolsPluginManager *const q;
 };
 
 void CustomToolsPluginManagerPrivate::initializePluginList()
 {
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/pimcommon/customtools"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/pimcommon/customtools"));
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
     QSet<QString> unique;
@@ -74,17 +74,17 @@ void CustomToolsPluginManagerPrivate::initializePluginList()
             qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
-    QVector<CustomToolsPluginInfo>::iterator end(mPluginList.end());
-    for (QVector<CustomToolsPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    QList<CustomToolsPluginInfo>::iterator end(mPluginList.end());
+    for (QList<CustomToolsPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
 }
 
-QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::pluginsList() const
+QList<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::pluginsList() const
 {
-    QVector<PimCommon::CustomToolsPlugin *> lst;
-    QVector<CustomToolsPluginInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<CustomToolsPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<PimCommon::CustomToolsPlugin *> lst;
+    QList<CustomToolsPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<CustomToolsPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if (auto plugin = (*it).plugin) {
             lst << plugin;
         }
@@ -114,7 +114,7 @@ CustomToolsPluginManager::CustomToolsPluginManager(QObject *parent)
 
 CustomToolsPluginManager::~CustomToolsPluginManager() = default;
 
-QVector<PimCommon::CustomToolsPlugin *> CustomToolsPluginManager::pluginsList() const
+QList<PimCommon::CustomToolsPlugin *> CustomToolsPluginManager::pluginsList() const
 {
     return d->pluginsList();
 }

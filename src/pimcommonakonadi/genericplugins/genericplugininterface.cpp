@@ -13,7 +13,7 @@ class PimCommon::GenericPluginInterfacePrivate
 public:
     GenericPluginInterfacePrivate() = default;
 
-    QVector<ActionType> actionTypes;
+    QList<ActionType> actionTypes;
 };
 
 GenericPluginInterface::GenericPluginInterface(QObject *parent)
@@ -24,7 +24,7 @@ GenericPluginInterface::GenericPluginInterface(QObject *parent)
 
 GenericPluginInterface::~GenericPluginInterface() = default;
 
-void GenericPluginInterface::setActionTypes(const QVector<ActionType> &type)
+void GenericPluginInterface::setActionTypes(const QList<ActionType> &type)
 {
     d->actionTypes = type;
 }
@@ -36,7 +36,7 @@ void GenericPluginInterface::addActionType(ActionType type)
     }
 }
 
-QVector<ActionType> GenericPluginInterface::actionTypes() const
+QList<ActionType> GenericPluginInterface::actionTypes() const
 {
     return d->actionTypes;
 }

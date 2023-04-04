@@ -43,8 +43,8 @@ public:
     }
 
     void loadPlugin(AddressessLineEditPluginInfo *item);
-    Q_REQUIRED_RESULT QVector<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
-    QVector<AddressessLineEditPluginInfo> mPluginList;
+    Q_REQUIRED_RESULT QList<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
+    QList<AddressessLineEditPluginInfo> mPluginList;
     bool initializePlugins();
 
 private:
@@ -56,7 +56,7 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("addressline"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("addressline"));
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
     while (i.hasPrevious()) {
@@ -73,8 +73,8 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
             qCWarning(PIMCOMMONAKONADI_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
-    const QVector<AddressessLineEditPluginInfo>::iterator end(mPluginList.end());
-    for (QVector<AddressessLineEditPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    const QList<AddressessLineEditPluginInfo>::iterator end(mPluginList.end());
+    for (QList<AddressessLineEditPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
     return true;
@@ -89,11 +89,11 @@ void AddressessLineEditPluginManagerPrivate::loadPlugin(AddressessLineEditPlugin
     }
 }
 
-QVector<PimCommon::AddressessLineEditAbstractPlugin *> AddressessLineEditPluginManagerPrivate::pluginsList() const
+QList<PimCommon::AddressessLineEditAbstractPlugin *> AddressessLineEditPluginManagerPrivate::pluginsList() const
 {
-    QVector<PimCommon::AddressessLineEditAbstractPlugin *> lst;
-    const QVector<AddressessLineEditPluginInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<AddressessLineEditPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<PimCommon::AddressessLineEditAbstractPlugin *> lst;
+    const QList<AddressessLineEditPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<AddressessLineEditPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if (auto plugin = (*it).plugin) {
             lst << plugin;
         }
@@ -115,16 +115,16 @@ AddressessLineEditPluginManager *AddressessLineEditPluginManager::self()
     return &s_self;
 }
 
-QVector<PimCommon::AddressessLineEditAbstractPlugin *> AddressessLineEditPluginManager::pluginsList() const
+QList<PimCommon::AddressessLineEditAbstractPlugin *> AddressessLineEditPluginManager::pluginsList() const
 {
     return d->pluginsList();
 }
 
 PimCommon::AddressessLineEditAbstractPlugin *AddressessLineEditPluginManager::plugin(const QString &identifier)
 {
-    const QVector<PimCommon::AddressessLineEditAbstractPlugin *> lstPlugins = pluginsList();
+    const QList<PimCommon::AddressessLineEditAbstractPlugin *> lstPlugins = pluginsList();
     for (PimCommon::AddressessLineEditAbstractPlugin *p : lstPlugins) {
-        const QVector<AddressessLineEditAbstractPluginInfo> lstPluginsInfo = p->names();
+        const QList<AddressessLineEditAbstractPluginInfo> lstPluginsInfo = p->names();
         for (const AddressessLineEditAbstractPluginInfo &info : lstPluginsInfo) {
             if (info.identifier == identifier) {
                 return p;

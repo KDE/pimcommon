@@ -35,7 +35,7 @@ public:
 
     void setLineEdit(PimCommon::AddresseeLineEdit *linedit);
 
-    virtual QVector<AddressessLineEditAbstractPluginInfo> names() const = 0;
+    virtual QList<AddressessLineEditAbstractPluginInfo> names() const = 0;
     virtual void start() = 0;
     virtual void cancel() = 0;
     virtual void stop() = 0;

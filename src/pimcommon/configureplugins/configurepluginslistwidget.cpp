@@ -93,7 +93,7 @@ void ConfigurePluginsListWidget::initializeDone()
     mInitializeDone = true;
 }
 
-void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QString &prefixSettingKey, const QVector<PluginItem *> &listItems)
+void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QString &prefixSettingKey, const QList<PluginItem *> &listItems)
 {
     if (listItems.isEmpty()) {
         return;
@@ -110,11 +110,11 @@ void ConfigurePluginsListWidget::savePlugins(const QString &groupName, const QSt
     PimCommon::PluginUtil::savePluginSettings(groupName, prefixSettingKey, enabledPlugins, disabledPlugins);
 }
 
-void ConfigurePluginsListWidget::fillTopItems(const QVector<PimCommon::PluginUtilData> &lst,
+void ConfigurePluginsListWidget::fillTopItems(const QList<PimCommon::PluginUtilData> &lst,
                                               const QString &topLevelItemName,
                                               const QString &groupName,
                                               const QString &prefixKey,
-                                              QVector<PluginItem *> &itemsList,
+                                              QList<PluginItem *> &itemsList,
                                               const QString &configureGroupName,
                                               bool checkable)
 {
@@ -165,14 +165,14 @@ void ConfigurePluginsListWidget::slotConfigureClicked(QAction *act)
     }
 }
 
-void ConfigurePluginsListWidget::changeState(const QVector<PluginItem *> &items)
+void ConfigurePluginsListWidget::changeState(const QList<PluginItem *> &items)
 {
     for (PluginItem *item : items) {
         item->setCheckState(0, item->mEnableByDefault ? Qt::Checked : Qt::Unchecked);
     }
 }
 
-void ConfigurePluginsListWidget::resetToUserSettings(const QVector<PluginItem *> &items)
+void ConfigurePluginsListWidget::resetToUserSettings(const QList<PluginItem *> &items)
 {
     for (PluginItem *item : items) {
         item->setCheckState(0, item->mEnableFromUserSettings ? Qt::Checked : Qt::Unchecked);
