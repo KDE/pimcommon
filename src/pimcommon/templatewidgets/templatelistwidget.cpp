@@ -315,11 +315,7 @@ QStringList TemplateListWidget::mimeTypes() const
     return lst;
 }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-QMimeData *TemplateListWidget::mimeData(const QList<QListWidgetItem *> items) const
-#else
 QMimeData *TemplateListWidget::mimeData(const QList<QListWidgetItem *> &items) const
-#endif
 {
     if (items.isEmpty()) {
         return nullptr;

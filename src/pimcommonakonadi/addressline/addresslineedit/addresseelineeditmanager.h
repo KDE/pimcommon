@@ -124,8 +124,5 @@ private:
     AddresseeLineEditAkonadi *const mAddresseeLineEditAkonadi;
     AddresseeLineEditLdap *const mAddressessLineEditLdap;
     AddresseeLineEditBaloo *const mAddressessLineEditBaloo;
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    QNetworkConfigurationManager *const mNetworkConfigMgr;
-#endif
 };
 }

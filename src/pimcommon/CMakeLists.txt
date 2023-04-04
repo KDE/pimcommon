@@ -97,17 +97,6 @@ target_sources(KPim6PimCommon PRIVATE
     autocorrection/widgets/lineeditwithautocorrection.h
     autocorrection/widgets/lineeditwithautocorrection.cpp
     )
-
-if (QT_MAJOR_VERSION STREQUAL "5")
-    target_sources(KPim6PimCommon PRIVATE
-        migration/migrateapplicationfiles.cpp
-        migration/migrateapplicationfiles.h
-
-        migration/migratefileinfo.cpp
-        migration/migratefileinfo.h
-    )
-endif()
-
 target_sources(KPim6PimCommon PRIVATE
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
@@ -159,9 +148,6 @@ install(TARGETS
 
 if (BUILD_TESTING)
     add_subdirectory(widgets/autotests)
-    if (QT_MAJOR_VERSION STREQUAL "5")
-        add_subdirectory(migration/autotests)
-    endif()
     add_subdirectory(shareserviceurl/autotests)
     add_subdirectory(widgets/tests)
     add_subdirectory(customtools/autotests)
@@ -237,17 +223,6 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     PREFIX PimCommon
     RELATIVE customtools
     )
-
-if (QT_MAJOR_VERSION STREQUAL "5")
-    ecm_generate_headers(PimCommon_Camelcasemigrate_HEADERS
-        HEADER_NAMES
-        MigrateApplicationFiles
-        MigrateFileInfo
-        REQUIRED_HEADERS PimCommon_migrate_HEADERS
-        PREFIX PimCommon
-        RELATIVE migration
-    )
-endif()
 
 ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     HEADER_NAMES

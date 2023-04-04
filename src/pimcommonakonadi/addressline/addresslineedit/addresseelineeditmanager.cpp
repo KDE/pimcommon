@@ -10,17 +10,13 @@
 #include "addresseelineeditldap.h"
 #include "kmailcompletion.h"
 
+#include "pimcommonakonadi_debug.h"
 #include <KColorScheme>
 #include <KConfigGroup>
 #include <KLDAP/LdapClient>
 #include <KSharedConfig>
 #include <QCoreApplication>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include "pimcommonakonadi_debug.h"
 #include <QNetworkInformation>
-#else
-#include <QNetworkConfigurationManager>
-#endif
 #include <QTimer>
 
 using namespace PimCommon;
@@ -32,9 +28,6 @@ AddresseeLineEditManager::AddresseeLineEditManager()
     , mAddresseeLineEditAkonadi(new AddresseeLineEditAkonadi)
     , mAddressessLineEditLdap(new AddresseeLineEditLdap(this))
     , mAddressessLineEditBaloo(new AddresseeLineEditBaloo)
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    , mNetworkConfigMgr(new QNetworkConfigurationManager(QCoreApplication::instance()))
-#endif
 {
     KConfigGroup group(KSharedConfig::openConfig(), "AddressLineEdit");
     mShowOU = group.readEntry("ShowOU", false);
@@ -120,16 +113,12 @@ void AddresseeLineEditManager::setAddressLineEdit(AddresseeLineEdit *addressLine
 
 bool AddresseeLineEditManager::isOnline() const
 {
-#if QT_VERSION >= QT_VERSION_CHECK(6, 1, 0)
     if (QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability)) {
         return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online;
     } else {
         qCWarning(PIMCOMMONAKONADI_LOG) << "Couldn't find a working backend for QNetworkInformation";
         return false;
     }
-#else
-    return mNetworkConfigMgr->isOnline();
-#endif
 }
 
 KLDAP::LdapClientSearch *AddresseeLineEditManager::ldapSearch() const

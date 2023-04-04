@@ -62,9 +62,6 @@ bool PimCommon::Util::saveToFile(const QString &filename, const QString &text)
         return false;
     }
     QTextStream out(&file);
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    out.setCodec("UTF-8");
-#endif
     out << text;
     file.close();
     return true;

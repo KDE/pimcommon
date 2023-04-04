@@ -78,10 +78,6 @@ AddresseeLineEdit::AddresseeLineEdit(QWidget *parent, bool enableCompletion)
     : KLineEdit(parent)
     , d(new AddresseeLineEditPrivate(this, enableCompletion))
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    setUrlDropsEnabled(false);
-#endif
-
     setObjectName(newLineEditObjectName());
     setPlaceholderText(QString());
 
