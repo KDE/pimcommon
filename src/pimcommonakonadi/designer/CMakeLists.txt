@@ -10,7 +10,7 @@ ecm_qtdesignerplugin_widget(PimCommon::AddresseeLineEdit
 
 ecm_add_qtdesignerplugin(pimcommonakonadiwidgets
     NAME PimCommonAkonadiWidgets
-    OUTPUT_NAME pimcommon${QT_MAJOR_VERSION}akonadiwidgets
+    OUTPUT_NAME pimcommon6akonadiwidgets
     WIDGETS
     PimCommon::AddresseeLineEdit
     LINK_LIBRARIES

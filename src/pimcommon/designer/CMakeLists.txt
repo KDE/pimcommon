@@ -9,7 +9,7 @@ ecm_qtdesignerplugin_widget(PimCommon::SimpleStringListEditor
     )
 ecm_add_qtdesignerplugin(pimcommonwidgets
     NAME PimCommonWidgets
-    OUTPUT_NAME pimcommon${QT_MAJOR_VERSION}widgets
+    OUTPUT_NAME pimcommon6widgets
     WIDGETS
     PimCommon::SimpleStringListEditor
     LINK_LIBRARIES
