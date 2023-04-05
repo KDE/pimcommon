@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2022-06-17 20:25+0300\n"
+"PO-Revision-Date: 2023-03-30 12:03+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -590,26 +590,22 @@ msgstr "Erota verkkoalueet merkillä ”%1”"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Jätä viestejä pois sääntölausekkeella:"
 
-# *** TARKISTA: Mitä %1 on, merkki vai jotain muuta?
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Erota verkkoalueet merkillä ”%1”"
+msgstr "Käytä ”%1” erottamassa lausekkeita"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Valitse"
+msgstr "Valitse"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "P&oista valinta"
+msgstr "Poista valinta"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -643,7 +639,7 @@ msgstr "Tallenna"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Peru"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -690,22 +686,19 @@ msgstr "Siirrä alemmas"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Uusi sähköposti…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "Sähköposti"
+msgstr "Lisää sähköposti"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Poista merkintä"
-msgstr[1] "Poista merkintä"
+msgstr[0] "Poista viesti"
+msgstr[1] "Poista viestit"
 
 # *** TARKISTA: ID tuntuu johtavan harhaan. Viesti näytetään, kun painaa Poista-painiketta asetusten kohdassa KMailin asetukset > Kirjoittaminen > Merkistö jokin luettelon merkistöistä valittuna. Korjataan muuksi, jos tätä käytetään jossain muuallakin
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
