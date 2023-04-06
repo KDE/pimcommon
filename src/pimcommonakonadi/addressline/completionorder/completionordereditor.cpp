@@ -9,10 +9,10 @@
 
 #include "completionordereditor.h"
 #include "completionorderwidget.h"
-#include <KLDAP/LdapClient>
-#include <KLDAP/LdapClientSearch>
+#include <KLDAPWidgets/LdapClient>
+#include <KLDAPWidgets/LdapClientSearch>
 
-#include <kldap/ldapserver.h>
+#include <kldapcore/ldapserver.h>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -36,7 +36,7 @@ public:
     CompletionOrderWidget *mCompletionOrderWidget = nullptr;
 };
 
-CompletionOrderEditor::CompletionOrderEditor(KLDAP::LdapClientSearch *ldapSearch, QWidget *parent)
+CompletionOrderEditor::CompletionOrderEditor(KLDAPWidgets::LdapClientSearch *ldapSearch, QWidget *parent)
     : QDialog(parent)
     , d(new PimCommon::CompletionOrderEditorPrivate)
 {

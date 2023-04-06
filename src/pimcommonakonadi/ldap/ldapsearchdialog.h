@@ -15,9 +15,12 @@
 
 class QCloseEvent;
 
-namespace KLDAP
+namespace KLDAPWidgets
 {
 class LdapClient;
+}
+namespace KLDAPCore
+{
 class LdapObject;
 }
 namespace PimCommon
@@ -87,7 +90,7 @@ private:
     class LdapSearchDialogPrivate;
     std::unique_ptr<LdapSearchDialogPrivate> const d;
 
-    Q_PRIVATE_SLOT(d, void slotAddResult(const KLDAP::LdapClient &, const KLDAP::LdapObject &))
+    Q_PRIVATE_SLOT(d, void slotAddResult(const KLDAPWidgets::LdapClient &, const KLDAPCore::LdapObject &))
     Q_PRIVATE_SLOT(d, void slotStartSearch())
     Q_PRIVATE_SLOT(d, void slotStopSearch())
     Q_PRIVATE_SLOT(d, void slotSearchDone())

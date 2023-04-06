@@ -6,9 +6,9 @@
 
 #include "addresseelineeditldap.h"
 #include "addresseelineeditmanager.h"
-#include <KLDAP/LdapClient>
-#include <KLDAP/LdapClientSearch>
-#include <KLDAP/LdapServer>
+#include <KLDAPCore/LdapServer>
+#include <KLDAPWidgets/LdapClient>
+#include <KLDAPWidgets/LdapClientSearch>
 #include <KLocalizedString>
 #include <QTimer>
 using namespace PimCommon;
@@ -27,8 +27,8 @@ void AddresseeLineEditLdap::updateLDAPWeights()
      * that they map to the LdapClient::clientNumber() */
     mLdapSearch->updateCompletionWeights();
     int clientIndex = 0;
-    const QList<KLDAP::LdapClient *> lstClients = mLdapSearch->clients();
-    for (const KLDAP::LdapClient *client : lstClients) {
+    const QList<KLDAPWidgets::LdapClient *> lstClients = mLdapSearch->clients();
+    for (const KLDAPWidgets::LdapClient *client : lstClients) {
         const int sourceIndex = mAddressLineStatic->addCompletionSource(i18n("LDAP server: %1", client->server().host()), client->completionWeight());
         mLdapClientToCompletionSourceMap.insert(clientIndex, sourceIndex);
         ++clientIndex;
@@ -50,7 +50,7 @@ bool AddresseeLineEditLdap::isLdapClientToCompletionSourceMapContains(int value)
     return mLdapClientToCompletionSourceMap.contains(value);
 }
 
-KLDAP::LdapClientSearch *AddresseeLineEditLdap::ldapSearch() const
+KLDAPWidgets::LdapClientSearch *AddresseeLineEditLdap::ldapSearch() const
 {
     return mLdapSearch;
 }
@@ -59,7 +59,7 @@ void AddresseeLineEditLdap::init()
 {
     if (!mLdapTimer) {
         mLdapTimer = new QTimer(this);
-        mLdapSearch = new KLDAP::LdapClientSearch(this);
+        mLdapSearch = new KLDAPWidgets::LdapClientSearch(this);
 
         /* The reasoning behind this filter is:
          * If it's a person, or a distlist, show it, even if it doesn't have an email address.

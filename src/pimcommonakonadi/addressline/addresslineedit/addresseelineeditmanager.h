@@ -11,7 +11,7 @@
 
 #include <Akonadi/Item>
 #include <Akonadi/Session>
-#include <KLDAP/LdapClientSearch>
+#include <KLDAPWidgets/LdapClientSearch>
 #include <QList>
 #include <QPointer>
 
@@ -79,7 +79,7 @@ public:
     void initializeLdap();
     Q_REQUIRED_RESULT QString ldapText() const;
     void setLdapText(const QString &ldapText);
-    KLDAP::LdapClientSearch *ldapSearch() const;
+    KLDAPWidgets::LdapClientSearch *ldapSearch() const;
     QTimer *ldapTimer() const;
     bool isLdapClientToCompletionSourceMapContains(int value) const;
     int ldapClientToCompletionSourceValue(int value) const;

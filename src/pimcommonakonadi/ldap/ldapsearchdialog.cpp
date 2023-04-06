@@ -9,10 +9,10 @@
 
 #include "ldapsearchdialog.h"
 
-#include <KLDAP/LdapClient>
+#include <KLDAPWidgets/LdapClient>
 
-#include <KLDAP/LdapClientSearchConfig>
-#include <KLDAP/LdapSearchClientReadConfigServerJob>
+#include <KLDAPWidgets/LdapClientSearchConfig>
+#include <KLDAPWidgets/LdapSearchClientReadConfigServerJob>
 #include <Libkdepim/LineEditCatchReturnKey>
 #include <Libkdepim/ProgressIndicatorLabel>
 
@@ -41,8 +41,8 @@
 #include <QComboBox>
 #include <QDialogButtonBox>
 #include <QLineEdit>
-#include <kldap/ldapobject.h>
-#include <kldap/ldapserver.h>
+#include <kldapcore/ldapobject.h>
+#include <kldapcore/ldapserver.h>
 
 #include <KConfigGroup>
 #include <KGuiItem>
@@ -67,12 +67,12 @@ static QString asUtf8(const QByteArray &val)
     }
 }
 
-static QString join(const KLDAP::LdapAttrValue &lst, const QString &sep)
+static QString join(const KLDAPCore::LdapAttrValue &lst, const QString &sep)
 {
     QString res;
     bool already = false;
-    KLDAP::LdapAttrValue::ConstIterator end(lst.constEnd());
-    for (KLDAP::LdapAttrValue::ConstIterator it = lst.constBegin(); it != end; ++it) {
+    KLDAPCore::LdapAttrValue::ConstIterator end(lst.constEnd());
+    for (KLDAPCore::LdapAttrValue::ConstIterator it = lst.constBegin(); it != end; ++it) {
         if (already) {
             res += sep;
         }
@@ -148,7 +148,7 @@ static QString makeFilter(const QString &query, LdapSearchDialog::FilterType att
     return result;
 }
 
-static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAttrMap &attrs)
+static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAPCore::LdapAttrMap &attrs)
 {
     KContacts::Addressee addr;
 
@@ -158,8 +158,8 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAP::LdapAt
     }
 
     // email
-    KLDAP::LdapAttrValue lst = attrs[QStringLiteral("mail")];
-    KLDAP::LdapAttrValue::ConstIterator it = lst.constBegin();
+    KLDAPCore::LdapAttrValue lst = attrs[QStringLiteral("mail")];
+    KLDAPCore::LdapAttrValue::ConstIterator it = lst.constBegin();
     bool pref = true;
     while (it != lst.constEnd()) {
         KContacts::Email email(asUtf8(*it));
@@ -231,7 +231,7 @@ public:
     {
     }
 
-    void addContact(const KLDAP::LdapAttrMap &contact, const QString &server)
+    void addContact(const KLDAPCore::LdapAttrMap &contact, const QString &server)
     {
         beginResetModel();
         mContactList.append(contact);
@@ -239,10 +239,10 @@ public:
         endResetModel();
     }
 
-    Q_REQUIRED_RESULT QPair<KLDAP::LdapAttrMap, QString> contact(const QModelIndex &index) const
+    Q_REQUIRED_RESULT QPair<KLDAPCore::LdapAttrMap, QString> contact(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
-            return qMakePair(KLDAP::LdapAttrMap(), QString());
+            return qMakePair(KLDAPCore::LdapAttrMap(), QString());
         }
 
         return qMakePair(mContactList.at(index.row()), mServerList.at(index.row()));
@@ -358,7 +358,7 @@ public:
             return {};
         }
 
-        const KLDAP::LdapAttrMap map = mContactList.at(index.row());
+        const KLDAPCore::LdapAttrMap map = mContactList.at(index.row());
 
         switch (index.column()) {
         case 0:
@@ -403,7 +403,7 @@ public:
     }
 
 private:
-    QList<KLDAP::LdapAttrMap> mContactList;
+    QList<KLDAPCore::LdapAttrMap> mContactList;
     QStringList mServerList;
 };
 
@@ -415,9 +415,9 @@ public:
     {
     }
 
-    QList<QPair<KLDAP::LdapAttrMap, QString>> selectedItems()
+    QList<QPair<KLDAPCore::LdapAttrMap, QString>> selectedItems()
     {
-        QList<QPair<KLDAP::LdapAttrMap, QString>> contacts;
+        QList<QPair<KLDAPCore::LdapAttrMap, QString>> contacts;
 
         const QModelIndexList selected = mResultView->selectionModel()->selectedRows();
         const int numberOfSelectedElement(selected.count());
@@ -433,7 +433,7 @@ public:
     void restoreSettings();
     void cancelQuery();
 
-    void slotAddResult(const KLDAP::LdapClient &, const KLDAP::LdapObject &);
+    void slotAddResult(const KLDAPWidgets::LdapClient &, const KLDAPCore::LdapObject &);
     void slotSetScope(bool);
     void slotStartSearch();
     void slotStopSearch();
@@ -447,7 +447,7 @@ public:
     KGuiItem startSearchGuiItem;
     KGuiItem stopSearchGuiItem;
     int mNumHosts = 0;
-    QList<KLDAP::LdapClient *> mLdapClientList;
+    QList<KLDAPWidgets::LdapClient *> mLdapClientList;
     bool mIsConfigured = false;
     KContacts::Addressee::List mSelectedContacts;
 
@@ -650,7 +650,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
     qDeleteAll(mLdapClientList);
     mLdapClientList.clear();
 
-    KConfig *config = KLDAP::LdapClientSearchConfig::config();
+    KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
 
     KConfigGroup searchGroup(config, "LDAPSearch");
     mSearchType->setCurrentIndex(searchGroup.readEntry("SearchType", 0));
@@ -663,10 +663,10 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
         mIsConfigured = false;
     } else {
         mIsConfigured = true;
-        auto clientSearchConfig = new KLDAP::LdapClientSearchConfig;
+        auto clientSearchConfig = new KLDAPWidgets::LdapClientSearchConfig;
         for (int j = 0; j < mNumHosts; ++j) {
-            auto ldapClient = new KLDAP::LdapClient(0, q);
-            auto job = new KLDAP::LdapSearchClientReadConfigServerJob(q);
+            auto ldapClient = new KLDAPWidgets::LdapClient(0, q);
+            auto job = new KLDAPWidgets::LdapSearchClientReadConfigServerJob(q);
             job->setCurrentIndex(j);
             job->setActive(true);
             job->setConfig(group);
@@ -682,10 +682,10 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
             ldapClient->setAttributes(attrs);
 
             // clang-format off
-            q->connect(ldapClient, SIGNAL(result(KLDAP::LdapClient,KLDAP::LdapObject)), q, SLOT(slotAddResult(KLDAP::LdapClient,KLDAP::LdapObject)));
+            q->connect(ldapClient, SIGNAL(result(KLDAPWidgets::LdapClient,KLDAPCore::LdapObject)), q, SLOT(slotAddResult(KLDAPWidgets::LdapClient,KLDAPCore::LdapObject)));
             // clang-format on
             q->connect(ldapClient, SIGNAL(done()), q, SLOT(slotSearchDone()));
-            q->connect(ldapClient, &KLDAP::LdapClient::error, q, [this](const QString &err) {
+            q->connect(ldapClient, &KLDAPWidgets::LdapClient::error, q, [this](const QString &err) {
                 slotError(err);
             });
 
@@ -709,7 +709,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
 void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 {
-    KConfig *config = KLDAP::LdapClientSearchConfig::config();
+    KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
     KConfigGroup group(config, "LDAPSearch");
     group.writeEntry("SearchType", mSearchType->currentIndex());
 
@@ -726,19 +726,19 @@ void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 
 void LdapSearchDialog::LdapSearchDialogPrivate::cancelQuery()
 {
-    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
         client->cancelQuery();
     }
 }
 
-void LdapSearchDialog::LdapSearchDialogPrivate::slotAddResult(const KLDAP::LdapClient &client, const KLDAP::LdapObject &obj)
+void LdapSearchDialog::LdapSearchDialogPrivate::slotAddResult(const KLDAPWidgets::LdapClient &client, const KLDAPCore::LdapObject &obj)
 {
     mModel->addContact(obj.attributes(), client.server().host());
 }
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotSetScope(bool rec)
 {
-    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
         if (rec) {
             client->setScope(QStringLiteral("sub"));
         } else {
@@ -772,7 +772,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
 
     // loop in the list and run the KLDAP::LdapClients
     mModel->clear();
-    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
         client->startQuery(filter);
     }
 
@@ -788,7 +788,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStopSearch()
 void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
 {
     // If there are no more active clients, we are done.
-    for (KLDAP::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
         if (client->isActive()) {
             return;
         }
@@ -836,7 +836,7 @@ void LdapSearchDialog::slotUser1()
 
     d->mSelectedContacts.clear();
 
-    const QList<QPair<KLDAP::LdapAttrMap, QString>> &items = d->selectedItems();
+    const QList<QPair<KLDAPCore::LdapAttrMap, QString>> &items = d->selectedItems();
 
     if (!items.isEmpty()) {
         const QDateTime now = QDateTime::currentDateTime();

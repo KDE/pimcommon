@@ -11,7 +11,7 @@
 
 #include <QDialog>
 class KConfig;
-namespace KLDAP
+namespace KLDAPWidgets
 {
 class LdapClientSearch;
 }
@@ -31,7 +31,7 @@ public:
 
     void load();
     void setEmailBlackList(const QStringList &lst);
-    void setLdapClientSearch(KLDAP::LdapClientSearch *ldapSearch);
+    void setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch);
     void setRecentAddresses(const QStringList &lst);
     Q_REQUIRED_RESULT bool recentAddressWasChanged() const;
     void storeAddresses(KConfig *config);

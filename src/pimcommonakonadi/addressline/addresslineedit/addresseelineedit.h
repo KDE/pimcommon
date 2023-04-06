@@ -36,7 +36,7 @@ namespace KContacts
 class Addressee;
 class ContactGroup;
 }
-namespace KLDAP
+namespace KLDAPWidgets
 {
 class LdapClientSearch;
 }
@@ -117,7 +117,7 @@ public:
 
     void updateBalooBlackList();
     void updateCompletionOrder();
-    Q_REQUIRED_RESULT KLDAP::LdapClientSearch *ldapSearch() const;
+    Q_REQUIRED_RESULT KLDAPWidgets::LdapClientSearch *ldapSearch() const;
 
     void setShowRecentAddresses(bool b);
     Q_REQUIRED_RESULT bool showRecentAddresses() const;

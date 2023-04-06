@@ -17,7 +17,7 @@
 #include "addresseelineeditmanager.h"
 #include "addresseelineeditutil.h"
 #include "addressline/recentaddress/recentaddresses.h"
-#include <KLDAP/LdapClientSearch>
+#include <KLDAPWidgets/LdapClientSearch>
 
 #include <KContacts/VCardConverter>
 
@@ -860,7 +860,7 @@ void AddresseeLineEdit::updateCompletionOrder()
     d->updateCompletionOrder();
 }
 
-KLDAP::LdapClientSearch *AddresseeLineEdit::ldapSearch() const
+KLDAPWidgets::LdapClientSearch *AddresseeLineEdit::ldapSearch() const
 {
     return d->ldapSearch();
 }

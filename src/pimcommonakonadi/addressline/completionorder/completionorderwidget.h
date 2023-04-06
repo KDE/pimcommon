@@ -17,7 +17,7 @@ class QAbstractItemModel;
 class QModelIndex;
 class QTreeWidget;
 
-namespace KLDAP
+namespace KLDAPWidgets
 {
 class LdapClientSearch;
 }
@@ -62,7 +62,7 @@ public:
 
     KConfig *configFile();
     void loadCompletionItems();
-    void setLdapClientSearch(KLDAP::LdapClientSearch *ldapSearch);
+    void setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch);
 
 Q_SIGNALS:
     void completionOrderChanged();
@@ -81,7 +81,7 @@ private:
     QPushButton *mUpButton = nullptr;
     QPushButton *mDownButton = nullptr;
     QAbstractItemModel *mCollectionModel = nullptr;
-    KLDAP::LdapClientSearch *mLdapSearch = nullptr;
+    KLDAPWidgets::LdapClientSearch *mLdapSearch = nullptr;
 
     int mDefaultValue = 60;
     bool mDirty = false;

@@ -13,7 +13,7 @@
 #include "pimcommonakonadi_debug.h"
 #include <KColorScheme>
 #include <KConfigGroup>
-#include <KLDAP/LdapClient>
+#include <KLDAPWidgets/LdapClient>
 #include <KSharedConfig>
 #include <QCoreApplication>
 #include <QNetworkInformation>
@@ -121,7 +121,7 @@ bool AddresseeLineEditManager::isOnline() const
     }
 }
 
-KLDAP::LdapClientSearch *AddresseeLineEditManager::ldapSearch() const
+KLDAPWidgets::LdapClientSearch *AddresseeLineEditManager::ldapSearch() const
 {
     return mAddressessLineEditLdap->ldapSearch();
 }

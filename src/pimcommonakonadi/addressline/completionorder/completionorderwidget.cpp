@@ -8,19 +8,19 @@
 #include "completionorderwidget.h"
 
 #include <KDescendantsProxyModel>
-#include <KLDAP/LdapClient>
-#include <KLDAP/LdapClientSearch>
+#include <KLDAPWidgets/LdapClient>
+#include <KLDAPWidgets/LdapClientSearch>
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
-#include <KLDAP/LdapClientSearchConfig>
+#include <KLDAPWidgets/LdapClientSearchConfig>
 
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
 #include <Akonadi/EntityTreeModel>
 #include <Akonadi/Monitor>
 
-#include <kldap/ldapserver.h>
+#include <kldapcore/ldapserver.h>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -42,7 +42,7 @@ CompletionOrderEditorAdaptor::CompletionOrderEditorAdaptor(QObject *parent)
 class LDAPCompletionItem : public CompletionItem
 {
 public:
-    explicit LDAPCompletionItem(KLDAP::LdapClient *ldapClient)
+    explicit LDAPCompletionItem(KLDAPWidgets::LdapClient *ldapClient)
         : mLdapClient(ldapClient)
     {
         mWeight = mLdapClient->completionWeight();
@@ -65,7 +65,7 @@ public:
 
     void save(CompletionOrderWidget *) override
     {
-        KConfig *config = KLDAP::LdapClientSearchConfig::config();
+        KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
         KConfigGroup group(config, "LDAP");
         group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()), mWeight);
         group.sync();
@@ -93,7 +93,7 @@ protected:
     }
 
 private:
-    KLDAP::LdapClient *mLdapClient = nullptr;
+    KLDAPWidgets::LdapClient *mLdapClient = nullptr;
     int mWeight;
 };
 
@@ -330,8 +330,8 @@ void CompletionOrderWidget::loadCompletionItems()
 {
     if (mLdapSearch) {
         // The first step is to gather all the data, creating CompletionItem objects
-        const QList<KLDAP::LdapClient *> listClients = mLdapSearch->clients();
-        for (KLDAP::LdapClient *client : listClients) {
+        const QList<KLDAPWidgets::LdapClient *> listClients = mLdapSearch->clients();
+        for (KLDAPWidgets::LdapClient *client : listClients) {
             new CompletionViewItem(mListView, new LDAPCompletionItem(client));
         }
     }
@@ -367,7 +367,7 @@ void CompletionOrderWidget::loadCompletionItems()
     mDirty = false;
 }
 
-void CompletionOrderWidget::setLdapClientSearch(KLDAP::LdapClientSearch *ldapSearch)
+void CompletionOrderWidget::setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch)
 {
     mLdapSearch = ldapSearch;
 }

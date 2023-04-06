@@ -7,7 +7,7 @@
 
 #include "completionconfiguredialog.h"
 #include <KConfigGroup>
-#include <KLDAP/LdapClientSearch>
+#include <KLDAPWidgets/LdapClientSearch>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowConfig>
@@ -101,7 +101,7 @@ void CompletionConfigureDialog::setRecentAddresses(const QStringList &lst)
     d->mRecentaddressWidget->setAddresses(lst);
 }
 
-void CompletionConfigureDialog::setLdapClientSearch(KLDAP::LdapClientSearch *ldapSearch)
+void CompletionConfigureDialog::setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch)
 {
     d->mCompletionOrderWidget->setLdapClientSearch(ldapSearch);
 }
