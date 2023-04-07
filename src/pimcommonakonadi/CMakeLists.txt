@@ -120,8 +120,13 @@ endif()
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
 endif()
+ecm_generate_export_header(KPim6PimCommonAkonadi
+    BASE_NAME pimcommonakonadi
+    VERSION ${PIMCOMMONAKONADI_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    USE_VERSION_HEADER
+)
 
-generate_export_header(KPim6PimCommonAkonadi BASE_NAME pimcommonakonadi)
 
 target_link_libraries(KPim6PimCommonAkonadi
     PUBLIC
@@ -154,8 +159,8 @@ target_include_directories(KPim6PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:
 target_include_directories(KPim6PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
 set_target_properties(KPim6PimCommonAkonadi PROPERTIES
-    VERSION ${PIMCOMMON_VERSION}
-    SOVERSION ${PIMCOMMON_SOVERSION}
+    VERSION ${PIMCOMMONAKONADI_VERSION}
+    SOVERSION ${PIMCOMMONAKONADI_SOVERSION}
     EXPORT_NAME PimCommonAkonadi
     )
 
