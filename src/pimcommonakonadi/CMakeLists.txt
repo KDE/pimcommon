@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: none
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
+ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMONAKONADI
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
     SOVERSION 6
