@@ -1,11 +1,11 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2012, 2013, 2016, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2012, 2013, 2016, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2022-06-09 23:44+0200\n"
+"PO-Revision-Date: 2023-04-03 16:52+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -595,16 +595,14 @@ msgid "Separate regular expression with '%1'"
 msgstr "Domain mit „%1“ trennen"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "Au&swählen"
+msgstr "Auswählen"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Auswahl aufheben"
+msgstr "Auswahl aufheben"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -639,7 +637,7 @@ msgstr "Speichern"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -686,22 +684,19 @@ msgstr "Nach unten"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Neue E-Mail-Adresse ..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "E-Mail"
+msgstr "E-Mail-Adresse hinzufügen"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Eintrag entfernen"
-msgstr[1] "Eintrag entfernen"
+msgstr[0] "E-Mail-Adresse entfernen"
+msgstr[1] "E-Mail-Adressen entfernen"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
