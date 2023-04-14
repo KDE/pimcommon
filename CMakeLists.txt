@@ -109,7 +109,7 @@ endif(BUILD_TESTING)
 
 ########### Targets ###########
 
-ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.105.0)
+ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.240.0)
 
 find_package(KF6TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
