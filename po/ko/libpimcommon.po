@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-23 00:48+0000\n"
-"PO-Revision-Date: 2022-10-03 16:22+0200\n"
+"PO-Revision-Date: 2023-04-22 00:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -579,25 +579,22 @@ msgstr "'%1'(으)로 도메인을 구분하십시오"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "정규 표현식과 일치하는 이메일 제외:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "'%1'(으)로 도메인을 구분하십시오"
+msgstr "'%1'(으)로 정규 표현식을 구분하십시오"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "선택(&S)"
+msgstr "선택"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "선택 해제(&U)"
+msgstr "선택 해제"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -629,7 +626,7 @@ msgstr "저장"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "취소"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -676,21 +673,18 @@ msgstr "아래로 이동"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "새 이메일..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "이메일"
+msgstr "이메일 추가"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "항목 삭제"
+msgstr[0] "이메일 삭제"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
