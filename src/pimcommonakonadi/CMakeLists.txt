@@ -154,8 +154,8 @@ target_include_directories(KPim${KF_MAJOR_VERSION}PimCommonAkonadi INTERFACE "$<
 target_include_directories(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
 
 set_target_properties(KPim${KF_MAJOR_VERSION}PimCommonAkonadi PROPERTIES
-    VERSION ${PIMCOMMON_VERSION}
-    SOVERSION ${PIMCOMMON_SOVERSION}
+	VERSION ${PIMCOMMONAKONADI_VERSION}
+	SOVERSION ${PIMCOMMONAKONADI_SOVERSION}
     EXPORT_NAME PimCommonAkonadi
     )
 
