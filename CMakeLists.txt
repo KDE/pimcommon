@@ -134,6 +134,11 @@ endif()
 
 configure_file(config-pimcommon.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h)
 
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h
+     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
+     )
+
 
 add_subdirectory(src)
 ecm_qt_install_logging_categories(
