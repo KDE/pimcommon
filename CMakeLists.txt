@@ -112,7 +112,23 @@ endif(BUILD_TESTING)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.240.0)
 
-find_package(KF6TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG)
+set_package_properties(KF6TextAutoCorrectionWidgets PROPERTIES DESCRIPTION
+    "Add support for text auto correction"
+    TYPE OPTIONAL
+)
+if (TARGET KF6::TextAutoCorrectionWidgets)
+    set(HAVE_TEXT_AUTOCORRECTION_WIDGETS TRUE)
+else()
+    find_package(KF6TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+endif()
+
+configure_file(config-pimcommon.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h)
+
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h
+     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
+     )
 
 add_subdirectory(src)
 ecm_qt_install_logging_categories(

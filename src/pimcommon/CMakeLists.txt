@@ -121,7 +121,6 @@ target_link_libraries(KPim6PimCommon
     KF6::KIOCore
     KF6::WidgetsAddons
     KPim6::PimTextEdit
-    KF6::TextAutoCorrection
     PRIVATE
     Qt::Network
     KF6::I18n
@@ -135,6 +134,17 @@ target_link_libraries(KPim6PimCommon
     KF6::PurposeWidgets
     KF6::Codecs
 )
+if (TARGET KF6::TextAutoCorrectionWidgets)
+    target_link_libraries(KPim6PimCommon
+        PUBLIC
+        KF6::TextAutoCorrectionWidgets
+    )
+else()
+    target_link_libraries(KPim6PimCommon
+        PUBLIC
+        KF6::TextAutoCorrection
+    )
+endif()
 
 target_include_directories(KPim6PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>")
 
