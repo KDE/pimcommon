@@ -12,6 +12,7 @@
 #include <textautocorrectioncore/textautocorrectionsettings.h>
 #else
 #include <TextAutoCorrection/AutoCorrection>
+#include <TextAutoCorrection/AutoCorrectionWidget>
 #include <textautocorrection/textautocorrectionsettings.h>
 #endif
 
