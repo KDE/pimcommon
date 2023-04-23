@@ -4,5 +4,14 @@ add_executable(autocorrection_gui autocorrection_gui.cpp autocorrection_gui.h)
 target_link_libraries(autocorrection_gui
   KF5::PimCommon
   KF${KF_MAJOR_VERSION}::I18n
-  KF${KF_MAJOR_VERSION}::TextAutoCorrection
 )
+
+if (TARGET KF${KF_MAJOR_VERSION}::TextAutoCorrectionWidgets)
+    target_link_libraries(autocorrection_gui
+        KF${KF_MAJOR_VERSION}::TextAutoCorrectionWidgets
+    )
+else()
+  target_link_libraries(autocorrection_gui
+      KF${KF_MAJOR_VERSION}::TextAutoCorrection
+  )
+endif()
