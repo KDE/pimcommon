@@ -127,7 +127,6 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
     KF${KF_MAJOR_VERSION}::KIOCore
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KPim${KF_MAJOR_VERSION}::PimTextEdit
-    KF${KF_MAJOR_VERSION}::TextAutoCorrection
     PRIVATE
     Qt::Network
     KF${KF_MAJOR_VERSION}::I18n
@@ -141,6 +140,17 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
     KF${KF_MAJOR_VERSION}::PurposeWidgets
     KF${KF_MAJOR_VERSION}::Codecs
 )
+if (TARGET KF${KF_MAJOR_VERSION}::TextAutoCorrectionWidgets)
+    target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
+        PUBLIC
+        KF${KF_MAJOR_VERSION}::TextAutoCorrectionWidgets
+    )
+else()
+    target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
+        PUBLIC
+        KF${KF_MAJOR_VERSION}::TextAutoCorrection
+    )
+endif()
 
 target_include_directories(KPim${KF_MAJOR_VERSION}PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/>")
 
