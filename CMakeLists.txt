@@ -38,7 +38,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "5.23.40")
-set(KTEXTADDONS_MIN_VERSION "1.2.0")
+set(KTEXTADDONS_MIN_VERSION "1.2.41")
 set(KIMAP_LIB_VERSION "5.23.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.23.40")
 set(KLDAP_LIB_VERSION "5.23.41")
@@ -112,23 +112,7 @@ endif(BUILD_TESTING)
 
 ecm_set_disabled_deprecation_versions(QT 5.15.2  KF 5.240.0)
 
-find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG)
-set_package_properties(KF6TextAutoCorrectionWidgets PROPERTIES DESCRIPTION
-    "Add support for text auto correction"
-    TYPE OPTIONAL
-)
-if (TARGET KF6::TextAutoCorrectionWidgets)
-    set(HAVE_TEXT_AUTOCORRECTION_WIDGETS TRUE)
-else()
-    find_package(KF6TextAutoCorrection ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
-endif()
-
-configure_file(config-pimcommon.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h)
-
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h
-     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
-     )
+find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 add_subdirectory(src)
 ecm_qt_install_logging_categories(
