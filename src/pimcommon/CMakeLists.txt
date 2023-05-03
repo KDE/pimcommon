@@ -161,12 +161,12 @@ target_link_libraries(KF5PimCommon
     KF${KF_MAJOR_VERSION}::Codecs
 )
 if (TARGET KF${KF_MAJOR_VERSION}::TextAutoCorrectionWidgets)
-    target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
+	target_link_libraries(KF5PimCommon
         PUBLIC
         KF${KF_MAJOR_VERSION}::TextAutoCorrectionWidgets
     )
 else()
-    target_link_libraries(KPim${KF_MAJOR_VERSION}PimCommon
+	target_link_libraries(KF5PimCommon
         PUBLIC
         KF${KF_MAJOR_VERSION}::TextAutoCorrection
     )
