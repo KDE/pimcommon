@@ -135,7 +135,7 @@ configure_file(config-pimcommon.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimc
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/src/config-pimcommon.h
-     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/PimCommon/ COMPONENT Devel
+     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/${KDE_INSTALL_INCLUDEDIR_KF}/PimCommon/ COMPONENT Devel
      )
 
 
