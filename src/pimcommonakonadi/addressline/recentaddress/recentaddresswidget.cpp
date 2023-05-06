@@ -21,8 +21,8 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 
+#include <KEmailValidator>
 #include <KLineEditEventHandler>
-#include <PimCommon/EmailValidator>
 
 using namespace PimCommon;
 RecentAddressWidget::RecentAddressWidget(QWidget *parent)
@@ -41,7 +41,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     KLineEditEventHandler::catchReturnKey(mLineEdit);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
-    mLineEdit->setValidator(new PimCommon::EmailValidator(this));
+    mLineEdit->setValidator(new KEmailValidator(this));
     mLineEdit->setPlaceholderText(i18n("New email..."));
     connect(mLineEdit, &QLineEdit::returnPressed, this, &RecentAddressWidget::slotAddItem);
 

@@ -61,9 +61,7 @@ target_sources(KPim6PimCommon PRIVATE
 
     shareserviceurl/shareserviceurlmanager.cpp
     network/networkmanager.cpp
-    misc/emailvalidator.cpp
     widgets/icons.qrc
-    misc/emailvalidator.h
 
     customtools/customtoolswidgetng.h
     customtools/customtoolsplugin.h
@@ -169,7 +167,6 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(genericplugins/autotests)
-    add_subdirectory(misc/autotests)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(autocorrection/tests)
 endif()
@@ -201,14 +198,6 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     REQUIRED_HEADERS PimCommon_networkmanager_HEADERS
     PREFIX PimCommon
     RELATIVE network
-    )
-
-ecm_generate_headers(PimCommon_CamelCasemisc_HEADERS
-    HEADER_NAMES
-    EmailValidator
-    REQUIRED_HEADERS PimCommon_misc_HEADERS
-    PREFIX PimCommon
-    RELATIVE misc
     )
 
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
@@ -297,7 +286,6 @@ install(FILES
     ${PimCommon_Camelcasetemplatelist_HEADERS}
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
-    ${PimCommon_CamelCasemisc_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/PimCommon
     COMPONENT Devel
     )
@@ -320,7 +308,6 @@ install(FILES
     ${PimCommon_templatelist_HEADERS}
     ${PimCommon_texteditor_commonwidget_HEADERS}
     ${PimCommon_widgets_HEADERS}
-    ${PimCommon_misc_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
@@ -363,7 +350,6 @@ if (BUILD_QCH)
         ${PimCommon_texteditor_commonwidget_HEADERS}
         ${PimCommon_translator_HEADERS}
         ${PimCommon_widgets_HEADERS}
-        ${PimCommon_misc_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
