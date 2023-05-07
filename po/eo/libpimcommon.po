@@ -1,0 +1,1219 @@
+# Translation of libpimcommon.pot into esperanto.
+# Copyright (C) 2012 Free Software Foundation, Inc.
+# This file is distributed under the same license as the pimcommon package.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pimcommon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-03-23 00:48+0000\n"
+"PO-Revision-Date: 2023-05-06 10:51+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
+#, kde-format
+msgid "Configure"
+msgstr "Agordi"
+
+#: pimcommon/configureplugins/configurepluginswidget.cpp:43
+#, kde-format
+msgid "Restart is necessary for applying the changes."
+msgstr "Rekomenco estas necesa por apliki la ŝanĝojn."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#, kde-format
+msgid "Share On..."
+msgstr "Kunhavigi sur..."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#, kde-format
+msgctxt "@action:inmenu Share On..."
+msgid "%1"
+msgstr "%1"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#, kde-format
+msgid "Facebook"
+msgstr "Fejsbuko"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#, kde-format
+msgid "Twitter"
+msgstr "Twitter"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#, kde-format
+msgid "Mail"
+msgstr "Poŝto"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#, kde-format
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#, kde-format
+msgid "Evernote"
+msgstr "Evernote"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
+#, kde-format
+msgid "Pocket"
+msgstr "Poŝo"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#, kde-format
+msgid "LiveJournal"
+msgstr "LiveJournal"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#, kde-format
+msgctxt "@title:window"
+msgid "Default template"
+msgstr "Defaŭlta ŝablono"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#, kde-format
+msgctxt "@title:window"
+msgid "Template"
+msgstr "Ŝablono"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#, kde-format
+msgid "Name:"
+msgstr "Nomo:"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#, kde-format
+msgid "Do you want to delete selected template?"
+msgstr "Ĉu vi volas forigi elektitan ŝablonon?"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#, kde-format
+msgid "Delete template"
+msgstr "Forigi ŝablonon"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#, kde-format
+msgid "Import Template"
+msgstr "Importi Ŝablonon"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#, kde-format
+msgid "Export Template"
+msgstr "Eksporto Ŝablono"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#, kde-format
+msgid "Insert template"
+msgstr "Enigi ŝablonon"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#, kde-format
+msgid "Add..."
+msgstr "Aldoni..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Show..."
+msgstr "Montri..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#, kde-format
+msgid "Modify..."
+msgstr "Modifi..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#, kde-format
+msgid "Duplicate"
+msgstr "Duobligi"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, kde-format
+msgid "Remove"
+msgstr "Forigi"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#, kde-format
+msgid "Export..."
+msgstr "Eksporti..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#, kde-format
+msgid "Import..."
+msgstr "Importi..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#, kde-format
+msgid "Download new Templates..."
+msgstr "Elŝuti novajn Ŝablonojn..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "'%1' is not a template file"
+msgstr "'%1' ne estas ŝablondosiero"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#, kde-format
+msgid "Load Template"
+msgstr "Ŝargi Ŝablono"
+
+#: pimcommon/util/pimutil.cpp:48
+#, kde-format
+msgid ""
+"Could not write the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Ne eblis skribi la dosieron %1:\n"
+"\"%2\" estas la detala erara priskribo."
+
+#: pimcommon/util/pimutil.cpp:52
+#, kde-format
+msgid "Save File Error"
+msgstr "Konservi Dosieran Eraron"
+
+#: pimcommon/util/pimutil.cpp:86
+#, kde-format
+msgid ""
+"Could not read the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Ne eblis legi la dosieron %1:\n"
+"\"%2\" estas la detala erara priskribo."
+
+#: pimcommon/util/pimutil.cpp:90
+#, kde-format
+msgid "Load File Error"
+msgstr "Ŝargi Dosieran Eraron"
+
+#: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
+#, kde-format
+msgid ""
+"<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
+"this is an error, please contact him.</p></qt>"
+msgstr ""
+"<qt><p>Tiu ĉi agordo estas riparita de via administranto.</p><p>Se vi "
+"pensas, ke tio estas eraro, bonvolu kontakti lin.</p></qt>"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:27
+#, kde-format
+msgid "Change Case"
+msgstr "Ŝanĝi Kazon"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:28
+#, kde-format
+msgid "Uppercase"
+msgstr "Majuskla"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:31
+#, kde-format
+msgid "Sentence case"
+msgstr "Frazkazo"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:34
+#, kde-format
+msgid "Lowercase"
+msgstr "Minuskla"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:37
+#, kde-format
+msgid "Reverse Case"
+msgstr "Inversa Kazo"
+
+#: pimcommon/widgets/lineeditwithcompleterng.cpp:44
+#, kde-format
+msgid "Clear History"
+msgstr "Klara Historio"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "There was a problem sharing the document: %1"
+msgstr "Estis problemo kun konigo de la dokumento: %1"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:54
+#, kde-format
+msgid "Share"
+msgstr "Kunhavigi"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:58
+#, kde-format
+msgid "File was shared."
+msgstr "Dosiero estis dividita."
+
+#: pimcommon/widgets/purposemenuwidget.cpp:61
+#, kde-format
+msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
+msgstr "<qt>Vi povas trovi la novan peton ĉe:<br /><a href='%1'>%1</a> </qt>"
+
+#: pimcommon/widgets/renamefiledialog.cpp:100
+#, kde-format
+msgctxt "@title:window"
+msgid "File Already Exists"
+msgstr "Dosiero Jam Ekzistas"
+
+#: pimcommon/widgets/renamefiledialog.cpp:103
+#, kde-kuit-format
+msgid ""
+"A file named <filename>%1</filename> already exists. Do you want to "
+"overwrite it?"
+msgstr ""
+"Dosiero nomita <filename>%1</filename> jam ekzistas. Ĉu vi volas anstataŭigi "
+"ĝin?"
+
+#: pimcommon/widgets/renamefiledialog.cpp:113
+#, kde-format
+msgid "Suggest New &Name"
+msgstr "Proponi Novan &Nomon"
+
+#: pimcommon/widgets/renamefiledialog.cpp:121
+#, kde-format
+msgid "&Ignore"
+msgstr "&Ignori"
+
+#: pimcommon/widgets/renamefiledialog.cpp:124
+#, kde-format
+msgid "&Rename"
+msgstr "&Renomi"
+
+#: pimcommon/widgets/renamefiledialog.cpp:134
+#, kde-format
+msgid "Appl&y to All"
+msgstr "Aplik&i al Ĉiuj"
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "This filename \"%1\" already exists."
+msgstr "Tiu dosiernomo \"%1\" jam ekzistas."
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "File already exists"
+msgstr "Dosiero jam ekzistas"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#, kde-format
+msgid "New entry:"
+msgstr "Nova eniro:"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:57
+#, kde-format
+msgid "New Value"
+msgstr "Nova Valoro"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#, kde-format
+msgid "Do you want to remove selected text?"
+msgstr "Ĉu vi volas forigi elektitan tekston?"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#, kde-format
+msgid "&Add..."
+msgstr "&Aldoni..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#, kde-format
+msgid "&Modify..."
+msgstr "&Modifi..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#, kde-format
+msgid "&Remove"
+msgstr "Fo&rigi"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#, kde-format
+msgid "&Customize..."
+msgstr "A&gordi..."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#, kde-format
+msgid "&User identifier:"
+msgstr "&Uzantidentigilo:"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The User Identifier is the login of the user on the IMAP server. This can be "
+"a simple user name or the full email address of the user; the login for your "
+"own account on the server will tell you which one it is."
+msgstr ""
+"La Uzanto-Identigilo estas la ensaluto de la uzanto sur la IMAP-servilo. Ĉi "
+"tio povas esti simpla uzantnomo aŭ la plena retadreso de la uzanto; la "
+"ensaluto por via propra konto sur la servilo diros al vi, kiu ĝi estas."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#, kde-format
+msgctxt "select an email address"
+msgid "Se&lect..."
+msgstr "E&lekti..."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#, kde-format
+msgid "Permissions"
+msgstr "Permesoj"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#, kde-format
+msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
+msgstr ""
+"<b>Noto: </b>Alinomado postulas skribajn permesojn sur la gepatra dosierujo."
+
+#: pimcommonakonadi/acl/acllistview.cpp:50
+#, kde-format
+msgid "Folder cannot be administrated."
+msgstr "Dosierujo ne povas esti administrita."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:159
+#, kde-format
+msgid "Add Entry..."
+msgstr "Aldoni eniron..."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:164
+#, kde-format
+msgid "Edit Entry..."
+msgstr "Redakti eniron..."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:170
+#, kde-format
+msgid "Remove Entry"
+msgstr "Forigi Eniron"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:212
+#, kde-format
+msgctxt "@title:window"
+msgid "Add ACL"
+msgstr "Aldoni ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:239
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit ACL"
+msgstr "Redakti ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:279
+#, kde-format
+msgid ""
+"Do you really want to remove your own permissions for this folder? You will "
+"not be able to access it afterwards."
+msgstr ""
+"Ĉu vi vere volas forigi viajn proprajn permesojn por ĉi tiu dosierujo? Vi ne "
+"povos aliri ĝin poste."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#, kde-format
+msgid "Do you really want to remove these permissions for this folder?"
+msgstr "Ĉu vi vere volas forigi ĉi tiujn permesojn por ĉi tiu dosierujo?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
+#, kde-format
+msgid ""
+"Do you really want to apply the folder's permissions to these subfolders?"
+msgstr ""
+"Ĉu vi vere volas apliki la permesojn de la dosierujo al ĉi tiuj "
+"subdosierujoj?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#, kde-format
+msgid "Apply Permissions"
+msgstr "Apliki Permesojn"
+
+#: pimcommonakonadi/acl/aclutils.cpp:19
+msgctxt "Permissions"
+msgid "None"
+msgstr "Neniu"
+
+#: pimcommonakonadi/acl/aclutils.cpp:21
+msgctxt "Permissions"
+msgid "Read"
+msgstr "Legi"
+
+#: pimcommonakonadi/acl/aclutils.cpp:23
+msgctxt "Permissions"
+msgid "Append"
+msgstr "Aldoni"
+
+#: pimcommonakonadi/acl/aclutils.cpp:27
+msgctxt "Permissions"
+msgid "Write"
+msgstr "Skribi"
+
+#: pimcommonakonadi/acl/aclutils.cpp:31
+msgctxt "Permissions"
+msgid "All"
+msgstr "Ĉiuj"
+
+#: pimcommonakonadi/acl/aclutils.cpp:66
+#, kde-format
+msgid "Custom Permissions (%1)"
+msgstr "Propraj Permesoj (%1)"
+
+#: pimcommonakonadi/acl/collectionaclpage.cpp:32
+#, kde-format
+msgid "Access Control"
+msgstr "Kontrolo de Aliro"
+
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
+#, kde-format
+msgid "Apply permissions on all &subfolders."
+msgstr "Apliki permesojn al ĉiuj &subdosierujoj."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#, kde-format
+msgid "vCard Import Failed"
+msgstr "vCard Importo Malsukcesis"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#, kde-format
+msgid "<qt>Unable to access <b>%1</b>.</qt>"
+msgstr "<qt>Ne eblas aliri <b>%1</b>.</qt>"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#, kde-format
+msgid "Select email from contact"
+msgstr "Elekti retpoŝton de kontakto"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#, kde-format
+msgid "Show Organization Unit for LDAP results"
+msgstr "Montri Organizan Unuon por LDAP-rezultoj"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#, kde-format
+msgid "Configure Completion..."
+msgstr "Agordi kompletigon..."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#, kde-format
+msgid "Automatically expand groups"
+msgstr "Aŭtomate vastigi grupojn"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#, kde-format
+msgid "Expand Groups..."
+msgstr "Pligrandigi Grupojn..."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
+#, kde-format
+msgid "Recent Addresses"
+msgstr "Lastatempaj Adresoj"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
+#, kde-format
+msgctxt "@title:group"
+msgid "Contacts found in your data"
+msgstr "Kontaktoj trovitaj en viaj datumoj"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#, kde-format
+msgid "LDAP server: %1"
+msgstr "LDAP-servilo: %1"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
+#, kde-format
+msgid "Search"
+msgstr "Serĉi"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#, kde-format
+msgid "&Select"
+msgstr "&Selekti"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#, kde-format
+msgid "&Unselect"
+msgstr "Malelekt&u"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr "Montri Nigralistitajn Retpoŝtojn"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
+#, kde-format
+msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Pli da rezulto...</a></qt>"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
+#, kde-format
+msgid "Search email:"
+msgstr "Serĉi retpoŝton:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr "Esploro estas farita el 3 signoj"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
+#, kde-format
+msgid "Search in result..."
+msgstr "Serĉi en rezulto..."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
+#, kde-format
+msgid "Exclude domain names:"
+msgstr "Ekskludi domajnajn nomojn:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
+#, kde-format
+msgid "Separate domain with '%1'"
+msgstr "Apartigi domajnon kun '%1'"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
+#, kde-format
+msgid "Exclude email with Regular Expression:"
+msgstr "Ekskludi retpoŝton kun Regula Esprimo:"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
+#, kde-format
+msgid "Separate regular expression with '%1'"
+msgstr "Apartigi regulan esprimon kun '%1'"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
+#, kde-format
+msgid "Select"
+msgstr "Elekti"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#, kde-format
+msgid "Unselect"
+msgstr "Malelekti"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
+#, kde-format
+msgid "No email found."
+msgstr "Neniu retpoŝto trovita."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
+#, kde-format
+msgid "1 email found"
+msgid_plural "%1 emails found"
+msgstr[0] "1 retpoŝto trovita"
+msgstr[1] "%1 retpoŝtoj trovitaj"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
+#, kde-format
+msgid "No result found"
+msgstr "Neniu rezulto trovita"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
+#, kde-format
+msgid ""
+"The list was changed. Do you want to save before to make another search ?"
+msgstr ""
+"La listo estis ŝanĝita. Ĉu vi volas konservi antaŭe por fari alian serĉon?"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
+#, kde-format
+msgid "Save"
+msgstr "Konservi"
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
+#, kde-format
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Completion"
+msgstr "Agordi Kompleton"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
+#, kde-format
+msgid "Completion Order"
+msgstr "Kompleta Ordo"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
+#, kde-format
+msgid "Recent Address"
+msgstr "Lastatempa Adreso"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
+#, kde-format
+msgid "Blacklist Email Address"
+msgstr "Nigra Listo Retpoŝta Adreso"
+
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Completion Order"
+msgstr "Redakti Kompletigan Ordon"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
+#, kde-format
+msgid "LDAP server %1"
+msgstr "LDAP-servilo %1"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
+#, kde-format
+msgid "Move Up"
+msgstr "Movi Supren"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
+#, kde-format
+msgid "Move Down"
+msgstr "Movi Malsupren"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
+#, kde-format
+msgid "New email..."
+msgstr "Nova retpoŝto..."
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
+#, kde-format
+msgid "Add Email"
+msgstr "Aldoni Retpoŝton"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
+#, kde-format
+msgid "Remove Email"
+msgid_plural "Remove Emails"
+msgstr[0] "Forigi retpoŝton"
+msgstr[1] "Forigi retpoŝtojn"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgid_plural "Do you want to remove %1 email addresses?"
+msgstr[0] "Ĉu vi volas forigi tiun e-poŝtan adreson?"
+msgstr[1] "Ĉu vi volas forigi %1 e-poŝtajn adresojn?"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
+#, kde-format
+msgctxt "type of folder content"
+msgid "Mail"
+msgstr "Poŝto"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
+#, kde-format
+msgctxt "type of folder content"
+msgid "Calendar"
+msgstr "Kalendaro"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
+#, kde-format
+msgctxt "type of folder content"
+msgid "Contacts"
+msgstr "Kontaktoj"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
+#, kde-format
+msgctxt "type of folder content"
+msgid "Notes"
+msgstr "Notoj"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
+#, kde-format
+msgctxt "type of folder content"
+msgid "Tasks"
+msgstr "Taskoj"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
+#, kde-format
+msgctxt "type of folder content"
+msgid "Journal"
+msgstr "Ĵurnalo"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
+#, kde-format
+msgctxt "type of folder content"
+msgid "Configuration"
+msgstr "Agordo"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
+#, kde-format
+msgctxt "type of folder content"
+msgid "Freebusy"
+msgstr "Freebusy"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
+#, kde-format
+msgctxt "type of folder content"
+msgid "Files"
+msgstr "Dosieroj"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#, kde-format
+msgctxt "type of folder content"
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
+#, kde-format
+msgid "&Folder contents:"
+msgstr "Enhavo de &dosierujo:"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
+#, kde-format
+msgid "Nobody"
+msgstr "Neniu"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
+#, kde-format
+msgid "Admins of This Folder"
+msgstr "Administrantoj de Ĉi tiu Dosierujo"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#, kde-format
+msgid "All Readers of This Folder"
+msgstr "Ĉiuj Legantoj de Ĉi tiu Dosierujo"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
+#, kde-format
+msgid ""
+"This setting defines which users sharing this folder should get \"busy\" "
+"periods in their freebusy lists and should see the alarms for the events or "
+"tasks in this folder. The setting applies to Calendar and Task folders only "
+"(for tasks, this setting is only used for alarms).\n"
+"\n"
+"Example use cases: if the boss shares a folder with his secretary, only the "
+"boss should be marked as busy for his meetings, so he should select \"Admins"
+"\", since the secretary has no admin rights on the folder.\n"
+"On the other hand if a working group shares a Calendar for group meetings, "
+"all readers of the folders should be marked as busy for meetings.\n"
+"A company-wide folder with optional events in it would use \"Nobody\" since "
+"it is not known who will go to those events."
+msgstr ""
+"Ĉi tiu agordo difinas kiuj uzantoj kunhavanta ĉi tiun dosierujon ricevu "
+"\"okupataj\" periodojn en siaj liberokupaj listoj kaj devus vidi la alarmojn "
+"por la eventoj aŭ taskoj en ĉi tiu dosierujo. La agordo validas nur por la "
+"dosierujoj de Kalendaro kaj Tasko (por taskoj, ĉi tiu agordo estas uzata nur "
+"por alarmoj).\n"
+"\n"
+"Ekzemplaj uzkazoj: se la estro kunhavas dosierujon kun sia sekretario, nur "
+"la estro estu markita kiel okupata por siaj renkontiĝoj. , do li elektu "
+"\"Administrantoj\", ĉar la sekretario ne havas administrantajn rajtojn sur "
+"la dosierujo.\n"
+"Aliflanke se laborgrupo dividas Kalendaron por grupaj kunvenoj, ĉiuj "
+"legantoj de la dosierujoj estu markitaj kiel okupataj por renkontiĝoj. .\n"
+"Tusta kompanio kun laŭvolaj eventoj en ĝi uzus \"Neniu\" ĉar oni ne scias, "
+"kiu iros al tiuj eventoj."
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#, kde-format
+msgid "Generate free/&busy and activate alarms for:"
+msgstr "Generi li&bera/okupata kaj aktivigi alarmojn por:"
+
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#, kde-format
+msgid "Search..."
+msgstr "Serĉi..."
+
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Multiple Folders"
+msgstr "Elekti Multoblajn Dosierujojn"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Title"
+msgstr "Titolo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
+#, kde-format
+msgid "Full Name"
+msgstr "Plena nomo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Email"
+msgstr "Retpoŝto"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#, kde-format
+msgid "Home Number"
+msgstr "Hejma Numero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#, kde-format
+msgid "Work Number"
+msgstr "Labora Nombro"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#, kde-format
+msgid "Mobile Number"
+msgstr "Poŝtelefona numero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#, kde-format
+msgid "Fax Number"
+msgstr "Faksa Numero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
+#, kde-format
+msgid "Pager"
+msgstr "Televokilo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#, kde-format
+msgid "Street"
+msgstr "strato"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "State"
+msgstr "Ŝtato"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#, kde-format
+msgid "Country"
+msgstr "Lando"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#, kde-format
+msgid "City"
+msgstr "Urbo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#, kde-format
+msgid "Organization"
+msgstr "Organizo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#, kde-format
+msgid "Company"
+msgstr "Kompanio"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#, kde-format
+msgid "Department"
+msgstr "Fako"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#, kde-format
+msgid "Zip Code"
+msgstr "Poŝtkodo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#, kde-format
+msgid "Postal Address"
+msgstr "Poŝta Adreso"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#, kde-format
+msgid "Description"
+msgstr "Priskribo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#, kde-format
+msgid "User ID"
+msgstr "Uzanto ID"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#, kde-format
+msgctxt "@title:column Column containing email addresses"
+msgid "Email"
+msgstr "Retpoŝto"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#, kde-format
+msgctxt "@title:column Column containing the residential state of the address"
+msgid "State"
+msgstr "Ŝtato"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#, kde-format
+msgctxt "@title:column Column containing title of the person"
+msgid "Title"
+msgstr "Titolo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Contacts from LDAP"
+msgstr "Importi Kontaktojn de LDAP"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
+#, kde-format
+msgid "Search for Addresses in Directory"
+msgstr "Serĉi Adresojn en Dosierujo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
+#, kde-format
+msgid "Search for:"
+msgstr "Serĉi:"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#, kde-format
+msgctxt "In LDAP attribute"
+msgid "in"
+msgstr "en"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
+#, kde-format
+msgctxt "@item:inlistbox Name of the contact"
+msgid "Name"
+msgstr "Nomo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
+#, kde-format
+msgctxt "@item:inlistbox email address of the contact"
+msgid "Email"
+msgstr "Retpoŝto"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Home Number"
+msgstr "Hejma Numero"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Work Number"
+msgstr "Labora Nombro"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#, kde-format
+msgctxt "@action:button Start searching"
+msgid "&Search"
+msgstr "&Serĉi"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#, kde-format
+msgid "Recursive search"
+msgstr "Rekursiva serĉo"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#, kde-format
+msgid "Contains"
+msgstr "Enhavas"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
+#, kde-format
+msgid "Starts With"
+msgstr "Komencas Kun"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
+#, kde-format
+msgid "Search in result"
+msgstr "Serĉi en rezulto"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
+#, kde-format
+msgid "Searching..."
+msgstr "Serĉante..."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
+#, kde-format
+msgid "Select All"
+msgstr "Elekti ĉiujn"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
+#, kde-format
+msgid "Unselect All"
+msgstr "Malelekti Ĉion"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
+#, kde-format
+msgid "Add Selected"
+msgstr "Aldoni Elektitajn"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
+#, kde-format
+msgid "Configure LDAP Servers..."
+msgstr "Agordi LDAP-servilojn..."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
+#, kde-format
+msgid "Copy"
+msgstr "Kopii"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
+#, kde-format
+msgid "You must select an LDAP server before searching."
+msgstr "Vi devas elekti LDAP-servilon antaŭ serĉi."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#, kde-format
+msgctxt "arguments are host name, datetime"
+msgid "Imported from LDAP directory %1 on %2"
+msgstr "Importite el LDAP-dosierujo %1 sur %2"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure the Address Book LDAP Settings"
+msgstr "Agordi la Agordojn de LDAP-Adresaro"
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
+#, kde-format
+msgid ""
+"IMAP server not configured yet. Please configure the server in the IMAP "
+"account before setting up server-side subscription."
+msgstr ""
+"IMAP-servilo ankoraŭ ne agordita. Bonvolu agordi la servilon en la IMAP-"
+"konto antaŭ ol agordi servilflankan abonon."
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
+#, kde-format
+msgid ""
+"Log in failed, please configure the IMAP account before setting up server-"
+"side subscription."
+msgstr ""
+"Ensaluto malsukcesis, bonvolu agordi la IMAP-konton antaŭ ol agordi "
+"servilflankan abonon."
+
+#: pimcommonakonadi/util/createresource.cpp:64
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "Rimeda tipo '%1' ne disponeblas."
+
+#: pimcommonakonadi/util/createresource.cpp:75
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Rimedo '%1' jam estas agordita."
+
+#: pimcommonakonadi/util/createresource.cpp:81
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Kreante rimedan ekzemplon por '%1'..."
+
+#: pimcommonakonadi/util/createresource.cpp:87
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Agordante rimedan petskribon..."
+
+#: pimcommonakonadi/util/createresource.cpp:90
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Ne eblas agordi rimedan petskribon."
+
+#: pimcommonakonadi/util/createresource.cpp:106
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "Ne eblis konverti valoron de agordo '%1' al postulata tipo %2."
+
+#: pimcommonakonadi/util/createresource.cpp:112
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Ne eblis agordi la agordon '%1': %2"
+
+#: pimcommonakonadi/util/createresource.cpp:118
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Ne eblis konservi agordojn: %1"
+
+#: pimcommonakonadi/util/createresource.cpp:127
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Rimeda agordo finiĝis."
+
+#: pimcommonakonadi/util/createresource.cpp:131
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Malsukcesis krei rimedan ekzemplon: %1"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit Note"
+msgstr "Redakti Noton"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:69
+#, kde-format
+msgctxt "@action:button"
+msgid "Delete Note"
+msgstr "Forigi Noton"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:73
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Note"
+msgstr "Aldoni Noton"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:78
+#, kde-format
+msgid "Enter the text that should be stored as a note to the mail:"
+msgstr "Enigu la tekston, kiu estu konservita kiel noto al la poŝto:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:88
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Note type:"
+msgstr "Noto-tipo:"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:92
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Private note"
+msgstr "Privata noto"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:93
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Shared note"
+msgstr "Kunhavita noto"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:134
+#, kde-format
+msgid "Do you really want to delete this note?"
+msgstr "Ĉu vi vere volas forigi ĉi tiun noton?"
+
+#: pimcommonakonadi/widgets/annotationdialog.cpp:135
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Note"
+msgstr "Forigi Noton"
