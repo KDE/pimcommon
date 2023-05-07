@@ -13,7 +13,7 @@
 
 #include <KLDAPWidgets/LdapClientSearchConfig>
 #include <KLDAPWidgets/LdapSearchClientReadConfigServerJob>
-#include <Libkdepim/LineEditCatchReturnKey>
+#include <KLineEditEventHandler>
 #include <Libkdepim/ProgressIndicatorLabel>
 
 #include <QApplication>
@@ -544,7 +544,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     auto quickSearchLineLayout = new QHBoxLayout;
     quickSearchLineLayout->addStretch();
     d->searchLine = new QLineEdit;
-    new KPIM::LineEditCatchReturnKey(d->searchLine, this);
+    KLineEditEventHandler::catchReturnKey(d->searchLine);
     d->searchLine->setClearButtonEnabled(true);
     d->searchLine->setPlaceholderText(i18n("Search in result"));
     quickSearchLineLayout->addWidget(d->searchLine);

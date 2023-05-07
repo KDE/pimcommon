@@ -5,9 +5,9 @@
 */
 
 #include "templateeditdialog.h"
+#include <KLineEditEventHandler>
 #include <KPIMTextEdit/PlainTextEditor>
 #include <KPIMTextEdit/PlainTextEditorWidget>
-#include <Libkdepim/LineEditCatchReturnKey>
 
 #include <KLocalizedString>
 #include <QLineEdit>
@@ -58,7 +58,7 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     auto label = new QLabel(i18n("Name:"));
     hbox->addWidget(label);
 
-    new KPIM::LineEditCatchReturnKey(mTemplateNameEdit, this);
+    KLineEditEventHandler::catchReturnKey(mTemplateNameEdit);
     mTemplateNameEdit->setClearButtonEnabled(!defaultTemplate);
     mTemplateNameEdit->setReadOnly(defaultTemplate);
     hbox->addWidget(mTemplateNameEdit);

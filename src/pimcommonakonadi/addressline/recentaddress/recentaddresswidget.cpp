@@ -21,7 +21,7 @@
 #include <QToolButton>
 #include <QVBoxLayout>
 
-#include <Libkdepim/LineEditCatchReturnKey>
+#include <KLineEditEventHandler>
 #include <PimCommon/EmailValidator>
 
 using namespace PimCommon;
@@ -38,7 +38,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     layout->addLayout(lineLayout);
 
     mLineEdit->setObjectName(QStringLiteral("line_edit"));
-    new KPIM::LineEditCatchReturnKey(mLineEdit, this);
+    KLineEditEventHandler::catchReturnKey(mLineEdit);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
     mLineEdit->setValidator(new PimCommon::EmailValidator(this));
