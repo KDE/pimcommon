@@ -122,7 +122,6 @@ target_link_libraries(KPim6PimCommon
     PRIVATE
     Qt::Network
     KF6::I18n
-    KPim6::Libkdepim
     KF6::XmlGui
     KF6::KIOWidgets
     KF6::ItemViews
