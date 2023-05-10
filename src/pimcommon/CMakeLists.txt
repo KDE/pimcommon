@@ -300,7 +300,6 @@ install(FILES
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_job_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
-    ${PimCommon_migrate_HEADERS}
     ${PimCommon_plaintexteditor_HEADERS}
     ${PimCommon_richtexteditor_HEADERS}
     ${PimCommon_shareserviceurl_HEADERS}
@@ -335,7 +334,6 @@ if (BUILD_QCH)
         ${PimCommon_customtools_HEADERS}
         ${PimCommon_job_HEADERS}
         ${PimCommon_managerserversidesubscription_HEADERS}
-        ${PimCommon_migrate_HEADERS}
         ${PimCommon_plaintexteditor_HEADERS}
         ${PimCommon_richtexteditor_HEADERS}
         ${PimCommon_settings_HEADERS}
