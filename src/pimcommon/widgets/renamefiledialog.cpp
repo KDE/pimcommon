@@ -171,7 +171,7 @@ void RenameFileDialog::slotRenamePressed()
     if (newName().isLocalFile()) {
         fileExists = QFile::exists(newName().path());
     } else {
-        auto job = KIO::statDetails(newName(), KIO::StatJob::DestinationSide, KIO::StatBasic);
+        auto job = KIO::stat(newName(), KIO::StatJob::DestinationSide, KIO::StatBasic);
         KJobWidgets::setWindow(job, this);
         fileExists = job->exec();
     }
