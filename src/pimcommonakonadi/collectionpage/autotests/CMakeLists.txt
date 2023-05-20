@@ -9,6 +9,5 @@ macro(add_pimcommon_collectionpage_test _source)
     )
 endmacro()
 
-add_pimcommon_collectionpage_test(collectionannotationsattributetest.cpp)
 add_pimcommon_collectionpage_test(incidencesforwidgettest.cpp)
 add_pimcommon_collectionpage_test(contenttypewidgettest.cpp)

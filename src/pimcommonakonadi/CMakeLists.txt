@@ -37,8 +37,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
    progresswidget/agentprogressmonitor.cpp
    progresswidget/progressmanagerakonadi.cpp
   collectionpage/collectiontypeutil.cpp
-  collectionpage/attributeregistrar.cpp
-  collectionpage/attributes/collectionannotationsattribute.cpp
   collectionpage/incidencesforwidget.cpp
   collectionpage/contenttypewidget.cpp
     addressline/completionorder/completionordereditor.cpp
@@ -88,7 +86,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     collectionpage/contenttypewidget.h
     collectionpage/collectiontypeutil.h
     collectionpage/incidencesforwidget.h
-    collectionpage/attributes/collectionannotationsattribute.h
     folderdialog/checkedcollectionwidget.h
     folderdialog/selectmulticollectiondialog.h
     folderdialog/selectmulticollectionwidget.h
@@ -232,15 +229,6 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpage_HEADERS
   RELATIVE collectionpage
 )
 
-ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS
-  HEADER_NAMES
-  CollectionAnnotationsAttribute
-  REQUIRED_HEADERS PimCommonAkonadi_collectionpageattributes_HEADERS
-  PREFIX PimCommonAkonadi
-  RELATIVE collectionpage/attributes
-)
-
-
 ecm_generate_headers(PimCommonAkonadi_CamelCaseUtil_HEADERS
     HEADER_NAMES
     CreateResource
@@ -318,7 +306,6 @@ ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
 
 install(FILES
     ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
-    ${PimCommonAkonadi_Camelcasecollectionpageattributes_HEADERS}
     ${PimCommonAkonadi_Camelcaseacl_HEADERS}
     ${PimCommonAkonadi_Camelcaseldap_HEADERS}
     ${PimCommonAkonadi_Camelcasefolderdialog_HEADERS}
@@ -340,7 +327,6 @@ install(FILES
     ${PimCommonAkonadi_acl_HEADERS}
     ${PimCommonAkonadi_ldap_HEADERS}
     ${PimCommonAkonadi_collectionpage_HEADERS}
-    ${PimCommonAkonadi_collectionpageattributes_HEADERS}
     ${PimCommonAkonadi_folderdialog_HEADERS}
     ${PimCommonAkonadi_genericplugins_HEADERS}
     ${PimCommonAkonadi_casewidgets_HEADERS}
@@ -373,7 +359,6 @@ if (BUILD_QCH)
         ${PimCommonAkonadi_acl_HEADERS}
         ${PimCommonAkonadi_ldap_HEADERS}
         ${PimCommonAkonadi_collectionpage_HEADERS}
-        ${PimCommonAkonadi_collectionpageattributes_HEADERS}
         ${PimCommonAkonadi_folderdialog_HEADERS}
         ${PimCommonAkonadi_genericplugins_HEADERS}
         ${PimCommonAkonadi_casewidgets_HEADERS}
