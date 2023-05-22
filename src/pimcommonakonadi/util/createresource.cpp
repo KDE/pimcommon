@@ -29,7 +29,7 @@ CreateResource::CreateResource(QObject *parent)
 CreateResource::~CreateResource() = default;
 
 // code from accountwizard
-static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
+static QMetaType::Type argumentType(const QMetaObject *mo, const QString &method)
 {
     QMetaMethod m;
     const int numberOfMethod(mo->methodCount());
@@ -46,15 +46,15 @@ static QVariant::Type argumentType(const QMetaObject *mo, const QString &method)
         for (int i = 0; i < numberOfMethod; ++i) {
             qCWarning(PIMCOMMONAKONADI_LOG) << mo->method(i).methodSignature();
         }
-        return QVariant::Invalid;
+        return QMetaType::UnknownType;
     }
 
     const QList<QByteArray> argTypes = m.parameterTypes();
     if (argTypes.count() != 1) {
-        return QVariant::Invalid;
+        return QMetaType::UnknownType;
     }
 
-    return QVariant::nameToType(argTypes.first().constData());
+    return static_cast<QMetaType::Type>(QMetaType::fromName(argTypes.first().constData()).id());
 }
 
 QString CreateResource::createResource(const QString &resources, const QString &name, const QMap<QString, QVariant> &settings, bool synchronizeTree)
@@ -100,13 +100,12 @@ QString CreateResource::createResource(const QString &resources, const QString &
                 qCDebug(PIMCOMMONAKONADI_LOG) << "Setting up " << it.key() << " for agent " << instance.identifier();
                 const QString methodName = QStringLiteral("set%1").arg(it.key());
                 QVariant arg = it.value();
-                const QVariant::Type targetType = argumentType(iface.metaObject(), methodName);
-                if (!arg.canConvert(targetType)) {
+                const QMetaType::Type targetType = argumentType(iface.metaObject(), methodName);
+                if (arg.metaType().id() != targetType) {
                     Q_EMIT createResourceError(
-                        i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QString::fromLatin1(QVariant::typeToName(targetType))));
+                        i18n("Could not convert value of setting '%1' to required type %2.", it.key(), QString::fromLatin1(QMetaType(targetType).name())));
                     return {};
                 }
-                arg.convert(targetType);
                 QDBusReply<void> reply = iface.call(methodName, arg);
                 if (!reply.isValid()) {
                     Q_EMIT createResourceError(i18n("Could not set setting '%1': %2", it.key(), reply.error().message()));
