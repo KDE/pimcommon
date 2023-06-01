@@ -46,7 +46,7 @@ set(KLDAP_LIB_VERSION "5.240.41")
 set(AKONADICONTACT_LIB_VERSION "5.240.40")
 set(AKONADI_VERSION "5.240.43")
 
-find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Xml)
 
 find_package(KF6Archive ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6Codecs ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -106,6 +106,7 @@ configure_file(config-akonadi-search.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
+   find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 endif(BUILD_TESTING)
 
 ########### Targets ###########
