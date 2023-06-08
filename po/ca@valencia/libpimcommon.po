@@ -672,12 +672,12 @@ msgstr "Servidor LDAP %1"
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
 #, kde-format
 msgid "Move Up"
-msgstr "Mou amunt"
+msgstr "Mou cap amunt"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
 #, kde-format
 msgid "Move Down"
-msgstr "Mou avall"
+msgstr "Mou cap avall"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
