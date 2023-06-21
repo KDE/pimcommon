@@ -94,3 +94,5 @@ void ShareServiceUrlManagerTest::shouldGenerateServiceUrl()
 }
 
 QTEST_MAIN(ShareServiceUrlManagerTest)
+
+#include "moc_shareserviceurlmanagertest.cpp"

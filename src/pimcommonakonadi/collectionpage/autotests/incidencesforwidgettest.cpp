@@ -24,3 +24,5 @@ void IncidencesForWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(IncidencesForWidgetTest)
+
+#include "moc_incidencesforwidgettest.cpp"

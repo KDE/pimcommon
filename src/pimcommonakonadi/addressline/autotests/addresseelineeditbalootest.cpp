@@ -23,3 +23,5 @@ void AddresseeLineEditBalooTest::shouldHaveDefaultValues()
     QVERIFY(b.domainExcludeList().isEmpty());
     QCOMPARE(b.balooCompletionSource(), 0);
 }
+
+#include "moc_addresseelineeditbalootest.cpp"

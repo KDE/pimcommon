@@ -32,3 +32,5 @@ void GenericPluginManagerTest::shouldInitialized()
 }
 
 QTEST_MAIN(GenericPluginManagerTest)
+
+#include "moc_genericpluginmanagertest.cpp"

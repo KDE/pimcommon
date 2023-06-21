@@ -19,3 +19,5 @@ void AddressessLineEditAbstractPlugin::setLineEdit(AddresseeLineEdit *linedit)
 {
     mLinedit = linedit;
 }
+
+#include "moc_addressesslineeditabstractplugin.cpp"

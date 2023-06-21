@@ -65,3 +65,5 @@ void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int e
         }
     }
 }
+
+#include "moc_purposemenuwidget.cpp"

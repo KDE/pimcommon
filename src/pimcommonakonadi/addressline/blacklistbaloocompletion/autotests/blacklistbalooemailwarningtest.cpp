@@ -56,3 +56,5 @@ void BlackListBalooEmailWarningTest::shouldEmitNewSearch()
 }
 
 QTEST_MAIN(BlackListBalooEmailWarningTest)
+
+#include "moc_blacklistbalooemailwarningtest.cpp"

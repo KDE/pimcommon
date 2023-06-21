@@ -86,3 +86,5 @@ void ManageServerSideSubscriptionJob::setCurrentCollection(const Akonadi::Collec
 {
     d->mCurrentCollection = col;
 }
+
+#include "moc_manageserversidesubscriptionjob.cpp"

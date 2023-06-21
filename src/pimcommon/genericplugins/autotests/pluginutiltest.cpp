@@ -53,3 +53,5 @@ void PluginUtilTest::shouldTestIsEnabled()
 }
 
 QTEST_MAIN(PluginUtilTest)
+
+#include "moc_pluginutiltest.cpp"

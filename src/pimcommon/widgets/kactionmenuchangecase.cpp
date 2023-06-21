@@ -74,3 +74,5 @@ void KActionMenuChangeCase::appendInActionCollection(KActionCollection *ac)
         ac->addAction(QStringLiteral("change_to_reversecase"), d->mReverseCase);
     }
 }
+
+#include "moc_kactionmenuchangecase.cpp"

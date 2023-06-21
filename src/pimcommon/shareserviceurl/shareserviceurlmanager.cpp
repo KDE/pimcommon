@@ -207,3 +207,5 @@ void ShareServiceUrlManager::openUrl(const QUrl &url)
         qCDebug(PIMCOMMON_LOG) << "url is invalid.";
     }
 }
+
+#include "moc_shareserviceurlmanager.cpp"

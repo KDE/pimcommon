@@ -44,3 +44,5 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CompletionConfigureDialogTest)
+
+#include "moc_completionconfiguredialogtest.cpp"

@@ -21,3 +21,5 @@ KToggleAction *CustomToolsViewInterface::action() const
 {
     return nullptr;
 }
+
+#include "moc_customtoolsviewinterface.cpp"

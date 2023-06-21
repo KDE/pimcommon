@@ -102,3 +102,5 @@ void AgentProgressMonitor::instanceNameChanged(const Akonadi::AgentInstance &ins
     }
     mItem.data()->setLabel(instance.name());
 }
+
+#include "moc_agentprogressmonitor.cpp"

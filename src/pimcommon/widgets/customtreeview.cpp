@@ -82,3 +82,5 @@ void CustomTreeView::paintEvent(QPaintEvent *event)
         QTreeWidget::paintEvent(event);
     }
 }
+
+#include "moc_customtreeview.cpp"

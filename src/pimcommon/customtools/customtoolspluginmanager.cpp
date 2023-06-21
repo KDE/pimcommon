@@ -118,3 +118,5 @@ QList<PimCommon::CustomToolsPlugin *> CustomToolsPluginManager::pluginsList() co
 {
     return d->pluginsList();
 }
+
+#include "moc_customtoolspluginmanager.cpp"

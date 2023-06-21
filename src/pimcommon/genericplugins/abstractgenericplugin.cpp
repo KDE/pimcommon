@@ -50,3 +50,5 @@ bool AbstractGenericPlugin::isEnabled() const
 {
     return mIsEnabled;
 }
+
+#include "moc_abstractgenericplugin.cpp"

@@ -40,3 +40,5 @@ void BlackListBalooEmailSearchJob::setLimit(int limit)
 {
     mLimit = qMax(10, limit);
 }
+
+#include "moc_blacklistbalooemailsearchjob.cpp"

@@ -51,3 +51,5 @@ void AddresseeLineEditUtilTest::shouldAdaptPasteMails()
 }
 
 QTEST_MAIN(AddresseeLineEditUtilTest)
+
+#include "moc_addresseelineeditutiltest.cpp"

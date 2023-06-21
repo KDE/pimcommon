@@ -88,3 +88,5 @@ void CompletionOrderEditor::slotOk()
     d->mCompletionOrderWidget->save();
     accept();
 }
+
+#include "moc_completionordereditor.cpp"

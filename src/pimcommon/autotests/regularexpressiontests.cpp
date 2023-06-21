@@ -469,3 +469,5 @@ void RegularExpressionTests::shouldRemoveString()
 }
 
 QTEST_MAIN(RegularExpressionTests)
+
+#include "moc_regularexpressiontests.cpp"

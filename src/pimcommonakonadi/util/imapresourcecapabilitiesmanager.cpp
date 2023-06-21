@@ -85,3 +85,5 @@ bool ImapResourceCapabilitiesManager::hasAnnotationSupport(const QString &identi
     }
     return mImapResource.value(identifier, true);
 }
+
+#include "moc_imapresourcecapabilitiesmanager.cpp"

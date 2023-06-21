@@ -62,3 +62,5 @@ void CollectionAclPage::save(Akonadi::Collection &collection)
     const auto origCol = d->mCollectionAclWidget->aclManager()->collection();
     collection.addAttribute(origCol.attribute<PimCommon::ImapAclAttribute>()->clone());
 }
+
+#include "moc_collectionaclpage.cpp"

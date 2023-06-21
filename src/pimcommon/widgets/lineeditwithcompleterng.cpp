@@ -54,3 +54,5 @@ void LineEditWithCompleterNg::slotClearHistory()
     mListCompetion.clear();
     mCompleterListModel->setStringList(mListCompetion);
 }
+
+#include "moc_lineeditwithcompleterng.cpp"

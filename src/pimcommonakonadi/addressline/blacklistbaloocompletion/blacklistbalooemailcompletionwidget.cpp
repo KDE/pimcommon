@@ -317,3 +317,5 @@ void BlackListBalooEmailCompletionWidget::slotShowAllBlacklistedEmail()
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     slotEmailFound(balooBlackList);
 }
+
+#include "moc_blacklistbalooemailcompletionwidget.cpp"

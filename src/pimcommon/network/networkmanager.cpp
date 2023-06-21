@@ -38,3 +38,5 @@ bool NetworkManager::isOnline() const
         return false;
     }
 }
+
+#include "moc_networkmanager.cpp"

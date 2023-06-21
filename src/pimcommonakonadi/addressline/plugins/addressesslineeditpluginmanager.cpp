@@ -133,3 +133,5 @@ PimCommon::AddressessLineEditAbstractPlugin *AddressessLineEditPluginManager::pl
     }
     return {};
 }
+
+#include "moc_addressesslineeditpluginmanager.cpp"

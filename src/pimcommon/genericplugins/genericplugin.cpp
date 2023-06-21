@@ -14,3 +14,5 @@ GenericPlugin::GenericPlugin(QObject *parent)
 }
 
 GenericPlugin::~GenericPlugin() = default;
+
+#include "moc_genericplugin.cpp"

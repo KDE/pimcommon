@@ -144,3 +144,5 @@ void CompletionConfigureDialog::setEmailBlackList(const QStringList &lst)
     d->mBlackListBalooWidget->setEmailBlackList(lst);
 #endif
 }
+
+#include "moc_completionconfiguredialog.cpp"

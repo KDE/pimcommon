@@ -99,3 +99,5 @@ void ConfigurePluginDialog::saveConfig()
     group.writeEntry("Size", size());
     group.sync();
 }
+
+#include "moc_configureplugindialog.cpp"

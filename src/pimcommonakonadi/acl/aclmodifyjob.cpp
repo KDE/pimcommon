@@ -265,3 +265,5 @@ void AclModifyJob::setRecursive(bool recursive)
 {
     mRecursive = recursive;
 }
+
+#include "moc_aclmodifyjob.cpp"

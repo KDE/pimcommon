@@ -32,3 +32,5 @@ void CollectionAclWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CollectionAclWidgetTest)
+
+#include "moc_collectionaclwidgettest.cpp"

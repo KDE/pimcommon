@@ -437,3 +437,5 @@ void CompletionOrderWidget::slotMoveDown()
     slotSelectionChanged();
     mDirty = true;
 }
+
+#include "moc_completionorderwidget.cpp"

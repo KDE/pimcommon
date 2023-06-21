@@ -86,3 +86,5 @@ QList<Akonadi::Collection> SelectMultiCollectionDialog::selectedCollection() con
 {
     return d->mSelectMultiCollection->selectedCollection();
 }
+
+#include "moc_selectmulticollectiondialog.cpp"

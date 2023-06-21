@@ -182,3 +182,5 @@ bool RecentAddressWidget::wasChanged() const
 {
     return mDirty;
 }
+
+#include "moc_recentaddresswidget.cpp"

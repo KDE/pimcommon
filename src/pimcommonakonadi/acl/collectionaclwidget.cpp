@@ -144,3 +144,5 @@ void CollectionAclWidget::slotRecursivePermissionChanged()
 {
     mAclManager->setChanged(true);
 }
+
+#include "moc_collectionaclwidget.cpp"

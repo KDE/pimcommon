@@ -34,3 +34,5 @@ void ActionTypeTest::shouldAssignValue()
 }
 
 QTEST_MAIN(ActionTypeTest)
+
+#include "moc_actiontypetest.cpp"

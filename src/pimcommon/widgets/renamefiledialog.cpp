@@ -210,3 +210,5 @@ QUrl RenameFileDialog::newName() const
 
     return newDest;
 }
+
+#include "moc_renamefiledialog.cpp"

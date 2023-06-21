@@ -239,3 +239,5 @@ void ImapAclAttributeTest::testOldRights()
 }
 
 QTEST_MAIN(ImapAclAttributeTest)
+
+#include "moc_imapaclattributetest.cpp"

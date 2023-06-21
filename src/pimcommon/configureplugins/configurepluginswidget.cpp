@@ -115,3 +115,5 @@ void ConfigurePluginsWidget::initialize()
 {
     mConfigureListWidget->initialize();
 }
+
+#include "moc_configurepluginswidget.cpp"

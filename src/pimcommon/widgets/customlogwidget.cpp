@@ -182,3 +182,5 @@ bool CustomLogWidget::isEmpty() const
 {
     return count() == 0;
 }
+
+#include "moc_customlogwidget.cpp"

@@ -124,3 +124,5 @@ void RecentAddressWidgetTest::shouldDisableAddButton()
 }
 
 QTEST_MAIN(RecentAddressWidgetTest)
+
+#include "moc_recentaddresswidgettest.cpp"

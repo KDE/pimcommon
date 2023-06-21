@@ -49,3 +49,5 @@ void BlackListBalooEmailWarning::slotSearch()
     animatedHide();
     Q_EMIT newSearch();
 }
+
+#include "moc_blacklistbalooemailwarning.cpp"

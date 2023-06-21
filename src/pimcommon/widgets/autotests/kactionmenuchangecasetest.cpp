@@ -45,3 +45,5 @@ void KActionMenuChangeCaseTest::shouldEmitSignals()
 }
 
 QTEST_MAIN(KActionMenuChangeCaseTest)
+
+#include "moc_kactionmenuchangecasetest.cpp"

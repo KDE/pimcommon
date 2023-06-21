@@ -40,3 +40,5 @@ QString IncidencesForWidget::labelName()
 {
     return i18n("Generate free/&busy and activate alarms for:");
 }
+
+#include "moc_incidencesforwidget.cpp"

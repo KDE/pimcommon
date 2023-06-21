@@ -72,3 +72,5 @@ void BroadcastStatus::reset()
     Q_EMIT statusMsg(d->mStatusMsg);
 }
 }
+
+#include "moc_broadcaststatus.cpp"

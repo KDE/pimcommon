@@ -35,3 +35,5 @@ void ConfigurePluginsListWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ConfigurePluginsListWidgetTest)
+
+#include "moc_configurepluginslistwidgettest.cpp"

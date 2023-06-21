@@ -389,3 +389,5 @@ void BalooCompletionEmailTest::shouldExcludeEmptyNameWithDisplayNameForSameAddre
 }
 
 QTEST_MAIN(BalooCompletionEmailTest)
+
+#include "moc_baloocompletionemailtest.cpp"

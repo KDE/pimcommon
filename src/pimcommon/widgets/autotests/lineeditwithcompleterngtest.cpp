@@ -48,3 +48,5 @@ void LineEditWithCompleterNgTest::shouldClearCompleter()
     w.slotClearHistory();
     QCOMPARE(w.completer()->model()->rowCount(), 0);
 }
+
+#include "moc_lineeditwithcompleterngtest.cpp"

@@ -46,3 +46,5 @@ bool CustomToolsPlugin::isEnabled() const
 {
     return d->enabled;
 }
+
+#include "moc_customtoolsplugin.cpp"

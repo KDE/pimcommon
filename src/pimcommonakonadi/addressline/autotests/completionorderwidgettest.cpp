@@ -37,3 +37,5 @@ void CompletionOrderWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CompletionOrderWidgetTest)
+
+#include "moc_completionorderwidgettest.cpp"

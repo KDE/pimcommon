@@ -52,3 +52,5 @@ void AclListView::paintEvent(QPaintEvent *event)
         QListView::paintEvent(event);
     }
 }
+
+#include "moc_acllistview.cpp"

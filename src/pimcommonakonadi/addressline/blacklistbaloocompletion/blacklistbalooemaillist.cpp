@@ -158,3 +158,5 @@ void BlackListBalooEmailListItem::setInitializeStatus(bool initializeStatus)
 {
     mInitializeStatus = initializeStatus;
 }
+
+#include "moc_blacklistbalooemaillist.cpp"

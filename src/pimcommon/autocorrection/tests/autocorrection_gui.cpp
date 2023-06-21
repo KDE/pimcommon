@@ -138,3 +138,5 @@ int main(int argc, char **argv)
     delete w;
     return ret;
 }
+
+#include "moc_autocorrection_gui.cpp"

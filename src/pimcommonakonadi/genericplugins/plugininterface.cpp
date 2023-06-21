@@ -229,3 +229,5 @@ PimCommon::GenericPlugin *PluginInterface::pluginFromIdentifier(const QString &i
 {
     return d->mGenericPluginManager->pluginFromIdentifier(id);
 }
+
+#include "moc_plugininterface.cpp"

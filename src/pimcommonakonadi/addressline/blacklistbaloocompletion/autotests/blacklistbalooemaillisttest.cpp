@@ -116,3 +116,5 @@ void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDisplayNameOrNot()
 }
 
 QTEST_MAIN(BlackListBalooEmailListTest)
+
+#include "moc_blacklistbalooemaillisttest.cpp"

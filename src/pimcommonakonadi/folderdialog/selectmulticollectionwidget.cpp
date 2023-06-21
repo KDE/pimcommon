@@ -88,3 +88,5 @@ QList<Akonadi::Collection> SelectMultiCollectionWidget::selectedCollection(const
     }
     return lst;
 }
+
+#include "moc_selectmulticollectionwidget.cpp"

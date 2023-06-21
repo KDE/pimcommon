@@ -495,3 +495,5 @@ QSize SimpleStringListEditor::sizeHint() const
     sh.setHeight(d->mButtonLayout->minimumSize().height());
     return sh;
 }
+
+#include "moc_simplestringlisteditor.cpp"

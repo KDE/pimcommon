@@ -41,3 +41,5 @@ QString ContentTypeWidget::labelName()
 {
     return i18n("&Folder contents:");
 }
+
+#include "moc_contenttypewidget.cpp"

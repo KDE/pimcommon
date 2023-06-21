@@ -936,3 +936,5 @@ KConfig *AddresseeLineEdit::recentAddressConfig() const
 {
     return d->recentAddressConfig();
 }
+
+#include "moc_addresseelineedit.cpp"

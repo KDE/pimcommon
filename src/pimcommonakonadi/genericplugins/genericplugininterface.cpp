@@ -71,3 +71,5 @@ PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requires
 {
     return None;
 }
+
+#include "moc_genericplugininterface.cpp"

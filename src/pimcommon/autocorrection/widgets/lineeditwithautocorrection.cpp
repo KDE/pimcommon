@@ -76,3 +76,5 @@ void LineEditWithAutoCorrection::keyPressEvent(QKeyEvent *e)
     }
     PimCommon::SpellCheckLineEdit::keyPressEvent(e);
 }
+
+#include "moc_lineeditwithautocorrection.cpp"

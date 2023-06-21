@@ -22,3 +22,5 @@ void BlackListBalooEmailSearchJobTest::shouldNotSearchWhenTextIsEmpty()
 }
 
 QTEST_MAIN(BlackListBalooEmailSearchJobTest)
+
+#include "moc_blacklistbalooemailsearchjobtest.cpp"

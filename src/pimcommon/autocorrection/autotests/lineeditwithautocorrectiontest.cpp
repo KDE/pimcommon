@@ -84,3 +84,5 @@ void LineEditWithAutocorrectionTest::shouldNotAddTwoSpace()
 }
 
 QTEST_MAIN(LineEditWithAutocorrectionTest)
+
+#include "moc_lineeditwithautocorrectiontest.cpp"

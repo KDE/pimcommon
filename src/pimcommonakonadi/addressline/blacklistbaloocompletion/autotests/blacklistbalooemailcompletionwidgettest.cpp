@@ -119,3 +119,5 @@ void BlackListBalooEmailCompletionWidgetTest::shouldChangeEnableSelectUnSelectBu
 }
 
 QTEST_MAIN(BlackListBalooEmailCompletionWidgetTest)
+
+#include "moc_blacklistbalooemailcompletionwidgettest.cpp"

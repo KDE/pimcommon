@@ -22,3 +22,5 @@ void PurposeMenuWidgetTest::shouldHaveDefaultValues()
     QVERIFY(w.menu());
     QCOMPARE(w.menu()->objectName(), QStringLiteral("purposesharemenu"));
 }
+
+#include "moc_purposemenuwidgettest.cpp"

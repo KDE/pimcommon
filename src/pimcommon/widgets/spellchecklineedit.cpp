@@ -108,3 +108,5 @@ void SpellCheckLineEdit::insertFromMimeData(const QMimeData *source)
         RichTextEditor::insertFromMimeData(source);
     }
 }
+
+#include "moc_spellchecklineedit.cpp"

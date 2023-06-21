@@ -59,3 +59,5 @@ void BlackListBalooEmailUtilTest::shouldAddNewElements()
 }
 
 QTEST_MAIN(BlackListBalooEmailUtilTest)
+
+#include "moc_blacklistbalooemailutiltest.cpp"

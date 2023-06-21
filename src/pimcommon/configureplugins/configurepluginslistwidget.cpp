@@ -178,3 +178,5 @@ void ConfigurePluginsListWidget::resetToUserSettings(const QList<PluginItem *> &
         item->setCheckState(0, item->mEnableFromUserSettings ? Qt::Checked : Qt::Unchecked);
     }
 }
+
+#include "moc_configurepluginslistwidget.cpp"

@@ -132,3 +132,5 @@ QString CreateResource::createResource(const QString &resources, const QString &
     }
     return {};
 }
+
+#include "moc_createresource.cpp"

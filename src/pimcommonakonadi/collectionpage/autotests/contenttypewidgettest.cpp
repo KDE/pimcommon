@@ -23,3 +23,5 @@ void ContentTypeWidgetTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(ContentTypeWidgetTest)
+
+#include "moc_contenttypewidgettest.cpp"

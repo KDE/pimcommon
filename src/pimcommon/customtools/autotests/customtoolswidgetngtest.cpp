@@ -28,3 +28,5 @@ void CustomToolsWidgetNgTest::shouldHaveDefaultValue()
 }
 
 QTEST_MAIN(CustomToolsWidgetNgTest)
+
+#include "moc_customtoolswidgetngtest.cpp"

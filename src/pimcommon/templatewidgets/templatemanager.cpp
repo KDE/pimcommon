@@ -110,3 +110,5 @@ void TemplateInfo::debug() const
 {
     qCDebug(PIMCOMMON_LOG) << " name :" << name << " script :" << script;
 }
+
+#include "moc_templatemanager.cpp"

@@ -950,3 +950,5 @@ void AddresseeLineEditPrivate::mightBeGroupJobsAdd(Akonadi::ContactGroupSearchJo
 {
     mMightBeGroupJobs.append(job);
 }
+
+#include "moc_addresseelineedit_p.cpp"
