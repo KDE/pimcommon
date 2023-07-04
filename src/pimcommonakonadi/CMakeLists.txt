@@ -131,11 +131,12 @@ target_link_libraries(KPim6PimCommonAkonadi
     KPim6::AkonadiCore
     KPim6::AkonadiWidgets
     KF6::Contacts
-    KPim6::AkonadiContact
+    KPim6::AkonadiContactWidgets
     KF6::KIOCore
     KPim6::IMAP
     KPim6::Libkdepim
     PRIVATE
+    KPim6::AkonadiContactCore
     KF6::I18n
     KF6::Codecs
     KPim6::PimTextEdit
