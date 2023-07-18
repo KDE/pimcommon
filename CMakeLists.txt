@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.23.41")
+set(PIM_VERSION "5.23.80")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -37,7 +37,7 @@ option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, 
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
-set(LIBKDEPIM_LIB_VERSION "5.23.40")
+set(LIBKDEPIM_LIB_VERSION "5.23.80")
 set(QT_REQUIRED_VERSION "5.15.2")
 if (QT_MAJOR_VERSION STREQUAL "6")
     set(QT_REQUIRED_VERSION "6.4.0")
@@ -48,12 +48,12 @@ else()
     set(KF_MAJOR_VERSION "5")
     set(KTEXTADDONS_MIN_VERSION "1.0.0")
 endif()
-set(KIMAP_LIB_VERSION "5.23.40")
-set(KPIMTEXTEDIT_LIB_VERSION "5.23.40")
-set(KLDAP_LIB_VERSION "5.23.40")
+set(KIMAP_LIB_VERSION "5.23.80")
+set(KPIMTEXTEDIT_LIB_VERSION "5.23.80")
+set(KLDAP_LIB_VERSION "5.23.80")
 
-set(AKONADICONTACT_LIB_VERSION "5.23.40")
-set(AKONADI_VERSION "5.23.43")
+set(AKONADICONTACT_LIB_VERSION "5.23.80")
+set(AKONADI_VERSION "5.23.80")
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Network Test Xml)
 
