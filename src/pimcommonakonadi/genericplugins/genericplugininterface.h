@@ -51,4 +51,4 @@ private:
     std::unique_ptr<GenericPluginInterfacePrivate> const d;
 };
 }
-Q_DECLARE_TYPEINFO(PimCommon::ActionType, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(PimCommon::ActionType, Q_RELOCATABLE_TYPE);

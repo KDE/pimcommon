@@ -58,4 +58,4 @@ private:
     std::unique_ptr<TemplateListWidgetPrivate> const d;
 };
 }
-Q_DECLARE_TYPEINFO(PimCommon::defaultTemplate, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(PimCommon::defaultTemplate, Q_RELOCATABLE_TYPE);
