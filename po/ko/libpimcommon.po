@@ -1105,12 +1105,12 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "자원 형식 '%1'을(를) 사용할 수 없습니다."
+msgstr "리소스 형식 '%1'을(를) 사용할 수 없습니다."
 
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "자원 '%1'이(가) 이미 설정되었습니다."
+msgstr "리소스 '%1'이(가) 이미 설정되었습니다."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
@@ -1120,12 +1120,12 @@ msgstr "'%1'의 인스턴스를 만드는 중..."
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "자원 인스턴스 설정 중..."
+msgstr "리소스 인스턴스 설정 중..."
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "자원 인스턴스를 설정할 수 없습니다."
+msgstr "리소스 인스턴스를 설정할 수 없습니다."
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
@@ -1145,12 +1145,12 @@ msgstr "설정을 저장할 수 없음: %1"
 #: pimcommonakonadi/util/createresource.cpp:127
 #, kde-format
 msgid "Resource setup completed."
-msgstr "자원 설정이 완료되었습니다."
+msgstr "리소스 설정이 완료되었습니다."
 
 #: pimcommonakonadi/util/createresource.cpp:131
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "자원 인스턴스를 만들 수 없음: %1"
+msgstr "리소스 인스턴스를 만들 수 없음: %1"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
