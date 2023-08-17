@@ -38,7 +38,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "5.240.40")
-set(KTEXTADDONS_MIN_VERSION "1.4.0")
+set(KTEXTADDONS_MIN_VERSION "1.4.42")
 set(KIMAP_LIB_VERSION "5.240.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.240.40")
 set(KLDAP_LIB_VERSION "5.240.41")
@@ -114,6 +114,7 @@ endif(BUILD_TESTING)
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 add_subdirectory(src)
 ecm_qt_install_logging_categories(

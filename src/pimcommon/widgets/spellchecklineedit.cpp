@@ -13,7 +13,7 @@
 using namespace PimCommon;
 
 SpellCheckLineEdit::SpellCheckLineEdit(QWidget *parent, const QString &configFile)
-    : KPIMTextEdit::RichTextEditor(parent)
+    : TextCustomEditor::RichTextEditor(parent)
 {
     setSpellCheckingConfigFileName(configFile);
     setSearchSupport(false);

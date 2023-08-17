@@ -9,7 +9,7 @@
 #include <QDialog>
 
 class QLineEdit;
-namespace KPIMTextEdit
+namespace TextCustomEditor
 {
 class PlainTextEditorWidget;
 }
@@ -32,7 +32,7 @@ private:
     void slotTemplateChanged();
     void readConfig();
     void writeConfig();
-    KPIMTextEdit::PlainTextEditorWidget *const mTextEdit;
+    TextCustomEditor::PlainTextEditorWidget *const mTextEdit;
     QLineEdit *const mTemplateNameEdit;
     QPushButton *mOkButton = nullptr;
 };

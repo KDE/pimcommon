@@ -6,7 +6,7 @@
 */
 
 #include "annotationdialog.h"
-#include <KPIMTextEdit/PlainTextEditorWidget>
+#include <TextCustomEditor/PlainTextEditorWidget>
 
 #include <Akonadi/EntityAnnotationsAttribute>
 #include <Akonadi/Item>
@@ -35,7 +35,7 @@ public:
     AnnotationEditDialogPrivate() = default;
 
     Akonadi::Item mItem;
-    KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
+    TextCustomEditor::PlainTextEditorWidget *mTextEdit = nullptr;
     QComboBox *mNoteType = nullptr;
     bool mHasAnnotation = false;
 };
@@ -78,7 +78,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
     auto label = new QLabel(i18n("Enter the text that should be stored as a note to the mail:"));
     auto vbox = new QVBoxLayout(mainWidget);
     vbox->setContentsMargins({});
-    d->mTextEdit = new KPIMTextEdit::PlainTextEditorWidget(this);
+    d->mTextEdit = new TextCustomEditor::PlainTextEditorWidget(this);
     vbox->addWidget(label);
     vbox->addWidget(d->mTextEdit);
     d->mTextEdit->setFocus();

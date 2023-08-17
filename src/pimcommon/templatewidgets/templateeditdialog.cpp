@@ -6,8 +6,8 @@
 
 #include "templateeditdialog.h"
 #include <KLineEditEventHandler>
-#include <KPIMTextEdit/PlainTextEditor>
-#include <KPIMTextEdit/PlainTextEditorWidget>
+#include <TextCustomEditor/PlainTextEditor>
+#include <TextCustomEditor/PlainTextEditorWidget>
 
 #include <KLocalizedString>
 #include <QLineEdit>
@@ -29,7 +29,7 @@ static const char myTemplateEditDialogConfigGroupName[] = "TemplateEditDialog";
 }
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)
-    , mTextEdit(new KPIMTextEdit::PlainTextEditorWidget(this))
+    , mTextEdit(new TextCustomEditor::PlainTextEditorWidget(this))
     , mTemplateNameEdit(new QLineEdit(this))
 {
     setWindowTitle(defaultTemplate ? i18nc("@title:window", "Default template") : i18nc("@title:window", "Template"));

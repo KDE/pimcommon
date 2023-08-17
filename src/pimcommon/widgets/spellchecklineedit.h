@@ -6,7 +6,7 @@
 
 #pragma once
 #include "pimcommon_export.h"
-#include <KPIMTextEdit/RichTextEditor>
+#include <TextCustomEditor/RichTextEditor>
 
 class QMimeData;
 namespace PimCommon
@@ -15,7 +15,7 @@ namespace PimCommon
  * @brief The SpellCheckLineEdit class
  * @author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMON_EXPORT SpellCheckLineEdit : public KPIMTextEdit::RichTextEditor
+class PIMCOMMON_EXPORT SpellCheckLineEdit : public TextCustomEditor::RichTextEditor
 {
     Q_OBJECT
 
