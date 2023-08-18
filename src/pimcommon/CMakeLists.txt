@@ -118,7 +118,7 @@ target_link_libraries(KPim6PimCommon
     Qt::DBus
     KF6::KIOCore
     KF6::WidgetsAddons
-    KPim6::PimTextEdit
+    KF6::TextCustomEditor
     PRIVATE
     Qt::Network
     KF6::I18n

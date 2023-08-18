@@ -10,7 +10,6 @@ Dependencies:
     'pim/akonadi' : '@latest-kf6'
     'pim/akonadi-contacts' : '@latest-kf6'
     'pim/kimap' : '@latest-kf6'
-    'pim/kpimtextedit' : '@latest-kf6'
     'pim/libkdepim' : '@latest-kf6'
     'pim/kldap' : '@latest-kf6'
     'frameworks/kconfig': '@latest-kf6'
@@ -34,6 +33,7 @@ Dependencies:
     'frameworks/kxmlgui': '@latest-kf6'
     'frameworks/kiconthemes': '@latest-kf6'
     'frameworks/kcalendarcore': '@latest-kf6'
+    'libraries/ktextaddons': '@latest-kf6'
 
 - 'on': ['Linux', 'FreeBSD', 'macOS']
   'require':

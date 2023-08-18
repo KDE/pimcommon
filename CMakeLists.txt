@@ -40,7 +40,6 @@ set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "5.240.40")
 set(KTEXTADDONS_MIN_VERSION "1.4.42")
 set(KIMAP_LIB_VERSION "5.240.40")
-set(KPIMTEXTEDIT_LIB_VERSION "5.240.40")
 set(KLDAP_LIB_VERSION "5.240.41")
 
 set(AKONADICONTACT_LIB_VERSION "5.240.43")
@@ -64,13 +63,13 @@ find_package(KF6Service ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6XmlGui ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
 find_package(KPim6AkonadiContactWidgets ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
-find_package(KPim6TextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
@@ -115,6 +114,7 @@ ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
 add_subdirectory(src)
 ecm_qt_install_logging_categories(

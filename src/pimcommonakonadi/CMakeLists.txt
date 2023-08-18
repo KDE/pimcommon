@@ -139,7 +139,6 @@ target_link_libraries(KPim6PimCommonAkonadi
     KPim6::AkonadiContactCore
     KF6::I18n
     KF6::Codecs
-    KPim6::PimTextEdit
     KF6::XmlGui
     KF6::KIOWidgets
     KF6::KCMUtils
