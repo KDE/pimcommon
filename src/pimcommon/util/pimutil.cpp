@@ -103,8 +103,9 @@ bool PimCommon::Util::isImapResource(const QString &identifier)
         || identifier.startsWith(GMAIL_RESOURCE_IDENTIFIER);
 }
 
-void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
+QUrl PimCommon::Util::generateHelpUrl(const QString &docfile, const QString &anchor)
 {
+    QUrl generatedUrl;
     if (!docfile.isEmpty()) {
         QUrl url;
         url = QUrl(QStringLiteral("help:/")).resolved(QUrl(docfile));
@@ -113,6 +114,15 @@ void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
             query.addQueryItem(QStringLiteral("anchor"), anchor);
             url.setQuery(query);
         }
+        generatedUrl = std::move(url);
+    }
+    return generatedUrl;
+}
+
+void PimCommon::Util::invokeHelp(const QString &docfile, const QString &anchor)
+{
+    const QUrl url = generateHelpUrl(docfile, anchor);
+    if (!url.isEmpty()) {
         // launch khelpcenter, or a browser for URIs not handled by khelpcenter
         QDesktopServices::openUrl(url);
     }

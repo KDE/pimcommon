@@ -14,4 +14,6 @@ class PimUtilsTest : public QObject
 public:
     explicit PimUtilsTest(QObject *parent = nullptr);
     ~PimUtilsTest() override = default;
+private Q_SLOTS:
+    void shouldTestInvokeHelp();
 };

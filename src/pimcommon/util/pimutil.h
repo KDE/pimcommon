@@ -8,6 +8,7 @@
 #pragma once
 
 #include "pimcommon_export.h"
+#include "pimcommon_private_export.h"
 #include <QUrl>
 class OrgKdeAkonadiImapSettingsInterface;
 class QWidget;
@@ -32,5 +33,7 @@ Q_REQUIRED_RESULT PIMCOMMON_EXPORT QString loadToFile(const QString &filter, QWi
 PIMCOMMON_EXPORT void invokeHelp(const QString &docfile, const QString &anchor = QString());
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT bool isImapResource(const QString &identifier);
 Q_REQUIRED_RESULT PIMCOMMON_EXPORT QStringList generateEmailList(const QStringList &list);
+// Only for testing
+Q_REQUIRED_RESULT PIMCOMMON_TESTS_EXPORT QUrl generateHelpUrl(const QString &docfile, const QString &anchor = QString());
 }
 }
