@@ -10,3 +10,4 @@ macro(add_pimcommon_regularexpression_unittest _source)
 endmacro()
 
 add_pimcommon_regularexpression_unittest(regularexpressiontests.cpp)
+add_pimcommon_regularexpression_unittest(pimutilstest.cpp)
