@@ -16,6 +16,8 @@ PimUtilsTest::PimUtilsTest(QObject *parent)
 void PimUtilsTest::shouldTestInvokeHelp()
 {
     QCOMPARE(PimCommon::Util::generateHelpUrl(QStringLiteral("kmail2/configure-identity.html")), QUrl(QStringLiteral("help:/kmail2/configure-identity.html")));
+    QCOMPARE(PimCommon::Util::generateHelpUrl(QStringLiteral("kmail2/configure-identity.html"), QStringLiteral("configure-identity-newidentitydialog")),
+             QUrl(QStringLiteral("help:/kmail2/configure-identity.html?anchor=configure-identity-newidentitydialog")));
 }
 
 #include "moc_pimutilstest.cpp"
