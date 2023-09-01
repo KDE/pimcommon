@@ -263,7 +263,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     RELATIVE configureplugins
     )
 ecm_generate_pri_file(BASE_NAME PimCommon
-    LIB_NAME KF6PimCommon
+    LIB_NAME KPim6PimCommon
     DEPS "network KIOCore KWidgetsAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon
     )
 
