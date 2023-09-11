@@ -21,5 +21,8 @@ class PIMCOMMON_EXPORT PurposeMenuMessageWidget : public KMessageWidget
 public:
     explicit PurposeMenuMessageWidget(QWidget *parent = nullptr);
     ~PurposeMenuMessageWidget() override;
+
+    void shareError(const QString &url);
+    void shareSuccess(const QString &message);
 };
 }
