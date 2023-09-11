@@ -5,6 +5,8 @@
 */
 
 #include "purposemenumessagewidget.h"
+#include <QDesktopServices>
+#include <QUrl>
 
 using namespace PimCommon;
 PurposeMenuMessageWidget::PurposeMenuMessageWidget(QWidget *parent)
@@ -12,6 +14,9 @@ PurposeMenuMessageWidget::PurposeMenuMessageWidget(QWidget *parent)
 {
     setVisible(false);
     setCloseButtonVisible(true);
+    connect(this, &KMessageWidget::linkActivated, this, [](const QString &contents) {
+        QDesktopServices::openUrl(QUrl(contents));
+    });
 }
 
 PurposeMenuMessageWidget::~PurposeMenuMessageWidget() = default;
