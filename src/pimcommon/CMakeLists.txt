@@ -22,7 +22,7 @@ endmacro()
 
 add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
 
-add_library(KPim6PimCommon )
+add_library(KPim6PimCommon)
 add_library(KPim6::PimCommon ALIAS KPim6PimCommon)
 ecm_qt_declare_logging_category(KPim6PimCommon HEADER pimcommon_debug.h IDENTIFIER PIMCOMMON_LOG CATEGORY_NAME org.kde.pim.pimcommon
         DESCRIPTION "kdepim (pimcommon)"
@@ -94,6 +94,9 @@ target_sources(KPim6PimCommon PRIVATE
 
     autocorrection/widgets/lineeditwithautocorrection.h
     autocorrection/widgets/lineeditwithautocorrection.cpp
+
+    widgets/purposemenumessagewidget.h
+    widgets/purposemenumessagewidget.cpp
     )
 target_sources(KPim6PimCommon PRIVATE
     widgets/purposemenuwidget.h
@@ -248,6 +251,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     LineEditWithCompleterNg
     CustomLogWidget
     PurposeMenuWidget
+    PurposeMenuMessageWidget
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
     RELATIVE widgets
