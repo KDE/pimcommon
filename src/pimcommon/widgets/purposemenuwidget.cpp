@@ -5,6 +5,7 @@
 */
 
 #include "purposemenuwidget.h"
+#include <KLocalizedString>
 #include <Purpose/AlternativesModel>
 #include <Purpose/Menu>
 #include <QJsonArray>
@@ -49,10 +50,14 @@ void PurposeMenuWidget::slotInitializeShareMenu()
 void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
 {
     if (error) {
-        Q_EMIT shareError(message);
+        Q_EMIT shareError(i18n("There was a problem sharing the document: %1", message));
     } else {
         const QString url = output[QLatin1String("url")].toString();
-        Q_EMIT shareSuccess(url);
+        if (url.isEmpty()) {
+            Q_EMIT shareSuccess(i18n("File was shared."));
+        } else {
+            Q_EMIT shareSuccess(i18n("<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>", url));
+        }
     }
 }
 
