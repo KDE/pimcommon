@@ -22,7 +22,8 @@ public:
     explicit PurposeMenuMessageWidget(QWidget *parent = nullptr);
     ~PurposeMenuMessageWidget() override;
 
-    void shareError(const QString &message);
-    void shareSuccess(const QString &url);
+public Q_SLOTS:
+    void slotShareError(const QString &message);
+    void slotShareSuccess(const QString &url);
 };
 }

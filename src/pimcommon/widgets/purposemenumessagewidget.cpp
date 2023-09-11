@@ -17,14 +17,14 @@ PurposeMenuMessageWidget::PurposeMenuMessageWidget(QWidget *parent)
 
 PurposeMenuMessageWidget::~PurposeMenuMessageWidget() = default;
 
-void PurposeMenuMessageWidget::shareError(const QString &message)
+void PurposeMenuMessageWidget::slotShareError(const QString &message)
 {
     setMessageType(KMessageWidget::MessageType::Error);
     setText(i18n("There was a problem sharing the document: %1", message));
     animatedShow();
 }
 
-void PurposeMenuMessageWidget::shareSuccess(const QString &url)
+void PurposeMenuMessageWidget::slotShareSuccess(const QString &url)
 {
     setMessageType(KMessageWidget::MessageType::Information);
     if (url.isEmpty()) {
