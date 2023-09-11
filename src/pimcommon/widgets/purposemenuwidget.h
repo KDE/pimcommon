@@ -30,6 +30,10 @@ public:
     Q_REQUIRED_RESULT virtual QByteArray text() = 0;
     Q_REQUIRED_RESULT QMenu *menu() const;
 
+Q_SIGNALS:
+    void shareError(const QString &message);
+    void shareSuccess(const QString &url);
+
 private:
     PIMCOMMON_NO_EXPORT void slotInitializeShareMenu();
     PIMCOMMON_NO_EXPORT void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);

@@ -51,9 +51,11 @@ void PurposeMenuWidget::slotInitializeShareMenu()
 void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int error, const QString &message)
 {
     if (error) {
+        Q_EMIT shareError(message);
         KMessageBox::error(mParentWidget, i18n("There was a problem sharing the document: %1", message), i18n("Share"));
     } else {
         const QString url = output[QLatin1String("url")].toString();
+        Q_EMIT shareSuccess(url);
         if (url.isEmpty()) {
             KMessageBox::information(mParentWidget, i18n("File was shared."));
         } else {
