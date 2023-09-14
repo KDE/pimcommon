@@ -7,11 +7,11 @@ Dependencies:
     'frameworks/extra-cmake-modules': '@latest-kf6'
     'frameworks/kcontacts' : '@latest-kf6'
     'frameworks/purpose': '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-contacts' : '@latest-kf6'
-    'pim/kimap' : '@latest-kf6'
-    'pim/libkdepim' : '@latest-kf6'
-    'pim/kldap' : '@latest-kf6'
+    'pim/akonadi' : '@same'
+    'pim/akonadi-contacts' : '@same'
+    'pim/kimap' : '@same'
+    'pim/libkdepim' : '@same'
+    'pim/kldap' : '@same'
     'frameworks/kconfig': '@latest-kf6'
     'frameworks/kcrash': '@latest-kf6'
     'frameworks/kdbusaddons': '@latest-kf6'
@@ -37,7 +37,7 @@ Dependencies:
 
 - 'on': ['Linux', 'FreeBSD', 'macOS']
   'require':
-    'pim/akonadi-search' : '@latest-kf6'
+    'pim/akonadi-search' : '@same'
 
 Options:
   require-passing-tests-on: [ 'Linux/Qt5', 'FreeBSD/Qt5' ]
