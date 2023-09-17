@@ -25,7 +25,7 @@ namespace PimCommon
 class SimpleStringListEditor;
 namespace ConfigureImmutableWidgetUtils
 {
-void checkLockDown(QWidget *w, const KConfigSkeletonItem *item);
+PIMCOMMON_EXPORT void checkLockDown(QWidget *w, const KConfigSkeletonItem *item);
 PIMCOMMON_EXPORT void populateButtonGroup(QGroupBox *box, QButtonGroup *group, int orientation, const KCoreConfigSkeleton::ItemEnum *e);
 PIMCOMMON_EXPORT void populateCheckBox(QCheckBox *b, const KCoreConfigSkeleton::ItemBool *e);
 PIMCOMMON_EXPORT void loadWidget(QCheckBox *b, const KCoreConfigSkeleton::ItemBool *e);
