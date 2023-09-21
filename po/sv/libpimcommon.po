@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2023-07-25 09:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Save File Error"
 msgstr "Fel vid spara fil"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:83
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -198,7 +198,7 @@ msgstr ""
 "Kunde inte läsa filen %1:\n"
 "Den detaljerade felbeskrivningen är \"%2\"."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid "Load File Error"
 msgstr "Fil vid inläsning av fil"
@@ -242,22 +242,17 @@ msgstr "Omvända bokstäver"
 msgid "Clear History"
 msgstr "Rensa historik"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Ett problem uppstod när dokumentet skulle delas: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
-#, kde-format
-msgid "Share"
-msgstr "Dela"
-
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:57
 #, kde-format
 msgid "File was shared."
 msgstr "Filen delades."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Den nya begäran finns på:<br /><a href='%1'>%1</a> </qt>"
@@ -476,42 +471,42 @@ msgstr "Åtkomstkontroll"
 msgid "Apply permissions on all &subfolders."
 msgstr "Ändra rättigheter för alla &underkataloger"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Misslyckades importera visitkort"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Kan inte komma åt <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
 msgid "Select email from contact"
 msgstr "Välj e-postadress från kontakt"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Visa organisationsenhet för LDAP-resultat"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Anpassa komplettering..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Expandera grupper automatiskt"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Expandera grupper..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1142,22 +1137,22 @@ msgstr "Kan inte anpassa resursinstans."
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Kunde inte konvertera värdet på inställningen '%1' till begärd typ %2."
 
-#: pimcommonakonadi/util/createresource.cpp:112
+#: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Kunde inte ändra inställning '%1': %2"
 
-#: pimcommonakonadi/util/createresource.cpp:118
+#: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Kunde inte spara inställningar: %1"
 
-#: pimcommonakonadi/util/createresource.cpp:127
+#: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Resursinställning klar."
 
-#: pimcommonakonadi/util/createresource.cpp:131
+#: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Misslyckades skapa resursinstans: %1"
@@ -1213,6 +1208,9 @@ msgstr "Vill du verkligen ta bort den här anmärkningen?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Ta bort anmärkning"
+
+#~ msgid "Share"
+#~ msgstr "Dela"
 
 #~ msgid "Add"
 #~ msgstr "Lägg till"

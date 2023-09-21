@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2023-03-24 06:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -190,7 +190,7 @@ msgstr ""
 msgid "Save File Error"
 msgstr "ფაილის შენახვის შეცდომა"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:83
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -199,7 +199,7 @@ msgstr ""
 "ფაილის %1 წაკითხვის შეცდომა:\n"
 "\"%2\" შეცდომის დეტალური აღწერაა."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid "Load File Error"
 msgstr "ფაილის ჩატვირთვის შეცდომა"
@@ -243,22 +243,17 @@ msgstr "რეგისტრის შებრუნება"
 msgid "Clear History"
 msgstr "ისტორიის გაწმენდა"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "პრობლემა დოკუმენტის გაზიარებისას: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
-#, kde-format
-msgid "Share"
-msgstr "გაზიარება"
-
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:57
 #, kde-format
 msgid "File was shared."
 msgstr "ფაილი გაზიარდა."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr ""
@@ -479,42 +474,42 @@ msgstr "წვდომის კონტროლი"
 msgid "Apply permissions on all &subfolders."
 msgstr "წვდომების ყველა ქვესაქაღალდეზე გადატარება."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard -ის შემოტანის შეცდომა"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>წვდომა აკრძალულია: <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
 msgid "Select email from contact"
 msgstr "აირჩიეთ ელფოსტა კონტაქტიდან"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "LDAP შედეგების ორგანიზაციის ერთეულის ჩვენება"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Configure Completion..."
 msgstr "დასრულების მორგება..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "ჯგუფების ავტომატური ამოკეცვა"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
 msgstr "ყველა ჯგუფის ამოკეცვა..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1147,22 +1142,22 @@ msgstr "რესურსის გაშვებული ასლის მ
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "პარამეტრის '%1' მნიშვნელობის საჭირო ტიპში '%2' გადაყვანის შეცდომა."
 
-#: pimcommonakonadi/util/createresource.cpp:112
+#: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "'%1' პარამეტრის დაყენების შეცდომა: %2"
 
-#: pimcommonakonadi/util/createresource.cpp:118
+#: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "პარამეტრების შენახვის შეცდომა: %1"
 
-#: pimcommonakonadi/util/createresource.cpp:127
+#: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
 msgstr "რესურსის მორგება დასრულდა."
 
-#: pimcommonakonadi/util/createresource.cpp:131
+#: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "რესურსის გაშვებული ასლის შექმნის შეცდომა: %1"
@@ -1218,6 +1213,9 @@ msgstr "მართლა გნებავთ ამ შენიშვნი
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "შენიშვნის წაშლა"
+
+#~ msgid "Share"
+#~ msgstr "გაზიარება"
 
 #~ msgid "Add"
 #~ msgstr "დამატება"

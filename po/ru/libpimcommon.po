@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2022-10-11 12:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -203,7 +203,7 @@ msgstr ""
 msgid "Save File Error"
 msgstr "Ошибка записи в файл"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:83
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -212,7 +212,7 @@ msgstr ""
 "Не удалось прочитать файл %1:\n"
 "Подробное описание ошибки: «%2»."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid "Load File Error"
 msgstr "Ошибка чтения из файла"
@@ -256,23 +256,17 @@ msgstr "Инвертировать регистр побуквенно"
 msgid "Clear History"
 msgstr "Очистить историю"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Не удалось опубликовать документ: %1"
 
-# BUGME: please check meaning of this and add to glossary --aspotashev
-#: pimcommon/widgets/purposemenuwidget.cpp:54
-#, kde-format
-msgid "Share"
-msgstr "Публикация"
-
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:57
 #, kde-format
 msgid "File was shared."
 msgstr "Файл опубликован."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Новый запрос доступен по адресу:<br /><a href='%1'>%1</a>.</qt>"
@@ -489,42 +483,42 @@ msgstr "Управление доступом"
 msgid "Apply permissions on all &subfolders."
 msgstr "Применять права доступа ко всем вложенным папкам"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Не удалось импортировать vCard"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Не удалось получить доступ к <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
 msgid "Select email from contact"
 msgstr "Выберите адрес эл. почты контакта"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Показывать подразделение для адресов из LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Настроить автодополнение..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Автоматически разворачивать группы"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Развернуть группы..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1177,22 +1171,22 @@ msgstr "Не удалось создать экземпляр источника
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Не удалось преобразовать значение параметра «%1» в необходимый тип %2."
 
-#: pimcommonakonadi/util/createresource.cpp:112
+#: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Не удалось установить параметр «%1»: %2"
 
-#: pimcommonakonadi/util/createresource.cpp:118
+#: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Не удалось сохранить параметры: %1"
 
-#: pimcommonakonadi/util/createresource.cpp:127
+#: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Создание источника данных завершено."
 
-#: pimcommonakonadi/util/createresource.cpp:131
+#: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не удалось создать экземпляр источника данных: %1"
@@ -1249,6 +1243,10 @@ msgstr "Удалить это примечание?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Удаление примечания"
+
+# BUGME: please check meaning of this and add to glossary --aspotashev
+#~ msgid "Share"
+#~ msgstr "Публикация"
 
 # BUGME: please add accelerator so that it's fixed on some letter. --aspotashev
 #~ msgid "Add"

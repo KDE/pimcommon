@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-23 00:48+0000\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2023-04-10 11:48+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -191,7 +191,7 @@ msgstr ""
 msgid "Save File Error"
 msgstr "Błąd zapisu pliku"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:83
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -200,7 +200,7 @@ msgstr ""
 "Nie można odczytać pliku %1:\n"
 "\"%2\" jest szczegółowym opisem błędu."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid "Load File Error"
 msgstr "Błąd wczytywania pliku"
@@ -244,22 +244,17 @@ msgstr "Przeciwna wielkość liter"
 msgid "Clear History"
 msgstr "Wyczyść historię"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
+#: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Wystąpił problem przy udostępnianiu dokumentu: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:54
-#, kde-format
-msgid "Share"
-msgstr "Udostępnij"
-
-#: pimcommon/widgets/purposemenuwidget.cpp:58
+#: pimcommon/widgets/purposemenuwidget.cpp:57
 #, kde-format
 msgid "File was shared."
 msgstr "Plik został udostępniony."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Możesz znaleźć nowe żądanie na:<br /><a href='%1'>%1</a> </qt>"
@@ -476,42 +471,42 @@ msgstr "Sterowanie dostępem"
 msgid "Apply permissions on all &subfolders."
 msgstr "Zasto&suj uprawnienia na wszystkie podkatalogi."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Nieudane importowanie vCard"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Nie można uzyskać dostępu do <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
 msgid "Select email from contact"
 msgstr "Wybierz e-mail z kontaktu"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Pokaż jednostkę organizacyjną dla wyników LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Ustawienia podpowiadania..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:585
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Sam rozwiń grupy"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:591
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Rozwiń grupy..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:626
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1145,22 +1140,22 @@ msgstr "Nie można ustawić wystąpienia zasobu."
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Nie można zmienić wartości zmiennej '%1' na wymagany typ %2."
 
-#: pimcommonakonadi/util/createresource.cpp:112
+#: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Nie można ustawić ustawienia '%1': %2"
 
-#: pimcommonakonadi/util/createresource.cpp:118
+#: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
 msgstr "Nie można zapisać ustawień: %1"
 
-#: pimcommonakonadi/util/createresource.cpp:127
+#: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Ukończono ustawianie zasobu."
 
-#: pimcommonakonadi/util/createresource.cpp:131
+#: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Nie udało się utworzyć zasobu: %1"
@@ -1216,6 +1211,9 @@ msgstr "Czy na pewno chcesz usunąć tę notatkę?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Usuwanie notatki"
+
+#~ msgid "Share"
+#~ msgstr "Udostępnij"
 
 #~ msgid "Add"
 #~ msgstr "Dodaj"
