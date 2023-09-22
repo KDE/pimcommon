@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2020-06-16 02:23+0200\n"
+"POT-Creation-Date: 2023-09-21 00:46+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,923 +18,175 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:130
-#, kde-format
-msgid "LibreOffice Autocorrection"
-msgstr "Самоисправљање из Либреофиса"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:134
-#, kde-format
-msgid "KMail/Calligra Autocorrection"
-msgstr "Самоисправљање из К‑поште/Калигре"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:377
-#, kde-format
-msgid "\"Replace\" string is the same as \"Find\" string."
-msgstr "Ниска за замену иста је као ниска за тражење."
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:377
-#, kde-format
-msgid "Add Autocorrection Entry"
-msgstr "Додај унос самоисправљања"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:456
-#, kde-format
-msgid "&Modify"
-msgstr "&Измени"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#. i18n: ectx: property (text), widget (QPushButton, add1)
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:459
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:289
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:420
-#, kde-format
-msgid "&Add"
-msgstr "&Додај"
-
-# >> @title:window
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:567
-#, kde-format
-msgid "Import LibreOffice Autocorrection"
-msgstr "Увоз самоисправљања из Либреофиса"
-
-# >> @item
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:568
-#, kde-format
-msgid "LibreOffice Autocorrection File (*.data)"
-msgstr "фајла самоисправљања из Либреофиса (*.data)"
-
-# >> @title:window
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:571
-#, kde-format
-msgid "Import KMail Autocorrection"
-msgstr "Увоз самоисправљања из К‑поште"
-
-# >> @item
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:572
-#, kde-format
-msgid "KMail Autocorrection File (*.xml)"
-msgstr "фајл самоисправљања из К‑поште (*.xml)"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:621
-#, kde-format
-msgid "Language was changed, do you want to save config for previous language?"
-msgstr "Језик је измењен, желите ли да сачувате поставу претходног језика?"
-
-# >> @title:window
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:621
-#, kde-format
-msgid "Save config"
-msgstr "Уписивање поставе"
-
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:650
-#, kde-format
-msgid "Please save changes before exporting settings."
-msgstr "Сачувајте измене пре извоза поставки."
-
-# >> @title:window
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:650
-#: pimcommon/autocorrection/autocorrectionwidget.cpp:653
-#, kde-format
-msgid "Export Autocorrection File"
-msgstr "Извоз фајла самоисправљања"
-
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:67
-#, kde-format
-msgid "Archive cannot be opened in read mode."
-msgstr "Архива не може да се отвори само за читање."
-
-# >> @title:window
-#: pimcommon/autocorrection/import/importlibreofficeautocorrection.cpp:67
-#, kde-format
-msgid "Import LibreOffice Autocorrection File"
-msgstr "Увоз фајла самоисправљања из Либреофиса"
-
-#. i18n: ectx: property (text), widget (QCheckBox, enabledAutocorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:17
-#, kde-format
-msgid "Enable autocorrection"
-msgstr "Самоисправљање"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:26
-#, kde-format
-msgid "Replacement and exception for language:"
-msgstr "Замена и изузетак за језик:"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:42
-#, kde-format
-msgid "Si&mple Autocorrection"
-msgstr "&Једноставно самоисправљање"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperCase)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:48
-#, kde-format
-msgid ""
-"Detect when a new sentence is started and always ensure that the first "
-"character is an uppercase character"
-msgstr ""
-"Открива почетак нове реченице и обезбеђује да је прво слово увек велико."
-
-#. i18n: ectx: property (text), widget (QCheckBox, upperCase)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:52
-#, kde-format
-msgid ""
-"Convert &first letter of a sentence automatically to uppercase\n"
-"(e.g. \"my house. in this town\" to \"my house. In this town\")"
-msgstr ""
-"Аутоматски претварај &прво слово реченице у велико\n"
-"(нпр. „моја кућа. у овом граду“ у „моја кућа. У овом граду“)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, upperUpper)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:62
-#, kde-format
-msgid ""
-"All words are checked for the common mistake of holding the shift key down a "
-"bit too long. If some words must have two uppercase characters, then those "
-"exceptions should be added in the 'Exceptions' tab."
-msgstr ""
-"Све речи се проверавају на честу грешку мало дужег задржавања тастера Shift. "
-"Речи које заиста треба да почињу са два велика слова треба додати под "
-"језичком изузетака."
-
-# well-spelled: САвршено
-#. i18n: ectx: property (text), widget (QCheckBox, upperUpper)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:66
-#, kde-format
-msgid ""
-"Convert &two uppercase characters to one uppercase and one lowercase "
-"character\n"
-" (e.g. PErfect to Perfect)"
-msgstr ""
-"Претварај &два почетна велика слова у једно велико и једно мало\n"
-"(нпр. ‘САвршено’ у ‘Савршено’)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:73
-#, kde-format
-msgid ""
-"Make sure that more than one space cannot be typed, as this is a common "
-"mistake which is quite hard to find in formatted text."
-msgstr ""
-"Обезбеђује да нигде нема два или више узастопних размака, пошто је ову "
-"грешку тешко касније уочити у форматираном тексту."
-
-#. i18n: ectx: property (text), widget (QCheckBox, ignoreDoubleSpace)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:76
-#, kde-format
-msgid "&Suppress double spaces"
-msgstr "&Субзијај двоструке размаке"
-
-# rewrite-msgid: /when available/when character is available/
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoReplaceNumber)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:83
-#, kde-format
-msgid "Most standard fraction notations will be converted when available"
-msgstr "Већина уобичајених нотација биће претворена, кад је знак доступан."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoReplaceNumber)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:86
-#, kde-format
-msgid "Re&place 1/2... with ½..."
-msgstr "&Смењуј 1/2... са ½..."
-
-#. i18n: ectx: property (text), widget (QCheckBox, capitalizeDaysName)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:93
-#, kde-format
-msgid "Capitalize name of days"
-msgstr "Започињи имена дана великим словом"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoFormatUrl)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:100
-#, kde-format
-msgid ""
-"Detect when a URL (Uniform Resource Locator) is typed and provide formatting "
-"that matches the way an Internet browser would show a URL."
-msgstr ""
-"Открива када се унесе УРЛ (униформни ресурсни локатор) и форматира га као "
-"што би се видео у интернет прегледачу."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoFormatUrl)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:103
-#, kde-format
-msgid "Autoformat &URLs (HTML mode)"
-msgstr "Аутоматски форматирај УРЛ‑ове (ХТМЛ режим)"
-
-#. i18n: ectx: property (whatsThis), widget (QCheckBox, autoChangeFormat)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:110
-#, kde-format
-msgid ""
-"When you use _underline_ or *bold*, the text between the underscores or "
-"asterisks will be converted to underlined or bold text."
-msgstr ""
-"Када унесете _подвучено_ или *подебљано*, текст између подвлака или звездица "
-"биће претворен у подвучени или подебљани текст."
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoChangeFormat)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:113
-#, kde-format
-msgid "Automatically do &bold, strikeout and underline formatting (HTML mode)"
-msgstr "Аутоматски форматирај &подебљано, прецртано и подвучено (ХТМЛ режим)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, autoSuperScript)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:120
-#, kde-format
-msgid "Replace 1st... with 1^st... (HTML mode)"
-msgstr "Смењуј 1st... са 1^st... (ХТМЛ режим)"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:141
-#, kde-format
-msgid "Custom &Quotes"
-msgstr "Посебни &наводници"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicSingleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:147
-#, kde-format
-msgid "Replace &single quotes with typographical quotes"
-msgstr "Смењуј просте &полунаводнике типографским"
-
-#. i18n: ectx: property (text), widget (QCheckBox, typographicDoubleQuotes)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:154
-#, kde-format
-msgid "Replace &double quotes with typographical quotes"
-msgstr "Смењуј просте &наводнике типографским"
-
-#. i18n: ectx: property (text), widget (QPushButton, doubleDefault)
-#. i18n: ectx: property (text), widget (QPushButton, singleDefault)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:187
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:235
-#, kde-format
-msgid "Default"
-msgstr "Подразумевано"
-
-#. i18n: ectx: property (text), widget (QCheckBox, addNonBreakingSpaceInFrench)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:270
-#, kde-format
-msgid "Add non breaking space before specific punctuation marks in French text"
-msgstr ""
-"Додај беспреломни размак пре неких знакова интерпункције у француском тексту"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_3)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:278
-#, kde-format
-msgid "Ad&vanced Autocorrection"
-msgstr "Напре&дно самоисправљање"
-
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#. i18n: ectx: property (text), widget (QPushButton, remove2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:299
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:492
-#: pimcommon/templatewidgets/templatelistwidget.cpp:194
-#: pimcommon/widgets/simplestringlisteditor.cpp:330
-#: pimcommonakonadi/acl/aclmanager.cpp:299
-#: pimcommonakonadi/acl/aclmanager.cpp:306
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:70
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:125
-#, kde-format
-msgid "Remove"
-msgstr "Уклони"
-
-#. i18n: ectx: property (text), widget (QCheckBox, advancedAutocorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:321
-#, kde-format
-msgid "&Enable word replacement"
-msgstr "&Замена речи"
-
-#. i18n: ectx: property (text), widget (QLabel, findLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:330
-#, kde-format
-msgid "&Find"
-msgstr "&Нађи"
-
-#. i18n: ectx: property (text), widget (QLabel, replaceLabel)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:347
-#, kde-format
-msgid "Re&place"
-msgstr "За&мени"
-
-#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:382
-#, kde-format
-msgid "Find"
-msgstr "Нађи"
-
-#. i18n: ectx: property (text), widget (PimCommon::AutoCorrectionTreeWidget, treeWidget)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:387
-#, kde-format
-msgid "Replace"
-msgstr "Замени"
-
-#. i18n: ectx: attribute (title), widget (QWidget, tab_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:396
-#, kde-format
-msgid "E&xceptions"
-msgstr "&Изузеци"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:404
-#, kde-format
-msgid "Do not treat as the end of a sentence:"
-msgstr "Не узимај за крај реченице:"
-
-#. i18n: ectx: property (text), widget (QPushButton, remove1)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:427
-#, kde-format
-msgid "R&emove"
-msgstr "&Уклони"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:469
-#, kde-format
-msgid "Accept two uppercase letters in:"
-msgstr "Прихватај два велика слова у:"
-
-#. i18n: ectx: property (text), widget (QPushButton, add2)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:485
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:60
-#, kde-format
-msgid "Add"
-msgstr "Додај"
-
-#. i18n: ectx: property (text), widget (QPushButton, exportAutoCorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:538
-#: pimcommon/templatewidgets/templatelistwidget.cpp:201
-#, kde-format
-msgid "Export..."
-msgstr "Извези..."
-
-#. i18n: ectx: property (text), widget (QPushButton, importAutoCorrection)
-#: pimcommon/autocorrection/ui/autocorrectionwidget.ui:545
-#: pimcommon/templatewidgets/templatelistwidget.cpp:205
-#, kde-format
-msgid "Import..."
-msgstr "Увези..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
 msgid "..."
 msgstr "..."
 
 # >> @title:window
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:152
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
 msgid "Configure"
 msgstr "Подешавање"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:55
+#: pimcommon/configureplugins/configurepluginswidget.cpp:43
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Неопходно је поновно покретање да би измене ступиле у дејство."
 
-# >> @title:window
-#: pimcommon/logactivities/logactivitiesdialog.cpp:37
-#, fuzzy, kde-format
-#| msgid "Log activities"
-msgctxt "@title:window"
-msgid "Log activities"
-msgstr "Бележење активности"
-
-# >> @title:window
-#: pimcommon/logactivities/logactivitiesdialog.cpp:45
-#, kde-format
-msgid "Log activities"
-msgstr "Бележење активности"
-
-#: pimcommon/logactivities/logactivitiesdialog.cpp:53
-#: pimcommon/translator/translatorwidget.cpp:259
-#: pimcommon/translator/translatorwidget.cpp:262
-#, kde-format
-msgid "Clear"
-msgstr "Очисти"
-
-#: pimcommon/logactivities/logactivitiesdialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Share On..."
-msgid "Share..."
-msgstr "Подели преко..."
-
-#: pimcommon/logactivities/logactivitiesdialog.cpp:95
-#: pimcommon/translator/translatordebugdialog.cpp:81
-#, kde-format
-msgid "All Files (*)"
-msgstr "сви фајлови (*)"
-
-#: pimcommon/logactivities/logactivitiesdialog.cpp:97
-#, kde-format
-msgctxt "@title:window"
-msgid "Save Log"
-msgstr "Уписивање дневника"
-
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:48
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
 msgid "Share On..."
 msgstr "Подели преко..."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:51
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "%1|/|$[ген %1]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
 #, kde-format
 msgid "Facebook"
 msgstr "Фејсбук"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:99
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
 #, kde-format
 msgid "Twitter"
 msgstr "Твитер"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:102
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
 #, kde-format
 msgid "Mail"
 msgstr "пошта|/|$[својства ген поште аку пошту дат,лок пошти]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:105
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
 #, kde-format
 msgid "LinkedIn"
 msgstr "Линкедин"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:108
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
 #, kde-format
 msgid "Evernote"
 msgstr "Еверноут"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:111
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
 #, kde-format
 msgid "Pocket"
 msgstr "Покет"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:114
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
 #, kde-format
 msgid "LiveJournal"
 msgstr "Лајвџорнал"
 
 # >> @title:window
-#: pimcommon/templatewidgets/templateeditdialog.cpp:40
-#, kde-format
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Default template"
+msgctxt "@title:window"
 msgid "Default template"
 msgstr "Подразумевани шаблон"
 
 # >> @title:window
-#: pimcommon/templatewidgets/templateeditdialog.cpp:40
-#, kde-format
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#, fuzzy, kde-format
+#| msgid "Template"
+msgctxt "@title:window"
 msgid "Template"
 msgstr "Шаблон"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:63
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
 msgstr "Име:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:86
+#: pimcommon/templatewidgets/templatelistwidget.cpp:75
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Желите ли да обришете изабрани шаблон?"
 
 # >> @title:window
-#: pimcommon/templatewidgets/templatelistwidget.cpp:86
+#: pimcommon/templatewidgets/templatelistwidget.cpp:76
 #, kde-format
 msgid "Delete template"
 msgstr "Брисање шаблона"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:150
+#: pimcommon/templatewidgets/templatelistwidget.cpp:143
 #, fuzzy, kde-format
 #| msgid "Insert template"
 msgid "Import Template"
 msgstr "Уметни шаблон"
 
 # >> @title:window
-#: pimcommon/templatewidgets/templatelistwidget.cpp:159
+#: pimcommon/templatewidgets/templatelistwidget.cpp:152
 #, fuzzy, kde-format
 #| msgid "Load Template"
 msgid "Export Template"
 msgstr "Учитавање шаблона"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:173
+#: pimcommon/templatewidgets/templatelistwidget.cpp:166
 #, kde-format
 msgid "Insert template"
 msgstr "Уметни шаблон"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:179
+#: pimcommon/templatewidgets/templatelistwidget.cpp:172
 #, kde-format
 msgid "Add..."
 msgstr "Додај..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:185
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
 #, kde-format
 msgid "Show..."
 msgstr "Покажи..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:185
+#: pimcommon/templatewidgets/templatelistwidget.cpp:178
 #, kde-format
 msgid "Modify..."
 msgstr "Измени..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:188
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Duplicate"
 msgstr "Удвостручи"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:212
+#: pimcommon/templatewidgets/templatelistwidget.cpp:187
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, kde-format
+msgid "Remove"
+msgstr "Уклони"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#, kde-format
+msgid "Export..."
+msgstr "Извези..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#, kde-format
+msgid "Import..."
+msgstr "Увези..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:205
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Преузимам нове шаблоне..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:249
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "„%1“ није фајл шаблона."
 
 # >> @title:window
-#: pimcommon/templatewidgets/templatelistwidget.cpp:249
+#: pimcommon/templatewidgets/templatelistwidget.cpp:240
 #, kde-format
 msgid "Load Template"
 msgstr "Учитавање шаблона"
 
-#: pimcommon/translator/googletranslator.cpp:158
-#, kde-format
-msgid "You used same language for from and to language."
-msgstr "Ставили сте исти изворни и циљни језик."
-
-#: pimcommon/translator/translatordebugdialog.cpp:33
-#, fuzzy, kde-format
-#| msgid "Translator Debug"
-msgctxt "@title:window"
-msgid "Translator Debug"
-msgstr "Исправљање преводиоца"
-
-#: pimcommon/translator/translatordebugdialog.cpp:41
-#, kde-format
-msgid "Save As..."
-msgstr "Сачувај као..."
-
-# rewrite-msgid: /language/automatically/
-# >> @item
-#: pimcommon/translator/translatorutil.cpp:33
-#, kde-format
-msgid "Detect language"
-msgstr "аутоматско откривање"
-
-#: pimcommon/translator/translatorutil.cpp:36
-#, kde-format
-msgid "English"
-msgstr "енглески"
-
-#: pimcommon/translator/translatorutil.cpp:39
-#: pimcommon/translator/translatorutil.cpp:102
-#, kde-format
-msgid "Chinese (Simplified)"
-msgstr "кинески (поједностављени)"
-
-#: pimcommon/translator/translatorutil.cpp:42
-#: pimcommon/translator/translatorutil.cpp:105
-#, kde-format
-msgid "Chinese (Traditional)"
-msgstr "кинески (традиционални)"
-
-#: pimcommon/translator/translatorutil.cpp:45
-#, kde-format
-msgid "Dutch"
-msgstr "холандски"
-
-#: pimcommon/translator/translatorutil.cpp:48
-#, kde-format
-msgid "French"
-msgstr "француски"
-
-#: pimcommon/translator/translatorutil.cpp:51
-#, kde-format
-msgid "German"
-msgstr "њемачки"
-
-#: pimcommon/translator/translatorutil.cpp:54
-#, kde-format
-msgid "Greek"
-msgstr "грчки"
-
-#: pimcommon/translator/translatorutil.cpp:57
-#, kde-format
-msgid "Italian"
-msgstr "италијански"
-
-#: pimcommon/translator/translatorutil.cpp:60
-#, kde-format
-msgid "Japanese"
-msgstr "јапански"
-
-#: pimcommon/translator/translatorutil.cpp:63
-#, kde-format
-msgid "Korean"
-msgstr "корејски"
-
-#: pimcommon/translator/translatorutil.cpp:66
-#, kde-format
-msgid "Portuguese"
-msgstr "португалски"
-
-#: pimcommon/translator/translatorutil.cpp:69
-#, kde-format
-msgid "Russian"
-msgstr "руски"
-
-#: pimcommon/translator/translatorutil.cpp:72
-#, kde-format
-msgid "Spanish"
-msgstr "шпански"
-
-#: pimcommon/translator/translatorutil.cpp:75
-#, kde-format
-msgid "Afrikaans"
-msgstr "африканс"
-
-#: pimcommon/translator/translatorutil.cpp:78
-#, kde-format
-msgid "Albanian"
-msgstr "албански"
-
-#: pimcommon/translator/translatorutil.cpp:81
-#, kde-format
-msgid "Arabic"
-msgstr "арапски"
-
-#: pimcommon/translator/translatorutil.cpp:84
-#, kde-format
-msgid "Armenian"
-msgstr "јерменски"
-
-#: pimcommon/translator/translatorutil.cpp:87
-#, kde-format
-msgid "Azerbaijani"
-msgstr "азербејџански"
-
-#: pimcommon/translator/translatorutil.cpp:90
-#, kde-format
-msgid "Basque"
-msgstr "баскијски"
-
-#: pimcommon/translator/translatorutil.cpp:93
-#, kde-format
-msgid "Belarusian"
-msgstr "бјелоруски"
-
-#: pimcommon/translator/translatorutil.cpp:96
-#, kde-format
-msgid "Bulgarian"
-msgstr "бугарски"
-
-#: pimcommon/translator/translatorutil.cpp:99
-#, kde-format
-msgid "Catalan"
-msgstr "каталонски"
-
-#: pimcommon/translator/translatorutil.cpp:108
-#, kde-format
-msgid "Croatian"
-msgstr "хрватски"
-
-#: pimcommon/translator/translatorutil.cpp:111
-#, kde-format
-msgid "Czech"
-msgstr "чешки"
-
-#: pimcommon/translator/translatorutil.cpp:114
-#, kde-format
-msgid "Danish"
-msgstr "дански"
-
-#: pimcommon/translator/translatorutil.cpp:117
-#, kde-format
-msgid "Estonian"
-msgstr "естонски"
-
-#: pimcommon/translator/translatorutil.cpp:120
-#, kde-format
-msgid "Filipino"
-msgstr "филипински"
-
-#: pimcommon/translator/translatorutil.cpp:123
-#, kde-format
-msgid "Finnish"
-msgstr "фински"
-
-#: pimcommon/translator/translatorutil.cpp:126
-#, kde-format
-msgid "Galician"
-msgstr "галицијски"
-
-#: pimcommon/translator/translatorutil.cpp:129
-#, kde-format
-msgid "Georgian"
-msgstr "грузијски"
-
-#: pimcommon/translator/translatorutil.cpp:132
-#, kde-format
-msgid "Haitian Creole"
-msgstr "хаићански креолски"
-
-#: pimcommon/translator/translatorutil.cpp:135
-#, kde-format
-msgid "Hebrew"
-msgstr "хебрејски"
-
-#: pimcommon/translator/translatorutil.cpp:138
-#, kde-format
-msgid "Hindi"
-msgstr "хинду"
-
-#: pimcommon/translator/translatorutil.cpp:141
-#, kde-format
-msgid "Hungarian"
-msgstr "мађарски"
-
-#: pimcommon/translator/translatorutil.cpp:144
-#, kde-format
-msgid "Icelandic"
-msgstr "исландски"
-
-#: pimcommon/translator/translatorutil.cpp:147
-#, kde-format
-msgid "Indonesian"
-msgstr "индонезијски"
-
-#: pimcommon/translator/translatorutil.cpp:150
-#, kde-format
-msgid "Irish"
-msgstr "ирски"
-
-#: pimcommon/translator/translatorutil.cpp:153
-#, kde-format
-msgid "Latvian"
-msgstr "летонски"
-
-#: pimcommon/translator/translatorutil.cpp:156
-#, kde-format
-msgid "Lithuanian"
-msgstr "литвански"
-
-#: pimcommon/translator/translatorutil.cpp:159
-#, kde-format
-msgid "Macedonian"
-msgstr "македонски"
-
-#: pimcommon/translator/translatorutil.cpp:162
-#, kde-format
-msgid "Malay"
-msgstr "малајски"
-
-#: pimcommon/translator/translatorutil.cpp:165
-#, kde-format
-msgid "Maltese"
-msgstr "малтешки"
-
-#: pimcommon/translator/translatorutil.cpp:168
-#, kde-format
-msgid "Norwegian"
-msgstr "норвешки"
-
-#: pimcommon/translator/translatorutil.cpp:171
-#, kde-format
-msgid "Persian"
-msgstr "персијски"
-
-#: pimcommon/translator/translatorutil.cpp:174
-#, kde-format
-msgid "Polish"
-msgstr "пољски"
-
-#: pimcommon/translator/translatorutil.cpp:177
-#, kde-format
-msgid "Romanian"
-msgstr "румунски"
-
-#: pimcommon/translator/translatorutil.cpp:180
-#, kde-format
-msgid "Serbian"
-msgstr "српски"
-
-#: pimcommon/translator/translatorutil.cpp:183
-#, kde-format
-msgid "Slovak"
-msgstr "словачки"
-
-#: pimcommon/translator/translatorutil.cpp:186
-#, kde-format
-msgid "Slovenian"
-msgstr "словеначки"
-
-#: pimcommon/translator/translatorutil.cpp:189
-#, kde-format
-msgid "Swahili"
-msgstr "свахили"
-
-#: pimcommon/translator/translatorutil.cpp:192
-#, kde-format
-msgid "Swedish"
-msgstr "шведски"
-
-#: pimcommon/translator/translatorutil.cpp:195
-#, kde-format
-msgid "Thai"
-msgstr "тајландски"
-
-#: pimcommon/translator/translatorutil.cpp:198
-#, kde-format
-msgid "Turkish"
-msgstr "турски"
-
-#: pimcommon/translator/translatorutil.cpp:201
-#, kde-format
-msgid "Ukrainian"
-msgstr "украјински"
-
-#: pimcommon/translator/translatorutil.cpp:204
-#, kde-format
-msgid "Urdu"
-msgstr "урду"
-
-#: pimcommon/translator/translatorutil.cpp:207
-#, kde-format
-msgid "Vietnamese"
-msgstr "вијетнамски"
-
-#: pimcommon/translator/translatorutil.cpp:210
-#, kde-format
-msgid "Welsh"
-msgstr "велшки"
-
-#: pimcommon/translator/translatorutil.cpp:213
-#, kde-format
-msgid "Yiddish"
-msgstr "јидиш"
-
-#: pimcommon/translator/translatorwidget.cpp:128
-#, kde-format
-msgid "Problem when connecting to the translator web site."
-msgstr "Проблем при повезивању на веб сајт преводиоца."
-
-#: pimcommon/translator/translatorwidget.cpp:225
-#: pimcommon/translator/translatorwidget.cpp:228
-#, kde-format
-msgid "Close"
-msgstr "Затвори"
-
-#: pimcommon/translator/translatorwidget.cpp:234
-#, kde-format
-msgctxt "Translate from language"
-msgid "From:"
-msgstr "Са:"
-
-#: pimcommon/translator/translatorwidget.cpp:241
-#, kde-format
-msgctxt "Translate to language"
-msgid "To:"
-msgstr "На:"
-
-#: pimcommon/translator/translatorwidget.cpp:254
-#, kde-format
-msgctxt "Invert language choices so that from becomes to and to becomes from"
-msgid "Invert"
-msgstr "Обрни"
-
-#: pimcommon/translator/translatorwidget.cpp:267
-#: pimcommon/translator/translatorwidget.cpp:270
-#, kde-format
-msgid "Translate"
-msgstr "Преведи"
-
-#: pimcommon/translator/translatorwidget.cpp:277
-#, kde-format
-msgid "Debug"
-msgstr "Исправљај"
-
-#: pimcommon/translator/translatorwidget.cpp:294
-#, fuzzy, kde-format
-#| msgid "Drag text that you want to translate."
-msgid ""
-"Drag text that you want to translate. (Be careful text will be send to "
-"Google Server)."
-msgstr "Превуците текст који желите да преведете."
-
-#: pimcommon/translator/translatorwidget.cpp:363
-#, kde-format
-msgid "No network connection detected, we cannot translate text."
-msgstr "Нема мрежне везе, текст не може да се преведе."
-
-#: pimcommon/translator/translatorwidget.cpp:363
-#, kde-format
-msgid "No network"
-msgstr "Нема мреже"
-
-#: pimcommon/translator/translatorwidget.cpp:399
-#, kde-format
-msgid "Translate error"
-msgstr "Грешка у превођењу"
-
-#: pimcommon/util/pimutil.cpp:78
+#: pimcommon/util/pimutil.cpp:48
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -943,12 +195,12 @@ msgstr ""
 "Не могу да пишем у фајл %1:\n"
 "Детаљан опис грешке: %2"
 
-#: pimcommon/util/pimutil.cpp:82
+#: pimcommon/util/pimutil.cpp:52
 #, kde-format
 msgid "Save File Error"
 msgstr "Грешка при уписивању фајла"
 
-#: pimcommon/util/pimutil.cpp:114
+#: pimcommon/util/pimutil.cpp:83
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -957,12 +209,12 @@ msgstr ""
 "Не могу да читам фајл %1:\n"
 "Детаљан опис грешке: %2"
 
-#: pimcommon/util/pimutil.cpp:118
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid "Load File Error"
 msgstr "Грешка при учитавању фајла"
 
-#: pimcommon/widgets/configureimmutablewidgetutils.cpp:39
+#: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
 msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
@@ -971,69 +223,63 @@ msgstr ""
 "<qt><p>Ову поставку закључао је администратор.</p><p>Ако мислите да је то "
 "погрешно, обратите му се.</p></qt>"
 
-#: pimcommon/widgets/kactionmenuchangecase.cpp:41
+#: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
 msgid "Change Case"
 msgstr "Величина слова"
 
 # >> @item:inmenu
-#: pimcommon/widgets/kactionmenuchangecase.cpp:42
+#: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
 msgid "Uppercase"
 msgstr "велика"
 
 # >> @item:inmenu
-#: pimcommon/widgets/kactionmenuchangecase.cpp:45
+#: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
 msgid "Sentence case"
 msgstr "прво велико"
 
 # >> @item:inmenu
-#: pimcommon/widgets/kactionmenuchangecase.cpp:48
+#: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
 msgid "Lowercase"
 msgstr "мала"
 
 # >> @item:inmenu
-#: pimcommon/widgets/kactionmenuchangecase.cpp:51
+#: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgid "Reverse Case"
 msgstr "обрнуто"
 
-#: pimcommon/widgets/lineeditwithcompleterng.cpp:56
+#: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
 msgid "Clear History"
 msgstr "Очисти историјат"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:68
+#: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr ""
 
-#: pimcommon/widgets/purposemenuwidget.cpp:69
-#, fuzzy, kde-format
-#| msgid "Share On..."
-msgid "Share"
-msgstr "Подели преко..."
-
-#: pimcommon/widgets/purposemenuwidget.cpp:73
+#: pimcommon/widgets/purposemenuwidget.cpp:57
 #, kde-format
 msgid "File was shared."
 msgstr ""
 
-#: pimcommon/widgets/purposemenuwidget.cpp:75
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr ""
 
-#: pimcommon/widgets/renamefiledialog.cpp:126
+#: pimcommon/widgets/renamefiledialog.cpp:100
 #, fuzzy, kde-format
 #| msgid "File Already Exists"
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "Фајл већ постоји"
 
-#: pimcommon/widgets/renamefiledialog.cpp:129
+#: pimcommon/widgets/renamefiledialog.cpp:103
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
@@ -1042,83 +288,79 @@ msgstr ""
 "Фајл по имену <filename>%1</filename> већ постоји. Желите ли да га "
 "пребришете?"
 
-#: pimcommon/widgets/renamefiledialog.cpp:139
+#: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
 msgid "Suggest New &Name"
 msgstr "Предложи &ново име"
 
-#: pimcommon/widgets/renamefiledialog.cpp:147
+#: pimcommon/widgets/renamefiledialog.cpp:121
 #, kde-format
 msgid "&Ignore"
 msgstr "И&гнориши"
 
-#: pimcommon/widgets/renamefiledialog.cpp:150
+#: pimcommon/widgets/renamefiledialog.cpp:124
 #, kde-format
 msgid "&Rename"
 msgstr "Пре&именуј"
 
-#: pimcommon/widgets/renamefiledialog.cpp:160
+#: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
 msgid "Appl&y to All"
 msgstr "Примени на &све"
 
-#: pimcommon/widgets/renamefiledialog.cpp:209
+#: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "This filename \"%1\" already exists."
 msgstr "Име фајла „%1“ већ постоји."
 
-#: pimcommon/widgets/renamefiledialog.cpp:209
+#: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "File already exists"
 msgstr "Фајл већ постоји"
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:111
-#, kde-format
-msgid "&Add..."
-msgstr "&Додај..."
-
-#: pimcommon/widgets/simplestringlisteditor.cpp:122
-#, kde-format
-msgid "&Modify..."
-msgstr "&Измени..."
-
-#: pimcommon/widgets/simplestringlisteditor.cpp:135
-#, kde-format
-msgid "&Remove"
-msgstr "&Уклони"
-
-#: pimcommon/widgets/simplestringlisteditor.cpp:172
-#, kde-format
-msgid "&Customize..."
-msgstr ""
-
-#: pimcommon/widgets/simplestringlisteditor.cpp:280
-#, kde-format
-msgid "New Value"
-msgstr "Нова вредност"
-
-# >> @title:window
-#: pimcommon/widgets/simplestringlisteditor.cpp:342
-#, kde-format
-msgid "Change Value"
-msgstr "Измена вредности"
-
-#: pimcommon/widgets/simplestringlisteditor.cpp:369
-#, kde-format
-msgid "Do you want to remove selected text?"
-msgstr "Желите ли да уклоните изабрани текст?"
-
-#: pimcommon/widgets/simplestringlisteditor.cpp:374
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New entry:"
 msgstr "Нови унос:"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:102
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:57
+#, kde-format
+msgid "New Value"
+msgstr "Нова вредност"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#, kde-format
+msgid "Do you want to remove selected text?"
+msgstr "Желите ли да уклоните изабрани текст?"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#, kde-format
+msgid "&Add..."
+msgstr "&Додај..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#, kde-format
+msgid "&Modify..."
+msgstr "&Измени..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#, kde-format
+msgid "&Remove"
+msgstr "&Уклони"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#, kde-format
+msgid "&Customize..."
+msgstr ""
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
 msgstr "&Идентификатор корисника:"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:110
+#: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -1130,59 +372,59 @@ msgstr ""
 "бити једноставно корисничко име или пуна адреса е‑поште, што ћете закључити "
 "на основу пријавне ниске за сопствени налог."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
 msgstr "&Изабери..."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:117
+#: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
 msgid "Permissions"
 msgstr "Дозволе"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:136
+#: pimcommonakonadi/acl/aclentrydialog.cpp:114
 #, kde-format
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
 "<b>Напомена:</b> преименовање захтева дозволу за писање у родитељску "
 "фасциклу."
 
-#: pimcommonakonadi/acl/acllistview.cpp:65
+#: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
 msgstr "Фасцикла не може да се администрира."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:173
+#: pimcommonakonadi/acl/aclmanager.cpp:159
 #, kde-format
 msgid "Add Entry..."
 msgstr "Додај унос..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:178
+#: pimcommonakonadi/acl/aclmanager.cpp:164
 #, kde-format
 msgid "Edit Entry..."
 msgstr "Уреди унос..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:184
+#: pimcommonakonadi/acl/aclmanager.cpp:170
 #, kde-format
 msgid "Remove Entry"
 msgstr "Уклони унос"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:229
+#: pimcommonakonadi/acl/aclmanager.cpp:212
 #, fuzzy, kde-format
 #| msgid "Add ACL"
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Додај АЦЛ"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:257
+#: pimcommonakonadi/acl/aclmanager.cpp:239
 #, fuzzy, kde-format
 #| msgid "Edit ACL"
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Уреди АЦЛ"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:297
+#: pimcommonakonadi/acl/aclmanager.cpp:279
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -1191,185 +433,204 @@ msgstr ""
 "Желите ли заиста да уклоните сопствене дозволе над овом фасциклом? После "
 "тога јој више не можете приступити."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:305
+#: pimcommonakonadi/acl/aclmanager.cpp:286
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Желите ли заиста да уклоните ове дозволе над овом фасциклом?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:262
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "Желите ли заиста да примените дозволе ове фасцикле на ове потфасцикле?"
 
 # >> @title:window
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:264
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
 msgid "Apply Permissions"
 msgstr "Примена дозвола"
 
-#: pimcommonakonadi/acl/aclutils.cpp:33
-#, kde-format
+#: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
 msgid "None"
 msgstr "ништа"
 
-#: pimcommonakonadi/acl/aclutils.cpp:38
-#, kde-format
+#: pimcommonakonadi/acl/aclutils.cpp:21
 msgctxt "Permissions"
 msgid "Read"
 msgstr "читање"
 
-#: pimcommonakonadi/acl/aclutils.cpp:44
-#, kde-format
+#: pimcommonakonadi/acl/aclutils.cpp:23
 msgctxt "Permissions"
 msgid "Append"
 msgstr "надовезивање"
 
-#: pimcommonakonadi/acl/aclutils.cpp:52
-#, kde-format
+#: pimcommonakonadi/acl/aclutils.cpp:27
 msgctxt "Permissions"
 msgid "Write"
 msgstr "писање"
 
-#: pimcommonakonadi/acl/aclutils.cpp:60
-#, kde-format
+#: pimcommonakonadi/acl/aclutils.cpp:31
 msgctxt "Permissions"
 msgid "All"
 msgstr "све"
 
-#: pimcommonakonadi/acl/aclutils.cpp:97
+#: pimcommonakonadi/acl/aclutils.cpp:66
 #, kde-format
 msgid "Custom Permissions (%1)"
 msgstr "посебне дозволе (%1)"
 
-#: pimcommonakonadi/acl/collectionaclpage.cpp:58
+#: pimcommonakonadi/acl/collectionaclpage.cpp:32
 #, kde-format
 msgid "Access Control"
 msgstr "Управљање приступом"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:92
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
 #, kde-format
 msgid "Apply permissions on all &subfolders."
 msgstr "Примени дозволе на све &потфасцикле"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:342
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:343
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:463
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
 msgid "Select email from contact"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, fuzzy, kde-format
 #| msgctxt "type of folder content"
 #| msgid "Configuration"
 msgid "Configure Completion..."
 msgstr "постава"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:594
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Automatically expand groups"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:600
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:635
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:328
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:131
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:797
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:798
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:48
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
 #, kde-format
 msgid "LDAP server: %1"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, kde-format
-msgid "Search email:"
-msgstr ""
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:54
-#, kde-format
-msgid "Research is done from 3 characters"
-msgstr ""
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:62
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:41
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search"
 msgstr "Тражи..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:68
-#, kde-format
-msgid "Show Blacklisted Emails"
-msgstr ""
-
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:89
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
 #, fuzzy, kde-format
 #| msgctxt "select an email address"
 #| msgid "Se&lect..."
 msgid "&Select"
 msgstr "&Изабери..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:94
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
 #, kde-format
 msgid "&Unselect"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:99
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#, kde-format
+msgid "Show Blacklisted Emails"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:113
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
+#, kde-format
+msgid "Search email:"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
+#, kde-format
+msgid "Research is done from 3 characters"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search in result..."
 msgstr "Тражи..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
 #, kde-format
 msgid "Exclude domain names:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:135
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:212
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
+#, kde-format
+msgid "Exclude email with Regular Expression:"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
+#, kde-format
+msgid "Separate regular expression with '%1'"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgid "Select"
+msgstr "&Изабери..."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgid "Unselect"
+msgstr "&Изабери..."
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
 msgid "No email found."
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:214
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1378,25 +639,30 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:135
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
 msgid "No result found"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Save Log"
 msgid "Save"
 msgstr "Уписивање дневника"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, fuzzy, kde-format
 #| msgctxt "type of folder content"
 #| msgid "Configuration"
@@ -1404,43 +670,63 @@ msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "постава"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
 #, kde-format
 msgid "Completion Order"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:71
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
 #, kde-format
 msgid "Recent Address"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:76
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:67
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:66
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
 #, kde-format
 msgid "LDAP server %1"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
 #, kde-format
 msgid "Move Up"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:279
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
 #, kde-format
 msgid "Move Down"
 msgstr ""
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:125
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
+#, kde-format
+msgid "New email..."
+msgstr ""
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
+#, kde-format
+msgid "Add Email"
+msgstr ""
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgid "Remove Email"
+msgid_plural "Remove Emails"
+msgstr[0] "Уклони унос"
+msgstr[1] "Уклони унос"
+msgstr[2] "Уклони унос"
+msgstr[3] "Уклони унос"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, fuzzy, kde-format
 #| msgid "Do you want to remove selected text?"
 msgid "Do you want to remove this email address?"
@@ -1450,113 +736,108 @@ msgstr[1] "Желите ли да уклоните изабрани текст?"
 msgstr[2] "Желите ли да уклоните изабрани текст?"
 msgstr[3] "Желите ли да уклоните изабрани текст?"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:52
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:215
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
 msgstr "пошта"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:54
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:194
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
 msgstr "календар"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:56
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:197
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
 msgstr "контакти"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:58
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:200
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
 #, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
 msgstr "белешке"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:60
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:169
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:191
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
 msgstr "задаци"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:62
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:172
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:203
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
 msgstr "дневник"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:64
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:175
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:206
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
 #, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
 msgstr "постава"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:66
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:178
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:209
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
 msgstr "слободно-заузето"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:68
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:181
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:212
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
 #, kde-format
 msgctxt "type of folder content"
 msgid "Files"
 msgstr "фајлови"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:70
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
 msgstr "непознато"
 
-#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:48
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
 #, kde-format
 msgid "&Folder contents:"
 msgstr "Садржај &фасцикле:"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:44
-#, kde-format
-msgid "Generate free/&busy and activate alarms for:"
-msgstr "Генериши &слободно-заузето и активирај аларме за:"
-
 # @item:inlistbox Generate ... for:
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:52
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
 #, kde-format
 msgid "Nobody"
 msgstr "никога"
 
 # @item:inlistbox Generate ... for:
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:53
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
 #, kde-format
 msgid "Admins of This Folder"
 msgstr "администраторе ове фасцикле"
 
 # @item:inlistbox Generate ... for:
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:54
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "All Readers of This Folder"
 msgstr "све читаоце ове фасцикле"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:56
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
 #, kde-format
 msgid ""
 "This setting defines which users sharing this folder should get \"busy\" "
@@ -1585,277 +866,282 @@ msgstr ""
 "фасцикле за опционе догађаје широм фирме ставило би се „нико“, пошто се не "
 "зна ко ће отићи на који догађај."
 
-#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:91
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#, kde-format
+msgid "Generate free/&busy and activate alarms for:"
+msgstr "Генериши &слободно-заузето и активирај аларме за:"
+
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
 #, kde-format
 msgid "Search..."
 msgstr "Тражи..."
 
 # >> @title:window
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:64
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, fuzzy, kde-format
 #| msgid "Select Multiple Folders"
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
 msgstr "Избор више фасцикли"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:314
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
 #, kde-format
 msgid "Full Name"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:318
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
 #, kde-format
 msgid "Home Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:320
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
 #, kde-format
 msgid "Work Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:322
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
 #, kde-format
 msgid "Mobile Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:324
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Fax Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
 msgid "Pager"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:111
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:330
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Street"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:112
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:113
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgid "Country"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:114
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:341
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "City"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:115
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:328
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Organization"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:116
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:326
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
 #, kde-format
 msgid "Company"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:117
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:343
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
 #, kde-format
 msgid "Department"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:118
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:119
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:339
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:120
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:345
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Description"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:121
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:347
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "User ID"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:316
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:349
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:485
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
 msgid "Search for Addresses in Directory"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Search for:"
 msgstr "Тражи..."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:522
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
 #, fuzzy, kde-format
 #| msgid "Find"
 msgctxt "In LDAP attribute"
 msgid "in"
 msgstr "Нађи"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:526
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
 msgstr "Име:"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:527
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:528
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:529
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:531
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgctxt "@action:button Start searching"
 msgid "&Search"
 msgstr "Тражи..."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:547
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
 msgid "Recursive search"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:552
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
 #, fuzzy, kde-format
 #| msgctxt "type of folder content"
 #| msgid "Contacts"
 msgid "Contains"
 msgstr "контакти"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:553
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
 #, kde-format
 msgid "Starts With"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:563
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
 #, kde-format
 msgid "Search in result"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:594
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgid "Searching..."
 msgstr "Тражи..."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
 msgid "Select All"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:603
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, kde-format
 msgid "Unselect All"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:611
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
 msgid "Add Selected"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:612
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:650
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
 msgid "Copy"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:770
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:865
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:883
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr ""
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:89
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
 #, kde-format
 msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
@@ -1864,7 +1150,7 @@ msgstr ""
 "ИМАП сервер још није подешен. Прво подесите сервер у ИМАП налогу па онда "
 "поставите претплату на страни сервера."
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:91
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
 #, kde-format
 msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
@@ -1873,99 +1159,570 @@ msgstr ""
 "Пријављивање пропало, подесите ИМАП налог пре постављања претплате на страни "
 "сервера."
 
-#: pimcommonakonadi/util/createresource.cpp:79
+#: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
 msgstr "Тип ресурса „%1“ није доступан."
 
-#: pimcommonakonadi/util/createresource.cpp:90
+#: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
 msgstr "Ресурс „%1“ је већ постављен."
 
-#: pimcommonakonadi/util/createresource.cpp:96
+#: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
 msgstr "Стварам примерак ресурса за „%1“..."
 
-#: pimcommonakonadi/util/createresource.cpp:102
+#: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
 msgstr "Подешавам примерак ресурса..."
 
-#: pimcommonakonadi/util/createresource.cpp:105
+#: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
 msgstr "Не могу да подесим примерак ресурса."
 
-#: pimcommonakonadi/util/createresource.cpp:120
+#: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr "Не могу да претворим вредност поставке „%1“ у тражени тип %2."
 
-#: pimcommonakonadi/util/createresource.cpp:126
+#: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
 msgstr "Не могу да поставим поставку „%1“: %2"
 
-#: pimcommonakonadi/util/createresource.cpp:136
+#: pimcommonakonadi/util/createresource.cpp:117
+#, fuzzy, kde-format
+#| msgid "Could not set setting '%1': %2"
+msgid "Could not save settings: %1"
+msgstr "Не могу да поставим поставку „%1“: %2"
+
+#: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
 msgstr "Постављање ресурса завршено."
 
-#: pimcommonakonadi/util/createresource.cpp:140
+#: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не могу да направим примерак ресурса: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:75
+#: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Note"
 msgstr "Уређивање белешке"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
+#: pimcommonakonadi/widgets/annotationdialog.cpp:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Note"
 msgstr "Обриши белешку"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:82
+#: pimcommonakonadi/widgets/annotationdialog.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Note"
 msgstr "Додавање белешке"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:87
+#: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "Унесите текст који ће бити белешка уз поруку:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:97
+#: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Note type:"
 msgstr "Тип белешке:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:101
+#: pimcommonakonadi/widgets/annotationdialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Private note"
 msgstr "приватна белешка"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:102
+#: pimcommonakonadi/widgets/annotationdialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Shared note"
 msgstr "дељена белешка"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:144
+#: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, kde-format
 msgid "Do you really want to delete this note?"
 msgstr "Желите ли заиста да обришете ову белешку?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:145
-#, kde-format
+#: pimcommonakonadi/widgets/annotationdialog.cpp:135
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Delete Note"
 msgctxt "@title:window"
-msgid "Delete Note?"
-msgstr "Обрисати белешку?"
+msgid "Delete Note"
+msgstr "Обриши белешку"
+
+#~ msgid "LibreOffice Autocorrection"
+#~ msgstr "Самоисправљање из Либреофиса"
+
+#~ msgid "KMail/Calligra Autocorrection"
+#~ msgstr "Самоисправљање из К‑поште/Калигре"
+
+#~ msgid "\"Replace\" string is the same as \"Find\" string."
+#~ msgstr "Ниска за замену иста је као ниска за тражење."
+
+#~ msgid "Add Autocorrection Entry"
+#~ msgstr "Додај унос самоисправљања"
+
+#~ msgid "&Modify"
+#~ msgstr "&Измени"
+
+#~ msgid "&Add"
+#~ msgstr "&Додај"
+
+# >> @title:window
+#~ msgid "Import LibreOffice Autocorrection"
+#~ msgstr "Увоз самоисправљања из Либреофиса"
+
+# >> @item
+#~ msgid "LibreOffice Autocorrection File (*.data)"
+#~ msgstr "фајла самоисправљања из Либреофиса (*.data)"
+
+# >> @title:window
+#~ msgid "Import KMail Autocorrection"
+#~ msgstr "Увоз самоисправљања из К‑поште"
+
+# >> @item
+#~ msgid "KMail Autocorrection File (*.xml)"
+#~ msgstr "фајл самоисправљања из К‑поште (*.xml)"
+
+#~ msgid ""
+#~ "Language was changed, do you want to save config for previous language?"
+#~ msgstr "Језик је измењен, желите ли да сачувате поставу претходног језика?"
+
+# >> @title:window
+#~ msgid "Save config"
+#~ msgstr "Уписивање поставе"
+
+#~ msgid "Please save changes before exporting settings."
+#~ msgstr "Сачувајте измене пре извоза поставки."
+
+# >> @title:window
+#~ msgid "Export Autocorrection File"
+#~ msgstr "Извоз фајла самоисправљања"
+
+#~ msgid "Archive cannot be opened in read mode."
+#~ msgstr "Архива не може да се отвори само за читање."
+
+# >> @title:window
+#~ msgid "Import LibreOffice Autocorrection File"
+#~ msgstr "Увоз фајла самоисправљања из Либреофиса"
+
+#~ msgid "Enable autocorrection"
+#~ msgstr "Самоисправљање"
+
+#~ msgid "Replacement and exception for language:"
+#~ msgstr "Замена и изузетак за језик:"
+
+#~ msgid "Si&mple Autocorrection"
+#~ msgstr "&Једноставно самоисправљање"
+
+#~ msgid ""
+#~ "Detect when a new sentence is started and always ensure that the first "
+#~ "character is an uppercase character"
+#~ msgstr ""
+#~ "Открива почетак нове реченице и обезбеђује да је прво слово увек велико."
+
+#~ msgid ""
+#~ "Convert &first letter of a sentence automatically to uppercase\n"
+#~ "(e.g. \"my house. in this town\" to \"my house. In this town\")"
+#~ msgstr ""
+#~ "Аутоматски претварај &прво слово реченице у велико\n"
+#~ "(нпр. „моја кућа. у овом граду“ у „моја кућа. У овом граду“)"
+
+#~ msgid ""
+#~ "All words are checked for the common mistake of holding the shift key "
+#~ "down a bit too long. If some words must have two uppercase characters, "
+#~ "then those exceptions should be added in the 'Exceptions' tab."
+#~ msgstr ""
+#~ "Све речи се проверавају на честу грешку мало дужег задржавања тастера "
+#~ "Shift. Речи које заиста треба да почињу са два велика слова треба додати "
+#~ "под језичком изузетака."
+
+# well-spelled: САвршено
+#~ msgid ""
+#~ "Convert &two uppercase characters to one uppercase and one lowercase "
+#~ "character\n"
+#~ " (e.g. PErfect to Perfect)"
+#~ msgstr ""
+#~ "Претварај &два почетна велика слова у једно велико и једно мало\n"
+#~ "(нпр. ‘САвршено’ у ‘Савршено’)"
+
+#~ msgid ""
+#~ "Make sure that more than one space cannot be typed, as this is a common "
+#~ "mistake which is quite hard to find in formatted text."
+#~ msgstr ""
+#~ "Обезбеђује да нигде нема два или више узастопних размака, пошто је ову "
+#~ "грешку тешко касније уочити у форматираном тексту."
+
+#~ msgid "&Suppress double spaces"
+#~ msgstr "&Субзијај двоструке размаке"
+
+# rewrite-msgid: /when available/when character is available/
+#~ msgid "Most standard fraction notations will be converted when available"
+#~ msgstr "Већина уобичајених нотација биће претворена, кад је знак доступан."
+
+#~ msgid "Re&place 1/2... with ½..."
+#~ msgstr "&Смењуј 1/2... са ½..."
+
+#~ msgid "Capitalize name of days"
+#~ msgstr "Започињи имена дана великим словом"
+
+#~ msgid ""
+#~ "Detect when a URL (Uniform Resource Locator) is typed and provide "
+#~ "formatting that matches the way an Internet browser would show a URL."
+#~ msgstr ""
+#~ "Открива када се унесе УРЛ (униформни ресурсни локатор) и форматира га као "
+#~ "што би се видео у интернет прегледачу."
+
+#~ msgid "Autoformat &URLs (HTML mode)"
+#~ msgstr "Аутоматски форматирај УРЛ‑ове (ХТМЛ режим)"
+
+#~ msgid ""
+#~ "When you use _underline_ or *bold*, the text between the underscores or "
+#~ "asterisks will be converted to underlined or bold text."
+#~ msgstr ""
+#~ "Када унесете _подвучено_ или *подебљано*, текст између подвлака или "
+#~ "звездица биће претворен у подвучени или подебљани текст."
+
+#~ msgid ""
+#~ "Automatically do &bold, strikeout and underline formatting (HTML mode)"
+#~ msgstr ""
+#~ "Аутоматски форматирај &подебљано, прецртано и подвучено (ХТМЛ режим)"
+
+#~ msgid "Replace 1st... with 1^st... (HTML mode)"
+#~ msgstr "Смењуј 1st... са 1^st... (ХТМЛ режим)"
+
+#~ msgid "Custom &Quotes"
+#~ msgstr "Посебни &наводници"
+
+#~ msgid "Replace &single quotes with typographical quotes"
+#~ msgstr "Смењуј просте &полунаводнике типографским"
+
+#~ msgid "Replace &double quotes with typographical quotes"
+#~ msgstr "Смењуј просте &наводнике типографским"
+
+#~ msgid "Default"
+#~ msgstr "Подразумевано"
+
+#~ msgid ""
+#~ "Add non breaking space before specific punctuation marks in French text"
+#~ msgstr ""
+#~ "Додај беспреломни размак пре неких знакова интерпункције у француском "
+#~ "тексту"
+
+#~ msgid "Ad&vanced Autocorrection"
+#~ msgstr "Напре&дно самоисправљање"
+
+#~ msgid "&Enable word replacement"
+#~ msgstr "&Замена речи"
+
+#~ msgid "&Find"
+#~ msgstr "&Нађи"
+
+#~ msgid "Re&place"
+#~ msgstr "За&мени"
+
+#~ msgid "Find"
+#~ msgstr "Нађи"
+
+#~ msgid "Replace"
+#~ msgstr "Замени"
+
+#~ msgid "E&xceptions"
+#~ msgstr "&Изузеци"
+
+#~ msgid "Do not treat as the end of a sentence:"
+#~ msgstr "Не узимај за крај реченице:"
+
+#~ msgid "R&emove"
+#~ msgstr "&Уклони"
+
+#~ msgid "Accept two uppercase letters in:"
+#~ msgstr "Прихватај два велика слова у:"
+
+#~ msgid "Add"
+#~ msgstr "Додај"
+
+# >> @title:window
+#, fuzzy
+#~| msgid "Log activities"
+#~ msgctxt "@title:window"
+#~ msgid "Log activities"
+#~ msgstr "Бележење активности"
+
+# >> @title:window
+#~ msgid "Log activities"
+#~ msgstr "Бележење активности"
+
+#~ msgid "Clear"
+#~ msgstr "Очисти"
+
+#, fuzzy
+#~| msgid "Share On..."
+#~ msgid "Share..."
+#~ msgstr "Подели преко..."
+
+#~ msgid "All Files (*)"
+#~ msgstr "сви фајлови (*)"
+
+#~ msgctxt "@title:window"
+#~ msgid "Save Log"
+#~ msgstr "Уписивање дневника"
+
+#~ msgid "You used same language for from and to language."
+#~ msgstr "Ставили сте исти изворни и циљни језик."
+
+#, fuzzy
+#~| msgid "Translator Debug"
+#~ msgctxt "@title:window"
+#~ msgid "Translator Debug"
+#~ msgstr "Исправљање преводиоца"
+
+#~ msgid "Save As..."
+#~ msgstr "Сачувај као..."
+
+# rewrite-msgid: /language/automatically/
+# >> @item
+#~ msgid "Detect language"
+#~ msgstr "аутоматско откривање"
+
+#~ msgid "English"
+#~ msgstr "енглески"
+
+#~ msgid "Chinese (Simplified)"
+#~ msgstr "кинески (поједностављени)"
+
+#~ msgid "Chinese (Traditional)"
+#~ msgstr "кинески (традиционални)"
+
+#~ msgid "Dutch"
+#~ msgstr "холандски"
+
+#~ msgid "French"
+#~ msgstr "француски"
+
+#~ msgid "German"
+#~ msgstr "њемачки"
+
+#~ msgid "Greek"
+#~ msgstr "грчки"
+
+#~ msgid "Italian"
+#~ msgstr "италијански"
+
+#~ msgid "Japanese"
+#~ msgstr "јапански"
+
+#~ msgid "Korean"
+#~ msgstr "корејски"
+
+#~ msgid "Portuguese"
+#~ msgstr "португалски"
+
+#~ msgid "Russian"
+#~ msgstr "руски"
+
+#~ msgid "Spanish"
+#~ msgstr "шпански"
+
+#~ msgid "Afrikaans"
+#~ msgstr "африканс"
+
+#~ msgid "Albanian"
+#~ msgstr "албански"
+
+#~ msgid "Arabic"
+#~ msgstr "арапски"
+
+#~ msgid "Armenian"
+#~ msgstr "јерменски"
+
+#~ msgid "Azerbaijani"
+#~ msgstr "азербејџански"
+
+#~ msgid "Basque"
+#~ msgstr "баскијски"
+
+#~ msgid "Belarusian"
+#~ msgstr "бјелоруски"
+
+#~ msgid "Bulgarian"
+#~ msgstr "бугарски"
+
+#~ msgid "Catalan"
+#~ msgstr "каталонски"
+
+#~ msgid "Croatian"
+#~ msgstr "хрватски"
+
+#~ msgid "Czech"
+#~ msgstr "чешки"
+
+#~ msgid "Danish"
+#~ msgstr "дански"
+
+#~ msgid "Estonian"
+#~ msgstr "естонски"
+
+#~ msgid "Filipino"
+#~ msgstr "филипински"
+
+#~ msgid "Finnish"
+#~ msgstr "фински"
+
+#~ msgid "Galician"
+#~ msgstr "галицијски"
+
+#~ msgid "Georgian"
+#~ msgstr "грузијски"
+
+#~ msgid "Haitian Creole"
+#~ msgstr "хаићански креолски"
+
+#~ msgid "Hebrew"
+#~ msgstr "хебрејски"
+
+#~ msgid "Hindi"
+#~ msgstr "хинду"
+
+#~ msgid "Hungarian"
+#~ msgstr "мађарски"
+
+#~ msgid "Icelandic"
+#~ msgstr "исландски"
+
+#~ msgid "Indonesian"
+#~ msgstr "индонезијски"
+
+#~ msgid "Irish"
+#~ msgstr "ирски"
+
+#~ msgid "Latvian"
+#~ msgstr "летонски"
+
+#~ msgid "Lithuanian"
+#~ msgstr "литвански"
+
+#~ msgid "Macedonian"
+#~ msgstr "македонски"
+
+#~ msgid "Malay"
+#~ msgstr "малајски"
+
+#~ msgid "Maltese"
+#~ msgstr "малтешки"
+
+#~ msgid "Norwegian"
+#~ msgstr "норвешки"
+
+#~ msgid "Persian"
+#~ msgstr "персијски"
+
+#~ msgid "Polish"
+#~ msgstr "пољски"
+
+#~ msgid "Romanian"
+#~ msgstr "румунски"
+
+#~ msgid "Serbian"
+#~ msgstr "српски"
+
+#~ msgid "Slovak"
+#~ msgstr "словачки"
+
+#~ msgid "Slovenian"
+#~ msgstr "словеначки"
+
+#~ msgid "Swahili"
+#~ msgstr "свахили"
+
+#~ msgid "Swedish"
+#~ msgstr "шведски"
+
+#~ msgid "Thai"
+#~ msgstr "тајландски"
+
+#~ msgid "Turkish"
+#~ msgstr "турски"
+
+#~ msgid "Ukrainian"
+#~ msgstr "украјински"
+
+#~ msgid "Urdu"
+#~ msgstr "урду"
+
+#~ msgid "Vietnamese"
+#~ msgstr "вијетнамски"
+
+#~ msgid "Welsh"
+#~ msgstr "велшки"
+
+#~ msgid "Yiddish"
+#~ msgstr "јидиш"
+
+#~ msgid "Problem when connecting to the translator web site."
+#~ msgstr "Проблем при повезивању на веб сајт преводиоца."
+
+#~ msgid "Close"
+#~ msgstr "Затвори"
+
+#~ msgctxt "Translate from language"
+#~ msgid "From:"
+#~ msgstr "Са:"
+
+#~ msgctxt "Translate to language"
+#~ msgid "To:"
+#~ msgstr "На:"
+
+#~ msgctxt ""
+#~ "Invert language choices so that from becomes to and to becomes from"
+#~ msgid "Invert"
+#~ msgstr "Обрни"
+
+#~ msgid "Translate"
+#~ msgstr "Преведи"
+
+#~ msgid "Debug"
+#~ msgstr "Исправљај"
+
+#, fuzzy
+#~| msgid "Drag text that you want to translate."
+#~ msgid ""
+#~ "Drag text that you want to translate. (Be careful text will be send to "
+#~ "Google Server)."
+#~ msgstr "Превуците текст који желите да преведете."
+
+#~ msgid "No network connection detected, we cannot translate text."
+#~ msgstr "Нема мрежне везе, текст не може да се преведе."
+
+#~ msgid "No network"
+#~ msgstr "Нема мреже"
+
+#~ msgid "Translate error"
+#~ msgstr "Грешка у превођењу"
+
+#, fuzzy
+#~| msgid "Share On..."
+#~ msgid "Share"
+#~ msgstr "Подели преко..."
+
+# >> @title:window
+#~ msgid "Change Value"
+#~ msgstr "Измена вредности"
+
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note?"
+#~ msgstr "Обрисати белешку?"
