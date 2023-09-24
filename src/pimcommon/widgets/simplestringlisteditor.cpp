@@ -305,7 +305,8 @@ void SimpleStringListEditor::slotRemove()
     if (selectedItems.isEmpty()) {
         return;
     }
-    const int answer = KMessageBox::warningTwoActions(this, d->mRemoveDialogLabel, i18n("Remove"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
+    const int answer =
+        KMessageBox::warningTwoActions(this, d->mRemoveDialogLabel, i18nc("@title:window", "Remove"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
     if (answer == KMessageBox::ButtonCode::PrimaryAction) {
         for (QListWidgetItem *item : selectedItems) {
             delete d->mListBox->takeItem(d->mListBox->row(item));

@@ -240,7 +240,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
     if (KMessageBox::warningContinueCancelList(nullptr,
                                                i18n("Do you really want to apply the folder's permissions to these subfolders?"),
                                                folderNames,
-                                               i18n("Apply Permissions"))
+                                               i18nc("@title:window", "Apply Permissions"))
         != KMessageBox::Continue) {
         deleteLater();
         qCDebug(PIMCOMMONAKONADI_LOG) << "AclModifyJob: User canceled .";

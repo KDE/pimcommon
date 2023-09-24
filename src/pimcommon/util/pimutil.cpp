@@ -49,7 +49,7 @@ void PimCommon::Util::saveTextAs(const QString &text, const QString &filter, QWi
                                     "\"%2\" is the detailed error description.",
                                     fileName,
                                     QString::fromLocal8Bit(strerror(errno))),
-                               i18n("Save File Error"));
+                               i18nc("@title:window", "Save File Error"));
         }
     }
     delete fdlg;
@@ -84,7 +84,7 @@ QString PimCommon::Util::loadToFile(const QString &filter, QWidget *parent, cons
                                     "\"%2\" is the detailed error description.",
                                     fileName,
                                     QString::fromLocal8Bit(strerror(errno))),
-                               i18n("Load File Error"));
+                               i18nc("@title:window", "Load File Error"));
         } else {
             result = QString::fromUtf8(file.readAll());
             file.close();

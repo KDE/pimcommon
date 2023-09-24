@@ -130,7 +130,7 @@ void RecentAddressWidget::slotRemoveItem()
     const int answer =
         KMessageBox::questionTwoActions(this,
                                         i18np("Do you want to remove this email address?", "Do you want to remove %1 email addresses?", selectedItems.count()),
-                                        i18n("Remove"),
+                                        i18nc("@title:window", "Remove"),
                                         KStandardGuiItem::remove(),
                                         KStandardGuiItem::cancel());
     if (answer == KMessageBox::ButtonCode::PrimaryAction) {

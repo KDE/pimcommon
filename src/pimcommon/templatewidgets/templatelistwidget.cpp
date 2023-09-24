@@ -73,7 +73,7 @@ public:
     {
         const int answer = KMessageBox::questionTwoActions(q,
                                                            i18n("Do you want to delete selected template?"),
-                                                           i18n("Delete template"),
+                                                           i18nc("@title:window", "Delete template"),
                                                            KStandardGuiItem::del(),
                                                            KStandardGuiItem::cancel());
         if (answer == KMessageBox::ButtonCode::PrimaryAction) {

@@ -278,12 +278,14 @@ public:
                 == KMessageBox::warningContinueCancel(nullptr,
                                                       i18n("Do you really want to remove your own permissions for this folder? "
                                                            "You will not be able to access it afterwards."),
-                                                      i18n("Remove"))) {
+                                                      i18nc("@title:window", "Remove"))) {
                 return;
             }
         } else {
             if (KMessageBox::Cancel
-                == KMessageBox::warningContinueCancel(nullptr, i18n("Do you really want to remove these permissions for this folder?"), i18n("Remove"))) {
+                == KMessageBox::warningContinueCancel(nullptr,
+                                                      i18n("Do you really want to remove these permissions for this folder?"),
+                                                      i18nc("@title:window", "Remove"))) {
                 return;
             }
         }
