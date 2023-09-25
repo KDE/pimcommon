@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -108,7 +108,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Επιθυμείτε πραγματικά τη διαγραφή του επιλεγμένου προτύπου;"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Διαγραφή προτύπου"
 
@@ -150,11 +152,7 @@ msgid "Duplicate"
 msgstr "Αντίγραφο"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Αφαίρεση"
@@ -195,7 +193,9 @@ msgstr ""
 "\"%2\" είναι η λεπτομερής περιγραφή σφάλματος."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Σφάλμα αποθήκευσης αρχείου"
 
@@ -209,7 +209,9 @@ msgstr ""
 "\"%2\" είναι η λεπτομερής περιγραφή του σφάλματος."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Σφάλμα φόρτωσης αρχείου"
 
@@ -352,6 +354,16 @@ msgstr "Α&φαίρεση"
 msgid "&Customize..."
 msgstr ""
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Αφαίρεση"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -431,7 +443,7 @@ msgstr ""
 "Θέλετε πράγματι να αφαιρέσετε τα δικά σας δικαιώματα για τον φάκελο αυτό; "
 "Έτσι δε θα μπορείτε να έχετε πρόσβαση στον φάκελο."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, fuzzy, kde-format
 #| msgid ""
 #| "Do you really want to remove your own permissions for this folder? You "
@@ -455,6 +467,7 @@ msgstr ""
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, fuzzy, kde-format
 #| msgid "Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Δικαιώματα"
 

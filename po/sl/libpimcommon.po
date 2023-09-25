@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-03-25 10:23+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -108,7 +108,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Ali želite izbrisati izbrano predlogo?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Izbriši predlogo"
 
@@ -148,11 +150,7 @@ msgid "Duplicate"
 msgstr "Podvoji"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Odstrani"
@@ -192,7 +190,9 @@ msgstr ""
 "»%2« je podroben opis napake."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Napaka med shranjevanjem datoteke"
 
@@ -206,7 +206,9 @@ msgstr ""
 "»%2« je podroben opis napake."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Napaka med nalaganjem datoteke"
 
@@ -346,6 +348,16 @@ msgstr "Odst&rani"
 msgid "&Customize..."
 msgstr "Prilag&odi ..."
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Odstrani"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -422,7 +434,7 @@ msgstr ""
 "Ali res želite odstraniti svoja lastna dovoljenja za to mapo? Po odstranitvi "
 "do nje ne boste mogli več dostopati."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Ali res želite odstraniti ta dovoljenja za to mapo?"
@@ -434,7 +446,9 @@ msgid ""
 msgstr "Ali resnično želite uveljaviti dovoljenja te mape na teh podmapah?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Uveljavi dovoljenja"
 

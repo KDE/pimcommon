@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-03-23 12:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -103,7 +103,9 @@ msgid "Do you want to delete selected template?"
 msgstr "أتريد حذف القالب المحدّد؟"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "حذف القالب"
 
@@ -143,11 +145,7 @@ msgid "Duplicate"
 msgstr "كرّر"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "أزِل"
@@ -187,7 +185,9 @@ msgstr ""
 "وصف الخطأ المفصّل هو ”%2“."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "خطأ في حفظ الملفّ"
 
@@ -201,7 +201,9 @@ msgstr ""
 "وصف الخطأ المفصّل هو ”%2“."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "خطأ في تحميل الملفّ"
 
@@ -339,6 +341,16 @@ msgstr "أ&زل"
 msgid "&Customize..."
 msgstr "&خصّص..."
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "أزِل"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -411,7 +423,7 @@ msgid ""
 "not be able to access it afterwards."
 msgstr "أمتأكّد من إزالة تصاريحك عن هذا المجلّد؟ لن يمكنك النّفاذ إليه بعد الآن."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "أمتأكّد من إزالة هذه التّصاريح عن هذا المجلّد؟"
@@ -423,7 +435,9 @@ msgid ""
 msgstr "أمتأكّد من تطبيق تصاريح المجلّد على المجلّدات الفرعيّة هذه؟"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "تطبيق التّصاريح"
 

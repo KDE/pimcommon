@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2012-11-29 14:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -102,6 +102,7 @@ msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
 #, kde-format
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr ""
 
@@ -141,11 +142,7 @@ msgid "Duplicate"
 msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Bain"
@@ -184,6 +181,7 @@ msgstr ""
 
 #: pimcommon/util/pimutil.cpp:52
 #, kde-format
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr ""
 
@@ -196,6 +194,7 @@ msgstr ""
 
 #: pimcommon/util/pimutil.cpp:87
 #, kde-format
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr ""
 
@@ -332,6 +331,16 @@ msgstr "Bain"
 msgid "&Customize..."
 msgstr ""
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Bain"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -401,7 +410,7 @@ msgid ""
 "not be able to access it afterwards."
 msgstr ""
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr ""
@@ -415,6 +424,7 @@ msgstr ""
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, fuzzy, kde-format
 #| msgid "Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Ceadanna"
 

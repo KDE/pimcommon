@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-03-23 13:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -104,7 +104,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Seçili şablonu silmek istiyor musunuz?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Şablonu sil"
 
@@ -144,11 +146,7 @@ msgid "Duplicate"
 msgstr "Çoğalt"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"
@@ -188,7 +186,9 @@ msgstr ""
 "\"%2\", ayrıntılı hata açıklamasıdır."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Dosya Kaydetme Hatası"
 
@@ -202,7 +202,9 @@ msgstr ""
 "\"%2\", ayrıntılı hata açıklamasıdır."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Dosya Yükleme Hatası"
 
@@ -343,6 +345,16 @@ msgstr "&Kaldır"
 msgid "&Customize..."
 msgstr "Öz&elleştir..."
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Kaldır"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -417,7 +429,7 @@ msgstr ""
 "Bu klasörden kendi izinlerinizi gerçekten kaldırmak istiyor musunuz? "
 "Ardından buraya erişemeyeceksiniz."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Bu klasörden bu izinleri gerçekten kaldırmak istiyor musunuz?"
@@ -431,7 +443,9 @@ msgstr ""
 "musunuz?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "İzinleri Uygula"
 

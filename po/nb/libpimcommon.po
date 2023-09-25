@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2022-05-29 19:41+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -104,7 +104,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Vil du slette den markerte malen?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Slett mal"
 
@@ -144,11 +146,7 @@ msgid "Duplicate"
 msgstr "Lag kopi"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"
@@ -188,7 +186,9 @@ msgstr ""
 "Detaljert feilbeskrivelse er «%2»."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Feil ved fil-lagring"
 
@@ -202,7 +202,9 @@ msgstr ""
 "Detaljert feilbeskrivelse er «%2»."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Feil ved fil-lasting"
 
@@ -342,6 +344,16 @@ msgstr "&Fjern"
 msgid "&Customize..."
 msgstr ""
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Fjern"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -417,7 +429,7 @@ msgstr ""
 "Er du sikker på at du vil fjerne dine egne tilgangsrettigheter for denne "
 "mappa? Etterpå vil du ikke ha tilgang til den."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr ""
@@ -429,9 +441,11 @@ msgid ""
 msgstr ""
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr ""
+msgstr "Rettigheter"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"

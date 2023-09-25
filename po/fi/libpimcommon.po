@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-03-30 12:03+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -104,7 +104,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Haluatko varmasti poistaa valitun mallipohjan?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Poista mallipohja"
 
@@ -144,11 +146,7 @@ msgid "Duplicate"
 msgstr "Kahdenna"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Poista"
@@ -188,7 +186,9 @@ msgstr ""
 "Virheen tarkka kuvaus on ”%2”."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Tiedoston tallennusvirhe"
 
@@ -202,7 +202,9 @@ msgstr ""
 "Virheen tarkka kuvaus on ”%2”."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Tiedoston latausvirhe"
 
@@ -343,6 +345,16 @@ msgstr "&Poista"
 msgid "&Customize..."
 msgstr "M&ukauta…"
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Poista"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -420,7 +432,7 @@ msgstr ""
 "Haluatko varmasti poistaa omat oikeutesi tähän kansioon? Et pääse siihen "
 "käsiksi enää myöhemmin."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Haluatko varmasti poistaa nämä oikeudet tähän kansioon?"
@@ -432,7 +444,9 @@ msgid ""
 msgstr "Haluatko varmasti käyttää kansion oikeuksia näihin alikansioihin?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Käytä oikeuksia"
 

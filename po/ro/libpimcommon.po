@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2013-09-15 12:14+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -105,7 +105,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Doriți să ștergeți șablonul ales?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Șterge șablonul"
 
@@ -147,11 +149,7 @@ msgid "Duplicate"
 msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Elimină"
@@ -191,6 +189,7 @@ msgstr ""
 
 #: pimcommon/util/pimutil.cpp:52
 #, kde-format
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr ""
 
@@ -203,6 +202,7 @@ msgstr ""
 
 #: pimcommon/util/pimutil.cpp:87
 #, kde-format
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr ""
 
@@ -343,6 +343,16 @@ msgstr "&Elimină"
 msgid "&Customize..."
 msgstr ""
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Elimină"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -412,7 +422,7 @@ msgid ""
 "not be able to access it afterwards."
 msgstr ""
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, fuzzy, kde-format
 #| msgid "Do you want to delete selected template?"
 msgid "Do you really want to remove these permissions for this folder?"
@@ -428,6 +438,7 @@ msgstr "Doriți să ștergeți șablonul ales?"
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, fuzzy, kde-format
 #| msgid "Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Permisiuni"
 

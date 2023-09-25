@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2019-05-14 22:35+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -107,7 +107,9 @@ msgid "Do you want to delete selected template?"
 msgstr "您要刪除選取的樣本嗎？"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "刪除樣本"
 
@@ -149,11 +151,7 @@ msgid "Duplicate"
 msgstr "複製"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "移除"
@@ -193,7 +191,9 @@ msgstr ""
 "%2 中有錯誤描述。"
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "檔案儲存錯誤"
 
@@ -207,7 +207,9 @@ msgstr ""
 "\"%2\" 為詳細的錯誤描述。"
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "載入檔案時發生錯誤"
 
@@ -347,6 +349,16 @@ msgstr "移除(&R)"
 msgid "&Customize..."
 msgstr ""
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "移除"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -420,7 +432,7 @@ msgid ""
 "not be able to access it afterwards."
 msgstr "您確定要移除您對這個資料夾的權限嗎？此後您就無法再存取這個資料夾了。"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, fuzzy, kde-format
 #| msgid ""
 #| "Do you really want to remove your own permissions for this folder? You "
@@ -440,6 +452,7 @@ msgstr "您確定要移除您對這個資料夾的權限嗎？此後您就無法
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, fuzzy, kde-format
 #| msgid "Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "權限"
 

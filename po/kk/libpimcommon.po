@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2013-11-07 03:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -105,7 +105,9 @@ msgid "Do you want to delete selected template?"
 msgstr "Таңдалған үлгіні өшіруді қалайсыз ба?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Үлгіні өшіру"
 
@@ -147,11 +149,7 @@ msgid "Duplicate"
 msgstr "Қосарлау"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "Өшіру"
@@ -192,7 +190,9 @@ msgstr ""
 "Қатенің сипаттамасы: \"%2\"."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Файл сақтау қатесі"
 
@@ -206,7 +206,9 @@ msgstr ""
 "Қатенің сипаттамасы: \"%2\"."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Файл жүктеу қатесі"
 
@@ -347,6 +349,16 @@ msgstr "Ө&шіру"
 msgid "&Customize..."
 msgstr ""
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Өшіру"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -424,7 +436,7 @@ msgstr ""
 "Шынымен осы қапшыққа қатынау рұқсаттарыңызды өшірмексіз бе? Кейін өзіңіз "
 "оған қатынай алмайсыз."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, fuzzy, kde-format
 #| msgid ""
 #| "Do you really want to remove your own permissions for this folder? You "
@@ -448,6 +460,7 @@ msgstr ""
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, fuzzy, kde-format
 #| msgid "Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Рұқсаттары"
 

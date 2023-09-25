@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:46+0000\n"
+"POT-Creation-Date: 2023-09-25 01:41+0000\n"
 "PO-Revision-Date: 2023-03-24 06:36+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -102,7 +102,9 @@ msgid "Do you want to delete selected template?"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ მონიშნული შაბლონი?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Delete template"
+msgctxt "@title:window"
 msgid "Delete template"
 msgstr "შაბლონის წაშლა"
 
@@ -142,11 +144,7 @@ msgid "Duplicate"
 msgstr "დუბლიკაცია"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:286
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
 #, kde-format
 msgid "Remove"
 msgstr "წაშლა"
@@ -186,7 +184,9 @@ msgstr ""
 "\"%2\" შეცდომის დეტალურ აღწერას წარმოადგენს."
 
 #: pimcommon/util/pimutil.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save File Error"
+msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "ფაილის შენახვის შეცდომა"
 
@@ -200,7 +200,9 @@ msgstr ""
 "\"%2\" შეცდომის დეტალური აღწერაა."
 
 #: pimcommon/util/pimutil.cpp:87
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Load File Error"
+msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "ფაილის ჩატვირთვის შეცდომა"
 
@@ -342,6 +344,16 @@ msgstr "&წაშლა"
 msgid "&Customize..."
 msgstr "&მორგება..."
 
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:288
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "წაშლა"
+
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
@@ -418,7 +430,7 @@ msgstr ""
 "ნამდვილად გსურთ ამ საქაღალდისთვის საკუთარი წვდომის წაშლა? მასზე წვდომა აღარ "
 "გექნებათ."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:286
+#: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "მართლა გნებავთ ამ საქაღალდის ამ წვდომების წაშლა?"
@@ -430,7 +442,9 @@ msgid ""
 msgstr "გნებავთ საქაღალდის წვდომები ამ ქვესაქაღალდეებზე გადაატაროთ?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "წვდომების გადატარება"
 
