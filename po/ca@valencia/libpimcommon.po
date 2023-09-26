@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-03-23 09:54+0100\n"
+"PO-Revision-Date: 2023-09-25 09:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -105,8 +105,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Voleu eliminar la plantilla seleccionada?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Elimina la plantilla"
@@ -187,8 +186,7 @@ msgstr ""
 "«%2» és la descripció detallada de l'error."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "S'ha produït un error en guardar el fitxer"
@@ -203,8 +201,7 @@ msgstr ""
 "«%2» és la descripció detallada de l'error."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "S'ha produït un error en carregar el fitxer"
@@ -348,8 +345,7 @@ msgstr "Personal&itza..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Elimina"
@@ -442,8 +438,7 @@ msgid ""
 msgstr "Segur que voleu aplicar els permisos d'esta carpeta a les subcarpetes?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Aplica els permisos"
@@ -836,9 +831,9 @@ msgstr ""
 "secretari, només el director s'ha de marcar com a ocupat per a les seues "
 "reunions, així que ha de seleccionar «Administradors», ja que el secretari "
 "no té drets d'administració de la carpeta.\n"
-"D'altra banda si un grup de treball compartix un calendari per a reunions de "
-"grup, tots els lectors de les carpetes s'han de marcar com a ocupats per a "
-"les reunions.\n"
+"D'altra banda, si un grup de treball compartix un calendari per a reunions "
+"de grup, tots els lectors de les carpetes s'han de marcar com a ocupats per "
+"a les reunions.\n"
 "Una carpeta de tota la companyia amb esdeveniments opcionals utilitza "
 "«Ningú», ja que no se sap qui anirà a estos esdeveniments."
 
@@ -1229,6 +1224,3 @@ msgstr "Segur que voleu suprimir esta nota?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Supressió de nota"
-
-#~ msgid "Share"
-#~ msgstr "Compartix"

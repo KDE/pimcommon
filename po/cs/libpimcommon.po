@@ -101,11 +101,10 @@ msgid "Do you want to delete selected template?"
 msgstr "Chcete smazat zvolenou šablonu?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
-msgstr "Smazat šablonu"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:143
 #, kde-format
@@ -183,11 +182,10 @@ msgstr ""
 "Podrobný popis chyby: %2."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
-msgstr "Chyba ukládání souboru"
+msgstr ""
 
 #: pimcommon/util/pimutil.cpp:83
 #, kde-format
@@ -199,11 +197,10 @@ msgstr ""
 "\"%2\" je podrobný popis chyby."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
-msgstr "Chyba při načítání souboru"
+msgstr ""
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -344,11 +341,10 @@ msgstr "U&pravit..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
-msgstr "Odstranit"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
@@ -437,11 +433,10 @@ msgid ""
 msgstr "Opravdu si přejete aplikovat oprávnění této složky na podsložky?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "Aplikovat oprávnění"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
@@ -1219,6 +1214,3 @@ msgstr "Opravdu si přejete smazat tuto poznámku?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Smazat poznámku"
-
-#~ msgid "Share"
-#~ msgstr "Sdílet"

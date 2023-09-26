@@ -1,7 +1,7 @@
 # Translation for libpimcommon.po to Euskara/Basque (eu).
 # Copyright (C) 2021-2023 This file is copyright:
 # This file is distributed under the same license as the pimcommon package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-07-22 16:29+0200\n"
+"PO-Revision-Date: 2023-09-25 23:37+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -104,8 +104,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Hautatutako txantiloia ezabatu nahi duzu?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Ezabatu txantiloia"
@@ -186,8 +185,7 @@ msgstr ""
 "«%2» da errorearen deskribapen xehatua."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Fitxategia gordetzeko errorea"
@@ -202,8 +200,7 @@ msgstr ""
 "«%2» da errorearen deskribapen xehatua."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Fitxategia zamatzeko errorea"
@@ -349,8 +346,7 @@ msgstr "Norbere erara e&gokitu..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Kendu"
@@ -443,11 +439,10 @@ msgid ""
 msgstr "Benetan ezarri nahi dituzu karpetaren baimenak azpikarpeta hauetan?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "Ezarri baimenak"
+msgstr "Aplikatu baimenak"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-09-24 17:08+0200\n"
+"PO-Revision-Date: 2023-09-25 09:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -105,8 +105,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Voleu eliminar la plantilla seleccionada?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Elimina la plantilla"
@@ -187,8 +186,7 @@ msgstr ""
 "«%2» és la descripció detallada de l'error."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Error en desar el fitxer"
@@ -203,8 +201,7 @@ msgstr ""
 "«%2» és la descripció detallada de l'error."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Error en carregar el fitxer"
@@ -349,8 +346,7 @@ msgstr "P&ersonalitza..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Elimina"
@@ -443,8 +439,7 @@ msgstr ""
 "De veres voleu aplicar els permisos d'aquesta carpeta a les subcarpetes?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Aplica els permisos"
@@ -1230,6 +1225,3 @@ msgstr "Realment voleu suprimir aquesta nota?"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "Supressió de nota"
-
-#~ msgid "Share"
-#~ msgstr "Comparteix"
