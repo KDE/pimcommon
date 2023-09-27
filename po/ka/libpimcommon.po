@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-03-24 06:36+0100\n"
+"PO-Revision-Date: 2023-09-26 05:37+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -102,8 +102,7 @@ msgid "Do you want to delete selected template?"
 msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ, წაშალოთ მონიშნული შაბლონი?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "შაბლონის წაშლა"
@@ -184,8 +183,7 @@ msgstr ""
 "\"%2\" შეცდომის დეტალურ აღწერას წარმოადგენს."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "ფაილის შენახვის შეცდომა"
@@ -200,8 +198,7 @@ msgstr ""
 "\"%2\" შეცდომის დეტალური აღწერაა."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "ფაილის ჩატვირთვის შეცდომა"
@@ -348,8 +345,7 @@ msgstr "&მორგება..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "წაშლა"
@@ -442,8 +438,7 @@ msgid ""
 msgstr "გნებავთ საქაღალდის წვდომები ამ ქვესაქაღალდეებზე გადაატაროთ?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "წვდომების გადატარება"
@@ -1009,7 +1004,7 @@ msgstr "ძებნა:"
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr "-ში"
+msgstr "სად"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, kde-format
