@@ -298,12 +298,6 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     RELATIVE genericplugins
     )
 
-ecm_generate_pri_file(BASE_NAME PimCommonAkonadi
-    LIB_NAME KPim6PimCommonAkonadi
-    DEPS "AkonadiCore AkonadiWidgets KContacts AkonadiContact network KIOCore KWidgetsAddons" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi
-    )
-
-
 install(FILES
     ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
     ${PimCommonAkonadi_Camelcaseacl_HEADERS}
@@ -343,10 +337,6 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
     )
-
-install(FILES
-    ${PRI_FILENAME}
-    DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 if (BUILD_QCH)
     ecm_add_qch(
