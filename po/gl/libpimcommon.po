@@ -3,14 +3,14 @@
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
 # Marce Villarino <mvillarino@kde-espana.org>, 2013, 2014.
 # Xosé <xosecalvo@gmail.com>, 2014.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2020, 2023.
+# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-08-05 11:54+0200\n"
+"PO-Revision-Date: 2023-09-30 12:56+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -104,11 +104,10 @@ msgid "Do you want to delete selected template?"
 msgstr "Quere eliminar o modelo escollido?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
-msgstr "Eliminar o modelo"
+msgstr "Eliminar un modelo"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:143
 #, kde-format
@@ -182,12 +181,11 @@ msgid ""
 "Could not write the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
-"Non se puido escribir o ficheiro %1:\n"
+"Non foi posíbel escribir o ficheiro %1:\n"
 "«%2» é a descrición detallada do erro."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Erro ao gardar o ficheiro"
@@ -198,12 +196,11 @@ msgid ""
 "Could not read the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
-"Non se puido ler o ficheiro %1:\n"
+"Non foi posíbel ler o ficheiro %1:\n"
 "«%2» é a descrición detallada do erro."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Erro ao cargar o ficheiro"
@@ -214,8 +211,8 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
-"<qt><p>O administrador fixou este parámetro.</p><p>Se cre que isto é un "
-"erro, contacte con el.</p></qt>"
+"<qt><p>A persoa administradora fixou este parámetro.</p><p>Se cre que isto é "
+"un erro, contacte con ela.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -245,7 +242,7 @@ msgstr "Inverter as maiúsculas"
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
 msgid "Clear History"
-msgstr "Borrar o historial"
+msgstr "Eliminar o historial"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
@@ -346,8 +343,7 @@ msgstr "&Personalizar…"
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Retirar"
@@ -355,7 +351,7 @@ msgstr "Retirar"
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
-msgstr "&Identificador do usuario:"
+msgstr "&Identificador de persoa usuaria:"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -365,9 +361,10 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
-"O identificador do usuario é o que se utiliza para identificalo no servidor "
-"IMAP. Pode tratarse dun simple nome de usuario ou dun enderezo de correo; o "
-"identificador para a súa propia conta no servidor indicaralle cal é."
+"O identificador de persoa usuaria é o que se usa para identificalo no "
+"servidor IMAP. Pode tratarse dun simple nome de usuaria ou dun enderezo de "
+"correo; o identificador para a súa propia conta no servidor indicaralle cal "
+"é."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
@@ -390,7 +387,7 @@ msgstr ""
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr "Non se pode administrar o cartafol."
+msgstr "Non é posíbel administrar o cartafol."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:159
 #, kde-format
@@ -441,8 +438,7 @@ msgstr ""
 "Seguro que quere aplicar os permisos deste cartafol a estes subcartafoles?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Aplicar os permisos"
@@ -575,7 +571,7 @@ msgstr "Buscar no correo:"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
 #, kde-format
 msgid "Research is done from 3 characters"
-msgstr "A busca actualízase a partir dos 3 caracteres."
+msgstr "A nova busca faise a partir dos 3 caracteres."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
 #, kde-format
@@ -803,7 +799,7 @@ msgstr "Ninguén"
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
 #, kde-format
 msgid "Admins of This Folder"
-msgstr "Administradores deste cartafol"
+msgstr "Administración deste cartafol"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
@@ -826,19 +822,19 @@ msgid ""
 "A company-wide folder with optional events in it would use \"Nobody\" since "
 "it is not known who will go to those events."
 msgstr ""
-"Esta opción define que usuarios que comparten este cartafol deberían obter "
+"Esta opción define que persoas que comparten este cartafol deberían obter "
 "períodos de indispoñibilidade nas súas listas de dispoñibilidade e deberían "
 "ver as alarmas dos eventos ou tarefas deste cartafol. A opción só se aplica "
 "aos cartafoles de calendario e tarefas (para as tarefas, a opción só se usa "
 "para alarmas).\n"
 "\n"
-"Casos de uso de exemplo: se o xefe comparte un cartafol co seu secretario, "
-"só o xefe debería marcarse como indispoñíbel para reunións, así que debería "
-"seleccionar «Administradores», dado que o secretario non ten permisos de "
-"administrador sobre o cartafol.\n"
+"Casos de uso de exemplo: se unha persoa comparte un cartafol con outra, só a "
+"primeira persoa debería marcarse como indispoñíbel para reunións, así que "
+"debería seleccionar «Persoas administradoras», dado que a segunda persoa non "
+"ten permisos de administración sobre o cartafol.\n"
 "Por outro lado, se un grupo de traballo comparte un calendario para as "
-"reunións do grupo, todos os lectores dos cartafoles deberían marcarse como "
-"indispoñíbeis para reunións.\n"
+"reunións do grupo, todas as persoas con permiso de lectura nos cartafoles "
+"deberían marcarse como indispoñíbeis para reunións.\n"
 "Un cartafol dispoñíbel para toda unha empresa con eventos opcionais nel "
 "usaría «Ninguén» dado que non se sabe quen asiste a cada evento."
 
@@ -995,6 +991,7 @@ msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
 msgstr "Importar contactos desde LDAP"
 
+# skip-rule: proposta-gl-directorio
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
 msgid "Search for Addresses in Directory"
@@ -1149,22 +1146,23 @@ msgstr "Configurando a instancia do recurso…"
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Non se pode configurar a instancia do recurso."
+msgstr "Non é posíbel configurar a instancia do recurso."
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "Non se puido converter o valor da opción «%1» ao tipo requirido, %2."
+msgstr ""
+"Non foi posíbel converter o valor da opción «%1» ao tipo requirido, %2."
 
 #: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "Non se puido definir a opción «%1»: %2"
+msgstr "Non foi posíbel definir a opción «%1»: %2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr "Non se puido gardar a configuración: %1"
+msgstr "Non foi posíbel gardar a configuración: %1"
 
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
@@ -1174,7 +1172,7 @@ msgstr "Completouse a preparación do recurso."
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Non se puido crear a instancia do recurso: %1"
+msgstr "Non foi posíbel crear a instancia do recurso: %1"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
@@ -1197,7 +1195,7 @@ msgstr "Engadir unha nota"
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Insira o texto que desexe almacenar como nota sobre o correo:"
+msgstr "Escriba o texto para almacenar como nota da mensaxe:"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
