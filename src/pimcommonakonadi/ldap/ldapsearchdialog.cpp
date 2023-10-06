@@ -239,7 +239,7 @@ public:
         endResetModel();
     }
 
-    Q_REQUIRED_RESULT QPair<KLDAPCore::LdapAttrMap, QString> contact(const QModelIndex &index) const
+    [[nodiscard]] QPair<KLDAPCore::LdapAttrMap, QString> contact(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
             return qMakePair(KLDAPCore::LdapAttrMap(), QString());
@@ -248,7 +248,7 @@ public:
         return qMakePair(mContactList.at(index.row()), mServerList.at(index.row()));
     }
 
-    Q_REQUIRED_RESULT QString email(const QModelIndex &index) const
+    [[nodiscard]] QString email(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
             return {};
@@ -257,7 +257,7 @@ public:
         return asUtf8(mContactList.at(index.row()).value(QStringLiteral("mail")).first()).trimmed();
     }
 
-    Q_REQUIRED_RESULT QString fullName(const QModelIndex &index) const
+    [[nodiscard]] QString fullName(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
             return {};
@@ -274,7 +274,7 @@ public:
         endResetModel();
     }
 
-    Q_REQUIRED_RESULT int rowCount(const QModelIndex &parent = QModelIndex()) const override
+    [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return mContactList.count();
@@ -283,7 +283,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    [[nodiscard]] int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return 18;
@@ -292,7 +292,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
+    [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override
     {
         if (orientation == Qt::Vertical || role != Qt::DisplayRole || section < 0 || section > 17) {
             return {};
@@ -340,7 +340,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
+    [[nodiscard]] QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid()) {
             return {};

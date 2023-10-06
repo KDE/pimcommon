@@ -34,11 +34,11 @@ public:
 
 namespace PluginUtil
 {
-Q_REQUIRED_RESULT PIMCOMMON_EXPORT bool
+[[nodiscard]] PIMCOMMON_EXPORT bool
 isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
-Q_REQUIRED_RESULT PIMCOMMON_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
+[[nodiscard]] PIMCOMMON_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
 PIMCOMMON_EXPORT void
 savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList);
-Q_REQUIRED_RESULT PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
+[[nodiscard]] PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
 }
 }

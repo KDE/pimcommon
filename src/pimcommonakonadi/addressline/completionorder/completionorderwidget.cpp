@@ -48,17 +48,17 @@ public:
         mWeight = mLdapClient->completionWeight();
     }
 
-    Q_REQUIRED_RESULT QString label() const override
+    [[nodiscard]] QString label() const override
     {
         return i18n("LDAP server %1", mLdapClient->server().host());
     }
 
-    Q_REQUIRED_RESULT QIcon icon() const override
+    [[nodiscard]] QIcon icon() const override
     {
         return QIcon::fromTheme(QStringLiteral("kmail"));
     }
 
-    Q_REQUIRED_RESULT int completionWeight() const override
+    [[nodiscard]] int completionWeight() const override
     {
         return mWeight;
     }
@@ -71,12 +71,12 @@ public:
         group.sync();
     }
 
-    Q_REQUIRED_RESULT bool hasEnableSupport() const override
+    [[nodiscard]] bool hasEnableSupport() const override
     {
         return false;
     }
 
-    Q_REQUIRED_RESULT bool isEnabled() const override
+    [[nodiscard]] bool isEnabled() const override
     {
         return true;
     }
@@ -116,12 +116,12 @@ public:
 
     ~SimpleCompletionItem() override = default;
 
-    Q_REQUIRED_RESULT bool isEnabled() const override
+    [[nodiscard]] bool isEnabled() const override
     {
         return mEnabled;
     }
 
-    Q_REQUIRED_RESULT bool hasEnableSupport() const override
+    [[nodiscard]] bool hasEnableSupport() const override
     {
         return mHasEnableSupport;
     }
@@ -131,17 +131,17 @@ public:
         mIcon = icon;
     }
 
-    Q_REQUIRED_RESULT QString label() const override
+    [[nodiscard]] QString label() const override
     {
         return mLabel;
     }
 
-    Q_REQUIRED_RESULT QIcon icon() const override
+    [[nodiscard]] QIcon icon() const override
     {
         return mIcon;
     }
 
-    Q_REQUIRED_RESULT int completionWeight() const override
+    [[nodiscard]] int completionWeight() const override
     {
         return mWeight;
     }
@@ -205,7 +205,7 @@ public:
         }
     }
 
-    Q_REQUIRED_RESULT CompletionItem *item() const
+    [[nodiscard]] CompletionItem *item() const
     {
         return mItem;
     }

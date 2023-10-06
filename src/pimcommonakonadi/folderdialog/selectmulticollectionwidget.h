@@ -21,7 +21,7 @@ public:
     explicit SelectMultiCollectionWidget(const QString &mimetype, QWidget *parent = nullptr);
     ~SelectMultiCollectionWidget() override;
 
-    Q_REQUIRED_RESULT QList<Akonadi::Collection> selectedCollection(const QModelIndex &parent = QModelIndex()) const;
+    [[nodiscard]] QList<Akonadi::Collection> selectedCollection(const QModelIndex &parent = QModelIndex()) const;
 
 private:
     void slotCollectionsTreeFetched();

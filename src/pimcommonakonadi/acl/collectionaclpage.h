@@ -28,7 +28,7 @@ public:
     void load(const Akonadi::Collection &collection) override;
     void save(Akonadi::Collection &collection) override;
 
-    Q_REQUIRED_RESULT bool canHandle(const Akonadi::Collection &collection) const override;
+    [[nodiscard]] bool canHandle(const Akonadi::Collection &collection) const override;
 
 protected:
     void init();

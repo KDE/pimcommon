@@ -22,7 +22,7 @@ public:
     ~NetworkManager() override;
     static NetworkManager *self();
 
-    Q_REQUIRED_RESULT bool isOnline() const;
+    [[nodiscard]] bool isOnline() const;
 
 Q_SIGNALS:
     void networkStatusChanged(bool isOnline);

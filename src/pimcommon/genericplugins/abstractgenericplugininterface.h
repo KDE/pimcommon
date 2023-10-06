@@ -34,10 +34,10 @@ public:
     ActionType() = default;
 
     ActionType(QAction *action, Type type);
-    Q_REQUIRED_RESULT QAction *action() const;
-    Q_REQUIRED_RESULT Type type() const;
+    [[nodiscard]] QAction *action() const;
+    [[nodiscard]] Type type() const;
 
-    Q_REQUIRED_RESULT bool operator==(const ActionType &other) const;
+    [[nodiscard]] bool operator==(const ActionType &other) const;
 
 private:
     QAction *mAction = nullptr;
@@ -53,10 +53,10 @@ public:
     ~AbstractGenericPluginInterface() override;
 
     void setParentWidget(QWidget *parent);
-    Q_REQUIRED_RESULT QWidget *parentWidget() const;
+    [[nodiscard]] QWidget *parentWidget() const;
 
     void setPlugin(AbstractGenericPlugin *plugin);
-    Q_REQUIRED_RESULT AbstractGenericPlugin *plugin() const;
+    [[nodiscard]] AbstractGenericPlugin *plugin() const;
 
     virtual void createAction(KActionCollection *ac) = 0;
     virtual void exec() = 0;

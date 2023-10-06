@@ -24,13 +24,13 @@ public:
     explicit KActionMenuChangeCase(QObject *parent = nullptr);
     ~KActionMenuChangeCase() override;
 
-    Q_REQUIRED_RESULT QAction *upperCaseAction() const;
+    [[nodiscard]] QAction *upperCaseAction() const;
 
-    Q_REQUIRED_RESULT QAction *sentenceCaseAction() const;
+    [[nodiscard]] QAction *sentenceCaseAction() const;
 
-    Q_REQUIRED_RESULT QAction *lowerCaseAction() const;
+    [[nodiscard]] QAction *lowerCaseAction() const;
 
-    Q_REQUIRED_RESULT QAction *reverseCaseAction() const;
+    [[nodiscard]] QAction *reverseCaseAction() const;
 
     void appendInActionCollection(KActionCollection *ac);
 

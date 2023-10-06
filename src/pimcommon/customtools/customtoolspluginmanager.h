@@ -26,7 +26,7 @@ public:
     explicit CustomToolsPluginManager(QObject *parent = nullptr);
     ~CustomToolsPluginManager() override;
 
-    Q_REQUIRED_RESULT QList<PimCommon::CustomToolsPlugin *> pluginsList() const;
+    [[nodiscard]] QList<PimCommon::CustomToolsPlugin *> pluginsList() const;
 
 private:
     std::unique_ptr<CustomToolsPluginManagerPrivate> const d;

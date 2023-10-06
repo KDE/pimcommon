@@ -36,7 +36,7 @@ public:
     KLDAPWidgets::LdapClientSearch *ldapSearch() const;
 
     QTimer *ldapTimer() const;
-    Q_REQUIRED_RESULT QString ldapText() const;
+    [[nodiscard]] QString ldapText() const;
     void setLdapText(const QString &ldapText);
 
     AddresseeLineEdit *addressLineEdit() const;

@@ -28,7 +28,7 @@ public:
     explicit ImapResourceCapabilitiesManager(QObject *parent = nullptr);
     ~ImapResourceCapabilitiesManager() override;
 
-    Q_REQUIRED_RESULT bool hasAnnotationSupport(const QString &identifier) const;
+    [[nodiscard]] bool hasAnnotationSupport(const QString &identifier) const;
 
 private:
     PIMCOMMONAKONADI_NO_EXPORT void slotInstanceAdded(const Akonadi::AgentInstance &instance);

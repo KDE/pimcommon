@@ -25,7 +25,7 @@ public:
 
     void setDefaultText(const QString &text);
 
-    Q_REQUIRED_RESULT bool showDefaultText() const;
+    [[nodiscard]] bool showDefaultText() const;
     void setShowDefaultText(bool b);
 
 private:

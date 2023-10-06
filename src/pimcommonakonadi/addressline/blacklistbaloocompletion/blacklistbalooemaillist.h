@@ -20,7 +20,7 @@ public:
     explicit BlackListBalooEmailListItem(QListWidget *parent = nullptr);
     ~BlackListBalooEmailListItem() override;
 
-    Q_REQUIRED_RESULT bool initializeStatus() const;
+    [[nodiscard]] bool initializeStatus() const;
     void setInitializeStatus(bool initializeStatus);
 
 private:
@@ -36,10 +36,10 @@ public:
 
     void setEmailBlackList(const QStringList &list);
 
-    Q_REQUIRED_RESULT QHash<QString, bool> blackListItemChanged() const;
+    [[nodiscard]] QHash<QString, bool> blackListItemChanged() const;
 
     void setExcludeDomains(const QStringList &domain);
-    Q_REQUIRED_RESULT int setEmailFound(const QStringList &);
+    [[nodiscard]] int setEmailFound(const QStringList &);
 
     void setExcludeEmailsRegularExpressions(const QStringList &newExcludeEmailsRegularExpressions);
 

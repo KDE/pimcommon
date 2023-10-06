@@ -32,9 +32,9 @@ public:
     // Need to load template in specific class to allow to use correct defaultTemplates function
     void loadTemplates();
 
-    Q_REQUIRED_RESULT virtual QList<PimCommon::defaultTemplate> defaultTemplates();
-    Q_REQUIRED_RESULT virtual bool addNewTemplate(QString &templateName, QString &templateScript);
-    Q_REQUIRED_RESULT virtual bool modifyTemplate(QString &templateName, QString &templateScript, bool defaultTemplate);
+    [[nodiscard]] virtual QList<PimCommon::defaultTemplate> defaultTemplates();
+    [[nodiscard]] virtual bool addNewTemplate(QString &templateName, QString &templateScript);
+    [[nodiscard]] virtual bool modifyTemplate(QString &templateName, QString &templateScript, bool defaultTemplate);
 
     void setKNewStuffConfigFile(const QString &configName);
 

@@ -22,13 +22,13 @@ public:
         QStringList mExcludeEmailsRegularExpressions;
     };
 
-    Q_REQUIRED_RESULT QStringList cleanupEmailList();
+    [[nodiscard]] QStringList cleanupEmailList();
 
-    Q_REQUIRED_RESULT BalooCompletionEmailInfo balooCompletionEmailInfo() const;
+    [[nodiscard]] BalooCompletionEmailInfo balooCompletionEmailInfo() const;
     void setBalooCompletionEmailInfo(const BalooCompletionEmailInfo &newBalooCompletionEmailInfo);
 
 private:
-    Q_REQUIRED_RESULT QString stripEmail(const QString &email, QString &address);
+    [[nodiscard]] QString stripEmail(const QString &email, QString &address);
     BalooCompletionEmailInfo mBalooCompletionEmailInfo;
     static QList<QRegularExpression> mExcludeEmailsRegularExpressions;
 };

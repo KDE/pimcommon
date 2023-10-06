@@ -19,7 +19,7 @@ public:
     explicit BlackListBalooEmailSearchJob(QObject *parent = nullptr);
     ~BlackListBalooEmailSearchJob() override;
 
-    Q_REQUIRED_RESULT bool start();
+    [[nodiscard]] bool start();
 
     void setSearchEmail(const QString &searchEmail);
 

@@ -44,15 +44,15 @@ public:
     }
 
     void loadPlugin(GenericPluginInfo *item);
-    Q_REQUIRED_RESULT QList<GenericPlugin *> pluginsList() const;
+    [[nodiscard]] QList<GenericPlugin *> pluginsList() const;
     bool initializePlugins();
     QString pluginDirectory;
     QString pluginName;
     QList<GenericPluginInfo> mPluginList;
 
-    Q_REQUIRED_RESULT QList<PluginUtilData> pluginsDataList() const;
-    Q_REQUIRED_RESULT QString configGroupName() const;
-    Q_REQUIRED_RESULT QString configPrefixSettingKey() const;
+    [[nodiscard]] QList<PluginUtilData> pluginsDataList() const;
+    [[nodiscard]] QString configGroupName() const;
+    [[nodiscard]] QString configPrefixSettingKey() const;
     GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:

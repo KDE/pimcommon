@@ -27,17 +27,17 @@ public:
     ~CustomToolsPlugin() override;
 
     virtual PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent = nullptr) = 0;
-    Q_REQUIRED_RESULT virtual QString customToolName() const = 0;
+    [[nodiscard]] virtual QString customToolName() const = 0;
 
-    Q_REQUIRED_RESULT virtual bool hasConfigureDialog() const;
+    [[nodiscard]] virtual bool hasConfigureDialog() const;
     virtual void showConfigureDialog(QWidget *parent);
 
     void emitConfigChanged();
 
-    Q_REQUIRED_RESULT virtual QString description() const;
+    [[nodiscard]] virtual QString description() const;
 
     void setIsEnabled(bool enabled);
-    Q_REQUIRED_RESULT bool isEnabled() const;
+    [[nodiscard]] bool isEnabled() const;
 
 private:
     std::unique_ptr<CustomToolsPluginPrivate> const d;

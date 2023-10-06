@@ -77,7 +77,7 @@ public:
 
     // Ldap
     void initializeLdap();
-    Q_REQUIRED_RESULT QString ldapText() const;
+    [[nodiscard]] QString ldapText() const;
     void setLdapText(const QString &ldapText);
     KLDAPWidgets::LdapClientSearch *ldapSearch() const;
     QTimer *ldapTimer() const;
@@ -88,7 +88,7 @@ public:
     void restartLdap(const QString &searchString, AddresseeLineEdit *addressLine);
 
     // Baloo
-    Q_REQUIRED_RESULT int balooCompletionSource() const;
+    [[nodiscard]] int balooCompletionSource() const;
     void setBalooCompletionSource(int value);
 
     // Akonadi
@@ -98,21 +98,21 @@ public:
 
     AddresseeLineEdit *addressLineEdit() const;
     void setAddressLineEdit(AddresseeLineEdit *addressLineEdit);
-    Q_REQUIRED_RESULT bool isOnline() const;
+    [[nodiscard]] bool isOnline() const;
 
     void loadBalooBlackList();
-    Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
-    Q_REQUIRED_RESULT QStringList balooBlackList() const;
+    [[nodiscard]] QStringList cleanupEmailList(const QStringList &inputList);
+    [[nodiscard]] QStringList balooBlackList() const;
 
-    Q_REQUIRED_RESULT bool showOU() const;
+    [[nodiscard]] bool showOU() const;
     void setShowOU(bool showOU);
 
     bool autoGroupExpand() const;
     void setAutoGroupExpand(bool checked);
 
-    Q_REQUIRED_RESULT QColor alternateColor() const;
+    [[nodiscard]] QColor alternateColor() const;
 
-    Q_REQUIRED_RESULT QStringList cleanupRecentAddressEmailList(const QStringList &inputList);
+    [[nodiscard]] QStringList cleanupRecentAddressEmailList(const QStringList &inputList);
 
 private:
     QStringList mRecentAddressEmailList;

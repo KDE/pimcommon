@@ -28,7 +28,7 @@ public:
     ~PluginInterface() override;
 
     void setParentWidget(QWidget *widget);
-    Q_REQUIRED_RESULT QHash<PimCommon::ActionType::Type, QList<QAction *>> actionsType();
+    [[nodiscard]] QHash<PimCommon::ActionType::Type, QList<QAction *>> actionsType();
     void createPluginInterface();
 
     void setPluginName(const QString &name);
@@ -42,9 +42,9 @@ public:
 
     void setActionCollection(KActionCollection *ac);
 
-    Q_REQUIRED_RESULT QList<PimCommon::PluginUtilData> pluginsDataList() const;
-    Q_REQUIRED_RESULT QString configGroupName() const;
-    Q_REQUIRED_RESULT QString configPrefixSettingKey() const;
+    [[nodiscard]] QList<PimCommon::PluginUtilData> pluginsDataList() const;
+    [[nodiscard]] QString configGroupName() const;
+    [[nodiscard]] QString configPrefixSettingKey() const;
 
     PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
     void clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient);

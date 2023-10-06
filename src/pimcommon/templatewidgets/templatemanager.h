@@ -16,7 +16,7 @@ class TemplateListWidget;
 struct TemplateInfo {
     QString name;
     QString script;
-    Q_REQUIRED_RESULT bool isValid() const
+    [[nodiscard]] bool isValid() const
     {
         return !name.isEmpty() && !script.isEmpty();
     }
@@ -39,7 +39,7 @@ private:
     PIMCOMMON_NO_EXPORT void slotDirectoryChanged();
     PIMCOMMON_NO_EXPORT void loadTemplates(bool init = false);
     PIMCOMMON_NO_EXPORT void initTemplatesDirectories(const QString &templatesRelativePath);
-    Q_REQUIRED_RESULT PIMCOMMON_NO_EXPORT TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
+    [[nodiscard]] PIMCOMMON_NO_EXPORT TemplateInfo loadTemplate(const QString &themePath, const QString &defaultDesktopFileName);
 
     std::unique_ptr<TemplateManagerPrivate> const d;
 };

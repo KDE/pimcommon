@@ -33,7 +33,7 @@ public:
         RENAMEFILE_OVERWRITEALL = 4
     };
 
-    Q_REQUIRED_RESULT QUrl newName() const;
+    [[nodiscard]] QUrl newName() const;
 
 private:
     PIMCOMMON_NO_EXPORT void slotOverwritePressed();

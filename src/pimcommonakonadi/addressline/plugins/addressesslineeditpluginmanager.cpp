@@ -43,7 +43,7 @@ public:
     }
 
     void loadPlugin(AddressessLineEditPluginInfo *item);
-    Q_REQUIRED_RESULT QList<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
+    [[nodiscard]] QList<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
     QList<AddressessLineEditPluginInfo> mPluginList;
     bool initializePlugins();
 

@@ -23,15 +23,15 @@ public:
     ~AbstractGenericPlugin() override;
 
     virtual PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent = nullptr) = 0;
-    Q_REQUIRED_RESULT virtual bool hasPopupMenuSupport() const;
-    Q_REQUIRED_RESULT virtual bool hasToolBarSupport() const;
-    Q_REQUIRED_RESULT virtual bool hasConfigureDialog() const;
-    Q_REQUIRED_RESULT virtual bool hasStatusBarSupport() const;
+    [[nodiscard]] virtual bool hasPopupMenuSupport() const;
+    [[nodiscard]] virtual bool hasToolBarSupport() const;
+    [[nodiscard]] virtual bool hasConfigureDialog() const;
+    [[nodiscard]] virtual bool hasStatusBarSupport() const;
 
     virtual void showConfigureDialog(QWidget *parent = nullptr);
 
     void setIsEnabled(bool enabled);
-    Q_REQUIRED_RESULT bool isEnabled() const;
+    [[nodiscard]] bool isEnabled() const;
 
 Q_SIGNALS:
     void configChanged();

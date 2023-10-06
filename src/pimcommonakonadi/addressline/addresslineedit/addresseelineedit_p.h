@@ -41,35 +41,35 @@ public:
     void akonadiHandlePending();
     void doCompletion(bool ctrlT);
 
-    Q_REQUIRED_RESULT bool showOU() const;
+    [[nodiscard]] bool showOU() const;
 
     void setIcon(const QIcon &icon, const QString &tooltip);
 
-    Q_REQUIRED_RESULT bool useCompletion() const;
+    [[nodiscard]] bool useCompletion() const;
     void setUseCompletion(bool useCompletion);
 
-    Q_REQUIRED_RESULT bool completionInitialized() const;
+    [[nodiscard]] bool completionInitialized() const;
 
-    Q_REQUIRED_RESULT bool smartPaste() const;
+    [[nodiscard]] bool smartPaste() const;
     void setSmartPaste(bool smartPaste);
 
-    Q_REQUIRED_RESULT bool searchExtended() const;
+    [[nodiscard]] bool searchExtended() const;
     void setSearchExtended(bool searchExtended);
 
-    Q_REQUIRED_RESULT QString searchString() const;
+    [[nodiscard]] QString searchString() const;
     void setSearchString(const QString &searchString);
 
-    Q_REQUIRED_RESULT bool enableBalooSearch() const;
+    [[nodiscard]] bool enableBalooSearch() const;
     void setEnableBalooSearch(bool enableBalooSearch);
 
-    Q_REQUIRED_RESULT bool useSemicolonAsSeparator() const;
+    [[nodiscard]] bool useSemicolonAsSeparator() const;
     void setUseSemicolonAsSeparator(bool useSemicolonAsSeparator);
 
-    Q_REQUIRED_RESULT bool enableAkonadiSearch() const;
+    [[nodiscard]] bool enableAkonadiSearch() const;
     void setEnableAkonadiSearch(bool enableAkonadiSearch);
 
     void removeCompletionSource(const QString &source);
-    Q_REQUIRED_RESULT int addCompletionSource(const QString &source, int weight);
+    [[nodiscard]] int addCompletionSource(const QString &source, int weight);
     void restartTime(const QString &searchString);
     void updateBalooBlackList();
     void updateCompletionOrder();
@@ -77,15 +77,15 @@ public:
     KLDAPWidgets::LdapClientSearch *ldapSearch();
 
     void setExpandIntern(bool);
-    Q_REQUIRED_RESULT bool expandIntern() const;
+    [[nodiscard]] bool expandIntern() const;
 
-    Q_REQUIRED_RESULT bool autoGroupExpand() const;
+    [[nodiscard]] bool autoGroupExpand() const;
     void setAutoGroupExpand(bool autoGroupExpand);
 
     QList<KJob *> mightBeGroupJobs() const;
     void setMightBeGroupJobs(const QList<KJob *> &mightBeGroupJobs);
 
-    Q_REQUIRED_RESULT KContacts::ContactGroup::List groups() const;
+    [[nodiscard]] KContacts::ContactGroup::List groups() const;
     void setGroups(const KContacts::ContactGroup::List &groups);
 
     void mightBeGroupJobsClear();
@@ -93,14 +93,14 @@ public:
     void addGroups(const KContacts::ContactGroup::List &lst);
     void mightBeGroupJobsRemoveOne(Akonadi::ContactGroupSearchJob *search);
     void mightBeGroupJobsAdd(Akonadi::ContactGroupSearchJob *job);
-    Q_REQUIRED_RESULT bool groupsIsEmpty() const;
+    [[nodiscard]] bool groupsIsEmpty() const;
     void setShowRecentAddresses(bool b);
-    Q_REQUIRED_RESULT bool showRecentAddresses() const;
+    [[nodiscard]] bool showRecentAddresses() const;
     void setRecentAddressConfig(KConfig *config);
 
     KConfig *recentAddressConfig() const;
 
-    Q_REQUIRED_RESULT bool canDeleteLineEdit() const;
+    [[nodiscard]] bool canDeleteLineEdit() const;
     void setCanDeleteLineEdit(bool inprogressToConfigureCompletion);
 
 public Q_SLOTS:

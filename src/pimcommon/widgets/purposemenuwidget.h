@@ -27,8 +27,8 @@ public:
     explicit PurposeMenuWidget(QWidget *parentWidget, QObject *parent = nullptr);
     ~PurposeMenuWidget() override;
 
-    Q_REQUIRED_RESULT virtual QByteArray text() = 0;
-    Q_REQUIRED_RESULT QMenu *menu() const;
+    [[nodiscard]] virtual QByteArray text() = 0;
+    [[nodiscard]] QMenu *menu() const;
 
 Q_SIGNALS:
     void shareError(const QString &message);

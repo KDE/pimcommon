@@ -45,13 +45,13 @@ public:
         IncForReaders,
     };
 
-    Q_REQUIRED_RESULT CollectionTypeUtil::IncidencesFor incidencesForFromString(const QString &string);
-    Q_REQUIRED_RESULT CollectionTypeUtil::FolderContentsType typeFromKolabName(const QByteArray &name);
-    Q_REQUIRED_RESULT QString folderContentDescription(CollectionTypeUtil::FolderContentsType type);
-    Q_REQUIRED_RESULT QByteArray kolabNameFromType(CollectionTypeUtil::FolderContentsType type);
-    Q_REQUIRED_RESULT QString incidencesForToString(CollectionTypeUtil::IncidencesFor type);
-    Q_REQUIRED_RESULT CollectionTypeUtil::FolderContentsType contentsTypeFromString(const QString &type);
-    Q_REQUIRED_RESULT QString typeNameFromKolabType(const QByteArray &type);
-    Q_REQUIRED_RESULT QString iconNameFromContentsType(CollectionTypeUtil::FolderContentsType type);
+    [[nodiscard]] CollectionTypeUtil::IncidencesFor incidencesForFromString(const QString &string);
+    [[nodiscard]] CollectionTypeUtil::FolderContentsType typeFromKolabName(const QByteArray &name);
+    [[nodiscard]] QString folderContentDescription(CollectionTypeUtil::FolderContentsType type);
+    [[nodiscard]] QByteArray kolabNameFromType(CollectionTypeUtil::FolderContentsType type);
+    [[nodiscard]] QString incidencesForToString(CollectionTypeUtil::IncidencesFor type);
+    [[nodiscard]] CollectionTypeUtil::FolderContentsType contentsTypeFromString(const QString &type);
+    [[nodiscard]] QString typeNameFromKolabType(const QByteArray &type);
+    [[nodiscard]] QString iconNameFromContentsType(CollectionTypeUtil::FolderContentsType type);
 };
 }

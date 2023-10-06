@@ -41,7 +41,7 @@ public:
     /**
      * Returns the user id of the ACL entry.
      */
-    Q_REQUIRED_RESULT QString userId() const;
+    [[nodiscard]] QString userId() const;
 
     /**
      * Sets the permissions of the ACL entry.
@@ -51,7 +51,7 @@ public:
     /**
      * Returns the permissions of the ACL entry.
      */
-    Q_REQUIRED_RESULT KIMAP::Acl::Rights permissions() const;
+    [[nodiscard]] KIMAP::Acl::Rights permissions() const;
 
 private:
     //@cond PRIVATE

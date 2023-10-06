@@ -30,7 +30,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT QString suggestName(const QUrl &baseURL, const QString &oldName);
+    [[nodiscard]] QString suggestName(const QUrl &baseURL, const QString &oldName);
 
     const QUrl url;
     QCheckBox *applyAll = nullptr;

@@ -73,15 +73,15 @@ public:
     void setFont(const QFont &font);
 
     void setEnableBalooSearch(bool enable);
-    Q_REQUIRED_RESULT bool enableBalooSearch() const;
+    [[nodiscard]] bool enableBalooSearch() const;
 
     void setEnableAkonadiSearch(bool enable);
-    Q_REQUIRED_RESULT bool enableAkonadiSearch() const;
+    [[nodiscard]] bool enableAkonadiSearch() const;
 
     void setExpandIntern(bool);
-    Q_REQUIRED_RESULT bool expandIntern() const;
+    [[nodiscard]] bool expandIntern() const;
 
-    Q_REQUIRED_RESULT bool isCompletionEnabled() const;
+    [[nodiscard]] bool isCompletionEnabled() const;
 
     /**
      * Adds a new @p contact to the completion with a given
@@ -105,7 +105,7 @@ public:
      *
      * If the source already exists, the weight will be updated.
      */
-    Q_REQUIRED_RESULT int addCompletionSource(const QString &name, int weight);
+    [[nodiscard]] int addCompletionSource(const QString &name, int weight);
 
     void removeCompletionSource(const QString &source);
     void emitTextCompleted();
@@ -117,19 +117,19 @@ public:
 
     void updateBalooBlackList();
     void updateCompletionOrder();
-    Q_REQUIRED_RESULT KLDAPWidgets::LdapClientSearch *ldapSearch() const;
+    [[nodiscard]] KLDAPWidgets::LdapClientSearch *ldapSearch() const;
 
     void setShowRecentAddresses(bool b);
-    Q_REQUIRED_RESULT bool showRecentAddresses() const;
+    [[nodiscard]] bool showRecentAddresses() const;
 
     void setRecentAddressConfig(KConfig *config);
-    Q_REQUIRED_RESULT KConfig *recentAddressConfig() const;
+    [[nodiscard]] KConfig *recentAddressConfig() const;
 
     void configureCompletion();
 
     void setIcon(const QIcon &icon, const QString &tooltip = QString());
 
-    Q_REQUIRED_RESULT bool canDeleteLineEdit() const;
+    [[nodiscard]] bool canDeleteLineEdit() const;
 Q_SIGNALS:
     void textCompleted();
     void addAddress(const QString &address);

@@ -23,10 +23,10 @@ public:
     ~TemplateEditDialog() override;
 
     void setTemplateName(const QString &name);
-    Q_REQUIRED_RESULT QString templateName() const;
+    [[nodiscard]] QString templateName() const;
 
     void setScript(const QString &);
-    Q_REQUIRED_RESULT QString script() const;
+    [[nodiscard]] QString script() const;
 
 private:
     void slotTemplateChanged();

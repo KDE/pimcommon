@@ -33,7 +33,7 @@ public:
     void setEmailBlackList(const QStringList &lst);
     void setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch);
     void setRecentAddresses(const QStringList &lst);
-    Q_REQUIRED_RESULT bool recentAddressWasChanged() const;
+    [[nodiscard]] bool recentAddressWasChanged() const;
     void storeAddresses(KConfig *config);
 
 private:

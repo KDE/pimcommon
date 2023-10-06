@@ -37,21 +37,21 @@ public:
     explicit GenericPluginManager(QObject *parent = nullptr);
     ~GenericPluginManager() override;
 
-    Q_REQUIRED_RESULT bool initializePlugins();
+    [[nodiscard]] bool initializePlugins();
 
     void setPluginDirectory(const QString &directory);
-    Q_REQUIRED_RESULT QString pluginDirectory() const;
+    [[nodiscard]] QString pluginDirectory() const;
 
     void setPluginName(const QString &pluginName);
-    Q_REQUIRED_RESULT QString pluginName() const;
+    [[nodiscard]] QString pluginName() const;
 
-    Q_REQUIRED_RESULT QList<PimCommon::GenericPlugin *> pluginsList() const;
-    Q_REQUIRED_RESULT QList<PimCommon::PluginUtilData> pluginsDataList() const;
+    [[nodiscard]] QList<PimCommon::GenericPlugin *> pluginsList() const;
+    [[nodiscard]] QList<PimCommon::PluginUtilData> pluginsDataList() const;
 
-    Q_REQUIRED_RESULT QString configGroupName() const;
-    Q_REQUIRED_RESULT QString configPrefixSettingKey() const;
+    [[nodiscard]] QString configGroupName() const;
+    [[nodiscard]] QString configPrefixSettingKey() const;
 
-    Q_REQUIRED_RESULT GenericPlugin *pluginFromIdentifier(const QString &id);
+    [[nodiscard]] GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:
     std::unique_ptr<GenericPluginManagerPrivate> const d;

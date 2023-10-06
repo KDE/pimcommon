@@ -26,7 +26,7 @@ public:
     explicit CustomToolsWidgetNg(QWidget *parent = nullptr);
     ~CustomToolsWidgetNg() override;
 
-    Q_REQUIRED_RESULT QList<KToggleAction *> actionList() const;
+    [[nodiscard]] QList<KToggleAction *> actionList() const;
     void initializeView(KActionCollection *ac, const QList<CustomToolsPlugin *> &localPluginsList);
 
     void setText(const QString &text);

@@ -30,7 +30,7 @@ public:
 
     void setAddresses(const QStringList &addrs);
     void storeAddresses(KConfig *config);
-    Q_REQUIRED_RESULT bool wasChanged() const;
+    [[nodiscard]] bool wasChanged() const;
 
 protected:
     void updateButtonState();

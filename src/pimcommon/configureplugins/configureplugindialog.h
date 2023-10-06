@@ -33,7 +33,7 @@ protected:
 
     virtual void help();
 
-    Q_REQUIRED_RESULT QDialogButtonBox *buttonBox() const;
+    [[nodiscard]] QDialogButtonBox *buttonBox() const;
 
 private:
     PIMCOMMON_NO_EXPORT void slotHelpClicked();

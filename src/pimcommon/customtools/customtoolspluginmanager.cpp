@@ -19,7 +19,7 @@ using namespace PimCommon;
 class CustomToolsPluginInfo
 {
 public:
-    Q_REQUIRED_RESULT QString saveName() const;
+    [[nodiscard]] QString saveName() const;
 
     KPluginMetaData metaData;
     PimCommon::CustomToolsPlugin *plugin = nullptr;
@@ -46,7 +46,7 @@ public:
     {
     }
 
-    Q_REQUIRED_RESULT QList<PimCommon::CustomToolsPlugin *> pluginsList() const;
+    [[nodiscard]] QList<PimCommon::CustomToolsPlugin *> pluginsList() const;
     void initializePluginList();
     void loadPlugin(CustomToolsPluginInfo *item);
     QList<CustomToolsPluginInfo> mPluginList;

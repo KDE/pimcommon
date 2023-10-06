@@ -32,7 +32,7 @@ class PimCommon::SimpleStringListEditorPrivate
 public:
     SimpleStringListEditorPrivate() = default;
 
-    Q_REQUIRED_RESULT QList<QListWidgetItem *> selectedItems() const
+    [[nodiscard]] QList<QListWidgetItem *> selectedItems() const
     {
         QList<QListWidgetItem *> listWidgetItem;
         const int numberOfFilters = mListBox->count();

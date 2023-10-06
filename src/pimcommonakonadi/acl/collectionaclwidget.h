@@ -18,8 +18,8 @@ public:
     explicit CollectionAclWidget(QWidget *parent = nullptr);
     ~CollectionAclWidget() override;
 
-    Q_REQUIRED_RESULT PimCommon::AclManager *aclManager() const;
-    Q_REQUIRED_RESULT bool recursive() const;
+    [[nodiscard]] PimCommon::AclManager *aclManager() const;
+    [[nodiscard]] bool recursive() const;
     void setEnableRecursiveCheckBox(bool enable);
 
 private:

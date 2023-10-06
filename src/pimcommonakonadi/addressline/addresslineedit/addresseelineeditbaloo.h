@@ -17,13 +17,13 @@ public:
     AddresseeLineEditBaloo();
     ~AddresseeLineEditBaloo();
 
-    Q_REQUIRED_RESULT int balooCompletionSource() const;
+    [[nodiscard]] int balooCompletionSource() const;
     void setBalooCompletionSource(int value);
     void loadBalooBlackList();
-    Q_REQUIRED_RESULT QStringList cleanupEmailList(const QStringList &inputList);
+    [[nodiscard]] QStringList cleanupEmailList(const QStringList &inputList);
 
-    Q_REQUIRED_RESULT QStringList balooBlackList() const;
-    Q_REQUIRED_RESULT QStringList domainExcludeList() const;
+    [[nodiscard]] QStringList balooBlackList() const;
+    [[nodiscard]] QStringList domainExcludeList() const;
 
 private:
     PimCommon::BalooCompletionEmail *const mBalooCompletionEmail;
