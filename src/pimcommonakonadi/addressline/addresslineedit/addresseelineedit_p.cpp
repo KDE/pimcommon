@@ -471,7 +471,7 @@ void AddresseeLineEditPrivate::doCompletion(bool ctrlT)
             break;
         }
         // else: fall-through to the CompletionPopup case
-        Q_FALLTHROUGH();
+        [[fallthrough]];
 
     case KCompletion::CompletionPopup: {
         const QStringList items = adjustedCompletionItems(false);
