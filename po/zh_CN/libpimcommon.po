@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-09-16 10:09\n"
+"PO-Revision-Date: 2023-10-10 14:25\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/pimcommon/libpimcommon.pot\n"
-"X-Crowdin-File-ID: 3761\n"
+"X-Crowdin-File: /kf6-trunk/messages/pimcommon/libpimcommon.pot\n"
+"X-Crowdin-File-ID: 45575\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
@@ -101,8 +101,7 @@ msgid "Do you want to delete selected template?"
 msgstr "您是否想要删除选中模板？"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "删除模板"
@@ -183,8 +182,7 @@ msgstr ""
 "“%2”为详细错误描述。"
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "保存文件错误"
@@ -199,8 +197,7 @@ msgstr ""
 "“%2”为详细错误描述。"
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "加载文件错误"
@@ -343,8 +340,7 @@ msgstr "自定义(&C)..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "删除"
@@ -432,8 +428,7 @@ msgid ""
 msgstr "你真的想将文件夹的权限应用于这些子文件夹吗？"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "应用权限"
@@ -1204,6 +1199,3 @@ msgstr "您真的想要删除此便笺吗？"
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "删除便笺"
-
-#~ msgid "Share"
-#~ msgstr "共享"
