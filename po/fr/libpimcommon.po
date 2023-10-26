@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-09-26 10:18+0200\n"
+"PO-Revision-Date: 2023-10-24 20:30+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -601,12 +601,12 @@ msgstr "Séparer le domaine avec « %1 »"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr "Exclure un courriel avec une expression régulière :"
+msgstr "Exclure un courriel avec une expression rationnelle :"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
 #, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Séparer une expression régulière avec « %1 »"
+msgstr "Séparer une expression rationnelle avec « %1 »"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
 #, kde-format
