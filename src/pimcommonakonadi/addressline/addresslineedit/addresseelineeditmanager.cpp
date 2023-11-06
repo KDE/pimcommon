@@ -29,7 +29,7 @@ AddresseeLineEditManager::AddresseeLineEditManager()
     , mAddressessLineEditLdap(new AddresseeLineEditLdap(this))
     , mAddressessLineEditBaloo(new AddresseeLineEditBaloo)
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AddressLineEdit");
+    KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("AddressLineEdit"));
     mShowOU = group.readEntry("ShowOU", false);
     mAutoGroupExpand = group.readEntry("AutoGroupExpand", false);
 }
@@ -213,7 +213,7 @@ bool AddresseeLineEditManager::showOU() const
 void AddresseeLineEditManager::setShowOU(bool checked)
 {
     if (checked != mShowOU) {
-        KConfigGroup group(KSharedConfig::openConfig(), "AddressLineEdit");
+        KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("AddressLineEdit"));
         group.writeEntry("ShowOU", checked);
         mShowOU = checked;
     }
@@ -228,7 +228,7 @@ void AddresseeLineEditManager::setAutoGroupExpand(bool checked)
 {
     if (mAutoGroupExpand != checked) {
         mAutoGroupExpand = checked;
-        KConfigGroup group(KSharedConfig::openConfig(), "AddressLineEdit");
+        KConfigGroup group(KSharedConfig::openConfig(), QLatin1String("AddressLineEdit"));
         group.writeEntry("AutoGroupExpand", mAutoGroupExpand);
     }
 }

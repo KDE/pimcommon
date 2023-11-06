@@ -66,7 +66,7 @@ public:
     void save(CompletionOrderWidget *) override
     {
         KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
-        KConfigGroup group(config, "LDAP");
+        KConfigGroup group(config, QLatin1String("LDAP"));
         group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()), mWeight);
         group.sync();
     }
@@ -106,10 +106,10 @@ public:
         , mHasEnableSupport(enableSupport)
         , mEnabled(true)
     {
-        KConfigGroup groupCompletionWeights(editor->configFile(), "CompletionWeights");
+        KConfigGroup groupCompletionWeights(editor->configFile(), QLatin1String("CompletionWeights"));
         mWeight = groupCompletionWeights.readEntry(mIdentifier, weight);
         if (mHasEnableSupport) {
-            KConfigGroup groupEnabled(editor->configFile(), "CompletionEnabled");
+            KConfigGroup groupEnabled(editor->configFile(), QLatin1String("CompletionEnabled"));
             mEnabled = groupEnabled.readEntry(mIdentifier, true);
         }
     }
@@ -153,10 +153,10 @@ public:
 
     void save(CompletionOrderWidget *editor) override
     {
-        KConfigGroup group(editor->configFile(), "CompletionWeights");
+        KConfigGroup group(editor->configFile(), QLatin1String("CompletionWeights"));
         group.writeEntry(mIdentifier, mWeight);
         if (mHasEnableSupport) {
-            KConfigGroup groupEnabled(editor->configFile(), "CompletionEnabled");
+            KConfigGroup groupEnabled(editor->configFile(), QLatin1String("CompletionEnabled"));
             groupEnabled.writeEntry(mIdentifier, isEnabled());
         }
     }
@@ -286,8 +286,8 @@ void CompletionOrderWidget::save()
     if (mDirty) {
         int w = 100;
         // Clean up order
-        KConfigGroup group(configFile(), "CompletionWeights");
-        group.deleteGroup();
+        KConfigGroup group(configFile(), QLatin1String("CompletionWeights"));
+        group.deleteGroup(QLatin1String());
 
         for (int itemIndex = 0; itemIndex < mListView->topLevelItemCount(); ++itemIndex) {
             auto item = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));

@@ -652,12 +652,12 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
     KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
 
-    KConfigGroup searchGroup(config, "LDAPSearch");
+    KConfigGroup searchGroup(config, QLatin1String("LDAPSearch"));
     mSearchType->setCurrentIndex(searchGroup.readEntry("SearchType", 0));
 
     // then read the config file and register all selected
     // server in the list
-    KConfigGroup group(config, "LDAP");
+    KConfigGroup group(config, QLatin1String("LDAP"));
     mNumHosts = group.readEntry("NumSelectedHosts", 0);
     if (!mNumHosts) {
         mIsConfigured = false;
@@ -695,10 +695,10 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
         mModel->clear();
     }
-    KConfigGroup groupHeader(config, "Headers");
+    KConfigGroup groupHeader(config, QLatin1String("Headers"));
     mResultView->horizontalHeader()->restoreState(groupHeader.readEntry("HeaderState", QByteArray()));
 
-    KConfigGroup groupSize(config, "Size");
+    KConfigGroup groupSize(config, QLatin1String("Size"));
     const QSize dialogSize = groupSize.readEntry("Size", QSize());
     if (dialogSize.isValid()) {
         q->resize(dialogSize);
@@ -710,14 +710,14 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 {
     KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
-    KConfigGroup group(config, "LDAPSearch");
+    KConfigGroup group(config, QLatin1String("LDAPSearch"));
     group.writeEntry("SearchType", mSearchType->currentIndex());
 
-    KConfigGroup groupHeader(config, "Headers");
+    KConfigGroup groupHeader(config, QLatin1String("Headers"));
     groupHeader.writeEntry("HeaderState", mResultView->horizontalHeader()->saveState());
     groupHeader.sync();
 
-    KConfigGroup size(config, "Size");
+    KConfigGroup size(config, QLatin1String("Size"));
     size.writeEntry("Size", q->size());
     size.sync();
 

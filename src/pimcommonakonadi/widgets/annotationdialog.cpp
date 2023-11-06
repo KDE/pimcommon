@@ -143,7 +143,7 @@ void AnnotationEditDialog::slotDeleteNote()
 
 void AnnotationEditDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAnnotationEditDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigAnnotationEditDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -151,7 +151,7 @@ void AnnotationEditDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(400, 300));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAnnotationEditDialog);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigAnnotationEditDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

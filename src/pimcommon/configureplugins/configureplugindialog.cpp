@@ -88,14 +88,14 @@ void ConfigurePluginDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigurePluginDialogGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigurePluginDialogGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void ConfigurePluginDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfigurePluginDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("ConfigurePluginDialog"));
     group.writeEntry("Size", size());
     group.sync();
 }

@@ -100,14 +100,14 @@ void ConfigurePluginsWidget::doResetToDefaultsOther()
 
 void ConfigurePluginsWidget::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfigurePluginsWidget");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("ConfigurePluginsWidget"));
     const QList<int> size = {400, 100};
     mSplitter->setSizes(group.readEntry("splitter", size));
 }
 
 void ConfigurePluginsWidget::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfigurePluginsWidget");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("ConfigurePluginsWidget"));
     group.writeEntry("splitter", mSplitter->sizes());
 }
 

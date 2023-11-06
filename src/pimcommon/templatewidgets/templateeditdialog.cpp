@@ -89,14 +89,14 @@ void TemplateEditDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), myTemplateEditDialogConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myTemplateEditDialogConfigGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void TemplateEditDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), myTemplateEditDialogConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myTemplateEditDialogConfigGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
