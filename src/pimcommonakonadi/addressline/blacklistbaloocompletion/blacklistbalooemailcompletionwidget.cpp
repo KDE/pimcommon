@@ -166,7 +166,7 @@ void BlackListBalooEmailCompletionWidget::slotCustomContextMenuRequested(const Q
 void BlackListBalooEmailCompletionWidget::load()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
-    KConfigGroup group(config, QLatin1String("AddressLineEdit"));
+    KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
 
     const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
     mEmailList->setExcludeEmailsRegularExpressions(lstExcludeEmailsRegularExpressions);
@@ -191,7 +191,7 @@ void BlackListBalooEmailCompletionWidget::save()
     needToSave |= (mOriginalExcludeDomain != newExcludeDomain);
 
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
-    KConfigGroup group(config, QLatin1String("AddressLineEdit"));
+    KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
     const QHash<QString, bool> result = mEmailList->blackListItemChanged();
     if (!result.isEmpty()) {
         needToSave = true;
@@ -220,7 +220,7 @@ void BlackListBalooEmailCompletionWidget::slotSaveChanges()
     // TODO avoid to save a lot.
     const QHash<QString, bool> result = mEmailList->blackListItemChanged();
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
-    KConfigGroup group(config, QLatin1String("AddressLineEdit"));
+    KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
     QStringList blackList = group.readEntry("BalooBackList", QStringList());
     PimCommon::BlackListBalooEmailUtil util;
     util.initialBlackList(blackList);
@@ -313,7 +313,7 @@ void BlackListBalooEmailCompletionWidget::slotLinkClicked(const QString &link)
 void BlackListBalooEmailCompletionWidget::slotShowAllBlacklistedEmail()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
-    KConfigGroup group(config, QLatin1String("AddressLineEdit"));
+    KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     slotEmailFound(balooBlackList);
 }

@@ -652,12 +652,12 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
     KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
 
-    KConfigGroup searchGroup(config, QLatin1String("LDAPSearch"));
+    KConfigGroup searchGroup(config, QStringLiteral("LDAPSearch"));
     mSearchType->setCurrentIndex(searchGroup.readEntry("SearchType", 0));
 
     // then read the config file and register all selected
     // server in the list
-    KConfigGroup group(config, QLatin1String("LDAP"));
+    KConfigGroup group(config, QStringLiteral("LDAP"));
     mNumHosts = group.readEntry("NumSelectedHosts", 0);
     if (!mNumHosts) {
         mIsConfigured = false;
@@ -695,10 +695,10 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
         mModel->clear();
     }
-    KConfigGroup groupHeader(config, QLatin1String("Headers"));
+    KConfigGroup groupHeader(config, QStringLiteral("Headers"));
     mResultView->horizontalHeader()->restoreState(groupHeader.readEntry("HeaderState", QByteArray()));
 
-    KConfigGroup groupSize(config, QLatin1String("Size"));
+    KConfigGroup groupSize(config, QStringLiteral("Size"));
     const QSize dialogSize = groupSize.readEntry("Size", QSize());
     if (dialogSize.isValid()) {
         q->resize(dialogSize);
@@ -710,14 +710,14 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 {
     KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
-    KConfigGroup group(config, QLatin1String("LDAPSearch"));
+    KConfigGroup group(config, QStringLiteral("LDAPSearch"));
     group.writeEntry("SearchType", mSearchType->currentIndex());
 
-    KConfigGroup groupHeader(config, QLatin1String("Headers"));
+    KConfigGroup groupHeader(config, QStringLiteral("Headers"));
     groupHeader.writeEntry("HeaderState", mResultView->horizontalHeader()->saveState());
     groupHeader.sync();
 
-    KConfigGroup size(config, QLatin1String("Size"));
+    KConfigGroup size(config, QStringLiteral("Size"));
     size.writeEntry("Size", q->size());
     size.sync();
 

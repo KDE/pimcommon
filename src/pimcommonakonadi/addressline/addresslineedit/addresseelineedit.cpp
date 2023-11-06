@@ -627,7 +627,7 @@ void AddresseeLineEdit::loadContacts()
         QString emailString;
 
         KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimcompletionorder"));
-        KConfigGroup group(config, QLatin1String("CompletionWeights"));
+        KConfigGroup group(config, QStringLiteral("CompletionWeights"));
         const int weight = group.readEntry("Recent Addresses", 10);
         removeCompletionSource(recentAddressGroupName);
         const int idx = addCompletionSource(recentAddressGroupName, weight);

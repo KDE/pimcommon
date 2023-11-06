@@ -54,7 +54,7 @@ void RecentAddresses::load(KConfig *config)
     QString emailString;
 
     m_addresseeList.clear();
-    KConfigGroup cg(config, QLatin1String("General"));
+    KConfigGroup cg(config, QStringLiteral("General"));
     m_maxCount = cg.readEntry("Maximum Recent Addresses", 200);
     const QStringList addresses = cg.readEntry("Recent Addresses", QStringList());
     for (const QString &address : addresses) {
@@ -74,7 +74,7 @@ void RecentAddresses::load(KConfig *config)
 
 void RecentAddresses::save(KConfig *config)
 {
-    KConfigGroup cg(config, QLatin1String("General"));
+    KConfigGroup cg(config, QStringLiteral("General"));
     cg.writeEntry("Recent Addresses", addresses());
 }
 

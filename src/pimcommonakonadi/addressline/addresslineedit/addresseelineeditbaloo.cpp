@@ -46,7 +46,7 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     config->reparseConfiguration();
-    KConfigGroup group(config, QLatin1String("AddressLineEdit"));
+    KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
     PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     const QStringList domainExcludeList = group.readEntry("ExcludeDomain", QStringList());

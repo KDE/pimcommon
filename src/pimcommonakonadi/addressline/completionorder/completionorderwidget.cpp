@@ -66,7 +66,7 @@ public:
     void save(CompletionOrderWidget *) override
     {
         KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
-        KConfigGroup group(config, QLatin1String("LDAP"));
+        KConfigGroup group(config, QStringLiteral("LDAP"));
         group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()), mWeight);
         group.sync();
     }
@@ -106,10 +106,10 @@ public:
         , mHasEnableSupport(enableSupport)
         , mEnabled(true)
     {
-        KConfigGroup groupCompletionWeights(editor->configFile(), QLatin1String("CompletionWeights"));
+        KConfigGroup groupCompletionWeights(editor->configFile(), QStringLiteral("CompletionWeights"));
         mWeight = groupCompletionWeights.readEntry(mIdentifier, weight);
         if (mHasEnableSupport) {
-            KConfigGroup groupEnabled(editor->configFile(), QLatin1String("CompletionEnabled"));
+            KConfigGroup groupEnabled(editor->configFile(), QStringLiteral("CompletionEnabled"));
             mEnabled = groupEnabled.readEntry(mIdentifier, true);
         }
     }
@@ -153,10 +153,10 @@ public:
 
     void save(CompletionOrderWidget *editor) override
     {
-        KConfigGroup group(editor->configFile(), QLatin1String("CompletionWeights"));
+        KConfigGroup group(editor->configFile(), QStringLiteral("CompletionWeights"));
         group.writeEntry(mIdentifier, mWeight);
         if (mHasEnableSupport) {
-            KConfigGroup groupEnabled(editor->configFile(), QLatin1String("CompletionEnabled"));
+            KConfigGroup groupEnabled(editor->configFile(), QStringLiteral("CompletionEnabled"));
             groupEnabled.writeEntry(mIdentifier, isEnabled());
         }
     }
@@ -286,7 +286,7 @@ void CompletionOrderWidget::save()
     if (mDirty) {
         int w = 100;
         // Clean up order
-        KConfigGroup group(configFile(), QLatin1String("CompletionWeights"));
+        KConfigGroup group(configFile(), QStringLiteral("CompletionWeights"));
         group.deleteGroup(QLatin1String());
 
         for (int itemIndex = 0; itemIndex < mListView->topLevelItemCount(); ++itemIndex) {

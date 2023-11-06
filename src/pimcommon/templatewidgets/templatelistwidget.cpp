@@ -217,7 +217,7 @@ public:
         for (const PimCommon::defaultTemplate &tmp : templatesLst) {
             createListWidgetItem(tmp.name, tmp.text, true);
         }
-        KConfigGroup group = config.data()->group(QLatin1String("template"));
+        KConfigGroup group = config.data()->group(QStringLiteral("template"));
         if (group.hasKey(QStringLiteral("templateCount"))) {
             loadTemplates(config.data());
         }
@@ -226,7 +226,7 @@ public:
 
     void loadTemplates(KConfig *configFile)
     {
-        KConfigGroup group = configFile->group(QLatin1String("template"));
+        KConfigGroup group = configFile->group(QStringLiteral("template"));
         if (group.hasKey(QStringLiteral("templateCount"))) {
             const int numberTemplate = group.readEntry("templateCount", 0);
             for (int i = 0; i < numberTemplate; ++i) {
@@ -258,7 +258,7 @@ public:
                 ++numberOfTemplate;
             }
         }
-        KConfigGroup group = configFile->group(QLatin1String("template"));
+        KConfigGroup group = configFile->group(QStringLiteral("template"));
         group.writeEntry("templateCount", numberOfTemplate);
         configFile->sync();
     }

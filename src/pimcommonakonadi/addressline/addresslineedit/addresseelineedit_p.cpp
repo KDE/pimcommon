@@ -716,8 +716,8 @@ void AddresseeLineEditPrivate::slotAkonadiSearchResult(KJob *job)
 void AddresseeLineEditPrivate::slotAkonadiCollectionsReceived(const Akonadi::Collection::List &collections)
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimcompletionorder"));
-    KConfigGroup groupCompletionWeights(config, QLatin1String("CompletionWeights"));
-    KConfigGroup groupCompletionEnabled(config, QLatin1String("CompletionEnabled"));
+    KConfigGroup groupCompletionWeights(config, QStringLiteral("CompletionWeights"));
+    KConfigGroup groupCompletionEnabled(config, QStringLiteral("CompletionEnabled"));
     for (const Akonadi::Collection &collection : collections) {
         if (collection.isValid()) {
             const QString sourceString = collection.displayName();

@@ -95,7 +95,7 @@ void ConfigurePluginDialog::readConfig()
 
 void ConfigurePluginDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("ConfigurePluginDialog"));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("ConfigurePluginDialog"));
     group.writeEntry("Size", size());
     group.sync();
 }
