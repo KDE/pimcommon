@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2023-03-30 12:03+0300\n"
+"PO-Revision-Date: 2023-10-12 18:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -104,8 +104,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Haluatko varmasti poistaa valitun mallipohjan?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Poista mallipohja"
@@ -186,8 +185,7 @@ msgstr ""
 "Virheen tarkka kuvaus on ”%2”."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Tiedoston tallennusvirhe"
@@ -202,8 +200,7 @@ msgstr ""
 "Virheen tarkka kuvaus on ”%2”."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Tiedoston latausvirhe"
@@ -349,8 +346,7 @@ msgstr "M&ukauta…"
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Poista"
@@ -444,11 +440,10 @@ msgid ""
 msgstr "Haluatko varmasti käyttää kansion oikeuksia näihin alikansioihin?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "Käytä oikeuksia"
+msgstr "Käytä käyttöoikeuksia"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
