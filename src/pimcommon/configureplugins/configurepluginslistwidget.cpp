@@ -8,6 +8,7 @@
 
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KTreeWidgetSearchLine>
 #include <KTreeWidgetSearchLineWidget>
 
 #include <QAction>
@@ -25,6 +26,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
+    mainLayout->setSpacing(0);
 
     mListWidget->setSortingEnabled(true);
     mListWidget->sortItems(0, Qt::AscendingOrder);
@@ -38,6 +40,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
 
     mTreeWidgetSearchLineEdit = new KTreeWidgetSearchLineWidget(this, mListWidget);
     mTreeWidgetSearchLineEdit->setObjectName(QStringLiteral("mTreeWidgetSearchLineEdit"));
+    mTreeWidgetSearchLineEdit->searchLine()->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::BottomEdge}));
 
     connect(mListWidget, &QTreeWidget::itemSelectionChanged, this, &ConfigurePluginsListWidget::slotItemSelectionChanged);
     connect(mListWidget, &QTreeWidget::itemChanged, this, &ConfigurePluginsListWidget::slotItemChanged);

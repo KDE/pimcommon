@@ -44,6 +44,7 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     mMessageWidget->setObjectName(QStringLiteral("mMessageWidget"));
     mMessageWidget->setCloseButtonVisible(false);
     mMessageWidget->setVisible(false);
+    mMessageWidget->setPosition(KMessageWidget::Header);
     layout->addWidget(mMessageWidget);
 
     mSplitter = new QSplitter(this);
