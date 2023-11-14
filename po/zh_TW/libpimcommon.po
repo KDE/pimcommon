@@ -3,26 +3,26 @@
 #
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2012, 2013, 2014, 2015.
 # pan93412 <pan93412@gmail.com>, 2019.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-25 01:41+0000\n"
-"PO-Revision-Date: 2019-05-14 22:35+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2023-11-14 02:19+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 24.01.75\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgid "..."
-msgstr "新增..."
+msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "設定"
 #: pimcommon/configureplugins/configurepluginswidget.cpp:43
 #, kde-format
 msgid "Restart is necessary for applying the changes."
-msgstr ""
+msgstr "需要重新啟動變更才會生效。"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, fuzzy, kde-format
@@ -44,54 +44,51 @@ msgstr "分享檔案..."
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
 #, kde-format
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
 #, kde-format
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
 #, kde-format
 msgid "Mail"
-msgstr ""
+msgstr "郵件"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
 #, kde-format
 msgid "LinkedIn"
-msgstr ""
+msgstr "LinkedIn"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
-#, fuzzy, kde-format
-#| msgid "Private note"
+#, kde-format
 msgid "Evernote"
-msgstr "私人便條"
+msgstr "Evernote"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
 #, kde-format
 msgid "Pocket"
-msgstr ""
+msgstr "Pocket"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
 #, kde-format
 msgid "LiveJournal"
-msgstr ""
+msgstr "LiveJournal"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Default template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "預設樣本"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "樣本"
@@ -107,23 +104,20 @@ msgid "Do you want to delete selected template?"
 msgstr "您要刪除選取的樣本嗎？"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "刪除樣本"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:143
-#, fuzzy, kde-format
-#| msgid "Insert template"
+#, kde-format
 msgid "Import Template"
-msgstr "插入樣本"
+msgstr "匯入樣本"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:152
-#, fuzzy, kde-format
-#| msgid "Load Template"
+#, kde-format
 msgid "Export Template"
-msgstr "載入樣本"
+msgstr "匯出樣本"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:166
 #, kde-format
@@ -191,8 +185,7 @@ msgstr ""
 "%2 中有錯誤描述。"
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "檔案儲存錯誤"
@@ -207,11 +200,10 @@ msgstr ""
 "\"%2\" 為詳細的錯誤描述。"
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
-msgstr "載入檔案時發生錯誤"
+msgstr "載入檔案錯誤"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -255,21 +247,20 @@ msgstr "清除歷史"
 #: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
 msgid "There was a problem sharing the document: %1"
-msgstr ""
+msgstr "分享文件時發生問題：%1"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:57
 #, kde-format
 msgid "File was shared."
-msgstr ""
+msgstr "已分享檔案。"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
-msgstr ""
+msgstr "<qt>您可以在此檢視新的請求：<br /><a href='%1'>%1</a> </qt>"
 
 #: pimcommon/widgets/renamefiledialog.cpp:100
-#, fuzzy, kde-format
-#| msgid "File Already Exists"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "檔案已存在"
@@ -324,10 +315,9 @@ msgid "New Value"
 msgstr "新的數值："
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:59
-#, fuzzy, kde-format
-#| msgid "Do you want to delete selected template?"
+#, kde-format
 msgid "Do you want to remove selected text?"
-msgstr "您要刪除選取的樣本嗎？"
+msgstr "您要移除選取的文字嗎？"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
@@ -347,14 +337,13 @@ msgstr "移除(&R)"
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
-msgstr ""
+msgstr "自訂(&C)…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "移除"
@@ -394,7 +383,7 @@ msgstr "<b>注意：</b>要重新命名，您必須有父資料夾的寫入權�
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr ""
+msgstr "資料夾無法被管理。"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:159
 #, kde-format
@@ -412,15 +401,13 @@ msgid "Remove Entry"
 msgstr "移除項目"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:212
-#, fuzzy, kde-format
-#| msgid "Add ACL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "新增存取控制清單"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:239
-#, fuzzy, kde-format
-#| msgid "Edit ACL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "編輯存取控制清單"
@@ -433,28 +420,21 @@ msgid ""
 msgstr "您確定要移除您對這個資料夾的權限嗎？此後您就無法再存取這個資料夾了。"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:287
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you really want to remove your own permissions for this folder? You "
-#| "will not be able to access it afterwards."
+#, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr "您確定要移除您對這個資料夾的權限嗎？此後您就無法再存取這個資料夾了。"
+msgstr "您確定要移除這個資料夾的這些權限嗎？"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:241
-#, fuzzy, kde-format
-#| msgid ""
-#| "Do you really want to remove your own permissions for this folder? You "
-#| "will not be able to access it afterwards."
+#, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
-msgstr "您確定要移除您對這個資料夾的權限嗎？此後您就無法再存取這個資料夾了。"
+msgstr "您確定要套用這個資料夾的權限到這些子資料夾上嗎？"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "權限"
+msgstr "套用權限"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
@@ -494,49 +474,48 @@ msgstr "權限控制"
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:71
 #, kde-format
 msgid "Apply permissions on all &subfolders."
-msgstr ""
+msgstr "套用權限到所有子資料夾(&S)。"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
-msgstr ""
+msgstr "vCard 匯入失敗"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
-msgstr ""
+msgstr "<qt>無法存取 <b>%1</b>。</qt>"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
 msgid "Select email from contact"
-msgstr ""
+msgstr "從聯絡人選取電子郵件"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
-msgstr ""
+msgstr "為 LDAP 結果顯示組織單位"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Completion..."
-msgstr "設定"
+msgstr "設定補完…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Automatically expand groups"
-msgstr ""
+msgstr "自動展開群組"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
-msgstr ""
+msgstr "展開群組…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
-msgstr ""
+msgstr "最近的地址"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
@@ -544,192 +523,179 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
-msgstr ""
+msgstr "在您的資料中找到的聯絡人"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
 #, kde-format
 msgid "LDAP server: %1"
-msgstr ""
+msgstr "LDAP 伺服器：%1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search"
-msgstr "搜尋..."
+msgstr "搜尋"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "select an email address"
-#| msgid "Se&lect..."
+#, kde-format
 msgid "&Select"
-msgstr "選擇(&L)..."
+msgstr "選取(&S)"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
 #, kde-format
 msgid "&Unselect"
-msgstr ""
+msgstr "取消選取(&U)"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "Show Blacklisted Emails"
-msgstr ""
+msgstr "顯示已加入黑名單的電子郵件"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"more_result\">更多結果...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search email:"
-msgstr "搜尋..."
+msgstr "搜尋電子郵件："
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
 #, kde-format
 msgid "Research is done from 3 characters"
-msgstr ""
+msgstr "已從三個字元完成重新搜尋"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search in result..."
-msgstr "搜尋..."
+msgstr "在結果中搜尋…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
 #, kde-format
 msgid "Exclude domain names:"
-msgstr ""
+msgstr "排除網域名稱："
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
 #, kde-format
 msgid "Separate domain with '%1'"
-msgstr ""
+msgstr "用 '%1' 分隔網域"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "用正則表達式排除電子郵件："
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
 #, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr ""
+msgstr "用 '%1' 分隔正則表達式"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgctxt "select an email address"
-#| msgid "Se&lect..."
+#, kde-format
 msgid "Select"
-msgstr "選擇(&L)..."
+msgstr "選取"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgctxt "select an email address"
-#| msgid "Se&lect..."
+#, kde-format
 msgid "Unselect"
-msgstr "選擇(&L)..."
+msgstr "取消選取"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
 msgid "No email found."
-msgstr ""
+msgstr "找不到電子郵件。"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
-msgstr[0] ""
+msgstr[0] "找到 %1 個電子郵件"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
 msgid "No result found"
-msgstr ""
+msgstr "找不到結果"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
-msgstr ""
+msgstr "列表已變更。您要在進行另一個搜尋之前先儲存嗎？"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save config"
+#, kde-format
 msgid "Save"
-msgstr "儲存設定"
+msgstr "儲存"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr "設定"
+msgstr "設定補完"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
 #, kde-format
 msgid "Completion Order"
-msgstr ""
+msgstr "補完順序"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
 #, kde-format
 msgid "Recent Address"
-msgstr ""
+msgstr "最近的位址"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
 #, kde-format
 msgid "Blacklist Email Address"
-msgstr ""
+msgstr "將電子郵件地址加入黑名單"
 
 #: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
-msgstr ""
+msgstr "編輯補完順序"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
 #, kde-format
 msgid "LDAP server %1"
-msgstr ""
+msgstr "LDAP 伺服器 %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
 #, kde-format
 msgid "Move Up"
-msgstr ""
+msgstr "上移"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
 #, kde-format
 msgid "Move Down"
-msgstr ""
+msgstr "下移"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "新增電子郵件…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
 #, kde-format
 msgid "Add Email"
-msgstr ""
+msgstr "新增電子郵件"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "移除項目"
+msgstr[0] "移除電子郵件"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Do you want to delete selected template?"
+#, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
-msgstr[0] "您要刪除選取的樣本嗎？"
+msgstr[0] "您要移除這 %1 個電子郵件位址嗎？"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
@@ -737,7 +703,7 @@ msgstr[0] "您要刪除選取的樣本嗎？"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
-msgstr ""
+msgstr "郵件"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
@@ -745,7 +711,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
-msgstr ""
+msgstr "行事曆"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
@@ -753,16 +719,15 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
-msgstr ""
+msgstr "聯絡人"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
-#, fuzzy, kde-format
-#| msgid "Add Note"
+#, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
-msgstr "新增備忘"
+msgstr "備忘"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
@@ -770,7 +735,7 @@ msgstr "新增備忘"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
-msgstr ""
+msgstr "工作"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
@@ -778,13 +743,12 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
-msgstr ""
+msgstr "日誌"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
 msgstr "設定"
@@ -800,8 +764,7 @@ msgstr ""
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "type of folder content"
 msgid "Files"
 msgstr "檔案"
@@ -810,27 +773,27 @@ msgstr "檔案"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
-msgstr ""
+msgstr "未知"
 
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
 #, kde-format
 msgid "&Folder contents:"
-msgstr ""
+msgstr "資料夾內容(&F)："
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
 #, kde-format
 msgid "Nobody"
-msgstr ""
+msgstr "沒有人"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
 #, kde-format
 msgid "Admins of This Folder"
-msgstr ""
+msgstr "這個資料夾的管理者"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "All Readers of This Folder"
-msgstr ""
+msgstr "這個資料夾的所有讀者"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
 #, kde-format
@@ -860,53 +823,52 @@ msgid "Search..."
 msgstr "搜尋..."
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
-#, fuzzy, kde-format
-#| msgid "Select Multiple Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr "選擇多個資料夾"
+msgstr "選取多個資料夾"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
-msgstr ""
+msgstr "職稱"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
 #, kde-format
 msgid "Full Name"
-msgstr ""
+msgstr "全名"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr ""
+msgstr "電子郵件"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
 #, kde-format
 msgid "Home Number"
-msgstr ""
+msgstr "家庭電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
 #, kde-format
 msgid "Work Number"
-msgstr ""
+msgstr "工作電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
 #, kde-format
 msgid "Mobile Number"
-msgstr ""
+msgstr "行動電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Fax Number"
-msgstr ""
+msgstr "傳真號碼"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
@@ -917,102 +879,101 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Street"
-msgstr ""
+msgstr "街道"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
-msgstr ""
+msgstr "州/省/縣"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgid "Country"
-msgstr ""
+msgstr "國家"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "City"
-msgstr ""
+msgstr "城市"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Organization"
-msgstr ""
+msgstr "組織"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
 #, kde-format
 msgid "Company"
-msgstr ""
+msgstr "公司"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
 #, kde-format
 msgid "Department"
-msgstr ""
+msgstr "部門"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
-msgstr ""
+msgstr "郵遞區號"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
-msgstr ""
+msgstr "郵寄地址"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "User ID"
-msgstr ""
+msgstr "使用者 ID"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr ""
+msgstr "電子郵件"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
-msgstr ""
+msgstr "州/省/縣"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
-msgstr ""
+msgstr "職稱"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
-msgstr ""
+msgstr "從 LDAP 匯入聯絡人"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
 msgid "Search for Addresses in Directory"
-msgstr ""
+msgstr "在目錄中搜尋位址"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search for:"
-msgstr "搜尋..."
+msgstr "搜尋："
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
 #, fuzzy, kde-format
@@ -1022,104 +983,101 @@ msgid "in"
 msgstr "尋找"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
-msgstr "名稱："
+msgstr "名稱"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr ""
+msgstr "電子郵件"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
-msgstr ""
+msgstr "家庭電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
-msgstr ""
+msgstr "工作電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
-msgstr "搜尋..."
+msgstr "搜尋(&S)"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
 msgid "Recursive search"
-msgstr ""
+msgstr "遞迴搜尋"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
 #, kde-format
 msgid "Contains"
-msgstr ""
+msgstr "包含"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
 #, kde-format
 msgid "Starts With"
-msgstr ""
+msgstr "開頭為"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
 #, kde-format
 msgid "Search in result"
-msgstr ""
+msgstr "在結果中搜尋"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Searching..."
-msgstr "搜尋..."
+msgstr "搜尋中…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
 msgid "Select All"
-msgstr ""
+msgstr "全部選取"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, kde-format
 msgid "Unselect All"
-msgstr ""
+msgstr "全部取消選取"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
 msgid "Add Selected"
-msgstr ""
+msgstr "加入已選取的"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr ""
+msgstr "設定 LDAP 伺服器…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "複製"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
 msgid "You must select an LDAP server before searching."
-msgstr ""
+msgstr "您必須先選取一個 LDAP 伺服器才能進行搜尋。"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
-msgstr ""
+msgstr "從 LDAP 目錄 %1 於 %2 匯入"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
-msgstr ""
+msgstr "調整這個通訊錄的 LDAP 設定"
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
 #, kde-format
@@ -1127,13 +1085,14 @@ msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
 "account before setting up server-side subscription."
 msgstr ""
+"IMAP 伺服器尚未設定。請在 IMAP 帳號裡設定伺服器後再設定伺服器端的訂閱。"
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
 #, kde-format
 msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
 "side subscription."
-msgstr ""
+msgstr "登入失敗，請在設定伺服器端的訂閱前先設定好 IMAP 帳號。"
 
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
@@ -1171,10 +1130,9 @@ msgid "Could not set setting '%1': %2"
 msgstr "無法設定 %1：%2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "無法設定 %1：%2"
+msgstr "無法儲存設定：%1"
 
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
@@ -1233,9 +1191,7 @@ msgid "Do you really want to delete this note?"
 msgstr "您確定要刪除此備忘嗎？"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete Note"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
 msgstr "刪除備忘"
