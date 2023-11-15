@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:41+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2016-11-04 11:09+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -22,13 +22,13 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:148
 #, fuzzy, kde-format
 #| msgid "Add..."
 msgid "..."
 msgstr "Pridėti..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, kde-format
 msgid "Configure"
 msgstr "Konfigūruoti"

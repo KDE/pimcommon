@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-25 01:41+0000\n"
+"POT-Creation-Date: 2023-11-15 01:39+0000\n"
 "PO-Revision-Date: 2013-04-06 12:39+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:148
 #, fuzzy, kde-format
 #| msgid "Add..."
 msgid "..."
 msgstr "जोडा..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, kde-format
 msgid "Configure"
 msgstr ""
