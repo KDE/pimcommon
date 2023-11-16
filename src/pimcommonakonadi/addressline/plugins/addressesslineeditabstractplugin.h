@@ -45,6 +45,5 @@ Q_SIGNALS:
 
 private:
     PimCommon::AddresseeLineEdit *mLinedit = nullptr;
-    bool mEnabled = true;
 };
 }
