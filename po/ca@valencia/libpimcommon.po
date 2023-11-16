@@ -831,7 +831,7 @@ msgstr ""
 "grup, tots els lectors de les carpetes s'han de marcar com a ocupats per a "
 "les reunions.\n"
 "Una carpeta de tota la companyia amb esdeveniments opcionals utilitza "
-"«Ningú», ja que no se sap qui anirà a estos esdeveniments."
+"«Ningú», ja que no se sap qui anirà fins a estos esdeveniments."
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
 #, kde-format
