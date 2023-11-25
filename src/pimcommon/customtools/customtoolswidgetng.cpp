@@ -30,7 +30,7 @@ CustomToolsWidgetNg::CustomToolsWidgetNg(QWidget *parent)
 {
     auto lay = new QHBoxLayout(this);
     d->mStackedWidget = new QStackedWidget;
-    d->mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    d->mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
     lay->addWidget(d->mStackedWidget);
     hide();
 }

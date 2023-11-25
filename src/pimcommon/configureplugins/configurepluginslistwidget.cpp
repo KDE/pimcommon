@@ -24,13 +24,13 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     , mListWidget(new QTreeWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QLatin1StringView("mainlayout"));
     mainLayout->setContentsMargins({});
     mainLayout->setSpacing(0);
 
     mListWidget->setSortingEnabled(true);
     mListWidget->sortItems(0, Qt::AscendingOrder);
-    mListWidget->setObjectName(QStringLiteral("listwidget"));
+    mListWidget->setObjectName(QLatin1StringView("listwidget"));
     mListWidget->setHeaderHidden(true);
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     mListWidget->setColumnCount(2);
@@ -39,7 +39,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mListWidget->header()->setStretchLastSection(false);
 
     mTreeWidgetSearchLineEdit = new KTreeWidgetSearchLineWidget(this, mListWidget);
-    mTreeWidgetSearchLineEdit->setObjectName(QStringLiteral("mTreeWidgetSearchLineEdit"));
+    mTreeWidgetSearchLineEdit->setObjectName(QLatin1StringView("mTreeWidgetSearchLineEdit"));
     mTreeWidgetSearchLineEdit->searchLine()->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::BottomEdge}));
 
     connect(mListWidget, &QTreeWidget::itemSelectionChanged, this, &ConfigurePluginsListWidget::slotItemSelectionChanged);

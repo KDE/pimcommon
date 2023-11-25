@@ -42,7 +42,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
 
     // Create a new change recorder.
     auto monitor = new Akonadi::Monitor(this);
-    monitor->setObjectName(QStringLiteral("CheckedCollectionWidgetMonitor"));
+    monitor->setObjectName(QLatin1StringView("CheckedCollectionWidgetMonitor"));
     monitor->fetchCollection(true);
     monitor->setAllMonitored(true);
     monitor->setMimeTypeMonitored(mimetype);

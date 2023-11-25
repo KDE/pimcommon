@@ -446,7 +446,7 @@ void AddresseeLineEdit::insertEmails(const QStringList &emails)
     // multiple emails, let the user choose one
     QMenu menu(this);
     menu.setTitle(i18n("Select email from contact"));
-    menu.setObjectName(QStringLiteral("Addresschooser"));
+    menu.setObjectName(QLatin1StringView("Addresschooser"));
     for (const QString &email : emails) {
         menu.addAction(email);
     }

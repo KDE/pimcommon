@@ -44,7 +44,7 @@ CompletionOrderEditor::CompletionOrderEditor(KLDAPWidgets::LdapClientSearch *lda
     auto mainLayout = new QVBoxLayout(this);
 
     d->mCompletionOrderWidget = new CompletionOrderWidget(this);
-    d->mCompletionOrderWidget->setObjectName(QStringLiteral("completionorderwidget"));
+    d->mCompletionOrderWidget->setObjectName(QLatin1StringView("completionorderwidget"));
 
     mainLayout->addWidget(d->mCompletionOrderWidget);
 

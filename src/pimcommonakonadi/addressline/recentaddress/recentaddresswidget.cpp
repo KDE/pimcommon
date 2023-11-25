@@ -37,7 +37,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     auto lineLayout = new QHBoxLayout;
     layout->addLayout(lineLayout);
 
-    mLineEdit->setObjectName(QStringLiteral("line_edit"));
+    mLineEdit->setObjectName(QLatin1StringView("line_edit"));
     KLineEditEventHandler::catchReturnKey(mLineEdit);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
@@ -48,7 +48,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     lineLayout->addWidget(mLineEdit);
 
     mNewButton->setToolTip(i18n("Add Email"));
-    mNewButton->setObjectName(QStringLiteral("new_button"));
+    mNewButton->setObjectName(QLatin1StringView("new_button"));
     mNewButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mNewButton->setEnabled(false);
     connect(mNewButton, &QPushButton::clicked, this, &RecentAddressWidget::slotAddItem);
@@ -57,7 +57,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setToolTip(i18n("Remove"));
-    mRemoveButton->setObjectName(QStringLiteral("remove_button"));
+    mRemoveButton->setObjectName(QLatin1StringView("remove_button"));
     mRemoveButton->setEnabled(false);
     lineLayout->addWidget(mRemoveButton);
     connect(mRemoveButton, &QPushButton::clicked, this, &RecentAddressWidget::slotRemoveItem);
@@ -66,7 +66,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     shortcut->setKey(QKeySequence(Qt::Key_Delete));
     connect(shortcut, &QShortcut::activated, this, &RecentAddressWidget::slotRemoveItem);
 
-    mListView->setObjectName(QStringLiteral("list_view"));
+    mListView->setObjectName(QLatin1StringView("list_view"));
     mListView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListView->setSortingEnabled(true);
     mListView->setContextMenuPolicy(Qt::CustomContextMenu);

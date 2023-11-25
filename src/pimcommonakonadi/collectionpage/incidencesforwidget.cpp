@@ -16,7 +16,7 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     addItem(i18n("Admins of This Folder"));
     addItem(i18n("All Readers of This Folder"));
 
-    setObjectName(QStringLiteral("contentstypecombobox"));
+    setObjectName(QLatin1StringView("contentstypecombobox"));
     const QString whatsThisForMyOwnFolders = i18n(
         "This setting defines which users sharing "
         "this folder should get \"busy\" periods in their freebusy lists "

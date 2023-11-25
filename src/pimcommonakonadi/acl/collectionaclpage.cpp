@@ -27,7 +27,7 @@ CollectionAclPage::CollectionAclPage(QWidget *parent)
     : CollectionPropertiesPage(parent)
     , d(new PimCommon::CollectionAclPagePrivate)
 {
-    setObjectName(QStringLiteral("PimCommon::CollectionAclPage"));
+    setObjectName(QLatin1StringView("PimCommon::CollectionAclPage"));
 
     setPageTitle(i18n("Access Control"));
     init();

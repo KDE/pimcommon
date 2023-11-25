@@ -18,7 +18,7 @@ PurposeMenuWidget::PurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     , mParentWidget(parentWidget)
 {
     mShareMenu = new Purpose::Menu(mParentWidget);
-    mShareMenu->setObjectName(QStringLiteral("purposesharemenu"));
+    mShareMenu->setObjectName(QLatin1StringView("purposesharemenu"));
     connect(mShareMenu, &Purpose::Menu::aboutToShow, this, &PurposeMenuWidget::slotInitializeShareMenu);
     connect(mShareMenu, &Purpose::Menu::finished, this, &PurposeMenuWidget::slotShareActionFinished);
 }

@@ -75,7 +75,7 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     layout->addLayout(listViewLayout);
 
     auto view = new AclListView;
-    view->setObjectName(QStringLiteral("list_view"));
+    view->setObjectName(QLatin1StringView("list_view"));
     listViewLayout->addWidget(view);
     listViewLayout->addWidget(mRecursiveChk);
     connect(mRecursiveChk, &QCheckBox::clicked, this, &CollectionAclWidget::slotRecursivePermissionChanged);
@@ -91,18 +91,18 @@ CollectionAclWidget::CollectionAclWidget(QWidget *parent)
 
     auto button = new ActionButton(buttonBox);
     buttonBoxVBoxLayout->addWidget(button);
-    button->setObjectName(QStringLiteral("add"));
+    button->setObjectName(QLatin1StringView("add"));
     button->setDefaultAction(mAclManager->addAction());
 
     button = new ActionButton(buttonBox);
     buttonBoxVBoxLayout->addWidget(button);
-    button->setObjectName(QStringLiteral("edit"));
+    button->setObjectName(QLatin1StringView("edit"));
     button->setDefaultAction(mAclManager->editAction());
 
     button = new ActionButton(buttonBox);
     buttonBoxVBoxLayout->addWidget(button);
     button->setDefaultAction(mAclManager->deleteAction());
-    button->setObjectName(QStringLiteral("delete"));
+    button->setObjectName(QLatin1StringView("delete"));
 
     auto spacer = new QWidget(buttonBox);
     buttonBoxVBoxLayout->addWidget(spacer);

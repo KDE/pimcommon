@@ -14,7 +14,7 @@ using namespace PimCommon;
 ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     : QComboBox(parent)
 {
-    setObjectName(QStringLiteral("contentcombobox"));
+    setObjectName(QLatin1StringView("contentcombobox"));
     PimCommon::CollectionTypeUtil collectionUtil;
     addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeMail));
     addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeCalendar));
