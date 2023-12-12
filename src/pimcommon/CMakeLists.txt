@@ -204,6 +204,7 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
 
 ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
     HEADER_NAMES
+    NeedUpdateVersionUtils
     NeedUpdateVersionWidget
     REQUIRED_HEADERS PimCommon_needupdateversionwidgets_HEADERS
     PREFIX PimCommon
