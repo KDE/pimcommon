@@ -20,5 +20,6 @@ public:
     ~NeedUpdateVersionMainWidget() override;
 
 private:
+    void checkVersion();
     PimCommon::NeedUpdateVersionWidget *const mNeedUpdateVersionWidget;
 };
