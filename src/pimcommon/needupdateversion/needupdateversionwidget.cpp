@@ -32,12 +32,12 @@ void NeedUpdateVersionWidget::setObsoleteVersion(NeedUpdateVersionUtils::Obsolet
             break;
         case NeedUpdateVersionUtils::ObsoleteVersion::OlderThan6Months:
             setMessageType(KMessageWidget::Information);
-            setText(i18n("Your version is older than 6 months, we encourage you to upgrade"));
+            setText(i18n("Your version is older than 6 months, we encourage you to upgrade."));
             animatedShow();
             break;
         case NeedUpdateVersionUtils::ObsoleteVersion::OlderThan12Months:
             setMessageType(KMessageWidget::Warning);
-            setText(i18n("Your version is older than 1 year, we strongly encourage you to upgrade"));
+            setText(i18n("Your version is older than 1 year, we strongly encourage you to upgrade."));
             animatedShow();
             break;
         case NeedUpdateVersionUtils::ObsoleteVersion::NotObsoleteYet:
