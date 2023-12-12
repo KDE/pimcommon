@@ -97,6 +97,10 @@ target_sources(KPim6PimCommon PRIVATE
 
     widgets/purposemenumessagewidget.h
     widgets/purposemenumessagewidget.cpp
+
+
+    needupdateversion/needupdateversionwidget.h
+    needupdateversion/needupdateversionwidget.cpp
     )
 target_sources(KPim6PimCommon PRIVATE
     widgets/purposemenuwidget.h
@@ -193,6 +197,14 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     RELATIVE autocorrection/widgets/
     )
 
+ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
+    HEADER_NAMES
+    NeedUpdateVersionWidget
+    REQUIRED_HEADERS PimCommon_needupdateversionwidgets_HEADERS
+    PREFIX PimCommon
+    RELATIVE needupdateversion
+    )
+
 
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     HEADER_NAMES
@@ -273,6 +285,7 @@ install(FILES
     ${PimCommon_CamelCasegenericplugins_HEADERS}
     ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
+    ${PimCommon_Camelcaseneedupdateversionwidgets_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
@@ -297,6 +310,7 @@ install(FILES
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_networkmanager_HEADERS}
+    ${PimCommon_needupdateversionwidgets_HEADERS}
     ${PimCommon_customtools_HEADERS}
     ${PimCommon_job_HEADERS}
     ${PimCommon_managerserversidesubscription_HEADERS}
@@ -327,6 +341,7 @@ if (BUILD_QCH)
         ${PimCommon_genericplugins_HEADERS}
         ${PimCommon_configureplugins_HEADERS}
         ${PimCommon_networkmanager_HEADERS}
+        ${PimCommon_needupdateversionwidgets_HEADERS}
         ${PimCommon_customtools_HEADERS}
         ${PimCommon_job_HEADERS}
         ${PimCommon_managerserversidesubscription_HEADERS}
@@ -374,9 +389,6 @@ configure_package_config_file(
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
-
-
-
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
