@@ -17,6 +17,7 @@ NeedUpdateVersionMainWidget::NeedUpdateVersionMainWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
+    mainLayout->setSpacing(0);
 
     mainLayout->addWidget(mNeedUpdateVersionWidget);
 
