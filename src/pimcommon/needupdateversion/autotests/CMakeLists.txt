@@ -10,3 +10,4 @@ macro(add_pimcommon_needupdateversion_unittest _source)
 endmacro()
 
 add_pimcommon_needupdateversion_unittest(needupdateversionwidgettest.cpp)
+add_pimcommon_needupdateversion_unittest(needupdateversionutilstest.cpp)

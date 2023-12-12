@@ -7,6 +7,7 @@
 #pragma once
 #include "pimcommon_export.h"
 #include <KMessageWidget>
+#include <PimCommon/NeedUpdateVersionUtils>
 namespace PimCommon
 {
 /**
@@ -17,15 +18,10 @@ class PIMCOMMON_EXPORT NeedUpdateVersionWidget : public KMessageWidget
 {
     Q_OBJECT
 public:
-    enum class ObsoleteVersion {
-        Unknown,
-        OlderThan6Months,
-        OlderThan12Months,
-    };
     explicit NeedUpdateVersionWidget(QWidget *parent = nullptr);
     ~NeedUpdateVersionWidget() override;
 
-    void setObsoleteVersion(NeedUpdateVersionWidget::ObsoleteVersion obsolete);
+    void setObsoleteVersion(NeedUpdateVersionUtils::ObsoleteVersion obsolete);
 
 private:
     PIMCOMMON_NO_EXPORT void slotDisableVersionCheck();

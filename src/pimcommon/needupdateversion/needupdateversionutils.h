@@ -5,9 +5,22 @@
 */
 
 #pragma once
-
-class NeedUpdateVersionUtils
+#include "pimcommon_export.h"
+#include <QDate>
+#include <QString>
+namespace PimCommon
 {
-public:
-    NeedUpdateVersionUtils();
+namespace NeedUpdateVersionUtils
+{
+enum class PIMCOMMON_EXPORT ObsoleteVersion {
+    Unknown,
+    NotObsoleteYet,
+    OlderThan6Months,
+    OlderThan12Months,
 };
+
+PIMCOMMON_EXPORT void disableCheckVersion();
+PIMCOMMON_EXPORT bool checkVersion();
+[[nodiscard]] PIMCOMMON_EXPORT NeedUpdateVersionUtils::ObsoleteVersion obsoleteVersionStatus(const QString &str, const QDate &currentDate);
+};
+}
