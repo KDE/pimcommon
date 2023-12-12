@@ -26,5 +26,8 @@ public:
     ~NeedUpdateVersionWidget() override;
 
     void setObsoleteVersion(NeedUpdateVersionWidget::ObsoleteVersion obsolete);
+
+private:
+    PIMCOMMON_NO_EXPORT void slotDisableVersionCheck();
 };
 }

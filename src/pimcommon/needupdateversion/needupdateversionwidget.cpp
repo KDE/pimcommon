@@ -12,7 +12,11 @@ using namespace PimCommon;
 NeedUpdateVersionWidget::NeedUpdateVersionWidget(QWidget *parent)
     : KMessageWidget(parent)
 {
+    setVisible(false);
     setCloseButtonVisible(true);
+    auto action = new QAction(i18n("Disable version check"), this);
+    addAction(action);
+    connect(action, &QAction::triggered, this, &NeedUpdateVersionWidget::slotDisableVersionCheck);
 }
 
 NeedUpdateVersionWidget::~NeedUpdateVersionWidget() = default;
@@ -34,6 +38,11 @@ void NeedUpdateVersionWidget::setObsoleteVersion(ObsoleteVersion obsolete)
         animatedShow();
         break;
     }
+}
+
+void NeedUpdateVersionWidget::slotDisableVersionCheck()
+{
+    // TODO
 }
 
 #include "moc_needupdateversionwidget.cpp"
