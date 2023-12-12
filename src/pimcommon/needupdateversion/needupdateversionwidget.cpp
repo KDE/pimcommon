@@ -12,6 +12,7 @@ using namespace PimCommon;
 NeedUpdateVersionWidget::NeedUpdateVersionWidget(QWidget *parent)
     : KMessageWidget(parent)
 {
+    setCloseButtonVisible(true);
 }
 
 NeedUpdateVersionWidget::~NeedUpdateVersionWidget() = default;
