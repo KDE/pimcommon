@@ -175,6 +175,8 @@ if (BUILD_TESTING)
     add_subdirectory(genericplugins/autotests)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(autocorrection/tests)
+    add_subdirectory(needupdateversion/tests)
+    add_subdirectory(needupdateversion/autotests)
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
