@@ -9,6 +9,8 @@
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
+#include "needupdateversionmainwidget.h"
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -17,6 +19,9 @@ int main(int argc, char *argv[])
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
+
+    auto needUpdateWidget = new NeedUpdateVersionMainWidget;
+    needUpdateWidget->show();
 
     return app.exec();
 }
