@@ -19,6 +19,7 @@ void NeedUpdateVersionWidgetTest::shouldHaveDefaultValues()
 {
     PimCommon::NeedUpdateVersionWidget w;
     QVERIFY(w.isCloseButtonVisible());
+    QCOMPARE(w.position(), KMessageWidget::Header);
 }
 
 #include "moc_needupdateversionwidgettest.cpp"
