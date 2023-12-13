@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
 "PO-Revision-Date: 2023-10-24 20:30+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -40,6 +40,22 @@ msgstr "Configurer"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Un redémarrage est nécessaire pour appliquer les changements."
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
+#, kde-format
+msgid "Disable version check"
+msgstr ""
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
+#, kde-format
+msgid "Your version is older than 6 months, we encourage you to upgrade."
+msgstr ""
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
+#, kde-format
+msgid ""
+"Your version is older than 1 year, we strongly encourage you to upgrade."
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format

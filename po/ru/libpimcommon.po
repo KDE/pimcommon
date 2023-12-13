@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
 "PO-Revision-Date: 2022-10-11 12:49+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -38,6 +38,22 @@ msgstr "Настройка"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Для применения изменений требуется перезапуск приложения"
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
+#, kde-format
+msgid "Disable version check"
+msgstr ""
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
+#, kde-format
+msgid "Your version is older than 6 months, we encourage you to upgrade."
+msgstr ""
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
+#, kde-format
+msgid ""
+"Your version is older than 1 year, we strongly encourage you to upgrade."
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format

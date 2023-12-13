@@ -3,13 +3,13 @@
 #
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2012, 2013, 2014, 2015.
 # pan93412 <pan93412@gmail.com>, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 01:39+0000\n"
-"PO-Revision-Date: 2023-12-09 18:50+0900\n"
+"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"PO-Revision-Date: 2023-12-13 02:59+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:148
 #, kde-format
@@ -33,6 +33,22 @@ msgstr "設定"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "需要重新啟動變更才會生效。"
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
+#, kde-format
+msgid "Disable version check"
+msgstr ""
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
+#, kde-format
+msgid "Your version is older than 6 months, we encourage you to upgrade."
+msgstr ""
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
+#, kde-format
+msgid ""
+"Your version is older than 1 year, we strongly encourage you to upgrade."
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -758,7 +774,7 @@ msgstr "設定"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
-msgstr ""
+msgstr "行程資訊"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
@@ -810,11 +826,21 @@ msgid ""
 "A company-wide folder with optional events in it would use \"Nobody\" since "
 "it is not known who will go to those events."
 msgstr ""
+"這個設定定義了共享這個資料夾的哪些使用者應該在他們的行程資訊表中得到「忙碌」"
+"的時段且應看到這個資料夾裡的事件或工作的鬧鐘。這個設定只適用於行事曆和工作資"
+"料夾（工作資料夾中這個設定只會套用於鬧鐘）。\n"
+"\n"
+"使用例：如果老闆跟秘書分享資料夾，老闆的會議只有他應被標為忙碌，所以他應該選"
+"取「管理者」，因為秘書沒有資料夾的管理者權限。\n"
+"另一方面，如果有個工作群組為群組會議做了一個共享行事曆，所有該行事曆的讀者都"
+"應為會議標為忙碌。\n"
+"一個全公司包含不一定要參加的事件的資料夾應該使用「沒有人」，因為這些事件並不"
+"知道有誰參加。"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
-msgstr ""
+msgstr "為誰產生行程資訊並啟用鬧鐘(&B)："
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
 #, kde-format
