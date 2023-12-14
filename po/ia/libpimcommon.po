@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-13 01:35+0000\n"
-"PO-Revision-Date: 2023-09-25 10:18+0200\n"
+"PO-Revision-Date: 2023-12-13 08:48+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -35,18 +35,20 @@ msgstr "Reinitiar si necessari per applicar le modificationes."
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
 msgid "Disable version check"
-msgstr ""
+msgstr "Dishabilita verifica de version"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
+msgstr "Tu version es plus vetere de 6 menses, nos te incoragia a actualisar."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Tu version es plus vetere de 1 anno, nos fortemente  te incoragia a "
+"actualisar."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
