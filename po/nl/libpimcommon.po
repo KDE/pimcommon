@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-13 01:35+0000\n"
-"PO-Revision-Date: 2023-09-25 09:21+0200\n"
+"PO-Revision-Date: 2023-12-13 23:49+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:148
 #, kde-format
@@ -35,18 +35,20 @@ msgstr "Opnieuw opstarten is nodig om de wijzigingen toe te passen."
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
 msgid "Disable version check"
-msgstr ""
+msgstr "Controleren op versie uitschakelen"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
 msgstr ""
+"Uw versie is ouder dan 6 maanden, we moedigen u aan om op te waarderen."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Uw versie is ouder dan 1 jaar, we moedigen u sterk aan om op te waarderen."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format

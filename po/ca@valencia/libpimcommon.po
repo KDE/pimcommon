@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-13 01:35+0000\n"
-"PO-Revision-Date: 2023-09-25 09:37+0200\n"
+"PO-Revision-Date: 2023-12-13 10:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -39,18 +39,21 @@ msgstr "Cal reiniciar per a aplicar els canvis."
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
 msgid "Disable version check"
-msgstr ""
+msgstr "Desactiva la comprovació de la versió"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
 msgstr ""
+"Esta versió té més de 6 mesos d'antiguitat, us animem que l'actualitzeu."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Esta versió té més d'un any d'antiguitat, us animem completament que "
+"l'actualitzeu."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
