@@ -6,6 +6,7 @@
 
 #include "configurepluginslistwidget.h"
 
+#include <KLineEditEventHandler>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KTreeWidgetSearchLine>
@@ -41,6 +42,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mTreeWidgetSearchLineEdit = new KTreeWidgetSearchLineWidget(this, mListWidget);
     mTreeWidgetSearchLineEdit->setObjectName(QLatin1StringView("mTreeWidgetSearchLineEdit"));
     mTreeWidgetSearchLineEdit->searchLine()->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::BottomEdge}));
+    KLineEditEventHandler::catchReturnKey(mTreeWidgetSearchLineEdit->searchLine());
 
     connect(mListWidget, &QTreeWidget::itemSelectionChanged, this, &ConfigurePluginsListWidget::slotItemSelectionChanged);
     connect(mListWidget, &QTreeWidget::itemChanged, this, &ConfigurePluginsListWidget::slotItemChanged);
