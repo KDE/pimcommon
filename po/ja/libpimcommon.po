@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2012-10-25 00:10-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,12 +14,12 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:148
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, kde-format
 msgid "..."
 msgstr ""
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:152
 #, kde-format
 msgid "Configure"
 msgstr ""

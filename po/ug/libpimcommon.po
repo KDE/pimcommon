@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-13 01:35+0000\n"
+"POT-Creation-Date: 2023-12-18 01:58+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:148
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, fuzzy, kde-format
 #| msgid "Add..."
 msgid "..."
 msgstr "قوش…"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:152
 #, kde-format
 msgid "Configure"
 msgstr ""
