@@ -1,5 +1,5 @@
 name: pimcommon
-description: PimCommon Library which contains PimCommon, PimCommonAkonadi, PimCommonAutoCorrection, PimCommonTextTranslator and PimCommonTextGrammarCheck
+description: PimCommon Library which contains PimCommon, PimCommonAkonadi
 maintainer: mlaurent
 public_lib: true
 group: kdepim
@@ -14,9 +14,6 @@ irc: akonadi
 libraries:
  - cmake: "KPim6::PimCommon"
  - cmake: "KPim6::PimCommonAkonadi"
- - cmake: "KPim6::PimCommonAutoCorrection"
- - cmake: "KPim6::PimCommonTextTranslator"
- - cmake: "KPim6::PimCommonTextGrammarCheck"
 
 cmakename: KPim6PimCommon
 # FIXME kapidox does not support more than one cmake module per repo yet
