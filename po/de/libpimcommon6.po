@@ -1,12 +1,12 @@
+# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2012, 2013, 2016, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2023-12-19 16:10+0100\n"
+"PO-Revision-Date: 2023-12-21 17:55+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -40,16 +40,15 @@ msgstr "Versionsprüfung deaktivieren"
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
 msgstr ""
-"Ihre Version ist älter als sechs Monate weshalb wir das Aktualisieren "
-"empfehlen."
+"Ihre Version ist älter als sechs Monate. Wir empfehlen zu akutalisieren."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
-"Ihre Version ist älter als ein Jahr weshalb wir das Aktualisieren dringends "
-"empfehlen."
+"Ihre Version ist älter als ein Jahr. Wir empfehlen dringendst zu "
+"aktualisieren."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
