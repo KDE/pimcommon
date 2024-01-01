@@ -29,6 +29,7 @@ CustomToolsWidgetNg::CustomToolsWidgetNg(QWidget *parent)
     , d(new PimCommon::CustomToolsWidgetNgPrivate)
 {
     auto lay = new QHBoxLayout(this);
+    lay->setContentsMargins({});
     d->mStackedWidget = new QStackedWidget;
     d->mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
     lay->addWidget(d->mStackedWidget);
