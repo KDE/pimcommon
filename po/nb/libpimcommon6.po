@@ -1,4 +1,4 @@
-# Translation of libpimcommon to Norwegian Bokmål
+# Translation of libpimcommon6 to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2012, 2013, 2014.
 # Karl Ove Hufthammer <karl@huftis.org>, 2022.
