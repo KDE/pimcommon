@@ -109,6 +109,11 @@ target_sources(KPim6PimCommon PRIVATE
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
 )
+if (ENABLE_WARN_OUTDATED)
+    target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=1)
+else()
+    target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=0)
+endif()
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6PimCommon PROPERTIES UNITY_BUILD ON)

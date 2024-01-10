@@ -61,7 +61,11 @@ void PimCommon::NeedUpdateVersionUtils::disableCheckVersion()
 
 bool PimCommon::NeedUpdateVersionUtils::checkVersion()
 {
+#if ENABLE_WARN_OUTDATED == 1
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     KConfigGroup group(config, QStringLiteral("Check Version"));
     return group.readEntry("checkerVersionEnabled", true);
+#else
+    return false;
+#endif
 }
