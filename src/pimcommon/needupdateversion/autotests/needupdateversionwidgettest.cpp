@@ -18,6 +18,7 @@ NeedUpdateVersionWidgetTest::~NeedUpdateVersionWidgetTest() = default;
 void NeedUpdateVersionWidgetTest::shouldHaveDefaultValues()
 {
     PimCommon::NeedUpdateVersionWidget w;
+    w.show();
     QVERIFY(w.isCloseButtonVisible());
     QCOMPARE(w.position(), KMessageWidget::Header);
 }
