@@ -12,7 +12,7 @@
 
 #include <QRegularExpression>
 
-PimCommon::NeedUpdateVersionUtils::ObsoleteVersion PimCommon::NeedUpdateVersionUtils::obsoleteVersionStatus(const QString &str, const QDate &currentDate)
+PimCommon::NeedUpdateVersionUtils::ObsoleteVersion PimCommon::NeedUpdateVersionUtils::obsoleteVersionStatus(const QString &str, QDate currentDate)
 {
     static QRegularExpression regular{QStringLiteral("\\((.*)\\)")};
     QRegularExpressionMatch match;

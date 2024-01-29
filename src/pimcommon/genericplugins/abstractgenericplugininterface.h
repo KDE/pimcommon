@@ -37,7 +37,7 @@ public:
     [[nodiscard]] QAction *action() const;
     [[nodiscard]] Type type() const;
 
-    [[nodiscard]] bool operator==(const ActionType &other) const;
+    [[nodiscard]] bool operator==(ActionType other) const;
 
 private:
     QAction *mAction = nullptr;
