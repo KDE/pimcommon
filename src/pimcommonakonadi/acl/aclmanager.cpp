@@ -303,7 +303,7 @@ public:
         const QMap<QByteArray, KIMAP::Acl::Rights> rights = attribute->rights();
 
         QString resource = collection.resource();
-        if (resource.contains(QLatin1String("akonadi_kolabproxy_resource"))) {
+        if (resource.contains(QLatin1StringView("akonadi_kolabproxy_resource"))) {
             const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent, QStringLiteral("akonadi_kolabproxy_resource"));
 
             QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));

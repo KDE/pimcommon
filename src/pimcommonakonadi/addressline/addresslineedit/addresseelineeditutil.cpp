@@ -20,16 +20,16 @@ QString PimCommon::AddresseeLineEditUtil::adaptPasteMails(const QString &str)
         static QRegularExpression reg1(QRegularExpression(QStringLiteral(",?\\s*$")));
         (*it).remove(reg1);
     }
-    newText = lines.join(QLatin1String(", "));
+    newText = lines.join(QLatin1StringView(", "));
 
-    if (newText.startsWith(QLatin1String("mailto:"))) {
+    if (newText.startsWith(QLatin1StringView("mailto:"))) {
         const QUrl url(newText);
         newText = url.path();
-    } else if (newText.contains(QLatin1String(" at "))) {
+    } else if (newText.contains(QLatin1StringView(" at "))) {
         // Anti-spam stuff
         newText.replace(QStringLiteral(" at "), QStringLiteral("@"));
         newText.replace(QStringLiteral(" dot "), QStringLiteral("."));
-    } else if (newText.contains(QLatin1String("(at)"))) {
+    } else if (newText.contains(QLatin1StringView("(at)"))) {
         static QRegularExpression reg((QStringLiteral("\\s*\\(at\\)\\s*")));
         newText.replace(reg, QStringLiteral("@"));
     }

@@ -304,7 +304,7 @@ void BlackListBalooEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded()
 
 void BlackListBalooEmailCompletionWidget::slotLinkClicked(const QString &link)
 {
-    if (link == QLatin1String("more_result")) {
+    if (link == QLatin1StringView("more_result")) {
         mLimit += 200;
         slotSearch();
     }

@@ -67,7 +67,7 @@ QString CreateResource::createResource(const QString &resources, const QString &
 
     // check if unique instance already exists
     qCDebug(PIMCOMMONAKONADI_LOG) << type.capabilities();
-    if (type.capabilities().contains(QLatin1String("Unique"))) {
+    if (type.capabilities().contains(QLatin1StringView("Unique"))) {
         const AgentInstance::List lstInstances = AgentManager::self()->instances();
         for (const AgentInstance &instance : lstInstances) {
             qCDebug(PIMCOMMONAKONADI_LOG) << instance.type().identifier() << (instance.type() == type);
@@ -85,7 +85,7 @@ QString CreateResource::createResource(const QString &resources, const QString &
 
         if (!settings.isEmpty()) {
             Q_EMIT createResourceInfo(i18n("Configuring resource instance..."));
-            QDBusInterface iface(QLatin1String("org.freedesktop.Akonadi.Resource.") + instance.identifier(), QStringLiteral("/Settings"));
+            QDBusInterface iface(QLatin1StringView("org.freedesktop.Akonadi.Resource.") + instance.identifier(), QStringLiteral("/Settings"));
             if (!iface.isValid()) {
                 Q_EMIT createResourceError(i18n("Unable to configure resource instance."));
                 return {};

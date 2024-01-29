@@ -272,7 +272,7 @@ const QStringList PimCommon::AddresseeLineEditPrivate::adjustedCompletionItems(b
 
             (*it).prepend(s_completionItemIndentString);
             // remove preferred email sort <blank> added in  addContact()
-            (*it).replace(QLatin1String("  <"), QStringLiteral(" <"));
+            (*it).replace(QLatin1StringView("  <"), QStringLiteral(" <"));
         }
         sections[index].append(*it);
 
@@ -496,7 +496,7 @@ void AddresseeLineEditPrivate::doCompletion(bool ctrlT)
 
         if (!mSearchString.isEmpty()) {
             // if only our \" is left, remove it since user has not typed it either
-            if (mSearchExtended && mSearchString == QLatin1String("\"")) {
+            if (mSearchExtended && mSearchString == QLatin1StringView("\"")) {
                 mSearchExtended = false;
                 mSearchString.clear();
                 q->setText(mPreviousAddresses);
@@ -513,9 +513,9 @@ void AddresseeLineEditPrivate::doCompletion(bool ctrlT)
             } else {
                 if (!mSearchString.startsWith(QLatin1Char('\"'))) {
                     // try with quoted text, if user has not type one already
-                    match = AddresseeLineEditManager::self()->completion()->makeCompletion(QLatin1String("\"") + mSearchString);
+                    match = AddresseeLineEditManager::self()->completion()->makeCompletion(QLatin1StringView("\"") + mSearchString);
                     if (!match.isEmpty() && match != mSearchString) {
-                        mSearchString = QLatin1String("\"") + mSearchString;
+                        mSearchString = QLatin1StringView("\"") + mSearchString;
                         mSearchExtended = true;
                         q->setText(mPreviousAddresses + mSearchString);
                         q->callSetCompletedText(mPreviousAddresses + match);
@@ -561,7 +561,7 @@ void AddresseeLineEditPrivate::slotPopupCompletion(const QString &completion)
 {
     QString c = completion.trimmed();
     if (c.endsWith(QLatin1Char(')'))) {
-        c = completion.mid(0, completion.lastIndexOf(QLatin1String(" ("))).trimmed();
+        c = completion.mid(0, completion.lastIndexOf(QLatin1StringView(" ("))).trimmed();
     }
     q->setText(mPreviousAddresses + c);
     q->cursorAtEnd();
@@ -609,7 +609,7 @@ void AddresseeLineEditPrivate::slotLDAPSearchData(const KLDAPWidgets::LdapResult
             const int depth = result.dn.depth();
             for (int i = 0; i < depth; ++i) {
                 const QString rdnStr = result.dn.rdnString(i);
-                if (rdnStr.startsWith(QLatin1String("ou="), Qt::CaseInsensitive)) {
+                if (rdnStr.startsWith(QLatin1StringView("ou="), Qt::CaseInsensitive)) {
                     ou = rdnStr.mid(3);
                     break;
                 }

@@ -26,7 +26,7 @@
 OrgKdeAkonadiImapSettingsInterface *PimCommon::Util::createImapSettingsInterface(const QString &ident)
 {
     if (isImapResource(ident)) {
-        return new OrgKdeAkonadiImapSettingsInterface(QLatin1String("org.freedesktop.Akonadi.Resource.") + ident,
+        return new OrgKdeAkonadiImapSettingsInterface(QLatin1StringView("org.freedesktop.Akonadi.Resource.") + ident,
                                                       QStringLiteral("/Settings"),
                                                       QDBusConnection::sessionBus());
     } else {
@@ -133,7 +133,7 @@ QStringList PimCommon::Util::generateEmailList(const QStringList &list)
         QString tmpStr = list.at(i);
         if (!tmpStr.trimmed().isEmpty()) {
             if (!str.isEmpty()) {
-                str.append(QLatin1String(", "));
+                str.append(QLatin1StringView(", "));
             }
             str.append(tmpStr);
         }

@@ -72,14 +72,14 @@ void CompletionOrderEditor::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(600, 400));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myCompletionOrderEditorGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myCompletionOrderEditorGroupName));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void CompletionOrderEditor::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myCompletionOrderEditorGroupName));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myCompletionOrderEditorGroupName));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 

@@ -70,11 +70,11 @@ QString CollectionTypeUtil::incidencesForToString(CollectionTypeUtil::Incidences
 
 CollectionTypeUtil::IncidencesFor CollectionTypeUtil::incidencesForFromString(const QString &string)
 {
-    if (string == QLatin1String("nobody")) {
+    if (string == QLatin1StringView("nobody")) {
         return CollectionTypeUtil::IncForNobody;
-    } else if (string == QLatin1String("admins")) {
+    } else if (string == QLatin1StringView("admins")) {
         return CollectionTypeUtil::IncForAdmins;
-    } else if (string == QLatin1String("readers")) {
+    } else if (string == QLatin1StringView("readers")) {
         return CollectionTypeUtil::IncForReaders;
     }
 

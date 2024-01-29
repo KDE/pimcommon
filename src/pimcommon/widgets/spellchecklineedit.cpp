@@ -84,8 +84,8 @@ void SpellCheckLineEdit::insertFromMimeData(const QMimeData *source)
         // replace \r with \n to make xterm pastes happy
         pasteText.replace(QLatin1Char('\r'), QLatin1Char('\n'));
         // remove blank lines
-        while (pasteText.contains(QLatin1String("\n\n"))) {
-            pasteText.replace(QLatin1String("\n\n"), QLatin1String("\n"));
+        while (pasteText.contains(QLatin1StringView("\n\n"))) {
+            pasteText.replace(QLatin1StringView("\n\n"), QLatin1String("\n"));
         }
 
         static const QRegularExpression reTopSpace(QStringLiteral("^ *\n"));

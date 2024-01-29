@@ -126,7 +126,7 @@ bool AclModifyJob::canAdministrate(const PimCommon::ImapAclAttribute *attribute,
     const QMap<QByteArray, KIMAP::Acl::Rights> rights = attribute->rights();
 
     QString resource = collection.resource();
-    if (resource.contains(QLatin1String("akonadi_kolabproxy_resource"))) {
+    if (resource.contains(QLatin1StringView("akonadi_kolabproxy_resource"))) {
         const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent, QStringLiteral("akonadi_kolabproxy_resource"));
         QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));
         if (interface.isValid()) {
@@ -220,7 +220,7 @@ void AclModifyJob::slotFetchCollectionFinished(const Akonadi::Collection::List &
                     // fetched. So look it up in our list.
                     for (const Akonadi::Collection &it : collectionList) {
                         if (it.id() == cur.id()) {
-                            fullName = QLatin1String("/") + it.displayName() + fullName;
+                            fullName = QLatin1StringView("/") + it.displayName() + fullName;
                             parentFound = true;
                             cur = cur.parentCollection();
                             break;

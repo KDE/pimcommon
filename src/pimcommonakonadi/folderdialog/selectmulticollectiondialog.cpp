@@ -69,7 +69,7 @@ void SelectMultiCollectionDialog::initialize(const QString &mimetype, const QLis
 
 void SelectMultiCollectionDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigSelectMultiCollectionDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigSelectMultiCollectionDialog));
     KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
@@ -77,7 +77,7 @@ void SelectMultiCollectionDialog::readConfig()
 {
     create(); // ensure a window is created
     windowHandle()->resize(QSize(800, 600));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String(myConfigSelectMultiCollectionDialog));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myConfigSelectMultiCollectionDialog));
     KWindowConfig::restoreWindowSize(windowHandle(), group);
     resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
