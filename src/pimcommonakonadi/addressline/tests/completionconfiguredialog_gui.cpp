@@ -9,7 +9,7 @@
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
-#include <addressline/completionconfiguredialog/completionconfiguredialog.h>
+#include "addressline/completionconfiguredialog/completionconfiguredialog.h"
 
 int main(int argc, char *argv[])
 {

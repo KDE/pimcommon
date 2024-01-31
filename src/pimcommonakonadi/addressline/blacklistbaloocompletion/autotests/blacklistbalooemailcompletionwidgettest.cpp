@@ -8,12 +8,12 @@
 #include "blacklistbalooemailcompletionwidgettest.h"
 #include "../blacklistbalooemailcompletionwidget.h"
 #include "../blacklistbalooemaillist.h"
+#include "addressline/blacklistbaloocompletion/blacklistbalooemailwarning.h"
 #include <KListWidgetSearchLine>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QTest>
-#include <addressline/blacklistbaloocompletion/blacklistbalooemailwarning.h>
 
 BlackListBalooEmailCompletionWidgetTest::BlackListBalooEmailCompletionWidgetTest(QObject *parent)
     : QObject(parent)

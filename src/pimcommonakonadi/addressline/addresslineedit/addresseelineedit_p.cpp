@@ -30,8 +30,8 @@
 #include <PIM/contactcompleter.h>
 #endif
 
+#include "addressline/addresslineedit/baloocompletionemail.h"
 #include <Akonadi/ContactSearchJob>
-#include <addressline/addresslineedit/baloocompletionemail.h>
 #include <chrono>
 
 using namespace std::chrono_literals;

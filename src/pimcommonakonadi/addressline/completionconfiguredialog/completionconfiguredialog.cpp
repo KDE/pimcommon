@@ -17,12 +17,12 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
-#include <addressline/completionorder/completionorderwidget.h>
+#include "addressline/completionorder/completionorderwidget.h"
 #include <config-akonadi-search.h>
 #if !DISABLE_AKONADI_SEARCH
-#include <addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.h>
+#include "addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.h"
 #endif
-#include <addressline/recentaddress/recentaddresswidget.h>
+#include "addressline/recentaddress/recentaddresswidget.h"
 
 using namespace PimCommon;
 namespace

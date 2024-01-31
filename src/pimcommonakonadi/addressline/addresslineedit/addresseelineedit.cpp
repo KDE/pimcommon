@@ -39,6 +39,7 @@
 #include <KLocalizedString>
 #include <KStandardShortcut>
 
+#include "addressline/completionconfiguredialog/completionconfiguredialog.h"
 #include <Akonadi/ContactGroupExpandJob>
 #include <KContacts/VCardDrag>
 #include <KMessageBox>
@@ -53,7 +54,6 @@
 #include <QMimeData>
 #include <QMouseEvent>
 #include <QObject>
-#include <addressline/completionconfiguredialog/completionconfiguredialog.h>
 
 using namespace PimCommon;
 
