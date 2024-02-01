@@ -163,7 +163,7 @@ QString CustomLogWidget::toHtml() const
             logText = QStringLiteral("<br/>");
             break;
         }
-        result += QLatin1StringView("<p>") + logText + QLatin1String("</p>") + QLatin1Char('\n');
+        result += QLatin1StringView("<p>") + logText + QLatin1StringView("</p>") + QLatin1Char('\n');
     }
     result += QLatin1StringView("</body>\n</html>\n");
     return result;
