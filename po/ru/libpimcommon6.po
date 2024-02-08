@@ -3,23 +3,23 @@
 #
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020.
+# SPDX-FileCopyrightText: 2019, 2020, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2022-10-11 12:49+0300\n"
-"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2024-02-07 13:28+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -42,18 +42,22 @@ msgstr "Для применения изменений требуется пер
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
 msgid "Disable version check"
-msgstr ""
+msgstr "Отключить проверку версии"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
 msgstr ""
+"Ваша версия была выпущена более шести месяцев назад, рекомендуется "
+"установить обновление."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Ваша версия была выпущена более года назад, настоятельно рекомендуется "
+"установить обновление."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -131,8 +135,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Вы хотите удалить выбранный шаблон?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Удаление шаблона"
@@ -213,8 +216,7 @@ msgstr ""
 "Подробное описание ошибки: «%2»."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Ошибка записи в файл"
@@ -229,8 +231,7 @@ msgstr ""
 "Подробное описание ошибки: «%2»."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Ошибка чтения из файла"
@@ -373,11 +374,10 @@ msgstr "&Настроить..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
-msgstr "Удалить"
+msgstr "Удаление"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
@@ -467,8 +467,7 @@ msgid ""
 msgstr "Применить права доступа папки к этим вложенным папкам?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Применение прав доступа"
@@ -622,25 +621,22 @@ msgstr "Разделяйте доменные имена символами «%1
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Исключить адреса эл. почты по регулярному выражению:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Разделяйте доменные имена символами «%1»"
+msgstr "Разделяйте регулярные выражения символами «%1»"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Выбрать"
+msgstr "Выбрать"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Снять отметки"
+msgstr "Снять отметки"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
 #, kde-format
@@ -675,7 +671,7 @@ msgstr "Сохранить"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отмена"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
 #, kde-format
@@ -722,24 +718,21 @@ msgstr "Вниз"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr ""
+msgstr "Новый адрес эл. почты…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgid "Add Email"
-msgstr "Адрес эл. почты"
+msgstr "Добавить адрес эл. почты"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Удалить запись"
-msgstr[1] "Удалить запись"
-msgstr[2] "Удалить запись"
-msgstr[3] "Удалить запись"
+msgstr[0] "Удалить адреса эл. почты"
+msgstr[1] "Удалить адреса эл. почты"
+msgstr[2] "Удалить адреса эл. почты"
+msgstr[3] "Удалить адрес эл. почты"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
 #, kde-format
