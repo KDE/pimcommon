@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2024-01-02 20:05+0900\n"
+"PO-Revision-Date: 2024-02-07 23:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, kde-format
@@ -898,7 +898,7 @@ msgstr "傳真號碼"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
 msgid "Pager"
-msgstr ""
+msgstr "呼叫器"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
@@ -1001,11 +1001,10 @@ msgid "Search for:"
 msgstr "搜尋："
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
-#, fuzzy, kde-format
-#| msgid "Find"
+#, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr "尋找"
+msgstr "於屬性中："
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, kde-format
