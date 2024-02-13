@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2023-03-23 12:36+0400\n"
+"PO-Revision-Date: 2024-02-12 12:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, kde-format
@@ -37,18 +37,18 @@ msgstr "إعادة التّشغيل مطلوبة لتطبيق التّغييرا
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
 msgid "Disable version check"
-msgstr ""
+msgstr "عطل التحقق من الإصدارة"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
+msgstr "الإصدار الخاص بك أقدم من 6 أشهر، ونحن نشجعك على الترقية."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
+msgstr "الإصدار الخاص بك أقدم من عام واحد، ونحن نشجعك بشدة على الترقية."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -119,8 +119,7 @@ msgid "Do you want to delete selected template?"
 msgstr "أتريد حذف القالب المحدّد؟"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:76
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "حذف القالب"
@@ -201,8 +200,7 @@ msgstr ""
 "وصف الخطأ المفصّل هو ”%2“."
 
 #: pimcommon/util/pimutil.cpp:52
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "خطأ في حفظ الملفّ"
@@ -217,8 +215,7 @@ msgstr ""
 "وصف الخطأ المفصّل هو ”%2“."
 
 #: pimcommon/util/pimutil.cpp:87
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "خطأ في تحميل الملفّ"
@@ -361,8 +358,7 @@ msgstr "&خصّص..."
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #: pimcommonakonadi/acl/aclmanager.cpp:288
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "أزِل"
@@ -451,11 +447,10 @@ msgid ""
 msgstr "أمتأكّد من تطبيق تصاريح المجلّد على المجلّدات الفرعيّة هذه؟"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "تطبيق التّصاريح"
+msgstr "طبّق التّصاريح"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
