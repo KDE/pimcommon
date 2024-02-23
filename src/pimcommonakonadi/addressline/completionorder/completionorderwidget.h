@@ -68,13 +68,13 @@ Q_SIGNALS:
     void completionOrderChanged();
 
 private:
-    void rowsInserted(const QModelIndex &parent, int start, int end);
-    void slotSelectionChanged();
-    void slotMoveUp();
-    void slotMoveDown();
-    void addRecentAddressItem();
-    void addCompletionItemForCollection(const QModelIndex &);
-    void slotItemChanged();
+    PIMCOMMONAKONADI_NO_EXPORT void rowsInserted(const QModelIndex &parent, int start, int end);
+    PIMCOMMONAKONADI_NO_EXPORT void slotSelectionChanged();
+    PIMCOMMONAKONADI_NO_EXPORT void slotMoveUp();
+    PIMCOMMONAKONADI_NO_EXPORT void slotMoveDown();
+    PIMCOMMONAKONADI_NO_EXPORT void addRecentAddressItem();
+    PIMCOMMONAKONADI_NO_EXPORT void addCompletionItemForCollection(const QModelIndex &);
+    PIMCOMMONAKONADI_NO_EXPORT void slotItemChanged();
 
     KConfig mConfig;
     QTreeWidget *mListView = nullptr;

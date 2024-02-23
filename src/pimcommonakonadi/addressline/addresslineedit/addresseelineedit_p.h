@@ -121,7 +121,6 @@ private:
     void searchInBaloo();
     void slotTriggerDelayedQueries();
 
-private:
     AddresseeLineEdit *const q;
     QToolButton *mToolButton = nullptr;
     QTimer *const mDelayedQueryTimer;

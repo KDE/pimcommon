@@ -29,18 +29,18 @@ public:
     void setEmailBlackList(const QStringList &list);
 
 private:
-    void slotSelectionChanged();
-    void slotUnselectEmails();
-    void slotSelectEmails();
-    void slotSearchLineEditChanged(const QString &text);
-    void slotSearch();
-    void slotLinkClicked(const QString &link);
-    void slotEmailFound(const QStringList &list);
-    void slotCheckIfUpdateBlackListIsNeeded();
-    void slotSaveChanges();
-    void slotShowAllBlacklistedEmail();
-    void hideMoreResultAndChangeLimit();
-    void slotCustomContextMenuRequested(const QPoint &pos);
+    PIMCOMMONAKONADI_NO_EXPORT void slotSelectionChanged();
+    PIMCOMMONAKONADI_NO_EXPORT void slotUnselectEmails();
+    PIMCOMMONAKONADI_NO_EXPORT void slotSelectEmails();
+    PIMCOMMONAKONADI_NO_EXPORT void slotSearchLineEditChanged(const QString &text);
+    PIMCOMMONAKONADI_NO_EXPORT void slotSearch();
+    PIMCOMMONAKONADI_NO_EXPORT void slotLinkClicked(const QString &link);
+    PIMCOMMONAKONADI_NO_EXPORT void slotEmailFound(const QStringList &list);
+    PIMCOMMONAKONADI_NO_EXPORT void slotCheckIfUpdateBlackListIsNeeded();
+    PIMCOMMONAKONADI_NO_EXPORT void slotSaveChanges();
+    PIMCOMMONAKONADI_NO_EXPORT void slotShowAllBlacklistedEmail();
+    PIMCOMMONAKONADI_NO_EXPORT void hideMoreResultAndChangeLimit();
+    PIMCOMMONAKONADI_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &pos);
     QStringList mOriginalExcludeDomain;
     QStringList mOriginalExcludeEmailRegexp;
     QLabel *const mNumberOfEmailsFound;

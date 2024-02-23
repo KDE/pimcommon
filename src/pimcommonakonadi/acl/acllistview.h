@@ -24,7 +24,7 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
 private:
-    void generalPaletteChanged();
+    PIMCOMMONAKONADI_NO_EXPORT void generalPaletteChanged();
     QColor mTextColor;
     bool mCanBeAdministrated = true;
 };

@@ -49,7 +49,7 @@ protected:
     void changeEvent(QEvent *event) override;
 
 private:
-    void generalPaletteChanged();
+    PIMCOMMONAKONADI_NO_EXPORT void generalPaletteChanged();
     QStringList mExcludeEmailsRegularExpressions;
     QStringList mEmailBlackList;
     QStringList mExcludeDomains;
