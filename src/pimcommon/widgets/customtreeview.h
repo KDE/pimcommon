@@ -32,7 +32,6 @@ protected:
     void paintEvent(QPaintEvent *event) override;
     void changeEvent(QEvent *event) override;
 
-protected:
     bool mShowDefaultText = true;
 
 private:
