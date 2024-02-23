@@ -69,7 +69,7 @@ public:
     [[nodiscard]] QSize sizeHint() const override;
 
     virtual void addNewEntry();
-    virtual QString customEntry(const QString &text);
+    [[nodiscard]] virtual QString customEntry(const QString &text);
 
     [[nodiscard]] virtual QString modifyEntry(const QString &text);
     void setAddDialogLabel(const QString &addDialogLabel);
