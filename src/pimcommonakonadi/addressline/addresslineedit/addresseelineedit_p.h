@@ -107,7 +107,7 @@ public Q_SLOTS:
     void slotToggleExpandGroups(bool);
     void slotShowOUChanged(bool);
 
-private Q_SLOTS:
+private:
     void slotCompletion();
     void slotPopupCompletion(const QString &);
     void slotReturnPressed(const QString &);

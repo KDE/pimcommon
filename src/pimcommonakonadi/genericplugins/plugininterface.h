@@ -46,12 +46,11 @@ public:
     [[nodiscard]] QString configGroupName() const;
     [[nodiscard]] QString configPrefixSettingKey() const;
 
-    PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
+    [[nodiscard]] PimCommon::GenericPlugin *pluginFromIdentifier(const QString &id);
     void clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient);
-private Q_SLOTS:
-    PIMCOMMONAKONADI_NO_EXPORT void slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
 
 private:
+    PIMCOMMONAKONADI_NO_EXPORT void slotPluginActivated(PimCommon::AbstractGenericPluginInterface *interface);
     std::unique_ptr<PluginInterfacePrivate> const d;
 };
 }

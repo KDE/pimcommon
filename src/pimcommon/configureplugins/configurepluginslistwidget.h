@@ -38,10 +38,6 @@ Q_SIGNALS:
     void changed();
     void configureClicked(const QString &configureGroupName, const QString &identifier);
 
-private:
-    PIMCOMMON_NO_EXPORT void slotItemSelectionChanged();
-    PIMCOMMON_NO_EXPORT void slotItemChanged(QTreeWidgetItem *item, int column);
-
 protected:
     class PluginItem : public QTreeWidgetItem
     {
@@ -71,8 +67,10 @@ protected:
     QTreeWidget *const mListWidget;
 
 private:
-    KTreeWidgetSearchLineWidget *mTreeWidgetSearchLineEdit = nullptr;
+    PIMCOMMON_NO_EXPORT void slotItemSelectionChanged();
+    PIMCOMMON_NO_EXPORT void slotItemChanged(QTreeWidgetItem *item, int column);
     PIMCOMMON_NO_EXPORT void slotConfigureClicked(QAction *act);
+    KTreeWidgetSearchLineWidget *mTreeWidgetSearchLineEdit = nullptr;
     bool mInitializeDone = false;
 };
 }

@@ -28,10 +28,6 @@ public:
     [[nodiscard]] bool showDefaultText() const;
     void setShowDefaultText(bool b);
 
-private:
-    PIMCOMMON_NO_EXPORT void generalPaletteChanged();
-    PIMCOMMON_NO_EXPORT void generalFontChanged();
-
 protected:
     void paintEvent(QPaintEvent *event) override;
     void changeEvent(QEvent *event) override;
@@ -40,6 +36,8 @@ protected:
     bool mShowDefaultText = true;
 
 private:
+    PIMCOMMON_NO_EXPORT void generalPaletteChanged();
+    PIMCOMMON_NO_EXPORT void generalFontChanged();
     QColor mTextColor;
     QString mDefaultText;
 };
