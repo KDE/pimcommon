@@ -177,19 +177,16 @@ protected:
      */
     void mouseReleaseEvent(QMouseEvent *) override;
 
-#ifndef QT_NO_DRAGANDDROP
     /**
      * Reimplemented for smart insertion of dragged email addresses.
      */
     void dropEvent(QDropEvent *) override;
-#endif
 
     /**
      * Reimplemented for internal reasons.
      */
     void keyPressEvent(QKeyEvent *) override;
 
-#ifndef QT_NO_CONTEXTMENU
     /**
      * Reimplemented for subclass access to menu
      */
@@ -201,7 +198,6 @@ protected:
      * See QLineEdit::contextMenuEvent().
      */
     void contextMenuEvent(QContextMenuEvent *) override;
-#endif
 
     void insertEmails(const QStringList &emails);
     void loadContacts();

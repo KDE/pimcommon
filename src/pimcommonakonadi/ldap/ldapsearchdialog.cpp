@@ -757,9 +757,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
         return;
     }
 
-#ifndef QT_NO_CURSOR
     QApplication::setOverrideCursor(Qt::WaitCursor);
-#endif
     KGuiItem::assign(mSearchButton, stopSearchGuiItem);
     progressIndication->start();
 
@@ -799,16 +797,12 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
 
     KGuiItem::assign(mSearchButton, startSearchGuiItem);
     progressIndication->stop();
-#ifndef QT_NO_CURSOR
     QApplication::restoreOverrideCursor();
-#endif
 }
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotError(const QString &error)
 {
-#ifndef QT_NO_CURSOR
     QApplication::restoreOverrideCursor();
-#endif
     KMessageBox::error(q, error);
 }
 

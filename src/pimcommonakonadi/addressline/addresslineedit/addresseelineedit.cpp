@@ -260,17 +260,14 @@ void AddresseeLineEdit::paste()
 void AddresseeLineEdit::mouseReleaseEvent(QMouseEvent *event)
 {
     // reimplemented from QLineEdit::mouseReleaseEvent()
-#ifndef QT_NO_CLIPBOARD
     if (d->useCompletion() && QApplication::clipboard()->supportsSelection() && !isReadOnly() && event->button() == Qt::MiddleButton) {
         d->setSmartPaste(true);
     }
-#endif
 
     KLineEdit::mouseReleaseEvent(event);
     d->setSmartPaste(false);
 }
 
-#ifndef QT_NO_DRAGANDDROP
 void AddresseeLineEdit::dropEvent(QDropEvent *event)
 {
     const QMimeData *md = event->mimeData();
@@ -405,8 +402,6 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
         d->setSmartPaste(false);
     }
 }
-
-#endif // QT_NO_DRAGANDDROP
 
 void AddresseeLineEdit::groupExpandResult(KJob *job)
 {
@@ -545,7 +540,6 @@ void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight,
     addContact(emails, addr, weight, source, append);
 }
 
-#ifndef QT_NO_CONTEXTMENU
 void AddresseeLineEdit::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu *menu = createStandardContextMenu();
@@ -589,8 +583,6 @@ QMenu *AddresseeLineEdit::createStandardContextMenu()
     }
     return menu;
 }
-
-#endif
 
 bool AddresseeLineEdit::canDeleteLineEdit() const
 {
