@@ -104,8 +104,7 @@ target_sources(KPim6PimCommon PRIVATE
 
     needupdateversion/needupdateversionutils.h
     needupdateversion/needupdateversionutils.cpp
-    )
-target_sources(KPim6PimCommon PRIVATE
+
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
 )
