@@ -37,8 +37,8 @@ Q_SIGNALS:
 private:
     PIMCOMMON_NO_EXPORT void slotInitializeShareMenu();
     PIMCOMMON_NO_EXPORT void slotShareActionFinished(const QJsonObject &output, int error, const QString &message);
-    Purpose::Menu *mShareMenu = nullptr;
-    QTemporaryFile *mTemporaryShareFile = nullptr;
     QWidget *const mParentWidget;
+    Purpose::Menu *const mShareMenu;
+    QTemporaryFile *mTemporaryShareFile = nullptr;
 };
 }
