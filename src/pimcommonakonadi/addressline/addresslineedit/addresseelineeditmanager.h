@@ -42,7 +42,7 @@ public:
     void updateLDAPWeights();
     void updateCompletionOrder();
 
-    int addCompletionSource(const QString &source, int weight);
+    [[nodiscard]] int addCompletionSource(const QString &source, int weight);
     void removeCompletionSource(const QString &source);
 
     CompletionItemsMap completionItemMap;
@@ -81,8 +81,8 @@ public:
     void setLdapText(const QString &ldapText);
     KLDAPWidgets::LdapClientSearch *ldapSearch() const;
     QTimer *ldapTimer() const;
-    bool isLdapClientToCompletionSourceMapContains(int value) const;
-    int ldapClientToCompletionSourceValue(int value) const;
+    [[nodiscard]] bool isLdapClientToCompletionSourceMapContains(int value) const;
+    [[nodiscard]] int ldapClientToCompletionSourceValue(int value) const;
     void stopLDAPLookup();
     void startLoadingLDAPEntries();
     void restartLdap(const QString &searchString, AddresseeLineEdit *addressLine);
@@ -92,11 +92,11 @@ public:
     void setBalooCompletionSource(int value);
 
     // Akonadi
-    Akonadi::Session *akonadiSession() const;
+    [[nodiscard]] Akonadi::Session *akonadiSession() const;
 
-    KMailCompletion *completion() const;
+    [[nodiscard]] KMailCompletion *completion() const;
 
-    AddresseeLineEdit *addressLineEdit() const;
+    [[nodiscard]] AddresseeLineEdit *addressLineEdit() const;
     void setAddressLineEdit(AddresseeLineEdit *addressLineEdit);
     [[nodiscard]] bool isOnline() const;
 
@@ -107,7 +107,7 @@ public:
     [[nodiscard]] bool showOU() const;
     void setShowOU(bool showOU);
 
-    bool autoGroupExpand() const;
+    [[nodiscard]] bool autoGroupExpand() const;
     void setAutoGroupExpand(bool checked);
 
     [[nodiscard]] QColor alternateColor() const;

@@ -24,7 +24,7 @@ public:
     ~CustomToolsViewInterface() override;
 
     virtual void setText(const QString &text);
-    virtual KToggleAction *action() const;
+    [[nodiscard]] virtual KToggleAction *action() const;
 
 Q_SIGNALS:
     void insertText(const QString &text);

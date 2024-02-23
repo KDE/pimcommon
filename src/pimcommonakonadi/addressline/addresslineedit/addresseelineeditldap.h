@@ -29,17 +29,17 @@ public:
 
     void updateLDAPWeights();
 
-    QMap<int, int> ldapClientToCompletionSourceMap() const;
-    bool isLdapClientToCompletionSourceMapContains(int value) const;
-    int ldapClientToCompletionSourceValue(int value) const;
+    [[nodiscard]] QMap<int, int> ldapClientToCompletionSourceMap() const;
+    [[nodiscard]] bool isLdapClientToCompletionSourceMapContains(int value) const;
+    [[nodiscard]] int ldapClientToCompletionSourceValue(int value) const;
 
-    KLDAPWidgets::LdapClientSearch *ldapSearch() const;
+    [[nodiscard]] KLDAPWidgets::LdapClientSearch *ldapSearch() const;
 
-    QTimer *ldapTimer() const;
+    [[nodiscard]] QTimer *ldapTimer() const;
     [[nodiscard]] QString ldapText() const;
     void setLdapText(const QString &ldapText);
 
-    AddresseeLineEdit *addressLineEdit() const;
+    [[nodiscard]] AddresseeLineEdit *addressLineEdit() const;
     void setAddressLineEdit(AddresseeLineEdit *addressLineEdit);
 
     void startLoadingLDAPEntries();

@@ -34,7 +34,7 @@ public:
     void init();
     void setCompletedItems(const QStringList &items, bool autoSuggest);
     void addCompletionItem(const QString &string, int weight, int source, const QStringList *keyWords = nullptr);
-    const QStringList adjustedCompletionItems(bool fullSearch);
+    [[nodiscard]] const QStringList adjustedCompletionItems(bool fullSearch);
     void updateSearchString();
     void startSearches();
     void akonadiPerformSearch();

@@ -27,8 +27,8 @@ public:
 
     static AddressessLineEditPluginManager *self();
 
-    PimCommon::AddressessLineEditAbstractPlugin *plugin(const QString &identifier);
-    QList<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
+    [[nodiscard]] PimCommon::AddressessLineEditAbstractPlugin *plugin(const QString &identifier);
+    [[nodiscard]] QList<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
 
 private:
     std::unique_ptr<AddressessLineEditPluginManagerPrivate> const d;

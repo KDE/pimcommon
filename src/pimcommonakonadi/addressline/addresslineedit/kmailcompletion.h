@@ -41,7 +41,7 @@ public:
      *
      * @returns email address
      */
-    QString makeCompletion(const QString &string) override;
+    [[nodiscard]] QString makeCompletion(const QString &string) override;
 
     /**
      * specify keywords for email.

@@ -35,7 +35,7 @@ public:
     void setPluginDirectory(const QString &name);
     void initializePlugins();
     virtual bool initializeInterfaceRequires(AbstractGenericPluginInterface *interface);
-    static QString actionXmlExtension(PimCommon::ActionType::Type type);
+    [[nodiscard]] static QString actionXmlExtension(PimCommon::ActionType::Type type);
 
     void initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient);
     void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
