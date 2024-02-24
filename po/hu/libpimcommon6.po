@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2023-12-16 21:56+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -497,42 +497,42 @@ msgstr "Hozzáférési jogosultságok"
 msgid "Apply permissions on all &subfolders."
 msgstr "Jogosultságok alkalmazása az összes alma&ppára."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:322
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "A vCard importálása meghiúsult"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:323
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Nem lehet hozzáférni ehhez: <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:443
 #, kde-format
 msgid "Select email from contact"
 msgstr "E-mail kiválasztása a névjegyekből"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:563
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Szervezeti egység megjelenítése az LDAP találatokhoz"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Kiegészítés beállítása…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:575
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Csoportok automatikus kibontása"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Csoportok kibontása…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:614
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1105,13 +1105,13 @@ msgstr "Másolás"
 msgid "You must select an LDAP server before searching."
 msgstr "Válasszon ki egy LDAP kiszolgálót a keresés előtt."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "Importálva a(z) %1 LDAP mappából ekkor: %2"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

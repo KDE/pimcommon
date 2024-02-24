@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2024-01-04 19:49+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -502,42 +502,42 @@ msgstr "Kontrolo de Aliro"
 msgid "Apply permissions on all &subfolders."
 msgstr "Apliki permesojn al ĉiuj &subdosierujoj."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:322
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard Importo Malsukcesis"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:323
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Ne eblas aliri <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:443
 #, kde-format
 msgid "Select email from contact"
 msgstr "Elekti retpoŝton de kontakto"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:563
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Montri Organizan Unuon por LDAP-rezultoj"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Agordi kompletigon..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:575
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Aŭtomate vastigi grupojn"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Pligrandigi Grupojn..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:614
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1110,13 +1110,13 @@ msgstr "Kopii"
 msgid "You must select an LDAP server before searching."
 msgstr "Vi devas elekti LDAP-servilon antaŭ serĉi."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "Importite el LDAP-dosierujo %1 sur %2"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

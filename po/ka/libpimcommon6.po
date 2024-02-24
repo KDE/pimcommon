@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2023-12-13 06:59+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -499,42 +499,42 @@ msgstr "წვდომის კონტროლი"
 msgid "Apply permissions on all &subfolders."
 msgstr "წვდომების ყველა ქვესაქაღალდეზე გადატარება."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:322
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard -ის შემოტანის შეცდომა"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:323
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>წვდომა აკრძალულია: <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:443
 #, kde-format
 msgid "Select email from contact"
 msgstr "აირჩიეთ ელფოსტა კონტაქტიდან"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:563
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "LDAP შედეგების ორგანიზაციის ერთეულის ჩვენება"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgid "Configure Completion..."
 msgstr "დასრულების მორგება..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:575
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "ჯგუფების ავტომატური ამოკეცვა"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Expand Groups..."
 msgstr "ყველა ჯგუფის ამოკეცვა..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:614
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1107,13 +1107,13 @@ msgstr "კოპირება"
 msgid "You must select an LDAP server before searching."
 msgstr "ძებნამდე LDAP სერვერის არჩევა აუცილებელია."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "LDAP დირექტორიის %1-დან %2-ზე შემოტანა დასრულდა"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

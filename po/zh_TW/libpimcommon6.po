@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-18 01:58+0000\n"
+"POT-Creation-Date: 2024-02-24 00:38+0000\n"
 "PO-Revision-Date: 2024-02-07 23:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -491,42 +491,42 @@ msgstr "權限控制"
 msgid "Apply permissions on all &subfolders."
 msgstr "套用權限到所有子資料夾(&S)。"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:322
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard 匯入失敗"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:323
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>無法存取 <b>%1</b>。</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:443
 #, kde-format
 msgid "Select email from contact"
 msgstr "從聯絡人選取電子郵件"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:569
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:563
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "為 LDAP 結果顯示組織單位"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgid "Configure Completion..."
 msgstr "設定補完…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:575
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "自動展開群組"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
 msgid "Expand Groups..."
 msgstr "展開群組…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:614
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
@@ -1091,13 +1091,13 @@ msgstr "複製"
 msgid "You must select an LDAP server before searching."
 msgstr "您必須先選取一個 LDAP 伺服器才能進行搜尋。"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:849
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "從 LDAP 目錄 %1 於 %2 匯入"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:868
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
