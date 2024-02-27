@@ -199,11 +199,9 @@ void AddresseeLineEditPrivate::setCompletedItems(const QStringList &items, bool 
             q->callSetUserSelection(false);
             q->callSetCompletedText(newText, true);
         }
-    } else {
-        if (completionBox && completionBox->isVisible()) {
-            completionBox->hide();
-            completionBox->setItems(QStringList());
-        }
+    } else if (completionBox && completionBox->isVisible()) {
+        completionBox->hide();
+        completionBox->setItems(QStringList());
     }
 }
 
