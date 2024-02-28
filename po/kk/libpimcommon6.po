@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-02-28 00:38+0000\n"
 "PO-Revision-Date: 2013-11-07 03:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -562,8 +562,8 @@ msgid "Recent Addresses"
 msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:754
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"

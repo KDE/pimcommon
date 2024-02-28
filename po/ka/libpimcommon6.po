@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-02-28 00:38+0000\n"
 "PO-Revision-Date: 2023-12-13 06:59+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -541,8 +541,8 @@ msgid "Recent Addresses"
 msgstr "უახლესი მისამართები"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:756
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:754
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
