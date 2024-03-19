@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-18 01:58+0000\n"
-"PO-Revision-Date: 2024-03-01 15:49+0300\n"
+"PO-Revision-Date: 2024-03-18 18:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:152
 #, kde-format
@@ -57,7 +57,7 @@ msgstr ""
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
 msgid "Share On..."
-msgstr "Paylaş..."
+msgstr "Paylaş…"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
 #, kde-format
@@ -104,7 +104,7 @@ msgstr "LiveJournal"
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
-msgstr "Öntanımlı şablon"
+msgstr "Öntanımlı Şablon"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
@@ -146,17 +146,17 @@ msgstr "Şablon ekle"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:172
 #, kde-format
 msgid "Add..."
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:178
 #, kde-format
 msgid "Show..."
-msgstr "Göster..."
+msgstr "Göster…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:178
 #, kde-format
 msgid "Modify..."
-msgstr "Değiştir..."
+msgstr "Değiştir…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
@@ -172,22 +172,22 @@ msgstr "Kaldır"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:194
 #, kde-format
 msgid "Export..."
-msgstr "Dışa Aktar..."
+msgstr "Dışa Aktar…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:198
 #, kde-format
 msgid "Import..."
-msgstr "İçe Aktar..."
+msgstr "İçe Aktar…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:205
 #, kde-format
 msgid "Download new Templates..."
-msgstr "Yeni Şablonlar İndir..."
+msgstr "Yeni Şablonlar İndir…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:240
 #, kde-format
 msgid "'%1' is not a template file"
-msgstr "'%1' bir şablon dosyası değil"
+msgstr "“%1” bir şablon dosyası değil"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:240
 #, kde-format
@@ -201,7 +201,7 @@ msgid ""
 "\"%2\" is the detailed error description."
 msgstr ""
 "%1 dosyasına yazılamadı:\n"
-"\"%2\", ayrıntılı hata açıklamasıdır."
+"“%2”, ayrıntılı hata açıklamasıdır."
 
 #: pimcommon/util/pimutil.cpp:52
 #, kde-format
@@ -216,7 +216,7 @@ msgid ""
 "\"%2\" is the detailed error description."
 msgstr ""
 "%1 dosyası okunamadı:\n"
-"\"%2\", ayrıntılı hata açıklamasıdır."
+"“%2”, ayrıntılı hata açıklamasıdır."
 
 #: pimcommon/util/pimutil.cpp:87
 #, kde-format
@@ -237,32 +237,32 @@ msgstr ""
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
 msgid "Change Case"
-msgstr "Büyük/Küçük Harf Değiştir"
+msgstr "BÜYÜK/küçük Harf Değiştir"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
 msgid "Uppercase"
-msgstr "Büyük Harf"
+msgstr "BÜYÜK harf"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
 msgid "Sentence case"
-msgstr "Tümce BÜYÜK/küçük harf durumu"
+msgstr "Tümce biçimi"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
 msgid "Lowercase"
-msgstr "Küçük harf"
+msgstr "küçük harf"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgid "Reverse Case"
-msgstr "Ters Durum"
+msgstr "Ters durum"
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
 msgid "Clear History"
-msgstr "Geçmişi Sil"
+msgstr "Geçmişi Temizle"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:53
 #, kde-format
@@ -277,13 +277,13 @@ msgstr "Dosya paylaşıldı."
 #: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
-msgstr "<qt>Yeni isteği bulabileceğiniz konum:<br /><a href='%1'>%1</a> </qt>"
+msgstr "<qt>Yeni isteği şurada bulabilirsiniz:<br /><a href='%1'>%1</a> </qt>"
 
 #: pimcommon/widgets/renamefiledialog.cpp:100
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
-msgstr "Dosya Zaten Var"
+msgstr "Dosya Halihazırda Var"
 
 #: pimcommon/widgets/renamefiledialog.cpp:103
 #, kde-kuit-format
@@ -291,8 +291,8 @@ msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
 msgstr ""
-"<filename>%1</filename> adlı bir dosya zaten var. Üzerine yazmak istiyor "
-"musunuz?"
+"<filename>%1</filename> adlı bir dosya halihazırda var. Üzerine yazmak "
+"istiyor musunuz?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
@@ -317,12 +317,12 @@ msgstr "&Tümüne uygula"
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "This filename \"%1\" already exists."
-msgstr "\"%1\" dosya adı halihazırda var."
+msgstr "Bu dosya adı “%1”, halihazırda var."
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "File already exists"
-msgstr "Dosya zaten var"
+msgstr "Dosya halihazırda var"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:55
 #: pimcommon/widgets/simplestringlisteditor.cpp:58
@@ -344,12 +344,12 @@ msgstr "Seçili metni kaldırmak istiyor musunuz?"
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
 msgid "&Add..."
-msgstr "&Ekle..."
+msgstr "&Ekle…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgid "&Modify..."
-msgstr "&Değiştir..."
+msgstr "&Değiştir…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
@@ -359,7 +359,7 @@ msgstr "&Kaldır"
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
-msgstr "Öz&elleştir..."
+msgstr "Öz&elleştir…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:281
@@ -373,7 +373,7 @@ msgstr "Kaldır"
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
-msgstr "&Kullanıcı tanımlayıcı:"
+msgstr "&Kullanıcı tanımlayıcısı:"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -383,7 +383,7 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
-"Kullanıcı Tanımlayıcı, kullanıcının IMAP sunucusundaki oturum adıdır. Bu "
+"Kullanıcı Tanımlayıcısı, kullanıcının IMAP sunucusundaki oturum adıdır. Bu "
 "basit bir kullanıcı adı veya kullanıcının tam e-posta adresi olabilir. "
 "Sunucudaki hesabınızın oturum bilgisi, hangisi olduğunu size bildirecektir."
 
@@ -391,7 +391,7 @@ msgstr ""
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
-msgstr "&Seç..."
+msgstr "&Seç…"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
@@ -406,17 +406,17 @@ msgstr "<b>Not: </b>Yeniden adlandırma üst klasörde yazma izinleri gerektirir
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr "Klasör yönetilemez."
+msgstr "Klasör yönetilemiyor."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:159
 #, kde-format
 msgid "Add Entry..."
-msgstr "Girdi Ekle..."
+msgstr "Girdi Ekle…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:164
 #, kde-format
 msgid "Edit Entry..."
-msgstr "Girdiyi Düzenle..."
+msgstr "Girdiyi Düzenle…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:170
 #, kde-format
@@ -433,7 +433,7 @@ msgstr "ACL Ekle"
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr "ACL Düzenle"
+msgstr "ACL’yi Düzenle"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:279
 #, kde-format
@@ -442,19 +442,19 @@ msgid ""
 "not be able to access it afterwards."
 msgstr ""
 "Bu klasörden kendi izinlerinizi gerçekten kaldırmak istiyor musunuz? "
-"Ardından buraya erişemeyeceksiniz."
+"Sonrasında buraya erişemeyeceksiniz."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:287
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr "Bu klasörden bu izinleri gerçekten kaldırmak istiyor musunuz?"
+msgstr "Bu klasörden bu izinleri kaldırmayı gerçekten istiyor musunuz?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:241
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr ""
-"Bu klasörlerin yetkilerini, gerçekten tüm alt klasörlere vermek istiyor "
+"Bu klasörlerin yetkilerini tüm alt klasörlere vermeyi gerçekten istiyor "
 "musunuz?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
@@ -466,22 +466,22 @@ msgstr "İzinleri Uygula"
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
 msgid "None"
-msgstr "Hiçbiri"
+msgstr "Yok"
 
 #: pimcommonakonadi/acl/aclutils.cpp:21
 msgctxt "Permissions"
 msgid "Read"
-msgstr "Oku"
+msgstr "Okuma"
 
 #: pimcommonakonadi/acl/aclutils.cpp:23
 msgctxt "Permissions"
 msgid "Append"
-msgstr "Ekle"
+msgstr "İliştirme"
 
 #: pimcommonakonadi/acl/aclutils.cpp:27
 msgctxt "Permissions"
 msgid "Write"
-msgstr "Yaz"
+msgstr "Yazma"
 
 #: pimcommonakonadi/acl/aclutils.cpp:31
 msgctxt "Permissions"
@@ -496,22 +496,22 @@ msgstr "Özel İzinler (%1)"
 #: pimcommonakonadi/acl/collectionaclpage.cpp:32
 #, kde-format
 msgid "Access Control"
-msgstr "Erişim Kontrolü"
+msgstr "Erişim Denetimi"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:71
 #, kde-format
 msgid "Apply permissions on all &subfolders."
-msgstr "İzinleri tüm &alt klasörlere uygula."
+msgstr "İzinleri tüm &alt klasörlere uygulayın."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
-msgstr "vCard İçe Aktarma Başarısız"
+msgstr "vCard İçe Aktarılamadı"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
-msgstr "<qt><b>%1</b> erişilemiyor.</qt>"
+msgstr "<qt><b>%1</b> ögesine erişilemiyor.</qt>"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:448
 #, kde-format
@@ -526,7 +526,7 @@ msgstr "LDAP sonuçları için organizasyon birimini göster"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Configure Completion..."
-msgstr "Tamamlamayı Yapılandır..."
+msgstr "Tamamlamayı Yapılandır…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
 #, kde-format
@@ -536,13 +536,13 @@ msgstr "Grupları kendiliğinden genişlet"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:587
 #, kde-format
 msgid "Expand Groups..."
-msgstr "Grupları Genişlet..."
+msgstr "Grupları Genişlet…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
 #, kde-format
 msgid "Recent Addresses"
-msgstr "Son Adresler"
+msgstr "Son Kullanılan Adresler"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:755
@@ -576,12 +576,12 @@ msgstr "S&eçimi Kaldır"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "Show Blacklisted Emails"
-msgstr "Kara Listeye Alınan E-postaları Göster"
+msgstr "Kara Listedeki E-postaları Göster"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr "<qt><a href=\"more_result\">Daha fazla sonuç...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Daha fazla sonuç…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
 #, kde-format
@@ -596,17 +596,17 @@ msgstr "Araştırma, 3 karakterden yapıldı"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
 #, kde-format
 msgid "Search in result..."
-msgstr "Sonuçta ara..."
+msgstr "Sonuçta ara…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
 #, kde-format
 msgid "Exclude domain names:"
-msgstr "Alan adlarını dışla:"
+msgstr "Etki alanı adlarını dışla:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
 #, kde-format
 msgid "Separate domain with '%1'"
-msgstr "Alan adını '%1' ile ayır"
+msgstr "Etki alanını “%1” ile ayır"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
 #, kde-format
@@ -616,7 +616,7 @@ msgstr "Düzenli ifade kullanarak e-postaları dışla:"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
 #, kde-format
 msgid "Separate regular expression with '%1'"
-msgstr "Düzenli ifadeyi '%1' ile ayır"
+msgstr "Düzenli ifadeyi “%1” ile ayır"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
 #, kde-format
@@ -650,7 +650,7 @@ msgstr "Sonuç bulunamadı"
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
 msgstr ""
-"Liste değiştirildi. Başka bir arama yapmadan önce kaydetmek istiyor musunu?"
+"Liste değiştirildi. Başka bir arama yapmadan önce kaydetmek istiyor musunuz?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
 #, kde-format
@@ -676,7 +676,7 @@ msgstr "Tamamlama Sırası"
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
 #, kde-format
 msgid "Recent Address"
-msgstr "Son Adres"
+msgstr "Son Kullanılan Adres"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
 #, kde-format
@@ -707,7 +707,7 @@ msgstr "Aşağı Taşı"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
 #, kde-format
 msgid "New email..."
-msgstr "Yeni e-posta..."
+msgstr "Yeni e-posta…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
 #, kde-format
@@ -790,7 +790,7 @@ msgstr "Yapılandırma"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
-msgstr "Uygunmeşgul"
+msgstr "Uygun/Meşgul"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
@@ -814,17 +814,17 @@ msgstr "&Klasör içeriği:"
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
 #, kde-format
 msgid "Nobody"
-msgstr "Hiçkimse"
+msgstr "Hiç kimse"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
 #, kde-format
 msgid "Admins of This Folder"
-msgstr "Bu Klasörün Yöneticisi"
+msgstr "Bu klasörün yöneticileri"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "All Readers of This Folder"
-msgstr "Bu Klasörün Tüm Okuyucuları"
+msgstr "Bu klasörün tüm okuyucuları"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
 #, kde-format
@@ -843,19 +843,19 @@ msgid ""
 "it is not known who will go to those events."
 msgstr ""
 "Bu ayar, bu klasörü paylaşan kullanıcıların bu klasör içindeki olay ve "
-"görevler için uygun/meşgul listelerinde \"meşgul\" görünmeleri ve alarmları "
+"görevler için uygun/meşgul listelerinde “meşgul” görünmeleri ve alarmları "
 "görmelerini tanımlar. Bu ayar yalnızca Takvim ve Görev klasörlerine "
-"(görevler için, bu ayar yalnızca alarmlar için kullanılır) uygulanır.\n"
+"(görevler için; bu ayar yalnızca alarmlar için kullanılır) uygulanır.\n"
 "\n"
-"Örnek kullanım durumları: eğer bir patron sekreteri ile bir klasör "
-"paylaşırsa, yalnızca kendisi toplantıları için meşgul işaretlenmesi "
+"Örnek kullanım durumları: Eğer bir patron sekreteri ile bir klasör "
+"paylaşırsa yalnızca kendisi toplantıları için meşgul işaretlenmesi "
 "gerektiğinden ve sekreter klasörde yönetici haklarına sahip olmadığından "
-"\"Yöneticiler\" seçmelidir.\n"
+"‘Yöneticiler’i seçmelidir.\n"
 "Diğer bir taraftan, eğer bir çalışma grubu, grup toplantıları için bir "
-"Takvim paylaşırsa, tüm klasör okuyucuları toplantılar için meşgul "
+"Takvim paylaşırsa tüm klasör okuyucuları toplantılar için meşgul "
 "işaretlenmelidir.\n"
-"İsteğe bağlı olaylara sahip şirket çapında bir klasör ise, olayların kime "
-"ait olduğu bilinmediğinden \"Kimse\" seçilmelidir."
+"İsteğe bağlı olaylara sahip şirket çapında bir klasör ise olayların kime ait "
+"olduğu bilinmediğinden ‘Kimse’ seçilmelidir."
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
 #, kde-format
@@ -865,7 +865,7 @@ msgstr "Şunun için için uygun/&meşgul alarmları oluştur ve etkinleştir:"
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
 #, kde-format
 msgid "Search..."
-msgstr "Ara..."
+msgstr "Ara…"
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
@@ -1008,7 +1008,7 @@ msgstr "Başlık"
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
-msgstr "Kişileri LDAP'tan İçe Aktar"
+msgstr "Kişileri LDAP’tan İçe Aktar"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
@@ -1079,7 +1079,7 @@ msgstr "Sonuçta ara"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, kde-format
 msgid "Searching..."
-msgstr "Aranıyor..."
+msgstr "Aranıyor…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
@@ -1099,7 +1099,7 @@ msgstr "Seçiliyi Ekle"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr "LDAP Sunucularını Yapılandır..."
+msgstr "LDAP Sunucularını Yapılandır…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
@@ -1144,37 +1144,37 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Kaynak türü '%1' mevcut değil."
+msgstr "Özaynak türü “%1” kullanılabilir değil."
 
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "Kaynak türü '%1' zaten ayarlanmış."
+msgstr "Özaynak türü “%1” halihazırda ayarlı."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "'%1' için kaynak örneği oluşturuluyor..."
+msgstr "“%1” için özkaynak örneği oluşturuluyor…"
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Kaynak örneği yapılandırılıyor..."
+msgstr "Özkaynak örneği yapılandırılıyor…"
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Kaynak örneği yapılandırılamadı."
+msgstr "Özkaynak örneği yapılandırılamadı."
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "'%1' ayar değeri gerekli olan %2 değerine dönüştürülemedi."
+msgstr "“%1” ayarının değeri gerekli olan %2 değerine dönüştürülemedi."
 
 #: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "'%1' ayarı ayarlanamadı: %2"
+msgstr "“%1” ayarı ayarlanamadı: %2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
@@ -1184,12 +1184,12 @@ msgstr "Ayarlar kaydedilemedi: %1"
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
-msgstr "Kaynak kurulumu tamamlandı."
+msgstr "Özkaynak kurulumu tamamlandı."
 
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Kaynak örneği oluşturulamadı: %1"
+msgstr "Özkaynak örneği oluşturulamadı: %1"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
@@ -1235,7 +1235,7 @@ msgstr "Paylaşılan not"
 #: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, kde-format
 msgid "Do you really want to delete this note?"
-msgstr "Bu notu gerçekten silmek istiyor musunuz?"
+msgstr "Bu notu silmeyi gerçekten istiyor musunuz?"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:135
 #, kde-format
