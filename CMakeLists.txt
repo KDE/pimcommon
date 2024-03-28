@@ -38,7 +38,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "6.0.40")
-set(KTEXTADDONS_MIN_VERSION "1.5.3")
+set(KTEXTADDONS_MIN_VERSION "1.5.4")
 set(KIMAP_LIB_VERSION "6.0.40")
 set(KLDAP_LIB_VERSION "6.0.40")
 
