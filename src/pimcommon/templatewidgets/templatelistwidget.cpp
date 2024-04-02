@@ -5,6 +5,8 @@
 */
 
 #include "templatelistwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "templateeditdialog.h"
 
 #include <KAuthorized>
@@ -123,7 +125,7 @@ public:
             for (int i = 0; i < q->count(); ++i) {
                 name.append(q->item(i)->text());
             }
-            QString templateName = item->text() + QLatin1StringView(" (%1)");
+            QString templateName = item->text() + " (%1)"_L1;
             QString newName;
             int i = 1;
             do {

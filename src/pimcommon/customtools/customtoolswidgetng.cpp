@@ -5,6 +5,8 @@
 */
 
 #include "customtoolswidgetng.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "customtoolsplugin.h"
 #include "customtoolsviewinterface.h"
 
@@ -31,7 +33,7 @@ CustomToolsWidgetNg::CustomToolsWidgetNg(QWidget *parent)
     auto lay = new QHBoxLayout(this);
     lay->setContentsMargins({});
     d->mStackedWidget = new QStackedWidget;
-    d->mStackedWidget->setObjectName(QLatin1StringView("stackedwidget"));
+    d->mStackedWidget->setObjectName("stackedwidget"_L1);
     lay->addWidget(d->mStackedWidget);
     hide();
 }

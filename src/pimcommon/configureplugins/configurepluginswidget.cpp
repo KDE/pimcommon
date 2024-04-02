@@ -5,6 +5,8 @@
 */
 
 #include "configurepluginswidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "configurepluginslistwidget.h"
 
 #include <KConfigGroup>
@@ -41,14 +43,14 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     layout->setContentsMargins({});
 
     mMessageWidget = new KMessageWidget(i18n("Restart is necessary for applying the changes."), this);
-    mMessageWidget->setObjectName(QLatin1StringView("mMessageWidget"));
+    mMessageWidget->setObjectName("mMessageWidget"_L1);
     mMessageWidget->setCloseButtonVisible(false);
     mMessageWidget->setVisible(false);
     mMessageWidget->setPosition(KMessageWidget::Header);
     layout->addWidget(mMessageWidget);
 
     mSplitter = new QSplitter(this);
-    mSplitter->setObjectName(QLatin1StringView("splitter"));
+    mSplitter->setObjectName("splitter"_L1);
     mSplitter->setChildrenCollapsible(false);
     layout->addWidget(mSplitter);
 
@@ -57,11 +59,11 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     } else {
         mConfigureListWidget = configurePluginListWidget;
     }
-    mConfigureListWidget->setObjectName(QLatin1StringView("configureListWidget"));
+    mConfigureListWidget->setObjectName("configureListWidget"_L1);
     mSplitter->addWidget(mConfigureListWidget);
 
     mDescription = new QTextEdit(this);
-    mDescription->setObjectName(QLatin1StringView("description"));
+    mDescription->setObjectName("description"_L1);
     mDescription->setReadOnly(true);
 
     mSplitter->addWidget(mDescription);

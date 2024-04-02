@@ -6,6 +6,8 @@
  */
 
 #include "collectionaclpage.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "aclmanager.h"
 #include "collectionaclwidget.h"
 #include "imapaclattribute.h"
@@ -27,7 +29,7 @@ CollectionAclPage::CollectionAclPage(QWidget *parent)
     : CollectionPropertiesPage(parent)
     , d(new PimCommon::CollectionAclPagePrivate)
 {
-    setObjectName(QLatin1StringView("PimCommon::CollectionAclPage"));
+    setObjectName("PimCommon::CollectionAclPage"_L1);
 
     setPageTitle(i18n("Access Control"));
     init();

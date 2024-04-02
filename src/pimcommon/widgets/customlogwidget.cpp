@@ -11,6 +11,7 @@
 #include <QTextDocument>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 
 LogItemDelegate::LogItemDelegate(QObject *parent)
     : QStyledItemDelegate(parent)
@@ -36,7 +37,7 @@ QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, con
                                 "<html style=\"color:%1\">"
                                 "<body> %2")
                                 .arg(textColor.name().toUpper(), text)
-        + QLatin1StringView("</table></body></html>");
+        + "</table></body></html>"_L1;
 
     document->setHtml(content);
 
@@ -143,7 +144,7 @@ void CustomLogWidget::addEndLineLogEntry()
 QString CustomLogWidget::toHtml() const
 {
     QString result = QStringLiteral("<html>\n<body>\n");
-    result += QLatin1StringView("<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n");
+    result += "<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">\n"_L1;
     for (int i = 0; i < count(); ++i) {
         QListWidgetItem *itemWidget = item(i);
         const QString itemText(itemWidget->text());
@@ -163,9 +164,9 @@ QString CustomLogWidget::toHtml() const
             logText = QStringLiteral("<br/>");
             break;
         }
-        result += QLatin1StringView("<p>") + logText + QLatin1StringView("</p>") + QLatin1Char('\n');
+        result += "<p>"_L1 + logText + "</p>"_L1 + QLatin1Char('\n');
     }
-    result += QLatin1StringView("</body>\n</html>\n");
+    result += "</body>\n</html>\n"_L1;
     return result;
 }
 

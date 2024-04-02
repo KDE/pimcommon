@@ -6,6 +6,8 @@
 */
 
 #include "contenttypewidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "collectiontypeutil.h"
 #include <KLocalizedString>
 
@@ -14,7 +16,7 @@ using namespace PimCommon;
 ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     : QComboBox(parent)
 {
-    setObjectName(QLatin1StringView("contentcombobox"));
+    setObjectName("contentcombobox"_L1);
     PimCommon::CollectionTypeUtil collectionUtil;
     addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeMail));
     addItem(collectionUtil.folderContentDescription(CollectionTypeUtil::ContentsTypeCalendar));

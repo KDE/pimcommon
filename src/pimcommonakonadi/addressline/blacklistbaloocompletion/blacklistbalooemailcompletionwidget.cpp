@@ -6,6 +6,8 @@
 */
 
 #include "blacklistbalooemailcompletionwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "blacklistbalooemaillist.h"
 #include "blacklistbalooemailsearchjob.h"
 #include "blacklistbalooemailutil.h"
@@ -45,30 +47,30 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mainLayout->addLayout(searchLayout);
 
     auto lab = new QLabel(i18n("Search email:"), this);
-    lab->setObjectName(QLatin1StringView("search_label"));
+    lab->setObjectName("search_label"_L1);
     searchLayout->addWidget(lab);
 
     mSearchLineEdit->setPlaceholderText(i18n("Research is done from 3 characters"));
     mSearchLineEdit->setFocus();
     mSearchLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
-    mSearchLineEdit->setObjectName(QLatin1StringView("search_lineedit"));
+    mSearchLineEdit->setObjectName("search_lineedit"_L1);
     connect(mSearchLineEdit, &QLineEdit::returnPressed, this, &BlackListBalooEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded);
     searchLayout->addWidget(mSearchLineEdit);
 
-    mSearchButton->setObjectName(QLatin1StringView("search_button"));
+    mSearchButton->setObjectName("search_button"_L1);
     connect(mSearchButton, &QAbstractButton::clicked, this, &BlackListBalooEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded);
     mSearchButton->setEnabled(false);
     searchLayout->addWidget(mSearchButton);
 
-    mShowAllBlackListedEmails->setObjectName(QLatin1StringView("show_blacklisted_email_button"));
+    mShowAllBlackListedEmails->setObjectName("show_blacklisted_email_button"_L1);
     connect(mShowAllBlackListedEmails, &QAbstractButton::clicked, this, &BlackListBalooEmailCompletionWidget::slotShowAllBlacklistedEmail);
     searchLayout->addWidget(mShowAllBlackListedEmails);
 
-    mEmailList->setObjectName(QLatin1StringView("email_list"));
+    mEmailList->setObjectName("email_list"_L1);
     mainLayout->addWidget(mEmailList);
 
-    mBlackListWarning->setObjectName(QLatin1StringView("backlistwarning"));
+    mBlackListWarning->setObjectName("backlistwarning"_L1);
     connect(mBlackListWarning, &BlackListBalooEmailWarning::newSearch, this, &BlackListBalooEmailCompletionWidget::slotSearch);
     connect(mBlackListWarning, &BlackListBalooEmailWarning::saveChanges, this, &BlackListBalooEmailCompletionWidget::slotSaveChanges);
     mainLayout->addWidget(mBlackListWarning);
@@ -79,15 +81,15 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     auto selectElementLayout = new QHBoxLayout;
     searchLineLayout->addLayout(selectElementLayout);
 
-    mSelectButton->setObjectName(QLatin1StringView("select_email"));
+    mSelectButton->setObjectName("select_email"_L1);
     connect(mSelectButton, &QAbstractButton::clicked, this, &BlackListBalooEmailCompletionWidget::slotSelectEmails);
     selectElementLayout->addWidget(mSelectButton);
 
-    mUnselectButton->setObjectName(QLatin1StringView("unselect_email"));
+    mUnselectButton->setObjectName("unselect_email"_L1);
     connect(mUnselectButton, &QAbstractButton::clicked, this, &BlackListBalooEmailCompletionWidget::slotUnselectEmails);
     selectElementLayout->addWidget(mUnselectButton);
 
-    mMoreResult->setObjectName(QLatin1StringView("moreresultlabel"));
+    mMoreResult->setObjectName("moreresultlabel"_L1);
     selectElementLayout->addWidget(mMoreResult);
 
     mMoreResult->setContextMenuPolicy(Qt::NoContextMenu);
@@ -98,13 +100,13 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &BlackListBalooEmailCompletionWidget::slotSearchLineEditChanged);
 
     mSearchInResultLineEdit = new KListWidgetSearchLine(this, mEmailList);
-    mSearchInResultLineEdit->setObjectName(QLatin1StringView("searchinresultlineedit"));
+    mSearchInResultLineEdit->setObjectName("searchinresultlineedit"_L1);
     mSearchInResultLineEdit->setClearButtonEnabled(true);
     mSearchInResultLineEdit->setPlaceholderText(i18n("Search in result..."));
     KLineEditEventHandler::catchReturnKey(mSearchInResultLineEdit);
 
     searchLineLayout->addStretch(0);
-    mNumberOfEmailsFound->setObjectName(QLatin1StringView("numberofemailsfound"));
+    mNumberOfEmailsFound->setObjectName("numberofemailsfound"_L1);
 
     searchLineLayout->addWidget(mNumberOfEmailsFound, 1);
     searchLineLayout->addWidget(mSearchInResultLineEdit);
@@ -114,11 +116,11 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mainLayout->addLayout(excludeDomainLayout);
 
     auto excludeDomainLabel = new QLabel(i18n("Exclude domain names:"), this);
-    excludeDomainLabel->setObjectName(QLatin1StringView("domain_label"));
+    excludeDomainLabel->setObjectName("domain_label"_L1);
     excludeDomainLayout->addWidget(excludeDomainLabel);
 
     excludeDomainLayout->addWidget(mExcludeDomainLineEdit);
-    mExcludeDomainLineEdit->setObjectName(QLatin1StringView("domain_lineedit"));
+    mExcludeDomainLineEdit->setObjectName("domain_lineedit"_L1);
     mExcludeDomainLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mExcludeDomainLineEdit);
     mExcludeDomainLineEdit->setPlaceholderText(i18n("Separate domain with \'%1\'", QLatin1Char(',')));
@@ -128,11 +130,11 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mainLayout->addLayout(excludeEmailRegularExpressionLayout);
 
     auto excludeEmailRegularExpressionLabel = new QLabel(i18n("Exclude email with Regular Expression:"), this);
-    excludeEmailRegularExpressionLabel->setObjectName(QLatin1StringView("email_regularexpression_label"));
+    excludeEmailRegularExpressionLabel->setObjectName("email_regularexpression_label"_L1);
     excludeEmailRegularExpressionLayout->addWidget(excludeEmailRegularExpressionLabel);
 
     excludeEmailRegularExpressionLayout->addWidget(mExcludeEmailFromRegularExpressionLineEdit);
-    mExcludeEmailFromRegularExpressionLineEdit->setObjectName(QLatin1StringView("exclude_email_lineedit"));
+    mExcludeEmailFromRegularExpressionLineEdit->setObjectName("exclude_email_lineedit"_L1);
     mExcludeEmailFromRegularExpressionLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mExcludeEmailFromRegularExpressionLineEdit);
     mExcludeEmailFromRegularExpressionLineEdit->setPlaceholderText(i18n("Separate regular expression with \'%1\'", QLatin1Char(',')));
@@ -304,7 +306,7 @@ void BlackListBalooEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded()
 
 void BlackListBalooEmailCompletionWidget::slotLinkClicked(const QString &link)
 {
-    if (link == QLatin1StringView("more_result")) {
+    if (link == "more_result"_L1) {
         mLimit += 200;
         slotSearch();
     }

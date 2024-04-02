@@ -6,6 +6,8 @@
 */
 
 #include "completionconfiguredialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KConfigGroup>
 #include <KLDAPWidgets/LdapClientSearch>
 #include <KLocalizedString>
@@ -50,25 +52,25 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
 
     d->mTabWidget = new QTabWidget(this);
-    d->mTabWidget->setObjectName(QLatin1StringView("tabwidget"));
+    d->mTabWidget->setObjectName("tabwidget"_L1);
     mainLayout->addWidget(d->mTabWidget);
 
     d->mCompletionOrderWidget = new PimCommon::CompletionOrderWidget(this);
-    d->mCompletionOrderWidget->setObjectName(QLatin1StringView("completionorder_widget"));
+    d->mCompletionOrderWidget->setObjectName("completionorder_widget"_L1);
     d->mTabWidget->addTab(d->mCompletionOrderWidget, i18n("Completion Order"));
 
     d->mRecentaddressWidget = new PimCommon::RecentAddressWidget(this);
-    d->mRecentaddressWidget->setObjectName(QLatin1StringView("recentaddress_widget"));
+    d->mRecentaddressWidget->setObjectName("recentaddress_widget"_L1);
     d->mTabWidget->addTab(d->mRecentaddressWidget, i18n("Recent Address"));
 
 #if !DISABLE_AKONADI_SEARCH
     d->mBlackListBalooWidget = new PimCommon::BlackListBalooEmailCompletionWidget(this);
-    d->mBlackListBalooWidget->setObjectName(QLatin1StringView("blacklistbaloo_widget"));
+    d->mBlackListBalooWidget->setObjectName("blacklistbaloo_widget"_L1);
     d->mTabWidget->addTab(d->mBlackListBalooWidget, i18n("Blacklist Email Address"));
 #endif
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttonbox"));
+    buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CompletionConfigureDialog::slotSaveAndClose);
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &CompletionConfigureDialog::slotSave);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);

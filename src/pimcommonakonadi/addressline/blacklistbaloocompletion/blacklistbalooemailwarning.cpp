@@ -6,6 +6,8 @@
 */
 
 #include "blacklistbalooemailwarning.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedString>
 #include <QAction>
 
@@ -21,17 +23,17 @@ BlackListBalooEmailWarning::BlackListBalooEmailWarning(QWidget *parent)
 
     setText(i18n("The list was changed. Do you want to save before to make another search ?"));
     auto saveAction = new QAction(i18n("Save"), this);
-    saveAction->setObjectName(QLatin1StringView("saveblacklist"));
+    saveAction->setObjectName("saveblacklist"_L1);
     connect(saveAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSaveBlackList);
     addAction(saveAction);
 
     auto searchAction = new QAction(i18n("Search"), this);
-    searchAction->setObjectName(QLatin1StringView("search"));
+    searchAction->setObjectName("search"_L1);
     connect(searchAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSearch);
     addAction(searchAction);
 
     auto cancelAction = new QAction(i18n("Cancel"), this);
-    cancelAction->setObjectName(QLatin1StringView("cancel"));
+    cancelAction->setObjectName("cancel"_L1);
     connect(cancelAction, &QAction::triggered, this, &BlackListBalooEmailWarning::animatedHide);
     addAction(cancelAction);
 }

@@ -8,6 +8,8 @@
  */
 
 #include "completionordereditor.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "completionorderwidget.h"
 #include <KLDAPWidgets/LdapClient>
 #include <KLDAPWidgets/LdapClientSearch>
@@ -44,7 +46,7 @@ CompletionOrderEditor::CompletionOrderEditor(KLDAPWidgets::LdapClientSearch *lda
     auto mainLayout = new QVBoxLayout(this);
 
     d->mCompletionOrderWidget = new CompletionOrderWidget(this);
-    d->mCompletionOrderWidget->setObjectName(QLatin1StringView("completionorderwidget"));
+    d->mCompletionOrderWidget->setObjectName("completionorderwidget"_L1);
 
     mainLayout->addWidget(d->mCompletionOrderWidget);
 

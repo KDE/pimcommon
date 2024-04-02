@@ -5,6 +5,8 @@
 */
 
 #include "purposemenuwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedString>
 #include <Purpose/AlternativesModel>
 #include <Purpose/Menu>
@@ -18,7 +20,7 @@ PurposeMenuWidget::PurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     , mParentWidget(parentWidget)
     , mShareMenu(new Purpose::Menu(mParentWidget))
 {
-    mShareMenu->setObjectName(QLatin1StringView("purposesharemenu"));
+    mShareMenu->setObjectName("purposesharemenu"_L1);
     connect(mShareMenu, &Purpose::Menu::aboutToShow, this, &PurposeMenuWidget::slotInitializeShareMenu);
     connect(mShareMenu, &Purpose::Menu::finished, this, &PurposeMenuWidget::slotShareActionFinished);
 }
@@ -52,7 +54,7 @@ void PurposeMenuWidget::slotShareActionFinished(const QJsonObject &output, int e
     if (error) {
         Q_EMIT shareError(i18n("There was a problem sharing the document: %1", message));
     } else {
-        const QString url = output[QLatin1StringView("url")].toString();
+        const QString url = output["url"_L1].toString();
         if (url.isEmpty()) {
             Q_EMIT shareSuccess(i18n("File was shared."));
         } else {

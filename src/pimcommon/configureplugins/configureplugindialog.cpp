@@ -5,6 +5,8 @@
 */
 
 #include "configureplugindialog.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KWindowConfig>
@@ -39,7 +41,7 @@ void ConfigurePluginDialog::initLayout(bool addSpacer)
     }
 
     mButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults | QDialogButtonBox::Help, this);
-    mButtonBox->setObjectName(QLatin1StringView("buttonBox"));
+    mButtonBox->setObjectName("buttonBox"_L1);
     layout->addWidget(mButtonBox);
     connect(mButtonBox, &QDialogButtonBox::accepted, this, &ConfigurePluginDialog::slotAccepted);
     connect(mButtonBox, &QDialogButtonBox::rejected, this, &ConfigurePluginDialog::reject);

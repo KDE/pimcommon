@@ -6,6 +6,7 @@
 */
 
 #include "completionorderwidget.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <KDescendantsProxyModel>
 #include <KLDAPWidgets/LdapClient>
@@ -236,7 +237,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     pageHBoxLayout->setContentsMargins({});
     hbox->addWidget(page);
     mListView = new QTreeWidget(page);
-    mListView->setObjectName(QLatin1StringView("listview"));
+    mListView->setObjectName("listview"_L1);
 
     pageHBoxLayout->addWidget(mListView);
     mListView->setColumnCount(1);
@@ -253,7 +254,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mUpButton = new QPushButton(upDownBox);
     upDownBoxVBoxLayout->addWidget(mUpButton);
     mUpButton->setAutoRepeat(true);
-    mUpButton->setObjectName(QLatin1StringView("mUpButton"));
+    mUpButton->setObjectName("mUpButton"_L1);
     mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     mUpButton->setEnabled(false); // b/c no item is selected yet
     mUpButton->setToolTip(i18n("Move Up"));
@@ -262,7 +263,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mDownButton = new QPushButton(upDownBox);
     upDownBoxVBoxLayout->addWidget(mDownButton);
     mDownButton->setAutoRepeat(true);
-    mDownButton->setObjectName(QLatin1StringView("mDownButton"));
+    mDownButton->setObjectName("mDownButton"_L1);
     mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     mDownButton->setEnabled(false); // b/c no item is selected yet
     mDownButton->setToolTip(i18n("Move Down"));

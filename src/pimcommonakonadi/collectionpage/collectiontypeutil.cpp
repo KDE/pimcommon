@@ -6,6 +6,8 @@
 */
 
 #include "collectiontypeutil.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedString>
 
 using namespace PimCommon;
@@ -70,11 +72,11 @@ QString CollectionTypeUtil::incidencesForToString(CollectionTypeUtil::Incidences
 
 CollectionTypeUtil::IncidencesFor CollectionTypeUtil::incidencesForFromString(const QString &string)
 {
-    if (string == QLatin1StringView("nobody")) {
+    if (string == "nobody"_L1) {
         return CollectionTypeUtil::IncForNobody;
-    } else if (string == QLatin1StringView("admins")) {
+    } else if (string == "admins"_L1) {
         return CollectionTypeUtil::IncForAdmins;
-    } else if (string == QLatin1StringView("readers")) {
+    } else if (string == "readers"_L1) {
         return CollectionTypeUtil::IncForReaders;
     }
 

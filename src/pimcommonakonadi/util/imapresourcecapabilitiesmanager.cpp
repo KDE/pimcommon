@@ -5,6 +5,8 @@
 */
 
 #include "imapresourcecapabilitiesmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
 
@@ -58,7 +60,7 @@ void ImapResourceCapabilitiesManager::slotCapabilities(QDBusPendingCallWatcher *
     if (reply.isValid()) {
         if (watcher->property("identifier").isValid()) {
             const QStringList capabilities = reply.value();
-            mImapResource.insert(watcher->property("identifier").toString(), capabilities.contains(QLatin1StringView("ANNOTATEMORE")));
+            mImapResource.insert(watcher->property("identifier").toString(), capabilities.contains("ANNOTATEMORE"_L1));
         }
     }
     watcher->deleteLater();

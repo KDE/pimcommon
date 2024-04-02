@@ -11,6 +11,7 @@
 #include <QStyleOptionFrame>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 
 SpellCheckLineEdit::SpellCheckLineEdit(QWidget *parent, const QString &configFile)
     : TextCustomEditor::RichTextEditor(parent)
@@ -84,8 +85,8 @@ void SpellCheckLineEdit::insertFromMimeData(const QMimeData *source)
         // replace \r with \n to make xterm pastes happy
         pasteText.replace(QLatin1Char('\r'), QLatin1Char('\n'));
         // remove blank lines
-        while (pasteText.contains(QLatin1StringView("\n\n"))) {
-            pasteText.replace(QLatin1StringView("\n\n"), QLatin1StringView("\n"));
+        while (pasteText.contains("\n\n"_L1)) {
+            pasteText.replace("\n\n"_L1, "\n"_L1);
         }
 
         static const QRegularExpression reTopSpace(QStringLiteral("^ *\n"));

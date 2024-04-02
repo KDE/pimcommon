@@ -5,6 +5,8 @@
 */
 
 #include "checkedcollectionwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <Akonadi/CollectionFilterProxyModel>
 
 #include <Akonadi/EntityTreeModel>
@@ -42,7 +44,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
 
     // Create a new change recorder.
     auto monitor = new Akonadi::Monitor(this);
-    monitor->setObjectName(QLatin1StringView("CheckedCollectionWidgetMonitor"));
+    monitor->setObjectName("CheckedCollectionWidgetMonitor"_L1);
     monitor->fetchCollection(true);
     monitor->setAllMonitored(true);
     monitor->setMimeTypeMonitored(mimetype);

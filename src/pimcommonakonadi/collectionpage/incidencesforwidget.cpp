@@ -6,6 +6,8 @@
 */
 
 #include "incidencesforwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <KLocalizedString>
 
 using namespace PimCommon;
@@ -16,7 +18,7 @@ IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     addItem(i18n("Admins of This Folder"));
     addItem(i18n("All Readers of This Folder"));
 
-    setObjectName(QLatin1StringView("contentstypecombobox"));
+    setObjectName("contentstypecombobox"_L1);
     const QString whatsThisForMyOwnFolders = i18n(
         "This setting defines which users sharing "
         "this folder should get \"busy\" periods in their freebusy lists "

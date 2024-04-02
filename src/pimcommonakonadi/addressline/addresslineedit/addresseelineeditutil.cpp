@@ -5,6 +5,8 @@
 */
 
 #include "addresseelineeditutil.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <QRegularExpression>
 #include <QUrl>
 
@@ -20,16 +22,16 @@ QString PimCommon::AddresseeLineEditUtil::adaptPasteMails(const QString &str)
         static QRegularExpression reg1(QRegularExpression(QStringLiteral(",?\\s*$")));
         (*it).remove(reg1);
     }
-    newText = lines.join(QLatin1StringView(", "));
+    newText = lines.join(", "_L1);
 
-    if (newText.startsWith(QLatin1StringView("mailto:"))) {
+    if (newText.startsWith("mailto:"_L1)) {
         const QUrl url(newText);
         newText = url.path();
-    } else if (newText.contains(QLatin1StringView(" at "))) {
+    } else if (newText.contains(" at "_L1)) {
         // Anti-spam stuff
         newText.replace(QStringLiteral(" at "), QStringLiteral("@"));
         newText.replace(QStringLiteral(" dot "), QStringLiteral("."));
-    } else if (newText.contains(QLatin1StringView("(at)"))) {
+    } else if (newText.contains("(at)"_L1)) {
         static QRegularExpression reg((QStringLiteral("\\s*\\(at\\)\\s*")));
         newText.replace(reg, QStringLiteral("@"));
     }

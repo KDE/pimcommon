@@ -12,6 +12,8 @@
 #include <QTabWidget>
 #include <QTest>
 
+using namespace Qt::Literals::StringLiterals;
+
 CompletionConfigureDialogTest::CompletionConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
@@ -37,8 +39,7 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
     QVERIFY(tabWidget->count() > 0);
     for (int i = 0; i < tabWidget->count(); ++i) {
         const QString objName = tabWidget->widget(i)->objectName();
-        const bool hasName = (objName == QLatin1StringView("completionorder_widget")) || (objName == QLatin1StringView("recentaddress_widget"))
-            || (objName == QLatin1StringView("blacklistbaloo_widget"));
+        const bool hasName = (objName == "completionorder_widget"_L1) || (objName == "recentaddress_widget"_L1) || (objName == "blacklistbaloo_widget"_L1);
         QVERIFY(hasName);
     }
 }

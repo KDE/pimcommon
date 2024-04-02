@@ -13,6 +13,8 @@
 */
 
 #include "addresseelineedit.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "addresseelineedit_p.h"
 #include "addresseelineeditmanager.h"
 #include "addresseelineeditutil.h"
@@ -59,7 +61,7 @@ using namespace PimCommon;
 
 inline bool itemIsHeader(const QListWidgetItem *item)
 {
-    return item && !item->text().startsWith(QLatin1StringView("     "));
+    return item && !item->text().startsWith("     "_L1);
 }
 
 // needs to be unique, but the actual name doesn't matter much
@@ -291,7 +293,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
         for (const QUrl &url : urls) {
             // First, let's deal with mailto Urls. The path() part contains the
             // email-address.
-            if (url.scheme() == QLatin1StringView("mailto")) {
+            if (url.scheme() == "mailto"_L1) {
                 KContacts::Addressee addressee;
                 KContacts::Email email(KEmailAddress::decodeMailtoUrl(url));
                 email.setPreferred(true);
@@ -351,13 +353,13 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
                 bool mailtoURL = false;
                 // append the mailto URLs
                 for (const QUrl &url : uriList) {
-                    if (url.scheme() == QLatin1StringView("mailto")) {
+                    if (url.scheme() == "mailto"_L1) {
                         mailtoURL = true;
                         QString address;
                         address = QUrl::fromPercentEncoding(url.path().toLatin1());
                         address = KCodecs::decodeRFC2047String(address);
                         if (!contents.isEmpty()) {
-                            contents.append(QLatin1StringView(", "));
+                            contents.append(", "_L1);
                         }
                         contents.append(address);
                     }
@@ -375,7 +377,7 @@ void AddresseeLineEdit::dropEvent(QDropEvent *event)
                     if (!addrs.isEmpty()) {
                         if (addrs.count() == 1) {
                             QUrl url(dropData);
-                            if (url.scheme() == QLatin1StringView("mailto")) {
+                            if (url.scheme() == "mailto"_L1) {
                                 KContacts::Addressee addressee;
                                 KContacts::Email email(KEmailAddress::decodeMailtoUrl(url));
                                 email.setPreferred(true);
@@ -441,7 +443,7 @@ void AddresseeLineEdit::insertEmails(const QStringList &emails)
     // multiple emails, let the user choose one
     QMenu menu(this);
     menu.setTitle(i18n("Select email from contact"));
-    menu.setObjectName(QLatin1StringView("Addresschooser"));
+    menu.setObjectName("Addresschooser"_L1);
     for (const QString &email : emails) {
         menu.addAction(email);
     }
@@ -915,7 +917,7 @@ void AddresseeLineEdit::expandGroups()
         addresses.removeAll(group.name());
         expandJob->start();
     }
-    setText(addresses.join(QLatin1StringView(", ")));
+    setText(addresses.join(", "_L1));
     d->groupsClear();
 }
 

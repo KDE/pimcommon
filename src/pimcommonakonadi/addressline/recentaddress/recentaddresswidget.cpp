@@ -6,6 +6,8 @@
 */
 
 #include "recentaddresswidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "recentaddresses.h"
 
 #include <KConfig>
@@ -37,7 +39,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     auto lineLayout = new QHBoxLayout;
     layout->addLayout(lineLayout);
 
-    mLineEdit->setObjectName(QLatin1StringView("line_edit"));
+    mLineEdit->setObjectName("line_edit"_L1);
     KLineEditEventHandler::catchReturnKey(mLineEdit);
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
@@ -48,7 +50,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     lineLayout->addWidget(mLineEdit);
 
     mNewButton->setToolTip(i18n("Add Email"));
-    mNewButton->setObjectName(QLatin1StringView("new_button"));
+    mNewButton->setObjectName("new_button"_L1);
     mNewButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mNewButton->setEnabled(false);
     connect(mNewButton, &QPushButton::clicked, this, &RecentAddressWidget::slotAddItem);
@@ -57,7 +59,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     mRemoveButton->setToolTip(i18n("Remove"));
-    mRemoveButton->setObjectName(QLatin1StringView("remove_button"));
+    mRemoveButton->setObjectName("remove_button"_L1);
     mRemoveButton->setEnabled(false);
     lineLayout->addWidget(mRemoveButton);
     connect(mRemoveButton, &QPushButton::clicked, this, &RecentAddressWidget::slotRemoveItem);
@@ -66,7 +68,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     shortcut->setKey(QKeySequence(Qt::Key_Delete));
     connect(shortcut, &QShortcut::activated, this, &RecentAddressWidget::slotRemoveItem);
 
-    mListView->setObjectName(QLatin1StringView("list_view"));
+    mListView->setObjectName("list_view"_L1);
     mListView->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListView->setSortingEnabled(true);
     mListView->setContextMenuPolicy(Qt::CustomContextMenu);
