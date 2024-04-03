@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-28 00:38+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2020-11-17 19:30+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:152
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
 #, kde-format
 msgid "Configure"
 msgstr "Indstil"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:43
+#: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Genstart er nødvendigt for at anvende ændringerne."
@@ -113,85 +113,85 @@ msgstr "Skabelon"
 msgid "Name:"
 msgstr "Navn:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Vil du slette den valgte skabelon?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, fuzzy, kde-format
 #| msgid "Delete template"
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Slet skabelon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#: pimcommon/templatewidgets/templatelistwidget.cpp:145
 #, kde-format
 msgid "Import Template"
 msgstr "Importér skabelon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#: pimcommon/templatewidgets/templatelistwidget.cpp:154
 #, kde-format
 msgid "Export Template"
 msgstr "Eksportér skabelon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#: pimcommon/templatewidgets/templatelistwidget.cpp:168
 #, kde-format
 msgid "Insert template"
 msgstr "Indsæt skabelon"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#: pimcommon/templatewidgets/templatelistwidget.cpp:174
 #, kde-format
 msgid "Add..."
 msgstr "Tilføj..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Show..."
 msgstr "Vis..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
 msgstr "Ændr..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
 msgid "Duplicate"
 msgstr "Duplikér"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
+#: pimcommon/templatewidgets/templatelistwidget.cpp:189
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
 msgid "Export..."
 msgstr "Eksportér..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#: pimcommon/templatewidgets/templatelistwidget.cpp:200
 #, kde-format
 msgid "Import..."
 msgstr "Importér..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Download nye skabeloner..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "\"%1\" er ikke en skabelonfil"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "Load Template"
 msgstr "Indlæs skabelon"
 
-#: pimcommon/util/pimutil.cpp:48
+#: pimcommon/util/pimutil.cpp:49
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -200,14 +200,14 @@ msgstr ""
 "Kunne ikke skrive filen %1:\n"
 "\"%2\" er den detaljerede fejlbeskrivelse."
 
-#: pimcommon/util/pimutil.cpp:52
+#: pimcommon/util/pimutil.cpp:53
 #, fuzzy, kde-format
 #| msgid "Save File Error"
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Fejl ved gemning af fil"
 
-#: pimcommon/util/pimutil.cpp:83
+#: pimcommon/util/pimutil.cpp:84
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -216,7 +216,7 @@ msgstr ""
 "Kunne ikke læse filen %1:\n"
 "\"%2\" er den detaljerede fejlbeskrivelse."
 
-#: pimcommon/util/pimutil.cpp:87
+#: pimcommon/util/pimutil.cpp:88
 #, fuzzy, kde-format
 #| msgid "Load File Error"
 msgctxt "@title:window"
@@ -262,17 +262,17 @@ msgstr "Skift mellem store/små bogst."
 msgid "Clear History"
 msgstr "Ryd historik"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:53
+#: pimcommon/widgets/purposemenuwidget.cpp:55
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Der opstod et problem ved deling af dette dokument: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:57
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "File was shared."
 msgstr "Filen blev delt."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:59
+#: pimcommon/widgets/purposemenuwidget.cpp:61
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Du kan finde den nye anmodning på:<br /><a href='%1'>%1</a> </qt>"
@@ -360,9 +360,9 @@ msgid "&Customize..."
 msgstr "&Brugertilpas..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:288
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@title:window"
@@ -407,34 +407,34 @@ msgstr "<b>Bemærk: </b>Omdøbning kræver skriverettigheder i overmappen."
 msgid "Folder cannot be administrated."
 msgstr "Mappen kan ikke administreres."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:159
+#: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
 msgid "Add Entry..."
 msgstr "Tilføj indgang..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:164
+#: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
 msgid "Edit Entry..."
 msgstr "Redigér indgang..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:170
+#: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
 msgid "Remove Entry"
 msgstr "Fjern indgang"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:212
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Tilføj ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:239
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Redigér ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:279
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -443,18 +443,18 @@ msgstr ""
 "Vil du virkelig fjerne dine egne rettigheder for denne mappe? Du vil ikke "
 "kunne tilgå den bagefter."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:287
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Vil du virkelig fjerne disse rettigheder for denne mappe?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "Vil du virkelig anvende mappens rettigheder på disse undermapper?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, fuzzy, kde-format
 #| msgid "Apply Permissions"
 msgctxt "@title:window"
@@ -491,53 +491,53 @@ msgstr "Alle"
 msgid "Custom Permissions (%1)"
 msgstr "Brugertilpassede rettigheder (%1)"
 
-#: pimcommonakonadi/acl/collectionaclpage.cpp:32
+#: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, kde-format
 msgid "Access Control"
 msgstr "Adgangskontrol (ACL)"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
 msgid "Apply permissions on all &subfolders."
 msgstr "Anvend rettigheder på alle &undermapper."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:322
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Import af vCard mislykkedes"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:323
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Kan ikke tilgå <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:443
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
 #, kde-format
 msgid "Select email from contact"
 msgstr "Vælg e-mail fra kontakt"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:563
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Vis organisationsenhed for LDAP-resultater"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Indstil fuldførelse..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:575
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Fold automatisk grupper ud"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Fold grupper ud..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:614
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Nylige adresser"
@@ -555,86 +555,86 @@ msgstr "Kontakter fundet i dine data"
 msgid "LDAP server: %1"
 msgstr "LDAP-server: %1"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr "Søg"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "&Select"
 msgstr "&Vælg"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "&Unselect"
 msgstr "&Afmarkér"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
 msgid "Show Blacklisted Emails"
 msgstr "Vis sortlistede e-mails"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Flere fund...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
 #, kde-format
 msgid "Search email:"
 msgstr "Søg i e-mail:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
 msgid "Research is done from 3 characters"
 msgstr "Der søges fra 3 tegn"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, kde-format
 msgid "Search in result..."
 msgstr "Søg i resultat..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
 msgid "Exclude domain names:"
 msgstr "Undtag domænenavne:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr "Adskil domæne med \"%1\""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
 #, kde-format
 msgid "Exclude email with Regular Expression:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, fuzzy, kde-format
 #| msgid "Separate domain with '%1'"
 msgid "Separate regular expression with '%1'"
 msgstr "Adskil domæne med \"%1\""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, fuzzy, kde-format
 #| msgid "&Select"
 msgid "Select"
 msgstr "&Vælg"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
 #, fuzzy, kde-format
 #| msgid "&Unselect"
 msgid "Unselect"
 msgstr "&Afmarkér"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "No email found."
 msgstr "Ingen e-mail fundet."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:288
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -646,77 +646,77 @@ msgstr[1] "%1 e-mails fundet"
 msgid "No result found"
 msgstr "Ingen resultater fundet"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:24
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
 msgstr "Listen blev ændret. Vil du gemme før du foretager en ny søgning?"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
 #, kde-format
 msgid "Save"
 msgstr "Gem"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Indstil fuldførelse"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:60
 #, kde-format
 msgid "Completion Order"
 msgstr "Redigér fuldførelsesrækkefølge"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:64
 #, kde-format
 msgid "Recent Address"
 msgstr "Nylige adresser"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:69
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr "Sortlist e-mail-adresse"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
 msgstr "Redigér kompletteringsrækkefølge"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
 #, kde-format
 msgid "LDAP server %1"
 msgstr "LDAP-server %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
 msgid "Move Up"
 msgstr "Flyt op"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
 msgid "Move Down"
 msgstr "Flyt ned"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
 msgid "New email..."
 msgstr ""
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, fuzzy, kde-format
 #| msgctxt "@item LDAP search key"
 #| msgid "Email"
 msgid "Add Email"
 msgstr "E-mail"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, fuzzy, kde-format
 #| msgid "Remove Entry"
 msgid "Remove Email"
@@ -724,112 +724,112 @@ msgid_plural "Remove Emails"
 msgstr[0] "Fjern indgang"
 msgstr[1] "Fjern indgang"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
 msgstr[0] "Vil du fjerne denne e-mail-adresse?"
 msgstr[1] "Vil du fjerne %1 e-mail-adresser?"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:200
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
 msgstr "E-mail"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:145
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:179
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
 msgstr "Kalender"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:182
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
 msgstr "Kontakter"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:185
 #, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
 msgstr "Noter"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:176
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
 msgstr "Opgaver"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:188
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
 msgstr "Journal"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:191
 #, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:194
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
 msgstr "Ledigoptaget"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:197
 #, kde-format
 msgctxt "type of folder content"
 msgid "Files"
 msgstr "Filer"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
 msgstr "Ukendt"
 
-#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
 msgid "&Folder contents:"
 msgstr "&Mappeindhold:"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "Nobody"
 msgstr "Ingen"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:18
 #, kde-format
 msgid "Admins of This Folder"
 msgstr "Administratorer for denne mappe"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:19
 #, kde-format
 msgid "All Readers of This Folder"
 msgstr "Alle læsere af denne mappe"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:23
 #, kde-format
 msgid ""
 "This setting defines which users sharing this folder should get \"busy\" "
@@ -861,12 +861,12 @@ msgstr ""
 "bruge \"Ingen\", eftersom det ikke er kendt hvem der vil deltage i "
 "aktiviteterne."
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
 msgstr "Generér ledig/&optaget og aktivér alarmer for:"
 
-#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, kde-format
 msgid "Search..."
 msgstr "Søg..."

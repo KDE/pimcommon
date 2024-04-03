@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-28 00:38+0000\n"
+"POT-Creation-Date: 2024-04-03 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 16:45+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:150
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
 msgid "..."
 msgstr "…"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:152
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
 #, kde-format
 msgid "Configure"
 msgstr "Налаштування"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:43
+#: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Для застосування змін слід перезапустити програму."
@@ -115,84 +115,84 @@ msgstr "Шаблон"
 msgid "Name:"
 msgstr "Назва:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:75
+#: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Хочете вилучити позначений шаблон?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:76
+#: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Вилучення шаблона"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:143
+#: pimcommon/templatewidgets/templatelistwidget.cpp:145
 #, kde-format
 msgid "Import Template"
 msgstr "Імпортувати шаблон"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:152
+#: pimcommon/templatewidgets/templatelistwidget.cpp:154
 #, kde-format
 msgid "Export Template"
 msgstr "Експортувати шаблон"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:166
+#: pimcommon/templatewidgets/templatelistwidget.cpp:168
 #, kde-format
 msgid "Insert template"
 msgstr "Вставити шаблон"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:172
+#: pimcommon/templatewidgets/templatelistwidget.cpp:174
 #, kde-format
 msgid "Add..."
 msgstr "Додати…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Show..."
 msgstr "Показати…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:178
+#: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
 msgstr "Змінити…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:181
+#: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
 msgid "Duplicate"
 msgstr "Здублювати"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:187
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:59
+#: pimcommon/templatewidgets/templatelistwidget.cpp:189
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:194
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
 msgid "Export..."
 msgstr "Експортувати…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:198
+#: pimcommon/templatewidgets/templatelistwidget.cpp:200
 #, kde-format
 msgid "Import..."
 msgstr "Імпортувати…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:205
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Отримати нові шаблони…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "«%1» не є файлом шаблону"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:240
+#: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "Load Template"
 msgstr "Завантажити шаблон"
 
-#: pimcommon/util/pimutil.cpp:48
+#: pimcommon/util/pimutil.cpp:49
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -201,13 +201,13 @@ msgstr ""
 "Не вдалося виконати запис до файла %1.\n"
 "Докладний опис помилки: «%2»."
 
-#: pimcommon/util/pimutil.cpp:52
+#: pimcommon/util/pimutil.cpp:53
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Помилка під час збереження файла"
 
-#: pimcommon/util/pimutil.cpp:83
+#: pimcommon/util/pimutil.cpp:84
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -216,7 +216,7 @@ msgstr ""
 "Не вдалося виконати читання файла %1.\n"
 "Докладний опис помилки: «%2»."
 
-#: pimcommon/util/pimutil.cpp:87
+#: pimcommon/util/pimutil.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
@@ -262,17 +262,17 @@ msgstr "Обернений регістр"
 msgid "Clear History"
 msgstr "Спорожнити журнал"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:53
+#: pimcommon/widgets/purposemenuwidget.cpp:55
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Під час спроби оприлюднити документ виникла проблема: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:57
+#: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "File was shared."
 msgstr "Файл оприлюднено."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:59
+#: pimcommon/widgets/purposemenuwidget.cpp:61
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Новий запит можна знайти тут:<br /><a href='%1'>%1</a> </qt>"
@@ -359,9 +359,9 @@ msgid "&Customize..."
 msgstr "&Налаштувати…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
-#: pimcommonakonadi/acl/aclmanager.cpp:281
-#: pimcommonakonadi/acl/aclmanager.cpp:288
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:133
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove"
@@ -408,34 +408,34 @@ msgstr ""
 msgid "Folder cannot be administrated."
 msgstr "Адміністрування теки неможливе."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:159
+#: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
 msgid "Add Entry..."
 msgstr "Додати запис…"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:164
+#: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
 msgid "Edit Entry..."
 msgstr "Змінити запис…"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:170
+#: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
 msgid "Remove Entry"
 msgstr "Вилучити запис"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:212
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Додавання ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:239
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Зміна ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:279
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -444,18 +444,18 @@ msgstr ""
 "Ви дійсно бажаєте вилучити власні дозволи для цієї теки? Після цього ви "
 "більше не зможете отримати доступ до неї."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:287
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Ви дійсно бажаєте вилучити ці дозволи для цієї теки?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:241
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "Ви справді хочете застосувати права доступу до теки до усіх її підтек?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
@@ -491,53 +491,53 @@ msgstr "Всі дії"
 msgid "Custom Permissions (%1)"
 msgstr "Нетипові права доступу (%1)"
 
-#: pimcommonakonadi/acl/collectionaclpage.cpp:32
+#: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, kde-format
 msgid "Access Control"
 msgstr "Керування доступом"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:71
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
 msgid "Apply permissions on all &subfolders."
 msgstr "Застосувати права доступу до усіх &підтек."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:322
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Не вдалося імпортувати vCard"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:323
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Не вдалося отримати доступу до <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:443
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
 #, kde-format
 msgid "Select email from contact"
 msgstr "Вибір адреси ел. пошти із запису контакту"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:563
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
 msgid "Show Organization Unit for LDAP results"
 msgstr "Показувати модуль установи для результатів із LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Налаштувати автодоповнення…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:575
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Автоматично розгортати групи"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:581
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Розгорнути групи…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:614
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:311
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Нещодавні адреси."
@@ -555,83 +555,83 @@ msgstr "Записи контактів, виявлені у ваших дани
 msgid "LDAP server: %1"
 msgstr "Сервер LDAP: %1"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:34
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:28
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:35
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgid "&Select"
 msgstr "&Позначити"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgid "&Unselect"
 msgstr "З&няття позначення"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
 msgid "Show Blacklisted Emails"
 msgstr "Показати поштові повідомлення з «чорного» списку"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Інші результати…</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:47
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
 #, kde-format
 msgid "Search email:"
 msgstr "Шукати адресу ел. пошти:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:51
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
 msgid "Research is done from 3 characters"
 msgstr "Результати отримано за 3 символами"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:103
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, kde-format
 msgid "Search in result..."
 msgstr "Шукати у результатах…"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:116
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
 msgid "Exclude domain names:"
 msgstr "Виключити назви доменів:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:124
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
 msgid "Separate domain with '%1'"
 msgstr "Відокремити домен з «%1»"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:130
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
 #, kde-format
 msgid "Exclude email with Regular Expression:"
 msgstr "Виключити адресу ел. пошти за формальним виразом:"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:138
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, kde-format
 msgid "Separate regular expression with '%1'"
 msgstr "Відокремлення формального виразу — «%1»"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:159
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, kde-format
 msgid "Select"
 msgstr "Вибрати"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
 #, kde-format
 msgid "Unselect"
 msgstr "Зняття позначення"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:284
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "No email found."
 msgstr "Адрес електронної пошти не знайдено."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:288
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -645,76 +645,76 @@ msgstr[3] "Знайдено одне повідомлення"
 msgid "No result found"
 msgstr "Нічого не знайдено"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:22
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:24
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
 msgstr ""
 "До списку внесено зміни. Хочете зберегти їх до виконання іншого пошуку?"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:23
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
 #, kde-format
 msgid "Save"
 msgstr "Зберегти"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:33
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:49
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
 msgstr "Налаштувати автодоповнення…"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:58
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:60
 #, kde-format
 msgid "Completion Order"
 msgstr "Порядок доповнення"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:62
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:64
 #, kde-format
 msgid "Recent Address"
 msgstr "Недавня адреса"
 
-#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:67
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:69
 #, kde-format
 msgid "Blacklist Email Address"
 msgstr "Додати адресу до «чорного» списку"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:43
+#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
 msgstr "Редагування порядку доповнення"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:53
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
 #, kde-format
 msgid "LDAP server %1"
 msgstr "Сервер LDAP %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:259
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
 msgid "Move Up"
 msgstr "Пересунути вище"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:268
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
 msgid "Move Down"
 msgstr "Пересунути нижче"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:45
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
 msgid "New email..."
 msgstr "нова адреса ел.пошти…"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:50
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format
 msgid "Add Email"
 msgstr "Додати адресу ел. пошти"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:96
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
@@ -723,7 +723,7 @@ msgstr[1] "Вилучити ел. пошти"
 msgstr[2] "Вилучити ел. пошти"
 msgstr[3] "Вилучити ел. пошту"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:132
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
@@ -732,105 +732,105 @@ msgstr[1] "Хочете вилучити ці %1 адреси електронн
 msgstr[2] "Хочете вилучити ці %1 адрес електронної пошти?"
 msgstr[3] "Хочете вилучити цю адресу електронної пошти?"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:35
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:140
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:198
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:200
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
 msgstr "Пошта"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:143
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:177
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:145
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:179
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
 msgstr "Календар"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:146
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:180
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:182
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
 msgstr "Контакти"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:149
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:183
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:185
 #, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
 msgstr "Нотатки"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:152
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:174
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:176
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
 msgstr "Завдання"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:155
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:186
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:188
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
 msgstr "Журнал"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:158
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:189
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:191
 #, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
 msgstr "Налаштування"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:161
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:192
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:194
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
 msgstr "Вільний/Зайнятий час"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:164
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:195
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:197
 #, kde-format
 msgctxt "type of folder content"
 msgid "Files"
 msgstr "Файли"
 
-#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:42
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
 msgid "&Folder contents:"
 msgstr "&Вміст теки:"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:15
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "Nobody"
 msgstr "Ніхто"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:16
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:18
 #, kde-format
 msgid "Admins of This Folder"
 msgstr "Адміністратори цієї теки"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:19
 #, kde-format
 msgid "All Readers of This Folder"
 msgstr "Всі читачі цієї теки"
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:21
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:23
 #, kde-format
 msgid ""
 "This setting defines which users sharing this folder should get \"busy\" "
@@ -861,12 +861,12 @@ msgstr ""
 "Для теки з загальними подіями у компанії потрібно вибрати «ніхто», оскільки "
 "не відомо хто візьме участь у цих подіях."
 
-#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:41
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
 msgstr "Створювати нагадування про події та вільний/за&йнятий час для:"
 
-#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:72
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, kde-format
 msgid "Search..."
 msgstr "Шукати…"
