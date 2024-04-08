@@ -137,7 +137,7 @@ void AddresseeLineEditPrivate::setIcon(const QIcon &icon, const QString &tooltip
         q->setStyleSheet(QString());
     } else {
         mToolButton->setIcon(icon);
-        mToolButton->setToolTip(tooltip);
+        mToolButton->setToolTip(QStringLiteral("<div>") + tooltip + QStringLiteral("</div>"));
         const int padding = mToolButton->width() - q->style()->pixelMetric(QStyle::PM_DefaultFrameWidth);
         q->setStyleSheet(QStringLiteral("QLineEdit { padding-left: %1px }").arg(padding));
         mToolButton->setVisible(true);
