@@ -11,6 +11,9 @@
 #include <KLDAPWidgets/LdapClientSearch>
 #include <KLocalizedString>
 #include <QTimer>
+#include <chrono>
+
+using namespace std::chrono_literals;
 using namespace PimCommon;
 
 AddresseeLineEditLdap::AddresseeLineEditLdap(AddresseeLineEditManager *addressLineStatic, QObject *parent)
@@ -131,7 +134,7 @@ void AddresseeLineEditLdap::restartLdap(const QString &searchString, AddresseeLi
         mLdapText = searchString;
         mAddressLineEdit = addressLine;
         mLdapTimer->setSingleShot(true);
-        mLdapTimer->start(500);
+        mLdapTimer->start(500ms);
     }
 }
 
