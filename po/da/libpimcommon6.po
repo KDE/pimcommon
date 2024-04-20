@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-20 00:38+0000\n"
 "PO-Revision-Date: 2020-11-17 19:30+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -542,15 +542,15 @@ msgstr "Fold grupper ud..."
 msgid "Recent Addresses"
 msgstr "Nylige adresser"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:754
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "Kontakter fundet i dine data"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP-server: %1"

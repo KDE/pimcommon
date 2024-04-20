@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-20 00:38+0000\n"
 "PO-Revision-Date: 2016-11-04 11:09+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -551,15 +551,15 @@ msgstr ""
 msgid "Recent Addresses"
 msgstr "Atverti adresų knygelę"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:754
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
 #, kde-format
 msgid "LDAP server: %1"
 msgstr ""

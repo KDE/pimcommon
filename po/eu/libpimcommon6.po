@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-20 00:38+0000\n"
 "PO-Revision-Date: 2023-12-13 22:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -545,15 +545,15 @@ msgstr "Taldeak zabaltzea..."
 msgid "Recent Addresses"
 msgstr "Oraintsuko helbideak"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:109
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:754
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "Zure datuetan aurkitutako kontaktuak"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:32
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP zerbitzaria: %1"
