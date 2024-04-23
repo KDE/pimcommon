@@ -1,36 +1,36 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the pimcommon package.
+#
+# SPDX-FileCopyrightText: 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:38+0000\n"
-"PO-Revision-Date: 2024-04-22 15:58\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-04-22 21:51+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/pimcommon/libpimcommon6.pot\n"
-"X-Crowdin-File-ID: 49108\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
 #, kde-format
 msgid "Configure"
-msgstr "配置"
+msgstr "அமை"
 
 #: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
 msgid "Restart is necessary for applying the changes."
-msgstr "要应用更改必须重启启动。"
+msgstr ""
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
@@ -51,142 +51,142 @@ msgstr ""
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
 msgid "Share On..."
-msgstr "分享到..."
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
-msgstr "%1"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
 #, kde-format
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
 #, kde-format
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
 #, kde-format
 msgid "Mail"
-msgstr "邮寄"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
 #, kde-format
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
 #, kde-format
 msgid "Evernote"
-msgstr "Evernote"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
 #, kde-format
 msgid "Pocket"
-msgstr "Pocket"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
 #, kde-format
 msgid "LiveJournal"
-msgstr "LiveJournal"
+msgstr ""
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
-msgstr "默认模板"
+msgstr ""
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
-msgstr "模板"
+msgstr ""
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
-msgstr "名称："
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
 msgid "Do you want to delete selected template?"
-msgstr "您是否想要删除选中模板？"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
-msgstr "删除模板"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:145
 #, kde-format
 msgid "Import Template"
-msgstr "导入模版"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:154
 #, kde-format
 msgid "Export Template"
-msgstr "导出模板"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:168
 #, kde-format
 msgid "Insert template"
-msgstr "插入模板"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:174
 #, kde-format
 msgid "Add..."
-msgstr "添加..."
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Show..."
-msgstr "显示..."
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
-msgstr "修改..."
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
 msgid "Duplicate"
-msgstr "复制"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:189
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
-msgstr "删除"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
 msgid "Export..."
-msgstr "导出..."
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:200
 #, kde-format
 msgid "Import..."
-msgstr "导入..."
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Download new Templates..."
-msgstr "下载新模板..."
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "'%1' is not a template file"
-msgstr "“%1” 不是模板文件"
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "Load Template"
-msgstr "加载模板"
+msgstr ""
 
 #: pimcommon/util/pimutil.cpp:49
 #, kde-format
@@ -194,14 +194,12 @@ msgid ""
 "Could not write the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
-"无法写入文件 %1：\n"
-"“%2”为详细错误描述。"
 
 #: pimcommon/util/pimutil.cpp:53
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
-msgstr "保存文件错误"
+msgstr ""
 
 #: pimcommon/util/pimutil.cpp:84
 #, kde-format
@@ -209,14 +207,12 @@ msgid ""
 "Could not read the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
-"无法读取文件 %1：\n"
-"“%2”为详细错误描述。"
 
 #: pimcommon/util/pimutil.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
-msgstr "加载文件错误"
+msgstr ""
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -224,133 +220,131 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
-"<qt><p>此设置由您的管理员已修复。</p><p>如果您认为这是一个错误，请与他联系。"
-"</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
 msgid "Change Case"
-msgstr "更改大小写"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
 msgid "Uppercase"
-msgstr "大写"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
 msgid "Sentence case"
-msgstr "句首大写"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
 msgid "Lowercase"
-msgstr "小写"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgid "Reverse Case"
-msgstr "反向大小写"
+msgstr ""
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
 msgid "Clear History"
-msgstr "清除历史"
+msgstr ""
 
 #: pimcommon/widgets/purposemenuwidget.cpp:55
 #, kde-format
 msgid "There was a problem sharing the document: %1"
-msgstr "共享文档出错：%1"
+msgstr ""
 
 #: pimcommon/widgets/purposemenuwidget.cpp:59
 #, kde-format
 msgid "File was shared."
-msgstr "文件已共享。"
+msgstr ""
 
 #: pimcommon/widgets/purposemenuwidget.cpp:61
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
-msgstr "<qt>您的新请求位于：<br /><a href='%1'>%1</a> </qt>"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:100
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
-msgstr "文件已存在"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:103
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
-msgstr "名为 <filename>%1</filename> 的文件已经存在。您要覆盖它吗？"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
 msgid "Suggest New &Name"
-msgstr "建议新名称(&N)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
 #, kde-format
 msgid "&Ignore"
-msgstr "忽略(&I)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
 #, kde-format
 msgid "&Rename"
-msgstr "重命名(&R)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
 msgid "Appl&y to All"
-msgstr "应用于全体(&Y)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "This filename \"%1\" already exists."
-msgstr "文件名“%1”已经存在。"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "File already exists"
-msgstr "文件已存在"
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:55
 #: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New entry:"
-msgstr "新建项目："
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:56
 #: pimcommon/widgets/simplestringlisteditor.cpp:57
 #, kde-format
 msgid "New Value"
-msgstr "新值"
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:59
 #, kde-format
 msgid "Do you want to remove selected text?"
-msgstr "您想要移除选中文本吗？"
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
 msgid "&Add..."
-msgstr "添加(&A)..."
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgid "&Modify..."
-msgstr "修改(&M)..."
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
 msgid "&Remove"
-msgstr "删除(&R)"
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
-msgstr "自定义(&C)..."
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -359,12 +353,12 @@ msgstr "自定义(&C)..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove"
-msgstr "删除"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
-msgstr "用户标识(&U)："
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -374,130 +368,128 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
-"用户标识是用户在 IMAP 服务器上的登录名。它可以是一个简单的用户名，或者是完整"
-"的电子邮件地址；您自己账号的登录名将会告诉您是哪一个。"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
-msgstr "选择(&L)..."
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
 msgid "Permissions"
-msgstr "权限"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
 #, kde-format
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>注意：</b>重命名需要上级文件夹的写权限。"
+msgstr ""
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr "不能管理文件夹。"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
 msgid "Add Entry..."
-msgstr "添加项目..."
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
 msgid "Edit Entry..."
-msgstr "编辑项目..."
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
 msgid "Remove Entry"
-msgstr "删除条目"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
-msgstr "添加访问控制列表"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr "编辑访问控制列表"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
-msgstr "您真的要移除您自己对此文件夹的权限吗？您之后将无法对其进行访问。"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr "您真的要移除您自己对此文件夹的权限吗？您之后将无法对其进行访问。"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
-msgstr "你真的想将文件夹的权限应用于这些子文件夹吗？"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "应用权限"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
 msgid "None"
-msgstr "无"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:21
 msgctxt "Permissions"
 msgid "Read"
-msgstr "读"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:23
 msgctxt "Permissions"
 msgid "Append"
-msgstr "附加"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:27
 msgctxt "Permissions"
 msgid "Write"
-msgstr "写"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:31
 msgctxt "Permissions"
 msgid "All"
-msgstr "全部"
+msgstr ""
 
 #: pimcommonakonadi/acl/aclutils.cpp:66
 #, kde-format
 msgid "Custom Permissions (%1)"
-msgstr "自定义权限 (%1)"
+msgstr ""
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, kde-format
 msgid "Access Control"
-msgstr "访问控制"
+msgstr ""
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
 msgid "Apply permissions on all &subfolders."
-msgstr "应用权限到所有子文件夹(&S)。"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
 #, kde-format
 msgid "vCard Import Failed"
-msgstr "vCard 导入失败"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
-msgstr "<qt>无法访问 <b>%1</b>。</qt>"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
 #, kde-format
@@ -624,6 +616,7 @@ msgstr ""
 msgid "1 email found"
 msgid_plural "%1 emails found"
 msgstr[0] ""
+msgstr[1] ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
@@ -639,7 +632,7 @@ msgstr ""
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
 #, kde-format
 msgid "Save"
-msgstr "保存"
+msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
@@ -703,12 +696,14 @@ msgstr ""
 msgid "Remove Email"
 msgid_plural "Remove Emails"
 msgstr[0] ""
+msgstr[1] ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
 msgstr[0] ""
+msgstr[1] ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
@@ -716,7 +711,7 @@ msgstr[0] ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
-msgstr "邮寄"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:145
@@ -724,7 +719,7 @@ msgstr "邮寄"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
-msgstr "日历"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
@@ -732,7 +727,7 @@ msgstr "日历"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
-msgstr "联系人"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
@@ -740,7 +735,7 @@ msgstr "联系人"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
-msgstr "注记"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
@@ -748,7 +743,7 @@ msgstr "注记"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
-msgstr "任务"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
@@ -756,7 +751,7 @@ msgstr "任务"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
-msgstr "日志"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
@@ -764,7 +759,7 @@ msgstr "日志"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
-msgstr "配置"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
@@ -772,7 +767,7 @@ msgstr "配置"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
-msgstr "忙碌空闲"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
@@ -780,33 +775,33 @@ msgstr "忙碌空闲"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Files"
-msgstr "文件"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
-msgstr "未知"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
 msgid "&Folder contents:"
-msgstr "文件夹内容(&F)："
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "Nobody"
-msgstr "没有人"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:18
 #, kde-format
 msgid "Admins of This Folder"
-msgstr "此文件夹的管理员"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:19
 #, kde-format
 msgid "All Readers of This Folder"
-msgstr "此文件夹的所有读者"
+msgstr ""
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:23
 #, kde-format
@@ -824,31 +819,22 @@ msgid ""
 "A company-wide folder with optional events in it would use \"Nobody\" since "
 "it is not known who will go to those events."
 msgstr ""
-"此设置定义共享此文件夹的用户应在其“忙碌/空闲”列表中处于“忙碌”时段，并应查看此"
-"文件夹中事件或任务的闹钟。该设置仅适用于日历和任务文件夹（对于任务，此设置仅"
-"用于闹钟）。\n"
-"\n"
-"示例用例：如果老板与他的秘书共享一个文件夹，只有老板应该被标记为忙于他的会"
-"议，所以他应该选择“管理员”，因为秘书对该文件夹没有管理员权限。\n"
-"另一方面，如果工作组共享组会议的日历，则应将所有文件夹的读者标记为忙于会"
-"议。\n"
-"其中包含可选事件的公司范围文件夹将使用“没有人”，因为不知道谁将参加这些事件。"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
-msgstr "为其生成闲/忙并激活闹钟(&B)："
+msgstr ""
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, kde-format
 msgid "Search..."
-msgstr "搜索..."
+msgstr ""
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr "选择多个文件夹"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
@@ -895,7 +881,7 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
 msgid "Pager"
-msgstr "虚拟桌面切换器"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
@@ -943,13 +929,13 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
-msgstr "邮政编码"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
-msgstr "邮政地址"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
@@ -1013,7 +999,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr "电子邮件"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
@@ -1105,113 +1091,113 @@ msgstr ""
 msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
 "account before setting up server-side subscription."
-msgstr "IMAP 服务器尚未配置。请在设置服务器端订阅前在 IMAP 账户里配置服务器。"
+msgstr ""
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
 #, kde-format
 msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
 "side subscription."
-msgstr "登录失败，请在设置服务器端订阅前先配置 IMAP 账户。"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "资源类型“%1”不可用。"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "资源“%1”已设置。"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "正在创建“%1”的资源实例..."
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "正在配置资源实例..."
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "无法配置资源实例。"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "无法将设置值“%1”转换为所需类型 %2。"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "无法设置“%1”: %2"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr "无法保存设置：%1"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
-msgstr "资源设置完成。"
+msgstr ""
 
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "创建资源实例失败：%1"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:66
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Note"
-msgstr "编辑便笺"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:69
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Note"
-msgstr "删除便笺"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:73
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Note"
-msgstr "添加便签"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "输入要附加到邮件中的便笺文字："
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Note type:"
-msgstr "便笺类型："
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:92
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Private note"
-msgstr "私人便笺"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:93
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Shared note"
-msgstr "分享便笺"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:134
 #, kde-format
 msgid "Do you really want to delete this note?"
-msgstr "您真的想要删除此便笺吗？"
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
-msgstr "删除便笺"
+msgstr ""
