@@ -6,8 +6,8 @@
 
 #include "addresseelineeditldap.h"
 #include "addresseelineeditmanager.h"
+#include <KLDAPCore/LdapClient>
 #include <KLDAPCore/LdapServer>
-#include <KLDAPWidgets/LdapClient>
 #include <KLDAPWidgets/LdapClientSearch>
 #include <KLocalizedString>
 #include <QTimer>
@@ -30,8 +30,8 @@ void AddresseeLineEditLdap::updateLDAPWeights()
      * that they map to the LdapClient::clientNumber() */
     mLdapSearch->updateCompletionWeights();
     int clientIndex = 0;
-    const QList<KLDAPWidgets::LdapClient *> lstClients = mLdapSearch->clients();
-    for (const KLDAPWidgets::LdapClient *client : lstClients) {
+    const QList<KLDAPCore::LdapClient *> lstClients = mLdapSearch->clients();
+    for (const KLDAPCore::LdapClient *client : lstClients) {
         const int sourceIndex = mAddressLineStatic->addCompletionSource(i18n("LDAP server: %1", client->server().host()), client->completionWeight());
         mLdapClientToCompletionSourceMap.insert(clientIndex, sourceIndex);
         ++clientIndex;

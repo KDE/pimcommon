@@ -11,7 +11,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include "completionorderwidget.h"
-#include <KLDAPWidgets/LdapClient>
+#include <KLDAPCore/LdapClient>
 #include <KLDAPWidgets/LdapClientSearch>
 
 #include <kldapcore/ldapserver.h>

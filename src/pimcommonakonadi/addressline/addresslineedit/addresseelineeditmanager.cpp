@@ -13,7 +13,7 @@
 #include "pimcommonakonadi_debug.h"
 #include <KColorScheme>
 #include <KConfigGroup>
-#include <KLDAPWidgets/LdapClient>
+#include <KLDAPCore/LdapClient>
 #include <KSharedConfig>
 #include <QCoreApplication>
 #include <QNetworkInformation>

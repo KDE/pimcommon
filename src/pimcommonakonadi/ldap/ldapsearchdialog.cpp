@@ -9,10 +9,10 @@
 
 #include "ldapsearchdialog.h"
 
-#include <KLDAPWidgets/LdapClient>
+#include <KLDAPCore/LdapClient>
 
+#include <KLDAPCore/LdapSearchClientReadConfigServerJob>
 #include <KLDAPWidgets/LdapClientSearchConfig>
-#include <KLDAPWidgets/LdapSearchClientReadConfigServerJob>
 #include <KLineEditEventHandler>
 #include <Libkdepim/ProgressIndicatorLabel>
 
@@ -433,7 +433,7 @@ public:
     void restoreSettings();
     void cancelQuery();
 
-    void slotAddResult(const KLDAPWidgets::LdapClient &, const KLDAPCore::LdapObject &);
+    void slotAddResult(const KLDAPCore::LdapClient &, const KLDAPCore::LdapObject &);
     void slotSetScope(bool);
     void slotStartSearch();
     void slotStopSearch();
@@ -447,7 +447,7 @@ public:
     KGuiItem startSearchGuiItem;
     KGuiItem stopSearchGuiItem;
     int mNumHosts = 0;
-    QList<KLDAPWidgets::LdapClient *> mLdapClientList;
+    QList<KLDAPCore::LdapClient *> mLdapClientList;
     bool mIsConfigured = false;
     KContacts::Addressee::List mSelectedContacts;
 
@@ -665,8 +665,8 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
         mIsConfigured = true;
         auto clientSearchConfig = new KLDAPWidgets::LdapClientSearchConfig;
         for (int j = 0; j < mNumHosts; ++j) {
-            auto ldapClient = new KLDAPWidgets::LdapClient(0, q);
-            auto job = new KLDAPWidgets::LdapSearchClientReadConfigServerJob(q);
+            auto ldapClient = new KLDAPCore::LdapClient(0, q);
+            auto job = new KLDAPCore::LdapSearchClientReadConfigServerJob(q);
             job->setCurrentIndex(j);
             job->setActive(true);
             job->setConfig(group);
@@ -682,10 +682,10 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
             ldapClient->setAttributes(attrs);
 
             // clang-format off
-            q->connect(ldapClient, SIGNAL(result(KLDAPWidgets::LdapClient,KLDAPCore::LdapObject)), q, SLOT(slotAddResult(KLDAPWidgets::LdapClient,KLDAPCore::LdapObject)));
+            q->connect(ldapClient, SIGNAL(result(KLDAPCore::LdapClient,KLDAPCore::LdapObject)), q, SLOT(slotAddResult(KLDAPCore::LdapClient,KLDAPCore::LdapObject)));
             // clang-format on
             q->connect(ldapClient, SIGNAL(done()), q, SLOT(slotSearchDone()));
-            q->connect(ldapClient, &KLDAPWidgets::LdapClient::error, q, [this](const QString &err) {
+            q->connect(ldapClient, &KLDAPCore::LdapClient::error, q, [this](const QString &err) {
                 slotError(err);
             });
 
@@ -726,19 +726,19 @@ void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 
 void LdapSearchDialog::LdapSearchDialogPrivate::cancelQuery()
 {
-    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPCore::LdapClient *client : std::as_const(mLdapClientList)) {
         client->cancelQuery();
     }
 }
 
-void LdapSearchDialog::LdapSearchDialogPrivate::slotAddResult(const KLDAPWidgets::LdapClient &client, const KLDAPCore::LdapObject &obj)
+void LdapSearchDialog::LdapSearchDialogPrivate::slotAddResult(const KLDAPCore::LdapClient &client, const KLDAPCore::LdapObject &obj)
 {
     mModel->addContact(obj.attributes(), client.server().host());
 }
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotSetScope(bool rec)
 {
-    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPCore::LdapClient *client : std::as_const(mLdapClientList)) {
         if (rec) {
             client->setScope(QStringLiteral("sub"));
         } else {
@@ -770,7 +770,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
 
     // loop in the list and run the KLDAP::LdapClients
     mModel->clear();
-    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPCore::LdapClient *client : std::as_const(mLdapClientList)) {
         client->startQuery(filter);
     }
 
@@ -786,7 +786,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStopSearch()
 void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
 {
     // If there are no more active clients, we are done.
-    for (KLDAPWidgets::LdapClient *client : std::as_const(mLdapClientList)) {
+    for (KLDAPCore::LdapClient *client : std::as_const(mLdapClientList)) {
         if (client->isActive()) {
             return;
         }

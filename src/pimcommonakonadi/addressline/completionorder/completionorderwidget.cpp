@@ -9,7 +9,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include <KDescendantsProxyModel>
-#include <KLDAPWidgets/LdapClient>
+#include <KLDAPCore/LdapClient>
 #include <KLDAPWidgets/LdapClientSearch>
 
 #include <KContacts/Addressee>
@@ -43,7 +43,7 @@ CompletionOrderEditorAdaptor::CompletionOrderEditorAdaptor(QObject *parent)
 class LDAPCompletionItem : public CompletionItem
 {
 public:
-    explicit LDAPCompletionItem(KLDAPWidgets::LdapClient *ldapClient)
+    explicit LDAPCompletionItem(KLDAPCore::LdapClient *ldapClient)
         : mLdapClient(ldapClient)
     {
         mWeight = mLdapClient->completionWeight();
@@ -94,7 +94,7 @@ protected:
     }
 
 private:
-    KLDAPWidgets::LdapClient *mLdapClient = nullptr;
+    KLDAPCore::LdapClient *mLdapClient = nullptr;
     int mWeight;
 };
 
@@ -331,8 +331,8 @@ void CompletionOrderWidget::loadCompletionItems()
 {
     if (mLdapSearch) {
         // The first step is to gather all the data, creating CompletionItem objects
-        const QList<KLDAPWidgets::LdapClient *> listClients = mLdapSearch->clients();
-        for (KLDAPWidgets::LdapClient *client : listClients) {
+        const QList<KLDAPCore::LdapClient *> listClients = mLdapSearch->clients();
+        for (KLDAPCore::LdapClient *client : listClients) {
             new CompletionViewItem(mListView, new LDAPCompletionItem(client));
         }
     }
