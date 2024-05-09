@@ -9,7 +9,7 @@
 using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
-#include <KLDAPWidgets/LdapClientSearch>
+#include <KLDAPCore/LdapClientSearch>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowConfig>
@@ -103,7 +103,7 @@ void CompletionConfigureDialog::setRecentAddresses(const QStringList &lst)
     d->mRecentaddressWidget->setAddresses(lst);
 }
 
-void CompletionConfigureDialog::setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch)
+void CompletionConfigureDialog::setLdapClientSearch(KLDAPCore::LdapClientSearch *ldapSearch)
 {
     d->mCompletionOrderWidget->setLdapClientSearch(ldapSearch);
 }

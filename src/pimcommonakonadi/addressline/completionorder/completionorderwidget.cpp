@@ -10,7 +10,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KDescendantsProxyModel>
 #include <KLDAPCore/LdapClient>
-#include <KLDAPWidgets/LdapClientSearch>
+#include <KLDAPCore/LdapClientSearch>
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
@@ -368,7 +368,7 @@ void CompletionOrderWidget::loadCompletionItems()
     mDirty = false;
 }
 
-void CompletionOrderWidget::setLdapClientSearch(KLDAPWidgets::LdapClientSearch *ldapSearch)
+void CompletionOrderWidget::setLdapClientSearch(KLDAPCore::LdapClientSearch *ldapSearch)
 {
     mLdapSearch = ldapSearch;
 }

@@ -10,7 +10,7 @@
 #include <QObject>
 class QTimer;
 
-namespace KLDAPWidgets
+namespace KLDAPCore
 {
 class LdapClientSearch;
 }
@@ -33,7 +33,7 @@ public:
     [[nodiscard]] bool isLdapClientToCompletionSourceMapContains(int value) const;
     [[nodiscard]] int ldapClientToCompletionSourceValue(int value) const;
 
-    [[nodiscard]] KLDAPWidgets::LdapClientSearch *ldapSearch() const;
+    [[nodiscard]] KLDAPCore::LdapClientSearch *ldapSearch() const;
 
     [[nodiscard]] QTimer *ldapTimer() const;
     [[nodiscard]] QString ldapText() const;
@@ -54,7 +54,7 @@ private:
     QString mLdapText;
     QTimer *mLdapTimer = nullptr;
     AddresseeLineEdit *mAddressLineEdit = nullptr;
-    KLDAPWidgets::LdapClientSearch *mLdapSearch = nullptr;
+    KLDAPCore::LdapClientSearch *mLdapSearch = nullptr;
 
     AddresseeLineEditManager *mAddressLineStatic = nullptr;
 };

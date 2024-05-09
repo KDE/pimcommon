@@ -11,7 +11,7 @@
 #include "pimcommonakonadi_export.h"
 #include <QDialog>
 
-namespace KLDAPWidgets
+namespace KLDAPCore
 {
 class LdapClientSearch;
 }
@@ -27,7 +27,7 @@ class PIMCOMMONAKONADI_EXPORT CompletionOrderEditor : public QDialog
     Q_OBJECT
 
 public:
-    explicit CompletionOrderEditor(KLDAPWidgets::LdapClientSearch *ldapSearch, QWidget *parent = nullptr);
+    explicit CompletionOrderEditor(KLDAPCore::LdapClientSearch *ldapSearch, QWidget *parent = nullptr);
     ~CompletionOrderEditor() override;
 
 private:

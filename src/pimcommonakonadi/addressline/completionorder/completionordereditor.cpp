@@ -12,7 +12,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "completionorderwidget.h"
 #include <KLDAPCore/LdapClient>
-#include <KLDAPWidgets/LdapClientSearch>
+#include <KLDAPCore/LdapClientSearch>
 
 #include <kldapcore/ldapserver.h>
 
@@ -38,7 +38,7 @@ public:
     CompletionOrderWidget *mCompletionOrderWidget = nullptr;
 };
 
-CompletionOrderEditor::CompletionOrderEditor(KLDAPWidgets::LdapClientSearch *ldapSearch, QWidget *parent)
+CompletionOrderEditor::CompletionOrderEditor(KLDAPCore::LdapClientSearch *ldapSearch, QWidget *parent)
     : QDialog(parent)
     , d(new PimCommon::CompletionOrderEditorPrivate)
 {

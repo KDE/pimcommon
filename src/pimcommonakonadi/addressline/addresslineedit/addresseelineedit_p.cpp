@@ -118,7 +118,7 @@ void AddresseeLineEditPrivate::init()
             connect(box, &KCompletionBox::userCancelled, this, &AddresseeLineEditPrivate::slotUserCancelled);
             connect(AddresseeLineEditManager::self()->ldapTimer(), &QTimer::timeout, this, &AddresseeLineEditPrivate::slotStartLDAPLookup);
             connect(AddresseeLineEditManager::self()->ldapSearch(),
-                    qOverload<const KLDAPWidgets::LdapResult::List &>(&KLDAPWidgets::LdapClientSearch::searchData),
+                    qOverload<const KLDAPCore::LdapResult::List &>(&KLDAPCore::LdapClientSearch::searchData),
                     this,
                     &AddresseeLineEditPrivate::slotLDAPSearchData);
 
@@ -590,13 +590,13 @@ void AddresseeLineEditPrivate::slotStartLDAPLookup()
     }
 }
 
-void AddresseeLineEditPrivate::slotLDAPSearchData(const KLDAPWidgets::LdapResult::List &results)
+void AddresseeLineEditPrivate::slotLDAPSearchData(const KLDAPCore::LdapResult::List &results)
 {
     if (results.isEmpty() || AddresseeLineEditManager::self()->addressLineEdit() != q) {
         return;
     }
 
-    for (const KLDAPWidgets::LdapResult &result : results) {
+    for (const KLDAPCore::LdapResult &result : results) {
         KContacts::Addressee contact;
         contact.setNameFromString(result.name);
         contact.setEmails(result.email);
@@ -644,7 +644,7 @@ void AddresseeLineEditPrivate::slotEditCompletionOrder()
     }
 }
 
-KLDAPWidgets::LdapClientSearch *AddresseeLineEditPrivate::ldapSearch()
+KLDAPCore::LdapClientSearch *AddresseeLineEditPrivate::ldapSearch()
 {
     init(); // for AddresseeLineEditStatic::self()->ldapSearch
     return AddresseeLineEditManager::self()->ldapSearch();

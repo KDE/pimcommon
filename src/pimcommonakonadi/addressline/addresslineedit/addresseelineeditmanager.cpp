@@ -121,7 +121,7 @@ bool AddresseeLineEditManager::isOnline() const
     }
 }
 
-KLDAPWidgets::LdapClientSearch *AddresseeLineEditManager::ldapSearch() const
+KLDAPCore::LdapClientSearch *AddresseeLineEditManager::ldapSearch() const
 {
     return mAddressessLineEditLdap->ldapSearch();
 }

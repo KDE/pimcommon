@@ -19,7 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "addresseelineeditmanager.h"
 #include "addresseelineeditutil.h"
 #include "addressline/recentaddress/recentaddresses.h"
-#include <KLDAPWidgets/LdapClientSearch>
+#include <KLDAPCore/LdapClientSearch>
 
 #include <KContacts/VCardConverter>
 
@@ -854,7 +854,7 @@ void AddresseeLineEdit::updateCompletionOrder()
     d->updateCompletionOrder();
 }
 
-KLDAPWidgets::LdapClientSearch *AddresseeLineEdit::ldapSearch() const
+KLDAPCore::LdapClientSearch *AddresseeLineEdit::ldapSearch() const
 {
     return d->ldapSearch();
 }

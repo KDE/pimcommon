@@ -7,8 +7,8 @@
 #include "addresseelineeditldap.h"
 #include "addresseelineeditmanager.h"
 #include <KLDAPCore/LdapClient>
+#include <KLDAPCore/LdapClientSearch>
 #include <KLDAPCore/LdapServer>
-#include <KLDAPWidgets/LdapClientSearch>
 #include <KLocalizedString>
 #include <QTimer>
 #include <chrono>
@@ -53,7 +53,7 @@ bool AddresseeLineEditLdap::isLdapClientToCompletionSourceMapContains(int value)
     return mLdapClientToCompletionSourceMap.contains(value);
 }
 
-KLDAPWidgets::LdapClientSearch *AddresseeLineEditLdap::ldapSearch() const
+KLDAPCore::LdapClientSearch *AddresseeLineEditLdap::ldapSearch() const
 {
     return mLdapSearch;
 }
@@ -62,7 +62,7 @@ void AddresseeLineEditLdap::init()
 {
     if (!mLdapTimer) {
         mLdapTimer = new QTimer(this);
-        mLdapSearch = new KLDAPWidgets::LdapClientSearch(this);
+        mLdapSearch = new KLDAPCore::LdapClientSearch(this);
 
         /* The reasoning behind this filter is:
          * If it's a person, or a distlist, show it, even if it doesn't have an email address.

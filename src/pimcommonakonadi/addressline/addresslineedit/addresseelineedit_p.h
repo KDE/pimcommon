@@ -5,7 +5,7 @@
 */
 
 #pragma once
-#include <KLDAPWidgets/LdapClientSearch>
+#include <KLDAPCore/LdapClientSearch>
 #include <QList>
 #include <QObject>
 #include <QStringList>
@@ -74,7 +74,7 @@ public:
     void updateBalooBlackList();
     void updateCompletionOrder();
 
-    KLDAPWidgets::LdapClientSearch *ldapSearch();
+    KLDAPCore::LdapClientSearch *ldapSearch();
 
     void setExpandIntern(bool);
     [[nodiscard]] bool expandIntern() const;
@@ -112,7 +112,7 @@ private:
     void slotPopupCompletion(const QString &);
     void slotReturnPressed(const QString &);
     void slotStartLDAPLookup();
-    void slotLDAPSearchData(const KLDAPWidgets::LdapResult::List &);
+    void slotLDAPSearchData(const KLDAPCore::LdapResult::List &);
     void slotEditCompletionOrder();
     void slotUserCancelled(const QString &);
     void slotAkonadiHandleItems(const Akonadi::Item::List &items);
