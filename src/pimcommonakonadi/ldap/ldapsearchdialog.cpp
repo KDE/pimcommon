@@ -11,8 +11,8 @@
 
 #include <KLDAPCore/LdapClient>
 
+#include <KLDAPCore/LdapClientSearchConfig>
 #include <KLDAPCore/LdapSearchClientReadConfigServerJob>
-#include <KLDAPWidgets/LdapClientSearchConfig>
 #include <KLineEditEventHandler>
 #include <Libkdepim/ProgressIndicatorLabel>
 
@@ -650,7 +650,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
     qDeleteAll(mLdapClientList);
     mLdapClientList.clear();
 
-    KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
+    KConfig *config = KLDAPCore::LdapClientSearchConfig::config();
 
     KConfigGroup searchGroup(config, QStringLiteral("LDAPSearch"));
     mSearchType->setCurrentIndex(searchGroup.readEntry("SearchType", 0));
@@ -663,7 +663,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
         mIsConfigured = false;
     } else {
         mIsConfigured = true;
-        auto clientSearchConfig = new KLDAPWidgets::LdapClientSearchConfig;
+        auto clientSearchConfig = new KLDAPCore::LdapClientSearchConfig;
         for (int j = 0; j < mNumHosts; ++j) {
             auto ldapClient = new KLDAPCore::LdapClient(0, q);
             auto job = new KLDAPCore::LdapSearchClientReadConfigServerJob(q);
@@ -709,7 +709,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
 void LdapSearchDialog::LdapSearchDialogPrivate::saveSettings()
 {
-    KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
+    KConfig *config = KLDAPCore::LdapClientSearchConfig::config();
     KConfigGroup group(config, QStringLiteral("LDAPSearch"));
     group.writeEntry("SearchType", mSearchType->currentIndex());
 

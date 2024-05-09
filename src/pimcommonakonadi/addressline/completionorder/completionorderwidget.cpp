@@ -14,7 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
-#include <KLDAPWidgets/LdapClientSearchConfig>
+#include <KLDAPCore/LdapClientSearchConfig>
 
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
@@ -66,7 +66,7 @@ public:
 
     void save(CompletionOrderWidget *) override
     {
-        KConfig *config = KLDAPWidgets::LdapClientSearchConfig::config();
+        KConfig *config = KLDAPCore::LdapClientSearchConfig::config();
         KConfigGroup group(config, QStringLiteral("LDAP"));
         group.writeEntry(QStringLiteral("SelectedCompletionWeight%1").arg(mLdapClient->clientNumber()), mWeight);
         group.sync();
