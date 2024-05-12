@@ -24,7 +24,7 @@ msgstr ""
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
 #, kde-format
@@ -58,7 +58,7 @@ msgstr ""
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
 msgid "Share On..."
-msgstr "Compartix amb..."
+msgstr "Compartix amb…"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
 #, kde-format
@@ -147,17 +147,17 @@ msgstr "Inserix la plantilla"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:174
 #, kde-format
 msgid "Add..."
-msgstr "Afig..."
+msgstr "Afig…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Show..."
-msgstr "Mostra..."
+msgstr "Mostra…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
-msgstr "Modifica..."
+msgstr "Modifica…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
@@ -173,17 +173,17 @@ msgstr "Elimina"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
 msgid "Export..."
-msgstr "Exporta..."
+msgstr "Exporta…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:200
 #, kde-format
 msgid "Import..."
-msgstr "Importa..."
+msgstr "Importa…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Download new Templates..."
-msgstr "Baixa plantilles noves..."
+msgstr "Baixa plantilles noves…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
@@ -343,12 +343,12 @@ msgstr "Voleu eliminar el text seleccionat?"
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
 msgid "&Add..."
-msgstr "Afi&g..."
+msgstr "Afi&g…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgid "&Modify..."
-msgstr "&Modifica..."
+msgstr "&Modifica…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
@@ -358,7 +358,7 @@ msgstr "&Elimina"
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
-msgstr "Personal&itza..."
+msgstr "Personal&itza…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -390,7 +390,7 @@ msgstr ""
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
-msgstr "Se&lecciona..."
+msgstr "Se&lecciona…"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
@@ -412,12 +412,12 @@ msgstr "Esta carpeta no es pot administrar."
 #: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
 msgid "Add Entry..."
-msgstr "Afig una entrada..."
+msgstr "Afig una entrada…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
 msgid "Edit Entry..."
-msgstr "Edita l'entrada..."
+msgstr "Edita l'entrada…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
@@ -525,7 +525,7 @@ msgstr "Mostra la unitat organitzativa per als resultats de LDAP"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
 #, kde-format
 msgid "Configure Completion..."
-msgstr "Configura la compleció..."
+msgstr "Configura la compleció…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
@@ -535,7 +535,7 @@ msgstr "Expandix automàticament els grups"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Expand Groups..."
-msgstr "Expandix els grups..."
+msgstr "Expandix els grups…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
@@ -580,7 +580,7 @@ msgstr "Mostra els correus electrònics en la llista negra"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr "<qt><a href=\"more_result\">Més resultats...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Més resultats…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
 #, kde-format
@@ -595,7 +595,7 @@ msgstr "La recerca es porta a terme a partir de 3 caràcters"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, kde-format
 msgid "Search in result..."
-msgstr "Busca en el resultat..."
+msgstr "Busca en el resultat…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
@@ -705,7 +705,7 @@ msgstr "Mou cap avall"
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
 msgid "New email..."
-msgstr "Correu nou..."
+msgstr "Correu nou…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format
@@ -864,7 +864,7 @@ msgstr "Genera la informació de lliure/&ocupat i activa les alarmes per:"
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, kde-format
 msgid "Search..."
-msgstr "Busca..."
+msgstr "Busca…"
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
@@ -1078,7 +1078,7 @@ msgstr "Busca en el resultat"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, kde-format
 msgid "Searching..."
-msgstr "S'està buscant..."
+msgstr "S'està buscant…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
@@ -1098,7 +1098,7 @@ msgstr "Afig el seleccionat"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr "Configura els servidors LDAP..."
+msgstr "Configura els servidors LDAP…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
@@ -1153,12 +1153,12 @@ msgstr "El recurs «%1» ja s'ha configurat."
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "S'està creant la instància del recurs per a «%1»..."
+msgstr "S'està creant la instància del recurs per a «%1»…"
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "S'està configurant la instància del recurs..."
+msgstr "S'està configurant la instància del recurs…"
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
@@ -1242,4 +1242,4 @@ msgstr "Segur que voleu suprimir esta nota?"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Note"
-msgstr "Supressió de nota"
+msgstr "Suprimiu la nota"
