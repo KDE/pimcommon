@@ -562,7 +562,7 @@ QMenu *AddresseeLineEdit::createStandardContextMenu()
         return nullptr;
     }
     if (d->useCompletion()) {
-        auto showOU = new QAction(i18n("Show Organization Unit for LDAP results"), menu);
+        auto showOU = new QAction(i18nc("@action", "Show Organization Unit for LDAP results"), menu);
         showOU->setCheckable(true);
         showOU->setChecked(d->showOU());
         connect(showOU, &QAction::triggered, d, &AddresseeLineEditPrivate::slotShowOUChanged);

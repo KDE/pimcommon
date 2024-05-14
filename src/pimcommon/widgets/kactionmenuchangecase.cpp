@@ -25,16 +25,16 @@ KActionMenuChangeCase::KActionMenuChangeCase(QObject *parent)
     , d(new PimCommon::KActionMenuChangeCasePrivate)
 {
     setText(i18n("Change Case"));
-    d->mUpperCase = new QAction(i18n("Uppercase"), this);
+    d->mUpperCase = new QAction(i18nc("@action", "Uppercase"), this);
     connect(d->mUpperCase, &QAction::triggered, this, &KActionMenuChangeCase::upperCase);
 
-    d->mSentenceCase = new QAction(i18n("Sentence case"), this);
+    d->mSentenceCase = new QAction(i18nc("@action", "Sentence case"), this);
     connect(d->mSentenceCase, &QAction::triggered, this, &KActionMenuChangeCase::sentenceCase);
 
-    d->mLowerCase = new QAction(i18n("Lowercase"), this);
+    d->mLowerCase = new QAction(i18nc("@action", "Lowercase"), this);
     connect(d->mLowerCase, &QAction::triggered, this, &KActionMenuChangeCase::lowerCase);
 
-    d->mReverseCase = new QAction(i18n("Reverse Case"), this);
+    d->mReverseCase = new QAction(i18nc("@action", "Reverse Case"), this);
     connect(d->mReverseCase, &QAction::triggered, this, &KActionMenuChangeCase::reverseCase);
 
     addAction(d->mUpperCase);

@@ -158,18 +158,18 @@ public:
     AclManagerPrivate(AclManager *qq)
         : q(qq)
     {
-        mAddAction = new QAction(i18n("Add Entry..."), q);
+        mAddAction = new QAction(i18nc("@action", "Add Entry..."), q);
         q->connect(mAddAction, &QAction::triggered, q, [this]() {
             addAcl();
         });
 
-        mEditAction = new QAction(i18n("Edit Entry..."), q);
+        mEditAction = new QAction(i18nc("@action", "Edit Entry..."), q);
         mEditAction->setEnabled(false);
         q->connect(mEditAction, &QAction::triggered, q, [this]() {
             editAcl();
         });
 
-        mDeleteAction = new QAction(i18n("Remove Entry"), q);
+        mDeleteAction = new QAction(i18nc("@action", "Remove Entry"), q);
         mDeleteAction->setEnabled(false);
         q->connect(mDeleteAction, &QAction::triggered, q, [this]() {
             deleteAcl();
