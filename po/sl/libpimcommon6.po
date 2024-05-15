@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 06:42+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -40,7 +40,9 @@ msgid "Restart is necessary for applying the changes."
 msgstr "Za uveljavitev sprememb je zahtevan ponovni zagon."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable version check"
+msgctxt "@action"
 msgid "Disable version check"
 msgstr "Onemogoči preverjanje različic"
 
@@ -242,22 +244,30 @@ msgid "Change Case"
 msgstr "Spremeni velikost črk"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uppercase"
+msgctxt "@action"
 msgid "Uppercase"
 msgstr "Velike črke"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sentence case"
+msgctxt "@action"
 msgid "Sentence case"
 msgstr "Stavčni način (prva črka je velika)"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lowercase"
+msgctxt "@action"
 msgid "Lowercase"
 msgstr "Male črke"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reverse Case"
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Obrni velikost"
 
@@ -413,17 +423,23 @@ msgid "Folder cannot be administrated."
 msgstr "Mape ni mogoče upravljati."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Dodaj vnos ..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Entry..."
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Uredi vnos ..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Odstrani vnos"
 
@@ -521,7 +537,9 @@ msgid "Select email from contact"
 msgstr "Izberite e-pošto stika"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Organization Unit for LDAP results"
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Prikaži organizacijsko enoto za rezultate LDAP"
 
@@ -560,7 +578,6 @@ msgid "LDAP server: %1"
 msgstr "Strežnik LDAP: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr "Poišči"
@@ -658,12 +675,23 @@ msgstr ""
 "iskanje?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action"
 msgid "Save"
 msgstr "Shrani"
 
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action"
+msgid "Search"
+msgstr "Poišči"
+
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action"
 msgid "Cancel"
 msgstr "Prekliči"
 

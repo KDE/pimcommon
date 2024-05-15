@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 10:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -37,7 +37,9 @@ msgid "Restart is necessary for applying the changes."
 msgstr "Cal reiniciar per a aplicar els canvis."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable version check"
+msgctxt "@action"
 msgid "Disable version check"
 msgstr "Desactiva la comprovació de la versió"
 
@@ -240,22 +242,30 @@ msgid "Change Case"
 msgstr "Canvia la caixa"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uppercase"
+msgctxt "@action"
 msgid "Uppercase"
 msgstr "Majúscules"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sentence case"
+msgctxt "@action"
 msgid "Sentence case"
 msgstr "Caixa de la frase"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lowercase"
+msgctxt "@action"
 msgid "Lowercase"
 msgstr "Minúscules"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reverse Case"
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Inverteix la caixa"
 
@@ -410,17 +420,23 @@ msgid "Folder cannot be administrated."
 msgstr "Aquesta carpeta no es pot administrar."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Afegeix una entrada..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Entry..."
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Edita l'entrada..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Elimina l'entrada"
 
@@ -519,7 +535,9 @@ msgid "Select email from contact"
 msgstr "Selecciona l'adreça de correu del contacte"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Organization Unit for LDAP results"
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Mostra la unitat organitzativa per als resultats de LDAP"
 
@@ -558,7 +576,6 @@ msgid "LDAP server: %1"
 msgstr "Servidor LDAP: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr "Cerca"
@@ -652,12 +669,23 @@ msgid ""
 msgstr "La llista ha canviat. Voleu desar-la abans de fer una altra cerca?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action"
 msgid "Save"
 msgstr "Desa"
 
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action"
+msgid "Search"
+msgstr "Cerca"
+
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action"
 msgid "Cancel"
 msgstr "Cancel·la"
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -33,6 +33,7 @@ msgstr "Na použitie zmien je potrebný reštart."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
+msgctxt "@action"
 msgid "Disable version check"
 msgstr ""
 
@@ -235,22 +236,30 @@ msgid "Change Case"
 msgstr "Zmeniť veľkosť písmen"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uppercase"
+msgctxt "@action"
 msgid "Uppercase"
 msgstr "Veľké písmená"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sentence case"
+msgctxt "@action"
 msgid "Sentence case"
 msgstr "Veľkosť písmen vo vete"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lowercase"
+msgctxt "@action"
 msgid "Lowercase"
 msgstr "Malé písmená"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reverse Case"
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Obrátená veľkosť písmen"
 
@@ -406,17 +415,23 @@ msgid "Folder cannot be administrated."
 msgstr "Priečinok nie je možné spravovať."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Pridať položku..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Entry..."
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Upraviť položku..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Odstrániť položku"
 
@@ -519,6 +534,7 @@ msgstr "Vyberte súbor na stiahnutie:"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
@@ -558,7 +574,6 @@ msgid "LDAP server: %1"
 msgstr "LDAP server: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgid "Search"
@@ -664,11 +679,20 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Save Log"
+msgctxt "@action"
 msgid "Save"
 msgstr "Uložiť"
 
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, fuzzy, kde-format
+#| msgid "&Search"
+msgctxt "@action"
+msgid "Search"
+msgstr "Hľadať"
+
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
+msgctxt "@action"
 msgid "Cancel"
 msgstr ""
 

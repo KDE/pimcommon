@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2012-10-25 00:10-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -31,6 +31,7 @@ msgstr ""
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
+msgctxt "@action"
 msgid "Disable version check"
 msgstr ""
 
@@ -225,21 +226,25 @@ msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
+msgctxt "@action"
 msgid "Uppercase"
 msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
+msgctxt "@action"
 msgid "Sentence case"
 msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
+msgctxt "@action"
 msgid "Lowercase"
 msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr ""
 
@@ -389,16 +394,19 @@ msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr ""
 
@@ -495,6 +503,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
@@ -533,7 +542,6 @@ msgid "LDAP server: %1"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr ""
@@ -627,11 +635,19 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
 #, kde-format
+msgctxt "@action"
 msgid "Save"
+msgstr ""
+
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, kde-format
+msgctxt "@action"
+msgid "Search"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
+msgctxt "@action"
 msgid "Cancel"
 msgstr ""
 

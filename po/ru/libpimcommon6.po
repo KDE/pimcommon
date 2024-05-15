@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-02-07 13:28+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -40,7 +40,9 @@ msgid "Restart is necessary for applying the changes."
 msgstr "Для применения изменений требуется перезапуск приложения"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable version check"
+msgctxt "@action"
 msgid "Disable version check"
 msgstr "Отключить проверку версии"
 
@@ -251,22 +253,30 @@ msgid "Change Case"
 msgstr "Сменить регистр текста"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uppercase"
+msgctxt "@action"
 msgid "Uppercase"
 msgstr "Все прописные"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sentence case"
+msgctxt "@action"
 msgid "Sentence case"
 msgstr "Как в обычном тексте"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lowercase"
+msgctxt "@action"
 msgid "Lowercase"
 msgstr "Все строчные"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reverse Case"
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Инвертировать регистр побуквенно"
 
@@ -420,17 +430,23 @@ msgid "Folder cannot be administrated."
 msgstr "Управление правами на эту папку невозможно."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Добавить запись..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Entry..."
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Изменить запись..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Удалить запись"
 
@@ -528,7 +544,9 @@ msgid "Select email from contact"
 msgstr "Выберите адрес эл. почты контакта"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Organization Unit for LDAP results"
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Показывать подразделение для адресов из LDAP"
 
@@ -567,7 +585,6 @@ msgid "LDAP server: %1"
 msgstr "Сервер LDAP: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr "Поиск"
@@ -664,12 +681,23 @@ msgid ""
 msgstr "Список изменился. Сохранить его перед началом нового поиска?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action"
 msgid "Save"
 msgstr "Сохранить"
 
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action"
+msgid "Search"
+msgstr "Поиск"
+
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action"
 msgid "Cancel"
 msgstr "Отмена"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2024-04-30 08:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -34,7 +34,9 @@ msgid "Restart is necessary for applying the changes."
 msgstr "יש להפעיל מחדש כדי להחיל את השינויים."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Disable version check"
+msgctxt "@action"
 msgid "Disable version check"
 msgstr "השבתת בדיקת גרסה"
 
@@ -234,22 +236,30 @@ msgid "Change Case"
 msgstr "החלפת אותיות רישיות/רגילות"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Uppercase"
+msgctxt "@action"
 msgid "Uppercase"
 msgstr "אותיות רישיות"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sentence case"
+msgctxt "@action"
 msgid "Sentence case"
 msgstr "אות רישית בתחילת משפט"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Lowercase"
+msgctxt "@action"
 msgid "Lowercase"
 msgstr "אותיות רגילות"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Reverse Case"
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr "היפוך רישיות ורגילות"
 
@@ -401,17 +411,23 @@ msgid "Folder cannot be administrated."
 msgstr "אי אפשר לנהל את התיקייה."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr "הוספת רשומה…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Entry..."
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "עריכת רשומה…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr "הסרת רשומה"
 
@@ -508,7 +524,9 @@ msgid "Select email from contact"
 msgstr "בחירת דוא״ל מאנשי הקשר"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Organization Unit for LDAP results"
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "הצגת יחידה ארגונית לתוצאות LDAP"
 
@@ -547,7 +565,6 @@ msgid "LDAP server: %1"
 msgstr "שרת LDAP‏: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgid "Search"
 msgstr "חיפוש"
@@ -643,12 +660,23 @@ msgid ""
 msgstr "הרשימה נערכה. לשמור אותה לפני ביצוע חיפוש נוסף?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Save"
+msgctxt "@action"
 msgid "Save"
 msgstr "שמירה"
 
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, fuzzy, kde-format
+#| msgid "Search"
+msgctxt "@action"
+msgid "Search"
+msgstr "חיפוש"
+
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action"
 msgid "Cancel"
 msgstr "ביטול"
 

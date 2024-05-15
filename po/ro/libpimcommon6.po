@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:38+0000\n"
+"POT-Creation-Date: 2024-05-15 00:39+0000\n"
 "PO-Revision-Date: 2013-09-15 12:14+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -35,6 +35,7 @@ msgstr ""
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
+msgctxt "@action"
 msgid "Disable version check"
 msgstr ""
 
@@ -237,21 +238,25 @@ msgstr "Modifică valoarea"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
+msgctxt "@action"
 msgid "Uppercase"
 msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
+msgctxt "@action"
 msgid "Sentence case"
 msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
+msgctxt "@action"
 msgid "Lowercase"
 msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
+msgctxt "@action"
 msgid "Reverse Case"
 msgstr ""
 
@@ -405,17 +410,23 @@ msgid "Folder cannot be administrated."
 msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Entry..."
+msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Adaugă înregistrare..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Edit Entry..."
+msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Modifică înregistrarea..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove Entry"
+msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Elimină înregistrarea"
 
@@ -515,6 +526,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
+msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
@@ -553,7 +565,6 @@ msgid "LDAP server: %1"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, fuzzy, kde-format
 #| msgid "Text to search for"
 msgid "Search"
@@ -651,11 +662,20 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
 #, kde-format
+msgctxt "@action"
 msgid "Save"
 msgstr ""
 
+#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#, fuzzy, kde-format
+#| msgid "Text to search for"
+msgctxt "@action"
+msgid "Search"
+msgstr "Text de căutat"
+
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
+msgctxt "@action"
 msgid "Cancel"
 msgstr ""
 
