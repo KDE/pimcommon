@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:39+0000\n"
-"PO-Revision-Date: 2023-12-13 06:59+0100\n"
+"PO-Revision-Date: 2024-05-15 06:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34,8 +34,7 @@ msgid "Restart is necessary for applying the changes."
 msgstr "ცვლილებების გადასატარებლად გადატვირთვა აუცილებელია."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Disable version check"
+#, kde-format
 msgctxt "@action"
 msgid "Disable version check"
 msgstr "ვერსიის შემოწმების გათიშვა"
@@ -236,29 +235,25 @@ msgid "Change Case"
 msgstr "რეგისტრის შეცვლა"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "დიდი სიმბოლოები"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "წინადადების რეგისტრი"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
 msgstr "პატარა სიმბოლოები"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "რეგისტრის შებრუნება"
@@ -417,25 +412,22 @@ msgid "Folder cannot be administrated."
 msgstr "საქაღალდის მართვა შეუძლებელია."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "ჩანაწერის დამატება..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
-msgstr "ჩანაწერის რედაქტირება..."
+msgstr "ჩანაწერის ჩასწორება..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
-msgstr "ჩანაწერის ამოღება"
+msgstr "ჩანაწერის წაშლა"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
@@ -531,11 +523,10 @@ msgid "Select email from contact"
 msgstr "აირჩიეთ ელფოსტა კონტაქტიდან"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
-msgstr "LDAP შედეგების ორგანიზაციის ერთეულის ჩვენება"
+msgstr "LDAP შედეგებისთვის ორგანიზაციის ერთეულის ჩვენება"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
 #, kde-format
@@ -665,25 +656,22 @@ msgid ""
 msgstr "სია შეიცვალა. გნებავთ მისი შენახვა შემდეგი ძებნამდე?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "შენახვა"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "ძებნა"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
-msgstr "გუქმება"
+msgstr "გაუქმება"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format

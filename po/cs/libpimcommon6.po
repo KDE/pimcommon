@@ -33,11 +33,10 @@ msgid "Restart is necessary for applying the changes."
 msgstr "Pro provedení změn je potřeba restartovat."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Disable version check"
+#, kde-format
 msgctxt "@action"
 msgid "Disable version check"
-msgstr "Vypnout kontrolu verze"
+msgstr ""
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
@@ -235,32 +234,28 @@ msgid "Change Case"
 msgstr "Změnit velikost písmen"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
-msgstr "Velká písmena"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
-msgstr "Velikost písmen věty"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
-msgstr "Malá písmena"
+msgstr ""
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
-msgstr "Prohodit velikost"
+msgstr ""
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
@@ -412,22 +407,19 @@ msgid "Folder cannot be administrated."
 msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
-msgstr "Přidat položku..."
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
-msgstr "Upravit položku..."
+msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Odstranit položku"
@@ -526,11 +518,10 @@ msgid "Select email from contact"
 msgstr "Vyberte e-mail z kontaktu"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
-msgstr "Zobrazit organizační jednotku pro výsledky LDAP"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
 #, kde-format
@@ -662,22 +653,19 @@ msgstr ""
 "Seznam byl změněn. Přejete si uložit změny před provedením dalšího hledání?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Uložit"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Hledat"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
 msgstr "Zrušit"
