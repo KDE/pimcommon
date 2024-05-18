@@ -581,11 +581,11 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     buttonLayout->addWidget(d->progressIndication);
 
     auto buttons = new QDialogButtonBox(page);
-    QPushButton *button = buttons->addButton(i18n("Select All"), QDialogButtonBox::ActionRole);
+    QPushButton *button = buttons->addButton(i18nc("@action:button", "Select All"), QDialogButtonBox::ActionRole);
     connect(button, &QPushButton::clicked, this, [this]() {
         d->slotSelectAll();
     });
-    button = buttons->addButton(i18n("Unselect All"), QDialogButtonBox::ActionRole);
+    button = buttons->addButton(i18nc("@action:button", "Unselect All"), QDialogButtonBox::ActionRole);
     connect(button, &QPushButton::clicked, this, [this]() {
         d->slotUnselectAll();
     });
