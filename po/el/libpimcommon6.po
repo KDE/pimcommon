@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-19 00:39+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1139,12 +1139,14 @@ msgstr "Αναζήτηση..."
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, fuzzy, kde-format
 #| msgid "Replace All"
+msgctxt "@action:button"
 msgid "Select All"
 msgstr "Αντικατάσταση όλων"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, fuzzy, kde-format
 #| msgid "Replace All"
+msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Αντικατάσταση όλων"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-19 00:39+0000\n"
 "PO-Revision-Date: 2014-04-03 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -1135,12 +1135,14 @@ msgstr "Söken..."
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, fuzzy, kde-format
 #| msgid "Replace All"
+msgctxt "@action:button"
 msgid "Select All"
 msgstr "All utwesseln"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, fuzzy, kde-format
 #| msgid "Replace All"
+msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "All utwesseln"
 

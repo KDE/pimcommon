@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-19 00:39+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1154,14 +1154,20 @@ msgid "Searching..."
 msgstr "Traži..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgctxt "@action:button"
 msgid "Select All"
-msgstr ""
+msgstr "&Izaberi..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgctxt "@action:button"
 msgid "Unselect All"
-msgstr ""
+msgstr "&Izaberi..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
