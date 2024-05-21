@@ -1090,18 +1090,16 @@ msgid "Searching..."
 msgstr "Vyhledávám..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
-msgstr "Vybrat vše"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr "Zrušit výběr"
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
