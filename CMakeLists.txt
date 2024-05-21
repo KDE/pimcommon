@@ -112,7 +112,7 @@ endif(BUILD_TESTING)
 ########### Targets ###########
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.2.0)
+ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.3.0)
 
 find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
