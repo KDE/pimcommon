@@ -257,7 +257,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mUpButton->setObjectName("mUpButton"_L1);
     mUpButton->setIcon(QIcon::fromTheme(QStringLiteral("go-up")));
     mUpButton->setEnabled(false); // b/c no item is selected yet
-    mUpButton->setToolTip(i18n("Move Up"));
+    mUpButton->setToolTip(i18nc("@info:tooltip", "Move Up"));
     mUpButton->setFocusPolicy(Qt::StrongFocus);
 
     mDownButton = new QPushButton(upDownBox);
@@ -266,7 +266,7 @@ CompletionOrderWidget::CompletionOrderWidget(QWidget *parent)
     mDownButton->setObjectName("mDownButton"_L1);
     mDownButton->setIcon(QIcon::fromTheme(QStringLiteral("go-down")));
     mDownButton->setEnabled(false); // b/c no item is selected yet
-    mDownButton->setToolTip(i18n("Move Down"));
+    mDownButton->setToolTip(i18nc("@info:tooltip", "Move Down"));
     mDownButton->setFocusPolicy(Qt::StrongFocus);
 
     auto spacer = new QWidget(upDownBox);

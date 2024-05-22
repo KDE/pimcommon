@@ -49,7 +49,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
 
     lineLayout->addWidget(mLineEdit);
 
-    mNewButton->setToolTip(i18n("Add Email"));
+    mNewButton->setToolTip(i18nc("@info:tooltip", "Add Email"));
     mNewButton->setObjectName("new_button"_L1);
     mNewButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mNewButton->setEnabled(false);
@@ -58,7 +58,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     lineLayout->addWidget(mNewButton);
 
     mRemoveButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
-    mRemoveButton->setToolTip(i18n("Remove"));
+    mRemoveButton->setToolTip(i18nc("@info:tooltip", "Remove"));
     mRemoveButton->setObjectName("remove_button"_L1);
     mRemoveButton->setEnabled(false);
     lineLayout->addWidget(mRemoveButton);

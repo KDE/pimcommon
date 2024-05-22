@@ -150,7 +150,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QList<PimCommon::PluginUtilD
                 but->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
                 but->setText(i18n("..."));
                 but->setFixedWidth(28);
-                but->setToolTip(i18n("Configure"));
+                but->setToolTip(i18nc("@info:tooltip", "Configure"));
                 but->setAutoFillBackground(true);
                 but->setEnabled(subItem->mHasConfigureSupport);
                 mListWidget->setItemWidget(subItem, 1, but);
