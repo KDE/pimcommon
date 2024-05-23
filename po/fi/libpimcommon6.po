@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-29 21:56+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,7 +26,9 @@ msgid "..."
 msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Asetukset"
 
@@ -163,7 +165,6 @@ msgid "Duplicate"
 msgstr "Kahdenna"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:189
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
 msgstr "Poista"
@@ -722,12 +723,16 @@ msgid "LDAP server %1"
 msgstr "LDAP-palvelin %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Siirrä ylemmäs"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Siirrä alemmas"
 
@@ -737,9 +742,18 @@ msgid "New email..."
 msgstr "Uusi sähköposti…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Lisää sähköposti"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Poista"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 15:49+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,9 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Nastavit"
 
@@ -159,7 +161,6 @@ msgid "Duplicate"
 msgstr "Duplikovat"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:189
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
 msgstr "Odstranit"
@@ -703,12 +704,16 @@ msgid "LDAP server %1"
 msgstr "LDAP server %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Přesunout nahoru"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Přesunout dolů"
 
@@ -718,9 +723,18 @@ msgid "New email..."
 msgstr "Nový e-mail..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Přidat e-mail"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Odstranit"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, kde-format

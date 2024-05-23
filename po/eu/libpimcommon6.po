@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 22:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,7 +26,9 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure"
+msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Konfiguratu"
 
@@ -167,7 +169,6 @@ msgid "Duplicate"
 msgstr "Bikoiztu"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:189
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
 msgstr "Kendu"
@@ -723,12 +724,16 @@ msgid "LDAP server %1"
 msgstr "%1 LDAP zerbitzaria"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Up"
+msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Eraman gora"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Move Down"
+msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Eraman behera"
 
@@ -738,9 +743,18 @@ msgid "New email..."
 msgstr "E-posta berria..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add Email"
+msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Gehitu E-posta"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Kendu"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, kde-format

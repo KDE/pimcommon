@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-19 00:39+0000\n"
+"POT-Creation-Date: 2024-05-23 00:39+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -27,9 +27,10 @@ msgid "..."
 msgstr "Dodaj..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, kde-format
+#, fuzzy, kde-format
+msgctxt "@info:tooltip"
 msgid "Configure"
-msgstr ""
+msgstr "Prevedi"
 
 #: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
@@ -168,7 +169,6 @@ msgid "Duplicate"
 msgstr "Dupliciraj"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:189
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
 msgid "Remove"
 msgstr "Ukloni"
@@ -741,11 +741,13 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr ""
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr ""
 
@@ -756,8 +758,16 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr ""
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Ukloni"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, fuzzy, kde-format
@@ -1566,11 +1576,6 @@ msgstr "Obriši predložak"
 
 #~ msgid "Yiddish"
 #~ msgstr "Jidip"
-
-#, fuzzy
-#~ msgctxt "@title:window"
-#~ msgid "Configure Engine"
-#~ msgstr "Prevedi"
 
 #~ msgid "Google"
 #~ msgstr "Google"
