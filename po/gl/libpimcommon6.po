@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 21:20+0200\n"
+"PO-Revision-Date: 2024-05-23 08:37+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -26,11 +26,10 @@ msgid "..."
 msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
-msgstr "Configurar"
+msgstr "Configurar."
 
 #: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
@@ -709,18 +708,16 @@ msgid "LDAP server %1"
 msgstr "Servidor de LDAP %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
-msgstr "Subir"
+msgstr "Subir."
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
-msgstr "Baixar"
+msgstr "Baixar."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
@@ -728,18 +725,16 @@ msgid "New email..."
 msgstr "Nova mensaxe…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
-msgstr "Engadir unha mensaxe"
+msgstr "Engadir unha mensaxe."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
-msgstr "Retirar"
+msgstr "Retirar."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, kde-format
@@ -1111,15 +1106,13 @@ msgid "Searching..."
 msgstr "Buscando…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Seleccionalo todo"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Anular a selección"

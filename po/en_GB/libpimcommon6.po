@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-23 00:39+0000\n"
-"PO-Revision-Date: 2023-03-26 14:36+0100\n"
+"PO-Revision-Date: 2024-05-23 19:42+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -23,8 +23,7 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Configure"
@@ -38,18 +37,19 @@ msgstr "Restart is necessary for applying the changes."
 #, kde-format
 msgctxt "@action"
 msgid "Disable version check"
-msgstr ""
+msgstr "Disable version check"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
+msgstr "Your version is older than 6 months, we encourage you to upgrade."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Your version is older than 1 year, we strongly encourage you to upgrade."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -120,8 +120,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Do you want to delete selected template?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Delete template"
@@ -201,8 +200,7 @@ msgstr ""
 "\"%2\" is the detailed error description."
 
 #: pimcommon/util/pimutil.cpp:53
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Save File Error"
@@ -217,8 +215,7 @@ msgstr ""
 "\"%2\" is the detailed error description."
 
 #: pimcommon/util/pimutil.cpp:88
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Load File Error"
@@ -238,29 +235,25 @@ msgid "Change Case"
 msgstr "Change Case"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "Uppercase"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "Sentence case"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
 msgstr "Lowercase"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Reverse Case"
@@ -371,8 +364,7 @@ msgstr "&Customise..."
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Remove"
@@ -416,22 +408,19 @@ msgid "Folder cannot be administrated."
 msgstr "Folder cannot be administrated."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Add Entry..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Edit Entry..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Remove Entry"
@@ -470,8 +459,7 @@ msgstr ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Apply Permissions"
@@ -532,8 +520,7 @@ msgid "Select email from contact"
 msgstr "Select email from contact"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Show Organisation Unit for LDAP results"
@@ -667,22 +654,19 @@ msgstr ""
 "The list was changed. Do you want to save before to make another search ?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Save"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Search"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
 msgstr "Cancel"
@@ -720,15 +704,13 @@ msgid "LDAP server %1"
 msgstr "LDAP server %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Move Up"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Move Down"
@@ -739,15 +721,13 @@ msgid "New email..."
 msgstr "New email..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Add Email"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Remove"
@@ -1118,15 +1098,13 @@ msgid "Searching..."
 msgstr "Searching..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Select All"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Unselect All"
