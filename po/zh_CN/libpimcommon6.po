@@ -25,7 +25,7 @@ msgstr "..."
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
 #, kde-format
 msgid "Configure"
-msgstr "配置"
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
