@@ -23,11 +23,10 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
-msgstr "配置"
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
@@ -713,19 +712,16 @@ msgid "New email..."
 msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox email address of the contact"
-#| msgid "Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
-msgstr "电子邮件"
+msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
-msgstr "删除"
+msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
 #, kde-format
