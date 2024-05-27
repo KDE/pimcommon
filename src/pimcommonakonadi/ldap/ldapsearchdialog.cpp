@@ -497,7 +497,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     groupBox->setLayout(boxLayout);
     boxLayout->setColumnStretch(1, 1);
 
-    auto label = new QLabel(i18n("Search for:"), groupBox);
+    auto label = new QLabel(i18nc("@label:textbox", "Search for:"), groupBox);
     boxLayout->addWidget(label, 0, 0);
 
     d->mSearchEdit = new QLineEdit(groupBox);

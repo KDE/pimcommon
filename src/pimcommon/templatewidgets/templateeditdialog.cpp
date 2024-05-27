@@ -55,7 +55,7 @@ TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     vbox->setContentsMargins({});
 
     auto hbox = new QHBoxLayout;
-    auto label = new QLabel(i18n("Name:"));
+    auto label = new QLabel(i18nc("@label:textbox", "Name:"));
     hbox->addWidget(label);
 
     KLineEditEventHandler::catchReturnKey(mTemplateNameEdit);

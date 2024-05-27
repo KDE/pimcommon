@@ -75,7 +75,7 @@ AnnotationEditDialog::AnnotationEditDialog(const Akonadi::Item &item, QWidget *p
 
     buttonBox->button(QDialogButtonBox::Ok)->setDefault(true);
 
-    auto label = new QLabel(i18n("Enter the text that should be stored as a note to the mail:"), this);
+    auto label = new QLabel(i18nc("@label:textbox", "Enter the text that should be stored as a note to the mail:"), this);
     auto vbox = new QVBoxLayout(mainWidget);
     vbox->setContentsMargins({});
     d->mTextEdit = new TextCustomEditor::PlainTextEditorWidget(this);

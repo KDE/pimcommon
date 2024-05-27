@@ -37,7 +37,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     , mSelectButton(new QPushButton(i18n("&Select"), this))
     , mUnselectButton(new QPushButton(i18n("&Unselect"), this))
     , mShowAllBlackListedEmails(new QPushButton(i18n("Show Blacklisted Emails"), this))
-    , mMoreResult(new QLabel(i18n("<qt><a href=\"more_result\">More result...</a></qt>"), this))
+    , mMoreResult(new QLabel(i18nc("@label:textbox", "<qt><a href=\"more_result\">More result...</a></qt>"), this))
     , mBlackListWarning(new BlackListBalooEmailWarning(this))
     , mExcludeEmailFromRegularExpressionLineEdit(new QLineEdit(this))
 {
@@ -46,7 +46,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     auto searchLayout = new QHBoxLayout;
     mainLayout->addLayout(searchLayout);
 
-    auto lab = new QLabel(i18n("Search email:"), this);
+    auto lab = new QLabel(i18nc("@label:textbox", "Search email:"), this);
     lab->setObjectName("search_label"_L1);
     searchLayout->addWidget(lab);
 
@@ -115,7 +115,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     excludeDomainLayout->setContentsMargins({});
     mainLayout->addLayout(excludeDomainLayout);
 
-    auto excludeDomainLabel = new QLabel(i18n("Exclude domain names:"), this);
+    auto excludeDomainLabel = new QLabel(i18nc("@label:textbox", "Exclude domain names:"), this);
     excludeDomainLabel->setObjectName("domain_label"_L1);
     excludeDomainLayout->addWidget(excludeDomainLabel);
 
@@ -129,7 +129,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     excludeEmailRegularExpressionLayout->setContentsMargins({});
     mainLayout->addLayout(excludeEmailRegularExpressionLayout);
 
-    auto excludeEmailRegularExpressionLabel = new QLabel(i18n("Exclude email with Regular Expression:"), this);
+    auto excludeEmailRegularExpressionLabel = new QLabel(i18nc("@label:textbox", "Exclude email with Regular Expression:"), this);
     excludeEmailRegularExpressionLabel->setObjectName("email_regularexpression_label"_L1);
     excludeEmailRegularExpressionLayout->addWidget(excludeEmailRegularExpressionLabel);
 

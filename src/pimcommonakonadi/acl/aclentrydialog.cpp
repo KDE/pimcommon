@@ -81,7 +81,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     auto layout = new QGridLayout(page);
     layout->setContentsMargins({});
 
-    auto label = new QLabel(i18n("&User identifier:"), page);
+    auto label = new QLabel(i18nc("@label:textbox", "&User identifier:"), page);
     layout->addWidget(label, 0, 0);
 
     d->mUserIdLineEdit = new PimCommon::AddresseeLineEdit(page);
@@ -111,7 +111,7 @@ AclEntryDialog::AclEntryDialog(QWidget *parent)
     d->mButtonLayout->addStretch(1);
     layout->addWidget(groupBox, 1, 0, 1, 3);
 
-    label = new QLabel(i18n("<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
+    label = new QLabel(i18nc("@label:textbox", "<b>Note: </b>Renaming requires write permissions on the parent folder."), page);
     layout->addWidget(label, 2, 0, 1, 3);
     layout->setRowStretch(2, 10);
 
