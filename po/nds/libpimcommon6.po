@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 00:39+0000\n"
 "PO-Revision-Date: 2014-04-03 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -114,7 +114,9 @@ msgid "Template"
 msgstr "Vörlaag"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name:"
+msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Naam:"
 
@@ -384,7 +386,9 @@ msgid "Remove"
 msgstr "Wegmaken"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&User identifier:"
+msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Bruker-&Kennen:"
 
@@ -412,7 +416,10 @@ msgid "Permissions"
 msgstr "Verlöven"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
 "<b>Beacht bitte</b>: För't Ümnömen bruukt een de Schriefverlöfnis för den "
@@ -617,12 +624,14 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
+msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid "Search..."
+msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Söken..."
 
@@ -639,6 +648,7 @@ msgstr "Söken..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr ""
 
@@ -649,6 +659,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr ""
 
@@ -1074,6 +1085,7 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
 #, fuzzy, kde-format
 #| msgid "Search..."
+msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Söken..."
 
@@ -1278,6 +1290,7 @@ msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
+msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr ""
 
