@@ -109,7 +109,7 @@ msgstr "模板"
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgid "Name:"
-msgstr "名称："
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
@@ -364,7 +364,7 @@ msgstr "删除"
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, kde-format
 msgid "&User identifier:"
-msgstr "用户标识(&U)："
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -391,7 +391,7 @@ msgstr "权限"
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
 #, kde-format
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>注意：</b>重命名需要上级文件夹的写权限。"
+msgstr ""
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -1185,7 +1185,7 @@ msgstr "添加便签"
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
 #, kde-format
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "输入要附加到邮件中的便笺文字："
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
