@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-23 06:27+0300\n"
+"PO-Revision-Date: 2024-05-28 09:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -113,8 +113,7 @@ msgid "Template"
 msgstr "Шаблон"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Назва:"
@@ -375,8 +374,7 @@ msgid "Remove"
 msgstr "Вилучення"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&Ідентифікатор користувача:"
@@ -406,9 +404,7 @@ msgid "Permissions"
 msgstr "Права доступу"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -592,15 +588,13 @@ msgid "Show Blacklisted Emails"
 msgstr "Показати поштові повідомлення з «чорного» списку"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Інші результати…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Шукати адресу ел. пошти:"
@@ -616,8 +610,7 @@ msgid "Search in result..."
 msgstr "Шукати у результатах…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Виключити назви доменів:"
@@ -628,8 +621,7 @@ msgid "Separate domain with '%1'"
 msgstr "Відокремити домен з «%1»"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Виключити адресу ел. пошти за формальним виразом:"
@@ -1060,8 +1052,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Пошук адрес у каталозі"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Шукати:"
@@ -1259,8 +1250,7 @@ msgid "Add Note"
 msgstr "Додавання нотатки"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "Введіть текст, який має бути збережено як нотатку до пошти:"

@@ -109,11 +109,10 @@ msgid "Template"
 msgstr "模板"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
-msgstr "名称："
+msgstr ""
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
@@ -369,11 +368,10 @@ msgid "Remove"
 msgstr "删除"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
-msgstr "用户标识(&U)："
+msgstr ""
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -398,12 +396,10 @@ msgid "Permissions"
 msgstr "权限"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>注意：</b>重命名需要上级文件夹的写权限。"
+msgstr ""
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -1029,11 +1025,10 @@ msgid "Search for Addresses in Directory"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
-msgstr "搜索..."
+msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
 #, kde-format
@@ -1223,11 +1218,10 @@ msgid "Add Note"
 msgstr "添加便签"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "输入要附加到邮件中的便笺文字："
+msgstr ""
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format

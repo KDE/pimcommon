@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-23 08:10+0300\n"
+"PO-Revision-Date: 2024-05-28 09:23+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -110,8 +110,7 @@ msgid "Template"
 msgstr "תבנית"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "שם:"
@@ -370,8 +369,7 @@ msgid "Remove"
 msgstr "הסרה"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "מ&זהה משתמש:"
@@ -400,9 +398,7 @@ msgid "Permissions"
 msgstr "הרשאות"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr "<b>לתשומת ליבך: </b>שינוי שם דורש הרשאות כתיבה על תיקיית ההורה."
@@ -583,15 +579,13 @@ msgid "Show Blacklisted Emails"
 msgstr "הצגת כתובות דוא״ל חסומות"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">תוצאה נוספת…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "חיפוש דוא״ל:"
@@ -607,8 +601,7 @@ msgid "Search in result..."
 msgstr "חיפוש בתוצאה…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "החרגת שמות תחום:"
@@ -619,8 +612,7 @@ msgid "Separate domain with '%1'"
 msgstr "יש להפריד שמות תחום ב־‚%1’"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "החרגת כתובת דוא״ל עם ביטוי רגולרי:"
@@ -1048,8 +1040,7 @@ msgid "Search for Addresses in Directory"
 msgstr "חיפוש כתובות בספרייה"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "חיפוש אחר:"
@@ -1244,8 +1235,7 @@ msgid "Add Note"
 msgstr "הוספת הערה"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "נא למלא את הטקסט שיאוחסן כהערה לדוא״ל:"

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-23 09:42+0200\n"
+"PO-Revision-Date: 2024-05-28 07:32+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -118,8 +118,7 @@ msgid "Template"
 msgstr "Predloga"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Ime:"
@@ -380,8 +379,7 @@ msgid "Remove"
 msgstr "Odstrani"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Določilnik &uporabnika:"
@@ -410,13 +408,11 @@ msgid "Permissions"
 msgstr "Dovoljenja"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
-"<b>Opomba:</b> za preimenovanje so zahtevana dovoljenja za pisanje v "
+"<b>Opomba:</b> Za preimenovanje je zahtevano dovoljenje za pisanje v "
 "nadrejeni mapi."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
@@ -596,15 +592,13 @@ msgid "Show Blacklisted Emails"
 msgstr "Prikaži poštne naslove na črnem seznamu"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr "<qt><a href=\"more_result\">Več rezultatov ...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Več rezultatov...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Poišči e-pošto:"
@@ -620,8 +614,7 @@ msgid "Search in result..."
 msgstr "Poišči med rezultati..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Izvzemi imena domen:"
@@ -632,8 +625,7 @@ msgid "Separate domain with '%1'"
 msgstr "Domene ločite z '%1'"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Izvzemi sporočila z regularnim izrazom:"
@@ -1064,8 +1056,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Išči naslove v adresarju"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Poišči:"
@@ -1263,11 +1254,10 @@ msgid "Add Note"
 msgstr "Dodaj opombo"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Vnesite besedilo, ki bo shranjeno kot opomba sporočila:"
+msgstr "Vnesite besedilo, ki naj bo shranjeno kot opomba sporočila:"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format

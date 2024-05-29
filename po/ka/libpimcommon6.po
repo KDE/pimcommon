@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-24 16:38+0200\n"
+"PO-Revision-Date: 2024-05-28 06:06+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -110,8 +110,7 @@ msgid "Template"
 msgstr "შაბლონი"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "სახელი:"
@@ -374,8 +373,7 @@ msgid "Remove"
 msgstr "წაშლა"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&მომხმარებლის იდენტიფიკატორი:"
@@ -404,9 +402,7 @@ msgid "Permissions"
 msgstr "წვდომები"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -590,15 +586,13 @@ msgid "Show Blacklisted Emails"
 msgstr "შავი სიის ელფოსტების ჩვენება"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">მეტი შედეგები...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "ელფოსტის ძებნა:"
@@ -614,8 +608,7 @@ msgid "Search in result..."
 msgstr "წინა შედეგებში ძებნა..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "გამოსარიცხი დომენის სახელები:"
@@ -626,8 +619,7 @@ msgid "Separate domain with '%1'"
 msgstr "დომების განცალკევება %1-სთან"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "ელფოსტის გამორიცხვა რეგულარული გამოსახულებით:"
@@ -1052,8 +1044,7 @@ msgid "Search for Addresses in Directory"
 msgstr "მოძებნეთ მისამართები დირექტორიაში"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "ძებნა:"
@@ -1250,8 +1241,7 @@ msgid "Add Note"
 msgstr "კომენტარის დამატება"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "შეიყვანეთ ტექსტი, რომელიც ელფოსტის შენიშვნის სახით იქნება შენახული:"
