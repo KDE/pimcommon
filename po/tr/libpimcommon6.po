@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-23 14:26+0300\n"
+"PO-Revision-Date: 2024-05-29 13:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -115,8 +115,7 @@ msgid "Template"
 msgstr "Şablon"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Ad:"
@@ -378,8 +377,7 @@ msgid "Remove"
 msgstr "Kaldır"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&Kullanıcı tanımlayıcısı:"
@@ -408,12 +406,11 @@ msgid "Permissions"
 msgstr "İzinler"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>Not: </b>Yeniden adlandırma üst klasörde yazma izinleri gerektirir."
+msgstr ""
+"<b>Not: </b>Yeniden adlandırma, üst klasörde yazma izinleri gerektirir."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -594,15 +591,13 @@ msgid "Show Blacklisted Emails"
 msgstr "Kara Listedeki E-postaları Göster"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Daha fazla sonuç…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "E-posta ara:"
@@ -618,8 +613,7 @@ msgid "Search in result..."
 msgstr "Sonuçta ara…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Etki alanı adlarını dışla:"
@@ -630,8 +624,7 @@ msgid "Separate domain with '%1'"
 msgstr "Etki alanını “%1” ile ayır"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Düzenli ifade kullanarak e-postaları dışla:"
@@ -1056,8 +1049,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Dizinde Adres Ara"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Şunu ara:"
@@ -1254,11 +1246,10 @@ msgid "Add Note"
 msgstr "Not Ekle"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Postaya not olarak eklenecek metni girin:"
+msgstr "Postaya not olarak eklenecek metni gir:"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format
