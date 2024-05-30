@@ -15,9 +15,9 @@ NetworkManager::NetworkManager(QObject *parent)
     : QObject(parent)
 {
     QNetworkInformation::instance()->loadBackendByFeatures(QNetworkInformation::Feature::Reachability);
-    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, [this](QNetworkInformation::Reachability newReachability) {
-        Q_EMIT networkStatusChanged(newReachability == QNetworkInformation::Reachability::Online);
-    });
+    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &NetworkManager::refreshStatus);
+    connect(QNetworkInformation::instance(), &QNetworkInformation::isBehindCaptivePortalChanged, this, &NetworkManager::refreshStatus);
+    refreshStatus();
 }
 
 NetworkManager::~NetworkManager()
@@ -31,11 +31,16 @@ NetworkManager *NetworkManager::self()
 
 bool NetworkManager::isOnline() const
 {
-    if (QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability)) {
-        return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online;
-    } else {
-        qCWarning(PIMCOMMON_LOG) << "Couldn't find a working backend for QNetworkInformation";
-        return false;
+    return m_isOnline;
+}
+
+void NetworkManager::refreshStatus()
+{
+    const auto info = QNetworkInformation::instance();
+    const bool newIsOnline = info->reachability() == QNetworkInformation::Reachability::Online && !info->isBehindCaptivePortal();
+    if (newIsOnline != m_isOnline) {
+        m_isOnline = newIsOnline;
+        Q_EMIT networkStatusChanged(m_isOnline);
     }
 }
 

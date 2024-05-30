@@ -26,5 +26,10 @@ public:
 
 Q_SIGNALS:
     void networkStatusChanged(bool isOnline);
+
+private:
+    void refreshStatus();
+
+    bool m_isOnline = false;
 };
 }
