@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2024-05-24 09:14+0200\n"
+"PO-Revision-Date: 2024-05-29 09:02+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -122,8 +122,7 @@ msgid "Template"
 msgstr "Modèle"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nom :"
@@ -385,8 +384,7 @@ msgid "Remove"
 msgstr "Supprimer"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Identifiant &utilisateur :"
@@ -416,13 +414,11 @@ msgid "Permissions"
 msgstr "Droits d'accès"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
-"<b>Remarque : </b>le renommage nécessite les droits d'écriture sur le "
+"<b>Remarque : </b>le renommage nécessite des droits d'écriture sur le "
 "dossier parent."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
@@ -605,18 +601,16 @@ msgid "Show Blacklisted Emails"
 msgstr "Afficher les courriels en liste noire"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Plus de résultats...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
-msgstr "Rechercher le courriel : "
+msgstr "Rechercher un courriel : "
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
@@ -629,11 +623,10 @@ msgid "Search in result..."
 msgstr "Chercher dans les résultats..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
-msgstr "Exclure les noms de domaine : "
+msgstr "Exclure les noms de domaine :"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
@@ -641,11 +634,10 @@ msgid "Separate domain with '%1'"
 msgstr "Séparer le domaine avec « %1 »"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr "Exclure un courriel avec une expression rationnelle :"
+msgstr "Exclure un courriel grâce à une expression rationnelle :"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, kde-format
@@ -1071,8 +1063,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Rechercher des adresses dans le dossier"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Rechercher :"
@@ -1271,13 +1262,12 @@ msgid "Add Note"
 msgstr "Ajouter une note"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr ""
-"Saisissez le texte qui devrait être traité comme une note dans le courrier "
-"électronique :"
+"Saisissez le texte qui devrait être enregistré comme une note dans le "
+"courriel :"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:88
 #, kde-format

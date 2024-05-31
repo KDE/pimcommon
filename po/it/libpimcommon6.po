@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-28 00:39+0000\n"
-"PO-Revision-Date: 2023-12-17 15:27+0100\n"
+"PO-Revision-Date: 2024-05-28 22:59+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -24,8 +24,7 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Configura"
@@ -36,8 +35,7 @@ msgid "Restart is necessary for applying the changes."
 msgstr "È necessario un riavvio per applicare le modifiche."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Disable version check"
+#, kde-format
 msgctxt "@action"
 msgid "Disable version check"
 msgstr "Disabilita verifica di versione"
@@ -114,8 +112,7 @@ msgid "Template"
 msgstr "Modello"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nome:"
@@ -241,29 +238,25 @@ msgid "Change Case"
 msgstr "Cambia maiuscole/minuscole"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "Maiuscolo"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "Prima lettera della frase maiuscola"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
 msgstr "Minuscolo"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Inverti maiuscole/minuscole"
@@ -380,8 +373,7 @@ msgid "Remove"
 msgstr "Rimuovi"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Identificativo &utente:"
@@ -410,9 +402,7 @@ msgid "Permissions"
 msgstr "Permessi"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -425,22 +415,19 @@ msgid "Folder cannot be administrated."
 msgstr "La cartella non può essere gestita."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Aggiungi voce..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Modifica voce..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Rimuovi voce"
@@ -540,8 +527,7 @@ msgid "Select email from contact"
 msgstr "Seleziona indirizzo di posta dal contatto"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Mostra il campo «Organization Unit» nei risultati LDAP"
@@ -601,15 +587,13 @@ msgid "Show Blacklisted Emails"
 msgstr "Mostra indirizzi di posta in lista nera"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Ulteriori risultati...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Cerca messaggio di posta:"
@@ -625,8 +609,7 @@ msgid "Search in result..."
 msgstr "Cerca nei risultati..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Escludi nomi di dominio:"
@@ -637,8 +620,7 @@ msgid "Separate domain with '%1'"
 msgstr "Separa i domini con «%1»"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Escludi messaggi di posta tramite espressione regolare:"
@@ -684,22 +666,19 @@ msgstr ""
 "ricerca?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Salva"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Cerca"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
 msgstr "Annulla"
@@ -737,15 +716,13 @@ msgid "LDAP server %1"
 msgstr "Server LDAP %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Sposta in alto"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Sposta in basso"
@@ -756,15 +733,13 @@ msgid "New email..."
 msgstr "Nuovo messaggio di posta..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Aggiungi messaggio di posta"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Rimuovi"
@@ -1072,8 +1047,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Cerca indirizzi nella directory"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Cerca:"
@@ -1140,15 +1114,13 @@ msgid "Searching..."
 msgstr "Ricerca in corso..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Seleziona tutto"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Deseleziona tutto"
@@ -1273,8 +1245,7 @@ msgid "Add Note"
 msgstr "Aggiungi nota"
 
 #: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Enter the text that should be stored as a note to the mail:"
 msgstr "Inserisci il testo da memorizzare come nota del messaggio di posta:"
