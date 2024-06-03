@@ -31,7 +31,7 @@ CollectionAclPage::CollectionAclPage(QWidget *parent)
 {
     setObjectName("PimCommon::CollectionAclPage"_L1);
 
-    setPageTitle(i18n("Access Control"));
+    setPageTitle(i18nc("@title:tab Access Control settings page.", "Access Control"));
     init();
 }
 
