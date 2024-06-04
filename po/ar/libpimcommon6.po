@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-04 00:39+0000\n"
 "PO-Revision-Date: 2024-05-30 09:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -495,7 +495,9 @@ msgid "Custom Permissions (%1)"
 msgstr "تصاريح مخصّصة (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Access Control"
+msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "التّحكّم بالنّفاذ"
 

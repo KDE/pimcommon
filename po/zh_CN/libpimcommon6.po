@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-04 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -491,7 +491,9 @@ msgid "Custom Permissions (%1)"
 msgstr "自定义权限 (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Access Control"
+msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "访问控制"
 
