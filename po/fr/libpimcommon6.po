@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-04 00:39+0000\n"
-"PO-Revision-Date: 2024-05-29 09:02+0200\n"
+"PO-Revision-Date: 2024-06-05 07:23+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -515,8 +515,7 @@ msgid "Custom Permissions (%1)"
 msgstr "Droits d'accès personnalisés (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Contrôle d'accès"

@@ -491,11 +491,10 @@ msgid "Custom Permissions (%1)"
 msgstr "自定义权限 (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
-msgstr "访问控制"
+msgstr ""
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
