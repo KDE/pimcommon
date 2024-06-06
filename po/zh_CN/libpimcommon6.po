@@ -482,7 +482,7 @@ msgstr "自定义权限 (%1)"
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, kde-format
 msgid "Access Control"
-msgstr "访问控制"
+msgstr ""
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
