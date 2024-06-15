@@ -29,7 +29,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     acl/acllistview.cpp
     acl/aclmodifyjob.cpp
     manageserversidesubscription/manageserversidesubscriptionjob.cpp
-    widgets/annotationdialog.cpp
     ldap/ldapsearchdialog.cpp
     util/createresource.cpp
     util/imapresourcecapabilitiesmanager.cpp
@@ -89,7 +88,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     folderdialog/checkedcollectionwidget.h
     folderdialog/selectmulticollectiondialog.h
     folderdialog/selectmulticollectionwidget.h
-    widgets/annotationdialog.h
     pimcommonakonadi_private_export.h
     util/mailutil.h
     util/imapresourcecapabilitiesmanager.h
@@ -245,14 +243,6 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseprogresswidget_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_progresswidget_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE progresswidget
-)
-
-ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
-    HEADER_NAMES
-    AnnotationDialog
-    REQUIRED_HEADERS PimCommonAkonadi_widgets_HEADERS
-    PREFIX PimCommonAkonadi
-    RELATIVE widgets
 )
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaseldap_HEADERS
