@@ -91,7 +91,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
 
     if (buttons & Add) {
         if (addLabel.isEmpty()) {
-            d->mAddButton = new QPushButton(i18n("&Add..."), this);
+            d->mAddButton = new QPushButton(i18nc("@action:button", "&Add..."), this);
         } else {
             d->mAddButton = new QPushButton(addLabel, this);
         }
@@ -102,7 +102,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
 
     if (buttons & Modify) {
         if (modifyLabel.isEmpty()) {
-            d->mModifyButton = new QPushButton(i18n("&Modify..."), this);
+            d->mModifyButton = new QPushButton(i18nc("@action:button", "&Modify..."), this);
         } else {
             d->mModifyButton = new QPushButton(modifyLabel, this);
         }
@@ -115,7 +115,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
 
     if (buttons & Remove) {
         if (removeLabel.isEmpty()) {
-            d->mRemoveButton = new QPushButton(i18n("&Remove"), this);
+            d->mRemoveButton = new QPushButton(i18nc("@action:button", "&Remove"), this);
         } else {
             d->mRemoveButton = new QPushButton(removeLabel, this);
         }
@@ -152,7 +152,7 @@ SimpleStringListEditor::SimpleStringListEditor(QWidget *parent,
     }
 
     if (buttons & Custom) {
-        d->mCustomButton = new QPushButton(i18n("&Customize..."), this);
+        d->mCustomButton = new QPushButton(i18nc("@action:button", "&Customize..."), this);
         d->mCustomButton->setAutoDefault(false);
         d->mCustomButton->setEnabled(false); // no selection yet
         d->mButtonLayout->addWidget(d->mCustomButton);

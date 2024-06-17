@@ -110,7 +110,7 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     renameLayout->addWidget(d->nameEdit);
     d->nameEdit->setClearButtonEnabled(true);
     d->nameEdit->setText(url.fileName());
-    d->suggestNewNameBtn = new QPushButton(i18n("Suggest New &Name"), this);
+    d->suggestNewNameBtn = new QPushButton(i18nc("@action:button", "Suggest New &Name"), this);
     renameLayout->addWidget(d->suggestNewNameBtn);
     connect(d->suggestNewNameBtn, &QPushButton::clicked, this, &RenameFileDialog::slotSuggestNewNamePressed);
 
@@ -118,10 +118,10 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     KStandardGuiItem::assign(overWrite, KStandardGuiItem::Overwrite);
     connect(overWrite, &QPushButton::clicked, this, &RenameFileDialog::slotOverwritePressed);
 
-    auto ignore = new QPushButton(i18n("&Ignore"), this);
+    auto ignore = new QPushButton(i18nc("@action:button", "&Ignore"), this);
     connect(ignore, &QPushButton::clicked, this, &RenameFileDialog::slotIgnorePressed);
 
-    d->renameBtn = new QPushButton(i18n("&Rename"), this);
+    d->renameBtn = new QPushButton(i18nc("@action:button", "&Rename"), this);
     connect(d->renameBtn, &QPushButton::clicked, this, &RenameFileDialog::slotRenamePressed);
 
     auto separator = new KSeparator(this);
