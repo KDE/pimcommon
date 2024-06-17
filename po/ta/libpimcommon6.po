@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:38+0000\n"
-"PO-Revision-Date: 2024-05-19 16:45+0530\n"
+"PO-Revision-Date: 2024-06-16 18:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -194,12 +194,14 @@ msgid ""
 "Could not write the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
+"%1 எனும் கோப்பை எழுத முடியவில்லை:\n"
+"சிக்கலின் விவரணம்: \"%2\"."
 
 #: pimcommon/util/pimutil.cpp:53
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
-msgstr ""
+msgstr "கோப்பை சேமிப்பதில் சிக்கல்"
 
 #: pimcommon/util/pimutil.cpp:84
 #, kde-format
@@ -207,12 +209,14 @@ msgid ""
 "Could not read the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
+"%1 எனும் கோப்பைப் படிக்க முடியவில்லை:\n"
+"சிக்கலின் விவரணம்: \"%2\"."
 
 #: pimcommon/util/pimutil.cpp:88
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
-msgstr ""
+msgstr "கோப்பை ஏற்றுவதில் சிக்கல்"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
