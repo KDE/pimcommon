@@ -31,6 +31,7 @@ class SimpleStringListEditorPrivate;
 class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
 {
     Q_OBJECT
+    Q_PROPERTY(QStringList stringList READ stringList WRITE setStringList NOTIFY changed USER true)
 public:
     enum ButtonCode {
         None = 0,
