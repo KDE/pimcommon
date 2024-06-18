@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-04 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -306,17 +306,23 @@ msgstr ""
 "Datoteka imena <filename>%1</filename> već postoji. Želite li je prebrisati?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Suggest New &Name"
+msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Predloži &Novo ime"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Ignore"
+msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Ignoriši"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgctxt "@action:button"
 msgid "&Rename"
 msgstr "&Preimenuj"
 
@@ -354,22 +360,29 @@ msgid "Do you want to remove selected text?"
 msgstr "Želite li obrisati izabrani predložak?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add..."
+msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Dodaj"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Modifikuj..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Ukloni"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
+msgctxt "@action:button"
 msgid "&Customize..."
 msgstr ""
 
@@ -606,17 +619,20 @@ msgstr "Tekst koji treba potražiti"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Replace All"
+msgctxt "@action:button"
 msgid "&Select"
 msgstr "Zamijeni sve"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, fuzzy, kde-format
 #| msgid "Replace All"
+msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "Zamijeni sve"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
+msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr ""
 

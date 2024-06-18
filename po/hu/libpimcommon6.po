@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-04 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2023-12-16 21:56+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -301,17 +301,23 @@ msgid ""
 msgstr "Már létezik <filename>%1</filename> nevű fájl. Szeretné felülírni?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Suggest New &Name"
+msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Új név a&jánlása"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Ignore"
+msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Mellőzés"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgctxt "@action:button"
 msgid "&Rename"
 msgstr "Átne&vezés"
 
@@ -348,22 +354,30 @@ msgid "Do you want to remove selected text?"
 msgstr "Szeretné törölni a kijelölt szöveget?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add..."
+msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Hozzáadás…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Módosítás…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Eltávolítás"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Customize..."
+msgctxt "@action:button"
 msgid "&Customize..."
 msgstr "Te&stre szabás…"
 
@@ -585,17 +599,23 @@ msgid "Search"
 msgstr "Keresés"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Select"
+msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Kijelölés"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Unselect"
+msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "Ki&jelölés törlése"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Blacklisted Emails"
+msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Feketelistára tett e-mail címek megjelenítése"
 

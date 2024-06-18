@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-04 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2024-06-09 19:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -294,17 +294,23 @@ msgid ""
 msgstr "檔案 <filename>%1</filename> 已存在。您要覆寫它嗎？"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Suggest New &Name"
+msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "建議新的名稱(&N)"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Ignore"
+msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "忽略(&I)"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgctxt "@action:button"
 msgid "&Rename"
 msgstr "重新命名(&R)"
 
@@ -341,22 +347,30 @@ msgid "Do you want to remove selected text?"
 msgstr "您要移除選取的文字嗎？"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add..."
+msgctxt "@action:button"
 msgid "&Add..."
 msgstr "新增(&A)..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "變更(&M)..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgctxt "@action:button"
 msgid "&Remove"
 msgstr "移除(&R)"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Customize..."
+msgctxt "@action:button"
 msgid "&Customize..."
 msgstr "自訂(&C)…"
 
@@ -564,17 +578,23 @@ msgid "Search"
 msgstr "搜尋"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Select"
+msgctxt "@action:button"
 msgid "&Select"
 msgstr "選取(&S)"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Unselect"
+msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "取消選取(&U)"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show Blacklisted Emails"
+msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "顯示已加入黑名單的電子郵件"
 

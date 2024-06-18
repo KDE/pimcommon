@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-04 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2012-11-29 14:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -287,16 +287,19 @@ msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
+msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
 #, kde-format
+msgctxt "@action:button"
 msgid "&Ignore"
 msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
 #, kde-format
+msgctxt "@action:button"
 msgid "&Rename"
 msgstr ""
 
@@ -334,22 +337,26 @@ msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
+msgctxt "@action:button"
 msgid "&Add..."
 msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
+msgctxt "@action:button"
 msgid "&Modify..."
 msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, fuzzy, kde-format
 #| msgid "Remove"
+msgctxt "@action:button"
 msgid "&Remove"
 msgstr "Bain"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
+msgctxt "@action:button"
 msgid "&Customize..."
 msgstr ""
 
@@ -564,16 +571,21 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgctxt "select an email address"
 #| msgid "Se&lect..."
+msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Roghnaigh..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgctxt "@action:button"
 msgid "&Unselect"
-msgstr ""
+msgstr "&Roghnaigh..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
+msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr ""
 

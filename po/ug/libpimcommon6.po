@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-04 00:39+0000\n"
+"POT-Creation-Date: 2024-06-18 00:40+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -305,17 +305,23 @@ msgid ""
 msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Suggest New &Name"
+msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "يېڭى ئات تەۋسىيە(&N)"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Ignore"
+msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "پەرۋا قىلما(&I)"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgctxt "@action:button"
 msgid "&Rename"
 msgstr "ئات ئۆزگەرت(&R)"
 
@@ -352,22 +358,29 @@ msgid "Do you want to remove selected text?"
 msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Add..."
+msgctxt "@action:button"
 msgid "&Add..."
 msgstr "قوش(&A)…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "ئۆزگەرت(&M)..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgctxt "@action:button"
 msgid "&Remove"
 msgstr "چىقىرىۋەت(&R)"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
+msgctxt "@action:button"
 msgid "&Customize..."
 msgstr ""
 
@@ -583,16 +596,21 @@ msgstr "ئىزدەيدىغان تېكىست"
 #, fuzzy, kde-format
 #| msgctxt "select an email address"
 #| msgid "Se&lect..."
+msgctxt "@action:button"
 msgid "&Select"
 msgstr "تاللا(&L)…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "select an email address"
+#| msgid "Se&lect..."
+msgctxt "@action:button"
 msgid "&Unselect"
-msgstr ""
+msgstr "تاللا(&L)…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
+msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr ""
 
