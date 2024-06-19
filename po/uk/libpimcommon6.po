@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-05 08:33+0300\n"
+"PO-Revision-Date: 2024-06-18 08:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -298,22 +298,19 @@ msgstr ""
 "Файл з назвою <filename>%1</filename> вже існує. Хочете його перезаписати?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Запропонувати нову &назву"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Ігнорувати"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "&Перейменувати"
@@ -351,29 +348,25 @@ msgid "Do you want to remove selected text?"
 msgstr "Хочете вилучити позначений фрагмент тексту?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Додати…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "З&мінити…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "Ви&лучити"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, fuzzy, kde-format
-#| msgid "&Customize..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
 msgstr "&Налаштувати…"
@@ -588,22 +581,19 @@ msgid "Search"
 msgstr "Пошук"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Позначити"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "З&няття позначення"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Show Blacklisted Emails"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Показати поштові повідомлення з «чорного» списку"

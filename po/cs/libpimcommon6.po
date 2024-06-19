@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-18 00:40+0000\n"
-"PO-Revision-Date: 2024-06-05 09:14+0200\n"
+"PO-Revision-Date: 2024-06-18 16:10+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -293,25 +293,22 @@ msgstr ""
 "Soubor s názvem <filename>%1</filename> již existuje. Přejete si jej přepsat?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "&Navrhnout nový název"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Ignorovat"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
-msgstr "&Přejmenovat"
+msgstr "Pře&jmenovat"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
@@ -346,32 +343,28 @@ msgid "Do you want to remove selected text?"
 msgstr "Přejete si odstranit zvolený text?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "Přid&at..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Upravit..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "Odst&ranit"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, fuzzy, kde-format
-#| msgid "&Customize..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
-msgstr "U&pravit..."
+msgstr "&Přizpůsobit..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -581,22 +574,19 @@ msgid "Search"
 msgstr "Hledat"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
-msgstr "&Vybrat"
+msgstr "Vy&brat"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "Zr&ušit výběr"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Show Blacklisted Emails"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Zobrazit e-maily na černé listině"
@@ -653,7 +643,7 @@ msgstr "Vybrat"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
 #, kde-format
 msgid "Unselect"
-msgstr "Odznačit"
+msgstr "Zrušit výběr"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
@@ -1137,7 +1127,7 @@ msgstr "Vybrat vše"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr "Zrušit výběr"
+msgstr "Zrušit výběr všeho"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
