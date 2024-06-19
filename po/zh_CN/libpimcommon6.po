@@ -288,17 +288,17 @@ msgstr "名为 <filename>%1</filename> 的文件已经存在。您要覆盖它�
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
 msgid "Suggest New &Name"
-msgstr "建议新名称(&N)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
 #, kde-format
 msgid "&Ignore"
-msgstr "忽略(&I)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
 #, kde-format
 msgid "&Rename"
-msgstr "重命名(&R)"
+msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
@@ -335,22 +335,22 @@ msgstr "您想要移除选中文本吗？"
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, kde-format
 msgid "&Add..."
-msgstr "添加(&A)..."
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgid "&Modify..."
-msgstr "修改(&M)..."
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
 msgid "&Remove"
-msgstr "删除(&R)"
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgid "&Customize..."
-msgstr "自定义(&C)..."
+msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
