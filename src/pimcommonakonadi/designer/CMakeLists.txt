@@ -6,7 +6,7 @@ ecm_qtdesignerplugin_widget(PimCommon::AddresseeLineEdit
     TOOLTIP "Addressee Line Edit (KDE-PIM)"
     WHATSTHIS "A line edit which lets you select addressees from the addressbook"
     GROUP "Input (KDE-PIM)"
-    )
+)
 
 ecm_add_qtdesignerplugin(pimcommonakonadiwidgets
     NAME PimCommonAkonadiWidgets
@@ -18,4 +18,4 @@ ecm_add_qtdesignerplugin(pimcommonakonadiwidgets
     KF6::Completion
     INSTALL_DESTINATION "${KDE_INSTALL_QTPLUGINDIR}/designer"
     COMPONENT Devel
-    )
+)

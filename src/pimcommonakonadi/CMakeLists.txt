@@ -6,13 +6,13 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMONAKONADI
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
     SOVERSION 6
-    )
-add_library(KPim6PimCommonAkonadi )
+)
+add_library(KPim6PimCommonAkonadi)
 add_library(KPim6::PimCommonAkonadi ALIAS KPim6PimCommonAkonadi)
 ecm_qt_declare_logging_category(KPim6PimCommonAkonadi HEADER pimcommonakonadi_debug.h IDENTIFIER PIMCOMMONAKONADI_LOG CATEGORY_NAME org.kde.pim.pimcommonakonadi
         DESCRIPTION "kdepim (pimcommonakonadi)"
         EXPORT PIMCOMMON
-    )
+)
 
 target_sources(KPim6PimCommonAkonadi PRIVATE
     folderdialog/selectmulticollectionwidget.cpp
@@ -96,9 +96,9 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     util/createresource.h
     genericplugins/genericplugininterface.h
     genericplugins/plugininterface.h
-    )
+)
 
-if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+if(NOT FORCE_DISABLE_AKONADI_SEARCH)
 target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
@@ -110,11 +110,11 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/blacklistbaloocompletion/blacklistbalooemailutil.h
     addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.h
     addressline/blacklistbaloocompletion/blacklistbalooemaillist.h
-    )
+)
 endif()
 
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6PimCommonAkonadi
@@ -144,9 +144,9 @@ target_link_libraries(KPim6PimCommonAkonadi
     KF6::KCMUtils
     KPim6::LdapWidgets
     KF6::ItemViews
-    )
+)
 
-if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+if(NOT FORCE_DISABLE_AKONADI_SEARCH)
     target_link_libraries(KPim6PimCommonAkonadi PRIVATE KPim6::AkonadiSearchPIM)
 endif()
 
@@ -159,22 +159,22 @@ set_target_properties(KPim6PimCommonAkonadi PROPERTIES
     VERSION ${PIMCOMMONAKONADI_VERSION}
     SOVERSION ${PIMCOMMONAKONADI_SOVERSION}
     EXPORT_NAME PimCommonAkonadi
-    )
+)
 
 
 install(TARGETS
     KPim6PimCommonAkonadi
     EXPORT KPim6PimCommonAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    )
+)
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(acl/autotests)
     add_subdirectory(folderdialog/tests/)
     add_subdirectory(collectionpage/autotests/)
     add_subdirectory(ldap/tests)
     add_subdirectory(addressline/tests)
     add_subdirectory(addressline/autotests)
-    if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+    if(NOT FORCE_DISABLE_AKONADI_SEARCH)
        add_subdirectory(addressline/blacklistbaloocompletion/autotests)
     endif()       
 endif()
@@ -191,7 +191,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseaddressline_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_addressline_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE addressline/addresslineedit/
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaserecentaddress_HEADERS
     HEADER_NAMES
@@ -199,7 +199,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaserecentaddress_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_recentaddress_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE addressline/recentaddress/
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionorder_HEADERS
     HEADER_NAMES
@@ -207,7 +207,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionorder_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_completionorder_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE addressline/completionorder
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS
     HEADER_NAMES
@@ -215,7 +215,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_completionconfiguredialog_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE addressline/completionconfiguredialog/
-    )
+)
 
 
 
@@ -237,7 +237,7 @@ ecm_generate_headers(PimCommonAkonadi_CamelCaseUtil_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_Util_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE util
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaseprogresswidget_HEADERS
     HEADER_NAMES
@@ -245,7 +245,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseprogresswidget_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_progresswidget_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE progresswidget
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
     HEADER_NAMES
@@ -253,7 +253,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasewidgets_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_widgets_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE widgets
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaseldap_HEADERS
     HEADER_NAMES
@@ -261,7 +261,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseldap_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_ldap_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE ldap
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS
     HEADER_NAMES
@@ -269,7 +269,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEA
     REQUIRED_HEADERS PimCommonAkonadi_managerserversidesubscription_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE manageserversidesubscription
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaseacl_HEADERS
     HEADER_NAMES
@@ -278,7 +278,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseacl_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_acl_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE acl
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasefolderdialog_HEADERS
     HEADER_NAMES
@@ -287,7 +287,7 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasefolderdialog_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_folderdialog_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE folderdialog
-    )
+)
 
 ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     HEADER_NAMES
@@ -296,7 +296,7 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_genericplugins_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE genericplugins
-    )
+)
 
 install(FILES
     ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
@@ -314,7 +314,7 @@ install(FILES
     ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
     COMPONENT Devel
-    )
+)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
@@ -336,9 +336,9 @@ install(FILES
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
-    )
+)
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6PimCommonAkonadi_QCH
         NAME KPim6PimCommonAkonadi
@@ -373,11 +373,11 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 
 endif()
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonAkonadi")
-if (BUILD_QCH)
+if(BUILD_QCH)
 ecm_install_qch_export(
     TARGETS KPim6PimCommonAkonadi_QCH
     FILE KPim6PimCommonAkonadiQchTargets.cmake
@@ -390,7 +390,7 @@ configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
+)
 
 
 
@@ -400,7 +400,7 @@ install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
-    )
+)
 
 install(EXPORT KPim6PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     FILE KPim6PimCommonAkonadiTargets.cmake NAMESPACE KPim6::)
@@ -408,5 +408,5 @@ install(EXPORT KPim6PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_D
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/ COMPONENT Devel
-    )
+)
 

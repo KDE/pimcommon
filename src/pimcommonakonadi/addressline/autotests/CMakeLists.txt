@@ -14,7 +14,7 @@ macro(add_pimcommonakonadi_addressline_unittest  _source)
         KF6::ConfigCore
         KF6::Completion
         KF6::I18n
-    )
+)
 endmacro()
 
 add_pimcommonakonadi_addressline_unittest(recentaddresswidgettest.cpp)

@@ -6,12 +6,12 @@ target_link_libraries(autocorrection_gui
   KF6::I18n
 )
 
-if (TARGET KF6::TextAutoCorrectionWidgets)
+if(TARGET KF6::TextAutoCorrectionWidgets)
     target_link_libraries(autocorrection_gui
         KF6::TextAutoCorrectionWidgets
-    )
+)
 else()
   target_link_libraries(autocorrection_gui
       KF6::TextAutoCorrection
-  )
+)
 endif()

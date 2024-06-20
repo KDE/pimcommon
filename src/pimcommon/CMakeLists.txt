@@ -4,20 +4,20 @@
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/ COMPONENT Devel
-    )
+)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfigVersion.cmake"
     SOVERSION 6
-    )
+)
 
 
 macro(add_resource_iface _kcfgFile _ifaceName _className)
     kcfg_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/${_kcfgFile} ${_ifaceName})
     qt_add_dbus_interface(libpimcommon_SRCS
         ${CMAKE_CURRENT_BINARY_DIR}/${_ifaceName}.xml ${_fileName} ${_className}
-        )
+)
 endmacro()
 
 add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
@@ -28,7 +28,7 @@ ecm_qt_declare_logging_category(KPim6PimCommon HEADER pimcommon_debug.h IDENTIFI
         DESCRIPTION "kdepim (pimcommon)"
         OLD_CATEGORY_NAMES log_pimcommon
         EXPORT PIMCOMMON
-    )
+)
 
 target_sources(KPim6PimCommon PRIVATE
     ${libpimcommon_SRCS}
@@ -108,13 +108,13 @@ target_sources(KPim6PimCommon PRIVATE
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
 )
-if (ENABLE_WARN_OUTDATED)
+if(ENABLE_WARN_OUTDATED)
     target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=1)
 else()
     target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=0)
 endif()
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6PimCommon PROPERTIES UNITY_BUILD ON)
 endif()
 ecm_generate_export_header(KPim6PimCommon
@@ -145,16 +145,16 @@ target_link_libraries(KPim6PimCommon
     KF6::PurposeWidgets
     KF6::Codecs
 )
-if (TARGET KF6::TextAutoCorrectionWidgets)
+if(TARGET KF6::TextAutoCorrectionWidgets)
     target_link_libraries(KPim6PimCommon
         PUBLIC
         KF6::TextAutoCorrectionWidgets
-    )
+)
 else()
     target_link_libraries(KPim6PimCommon
         PUBLIC
         KF6::TextAutoCorrection
-    )
+)
 endif()
 
 target_include_directories(KPim6PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>")
@@ -165,14 +165,14 @@ set_target_properties(KPim6PimCommon PROPERTIES
     VERSION ${PIMCOMMON_VERSION}
     SOVERSION ${PIMCOMMON_SOVERSION}
     EXPORT_NAME PimCommon
-    )
+)
 
 install(TARGETS
     KPim6PimCommon
     EXPORT KPim6PimCommonTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-    )
+)
 
-if (BUILD_TESTING)
+if(BUILD_TESTING)
     add_subdirectory(widgets/autotests)
     add_subdirectory(shareserviceurl/autotests)
     add_subdirectory(widgets/tests)
@@ -196,7 +196,7 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     REQUIRED_HEADERS PimCommon_genericplugins_HEADERS
     PREFIX PimCommon
     RELATIVE genericplugins
-    )
+)
 
 ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     HEADER_NAMES
@@ -204,7 +204,7 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     REQUIRED_HEADERS PimCommon_autocorrectionwidgets_HEADERS
     PREFIX PimCommon
     RELATIVE autocorrection/widgets/
-    )
+)
 
 ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
     HEADER_NAMES
@@ -213,7 +213,7 @@ ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
     REQUIRED_HEADERS PimCommon_needupdateversionwidgets_HEADERS
     PREFIX PimCommon
     RELATIVE needupdateversion
-    )
+)
 
 
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
@@ -222,7 +222,7 @@ ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     REQUIRED_HEADERS PimCommon_networkmanager_HEADERS
     PREFIX PimCommon
     RELATIVE network
-    )
+)
 
 ecm_generate_headers(PimCommon_CamelCase_HEADERS
     HEADER_NAMES
@@ -231,7 +231,7 @@ ecm_generate_headers(PimCommon_CamelCase_HEADERS
     REQUIRED_HEADERS PimCommon_HEADERS
     PREFIX PimCommon
     RELATIVE util
-    )
+)
 
 ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
     HEADER_NAMES
@@ -239,7 +239,7 @@ ecm_generate_headers(PimCommon_Camelcaseshareserviceurl_HEADERS
     REQUIRED_HEADERS PimCommon_shareserviceurl_HEADERS
     PREFIX PimCommon
     RELATIVE shareserviceurl
-    )
+)
 
 ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     HEADER_NAMES
@@ -250,7 +250,7 @@ ecm_generate_headers(PimCommon_Camelcasecustomtools_HEADERS
     REQUIRED_HEADERS PimCommon_customtools_HEADERS
     PREFIX PimCommon
     RELATIVE customtools
-    )
+)
 
 ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     HEADER_NAMES
@@ -259,7 +259,7 @@ ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     REQUIRED_HEADERS PimCommon_templatelist_HEADERS
     PREFIX PimCommon
     RELATIVE templatewidgets
-    )
+)
 
 
 ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
@@ -277,7 +277,7 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     REQUIRED_HEADERS PimCommon_widgets_HEADERS
     PREFIX PimCommon
     RELATIVE widgets
-    )
+)
 
 ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     HEADER_NAMES
@@ -287,7 +287,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
     PREFIX PimCommon
     RELATIVE configureplugins
-    )
+)
 
 
 install(FILES
@@ -310,7 +310,7 @@ install(FILES
     ${PimCommon_Camelcasewidgets_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/PimCommon
     COMPONENT Devel
-    )
+)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
@@ -333,13 +333,13 @@ install(FILES
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
-    )
+)
 
 if(BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
 endif()
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6PimCommon_QCH
         NAME KPim6PimCommon
@@ -381,11 +381,11 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommon")
-if (BUILD_QCH)
+if(BUILD_QCH)
 ecm_install_qch_export(
     TARGETS KPim6PimCommon_QCH
     FILE KPim6PimCommonQchTargets.cmake
@@ -398,13 +398,13 @@ configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
+)
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
-    )
+)
 
 install(EXPORT KPim6PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6PimCommonTargets.cmake NAMESPACE KPim6::)

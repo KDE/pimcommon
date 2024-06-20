@@ -74,7 +74,7 @@ find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 
@@ -83,19 +83,19 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 
 option(FORCE_DISABLE_AKONADI_SEARCH "Disable features and API that require akonadi-search, e.g. because xapian isn't available" OFF)
-if (UNIX)
-    if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+if(UNIX)
+    if(NOT FORCE_DISABLE_AKONADI_SEARCH)
         find_package(KPim6AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
         set_package_properties(KPim6AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://invent.kde.org/pim/akonadi-search" TYPE REQUIRED PURPOSE "Provides search capabilities in KMail and Akonadi")
     endif()
 else()
-    if (NOT FORCE_DISABLE_AKONADI_SEARCH)
+    if(NOT FORCE_DISABLE_AKONADI_SEARCH)
         find_package(KPim6AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG)
         set_package_properties(KPim6AkonadiSearch PROPERTIES DESCRIPTION "The Akonadi Search libraries" URL "https://invent.kde.org/pim/akonadi-search" TYPE OPTIONAL PURPOSE "Provides search capabilities in KMail and Akonadi")
     endif()
 endif()
 
-if (NOT KPim6AkonadiSearch_FOUND)
+if(NOT KPim6AkonadiSearch_FOUND)
     set(FORCE_DISABLE_AKONADI_SEARCH TRUE)
 endif()
 
@@ -107,7 +107,7 @@ option(ENABLE_WARN_OUTDATED "Warn users if using an old version; if you long ter
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
    find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
-endif(BUILD_TESTING)
+endif()
 
 ########### Targets ###########
 
@@ -123,7 +123,7 @@ ecm_qt_install_logging_categories(
         EXPORT PIMCOMMON
         FILE pimcommon.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-        )
+)
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 ki18n_install(po)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

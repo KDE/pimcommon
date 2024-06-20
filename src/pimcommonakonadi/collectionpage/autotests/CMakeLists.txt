@@ -6,7 +6,7 @@ macro(add_pimcommon_collectionpage_test _source)
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-collectionpage-"
         LINK_LIBRARIES Qt::Test Qt::Gui KPim6::AkonadiCore KPim6::PimCommonAkonadi
-    )
+)
 endmacro()
 
 add_pimcommon_collectionpage_test(incidencesforwidgettest.cpp)
