@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 22:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1277,59 +1277,42 @@ msgstr "Baliabidearen ezarpena osatu da."
 msgid "Failed to create resource instance: %1"
 msgstr "Baliabidearen instantzia sortzea huts egin du: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Editatu Oharra"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Editatu Oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Ezabatu Oharra"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Ezabatu Oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr "Gehitu Oharra"
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "Gehitu Oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Sartu ohar gisa gorde beharreko testua e-postan:"
+#, fuzzy
+#~| msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgstr "Sartu ohar gisa gorde beharreko testua e-postan:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr "Ohar mota:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "Ohar mota:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "Ohar pribatua"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Ohar pribatua"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "Partekatutako oharra"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Partekatutako oharra"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "Benetan ezabatu nahi duzu ohar hau?"
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Benetan ezabatu nahi duzu ohar hau?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Ezabatu oharra"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Ezabatu oharra"
 
 #~ msgid "Share"
 #~ msgstr "Partekatu"

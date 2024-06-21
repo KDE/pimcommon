@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -1269,58 +1269,34 @@ msgstr "Postavljanje resursa završeno."
 msgid "Failed to create resource instance: %1"
 msgstr "Ne mogu da napravim primjerak resurs: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, fuzzy, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Obriši predložak"
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Obriši predložak"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, fuzzy, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Obriši predložak"
+#, fuzzy
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Obriši predložak"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr ""
+#, fuzzy
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Ime:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr ""
+#, fuzzy
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Ime:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr ""
+#, fuzzy
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Želite li obrisati izabrani predložak?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "Ime:"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, fuzzy, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "Ime:"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, fuzzy, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "Želite li obrisati izabrani predložak?"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, fuzzy, kde-format
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Obriši predložak"
+#, fuzzy
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Obriši predložak"
 
 #, fuzzy
 #~ msgid "Share"

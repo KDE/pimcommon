@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2016-11-04 11:09+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1277,65 +1277,50 @@ msgstr "Išteklių sąranka baigta."
 msgid "Failed to create resource instance: %1"
 msgstr "Nepavyko sukurti išteklių objekto: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid "Edit Note"
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Keisti pastabą"
+#, fuzzy
+#~| msgid "Edit Note"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Keisti pastabą"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, fuzzy, kde-format
-#| msgid "Delete Note"
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Ištrinti pastabą"
+#, fuzzy
+#~| msgid "Delete Note"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Ištrinti pastabą"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, fuzzy, kde-format
-#| msgid "Add Note"
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr "Pridėti pastabą"
+#, fuzzy
+#~| msgid "Add Note"
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "Pridėti pastabą"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr ""
+#, fuzzy
+#~| msgid "Note type:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "Pastabos tipas:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, fuzzy, kde-format
-#| msgid "Note type:"
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr "Pastabos tipas:"
+#, fuzzy
+#~| msgid "Private note"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Asmeninė pastaba"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, fuzzy, kde-format
-#| msgid "Private note"
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "Asmeninė pastaba"
+#, fuzzy
+#~| msgid "Shared note"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Bendrinama pastaba "
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Shared note"
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "Bendrinama pastaba "
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Ar tikrai norite ištrinti šią pastabą?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "Ar tikrai norite ištrinti šią pastabą?"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "Delete Note"
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Ištrinti pastabą"
+#, fuzzy
+#~| msgid "Delete Note"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Ištrinti pastabą"
 
 #, fuzzy
 #~| msgid "Shared:"

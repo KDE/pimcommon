@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2024-06-16 18:11+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -1202,57 +1202,4 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr ""
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Note"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2023-07-25 09:21+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -1271,59 +1271,42 @@ msgstr "Resursinställning klar."
 msgid "Failed to create resource instance: %1"
 msgstr "Misslyckades skapa resursinstans: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Redigera anmärkning"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Redigera anmärkning"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Ta bort anmärkning"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Ta bort anmärkning"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr "Lägg till anmärkning"
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "Lägg till anmärkning"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Skriv in texten som ska lagras som en anmärkning i brevet:"
+#, fuzzy
+#~| msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgstr "Skriv in texten som ska lagras som en anmärkning i brevet:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr "Anmärkningstyp:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "Anmärkningstyp:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "Privat anmärkning"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Privat anmärkning"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "Delad anmärkning"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Delad anmärkning"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "Vill du verkligen ta bort den här anmärkningen?"
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Vill du verkligen ta bort den här anmärkningen?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Ta bort anmärkning"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Ta bort anmärkning"
 
 #~ msgid "Share"
 #~ msgstr "Dela"

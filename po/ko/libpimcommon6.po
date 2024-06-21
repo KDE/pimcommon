@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1258,59 +1258,42 @@ msgstr "리소스 설정이 완료되었습니다."
 msgid "Failed to create resource instance: %1"
 msgstr "리소스 인스턴스를 만들 수 없음: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "메모 편집"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "메모 편집"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "메모 삭제"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "메모 삭제"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr "메모 추가"
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "메모 추가"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "메일에 덧붙일 메모 텍스트를 입력하십시오:"
+#, fuzzy
+#~| msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgstr "메일에 덧붙일 메모 텍스트를 입력하십시오:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr "메모 종류:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "메모 종류:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "개인 메모"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "개인 메모"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "공유 메모"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "공유 메모"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "이 메모를 삭제하시겠습니까?"
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "이 메모를 삭제하시겠습니까?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "메모 삭제"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "메모 삭제"
 
 #~ msgid "Share"
 #~ msgstr "공유"

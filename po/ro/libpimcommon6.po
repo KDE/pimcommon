@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2013-09-15 12:14+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -1239,64 +1239,40 @@ msgstr "Configurarea resursei s-a încheiat."
 msgid "Failed to create resource instance: %1"
 msgstr ""
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, fuzzy, kde-format
-#| msgid "Delete template"
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Șterge șablonul"
+#, fuzzy
+#~| msgid "Delete template"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Șterge șablonul"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, fuzzy, kde-format
-#| msgid "Delete template"
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Șterge șablonul"
+#, fuzzy
+#~| msgid "Delete template"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Șterge șablonul"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr ""
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Denumire:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr ""
+#, fuzzy
+#~| msgid "Name:"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Denumire:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr ""
+#, fuzzy
+#~| msgid "Do you want to delete selected template?"
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Doriți să ștergeți șablonul ales?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, fuzzy, kde-format
-#| msgid "Name:"
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "Denumire:"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Name:"
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "Denumire:"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Do you want to delete selected template?"
-msgid "Do you really want to delete this note?"
-msgstr "Doriți să ștergeți șablonul ales?"
-
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "Delete template"
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Șterge șablonul"
+#, fuzzy
+#~| msgid "Delete template"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Șterge șablonul"
 
 #, fuzzy
 #~| msgid "Name:"

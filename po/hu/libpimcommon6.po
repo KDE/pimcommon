@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2023-12-16 21:56+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -1270,59 +1270,42 @@ msgstr "Az erőforrás beállítás befejeződött."
 msgid "Failed to create resource instance: %1"
 msgstr "Az erőforráspéldány létrehozása nem sikerült: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Jegyzet szerkesztése"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Jegyzet szerkesztése"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Jegyzet törlése"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Jegyzet törlése"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr "Jegyzet hozzáadása"
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "Jegyzet hozzáadása"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Adja meg az e-mailhez tárolandó jegyzet szövegét:"
+#, fuzzy
+#~| msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgstr "Adja meg az e-mailhez tárolandó jegyzet szövegét:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr "Jegyzet típusa:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "Jegyzet típusa:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "Személyes jegyzet"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "Személyes jegyzet"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "Megosztott jegyzet"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "Megosztott jegyzet"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "Biztosan törölni szeretné ezt a feljegyzést?"
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Biztosan törölni szeretné ezt a feljegyzést?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, kde-format
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Jegyzet törlése"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Jegyzet törlése"
 
 #~ msgid "Share"
 #~ msgstr "Megosztás"

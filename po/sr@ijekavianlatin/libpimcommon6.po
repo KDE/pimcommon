@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:40+0000\n"
+"POT-Creation-Date: 2024-06-21 00:39+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -1314,61 +1314,45 @@ msgstr "Postavljanje resursa završeno."
 msgid "Failed to create resource instance: %1"
 msgstr "Ne mogu da napravim primerak resursa: %1"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:66
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Note"
-msgstr "Uređivanje beleške"
+#~ msgctxt "@title:window"
+#~ msgid "Edit Note"
+#~ msgstr "Uređivanje beleške"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:69
-#, kde-format
-msgctxt "@action:button"
-msgid "Delete Note"
-msgstr "Obriši belešku"
+#~ msgctxt "@action:button"
+#~ msgid "Delete Note"
+#~ msgstr "Obriši belešku"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:73
-#, kde-format
-msgctxt "@title:window"
-msgid "Add Note"
-msgstr "Dodavanje beleške"
+#~ msgctxt "@title:window"
+#~ msgid "Add Note"
+#~ msgstr "Dodavanje beleške"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:78
-#, fuzzy, kde-format
-#| msgid "Enter the text that should be stored as a note to the mail:"
-msgctxt "@label:textbox"
-msgid "Enter the text that should be stored as a note to the mail:"
-msgstr "Unesite tekst koji će biti beleška uz poruku:"
+#, fuzzy
+#~| msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgctxt "@label:textbox"
+#~ msgid "Enter the text that should be stored as a note to the mail:"
+#~ msgstr "Unesite tekst koji će biti beleška uz poruku:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:88
-#, kde-format
-msgctxt "@label:listbox"
-msgid "Note type:"
-msgstr "Tip beleške:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Note type:"
+#~ msgstr "Tip beleške:"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:92
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Private note"
-msgstr "privatna beleška"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Private note"
+#~ msgstr "privatna beleška"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:93
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Shared note"
-msgstr "deljena beleška"
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Shared note"
+#~ msgstr "deljena beleška"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:134
-#, kde-format
-msgid "Do you really want to delete this note?"
-msgstr "Želite li zaista da obrišete ovu belešku?"
+#~ msgid "Do you really want to delete this note?"
+#~ msgstr "Želite li zaista da obrišete ovu belešku?"
 
-#: pimcommonakonadi/widgets/annotationdialog.cpp:135
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Delete Note"
-msgctxt "@title:window"
-msgid "Delete Note"
-msgstr "Obriši belešku"
+#, fuzzy
+#~| msgctxt "@action:button"
+#~| msgid "Delete Note"
+#~ msgctxt "@title:window"
+#~ msgid "Delete Note"
+#~ msgstr "Obriši belešku"
 
 #~ msgid "LibreOffice Autocorrection"
 #~ msgstr "Samoispravljanje iz LibreOfficea"
