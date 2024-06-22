@@ -375,7 +375,7 @@ msgid ""
 "own account on the server will tell you which one it is."
 msgstr ""
 "用户标识是用户在 IMAP 服务器上的登录名。它可以是一个简单的用户名，或者是完整"
-"的电子邮件地址；您自己账号的登录名将会告诉您是哪一个。"
+"的电子邮件地址；您自己账户的登录名将会告诉您是哪一个。"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format

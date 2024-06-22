@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:38+0000\n"
-"PO-Revision-Date: 2023-12-17 15:27+0100\n"
+"PO-Revision-Date: 2024-06-18 17:55+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -573,7 +573,7 @@ msgstr "&Deseleziona"
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
 msgid "Show Blacklisted Emails"
-msgstr "Mostra indirizzi di posta in lista nera"
+msgstr "Mostra messaggi di posta in lista nera"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
