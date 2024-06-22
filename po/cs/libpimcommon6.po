@@ -1224,38 +1224,3 @@ msgstr "Nastavení zdroje bylo dokončeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Selhalo vytvoření instance zdroje: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Note"
-#~ msgstr "Upravit poznámku"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete Note"
-#~ msgstr "Smazat poznámku"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Note"
-#~ msgstr "Přidat poznámku"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Enter the text that should be stored as a note to the mail:"
-#~ msgstr "Zadejte text, který bude uložen jako poznámka k e-mailu:"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Note type:"
-#~ msgstr "Typ poznámky:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Private note"
-#~ msgstr "Soukromá poznámka"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Shared note"
-#~ msgstr "Sdílená poznámka"
-
-#~ msgid "Do you really want to delete this note?"
-#~ msgstr "Opravdu si přejete smazat tuto poznámku?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note"
-#~ msgstr "Smazat poznámku"
