@@ -5,6 +5,7 @@
 */
 
 #include "purposemenuwidget.h"
+#include "pimcommon_debug.h"
 using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
@@ -39,7 +40,9 @@ void PurposeMenuWidget::slotInitializeShareMenu()
 {
     delete mTemporaryShareFile;
     mTemporaryShareFile = new QTemporaryFile();
-    mTemporaryShareFile->open();
+    if (!mTemporaryShareFile->open()) {
+        qCWarning(PIMCOMMON_LOG) << "Impossible to open temporary file";
+    }
     mTemporaryShareFile->setPermissions(QFile::ReadUser);
     mTemporaryShareFile->write(text());
     mTemporaryShareFile->close();
