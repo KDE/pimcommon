@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"POT-Creation-Date: 2024-06-25 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 08:05-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -274,17 +274,17 @@ msgstr "Maiúsculas e minúsculas inversas"
 msgid "Clear History"
 msgstr "Limpar histórico"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:55
+#: pimcommon/widgets/purposemenuwidget.cpp:58
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Ocorreu um problema ao compartilhar o documento: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:59
+#: pimcommon/widgets/purposemenuwidget.cpp:62
 #, kde-format
 msgid "File was shared."
 msgstr "O arquivo foi compartilhado."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:64
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr ""

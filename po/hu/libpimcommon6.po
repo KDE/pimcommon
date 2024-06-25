@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"POT-Creation-Date: 2024-06-25 00:39+0000\n"
 "PO-Revision-Date: 2023-12-16 21:56+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -272,17 +272,17 @@ msgstr "Kis- és nagybetűk cseréje"
 msgid "Clear History"
 msgstr "Előzmények törlése"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:55
+#: pimcommon/widgets/purposemenuwidget.cpp:58
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Hiba történt a dokumentum megosztásakor: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:59
+#: pimcommon/widgets/purposemenuwidget.cpp:62
 #, kde-format
 msgid "File was shared."
 msgstr "A fájl megosztva."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:64
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Az új kérést itt találhatja meg:<br /><a href='%1'>%1</a> </qt>"

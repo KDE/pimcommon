@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-21 00:39+0000\n"
+"POT-Creation-Date: 2024-06-25 00:39+0000\n"
 "PO-Revision-Date: 2024-06-18 08:35+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -268,17 +268,17 @@ msgstr "Обернений регістр"
 msgid "Clear History"
 msgstr "Спорожнити журнал"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:55
+#: pimcommon/widgets/purposemenuwidget.cpp:58
 #, kde-format
 msgid "There was a problem sharing the document: %1"
 msgstr "Під час спроби оприлюднити документ виникла проблема: %1"
 
-#: pimcommon/widgets/purposemenuwidget.cpp:59
+#: pimcommon/widgets/purposemenuwidget.cpp:62
 #, kde-format
 msgid "File was shared."
 msgstr "Файл оприлюднено."
 
-#: pimcommon/widgets/purposemenuwidget.cpp:61
+#: pimcommon/widgets/purposemenuwidget.cpp:64
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>Новий запит можна знайти тут:<br /><a href='%1'>%1</a> </qt>"
