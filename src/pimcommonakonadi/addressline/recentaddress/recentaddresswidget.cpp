@@ -44,7 +44,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     mLineEdit->installEventFilter(this);
     mLineEdit->setClearButtonEnabled(true);
     mLineEdit->setValidator(new KEmailValidator(this));
-    mLineEdit->setPlaceholderText(i18n("New email..."));
+    mLineEdit->setPlaceholderText(i18nc("@info:placeholder", "New email..."));
     connect(mLineEdit, &QLineEdit::returnPressed, this, &RecentAddressWidget::slotAddItem);
 
     lineLayout->addWidget(mLineEdit);

@@ -71,7 +71,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     d->mCollectionFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
     auto searchLine = new QLineEdit(this);
-    searchLine->setPlaceholderText(i18n("Search..."));
+    searchLine->setPlaceholderText(i18nc("@info:placeholder", "Search..."));
     searchLine->setClearButtonEnabled(true);
     connect(searchLine, &QLineEdit::textChanged, this, &CheckedCollectionWidget::slotSetCollectionFilter);
 

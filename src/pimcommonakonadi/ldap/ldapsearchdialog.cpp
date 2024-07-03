@@ -546,7 +546,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->searchLine = new QLineEdit;
     KLineEditEventHandler::catchReturnKey(d->searchLine);
     d->searchLine->setClearButtonEnabled(true);
-    d->searchLine->setPlaceholderText(i18n("Search in result"));
+    d->searchLine->setPlaceholderText(i18nc("@info:placeholder", "Search in result"));
     quickSearchLineLayout->addWidget(d->searchLine);
     topLayout->addLayout(quickSearchLineLayout);
 

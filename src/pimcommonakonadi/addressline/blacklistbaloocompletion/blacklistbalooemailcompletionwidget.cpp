@@ -50,7 +50,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     lab->setObjectName("search_label"_L1);
     searchLayout->addWidget(lab);
 
-    mSearchLineEdit->setPlaceholderText(i18n("Research is done from 3 characters"));
+    mSearchLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Research is done from 3 characters"));
     mSearchLineEdit->setFocus();
     mSearchLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
@@ -102,7 +102,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mSearchInResultLineEdit = new KListWidgetSearchLine(this, mEmailList);
     mSearchInResultLineEdit->setObjectName("searchinresultlineedit"_L1);
     mSearchInResultLineEdit->setClearButtonEnabled(true);
-    mSearchInResultLineEdit->setPlaceholderText(i18n("Search in result..."));
+    mSearchInResultLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Search in result..."));
     KLineEditEventHandler::catchReturnKey(mSearchInResultLineEdit);
 
     searchLineLayout->addStretch(0);
@@ -123,7 +123,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mExcludeDomainLineEdit->setObjectName("domain_lineedit"_L1);
     mExcludeDomainLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mExcludeDomainLineEdit);
-    mExcludeDomainLineEdit->setPlaceholderText(i18n("Separate domain with \'%1\'", QLatin1Char(',')));
+    mExcludeDomainLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Separate domain with \'%1\'", QLatin1Char(',')));
 
     auto excludeEmailRegularExpressionLayout = new QHBoxLayout;
     excludeEmailRegularExpressionLayout->setContentsMargins({});
@@ -137,7 +137,7 @@ BlackListBalooEmailCompletionWidget::BlackListBalooEmailCompletionWidget(QWidget
     mExcludeEmailFromRegularExpressionLineEdit->setObjectName("exclude_email_lineedit"_L1);
     mExcludeEmailFromRegularExpressionLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mExcludeEmailFromRegularExpressionLineEdit);
-    mExcludeEmailFromRegularExpressionLineEdit->setPlaceholderText(i18n("Separate regular expression with \'%1\'", QLatin1Char(',')));
+    mExcludeEmailFromRegularExpressionLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Separate regular expression with \'%1\'", QLatin1Char(',')));
 
     connect(mEmailList, &QListWidget::itemSelectionChanged, this, &BlackListBalooEmailCompletionWidget::slotSelectionChanged);
     slotSelectionChanged();
