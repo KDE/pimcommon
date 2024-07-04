@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 19:16+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -629,12 +629,16 @@ msgid "Search email:"
 msgstr "이메일에서 찾기:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Research is done from 3 characters"
+msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "최소 3글자를 입력해야 합니다"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "결과에서 검색..."
 
@@ -646,7 +650,9 @@ msgid "Exclude domain names:"
 msgstr "도메인 이름 제외:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Separate domain with '%1'"
+msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "'%1'(으)로 도메인을 구분하십시오"
 
@@ -658,7 +664,9 @@ msgid "Exclude email with Regular Expression:"
 msgstr "정규 표현식과 일치하는 이메일 제외:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Separate regular expression with '%1'"
+msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "'%1'(으)로 정규 표현식을 구분하십시오"
 
@@ -762,7 +770,9 @@ msgid "Move Down"
 msgstr "아래로 이동"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New email..."
+msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "새 이메일..."
 
@@ -925,7 +935,9 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "다음에 대하여 바쁨/한가함 상태 생성 및 알람 활성화(&B):"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "찾기..."
 
@@ -1136,7 +1148,9 @@ msgid "Starts With"
 msgstr "다음으로 시작함"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result"
+msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "결과에서 검색:"
 

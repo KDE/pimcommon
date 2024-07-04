@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2023-12-13 22:06+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -641,12 +641,16 @@ msgid "Search email:"
 msgstr "Bilatu e-posta:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Research is done from 3 characters"
+msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Ikerketa 3 karakteretik abiatuta egiten da"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Bilatu emaitzan..."
 
@@ -658,7 +662,9 @@ msgid "Exclude domain names:"
 msgstr "Baztertu domeinu-izenak:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Separate domain with '%1'"
+msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Banatu domeinuak '%1' erabiliz"
 
@@ -670,7 +676,9 @@ msgid "Exclude email with Regular Expression:"
 msgstr "Baztertu adierazpen erregularra duen e-posta:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Separate regular expression with '%1'"
+msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Bereizi adierazpen erregularra '%1' erabiliz"
 
@@ -775,7 +783,9 @@ msgid "Move Down"
 msgstr "Eraman behera"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New email..."
+msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "E-posta berria..."
 
@@ -943,7 +953,9 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Sortu libre/lan&petuta eta aktibatu alarma hauei:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Bilatu..."
 
@@ -1154,7 +1166,9 @@ msgid "Starts With"
 msgstr "Honela hasten da"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result"
+msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Bilatu emaitzan"
 

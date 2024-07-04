@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2024-06-26 13:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -624,12 +624,16 @@ msgid "Search email:"
 msgstr "Rechercher un courriel : "
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Research is done from 3 characters"
+msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "La recherche est effectuée à partir de 3 caractères"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result..."
+msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Chercher dans les résultats..."
 
@@ -640,7 +644,9 @@ msgid "Exclude domain names:"
 msgstr "Exclure les noms de domaine :"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Separate domain with '%1'"
+msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Séparer le domaine avec « %1 »"
 
@@ -651,7 +657,9 @@ msgid "Exclude email with Regular Expression:"
 msgstr "Exclure un courriel grâce à une expression rationnelle :"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Separate regular expression with '%1'"
+msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Séparer une expression rationnelle avec « %1 »"
 
@@ -753,7 +761,9 @@ msgid "Move Down"
 msgstr "Déplacer vers le bas"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "New email..."
+msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "Nouveau courriel..."
 
@@ -921,7 +931,9 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Générer des listes de disp&onibilité et activer des alarmes pour :"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Chercher..."
 
@@ -1131,7 +1143,9 @@ msgid "Starts With"
 msgstr "Commence par"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search in result"
+msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Chercher dans les résultats"
 

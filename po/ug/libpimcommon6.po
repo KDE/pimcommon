@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -629,11 +629,13 @@ msgstr "ئىزدەيدىغان تېكىست"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr ""
 
@@ -645,6 +647,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr ""
 
@@ -656,6 +659,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr ""
 
@@ -760,6 +764,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr ""
 
@@ -911,9 +916,11 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr ""
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text to search for"
+msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr ""
+msgstr "ئىزدەيدىغان تېكىست"
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, fuzzy, kde-format
@@ -1125,9 +1132,11 @@ msgid "Starts With"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Text to search for"
+msgctxt "@info:placeholder"
 msgid "Search in result"
-msgstr ""
+msgstr "ئىزدەيدىغان تېكىست"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, kde-format

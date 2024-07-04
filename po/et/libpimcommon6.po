@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:39+0000\n"
+"POT-Creation-Date: 2024-07-04 00:39+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -637,12 +637,14 @@ msgstr "Otsing..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Otsing..."
 
@@ -654,6 +656,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr ""
 
@@ -665,6 +668,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr ""
 
@@ -772,6 +776,7 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
+msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr ""
 
@@ -939,7 +944,9 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Va&ba/hõivatud teabe loomine ja häirete aktiveerimine:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Otsing..."
 
@@ -1159,9 +1166,11 @@ msgid "Starts With"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgctxt "@info:placeholder"
 msgid "Search in result"
-msgstr ""
+msgstr "Otsing..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, fuzzy, kde-format
