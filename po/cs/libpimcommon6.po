@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 16:10+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-07-04 14:38+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -607,11 +607,10 @@ msgstr "Hledat e-mail:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr ""
+msgstr "Hledání je provedeno na základě 3 znaků"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Vyhledávám ve výsledcích..."
@@ -623,8 +622,7 @@ msgid "Exclude domain names:"
 msgstr "Vyjmout názvy domén:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Oddělená doména s '%1'"
@@ -636,8 +634,7 @@ msgid "Exclude email with Regular Expression:"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate regular expression with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Oddělit regulární výraz pomocí '%1'"
@@ -740,8 +737,7 @@ msgid "Move Down"
 msgstr "Přesunout dolů"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "New email..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "Nový e-mail..."
@@ -907,8 +903,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Zjistit stav &zaneprázdnění a zapnout upozornění pro:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Hledat..."
@@ -1119,8 +1114,7 @@ msgid "Starts With"
 msgstr "Začíná na"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Vyhledávat ve výsledcích"

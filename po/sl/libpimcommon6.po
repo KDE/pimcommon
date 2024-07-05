@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-18 09:50+0200\n"
+"PO-Revision-Date: 2024-07-04 10:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -615,15 +615,13 @@ msgid "Search email:"
 msgstr "Poišči e-pošto:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Research is done from 3 characters"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Raziskava je izvedena na 3 znakih"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Poišči med rezultati..."
@@ -635,8 +633,7 @@ msgid "Exclude domain names:"
 msgstr "Izvzemi imena domen:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Domene ločite z '%1'"
@@ -648,8 +645,7 @@ msgid "Exclude email with Regular Expression:"
 msgstr "Izvzemi sporočila z regularnim izrazom:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate regular expression with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Loči regularni izraz z '%1'"
@@ -754,11 +750,10 @@ msgid "Move Down"
 msgstr "Pomakni dol"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "New email..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
-msgstr "Novo sporočilo..."
+msgstr "Novo e-poštno sporočilo..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format

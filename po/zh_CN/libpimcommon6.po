@@ -605,11 +605,10 @@ msgid "Research is done from 3 characters"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
-msgstr "搜索..."
+msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
@@ -889,11 +888,10 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "为其生成闲/忙并激活闹钟(&B)："
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr "搜索..."
+msgstr ""
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format

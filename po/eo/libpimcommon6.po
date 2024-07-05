@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-06-19 22:33+0200\n"
+"PO-Revision-Date: 2024-07-04 21:35+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -612,15 +612,13 @@ msgid "Search email:"
 msgstr "Serĉi retpoŝton:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Research is done from 3 characters"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Esploro estas farita el 3 signoj"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Serĉi en rezulto..."
@@ -632,8 +630,7 @@ msgid "Exclude domain names:"
 msgstr "Ekskludi domajnajn nomojn:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Apartigi domajnon kun '%1'"
@@ -645,8 +642,7 @@ msgid "Exclude email with Regular Expression:"
 msgstr "Ekskludi retpoŝton kun Regula Esprimo:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate regular expression with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Apartigi regulan esprimon kun '%1'"
@@ -748,8 +744,7 @@ msgid "Move Down"
 msgstr "Movi Malsupren"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "New email..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "Nova retpoŝto..."
@@ -915,8 +910,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Generi li&bera/okupata kaj aktivigi alarmojn por:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Serĉi..."
@@ -1127,8 +1121,7 @@ msgid "Starts With"
 msgstr "Komencas Kun"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Serĉi en rezulto"
@@ -1249,38 +1242,3 @@ msgstr "Rimeda agordo finiĝis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Malsukcesis krei rimedan ekzemplon: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Note"
-#~ msgstr "Redakti Noton"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete Note"
-#~ msgstr "Forigi Noton"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Note"
-#~ msgstr "Aldoni Noton"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Enter the text that should be stored as a note to the mail:"
-#~ msgstr "Enigu la tekston, kiu estu konservita kiel noto al la poŝto:"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Note type:"
-#~ msgstr "Noto-tipo:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Private note"
-#~ msgstr "Privata noto"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Shared note"
-#~ msgstr "Kunhavita noto"
-
-#~ msgid "Do you really want to delete this note?"
-#~ msgstr "Ĉu vi vere volas forigi ĉi tiun noton?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note"
-#~ msgstr "Forigi Noton"
