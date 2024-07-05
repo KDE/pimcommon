@@ -842,7 +842,7 @@ msgstr "为其生成闲/忙并激活闹钟(&B)："
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, kde-format
 msgid "Search..."
-msgstr "搜索..."
+msgstr ""
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
