@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-07-04 10:40+0200\n"
+"PO-Revision-Date: 2024-07-05 07:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -919,11 +919,10 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Ustvari prost/zaseden in aktiviraj alarme za:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr "Poišči ..."
+msgstr "Išči…"
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
@@ -1131,8 +1130,7 @@ msgid "Starts With"
 msgstr "Začni pri"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Poišči v rezultatu"
