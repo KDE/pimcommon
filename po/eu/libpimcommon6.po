@@ -1,16 +1,16 @@
 # Translation for libpimcommon.po to Euskara/Basque (eu).
-# Copyright (C) 2021-2023 This file is copyright:
+# Copyright (C) 2021-2024 This file is copyright:
 # This file is distributed under the same license as the pimcommon package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-13 22:06+0100\n"
+"PO-Revision-Date: 2024-07-17 07:09+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -26,8 +26,7 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Konfiguratu"
@@ -38,8 +37,7 @@ msgid "Restart is necessary for applying the changes."
 msgstr "Aldaketak ezartzeko berrabiatu beharra dago."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Disable version check"
+#, kde-format
 msgctxt "@action"
 msgid "Disable version check"
 msgstr "Ezgaitu bertsio-egiaztapena"
@@ -118,8 +116,7 @@ msgid "Template"
 msgstr "Txantiloia"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Izena:"
@@ -245,29 +242,25 @@ msgid "Change Case"
 msgstr "Aldatu maiuskulak/minuskulak"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "Letra larriak"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "Perpausaren kaxa"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
-msgstr "Minuskulak"
+msgstr "Letra xeheak"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Alderantzizko kaxa"
@@ -309,22 +302,19 @@ msgstr ""
 "gainidatzi nahi duzu?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
-msgstr "Iradoki ize&n berri bat"
+msgstr "Iradoki ize&n berria"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
-msgstr "Ez &ikusi egin"
+msgstr "Ez &ikusi"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "Be&rrizendatu"
@@ -362,32 +352,28 @@ msgid "Do you want to remove selected text?"
 msgstr "Hautatutako testua kendu nahi duzu?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Gehitu..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Aldatu..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Kendu"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, fuzzy, kde-format
-#| msgid "&Customize..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
-msgstr "Norbere erara e&gokitu..."
+msgstr "&Neurrira ipini..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -399,8 +385,7 @@ msgid "Remove"
 msgstr "Kendu"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&Erabiltzailearen IDa:"
@@ -430,9 +415,7 @@ msgid "Permissions"
 msgstr "Baimenak"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -444,22 +427,19 @@ msgid "Folder cannot be administrated."
 msgstr "Karpeta ezin da administratu."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Gehitu sarrera..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Editatu sarrera..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Kendu sarrera"
@@ -533,8 +513,7 @@ msgid "Custom Permissions (%1)"
 msgstr "Norberak finkatutako baimenak (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Sarbide-kontrola"
@@ -560,8 +539,7 @@ msgid "Select email from contact"
 msgstr "Hautatu e-posta kontaktutik"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Erakutsi LDAP emaitzen Antolaketa Unitatea"
@@ -606,78 +584,67 @@ msgid "Search"
 msgstr "Bilatu"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Hautatu"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
-msgstr "&Desautatu"
+msgstr "&Deshautatu"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Show Blacklisted Emails"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Erakutsi zerrenda-beltzeko e-postak"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Emaitza gehiago...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Bilatu e-posta:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Research is done from 3 characters"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr "Ikerketa 3 karakteretik abiatuta egiten da"
+msgstr "Bilaketa 3 karakteretik abiatuta egiten da"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Bilatu emaitzan..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Baztertu domeinu-izenak:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Banatu domeinuak '%1' erabiliz"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr "Baztertu adierazpen erregularra duen e-posta:"
+msgstr "Baztertu e-posta adierazpen erregularrarekin:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate regular expression with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Bereizi adierazpen erregularra '%1' erabiliz"
@@ -716,22 +683,19 @@ msgid ""
 msgstr "Zerrenda aldatu da. Beste bilaketa bat egin aurretik gorde nahi duzu?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Gorde"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Bilatu"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
 msgstr "Utzi"
@@ -769,36 +733,31 @@ msgid "LDAP server %1"
 msgstr "%1 LDAP zerbitzaria"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Eraman gora"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Eraman behera"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "New email..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "E-posta berria..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Gehitu E-posta"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Kendu"
@@ -953,8 +912,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Sortu libre/lan&petuta eta aktibatu alarma hauei:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Bilatu..."
@@ -1108,8 +1066,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Bilatu helbideak direktorioan"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Bilatu:"
@@ -1166,8 +1123,7 @@ msgid "Starts With"
 msgstr "Honela hasten da"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Bilatu emaitzan"
@@ -1178,18 +1134,16 @@ msgid "Searching..."
 msgstr "Bilatzen..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
-msgstr "Hautatu guztia"
+msgstr "Hautatu dena"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr "Desautatu guztia"
+msgstr "Deshautatu dena"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
