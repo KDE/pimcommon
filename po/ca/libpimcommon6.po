@@ -1246,38 +1246,3 @@ msgstr "S'ha completat l'arranjament del recurs."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallat en crear la instància del recurs: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Note"
-#~ msgstr "Edita la nota"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete Note"
-#~ msgstr "Suprimeix la nota"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Note"
-#~ msgstr "Afegeix una nota"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Enter the text that should be stored as a note to the mail:"
-#~ msgstr "Introduïu el text que s'ha d'emmagatzemar com a nota al correu:"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Note type:"
-#~ msgstr "Tipus de nota:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Private note"
-#~ msgstr "Nota privada"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Shared note"
-#~ msgstr "Nota compartida"
-
-#~ msgid "Do you really want to delete this note?"
-#~ msgstr "Realment voleu suprimir aquesta nota?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note"
-#~ msgstr "Supressió de nota"
