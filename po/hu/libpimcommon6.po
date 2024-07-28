@@ -3,21 +3,21 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2020, 2021.
-# SPDX-FileCopyrightText: 2021, 2023 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2023-12-16 21:56+0100\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-07-27 21:31+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -25,8 +25,7 @@ msgid "..."
 msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Beállítás"
@@ -37,8 +36,7 @@ msgid "Restart is necessary for applying the changes."
 msgstr "A változtatások alkalmazáshoz újraindítás szükséges."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Disable version check"
+#, kde-format
 msgctxt "@action"
 msgid "Disable version check"
 msgstr "Verzióellenőrzés kikapcsolása"
@@ -113,8 +111,7 @@ msgid "Template"
 msgstr "Sablon"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Név:"
@@ -240,29 +237,25 @@ msgid "Change Case"
 msgstr "Kis- és nagybetűk változtatása"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "Csupa nagybetű"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "Mondatkezdő nagybetű"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
 msgstr "Csupa kisbetű"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Kis- és nagybetűk cseréje"
@@ -301,22 +294,19 @@ msgid ""
 msgstr "Már létezik <filename>%1</filename> nevű fájl. Szeretné felülírni?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Új név a&jánlása"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Mellőzés"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "Átne&vezés"
@@ -354,29 +344,25 @@ msgid "Do you want to remove selected text?"
 msgstr "Szeretné törölni a kijelölt szöveget?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Hozzáadás…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Módosítás…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Eltávolítás"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, fuzzy, kde-format
-#| msgid "&Customize..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
 msgstr "Te&stre szabás…"
@@ -391,8 +377,7 @@ msgid "Remove"
 msgstr "Eltávolítás"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&Felhasználóazonosító:"
@@ -421,9 +406,7 @@ msgid "Permissions"
 msgstr "Jogosultságok"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -436,22 +419,19 @@ msgid "Folder cannot be administrated."
 msgstr "A mappa nem adminisztrálható."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Bejegyzés hozzáadása…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Bejegyzés szerkesztése…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Bejegyzés eltávolítása"
@@ -526,8 +506,7 @@ msgid "Custom Permissions (%1)"
 msgstr "Egyéni jogosultságok (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Hozzáférési jogosultságok"
@@ -553,8 +532,7 @@ msgid "Select email from contact"
 msgstr "E-mail kiválasztása a névjegyekből"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Szervezeti egység megjelenítése az LDAP találatokhoz"
@@ -599,78 +577,67 @@ msgid "Search"
 msgstr "Keresés"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Kijelölés"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "Ki&jelölés törlése"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Show Blacklisted Emails"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Feketelistára tett e-mail címek megjelenítése"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">További találatok…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "E-mail keresése:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Research is done from 3 characters"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "A kutatás három karakter alapján történt"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Keresés a találatok közt…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Tartománynevek kizárása:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
-msgstr "Tartomány-elválasztó: '%1'"
+msgstr "Tartomány-elválasztó: „%1”"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "E-mailek kizárása reguláris kifejezéssel:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate regular expression with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Reguláris kifejezések elválasztója: „%1”"
@@ -710,25 +677,22 @@ msgstr ""
 "A lista megváltozott. Szeretné menteni azt, mielőtt új keresést indítana?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Mentés"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Keresés"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format
@@ -763,36 +727,31 @@ msgid "LDAP server %1"
 msgstr "LDAP kiszolgáló %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Fel"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Le"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "New email..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "Új e-mail…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "E-mail hozzáadása"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Eltávolítás"
@@ -946,8 +905,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "&Foglaltsági információk generálása és riasztások aktiválása hozzá:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Keresés…"
@@ -1101,8 +1059,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Címek keresése a mappában"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Keresendő:"
@@ -1159,8 +1116,7 @@ msgid "Starts With"
 msgstr "Ezzel kezdődik:"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Keresés a találatok közt"
@@ -1171,15 +1127,13 @@ msgid "Searching..."
 msgstr "Keresés…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Összes kijelölése"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Kijelölés megszüntetése"
