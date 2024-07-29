@@ -131,7 +131,7 @@ RenameFileDialog::RenameFileDialog(const QUrl &url, bool multiFiles, QWidget *pa
     pLayout->addLayout(layout);
 
     if (multiFiles) {
-        d->applyAll = new QCheckBox(i18n("Appl&y to All"), this);
+        d->applyAll = new QCheckBox(i18nc("@option:check", "Appl&y to All"), this);
         connect(d->applyAll, &QCheckBox::clicked, this, &RenameFileDialog::slotApplyAllPressed);
         layout->addWidget(d->applyAll);
         slotApplyAllPressed();

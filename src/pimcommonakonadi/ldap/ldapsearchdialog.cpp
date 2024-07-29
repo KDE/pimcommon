@@ -530,7 +530,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->mSearchButton->setDefault(true);
     boxLayout->addWidget(d->mSearchButton, 0, 4);
 
-    d->mRecursiveCheckbox = new QCheckBox(i18n("Recursive search"), groupBox);
+    d->mRecursiveCheckbox = new QCheckBox(i18nc("@option:check", "Recursive search"), groupBox);
     d->mRecursiveCheckbox->setChecked(true);
     boxLayout->addWidget(d->mRecursiveCheckbox, 1, 0, 1, 5);
 

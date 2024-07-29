@@ -70,7 +70,7 @@ private:
 CollectionAclWidget::CollectionAclWidget(QWidget *parent)
     : QWidget(parent)
     , mAclManager(new PimCommon::AclManager(this))
-    , mRecursiveChk(new QCheckBox(i18n("Apply permissions on all &subfolders."), this))
+    , mRecursiveChk(new QCheckBox(i18nc("@option:check", "Apply permissions on all &subfolders."), this))
 {
     auto layout = new QHBoxLayout(this);
     auto listViewLayout = new QVBoxLayout;
