@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -327,7 +327,9 @@ msgid "&Rename"
 msgstr "&Preimenuj"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Primijeni na &Sve"
 
@@ -552,6 +554,7 @@ msgstr "Kontrola pristupa"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr ""
 
@@ -1142,6 +1145,7 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 

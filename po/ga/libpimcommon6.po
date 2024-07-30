@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2012-11-29 14:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -305,6 +305,7 @@ msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr ""
 
@@ -504,6 +505,7 @@ msgstr "Rialú Rochtana"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr ""
 
@@ -1097,6 +1099,7 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 

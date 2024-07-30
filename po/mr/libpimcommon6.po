@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2013-04-06 12:39+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -318,6 +318,7 @@ msgstr "नाव बदला (&R)"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr ""
 
@@ -518,6 +519,7 @@ msgstr ""
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr ""
 
@@ -1106,6 +1108,7 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 

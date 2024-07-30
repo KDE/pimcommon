@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-06 21:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -314,7 +314,9 @@ msgid "&Rename"
 msgstr "&மறுபெயரிடு"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "&அனைத்துக்கும் செயல்படுத்து"
 
@@ -508,7 +510,9 @@ msgid "Access Control"
 msgstr "அணுக்கம் கட்டுப்பாடு"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply permissions on all &subfolders."
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "&சாரடைவுகளுக்கும் அனுமதிகளை செய்லபடுத்து"
 
@@ -1084,6 +1088,7 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 

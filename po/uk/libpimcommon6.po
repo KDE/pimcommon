@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-04 21:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -316,7 +316,9 @@ msgid "&Rename"
 msgstr "&Перейменувати"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Зас&тосувати до всіх"
 
@@ -516,7 +518,9 @@ msgid "Access Control"
 msgstr "Керування доступом"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply permissions on all &subfolders."
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Застосувати права доступу до усіх &підтек."
 
@@ -1111,7 +1115,9 @@ msgid "&Search"
 msgstr "&Шукати"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recursive search"
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Рекурсивний пошук"
 

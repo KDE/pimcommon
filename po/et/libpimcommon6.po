@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -325,7 +325,9 @@ msgid "&Rename"
 msgstr "&Muuda nime..."
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "&Rakendatakse kõigile"
 
@@ -535,7 +537,9 @@ msgid "Access Control"
 msgstr "Ligipääsukontroll"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply permissions on all &subfolders."
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Ra&kenda õigusi kõigile alamkaustadele"
 
@@ -1150,6 +1154,7 @@ msgstr "Otsing..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 

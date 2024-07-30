@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2023-12-13 08:05-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -326,7 +326,9 @@ msgid "&Rename"
 msgstr "&Renomear"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Apl&icar a todos"
 
@@ -537,7 +539,9 @@ msgid "Access Control"
 msgstr "Controle de acesso"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply permissions on all &subfolders."
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplicar as permissões em todas as &subpastas."
 
@@ -1147,7 +1151,9 @@ msgid "&Search"
 msgstr "Pe&squisar"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recursive search"
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Pesquisa recursiva"
 

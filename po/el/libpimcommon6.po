@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -332,7 +332,9 @@ msgid "&Rename"
 msgstr "&Μετονομασία"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Εφαρμο&γή σε όλα"
 
@@ -558,6 +560,7 @@ msgstr "Έλεγχος πρόσβασης"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr ""
 
@@ -1160,6 +1163,7 @@ msgstr "Αναζήτηση..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 

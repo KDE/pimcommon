@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2024-07-17 07:09+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -320,7 +320,9 @@ msgid "&Rename"
 msgstr "Be&rrizendatu"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "E&zarri guztiei"
 
@@ -519,7 +521,9 @@ msgid "Access Control"
 msgstr "Sarbide-kontrola"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Apply permissions on all &subfolders."
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Ezarri baimenak a&zpikarpeta guztietan."
 
@@ -1108,7 +1112,9 @@ msgid "&Search"
 msgstr "&Bilatu"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Recursive search"
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Bilaketa errekurtsiboa"
 

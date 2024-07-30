@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:39+0000\n"
+"POT-Creation-Date: 2024-07-30 00:42+0000\n"
 "PO-Revision-Date: 2013-11-07 03:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -327,7 +327,9 @@ msgid "&Rename"
 msgstr "Атауын ө&згерту"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Appl&y to All"
+msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Бүкіліне қол&дану"
 
@@ -551,6 +553,7 @@ msgstr "Қатынауды басқару"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
+msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr ""
 
@@ -1138,6 +1141,7 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
+msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 
