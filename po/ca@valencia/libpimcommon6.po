@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-06-04 13:55+0200\n"
+"PO-Revision-Date: 2024-07-30 11:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -319,8 +319,7 @@ msgid "&Rename"
 msgstr "Ca&nvia el nom"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Apl&ica a tot"
@@ -520,8 +519,7 @@ msgid "Access Control"
 msgstr "Control d'accés"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplica els permisos a totes les &subcarpetes."
@@ -1111,8 +1109,7 @@ msgid "&Search"
 msgstr "Bu&sca"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, fuzzy, kde-format
-#| msgid "Recursive search"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Busca recursiva"
