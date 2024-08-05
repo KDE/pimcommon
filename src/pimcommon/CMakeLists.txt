@@ -123,8 +123,6 @@ target_sources(KPim6PimCommon PRIVATE
     whatsnew/whatsnewtranslationsbase.cpp
     whatsnew/whatsnewinfo.h
     whatsnew/whatsnewinfo.cpp
-    whatsnew/whatsnewtranslations.h
-    whatsnew/whatsnewtranslations.cpp
 
 )
 if(ENABLE_WARN_OUTDATED)

@@ -4,7 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "whatsnewwidget.h"
-#include "whatsnew/whatsnewtranslations.h"
+#include "whatsnew/whatsnewtranslationsbase.h"
 
 #include <QTextBrowser>
 #include <QVBoxLayout>
@@ -51,7 +51,7 @@ void WhatsNewWidget::fillComboBox()
 
 void WhatsNewWidget::fillTranslations()
 {
-    const WhatsNewTranslations translations;
+    const WhatsNewTranslationsBase translations;
     mWhatsNewInfo = translations.createWhatsNewInfo();
 }
 
