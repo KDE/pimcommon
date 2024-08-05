@@ -18,7 +18,7 @@ WhatsNewWidgetTest::WhatsNewWidgetTest(QWidget *parent)
 
 void WhatsNewWidgetTest::shouldHaveDefaultValues()
 {
-    PimCommon::WhatsNewWidget w;
+    PimCommon::WhatsNewWidget w({});
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});

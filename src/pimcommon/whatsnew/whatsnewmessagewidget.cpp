@@ -28,10 +28,15 @@ WhatsNewMessageWidget::~WhatsNewMessageWidget() = default;
 void WhatsNewMessageWidget::slotLinkActivated(const QString &contents)
 {
     if (contents == "show_whats_new"_L1) {
-        WhatsNewDialog dlg(this);
+        WhatsNewDialog dlg(mWhatsNewInfos, this);
         dlg.updateInformations();
         dlg.exec();
     }
+}
+
+void WhatsNewMessageWidget::setWhatsNewInfos(const QList<PimCommon::WhatsNewInfo> &infos)
+{
+    mWhatsNewInfos = infos;
 }
 
 #include "moc_whatsnewmessagewidget.cpp"

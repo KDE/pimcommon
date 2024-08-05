@@ -11,11 +11,6 @@ WhatsNewTranslationsBase::WhatsNewTranslationsBase() = default;
 
 WhatsNewTranslationsBase::~WhatsNewTranslationsBase() = default;
 
-QList<WhatsNewInfo> WhatsNewTranslationsBase::createWhatsNewInfo() const
-{
-    return {};
-}
-
 QString WhatsNewTranslationsBase::newFeaturesMD5() const
 {
     QByteArray str;
@@ -28,9 +23,4 @@ QString WhatsNewTranslationsBase::newFeaturesMD5() const
     QCryptographicHash md5(QCryptographicHash::Md5);
     md5.addData(str);
     return QLatin1StringView(md5.result().toBase64());
-}
-
-QList<KLazyLocalizedString> WhatsNewTranslationsBase::lastNewFeatures() const
-{
-    return {};
 }

@@ -19,7 +19,7 @@ WhatsNewDialogTest::WhatsNewDialogTest(QObject *parent)
 
 void WhatsNewDialogTest::shouldHaveDefaultValues()
 {
-    PimCommon::WhatsNewDialog d;
+    PimCommon::WhatsNewDialog d({});
     QVERIFY(!d.windowTitle().isEmpty());
     auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);

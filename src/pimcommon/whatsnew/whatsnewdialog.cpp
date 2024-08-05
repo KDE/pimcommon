@@ -20,9 +20,9 @@ namespace
 const char myWhatsNewDialogGroupName[] = "WhatsNewDialog";
 }
 using namespace PimCommon;
-WhatsNewDialog::WhatsNewDialog(QWidget *parent)
+WhatsNewDialog::WhatsNewDialog(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent)
     : QDialog(parent)
-    , mWhatsNewWidget(new WhatsNewWidget(this))
+    , mWhatsNewWidget(new WhatsNewWidget(infos, this))
 {
     setWindowTitle(i18nc("@title:window", "What's new in %1", QCoreApplication::applicationName()));
     auto mainLayout = new QVBoxLayout(this);

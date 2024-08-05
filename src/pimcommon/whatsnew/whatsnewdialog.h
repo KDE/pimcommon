@@ -6,6 +6,7 @@
 #pragma once
 
 #include "pimcommon_export.h"
+#include <PimCommon/WhatsNewInfo>
 #include <QDialog>
 namespace PimCommon
 {
@@ -14,7 +15,7 @@ class PIMCOMMON_EXPORT WhatsNewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit WhatsNewDialog(QWidget *parent = nullptr);
+    explicit WhatsNewDialog(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent = nullptr);
     ~WhatsNewDialog() override;
 
     void updateInformations();

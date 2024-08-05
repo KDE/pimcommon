@@ -16,7 +16,7 @@ class PIMCOMMON_TESTS_EXPORT WhatsNewWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit WhatsNewWidget(QWidget *parent = nullptr);
+    explicit WhatsNewWidget(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent = nullptr);
     ~WhatsNewWidget() override;
 
     void updateInformations();
@@ -29,11 +29,10 @@ private:
     [[nodiscard]] PIMCOMMON_NO_EXPORT QString bugFixingChangeStr() const;
     PIMCOMMON_NO_EXPORT void slotVersionChanged(int i);
     [[nodiscard]] PIMCOMMON_NO_EXPORT QString createVersionInformation(const WhatsNewInfo &info);
-    PIMCOMMON_NO_EXPORT void fillTranslations();
     [[nodiscard]] PIMCOMMON_NO_EXPORT QString generateVersionHeader(int type) const;
     PIMCOMMON_NO_EXPORT void fillComboBox();
 
-    QList<WhatsNewInfo> mWhatsNewInfo;
+    const QList<WhatsNewInfo> mWhatsNewInfo;
     QTextBrowser *const mLabelInfo;
     WhatsNewComboBoxWidget *const mWhatsNewComboBoxWidget;
 };

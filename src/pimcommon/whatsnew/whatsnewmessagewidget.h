@@ -6,6 +6,7 @@
 #pragma once
 #include "pimcommon_export.h"
 #include <KMessageWidget>
+#include <PimCommon/WhatsNewInfo>
 namespace PimCommon
 {
 class PIMCOMMON_EXPORT WhatsNewMessageWidget : public KMessageWidget
@@ -15,7 +16,10 @@ public:
     explicit WhatsNewMessageWidget(QWidget *parent = nullptr);
     ~WhatsNewMessageWidget() override;
 
+    void setWhatsNewInfos(const QList<PimCommon::WhatsNewInfo> &infos);
+
 private:
     PIMCOMMON_NO_EXPORT void slotLinkActivated(const QString &contents);
+    QList<PimCommon::WhatsNewInfo> mWhatsNewInfos;
 };
 }

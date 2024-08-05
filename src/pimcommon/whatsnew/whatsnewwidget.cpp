@@ -14,8 +14,9 @@ namespace
 constexpr int allVersion = -1;
 }
 using namespace PimCommon;
-WhatsNewWidget::WhatsNewWidget(QWidget *parent)
+WhatsNewWidget::WhatsNewWidget(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent)
     : QWidget{parent}
+    , mWhatsNewInfo(infos)
     , mLabelInfo(new QTextBrowser(this))
     , mWhatsNewComboBoxWidget(new WhatsNewComboBoxWidget(this))
 {
@@ -32,7 +33,6 @@ WhatsNewWidget::WhatsNewWidget(QWidget *parent)
     mLabelInfo->setTextInteractionFlags(Qt::TextSelectableByMouse | Qt::LinksAccessibleByMouse);
     connect(mWhatsNewComboBoxWidget, &WhatsNewComboBoxWidget::versionChanged, this, &WhatsNewWidget::slotVersionChanged);
     mainLayout->addWidget(mLabelInfo);
-    fillTranslations();
     fillComboBox();
     mWhatsNewComboBoxWidget->initializeVersion(currentVersion());
 }
@@ -47,12 +47,6 @@ void WhatsNewWidget::fillComboBox()
         mWhatsNewComboBoxWidget->addVersion(i18n("Version %1", info.version()), index);
         index++;
     }
-}
-
-void WhatsNewWidget::fillTranslations()
-{
-    const WhatsNewTranslationsBase translations;
-    mWhatsNewInfo = translations.createWhatsNewInfo();
 }
 
 int WhatsNewWidget::currentVersion() const
