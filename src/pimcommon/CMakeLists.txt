@@ -107,6 +107,25 @@ target_sources(KPim6PimCommon PRIVATE
 
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
+
+    whatsnew/whatsnewdialog.h
+    whatsnew/whatsnewdialog.cpp
+    whatsnew/whatsnewwidget.h
+    whatsnew/whatsnewwidget.cpp
+
+    whatsnew/whatsnewmessagewidget.h
+    whatsnew/whatsnewmessagewidget.cpp
+
+    whatsnew/whatsnewcomboboxwidget.h
+    whatsnew/whatsnewcomboboxwidget.cpp
+
+    whatsnew/whatsnewtranslationsbase.h
+    whatsnew/whatsnewtranslationsbase.cpp
+    whatsnew/whatsnewinfo.h
+    whatsnew/whatsnewinfo.cpp
+    whatsnew/whatsnewtranslations.h
+    whatsnew/whatsnewtranslations.cpp
+
 )
 if(ENABLE_WARN_OUTDATED)
     target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=1)
@@ -184,6 +203,7 @@ if(BUILD_TESTING)
     add_subdirectory(autocorrection/tests)
     add_subdirectory(needupdateversion/tests)
     add_subdirectory(needupdateversion/autotests)
+    add_subdirectory(whatsnew/autotests)
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
@@ -290,6 +310,17 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
 )
 
 
+ecm_generate_headers(PimCommon_Camelcasewhatsnew_HEADERS
+    HEADER_NAMES
+    WhatsNewComboBoxWidget
+    WhatsNewDialog
+    WhatsNewInfo
+    WhatsNewTranslationsBase
+    REQUIRED_HEADERS PimCommon_whatsnew_HEADERS
+    PREFIX PimCommon
+    RELATIVE whatsnew
+)
+
 install(FILES
     ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
@@ -308,6 +339,7 @@ install(FILES
     ${PimCommon_Camelcasetemplatelist_HEADERS}
     ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
     ${PimCommon_Camelcasewidgets_HEADERS}
+    ${PimCommon_Camelcasewhatsnew_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/PimCommon
     COMPONENT Devel
 )
@@ -330,6 +362,7 @@ install(FILES
     ${PimCommon_templatelist_HEADERS}
     ${PimCommon_texteditor_commonwidget_HEADERS}
     ${PimCommon_widgets_HEADERS}
+    ${PimCommon_whatsnew_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
@@ -368,6 +401,7 @@ if(BUILD_QCH)
         ${PimCommon_texteditor_commonwidget_HEADERS}
         ${PimCommon_translator_HEADERS}
         ${PimCommon_widgets_HEADERS}
+        ${PimCommon_whatsnew_HEADERS}
         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
