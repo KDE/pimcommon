@@ -314,6 +314,7 @@ ecm_generate_headers(PimCommon_Camelcasewhatsnew_HEADERS
     WhatsNewDialog
     WhatsNewInfo
     WhatsNewTranslationsBase
+    WhatsNewMessageWidget
     REQUIRED_HEADERS PimCommon_whatsnew_HEADERS
     PREFIX PimCommon
     RELATIVE whatsnew
