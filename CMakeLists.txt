@@ -119,6 +119,26 @@ find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQU
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
+option(OPTION_USE_PLASMA_ACTIVITIES "Activate plasma activities" OFF)
+if(OPTION_USE_PLASMA_ACTIVITIES)
+    if(NOT WIN32 AND NOT APPLE)
+       set(OPTION_USE_PLASMA_ACTIVITIES true)
+    else()
+       set(OPTION_USE_PLASMA_ACTIVITIES false)
+    endif()
+endif()
+if(OPTION_USE_PLASMA_ACTIVITIES)
+    if(NOT WIN32 AND NOT APPLE)
+       find_package(PlasmaActivities "6.1.0")
+       set_package_properties(PlasmaActivities PROPERTIES DESCRIPTION
+               "Allow to compile with plasma activities"
+                TYPE OPTIONAL
+        )
+    endif()
+endif()
+
+
+
 add_subdirectory(src)
 ecm_qt_install_logging_categories(
         EXPORT PIMCOMMON
