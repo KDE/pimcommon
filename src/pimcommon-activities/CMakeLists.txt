@@ -52,18 +52,6 @@ install(TARGETS
 )
 
 install(FILES
-    ${PimCommonActivities_Camelcasecollectionpage_HEADERS}
-    ${PimCommonActivities_Camelcaseacl_HEADERS}
-    ${PimCommonActivities_Camelcaseldap_HEADERS}
-    ${PimCommonActivities_Camelcasefolderdialog_HEADERS}
-    ${PimCommonActivities_CamelCasegenericplugins_HEADERS}
-    ${PimCommonActivities_Camelcasemanagerserversidesubscription_HEADERS}
-    ${PimCommonActivities_Camelcasewidgets_HEADERS}
-    ${PimCommonActivities_CamelCaseUtil_HEADERS}
-    ${PimCommonActivities_Camelcaseprogresswidget_HEADERS}
-    ${PimCommonActivities_Camelcasecompletionconfiguredialog_HEADERS}
-    ${PimCommonActivities_Camelcasecompletionorder_HEADERS}
-    ${PimCommonActivities_Camelcaseaddressline_HEADERS}
     ${PimCommonActivities_Camelcaserecentaddress_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/PimCommonActivities
     COMPONENT Devel
@@ -71,19 +59,6 @@ install(FILES
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonactivities_export.h
-    ${PimCommonActivities_acl_HEADERS}
-    ${PimCommonActivities_ldap_HEADERS}
-    ${PimCommonActivities_collectionpage_HEADERS}
-    ${PimCommonActivities_folderdialog_HEADERS}
-    ${PimCommonActivities_genericplugins_HEADERS}
-    ${PimCommonActivities_casewidgets_HEADERS}
-    ${PimCommonActivities_widgets_HEADERS}
-    ${PimCommonActivities_managerserversidesubscription_HEADERS}
-    ${PimCommonActivities_Util_HEADERS}
-    ${PimCommonActivities_progresswidget_HEADERS}
-    ${PimCommonActivities_completionconfiguredialog_HEADERS}
-    ${PimCommonActivities_completionorder_HEADERS}
-    ${PimCommonActivities_addressline_HEADERS}
     ${PimCommonActivities_recentaddress_HEADERS}
 
 
@@ -144,9 +119,6 @@ configure_package_config_file(
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonActivitiesConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
-
-
-
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonActivitiesConfig.cmake"
