@@ -19,6 +19,10 @@ ecm_qt_declare_logging_category(KPim6PimCommonActivities HEADER pimcommonactivit
 )
 
 target_sources(KPim6PimCommonActivities PRIVATE
+    activitiesbasemanager.cpp
+    activitiesbasemanager.h
+	configureactivitieswidget.cpp  
+	configureactivitieswidget.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
@@ -34,6 +38,9 @@ ecm_generate_export_header(KPim6PimCommonActivities
 target_link_libraries(KPim6PimCommonActivities
     PUBLIC
     Qt::Widgets
+    Plasma::Activities
+    PRIVATE
+    KF6::I18n
 )
 
 target_include_directories(KPim6PimCommonActivities INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/>")
