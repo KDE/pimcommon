@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
-"PO-Revision-Date: 2024-07-17 07:09+0200\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
+"PO-Revision-Date: 2024-08-05 23:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -227,6 +227,56 @@ msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Fitxategia zamatzeko errorea"
 
+#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
+#, fuzzy, kde-format
+#| msgid "Persian"
+msgctxt "@label:textbox"
+msgid "Version:"
+msgstr "Persiera"
+
+#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "What's new in %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "(Show News)"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "What's new in %2. %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:44
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Apply Permissions"
+msgid "All Version"
+msgstr "Aplikatu baimenak"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:47
+#, kde-format
+msgid "Version %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#, kde-format
+msgid "Important changes since last version:"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#, kde-format
+msgid "Some of the new features in this release of Ruqola include:"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#, kde-format
+msgid "Some bug fixing:"
+msgstr ""
+
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
 msgid ""
@@ -320,11 +370,10 @@ msgid "&Rename"
 msgstr "Be&rrizendatu"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
-msgstr "E&zarri guztiei"
+msgstr "A&plikatu guztietan"
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
@@ -521,11 +570,10 @@ msgid "Access Control"
 msgstr "Sarbide-kontrola"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
-msgstr "Ezarri baimenak a&zpikarpeta guztietan."
+msgstr "Aplikatu baimenak a&zpikarpeta guztietan."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
 #, kde-format
@@ -1112,8 +1160,7 @@ msgid "&Search"
 msgstr "&Bilatu"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, fuzzy, kde-format
-#| msgid "Recursive search"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Bilaketa errekurtsiboa"
@@ -1658,9 +1705,6 @@ msgstr "Baliabidearen instantzia sortzea huts egin du: %1"
 
 #~ msgid "Khmer"
 #~ msgstr "Khemerera"
-
-#~ msgid "Persian"
-#~ msgstr "Persiera"
 
 #~ msgid "Polish"
 #~ msgstr "Poloniera"

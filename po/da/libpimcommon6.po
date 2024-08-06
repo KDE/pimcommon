@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2020-11-17 19:30+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -226,6 +226,55 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Indlæsningsfejl"
+
+#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
+#, fuzzy, kde-format
+#| msgid "Persian"
+msgctxt "@label:textbox"
+msgid "Version:"
+msgstr "Persisk"
+
+#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "What's new in %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "(Show News)"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "What's new in %2. %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:44
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgid "All Version"
+msgstr "Anvend rettigheder"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:47
+#, kde-format
+msgid "Version %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#, kde-format
+msgid "Important changes since last version:"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#, kde-format
+msgid "Some of the new features in this release of Ruqola include:"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#, kde-format
+msgid "Some bug fixing:"
+msgstr ""
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1653,9 +1702,6 @@ msgstr "Kunne ikke oprette ressourceinstans: %1"
 
 #~ msgid "Japanese"
 #~ msgstr "Japansk"
-
-#~ msgid "Persian"
-#~ msgstr "Persisk"
 
 #~ msgid "Polish"
 #~ msgstr "Polsk"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:42+0000\n"
+"POT-Creation-Date: 2024-08-06 00:40+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -223,6 +223,55 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Chyba načítania súboru"
+
+#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
+#, fuzzy, kde-format
+#| msgid "Persian"
+msgctxt "@label:textbox"
+msgid "Version:"
+msgstr "Perzština"
+
+#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "What's new in %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "(Show News)"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "What's new in %2. %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:44
+#, fuzzy, kde-format
+#| msgid "Apply Permissions"
+msgid "All Version"
+msgstr "Použiť oprávnenia"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:47
+#, kde-format
+msgid "Version %1"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#, kde-format
+msgid "Important changes since last version:"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#, kde-format
+msgid "Some of the new features in this release of Ruqola include:"
+msgstr ""
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#, kde-format
+msgid "Some bug fixing:"
+msgstr ""
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1653,9 +1702,6 @@ msgstr "Zlyhalo vytvorenie inštancie zdroja: %1"
 
 #~ msgid "Japanese"
 #~ msgstr "Japončina"
-
-#~ msgid "Persian"
-#~ msgstr "Perzština"
 
 #~ msgid "Polish"
 #~ msgstr "Poľština"
