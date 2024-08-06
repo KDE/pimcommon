@@ -21,8 +21,8 @@ ecm_qt_declare_logging_category(KPim6PimCommonActivities HEADER pimcommonactivit
 target_sources(KPim6PimCommonActivities PRIVATE
     activitiesbasemanager.cpp
     activitiesbasemanager.h
-	configureactivitieswidget.cpp  
-	configureactivitieswidget.h
+    configureactivitieswidget.cpp
+    configureactivitieswidget.h
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
@@ -33,6 +33,14 @@ ecm_generate_export_header(KPim6PimCommonActivities
     VERSION ${PIMCOMMONACTIVITIES_VERSION}
     DEPRECATED_BASE_VERSION 0
     USE_VERSION_HEADER
+)
+
+ecm_generate_headers(PimCommonActivities_CamelCasebase_HEADERS
+    HEADER_NAMES
+    ActivitiesBaseManager
+    ConfigureActivitiesWidget
+    REQUIRED_HEADERS PimCommonActivities_base_HEADERS
+    PREFIX PimCommonActivities
 )
 
 target_link_libraries(KPim6PimCommonActivities
@@ -59,14 +67,14 @@ install(TARGETS
 )
 
 install(FILES
-    ${PimCommonActivities_Camelcaserecentaddress_HEADERS}
+    ${PimCommonActivities_CamelCasebase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/PimCommonActivities
     COMPONENT Devel
 )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/pimcommonactivities_export.h
-    ${PimCommonActivities_recentaddress_HEADERS}
+    ${PimCommonActivities_base_HEADERS}
 
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/pimcommonactivities
