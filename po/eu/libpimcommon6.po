@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
-"PO-Revision-Date: 2024-08-05 23:17+0200\n"
+"POT-Creation-Date: 2024-08-07 00:41+0000\n"
+"PO-Revision-Date: 2024-08-06 11:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,6 +19,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
+
+#: pimcommon-activities/configureactivitieswidget.cpp:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Limit to the selected activities:"
+msgstr ""
+
+#: pimcommon-activities/configureactivitieswidget.cpp:63
+#, kde-format
+msgctxt "@label:textbox"
+msgid ""
+"If you limit this account to activity, it will be shown in Ruqola only when "
+"you are in those activities. Furthermore, when you switch to an activity it "
+"should not be available in, it will automatically be hidden."
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -228,54 +243,51 @@ msgid "Load File Error"
 msgstr "Fitxategia zamatzeko errorea"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Persiera"
+msgstr "Bertsioa:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "Zer berri %1(e)an"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Berriak erakutsi)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "Zer berri %2(a)n. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Aplikatu baimenak"
+msgstr "Bertsio denak"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "%1 bertsioa"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Azken bertsiotik dauden aldaketa garrantzitsuak:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release of Ruqola include:"
-msgstr ""
+msgstr "Ruqola-ren askapen berri honetako ezaugarri berrien artean daude:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Akatsak konponketa batzuk:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format

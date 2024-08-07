@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
-"PO-Revision-Date: 2024-07-30 06:26+0200\n"
+"POT-Creation-Date: 2024-08-07 00:41+0000\n"
+"PO-Revision-Date: 2024-08-06 05:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -17,6 +17,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
+
+#: pimcommon-activities/configureactivitieswidget.cpp:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Limit to the selected activities:"
+msgstr ""
+
+#: pimcommon-activities/configureactivitieswidget.cpp:63
+#, kde-format
+msgctxt "@label:textbox"
+msgid ""
+"If you limit this account to activity, it will be shown in Ruqola only when "
+"you are in those activities. Furthermore, when you switch to an activity it "
+"should not be available in, it will automatically be hidden."
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -222,54 +237,51 @@ msgid "Load File Error"
 msgstr "ფაილის ჩატვირთვის შეცდომა"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "სპარსული"
+msgstr "ვერსია:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "რა არის ახალი %1-ში"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(სიახლეების ჩვენება)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "რა არის ახალი %2-ში. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "წვდომების გადატარება"
+msgstr "ყველა ვერსია"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "ვერსია %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "მნიშვნელოვანი ცვლილებები ბოლო ვერსიის შემდეგ:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release of Ruqola include:"
-msgstr ""
+msgstr "Ruqola-ის ახალ ფუნქციებში შედის:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "გამოსწორდა ზოგიერთი შეცდომა:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format

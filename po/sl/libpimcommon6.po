@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-06 00:40+0000\n"
-"PO-Revision-Date: 2024-07-30 10:14+0200\n"
+"POT-Creation-Date: 2024-08-07 00:41+0000\n"
+"PO-Revision-Date: 2024-08-06 07:42+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -23,6 +23,21 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.4.4\n"
+
+#: pimcommon-activities/configureactivitieswidget.cpp:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Limit to the selected activities:"
+msgstr ""
+
+#: pimcommon-activities/configureactivitieswidget.cpp:63
+#, kde-format
+msgctxt "@label:textbox"
+msgid ""
+"If you limit this account to activity, it will be shown in Ruqola only when "
+"you are in those activities. Furthermore, when you switch to an activity it "
+"should not be available in, it will automatically be hidden."
+msgstr ""
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -230,54 +245,51 @@ msgid "Load File Error"
 msgstr "Napaka ob nalaganju datoteke"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Perzijščina"
+msgstr "Različica:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "Kaj je novega v %1"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Prikaži novice)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "Kaj je novega v %2.%1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Uveljavi dovoljenja"
+msgstr "Vse različice"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "Različica %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Pomembne spremembe od zadnje različice:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release of Ruqola include:"
-msgstr ""
+msgstr "Nekatere nove funkcije v tej izdaji Ruqole vključujejo:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Nekateri popravki napak:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
