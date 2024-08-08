@@ -4,8 +4,8 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "whatsnewwidget.h"
-#include "whatsnew/whatsnewtranslationsbase.h"
 
+#include <KLocalizedString>
 #include <QTextBrowser>
 #include <QVBoxLayout>
 
