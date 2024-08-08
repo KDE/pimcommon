@@ -88,7 +88,7 @@ QString WhatsNewWidget::importantChangeStr() const
 
 QString WhatsNewWidget::featuresChangeStr() const
 {
-    return QStringLiteral("<b>") + i18n("Some of the new features in this release of Ruqola include:") + QStringLiteral("</b>");
+    return QStringLiteral("<b>") + i18n("Some of the new features in this release include:") + QStringLiteral("</b>");
 }
 
 QString WhatsNewWidget::bugFixingChangeStr() const
