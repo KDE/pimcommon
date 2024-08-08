@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-07 00:41+0000\n"
-"PO-Revision-Date: 2024-08-06 09:08+0300\n"
+"PO-Revision-Date: 2024-08-07 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -24,7 +24,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Обмежити вибраними просторами дій:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
 #, kde-format
@@ -34,6 +34,10 @@ msgid ""
 "you are in those activities. Furthermore, when you switch to an activity it "
 "should not be available in, it will automatically be hidden."
 msgstr ""
+"Якщо ви обмежите дію цього облікового запису лише певними просторами дій, "
+"його буде показано лише тоді, коли ви користуєтеся цими просторами дій. Крім "
+"того, якщо ви перемкнетеся на простір дій, з якого обліковий запис є "
+"недоступним, його автоматично буде приховано."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format

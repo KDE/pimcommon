@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-07 00:41+0000\n"
-"PO-Revision-Date: 2024-08-06 07:44+0200\n"
+"PO-Revision-Date: 2024-08-07 06:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Begränsa till de valda aktiviteterna:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
 #, kde-format
@@ -31,6 +31,9 @@ msgid ""
 "you are in those activities. Furthermore, when you switch to an activity it "
 "should not be available in, it will automatically be hidden."
 msgstr ""
+"Om du begränsar kontot till aktiviteter, visas det bara i Ruqola när du är i "
+"de aktiviteterna. Dessutom, när du byter till en aktivitet som det inte ska "
+"vara tillgänglig i, döljs det automatiskt."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format

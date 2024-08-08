@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-07 00:41+0000\n"
-"PO-Revision-Date: 2024-08-06 11:49+0200\n"
+"PO-Revision-Date: 2024-08-07 08:27+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -24,7 +24,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Mugatu hautatutako jardueretara:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
 #, kde-format
@@ -34,6 +34,9 @@ msgid ""
 "you are in those activities. Furthermore, when you switch to an activity it "
 "should not be available in, it will automatically be hidden."
 msgstr ""
+"Kontua hau jarduerara mugatzen baduzu, Ruqolan erakutsiko da, bakarrik, "
+"jarduera horietan zaudenean. Hare gehiago, erabilgarri egon beharko ez "
+"litzatekeen jarduera batera aldatzen zarenean, automatikoki ezkutatuko da."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
