@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-08-07 10:29+0200\n"
+"PO-Revision-Date: 2024-08-09 23:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -24,22 +24,17 @@ msgid "Limit to the selected activities:"
 msgstr "Tot de geselecteerde activiteiten beperken:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid ""
-#| "If you limit this account to activity, it will be shown in Ruqola only "
-#| "when you are in those activities. Furthermore, when you switch to an "
-#| "activity it should not be available in, it will automatically be hidden."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-"Als u dit account beperkt tot activiteit, zal het in Ruqola alleen getoond "
-"worden wanneer u zich in die activiteiten bevindt. Verder, wanneer u "
-"omschakelt naar een activiteit waarin het niet beschikbaar zou moeten zijn, "
-"dan zal het automatisch verborgen worden."
+"Als u dit account beperkt tot activiteit, zal het alleen getoond worden "
+"wanneer u zich in die activiteiten bevindt. Verder, wanneer u omschakelt "
+"naar een activiteit waarin het niet beschikbaar zou moeten zijn, dan zal het "
+"automatisch verborgen worden."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -284,10 +279,9 @@ msgid "Important changes since last version:"
 msgstr "Belangrijke wijzigingen sinds de laatste versie:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Some of the new features in this release of Ruqola include:"
+#, kde-format
 msgid "Some of the new features in this release include:"
-msgstr "Enige van de nieuwe functies in deze uitgave van Ruqola omvatten:"
+msgstr "Enige van de nieuwe functies in deze uitgave omvatten:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format

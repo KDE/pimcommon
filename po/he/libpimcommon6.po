@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-08-07 09:09+0300\n"
+"PO-Revision-Date: 2024-08-09 08:28+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -25,20 +25,15 @@ msgid "Limit to the selected activities:"
 msgstr "הגבלה לפעילויות הנבחרות:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid ""
-#| "If you limit this account to activity, it will be shown in Ruqola only "
-#| "when you are in those activities. Furthermore, when you switch to an "
-#| "activity it should not be available in, it will automatically be hidden."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-"הגבלת החשבון הזה לפעילות, תגרום לכך שהוא יופיע ב־Ruqola רק בפעילויות האלה. "
-"יתרה מכך, במעבר לפעילות שבה הכספת לא אמורה להיות זמינה, היא תוסתר אוטומטית."
+"הגבלת החשבון הזה לפעילות, תגרום לכך שהוא יופיע רק בפעילויות האלה. יתרה מכך, "
+"במעבר לפעילות שבה הכספת לא אמורה להיות זמינה, היא תוסתר אוטומטית."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -281,10 +276,9 @@ msgid "Important changes since last version:"
 msgstr "שינויים חשובים מאז הגרסה האחרונה:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Some of the new features in this release of Ruqola include:"
+#, kde-format
 msgid "Some of the new features in this release include:"
-msgstr "חלק מהיכולות החדשות שהגרסה הזאת של Ruqola כוללת:"
+msgstr "חלק מהיכולות החדשות שהגרסה הזאת כוללת:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
