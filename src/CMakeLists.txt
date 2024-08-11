@@ -4,6 +4,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libpimcommon6\")
 
 add_subdirectory(pimcommon)
 add_subdirectory(pimcommonakonadi)
-if(OPTION_USE_PLASMA_ACTIVITIES)
+if(TARGET Plasma::Activities)
    add_subdirectory(pimcommon-activities)
 endif()
