@@ -119,7 +119,7 @@ find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQU
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
-option(OPTION_USE_PLASMA_ACTIVITIES "Activate plasma activities" OFF)
+option(OPTION_USE_PLASMA_ACTIVITIES "Activate plasma activities" ON)
 if(OPTION_USE_PLASMA_ACTIVITIES)
     if(NOT WIN32 AND NOT APPLE)
        set(OPTION_USE_PLASMA_ACTIVITIES true)
