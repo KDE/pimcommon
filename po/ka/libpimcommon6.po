@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-08-07 05:54+0200\n"
+"PO-Revision-Date: 2024-08-10 06:00+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -25,21 +25,16 @@ msgid "Limit to the selected activities:"
 msgstr "მონიშნულ ქმედებებზე შეზღუდვა:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@label:textbox"
-#| msgid ""
-#| "If you limit this account to activity, it will be shown in Ruqola only "
-#| "when you are in those activities. Furthermore, when you switch to an "
-#| "activity it should not be available in, it will automatically be hidden."
+#, kde-format
 msgctxt "@label:textbox"
 msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-"თუ ამ ანგარიშს აქტივობაზე შეზღუდავთ, ის Ruqola-ში, მხოლოდ, მაშინ გამოჩნდება, "
-"რომ იმ აქტივობებში ბრძანდებით. უფრო მეტიც კი, როცა გადაერთვებით აქტივობაზე, "
-"სადაც ის ხელმისაწვდომი არ უნდა იყოს, ის ავტომატურად დაიმალება."
+"თუ ამ ანგარიშს აქტივობაზე შეზღუდავთ, ის, მხოლოდ, მაშინ გამოჩნდება, რომ იმ "
+"აქტივობებში ბრძანდებით. უფრო მეტიც კი, როცა გადაერთვებით აქტივობაზე, სადაც "
+"ის ხელმისაწვდომი არ უნდა იყოს, ის ავტომატურად დაიმალება."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -282,10 +277,9 @@ msgid "Important changes since last version:"
 msgstr "მნიშვნელოვანი ცვლილებები ბოლო ვერსიის შემდეგ:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
-#, fuzzy, kde-format
-#| msgid "Some of the new features in this release of Ruqola include:"
+#, kde-format
 msgid "Some of the new features in this release include:"
-msgstr "Ruqola-ის ახალ ფუნქციებში შედის:"
+msgstr "ამ ვერსიის ახალ ფუნქციებში შედის:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
