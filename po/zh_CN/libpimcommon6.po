@@ -236,11 +236,10 @@ msgid "Load File Error"
 msgstr "加载文件错误"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "权限"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
@@ -259,11 +258,9 @@ msgid "What's new in %2. %1"
 msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "应用权限"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
