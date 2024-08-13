@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2016-11-04 11:09+0200\n"
+"PO-Revision-Date: 2024-08-12 15:05+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,17 +20,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgid "..."
-msgstr "Pridėti..."
+msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Konfigūruoti"
@@ -38,90 +36,88 @@ msgstr "Konfigūruoti"
 #: pimcommon/configureplugins/configurepluginswidget.cpp:45
 #, kde-format
 msgid "Restart is necessary for applying the changes."
-msgstr ""
+msgstr "Pakeitimų pritaikymui reikia paleidimo iš naujo."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
 #, kde-format
 msgctxt "@action"
 msgid "Disable version check"
-msgstr ""
+msgstr "Išjungti versijos tikrinimą"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
 msgstr ""
+"Jūsų versija yra daugiau kaip 6 mėnesių senumo, raginame jus atsinaujinti."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Jūsų versija yra daugiau kaip 1 metų senumo, primygtinai raginame jus "
+"atsinaujinti."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
-#, fuzzy, kde-format
-#| msgid "Share File..."
+#, kde-format
 msgid "Share On..."
-msgstr "Dalintis failu..."
+msgstr "Bendrinti..."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
 #, kde-format
 msgid "Facebook"
-msgstr ""
+msgstr "„Facebook“"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
 #, kde-format
 msgid "Twitter"
-msgstr ""
+msgstr "„Twitter“"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
 #, kde-format
 msgid "Mail"
-msgstr ""
+msgstr "Paštas"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
 #, kde-format
 msgid "LinkedIn"
-msgstr ""
+msgstr "„LinkedIn“"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
-#, fuzzy, kde-format
-#| msgid "Private note"
+#, kde-format
 msgid "Evernote"
-msgstr "Asmeninė pastaba"
+msgstr "Evernote"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
 #, kde-format
 msgid "Pocket"
-msgstr ""
+msgstr "„Pocket“"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
 #, kde-format
 msgid "LiveJournal"
-msgstr ""
+msgstr "„LiveJournal“"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Default template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Numatytasis šablonas"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Šablonas"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Pavadinimas:"
@@ -132,23 +128,20 @@ msgid "Do you want to delete selected template?"
 msgstr "Ar norite ištrinti pasirinktą šabloną?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
-msgstr "Trinti šabloną"
+msgstr "Ištrinti šabloną"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:145
-#, fuzzy, kde-format
-#| msgid "Insert template"
+#, kde-format
 msgid "Import Template"
-msgstr "Įterpti šabloną"
+msgstr "Importuoti šabloną"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:154
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgid "Export Template"
-msgstr "Šablonas"
+msgstr "Eksportuoti šabloną"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:168
 #, kde-format
@@ -168,7 +161,7 @@ msgstr "Rodyti..."
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
-msgstr "Keisti..."
+msgstr "Modifikuoti..."
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
@@ -178,7 +171,7 @@ msgstr "Dubliuoti"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:189
 #, kde-format
 msgid "Remove"
-msgstr "Pašalinti"
+msgstr "Šalinti"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
@@ -198,13 +191,12 @@ msgstr "Atsisiųsti naujus šablonus..."
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
 msgid "'%1' is not a template file"
-msgstr ""
+msgstr "„%1“ nėra šablono failas"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgid "Load Template"
-msgstr "Šablonas"
+msgstr "Įkelti šabloną"
 
 #: pimcommon/util/pimutil.cpp:49
 #, kde-format
@@ -212,13 +204,14 @@ msgid ""
 "Could not write the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
+"Nepavyko rašyti į failą %1:\n"
+"„%2“ yra išsamus klaidos aprašas."
 
 #: pimcommon/util/pimutil.cpp:53
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
-msgstr "Failo išsaugojimo klaida"
+msgstr "Failo įrašymo klaida"
 
 #: pimcommon/util/pimutil.cpp:84
 #, kde-format
@@ -226,10 +219,11 @@ msgid ""
 "Could not read the file %1:\n"
 "\"%2\" is the detailed error description."
 msgstr ""
+"Nepavyko perskaityti failo %1:\n"
+"„%2“ yra išsamus klaidos aprašas."
 
 #: pimcommon/util/pimutil.cpp:88
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Failo įkėlimo klaida"
@@ -240,102 +234,99 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
+"<qt><p>Šią nuostatą nustatė jūsų administratorius.</p><p>Jei manote, jog tai "
+"yra klaida, susisiekite su juo.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
-#, fuzzy, kde-format
-#| msgid "Change Value"
+#, kde-format
 msgid "Change Case"
-msgstr "Pakeisti reikšmę"
+msgstr "Keisti raidžių dydį"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "Uppercase"
-msgstr ""
+msgstr "DIDŽIOSIOS RAIDĖS"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Sentence case"
-msgstr ""
+msgstr "Pirmoji raidė didžioji"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Lowercase"
-msgstr ""
+msgstr "mažosios raidės"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
-msgstr ""
+msgstr "Priešingas dydis"
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
 msgid "Clear History"
-msgstr ""
+msgstr "Išvalyti istoriją"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:58
 #, kde-format
 msgid "There was a problem sharing the document: %1"
-msgstr ""
+msgstr "Bendrinant dokumentą atsirado problemų: %1"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:62
 #, kde-format
 msgid "File was shared."
-msgstr ""
+msgstr "Failas buvo bendrintas."
 
 #: pimcommon/widgets/purposemenuwidget.cpp:64
 #, kde-format
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
-msgstr ""
+msgstr "<qt>Galite rasti naują užklausą ties:<br /><a href='%1'>%1</a> </qt>"
 
 #: pimcommon/widgets/renamefiledialog.cpp:100
-#, fuzzy, kde-format
-#| msgid "File Already Exists"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
-msgstr "Failas jau egzistuoja"
+msgstr "Failas jau yra"
 
 #: pimcommon/widgets/renamefiledialog.cpp:103
-#, fuzzy, kde-kuit-format
-#| msgid "Filename already exists. Do you want to overwrite it?"
+#, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
-msgstr "Failo pavadinimas jau egzistuoja. Ar norite jį perrašyti?"
+msgstr ""
+"Failas, pavadinimu <filename>%1</filename> jau yra. Ar norite jį perrašyti?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
-msgstr "Siūlyti naują &vardą"
+msgstr "Siūlyti naują pavadi&nimą"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
-msgstr "&Ignoruoti"
+msgstr "&Nepaisyti"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
-msgstr "&Pervadinti"
+msgstr "Pe&rvadinti"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
 msgid "Appl&y to All"
-msgstr "&Pritaikyti visiems"
+msgstr "Taik&yti visiems"
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "This filename \"%1\" already exists."
-msgstr "Failo pavadinimas „%1“ jau egzistuoja."
+msgstr "Failo pavadinimas „%1“ jau yra."
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
@@ -355,54 +346,48 @@ msgid "New Value"
 msgstr "Nauja reikšmė"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:59
-#, fuzzy, kde-format
-#| msgid "Do you want to delete selected template?"
+#, kde-format
 msgid "Do you want to remove selected text?"
-msgstr "Ar norite ištrinti pasirinktą šabloną?"
+msgstr "Ar norite pašalinti pažymėtą tekstą?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Pridėti..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
-msgstr "&Keisti..."
+msgstr "&Modifikuoti..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
-msgstr "&Pašalinti"
+msgstr "Ša&linti"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
-msgstr ""
+msgstr "&Tinkinti..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
-msgstr "Pašalinti"
+msgstr "Šalinti"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
-msgstr "&Naudotojo identifikatorius:"
+msgstr "Na&udotojo identifikatorius:"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -412,6 +397,10 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
+"Naudotojo identifikatorius yra IMAP serveryje naudojamas naudotojo "
+"prisijungimas. Tai gali būti paprastas naudotojo vardas arba visas naudotojo "
+"el. pašto adresas; kuris iš jų – jums nurodys prisijungimas prie jūsų "
+"asmeninės paskyros serveryje."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
@@ -429,46 +418,43 @@ msgstr "Leidimai"
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
+"<b>Pastaba: </b>Pervadinimas reikalauja turėti rašymo leidimą viršesniame "
+"aplanke."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr ""
+msgstr "Aplankas negali būti administruojamas."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Pridėti įrašą..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
-msgstr "Keisti įrašą..."
+msgstr "Taisyti įrašą..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
-msgstr "Pašalinti įrašą"
+msgstr "Šalinti įrašą"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:214
-#, fuzzy, kde-format
-#| msgid "Add ACL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Pridėti ACL"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Edit ACL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr "Keisti ACL"
+msgstr "Taisyti ACL"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
@@ -476,31 +462,30 @@ msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
 msgstr ""
+"Ar tikrai norite pašalinti savo asmeninius leidimus šiame aplanke? Po to, "
+"nebegalėsite gauti prieigą prie jo."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:289
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this note?"
+#, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr "Ar tikrai norite ištrinti šią pastabą?"
+msgstr "Ar tikrai norite pašalinti nurodytus šio aplanko leidimus?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
-#, fuzzy, kde-format
-#| msgid "Do you really want to delete this note?"
+#, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
-msgstr "Ar tikrai norite ištrinti šią pastabą?"
+msgstr "Ar tikrai norite taikyti aplanko leidimus šiems poaplankiams?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "Leidimai"
+msgstr "Taikyti leidimus"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
 msgid "None"
-msgstr "Jokie"
+msgstr "Nėra"
 
 #: pimcommonakonadi/acl/aclutils.cpp:21
 msgctxt "Permissions"
@@ -515,7 +500,7 @@ msgstr "Papildyti"
 #: pimcommonakonadi/acl/aclutils.cpp:27
 msgctxt "Permissions"
 msgid "Write"
-msgstr "Įrašyti"
+msgstr "Rašyti"
 
 #: pimcommonakonadi/acl/aclutils.cpp:31
 msgctxt "Permissions"
@@ -525,64 +510,60 @@ msgstr "Visi"
 #: pimcommonakonadi/acl/aclutils.cpp:66
 #, kde-format
 msgid "Custom Permissions (%1)"
-msgstr "Saviti leidimai (%1)"
+msgstr "Tinkinti leidimai (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
-msgstr "Prieigos kontrolė"
+msgstr "Prieigos valdymas"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
 msgid "Apply permissions on all &subfolders."
-msgstr ""
+msgstr "Taikyti leidimus visiems &poaplankiams."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
 #, kde-format
 msgid "vCard Import Failed"
-msgstr ""
+msgstr "vCard importavimas patyrė nesėkmę"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
-msgstr ""
+msgstr "<qt>Nepavyko gauti prieigos prie <b>%1</b>.</qt>"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
-#, fuzzy, kde-format
-#| msgid "Select file to download:"
+#, kde-format
 msgid "Select email from contact"
-msgstr "Parinkite failą atsisiuntimui:"
+msgstr "Pasirinkti el. paštą iš adresato"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
-msgstr ""
+msgstr "Rodyti LDAP rezultatuose organizacijos skyrių"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
-#, fuzzy, kde-format
-#| msgid "Configure..."
+#, kde-format
 msgid "Configure Completion..."
-msgstr "Konfigūruoti..."
+msgstr "Konfigūruoti užbaigimą..."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Automatically expand groups"
-msgstr ""
+msgstr "Automatiškai išskleisti grupes"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Expand Groups..."
-msgstr ""
+msgstr "Išskleisti grupes..."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
-#, fuzzy, kde-format
-#| msgid "Open Address Book"
+#, kde-format
 msgid "Recent Addresses"
-msgstr "Atverti adresų knygelę"
+msgstr "Paskiausiai naudoti adresai"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
@@ -590,231 +571,218 @@ msgstr "Atverti adresų knygelę"
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
-msgstr ""
+msgstr "Jūsų duomenyse atrasti adresatai"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
 #, kde-format
 msgid "LDAP server: %1"
-msgstr ""
+msgstr "LDAP serveris: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search"
-msgstr "Ieškoti..."
+msgstr "Paieška"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
-msgstr "Pakeisti viską"
+msgstr "Ž&ymėti"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
-msgstr "Pakeisti viską"
+msgstr "N&uimti žymėjimą"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
-msgstr ""
+msgstr "Rodyti el. paštus juodajame sąraše"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"more_result\">Daugiau rezultatų...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
-msgstr "Ieškoti..."
+msgstr "Ieškomas el. paštas:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr ""
+msgstr "Paieška iš naujo atliekama įrašius daugiau kaip 3 simbolius"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
-msgstr "Ieškoti..."
+msgstr "Ieškoti rezultate..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
-msgstr ""
+msgstr "Išbraukti srities pavadinimus:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
-msgstr ""
+msgstr "Atskirti sritį naudojant „%1“"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Išbraukti el. paštą naudojant reguliarųjį reiškinį:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
-msgstr ""
+msgstr "Atskirkite reguliarųjį reiškinį naudodami „%1“"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Select"
-msgstr "Pakeisti viską"
+msgstr "Žymėti"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgid "Unselect"
-msgstr "Pakeisti viską"
+msgstr "Nuimti žymėjimą"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "No email found."
-msgstr ""
+msgstr "Nerasta jokio el. pašto."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:288
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Rastas 1 el. paštas"
+msgstr[1] "Rasti %1 el. paštai"
+msgstr[2] "Rasta %1 el. paštų"
+msgstr[3] "Rastas %1 el. paštas"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
 msgid "No result found"
-msgstr ""
+msgstr "Nieko nerasta"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:24
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
 msgstr ""
+"Sąraše buvo atlikti pakeitimai. Ar norite įrašyti prieš pradėdami kitą "
+"paiešką?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save config"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
-msgstr "Išsaugoti konfigūraciją"
+msgstr "Įrašyti"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action"
 msgid "Search"
-msgstr "Ieškoti..."
+msgstr "Ieškoti"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr "Konfigūruoti"
+msgstr "Konfigūruoti užbaigimą"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:60
 #, kde-format
 msgid "Completion Order"
-msgstr ""
+msgstr "Užbaigimo tvarka"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:64
-#, fuzzy, kde-format
-#| msgid "Open Address Book"
+#, kde-format
 msgid "Recent Address"
-msgstr "Atverti adresų knygelę"
+msgstr "Paskiausiai naudotas adresas"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:69
 #, kde-format
 msgid "Blacklist Email Address"
-msgstr ""
+msgstr "Įtraukti el. paštą į juodąjį sąrašą"
 
 #: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
-msgstr ""
+msgstr "Taisyti užbaigimo tvarką"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
 #, kde-format
 msgid "LDAP server %1"
-msgstr ""
+msgstr "LDAP serveris %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
-msgstr ""
+msgstr "Pakelti"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
-msgstr ""
+msgstr "Nuleisti"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
-msgstr ""
+msgstr "Naujas el. paštas..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
-msgstr "El. paštas:"
+msgstr "Pridėti el. paštą"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
-msgstr "Pašalinti"
+msgstr "Šalinti"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Pašalinti įrašą"
-msgstr[1] "Pašalinti įrašą"
-msgstr[2] "Pašalinti įrašą"
-msgstr[3] "Pašalinti įrašą"
+msgstr[0] "Šalinti el. paštą"
+msgstr[1] "Šalinti el. paštus"
+msgstr[2] "Šalinti el. paštus"
+msgstr[3] "Šalinti el. paštus"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
-#, fuzzy, kde-format
-#| msgid "Do you want to delete selected template?"
+#, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
-msgstr[0] "Ar norite ištrinti pasirinktą šabloną?"
-msgstr[1] "Ar norite ištrinti pasirinktą šabloną?"
-msgstr[2] "Ar norite ištrinti pasirinktą šabloną?"
-msgstr[3] "Ar norite ištrinti pasirinktą šabloną?"
+msgstr[0] "Ar norite pašalinti šį el. pašto adresą?"
+msgstr[1] "Ar norite pašalinti %1 el. pašto adresus?"
+msgstr[2] "Ar norite pašalinti %1 el. pašto adresų?"
+msgstr[3] "Ar norite pašalinti %1 el. pašto adresą?"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
@@ -822,7 +790,7 @@ msgstr[3] "Ar norite ištrinti pasirinktą šabloną?"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
-msgstr ""
+msgstr "Paštas"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:145
@@ -830,7 +798,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
-msgstr ""
+msgstr "Kalendorius"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
@@ -838,16 +806,15 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
-msgstr ""
+msgstr "Adresatai"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:185
-#, fuzzy, kde-format
-#| msgid "Add Note"
+#, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
-msgstr "Pridėti pastabą"
+msgstr "Pastabos"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
@@ -855,7 +822,7 @@ msgstr "Pridėti pastabą"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
-msgstr ""
+msgstr "Užduotys"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
@@ -863,16 +830,15 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
-msgstr ""
+msgstr "Dienynas"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:191
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
-msgstr "Konfigūruoti"
+msgstr "Konfigūracija"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
@@ -880,42 +846,41 @@ msgstr "Konfigūruoti"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
-msgstr ""
+msgstr "Užimtumas"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:197
-#, fuzzy, kde-format
-#| msgid "File"
+#, kde-format
 msgctxt "type of folder content"
 msgid "Files"
-msgstr "Failas"
+msgstr "Failai"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
-msgstr ""
+msgstr "Nežinoma"
 
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
 msgid "&Folder contents:"
-msgstr ""
+msgstr "&Aplanko turinys:"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "Nobody"
-msgstr ""
+msgstr "Niekas"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:18
 #, kde-format
 msgid "Admins of This Folder"
-msgstr ""
+msgstr "Šio aplanko administratoriai"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:19
 #, kde-format
 msgid "All Readers of This Folder"
-msgstr ""
+msgstr "Visi šio aplanko skaitytojai"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:23
 #, kde-format
@@ -933,293 +898,291 @@ msgid ""
 "A company-wide folder with optional events in it would use \"Nobody\" since "
 "it is not known who will go to those events."
 msgstr ""
+"Ši nuostata apibrėžia, kurie naudotojai, bendrinantys šį aplanką, turėtų "
+"gauti „užimtus“ laikotarpius savo užimtumo sąraše ir turėtų matyti "
+"priminimus apie įvykius ar užduotis šiame aplanke. Ši nuostata taikoma tik "
+"Kalendoriaus ir Užduočių aplankams (kalbant apie užduotis, ši nuostata yra "
+"naudojama tik priminimams).\n"
+"\n"
+"Naudojimo pavyzdžiai: jei viršininkas bendrina aplanką su savo sekretoriumi, "
+"tuomet tik viršininkas turėtų būti žymimas kaip užimtas savo susitikimų "
+"metu, tad jis turėtų pažymėti „Administratoriai“, nes sekretorius neturi "
+"administratoriaus prieigos teisių prie aplanko.\n"
+"Kita vertus, jei darbo grupė bendrina Kalendorių grupės susitikimams, tuomet "
+"visi aplanko skaitytojai turi būti žymimi kaip užimti susitikimų metu.\n"
+"Įmonės masto aplankas su pasirinktinais jame esančiais įvykiais turėtų "
+"naudoti „Niekas“, nes nėra žinoma, kas lankys tuos įvykius."
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
-msgstr ""
+msgstr "Generuoti laisvą/&užimtą laiką ir aktyvinti priminimus, skirtus:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Ieškoti..."
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
-#, fuzzy, kde-format
-#| msgid "Delete Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr "Ištrinti aplankus"
+msgstr "Žymėti kelis aplankus"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
-msgstr ""
+msgstr "Titulas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgid "Full Name"
-msgstr "Pavadinimas"
+msgstr "Vardas, pavardė"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr "El. paštas:"
+msgstr "El. paštas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
 #, kde-format
 msgid "Home Number"
-msgstr ""
+msgstr "Namų numeris"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
 #, kde-format
 msgid "Work Number"
-msgstr ""
+msgstr "Darbo numeris"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
 #, kde-format
 msgid "Mobile Number"
-msgstr ""
+msgstr "Mobilusis numeris"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Fax Number"
-msgstr ""
+msgstr "Fakso numeris"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
 msgid "Pager"
-msgstr ""
+msgstr "Pranešimų gaviklis"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Street"
-msgstr ""
+msgstr "Gatvė"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
-msgstr ""
+msgstr "Apskritis"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgid "Country"
-msgstr ""
+msgstr "Šalis"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "City"
-msgstr ""
+msgstr "Miestas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Organization"
-msgstr ""
+msgstr "Organizacija"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
 #, kde-format
 msgid "Company"
-msgstr ""
+msgstr "Įmonė"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
 #, kde-format
 msgid "Department"
-msgstr ""
+msgstr "Padalinys"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
-msgstr ""
+msgstr "Pašto kodas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
-msgstr ""
+msgstr "Pašto adresas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "Aprašas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "User ID"
-msgstr ""
+msgstr "Naudotojo ID"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr "El. paštas:"
+msgstr "El. paštas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
-msgstr ""
+msgstr "Apskritis"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
-msgstr ""
+msgstr "Titulas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
-msgstr ""
+msgstr "Importuoti adresatus iš LDAP"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
 msgid "Search for Addresses in Directory"
-msgstr ""
+msgstr "Ieškoti adresų kataloge"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
-msgstr "Ieškoti..."
+msgstr "Ko ieškoti:"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
-#, fuzzy, kde-format
-#| msgid "Find"
+#, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr "Ieškoti"
+msgstr "ties"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
-msgstr "Pavadinimas"
+msgstr "Vardas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr "El. paštas:"
+msgstr "El. paštas"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
-msgstr ""
+msgstr "Namų numeris"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
-msgstr ""
+msgstr "Darbo numeris"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
-msgstr "Ieškoti..."
+msgstr "&Ieškoti"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
 msgid "Recursive search"
-msgstr ""
+msgstr "Rekursinė paieška"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
 #, kde-format
 msgid "Contains"
-msgstr ""
+msgstr "Turi"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
 #, kde-format
 msgid "Starts With"
-msgstr ""
+msgstr "Prasideda"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
-msgstr "Ieškoti..."
+msgstr "Ieškoti rezultate"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Searching..."
-msgstr "Ieškoti..."
+msgstr "Ieškoma..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
-msgstr "Pakeisti viską"
+msgstr "Pažymėti viską"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
-#, fuzzy, kde-format
-#| msgid "Replace All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr "Pakeisti viską"
+msgstr "Nuimti žymėjimą nuo visų"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
-#, fuzzy, kde-format
-#| msgid "Add Service"
+#, kde-format
 msgid "Add Selected"
-msgstr "Pridėti tarnybą"
+msgstr "Pridėti pažymėtus"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
-#, fuzzy, kde-format
-#| msgid "Configure..."
+#, kde-format
 msgid "Configure LDAP Servers..."
-msgstr "Konfigūruoti..."
+msgstr "Konfigūruoti LDAP serverius..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "Kopijuoti"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
 msgid "You must select an LDAP server before searching."
-msgstr ""
+msgstr "Prieš atlikdami paiešką privalote pasirinkti LDAP serverį."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
-msgstr ""
+msgstr "Importuota iš LDAP katalogo %1 ties %2"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
-msgstr ""
+msgstr "Konfigūruoti adresų knygos LDAP nuostatas"
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
 #, kde-format
@@ -1227,6 +1190,8 @@ msgid ""
 "IMAP server not configured yet. Please configure the server in the IMAP "
 "account before setting up server-side subscription."
 msgstr ""
+"Kol kas nesukonfigūruotas IMAP serveris. Sukonfigūruokite IMAP paskyroje "
+"serverį prieš nustatydami prenumeratą serverio pusėje."
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
 #, kde-format
@@ -1234,11 +1199,13 @@ msgid ""
 "Log in failed, please configure the IMAP account before setting up server-"
 "side subscription."
 msgstr ""
+"Nepavyko prisijungti, sukonfigūruokite IMAP paskyrą prieš nustatydami "
+"prenumeratą serverio pusėje."
 
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr "Išteklius „%1“ tipo nepasiekiamas."
+msgstr "„%1“ tipo išteklius yra neprieinamas."
 
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
@@ -1248,43 +1215,42 @@ msgstr "Išteklius „%1“ jau nustatytas."
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "„%1“ išteklių objektų kūrimas..."
+msgstr "Kuriamas „%1“ ištekliaus egzempliorius..."
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Išteklių objektų nustatymai..."
+msgstr "Konfigūruojamas ištekliaus egzempliorius..."
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Išteklių objektų nustatyti negalima."
+msgstr "Nepavyko konfigūruoti ištekliaus egzemplioriaus."
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
-msgstr "Nepavyko pakeisti nuostatų vertės „%1“ privalomu tipu „%2“."
+msgstr "Nepavyko konvertuoti nuostatos „%1“ reikšmės į reikiamą tipą %2."
 
 #: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "Nenustatytos nuostatos „%1“: %2"
+msgstr "Nepavyko nustatyti nuostatos „%1“: %2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Nenustatytos nuostatos „%1“: %2"
+msgstr "Nepavyko įrašyti nuostatų: %1"
 
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
 msgid "Resource setup completed."
-msgstr "Išteklių sąranka baigta."
+msgstr "Ištekliaus sąranka baigta."
 
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "Nepavyko sukurti išteklių objekto: %1"
+msgstr "Nepavyko sukurti ištekliaus egzemplioriaus : %1"
 
 #, fuzzy
 #~| msgid "Edit Note"
