@@ -4,7 +4,6 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "whatsnewtranslationsbase.h"
-#include <KLazyLocalizedString>
 #include <QCryptographicHash>
 using namespace PimCommon;
 WhatsNewTranslationsBase::WhatsNewTranslationsBase() = default;
