@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 21:55+0530\n"
+"PO-Revision-Date: 2024-08-17 22:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "குறிப்பிட்ட செயல்பாடுகளில் மட்டும் காட்டு:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
 #, kde-format
@@ -240,22 +240,21 @@ msgid "Load File Error"
 msgstr "கோப்பை ஏற்றுவதில் சிக்கல்"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "அனுமதிகள்"
+msgstr "பதிப்பு:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "%1 தனில் புதியவை"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(செய்திகளை காட்டு)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
@@ -263,16 +262,14 @@ msgid "What's new in %2. %1"
 msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "அனுமதிகளை செயல்படுத்து"
+msgstr "அனைத்து பதிப்புகளும்"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "பதிப்பு %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
@@ -379,8 +376,7 @@ msgid "&Rename"
 msgstr "&மறுபெயரிடு"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "&அனைத்துக்கும் செயல்படுத்து"
@@ -575,11 +571,10 @@ msgid "Access Control"
 msgstr "அணுக்கம் கட்டுப்பாடு"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
-msgstr "&சாரடைவுகளுக்கும் அனுமதிகளை செய்லபடுத்து"
+msgstr "&அனைத்து சாரடைவுகளுக்கும் அனுமதிகளை செய்லபடுத்து."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
 #, kde-format
@@ -589,12 +584,12 @@ msgstr ""
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
-msgstr ""
+msgstr "<qt><b>%1</b> தனை அணுக முடியவில்லை.</qt>"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
 #, kde-format
 msgid "Select email from contact"
-msgstr ""
+msgstr "தொடர்பிலிருந்து மின்னஞ்சலை தேர்ந்தெடு"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
 #, kde-format
@@ -605,23 +600,23 @@ msgstr ""
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
 #, kde-format
 msgid "Configure Completion..."
-msgstr ""
+msgstr "நிரப்பலை அமை..."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
 #, kde-format
 msgid "Automatically expand groups"
-msgstr ""
+msgstr "குழுக்களை தானாக விரிவுபடுத்து"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Expand Groups..."
-msgstr ""
+msgstr "குழுக்களை விரிவுபடுத்து"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
-msgstr ""
+msgstr "சமீப முகவரிகள்"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
@@ -629,41 +624,41 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
-msgstr ""
+msgstr "உங்கள் தரவில் கண்டுபிடித்த தொடர்புகள்"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
 #, kde-format
 msgid "LDAP server: %1"
-msgstr ""
+msgstr "LDAP சேவையகம்: %1"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "தேடு"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, kde-format
 msgctxt "@action:button"
 msgid "&Select"
-msgstr ""
+msgstr "&தேர்ந்தெடு"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
 #, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
-msgstr ""
+msgstr "தேர்வுகளை &நிராகரி"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
-msgstr ""
+msgstr "தடுத்த மின்னஞ்சல்களை காட்டு"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"more_result\">கூடுதல் முடிவுகள்...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
 #, kde-format
@@ -681,7 +676,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
-msgstr ""
+msgstr "முடிவுகளில் தேடு..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
 #, kde-format
@@ -710,113 +705,112 @@ msgstr ""
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, kde-format
 msgid "Select"
-msgstr ""
+msgstr "தேர்ந்தெடு"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
 #, kde-format
 msgid "Unselect"
-msgstr ""
+msgstr "தேர்வுகளை நிராகரி"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
 msgid "No email found."
-msgstr ""
+msgstr "எந்த மின்னஞ்சலும் கண்டுபிடிக்கப்படவில்லை."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:288
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 மின்னஞ்சல் கண்டுபிடிக்கப்பட்டது"
+msgstr[1] "%1 மின்னஞ்சல்கள் கண்டுபிடிக்கப்பட்டன"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
 #, kde-format
 msgid "No result found"
-msgstr ""
+msgstr "எதுவும் கண்டுபிடிக்கப்படவில்லை"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:24
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
-msgstr ""
+msgstr "பட்டியல் மாறியுள்ளது. அடுத்த தேடலுக்கு முன் இதை சேமிக்க வேண்டுமா?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
 #, kde-format
 msgctxt "@action"
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, kde-format
 msgctxt "@action"
 msgid "Search"
-msgstr ""
+msgstr "தேடு"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்து செய்"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr ""
+msgstr "நிரப்பலை அமைப்பது"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:60
 #, kde-format
 msgid "Completion Order"
-msgstr ""
+msgstr "நிரப்பல் வரிசை"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:64
 #, kde-format
 msgid "Recent Address"
-msgstr ""
+msgstr "சமீப முகவரி"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:69
 #, kde-format
 msgid "Blacklist Email Address"
-msgstr ""
+msgstr "மின்னஞ்சல் முகவரியை தடு"
 
 #: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit Completion Order"
-msgstr ""
+msgstr "நிரப்பல் வரிசையை திருத்துவது"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
 #, kde-format
 msgid "LDAP server %1"
-msgstr ""
+msgstr "LDAP சேவையகம் %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
-msgstr ""
+msgstr "மேலே நகர்த்து"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
-msgstr ""
+msgstr "கீழே நகர்த்து"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
-msgstr ""
+msgstr "புதிய மின்னஞ்சல்..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
-msgstr ""
+msgstr "மின்னஞ்சலை சேர்"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "நீக்கு"
@@ -825,8 +819,8 @@ msgstr "நீக்கு"
 #, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "மின்னஞ்சல் முகவரியை நீக்கு"
+msgstr[1] "மின்னஞ்சல் முகவரிகளை நீக்கு"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
 #, kde-format
@@ -841,7 +835,7 @@ msgstr[1] ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Mail"
-msgstr ""
+msgstr "மின்னஞ்சல்"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:145
@@ -849,7 +843,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
-msgstr ""
+msgstr "நாள்காட்டி"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
@@ -857,7 +851,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
-msgstr ""
+msgstr "தொடர்புகள்"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
@@ -865,7 +859,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
-msgstr ""
+msgstr "குறிப்புகள்"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
@@ -873,7 +867,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
-msgstr ""
+msgstr "பணிகள்"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
@@ -881,7 +875,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
-msgstr ""
+msgstr "நாளேடு"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
@@ -889,7 +883,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
-msgstr ""
+msgstr "அமைப்பு"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
@@ -905,18 +899,18 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Files"
-msgstr ""
+msgstr "கோப்புகள்"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
 msgid "&Folder contents:"
-msgstr ""
+msgstr "&அடைவின் உள்ளடக்கம்:"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
@@ -959,13 +953,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr ""
+msgstr "தேடு..."
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr ""
+msgstr "பல அடைவுகளில் தேடுவது"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
@@ -977,13 +971,13 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
 #, kde-format
 msgid "Full Name"
-msgstr ""
+msgstr "முழுப்பெயர்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr ""
+msgstr "மின்னஞ்சல்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
@@ -1018,25 +1012,25 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Street"
-msgstr ""
+msgstr "தெரு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
-msgstr ""
+msgstr "மாநிலம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgid "Country"
-msgstr ""
+msgstr "நாடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "City"
-msgstr ""
+msgstr "ஊர்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
@@ -1072,25 +1066,25 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "விவரணம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "User ID"
-msgstr ""
+msgstr "பயனர் அடையாளம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr ""
+msgstr "மின்னஞ்சல்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
-msgstr ""
+msgstr "மாநிலம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
@@ -1125,13 +1119,13 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr ""
+msgstr "மின்னஞ்சல்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
@@ -1171,29 +1165,29 @@ msgstr ""
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
-msgstr ""
+msgstr "முடிவுகளில் தேடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, kde-format
 msgid "Searching..."
-msgstr ""
+msgstr "தேடுகிறது..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All"
-msgstr ""
+msgstr "அனைத்தையும் தேர்ந்தெடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr ""
+msgstr "அனைத்து தேர்வுகளை நிராகரி"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
 msgid "Add Selected"
-msgstr ""
+msgstr "தேர்ந்தெடுத்துள்ளவற்றை சேர்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
@@ -1203,7 +1197,7 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
 msgid "Copy"
-msgstr ""
+msgstr "நகலெடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
