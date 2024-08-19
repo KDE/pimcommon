@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-04 00:39+0000\n"
-"PO-Revision-Date: 2024-08-17 22:06+0530\n"
+"PO-Revision-Date: 2024-08-18 17:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -230,6 +230,8 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
+"<qt><p>இவ்வமைப்பு உங்கள் நிர்வாகியால் பூட்டப்பட்டுள்ளது.</p><p>இது பிழையாக "
+"இருக்கக்கூடுமெனில், அவரைத் தொடர்புகொள்ளவும்.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -600,13 +602,13 @@ msgstr "<qt><a href=\"more_result\">கூடுதல் முடிவுக�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
-msgstr ""
+msgstr "மின்னஞ்சலைத் தேடு:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr ""
+msgstr "தேடுவதற்கு மூன்று எழுத்துகளாவது இருக்க வேண்டும்"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, kde-format
@@ -618,13 +620,13 @@ msgstr "முடிவுகளில் தேடு..."
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
-msgstr ""
+msgstr "இந்த ஆள்களங்களைத் தவிர்:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
-msgstr ""
+msgstr "'%1'-ஆல் அள்களங்களைப் பிரிக்கவும்"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
 #, kde-format
