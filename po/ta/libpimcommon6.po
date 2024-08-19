@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-08-17 22:07+0530\n"
+"PO-Revision-Date: 2024-08-18 17:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -274,17 +274,17 @@ msgstr "பதிப்பு %1"
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "சென்ற பதிப்புக்கு பிந்தைய முக்கிய மாற்றங்கள்:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "இப்பதிப்பின் சில புதிய அம்சங்கள் பின்வருவன:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "திருத்தப்பட்ட சில பிழைகள்:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -292,6 +292,8 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
+"<qt><p>இவ்வமைப்பு உங்கள் நிர்வாகியால் பூட்டப்பட்டுள்ளது.</p><p>இது பிழையாக "
+"இருக்கக்கூடுமெனில், அவரைத் தொடர்புகொள்ளவும்.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -664,13 +666,13 @@ msgstr "<qt><a href=\"more_result\">கூடுதல் முடிவுக�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
-msgstr ""
+msgstr "மின்னஞ்சலைத் தேடு:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr ""
+msgstr "தேடுவதற்கு மூன்று எழுத்துகளாவது இருக்க வேண்டும்"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, kde-format
@@ -682,13 +684,13 @@ msgstr "முடிவுகளில் தேடு..."
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
-msgstr ""
+msgstr "இந்த ஆள்களங்களைத் தவிர்:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
-msgstr ""
+msgstr "'%1'-ஆல் அள்களங்களைப் பிரிக்கவும்"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
 #, kde-format
