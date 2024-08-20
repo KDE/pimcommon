@@ -55,3 +55,4 @@ private:
     KActivities::Consumer *const mActivitiesConsumer;
 };
 }
+PIMCOMMONACTIVITIES_EXPORT QDebug operator<<(QDebug d, const PimCommonActivities::ActivitiesBaseManager::ActivitySettings &t);

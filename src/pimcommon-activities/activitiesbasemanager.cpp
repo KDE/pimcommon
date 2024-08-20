@@ -54,4 +54,10 @@ QString ActivitiesBaseManager::currentActivity() const
     return mActivitiesConsumer->currentActivity();
 }
 
+QDebug operator<<(QDebug d, const PimCommonActivities::ActivitiesBaseManager::ActivitySettings &t)
+{
+    d << "enabled: " << t.enabled;
+    d << "activities: " << t.activities;
+    return d;
+}
 #include "moc_activitiesbasemanager.cpp"
