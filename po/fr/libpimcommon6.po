@@ -13,24 +13,24 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-05 10:34+0200\n"
+"PO-Revision-Date: 2024-08-10 08:53+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Text-Markup: kde4\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Limiter aux activités sélectionnées :"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
 #, kde-format
@@ -40,6 +40,10 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Si vous limitez ce compte à une liste d'activités, il sera affiché "
+"uniquement lorsque vous participez à ces activités. De plus, lorsque vous "
+"basculez sur une activité, elle ne doit pas être présente dans la liste et "
+"sera automatiquement masquée."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -249,54 +253,51 @@ msgid "Load File Error"
 msgstr "Erreur de chargement du fichier"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Perse"
+msgstr "Version :"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "Quoi de neuf dans %1 ?"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Afficher les nouveautés)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "Quoi de neuf dans %2. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Appliquer des droits d'accès"
+msgstr "Toutes les versions"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "Version %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Modifications importants depuis la dernière version :"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "Certaines des nouvelles fonctionnalités de cette version comprennent :"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Quelques corrections de bogues :"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -391,8 +392,7 @@ msgid "&Rename"
 msgstr "&Renommer"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Appl&iquer à tout"
@@ -595,8 +595,7 @@ msgid "Access Control"
 msgstr "Contrôle d'accès"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Appliquer les droits d'accès à tous les &sous-dossiers."
@@ -1191,8 +1190,7 @@ msgid "&Search"
 msgstr "&Chercher..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, fuzzy, kde-format
-#| msgid "Recursive search"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Recherche récursive"
