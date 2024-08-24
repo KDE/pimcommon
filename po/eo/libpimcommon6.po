@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:40+0000\n"
-"PO-Revision-Date: 2024-07-30 21:06+0200\n"
+"PO-Revision-Date: 2024-08-23 21:45+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Limo al la elektitaj aktivecoj:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:63
 #, kde-format
@@ -241,54 +241,51 @@ msgid "Load File Error"
 msgstr "Eraro Ŝargante Dosieron"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Permissions"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Permesoj"
+msgstr "Versio:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "Kio nova en %1"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Montri Novaĵojn)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "Kio nova en %2. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Apliki Permesojn"
+msgstr "Ĉiu Versio"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "Versio %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:86
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Gravaj ŝanĝoj ekde lasta version:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "Iuj el la novaj kapabloj en ĉi eldono inkluzivas:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Iu cimkorektado:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
