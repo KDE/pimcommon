@@ -27,7 +27,6 @@ msgstr ""
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
 #, fuzzy, kde-format
-#| msgid "Configure"
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Sett opp"
@@ -114,7 +113,6 @@ msgstr ""
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, fuzzy, kde-format
-#| msgid "Name:"
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Navn:"
@@ -126,7 +124,6 @@ msgstr "Vil du slette den markerte malen?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, fuzzy, kde-format
-#| msgid "Delete template"
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Slett mal"
@@ -207,7 +204,6 @@ msgstr ""
 
 #: pimcommon/util/pimutil.cpp:53
 #, fuzzy, kde-format
-#| msgid "Save File Error"
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Feil ved fil-lagring"
@@ -223,7 +219,6 @@ msgstr ""
 
 #: pimcommon/util/pimutil.cpp:88
 #, fuzzy, kde-format
-#| msgid "Load File Error"
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Feil ved fil-lasting"
@@ -244,21 +239,18 @@ msgstr "Bytt om små/store bokstaver"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, fuzzy, kde-format
-#| msgid "Uppercase"
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "Store bokstaver"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, fuzzy, kde-format
-#| msgid "Sentence case"
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "Stor forbokstav i setninger"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, fuzzy, kde-format
-#| msgid "Lowercase"
 msgctxt "@action"
 msgid "Lowercase"
 msgstr "Små bokstaver"
@@ -306,21 +298,18 @@ msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, fuzzy, kde-format
-#| msgid "Suggest New &Name"
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Foreslå nytt &navn"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
 #, fuzzy, kde-format
-#| msgid "&Ignore"
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Ignorer"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
 #, fuzzy, kde-format
-#| msgid "&Rename"
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "End&re navn"
@@ -359,21 +348,18 @@ msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
 #, fuzzy, kde-format
-#| msgid "&Add..."
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Legg til …"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, fuzzy, kde-format
-#| msgid "&Modify..."
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Endre …"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, fuzzy, kde-format
-#| msgid "&Remove"
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Fjern"
@@ -389,14 +375,12 @@ msgstr ""
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
 #, fuzzy, kde-format
-#| msgid "Remove"
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Fjern"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
 #, fuzzy, kde-format
-#| msgid "&User identifier:"
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Br&uker-identifikator:"
@@ -426,8 +410,6 @@ msgstr "Rettigheter"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
 #, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -440,21 +422,18 @@ msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
 #, fuzzy, kde-format
-#| msgid "Add Entry..."
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Legg til oppføring …"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
 #, fuzzy, kde-format
-#| msgid "Edit Entry..."
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Rediger oppføring …"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
 #, fuzzy, kde-format
-#| msgid "Remove Entry"
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Fjern oppføring"
@@ -493,7 +472,6 @@ msgstr ""
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, fuzzy, kde-format
-#| msgid "Permissions"
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Rettigheter"
@@ -530,7 +508,6 @@ msgstr "Egendefinerte rettigheter (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, fuzzy, kde-format
-#| msgid "Access Control"
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Tilgangskontroll"
@@ -602,8 +579,6 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, fuzzy, kde-format
-#| msgctxt "select an email address"
-#| msgid "Se&lect..."
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "Ve&lg …"
@@ -628,7 +603,6 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Søk …"
@@ -641,7 +615,6 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Søk …"
@@ -711,7 +684,6 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@action"
 msgid "Search"
 msgstr "Søk …"
@@ -780,7 +752,6 @@ msgstr ""
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, fuzzy, kde-format
-#| msgid "Remove"
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Fjern"
@@ -934,7 +905,6 @@ msgstr "Generer ledig/&opptatt og skru på varslinger for:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Søk …"
@@ -1089,7 +1059,6 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Søk …"
@@ -1147,7 +1116,6 @@ msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
 #, fuzzy, kde-format
-#| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Søk …"
