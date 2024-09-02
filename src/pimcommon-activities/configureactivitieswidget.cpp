@@ -57,7 +57,6 @@ ConfigureActivitiesWidget::ConfigureActivitiesWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName("mainLayout"_L1);
-    mainLayout->setContentsMargins({});
 
     auto label = new QLabel(i18nc("@label:textbox",
                                   "If you limit this account to activity, it will be shown only when you are in those activities. Furthermore, when "
