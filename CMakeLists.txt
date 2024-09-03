@@ -129,7 +129,8 @@ if(OPTION_USE_PLASMA_ACTIVITIES)
 endif()
 if(OPTION_USE_PLASMA_ACTIVITIES)
     if(NOT WIN32 AND NOT APPLE)
-       find_package(PlasmaActivities "6.1.0")
+       set(PLASMAACTIVITIES_MIN_VERSION "6.1.0")
+       find_package(PlasmaActivities ${PLASMAACTIVITIES_MIN_VERSION})
        set_package_properties(PlasmaActivities PROPERTIES DESCRIPTION
                "Allow to compile with plasma activities"
                 TYPE OPTIONAL
