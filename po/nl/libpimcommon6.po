@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:40+0000\n"
+"POT-Creation-Date: 2024-09-03 00:39+0000\n"
 "PO-Revision-Date: 2024-08-09 23:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -23,7 +23,7 @@ msgctxt "@option:check"
 msgid "Limit to the selected activities:"
 msgstr "Tot de geselecteerde activiteiten beperken:"
 
-#: pimcommon-activities/configureactivitieswidget.cpp:63
+#: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""
