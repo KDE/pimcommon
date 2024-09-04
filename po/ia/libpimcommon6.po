@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 00:39+0000\n"
-"PO-Revision-Date: 2024-09-02 16:04+0200\n"
+"PO-Revision-Date: 2024-09-03 11:01+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -31,6 +31,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Si tu limita iste conto a activitate, ilessera monstrate solmente quando tu "
+"es in ille activitates.In ultra, quando tu passa a un activitate il deberea "
+"non esser disponibile, il essera celate automaticamente."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -277,7 +280,7 @@ msgstr "Modificationes importante depost ultime version:"
 #: pimcommon/whatsnew/whatsnewwidget.cpp:91
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "Alcun delnove characteristicas in iste version include:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:96
 #, kde-format
