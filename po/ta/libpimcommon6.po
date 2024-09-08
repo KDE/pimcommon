@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-03 00:39+0000\n"
-"PO-Revision-Date: 2024-08-18 17:33+0530\n"
+"PO-Revision-Date: 2024-09-07 21:31+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -828,8 +828,8 @@ msgstr[1] "மின்னஞ்சல் முகவரிகளை நீக�
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "நீங்கள் இந்த மின்னஞ்சல் முகவரியை நீக்க விரும்புகிறீர்களா?"
+msgstr[1] "நீங்கள் இந்த %1 மின்னஞ்சல் முகவரிகளை நீக்க விரும்புகிறீர்களா?"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
@@ -1038,19 +1038,19 @@ msgstr "ஊர்"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Organization"
-msgstr ""
+msgstr "அமைப்பு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
 #, kde-format
 msgid "Company"
-msgstr ""
+msgstr "நிறுவனம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
 #, kde-format
 msgid "Department"
-msgstr ""
+msgstr "பிரிவு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
@@ -1062,7 +1062,7 @@ msgstr ""
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
-msgstr ""
+msgstr "அஞ்சல் முகவரி"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
@@ -1092,30 +1092,30 @@ msgstr "மாநிலம்"
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
-msgstr ""
+msgstr "பொறுப்பு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
-msgstr ""
+msgstr "LDAP-யிலிருந்து தொடர்புகளை இறக்குமதி செய்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
 msgid "Search for Addresses in Directory"
-msgstr ""
+msgstr "அடைவில் முகவரிகளைத் தேடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
-msgstr ""
+msgstr "இதைக் கண்டுபிடி:"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr ""
+msgstr "இதில்:"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, kde-format
@@ -1133,19 +1133,19 @@ msgstr "மின்னஞ்சல்"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
-msgstr ""
+msgstr "இல்ல தொலைபேசி எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
-msgstr ""
+msgstr "வேலையிட தொலைபேசி எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
 #, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
-msgstr ""
+msgstr "&தேடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
