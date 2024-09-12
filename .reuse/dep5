@@ -1,8 +1,0 @@
-Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: pimcommon
-Upstream-Contact: Montel Laurent <montel@kde.org>
-Source: https://invent.kde.org/pim/pimcommon
-
-Files: src/pimcommonautocorrection/autocorrection/autotests/data/acor_fr.dat src/pimcommonautocorrection/autocorrection/autotests/data/*.xml src/pimcommontexttranslator/translator/DEBUG src/pimcommon/widgets/icons/hint.svg src/pimcommon/widgets/icons/visibility.svg src/pimcommontextgrammarcheck/grammalecte/autotests/data/*.json src/pimcommontextgrammarcheck/languagetool/autotests/data/*.json
-Copyright: none
-License: CC0-1.0
