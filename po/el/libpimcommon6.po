@@ -42,8 +42,7 @@ msgid "..."
 msgstr "Προσθήκη..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Διαμόρφωση"
@@ -118,22 +117,19 @@ msgid "LiveJournal"
 msgstr ""
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Default template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Προκαθορισμένο πρότυπο"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Πρότυπο"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Όνομα:"
@@ -144,8 +140,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Επιθυμείτε πραγματικά τη διαγραφή του επιλεγμένου προτύπου;"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Διαγραφή προτύπου"
@@ -228,8 +223,7 @@ msgstr ""
 "\"%2\" είναι η λεπτομερής περιγραφή σφάλματος."
 
 #: pimcommon/util/pimutil.cpp:53
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Σφάλμα αποθήκευσης αρχείου"
@@ -244,8 +238,7 @@ msgstr ""
 "\"%2\" είναι η λεπτομερής περιγραφή του σφάλματος."
 
 #: pimcommon/util/pimutil.cpp:88
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Σφάλμα φόρτωσης αρχείου"
@@ -359,8 +352,7 @@ msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr ""
 
 #: pimcommon/widgets/renamefiledialog.cpp:100
-#, fuzzy, kde-format
-#| msgid "File Already Exists"
+#, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "Το αρχείο υπάρχει ήδη"
@@ -375,29 +367,25 @@ msgstr ""
 "αντικαταστήσετε;"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Πρόταση νέου &ονόματος"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Αγνόηση"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "&Μετονομασία"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Εφαρμο&γή σε όλα"
@@ -431,22 +419,19 @@ msgid "Do you want to remove selected text?"
 msgstr "Επιθυμείτε πραγματικά τη διαγραφή του επιλεγμένου προτύπου;"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Προσθήκη..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Επεξεργασία..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "Α&φαίρεση"
@@ -461,15 +446,13 @@ msgstr ""
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Αφαίρεση"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Α&ναγνωριστικό χρήστη:"
@@ -499,9 +482,7 @@ msgid "Permissions"
 msgstr "Δικαιώματα"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
@@ -514,36 +495,31 @@ msgid "Folder cannot be administrated."
 msgstr ""
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Προσθήκη εγγραφής..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Επεξεργασία εγγραφής..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Αφαίρεση εγγραφής"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:214
-#, fuzzy, kde-format
-#| msgid "Add ACL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Προσθήκη ACL"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:241
-#, fuzzy, kde-format
-#| msgid "Edit ACL"
+#, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Επεξεργασία ACL"
@@ -616,8 +592,7 @@ msgid "Custom Permissions (%1)"
 msgstr "Προσαρμοσμένα δικαιώματα (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Έλεγχος πρόσβασης"
@@ -686,10 +661,9 @@ msgid "LDAP server: %1"
 msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgid "Search"
-msgstr "Αναζήτηση..."
+msgstr "Αναζήτηση"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
 #, fuzzy, kde-format
@@ -804,11 +778,10 @@ msgid "Save"
 msgstr "Αποθήκευση διαμόρφωσης"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action"
 msgid "Search"
-msgstr "Αναζήτηση..."
+msgstr "Αναζήτηση"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
 #, kde-format
@@ -875,8 +848,7 @@ msgid "Add Email"
 msgstr "Email:"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Αφαίρεση"
@@ -1020,15 +992,13 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr ""
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
-#, fuzzy, kde-format
-#| msgid "Select Multiple Folders"
+#, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
 msgstr "Επιλογή πολλών φακέλων"
@@ -1047,11 +1017,10 @@ msgid "Full Name"
 msgstr "Φάκελος"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr "Email:"
+msgstr "Email"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
@@ -1149,11 +1118,10 @@ msgid "User ID"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr "Email:"
+msgstr "Email"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
@@ -1193,18 +1161,16 @@ msgid "in"
 msgstr "Εύρεση"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
 msgstr "Όνομα"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
-#, fuzzy, kde-format
-#| msgid "Email:"
+#, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr "Email:"
+msgstr "Email"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
@@ -1219,11 +1185,10 @@ msgid "Work Number"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
-msgstr "Αναζήτηση..."
+msgstr "Ανα&ζήτηση"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
