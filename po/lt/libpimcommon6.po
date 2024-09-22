@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:39+0000\n"
+"POT-Creation-Date: 2024-09-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-12 15:05+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -278,17 +278,17 @@ msgstr "Visos versijos"
 msgid "Version %1"
 msgstr "Versija %1"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
 msgstr "Svarbūs pakeitimai lyginant su ankstesne versija:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
 msgstr "Kai kurios naujos ypatybės šioje laidoje:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
 msgstr "Kai kurių klaidų pataisymai:"

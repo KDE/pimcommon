@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:39+0000\n"
+"POT-Creation-Date: 2024-09-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-09 12:22+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -278,17 +278,17 @@ msgstr "Totes les versions"
 msgid "Version %1"
 msgstr "Versió %1"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
 msgstr "Canvis importants des de la darrera versió:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
 msgstr "Algunes de les característiques noves d'aquesta versió inclouen:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
 msgstr "Correcció d'errors:"

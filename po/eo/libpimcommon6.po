@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:39+0000\n"
-"PO-Revision-Date: 2024-08-23 21:45+0200\n"
+"POT-Creation-Date: 2024-09-22 00:41+0000\n"
+"PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr "Limo al la elektitaj aktivecoj:"
+msgstr "Limigi al la elektitaj aktivecoj:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
@@ -32,6 +32,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Se vi limigas ĉi konton al aktiveco, ĝi montriĝos nur se vi enestas tiujn "
+"aktivecojn. Plue, se vi ŝanĝas al aktiveco kiu ne devus esti disponebla, la "
+"konto aŭtomate estos kaŝita."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -272,17 +275,17 @@ msgstr "Ĉiu Versio"
 msgid "Version %1"
 msgstr "Versio %1"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
 msgstr "Gravaj ŝanĝoj ekde lasta version:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
 msgstr "Iuj el la novaj kapabloj en ĉi eldono inkluzivas:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
 msgstr "Iu cimkorektado:"

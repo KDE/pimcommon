@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:39+0000\n"
+"POT-Creation-Date: 2024-09-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-09 07:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -279,17 +279,17 @@ msgstr "Vse različice"
 msgid "Version %1"
 msgstr "Različica %1"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
 msgstr "Pomembne spremembe od zadnje različice:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
 msgstr "Nekatere nove zmožnosti v tej izdaji vključujejo:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
 msgstr "Nekateri popravki napak:"

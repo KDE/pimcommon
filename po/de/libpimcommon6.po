@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-03 00:39+0000\n"
+"POT-Creation-Date: 2024-09-22 00:41+0000\n"
 "PO-Revision-Date: 2024-09-02 19:02+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -273,17 +273,17 @@ msgstr "Alle Versionen"
 msgid "Version %1"
 msgstr "Version %1"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:86
+#: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
 msgstr "Wichtige Änderungen seit der letzten Version:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:91
+#: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
 msgstr "Ein paar der neuen Funktionen in dieser Version beinhalten:"
 
-#: pimcommon/whatsnew/whatsnewwidget.cpp:96
+#: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
 msgstr "Ein paar Fehlerkorrekturen:"
