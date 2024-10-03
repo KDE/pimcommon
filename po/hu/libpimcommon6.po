@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-22 00:41+0000\n"
-"PO-Revision-Date: 2024-07-27 21:31+0200\n"
+"PO-Revision-Date: 2024-10-02 22:40+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Korlátozás a kijelölt aktivitásokra:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
@@ -33,6 +33,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Ha bizonyos aktivitásokra korlátozza ezt a fiókot, az csak akkor jelenik "
+"meg, ha azt az aktivitást használja. Továbbá ha olyan aktivitásra vált, ahol "
+"az nem szabad, hogy elérhető legyen, a fiók automatikusan rejtésre kerül."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -238,54 +241,51 @@ msgid "Load File Error"
 msgstr "Fájlbetöltési hiba"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Perzsa"
+msgstr "Verzió:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "A(z) %1 újdonságai"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Hírek megjelenítése)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "A(z) %2 újdonságai. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Jogosultságok alkalmazása"
+msgstr "Minden verzió"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "Verzió: %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Fontos változtatások a legutóbbi verzióhoz képest:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "Néhány új funkció, amelyet ez a kiadás tartalmaz:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Néhány hibajavítás:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -377,8 +377,7 @@ msgid "&Rename"
 msgstr "Átne&vezés"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Alkalma&zás az összesre"
@@ -579,8 +578,7 @@ msgid "Access Control"
 msgstr "Hozzáférési jogosultságok"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Jogosultságok alkalmazása az összes alma&ppára."
@@ -1170,8 +1168,7 @@ msgid "&Search"
 msgstr "&Keresés…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
-#, fuzzy, kde-format
-#| msgid "Recursive search"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Rekurzív keresés"
