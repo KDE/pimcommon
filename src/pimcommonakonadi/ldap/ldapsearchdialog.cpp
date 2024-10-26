@@ -224,7 +224,9 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAPCore::Ld
 class ContactListModel : public QAbstractTableModel
 {
 public:
-    enum Role { ServerRole = Qt::UserRole + 1 };
+    enum Role {
+        ServerRole = Qt::UserRole + 1
+    };
 
     explicit ContactListModel(QObject *parent)
         : QAbstractTableModel(parent)
