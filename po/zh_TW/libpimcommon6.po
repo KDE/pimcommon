@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:41+0000\n"
 "PO-Revision-Date: 2024-08-25 03:10+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -975,7 +975,7 @@ msgid "Title"
 msgstr "職稱"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
 #, kde-format
 msgid "Full Name"
 msgstr "全名"
@@ -987,25 +987,25 @@ msgid "Email"
 msgstr "電子郵件"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
 #, kde-format
 msgid "Home Number"
 msgstr "家庭電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
 #, kde-format
 msgid "Work Number"
 msgstr "工作電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Mobile Number"
 msgstr "行動電話"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
 #, kde-format
 msgid "Fax Number"
 msgstr "傳真號碼"
@@ -1016,7 +1016,7 @@ msgid "Pager"
 msgstr "呼叫器"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
 msgid "Street"
 msgstr "街道"
@@ -1028,196 +1028,196 @@ msgid "State"
 msgstr "州/省/縣"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Country"
 msgstr "國家"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
 #, kde-format
 msgid "City"
 msgstr "城市"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Organization"
 msgstr "組織"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Company"
 msgstr "公司"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Department"
 msgstr "部門"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Zip Code"
 msgstr "郵遞區號"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "Postal Address"
 msgstr "郵寄地址"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "Description"
 msgstr "描述"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
 msgid "User ID"
 msgstr "使用者 ID"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
 msgstr "電子郵件"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
 msgstr "州/省/縣"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:339
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
 msgstr "職稱"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:474
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
 msgstr "從 LDAP 匯入聯絡人"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:497
 #, kde-format
 msgid "Search for Addresses in Directory"
 msgstr "在目錄中搜尋位址"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:502
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "搜尋："
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:510
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
 msgstr "於屬性中："
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
 msgstr "名稱"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
 msgstr "電子郵件"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:516
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
 msgstr "家庭電話"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
 msgstr "工作電話"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:519
 #, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
 msgstr "搜尋(&S)"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
 #, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "遞迴搜尋"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:540
 #, kde-format
 msgid "Contains"
 msgstr "包含"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:541
 #, kde-format
 msgid "Starts With"
 msgstr "開頭為"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "在結果中搜尋"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:582
 #, kde-format
 msgid "Searching..."
 msgstr "搜尋中…"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:586
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "全部選取"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:590
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "全部取消選取"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:597
 #, kde-format
 msgid "Add Selected"
 msgstr "加入已選取的"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
 #, kde-format
 msgid "Configure LDAP Servers..."
 msgstr "設定 LDAP 伺服器…"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:633
 #, kde-format
 msgid "Copy"
 msgstr "複製"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:757
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr "您必須先選取一個 LDAP 伺服器才能進行搜尋。"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:845
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "從 LDAP 目錄 %1 於 %2 匯入"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:864
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
