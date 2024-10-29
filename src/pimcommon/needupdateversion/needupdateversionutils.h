@@ -12,7 +12,7 @@ namespace PimCommon
 {
 namespace NeedUpdateVersionUtils
 {
-enum class PIMCOMMON_EXPORT ObsoleteVersion {
+enum class PIMCOMMON_EXPORT ObsoleteVersion : uint8_t {
     Unknown,
     NotObsoleteYet,
     OlderThan6Months,
