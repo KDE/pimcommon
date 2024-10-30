@@ -127,16 +127,16 @@ static QString makeFilter(const QString &query, LdapSearchDialog::FilterType att
         return result + QStringLiteral("|(cn=*)(sn=*)") + QLatin1Char(')');
     }
 
-    if (attr == LdapSearchDialog::Name) {
+    if (attr == LdapSearchDialog::FilterType::Name) {
         result += startsWith ? QStringLiteral("|(cn=%1*)(sn=%2*)") : QStringLiteral("|(cn=*%1*)(sn=*%2*)");
         result = result.arg(query, query);
     } else {
         result += startsWith ? QStringLiteral("%1=%2*") : QStringLiteral("%1=*%2*");
-        if (attr == LdapSearchDialog::Email) {
+        if (attr == LdapSearchDialog::FilterType::Email) {
             result = result.arg(QStringLiteral("mail"), query);
-        } else if (attr == LdapSearchDialog::HomeNumber) {
+        } else if (attr == LdapSearchDialog::FilterType::HomeNumber) {
             result = result.arg(QStringLiteral("homePhone"), query);
-        } else if (attr == LdapSearchDialog::WorkNumber) {
+        } else if (attr == LdapSearchDialog::FilterType::WorkNumber) {
             result = result.arg(QStringLiteral("telephoneNumber"), query);
         } else {
             // Error?
@@ -511,10 +511,10 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     boxLayout->addWidget(label, 0, 2);
 
     d->mFilterCombo = new QComboBox(groupBox);
-    d->mFilterCombo->addItem(i18nc("@item:inlistbox Name of the contact", "Name"), QVariant::fromValue(Name));
-    d->mFilterCombo->addItem(i18nc("@item:inlistbox email address of the contact", "Email"), QVariant::fromValue(Email));
-    d->mFilterCombo->addItem(i18nc("@item:inlistbox", "Home Number"), QVariant::fromValue(HomeNumber));
-    d->mFilterCombo->addItem(i18nc("@item:inlistbox", "Work Number"), QVariant::fromValue(WorkNumber));
+    d->mFilterCombo->addItem(i18nc("@item:inlistbox Name of the contact", "Name"), QVariant::fromValue(FilterType::Name));
+    d->mFilterCombo->addItem(i18nc("@item:inlistbox email address of the contact", "Email"), QVariant::fromValue(FilterType::Email));
+    d->mFilterCombo->addItem(i18nc("@item:inlistbox", "Home Number"), QVariant::fromValue(FilterType::HomeNumber));
+    d->mFilterCombo->addItem(i18nc("@item:inlistbox", "Work Number"), QVariant::fromValue(FilterType::WorkNumber));
     boxLayout->addWidget(d->mFilterCombo, 0, 3);
     d->startSearchGuiItem = KGuiItem(i18nc("@action:button Start searching", "&Search"), QStringLiteral("edit-find"));
     d->stopSearchGuiItem = KStandardGuiItem::stop();

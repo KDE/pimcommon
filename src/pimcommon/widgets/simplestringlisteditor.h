@@ -33,7 +33,7 @@ class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
     Q_OBJECT
     Q_PROPERTY(QStringList stringList READ stringList WRITE setStringList NOTIFY changed USER true)
 public:
-    enum ButtonCode {
+    enum ButtonCode : uint8_t {
         None = 0,
         Add = 1,
         Remove = 2,
