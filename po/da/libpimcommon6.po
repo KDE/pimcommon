@@ -2,26 +2,27 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2013, 2014, 2015, 2016, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2020-11-17 19:30+0100\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-10-30 11:15+0100\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Begrænsning på de valgte aktiviteter:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
@@ -31,6 +32,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Hvis du begrænser denne konto til aktivitet, vil den kun vises, når du er i "
+"disse aktiviteter. Desuden, når du skifter til en aktivitet, den ikke burde "
+"være tilgængelig i, vil den automatisk blive skjult."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
 #, kde-format
@@ -38,8 +42,7 @@ msgid "..."
 msgstr "..."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Indstil"
@@ -53,18 +56,21 @@ msgstr "Genstart er nødvendigt for at anvende ændringerne."
 #, kde-format
 msgctxt "@action"
 msgid "Disable version check"
-msgstr ""
+msgstr "Deaktivér versionstjek"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
 msgid "Your version is older than 6 months, we encourage you to upgrade."
 msgstr ""
+"Din version er mere end 6 måneder gammel. Vi opfordrer dig til at opgradere."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
 #, kde-format
 msgid ""
 "Your version is older than 1 year, we strongly encourage you to upgrade."
 msgstr ""
+"Din version er mere end ét år gammel. Vi opfordrer dig kraftigt til at "
+"opgradere."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -113,22 +119,19 @@ msgid "LiveJournal"
 msgstr "LiveJournal"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Default template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Standardskabelon"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
-#, fuzzy, kde-format
-#| msgid "Template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Skabelon"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Navn:"
@@ -139,8 +142,7 @@ msgid "Do you want to delete selected template?"
 msgstr "Vil du slette den valgte skabelon?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
-#, fuzzy, kde-format
-#| msgid "Delete template"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Slet skabelon"
@@ -220,8 +222,7 @@ msgstr ""
 "\"%2\" er den detaljerede fejlbeskrivelse."
 
 #: pimcommon/util/pimutil.cpp:53
-#, fuzzy, kde-format
-#| msgid "Save File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Fejl ved gemning af fil"
@@ -236,60 +237,57 @@ msgstr ""
 "\"%2\" er den detaljerede fejlbeskrivelse."
 
 #: pimcommon/util/pimutil.cpp:88
-#, fuzzy, kde-format
-#| msgid "Load File Error"
+#, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Indlæsningsfejl"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Persisk"
+msgstr "Version:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "Hvad er nyt i %1"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Vis nyheder)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "Hvad er nyt i %2. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Anvend rettigheder"
+msgstr "Alle versioner"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "Version %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Vigtige ændringer siden sidste version:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "Nogle af de nye funktioner i denne udgivelse inkluderer:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Nogle fejlrettelser:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -306,29 +304,25 @@ msgid "Change Case"
 msgstr "Skift mellem store/små bogstaver"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
 msgstr "Store bogstaver"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
 msgstr "Store/små bogst. i sætning"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
 msgstr "Små bogstaver"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Skift mellem store/små bogst."
@@ -369,29 +363,25 @@ msgstr ""
 "overskrive den?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Foreslå nyt &navn"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&Ignorér"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "&Omdøb"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "An&vend på alle"
@@ -424,29 +414,25 @@ msgid "Do you want to remove selected text?"
 msgstr "Vil du fjerne den markerede tekst?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Tilføj..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "Æ&ndr..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Fjern"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, fuzzy, kde-format
-#| msgid "&Customize..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
 msgstr "&Brugertilpas..."
@@ -455,15 +441,13 @@ msgstr "&Brugertilpas..."
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove"
 msgstr "Fjern"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "Br&ugeridentifikator:"
@@ -492,9 +476,7 @@ msgid "Permissions"
 msgstr "Rettigheder"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr "<b>Bemærk: </b>Omdøbning kræver skriverettigheder i overmappen."
@@ -505,22 +487,19 @@ msgid "Folder cannot be administrated."
 msgstr "Mappen kan ikke administreres."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Tilføj indgang..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Redigér indgang..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Fjern indgang"
@@ -558,8 +537,7 @@ msgid ""
 msgstr "Vil du virkelig anvende mappens rettigheder på disse undermapper?"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
-#, fuzzy, kde-format
-#| msgid "Apply Permissions"
+#, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
 msgstr "Anvend rettigheder"
@@ -595,15 +573,13 @@ msgid "Custom Permissions (%1)"
 msgstr "Brugertilpassede rettigheder (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Adgangskontrol (ACL)"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Anvend rettigheder på alle &undermapper."
@@ -624,8 +600,7 @@ msgid "Select email from contact"
 msgstr "Vælg e-mail fra kontakt"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Vis organisationsenhed for LDAP-resultater"
@@ -670,64 +645,55 @@ msgid "Search"
 msgstr "Søg"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Vælg"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "&Afmarkér"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Show Blacklisted Emails"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Vis sortlistede e-mails"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Flere fund...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Søg i e-mail:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Research is done from 3 characters"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Der søges fra 3 tegn"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Søg i resultat..."
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Undtag domænenavne:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Adskil domæne med \"%1\""
@@ -736,26 +702,23 @@ msgstr "Adskil domæne med \"%1\""
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Ekskludér e-mail med regulært udtryk:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
-msgstr "Adskil domæne med \"%1\""
+msgstr "Adskil regulære udtryk med \"%1\""
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgid "Select"
-msgstr "&Vælg"
+msgstr "Vælg"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgid "Unselect"
-msgstr "&Afmarkér"
+msgstr "Afmarkér"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
 #, kde-format
@@ -781,15 +744,13 @@ msgid ""
 msgstr "Listen blev ændret. Vil du gemme før du foretager en ny søgning?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Gem"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Søg"
@@ -798,7 +759,7 @@ msgstr "Søg"
 #, kde-format
 msgctxt "@action"
 msgid "Cancel"
-msgstr ""
+msgstr "Annullér"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format
@@ -833,15 +794,13 @@ msgid "LDAP server %1"
 msgstr "LDAP-server %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Flyt op"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Flyt ned"
@@ -850,30 +809,26 @@ msgstr "Flyt ned"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
-msgstr ""
+msgstr "Nye e-mail…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "@item LDAP search key"
-#| msgid "Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
-msgstr "E-mail"
+msgstr "Tilføj e-mail"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Fjern"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] "Fjern indgang"
-msgstr[1] "Fjern indgang"
+msgstr[0] "Fjern e-mail"
+msgstr[1] "Fjern e-mails"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
 #, kde-format
@@ -1018,8 +973,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Generér ledig/&optaget og aktivér alarmer for:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Søg..."
@@ -1173,8 +1127,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Søg efter adresser i directory"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:502
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Søg efter:"
@@ -1216,8 +1169,7 @@ msgid "&Search"
 msgstr "&Søg"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
-#, fuzzy, kde-format
-#| msgid "Recursive search"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Rekursiv søgning"
@@ -1233,8 +1185,7 @@ msgid "Starts With"
 msgstr "Begynder med"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Søg i resultat"
@@ -1245,15 +1196,13 @@ msgid "Searching..."
 msgstr "Søger..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:586
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Markér alt"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:590
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Afmarkér alle"
@@ -1345,10 +1294,9 @@ msgid "Could not set setting '%1': %2"
 msgstr "Kunne ikke sætte indstilling \"%1\": %2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
-#, fuzzy, kde-format
-#| msgid "Could not set setting '%1': %2"
+#, kde-format
 msgid "Could not save settings: %1"
-msgstr "Kunne ikke sætte indstilling \"%1\": %2"
+msgstr "Kunne ikke gemme indstillinger: %1"
 
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
