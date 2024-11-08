@@ -123,8 +123,13 @@ target_sources(KPim6PimCommon PRIVATE
     whatsnew/whatsnewtranslationsbase.cpp
     whatsnew/whatsnewinfo.h
     whatsnew/whatsnewinfo.cpp
-
+    
+    verifynewversion/verifynewversionutils.cpp
+    verifynewversion/verifynewversionutils.h
+    verifynewversion/verifynewversionwidget.cpp
+    verifynewversion/verifynewversionwidget.h
 )
+
 if(ENABLE_WARN_OUTDATED)
     target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=1)
 else()
@@ -233,6 +238,13 @@ ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
     RELATIVE needupdateversion
 )
 
+ecm_generate_headers(PimCommon_Camelverifynewversion_HEADERS
+    HEADER_NAMES
+    VerifyNewVersionWidget
+    REQUIRED_HEADERS PimCommon_verifynewversion_HEADERS
+    PREFIX PimCommon
+    RELATIVE verifynewversion
+)
 
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     HEADER_NAMES
@@ -326,6 +338,7 @@ install(FILES
     ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_Camelcaseneedupdateversionwidgets_HEADERS}
+    ${PimCommon_Camelverifynewversion_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_CamelCasejob_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
@@ -362,6 +375,7 @@ install(FILES
     ${PimCommon_texteditor_commonwidget_HEADERS}
     ${PimCommon_widgets_HEADERS}
     ${PimCommon_whatsnew_HEADERS}
+    ${PimCommon_verifynewversion_HEADERS}
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
