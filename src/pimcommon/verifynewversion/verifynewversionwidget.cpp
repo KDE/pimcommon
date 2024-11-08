@@ -41,7 +41,18 @@ void VerifyNewVersionWidget::addOsUrlInfo(OsVersion os, const QString &url)
 
 void VerifyNewVersionWidget::slotVerifyNewVersion()
 {
-    const QUrl url = VerifyNewVersionUtils::newVersionUrl();
+    QUrl url;
+#if defined(Q_OS_WIN)
+    url = QUrl(mUrls.value(VerifyNewVersionWidget::OsVersion::Windows));
+#endif
+
+#if defined(Q_OS_MACOS)
+#ifdef Q_PROCESSOR_ARM_64
+    url = QUrl(mUrls.value(VerifyNewVersionWidget::OsVersion::MacOsArm64));
+#else
+    url = QUrl(mUrls.value(VerifyNewVersionWidget::OsVersion::MacOs));
+#endif
+#endif
     if (!url.isEmpty()) {
         QDesktopServices::openUrl(url);
     }
