@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:41+0000\n"
 "PO-Revision-Date: 2024-01-29 21:56+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -240,6 +240,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Tiedoston latausvirhe"
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
+#, kde-format
+msgid "Check New Version"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, fuzzy, kde-format
