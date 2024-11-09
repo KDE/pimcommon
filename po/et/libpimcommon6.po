@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 02:31+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -241,6 +241,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Tõrge faili laadimisel"
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
+#, kde-format
+msgid "Check New Version"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, fuzzy, kde-format

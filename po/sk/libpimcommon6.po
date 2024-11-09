@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 02:31+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -238,6 +238,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Chyba načítania súboru"
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
+#, kde-format
+msgid "Check New Version"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, fuzzy, kde-format
