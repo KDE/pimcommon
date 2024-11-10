@@ -5,13 +5,12 @@
 #
 # SPDX-FileCopyrightText: 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.
-# Josep M. Ferrer <txemaq@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 02:31+0000\n"
-"PO-Revision-Date: 2024-08-09 12:22+0200\n"
+"PO-Revision-Date: 2024-11-09 09:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -249,7 +248,7 @@ msgstr "Error en carregar el fitxer"
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "Comprova si hi ha una versió nova"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
@@ -1319,38 +1318,3 @@ msgstr "S'ha completat l'arranjament del recurs."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallat en crear la instància del recurs: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Note"
-#~ msgstr "Edita la nota"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete Note"
-#~ msgstr "Suprimeix la nota"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Note"
-#~ msgstr "Afegeix una nota"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Enter the text that should be stored as a note to the mail:"
-#~ msgstr "Introduïu el text que s'ha d'emmagatzemar com a nota al correu:"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Note type:"
-#~ msgstr "Tipus de nota:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Private note"
-#~ msgstr "Nota privada"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Shared note"
-#~ msgstr "Nota compartida"
-
-#~ msgid "Do you really want to delete this note?"
-#~ msgstr "Realment voleu suprimir aquesta nota?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note"
-#~ msgstr "Supressió de nota"

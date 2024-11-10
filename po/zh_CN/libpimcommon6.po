@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/pimcommon/libpimcommon6.pot\n"
-"X-Crowdin-File-ID: 49108\n"
+"X-Crowdin-File: /kf6-stable/messages/pimcommon/libpimcommon6.pot\n"
+"X-Crowdin-File-ID: 51994\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
