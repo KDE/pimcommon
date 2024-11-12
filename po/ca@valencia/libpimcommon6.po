@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-11-09 09:40+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -215,7 +215,7 @@ msgstr "«%1» no és un fitxer de plantilla"
 msgid "Load Template"
 msgstr "Carrega plantilla"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -224,13 +224,13 @@ msgstr ""
 "No s'ha pogut escriure el fitxer %1:\n"
 "«%2» és la descripció detallada de l'error."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "S'ha produït un error en guardar el fitxer"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -239,7 +239,7 @@ msgstr ""
 "No s'ha pogut llegir el fitxer %1:\n"
 "«%2» és la descripció detallada de l'error."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

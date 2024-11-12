@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-11-09 11:50+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -211,7 +211,7 @@ msgstr "'%1' is geen sjabloonbestand"
 msgid "Load Template"
 msgstr "Sjabloon laden"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -220,13 +220,13 @@ msgstr ""
 "Kon bestand %1 niet wegschrijven:\n"
 "\"%2\" is de gedetailleerde foutbeschrijving."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Fout met opslaan van bestand"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -235,7 +235,7 @@ msgstr ""
 "Kon bestand %1 niet lezen:\n"
 "\"%2\" is de gedetailleerde foutbeschrijving."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

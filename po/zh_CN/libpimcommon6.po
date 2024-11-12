@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -205,7 +205,7 @@ msgstr "“%1” 不是模板文件"
 msgid "Load Template"
 msgstr "加载模板"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -214,13 +214,13 @@ msgstr ""
 "无法写入文件 %1：\n"
 "“%2”为详细错误描述。"
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "保存文件错误"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -229,7 +229,7 @@ msgstr ""
 "无法读取文件 %1：\n"
 "“%2”为详细错误描述。"
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

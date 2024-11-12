@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 00:38+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -209,7 +209,7 @@ msgstr "'%1'은(는) 템플릿 파일이 아님"
 msgid "Load Template"
 msgstr "템플릿 불러오기"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -218,13 +218,13 @@ msgstr ""
 "파일 %1에 쓸 수 없습니다:\n"
 "자세한 오류 설명은 \"%2\"입니다."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "파일 저장 오류"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -233,7 +233,7 @@ msgstr ""
 "파일 %1을(를) 읽을 수 없습니다:\n"
 "자세한 오류 설명은 \"%2\"입니다."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

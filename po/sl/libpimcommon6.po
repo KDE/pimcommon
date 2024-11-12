@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2024-11-09 06:56+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -217,7 +217,7 @@ msgstr "»%1« ni datoteka s predlogo"
 msgid "Load Template"
 msgstr "Naloži predlogo"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -226,13 +226,13 @@ msgstr ""
 "Ni bilo mogoče pisati v datoteko %1:\n"
 "»%2« je podroben opis napake."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Napaka shranjevanja datoteke"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -241,7 +241,7 @@ msgstr ""
 "Ni bilo mogoče prebrati datoteke %1:\n"
 "»%2« je podroben opis napake."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

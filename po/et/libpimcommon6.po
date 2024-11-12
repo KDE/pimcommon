@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -210,7 +210,7 @@ msgstr "\"%1\" ei ole mallifail"
 msgid "Load Template"
 msgstr "Laadi mall"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -219,14 +219,14 @@ msgstr ""
 "Faili %1 kirjutamine nurjus:\n"
 "\"%2\" on üksikasjalik veakirjeldus."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, fuzzy, kde-format
 #| msgid "Save File Error"
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Tõrge faili salvestamisel"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -235,7 +235,7 @@ msgstr ""
 "Faili %1 lugemine nurjus:\n"
 "\"%2\" on üksikasjalik veakirjeldus."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, fuzzy, kde-format
 #| msgid "Load File Error"
 msgctxt "@title:window"

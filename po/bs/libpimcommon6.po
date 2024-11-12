@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -216,7 +216,7 @@ msgstr ""
 msgid "Load Template"
 msgstr "Predložak"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -225,14 +225,14 @@ msgstr ""
 "Ne mogu pisati u datoteku %1:\n"
 "\"%2\" je detaljan opis greške."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, fuzzy, kde-format
 #| msgid "Save File Error"
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Greška prilikom spremanja datoteke"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -241,7 +241,7 @@ msgstr ""
 "Ne mogu čitati datoteku %1:\n"
 "\"%2\" je detaljan opis greške."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, fuzzy, kde-format
 #| msgid "Load File Error"
 msgctxt "@title:window"

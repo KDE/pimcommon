@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -213,7 +213,7 @@ msgstr ""
 msgid "Load Template"
 msgstr "Πρότυπο"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -222,13 +222,13 @@ msgstr ""
 "Αδυναμία εγγραφής του αρχείου %1:\n"
 "\"%2\" είναι η λεπτομερής περιγραφή σφάλματος."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Σφάλμα αποθήκευσης αρχείου"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -237,7 +237,7 @@ msgstr ""
 "Αδυναμία ανάγνωσης του αρχείου %1:\n"
 "\"%2\" είναι η λεπτομερής περιγραφή του σφάλματος."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

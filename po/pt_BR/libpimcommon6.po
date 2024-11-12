@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
 "PO-Revision-Date: 2023-12-13 08:05-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -212,7 +212,7 @@ msgstr "'%1' não é um arquivo de modelo"
 msgid "Load Template"
 msgstr "Carregar modelo"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -221,13 +221,13 @@ msgstr ""
 "Não foi possível gravar o arquivo %1:\n"
 "\"%2\" é a descrição detalhada do erro."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Erro ao salvar arquivo"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -236,7 +236,7 @@ msgstr ""
 "Não foi possível ler o arquivo %1:\n"
 "\"%2\" é a descrição detalhada do erro."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

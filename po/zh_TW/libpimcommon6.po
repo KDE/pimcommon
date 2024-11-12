@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:41+0000\n"
-"PO-Revision-Date: 2024-08-25 03:10+0900\n"
+"POT-Creation-Date: 2024-11-12 00:41+0000\n"
+"PO-Revision-Date: 2024-11-11 15:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -209,7 +209,7 @@ msgstr "%1 不是樣本檔"
 msgid "Load Template"
 msgstr "載入樣本"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -218,13 +218,13 @@ msgstr ""
 "無法寫入檔案 %1：\n"
 "%2 中有錯誤描述。"
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "檔案儲存錯誤"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -233,7 +233,7 @@ msgstr ""
 "無法讀取檔案 %1：\n"
 "\"%2\" 為詳細的錯誤描述。"
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
@@ -242,7 +242,7 @@ msgstr "載入檔案錯誤"
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "檢查新版本"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
