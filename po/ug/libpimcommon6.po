@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 02:31+0000\n"
+"POT-Creation-Date: 2024-11-12 02:36+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -215,7 +215,7 @@ msgstr ""
 msgid "Load Template"
 msgstr "قېلىپ"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -224,13 +224,13 @@ msgstr ""
 "ھۆججەت %1 غا يازغىلى بولمىدى:\n"
 "«%2» بولسا خاتالىقنىڭ تەپسىلاتىدۇر."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr ""
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not write the file %1:\n"
@@ -242,7 +242,7 @@ msgstr ""
 "ھۆججەت %1 غا يازغىلى بولمىدى:\n"
 "«%2» بولسا خاتالىقنىڭ تەپسىلاتىدۇر."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

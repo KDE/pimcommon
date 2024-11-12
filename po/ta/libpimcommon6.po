@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 02:31+0000\n"
+"POT-Creation-Date: 2024-11-12 02:36+0000\n"
 "PO-Revision-Date: 2024-09-07 21:31+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -209,7 +209,7 @@ msgstr "'%1' வார்ப்புருக்கோப்பு இல்ல
 msgid "Load Template"
 msgstr "வார்ப்புருவை ஏற்று"
 
-#: pimcommon/util/pimutil.cpp:49
+#: pimcommon/util/pimutil.cpp:51
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -218,13 +218,13 @@ msgstr ""
 "%1 எனும் கோப்பை எழுத முடியவில்லை:\n"
 "சிக்கலின் விவரணம்: \"%2\"."
 
-#: pimcommon/util/pimutil.cpp:53
+#: pimcommon/util/pimutil.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "கோப்பை சேமிப்பதில் சிக்கல்"
 
-#: pimcommon/util/pimutil.cpp:84
+#: pimcommon/util/pimutil.cpp:86
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -233,7 +233,7 @@ msgstr ""
 "%1 எனும் கோப்பைப் படிக்க முடியவில்லை:\n"
 "சிக்கலின் விவரணம்: \"%2\"."
 
-#: pimcommon/util/pimutil.cpp:88
+#: pimcommon/util/pimutil.cpp:90
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
