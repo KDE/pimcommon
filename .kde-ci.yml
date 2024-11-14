@@ -34,7 +34,7 @@ Dependencies:
     'frameworks/kcalendarcore': '@latest-kf6'
     'libraries/ktextaddons': '@latest-kf6'
 
-- 'on': ['Linux', 'FreeBSD', 'macOS']
+- 'on': ['Linux', 'FreeBSD']
   'require':
     'pim/akonadi-search' : '@same'
     'plasma/plasma-activities': '@latest-kf6'
