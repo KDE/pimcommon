@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-12 00:41+0000\n"
-"PO-Revision-Date: 2024-10-02 22:40+0200\n"
+"PO-Revision-Date: 2024-11-15 20:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -243,7 +243,7 @@ msgstr "Fájlbetöltési hiba"
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "Új verzió keresése"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
