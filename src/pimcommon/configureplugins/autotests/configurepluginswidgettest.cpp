@@ -8,10 +8,8 @@
 #include "../configurepluginslistwidget.h"
 #include "../configurepluginswidget.h"
 #include <KMessageWidget>
-#include <QSplitter>
 #include <QStandardPaths>
 #include <QTest>
-#include <QTextEdit>
 
 ConfigurePluginsWidgetTest::ConfigurePluginsWidgetTest(QObject *parent)
     : QObject(parent)
@@ -30,17 +28,8 @@ void ConfigurePluginsWidgetTest::shouldHaveDefaultValue()
     QVERIFY(!mMessageWidget->isCloseButtonVisible());
     QVERIFY(!mMessageWidget->text().isEmpty());
 
-    auto mSplitter = w.findChild<QSplitter *>(QStringLiteral("splitter"));
-    QVERIFY(mSplitter);
-    QCOMPARE(mSplitter->count(), 2);
-
-    auto mConfigureListWidget = mSplitter->findChild<PimCommon::ConfigurePluginsListWidget *>(QStringLiteral("configureListWidget"));
+    auto mConfigureListWidget = w.findChild<PimCommon::ConfigurePluginsListWidget *>(QStringLiteral("configureListWidget"));
     QVERIFY(mConfigureListWidget);
-
-    auto mDescription = mSplitter->findChild<QTextEdit *>(QStringLiteral("description"));
-    QVERIFY(mDescription);
-    QVERIFY(mDescription->isReadOnly());
-    QVERIFY(mDescription->document()->isEmpty());
 }
 
 QTEST_MAIN(ConfigurePluginsWidgetTest)

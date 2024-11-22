@@ -5,7 +5,7 @@
 */
 
 #include "configurepluginslistwidget.h"
-using namespace Qt::Literals::StringLiterals;
+#include "configurepluginstreewidgetdelegate.h"
 
 #include <KLineEditEventHandler>
 #include <KLocalizedString>
@@ -20,6 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     : QWidget(parent)
@@ -30,6 +31,7 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mainLayout->setContentsMargins({});
     mainLayout->setSpacing(0);
 
+    mListWidget->setItemDelegate(new ConfigurePluginsTreeWidgetDelegate(this));
     mListWidget->setSortingEnabled(true);
     mListWidget->sortItems(0, Qt::AscendingOrder);
     mListWidget->setObjectName("listwidget"_L1);
@@ -45,7 +47,6 @@ ConfigurePluginsListWidget::ConfigurePluginsListWidget(QWidget *parent)
     mTreeWidgetSearchLineEdit->searchLine()->setProperty("_breeze_borders_sides", QVariant::fromValue(QFlags{Qt::BottomEdge}));
     KLineEditEventHandler::catchReturnKey(mTreeWidgetSearchLineEdit->searchLine());
 
-    connect(mListWidget, &QTreeWidget::itemSelectionChanged, this, &ConfigurePluginsListWidget::slotItemSelectionChanged);
     connect(mListWidget, &QTreeWidget::itemChanged, this, &ConfigurePluginsListWidget::slotItemChanged);
 
     mainLayout->addWidget(mTreeWidgetSearchLineEdit);
@@ -61,14 +62,6 @@ void ConfigurePluginsListWidget::slotItemChanged(QTreeWidgetItem *item, int colu
         if (column == 0) {
             Q_EMIT changed();
         }
-    }
-}
-
-void ConfigurePluginsListWidget::slotItemSelectionChanged()
-{
-    QTreeWidgetItem *item = mListWidget->currentItem();
-    if (auto pluginItem = dynamic_cast<PluginItem *>(item)) {
-        Q_EMIT descriptionChanged(pluginItem->mDescription);
     }
 }
 
@@ -131,9 +124,9 @@ void ConfigurePluginsListWidget::fillTopItems(const QList<PimCommon::PluginUtilD
         const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
         for (const PimCommon::PluginUtilData &data : lst) {
             auto subItem = new PluginItem(topLevel);
-            subItem->setText(0, data.mName);
+            // TODO use enum for it.
+            subItem->setText(0, data.mName + QLatin1Char('\n') + data.mDescription);
             subItem->mIdentifier = data.mIdentifier;
-            subItem->mDescription = data.mDescription;
             subItem->mEnableByDefault = data.mEnableByDefault;
             subItem->mHasConfigureSupport = data.mHasConfigureDialog;
             if (checkable) {

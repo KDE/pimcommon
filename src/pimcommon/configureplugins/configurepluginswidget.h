@@ -8,8 +8,6 @@
 
 #include "pimcommon_export.h"
 #include <QWidget>
-class QSplitter;
-class QTextEdit;
 class KMessageWidget;
 namespace PimCommon
 {
@@ -36,14 +34,10 @@ Q_SIGNALS:
 
 private:
     PIMCOMMON_NO_EXPORT void initialize();
-    PIMCOMMON_NO_EXPORT void readConfig();
-    PIMCOMMON_NO_EXPORT void writeConfig();
     PIMCOMMON_NO_EXPORT void slotConfigChanged();
     PIMCOMMON_NO_EXPORT void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
 
-    QSplitter *mSplitter = nullptr;
     ConfigurePluginsListWidget *mConfigureListWidget = nullptr;
-    QTextEdit *mDescription = nullptr;
     KMessageWidget *mMessageWidget = nullptr;
 };
 }
