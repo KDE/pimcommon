@@ -21,18 +21,24 @@ void ConfigurePluginsTreeWidgetDelegate::paint(QPainter *painter, const QStyleOp
 {
     if (!index.isValid())
         return;
-    QStyleOptionViewItem opt(option);
-    opt.showDecorationSelected = true;
-    QApplication::style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter);
 
     // Get the text and split it into two lines
     const QString text = index.data(Qt::DisplayRole).toString();
     if (text.isEmpty()) {
         return;
     }
-    painter->save();
-    const QStringList lines = text.split(QLatin1Char('\n'));
 
+    const QStringList lines = text.split(QLatin1Char('\n'));
+    if (/*lines.count() == 1*/ true) {
+        QStyledItemDelegate::paint(painter, option, index);
+        return;
+    }
+
+    QStyleOptionViewItem opt(option);
+    opt.showDecorationSelected = true;
+    QApplication::style()->drawPrimitive(QStyle::PE_PanelItemViewItem, &opt, painter);
+
+    painter->save();
     // Set the painter font
     painter->setFont(option.font);
 
