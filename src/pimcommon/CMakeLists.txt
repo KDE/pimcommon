@@ -70,6 +70,10 @@ target_sources(KPim6PimCommon PRIVATE
     configureplugins/configureplugindialog.h
     configureplugins/configurepluginswidget.h
     configureplugins/configurepluginslistwidget.h
+
+    configureplugins/configurepluginstreewidgetdelegate.h
+    configureplugins/configurepluginstreewidgetdelegate.cpp
+
     shareserviceurl/shareserviceurlmanager.h
     pimcommon_private_export.h
     network/networkmanager.h
@@ -314,6 +318,7 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     ConfigurePluginsListWidget
     ConfigurePluginsWidget
     ConfigurePluginDialog
+    ConfigurePluginsTreeWidgetDelegate
     REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
     PREFIX PimCommon
     RELATIVE configureplugins

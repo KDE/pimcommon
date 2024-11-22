@@ -34,7 +34,6 @@ public:
     virtual void initialize();
     void initializeDone();
 Q_SIGNALS:
-    void descriptionChanged(const QString &description);
     void changed();
     void configureClicked(const QString &configureGroupName, const QString &identifier);
 
@@ -48,7 +47,6 @@ protected:
         }
 
         QString mIdentifier;
-        QString mDescription;
         bool mEnableByDefault = false;
         bool mHasConfigureSupport = false;
         bool mEnableFromUserSettings = false;
@@ -67,7 +65,6 @@ protected:
     QTreeWidget *const mListWidget;
 
 private:
-    PIMCOMMON_NO_EXPORT void slotItemSelectionChanged();
     PIMCOMMON_NO_EXPORT void slotItemChanged(QTreeWidgetItem *item, int column);
     PIMCOMMON_NO_EXPORT void slotConfigureClicked(QAction *act);
     KTreeWidgetSearchLineWidget *mTreeWidgetSearchLineEdit = nullptr;

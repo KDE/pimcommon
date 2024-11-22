@@ -14,8 +14,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageWidget>
 #include <KSharedConfig>
 
-#include <QSplitter>
-#include <QTextEdit>
 #include <QVBoxLayout>
 
 using namespace PimCommon;
@@ -32,10 +30,7 @@ ConfigurePluginsWidget::ConfigurePluginsWidget(ConfigurePluginsListWidget *confi
     initLayout(configurePluginListWidget);
 }
 
-ConfigurePluginsWidget::~ConfigurePluginsWidget()
-{
-    writeConfig();
-}
+ConfigurePluginsWidget::~ConfigurePluginsWidget() = default;
 
 void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePluginListWidget)
 {
@@ -49,30 +44,17 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
     mMessageWidget->setPosition(KMessageWidget::Header);
     layout->addWidget(mMessageWidget);
 
-    mSplitter = new QSplitter(this);
-    mSplitter->setObjectName("splitter"_L1);
-    mSplitter->setChildrenCollapsible(false);
-    layout->addWidget(mSplitter);
-
     if (!configurePluginListWidget) {
         mConfigureListWidget = new ConfigurePluginsListWidget(this);
     } else {
         mConfigureListWidget = configurePluginListWidget;
     }
     mConfigureListWidget->setObjectName("configureListWidget"_L1);
-    mSplitter->addWidget(mConfigureListWidget);
+    layout->addWidget(mConfigureListWidget);
 
-    mDescription = new QTextEdit(this);
-    mDescription->setObjectName("description"_L1);
-    mDescription->setReadOnly(true);
-
-    mSplitter->addWidget(mDescription);
-
-    connect(mConfigureListWidget, &ConfigurePluginsListWidget::descriptionChanged, mDescription, &QTextEdit::setText);
     connect(mConfigureListWidget, &ConfigurePluginsListWidget::changed, this, &ConfigurePluginsWidget::slotConfigChanged);
 
     initialize();
-    readConfig();
 }
 
 void ConfigurePluginsWidget::slotConfigChanged()
@@ -99,19 +81,6 @@ void ConfigurePluginsWidget::doLoadFromGlobalSettings()
 void ConfigurePluginsWidget::doResetToDefaultsOther()
 {
     mConfigureListWidget->doResetToDefaultsOther();
-}
-
-void ConfigurePluginsWidget::readConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("ConfigurePluginsWidget"));
-    const QList<int> size = {400, 100};
-    mSplitter->setSizes(group.readEntry("splitter", size));
-}
-
-void ConfigurePluginsWidget::writeConfig()
-{
-    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("ConfigurePluginsWidget"));
-    group.writeEntry("splitter", mSplitter->sizes());
 }
 
 void ConfigurePluginsWidget::initialize()
