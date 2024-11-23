@@ -24,6 +24,9 @@ class PIMCOMMON_EXPORT ConfigurePluginsListWidget : public QWidget
 {
     Q_OBJECT
 public:
+    enum PluginItemData {
+        Description = Qt::UserRole + 1,
+    };
     explicit ConfigurePluginsListWidget(QWidget *parent = nullptr);
     ~ConfigurePluginsListWidget() override;
 
