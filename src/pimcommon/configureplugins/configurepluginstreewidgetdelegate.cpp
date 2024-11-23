@@ -5,7 +5,7 @@
 */
 
 #include "configurepluginstreewidgetdelegate.h"
-
+#include "configureplugins/configurepluginslistwidget.h"
 #include <QApplication>
 #include <QPainter>
 
@@ -28,8 +28,8 @@ void ConfigurePluginsTreeWidgetDelegate::paint(QPainter *painter, const QStyleOp
         return;
     }
 
-    const QStringList lines = text.split(QLatin1Char('\n'));
-    if (lines.count() == 1) {
+    const QString description = index.data(ConfigurePluginsListWidget::PluginItemData::Description).toString();
+    if (description.isEmpty()) {
         QStyledItemDelegate::paint(painter, option, index);
         return;
     }
@@ -77,14 +77,14 @@ void ConfigurePluginsTreeWidgetDelegate::paint(QPainter *painter, const QStyleOp
     // Draw the two lines
     painter->setPen(option.palette.text().color());
     const QRect line1Rect(rect.left() + 5 + checkboxSize.width(), rect.top(), rect.width(), fontMetrics.height());
-    painter->drawText(line1Rect, Qt::AlignLeft | Qt::AlignVCenter, lines.at(0));
-    if (lines.count() == 2) {
+    painter->drawText(line1Rect, Qt::AlignLeft | Qt::AlignVCenter, text);
+    if (!description.isEmpty()) {
         QFont f = option.font;
         f.setItalic(true);
         f.setPointSize(f.pointSize() - 2);
         painter->setFont(f);
         const QRect line2Rect(rect.left() + 5 + checkboxSize.width(), rect.top() + fontMetrics.height(), rect.width(), fontMetrics.height());
-        painter->drawText(line2Rect, Qt::AlignLeft | Qt::AlignVCenter, lines.at(1));
+        painter->drawText(line2Rect, Qt::AlignLeft | Qt::AlignVCenter, description);
     }
     painter->restore();
 }
@@ -93,6 +93,16 @@ QSize ConfigurePluginsTreeWidgetDelegate::sizeHint(const QStyleOptionViewItem &o
 {
     QFontMetrics fontMetrics(option.font);
     const int height = fontMetrics.height() * 2; // Height for two lines
-    const int width = fontMetrics.horizontalAdvance(index.data(Qt::DisplayRole).toString());
+
+    const QString description = index.data(ConfigurePluginsListWidget::PluginItemData::Description).toString();
+    int widthDescription = 0;
+    if (!description.isEmpty()) {
+        QFont f = option.font;
+        f.setItalic(true);
+        f.setPointSize(f.pointSize() - 2);
+        widthDescription = fontMetrics.horizontalAdvance(description);
+    }
+
+    const int width = qMax(fontMetrics.horizontalAdvance(index.data(Qt::DisplayRole).toString()), widthDescription);
     return QSize(width, height);
 }

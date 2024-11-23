@@ -124,8 +124,8 @@ void ConfigurePluginsListWidget::fillTopItems(const QList<PimCommon::PluginUtilD
         const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
         for (const PimCommon::PluginUtilData &data : lst) {
             auto subItem = new PluginItem(topLevel);
-            // TODO use enum for it.
-            subItem->setText(0, data.mName + QLatin1Char('\n') + data.mDescription);
+            subItem->setData(0, ConfigurePluginsListWidget::PluginItemData::Description, data.mDescription);
+            subItem->setText(0, data.mName);
             subItem->mIdentifier = data.mIdentifier;
             subItem->mEnableByDefault = data.mEnableByDefault;
             subItem->mHasConfigureSupport = data.mHasConfigureDialog;
