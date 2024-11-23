@@ -106,3 +106,5 @@ QSize ConfigurePluginsTreeWidgetDelegate::sizeHint(const QStyleOptionViewItem &o
     const int width = qMax(fontMetrics.horizontalAdvance(index.data(Qt::DisplayRole).toString()), widthDescription);
     return QSize(width, height);
 }
+
+#include "moc_configurepluginstreewidgetdelegate.cpp"
