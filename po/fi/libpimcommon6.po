@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 02:36+0000\n"
+"POT-Creation-Date: 2024-11-23 02:28+0000\n"
 "PO-Revision-Date: 2024-01-29 21:56+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -35,19 +35,19 @@ msgid ""
 "be available in, it will automatically be hidden."
 msgstr ""
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
 msgid "..."
 msgstr "…"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
 #, fuzzy, kde-format
 #| msgid "Configure"
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Asetukset"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:45
+#: pimcommon/configureplugins/configurepluginswidget.cpp:40
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Muutosten käyttöönotto vaatii uudelleenkäynnistyksen."

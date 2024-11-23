@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 02:36+0000\n"
+"POT-Creation-Date: 2024-11-23 02:28+0000\n"
 "PO-Revision-Date: 2024-11-09 08:08+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -38,18 +38,18 @@ msgstr ""
 "erakutsiko da. Hare gehiago, erabilgarri egon beharko ez litzatekeen "
 "jarduera batera aldatzen zarenean, automatikoki ezkutatuko da."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Konfiguratu"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:45
+#: pimcommon/configureplugins/configurepluginswidget.cpp:40
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Aldaketak ezartzeko berrabiatu beharra dago."

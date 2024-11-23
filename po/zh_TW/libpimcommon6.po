@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 02:36+0000\n"
+"POT-Creation-Date: 2024-11-23 02:28+0000\n"
 "PO-Revision-Date: 2024-11-11 15:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -36,18 +36,18 @@ msgstr ""
 "若限制此帳號於特定活動，則僅當使用者處於該活動中時，帳號才會顯示。此外，當您"
 "切換到其他非指定活動時，帳號會自動隱藏。"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "設定"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:45
+#: pimcommon/configureplugins/configurepluginswidget.cpp:40
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "需要重新啟動變更才會生效。"

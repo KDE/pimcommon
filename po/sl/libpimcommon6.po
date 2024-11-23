@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 02:36+0000\n"
+"POT-Creation-Date: 2024-11-23 02:28+0000\n"
 "PO-Revision-Date: 2024-11-10 07:45+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,18 +42,18 @@ msgstr ""
 "dejavnostih. Poleg tega, ko preklopite na dejavnost, ki naj ne bi smela biti "
 "na voljo, bo samodejno skrita."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Konfiguriraj"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:45
+#: pimcommon/configureplugins/configurepluginswidget.cpp:40
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Za uveljavitev sprememb je zahtevan ponovni zagon."

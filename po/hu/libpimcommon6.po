@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 02:36+0000\n"
+"POT-Creation-Date: 2024-11-23 02:28+0000\n"
 "PO-Revision-Date: 2024-11-15 20:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -37,18 +37,18 @@ msgstr ""
 "meg, ha azt az aktivitást használja. Továbbá ha olyan aktivitásra vált, ahol "
 "az nem szabad, hogy elérhető legyen, a fiók automatikusan rejtésre kerül."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:151
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
 msgid "..."
 msgstr "…"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:153
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Beállítás"
 
-#: pimcommon/configureplugins/configurepluginswidget.cpp:45
+#: pimcommon/configureplugins/configurepluginswidget.cpp:40
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "A változtatások alkalmazáshoz újraindítás szükséges."
