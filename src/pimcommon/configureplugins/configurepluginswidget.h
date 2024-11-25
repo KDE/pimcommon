@@ -30,7 +30,7 @@ public:
     void doResetToDefaultsOther();
 
 Q_SIGNALS:
-    void changed();
+    void wasChanged(bool changed);
 
 private:
     PIMCOMMON_NO_EXPORT void initialize();
