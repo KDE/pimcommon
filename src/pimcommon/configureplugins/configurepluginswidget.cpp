@@ -60,12 +60,13 @@ void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePlu
 void ConfigurePluginsWidget::slotConfigChanged()
 {
     mMessageWidget->animatedShow();
-    Q_EMIT changed();
+    Q_EMIT wasChanged(true);
 }
 
 void ConfigurePluginsWidget::save()
 {
     mConfigureListWidget->save();
+    Q_EMIT wasChanged(false);
 }
 
 void ConfigurePluginsWidget::defaults()
@@ -76,6 +77,8 @@ void ConfigurePluginsWidget::defaults()
 void ConfigurePluginsWidget::doLoadFromGlobalSettings()
 {
     mConfigureListWidget->doLoadFromGlobalSettings();
+    mMessageWidget->animatedHide();
+    Q_EMIT wasChanged(false);
 }
 
 void ConfigurePluginsWidget::doResetToDefaultsOther()
