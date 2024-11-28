@@ -76,6 +76,7 @@ static QString newLineEditObjectName()
     return name;
 }
 
+// TODO add activity support here too
 AddresseeLineEdit::AddresseeLineEdit(QWidget *parent, bool enableCompletion)
     : KLineEdit(parent)
     , d(new AddresseeLineEditPrivate(this, enableCompletion))
