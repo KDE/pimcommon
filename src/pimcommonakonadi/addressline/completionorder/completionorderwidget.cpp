@@ -94,7 +94,7 @@ protected:
     }
 
 private:
-    KLDAPCore::LdapClient *mLdapClient = nullptr;
+    KLDAPCore::LdapClient *const mLdapClient;
     int mWeight;
 };
 
