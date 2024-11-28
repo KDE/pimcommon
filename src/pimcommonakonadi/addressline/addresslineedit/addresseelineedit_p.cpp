@@ -147,7 +147,7 @@ void AddresseeLineEditPrivate::searchInBaloo()
 {
 #if !DISABLE_AKONADI_SEARCH
     const QString trimmedString = mSearchString.trimmed();
-    Akonadi::Search::PIM::ContactCompleter com(trimmedString, 20);
+    const Akonadi::Search::PIM::ContactCompleter com(trimmedString, 20);
     const QStringList listEmail = AddresseeLineEditManager::self()->cleanupEmailList(com.complete());
     for (const QString &email : listEmail) {
         addCompletionItem(email, 1, AddresseeLineEditManager::self()->balooCompletionSource());
