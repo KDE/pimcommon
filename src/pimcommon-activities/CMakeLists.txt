@@ -81,44 +81,29 @@ install(FILES
     COMPONENT Devel
 )
 
-# if(BUILD_QCH)
-#     ecm_add_qch(
-#         KPim6PimCommonActivities_QCH
-#         NAME KPim6PimCommonActivities
-#         BASE_NAME KPim6PimCommonActivities
-#         VERSION ${PIM_VERSION}
-#         ORG_DOMAIN org.kde
-#         SOURCES # using only public headers, to cover only public API
-#         ${PimCommonActivities_acl_HEADERS}
-#         ${PimCommonActivities_ldap_HEADERS}
-#         ${PimCommonActivities_collectionpage_HEADERS}
-#         ${PimCommonActivities_folderdialog_HEADERS}
-#         ${PimCommonActivities_genericplugins_HEADERS}
-#         ${PimCommonActivities_casewidgets_HEADERS}
-#         ${PimCommonActivities_widgets_HEADERS}
-#         ${PimCommonActivities_managerserversidesubscription_HEADERS}
-#         ${PimCommonActivities_Util_HEADERS}
-#         ${PimCommonActivities_progresswidget_HEADERS}
-#         ${PimCommonActivities_completionconfiguredialog_HEADERS}
-#         ${PimCommonActivities_completionorder_HEADERS}
-#         ${PimCommonActivities_addressline_HEADERS}
-#         ${PimCommonActivities_recentaddress_HEADERS}
-#         #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-#         #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-#         LINK_QCHS
-#             Qt6Core_QCH
-#             Qt6Gui_QCH
-#             Qt6Widgets_QCH
-#         INCLUDE_DIRS
-#             ${CMAKE_CURRENT_BINARY_DIR}
-#         BLANK_MACROS
-#             PIMCOMMONACTIVITIES_EXPORT
-#         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-#         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-#         COMPONENT Devel
-# )
+if(BUILD_QCH)
+    ecm_add_qch(
+        KPim6PimCommonActivities_QCH
+        NAME KPim6PimCommonActivities
+        BASE_NAME KPim6PimCommonActivities
+        VERSION ${PIM_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+        ${PimCommonActivities_base_HEADERS}
+        LINK_QCHS
+            Qt6Core_QCH
+            Qt6Gui_QCH
+            Qt6Widgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+        BLANK_MACROS
+            PIMCOMMONACTIVITIES_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+)
+endif()
 
-# endif()
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonActivities")
 if(BUILD_QCH)
     ecm_install_qch_export(
