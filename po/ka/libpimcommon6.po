@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-23 02:28+0000\n"
-"PO-Revision-Date: 2024-08-10 06:00+0200\n"
+"PO-Revision-Date: 2024-11-27 04:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -242,7 +242,7 @@ msgstr "ფაილის ჩატვირთვის შეცდომა"
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "ახალი ვერსიის შემოწმება"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
