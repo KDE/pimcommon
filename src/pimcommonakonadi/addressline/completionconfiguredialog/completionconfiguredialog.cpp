@@ -108,6 +108,11 @@ void CompletionConfigureDialog::setLdapClientSearch(KLDAPCore::LdapClientSearch 
     d->mCompletionOrderWidget->setLdapClientSearch(ldapSearch);
 }
 
+void CompletionConfigureDialog::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
+{
+    d->mCompletionOrderWidget->setLdapActivitiesAbstract(ldapActivities);
+}
+
 void CompletionConfigureDialog::load()
 {
     d->mCompletionOrderWidget->loadCompletionItems();

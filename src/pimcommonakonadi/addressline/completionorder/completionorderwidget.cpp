@@ -374,6 +374,11 @@ void CompletionOrderWidget::loadCompletionItems()
     mDirty = false;
 }
 
+void CompletionOrderWidget::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
+{
+    mLdapActivities = ldapActivities;
+}
+
 void CompletionOrderWidget::setLdapClientSearch(KLDAPCore::LdapClientSearch *ldapSearch)
 {
     mLdapSearch = ldapSearch;

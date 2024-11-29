@@ -20,6 +20,7 @@ class QTreeWidget;
 namespace KLDAPCore
 {
 class LdapClientSearch;
+class LdapActivitiesAbstract;
 }
 
 namespace PimCommon
@@ -64,6 +65,7 @@ public:
     void loadCompletionItems();
     void setLdapClientSearch(KLDAPCore::LdapClientSearch *ldapSearch);
 
+    void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
 Q_SIGNALS:
     void completionOrderChanged();
 
@@ -82,6 +84,7 @@ private:
     QPushButton *mDownButton = nullptr;
     QAbstractItemModel *mCollectionModel = nullptr;
     KLDAPCore::LdapClientSearch *mLdapSearch = nullptr;
+    KLDAPCore::LdapActivitiesAbstract *mLdapActivities = nullptr;
 
     int mDefaultValue = 60;
     bool mDirty = false;

@@ -14,6 +14,7 @@ class KConfig;
 namespace KLDAPCore
 {
 class LdapClientSearch;
+class LdapActivitiesAbstract;
 }
 namespace PimCommon
 {
@@ -35,6 +36,8 @@ public:
     void setRecentAddresses(const QStringList &lst);
     [[nodiscard]] bool recentAddressWasChanged() const;
     void storeAddresses(KConfig *config);
+
+    void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
 
 private:
     PIMCOMMONAKONADI_NO_EXPORT void slotSaveAndClose();
