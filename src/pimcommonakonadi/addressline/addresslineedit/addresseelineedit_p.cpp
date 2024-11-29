@@ -87,12 +87,11 @@ void AddresseeLineEditPrivate::setLdapActivitiesAbstract(KLDAPCore::LdapActiviti
     mLdapActivities = ldapActivities;
 }
 
-#if 0
-KLDAPCore::LdapActivitiesAbstract AddresseeLineEditPrivate::ldapActivitiesAbstract() const
+KLDAPCore::LdapActivitiesAbstract *AddresseeLineEditPrivate::ldapActivitiesAbstract() const
 {
     return mLdapActivities;
 }
-#endif
+
 void AddresseeLineEditPrivate::init()
 {
     if (mToolButton) {

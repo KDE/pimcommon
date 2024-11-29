@@ -109,7 +109,7 @@ public:
     void setCanDeleteLineEdit(bool inprogressToConfigureCompletion);
 
     void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
-    // [[nodiscard]] KLDAPCore::LdapActivitiesAbstract ldapActivitiesAbstract() const;
+    [[nodiscard]] KLDAPCore::LdapActivitiesAbstract *ldapActivitiesAbstract() const;
 
 public Q_SLOTS:
     void slotToggleExpandGroups(bool);
