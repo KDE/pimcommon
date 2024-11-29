@@ -19,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "addresseelineeditmanager.h"
 #include "addresseelineeditutil.h"
 #include "addressline/recentaddress/recentaddresses.h"
+#include <KLDAPCore/LdapActivitiesAbstract>
 #include <KLDAPCore/LdapClientSearch>
 
 #include <KContacts/VCardConverter>
@@ -76,7 +77,6 @@ static QString newLineEditObjectName()
     return name;
 }
 
-// TODO add activity support here too
 AddresseeLineEdit::AddresseeLineEdit(QWidget *parent, bool enableCompletion)
     : KLineEdit(parent)
     , d(new AddresseeLineEditPrivate(this, enableCompletion))
@@ -90,6 +90,11 @@ AddresseeLineEdit::AddresseeLineEdit(QWidget *parent, bool enableCompletion)
 AddresseeLineEdit::~AddresseeLineEdit()
 {
     delete d;
+}
+
+void AddresseeLineEdit::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
+{
+    d->setLdapActivitiesAbstract(ldapActivities);
 }
 
 void AddresseeLineEdit::setFont(const QFont &font)

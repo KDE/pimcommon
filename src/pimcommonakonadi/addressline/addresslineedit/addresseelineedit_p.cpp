@@ -83,6 +83,11 @@ public:
     }
 };
 
+void AddresseeLineEditPrivate::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
+{
+    mLdapActivities = ldapActivities;
+}
+
 void AddresseeLineEditPrivate::init()
 {
     if (mToolButton) {

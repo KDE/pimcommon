@@ -22,6 +22,11 @@ namespace Akonadi
 class ContactGroupSearchJob;
 }
 
+namespace KLDAPCore
+{
+class LdapActivitiesAbstract;
+}
+
 namespace PimCommon
 {
 class AddresseeLineEdit;
@@ -103,6 +108,7 @@ public:
     [[nodiscard]] bool canDeleteLineEdit() const;
     void setCanDeleteLineEdit(bool inprogressToConfigureCompletion);
 
+    void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
 public Q_SLOTS:
     void slotToggleExpandGroups(bool);
     void slotShowOUChanged(bool);
@@ -122,6 +128,7 @@ private:
     void slotTriggerDelayedQueries();
 
     AddresseeLineEdit *const q;
+    KLDAPCore::LdapActivitiesAbstract *mLdapActivities = nullptr;
     QToolButton *mToolButton = nullptr;
     QTimer *const mDelayedQueryTimer;
     QString mPreviousAddresses;

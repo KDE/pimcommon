@@ -39,6 +39,7 @@ class ContactGroup;
 namespace KLDAPCore
 {
 class LdapClientSearch;
+class LdapActivitiesAbstract;
 }
 
 namespace PimCommon
@@ -130,6 +131,7 @@ public:
     void setIcon(const QIcon &icon, const QString &tooltip = QString());
 
     [[nodiscard]] bool canDeleteLineEdit() const;
+    void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
 Q_SIGNALS:
     void textCompleted();
     void addAddress(const QString &address);
