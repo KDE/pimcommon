@@ -604,7 +604,7 @@ void AddresseeLineEdit::configureCompletion()
     dlg->setRecentAddresses(PimCommon::RecentAddresses::self(recentAddressConfig())->addresses());
     dlg->setLdapClientSearch(ldapSearch());
     dlg->setEmailBlackList(PimCommon::AddresseeLineEditManager::self()->balooBlackList());
-    // dlg->setLdapActivitiesAbstract(d->ldapActivitiesAbstract());
+    dlg->setLdapActivitiesAbstract(d->ldapActivitiesAbstract());
     dlg->load();
     if (dlg->exec() && dlg) {
         if (dlg->recentAddressWasChanged()) {
