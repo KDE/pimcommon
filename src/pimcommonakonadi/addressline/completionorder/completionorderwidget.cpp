@@ -6,6 +6,7 @@
 */
 
 #include "completionorderwidget.h"
+#include <kldapcore/ldapactivitiesabstract.h>
 using namespace Qt::Literals::StringLiterals;
 
 #include <KDescendantsProxyModel>
@@ -333,12 +334,12 @@ void CompletionOrderWidget::loadCompletionItems()
         // The first step is to gather all the data, creating CompletionItem objects
         const QList<KLDAPCore::LdapClient *> listClients = mLdapSearch->clients();
         for (KLDAPCore::LdapClient *client : listClients) {
-            // TODO add activities support
-#if 0
-            if (client->server().enablePlasmaActivities() && !client->server().activities().contains(/*TODO*/)) {
-                continue;
+            if (mLdapActivities) {
+                if (mLdapActivities->hasActivitySupport())
+                    if (client->server().enablePlasmaActivities() && !client->server().activities().contains(mLdapActivities->currentActivity())) {
+                        continue;
+                    }
             }
-#endif
             new CompletionViewItem(mListView, new LDAPCompletionItem(client));
         }
     }
