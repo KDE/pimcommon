@@ -119,7 +119,6 @@ private:
     void slotReturnPressed(const QString &);
     void slotStartLDAPLookup();
     void slotLDAPSearchData(const KLDAPCore::LdapResult::List &);
-    void slotEditCompletionOrder();
     void slotUserCancelled(const QString &);
     void slotAkonadiHandleItems(const Akonadi::Item::List &items);
     void slotAkonadiSearchResult(KJob *);

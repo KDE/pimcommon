@@ -7,7 +7,6 @@
 #include "addresseelineedit_p.h"
 #include "addresseelineedit.h"
 #include "addresseelineeditmanager.h"
-#include "addressline/completionorder/completionordereditor.h"
 #include "kmailcompletion.h"
 #include "pimcommonakonadi_debug.h"
 
@@ -634,18 +633,6 @@ void AddresseeLineEditPrivate::slotLDAPSearchData(const KLDAPCore::LdapResult::L
         if (!current || mSearchString.trimmed() != current->text().trimmed()) {
             doCompletion(mLastSearchMode);
         }
-    }
-}
-
-void AddresseeLineEditPrivate::slotEditCompletionOrder()
-{
-    if (mUseCompletion) {
-        init(); // for AddresseeLineEditStatic::self()->ldapSearch
-        QPointer<CompletionOrderEditor> dlg = new CompletionOrderEditor(AddresseeLineEditManager::self()->ldapSearch(), nullptr);
-        if (dlg->exec()) {
-            AddresseeLineEditManager::self()->updateCompletionOrder();
-        }
-        delete dlg;
     }
 }
 
