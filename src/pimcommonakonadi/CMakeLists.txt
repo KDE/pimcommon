@@ -38,7 +38,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
   collectionpage/collectiontypeutil.cpp
   collectionpage/incidencesforwidget.cpp
   collectionpage/contenttypewidget.cpp
-    addressline/completionorder/completionordereditor.cpp
     addressline/completionorder/completionorderwidget.cpp
     addressline/addresslineedit/addresseelineedit.cpp
     addressline/addresslineedit/addresseelineedit_p.cpp
@@ -66,7 +65,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     acl/collectionaclwidget.h
     manageserversidesubscription/manageserversidesubscriptionjob.h
     ldap/ldapsearchdialog.h
-    addressline/completionorder/completionordereditor.h
     addressline/completionorder/completionorderwidget.h
     addressline/recentaddress/recentaddresses.h
     addressline/recentaddress/recentaddresswidget.h
@@ -201,14 +199,6 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaserecentaddress_HEADERS
     RELATIVE addressline/recentaddress/
 )
 
-ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionorder_HEADERS
-    HEADER_NAMES
-    CompletionOrderEditor
-    REQUIRED_HEADERS PimCommonAkonadi_completionorder_HEADERS
-    PREFIX PimCommonAkonadi
-    RELATIVE addressline/completionorder
-)
-
 ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS
     HEADER_NAMES
     CompletionConfigureDialog
@@ -301,7 +291,6 @@ install(FILES
     ${PimCommonAkonadi_CamelCaseUtil_HEADERS}
     ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
     ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
-    ${PimCommonAkonadi_Camelcasecompletionorder_HEADERS}
     ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
     ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
@@ -321,7 +310,6 @@ install(FILES
     ${PimCommonAkonadi_Util_HEADERS}
     ${PimCommonAkonadi_progresswidget_HEADERS}
     ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
-    ${PimCommonAkonadi_completionorder_HEADERS}
     ${PimCommonAkonadi_addressline_HEADERS}
     ${PimCommonAkonadi_recentaddress_HEADERS}
 
