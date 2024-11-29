@@ -478,7 +478,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->user1Button = new QPushButton;
     buttonBox->addButton(d->user1Button, QDialogButtonBox::ActionRole);
 
-    auto user2Button = new QPushButton;
+    auto user2Button = new QPushButton(this);
     buttonBox->addButton(user2Button, QDialogButtonBox::ActionRole);
 
     connect(d->user1Button, &QPushButton::clicked, this, &LdapSearchDialog::slotUser1);
