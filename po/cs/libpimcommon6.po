@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2024-08-14 09:14+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -582,43 +582,43 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplikovat oprávnění na všechny pod&složky."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Import vizitky selhal"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Nelze přistupovat k <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
 #, kde-format
 msgid "Select email from contact"
 msgstr "Vyberte e-mail z kontaktu"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Zobrazit organizační jednotku pro výsledky LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Nastavit doplňování..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Automaticky rozbalovat skupiny"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Rozbalit skupiny..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"

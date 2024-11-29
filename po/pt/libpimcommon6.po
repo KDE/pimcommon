@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2023-03-27 23:29+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -631,44 +631,44 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplicar as permissões a todas as &sub-pastas."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Importação do vCard sem Sucesso"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Não é possível aceder a <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
 #, kde-format
 msgid "Select email from contact"
 msgstr "Seleccionar o e-mail do contacto"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
 #, fuzzy, kde-format
 #| msgid "Show Organization Unit for LDAP results"
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Mostrar a Unidade Organizacional dos Resultados LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Configurar a Completação..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Expandir automaticamente os grupos"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Expandir os Grupos..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"

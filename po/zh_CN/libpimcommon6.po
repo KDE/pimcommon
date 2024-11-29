@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-23 00:41+0000\n"
+"POT-Creation-Date: 2024-11-29 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -577,43 +577,43 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "应用权限到所有子文件夹(&S)"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:324
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard 导入失败"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>无法访问 <b>%1</b>。</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:445
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
 #, kde-format
 msgid "Select email from contact"
 msgstr "从联系人中选择电子邮件"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "在 LDAP 结果中显示组织部门"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:573
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
 #, kde-format
 msgid "Configure Completion..."
 msgstr "配置补全..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:577
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "自动展开分组"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Expand Groups..."
 msgstr "展开分组..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:616
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
