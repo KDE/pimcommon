@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2024-11-30 00:41+0000\n"
 "PO-Revision-Date: 2024-11-15 20:29+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -588,57 +588,57 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Jogosultságok alkalmazása az összes alma&ppára."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "A vCard importálása meghiúsult"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Nem lehet hozzáférni ehhez: <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
 #, kde-format
 msgid "Select email from contact"
 msgstr "E-mail kiválasztása a névjegyekből"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Szervezeti egység megjelenítése az LDAP találatokhoz"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Kiegészítés beállítása…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Csoportok automatikus kibontása"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Csoportok kibontása…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Legutóbbi címek"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:117
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:750
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "Az adatok közt talált névjegyek"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:36
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP kiszolgáló: %1"
@@ -787,24 +787,18 @@ msgstr "Legutóbbi cím"
 msgid "Blacklist Email Address"
 msgstr "Feketelistára tett e-mail címek"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Completion Order"
-msgstr "Kiegészítési sorrend szerkesztése"
-
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:55
 #, kde-format
 msgid "LDAP server %1"
 msgstr "LDAP kiszolgáló %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Fel"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
@@ -1310,6 +1304,10 @@ msgstr "Az erőforrás beállítás befejeződött."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Az erőforráspéldány létrehozása nem sikerült: %1"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Completion Order"
+#~ msgstr "Kiegészítési sorrend szerkesztése"
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Note"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2024-11-30 00:41+0000\n"
 "PO-Revision-Date: 2024-11-11 15:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -581,57 +581,57 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "套用權限到所有子資料夾(&S)。"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard 匯入失敗"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>無法存取 <b>%1</b>。</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
 #, kde-format
 msgid "Select email from contact"
 msgstr "從聯絡人選取電子郵件"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "為 LDAP 結果顯示組織單位"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
 #, kde-format
 msgid "Configure Completion..."
 msgstr "設定補完…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "自動展開群組"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
 #, kde-format
 msgid "Expand Groups..."
 msgstr "展開群組…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "最近的地址"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:117
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:750
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "在您的資料中找到的聯絡人"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:36
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP 伺服器：%1"
@@ -778,24 +778,18 @@ msgstr "最近的位址"
 msgid "Blacklist Email Address"
 msgstr "將電子郵件地址加入黑名單"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Completion Order"
-msgstr "編輯補完順序"
-
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:55
 #, kde-format
 msgid "LDAP server %1"
 msgstr "LDAP 伺服器 %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "上移"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
@@ -1292,6 +1286,10 @@ msgstr "資源設定完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "建立資源實體失敗：%1"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Completion Order"
+#~ msgstr "編輯補完順序"
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Note"

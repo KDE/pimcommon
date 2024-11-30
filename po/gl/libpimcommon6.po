@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2024-11-30 00:41+0000\n"
 "PO-Revision-Date: 2024-11-09 16:00+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -591,57 +591,57 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplicar os permisos a todos os subcartafole&s."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Fallou a importación da vCard"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Non se pode acceder a <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
 #, kde-format
 msgid "Select email from contact"
 msgstr "Seleccionar o correo electrónico do contacto"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Amosar a unidade de organización nos resultados de LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Configurar o completado…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Expandir os grupos automaticamente"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Expandir os grupos…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Enderezos recentes"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:117
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:750
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "Contactos atopados entre os seus datos"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:36
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "Servidor de LDAP: %1"
@@ -790,24 +790,18 @@ msgstr "Enderezo recente"
 msgid "Blacklist Email Address"
 msgstr "Enderezo de correo da lista negra"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Completion Order"
-msgstr "Editar a orde de completado"
-
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:55
 #, kde-format
 msgid "LDAP server %1"
 msgstr "Servidor de LDAP %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Subir."
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
@@ -1316,6 +1310,10 @@ msgstr "Completouse a preparación do recurso."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Non foi posíbel crear a instancia do recurso: %1"
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Completion Order"
+#~ msgstr "Editar a orde de completado"
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Note"

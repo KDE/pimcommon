@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-29 00:42+0000\n"
+"POT-Creation-Date: 2024-11-30 00:41+0000\n"
 "PO-Revision-Date: 2024-09-07 21:31+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -583,57 +583,57 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "&அனைத்து சாரடைவுகளுக்கும் அனுமதிகளை செய்லபடுத்து."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:325
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
 msgid "vCard Import Failed"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:326
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt><b>%1</b> தனை அணுக முடியவில்லை.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:446
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
 #, kde-format
 msgid "Select email from contact"
 msgstr "தொடர்பிலிருந்து மின்னஞ்சலை தேர்ந்தெடு"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:566
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:574
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
 #, kde-format
 msgid "Configure Completion..."
 msgstr "நிரப்பலை அமை..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "குழுக்களை தானாக விரிவுபடுத்து"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
 #, kde-format
 msgid "Expand Groups..."
 msgstr "குழுக்களை விரிவுபடுத்து"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:617
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "சமீப முகவரிகள்"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:108
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:752
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:753
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:117
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:750
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "உங்கள் தரவில் கண்டுபிடித்த தொடர்புகள்"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:35
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:36
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP சேவையகம்: %1"
@@ -781,24 +781,18 @@ msgstr "சமீப முகவரி"
 msgid "Blacklist Email Address"
 msgstr "மின்னஞ்சல் முகவரியை தடு"
 
-#: pimcommonakonadi/addressline/completionorder/completionordereditor.cpp:45
-#, kde-format
-msgctxt "@title:window"
-msgid "Edit Completion Order"
-msgstr "நிரப்பல் வரிசையை திருத்துவது"
-
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:54
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:55
 #, kde-format
 msgid "LDAP server %1"
 msgstr "LDAP சேவையகம் %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "மேலே நகர்த்து"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
@@ -1286,3 +1280,7 @@ msgstr ""
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr ""
+
+#~ msgctxt "@title:window"
+#~ msgid "Edit Completion Order"
+#~ msgstr "நிரப்பல் வரிசையை திருத்துவது"
