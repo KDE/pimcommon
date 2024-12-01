@@ -1280,7 +1280,3 @@ msgstr "资源设置完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "创建资源实例失败：%1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Completion Order"
-#~ msgstr "编辑补全顺序"
