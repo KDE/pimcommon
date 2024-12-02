@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-30 00:41+0000\n"
-"PO-Revision-Date: 2024-09-07 21:31+0200\n"
+"PO-Revision-Date: 2024-12-01 19:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -31,6 +31,8 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"இந்த கணக்கை குறிப்பிட்ட செயல்பாட்டுடன் இணைத்தால், நீங்கள் அச்செயல்பாட்டிலுள்ளபோது மட்டும் "
+"காட்டப்படும். மேலும், வேறு செயல்பாட்டிற்கு தாவும்போது, இக்கணக்கு தானாக மறைக்கப்படும்."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
@@ -242,7 +244,7 @@ msgstr "கோப்பை ஏற்றுவதில் சிக்கல்"
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "புதிய பதிப்புள்ளதா என பார்"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
@@ -303,31 +305,31 @@ msgstr ""
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
 msgid "Change Case"
-msgstr ""
+msgstr "பெரிய/சிறிய எழுத்தாக மாற்று"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
 #, kde-format
 msgctxt "@action"
 msgid "Uppercase"
-msgstr "பெரிய எழுத்து"
+msgstr "பெரிய எழுத்தாக்கு"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Sentence case"
-msgstr ""
+msgstr "சொற்றொடரின் முதல் எழுத்தை மட்டும் பெரியதாக்கு"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Lowercase"
-msgstr "சின்ன எழுத்து"
+msgstr "சின்ன எழுத்தாக்கு"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
-msgstr ""
+msgstr "பெரிய/சிறிய எழுத்துகளை புரட்டு"
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
@@ -478,12 +480,12 @@ msgstr "அனுமதிகள்"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr ""
+msgstr "<b>குறிப்பு: </b>மறுபெயரிட தாய் அடைவில் எழுதும் அனுமதி தேவை."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr ""
+msgstr "அடைவை நிர்வகிக்க முடியவில்லை."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
@@ -586,7 +588,7 @@ msgstr "&அனைத்து சாரடைவுகளுக்கும் 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
 msgid "vCard Import Failed"
-msgstr ""
+msgstr "vCard இறக்குமதி தோல்வியடைந்தது"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
@@ -701,13 +703,13 @@ msgstr "'%1'-ஆல் அள்களங்களைப் பிரிக்�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "இச்சுருங்குறித் தொடருடன் பொருந்தும் மின்னஞ்சலை உட்படுத்தாதே:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
-msgstr ""
+msgstr "'%1' தனைக் கொண்டு சுருங்குறித் தொடர்களைப் பிரிக்குவும்"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, kde-format
@@ -916,17 +918,17 @@ msgstr "&அடைவின் உள்ளடக்கம்:"
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
 msgid "Nobody"
-msgstr ""
+msgstr "யாருமில்லை"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:18
 #, kde-format
 msgid "Admins of This Folder"
-msgstr ""
+msgstr "நிர்வாகிகள் மட்டும்"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:19
 #, kde-format
 msgid "All Readers of This Folder"
-msgstr ""
+msgstr "படிக்கக்கூடிய அனைவரும்"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:23
 #, kde-format
@@ -966,7 +968,7 @@ msgstr "பல அடைவுகளில் தேடுவது"
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
-msgstr ""
+msgstr "தலைப்பு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
@@ -1150,17 +1152,17 @@ msgstr "&தேடு"
 #, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
-msgstr ""
+msgstr "சார்ந்தவற்றிலும் தேடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:540
 #, kde-format
 msgid "Contains"
-msgstr ""
+msgstr "இதைக் கொண்டது"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:541
 #, kde-format
 msgid "Starts With"
-msgstr ""
+msgstr "இத்துடன் தொடங்குகிறது"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
 #, kde-format
@@ -1193,7 +1195,7 @@ msgstr "தேர்ந்தெடுத்துள்ளவற்றை ச�
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr ""
+msgstr "LDAP சேவையகங்களை அமை..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:633
 #, kde-format
@@ -1203,19 +1205,19 @@ msgstr "நகலெடு"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:757
 #, kde-format
 msgid "You must select an LDAP server before searching."
-msgstr ""
+msgstr "தேடுமுன் LDAP சேவையகத்தைத் தேர்ந்தெடுக்க வேண்டும்."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:845
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
-msgstr ""
+msgstr "%2 தனிலுள்ள %1 LDAP அடைவிலிருந்து இறக்குமதி செய்யப்பட்டுள்ளது"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:864
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
-msgstr ""
+msgstr "முகவரிப்புத்தகத்திற்கான LDAP அமைப்புகள்"
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
 #, kde-format
@@ -1234,12 +1236,12 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
-msgstr ""
+msgstr "'%1' வகையானது கிடைக்கவில்லை."
 
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr ""
+msgstr "'%1' ஏற்கனவே அமைக்கப்பட்டுள்ளது."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
