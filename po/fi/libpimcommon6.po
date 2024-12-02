@@ -1,7 +1,7 @@
 # KDE Finnish translation sprint participants:
 # Author: Artnay
 # Author: Lliehu
-# Tommi Nieminen <translator@legisign.org>, 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
 # Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
 msgid ""
@@ -9,22 +9,21 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-23 02:28+0000\n"
-"PO-Revision-Date: 2024-01-29 21:56+0200\n"
+"PO-Revision-Date: 2024-10-18 13:08+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-POT-Import-Date: 2012-12-01 22:25:14+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "Rajaa valittuihin aktiviteetteihin:"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
@@ -34,6 +33,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Jos rajaat tilin aktiviteettiin, se näkyy vain kyseisissä aktiviteeteissa. "
+"Lisäksi vaihtaessasi aktiviteettiin, jossa tilin ei tulisi olla "
+"käytettävissä, se automaattisesti piilotetaan."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
@@ -41,8 +43,7 @@ msgid "..."
 msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
 msgstr "Asetukset"
@@ -53,8 +54,7 @@ msgid "Restart is necessary for applying the changes."
 msgstr "Muutosten käyttöönotto vaatii uudelleenkäynnistyksen."
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, fuzzy, kde-format
-#| msgid "Disable version check"
+#, kde-format
 msgctxt "@action"
 msgid "Disable version check"
 msgstr "Poista versiontarkistus käytöstä"
@@ -129,8 +129,7 @@ msgid "Template"
 msgstr "Mallipohja"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
-#, fuzzy, kde-format
-#| msgid "Name:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nimi:"
@@ -247,54 +246,51 @@ msgid "Check New Version"
 msgstr ""
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, fuzzy, kde-format
-#| msgid "Persian"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr "Persia"
+msgstr "Versio:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "%1 – mitä uutta"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "(Show News)"
-msgstr ""
+msgstr "(Näytä uutiset)"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
 msgid "What's new in %2. %1"
-msgstr ""
+msgstr "%2 – mitä uutta. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Version"
-msgstr "Käytä käyttöoikeuksia"
+msgstr "Kaikki versiot"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
 msgid "Version %1"
-msgstr ""
+msgstr "Versio %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
-msgstr ""
+msgstr "Tärkeitä muutoksia sitten viime julkaisun:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr ""
+msgstr "Joitakin tämän julkaisun uusia ominaisuuksia ovat:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
-msgstr ""
+msgstr "Joitakin vikoja on korjattu:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -311,29 +307,25 @@ msgid "Change Case"
 msgstr "Vaihda aakkoslajia"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:28
-#, fuzzy, kde-format
-#| msgid "Uppercase"
+#, kde-format
 msgctxt "@action"
 msgid "Uppercase"
-msgstr "Suuraakkoset"
+msgstr "Suuraakkosiksi"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
-#, fuzzy, kde-format
-#| msgid "Sentence case"
+#, kde-format
 msgctxt "@action"
 msgid "Sentence case"
-msgstr "Virkkeen kirjoitusasu"
+msgstr "Virketyylin aakkosiin"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
-#, fuzzy, kde-format
-#| msgid "Lowercase"
+#, kde-format
 msgctxt "@action"
 msgid "Lowercase"
-msgstr "Pienaakkoset"
+msgstr "Pienaakkosiksi"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
-#, fuzzy, kde-format
-#| msgid "Reverse Case"
+#, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
 msgstr "Käänteinen aakkoslaji"
@@ -374,29 +366,25 @@ msgstr ""
 "sen?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
-#, fuzzy, kde-format
-#| msgid "Suggest New &Name"
+#, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
-msgstr "Ehdota &uutta nimeä"
+msgstr "Ehdota uutta &nimeä"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Ignore"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
-msgstr "&Ohita"
+msgstr "&Hylkää"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "M&uuta nimeä"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
-#, fuzzy, kde-format
-#| msgid "Appl&y to All"
+#, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "K&äytä kaikkiin"
@@ -430,32 +418,28 @@ msgid "Do you want to remove selected text?"
 msgstr "Haluatko poistaa valitun merkistökoodauksen?"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:94
-#, fuzzy, kde-format
-#| msgid "&Add..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
 msgstr "&Lisää…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
 msgstr "&Muuta…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
 msgstr "&Poista"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
-#, fuzzy, kde-format
-#| msgid "&Customize..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
-msgstr "M&ukauta…"
+msgstr "&Mukauta…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -467,11 +451,10 @@ msgid "Remove"
 msgstr "Poista"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&User identifier:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
-msgstr "&Käyttäjätunniste:"
+msgstr "K&äyttäjätunniste:"
 
 # Puolipisteen jälkeinen selitysosuus ei kyllä selitä mitään (kummallakaan kielellä!) :D
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
@@ -498,14 +481,11 @@ msgid "Permissions"
 msgstr "Oikeudet"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
-#, fuzzy, kde-format
-#| msgid ""
-#| "<b>Note: </b>Renaming requires write permissions on the parent folder."
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
-"<b>Huomio:</b> Nimen muuttaminen edellyttää kirjoitusoikeuksia ylempään "
-"kansioon."
+"<b>Huom!</b> Nimen muuttaminen edellyttää yläkansion kirjoitusoikeuksia."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -513,22 +493,19 @@ msgid "Folder cannot be administrated."
 msgstr "Kansiota ei voida hallinnoida."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
-#, fuzzy, kde-format
-#| msgid "Add Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Lisää merkintä…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
-#, fuzzy, kde-format
-#| msgid "Edit Entry..."
+#, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Muokkaa merkintää…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
-#, fuzzy, kde-format
-#| msgid "Remove Entry"
+#, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Poista merkintä"
@@ -602,15 +579,13 @@ msgid "Custom Permissions (%1)"
 msgstr "Mukautetut oikeudet (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
-#, fuzzy, kde-format
-#| msgid "Access Control"
+#, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Käyttöluvat"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
-#, fuzzy, kde-format
-#| msgid "Apply permissions on all &subfolders."
+#, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Käytä oikeuksia kaikkiin &alikansioihin."
@@ -631,8 +606,7 @@ msgid "Select email from contact"
 msgstr "Valitse yhteystiedon sähköposti"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:565
-#, fuzzy, kde-format
-#| msgid "Show Organization Unit for LDAP results"
+#, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Näytä LDAP-tuloksille organisaatioyksikkö"
@@ -677,82 +651,71 @@ msgid "Search"
 msgstr "Etsi"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "&Select"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Valitse"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "&Unselect"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "P&oista valinta"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
-#, fuzzy, kde-format
-#| msgid "Show Blacklisted Emails"
+#, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Näytä estetyt sähköpostit"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
-#, fuzzy, kde-format
-#| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Lisää tuloksia…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search email:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "Etsi sähköpostia:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
-#, fuzzy, kde-format
-#| msgid "Research is done from 3 characters"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Haku alkaa 3 merkistä"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
-#, fuzzy, kde-format
-#| msgid "Search in result..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Etsi tuloksista…"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
-#, fuzzy, kde-format
-#| msgid "Exclude domain names:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Sulje pois verkkoalueet:"
 
 # *** TARKISTA: Mitä %1 on, merkki vai jotain muuta?
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
-#, fuzzy, kde-format
-#| msgid "Separate domain with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
-msgstr "Erota verkkoalueet merkillä ”%1”"
+msgstr "Erota verkkoalueet ”%1”-merkillä"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
-#, fuzzy, kde-format
-#| msgid "Exclude email with Regular Expression:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr "Jätä viestejä pois sääntölausekkeella:"
+msgstr "Sulje viestejä pois sääntölausekkeella:"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
-#, fuzzy, kde-format
-#| msgid "Separate regular expression with '%1'"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
-msgstr "Käytä ”%1” erottamassa lausekkeita"
+msgstr "Erota lausekkeet ”%1”-merkillä"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
 #, kde-format
@@ -789,22 +752,19 @@ msgstr ""
 "Luettelo on muuttunut. Haluatko tallentaa muutokset ennen seuraavaa hakua?"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save"
+#, kde-format
 msgctxt "@action"
 msgid "Save"
 msgstr "Tallenna"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgctxt "@action"
 msgid "Search"
 msgstr "Etsi"
 
 #: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action"
 msgid "Cancel"
 msgstr "Peru"
@@ -842,36 +802,31 @@ msgid "LDAP server %1"
 msgstr "LDAP-palvelin %1"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
-#, fuzzy, kde-format
-#| msgid "Move Up"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Siirrä ylemmäs"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
-#, fuzzy, kde-format
-#| msgid "Move Down"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
 msgstr "Siirrä alemmas"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
-#, fuzzy, kde-format
-#| msgid "New email..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
 msgstr "Uusi sähköposti…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
-#, fuzzy, kde-format
-#| msgid "Add Email"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
 msgstr "Lisää sähköposti"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Poista"
@@ -1024,8 +979,7 @@ msgid "Generate free/&busy and activate alarms for:"
 msgstr "Luo &varaustiedot ja ota hälytykset käyttöön:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
-#, fuzzy, kde-format
-#| msgid "Search..."
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Etsi…"
@@ -1179,8 +1133,7 @@ msgid "Search for Addresses in Directory"
 msgstr "Etsi osoitteita hakemistosta"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:502
-#, fuzzy, kde-format
-#| msgid "Search for:"
+#, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Etsi:"
@@ -1222,8 +1175,7 @@ msgid "&Search"
 msgstr "&Etsi"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
-#, fuzzy, kde-format
-#| msgid "Recursive search"
+#, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Rekursiivinen haku"
@@ -1239,8 +1191,7 @@ msgid "Starts With"
 msgstr "Alkaa"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
-#, fuzzy, kde-format
-#| msgid "Search in result"
+#, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Etsi tuloksista"
@@ -1251,18 +1202,16 @@ msgid "Searching..."
 msgstr "Etsitään…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:586
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Valitse kaikki"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:590
-#, fuzzy, kde-format
-#| msgid "Unselect All"
+#, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr "Poista kaikki valinnat"
+msgstr "Poista valinnat"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:597
 #, kde-format
