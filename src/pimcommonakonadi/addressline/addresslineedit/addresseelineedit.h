@@ -23,7 +23,6 @@ class QEvent;
 class QKeyEvent;
 class QMenu;
 class QMouseEvent;
-class QObject;
 class KJob;
 class KConfig;
 namespace Akonadi
