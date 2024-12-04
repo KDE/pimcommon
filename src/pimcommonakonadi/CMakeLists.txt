@@ -80,8 +80,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/addresslineedit/addresseelineeditakonadi.h
     addressline/addresslineedit/addresseelineeditmanager.h
     addressline/addresslineedit/kmailcompletion.h
-    addressline/addresslineedit/addresseeactivitiesabstract.cpp
-    addressline/addresslineedit/addresseeactivitiesabstract.h
     collectionpage/contenttypewidget.h
     collectionpage/collectiontypeutil.h
     collectionpage/incidencesforwidget.h
