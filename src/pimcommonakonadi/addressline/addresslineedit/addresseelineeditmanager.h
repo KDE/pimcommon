@@ -60,8 +60,6 @@ public:
     // holds the cached mapping from akonadi collection id to the completion source index
     struct collectionInfo {
         collectionInfo()
-            : index(-1)
-            , enabled(true)
         {
         }
 
@@ -71,8 +69,8 @@ public:
         {
         }
 
-        int index;
-        bool enabled;
+        int index = -1;
+        bool enabled = true;
     };
 
     QMap<Akonadi::Collection::Id, collectionInfo> akonadiCollectionToCompletionSourceMap;
