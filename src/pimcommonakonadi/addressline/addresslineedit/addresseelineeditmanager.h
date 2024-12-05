@@ -19,6 +19,11 @@
 
 class QTimer;
 class QNetworkConfigurationManager;
+namespace KLDAPCore
+{
+class LdapActivitiesAbstract;
+}
+
 namespace PimCommon
 {
 class KMailCompletion;
@@ -113,6 +118,8 @@ public:
     [[nodiscard]] QColor alternateColor() const;
 
     [[nodiscard]] QStringList cleanupRecentAddressEmailList(const QStringList &inputList);
+
+    void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
 
 private:
     QStringList mRecentAddressEmailList;

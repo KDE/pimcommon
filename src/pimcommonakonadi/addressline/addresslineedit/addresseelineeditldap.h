@@ -13,6 +13,7 @@ class QTimer;
 namespace KLDAPCore
 {
 class LdapClientSearch;
+class LdapActivitiesAbstract;
 }
 
 namespace PimCommon
@@ -46,6 +47,8 @@ public:
     void stopLDAPLookup();
     void restartLdap(const QString &searchString, AddresseeLineEdit *addressLine);
 
+    void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
+
 private:
     // maps LDAP client indices to completion source indices
     // the assumption that they are always the first n indices in s_static->completion
@@ -55,6 +58,7 @@ private:
     QTimer *mLdapTimer = nullptr;
     AddresseeLineEdit *mAddressLineEdit = nullptr;
     KLDAPCore::LdapClientSearch *mLdapSearch = nullptr;
+    KLDAPCore::LdapActivitiesAbstract *mLdapActivities = nullptr;
 
     AddresseeLineEditManager *mAddressLineStatic = nullptr;
 };

@@ -6,6 +6,7 @@
 
 #include "addresseelineeditldap.h"
 #include "addresseelineeditmanager.h"
+#include <KLDAPCore/LdapActivitiesAbstract>
 #include <KLDAPCore/LdapClient>
 #include <KLDAPCore/LdapClientSearch>
 #include <KLDAPCore/LdapServer>
@@ -24,6 +25,11 @@ AddresseeLineEditLdap::AddresseeLineEditLdap(AddresseeLineEditManager *addressLi
 
 AddresseeLineEditLdap::~AddresseeLineEditLdap() = default;
 
+void AddresseeLineEditLdap::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
+{
+    mLdapActivities = ldapActivities;
+}
+
 void AddresseeLineEditLdap::updateLDAPWeights()
 {
     /* Add completion sources for all ldap server, 0 to n. Added first so
@@ -32,6 +38,13 @@ void AddresseeLineEditLdap::updateLDAPWeights()
     int clientIndex = 0;
     const QList<KLDAPCore::LdapClient *> lstClients = mLdapSearch->clients();
     for (const KLDAPCore::LdapClient *client : lstClients) {
+        if (mLdapActivities) {
+            if (mLdapActivities->hasActivitySupport()) {
+                if (client->server().enablePlasmaActivities() && !client->server().activities().contains(mLdapActivities->currentActivity())) {
+                    continue;
+                }
+            }
+        }
         // TODO add activities support
         const int sourceIndex = mAddressLineStatic->addCompletionSource(i18n("LDAP server: %1", client->server().host()), client->completionWeight());
         mLdapClientToCompletionSourceMap.insert(clientIndex, sourceIndex);

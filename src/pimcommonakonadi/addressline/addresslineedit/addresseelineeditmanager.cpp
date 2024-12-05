@@ -54,6 +54,11 @@ void AddresseeLineEditManager::updateCompletionOrder()
     updateCollectionWeights();
 }
 
+void AddresseeLineEditManager::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
+{
+    mAddressessLineEditLdap->setLdapActivitiesAbstract(ldapActivities);
+}
+
 void AddresseeLineEditManager::updateCollectionWeights()
 {
     akonadiCollectionToCompletionSourceMap.clear();
