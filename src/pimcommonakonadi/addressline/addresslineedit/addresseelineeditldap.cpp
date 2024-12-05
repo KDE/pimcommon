@@ -45,7 +45,6 @@ void AddresseeLineEditLdap::updateLDAPWeights()
                 }
             }
         }
-        // TODO add activities support
         const int sourceIndex = mAddressLineStatic->addCompletionSource(i18n("LDAP server: %1", client->server().host()), client->completionWeight());
         mLdapClientToCompletionSourceMap.insert(clientIndex, sourceIndex);
         ++clientIndex;
