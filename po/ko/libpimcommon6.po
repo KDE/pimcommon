@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-30 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 00:38+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -633,7 +633,7 @@ msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "내 데이터에서 찾은 연락처"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:36
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:48
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP 서버: %1"
