@@ -30,7 +30,7 @@ class KMailCompletion;
 class AddresseeLineEdit;
 class AddresseeLineEditAkonadi;
 class AddresseeLineEditLdap;
-class AddresseeLineEditBaloo;
+class AddresseeLineEditAkonadiSearch;
 class AddresseeLineEditManager
 {
 public:
@@ -128,6 +128,6 @@ private:
     KMailCompletion *const mCompletion;
     AddresseeLineEditAkonadi *const mAddresseeLineEditAkonadi;
     AddresseeLineEditLdap *const mAddressessLineEditLdap;
-    AddresseeLineEditBaloo *const mAddressessLineEditBaloo;
+    AddresseeLineEditAkonadiSearch *const mAddressessLineEditBaloo;
 };
 }

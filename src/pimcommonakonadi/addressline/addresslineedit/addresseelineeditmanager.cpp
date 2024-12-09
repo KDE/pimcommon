@@ -6,7 +6,7 @@
 
 #include "addresseelineeditmanager.h"
 #include "addresseelineeditakonadi.h"
-#include "addresseelineeditbaloo.h"
+#include "addresseelineeditakonadisearch.h"
 #include "addresseelineeditldap.h"
 #include "kmailcompletion.h"
 
@@ -27,7 +27,7 @@ AddresseeLineEditManager::AddresseeLineEditManager()
     : mCompletion(new KMailCompletion)
     , mAddresseeLineEditAkonadi(new AddresseeLineEditAkonadi)
     , mAddressessLineEditLdap(new AddresseeLineEditLdap(this))
-    , mAddressessLineEditBaloo(new AddresseeLineEditBaloo)
+    , mAddressessLineEditBaloo(new AddresseeLineEditAkonadiSearch)
 {
     KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("AddressLineEdit"));
     mShowOU = group.readEntry("ShowOU", false);

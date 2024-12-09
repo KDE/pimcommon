@@ -44,7 +44,7 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/addresslineedit/addresseelineeditmanager.cpp
     addressline/addresslineedit/addresseelineeditldap.cpp
     addressline/addresslineedit/addresseelineeditakonadi.cpp
-    addressline/addresslineedit/addresseelineeditbaloo.cpp
+    addressline/addresslineedit/addresseelineeditakonadisearch.cpp
     addressline/addresslineedit/kmailcompletion.cpp
     addressline/addresslineedit/baloocompletionemail.cpp
     addressline/completionconfiguredialog/completionconfiguredialog.cpp
@@ -73,7 +73,7 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/plugins/addressesslineeditpluginmanager.h
     addressline/addresslineedit/addresseelineedit_p.h
     addressline/addresslineedit/addresseelineeditldap.h
-    addressline/addresslineedit/addresseelineeditbaloo.h
+    addressline/addresslineedit/addresseelineeditakonadisearch.h
     addressline/addresslineedit/addresseelineedit.h
     addressline/addresslineedit/addresseelineeditutil.h
     addressline/addresslineedit/baloocompletionemail.h

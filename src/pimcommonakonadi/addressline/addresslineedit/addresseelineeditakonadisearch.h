@@ -11,11 +11,11 @@
 namespace PimCommon
 {
 class BalooCompletionEmail;
-class PIMCOMMONAKONADI_TESTS_EXPORT AddresseeLineEditBaloo
+class PIMCOMMONAKONADI_TESTS_EXPORT AddresseeLineEditAkonadiSearch
 {
 public:
-    AddresseeLineEditBaloo();
-    ~AddresseeLineEditBaloo();
+    AddresseeLineEditAkonadiSearch();
+    ~AddresseeLineEditAkonadiSearch();
 
     [[nodiscard]] int balooCompletionSource() const;
     void setBalooCompletionSource(int value);

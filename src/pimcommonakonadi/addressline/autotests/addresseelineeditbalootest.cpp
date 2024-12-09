@@ -5,7 +5,7 @@
 */
 
 #include "addresseelineeditbalootest.h"
-#include "addressline/addresslineedit/addresseelineeditbaloo.h"
+#include "addressline/addresslineedit/addresseelineeditakonadisearch.h"
 #include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(AddresseeLineEditBalooTest)
@@ -18,7 +18,7 @@ AddresseeLineEditBalooTest::AddresseeLineEditBalooTest(QObject *parent)
 
 void AddresseeLineEditBalooTest::shouldHaveDefaultValues()
 {
-    PimCommon::AddresseeLineEditBaloo b;
+    PimCommon::AddresseeLineEditAkonadiSearch b;
     QVERIFY(b.balooBlackList().isEmpty());
     QVERIFY(b.domainExcludeList().isEmpty());
     QCOMPARE(b.balooCompletionSource(), 0);

@@ -4,45 +4,45 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "addresseelineeditbaloo.h"
+#include "addresseelineeditakonadisearch.h"
 #include "baloocompletionemail.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
 
 using namespace PimCommon;
 
-AddresseeLineEditBaloo::AddresseeLineEditBaloo()
+AddresseeLineEditAkonadiSearch::AddresseeLineEditAkonadiSearch()
     : mBalooCompletionEmail(new PimCommon::BalooCompletionEmail)
 {
     loadBalooBlackList();
 }
 
-AddresseeLineEditBaloo::~AddresseeLineEditBaloo()
+AddresseeLineEditAkonadiSearch::~AddresseeLineEditAkonadiSearch()
 {
     delete mBalooCompletionEmail;
 }
 
-int AddresseeLineEditBaloo::balooCompletionSource() const
+int AddresseeLineEditAkonadiSearch::balooCompletionSource() const
 {
     return mBalooCompletionSource;
 }
 
-void AddresseeLineEditBaloo::setBalooCompletionSource(int value)
+void AddresseeLineEditAkonadiSearch::setBalooCompletionSource(int value)
 {
     mBalooCompletionSource = value;
 }
 
-QStringList AddresseeLineEditBaloo::balooBlackList() const
+QStringList AddresseeLineEditAkonadiSearch::balooBlackList() const
 {
     return mBalooCompletionEmail->balooCompletionEmailInfo().mBlackList;
 }
 
-QStringList AddresseeLineEditBaloo::domainExcludeList() const
+QStringList AddresseeLineEditAkonadiSearch::domainExcludeList() const
 {
     return mBalooCompletionEmail->balooCompletionEmailInfo().mExcludeDomains;
 }
 
-void AddresseeLineEditBaloo::loadBalooBlackList()
+void AddresseeLineEditAkonadiSearch::loadBalooBlackList()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     config->reparseConfiguration();
@@ -58,7 +58,7 @@ void AddresseeLineEditBaloo::loadBalooBlackList()
     mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
 }
 
-QStringList AddresseeLineEditBaloo::cleanupEmailList(const QStringList &inputList)
+QStringList AddresseeLineEditAkonadiSearch::cleanupEmailList(const QStringList &inputList)
 {
     PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info = mBalooCompletionEmail->balooCompletionEmailInfo();
     info.mListEmail = inputList;
