@@ -5,14 +5,14 @@
 */
 
 #include "addresseelineeditakonadisearch.h"
-#include "baloocompletionemail.h"
+#include "akonadisearchcompletionemail.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
 
 using namespace PimCommon;
 
 AddresseeLineEditAkonadiSearch::AddresseeLineEditAkonadiSearch()
-    : mBalooCompletionEmail(new PimCommon::BalooCompletionEmail)
+    : mBalooCompletionEmail(new PimCommon::AkonadiSearchCompletionEmail)
 {
     loadBalooBlackList();
 }
@@ -47,7 +47,7 @@ void AddresseeLineEditAkonadiSearch::loadBalooBlackList()
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     config->reparseConfiguration();
     KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
-    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info;
+    PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info;
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     const QStringList domainExcludeList = group.readEntry("ExcludeDomain", QStringList());
     const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
@@ -60,7 +60,7 @@ void AddresseeLineEditAkonadiSearch::loadBalooBlackList()
 
 QStringList AddresseeLineEditAkonadiSearch::cleanupEmailList(const QStringList &inputList)
 {
-    PimCommon::BalooCompletionEmail::BalooCompletionEmailInfo info = mBalooCompletionEmail->balooCompletionEmailInfo();
+    PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info = mBalooCompletionEmail->balooCompletionEmailInfo();
     info.mListEmail = inputList;
     mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
     return mBalooCompletionEmail->cleanupEmailList();

@@ -11,11 +11,11 @@
 #include <QStringList>
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_TESTS_EXPORT BalooCompletionEmail
+class PIMCOMMONAKONADI_TESTS_EXPORT AkonadiSearchCompletionEmail
 {
 public:
-    BalooCompletionEmail();
-    struct BalooCompletionEmailInfo {
+    AkonadiSearchCompletionEmail();
+    struct AkonadiSearchCompletionEmailInfo {
         QStringList mListEmail;
         QStringList mExcludeDomains;
         QStringList mBlackList;
@@ -24,12 +24,12 @@ public:
 
     [[nodiscard]] QStringList cleanupEmailList();
 
-    [[nodiscard]] BalooCompletionEmailInfo balooCompletionEmailInfo() const;
-    void setBalooCompletionEmailInfo(const BalooCompletionEmailInfo &newBalooCompletionEmailInfo);
+    [[nodiscard]] AkonadiSearchCompletionEmailInfo balooCompletionEmailInfo() const;
+    void setBalooCompletionEmailInfo(const AkonadiSearchCompletionEmailInfo &newBalooCompletionEmailInfo);
 
 private:
     [[nodiscard]] QString stripEmail(const QString &email, QString &address);
-    BalooCompletionEmailInfo mBalooCompletionEmailInfo;
+    AkonadiSearchCompletionEmailInfo mBalooCompletionEmailInfo;
     static QList<QRegularExpression> mExcludeEmailsRegularExpressions;
 };
 }

@@ -5,16 +5,16 @@
 
 */
 
-#include "baloocompletionemail.h"
+#include "akonadisearchcompletionemail.h"
 #include <KEmailAddress>
 #include <QMap>
 #include <QRegularExpression>
 
 using namespace PimCommon;
 
-BalooCompletionEmail::BalooCompletionEmail() = default;
-QList<QRegularExpression> BalooCompletionEmail::mExcludeEmailsRegularExpressions = {};
-QStringList BalooCompletionEmail::cleanupEmailList()
+AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmail() = default;
+QList<QRegularExpression> AkonadiSearchCompletionEmail::mExcludeEmailsRegularExpressions = {};
+QStringList AkonadiSearchCompletionEmail::cleanupEmailList()
 {
     if (mBalooCompletionEmailInfo.mListEmail.isEmpty()) {
         return {};
@@ -63,7 +63,7 @@ QStringList BalooCompletionEmail::cleanupEmailList()
  * but "\"'a" <a@example.com> -> "\"'a" <a@example.com>
  * cause the start and end is not the same.
  */
-QString BalooCompletionEmail::stripEmail(const QString &email, QString &address)
+QString AkonadiSearchCompletionEmail::stripEmail(const QString &email, QString &address)
 {
     QString displayName;
     QString addrSpec;
@@ -86,12 +86,12 @@ QString BalooCompletionEmail::stripEmail(const QString &email, QString &address)
     }
 }
 
-BalooCompletionEmail::BalooCompletionEmailInfo BalooCompletionEmail::balooCompletionEmailInfo() const
+AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo AkonadiSearchCompletionEmail::balooCompletionEmailInfo() const
 {
     return mBalooCompletionEmailInfo;
 }
 
-void BalooCompletionEmail::setBalooCompletionEmailInfo(const BalooCompletionEmailInfo &newBalooCompletionEmailInfo)
+void AkonadiSearchCompletionEmail::setBalooCompletionEmailInfo(const AkonadiSearchCompletionEmailInfo &newBalooCompletionEmailInfo)
 {
     mBalooCompletionEmailInfo = newBalooCompletionEmailInfo;
     mExcludeEmailsRegularExpressions.clear();

@@ -46,7 +46,7 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/addresslineedit/addresseelineeditakonadi.cpp
     addressline/addresslineedit/addresseelineeditakonadisearch.cpp
     addressline/addresslineedit/kmailcompletion.cpp
-    addressline/addresslineedit/baloocompletionemail.cpp
+    addressline/addresslineedit/akonadisearchcompletionemail.cpp
     addressline/completionconfiguredialog/completionconfiguredialog.cpp
     addressline/addresslineedit/addresseelineeditutil.cpp
     addressline/recentaddress/recentaddresswidget.cpp
@@ -76,7 +76,7 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     addressline/addresslineedit/addresseelineeditakonadisearch.h
     addressline/addresslineedit/addresseelineedit.h
     addressline/addresslineedit/addresseelineeditutil.h
-    addressline/addresslineedit/baloocompletionemail.h
+    addressline/addresslineedit/akonadisearchcompletionemail.h
     addressline/addresslineedit/addresseelineeditakonadi.h
     addressline/addresslineedit/addresseelineeditmanager.h
     addressline/addresslineedit/kmailcompletion.h

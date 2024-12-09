@@ -10,7 +10,7 @@
 
 namespace PimCommon
 {
-class BalooCompletionEmail;
+class AkonadiSearchCompletionEmail;
 class PIMCOMMONAKONADI_TESTS_EXPORT AddresseeLineEditAkonadiSearch
 {
 public:
@@ -26,7 +26,7 @@ public:
     [[nodiscard]] QStringList domainExcludeList() const;
 
 private:
-    PimCommon::BalooCompletionEmail *const mBalooCompletionEmail;
+    PimCommon::AkonadiSearchCompletionEmail *const mBalooCompletionEmail;
     int mBalooCompletionSource = 0;
 };
 }
