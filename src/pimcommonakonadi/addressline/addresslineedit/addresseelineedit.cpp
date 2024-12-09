@@ -606,7 +606,7 @@ void AddresseeLineEdit::configureCompletion()
     dlg->setEmailBlackList(PimCommon::AddresseeLineEditManager::self()->balooBlackList());
     dlg->setLdapActivitiesAbstract(d->ldapActivitiesAbstract());
     dlg->load();
-    if (dlg->exec() && dlg) {
+    if (dlg->exec()) {
         if (dlg->recentAddressWasChanged()) {
             PimCommon::RecentAddresses::self(recentAddressConfig())->clear();
             dlg->storeAddresses(recentAddressConfig());
