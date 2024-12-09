@@ -551,7 +551,7 @@ void AddresseeLineEdit::addContact(const KContacts::Addressee &addr, int weight,
 void AddresseeLineEdit::contextMenuEvent(QContextMenuEvent *event)
 {
     QMenu *menu = createStandardContextMenu();
-    if (menu) { // can be 0 on platforms with only a touch interface
+    if (menu) { // can be nullptr on platforms with only a touch interface
         menu->exec(event->globalPos());
         delete menu;
     }
