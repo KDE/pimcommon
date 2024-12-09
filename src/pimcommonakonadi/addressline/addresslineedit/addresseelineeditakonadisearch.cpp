@@ -12,37 +12,37 @@
 using namespace PimCommon;
 
 AddresseeLineEditAkonadiSearch::AddresseeLineEditAkonadiSearch()
-    : mBalooCompletionEmail(new PimCommon::AkonadiSearchCompletionEmail)
+    : mAkonadiSearchCompletionEmail(new PimCommon::AkonadiSearchCompletionEmail)
 {
-    loadBalooBlackList();
+    loadAkonadiSearchBlackList();
 }
 
 AddresseeLineEditAkonadiSearch::~AddresseeLineEditAkonadiSearch()
 {
-    delete mBalooCompletionEmail;
+    delete mAkonadiSearchCompletionEmail;
 }
 
-int AddresseeLineEditAkonadiSearch::balooCompletionSource() const
+int AddresseeLineEditAkonadiSearch::akonadiSearchCompletionSource() const
 {
-    return mBalooCompletionSource;
+    return mAkonadiSearchCompletionSource;
 }
 
-void AddresseeLineEditAkonadiSearch::setBalooCompletionSource(int value)
+void AddresseeLineEditAkonadiSearch::setAkonadiSearchCompletionSource(int value)
 {
-    mBalooCompletionSource = value;
+    mAkonadiSearchCompletionSource = value;
 }
 
-QStringList AddresseeLineEditAkonadiSearch::balooBlackList() const
+QStringList AddresseeLineEditAkonadiSearch::akonadiSearchBlackList() const
 {
-    return mBalooCompletionEmail->balooCompletionEmailInfo().mBlackList;
+    return mAkonadiSearchCompletionEmail->balooCompletionEmailInfo().mBlackList;
 }
 
 QStringList AddresseeLineEditAkonadiSearch::domainExcludeList() const
 {
-    return mBalooCompletionEmail->balooCompletionEmailInfo().mExcludeDomains;
+    return mAkonadiSearchCompletionEmail->balooCompletionEmailInfo().mExcludeDomains;
 }
 
-void AddresseeLineEditAkonadiSearch::loadBalooBlackList()
+void AddresseeLineEditAkonadiSearch::loadAkonadiSearchBlackList()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     config->reparseConfiguration();
@@ -55,13 +55,13 @@ void AddresseeLineEditAkonadiSearch::loadBalooBlackList()
     info.mExcludeEmailsRegularExpressions = lstExcludeEmailsRegularExpressions;
     info.mBlackList = balooBlackList;
     info.mExcludeDomains = domainExcludeList;
-    mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
+    mAkonadiSearchCompletionEmail->setBalooCompletionEmailInfo(info);
 }
 
 QStringList AddresseeLineEditAkonadiSearch::cleanupEmailList(const QStringList &inputList)
 {
-    PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info = mBalooCompletionEmail->balooCompletionEmailInfo();
+    PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info = mAkonadiSearchCompletionEmail->balooCompletionEmailInfo();
     info.mListEmail = inputList;
-    mBalooCompletionEmail->setBalooCompletionEmailInfo(info);
-    return mBalooCompletionEmail->cleanupEmailList();
+    mAkonadiSearchCompletionEmail->setBalooCompletionEmailInfo(info);
+    return mAkonadiSearchCompletionEmail->cleanupEmailList();
 }

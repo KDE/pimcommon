@@ -17,16 +17,16 @@ public:
     AddresseeLineEditAkonadiSearch();
     ~AddresseeLineEditAkonadiSearch();
 
-    [[nodiscard]] int balooCompletionSource() const;
-    void setBalooCompletionSource(int value);
-    void loadBalooBlackList();
+    [[nodiscard]] int akonadiSearchCompletionSource() const;
+    void setAkonadiSearchCompletionSource(int value);
+    void loadAkonadiSearchBlackList();
     [[nodiscard]] QStringList cleanupEmailList(const QStringList &inputList);
 
-    [[nodiscard]] QStringList balooBlackList() const;
+    [[nodiscard]] QStringList akonadiSearchBlackList() const;
     [[nodiscard]] QStringList domainExcludeList() const;
 
 private:
-    PimCommon::AkonadiSearchCompletionEmail *const mBalooCompletionEmail;
-    int mBalooCompletionSource = 0;
+    PimCommon::AkonadiSearchCompletionEmail *const mAkonadiSearchCompletionEmail;
+    int mAkonadiSearchCompletionSource = 0;
 };
 }

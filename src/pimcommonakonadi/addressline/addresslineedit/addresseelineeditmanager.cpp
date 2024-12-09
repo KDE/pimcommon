@@ -149,12 +149,12 @@ bool AddresseeLineEditManager::isLdapClientToCompletionSourceMapContains(int val
 
 int AddresseeLineEditManager::balooCompletionSource() const
 {
-    return mAddressessLineEditBaloo->balooCompletionSource();
+    return mAddressessLineEditBaloo->akonadiSearchCompletionSource();
 }
 
 void AddresseeLineEditManager::setBalooCompletionSource(int value)
 {
-    mAddressessLineEditBaloo->setBalooCompletionSource(value);
+    mAddressessLineEditBaloo->setAkonadiSearchCompletionSource(value);
 }
 
 void AddresseeLineEditManager::initializeLdap()
@@ -189,7 +189,7 @@ void AddresseeLineEditManager::restartLdap(const QString &searchString, Addresse
 
 void AddresseeLineEditManager::loadBalooBlackList()
 {
-    mAddressessLineEditBaloo->loadBalooBlackList();
+    mAddressessLineEditBaloo->loadAkonadiSearchBlackList();
 }
 
 QStringList AddresseeLineEditManager::cleanupRecentAddressEmailList(const QStringList &inputList)
@@ -208,7 +208,7 @@ QStringList AddresseeLineEditManager::cleanupEmailList(const QStringList &inputL
 
 QStringList AddresseeLineEditManager::balooBlackList() const
 {
-    return mAddressessLineEditBaloo->balooBlackList();
+    return mAddressessLineEditBaloo->akonadiSearchBlackList();
 }
 
 bool AddresseeLineEditManager::showOU() const

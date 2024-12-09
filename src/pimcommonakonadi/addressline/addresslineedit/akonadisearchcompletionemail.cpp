@@ -16,19 +16,19 @@ AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmail() = default;
 QList<QRegularExpression> AkonadiSearchCompletionEmail::mExcludeEmailsRegularExpressions = {};
 QStringList AkonadiSearchCompletionEmail::cleanupEmailList()
 {
-    if (mBalooCompletionEmailInfo.mListEmail.isEmpty()) {
+    if (mAkonadiSearchCompletionEmailInfo.mListEmail.isEmpty()) {
         return {};
     }
     QMap<QString, QString> hashEmail;
-    for (QString email : std::as_const(mBalooCompletionEmailInfo.mListEmail)) {
-        if (!mBalooCompletionEmailInfo.mBlackList.contains(email)) {
+    for (QString email : std::as_const(mAkonadiSearchCompletionEmailInfo.mListEmail)) {
+        if (!mAkonadiSearchCompletionEmailInfo.mBlackList.contains(email)) {
             QString address;
             email = stripEmail(email, address);
             if (address.isEmpty()) {
                 address = email;
             }
             bool excludeMail = false;
-            for (const QString &excludeDomain : std::as_const(mBalooCompletionEmailInfo.mExcludeDomains)) {
+            for (const QString &excludeDomain : std::as_const(mAkonadiSearchCompletionEmailInfo.mExcludeDomains)) {
                 if (!excludeDomain.isEmpty()) {
                     if (address.endsWith(excludeDomain)) {
                         excludeMail = true;
@@ -88,14 +88,14 @@ QString AkonadiSearchCompletionEmail::stripEmail(const QString &email, QString &
 
 AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo AkonadiSearchCompletionEmail::balooCompletionEmailInfo() const
 {
-    return mBalooCompletionEmailInfo;
+    return mAkonadiSearchCompletionEmailInfo;
 }
 
 void AkonadiSearchCompletionEmail::setBalooCompletionEmailInfo(const AkonadiSearchCompletionEmailInfo &newBalooCompletionEmailInfo)
 {
-    mBalooCompletionEmailInfo = newBalooCompletionEmailInfo;
+    mAkonadiSearchCompletionEmailInfo = newBalooCompletionEmailInfo;
     mExcludeEmailsRegularExpressions.clear();
-    for (const auto &str : std::as_const(mBalooCompletionEmailInfo.mExcludeEmailsRegularExpressions)) {
+    for (const auto &str : std::as_const(mAkonadiSearchCompletionEmailInfo.mExcludeEmailsRegularExpressions)) {
         const QRegularExpression exp(str);
         if (exp.isValid()) {
             mExcludeEmailsRegularExpressions.append(exp);
