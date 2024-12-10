@@ -22,7 +22,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "addressline/completionorder/completionorderwidget.h"
 #include <config-akonadi-search.h>
 #if !DISABLE_AKONADI_SEARCH
-#include "addressline/blacklistbaloocompletion/blacklistakonadisearchemailcompletionwidget.h"
+#include "addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.h"
 #endif
 #include "addressline/recentaddress/recentaddresswidget.h"
 

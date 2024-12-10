@@ -8,7 +8,7 @@
 #include "blacklistbalooemailcompletionwidgettest.h"
 #include "../blacklistakonadisearchemailcompletionwidget.h"
 #include "../blacklistakonadisearchemaillist.h"
-#include "addressline/blacklistbaloocompletion/blacklistakonadisearchemailwarning.h"
+#include "addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.h"
 #include <KListWidgetSearchLine>
 #include <QLabel>
 #include <QLineEdit>

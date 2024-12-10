@@ -96,16 +96,16 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
 
 if(NOT FORCE_DISABLE_AKONADI_SEARCH)
 target_sources(KPim6PimCommonAkonadi PRIVATE
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemaillist.cpp
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailutil.cpp
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailcompletionwidget.cpp
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailwarning.cpp
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailsearchjob.cpp
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailcompletionwidget.h
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailwarning.h
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailutil.h
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemailsearchjob.h
-    addressline/blacklistbaloocompletion/blacklistakonadisearchemaillist.h
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailutil.cpp
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailsearchjob.cpp
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.h
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.h
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailutil.h
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailsearchjob.h
+    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.h
 )
 endif()
 
@@ -171,7 +171,7 @@ if(BUILD_TESTING)
     add_subdirectory(addressline/tests)
     add_subdirectory(addressline/autotests)
     if(NOT FORCE_DISABLE_AKONADI_SEARCH)
-       add_subdirectory(addressline/blacklistbaloocompletion/autotests)
+       add_subdirectory(addressline/blacklistakonadisearchcompletion/autotests)
     endif()       
 endif()
 
