@@ -6,7 +6,7 @@
 */
 
 #include "blacklistbalooemailutiltest.h"
-#include "../blacklistbalooemailutil.h"
+#include "../blacklistakonadisearchemailutil.h"
 #include <QTest>
 BlackListBalooEmailUtilTest::BlackListBalooEmailUtilTest(QObject *parent)
     : QObject(parent)
@@ -17,13 +17,13 @@ BlackListBalooEmailUtilTest::~BlackListBalooEmailUtilTest() = default;
 
 void BlackListBalooEmailUtilTest::shouldReturnEmptyResult()
 {
-    PimCommon::BlackListBalooEmailUtil util;
+    PimCommon::BlackListAkonadiSearchEmailUtil util;
     QVERIFY(util.createNewBlackList().isEmpty());
 }
 
 void BlackListBalooEmailUtilTest::shouldDontChangeWhenNotChanged()
 {
-    PimCommon::BlackListBalooEmailUtil util;
+    PimCommon::BlackListAkonadiSearchEmailUtil util;
     const QStringList lst = QStringList() << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo2");
     util.initialBlackList(lst);
     QCOMPARE(util.createNewBlackList(), lst);
@@ -31,7 +31,7 @@ void BlackListBalooEmailUtilTest::shouldDontChangeWhenNotChanged()
 
 void BlackListBalooEmailUtilTest::shouldCreateNewList()
 {
-    PimCommon::BlackListBalooEmailUtil util;
+    PimCommon::BlackListAkonadiSearchEmailUtil util;
     const QStringList lst = QStringList() << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo2");
     util.initialBlackList(lst);
     QHash<QString, bool> newList;
@@ -42,7 +42,7 @@ void BlackListBalooEmailUtilTest::shouldCreateNewList()
 
 void BlackListBalooEmailUtilTest::shouldAddNewElements()
 {
-    PimCommon::BlackListBalooEmailUtil util;
+    PimCommon::BlackListAkonadiSearchEmailUtil util;
     QHash<QString, bool> newList;
     newList.insert(QStringLiteral("foo"), false);
     newList.insert(QStringLiteral("foo1"), false);

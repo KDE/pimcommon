@@ -10,8 +10,8 @@ using namespace Qt::Literals::StringLiterals;
 
 #include "blacklistakonadisearchemaillist.h"
 #include "blacklistakonadisearchemailsearchjob.h"
+#include "blacklistakonadisearchemailutil.h"
 #include "blacklistakonadisearchemailwarning.h"
-#include "blacklistbalooemailutil.h"
 #include <KLineEditEventHandler>
 
 #include "pimcommonakonadi_debug.h"
@@ -198,7 +198,7 @@ void BlackListAkonadiSearchEmailCompletionWidget::save()
     if (!result.isEmpty()) {
         needToSave = true;
         QStringList blackList = group.readEntry("BalooBackList", QStringList());
-        PimCommon::BlackListBalooEmailUtil util;
+        PimCommon::BlackListAkonadiSearchEmailUtil util;
         util.initialBlackList(blackList);
         util.setNewBlackList(result);
         blackList = util.createNewBlackList();
@@ -224,7 +224,7 @@ void BlackListAkonadiSearchEmailCompletionWidget::slotSaveChanges()
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
     QStringList blackList = group.readEntry("BalooBackList", QStringList());
-    PimCommon::BlackListBalooEmailUtil util;
+    PimCommon::BlackListAkonadiSearchEmailUtil util;
     util.initialBlackList(blackList);
     util.setNewBlackList(result);
     blackList = util.createNewBlackList();

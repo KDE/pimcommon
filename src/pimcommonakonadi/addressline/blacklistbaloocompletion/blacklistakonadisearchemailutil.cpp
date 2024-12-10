@@ -5,24 +5,24 @@
 
 */
 
-#include "blacklistbalooemailutil.h"
+#include "blacklistakonadisearchemailutil.h"
 
 using namespace PimCommon;
-BlackListBalooEmailUtil::BlackListBalooEmailUtil() = default;
+BlackListAkonadiSearchEmailUtil::BlackListAkonadiSearchEmailUtil() = default;
 
-BlackListBalooEmailUtil::~BlackListBalooEmailUtil() = default;
+BlackListAkonadiSearchEmailUtil::~BlackListAkonadiSearchEmailUtil() = default;
 
-void BlackListBalooEmailUtil::initialBlackList(const QStringList &blackList)
+void BlackListAkonadiSearchEmailUtil::initialBlackList(const QStringList &blackList)
 {
     mInitialList = blackList;
 }
 
-void BlackListBalooEmailUtil::setNewBlackList(const QHash<QString, bool> &list)
+void BlackListAkonadiSearchEmailUtil::setNewBlackList(const QHash<QString, bool> &list)
 {
     mNewBlackList = list;
 }
 
-QStringList BlackListBalooEmailUtil::createNewBlackList()
+QStringList BlackListAkonadiSearchEmailUtil::createNewBlackList()
 {
     if (mNewBlackList.isEmpty()) {
         return mInitialList;

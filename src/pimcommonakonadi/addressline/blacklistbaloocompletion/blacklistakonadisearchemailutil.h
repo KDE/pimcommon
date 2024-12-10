@@ -12,11 +12,11 @@
 #include <QStringList>
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailUtil
+class PIMCOMMONAKONADI_TESTS_EXPORT BlackListAkonadiSearchEmailUtil
 {
 public:
-    BlackListBalooEmailUtil();
-    ~BlackListBalooEmailUtil();
+    BlackListAkonadiSearchEmailUtil();
+    ~BlackListAkonadiSearchEmailUtil();
     void initialBlackList(const QStringList &blackList);
     void setNewBlackList(const QHash<QString, bool> &);
     [[nodiscard]] QStringList createNewBlackList();
