@@ -15,14 +15,14 @@ class QLabel;
 class KListWidgetSearchLine;
 namespace PimCommon
 {
-class BlackListBalooEmailList;
-class BlackListBalooEmailWarning;
-class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailCompletionWidget : public QWidget
+class BlackListAkonadiSearchEmailList;
+class BlackListAkonadiSearchEmailWarning;
+class PIMCOMMONAKONADI_TESTS_EXPORT BlackListAkonadiSearchEmailCompletionWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit BlackListBalooEmailCompletionWidget(QWidget *parent = nullptr);
-    ~BlackListBalooEmailCompletionWidget() override;
+    explicit BlackListAkonadiSearchEmailCompletionWidget(QWidget *parent = nullptr);
+    ~BlackListAkonadiSearchEmailCompletionWidget() override;
 
     void save();
     void load();
@@ -46,14 +46,14 @@ private:
     QLabel *const mNumberOfEmailsFound;
     QLineEdit *const mSearchLineEdit;
     QLineEdit *const mExcludeDomainLineEdit;
-    BlackListBalooEmailList *const mEmailList;
+    BlackListAkonadiSearchEmailList *const mEmailList;
     QPushButton *const mSearchButton;
     QPushButton *const mSelectButton;
     QPushButton *const mUnselectButton;
     QPushButton *const mShowAllBlackListedEmails;
     QLabel *const mMoreResult;
     KListWidgetSearchLine *mSearchInResultLineEdit = nullptr;
-    BlackListBalooEmailWarning *const mBlackListWarning;
+    BlackListAkonadiSearchEmailWarning *const mBlackListWarning;
     QLineEdit *const mExcludeEmailFromRegularExpressionLineEdit;
     int mLimit = 500;
 };

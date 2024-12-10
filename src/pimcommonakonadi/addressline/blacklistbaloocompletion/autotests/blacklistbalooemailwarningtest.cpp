@@ -6,7 +6,7 @@
 */
 
 #include "blacklistbalooemailwarningtest.h"
-#include "../blacklistbalooemailwarning.h"
+#include "../blacklistakonadisearchemailwarning.h"
 #include <QAction>
 #include <QSignalSpy>
 #include <QTest>
@@ -20,7 +20,7 @@ BlackListBalooEmailWarningTest::~BlackListBalooEmailWarningTest() = default;
 
 void BlackListBalooEmailWarningTest::shouldHaveDefaultValue()
 {
-    PimCommon::BlackListBalooEmailWarning warning;
+    PimCommon::BlackListAkonadiSearchEmailWarning warning;
     QVERIFY(!warning.isVisible());
     QVERIFY(!warning.isCloseButtonVisible());
     QVERIFY(warning.wordWrap());
@@ -37,8 +37,8 @@ void BlackListBalooEmailWarningTest::shouldHaveDefaultValue()
 
 void BlackListBalooEmailWarningTest::shouldEmitSaveChanges()
 {
-    PimCommon::BlackListBalooEmailWarning warning;
-    QSignalSpy spy1(&warning, &PimCommon::BlackListBalooEmailWarning::saveChanges);
+    PimCommon::BlackListAkonadiSearchEmailWarning warning;
+    QSignalSpy spy1(&warning, &PimCommon::BlackListAkonadiSearchEmailWarning::saveChanges);
 
     auto save = warning.findChild<QAction *>(QStringLiteral("saveblacklist"));
     save->trigger();
@@ -47,8 +47,8 @@ void BlackListBalooEmailWarningTest::shouldEmitSaveChanges()
 
 void BlackListBalooEmailWarningTest::shouldEmitNewSearch()
 {
-    PimCommon::BlackListBalooEmailWarning warning;
-    QSignalSpy spy1(&warning, &PimCommon::BlackListBalooEmailWarning::newSearch);
+    PimCommon::BlackListAkonadiSearchEmailWarning warning;
+    QSignalSpy spy1(&warning, &PimCommon::BlackListAkonadiSearchEmailWarning::newSearch);
 
     auto search = warning.findChild<QAction *>(QStringLiteral("search"));
     search->trigger();

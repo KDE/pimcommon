@@ -22,7 +22,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "addressline/completionorder/completionorderwidget.h"
 #include <config-akonadi-search.h>
 #if !DISABLE_AKONADI_SEARCH
-#include "addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.h"
+#include "addressline/blacklistbaloocompletion/blacklistakonadisearchemailcompletionwidget.h"
 #endif
 #include "addressline/recentaddress/recentaddresswidget.h"
 
@@ -39,7 +39,7 @@ public:
     QTabWidget *mTabWidget = nullptr;
     PimCommon::CompletionOrderWidget *mCompletionOrderWidget = nullptr;
 #if !DISABLE_AKONADI_SEARCH
-    PimCommon::BlackListBalooEmailCompletionWidget *mBlackListBalooWidget = nullptr;
+    PimCommon::BlackListAkonadiSearchEmailCompletionWidget *mBlackListBalooWidget = nullptr;
 #endif
     PimCommon::RecentAddressWidget *mRecentaddressWidget = nullptr;
 };
@@ -64,7 +64,7 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
     d->mTabWidget->addTab(d->mRecentaddressWidget, i18n("Recent Address"));
 
 #if !DISABLE_AKONADI_SEARCH
-    d->mBlackListBalooWidget = new PimCommon::BlackListBalooEmailCompletionWidget(this);
+    d->mBlackListBalooWidget = new PimCommon::BlackListAkonadiSearchEmailCompletionWidget(this);
     d->mBlackListBalooWidget->setObjectName("blacklistbaloo_widget"_L1);
     d->mTabWidget->addTab(d->mBlackListBalooWidget, i18n("Blacklist Email Address"));
 #endif

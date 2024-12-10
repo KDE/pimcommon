@@ -5,7 +5,7 @@
 
 */
 
-#include "blacklistbalooemaillist.h"
+#include "blacklistakonadisearchemaillist.h"
 
 #include <KEmailAddress>
 #include <KLocalizedString>
@@ -13,7 +13,7 @@
 #include <QPainter>
 using namespace PimCommon;
 
-BlackListBalooEmailList::BlackListBalooEmailList(QWidget *parent)
+BlackListAkonadiSearchEmailList::BlackListAkonadiSearchEmailList(QWidget *parent)
     : QListWidget(parent)
 {
     setSelectionMode(QAbstractItemView::ExtendedSelection);
@@ -21,9 +21,9 @@ BlackListBalooEmailList::BlackListBalooEmailList(QWidget *parent)
     setContextMenuPolicy(Qt::CustomContextMenu);
 }
 
-BlackListBalooEmailList::~BlackListBalooEmailList() = default;
+BlackListAkonadiSearchEmailList::~BlackListAkonadiSearchEmailList() = default;
 
-void BlackListBalooEmailList::changeEvent(QEvent *event)
+void BlackListAkonadiSearchEmailList::changeEvent(QEvent *event)
 {
     if (event->type() == QEvent::PaletteChange) {
         generalPaletteChanged();
@@ -31,17 +31,17 @@ void BlackListBalooEmailList::changeEvent(QEvent *event)
     QListWidget::changeEvent(event);
 }
 
-void BlackListBalooEmailList::setEmailBlackList(const QStringList &list)
+void BlackListAkonadiSearchEmailList::setEmailBlackList(const QStringList &list)
 {
     mEmailBlackList = list;
 }
 
-QHash<QString, bool> BlackListBalooEmailList::blackListItemChanged() const
+QHash<QString, bool> BlackListAkonadiSearchEmailList::blackListItemChanged() const
 {
     QHash<QString, bool> result;
     for (int i = 0; i < count(); ++i) {
         QListWidgetItem *element = item(i);
-        auto blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(element);
+        auto blackListItem = static_cast<PimCommon::BlackListAkonadiSearchEmailListItem *>(element);
         bool currentStatus = (blackListItem->checkState() == Qt::Checked);
         if (blackListItem->initializeStatus() != currentStatus) {
             result.insert(blackListItem->text(), currentStatus);
@@ -50,12 +50,12 @@ QHash<QString, bool> BlackListBalooEmailList::blackListItemChanged() const
     return result;
 }
 
-void BlackListBalooEmailList::setExcludeDomains(const QStringList &domain)
+void BlackListAkonadiSearchEmailList::setExcludeDomains(const QStringList &domain)
 {
     mExcludeDomains = domain;
 }
 
-int BlackListBalooEmailList::setEmailFound(const QStringList &list)
+int BlackListAkonadiSearchEmailList::setEmailFound(const QStringList &list)
 {
     mFirstResult = true;
     clear();
@@ -91,7 +91,7 @@ int BlackListBalooEmailList::setEmailFound(const QStringList &list)
             continue;
         }
         if (!emailsAdded.contains(mail) && !emailsLower.contains(mailToLower) && !onlyEmails.contains(emailToLower)) {
-            auto item = new BlackListBalooEmailListItem(this);
+            auto item = new BlackListAkonadiSearchEmailListItem(this);
             if (mEmailBlackList.contains(mail)) {
                 item->setCheckState(Qt::Checked);
                 item->setInitializeStatus(true);
@@ -107,7 +107,7 @@ int BlackListBalooEmailList::setEmailFound(const QStringList &list)
     return count();
 }
 
-void BlackListBalooEmailList::generalPaletteChanged()
+void BlackListAkonadiSearchEmailList::generalPaletteChanged()
 {
     const QPalette palette = viewport()->palette();
     QColor color = palette.text().color();
@@ -115,12 +115,12 @@ void BlackListBalooEmailList::generalPaletteChanged()
     mTextColor = color;
 }
 
-void BlackListBalooEmailList::setExcludeEmailsRegularExpressions(const QStringList &newExcludeEmailsRegularExpressions)
+void BlackListAkonadiSearchEmailList::setExcludeEmailsRegularExpressions(const QStringList &newExcludeEmailsRegularExpressions)
 {
     mExcludeEmailsRegularExpressions = newExcludeEmailsRegularExpressions;
 }
 
-void BlackListBalooEmailList::paintEvent(QPaintEvent *event)
+void BlackListAkonadiSearchEmailList::paintEvent(QPaintEvent *event)
 {
     if (mFirstResult && (!model() || model()->rowCount() == 0)) {
         QPainter p(viewport());
@@ -140,23 +140,23 @@ void BlackListBalooEmailList::paintEvent(QPaintEvent *event)
     }
 }
 
-BlackListBalooEmailListItem::BlackListBalooEmailListItem(QListWidget *parent)
+BlackListAkonadiSearchEmailListItem::BlackListAkonadiSearchEmailListItem(QListWidget *parent)
     : QListWidgetItem(parent)
     , mInitializeStatus(false)
 {
     setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable);
 }
 
-BlackListBalooEmailListItem::~BlackListBalooEmailListItem() = default;
+BlackListAkonadiSearchEmailListItem::~BlackListAkonadiSearchEmailListItem() = default;
 
-bool BlackListBalooEmailListItem::initializeStatus() const
+bool BlackListAkonadiSearchEmailListItem::initializeStatus() const
 {
     return mInitializeStatus;
 }
 
-void BlackListBalooEmailListItem::setInitializeStatus(bool initializeStatus)
+void BlackListAkonadiSearchEmailListItem::setInitializeStatus(bool initializeStatus)
 {
     mInitializeStatus = initializeStatus;
 }
 
-#include "moc_blacklistbalooemaillist.cpp"
+#include "moc_blacklistakonadisearchemaillist.cpp"

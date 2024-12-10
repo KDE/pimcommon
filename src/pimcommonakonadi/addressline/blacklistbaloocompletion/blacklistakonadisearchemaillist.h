@@ -14,11 +14,11 @@
 
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailListItem : public QListWidgetItem
+class PIMCOMMONAKONADI_TESTS_EXPORT BlackListAkonadiSearchEmailListItem : public QListWidgetItem
 {
 public:
-    explicit BlackListBalooEmailListItem(QListWidget *parent = nullptr);
-    ~BlackListBalooEmailListItem() override;
+    explicit BlackListAkonadiSearchEmailListItem(QListWidget *parent = nullptr);
+    ~BlackListAkonadiSearchEmailListItem() override;
 
     [[nodiscard]] bool initializeStatus() const;
     void setInitializeStatus(bool initializeStatus);
@@ -27,12 +27,12 @@ private:
     bool mInitializeStatus;
 };
 
-class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailList : public QListWidget
+class PIMCOMMONAKONADI_TESTS_EXPORT BlackListAkonadiSearchEmailList : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit BlackListBalooEmailList(QWidget *parent = nullptr);
-    ~BlackListBalooEmailList() override;
+    explicit BlackListAkonadiSearchEmailList(QWidget *parent = nullptr);
+    ~BlackListAkonadiSearchEmailList() override;
 
     void setEmailBlackList(const QStringList &list);
 

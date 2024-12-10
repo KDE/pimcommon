@@ -96,16 +96,16 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
 
 if(NOT FORCE_DISABLE_AKONADI_SEARCH)
 target_sources(KPim6PimCommonAkonadi PRIVATE
-    addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemaillist.cpp
     addressline/blacklistbaloocompletion/blacklistbalooemailutil.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.cpp
-    addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.h
-    addressline/blacklistbaloocompletion/blacklistbalooemailwarning.h
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemailcompletionwidget.cpp
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemailwarning.cpp
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemailsearchjob.cpp
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemailcompletionwidget.h
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemailwarning.h
     addressline/blacklistbaloocompletion/blacklistbalooemailutil.h
-    addressline/blacklistbaloocompletion/blacklistbalooemailsearchjob.h
-    addressline/blacklistbaloocompletion/blacklistbalooemaillist.h
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemailsearchjob.h
+    addressline/blacklistbaloocompletion/blacklistakonadisearchemaillist.h
 )
 endif()
 

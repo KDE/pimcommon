@@ -5,7 +5,7 @@
 
 */
 
-#include "blacklistbalooemailwarning.h"
+#include "blacklistakonadisearchemailwarning.h"
 using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
@@ -13,7 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 
 using namespace PimCommon;
 
-BlackListBalooEmailWarning::BlackListBalooEmailWarning(QWidget *parent)
+BlackListAkonadiSearchEmailWarning::BlackListAkonadiSearchEmailWarning(QWidget *parent)
     : KMessageWidget(parent)
 {
     setVisible(false);
@@ -24,32 +24,32 @@ BlackListBalooEmailWarning::BlackListBalooEmailWarning(QWidget *parent)
     setText(i18n("The list was changed. Do you want to save before to make another search ?"));
     auto saveAction = new QAction(i18nc("@action", "Save"), this);
     saveAction->setObjectName("saveblacklist"_L1);
-    connect(saveAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSaveBlackList);
+    connect(saveAction, &QAction::triggered, this, &BlackListAkonadiSearchEmailWarning::slotSaveBlackList);
     addAction(saveAction);
 
     auto searchAction = new QAction(i18nc("@action", "Search"), this);
     searchAction->setObjectName("search"_L1);
-    connect(searchAction, &QAction::triggered, this, &BlackListBalooEmailWarning::slotSearch);
+    connect(searchAction, &QAction::triggered, this, &BlackListAkonadiSearchEmailWarning::slotSearch);
     addAction(searchAction);
 
     auto cancelAction = new QAction(i18nc("@action", "Cancel"), this);
     cancelAction->setObjectName("cancel"_L1);
-    connect(cancelAction, &QAction::triggered, this, &BlackListBalooEmailWarning::animatedHide);
+    connect(cancelAction, &QAction::triggered, this, &BlackListAkonadiSearchEmailWarning::animatedHide);
     addAction(cancelAction);
 }
 
-BlackListBalooEmailWarning::~BlackListBalooEmailWarning() = default;
+BlackListAkonadiSearchEmailWarning::~BlackListAkonadiSearchEmailWarning() = default;
 
-void BlackListBalooEmailWarning::slotSaveBlackList()
+void BlackListAkonadiSearchEmailWarning::slotSaveBlackList()
 {
     animatedHide();
     Q_EMIT saveChanges();
 }
 
-void BlackListBalooEmailWarning::slotSearch()
+void BlackListAkonadiSearchEmailWarning::slotSearch()
 {
     animatedHide();
     Q_EMIT newSearch();
 }
 
-#include "moc_blacklistbalooemailwarning.cpp"
+#include "moc_blacklistakonadisearchemailwarning.cpp"

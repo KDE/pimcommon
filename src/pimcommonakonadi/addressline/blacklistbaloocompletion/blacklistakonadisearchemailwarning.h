@@ -12,12 +12,12 @@
 
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailWarning : public KMessageWidget
+class PIMCOMMONAKONADI_TESTS_EXPORT BlackListAkonadiSearchEmailWarning : public KMessageWidget
 {
     Q_OBJECT
 public:
-    explicit BlackListBalooEmailWarning(QWidget *parent = nullptr);
-    ~BlackListBalooEmailWarning() override;
+    explicit BlackListAkonadiSearchEmailWarning(QWidget *parent = nullptr);
+    ~BlackListAkonadiSearchEmailWarning() override;
 
 Q_SIGNALS:
     void newSearch();

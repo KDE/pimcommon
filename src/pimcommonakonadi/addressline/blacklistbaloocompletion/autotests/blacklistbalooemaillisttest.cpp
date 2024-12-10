@@ -6,7 +6,7 @@
 */
 
 #include "blacklistbalooemaillisttest.h"
-#include "../blacklistbalooemaillist.h"
+#include "../blacklistakonadisearchemaillist.h"
 #include <QTest>
 
 BlackListBalooEmailListTest::BlackListBalooEmailListTest(QObject *parent)
@@ -18,7 +18,7 @@ BlackListBalooEmailListTest::~BlackListBalooEmailListTest() = default;
 
 void BlackListBalooEmailListTest::shouldHaveDefaultValue()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     QVERIFY(blackList.count() == 0);
     QVERIFY(blackList.isSortingEnabled());
     QCOMPARE(blackList.selectionMode(), QAbstractItemView::ExtendedSelection);
@@ -26,13 +26,13 @@ void BlackListBalooEmailListTest::shouldHaveDefaultValue()
 
 void BlackListBalooEmailListTest::shouldFillListEmail()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     QCOMPARE(blackList.setEmailFound(QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bla@kde.org") << QStringLiteral("bli@kde.org")), 3);
     QCOMPARE(blackList.count(), 3);
     for (int i = 0; i < blackList.count(); ++i) {
         QListWidgetItem *item = blackList.item(i);
         QVERIFY(item);
-        auto blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(item);
+        auto blackListItem = static_cast<PimCommon::BlackListAkonadiSearchEmailListItem *>(item);
         QVERIFY(!blackListItem->initializeStatus());
         QCOMPARE(blackListItem->checkState(), Qt::Unchecked);
     }
@@ -41,7 +41,7 @@ void BlackListBalooEmailListTest::shouldFillListEmail()
 
 void BlackListBalooEmailListTest::shouldFillListWithAlreadyBlackListedEmail()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bla@kde.org") << QStringLiteral("bli@kde.org");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 3);
@@ -50,7 +50,7 @@ void BlackListBalooEmailListTest::shouldFillListWithAlreadyBlackListedEmail()
     for (int i = 0; i < blackList.count(); ++i) {
         QListWidgetItem *item = blackList.item(i);
         QVERIFY(item);
-        auto blackListItem = static_cast<PimCommon::BlackListBalooEmailListItem *>(item);
+        auto blackListItem = static_cast<PimCommon::BlackListAkonadiSearchEmailListItem *>(item);
         QVERIFY(blackListItem->initializeStatus());
         QCOMPARE(blackListItem->checkState(), Qt::Checked);
     }
@@ -60,7 +60,7 @@ void BlackListBalooEmailListTest::shouldFillListWithAlreadyBlackListedEmail()
 
 void BlackListBalooEmailListTest::shouldReturnChangedItems()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bla@kde.org") << QStringLiteral("bli@kde.org");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 3);
@@ -72,7 +72,7 @@ void BlackListBalooEmailListTest::shouldReturnChangedItems()
 
 void BlackListBalooEmailListTest::shouldNotAddDuplicateEmails()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bli@kde.org") << QStringLiteral("bli@kde.org");
     blackList.setEmailBlackList(emails);
     QCOMPARE(blackList.setEmailFound(emails), 2);
@@ -82,7 +82,7 @@ void BlackListBalooEmailListTest::shouldNotAddDuplicateEmails()
 
 void BlackListBalooEmailListTest::shouldExcludeDomain()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     blackList.setExcludeDomains(QStringList() << QStringLiteral("kde.org") << QStringLiteral("toto.fr"));
     QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("bli@fr.fr") << QStringLiteral("bli@toto.fr");
     blackList.setEmailBlackList(emails);
@@ -99,7 +99,7 @@ void BlackListBalooEmailListTest::shouldExcludeDomain()
 
 void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDifferentCase()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("Foo@kde.org") << QStringLiteral("foo@kde.ORG");
     QCOMPARE(blackList.setEmailFound(emails), 1);
 
@@ -108,7 +108,7 @@ void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDifferentCase()
 
 void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDisplayNameOrNot()
 {
-    PimCommon::BlackListBalooEmailList blackList;
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
     const QStringList emails = QStringList() << QStringLiteral("foo@kde.org") << QStringLiteral("Bla Blo <Foo@kde.org>");
     QCOMPARE(blackList.setEmailFound(emails), 1);
 

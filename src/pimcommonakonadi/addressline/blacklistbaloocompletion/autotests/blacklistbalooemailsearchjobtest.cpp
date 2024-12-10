@@ -5,7 +5,7 @@
 
 */
 #include "blacklistbalooemailsearchjobtest.h"
-#include "../blacklistbalooemailsearchjob.h"
+#include "../blacklistakonadisearchemailsearchjob.h"
 #include <QTest>
 
 BlackListBalooEmailSearchJobTest::BlackListBalooEmailSearchJobTest(QObject *parent)
@@ -17,7 +17,7 @@ BlackListBalooEmailSearchJobTest::~BlackListBalooEmailSearchJobTest() = default;
 
 void BlackListBalooEmailSearchJobTest::shouldNotSearchWhenTextIsEmpty()
 {
-    auto job = new PimCommon::BlackListBalooEmailSearchJob;
+    auto job = new PimCommon::BlackListAkonadiSearchEmailSearchJob;
     QVERIFY(!job->start());
 }
 

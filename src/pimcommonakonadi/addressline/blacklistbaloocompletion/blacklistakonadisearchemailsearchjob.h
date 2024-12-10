@@ -12,12 +12,12 @@
 #include "pimcommonakonadi_private_export.h"
 namespace PimCommon
 {
-class PIMCOMMONAKONADI_TESTS_EXPORT BlackListBalooEmailSearchJob : public QObject
+class PIMCOMMONAKONADI_TESTS_EXPORT BlackListAkonadiSearchEmailSearchJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit BlackListBalooEmailSearchJob(QObject *parent = nullptr);
-    ~BlackListBalooEmailSearchJob() override;
+    explicit BlackListAkonadiSearchEmailSearchJob(QObject *parent = nullptr);
+    ~BlackListAkonadiSearchEmailSearchJob() override;
 
     [[nodiscard]] bool start();
 

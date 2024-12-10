@@ -5,19 +5,19 @@
 
 */
 
-#include "blacklistbalooemailsearchjob.h"
+#include "blacklistakonadisearchemailsearchjob.h"
 
 #include <PIM/contactcompleter.h>
 using namespace PimCommon;
 
-BlackListBalooEmailSearchJob::BlackListBalooEmailSearchJob(QObject *parent)
+BlackListAkonadiSearchEmailSearchJob::BlackListAkonadiSearchEmailSearchJob(QObject *parent)
     : QObject(parent)
 {
 }
 
-BlackListBalooEmailSearchJob::~BlackListBalooEmailSearchJob() = default;
+BlackListAkonadiSearchEmailSearchJob::~BlackListAkonadiSearchEmailSearchJob() = default;
 
-bool BlackListBalooEmailSearchJob::start()
+bool BlackListAkonadiSearchEmailSearchJob::start()
 {
     const QString trimmedString = mSearchEmail.trimmed();
     if (trimmedString.isEmpty()) {
@@ -31,14 +31,14 @@ bool BlackListBalooEmailSearchJob::start()
     return true;
 }
 
-void BlackListBalooEmailSearchJob::setSearchEmail(const QString &searchEmail)
+void BlackListAkonadiSearchEmailSearchJob::setSearchEmail(const QString &searchEmail)
 {
     mSearchEmail = searchEmail;
 }
 
-void BlackListBalooEmailSearchJob::setLimit(int limit)
+void BlackListAkonadiSearchEmailSearchJob::setLimit(int limit)
 {
     mLimit = qMax(10, limit);
 }
 
-#include "moc_blacklistbalooemailsearchjob.cpp"
+#include "moc_blacklistakonadisearchemailsearchjob.cpp"
