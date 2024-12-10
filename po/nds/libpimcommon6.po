@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:41+0000\n"
+"POT-Creation-Date: 2024-12-10 00:41+0000\n"
 "PO-Revision-Date: 2014-04-03 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -681,7 +681,7 @@ msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:48
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:52
 #, kde-format
 msgid "LDAP server: %1"
 msgstr ""

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:41+0000\n"
+"POT-Creation-Date: 2024-12-10 00:41+0000\n"
 "PO-Revision-Date: 2024-11-10 10:38+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -656,7 +656,7 @@ msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "Contacts trouvés dans vos données"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:48
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:52
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "Serveur LDAP : %1"

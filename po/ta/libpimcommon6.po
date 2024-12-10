@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:41+0000\n"
+"POT-Creation-Date: 2024-12-10 00:41+0000\n"
 "PO-Revision-Date: 2024-12-01 19:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -635,7 +635,7 @@ msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "உங்கள் தரவில் கண்டுபிடித்த தொடர்புகள்"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:48
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:52
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP சேவையகம்: %1"
