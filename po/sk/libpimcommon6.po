@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-10 00:41+0000\n"
+"POT-Creation-Date: 2024-12-11 00:41+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -670,101 +670,101 @@ msgstr ""
 msgid "LDAP server: %1"
 msgstr "LDAP server: %1"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:36
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:36
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgid "Search"
 msgstr "Hľadať"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgctxt "@action:button"
 msgid "&Select"
 msgstr "&Vybrať"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:38
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, fuzzy, kde-format
 #| msgid "&Unselect"
 msgctxt "@action:button"
 msgid "&Unselect"
 msgstr "Odznačiť"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:39
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:40
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:49
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgctxt "@label:textbox"
 msgid "Search email:"
 msgstr "&Hľadať"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:53
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Hľadať..."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:118
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:126
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:132
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:140
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "Select"
 msgstr "Nahradiť všetko"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:163
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
 #, fuzzy, kde-format
 #| msgid "&Unselect"
 msgid "Unselect"
 msgstr "Odznačiť"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:286
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:286
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No email found."
 msgstr "Nenašiel sa gravatar."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailcompletionwidget.cpp:288
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:288
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -772,19 +772,19 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemaillist.cpp:137
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp:137
 #, fuzzy, kde-format
 #| msgid "No Gravatar found."
 msgid "No result found"
 msgstr "Nenájdený žiadny výsledok."
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:24
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:24
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:25
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:25
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Save Log"
@@ -792,14 +792,14 @@ msgctxt "@action"
 msgid "Save"
 msgstr "Uložiť"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:30
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:30
 #, fuzzy, kde-format
 #| msgid "&Search"
 msgctxt "@action"
 msgid "Search"
 msgstr "Hľadať"
 
-#: pimcommonakonadi/addressline/blacklistbaloocompletion/blacklistbalooemailwarning.cpp:35
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:35
 #, kde-format
 msgctxt "@action"
 msgid "Cancel"
