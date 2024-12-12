@@ -113,6 +113,12 @@ endif()
 ########### Targets ###########
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
+# -fhardened increase compilation time and produce a lot of warning
+option(OPTION_DISABLE_HARDENED_OPTIMIZATION "Disable -fhardened" OFF)
+if(OPTION_DISABLE_HARDENED_OPTIMIZATION)
+   string(REPLACE "-fhardened" "" CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
+   string(REPLACE "-fhardened" "" CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+endif()
 ecm_set_disabled_deprecation_versions(QT 6.8.1 KF 6.9.0)
 
 find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
