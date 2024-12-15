@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "चयनितक्रियाकलापानाम् सीमाः १."
 
 #: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
@@ -31,6 +31,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"यदि भवान् एतत् खातं क्रियाकलापं प्रति सीमितं करोति तर्हि तत् केवलं तदा एव दर्शितं भविष्यति "
+"यदा भवान् तेषु कार्येषु भवति । अपि च, यदा भवन्तः कस्मिंश्चित् क्रियाकलापे परिवर्तयन्ति "
+"यस्मिन् तत् उपलब्धं न भवेत् तदा तत् स्वयमेव गोपनीयं भविष्यति ।"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
@@ -41,7 +44,7 @@ msgstr "..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
-msgstr ""
+msgstr "विन्यस्तं कुर्वन्तु"
 
 #: pimcommon/configureplugins/configurepluginswidget.cpp:40
 #, kde-format
@@ -52,7 +55,7 @@ msgstr "परिवर्तनस्य प्रयोक्तुं पु�
 #, kde-format
 msgctxt "@action"
 msgid "Disable version check"
-msgstr ""
+msgstr "संस्करणपरीक्षां निष्क्रियं कुर्वन्तु"
 
 #: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
 #, kde-format
@@ -74,7 +77,7 @@ msgstr "Share On..."
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
-msgstr ""
+msgstr "%1"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
 #, kde-format
@@ -115,19 +118,19 @@ msgstr "लाइवजर्नल"
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
-msgstr ""
+msgstr "पूर्वनिर्धारित टेम्पलेट"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:35
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
-msgstr ""
+msgstr "टेम्पलेट"
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:58
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
-msgstr ""
+msgstr "नामः:"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
@@ -138,7 +141,7 @@ msgstr "चयनितं टेम्पलेट् विलोपयित�
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
-msgstr ""
+msgstr "टेम्पलेट मेटाउ"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:145
 #, kde-format
@@ -218,7 +221,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
-msgstr ""
+msgstr "सञ्चिका त्रुटिः रक्षतु"
 
 #: pimcommon/util/pimutil.cpp:86
 #, kde-format
@@ -233,7 +236,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
-msgstr ""
+msgstr "लोड सञ्चिका त्रुटि"
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
@@ -244,13 +247,13 @@ msgstr "नवीनसंस्करणं पश्यन्तु"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Version:"
-msgstr ""
+msgstr "संस्करण:"
 
 #: pimcommon/whatsnew/whatsnewdialog.cpp:27
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr ""
+msgstr "%1 मध्ये किं नवीनम् अस्ति"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
 #, kde-format
@@ -305,25 +308,25 @@ msgstr "प्रकरणं परिवर्तयतु"
 #, kde-format
 msgctxt "@action"
 msgid "Uppercase"
-msgstr ""
+msgstr "बृहत्"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:31
 #, kde-format
 msgctxt "@action"
 msgid "Sentence case"
-msgstr ""
+msgstr "वाक्यप्रकरणम्"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:34
 #, kde-format
 msgctxt "@action"
 msgid "Lowercase"
-msgstr ""
+msgstr "लघु"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:37
 #, kde-format
 msgctxt "@action"
 msgid "Reverse Case"
-msgstr ""
+msgstr "विपर्ययप्रकरणम्"
 
 #: pimcommon/widgets/lineeditwithcompleterng.cpp:44
 #, kde-format
@@ -349,7 +352,7 @@ msgstr "<qt>नूतनं अनुरोधं भवन्तः अत्�
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
-msgstr ""
+msgstr "सञ्चिका पूर्वमेव विद्यते"
 
 #: pimcommon/widgets/renamefiledialog.cpp:103
 #, kde-kuit-format
@@ -364,25 +367,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
-msgstr ""
+msgstr "New &Name सुझाव दें"
 
 #: pimcommon/widgets/renamefiledialog.cpp:121
 #, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
-msgstr ""
+msgstr "&उपेक्षा"
 
 #: pimcommon/widgets/renamefiledialog.cpp:124
 #, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
-msgstr ""
+msgstr "&नाम पुनर्नाम"
 
 #: pimcommon/widgets/renamefiledialog.cpp:134
 #, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
-msgstr ""
+msgstr "Appl&y to All इति"
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
@@ -415,25 +418,25 @@ msgstr "चयनितं पाठं हर्तुं इच्छति �
 #, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
-msgstr ""
+msgstr "&संयोजयति..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
-msgstr ""
+msgstr "&संशोधन..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
 msgctxt "@action:button"
 msgid "&Remove"
-msgstr ""
+msgstr "&अपाकरोति"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:155
 #, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
-msgstr ""
+msgstr "&अनुकूलित करें..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -448,7 +451,7 @@ msgstr "अपाकरोति"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
-msgstr ""
+msgstr "&उपयोक्तृपरिचयः : १."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -458,12 +461,14 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
+"User Identifier इति IMAP सर्वरे उपयोक्तुः प्रवेशः । एतत् सरलं उपयोक्तृनाम अथवा उपयोक्तुः "
+"पूर्णं ईमेल-सङ्केतं भवितुम् अर्हति; सर्वरे स्वस्य खातेः प्रवेशः भवन्तं वक्ष्यति यत् एतत् कः अस्ति ।"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
-msgstr ""
+msgstr "विचि..."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
@@ -474,7 +479,7 @@ msgstr "अनुमतिः"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr ""
+msgstr "<b>नोट्:</b> पुनर्नामकरणाय मातापितृपुटे लेखनस्य अनुमतिः आवश्यकी भवति ।"
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -485,31 +490,31 @@ msgstr "पुटस्य प्रशासनं कर्तुं न श�
 #, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
-msgstr ""
+msgstr "प्रविष्टि योजयतु..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
-msgstr ""
+msgstr "प्रविष्टि सम्पादयतु..."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
-msgstr ""
+msgstr "प्रविष्टि निष्कासयन्तु"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
-msgstr ""
+msgstr "एसीएल योजयन्तु"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
-msgstr ""
+msgstr "एसीएल सम्पादयतु"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
@@ -535,32 +540,32 @@ msgstr "किं भवान् वास्तवमेव एतेषु �
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr ""
+msgstr "अनुमतिः प्रयोजयन्तु"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: pimcommonakonadi/acl/aclutils.cpp:21
 msgctxt "Permissions"
 msgid "Read"
-msgstr ""
+msgstr "पठतु"
 
 #: pimcommonakonadi/acl/aclutils.cpp:23
 msgctxt "Permissions"
 msgid "Append"
-msgstr ""
+msgstr "परिशिष्टम्"
 
 #: pimcommonakonadi/acl/aclutils.cpp:27
 msgctxt "Permissions"
 msgid "Write"
-msgstr ""
+msgstr "लिखतु"
 
 #: pimcommonakonadi/acl/aclutils.cpp:31
 msgctxt "Permissions"
 msgid "All"
-msgstr ""
+msgstr "सर्वे"
 
 #: pimcommonakonadi/acl/aclutils.cpp:66
 #, kde-format
@@ -571,13 +576,13 @@ msgstr "इष्टानुमतिः (%1) ."
 #, kde-format
 msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
-msgstr ""
+msgstr "अभिगमननियन्त्रणम्"
 
 #: pimcommonakonadi/acl/collectionaclwidget.cpp:73
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
-msgstr ""
+msgstr "सर्वेषु &उपपुटेषु अनुमतिः प्रयोजयन्तु ।"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
@@ -598,7 +603,7 @@ msgstr "सम्पर्कात् ईमेलं चिनोतु"
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
-msgstr ""
+msgstr "LDAP परिणामानां कृते Organization Unit दर्शयतु"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
 #, kde-format
@@ -627,7 +632,7 @@ msgstr "अद्यतन पता"
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
-msgstr ""
+msgstr "भवतः दत्तांशेषु प्राप्ताः सम्पर्काः"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:52
 #, kde-format
@@ -643,67 +648,67 @@ msgstr "अन्वेषण"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Select"
-msgstr ""
+msgstr "&विचि"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, kde-format
 msgctxt "@action:button"
 msgid "&Unselect"
-msgstr ""
+msgstr "&अचयनं कुर्वन्तु"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
-msgstr ""
+msgstr "ब्लैकलिस्ट्ड् ईमेल्स् दर्शयतु"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr ""
+msgstr "<qt><a href=\"more_result\">अधिकं परिणामः...</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search email:"
-msgstr ""
+msgstr "ईमेल अन्वेष्टुम्:"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr ""
+msgstr "३ वर्णात् शोधं क्रियते"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
-msgstr ""
+msgstr "परिणामे अन्वेषणं कुर्वन्तु..."
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
-msgstr ""
+msgstr "डोमेननामानि बहिष्कृत्य : १."
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
-msgstr ""
+msgstr "'%1' इत्यनेन डोमेन् पृथक् कुर्वन्तु ।"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "नियमितव्यञ्जनेन सह ईमेलं बहिष्कृत्य:"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
-msgstr ""
+msgstr "'%1' इत्यनेन नियमितव्यञ्जनं पृथक् कुर्वन्तु ।"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
 #, kde-format
@@ -724,8 +729,8 @@ msgstr "कोऽपि ईमेलः न प्राप्तः।"
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ ईमेल प्राप्तम्"
+msgstr[1] "%1 ईमेल प्राप्ताः"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp:137
 #, kde-format
@@ -742,7 +747,7 @@ msgstr "सूची परिवर्तिता आसीत्। अन्
 #, kde-format
 msgctxt "@action"
 msgid "Save"
-msgstr ""
+msgstr "रक्ष्"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:30
 #, kde-format
@@ -754,13 +759,13 @@ msgstr "अन्वेषण"
 #, kde-format
 msgctxt "@action"
 msgid "Cancel"
-msgstr ""
+msgstr "निरसयतु"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Completion"
-msgstr ""
+msgstr "Completion विन्यस्तं कुर्वन्तु"
 
 #: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:60
 #, kde-format
@@ -786,25 +791,25 @@ msgstr "LDAP सर्वर %1"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
-msgstr ""
+msgstr "उपरि गच्छतु"
 
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
-msgstr ""
+msgstr "अधः गच्छतु"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
-msgstr ""
+msgstr "नवीनं ईमेल..."
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add Email"
-msgstr ""
+msgstr "ईमेल योजयतु"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
 #, kde-format
@@ -816,15 +821,15 @@ msgstr "अपाकरोति"
 #, kde-format
 msgid "Remove Email"
 msgid_plural "Remove Emails"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ईमेल निष्कासयन्तु"
+msgstr[1] "ईमेल निष्कासयन्तु"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
 #, kde-format
 msgid "Do you want to remove this email address?"
 msgid_plural "Do you want to remove %1 email addresses?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "किं भवान् एतत् ईमेल-सङ्केतं हर्तुं इच्छति ?"
+msgstr[1] "%1 ईमेल-सङ्केतान् हर्तुं इच्छति वा?"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
@@ -840,7 +845,7 @@ msgstr "मेल"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Calendar"
-msgstr ""
+msgstr "पञ्चाङ्गम्"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
@@ -848,7 +853,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Contacts"
-msgstr ""
+msgstr "सम्पर्क"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
@@ -856,7 +861,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Notes"
-msgstr ""
+msgstr "टिप्पणियाँ"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
@@ -864,7 +869,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Tasks"
-msgstr ""
+msgstr "कार्याणि"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
@@ -872,7 +877,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
-msgstr ""
+msgstr "जर्नल"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
@@ -880,7 +885,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Configuration"
-msgstr ""
+msgstr "विन्यासः"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
@@ -888,7 +893,7 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
-msgstr ""
+msgstr "मुक्तव्यस्तः"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
@@ -896,13 +901,13 @@ msgstr ""
 #, kde-format
 msgctxt "type of folder content"
 msgid "Files"
-msgstr ""
+msgstr "सञ्चिकाः"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
 #, kde-format
 msgctxt "type of folder content"
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
@@ -962,19 +967,19 @@ msgstr "निःशुल्क/&व्यस्तं जनयन्तु �
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr ""
+msgstr "अन्वेषण..."
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr ""
+msgstr "Multiple Folders इति चिनोतु"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
-msgstr ""
+msgstr "शीर्षक"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
@@ -986,7 +991,7 @@ msgstr "सम्पूर्ण नाम"
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
-msgstr ""
+msgstr "ईमेल"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
@@ -1027,7 +1032,7 @@ msgstr "मार्गं"
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
-msgstr ""
+msgstr "राज्यम्‌"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
@@ -1087,25 +1092,25 @@ msgstr "उपयोक्तृपरिचयः"
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
-msgstr ""
+msgstr "ईमेल"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
-msgstr ""
+msgstr "राज्यम्‌"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:339
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
-msgstr ""
+msgstr "शीर्षक"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:474
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
-msgstr ""
+msgstr "LDAP तः सम्पर्काः आयातयन्तु"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:497
 #, kde-format
@@ -1116,25 +1121,25 @@ msgstr "Directory मध्ये Addresses अन्वेष्टुम्"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
-msgstr ""
+msgstr "अन्वेषणं कुर्वन्तु:"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:510
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
-msgstr ""
+msgstr "इत्यस्मिन्‌"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
-msgstr ""
+msgstr "ईमेल"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:516
 #, kde-format
@@ -1152,13 +1157,13 @@ msgstr "कार्य संख्या"
 #, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
-msgstr ""
+msgstr "&अन्वेषण"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
 #, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
-msgstr ""
+msgstr "पुनरावर्तनीयः अन्वेषणम्"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:540
 #, kde-format
@@ -1174,7 +1179,7 @@ msgstr "आरभ्यते"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
-msgstr ""
+msgstr "परिणामे अन्वेषणं कुर्वन्तु"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:582
 #, kde-format
@@ -1185,13 +1190,13 @@ msgstr "अन्वेषणं कुर्वन्..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All"
-msgstr ""
+msgstr "All इति चिनोतु"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:590
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
-msgstr ""
+msgstr "All अचयनं कुर्वन्तु"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:597
 #, kde-format
@@ -1217,13 +1222,13 @@ msgstr "अन्वेषणात् पूर्वं भवद्भिः 
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
-msgstr ""
+msgstr "%2 इत्यत्र %1 LDAP निर्देशिकातः आयातितम्"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:864
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
-msgstr ""
+msgstr "पतापुस्तिका LDAP सेटिंग्स् विन्यस्यताम्"
 
 #: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
 #, kde-format
