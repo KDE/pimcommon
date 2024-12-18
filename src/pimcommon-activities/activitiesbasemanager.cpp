@@ -60,4 +60,24 @@ QDebug operator<<(QDebug d, const PimCommonActivities::ActivitiesBaseManager::Ac
     d << "activities: " << t.activities;
     return d;
 }
+
+bool ActivitiesBaseManager::ActivitySettings::contains(const QString &str) const
+{
+    return activities.contains(str);
+}
+
+void ActivitiesBaseManager::ActivitySettings::changeActivities(bool added, const QString &currentActivity)
+{
+    if (added) {
+        if (!activities.contains(currentActivity)) {
+            activities.append(currentActivity);
+        }
+    } else {
+        if (activities.contains(currentActivity)) {
+            activities.removeAll(currentActivity);
+        }
+    }
+    enabled = true;
+}
+
 #include "moc_activitiesbasemanager.cpp"

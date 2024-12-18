@@ -21,24 +21,9 @@ public:
     struct ActivitySettings {
         QStringList activities;
         bool enabled = false;
-        [[nodiscard]] bool contains(const QString &str) const
-        {
-            return activities.contains(str);
-        }
+        [[nodiscard]] bool contains(const QString &str) const;
 
-        void changeActivities(bool added, const QString &currentActivity)
-        {
-            if (added) {
-                if (!activities.contains(currentActivity)) {
-                    activities.append(currentActivity);
-                }
-            } else {
-                if (activities.contains(currentActivity)) {
-                    activities.removeAll(currentActivity);
-                }
-            }
-            enabled = true;
-        }
+        void changeActivities(bool added, const QString &currentActivity);
     };
 
     explicit ActivitiesBaseManager(QObject *parent = nullptr);
