@@ -3,25 +3,27 @@
 # This file is distributed under the same license as the pimcommon package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-11 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:53+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr "चयनितक्रियाकलापानाम् सीमाः १."
+msgstr "चयनितक्रियाकलापानाम् सीमाः"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:62
 #, kde-format
@@ -278,7 +280,7 @@ msgstr "संस्करणम् %1"
 #: pimcommon/whatsnew/whatsnewwidget.cpp:85
 #, kde-format
 msgid "Important changes since last version:"
-msgstr "अन्तिमसंस्करणात् महत्त्वपूर्णपरिवर्तनानि : १."
+msgstr "अन्तिमसंस्करणात् महत्त्वपूर्णपरिवर्तनानि :"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
@@ -288,7 +290,7 @@ msgstr "अस्मिन् विमोचने केचन नूतना
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
 msgid "Some bug fixing:"
-msgstr "केचन दोषनिवारणाः : १."
+msgstr "केचन दोषनिवारणाः :"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -401,7 +403,7 @@ msgstr "सञ्चिका पूर्वमेव अस्ति"
 #: pimcommon/widgets/simplestringlisteditor.cpp:58
 #, kde-format
 msgid "New entry:"
-msgstr "नवीनप्रविष्टिः : १."
+msgstr "नवीनप्रविष्टिः :"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:56
 #: pimcommon/widgets/simplestringlisteditor.cpp:57
@@ -451,7 +453,7 @@ msgstr "अपाकरोति"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
-msgstr "&उपयोक्तृपरिचयः : १."
+msgstr "&उपयोक्तृपरिचयः :"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:91
 #, kde-format
@@ -690,7 +692,7 @@ msgstr "परिणामे अन्वेषणं कुर्वन्त�
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
-msgstr "डोमेननामानि बहिष्कृत्य : १."
+msgstr "डोमेननामानि बहिष्कृत्य :"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
 #, kde-format
@@ -912,7 +914,7 @@ msgstr "अज्ञात"
 #: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
 #, kde-format
 msgid "&Folder contents:"
-msgstr "&पुटस्य विषयवस्तु : १."
+msgstr "&पुटस्य विषयवस्तु :"
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
 #, kde-format
