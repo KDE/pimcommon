@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-11 00:41+0000\n"
-"PO-Revision-Date: 2024-09-21 10:41+0200\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -246,7 +246,7 @@ msgstr "Eraro Ŝargante Dosieron"
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:31
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "Kontroli Novan Version"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
@@ -1309,7 +1309,3 @@ msgstr "Rimeda agordo finiĝis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Malsukcesis krei rimedan ekzemplon: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Completion Order"
-#~ msgstr "Redakti Kompletigan Ordon"
