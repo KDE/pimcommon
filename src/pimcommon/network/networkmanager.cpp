@@ -37,7 +37,7 @@ bool NetworkManager::isOnline() const
 void NetworkManager::refreshStatus()
 {
     const auto info = QNetworkInformation::instance();
-    const bool newIsOnline = info->reachability() == QNetworkInformation::Reachability::Online && !info->isBehindCaptivePortal();
+    const bool newIsOnline = !info || info->reachability() == QNetworkInformation::Reachability::Online && !info->isBehindCaptivePortal();
     if (newIsOnline != m_isOnline) {
         m_isOnline = newIsOnline;
         Q_EMIT networkStatusChanged(m_isOnline);
