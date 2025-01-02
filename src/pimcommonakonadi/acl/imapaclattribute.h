@@ -47,8 +47,5 @@ public:
 
 private:
     std::unique_ptr<ImapAclAttributePrivate> const d;
-    QMap<QByteArray, KIMAP::Acl::Rights> mRights;
-    QMap<QByteArray, KIMAP::Acl::Rights> mOldRights;
-    KIMAP::Acl::Rights mMyRights;
 };
 }
