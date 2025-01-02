@@ -6,10 +6,10 @@
 */
 
 #include "collectiontypeutil.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 CollectionTypeUtil::CollectionTypeUtil() = default;
 

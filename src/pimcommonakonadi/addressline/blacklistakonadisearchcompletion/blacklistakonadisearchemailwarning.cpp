@@ -6,12 +6,12 @@
 */
 
 #include "blacklistakonadisearchemailwarning.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <QAction>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 
 BlackListAkonadiSearchEmailWarning::BlackListAkonadiSearchEmailWarning(QWidget *parent)
     : KMessageWidget(parent)

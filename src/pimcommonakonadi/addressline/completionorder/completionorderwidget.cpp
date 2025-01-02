@@ -7,7 +7,6 @@
 
 #include "completionorderwidget.h"
 #include <kldapcore/ldapactivitiesabstract.h>
-using namespace Qt::Literals::StringLiterals;
 
 #include <KDescendantsProxyModel>
 #include <KLDAPCore/LdapClient>
@@ -34,6 +33,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QVBoxLayout>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 
 CompletionOrderEditorAdaptor::CompletionOrderEditorAdaptor(QObject *parent)
     : QDBusAbstractAdaptor(parent)

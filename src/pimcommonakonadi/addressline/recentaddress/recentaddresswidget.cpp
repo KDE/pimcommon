@@ -6,7 +6,6 @@
 */
 
 #include "recentaddresswidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "recentaddresses.h"
 
@@ -26,6 +25,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KEmailValidator>
 #include <KLineEditEventHandler>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     : QWidget(parent)

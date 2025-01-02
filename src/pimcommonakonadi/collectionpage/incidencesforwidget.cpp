@@ -6,10 +6,10 @@
 */
 
 #include "incidencesforwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 IncidencesForWidget::IncidencesForWidget(QWidget *parent)
     : QComboBox(parent)

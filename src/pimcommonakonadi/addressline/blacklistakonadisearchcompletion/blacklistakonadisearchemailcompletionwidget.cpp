@@ -6,7 +6,6 @@
 */
 
 #include "blacklistakonadisearchemailcompletionwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "blacklistakonadisearchemaillist.h"
 #include "blacklistakonadisearchemailsearchjob.h"
@@ -27,6 +26,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QVBoxLayout>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompletionWidget(QWidget *parent)
     : QWidget(parent)
     , mNumberOfEmailsFound(new QLabel(this))

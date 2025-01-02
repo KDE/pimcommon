@@ -5,11 +5,11 @@
 */
 
 #include "addresseelineeditutil.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QRegularExpression>
 #include <QUrl>
 
+using namespace Qt::Literals::StringLiterals;
 QString PimCommon::AddresseeLineEditUtil::adaptPasteMails(const QString &str)
 {
     QString newText = str;

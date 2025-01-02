@@ -13,7 +13,6 @@
 */
 
 #include "addresseelineedit.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "addresseelineedit_p.h"
 #include "addresseelineeditmanager.h"
@@ -59,6 +58,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QObject>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 
 inline bool itemIsHeader(const QListWidgetItem *item)
 {

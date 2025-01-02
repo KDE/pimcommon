@@ -6,12 +6,12 @@
 */
 
 #include "contenttypewidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "collectiontypeutil.h"
 #include <KLocalizedString>
 
 using namespace PimCommon;
+using namespace Qt::Literals::StringLiterals;
 
 ContentTypeWidget::ContentTypeWidget(QWidget *parent)
     : QComboBox(parent)

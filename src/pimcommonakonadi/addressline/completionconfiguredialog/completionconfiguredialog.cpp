@@ -6,7 +6,6 @@
 */
 
 #include "completionconfiguredialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KLDAPCore/LdapClientSearch>
@@ -26,6 +25,7 @@ using namespace Qt::Literals::StringLiterals;
 #endif
 #include "addressline/recentaddress/recentaddresswidget.h"
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 namespace
 {
