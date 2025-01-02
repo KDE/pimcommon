@@ -222,7 +222,7 @@ void AddresseeLineEdit::insert(const QString &t)
 
     if (hasSelectedText()) {
         // Cut away the selection.
-        int start_sel = selectionStart();
+        const int start_sel = selectionStart();
         pos = start_sel;
         contents = contents.left(start_sel) + contents.mid(start_sel + selectedText().length());
     }
