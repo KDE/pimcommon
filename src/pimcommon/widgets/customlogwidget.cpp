@@ -31,7 +31,7 @@ QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, con
     QStyleOptionViewItem option4 = option;
     QStyledItemDelegate::initStyleOption(&option4, index);
 
-    QString text = option4.text;
+    const QString text = option4.text;
 
     const QString content = QStringLiteral(
                                 "<html style=\"color:%1\">"
@@ -56,7 +56,7 @@ void LogItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &optio
     doc->setTextWidth(option.rect.width());
     painter->setRenderHint(QPainter::Antialiasing);
 
-    QPen pen = painter->pen();
+    const QPen pen = painter->pen();
 
     QStyleOptionViewItem opt(option);
     opt.showDecorationSelected = true;
@@ -78,7 +78,7 @@ QSize LogItemDelegate::sizeHint(const QStyleOptionViewItem &option, const QModel
         return {0, 0};
     }
 
-    QTextDocument *doc = document(option, index);
+    const QTextDocument *doc = document(option, index);
     if (!doc) {
         return {0, 0};
     }
@@ -149,7 +149,7 @@ QString CustomLogWidget::toHtml() const
         QListWidgetItem *itemWidget = item(i);
         const QString itemText(itemWidget->text());
         QString logText;
-        LogType type = static_cast<LogType>(itemWidget->data(CustomLogWidget::ItemLogType).toInt());
+        const LogType type = static_cast<LogType>(itemWidget->data(CustomLogWidget::ItemLogType).toInt());
         switch (type) {
         case Title:
             logText = QStringLiteral("<font color=%1>%2</font>").arg(QColor(Qt::black).name(), itemText);
