@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
 # Emir SARI <emir_sari@icloud.com>, 2023.
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-11 00:41+0000\n"
-"PO-Revision-Date: 2024-11-09 08:38+0300\n"
+"PO-Revision-Date: 2025-01-09 16:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -965,12 +965,12 @@ msgstr ""
 "Örnek kullanım durumları: Eğer bir patron sekreteri ile bir klasör "
 "paylaşırsa yalnızca kendisi toplantıları için meşgul işaretlenmesi "
 "gerektiğinden ve sekreter klasörde yönetici haklarına sahip olmadığından "
-"‘Yöneticiler’i seçmelidir.\n"
+"“Yöneticiler”i seçmelidir.\n"
 "Diğer bir taraftan, eğer bir çalışma grubu, grup toplantıları için bir "
 "Takvim paylaşırsa tüm klasör okuyucuları toplantılar için meşgul "
 "işaretlenmelidir.\n"
 "İsteğe bağlı olaylara sahip şirket çapında bir klasör ise olayların kime ait "
-"olduğu bilinmediğinden ‘Kimse’ seçilmelidir."
+"olduğu bilinmediğinden “Kimse” seçilmelidir."
 
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
 #, kde-format
