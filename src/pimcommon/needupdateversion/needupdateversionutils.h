@@ -21,6 +21,7 @@ enum class PIMCOMMON_EXPORT ObsoleteVersion : uint8_t {
 
 PIMCOMMON_EXPORT void disableCheckVersion();
 PIMCOMMON_EXPORT bool checkVersion();
+[[nodiscard]] PIMCOMMON_EXPORT QString compileDate();
 [[nodiscard]] PIMCOMMON_EXPORT NeedUpdateVersionUtils::ObsoleteVersion obsoleteVersionStatus(const QString &str, QDate currentDate);
 };
 }

@@ -69,3 +69,8 @@ bool PimCommon::NeedUpdateVersionUtils::checkVersion()
     return false;
 #endif
 }
+
+QString PimCommon::NeedUpdateVersionUtils::compileDate()
+{
+    return QString::fromLatin1(__DATE__);
+}
