@@ -202,7 +202,9 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
 void ShareServiceUrlManager::openUrl(const QUrl &url)
 {
     if (url.isValid()) {
-        QDesktopServices::openUrl(url);
+        if (!QDesktopServices::openUrl(url)) {
+            qCWarning(PIMCOMMON_LOG) << "Impossible to open url: " << url;
+        }
     } else {
         qCDebug(PIMCOMMON_LOG) << "url is invalid.";
     }
