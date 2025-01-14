@@ -70,7 +70,7 @@ bool PimCommon::NeedUpdateVersionUtils::checkVersion()
 #endif
 }
 
-QString PimCommon::NeedUpdateVersionUtils::compileDate()
+QDate PimCommon::NeedUpdateVersionUtils::compileDate()
 {
-    return QString::fromLatin1(__DATE__);
+    return QDate::fromString(QString::fromLatin1(__DATE__), QStringLiteral("MMM dd yyyy"));
 }
