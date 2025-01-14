@@ -21,6 +21,7 @@ void NeedUpdateCheckExistingNewVersionJob::start()
 {
     if (!canStart()) {
         qCWarning(PIMCOMMON_LOG) << "Impossible to start NeedUpdateCheckExistingNewVersionJob";
+        Q_EMIT foundNewVersion(false);
         deleteLater();
         return;
     }

@@ -36,6 +36,7 @@ void NeedUpdateParseHtmlJob::start()
 {
     if (!canStart()) {
         qCWarning(PIMCOMMON_LOG) << "Impossible to start NeedUpdateParseHtmlJob";
+        Q_EMIT downLoadDone({});
         deleteLater();
         return;
     }
