@@ -109,6 +109,14 @@ target_sources(KPim6PimCommon PRIVATE
     needupdateversion/needupdateversionutils.h
     needupdateversion/needupdateversionutils.cpp
 
+    needupdateversion/needupdatecheckexistingnewversionjob.cpp
+    needupdateversion/needupdatecheckexistingnewversionjob.h
+    needupdateversion/needupdateparsehtmljob.cpp
+    needupdateversion/needupdateparsehtmljob.h
+    needupdateversion/needupdateparsehtmlutil.cpp
+    needupdateversion/needupdateparsehtmlutil.h
+
+
     widgets/purposemenuwidget.h
     widgets/purposemenuwidget.cpp
 

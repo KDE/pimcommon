@@ -1,0 +1,80 @@
+/*
+  SPDX-FileCopyrightText: 2025 Laurent Montel <montel@kde.org>
+
+  SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
+#include "needupdatecheckexistingnewversionjob.h"
+#include "needupdateparsehtmljob.h"
+#include "needupdateparsehtmlutil.h"
+#include "pimcommon_debug.h"
+#include <QDate>
+using namespace PimCommon;
+NeedUpdateCheckExistingNewVersionJob::NeedUpdateCheckExistingNewVersionJob(QObject *parent)
+    : QObject{parent}
+{
+}
+
+NeedUpdateCheckExistingNewVersionJob::~NeedUpdateCheckExistingNewVersionJob() = default;
+
+void NeedUpdateCheckExistingNewVersionJob::start()
+{
+    if (!canStart()) {
+        qCWarning(PIMCOMMON_LOG) << "Impossible to start NeedUpdateCheckExistingNewVersionJob";
+        deleteLater();
+        return;
+    }
+    auto job = new NeedUpdateParseHtmlJob(this);
+    job->setUrl(mUrl);
+    connect(job, &NeedUpdateParseHtmlJob::downLoadDone, this, &NeedUpdateCheckExistingNewVersionJob::slotDownloadDone);
+    job->start();
+}
+
+void NeedUpdateCheckExistingNewVersionJob::slotDownloadDone(const QString &str)
+{
+    const QString compileDateStr = NeedUpdateParseHtmlUtil::extractDate(str);
+    if (compileDateStr.isEmpty()) {
+        Q_EMIT foundNewVersion(false);
+        deleteLater();
+        return;
+    }
+
+    qCDebug(PIMCOMMON_LOG) << " currentCompiledDate " << mCompileDate;
+
+    const QDate dateFromUrl = QDate::fromString(compileDateStr, QStringLiteral("yyyy-MM-dd"));
+    qCDebug(PIMCOMMON_LOG) << " dateFromUrl " << dateFromUrl << " original " << compileDateStr;
+
+    if (dateFromUrl > mCompileDate) {
+        Q_EMIT foundNewVersion(true);
+    } else {
+        Q_EMIT foundNewVersion(false);
+    }
+    deleteLater();
+}
+
+QUrl NeedUpdateCheckExistingNewVersionJob::url() const
+{
+    return mUrl;
+}
+
+void NeedUpdateCheckExistingNewVersionJob::setUrl(const QUrl &newUrl)
+{
+    mUrl = newUrl;
+}
+
+bool NeedUpdateCheckExistingNewVersionJob::canStart() const
+{
+    return !mUrl.isEmpty() && mCompileDate.isValid();
+}
+
+QDate NeedUpdateCheckExistingNewVersionJob::compileDate() const
+{
+    return mCompileDate;
+}
+
+void NeedUpdateCheckExistingNewVersionJob::setCompileDate(const QDate &newCompileDate)
+{
+    mCompileDate = newCompileDate;
+}
+
+#include "moc_needupdatecheckexistingnewversionjob.cpp"
