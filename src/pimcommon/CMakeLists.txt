@@ -245,6 +245,9 @@ ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
     HEADER_NAMES
     NeedUpdateVersionUtils
     NeedUpdateVersionWidget
+    NeedUpdateParseHtmlJob
+    NeedUpdateCheckExistingNewVersionJob
+    NeedUpdateParseHtmlUtil
     REQUIRED_HEADERS PimCommon_needupdateversionwidgets_HEADERS
     PREFIX PimCommon
     RELATIVE needupdateversion
