@@ -7,7 +7,7 @@ SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
 SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/pimcommon"
 
 [[annotations]]
-path = ["src/pimcommonautocorrection/autocorrection/autotests/data/acor_fr.dat", "src/pimcommonautocorrection/autocorrection/autotests/data/**.xml", "src/pimcommontexttranslator/translator/DEBUG", "src/pimcommon/widgets/icons/hint.svg", "src/pimcommon/widgets/icons/visibility.svg", "src/pimcommontextgrammarcheck/grammalecte/autotests/data/**.json", "src/pimcommontextgrammarcheck/languagetool/autotests/data/**.json"]
+path = ["src/pimcommonautocorrection/autocorrection/autotests/data/acor_fr.dat", "src/pimcommonautocorrection/autocorrection/autotests/data/**.xml", "src/pimcommontexttranslator/translator/DEBUG", "src/pimcommon/widgets/icons/hint.svg", "src/pimcommon/widgets/icons/visibility.svg", "src/pimcommontextgrammarcheck/grammalecte/autotests/data/**.json", "src/pimcommontextgrammarcheck/languagetool/autotests/data/**.json", "src/pimcommon/needupdateversion/autotests/data/*.html"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"
