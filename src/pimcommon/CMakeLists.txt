@@ -140,6 +140,11 @@ target_sources(KPim6PimCommon PRIVATE
     verifynewversion/verifynewversionutils.h
     verifynewversion/verifynewversionwidget.cpp
     verifynewversion/verifynewversionwidget.h
+    verifynewversion/checknewversiondialog.cpp
+    verifynewversion/checknewversiondialog.h
+    verifynewversion/checknewversionwidget.cpp
+    verifynewversion/checknewversionwidget.h
+
 )
 
 if(ENABLE_WARN_OUTDATED)
