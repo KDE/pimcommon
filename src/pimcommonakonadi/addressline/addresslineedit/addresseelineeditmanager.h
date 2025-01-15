@@ -18,7 +18,6 @@
 #include <QColor>
 
 class QTimer;
-class QNetworkConfigurationManager;
 namespace KLDAPCore
 {
 class LdapActivitiesAbstract;
