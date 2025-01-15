@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QUrl>
 #include <QWidget>
 class QLabel;
 namespace PimCommon
@@ -19,8 +20,11 @@ public:
 
     void checkNewVersion();
 
+    void setUrl(const QUrl &url);
+
 private:
     void slotFoundNewVersion(bool found);
     QLabel *const mCheckVersionResultLabel;
+    QUrl mUrl;
 };
 }

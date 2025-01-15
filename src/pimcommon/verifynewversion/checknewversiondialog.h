@@ -19,6 +19,8 @@ public:
 
     void checkNewVersion();
 
+    void setUrl(const QUrl &url);
+
 private:
     CheckNewVersionWidget *const mVerifyNewVersionWidget;
 };

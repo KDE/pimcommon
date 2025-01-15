@@ -35,4 +35,9 @@ void CheckNewVersionDialog::checkNewVersion()
     mVerifyNewVersionWidget->checkNewVersion();
 }
 
+void CheckNewVersionDialog::setUrl(const QUrl &url)
+{
+    mVerifyNewVersionWidget->setUrl(url);
+}
+
 #include "moc_checknewversiondialog.cpp"

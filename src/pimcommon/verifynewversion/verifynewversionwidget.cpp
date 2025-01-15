@@ -6,6 +6,7 @@
 
 #include "verifynewversionwidget.h"
 #include "pimcommon_debug.h"
+#include "verifynewversion/checknewversiondialog.h"
 #include "verifynewversionutils.h"
 #include <KLocalizedString>
 #include <QAction>
@@ -55,9 +56,9 @@ void VerifyNewVersionWidget::slotVerifyNewVersion()
 #endif
 #endif
     if (!url.isEmpty()) {
-        if (!QDesktopServices::openUrl(url)) {
-            qCWarning(PIMCOMMON_LOG) << "Impossible to open url: " << url;
-        }
+        CheckNewVersionDialog dlg(nullptr);
+        dlg.checkNewVersion();
+        dlg.exec();
     }
 }
 

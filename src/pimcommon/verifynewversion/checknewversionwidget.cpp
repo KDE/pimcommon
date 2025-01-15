@@ -33,18 +33,22 @@ CheckNewVersionWidget::~CheckNewVersionWidget() = default;
 void CheckNewVersionWidget::checkNewVersion()
 {
     auto job = new NeedUpdateCheckExistingNewVersionJob(this);
-    // TODO job->setUrl(NeedUpdateVersionUtils::newVersionUrl());
+    job->setUrl(mUrl);
     job->setCompileDate(NeedUpdateVersionUtils::compileDate());
     connect(job, &NeedUpdateCheckExistingNewVersionJob::foundNewVersion, this, &CheckNewVersionWidget::slotFoundNewVersion);
     job->start();
+}
+
+void CheckNewVersionWidget::setUrl(const QUrl &url)
+{
+    mUrl = url;
 }
 
 void CheckNewVersionWidget::slotFoundNewVersion(bool found)
 {
     if (found) {
         mCheckVersionResultLabel->setTextFormat(Qt::RichText);
-        const QUrl url; // TODO = NeedUpdateVersionUtils::newVersionUrl();
-        mCheckVersionResultLabel->setText(i18n("A new version found. Click <a href=\"%1\">here</a> for downloading it.", url.toString()));
+        mCheckVersionResultLabel->setText(i18n("A new version found. Click <a href=\"%1\">here</a> for downloading it.", mUrl.toString()));
         connect(mCheckVersionResultLabel, &QLabel::linkActivated, this, [](const QString &url) {
             if (!QDesktopServices::openUrl(QUrl(url))) {
                 qCWarning(PIMCOMMON_LOG) << "Impossible to open url: " << url;
