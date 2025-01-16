@@ -26,6 +26,7 @@ CheckNewVersionDialog::CheckNewVersionDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckNewVersionDialog::reject);
+    resize(300, 200);
 }
 
 CheckNewVersionDialog::~CheckNewVersionDialog() = default;
