@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 00:42+0000\n"
 "PO-Revision-Date: 2024-11-16 12:15+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -241,7 +241,25 @@ msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Błąd wczytywania pliku"
 
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:32
+#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
+#, fuzzy, kde-format
+#| msgid "Check New Version"
+msgctxt "@title:window"
+msgid "Check New Version"
+msgstr "Sprawdź, czy jest nowa wersja"
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
+#, kde-format
+msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "No email found."
+msgid "No new version found."
+msgstr "Nie znaleziono e-maila."
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
 msgid "Check New Version"
 msgstr "Sprawdź, czy jest nowa wersja"

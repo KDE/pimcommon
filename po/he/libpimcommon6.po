@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 00:42+0000\n"
 "PO-Revision-Date: 2024-11-09 11:33+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -238,7 +238,25 @@ msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "שגיאת טעינת קובץ"
 
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:32
+#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
+#, fuzzy, kde-format
+#| msgid "Check New Version"
+msgctxt "@title:window"
+msgid "Check New Version"
+msgstr "בדיקה לאיתור גרסה חדשה"
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
+#, kde-format
+msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "No email found."
+msgid "No new version found."
+msgstr "לא נמצאו כתובות דוא״ל."
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
 msgid "Check New Version"
 msgstr "בדיקה לאיתור גרסה חדשה"

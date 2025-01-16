@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 00:42+0000\n"
 "PO-Revision-Date: 2024-08-12 15:05+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -246,7 +246,24 @@ msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Failo įkėlimo klaida"
 
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:32
+#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Check New Version"
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
+#, kde-format
+msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "No email found."
+msgid "No new version found."
+msgstr "Nerasta jokio el. pašto."
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
 msgid "Check New Version"
 msgstr ""

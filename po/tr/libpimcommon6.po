@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 16:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -244,7 +244,25 @@ msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Dosya Yükleme Hatası"
 
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:32
+#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
+#, fuzzy, kde-format
+#| msgid "Check New Version"
+msgctxt "@title:window"
+msgid "Check New Version"
+msgstr "Yeni Sürüm Denetle"
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
+#, kde-format
+msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "No email found."
+msgid "No new version found."
+msgstr "E-posta bulunamadı."
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
 msgid "Check New Version"
 msgstr "Yeni Sürüm Denetle"

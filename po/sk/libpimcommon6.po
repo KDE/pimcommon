@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 00:42+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -239,7 +239,24 @@ msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Chyba načítania súboru"
 
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:32
+#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Check New Version"
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
+#, kde-format
+msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+msgstr ""
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
+#, fuzzy, kde-format
+#| msgid "No Gravatar found."
+msgid "No new version found."
+msgstr "Nenašiel sa gravatar."
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
 msgid "Check New Version"
 msgstr ""
