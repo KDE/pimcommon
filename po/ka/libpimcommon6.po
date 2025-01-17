@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 05:30+0100\n"
+"PO-Revision-Date: 2025-01-16 02:42+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -240,8 +240,7 @@ msgid "Load File Error"
 msgstr "ფაილის ჩატვირთვის შეცდომა"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
 msgstr "ახალი ვერსიის შემოწმება"
@@ -250,12 +249,12 @@ msgstr "ახალი ვერსიის შემოწმება"
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
 msgstr ""
+"აღმოჩენილია ახალი ვერსია. მის გადმოსაწერად დააწკაპუნეთ <a href=\"%1\">აქ</a>."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "ელფოსტა ვერ მოიძებნა."
+msgstr "ახალი ვერსია აღმოჩენილი არაა."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format

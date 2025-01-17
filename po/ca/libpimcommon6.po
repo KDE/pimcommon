@@ -1,16 +1,16 @@
 # Translation of libpimcommon6.po to Catalan
-# Copyright (C) 2012-2024 This_file_is_part_of_KDE
+# Copyright (C) 2012-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 09:40+0100\n"
+"PO-Revision-Date: 2025-01-16 10:45+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -246,22 +246,22 @@ msgid "Load File Error"
 msgstr "Error en carregar el fitxer"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
-msgstr "Comprova si hi ha una versió nova"
+msgstr "Comprovació de versió nova"
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
 msgstr ""
+"S'ha trobat una versió nova. Feu clic <a href=\"%1\">aquí</a> per a baixar-"
+"la."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "No s'ha trobat cap correu electrònic."
+msgstr "No s'ha trobat cap versió nova."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
@@ -1330,42 +1330,3 @@ msgstr "S'ha completat l'arranjament del recurs."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallat en crear la instància del recurs: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Completion Order"
-#~ msgstr "Edició de l'ordre de la compleció"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Note"
-#~ msgstr "Edita la nota"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete Note"
-#~ msgstr "Suprimeix la nota"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Note"
-#~ msgstr "Afegeix una nota"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Enter the text that should be stored as a note to the mail:"
-#~ msgstr "Introduïu el text que s'ha d'emmagatzemar com a nota al correu:"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Note type:"
-#~ msgstr "Tipus de nota:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Private note"
-#~ msgstr "Nota privada"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Shared note"
-#~ msgstr "Nota compartida"
-
-#~ msgid "Do you really want to delete this note?"
-#~ msgstr "Realment voleu suprimir aquesta nota?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note"
-#~ msgstr "Supressió de nota"
