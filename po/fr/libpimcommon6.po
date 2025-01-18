@@ -5,7 +5,7 @@
 # Sebastien Renard <renard@kde.org>, 2013, 2014.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2022, 2023.
 #
 msgid ""
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-11-10 10:38+0100\n"
+"PO-Revision-Date: 2025-01-17 09:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
@@ -253,22 +253,22 @@ msgid "Load File Error"
 msgstr "Erreur de chargement du fichier"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
-msgstr "Vérifier l'existence d'une nouvelle Version"
+msgstr "Vérifier l'existence d'une nouvelle version"
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
 msgstr ""
+"Une nouvelle version a été trouvée. Veuillez cliquer <a href=\"%1\">ici</a> "
+"pour latélécharger."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "Aucun courriel trouvé."
+msgstr "Aucune nouvelle version n'a été trouvée."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
