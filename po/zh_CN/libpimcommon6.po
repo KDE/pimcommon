@@ -239,7 +239,7 @@ msgstr "加载文件错误"
 #, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
-msgstr ""
+msgstr "检查新版本"
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
@@ -247,15 +247,14 @@ msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
 msgstr ""
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "没有找到电子邮件。"
+msgstr ""
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
 msgid "Check New Version"
-msgstr ""
+msgstr "检查新版本"
 
 #: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
 #, kde-format
