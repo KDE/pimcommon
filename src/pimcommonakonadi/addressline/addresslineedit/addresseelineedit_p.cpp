@@ -102,7 +102,7 @@ void AddresseeLineEditPrivate::init()
     mToolButton->setCursor(Qt::ArrowCursor);
     const int size = q->sizeHint().height() - 5;
     mToolButton->setFixedSize(size, size);
-    int padding = (q->sizeHint().height() - size) / 2;
+    const int padding = (q->sizeHint().height() - size) / 2;
     mToolButton->move(2, padding);
     mToolButton->setStyleSheet(QStringLiteral("QToolButton { border: none; }"));
     connect(mToolButton, &QToolButton::clicked, q, &AddresseeLineEdit::iconClicked);
