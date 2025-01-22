@@ -12,8 +12,8 @@ platforms:
 irc: akonadi
 
 libraries:
- - cmake: "KPim6::PimCommon"
- - cmake: "KPim6::PimCommonAkonadi"
+    - cmake: "KPim6::PimCommon"
+    - cmake: "KPim6::PimCommonAkonadi"
 
 cmakename: KPim6PimCommon
 # FIXME kapidox does not support more than one cmake module per repo yet
