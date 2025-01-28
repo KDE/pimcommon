@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Luigi Toscano <luigi.toscano@tiscali.it>
 # Vincenzo Reale <smart2128vr@gmail.com>, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 14:27+0100\n"
+"PO-Revision-Date: 2025-01-16 14:17+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -242,8 +242,7 @@ msgid "Load File Error"
 msgstr "Errore nel caricamento del file"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
 msgstr "Verifica nuova versione"
@@ -252,12 +251,13 @@ msgstr "Verifica nuova versione"
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
 msgstr ""
+"È stata trovata una nuova versione. Fai click <a href=\"%1\">qui</a> per "
+"scaricarla."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "Nessun messaggio di posta trovato."
+msgstr "Non è stata trovata una nuova versione."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
