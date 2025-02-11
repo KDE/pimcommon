@@ -236,11 +236,10 @@ msgid "Load File Error"
 msgstr "Chyba při načítání souboru"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
-msgstr "Zkontrolovat novou verzi"
+msgstr ""
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
@@ -248,10 +247,9 @@ msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
 msgstr ""
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "Nebyl nalezen žádný e-mail."
+msgstr ""
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
@@ -1313,7 +1311,3 @@ msgstr "Nastavení zdroje bylo dokončeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Selhalo vytvoření instance zdroje: %1"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Completion Order"
-#~ msgstr "Upravit pořadí doplňování"
