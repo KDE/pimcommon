@@ -862,7 +862,7 @@ void LdapSearchDialog::slotUser2()
 
     QPointer<KCMultiDialog> dialog = new KCMultiDialog(this);
     dialog->setWindowTitle(i18nc("@title:window", "Configure the Address Book LDAP Settings"));
-    dialog->addModule(KPluginMetaData(QStringLiteral("pim6/kcms/kaddressbook/kcm_ldap")));
+    dialog->addModule(KPluginMetaData(QStringLiteral("pim6/kcms/common/kcm_ldap")));
 
     if (dialog->exec()) { // krazy:exclude=crashy
         d->restoreSettings();
