@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-12-28 17:41+0100\n"
+"PO-Revision-Date: 2025-02-12 22:59+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -244,8 +244,7 @@ msgid "Load File Error"
 msgstr "Eraro Ŝargante Dosieron"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
 msgstr "Kontroli Novan Version"
@@ -253,13 +252,12 @@ msgstr "Kontroli Novan Version"
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
+msgstr "Nova versio trovita. Klaku <a href=\"%1\">tien ĉi</a> por elŝuti ĝin."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "Neniu retpoŝto trovita."
+msgstr "Neniu nova versio trovita."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
