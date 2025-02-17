@@ -28,16 +28,20 @@ public:
 
     explicit ActivitiesBaseManager(QObject *parent = nullptr);
     ~ActivitiesBaseManager() override;
-    [[nodiscard]] virtual bool enabled() const = 0;
 
     [[nodiscard]] bool isInCurrentActivity(const QStringList &lst) const;
 
     [[nodiscard]] QString currentActivity() const;
+
+    [[nodiscard]] bool enabled() const;
+    void setEnabled(bool newEnabled);
+
 Q_SIGNALS:
     void activitiesChanged();
 
 private:
     KActivities::Consumer *const mActivitiesConsumer;
+    bool mEnabled = false;
 };
 }
 PIMCOMMONACTIVITIES_EXPORT QDebug operator<<(QDebug d, const PimCommonActivities::ActivitiesBaseManager::ActivitySettings &t);

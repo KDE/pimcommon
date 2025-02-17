@@ -54,6 +54,19 @@ QString ActivitiesBaseManager::currentActivity() const
     return mActivitiesConsumer->currentActivity();
 }
 
+bool ActivitiesBaseManager::enabled() const
+{
+    return mEnabled;
+}
+
+void ActivitiesBaseManager::setEnabled(bool newEnabled)
+{
+    if (mEnabled != newEnabled) {
+        mEnabled = newEnabled;
+        Q_EMIT activitiesChanged();
+    }
+}
+
 QDebug operator<<(QDebug d, const PimCommonActivities::ActivitiesBaseManager::ActivitySettings &t)
 {
     d << "enabled: " << t.enabled;
