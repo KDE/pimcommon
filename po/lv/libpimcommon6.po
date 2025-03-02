@@ -1,0 +1,1330 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the pimcommon package.
+#
+# SPDX-FileCopyrightText: 2025 Toms Trasuns <toms.trasuns@posteo.net>
+msgid ""
+msgstr ""
+"Project-Id-Version: pimcommon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"PO-Revision-Date: 2025-02-28 15:06+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 24.12.2\n"
+
+#: pimcommon-activities/configureactivitieswidget.cpp:56
+#, kde-format
+msgctxt "@option:check"
+msgid "Limit to the selected activities:"
+msgstr "Ierobežot līdz atlasītajām aktivitātēm:"
+
+#: pimcommon-activities/configureactivitieswidget.cpp:62
+#, kde-format
+msgctxt "@label:textbox"
+msgid ""
+"If you limit this account to activity, it will be shown only when you are in "
+"those activities. Furthermore, when you switch to an activity it should not "
+"be available in, it will automatically be hidden."
+msgstr ""
+"Ja ierobežosit šo kontu līdz aktivitātei, tas būs redzams tikai tad, kad "
+"atradīsities attiecīgajā aktivitātē. Turklāt, pārslēdzoties uz aktivitāti, "
+"kurā tam nav jābūt pieejamam, konts būs automātiski paslēpts."
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
+#, kde-format
+msgid "..."
+msgstr "..."
+
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Configure"
+msgstr "Konfigurēt"
+
+#: pimcommon/configureplugins/configurepluginswidget.cpp:40
+#, kde-format
+msgid "Restart is necessary for applying the changes."
+msgstr "Lai pielietotu izmaiņas, nepieciešamas sistēmu pārstartēt."
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
+#, kde-format
+msgctxt "@action"
+msgid "Disable version check"
+msgstr "Izslēgt versijas pārbaudi"
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
+#, kde-format
+msgid "Your version is older than 6 months, we encourage you to upgrade."
+msgstr ""
+"Jūsu versija ir vecāka par sešiem mēnešiem, tāpēc iesakām to atjaunināt."
+
+#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
+#, kde-format
+msgid ""
+"Your version is older than 1 year, we strongly encourage you to upgrade."
+msgstr ""
+"Jūsu versija ir vecāka par vienu gadu, tāpēc stingri iesakām to atjaunināt."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#, kde-format
+msgid "Share On..."
+msgstr "Kopīgot caur..."
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#, kde-format
+msgctxt "@action:inmenu Share On..."
+msgid "%1"
+msgstr "%1"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#, kde-format
+msgid "Facebook"
+msgstr "Facebook"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#, kde-format
+msgid "Twitter"
+msgstr "Twitter"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#, kde-format
+msgid "Mail"
+msgstr "Pastu"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#, kde-format
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#, kde-format
+msgid "Evernote"
+msgstr "Evernote"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
+#, kde-format
+msgid "Pocket"
+msgstr "Pocket"
+
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#, kde-format
+msgid "LiveJournal"
+msgstr "LiveJournal"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#, kde-format
+msgctxt "@title:window"
+msgid "Default template"
+msgstr "Noklusējuma veidne"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#, kde-format
+msgctxt "@title:window"
+msgid "Template"
+msgstr "Veidne"
+
+#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Name:"
+msgstr "Nosaukums:"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:77
+#, kde-format
+msgid "Do you want to delete selected template?"
+msgstr "Vai vēlaties dzēst atlasīto veidni?"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:78
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete template"
+msgstr "Dzēst veidni"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:145
+#, kde-format
+msgid "Import Template"
+msgstr "Importēt veidni"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:154
+#, kde-format
+msgid "Export Template"
+msgstr "Eksportēt veidni"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:168
+#, kde-format
+msgid "Insert template"
+msgstr "Ievietot veidni"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:174
+#, kde-format
+msgid "Add..."
+msgstr "Pievienot..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#, kde-format
+msgid "Show..."
+msgstr "Rādīt..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#, kde-format
+msgid "Modify..."
+msgstr "Izmainīt..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:183
+#, kde-format
+msgid "Duplicate"
+msgstr "Dublēt"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:189
+#, kde-format
+msgid "Remove"
+msgstr "Noņemt"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#, kde-format
+msgid "Export..."
+msgstr "Eksportēt..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:200
+#, kde-format
+msgid "Import..."
+msgstr "Importēt..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:207
+#, kde-format
+msgid "Download new Templates..."
+msgstr "Lejupielādēt jaunas veidnes..."
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#, kde-format
+msgid "'%1' is not a template file"
+msgstr "„%1“ nav veidnes datne"
+
+#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#, kde-format
+msgid "Load Template"
+msgstr "Ielādēt veidni"
+
+#: pimcommon/util/pimutil.cpp:51
+#, kde-format
+msgid ""
+"Could not write the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Neizdevās rakstīt datni „%1“:\n"
+"„%2“ ir sīkāks kļūda apraksts."
+
+#: pimcommon/util/pimutil.cpp:55
+#, kde-format
+msgctxt "@title:window"
+msgid "Save File Error"
+msgstr "Datnes saglabāšanas kļūda"
+
+#: pimcommon/util/pimutil.cpp:86
+#, kde-format
+msgid ""
+"Could not read the file %1:\n"
+"\"%2\" is the detailed error description."
+msgstr ""
+"Neizdevās nolasīt datni „%1“:\n"
+"„%2“ ir sīkāks kļūdas apraksts."
+
+#: pimcommon/util/pimutil.cpp:90
+#, kde-format
+msgctxt "@title:window"
+msgid "Load File Error"
+msgstr "Datnes ielādes kļūda"
+
+#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
+#, kde-format
+msgctxt "@title:window"
+msgid "Check New Version"
+msgstr "Pārbaudīt jaunu versiju"
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
+#, kde-format
+msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+msgstr ""
+"Atrasta jauna versija. Klikšķiniet <a href=\"%1\">te</a>, lai to "
+"lejupielādētu."
+
+#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
+#, kde-format
+msgid "No new version found."
+msgstr "Jaunas versijas nav atrastas."
+
+#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
+#, kde-format
+msgid "Check New Version"
+msgstr "Pārbaudīt jaunu versiju"
+
+#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Version:"
+msgstr "Versija:"
+
+#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#, kde-format
+msgctxt "@title:window"
+msgid "What's new in %1"
+msgstr "Kas jauns %1?"
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "(Show News)"
+msgstr "(Rādīt ziņas)"
+
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#, kde-format
+msgid "What's new in %2. %1"
+msgstr "Kas jauns %2? %1"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:44
+#, kde-format
+msgid "All Version"
+msgstr "Visas versijas"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:47
+#, kde-format
+msgid "Version %1"
+msgstr "Versija %1"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:85
+#, kde-format
+msgid "Important changes since last version:"
+msgstr "Svarīgas izmaiņas kopš iepriekšējās versijas:"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:90
+#, kde-format
+msgid "Some of the new features in this release include:"
+msgstr "Daži no jaunumiem šajā versijā:"
+
+#: pimcommon/whatsnew/whatsnewwidget.cpp:95
+#, kde-format
+msgid "Some bug fixing:"
+msgstr "Atsevišķi kļūdu labojumi:"
+
+#: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
+#, kde-format
+msgid ""
+"<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
+"this is an error, please contact him.</p></qt>"
+msgstr ""
+"<qt><p>Šo iestatījumu ir labojis administrators.</p><p>Ja domājat, ka tas ir "
+"kļūda, sazinieties ar viņu.</p></qt>"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:27
+#, kde-format
+msgid "Change Case"
+msgstr "Mainīt reģistru"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:28
+#, kde-format
+msgctxt "@action"
+msgid "Uppercase"
+msgstr "Lielie burti"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:31
+#, kde-format
+msgctxt "@action"
+msgid "Sentence case"
+msgstr "Teikuma lielie burti"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:34
+#, kde-format
+msgctxt "@action"
+msgid "Lowercase"
+msgstr "Mazie burti"
+
+#: pimcommon/widgets/kactionmenuchangecase.cpp:37
+#, kde-format
+msgctxt "@action"
+msgid "Reverse Case"
+msgstr "Apgriezt"
+
+#: pimcommon/widgets/lineeditwithcompleterng.cpp:44
+#, kde-format
+msgid "Clear History"
+msgstr "Notīrīt vēsturi"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:58
+#, kde-format
+msgid "There was a problem sharing the document: %1"
+msgstr "Radās problēma ar dokumenta kopīgošanu: %1"
+
+#: pimcommon/widgets/purposemenuwidget.cpp:62
+#, kde-format
+msgid "File was shared."
+msgstr "Datne ir kopīgota."
+
+#: pimcommon/widgets/purposemenuwidget.cpp:64
+#, kde-format
+msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
+msgstr "<qt>Varat atrast jaunu pieprasījumu te:<br /><a href='%1'>%1</a> </qt>"
+
+#: pimcommon/widgets/renamefiledialog.cpp:100
+#, kde-format
+msgctxt "@title:window"
+msgid "File Already Exists"
+msgstr "Datne jau pastāv"
+
+#: pimcommon/widgets/renamefiledialog.cpp:103
+#, kde-kuit-format
+msgid ""
+"A file named <filename>%1</filename> already exists. Do you want to "
+"overwrite it?"
+msgstr ""
+"Datne ar nosaukumu <filename>%1</filename> jau pastāv. Vai vēlaties to "
+"pārrakstīt?"
+
+#: pimcommon/widgets/renamefiledialog.cpp:113
+#, kde-format
+msgctxt "@action:button"
+msgid "Suggest New &Name"
+msgstr "Ieteikt &jaunu nosaukumu"
+
+#: pimcommon/widgets/renamefiledialog.cpp:121
+#, kde-format
+msgctxt "@action:button"
+msgid "&Ignore"
+msgstr "&Ignorēt"
+
+#: pimcommon/widgets/renamefiledialog.cpp:124
+#, kde-format
+msgctxt "@action:button"
+msgid "&Rename"
+msgstr "&Pārdēvēt"
+
+#: pimcommon/widgets/renamefiledialog.cpp:134
+#, kde-format
+msgctxt "@option:check"
+msgid "Appl&y to All"
+msgstr "&Pielietot visam"
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "This filename \"%1\" already exists."
+msgstr "Datne ar nosaukumu „%1“ jau pastāv."
+
+#: pimcommon/widgets/renamefiledialog.cpp:180
+#, kde-format
+msgid "File already exists"
+msgstr "Datne jau pastāv"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:55
+#: pimcommon/widgets/simplestringlisteditor.cpp:58
+#, kde-format
+msgid "New entry:"
+msgstr "Jauns ieraksts:"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:56
+#: pimcommon/widgets/simplestringlisteditor.cpp:57
+#, kde-format
+msgid "New Value"
+msgstr "Jauna vērtība"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:59
+#, kde-format
+msgid "Do you want to remove selected text?"
+msgstr "Vai vēlaties noņemt atlasīto tekstu?"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:94
+#, kde-format
+msgctxt "@action:button"
+msgid "&Add..."
+msgstr "&Pievienot..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:105
+#, kde-format
+msgctxt "@action:button"
+msgid "&Modify..."
+msgstr "&Mainīt..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:118
+#, kde-format
+msgctxt "@action:button"
+msgid "&Remove"
+msgstr "&Noņemt"
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:155
+#, kde-format
+msgctxt "@action:button"
+msgid "&Customize..."
+msgstr "&Pielāgot..."
+
+#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#, kde-format
+msgctxt "@label:textbox"
+msgid "&User identifier:"
+msgstr "&Lietotāja identifikators:"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid ""
+"The User Identifier is the login of the user on the IMAP server. This can be "
+"a simple user name or the full email address of the user; the login for your "
+"own account on the server will tell you which one it is."
+msgstr ""
+"Lietotāja identifikators ir IMAP servera lietotājvārds. Tas var būt "
+"vienkāršs vārds vai lietotāja pilna e-pasta adrese. Ierakstīšanās vārds jūsu "
+"paša kontā serverī parādīs, kas tas ir."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#, kde-format
+msgctxt "select an email address"
+msgid "Se&lect..."
+msgstr "&Atlasīt..."
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#, kde-format
+msgid "Permissions"
+msgstr "Atļaujas"
+
+#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#, kde-format
+msgctxt "@label:textbox"
+msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
+msgstr ""
+"<b>Ievērībai: </b>pārdēvēšanai ir nepieciešamas hierarhiski augstākas mapes "
+"rakstīšanas atļaujas"
+
+#: pimcommonakonadi/acl/acllistview.cpp:50
+#, kde-format
+msgid "Folder cannot be administrated."
+msgstr "Mapi nevar administrēt."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:161
+#, kde-format
+msgctxt "@action"
+msgid "Add Entry..."
+msgstr "Pievienot ierakstu..."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:166
+#, kde-format
+msgctxt "@action"
+msgid "Edit Entry..."
+msgstr "Rediģēt ierakstu..."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:172
+#, kde-format
+msgctxt "@action"
+msgid "Remove Entry"
+msgstr "Noņemt ierakstu"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:214
+#, kde-format
+msgctxt "@title:window"
+msgid "Add ACL"
+msgstr "Pievienot ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:241
+#, kde-format
+msgctxt "@title:window"
+msgid "Edit ACL"
+msgstr "Rediģēt ACL"
+
+#: pimcommonakonadi/acl/aclmanager.cpp:281
+#, kde-format
+msgid ""
+"Do you really want to remove your own permissions for this folder? You will "
+"not be able to access it afterwards."
+msgstr ""
+"Vai vēlaties noņemt savas atļaujas šai mapei? Ja turpināsit, zaudēsit "
+"piekļuvi tai."
+
+#: pimcommonakonadi/acl/aclmanager.cpp:289
+#, kde-format
+msgid "Do you really want to remove these permissions for this folder?"
+msgstr "Vai vēlaties noņemt atļaujas šai mapei?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#, kde-format
+msgid ""
+"Do you really want to apply the folder's permissions to these subfolders?"
+msgstr "Vai tiešām vēlaties apstiprināt mapju atļaujas šīm apakšmapēm?"
+
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#, kde-format
+msgctxt "@title:window"
+msgid "Apply Permissions"
+msgstr "Pielietot atļaujas"
+
+#: pimcommonakonadi/acl/aclutils.cpp:19
+msgctxt "Permissions"
+msgid "None"
+msgstr "Nav"
+
+#: pimcommonakonadi/acl/aclutils.cpp:21
+msgctxt "Permissions"
+msgid "Read"
+msgstr "Lasīt"
+
+#: pimcommonakonadi/acl/aclutils.cpp:23
+msgctxt "Permissions"
+msgid "Append"
+msgstr "Pievienot"
+
+#: pimcommonakonadi/acl/aclutils.cpp:27
+msgctxt "Permissions"
+msgid "Write"
+msgstr "Rakstīt"
+
+#: pimcommonakonadi/acl/aclutils.cpp:31
+msgctxt "Permissions"
+msgid "All"
+msgstr "Visas"
+
+#: pimcommonakonadi/acl/aclutils.cpp:66
+#, kde-format
+msgid "Custom Permissions (%1)"
+msgstr "Pielāgotas atļaujas (%1)"
+
+#: pimcommonakonadi/acl/collectionaclpage.cpp:34
+#, kde-format
+msgctxt "@title:tab Access Control settings page."
+msgid "Access Control"
+msgstr "Pieejas kontrole"
+
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
+#, kde-format
+msgctxt "@option:check"
+msgid "Apply permissions on all &subfolders."
+msgstr "Pielietot atļaujas visām &apakšmapēm."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#, kde-format
+msgid "vCard Import Failed"
+msgstr "„vCard“ importēšana neizdevās"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
+#, kde-format
+msgid "<qt>Unable to access <b>%1</b>.</qt>"
+msgstr "<qt>Neizdodas piekļūt <b>%1</b>.</qt>"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
+#, kde-format
+msgid "Select email from contact"
+msgstr "Atlasiet e-pastu no kontakta"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
+#, kde-format
+msgctxt "@action"
+msgid "Show Organization Unit for LDAP results"
+msgstr "Rādīt organizācijas vienību LDAP rezultātiem"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
+#, kde-format
+msgid "Configure Completion..."
+msgstr "Konfigurēt pabeigšanu..."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
+#, kde-format
+msgid "Automatically expand groups"
+msgstr "Automātiski izvērst grupas"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
+#, kde-format
+msgid "Expand Groups..."
+msgstr "Izvērst grupas..."
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
+#, kde-format
+msgid "Recent Addresses"
+msgstr "Nesenās adreses"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:117
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:750
+#, kde-format
+msgctxt "@title:group"
+msgid "Contacts found in your data"
+msgstr "Jūsu datos atrastās kontaktpersonas"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:52
+#, kde-format
+msgid "LDAP server: %1"
+msgstr "LDAP serveris: %1"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:36
+#, kde-format
+msgid "Search"
+msgstr "Meklēt"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
+#, kde-format
+msgctxt "@action:button"
+msgid "&Select"
+msgstr "&Atlasīt"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
+#, kde-format
+msgctxt "@action:button"
+msgid "&Unselect"
+msgstr "&Noņemt atlasi"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
+#, kde-format
+msgctxt "@action:button"
+msgid "Show Blacklisted Emails"
+msgstr "Rādīt melnā saraksta e-pastus"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
+#, kde-format
+msgctxt "@label:textbox"
+msgid "<qt><a href=\"more_result\">More result...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Vairāk rezultātu...</a></qt>"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Search email:"
+msgstr "Meklēt e-pastu:"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Research is done from 3 characters"
+msgstr "Atkārtota meklēšana notiek no trim rakstzīmēm"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search in result..."
+msgstr "Meklēt rezultātos..."
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Exclude domain names:"
+msgstr "Izlaist domēnu nosaukumus:"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Separate domain with '%1'"
+msgstr "Atdalīt domēnu ar „%1“"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Exclude email with Regular Expression:"
+msgstr "Ignorēt e-pastu ar regulāro izteiksmi:"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Separate regular expression with '%1'"
+msgstr "Atdalīt regulārās izteiksmes ar „%1“"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
+#, kde-format
+msgid "Select"
+msgstr "Atlasīt"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
+#, kde-format
+msgid "Unselect"
+msgstr "Noņemt atlasi"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:286
+#, kde-format
+msgid "No email found."
+msgstr "Neviens e-pasts nav atrasts."
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:288
+#, kde-format
+msgid "1 email found"
+msgid_plural "%1 emails found"
+msgstr[0] "Atrasts %1 e-pasts"
+msgstr[1] "Atrasti %1 e-pasti"
+msgstr[2] "Atrasts %1 e-pastu"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp:137
+#, kde-format
+msgid "No result found"
+msgstr "Nekas nav atrasts"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:24
+#, kde-format
+msgid ""
+"The list was changed. Do you want to save before to make another search ?"
+msgstr ""
+"Saraksts ir mainīts. Vai vēlaties to saglabāt pirms veicat nākamo meklēšanu?"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:25
+#, kde-format
+msgctxt "@action"
+msgid "Save"
+msgstr "Saglabāt"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:30
+#, kde-format
+msgctxt "@action"
+msgid "Search"
+msgstr "Meklēt"
+
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:35
+#, kde-format
+msgctxt "@action"
+msgid "Cancel"
+msgstr "Atcelt"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:51
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Completion"
+msgstr "Konfigurēt pabeigšanu"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:60
+#, kde-format
+msgid "Completion Order"
+msgstr "Pabeigšanas secība"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:64
+#, kde-format
+msgid "Recent Address"
+msgstr "Nesena adrese"
+
+#: pimcommonakonadi/addressline/completionconfiguredialog/completionconfiguredialog.cpp:69
+#, kde-format
+msgid "Blacklist Email Address"
+msgstr "Ievietot adresi melnajā sarakstā"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:55
+#, kde-format
+msgid "LDAP server %1"
+msgstr "LDAP serveris „%1“"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move Up"
+msgstr "Pārvietot augšup"
+
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move Down"
+msgstr "Pārvietot lejup"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:47
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "New email..."
+msgstr "Jauns e-pasts..."
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add Email"
+msgstr "Pievienot e-pastu"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:61
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Noņemt"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
+#, kde-format
+msgid "Remove Email"
+msgid_plural "Remove Emails"
+msgstr[0] "Noņemt e-pastu"
+msgstr[1] "Noņemt e-pastus"
+msgstr[2] "Noņemt e-pastus"
+
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
+#, kde-format
+msgid "Do you want to remove this email address?"
+msgid_plural "Do you want to remove %1 email addresses?"
+msgstr[0] "Vai vēlaties noņemt šo %1 e-pasta adresi?"
+msgstr[1] "Vai vēlaties noņemt šīs %1 e-pasta adreses?"
+msgstr[2] "Vai vēlaties noņemt šīs %1 e-pasta adreses?"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:37
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:142
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:200
+#, kde-format
+msgctxt "type of folder content"
+msgid "Mail"
+msgstr "Pasts"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:39
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:145
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:179
+#, kde-format
+msgctxt "type of folder content"
+msgid "Calendar"
+msgstr "Kalendārs"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:41
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:148
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:182
+#, kde-format
+msgctxt "type of folder content"
+msgid "Contacts"
+msgstr "Kontakti"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:43
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:151
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:185
+#, kde-format
+msgctxt "type of folder content"
+msgid "Notes"
+msgstr "Piezīmes"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:45
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:154
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:176
+#, kde-format
+msgctxt "type of folder content"
+msgid "Tasks"
+msgstr "Uzdevumi"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:47
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:157
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:188
+#, kde-format
+msgctxt "type of folder content"
+msgid "Journal"
+msgstr "Žurnāls"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:191
+#, kde-format
+msgctxt "type of folder content"
+msgid "Configuration"
+msgstr "Konfigurācija"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:51
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:163
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:194
+#, kde-format
+msgctxt "type of folder content"
+msgid "Freebusy"
+msgstr "Aizņemtība"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:197
+#, kde-format
+msgctxt "type of folder content"
+msgid "Files"
+msgstr "Datnes"
+
+#: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:55
+#, kde-format
+msgctxt "type of folder content"
+msgid "Unknown"
+msgstr "Nezināms"
+
+#: pimcommonakonadi/collectionpage/contenttypewidget.cpp:44
+#, kde-format
+msgid "&Folder contents:"
+msgstr "&Mapes saturs:"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:17
+#, kde-format
+msgid "Nobody"
+msgstr "Neviens"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:18
+#, kde-format
+msgid "Admins of This Folder"
+msgstr "Šīs mapes administratori"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:19
+#, kde-format
+msgid "All Readers of This Folder"
+msgstr "Visi šīs mapes lasītāji"
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:23
+#, kde-format
+msgid ""
+"This setting defines which users sharing this folder should get \"busy\" "
+"periods in their freebusy lists and should see the alarms for the events or "
+"tasks in this folder. The setting applies to Calendar and Task folders only "
+"(for tasks, this setting is only used for alarms).\n"
+"\n"
+"Example use cases: if the boss shares a folder with his secretary, only the "
+"boss should be marked as busy for his meetings, so he should select \"Admins"
+"\", since the secretary has no admin rights on the folder.\n"
+"On the other hand if a working group shares a Calendar for group meetings, "
+"all readers of the folders should be marked as busy for meetings.\n"
+"A company-wide folder with optional events in it would use \"Nobody\" since "
+"it is not known who will go to those events."
+msgstr ""
+"Šis iestatījuma nosaka, kuri lietotāji, kas dalās ar šo mapi, saņems "
+"„aizņemts“ periodus savos aizņemtības sarakstus un redzēs paziņojumus par "
+"notikumiem vai uzdevumiem šajā mapē. Šis iestatījums attiecas tikai uz "
+"kalendāra un uzdevumu mapi (uzdevumu gadījumā šis iestatījums tiek izmantots "
+"tikai paziņojumiem.)\n"
+"\n"
+"Piemēri, kā to lietot: ja priekšnieks kopīgo mapi ar savu sekretāri, tad "
+"tikai priekšniekam jātiek atzīmētam kā aizņemtam uz sapulci, tāpēc viņam ir "
+"jāatlasa „Administratori“, jo sekretārei nav administratores tiesību šajā "
+"mapē.\n"
+"No otras puses — ja darba grupa kopīgi izmanto kalendāru grupas sapulcēm, "
+"visiem mapes lietotājiem šādas sapulces gadījumā jābūt atzīmētiem kā "
+"aizņemtiem.\n"
+"Ja šādu mapi izmanto viss uzņēmums kopīgi, tad notikumam izmantotu "
+"„Neviens“, jo nav zināms, kas ieradīsies un kas neieradīsies uz šādu sapulci."
+
+#: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
+#, kde-format
+msgid "Generate free/&busy and activate alarms for:"
+msgstr "Ģenerēt &aizņemtību un aktivizēt paziņojumus priekš:"
+
+#: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search..."
+msgstr "Meklēt..."
+
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Multiple Folders"
+msgstr "Atlasiet vairākas mapes"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Title"
+msgstr "Uzruna"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#, kde-format
+msgid "Full Name"
+msgstr "Pilns vārds"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "Email"
+msgstr "E-pasta adrese"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#, kde-format
+msgid "Home Number"
+msgstr "Mājas tālruņa numurs"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#, kde-format
+msgid "Work Number"
+msgstr "Darba tālruņa numurs"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#, kde-format
+msgid "Mobile Number"
+msgstr "Mobilā tālruņa numurs"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#, kde-format
+msgid "Fax Number"
+msgstr "Faksa numurs"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
+#, kde-format
+msgid "Pager"
+msgstr "Peidžers"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#, kde-format
+msgid "Street"
+msgstr "Iela"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#, kde-format
+msgctxt "@item LDAP search key"
+msgid "State"
+msgstr "Štats"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#, kde-format
+msgid "Country"
+msgstr "Valsts"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#, kde-format
+msgid "City"
+msgstr "Pilsēta"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#, kde-format
+msgid "Organization"
+msgstr "Organizācija"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#, kde-format
+msgid "Company"
+msgstr "Uzņēmums"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#, kde-format
+msgid "Department"
+msgstr "Nodaļa"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#, kde-format
+msgid "Zip Code"
+msgstr "ZIP kods"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#, kde-format
+msgid "Postal Address"
+msgstr "Pasta adrese"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#, kde-format
+msgid "Description"
+msgstr "Apraksts"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#, kde-format
+msgid "User ID"
+msgstr "Lietotāja ID"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#, kde-format
+msgctxt "@title:column Column containing email addresses"
+msgid "Email"
+msgstr "E-pasta adrese"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#, kde-format
+msgctxt "@title:column Column containing the residential state of the address"
+msgid "State"
+msgstr "Štats"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:339
+#, kde-format
+msgctxt "@title:column Column containing title of the person"
+msgid "Title"
+msgstr "Uzruna"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:474
+#, kde-format
+msgctxt "@title:window"
+msgid "Import Contacts from LDAP"
+msgstr "Importēt kontaktus no LDAP"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:497
+#, kde-format
+msgid "Search for Addresses in Directory"
+msgstr "Meklēt adreses direktorijā"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:502
+#, kde-format
+msgctxt "@label:textbox"
+msgid "Search for:"
+msgstr "Meklēt:"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:510
+#, kde-format
+msgctxt "In LDAP attribute"
+msgid "in"
+msgstr "vieta"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#, kde-format
+msgctxt "@item:inlistbox Name of the contact"
+msgid "Name"
+msgstr "Nosaukums"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#, kde-format
+msgctxt "@item:inlistbox email address of the contact"
+msgid "Email"
+msgstr "E-pasta adrese"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:516
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Home Number"
+msgstr "Mājas tālruņa numurs"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Work Number"
+msgstr "Darba tālruņa numurs"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:519
+#, kde-format
+msgctxt "@action:button Start searching"
+msgid "&Search"
+msgstr "&Meklēt"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
+#, kde-format
+msgctxt "@option:check"
+msgid "Recursive search"
+msgstr "Rekursīva meklēšana"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:540
+#, kde-format
+msgid "Contains"
+msgstr "Satur"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:541
+#, kde-format
+msgid "Starts With"
+msgstr "Sākas ar"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Search in result"
+msgstr "Meklēt rezultātos"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:582
+#, kde-format
+msgid "Searching..."
+msgstr "Meklē..."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:586
+#, kde-format
+msgctxt "@action:button"
+msgid "Select All"
+msgstr "Atlasīt visu"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:590
+#, kde-format
+msgctxt "@action:button"
+msgid "Unselect All"
+msgstr "Noņemt atlasi visam"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:597
+#, kde-format
+msgid "Add Selected"
+msgstr "Pievienot atlasīto"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
+#, kde-format
+msgid "Configure LDAP Servers..."
+msgstr "Konfigurēt LDAP serverus..."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:633
+#, kde-format
+msgid "Copy"
+msgstr "Kopēt"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:757
+#, kde-format
+msgid "You must select an LDAP server before searching."
+msgstr "Pirms meklēšanas norādiet LDAP serveri."
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:845
+#, kde-format
+msgctxt "arguments are host name, datetime"
+msgid "Imported from LDAP directory %1 on %2"
+msgstr "%2 importēta LDAP mape „%1“"
+
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:864
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure the Address Book LDAP Settings"
+msgstr "Konfigurēt adrešu grāmatas LDAP iestatījumus"
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
+#, kde-format
+msgid ""
+"IMAP server not configured yet. Please configure the server in the IMAP "
+"account before setting up server-side subscription."
+msgstr ""
+"IMAP serveris vēl nav konfigurēts. Konfigurējiet serveri IMAP kontā pirms "
+"iestatiet servera puses abonementu."
+
+#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
+#, kde-format
+msgid ""
+"Log in failed, please configure the IMAP account before setting up server-"
+"side subscription."
+msgstr ""
+"Ierakstīšanās neizdevās. Pirms servera puses abonementa iestatīšanas "
+"konfigurējiet IMAP kontu."
+
+#: pimcommonakonadi/util/createresource.cpp:64
+#, kde-format
+msgid "Resource type '%1' is not available."
+msgstr "Resursa tips „%1“ nav pieejams."
+
+#: pimcommonakonadi/util/createresource.cpp:75
+#, kde-format
+msgid "Resource '%1' is already set up."
+msgstr "Resurss „%1“ jau ir iestatīts."
+
+#: pimcommonakonadi/util/createresource.cpp:81
+#, kde-format
+msgid "Creating resource instance for '%1'..."
+msgstr "Izveido „%1“ resursa instanci..."
+
+#: pimcommonakonadi/util/createresource.cpp:87
+#, kde-format
+msgid "Configuring resource instance..."
+msgstr "Konfigurē resursa instanci..."
+
+#: pimcommonakonadi/util/createresource.cpp:90
+#, kde-format
+msgid "Unable to configure resource instance."
+msgstr "Neizdevās konfigurēt resursa instanci."
+
+#: pimcommonakonadi/util/createresource.cpp:106
+#, kde-format
+msgid "Could not convert value of setting '%1' to required type %2."
+msgstr "Neizdevās pārveidot iestatījuma „%1“ vērtību uz pieprasīto tipu „%2“."
+
+#: pimcommonakonadi/util/createresource.cpp:111
+#, kde-format
+msgid "Could not set setting '%1': %2"
+msgstr "Neizdevās iestatīt iestatījumu „%1“: %2"
+
+#: pimcommonakonadi/util/createresource.cpp:117
+#, kde-format
+msgid "Could not save settings: %1"
+msgstr "Neizdevās saglabāt iestatījumus: %1"
+
+#: pimcommonakonadi/util/createresource.cpp:126
+#, kde-format
+msgid "Resource setup completed."
+msgstr "Resursa iestatīšana ir pabeigta."
+
+#: pimcommonakonadi/util/createresource.cpp:130
+#, kde-format
+msgid "Failed to create resource instance: %1"
+msgstr "Neizdevās izveidot resursa instanci: %1"
