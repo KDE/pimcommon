@@ -1,7 +1,7 @@
 # KDE Finnish translation sprint participants:
 # Author: Artnay
 # Author: Lliehu
-# SPDX-FileCopyrightText: 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2013, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2016.
 # Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-16 00:42+0000\n"
-"PO-Revision-Date: 2024-12-01 14:59+0200\n"
+"PO-Revision-Date: 2025-02-17 16:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -241,8 +241,7 @@ msgid "Load File Error"
 msgstr "Tiedoston latausvirhe"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
 msgstr "Etsi uutta versiota"
@@ -250,13 +249,12 @@ msgstr "Etsi uutta versiota"
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
+msgstr "Löytyi uusi versio. Lataa se napsauttamalla <a href=\"%1\">tästä</a>."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "Sähköpostia ei löydy."
+msgstr "Uutta versiota ei löytynyt."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
@@ -621,7 +619,7 @@ msgstr "<qt>Ei pääsyä kohteeseen <b>%1</b>.</qt>"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
 #, kde-format
 msgid "Select email from contact"
-msgstr "Valitse yhteystiedon sähköposti"
+msgstr "Valitse yhteystiedoista sähköposti"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
