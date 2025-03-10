@@ -28,7 +28,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     acl/collectionaclwidget.cpp
     acl/acllistview.cpp
     acl/aclmodifyjob.cpp
-    manageserversidesubscription/manageserversidesubscriptionjob.cpp
     ldap/ldapsearchdialog.cpp
     util/createresource.cpp
     util/imapresourcecapabilitiesmanager.cpp
@@ -63,7 +62,6 @@ target_sources(KPim6PimCommonAkonadi PRIVATE
     acl/aclmodifyjob.h
     acl/aclmanager.h
     acl/collectionaclwidget.h
-    manageserversidesubscription/manageserversidesubscriptionjob.h
     ldap/ldapsearchdialog.h
     addressline/completionorder/completionorderwidget.h
     addressline/recentaddress/recentaddresses.h
@@ -241,14 +239,6 @@ ecm_generate_headers(PimCommonAkonadi_Camelcaseldap_HEADERS
     REQUIRED_HEADERS PimCommonAkonadi_ldap_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE ldap
-)
-
-ecm_generate_headers(PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS
-    HEADER_NAMES
-    ManageServerSideSubscriptionJob
-    REQUIRED_HEADERS PimCommonAkonadi_managerserversidesubscription_HEADERS
-    PREFIX PimCommonAkonadi
-    RELATIVE manageserversidesubscription
 )
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaseacl_HEADERS
