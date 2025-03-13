@@ -4,5 +4,5 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
 find_dependency(PlasmaActivities "@PLASMAACTIVITIES_MIN_VERSION@")
-include("${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonActivitiesTargets.cmake")
+include("${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonActivitiesWidgetsTargets.cmake")
 @PACKAGE_INCLUDE_QCHTARGETS@
