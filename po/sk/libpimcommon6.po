@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -1314,24 +1314,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr ""
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP server ešte nie je nastavený. Prosím nastavte server v IMAP účte pred "
-"nastavením prihlásenia na strane servera."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Prihlásenie zlyhalo, prosím nastavte IMAP účet pred nastavením prihlásenia "
-"na strane servera."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1381,6 +1363,20 @@ msgstr "Nastavenie zdroja dokončené."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Zlyhalo vytvorenie inštancie zdroja: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP server ešte nie je nastavený. Prosím nastavte server v IMAP účte "
+#~ "pred nastavením prihlásenia na strane servera."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Prihlásenie zlyhalo, prosím nastavte IMAP účet pred nastavením "
+#~ "prihlásenia na strane servera."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Note"

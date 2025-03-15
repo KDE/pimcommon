@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-17 12:22+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1258,24 +1258,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Configura le preferentias de adressario LDAP"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Servitor IMAP non ancora configurate. Per favor tu configura le servitor in "
-"le conto IMAP ante configurar tu subscription de latere servitor."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Il falleva accesso de authentication, per favor tu configura le conto IMAP "
-"ante que configurar subscription latere servitor."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1325,6 +1307,20 @@ msgstr "Configuration de ressource completate."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Il falleva a crear un instantia de ressource: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Servitor IMAP non ancora configurate. Per favor tu configura le servitor "
+#~ "in le conto IMAP ante configurar tu subscription de latere servitor."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Il falleva accesso de authentication, per favor tu configura le conto "
+#~ "IMAP ante que configurar subscription latere servitor."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

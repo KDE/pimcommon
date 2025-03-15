@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2024-12-04 14:37+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -1284,25 +1284,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Настройка адресной книги LDAP"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Подключение к серверу IMAP не настроено. Установите параметры сервера в "
-"свойствах учётной записи IMAP прежде чем настраивать подписку на стороне "
-"сервера."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Не удалось выполнить аутентификацию. Настройте учётную запись IMAP прежде "
-"чем настраивать подписку на стороне сервера."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1352,6 +1333,21 @@ msgstr "Создание источника данных завершено."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не удалось создать экземпляр источника данных: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Подключение к серверу IMAP не настроено. Установите параметры сервера в "
+#~ "свойствах учётной записи IMAP прежде чем настраивать подписку на стороне "
+#~ "сервера."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Не удалось выполнить аутентификацию. Настройте учётную запись IMAP прежде "
+#~ "чем настраивать подписку на стороне сервера."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

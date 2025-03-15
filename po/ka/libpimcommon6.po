@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 02:42+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1256,24 +1256,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "მისამართებს წიგნაკის LDAP-ის პარამეტრების მორგება"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP სერვერი ჯერ მორგებული არაა. სერვერის მხრის გამოწერების მოსარგებად "
-"სწორად მორგებული IMAP სერვერია საჭირო."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"შესვლის შეცდომა. სერვერის-მხარეს გამოწერებისთვის IMAP ანგარიშის მორგებაა "
-"საჭირო."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1323,6 +1305,20 @@ msgstr "რესურსის მორგება დასრულდა.
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "რესურსის გაშვებული ასლის შექმნის შეცდომა: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP სერვერი ჯერ მორგებული არაა. სერვერის მხრის გამოწერების მოსარგებად "
+#~ "სწორად მორგებული IMAP სერვერია საჭირო."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "შესვლის შეცდომა. სერვერის-მხარეს გამოწერებისთვის IMAP ანგარიშის მორგებაა "
+#~ "საჭირო."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -1310,24 +1310,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr ""
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP server pole veel seadistatud. Palun seadista IMAP konto all server, "
-"enne kui määrad serveripoolsed tellimused."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Sisselogimine nurjus. Palun seadista IMAP konto, enne kui määrad "
-"serveripoolsed tellimused."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1378,6 +1360,20 @@ msgstr "Ressurss on seadistatud."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ressursiisendi loomine nurjus: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP server pole veel seadistatud. Palun seadista IMAP konto all server, "
+#~ "enne kui määrad serveripoolsed tellimused."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Sisselogimine nurjus. Palun seadista IMAP konto, enne kui määrad "
+#~ "serveripoolsed tellimused."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Note"

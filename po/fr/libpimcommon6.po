@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-17 09:33+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -1277,24 +1277,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Configurer les paramètres du carnet d'adresses LDAP"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Serveur IMAP non configuré. Veuillez configurer le serveur dans le compte "
-"IMAP avant de définir les souscriptions côté serveur."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Échec de la connexion, veuillez configurer le compte IMAP avant de définir "
-"les souscriptions côté serveur."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1346,6 +1328,20 @@ msgstr "Configuration de la ressource terminée."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Il est impossible de créer une instance de ressource : %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Serveur IMAP non configuré. Veuillez configurer le serveur dans le compte "
+#~ "IMAP avant de définir les souscriptions côté serveur."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Échec de la connexion, veuillez configurer le compte IMAP avant de "
+#~ "définir les souscriptions côté serveur."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

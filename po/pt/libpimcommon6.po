@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2023-03-27 23:29+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1323,24 +1323,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Configurar as Opções de LDAP do Livro de Endereços..."
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"O servidor de IMAP ainda não foi configurado. Por favor, configure o "
-"servidor na conta de IMAP, antes de configurar a subscrição no servidor."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"A autenticação foi mal-sucedida; por favor, configure a conta de IMAP antes "
-"de configurar a subscrição do lado do servidor."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1391,6 +1373,20 @@ msgstr "A configuração do recurso terminou."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Não foi possível criar a instância do recurso: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "O servidor de IMAP ainda não foi configurado. Por favor, configure o "
+#~ "servidor na conta de IMAP, antes de configurar a subscrição no servidor."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "A autenticação foi mal-sucedida; por favor, configure a conta de IMAP "
+#~ "antes de configurar a subscrição do lado do servidor."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

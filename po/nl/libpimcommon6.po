@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 14:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -1259,24 +1259,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "LDAP-instellingen van adresboek configureren"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP-server is nog niet geconfigureerd. Gaarne de server in het IMAP-account "
-"instellen alvorens de inschrijving aan de kant van de server in te stellen."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Aanmelden is mislukt, gaarne het IMAP-account instellen alvorens de "
-"inschrijving aan de kant van de server in te stellen."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1328,6 +1310,21 @@ msgstr "Instellen van hulpbron voltooid."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Hulpbroninstantie %1 creëren mislukt"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP-server is nog niet geconfigureerd. Gaarne de server in het IMAP-"
+#~ "account instellen alvorens de inschrijving aan de kant van de server in "
+#~ "te stellen."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Aanmelden is mislukt, gaarne het IMAP-account instellen alvorens de "
+#~ "inschrijving aan de kant van de server in te stellen."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

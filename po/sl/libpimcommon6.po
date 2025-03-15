@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 07:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1267,24 +1267,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Nastavite nastavitve LDAP za program Address book"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Strežnik IMAP še ni nastavljen. Preden nastavite naročnine na strani "
-"strežnika, v računu IMAP nastavite strežnik."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Prijava ni uspela. Preden nastavite naročnine na strani strežnika, nastavite "
-"račun IMAP."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1335,6 +1317,20 @@ msgstr "Nastavitev vira je zaključena."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ustvaritev primerka vira ni uspela: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Strežnik IMAP še ni nastavljen. Preden nastavite naročnine na strani "
+#~ "strežnika, v računu IMAP nastavite strežnik."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Prijava ni uspela. Preden nastavite naročnine na strani strežnika, "
+#~ "nastavite račun IMAP."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

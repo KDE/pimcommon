@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 08:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -1265,25 +1265,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Налаштовування параметрів LDAP адресної книги"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Не вказано параметри сервера IMAP. Будь ласка, вкажіть ці параметри у "
-"налаштуваннях облікового запису IMAP, перш ніж визначати підписки на боці "
-"сервера."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Помилка під час спроби увійти. Будь ласка, налаштуйте обліковий запис IMAP, "
-"перш ніж визначати підписку на боці сервера."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1333,6 +1314,21 @@ msgstr "Налаштовування ресурсу завершено."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не вдалося створити екземпляр ресурсу: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Не вказано параметри сервера IMAP. Будь ласка, вкажіть ці параметри у "
+#~ "налаштуваннях облікового запису IMAP, перш ніж визначати підписки на боці "
+#~ "сервера."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Помилка під час спроби увійти. Будь ласка, налаштуйте обліковий запис "
+#~ "IMAP, перш ніж визначати підписку на боці сервера."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

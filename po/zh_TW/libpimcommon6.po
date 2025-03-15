@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-02-06 20:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -1238,21 +1238,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "調整這個通訊錄的 LDAP 設定"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP 伺服器尚未設定。請在 IMAP 帳號裡設定伺服器後再設定伺服器端的訂閱。"
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr "登入失敗，請在設定伺服器端的訂閱前先設定好 IMAP 帳號。"
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1302,6 +1287,17 @@ msgstr "資源設定完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "建立資源實體失敗：%1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP 伺服器尚未設定。請在 IMAP 帳號裡設定伺服器後再設定伺服器端的訂閱。"
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr "登入失敗，請在設定伺服器端的訂閱前先設定好 IMAP 帳號。"
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

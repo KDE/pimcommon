@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-17 05:54+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1262,24 +1262,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Konfiguratu Helbide Liburuko LDAP ezarpenak"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP zerbitzaria ez dago konfiguratuta oraindik. Mesedez, konfiguratu IMAP "
-"kontuko zerbitzaria zerbitzari aldeko harpidetzak ezarri aurretik."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Saio-hasteak huts egin du, mesedez, konfiguratu IMAP kontua zerbitzari "
-"aldeko harpidetzak ezarri aurretik."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1329,6 +1311,20 @@ msgstr "Baliabidearen ezarpena osatu da."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Baliabidearen instantzia sortzea huts egin du: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP zerbitzaria ez dago konfiguratuta oraindik. Mesedez, konfiguratu "
+#~ "IMAP kontuko zerbitzaria zerbitzari aldeko harpidetzak ezarri aurretik."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Saio-hasteak huts egin du, mesedez, konfiguratu IMAP kontua zerbitzari "
+#~ "aldeko harpidetzak ezarri aurretik."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

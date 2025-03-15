@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 10:45+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1261,25 +1261,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Configura l'arranjament LDAP de la llibreta d'adreces"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"El servidor IMAP encara no està configurat. Si us plau, configureu el "
-"servidor en el compte IMAP abans de definir la subscripció de la banda del "
-"servidor."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"L'inici de sessió ha fallat. Si us plau, configureu el servidor en el compte "
-"IMAP abans de definir la subscripció de la banda del servidor."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1330,3 +1311,18 @@ msgstr "S'ha completat l'arranjament del recurs."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallat en crear la instància del recurs: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "El servidor IMAP encara no està configurat. Si us plau, configureu el "
+#~ "servidor en el compte IMAP abans de definir la subscripció de la banda "
+#~ "del servidor."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "L'inici de sessió ha fallat. Si us plau, configureu el servidor en el "
+#~ "compte IMAP abans de definir la subscripció de la banda del servidor."

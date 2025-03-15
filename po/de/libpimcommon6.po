@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2024-12-28 23:24+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -1263,25 +1263,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "LDAP-Einstellungen des Adressbuchs einrichten"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Der IMAP-Server wurde bisher noch nicht eingerichtet. Bitte stellen Sie den "
-"Server für den IMAP-Zugang ein, ehe Sie die serverseitigen Abonnements "
-"einstellen."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Die Anmeldung ist fehlgeschlagen. Bitte stellen Sie den Server für den IMAP-"
-"Zugang ein, ehe Sie die serverseitigen Abonnements einstellen."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1333,6 +1314,21 @@ msgstr "Die Einrichtung der Ressource ist abgeschlossen."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Fehler beim Erzeugen der Ressourcen-Instanz: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Der IMAP-Server wurde bisher noch nicht eingerichtet. Bitte stellen Sie "
+#~ "den Server für den IMAP-Zugang ein, ehe Sie die serverseitigen "
+#~ "Abonnements einstellen."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Die Anmeldung ist fehlgeschlagen. Bitte stellen Sie den Server für den "
+#~ "IMAP-Zugang ein, ehe Sie die serverseitigen Abonnements einstellen."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

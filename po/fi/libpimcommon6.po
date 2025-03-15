@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-02-17 16:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -1255,24 +1255,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Osoitekirjan LDAP-asetukset"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP-palvelinta ei ole vielä asetettu. Aseta IMAP-tilin palvelin ennen "
-"palvelinpuolen tilausten asettamista."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Kirjautuminen epäonnistui. Aseta IMAP-tili ennen palvelinpuolen tilausten "
-"asettamista."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1322,6 +1304,20 @@ msgstr "Resurssin asetus valmis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP-palvelinta ei ole vielä asetettu. Aseta IMAP-tilin palvelin ennen "
+#~ "palvelinpuolen tilausten asettamista."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Kirjautuminen epäonnistui. Aseta IMAP-tili ennen palvelinpuolen tilausten "
+#~ "asettamista."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2023-12-13 08:05-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1306,24 +1306,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Configurar as definições para LDAP do livro de endereços"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"O servidor IMAP não está configurado. Configure o servidor na conta IMAP "
-"antes de configurar a inscrição no servidor."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Ocorreu uma falha na autenticação. Configure a conta IMAP antes de "
-"configurar a inscrição no servidor."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1375,6 +1357,20 @@ msgstr "A configuração do recurso foi concluída."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Falha na criação da instância do recurso: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "O servidor IMAP não está configurado. Configure o servidor na conta IMAP "
+#~ "antes de configurar a inscrição no servidor."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Ocorreu uma falha na autenticação. Configure a conta IMAP antes de "
+#~ "configurar a inscrição no servidor."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

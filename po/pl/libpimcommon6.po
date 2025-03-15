@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-18 12:05+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -1255,24 +1255,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "Ustawienia książki adresowej LDAP"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"Jeszcze nie ustawiono serwera IMAP. Proszę ustawić serwer w koncie IMAP "
-"przed ustawieniem subskrypcji po stronie serwera."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"Nieudane logowanie, proszę ustawić serwer w koncie IMAP przed ustawieniem "
-"subskrypcji po stronie serwera."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1322,6 +1304,20 @@ msgstr "Ukończono ustawianie zasobu."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Nie udało się utworzyć zasobu: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "Jeszcze nie ustawiono serwera IMAP. Proszę ustawić serwer w koncie IMAP "
+#~ "przed ustawieniem subskrypcji po stronie serwera."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "Nieudane logowanie, proszę ustawić serwer w koncie IMAP przed ustawieniem "
+#~ "subskrypcji po stronie serwera."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

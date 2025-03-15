@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-16 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 18:06+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1244,23 +1244,6 @@ msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
 msgstr "주소록 LDAP 설정"
 
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:69
-#, kde-format
-msgid ""
-"IMAP server not configured yet. Please configure the server in the IMAP "
-"account before setting up server-side subscription."
-msgstr ""
-"IMAP 서버가 설정되지 않았습니다. 서버 측 구독을 사용하려면 IMAP 서버의 계정"
-"을 설정하십시오."
-
-#: pimcommonakonadi/manageserversidesubscription/manageserversidesubscriptionjob.cpp:71
-#, kde-format
-msgid ""
-"Log in failed, please configure the IMAP account before setting up server-"
-"side subscription."
-msgstr ""
-"로그인이 실패했습니다. 서버 측 구독을 사용하기 전에 IMAP 계정을 설정하십시오."
-
 #: pimcommonakonadi/util/createresource.cpp:64
 #, kde-format
 msgid "Resource type '%1' is not available."
@@ -1310,6 +1293,20 @@ msgstr "리소스 설정이 완료되었습니다."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "리소스 인스턴스를 만들 수 없음: %1"
+
+#~ msgid ""
+#~ "IMAP server not configured yet. Please configure the server in the IMAP "
+#~ "account before setting up server-side subscription."
+#~ msgstr ""
+#~ "IMAP 서버가 설정되지 않았습니다. 서버 측 구독을 사용하려면 IMAP 서버의 계"
+#~ "정을 설정하십시오."
+
+#~ msgid ""
+#~ "Log in failed, please configure the IMAP account before setting up server-"
+#~ "side subscription."
+#~ msgstr ""
+#~ "로그인이 실패했습니다. 서버 측 구독을 사용하기 전에 IMAP 계정을 설정하십시"
+#~ "오."
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"
