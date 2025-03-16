@@ -1282,14 +1282,3 @@ msgstr "资源设置完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "创建资源实例失败：%1"
-
-#~ msgid ""
-#~ "IMAP server not configured yet. Please configure the server in the IMAP "
-#~ "account before setting up server-side subscription."
-#~ msgstr ""
-#~ "IMAP 服务器尚未配置。请在设置服务器端订阅前在 IMAP 账户里配置服务器。"
-
-#~ msgid ""
-#~ "Log in failed, please configure the IMAP account before setting up server-"
-#~ "side subscription."
-#~ msgstr "登录失败，请在设置服务器端订阅前先配置 IMAP 账户。"
