@@ -61,7 +61,6 @@ target_sources(KPim6PimCommon PRIVATE
 
     shareserviceurl/shareserviceurlmanager.cpp
     network/networkmanager.cpp
-    widgets/icons.qrc
 
     customtools/customtoolswidgetng.h
     customtools/customtoolsplugin.h
