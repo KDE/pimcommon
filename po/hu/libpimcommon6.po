@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2020, 2021.
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:43+0000\n"
-"PO-Revision-Date: 2024-11-15 20:29+0100\n"
+"PO-Revision-Date: 2025-04-21 22:17+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -241,8 +241,7 @@ msgid "Load File Error"
 msgstr "Fájlbetöltési hiba"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check New Version"
 msgstr "Új verzió keresése"
@@ -250,13 +249,12 @@ msgstr "Új verzió keresése"
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:51
 #, kde-format
 msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
+msgstr "Új verzió érhető el. Kattintson <a href=\"%1\">ide</a> a letöltéshez."
 
 #: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
+#, kde-format
 msgid "No new version found."
-msgstr "Nincsenek e-mailek."
+msgstr "Nem található új verzió."
 
 #: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
 #, kde-format
