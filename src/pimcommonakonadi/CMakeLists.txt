@@ -138,6 +138,7 @@ target_link_libraries(KPim6PimCommonAkonadi
     KF6::KCMUtils
     KPim6::LdapWidgets
     KF6::ItemViews
+    KF6::ColorScheme
 )
 
 if(NOT FORCE_DISABLE_AKONADI_SEARCH)

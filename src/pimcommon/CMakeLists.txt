@@ -182,6 +182,7 @@ target_link_libraries(KPim6PimCommon
     KF6::Purpose
     KF6::PurposeWidgets
     KF6::Codecs
+    KF6::ColorScheme
 )
 if(TARGET KF6::TextAutoCorrectionWidgets)
     target_link_libraries(KPim6PimCommon
