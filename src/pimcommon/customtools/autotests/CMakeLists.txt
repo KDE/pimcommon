@@ -5,4 +5,3 @@ ecm_add_test(customtoolswidgetngtest.cpp customtoolswidgetngtest.h
     NAME_PREFIX pimcommon-
     LINK_LIBRARIES Qt::Test Qt::Gui KPim6::PimCommon KF6::XmlGui
 )
-

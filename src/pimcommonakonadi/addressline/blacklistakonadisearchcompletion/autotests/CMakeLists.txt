@@ -6,7 +6,7 @@ macro(add_libkdepim_blacklistbaloocompletion_unittest _source)
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-addessline-blaclistbaloocompletion-"
         LINK_LIBRARIES Qt::Test KPim6::PimCommonAkonadi KF6::Completion KF6::I18n KF6::ConfigCore KF6::ItemViews KF6::Codecs
-)
+    )
 endmacro()
 
 add_libkdepim_blacklistbaloocompletion_unittest(blacklistbalooemailcompletionwidgettest.cpp)

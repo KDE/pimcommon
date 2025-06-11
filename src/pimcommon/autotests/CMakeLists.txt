@@ -6,7 +6,7 @@ macro(add_pimcommon_regularexpression_unittest _source)
         TEST_NAME ${_name}
         NAME_PREFIX "pimcommon-regularexpression-"
         LINK_LIBRARIES Qt::Test Qt::Gui KPim6::PimCommon
-)
+    )
 endmacro()
 
 add_pimcommon_regularexpression_unittest(regularexpressiontests.cpp)

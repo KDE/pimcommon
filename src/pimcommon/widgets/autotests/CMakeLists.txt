@@ -8,7 +8,7 @@ macro(add_pimcommon_widget_unittest _source)
         LINK_LIBRARIES Qt::Test
         Qt::Widgets
         KPim6::PimCommon
-)
+    )
 endmacro()
 add_pimcommon_widget_unittest(kactionmenuchangecasetest.cpp)
 add_pimcommon_widget_unittest(lineeditwithcompleterngtest.cpp)

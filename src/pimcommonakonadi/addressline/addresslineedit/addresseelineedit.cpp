@@ -688,7 +688,7 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
                     return true; // eat the event, we don't want anything to happen
                 } else {
                     // if we are not on one of the group heading, make sure the item
-                    // below or above is selected, not the heading, inadvertedly, due
+                    // below or above is selected, not the heading, inadvertently, due
                     // to fuzzy auto-selection from QListBox
                     completionBox()->setCurrentItem(item);
                     item->setSelected(true);

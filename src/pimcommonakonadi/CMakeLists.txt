@@ -14,99 +14,102 @@ ecm_qt_declare_logging_category(KPim6PimCommonAkonadi HEADER pimcommonakonadi_de
         EXPORT PIMCOMMON
 )
 
-target_sources(KPim6PimCommonAkonadi PRIVATE
-    folderdialog/selectmulticollectionwidget.cpp
-    folderdialog/selectmulticollectiondialog.cpp
-    folderdialog/checkedcollectionwidget.cpp
-    genericplugins/genericplugininterface.cpp
-    genericplugins/plugininterface.cpp
-    acl/aclentrydialog.cpp
-    acl/aclmanager.cpp
-    acl/aclutils.cpp
-    acl/collectionaclpage.cpp
-    acl/imapaclattribute.cpp
-    acl/collectionaclwidget.cpp
-    acl/acllistview.cpp
-    acl/aclmodifyjob.cpp
-    ldap/ldapsearchdialog.cpp
-    util/createresource.cpp
-    util/imapresourcecapabilitiesmanager.cpp
-    util/mailutil.cpp
-   progresswidget/agentprogressmonitor.cpp
-   progresswidget/progressmanagerakonadi.cpp
-  collectionpage/collectiontypeutil.cpp
-  collectionpage/incidencesforwidget.cpp
-  collectionpage/contenttypewidget.cpp
-    addressline/completionorder/completionorderwidget.cpp
-    addressline/addresslineedit/addresseelineedit.cpp
-    addressline/addresslineedit/addresseelineedit_p.cpp
-    addressline/addresslineedit/addresseelineeditmanager.cpp
-    addressline/addresslineedit/addresseelineeditldap.cpp
-    addressline/addresslineedit/addresseelineeditakonadi.cpp
-    addressline/addresslineedit/addresseelineeditakonadisearch.cpp
-    addressline/addresslineedit/kmailcompletion.cpp
-    addressline/addresslineedit/akonadisearchcompletionemail.cpp
-    addressline/completionconfiguredialog/completionconfiguredialog.cpp
-    addressline/addresslineedit/addresseelineeditutil.cpp
-    addressline/recentaddress/recentaddresswidget.cpp
-    addressline/recentaddress/recentaddresses.cpp
-    addressline/plugins/addressesslineeditabstractplugin.cpp
-    addressline/plugins/addressesslineeditpluginmanager.cpp
-    progresswidget/agentprogressmonitor.h
-    progresswidget/progressmanagerakonadi.h
-    acl/collectionaclpage.h
-    acl/aclutils_p.h
-    acl/acllistview.h
-    acl/aclentrydialog_p.h
-    acl/imapaclattribute.h
-    acl/aclmodifyjob.h
-    acl/aclmanager.h
-    acl/collectionaclwidget.h
-    ldap/ldapsearchdialog.h
-    addressline/completionorder/completionorderwidget.h
-    addressline/recentaddress/recentaddresses.h
-    addressline/recentaddress/recentaddresswidget.h
-    addressline/completionconfiguredialog/completionconfiguredialog.h
-    addressline/plugins/addressesslineeditabstractplugin.h
-    addressline/plugins/addressesslineeditpluginmanager.h
-    addressline/addresslineedit/addresseelineedit_p.h
-    addressline/addresslineedit/addresseelineeditldap.h
-    addressline/addresslineedit/addresseelineeditakonadisearch.h
-    addressline/addresslineedit/addresseelineedit.h
-    addressline/addresslineedit/addresseelineeditutil.h
-    addressline/addresslineedit/akonadisearchcompletionemail.h
-    addressline/addresslineedit/addresseelineeditakonadi.h
-    addressline/addresslineedit/addresseelineeditmanager.h
-    addressline/addresslineedit/kmailcompletion.h
-    collectionpage/contenttypewidget.h
-    collectionpage/collectiontypeutil.h
-    collectionpage/incidencesforwidget.h
-    folderdialog/checkedcollectionwidget.h
-    folderdialog/selectmulticollectiondialog.h
-    folderdialog/selectmulticollectionwidget.h
-    pimcommonakonadi_private_export.h
-    util/mailutil.h
-    util/imapresourcecapabilitiesmanager.h
-    util/createresource.h
-    genericplugins/genericplugininterface.h
-    genericplugins/plugininterface.h
+target_sources(
+    KPim6PimCommonAkonadi
+    PRIVATE
+        folderdialog/selectmulticollectionwidget.cpp
+        folderdialog/selectmulticollectiondialog.cpp
+        folderdialog/checkedcollectionwidget.cpp
+        genericplugins/genericplugininterface.cpp
+        genericplugins/plugininterface.cpp
+        acl/aclentrydialog.cpp
+        acl/aclmanager.cpp
+        acl/aclutils.cpp
+        acl/collectionaclpage.cpp
+        acl/imapaclattribute.cpp
+        acl/collectionaclwidget.cpp
+        acl/acllistview.cpp
+        acl/aclmodifyjob.cpp
+        ldap/ldapsearchdialog.cpp
+        util/createresource.cpp
+        util/imapresourcecapabilitiesmanager.cpp
+        util/mailutil.cpp
+        progresswidget/agentprogressmonitor.cpp
+        progresswidget/progressmanagerakonadi.cpp
+        collectionpage/collectiontypeutil.cpp
+        collectionpage/incidencesforwidget.cpp
+        collectionpage/contenttypewidget.cpp
+        addressline/completionorder/completionorderwidget.cpp
+        addressline/addresslineedit/addresseelineedit.cpp
+        addressline/addresslineedit/addresseelineedit_p.cpp
+        addressline/addresslineedit/addresseelineeditmanager.cpp
+        addressline/addresslineedit/addresseelineeditldap.cpp
+        addressline/addresslineedit/addresseelineeditakonadi.cpp
+        addressline/addresslineedit/addresseelineeditakonadisearch.cpp
+        addressline/addresslineedit/kmailcompletion.cpp
+        addressline/addresslineedit/akonadisearchcompletionemail.cpp
+        addressline/completionconfiguredialog/completionconfiguredialog.cpp
+        addressline/addresslineedit/addresseelineeditutil.cpp
+        addressline/recentaddress/recentaddresswidget.cpp
+        addressline/recentaddress/recentaddresses.cpp
+        addressline/plugins/addressesslineeditabstractplugin.cpp
+        addressline/plugins/addressesslineeditpluginmanager.cpp
+        progresswidget/agentprogressmonitor.h
+        progresswidget/progressmanagerakonadi.h
+        acl/collectionaclpage.h
+        acl/aclutils_p.h
+        acl/acllistview.h
+        acl/aclentrydialog_p.h
+        acl/imapaclattribute.h
+        acl/aclmodifyjob.h
+        acl/aclmanager.h
+        acl/collectionaclwidget.h
+        ldap/ldapsearchdialog.h
+        addressline/completionorder/completionorderwidget.h
+        addressline/recentaddress/recentaddresses.h
+        addressline/recentaddress/recentaddresswidget.h
+        addressline/completionconfiguredialog/completionconfiguredialog.h
+        addressline/plugins/addressesslineeditabstractplugin.h
+        addressline/plugins/addressesslineeditpluginmanager.h
+        addressline/addresslineedit/addresseelineedit_p.h
+        addressline/addresslineedit/addresseelineeditldap.h
+        addressline/addresslineedit/addresseelineeditakonadisearch.h
+        addressline/addresslineedit/addresseelineedit.h
+        addressline/addresslineedit/addresseelineeditutil.h
+        addressline/addresslineedit/akonadisearchcompletionemail.h
+        addressline/addresslineedit/addresseelineeditakonadi.h
+        addressline/addresslineedit/addresseelineeditmanager.h
+        addressline/addresslineedit/kmailcompletion.h
+        collectionpage/contenttypewidget.h
+        collectionpage/collectiontypeutil.h
+        collectionpage/incidencesforwidget.h
+        folderdialog/checkedcollectionwidget.h
+        folderdialog/selectmulticollectiondialog.h
+        folderdialog/selectmulticollectionwidget.h
+        pimcommonakonadi_private_export.h
+        util/mailutil.h
+        util/imapresourcecapabilitiesmanager.h
+        util/createresource.h
+        genericplugins/genericplugininterface.h
+        genericplugins/plugininterface.h
 )
 
 if(NOT FORCE_DISABLE_AKONADI_SEARCH)
-target_sources(KPim6PimCommonAkonadi PRIVATE
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailutil.cpp
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailsearchjob.cpp
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.h
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.h
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailutil.h
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailsearchjob.h
-    addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.h
-)
+    target_sources(
+        KPim6PimCommonAkonadi
+        PRIVATE
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailutil.cpp
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailsearchjob.cpp
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.h
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.h
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailutil.h
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailsearchjob.h
+            addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.h
+    )
 endif()
-
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
@@ -118,48 +121,57 @@ ecm_generate_export_header(KPim6PimCommonAkonadi
     USE_VERSION_HEADER
 )
 
-
-target_link_libraries(KPim6PimCommonAkonadi
+target_link_libraries(
+    KPim6PimCommonAkonadi
     PUBLIC
-    KPim6::PimCommon
-    KPim6::AkonadiCore
-    KPim6::AkonadiWidgets
-    KF6::Contacts
-    KPim6::AkonadiContactWidgets
-    KF6::KIOCore
-    KPim6::IMAP
-    KPim6::Libkdepim
+        KPim6::PimCommon
+        KPim6::AkonadiCore
+        KPim6::AkonadiWidgets
+        KF6::Contacts
+        KPim6::AkonadiContactWidgets
+        KF6::KIOCore
+        KPim6::IMAP
+        KPim6::Libkdepim
     PRIVATE
-    KPim6::AkonadiContactCore
-    KF6::I18n
-    KF6::Codecs
-    KF6::XmlGui
-    KF6::KIOWidgets
-    KF6::KCMUtils
-    KPim6::LdapWidgets
-    KF6::ItemViews
-    KF6::ColorScheme
+        KPim6::AkonadiContactCore
+        KF6::I18n
+        KF6::Codecs
+        KF6::XmlGui
+        KF6::KIOWidgets
+        KF6::KCMUtils
+        KPim6::LdapWidgets
+        KF6::ItemViews
+        KF6::ColorScheme
 )
 
 if(NOT FORCE_DISABLE_AKONADI_SEARCH)
     target_link_libraries(KPim6PimCommonAkonadi PRIVATE KPim6::AkonadiSearchPIM)
 endif()
 
-
-target_include_directories(KPim6PimCommonAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/>")
-
-target_include_directories(KPim6PimCommonAkonadi PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
-
-set_target_properties(KPim6PimCommonAkonadi PROPERTIES
-    VERSION ${PIMCOMMONAKONADI_VERSION}
-    SOVERSION ${PIMCOMMONAKONADI_SOVERSION}
-    EXPORT_NAME PimCommonAkonadi
+target_include_directories(
+    KPim6PimCommonAkonadi
+    INTERFACE
+        "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/>"
 )
 
-
-install(TARGETS
+target_include_directories(
     KPim6PimCommonAkonadi
-    EXPORT KPim6PimCommonAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    PUBLIC
+        "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>"
+)
+
+set_target_properties(
+    KPim6PimCommonAkonadi
+    PROPERTIES
+        VERSION ${PIMCOMMONAKONADI_VERSION}
+        SOVERSION ${PIMCOMMONAKONADI_SOVERSION}
+        EXPORT_NAME PimCommonAkonadi
+)
+
+install(
+    TARGETS KPim6PimCommonAkonadi
+    EXPORT KPim6PimCommonAkonadiTargets
+    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 if(BUILD_TESTING)
@@ -170,14 +182,12 @@ if(BUILD_TESTING)
     add_subdirectory(addressline/tests)
     add_subdirectory(addressline/autotests)
     if(NOT FORCE_DISABLE_AKONADI_SEARCH)
-       add_subdirectory(addressline/blacklistakonadisearchcompletion/autotests)
-    endif()       
+        add_subdirectory(addressline/blacklistakonadisearchcompletion/autotests)
+    endif()
 endif()
 
-
-
 if(BUILD_DESIGNERPLUGIN)
-        add_subdirectory(designer)
+    add_subdirectory(designer)
 endif()
 
 ecm_generate_headers(PimCommonAkonadi_Camelcaseaddressline_HEADERS
@@ -203,8 +213,6 @@ ecm_generate_headers(PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS
     PREFIX PimCommonAkonadi
     RELATIVE addressline/completionconfiguredialog/
 )
-
-
 
 ecm_generate_headers(PimCommonAkonadi_Camelcasecollectionpage_HEADERS
   HEADER_NAMES
@@ -269,41 +277,43 @@ ecm_generate_headers(PimCommonAkonadi_CamelCasegenericplugins_HEADERS
     RELATIVE genericplugins
 )
 
-install(FILES
-    ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
-    ${PimCommonAkonadi_Camelcaseacl_HEADERS}
-    ${PimCommonAkonadi_Camelcaseldap_HEADERS}
-    ${PimCommonAkonadi_Camelcasefolderdialog_HEADERS}
-    ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
-    ${PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS}
-    ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
-    ${PimCommonAkonadi_CamelCaseUtil_HEADERS}
-    ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
-    ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
-    ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
-    ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
+install(
+    FILES
+        ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
+        ${PimCommonAkonadi_Camelcaseacl_HEADERS}
+        ${PimCommonAkonadi_Camelcaseldap_HEADERS}
+        ${PimCommonAkonadi_Camelcasefolderdialog_HEADERS}
+        ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
+        ${PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS}
+        ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
+        ${PimCommonAkonadi_CamelCaseUtil_HEADERS}
+        ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
+        ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
+        ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
+        ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
+    DESTINATION
+        ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
     COMPONENT Devel
 )
 
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
-    ${PimCommonAkonadi_acl_HEADERS}
-    ${PimCommonAkonadi_ldap_HEADERS}
-    ${PimCommonAkonadi_collectionpage_HEADERS}
-    ${PimCommonAkonadi_folderdialog_HEADERS}
-    ${PimCommonAkonadi_genericplugins_HEADERS}
-    ${PimCommonAkonadi_casewidgets_HEADERS}
-    ${PimCommonAkonadi_widgets_HEADERS}
-    ${PimCommonAkonadi_managerserversidesubscription_HEADERS}
-    ${PimCommonAkonadi_Util_HEADERS}
-    ${PimCommonAkonadi_progresswidget_HEADERS}
-    ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
-    ${PimCommonAkonadi_addressline_HEADERS}
-    ${PimCommonAkonadi_recentaddress_HEADERS}
-
-
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
+install(
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
+        ${PimCommonAkonadi_acl_HEADERS}
+        ${PimCommonAkonadi_ldap_HEADERS}
+        ${PimCommonAkonadi_collectionpage_HEADERS}
+        ${PimCommonAkonadi_folderdialog_HEADERS}
+        ${PimCommonAkonadi_genericplugins_HEADERS}
+        ${PimCommonAkonadi_casewidgets_HEADERS}
+        ${PimCommonAkonadi_widgets_HEADERS}
+        ${PimCommonAkonadi_managerserversidesubscription_HEADERS}
+        ${PimCommonAkonadi_Util_HEADERS}
+        ${PimCommonAkonadi_progresswidget_HEADERS}
+        ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
+        ${PimCommonAkonadi_addressline_HEADERS}
+        ${PimCommonAkonadi_recentaddress_HEADERS}
+    DESTINATION
+        ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
 )
 
@@ -342,40 +352,45 @@ if(BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-)
-
+    )
 endif()
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonAkonadi")
-if(BUILD_QCH)
-ecm_install_qch_export(
-    TARGETS KPim6PimCommonAkonadi_QCH
-    FILE KPim6PimCommonAkonadiQchTargets.cmake
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
+set(CMAKECONFIG_INSTALL_DIR
+    "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonAkonadi"
 )
-set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonAkonadiQchTargets.cmake\")")
+if(BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim6PimCommonAkonadi_QCH
+        FILE KPim6PimCommonAkonadiQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS
+        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonAkonadiQchTargets.cmake\")"
+    )
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
 )
 
-
-
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
+install(
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfig.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonAkonadiConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
 
-install(EXPORT KPim6PimCommonAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    FILE KPim6PimCommonAkonadiTargets.cmake NAMESPACE KPim6::)
-
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/ COMPONENT Devel
+install(
+    EXPORT KPim6PimCommonAkonadiTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPim6PimCommonAkonadiTargets.cmake
+    NAMESPACE KPim6::
 )
 
+install(
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/
+    COMPONENT Devel
+)

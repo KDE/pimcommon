@@ -1,9 +1,10 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/ COMPONENT Devel
+install(
+    FILES ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/
+    COMPONENT Devel
 )
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
@@ -12,12 +13,11 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
     SOVERSION 6
 )
 
-
 macro(add_resource_iface _kcfgFile _ifaceName _className)
     kcfg_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/${_kcfgFile} ${_ifaceName})
     qt_add_dbus_interface(libpimcommon_SRCS
         ${CMAKE_CURRENT_BINARY_DIR}/${_ifaceName}.xml ${_fileName} ${_className}
-)
+    )
 endmacro()
 
 add_resource_iface(util/imapresource.kcfg org.kde.Akonadi.Imap.Settings imapresourcesettings)
@@ -30,120 +30,103 @@ ecm_qt_declare_logging_category(KPim6PimCommon HEADER pimcommon_debug.h IDENTIFI
         EXPORT PIMCOMMON
 )
 
-target_sources(KPim6PimCommon PRIVATE
-    ${libpimcommon_SRCS}
-    genericplugins/pluginutil.cpp
-    genericplugins/genericpluginmanager.cpp
-    genericplugins/genericplugin.cpp
-    genericplugins/abstractgenericplugin.cpp
-    genericplugins/abstractgenericplugininterface.cpp
-    configureplugins/configurepluginslistwidget.cpp
-    configureplugins/configurepluginswidget.cpp
-    configureplugins/configureplugindialog.cpp
-
-    templatewidgets/templatelistwidget.cpp
-    templatewidgets/templateeditdialog.cpp
-    templatewidgets/templatemanager.cpp
-    widgets/renamefiledialog.cpp
-    widgets/simplestringlisteditor.cpp
-    widgets/customtreeview.cpp
-    widgets/configureimmutablewidgetutils.cpp
-    widgets/kactionmenuchangecase.cpp
-    widgets/spellchecklineedit.cpp
-    widgets/lineeditwithcompleterng.cpp
-    widgets/customlogwidget.cpp
-    customtools/customtoolsplugin.cpp
-    customtools/customtoolspluginmanager.cpp
-    customtools/customtoolswidgetng.cpp
-    customtools/customtoolsviewinterface.cpp
-    util/pimutil.cpp
-    util/broadcaststatus.cpp
-
-    shareserviceurl/shareserviceurlmanager.cpp
-    network/networkmanager.cpp
-
-    customtools/customtoolswidgetng.h
-    customtools/customtoolsplugin.h
-    customtools/customtoolspluginmanager.h
-    customtools/customtoolsviewinterface.h
-    configureplugins/configureplugindialog.h
-    configureplugins/configurepluginswidget.h
-    configureplugins/configurepluginslistwidget.h
-
-    configureplugins/configurepluginstreewidgetdelegate.h
-    configureplugins/configurepluginstreewidgetdelegate.cpp
-
-    shareserviceurl/shareserviceurlmanager.h
-    pimcommon_private_export.h
-    network/networkmanager.h
-    widgets/renamefiledialog.h
-    widgets/spellchecklineedit.h
-    widgets/customtreeview.h
-    widgets/lineeditwithcompleterng.h
-    widgets/simplestringlisteditor.h
-    widgets/customlogwidget.h
-    widgets/configureimmutablewidgetutils.h
-    widgets/kactionmenuchangecase.h
-    templatewidgets/templatemanager.h
-    templatewidgets/templatelistwidget.h
-    templatewidgets/templateeditdialog.h
-    util/broadcaststatus.h
-    util/pimutil.h
-    genericplugins/genericplugin.h
-    genericplugins/genericpluginmanager.h
-    genericplugins/pluginutil.h
-    genericplugins/abstractgenericplugininterface.h
-    genericplugins/abstractgenericplugin.h
-
-    autocorrection/widgets/lineeditwithautocorrection.h
-    autocorrection/widgets/lineeditwithautocorrection.cpp
-
-    widgets/purposemenumessagewidget.h
-    widgets/purposemenumessagewidget.cpp
-
-
-    needupdateversion/needupdateversionwidget.h
-    needupdateversion/needupdateversionwidget.cpp
-
-    needupdateversion/needupdateversionutils.h
-    needupdateversion/needupdateversionutils.cpp
-
-    needupdateversion/needupdatecheckexistingnewversionjob.cpp
-    needupdateversion/needupdatecheckexistingnewversionjob.h
-    needupdateversion/needupdateparsehtmljob.cpp
-    needupdateversion/needupdateparsehtmljob.h
-    needupdateversion/needupdateparsehtmlutil.cpp
-    needupdateversion/needupdateparsehtmlutil.h
-
-
-    widgets/purposemenuwidget.h
-    widgets/purposemenuwidget.cpp
-
-    whatsnew/whatsnewdialog.h
-    whatsnew/whatsnewdialog.cpp
-    whatsnew/whatsnewwidget.h
-    whatsnew/whatsnewwidget.cpp
-
-    whatsnew/whatsnewmessagewidget.h
-    whatsnew/whatsnewmessagewidget.cpp
-
-    whatsnew/whatsnewcomboboxwidget.h
-    whatsnew/whatsnewcomboboxwidget.cpp
-
-    whatsnew/whatsnewtranslationsbase.h
-    whatsnew/whatsnewtranslationsbase.cpp
-    whatsnew/whatsnewinfo.h
-    whatsnew/whatsnewinfo.cpp
-    
-    verifynewversion/verifynewversionutils.cpp
-    verifynewversion/verifynewversionutils.h
-    verifynewversion/verifynewversionwidget.cpp
-    verifynewversion/verifynewversionwidget.h
-    verifynewversion/checknewversiondialog.cpp
-    verifynewversion/checknewversiondialog.h
-    verifynewversion/checknewversionwidget.cpp
-    verifynewversion/checknewversionwidget.h
-
+target_sources(
+    KPim6PimCommon
+    PRIVATE
+        ${libpimcommon_SRCS}
+        genericplugins/pluginutil.cpp
+        genericplugins/genericpluginmanager.cpp
+        genericplugins/genericplugin.cpp
+        genericplugins/abstractgenericplugin.cpp
+        genericplugins/abstractgenericplugininterface.cpp
+        configureplugins/configurepluginslistwidget.cpp
+        configureplugins/configurepluginswidget.cpp
+        configureplugins/configureplugindialog.cpp
+        templatewidgets/templatelistwidget.cpp
+        templatewidgets/templateeditdialog.cpp
+        templatewidgets/templatemanager.cpp
+        widgets/renamefiledialog.cpp
+        widgets/simplestringlisteditor.cpp
+        widgets/customtreeview.cpp
+        widgets/configureimmutablewidgetutils.cpp
+        widgets/kactionmenuchangecase.cpp
+        widgets/spellchecklineedit.cpp
+        widgets/lineeditwithcompleterng.cpp
+        widgets/customlogwidget.cpp
+        customtools/customtoolsplugin.cpp
+        customtools/customtoolspluginmanager.cpp
+        customtools/customtoolswidgetng.cpp
+        customtools/customtoolsviewinterface.cpp
+        util/pimutil.cpp
+        util/broadcaststatus.cpp
+        shareserviceurl/shareserviceurlmanager.cpp
+        network/networkmanager.cpp
+        customtools/customtoolswidgetng.h
+        customtools/customtoolsplugin.h
+        customtools/customtoolspluginmanager.h
+        customtools/customtoolsviewinterface.h
+        configureplugins/configureplugindialog.h
+        configureplugins/configurepluginswidget.h
+        configureplugins/configurepluginslistwidget.h
+        configureplugins/configurepluginstreewidgetdelegate.h
+        configureplugins/configurepluginstreewidgetdelegate.cpp
+        shareserviceurl/shareserviceurlmanager.h
+        pimcommon_private_export.h
+        network/networkmanager.h
+        widgets/renamefiledialog.h
+        widgets/spellchecklineedit.h
+        widgets/customtreeview.h
+        widgets/lineeditwithcompleterng.h
+        widgets/simplestringlisteditor.h
+        widgets/customlogwidget.h
+        widgets/configureimmutablewidgetutils.h
+        widgets/kactionmenuchangecase.h
+        templatewidgets/templatemanager.h
+        templatewidgets/templatelistwidget.h
+        templatewidgets/templateeditdialog.h
+        util/broadcaststatus.h
+        util/pimutil.h
+        genericplugins/genericplugin.h
+        genericplugins/genericpluginmanager.h
+        genericplugins/pluginutil.h
+        genericplugins/abstractgenericplugininterface.h
+        genericplugins/abstractgenericplugin.h
+        autocorrection/widgets/lineeditwithautocorrection.h
+        autocorrection/widgets/lineeditwithautocorrection.cpp
+        widgets/purposemenumessagewidget.h
+        widgets/purposemenumessagewidget.cpp
+        needupdateversion/needupdateversionwidget.h
+        needupdateversion/needupdateversionwidget.cpp
+        needupdateversion/needupdateversionutils.h
+        needupdateversion/needupdateversionutils.cpp
+        needupdateversion/needupdatecheckexistingnewversionjob.cpp
+        needupdateversion/needupdatecheckexistingnewversionjob.h
+        needupdateversion/needupdateparsehtmljob.cpp
+        needupdateversion/needupdateparsehtmljob.h
+        needupdateversion/needupdateparsehtmlutil.cpp
+        needupdateversion/needupdateparsehtmlutil.h
+        widgets/purposemenuwidget.h
+        widgets/purposemenuwidget.cpp
+        whatsnew/whatsnewdialog.h
+        whatsnew/whatsnewdialog.cpp
+        whatsnew/whatsnewwidget.h
+        whatsnew/whatsnewwidget.cpp
+        whatsnew/whatsnewmessagewidget.h
+        whatsnew/whatsnewmessagewidget.cpp
+        whatsnew/whatsnewcomboboxwidget.h
+        whatsnew/whatsnewcomboboxwidget.cpp
+        whatsnew/whatsnewtranslationsbase.h
+        whatsnew/whatsnewtranslationsbase.cpp
+        whatsnew/whatsnewinfo.h
+        whatsnew/whatsnewinfo.cpp
+        verifynewversion/verifynewversionutils.cpp
+        verifynewversion/verifynewversionutils.h
+        verifynewversion/verifynewversionwidget.cpp
+        verifynewversion/verifynewversionwidget.h
+        verifynewversion/checknewversiondialog.cpp
+        verifynewversion/checknewversiondialog.h
+        verifynewversion/checknewversionwidget.cpp
+        verifynewversion/checknewversionwidget.h
 )
 
 if(ENABLE_WARN_OUTDATED)
@@ -162,53 +145,57 @@ ecm_generate_export_header(KPim6PimCommon
     USE_VERSION_HEADER
 )
 
-
-target_link_libraries(KPim6PimCommon
+target_link_libraries(
+    KPim6PimCommon
     PUBLIC
-    Qt::Gui
-    Qt::Widgets
-    Qt::DBus
-    KF6::KIOCore
-    KF6::WidgetsAddons
-    KF6::TextCustomEditor
+        Qt::Gui
+        Qt::Widgets
+        Qt::DBus
+        KF6::KIOCore
+        KF6::WidgetsAddons
+        KF6::TextCustomEditor
     PRIVATE
-    Qt::Network
-    KF6::I18n
-    KF6::XmlGui
-    KF6::KIOWidgets
-    KF6::ItemViews
-    KF6::NewStuffCore
-    KF6::NewStuffWidgets
-    KF6::Purpose
-    KF6::PurposeWidgets
-    KF6::Codecs
-    KF6::ColorScheme
+        Qt::Network
+        KF6::I18n
+        KF6::XmlGui
+        KF6::KIOWidgets
+        KF6::ItemViews
+        KF6::NewStuffCore
+        KF6::NewStuffWidgets
+        KF6::Purpose
+        KF6::PurposeWidgets
+        KF6::Codecs
+        KF6::ColorScheme
 )
 if(TARGET KF6::TextAutoCorrectionWidgets)
-    target_link_libraries(KPim6PimCommon
-        PUBLIC
-        KF6::TextAutoCorrectionWidgets
-)
+    target_link_libraries(KPim6PimCommon PUBLIC KF6::TextAutoCorrectionWidgets)
 else()
-    target_link_libraries(KPim6PimCommon
-        PUBLIC
-        KF6::TextAutoCorrection
-)
+    target_link_libraries(KPim6PimCommon PUBLIC KF6::TextAutoCorrection)
 endif()
 
-target_include_directories(KPim6PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>")
-
-target_include_directories(KPim6PimCommon PUBLIC "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>")
-
-set_target_properties(KPim6PimCommon PROPERTIES
-    VERSION ${PIMCOMMON_VERSION}
-    SOVERSION ${PIMCOMMON_SOVERSION}
-    EXPORT_NAME PimCommon
+target_include_directories(
+    KPim6PimCommon
+    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>"
 )
 
-install(TARGETS
+target_include_directories(
     KPim6PimCommon
-    EXPORT KPim6PimCommonTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
+    PUBLIC
+        "$<BUILD_INTERFACE:${pimcommon_SOURCE_DIR}/src;${pimcommon_BINARY_DIR}/src>"
+)
+
+set_target_properties(
+    KPim6PimCommon
+    PROPERTIES
+        VERSION ${PIMCOMMON_VERSION}
+        SOVERSION ${PIMCOMMON_SOVERSION}
+        EXPORT_NAME PimCommon
+)
+
+install(
+    TARGETS KPim6PimCommon
+    EXPORT KPim6PimCommonTargets
+    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
 )
 
 if(BUILD_TESTING)
@@ -311,7 +298,6 @@ ecm_generate_headers(PimCommon_Camelcasetemplatelist_HEADERS
     RELATIVE templatewidgets
 )
 
-
 ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
     HEADER_NAMES
     CustomTreeView
@@ -340,7 +326,6 @@ ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     RELATIVE configureplugins
 )
 
-
 ecm_generate_headers(PimCommon_Camelcasewhatsnew_HEADERS
     HEADER_NAMES
     WhatsNewComboBoxWidget
@@ -353,51 +338,52 @@ ecm_generate_headers(PimCommon_Camelcasewhatsnew_HEADERS
     RELATIVE whatsnew
 )
 
-install(FILES
-    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
-    ${PimCommon_CamelCasegenericplugins_HEADERS}
-    ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
-    ${PimCommon_CamelCasenetworkmanager_HEADERS}
-    ${PimCommon_Camelcaseneedupdateversionwidgets_HEADERS}
-    ${PimCommon_Camelverifynewversion_HEADERS}
-    ${PimCommon_CamelCase_HEADERS}
-    ${PimCommon_CamelCasejob_HEADERS}
-    ${PimCommon_Camelcasecustomtools_HEADERS}
-    ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
-    ${PimCommon_Camelcasemigrate_HEADERS}
-    ${PimCommon_Camelcaseplaintexteditor_HEADERS}
-    ${PimCommon_Camelcaserichtexteditor_HEADERS}
-    ${PimCommon_Camelcasescript_HEADERS}
-    ${PimCommon_Camelcaseshareserviceurl_HEADERS}
-    ${PimCommon_Camelcasetemplatelist_HEADERS}
-    ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
-    ${PimCommon_Camelcasewidgets_HEADERS}
-    ${PimCommon_Camelcasewhatsnew_HEADERS}
+install(
+    FILES
+        ${PimCommon_Camelcaseconfigureplugins_HEADERS}
+        ${PimCommon_CamelCasegenericplugins_HEADERS}
+        ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
+        ${PimCommon_CamelCasenetworkmanager_HEADERS}
+        ${PimCommon_Camelcaseneedupdateversionwidgets_HEADERS}
+        ${PimCommon_Camelverifynewversion_HEADERS}
+        ${PimCommon_CamelCase_HEADERS}
+        ${PimCommon_CamelCasejob_HEADERS}
+        ${PimCommon_Camelcasecustomtools_HEADERS}
+        ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
+        ${PimCommon_Camelcasemigrate_HEADERS}
+        ${PimCommon_Camelcaseplaintexteditor_HEADERS}
+        ${PimCommon_Camelcaserichtexteditor_HEADERS}
+        ${PimCommon_Camelcasescript_HEADERS}
+        ${PimCommon_Camelcaseshareserviceurl_HEADERS}
+        ${PimCommon_Camelcasetemplatelist_HEADERS}
+        ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
+        ${PimCommon_Camelcasewidgets_HEADERS}
+        ${PimCommon_Camelcasewhatsnew_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/PimCommon
     COMPONENT Devel
 )
 
-install(FILES
-    ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
-    ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
-    ${PimCommon_HEADERS}
-    ${PimCommon_autocorrectionwidgets_HEADERS}
-    ${PimCommon_genericplugins_HEADERS}
-    ${PimCommon_configureplugins_HEADERS}
-    ${PimCommon_networkmanager_HEADERS}
-    ${PimCommon_needupdateversionwidgets_HEADERS}
-    ${PimCommon_customtools_HEADERS}
-    ${PimCommon_job_HEADERS}
-    ${PimCommon_managerserversidesubscription_HEADERS}
-    ${PimCommon_plaintexteditor_HEADERS}
-    ${PimCommon_richtexteditor_HEADERS}
-    ${PimCommon_shareserviceurl_HEADERS}
-    ${PimCommon_templatelist_HEADERS}
-    ${PimCommon_texteditor_commonwidget_HEADERS}
-    ${PimCommon_widgets_HEADERS}
-    ${PimCommon_whatsnew_HEADERS}
-    ${PimCommon_verifynewversion_HEADERS}
-
+install(
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
+        ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
+        ${PimCommon_HEADERS}
+        ${PimCommon_autocorrectionwidgets_HEADERS}
+        ${PimCommon_genericplugins_HEADERS}
+        ${PimCommon_configureplugins_HEADERS}
+        ${PimCommon_networkmanager_HEADERS}
+        ${PimCommon_needupdateversionwidgets_HEADERS}
+        ${PimCommon_customtools_HEADERS}
+        ${PimCommon_job_HEADERS}
+        ${PimCommon_managerserversidesubscription_HEADERS}
+        ${PimCommon_plaintexteditor_HEADERS}
+        ${PimCommon_richtexteditor_HEADERS}
+        ${PimCommon_shareserviceurl_HEADERS}
+        ${PimCommon_templatelist_HEADERS}
+        ${PimCommon_texteditor_commonwidget_HEADERS}
+        ${PimCommon_widgets_HEADERS}
+        ${PimCommon_whatsnew_HEADERS}
+        ${PimCommon_verifynewversion_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
 )
@@ -449,30 +435,38 @@ if(BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-)
+    )
 endif()
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommon")
 if(BUILD_QCH)
-ecm_install_qch_export(
-    TARGETS KPim6PimCommon_QCH
-    FILE KPim6PimCommonQchTargets.cmake
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-)
-set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonQchTargets.cmake\")")
+    ecm_install_qch_export(
+        TARGETS KPim6PimCommon_QCH
+        FILE KPim6PimCommonQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS
+        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonQchTargets.cmake\")"
+    )
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
 )
 
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfigVersion.cmake"
+install(
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
 )
 
-install(EXPORT KPim6PimCommonTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6PimCommonTargets.cmake NAMESPACE KPim6::)
+install(
+    EXPORT KPim6PimCommonTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    FILE KPim6PimCommonTargets.cmake
+    NAMESPACE KPim6::
+)
