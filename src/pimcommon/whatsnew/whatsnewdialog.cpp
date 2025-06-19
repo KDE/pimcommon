@@ -11,7 +11,6 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowConfig>
-#include <QCoreApplication>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QWindow>
@@ -20,11 +19,11 @@ namespace
 const char myWhatsNewDialogGroupName[] = "WhatsNewDialog";
 }
 using namespace PimCommon;
-WhatsNewDialog::WhatsNewDialog(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent)
+WhatsNewDialog::WhatsNewDialog(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent, const QString &applicationName)
     : QDialog(parent)
     , mWhatsNewWidget(new WhatsNewWidget(infos, this))
 {
-    setWindowTitle(i18nc("@title:window", "What's new in %1", QCoreApplication::applicationName()));
+    setWindowTitle(i18nc("@title:window", "What's new in %1", applicationName));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 

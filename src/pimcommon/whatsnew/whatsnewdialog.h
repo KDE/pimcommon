@@ -7,7 +7,10 @@
 
 #include "pimcommon_export.h"
 #include <PimCommon/WhatsNewInfo>
+
+#include <QCoreApplication>
 #include <QDialog>
+
 namespace PimCommon
 {
 class WhatsNewWidget;
@@ -15,7 +18,9 @@ class PIMCOMMON_EXPORT WhatsNewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit WhatsNewDialog(const QList<PimCommon::WhatsNewInfo> &infos, QWidget *parent = nullptr);
+    explicit WhatsNewDialog(const QList<PimCommon::WhatsNewInfo> &infos,
+                            QWidget *parent = nullptr,
+                            const QString &applicationName = QCoreApplication::applicationName());
     ~WhatsNewDialog() override;
 
     void updateInformations();
