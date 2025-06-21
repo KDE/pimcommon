@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-15 00:43+0000\n"
+"POT-Creation-Date: 2025-06-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 08:54+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -271,18 +271,18 @@ msgctxt "@label:textbox"
 msgid "Version:"
 msgstr "Версія:"
 
-#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#: pimcommon/whatsnew/whatsnewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
 msgstr "Що нового у %1"
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "(Show News)"
 msgstr "(Показати новини)"
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "What's new in %2. %1"
 msgstr "Що нового у %2. %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-15 00:43+0000\n"
+"POT-Creation-Date: 2025-06-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-26 18:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -269,18 +269,18 @@ msgctxt "@label:textbox"
 msgid "Version:"
 msgstr "பதிப்பு:"
 
-#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#: pimcommon/whatsnew/whatsnewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
 msgstr "%1 தனில் புதியவை"
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "(Show News)"
 msgstr "(செய்திகளை காட்டு)"
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "What's new in %2. %1"
 msgstr ""

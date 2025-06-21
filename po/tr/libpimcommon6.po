@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-15 00:43+0000\n"
+"POT-Creation-Date: 2025-06-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 16:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -272,18 +272,18 @@ msgctxt "@label:textbox"
 msgid "Version:"
 msgstr "Sürüm:"
 
-#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#: pimcommon/whatsnew/whatsnewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
 msgstr "%1 Yenilikleri"
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "(Show News)"
 msgstr "(Haberleri Göster)"
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "What's new in %2. %1"
 msgstr "%2 içinde neler yeni. %1"

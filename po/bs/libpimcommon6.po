@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-15 00:43+0000\n"
+"POT-Creation-Date: 2025-06-21 00:43+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -276,18 +276,18 @@ msgctxt "@label:textbox"
 msgid "Version:"
 msgstr "Perzijski"
 
-#: pimcommon/whatsnew/whatsnewdialog.cpp:27
+#: pimcommon/whatsnew/whatsnewdialog.cpp:26
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
 msgstr ""
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "(Show News)"
 msgstr ""
 
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:21
+#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
 msgid "What's new in %2. %1"
 msgstr ""
