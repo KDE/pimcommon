@@ -2,7 +2,8 @@
 # SPDX-FileCopyrightText: none
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/
     COMPONENT Devel
 )
@@ -136,7 +137,12 @@ else()
 endif()
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6PimCommon PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6PimCommon
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6PimCommon
     BASE_NAME pimcommon
@@ -173,10 +179,7 @@ else()
     target_link_libraries(KPim6PimCommon PUBLIC KF6::TextAutoCorrection)
 endif()
 
-target_include_directories(
-    KPim6PimCommon
-    INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>"
-)
+target_include_directories(KPim6PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>")
 
 target_include_directories(
     KPim6PimCommon
@@ -187,16 +190,15 @@ target_include_directories(
 set_target_properties(
     KPim6PimCommon
     PROPERTIES
-        VERSION ${PIMCOMMON_VERSION}
-        SOVERSION ${PIMCOMMON_SOVERSION}
-        EXPORT_NAME PimCommon
+        VERSION
+            ${PIMCOMMON_VERSION}
+        SOVERSION
+            ${PIMCOMMON_SOVERSION}
+        EXPORT_NAME
+            PimCommon
 )
 
-install(
-    TARGETS KPim6PimCommon
-    EXPORT KPim6PimCommonTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6PimCommon EXPORT KPim6PimCommonTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(BUILD_TESTING)
     add_subdirectory(widgets/autotests)
@@ -446,9 +448,7 @@ if(BUILD_QCH)
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS
-        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonQchTargets.cmake\")"
-    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonQchTargets.cmake\")")
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"

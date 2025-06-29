@@ -1,8 +1,6 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
-add_definitions(
-    -DPIMCOMMON_DATA_NEEDUPDATEDIR="${CMAKE_CURRENT_SOURCE_DIR}/data"
-)
+add_definitions(-DPIMCOMMON_DATA_NEEDUPDATEDIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 
 macro(add_pimcommon_needupdateversion_unittest _source)
     get_filename_component(_name ${_source} NAME_WE)

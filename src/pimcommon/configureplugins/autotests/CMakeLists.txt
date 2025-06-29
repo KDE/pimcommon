@@ -21,10 +21,7 @@ add_executable(
     configurepluginslistwidgettest.cpp
     configurepluginslistwidgettest.h
 )
-add_test(
-    NAME configurepluginslistwidgettest
-    COMMAND configurepluginslistwidgettest
-)
+add_test(NAME configurepluginslistwidgettest COMMAND configurepluginslistwidgettest)
 ecm_mark_as_test(kmail-configurepluginslistwidgettest)
 target_link_libraries(
     configurepluginslistwidgettest

@@ -112,7 +112,12 @@ if(NOT FORCE_DISABLE_AKONADI_SEARCH)
 endif()
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6PimCommonAkonadi PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6PimCommonAkonadi
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6PimCommonAkonadi
     BASE_NAME pimcommonakonadi
@@ -163,16 +168,15 @@ target_include_directories(
 set_target_properties(
     KPim6PimCommonAkonadi
     PROPERTIES
-        VERSION ${PIMCOMMONAKONADI_VERSION}
-        SOVERSION ${PIMCOMMONAKONADI_SOVERSION}
-        EXPORT_NAME PimCommonAkonadi
+        VERSION
+            ${PIMCOMMONAKONADI_VERSION}
+        SOVERSION
+            ${PIMCOMMONAKONADI_SOVERSION}
+        EXPORT_NAME
+            PimCommonAkonadi
 )
 
-install(
-    TARGETS KPim6PimCommonAkonadi
-    EXPORT KPim6PimCommonAkonadiTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6PimCommonAkonadi EXPORT KPim6PimCommonAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(BUILD_TESTING)
     add_subdirectory(acl/autotests)
@@ -291,8 +295,7 @@ install(
         ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
         ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
         ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
-    DESTINATION
-        ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/PimCommonAkonadi
     COMPONENT Devel
 )
 
@@ -312,8 +315,7 @@ install(
         ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
         ${PimCommonAkonadi_addressline_HEADERS}
         ${PimCommonAkonadi_recentaddress_HEADERS}
-    DESTINATION
-        ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
 )
 
@@ -354,9 +356,7 @@ if(BUILD_QCH)
         COMPONENT Devel
     )
 endif()
-set(CMAKECONFIG_INSTALL_DIR
-    "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonAkonadi"
-)
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonAkonadi")
 if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6PimCommonAkonadi_QCH
@@ -364,9 +364,7 @@ if(BUILD_QCH)
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS
-        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonAkonadiQchTargets.cmake\")"
-    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonAkonadiQchTargets.cmake\")")
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonAkonadiConfig.cmake.in"
@@ -390,7 +388,8 @@ install(
 )
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/
     COMPONENT Devel
 )

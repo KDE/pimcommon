@@ -19,7 +19,11 @@ include(ECMGenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 
-file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES src/*.cpp src/*.h)
+file(
+    GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
+    src/*.cpp
+    src/*.h
+)
 set(PRE_COMMIT_INSTALLED FALSE)
 if(${CMAKE_SOURCE_DIR} STREQUAL ${PROJECT_SOURCE_DIR})
     if(EXISTS "${PROJECT_SOURCE_DIR}/.git/hooks/pre-commit")
@@ -45,11 +49,7 @@ include(ECMAddQtDesignerPlugin)
 include(ECMAddQch)
 include(ECMCheckOutboundLicense)
 
-option(
-    BUILD_QCH
-    "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
-    OFF
-)
+option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(
     QCH
     ${BUILD_QCH}
@@ -70,7 +70,11 @@ find_package(
     Qt6
     ${QT_REQUIRED_VERSION}
     CONFIG
-    REQUIRED Widgets DBus Network Xml
+    REQUIRED
+        Widgets
+        DBus
+        Network
+        Xml
 )
 
 find_package(KF6Archive ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -92,21 +96,12 @@ find_package(KF6WidgetsAddons ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6ColorScheme ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6Akonadi ${AKONADI_VERSION} CONFIG REQUIRED)
-find_package(
-    KPim6AkonadiContactWidgets
-    ${AKONADICONTACT_LIB_VERSION}
-    CONFIG
-    REQUIRED
-)
+find_package(KPim6AkonadiContactWidgets ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6IMAP ${KIMAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6LdapWidgets ${KLDAP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6Libkdepim ${LIBKDEPIM_LIB_VERSION} CONFIG REQUIRED)
 
-option(
-    USE_UNITY_CMAKE_SUPPORT
-    "Use UNITY cmake support (speedup compile time)"
-    OFF
-)
+option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
 if(USE_UNITY_CMAKE_SUPPORT)
@@ -127,19 +122,18 @@ option(
 )
 if(UNIX)
     if(NOT FORCE_DISABLE_AKONADI_SEARCH)
-        find_package(
-            KPim6AkonadiSearch
-            ${AKONADI_SEARCH_VERSION}
-            CONFIG
-            REQUIRED
-        )
+        find_package(KPim6AkonadiSearch ${AKONADI_SEARCH_VERSION} CONFIG REQUIRED)
         set_package_properties(
             KPim6AkonadiSearch
             PROPERTIES
-                DESCRIPTION "The Akonadi Search libraries"
-                URL "https://invent.kde.org/pim/akonadi-search"
-                TYPE REQUIRED
-                PURPOSE "Provides search capabilities in KMail and Akonadi"
+                DESCRIPTION
+                    "The Akonadi Search libraries"
+                URL
+                    "https://invent.kde.org/pim/akonadi-search"
+                TYPE
+                    REQUIRED
+                PURPOSE
+                    "Provides search capabilities in KMail and Akonadi"
         )
     endif()
 else()
@@ -148,10 +142,14 @@ else()
         set_package_properties(
             KPim6AkonadiSearch
             PROPERTIES
-                DESCRIPTION "The Akonadi Search libraries"
-                URL "https://invent.kde.org/pim/akonadi-search"
-                TYPE OPTIONAL
-                PURPOSE "Provides search capabilities in KMail and Akonadi"
+                DESCRIPTION
+                    "The Akonadi Search libraries"
+                URL
+                    "https://invent.kde.org/pim/akonadi-search"
+                TYPE
+                    OPTIONAL
+                PURPOSE
+                    "Provides search capabilities in KMail and Akonadi"
         )
     endif()
 endif()
@@ -161,10 +159,7 @@ if(NOT KPim6AkonadiSearch_FOUND)
 endif()
 
 set(DISABLE_AKONADI_SEARCH ${FORCE_DISABLE_AKONADI_SEARCH})
-configure_file(
-    config-akonadi-search.h.in
-    ${CMAKE_CURRENT_BINARY_DIR}/src/config-akonadi-search.h
-)
+configure_file(config-akonadi-search.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-akonadi-search.h)
 
 option(
     ENABLE_WARN_OUTDATED
@@ -182,12 +177,7 @@ endif()
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.15.0)
 
-find_package(
-    KF6TextAutoCorrectionWidgets
-    ${KTEXTADDONS_MIN_VERSION}
-    CONFIG
-    REQUIRED
-)
+find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 
@@ -206,8 +196,10 @@ if(OPTION_USE_PLASMA_ACTIVITIES)
         set_package_properties(
             PlasmaActivities
             PROPERTIES
-                DESCRIPTION "Allow to compile with plasma activities"
-                TYPE OPTIONAL
+                DESCRIPTION
+                    "Allow to compile with plasma activities"
+                TYPE
+                    OPTIONAL
         )
     endif()
 endif()
@@ -223,5 +215,9 @@ if(DEFINED kde_configure_git_pre_commit_hook)
 endif()
 ki18n_install(po)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-file(GLOB_RECURSE ALL_SOURCE_FILES src/*.cpp src/*.h)
+file(
+    GLOB_RECURSE ALL_SOURCE_FILES
+    src/*.cpp
+    src/*.h
+)
 ecm_check_outbound_license(LICENSES GPL-2.0-only  FILES ${ALL_SOURCE_FILES})

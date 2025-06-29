@@ -27,7 +27,12 @@ target_sources(
 )
 
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KPim6PimCommonActivities PROPERTIES UNITY_BUILD ON)
+    set_target_properties(
+        KPim6PimCommonActivities
+        PROPERTIES
+            UNITY_BUILD
+                ON
+    )
 endif()
 ecm_generate_export_header(KPim6PimCommonActivities
     BASE_NAME pimcommonactivities
@@ -46,8 +51,11 @@ ecm_generate_headers(PimCommonActivities_CamelCasebase_HEADERS
 
 target_link_libraries(
     KPim6PimCommonActivities
-    PUBLIC Qt::Widgets Plasma::Activities
-    PRIVATE KF6::I18n
+    PUBLIC
+        Qt::Widgets
+        Plasma::Activities
+    PRIVATE
+        KF6::I18n
 )
 
 target_include_directories(
@@ -65,21 +73,20 @@ target_include_directories(
 set_target_properties(
     KPim6PimCommonActivities
     PROPERTIES
-        VERSION ${PIMCOMMONACTIVITIES_VERSION}
-        SOVERSION ${PIMCOMMONACTIVITIES_SOVERSION}
-        EXPORT_NAME PimCommonActivities
+        VERSION
+            ${PIMCOMMONACTIVITIES_VERSION}
+        SOVERSION
+            ${PIMCOMMONACTIVITIES_SOVERSION}
+        EXPORT_NAME
+            PimCommonActivities
 )
 
-install(
-    TARGETS KPim6PimCommonActivities
-    EXPORT KPim6PimCommonActivitiesTargets
-    ${KDE_INSTALL_TARGETS_DEFAULT_ARGS}
-)
+install(TARGETS KPim6PimCommonActivities EXPORT KPim6PimCommonActivitiesTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(
-    FILES ${PimCommonActivities_CamelCasebase_HEADERS}
-    DESTINATION
-        ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/PimCommonActivities
+    FILES
+        ${PimCommonActivities_CamelCasebase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/PimCommonActivities
     COMPONENT Devel
 )
 
@@ -87,8 +94,7 @@ install(
     FILES
         ${CMAKE_CURRENT_BINARY_DIR}/pimcommonactivities_export.h
         ${PimCommonActivities_base_HEADERS}
-    DESTINATION
-        ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/pimcommonactivities
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/pimcommonactivities
     COMPONENT Devel
 )
 
@@ -115,9 +121,7 @@ if(BUILD_QCH)
     )
 endif()
 
-set(CMAKECONFIG_INSTALL_DIR
-    "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonActivities"
-)
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonActivities")
 if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6PimCommonActivities_QCH
@@ -125,9 +129,7 @@ if(BUILD_QCH)
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS
-        "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonActivitiesQchTargets.cmake\")"
-    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonActivitiesQchTargets.cmake\")")
 endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonActivitiesConfig.cmake.in"
@@ -151,7 +153,8 @@ install(
 )
 
 install(
-    FILES ${CMAKE_CURRENT_BINARY_DIR}/pimcommonactivities_version.h
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/pimcommonactivities_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/
     COMPONENT Devel
 )
