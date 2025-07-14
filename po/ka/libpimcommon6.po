@@ -1504,7 +1504,7 @@ msgstr "რესურსის გაშვებული ასლის შ
 #~ msgstr "&ორმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
 
 #~ msgid "By Default"
-#~ msgstr "ნაგულისხმებად"
+#~ msgstr "ნაგულისხმევად"
 
 #~ msgid "\""
 #~ msgstr "\""
@@ -1516,7 +1516,7 @@ msgstr "რესურსის გაშვებული ასლის შ
 #~ msgstr "გამხსნელი ბრჭყალი:"
 
 #~ msgid "Default"
-#~ msgstr "ნაგულისხმები"
+#~ msgstr "ნაგულისხმევი"
 
 #~ msgid "Replace &single quotes with typographical quotes"
 #~ msgstr "&ერთმაგი ბრჭყალების ტიპოგრაფიულ ბრჭყალებად გადაკეთება"
@@ -1797,7 +1797,7 @@ msgstr "რესურსის გაშვებული ასლის შ
 #~ msgstr "ენების სია"
 
 #~ msgid "Detect language"
-#~ msgstr "ნაგულისხმები ენა"
+#~ msgstr "ნაგულისხმევი ენა"
 
 #~ msgid "Hmong"
 #~ msgstr "Hmong"
