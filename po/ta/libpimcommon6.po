@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-26 18:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -286,8 +286,9 @@ msgid "What's new in %2. %1"
 msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Version"
+#, fuzzy, kde-format
+#| msgid "All Version"
+msgid "All Versions"
 msgstr "அனைத்து பதிப்புகளும்"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47

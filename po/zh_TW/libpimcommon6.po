@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2025-02-06 20:43+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -283,8 +283,9 @@ msgid "What's new in %2. %1"
 msgstr "%2 的新功能。%1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Version"
+#, fuzzy, kde-format
+#| msgid "All Version"
+msgid "All Versions"
 msgstr "所有版本"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47

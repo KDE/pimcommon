@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-17 07:27+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -287,8 +287,9 @@ msgid "What's new in %2. %1"
 msgstr "Novidades de %2. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Version"
+#, fuzzy, kde-format
+#| msgid "All Version"
+msgid "All Versions"
 msgstr "Todas as versións"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47

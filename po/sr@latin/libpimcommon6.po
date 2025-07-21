@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -299,7 +299,7 @@ msgstr ""
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Apply Permissions"
-msgid "All Version"
+msgid "All Versions"
 msgstr "Primena dozvola"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47

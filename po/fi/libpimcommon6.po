@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2025-02-17 16:26+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -284,8 +284,9 @@ msgid "What's new in %2. %1"
 msgstr "%2 – mitä uutta. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Version"
+#, fuzzy, kde-format
+#| msgid "All Version"
+msgid "All Versions"
 msgstr "Kaikki versiot"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47

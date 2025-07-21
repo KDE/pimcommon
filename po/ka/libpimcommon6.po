@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-16 02:42+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -284,8 +284,9 @@ msgid "What's new in %2. %1"
 msgstr "რა არის ახალი %2-ში. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Version"
+#, fuzzy, kde-format
+#| msgid "All Version"
+msgid "All Versions"
 msgstr "ყველა ვერსია"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47

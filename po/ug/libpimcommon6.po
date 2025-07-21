@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:43+0000\n"
+"POT-Creation-Date: 2025-07-21 00:43+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -295,7 +295,7 @@ msgstr ""
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
 #, fuzzy, kde-format
 #| msgid "Permissions"
-msgid "All Version"
+msgid "All Versions"
 msgstr "ئىمتىيازلار"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
