@@ -1,15 +1,15 @@
-# Translation of libpimcommon to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
+# Spanish translations for libpimcommon6.po package.
+# Copyright (C) 2012-2025 This file is copyright:
 # This file is distributed under the same license as the pimcommon package.
 #
 # SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Javier Viñal <fjvinal@gmail.com>
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: libpimcommon\n"
+"Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-21 00:43+0000\n"
-"PO-Revision-Date: 2025-01-16 08:25+0100\n"
+"PO-Revision-Date: 2025-07-21 11:36+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -40,7 +40,7 @@ msgstr ""
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
 msgid "..."
-msgstr "..."
+msgstr "…"
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
 #, kde-format
@@ -77,7 +77,7 @@ msgstr ""
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
 msgid "Share On..."
-msgstr "Compartir en..."
+msgstr "Compartir en…"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
 #, kde-format
@@ -167,17 +167,17 @@ msgstr "Insertar plantilla"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:174
 #, kde-format
 msgid "Add..."
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Show..."
-msgstr "Mostrar..."
+msgstr "Mostrar…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
-msgstr "Modificar..."
+msgstr "Modificar…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
@@ -192,17 +192,17 @@ msgstr "Eliminar"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
 msgid "Export..."
-msgstr "Exportar..."
+msgstr "Exportar…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:200
 #, kde-format
 msgid "Import..."
-msgstr "Importar..."
+msgstr "Importar…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Download new Templates..."
-msgstr "Descargar nuevas plantillas..."
+msgstr "Descargar nuevas plantillas…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
@@ -290,8 +290,7 @@ msgid "What's new in %2. %1"
 msgstr "Novedades de %2. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "All Version"
+#, kde-format
 msgid "All Versions"
 msgstr "Todas las versiones"
 
@@ -444,13 +443,13 @@ msgstr "¿Quiere eliminar el texto seleccionado?"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Add..."
-msgstr "&Añadir..."
+msgstr "&Añadir…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:105
 #, kde-format
 msgctxt "@action:button"
 msgid "&Modify..."
-msgstr "&Modificar..."
+msgstr "&Modificar…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:118
 #, kde-format
@@ -462,7 +461,7 @@ msgstr "Elimina&r"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Customize..."
-msgstr "&Personalizar..."
+msgstr "&Personalizar…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:309
 #: pimcommonakonadi/acl/aclmanager.cpp:283
@@ -495,7 +494,7 @@ msgstr ""
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
-msgstr "Se&leccionar..."
+msgstr "Se&leccionar…"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
@@ -519,13 +518,13 @@ msgstr "La carpeta no puede ser administrada."
 #, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
-msgstr "Añadir entrada..."
+msgstr "Añadir entrada…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:166
 #, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
-msgstr "Editar entrada..."
+msgstr "Editar entrada…"
 
 #: pimcommonakonadi/acl/aclmanager.cpp:172
 #, kde-format
@@ -638,7 +637,7 @@ msgstr "Mostrar la unidad organizativa para los resultados de LDAP"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
 #, kde-format
 msgid "Configure Completion..."
-msgstr "Configurar terminación automática..."
+msgstr "Configurar terminación automática…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
@@ -648,7 +647,7 @@ msgstr "Expandir grupos automáticamente"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
 #, kde-format
 msgid "Expand Groups..."
-msgstr "Expandir grupos..."
+msgstr "Expandir grupos…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
@@ -696,7 +695,7 @@ msgstr "Mostrar direcciones de correo de la lista negra"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
-msgstr "<qt><a href=\"more_result\">Más resultados...</a></qt>"
+msgstr "<qt><a href=\"more_result\">Más resultados…</a></qt>"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
 #, kde-format
@@ -714,7 +713,7 @@ msgstr "La búsqueda empieza a partir de 3 caracteres"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
-msgstr "Buscar en los resultados..."
+msgstr "Buscar en los resultados…"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
 #, kde-format
@@ -833,7 +832,7 @@ msgstr "Bajar"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "New email..."
-msgstr "Nueva dirección de correo..."
+msgstr "Nueva dirección de correo…"
 
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:52
 #, kde-format
@@ -1000,7 +999,7 @@ msgstr "Generar disponibilidad y activar alarmas para:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
 #, kde-format
@@ -1217,7 +1216,7 @@ msgstr "Buscar en el resultado"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:582
 #, kde-format
 msgid "Searching..."
-msgstr "Buscando..."
+msgstr "Buscando…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:586
 #, kde-format
@@ -1239,7 +1238,7 @@ msgstr "Añadir seleccionados"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr "Configurar servidores LDAP..."
+msgstr "Configurar servidores LDAP…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:633
 #, kde-format
@@ -1276,12 +1275,12 @@ msgstr "Tipo de recurso «%1» ya está configurado."
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Creando instancia de recurso para «%1»..."
+msgstr "Creando instancia de recurso para «%1»…"
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Configurando instancia de recurso..."
+msgstr "Configurando instancia de recurso…"
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
@@ -1314,802 +1313,3 @@ msgstr "Configuración de recurso completada."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallado la creación de instancia del recurso: %1"
-
-#~ msgid ""
-#~ "IMAP server not configured yet. Please configure the server in the IMAP "
-#~ "account before setting up server-side subscription."
-#~ msgstr ""
-#~ "El servidor IMAP no se ha configurado todavía. Configure el servidor en "
-#~ "la cuenta IMAP antes de configurar la suscripción en el servidor."
-
-#~ msgid ""
-#~ "Log in failed, please configure the IMAP account before setting up server-"
-#~ "side subscription."
-#~ msgstr ""
-#~ "El inicio de sesión ha fallado. Configure la cuenta IMAP antes de "
-#~ "configurar la suscripción en el servidor."
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Completion Order"
-#~ msgstr "Editar orden de terminación"
-
-#~ msgctxt "@title:window"
-#~ msgid "Edit Note"
-#~ msgstr "Editar nota"
-
-#~ msgctxt "@action:button"
-#~ msgid "Delete Note"
-#~ msgstr "Borrar nota"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Note"
-#~ msgstr "Añadir nota"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Enter the text that should be stored as a note to the mail:"
-#~ msgstr ""
-#~ "Introduzca el texto que debería almacenarse como una nota al correo:"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Note type:"
-#~ msgstr "Tipo de nota:"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Private note"
-#~ msgstr "Nota privada"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "Shared note"
-#~ msgstr "Nota compartida"
-
-#~ msgid "Do you really want to delete this note?"
-#~ msgstr "¿Realmente quiere borrar esta nota?"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note"
-#~ msgstr "Borrar nota"
-
-#~ msgid "Share"
-#~ msgstr "Compartir"
-
-#~ msgid "Add"
-#~ msgstr "Añadir"
-
-#~ msgid "Archive cannot be opened in read mode."
-#~ msgstr "El archivo no puede abrirse en modo lectura."
-
-#~ msgid "Enable autocorrection"
-#~ msgstr "Activar autocorrección"
-
-#~ msgid "Replacement and exception for language:"
-#~ msgstr "Sustitución y excepción para el idioma:"
-
-#~ msgid "Ad&vanced Autocorrection"
-#~ msgstr "Autocorrección a&vanzada"
-
-#~ msgid "&Add"
-#~ msgstr "&Añadir"
-
-#~ msgid "&Enable word replacement"
-#~ msgstr "Activar r&emplazo de palabras"
-
-#~ msgid "&Find"
-#~ msgstr "&Buscar"
-
-#~ msgid "Re&place"
-#~ msgstr "Rem&plazar"
-
-#~ msgid "Find"
-#~ msgstr "Buscar"
-
-#~ msgid "Replace"
-#~ msgstr "Sustituir"
-
-#~ msgid "E&xceptions"
-#~ msgstr "E&xcepciones"
-
-#~ msgid "Do not treat as the end of a sentence:"
-#~ msgstr "No tratar como final de frase:"
-
-#~ msgid "R&emove"
-#~ msgstr "&Eliminar"
-
-#~ msgid "Accept two uppercase letters in:"
-#~ msgstr "Aceptar dos letras mayúsculas en"
-
-#~ msgid "Si&mple Autocorrection"
-#~ msgstr "Autocorrección &sencilla"
-
-#~ msgid ""
-#~ "Detect when a new sentence is started and always ensure that the first "
-#~ "character is an uppercase character"
-#~ msgstr ""
-#~ "Detectar cuando se inicia una nueva frase y asegurarse siempre de que el "
-#~ "primer carácter es una mayúscula"
-
-#~ msgid ""
-#~ "Convert &first letter of a sentence automatically to uppercase\n"
-#~ "(e.g. \"my house. in this town\" to \"my house. In this town\")"
-#~ msgstr ""
-#~ "Convertir la &primera letra de una frase automáticamente a mayúsculas\n"
-#~ "(p. ej. «mi casa. en esta ciudad» a «mi casa. En esta ciudad»)"
-
-#~ msgid ""
-#~ "All words are checked for the common mistake of holding the shift key "
-#~ "down a bit too long. If some words must have two uppercase characters, "
-#~ "then those exceptions should be added in the 'Exceptions' tab."
-#~ msgstr ""
-#~ "Todas las palabras se comprueban para los errores habituales de mantener "
-#~ "la tecla de mayúsculas presionada demasiado tiempo. Si algunas palabras "
-#~ "deben tener dos letras mayúsculas, entonces esas excepciones deberían "
-#~ "añadirse a la pestaña de «excepciones»."
-
-#~ msgid ""
-#~ "Convert &two uppercase characters to one uppercase and one lowercase "
-#~ "character\n"
-#~ " (e.g. PErfect to Perfect)"
-#~ msgstr ""
-#~ "Convertir &dos caracteres en mayúsculas a un carácter en mayúsculas y "
-#~ "otro en minúscula\n"
-#~ " (p. ej. PErfecto a Perfecto)"
-
-#~ msgid ""
-#~ "Make sure that more than one space cannot be typed, as this is a common "
-#~ "mistake which is quite hard to find in formatted text."
-#~ msgstr ""
-#~ "Asegurarse de que no se puede teclear más de un espacio, ya que esto es "
-#~ "un error habitual que es difícil de localizar en un texto formateado."
-
-#~ msgid "&Suppress double spaces"
-#~ msgstr "&Suprimir espacios dobles"
-
-#~ msgid "Most standard fraction notations will be converted when available"
-#~ msgstr ""
-#~ "La mayoría de las notaciones de fracciones estándar se convertirán cuando "
-#~ "esté disponible"
-
-#~ msgid "Re&place 1/2... with ½..."
-#~ msgstr "Rem&plazar 1/2... con ½..."
-
-#~ msgid "Capitalize name of days"
-#~ msgstr "Convertir a mayúsculas los nombres de los días"
-
-#~ msgid ""
-#~ "Detect when a URL (Uniform Resource Locator) is typed and provide "
-#~ "formatting that matches the way an Internet browser would show a URL."
-#~ msgstr ""
-#~ "Detectar cuando un URL (Localizador Uniforme de Recursos) se teclea, y "
-#~ "proporcionar un formateo que coincida con el modo en el que un navegador "
-#~ "de Internet mostraría un URL."
-
-#~ msgid "Autoformat &URLs (HTML mode)"
-#~ msgstr "Autoformatear los &URL (modo HTML)"
-
-#~ msgid ""
-#~ "When you use _underline_ or *bold*, the text between the underscores or "
-#~ "asterisks will be converted to underlined or bold text."
-#~ msgstr ""
-#~ "Cuando usted use _subrayado_ o *negrita*, el texto entre los subrayados o "
-#~ "asteriscos se convertirá a texto subrayado o en negrita."
-
-#~ msgid ""
-#~ "Automatically do &bold, strikeout and underline formatting (HTML mode)"
-#~ msgstr ""
-#~ "Poner automáticamente ne&grita, tachado y subrayado al formatear (modo "
-#~ "HTML)"
-
-#~ msgid "Replace 1st... with 1^st... (HTML mode)"
-#~ msgstr "Sustituir 1st... con 1^st... (modo HTML)"
-
-#~ msgid ""
-#~ "Add non breaking space before specific punctuation marks in French text"
-#~ msgstr ""
-#~ "Añadir espacio no separable antes de marcas específicas de puntuación en "
-#~ "textos en francés"
-
-#~ msgid "Replace double quotes by french quotes"
-#~ msgstr "Sustituir comillas dobles por comillas francesas"
-
-#~ msgid "Custom &Quotes"
-#~ msgstr "Comillas &personalizadas"
-
-#~ msgid "Replace &double quotes with typographical quotes"
-#~ msgstr "Sustituir comillas &dobles por comillas tipográficas"
-
-#~ msgid "By Default"
-#~ msgstr "Por omisión"
-
-#~ msgid "\""
-#~ msgstr "\""
-
-#~ msgid "Ending Quote:"
-#~ msgstr "Cierre de comillas:"
-
-#~ msgid "Opening Quote:"
-#~ msgstr "Apertura de comillas:"
-
-#~ msgid "Default"
-#~ msgstr "Por omisión"
-
-#~ msgid "Replace &single quotes with typographical quotes"
-#~ msgstr "Sustituir comillas &sencillas por comillas tipográficas"
-
-#~ msgid "'"
-#~ msgstr "'"
-
-#~ msgid "Ending Quotes:"
-#~ msgstr "Cierre de comillas:"
-
-#~ msgid "Path"
-#~ msgstr "Ruta"
-
-#~ msgid "System Path:"
-#~ msgstr "Ruta del sistema:"
-
-#~ msgid "TextLabel"
-#~ msgstr "Etiqueta de texto"
-
-#~ msgid "Writable Path:"
-#~ msgstr "Ruta con permiso de escritura:"
-
-#~ msgid "Custom System Path:"
-#~ msgstr "Ruta personalizada del sistema:"
-
-#~ msgid "Custom Writable Path:"
-#~ msgstr "Ruta personalizada con permiso de escritura:"
-
-#~ msgid "Select Custom Writable Path"
-#~ msgstr "Seleccione la ruta personalizada con permiso de escritura"
-
-#~ msgid "Select Custom System Path"
-#~ msgstr "Seleccione la ruta personalizada del sistema"
-
-#~ msgid "LibreOffice Autocorrection"
-#~ msgstr "Autocorrección de LibreOffice"
-
-#~ msgid "KMail/Calligra Autocorrection"
-#~ msgstr "Autocorrección de KMail/Calligra"
-
-#~ msgid "\"Replace\" string is the same as \"Find\" string."
-#~ msgstr "«Sustituir» cadena es lo mismo que «Buscar» cadena."
-
-#~ msgid "Add Autocorrection Entry"
-#~ msgstr "Añadir entrada de autocorrección"
-
-#~ msgid "&Modify"
-#~ msgstr "&Modificar"
-
-#~ msgid "Import LibreOffice Autocorrection"
-#~ msgstr "Importar autocorrección de LibreOffice"
-
-#~ msgid "LibreOffice Autocorrection File (*.dat)"
-#~ msgstr "Archivo de autocorrección de LibreOffice (*.dat)"
-
-#~ msgid "Import KMail Autocorrection"
-#~ msgstr "Importar autocorrección de KMail"
-
-#~ msgid "KMail Autocorrection File (*.xml)"
-#~ msgstr "Archivo de autocorrección de KMail (*.xml)"
-
-#~ msgid "Import Autocorrection File"
-#~ msgstr "Importar archivo de autocorrección"
-
-#~ msgid ""
-#~ "Language was changed, do you want to save config for previous language?"
-#~ msgstr ""
-#~ "Se cambió el idioma, ¿quiere usted guardar la configuración del idioma "
-#~ "anterior?"
-
-#~ msgid "Save config"
-#~ msgstr "Guardar configuración"
-
-#~ msgid "Please save changes before exporting settings."
-#~ msgstr "Por favor, guarde los cambios antes de exportar las preferencias."
-
-#~ msgid "Export Autocorrection File"
-#~ msgstr "Exportar archivo de autocorrección"
-
-#~ msgctxt "@title:window"
-#~ msgid "Select Special Characters"
-#~ msgstr "Seleccionar caracteres especiales"
-
-#~ msgid "Insert"
-#~ msgstr "Insertar"
-
-#~ msgid "Any text to check."
-#~ msgstr "Cualquier texto para comprobar."
-
-#~ msgid "Replacement"
-#~ msgstr "Sustitución"
-
-#~ msgid "Online Grammar Information"
-#~ msgstr "Información de gramática en línea"
-
-#~ msgid "Check Again"
-#~ msgstr "Volver a comprobar"
-
-#~ msgid "Configure..."
-#~ msgstr "Configurar..."
-
-#~ msgid "See on: %1"
-#~ msgstr "Ver en: %1"
-
-#~ msgid "Close"
-#~ msgstr "Cerrar"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Grammalecte"
-#~ msgstr "Configurar Grammalecte"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Grammar Settings"
-#~ msgstr "Preferencias de gramática"
-
-#~ msgid ""
-#~ "Impossible to get options. Please verify that you have grammalected "
-#~ "installed."
-#~ msgstr ""
-#~ "No se pueden obtener las opciones. Compruebe que tiene instalado "
-#~ "grammalected."
-
-#~ msgid "Error during Extracting Options"
-#~ msgstr "Error durante la extracción de opciones"
-
-#~ msgid "Press Button for Reloading Settings"
-#~ msgstr "Pulse el botón para volver a cargar las preferencias"
-
-#~ msgid "Reload Settings"
-#~ msgstr "Volver a cargar preferencias"
-
-#~ msgid "Python Path:"
-#~ msgstr "Ruta de Python:"
-
-#~ msgid "Add full 'grammalecte-cli.py' path"
-#~ msgstr "Añadir la ruta completa de «grammalecte-cli.py»"
-
-#~ msgid "Grammalecte Path:"
-#~ msgstr "Ruta de Grammalecte:"
-
-#~ msgid "Python path is missing."
-#~ msgstr "Falta la ruta de Python."
-
-#~ msgid "Grammalecte path not found."
-#~ msgstr "No se ha encontrado la ruta de Grammalecte."
-
-#~ msgid "Grammalecte program file not found."
-#~ msgstr "No se ha encontrado el programa Grammalecte."
-
-#~ msgid "Grammalecte cli file not found."
-#~ msgstr "Interfaz de Grammalecte no encontrada."
-
-#~ msgid "Grammalecte error"
-#~ msgstr "Error de Grammalecte"
-
-#~ msgid "Select Path"
-#~ msgstr "Seleccione ruta"
-
-#~ msgid "English"
-#~ msgstr "Inglés"
-
-#~ msgid "Asturian"
-#~ msgstr "Asturiano"
-
-#~ msgid "Belarusian"
-#~ msgstr "Bielorruso"
-
-#~ msgid "Breton"
-#~ msgstr "Bretón"
-
-#~ msgid "Catalan"
-#~ msgstr "Catalán"
-
-#~ msgid "Chinese"
-#~ msgstr "Chino"
-
-#~ msgid "Danish"
-#~ msgstr "Danés"
-
-#~ msgid "Dutch"
-#~ msgstr "Holandés"
-
-#~ msgid "English (Australian)"
-#~ msgstr "Inglés (australiano)"
-
-#~ msgid "English (Canadian)"
-#~ msgstr "Inglés (canadiense)"
-
-#~ msgid "Esperanto"
-#~ msgstr "Esperanto"
-
-#~ msgid "French"
-#~ msgstr "Francés"
-
-#~ msgid "Galician"
-#~ msgstr "Gallego"
-
-#~ msgid "German"
-#~ msgstr "Alemán"
-
-#~ msgid "Greek"
-#~ msgstr "Griego"
-
-#~ msgid "Italian"
-#~ msgstr "Italiano"
-
-#~ msgid "Japanese"
-#~ msgstr "Japonés"
-
-#~ msgid "Khmer"
-#~ msgstr "Jémer"
-
-#~ msgid "Polish"
-#~ msgstr "Polaco"
-
-#~ msgid "Portuguese"
-#~ msgstr "Portugués"
-
-#~ msgid "Romanian"
-#~ msgstr "Rumano"
-
-#~ msgid "Russian"
-#~ msgstr "Ruso"
-
-#~ msgid "Slovak"
-#~ msgstr "Eslovaco"
-
-#~ msgid "Slovenian"
-#~ msgstr "Esloveno"
-
-#~ msgid "Spanish"
-#~ msgstr "Español"
-
-#~ msgid "Swedish"
-#~ msgstr "Sueco"
-
-#~ msgid "Tagalog"
-#~ msgstr "Tagalo"
-
-#~ msgid "Tamil"
-#~ msgstr "Tamil"
-
-#~ msgid "Ukrainian"
-#~ msgstr "Ucraniano"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure LanguageTool"
-#~ msgstr "Configurar LanguageTool"
-
-#~ msgid "Use Local Instance"
-#~ msgstr "Usar instancia local"
-
-#~ msgid "Instance Path:"
-#~ msgstr "Ruta de la instancia:"
-
-#~ msgid "Language:"
-#~ msgstr "Idioma:"
-
-#~ msgid "Refresh"
-#~ msgstr "Actualizar"
-
-#~ msgid "An error was reported: %1"
-#~ msgstr "Se ha informado de un error: %1"
-
-#~ msgid "Failed to check grammar."
-#~ msgstr "No se ha podido comprobar la gramática."
-
-#~ msgid "Check"
-#~ msgstr "Comprobar"
-
-#~ msgid ""
-#~ "An error occurred attempting to load the list of available languages:\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Ha ocurrido un error al intentar cargar la lista de idiomas disponibles:\n"
-#~ "%1"
-
-#~ msgid "List of Languages"
-#~ msgstr "Lista de idiomas"
-
-#~ msgid "Detect language"
-#~ msgstr "Detectar idioma"
-
-#~ msgid "Hmong"
-#~ msgstr "Hmong"
-
-#~ msgid "Bosnian"
-#~ msgstr "Bosnio"
-
-#~ msgid "Chinese (Simplified)"
-#~ msgstr "Chino (simplificado)"
-
-#~ msgid "Chinese (Traditional)"
-#~ msgstr "Chino (tradicional)"
-
-#~ msgid "Korean"
-#~ msgstr "Coreano"
-
-#~ msgid "Afrikaans"
-#~ msgstr "Afrikaans"
-
-#~ msgid "Albanian"
-#~ msgstr "Albanés"
-
-#~ msgid "Arabic"
-#~ msgstr "Árabe"
-
-#~ msgid "Armenian"
-#~ msgstr "Armenio"
-
-#~ msgid "Azerbaijani"
-#~ msgstr "Azerbaiyano"
-
-#~ msgid "Basque"
-#~ msgstr "Vasco"
-
-#~ msgid "Bulgarian"
-#~ msgstr "Búlgaro"
-
-#~ msgid "Croatian"
-#~ msgstr "Croata"
-
-#~ msgid "Czech"
-#~ msgstr "Checo"
-
-#~ msgid "Estonian"
-#~ msgstr "Estonio"
-
-#~ msgid "Filipino"
-#~ msgstr "Filipino"
-
-#~ msgid "Finnish"
-#~ msgstr "Finés"
-
-#~ msgid "Georgian"
-#~ msgstr "Georgiano"
-
-#~ msgid "Haitian Creole"
-#~ msgstr "Criollo haitiano"
-
-#~ msgid "Hebrew"
-#~ msgstr "Hebreo"
-
-#~ msgid "Hindi"
-#~ msgstr "Hindi"
-
-#~ msgid "Hungarian"
-#~ msgstr "Húngaro"
-
-#~ msgid "Icelandic"
-#~ msgstr "Islandés"
-
-#~ msgid "Indonesian"
-#~ msgstr "Indonesio"
-
-#~ msgid "Irish"
-#~ msgstr "Irlandés"
-
-#~ msgid "Latvian"
-#~ msgstr "Letón"
-
-#~ msgid "Lithuanian"
-#~ msgstr "Lituano"
-
-#~ msgid "Macedonian"
-#~ msgstr "Macedonio"
-
-#~ msgid "Malay"
-#~ msgstr "Malayo"
-
-#~ msgid "Maltese"
-#~ msgstr "Maltés"
-
-#~ msgid "Norwegian"
-#~ msgstr "Noruego"
-
-#~ msgid "Serbian"
-#~ msgstr "Serbio"
-
-#~ msgid "Swahili"
-#~ msgstr "Swahili"
-
-#~ msgid "Thai"
-#~ msgstr "Tailandés"
-
-#~ msgid "Turkish"
-#~ msgstr "Turco"
-
-#~ msgid "Urdu"
-#~ msgstr "Urdu"
-
-#~ msgid "Vietnamese"
-#~ msgstr "Vietnamita"
-
-#~ msgid "Welsh"
-#~ msgstr "Galés"
-
-#~ msgid "Yiddish"
-#~ msgstr "Yidis"
-
-#~ msgid "Bing"
-#~ msgstr "Bing"
-
-#~ msgid "Error: Unable to find Bing credentials in web version."
-#~ msgstr ""
-#~ "Error: No se ha sido posible encontrar las credenciales de Bing en la "
-#~ "versión web."
-
-#~ msgid "Error: Unable to extract Bing key from web version."
-#~ msgstr ""
-#~ "Error: No ha sido posible extraer la clave de Bing de la versión web."
-
-#~ msgid "Error: Unable to extract Bing token from web version."
-#~ msgstr ""
-#~ "Error: No ha sido posible extraer el tóken de Bing de la versión web."
-
-#~ msgid ""
-#~ "Error: Unable to extract additional Bing information from web version."
-#~ msgstr ""
-#~ "Error: No ha sido posible extraer información adicional de Bing de la "
-#~ "versión web."
-
-#~ msgid "DeepL"
-#~ msgstr "DeepL"
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Engine"
-#~ msgstr "Configurar el motor"
-
-#~ msgid "Use Free License Key"
-#~ msgstr "Usar clave de licencia libre"
-
-#~ msgid "Api Key:"
-#~ msgstr "Clave de API:"
-
-#~ msgid "Server needs Api Key."
-#~ msgstr "El servidor necesita clave de API."
-
-#~ msgid "Google"
-#~ msgstr "Google"
-
-#~ msgid "Libre Translate"
-#~ msgstr "Libre Translate"
-
-#~ msgid "Server required Api Key"
-#~ msgstr "El servidor ha solicitado la clave de API"
-
-#~ msgid "Server Url:"
-#~ msgstr "URL del servidor:"
-
-#~ msgid "Server url is not defined."
-#~ msgstr "La URL del servidor no se ha definido."
-
-#~ msgid "Lingva"
-#~ msgstr "Lingva"
-
-#~ msgid "Yandex"
-#~ msgstr "Yandex"
-
-#~ msgid ""
-#~ "Error: Engine systems have detected suspicious traffic from your computer "
-#~ "network. Please try your request again later."
-#~ msgstr ""
-#~ "Error: Los sistemas de motores han detectado un tráfico sospechoso desde "
-#~ "su red de equipos. Vuelva a realizar su petición más tarde."
-
-#~ msgid "Error: Unable to find Yandex SID in web version."
-#~ msgstr ""
-#~ "Error: No ha sido posible encontrar el SID de Yandex en la versión web."
-
-#~ msgid "Error: Unable to extract Yandex SID from web version."
-#~ msgstr ""
-#~ "Error: No ha sido posible extraer el SID de Yandex de la versión web."
-
-#~ msgid "You used same language for 'from' and 'to' language."
-#~ msgstr "Ha usado el mismo idioma para «del» y «al»."
-
-#~ msgctxt "@title:window"
-#~ msgid "Configure Translator"
-#~ msgstr "Configurar traductor"
-
-#~ msgid "From:"
-#~ msgstr "Del:"
-
-#~ msgid "To:"
-#~ msgstr "Al:"
-
-#~ msgid "Engine:"
-#~ msgstr "Motor:"
-
-#~ msgctxt "@title:window"
-#~ msgid "Translator Debug"
-#~ msgstr "Depurar el traductor"
-
-#~ msgid "Save As..."
-#~ msgstr "Guardar como..."
-
-#~ msgid "All Files (*)"
-#~ msgstr "Todos los archivos (*)"
-
-#~ msgid "Translate..."
-#~ msgstr "Traducir..."
-
-#~ msgid "Problem when connecting to the translator web site."
-#~ msgstr "Problema al conectarse al sitio web de traducción."
-
-#~ msgctxt "Translate from language"
-#~ msgid "From:"
-#~ msgstr "Del:"
-
-#~ msgctxt "Translate to language"
-#~ msgid "To:"
-#~ msgstr "Al:"
-
-#~ msgctxt ""
-#~ "Invert language choices so that from becomes to and to becomes from"
-#~ msgid "Invert"
-#~ msgstr "Invertir"
-
-#~ msgid "Clear"
-#~ msgstr "Despejar"
-
-#~ msgid "Translate"
-#~ msgstr "Traducir"
-
-#~ msgid "Debug"
-#~ msgstr "Depurar"
-
-#~ msgid ""
-#~ "Drag text that you want to translate. (Be careful text will be send to "
-#~ "Google Server)."
-#~ msgstr ""
-#~ "Arrastre el texto que usted quiere traducir (Sea cuidadoso, el texto se "
-#~ "enviará al servidor de Google)."
-
-#~ msgid "No network connection detected, we cannot translate text."
-#~ msgstr "No se detectó conexión de red, no podemos traducir texto."
-
-#~ msgid "No network"
-#~ msgstr "Sin red"
-
-#~ msgid "Translate error"
-#~ msgstr "Error de traducción"
-
-#~ msgid "Error: Unable to parse autodetected language"
-#~ msgstr ""
-#~ "Error: No ha sido posible analizar el idioma detectado automáticamente."
-
-#~ msgid "You used same language for from and to language."
-#~ msgstr "Usted usó el mismo idioma para los idiomas desde y hasta."
-
-#~ msgid "Offline"
-#~ msgstr "Sin conexión"
-
-#~ msgid "Import LibreOffice Autocorrection File"
-#~ msgstr "Importar archivo de autocorrección de LibreOffice"
-
-#~ msgctxt "@item:inlistbox"
-#~ msgid "AnnotationEditDialogPrivate note"
-#~ msgstr "Nota de AnnotationEditDialogPrivate"
-
-#~ msgctxt "@title:window"
-#~ msgid "Delete Note?"
-#~ msgstr "¿Borrar nota?"
-
-#~ msgid "Log activities"
-#~ msgstr "Registrar actividades"
-
-#~ msgctxt "@title:window"
-#~ msgid "Log activities"
-#~ msgstr "Registrar actividades"
-
-#~ msgid "Share..."
-#~ msgstr "Compartir..."
-
-#~ msgctxt "@title:window"
-#~ msgid "Save Log"
-#~ msgstr "Guardar registro"
-
-#~ msgid "Change Value"
-#~ msgstr "Cambiar valor"

@@ -279,11 +279,9 @@ msgid "What's new in %2. %1"
 msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Apply Permissions"
+#, kde-format
 msgid "All Versions"
-msgstr "应用权限"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
