@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-21 00:43+0000\n"
-"PO-Revision-Date: 2025-07-21 19:04+0200\n"
+"PO-Revision-Date: 2025-07-22 21:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -278,7 +278,7 @@ msgstr "Bertsioa:"
 #, kde-format
 msgctxt "@title:window"
 msgid "What's new in %1"
-msgstr "Zer berri %1(e)an"
+msgstr "Zer berri %1(e)(a)n"
 
 #: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
 #, kde-format
@@ -308,7 +308,7 @@ msgstr "Azken bertsiotik dauden aldaketa garrantzitsuak:"
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr "Askapen berri honetako ezaugarri berrien artean daude:"
+msgstr "Argitalpen berri honetako ezaugarri berrien artean daude:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
