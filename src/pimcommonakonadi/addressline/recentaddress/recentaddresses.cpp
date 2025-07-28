@@ -17,7 +17,7 @@ using namespace PimCommon;
 
 RecentAddresses *s_self = nullptr;
 
-void deleteGlobalRecentAddresses()
+static void deleteGlobalRecentAddresses()
 {
     delete s_self;
     s_self = nullptr;

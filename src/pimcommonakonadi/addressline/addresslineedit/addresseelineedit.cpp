@@ -60,7 +60,7 @@
 using namespace PimCommon;
 using namespace Qt::Literals::StringLiterals;
 
-inline bool itemIsHeader(const QListWidgetItem *item)
+inline static bool itemIsHeader(const QListWidgetItem *item)
 {
     return item && !item->text().startsWith("     "_L1);
 }
