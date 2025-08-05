@@ -35,7 +35,7 @@ msgid ""
 "be available in, it will automatically be hidden."
 msgstr ""
 "إذا قصرت هذا الحساب لنشاط، فسيعرض فقط عندما تكون في تلك الأنشطة. علاوة على "
-"ذلك، عند التبديل إلى نشاط لا ينبغي أن يكون متاحًا فيه، فسيخفى تلقائيًا."
+"ذلك، عند التبديل إلى نشاط لا ينبغي أن يكون متاحًا فيه، فسيخفى آليًّا."
 
 #: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
 #, kde-format
@@ -628,7 +628,7 @@ msgstr "اضبط الإكمال..."
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
 #, kde-format
 msgid "Automatically expand groups"
-msgstr "وسع المجموعات آلياً"
+msgstr "وسع المجموعات آليّاً"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
 #, kde-format
