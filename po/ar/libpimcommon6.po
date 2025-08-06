@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-21 00:43+0000\n"
-"PO-Revision-Date: 2025-08-03 07:52+0400\n"
+"PO-Revision-Date: 2025-08-05 11:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -89,7 +89,7 @@ msgstr "فيسبوك"
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
 #, kde-format
 msgid "Twitter"
-msgstr "تويتر"
+msgstr "توتير"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
 #, kde-format
@@ -314,8 +314,8 @@ msgid ""
 "<qt><p>This setting has been fixed by your administrator.</p><p>If you think "
 "this is an error, please contact him.</p></qt>"
 msgstr ""
-"<html dir=\"rtl\"><p>ثبّت المدير هذا الإعداد.</p><p>إن كنت تظنّ أنّ ذلك خطأ، "
-"فرجاءً راسله.</p></html>"
+"<qt><p>ثبّت المدير هذا الإعداد.</p><p>إن كنت تظنّ أنّ ذلك خطأ، فرجاءً راسله.</"
+"p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -693,7 +693,7 @@ msgstr "ابحث البريد الإلكتروني:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
-msgstr "يتم البحث من 3 أحرف"
+msgstr "يبدأ البحث من 3 أحرف"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, kde-format
@@ -1233,7 +1233,7 @@ msgstr "أضف المحدد"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr "اضبط خواديم LDAP..."
+msgstr "اضبط خوادم LDAP..."
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:633
 #, kde-format
