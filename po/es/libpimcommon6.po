@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-21 00:43+0000\n"
-"PO-Revision-Date: 2025-07-21 11:36+0100\n"
+"PO-Revision-Date: 2025-08-07 12:24+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -365,7 +365,7 @@ msgstr "Ha habido un problema compartiendo el documento %1"
 #: pimcommon/widgets/purposemenuwidget.cpp:62
 #, kde-format
 msgid "File was shared."
-msgstr "El archivo se compartió."
+msgstr "El archivo se ha compartido."
 
 #: pimcommon/widgets/purposemenuwidget.cpp:64
 #, kde-format
