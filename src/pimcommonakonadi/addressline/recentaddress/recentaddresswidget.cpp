@@ -91,7 +91,7 @@ void RecentAddressWidget::slotCustomContextMenuRequested(const QPoint &pos)
     if (selectedItems.isEmpty()) {
         return;
     }
-    QListWidgetItem *item = mListView->itemAt(pos);
+    const QListWidgetItem *item = mListView->itemAt(pos);
     if (item) {
         QMenu menu(this);
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),

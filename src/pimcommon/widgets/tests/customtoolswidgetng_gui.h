@@ -20,5 +20,5 @@ public:
     ~CustomToolWidgetNgTest() override;
 
 private:
-    PimCommon::CustomToolsWidgetNg *mCustomTools;
+    PimCommon::CustomToolsWidgetNg *const mCustomTools;
 };

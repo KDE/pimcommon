@@ -19,13 +19,13 @@
 
 CustomToolWidgetNgTest::CustomToolWidgetNgTest(QWidget *parent)
     : QWidget(parent)
+    , mCustomTools(new PimCommon::CustomToolsWidgetNg(this))
 {
     auto lay = new QVBoxLayout(this);
 
     auto menu = new QToolBar(this);
     lay->addWidget(menu);
 
-    mCustomTools = new PimCommon::CustomToolsWidgetNg(this);
     mCustomTools->initializeView(new KActionCollection(this), PimCommon::CustomToolsPluginManager::self()->pluginsList());
     const QList<KToggleAction *> lst = mCustomTools->actionList();
     for (KToggleAction *act : lst) {
