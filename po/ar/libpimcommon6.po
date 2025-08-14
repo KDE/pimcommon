@@ -490,13 +490,13 @@ msgstr "ا&ختر..."
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
 msgid "Permissions"
-msgstr "التّصاريح"
+msgstr "الأذونات"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>لاحظ:</b> يتطلّب تغيير الاسم تصاريح الكتابة في المجلّد الأبّ."
+msgstr "<b>لاحظ:</b> يتطلّب تغيير الاسم أذونات الكتابة في المجلّد الأبّ."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -538,24 +538,24 @@ msgstr "حرّر ACL"
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
-msgstr "أمتأكّد من إزالة تصاريحك عن هذا المجلّد؟ لن يمكنك النّفاذ إليه بعد الآن."
+msgstr "أمتأكّد من إزالة أذوناتك عن هذا المجلّد؟ لن يمكنك النّفاذ إليه بعد الآن."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr "أمتأكّد من إزالة هذه التّصاريح عن هذا المجلّد؟"
+msgstr "أمتأكّد من إزالة هذه الأذونات عن هذا المجلّد؟"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
-msgstr "أمتأكّد من تطبيق تصاريح المجلّد على المجلّدات الفرعيّة هذه؟"
+msgstr "أمتأكّد من تطبيق أذونات المجلّد على المجلّدات الفرعيّة هذه؟"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "طبّق التّصاريح"
+msgstr "طبّق الأذونات"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
@@ -585,7 +585,7 @@ msgstr "الكلّ"
 #: pimcommonakonadi/acl/aclutils.cpp:66
 #, kde-format
 msgid "Custom Permissions (%1)"
-msgstr "تصاريح مخصّصة (%1)"
+msgstr "أذونات مخصّصة (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, kde-format
@@ -597,7 +597,7 @@ msgstr "التّحكّم بالنّفاذ"
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
-msgstr "طبّق التّصاريح على المجلّدات ال&فرعيّة."
+msgstr "طبّق الأذونات على المجلّدات ال&فرعيّة."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
@@ -978,7 +978,7 @@ msgstr ""
 "للمنبّهات فقط).\n"
 "\n"
 "أمثلة عن الاستخدام: إن كان ربّ العمل يشارك مجلّدًا مع السّكرتاريّة، فيجب أن يُعلَّم "
-"الرّبّ بِ‍ ”مشغول“ لاجتماعاته، لذلك عليه اختيار ”المدراء“، إذ أنّه لا تصاريح "
+"الرّبّ بِ‍ ”مشغول“ لاجتماعاته، لذلك عليه اختيار ”المدراء“، إذ أنّه لا أذونات "
 "إداريّة للسّكرتاريّة على هذا المجلّد.\n"
 "من جهة أخرى، إن كانت مجموعة عمل تشارك تقويمًا ما لاجتماعات المجموعة، فيجب "
 "تعليم كلّ قارئي المجلّد بِ‍ ”مشغول“ للاجتماعات.\n"
@@ -1270,17 +1270,17 @@ msgstr "ضُبط المورد ’%1‘ بالفعل."
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "ينشئ سيرورة للمورد ’%1‘..."
+msgstr "ينشئ نسخة للمورد ’%1‘..."
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "يولّد سيرورة موارد..."
+msgstr "يولّد نسخة موارد..."
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "تعذّر ضبط سيرورة الموارد."
+msgstr "تعذّر ضبط نسخة الموارد."
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
@@ -1305,7 +1305,7 @@ msgstr "اكتمل ضبط المورد."
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "فشل إنشاء سيرورة الموارد: %1"
+msgstr "فشل إنشاء نسخة الموارد: %1"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "
