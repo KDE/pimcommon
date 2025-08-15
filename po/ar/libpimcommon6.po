@@ -370,14 +370,14 @@ msgstr "<qt>ستجد الطلب الجديد في: <a href='%1'>%1</a> </qt>"
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
-msgstr "الملفّ موجود بالفعل"
+msgstr "الملفّ موجود فعلًا"
 
 #: pimcommon/widgets/renamefiledialog.cpp:103
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
-msgstr "الملفّ بالاسم <filename>%1</filename> موجود بالفعل. أتريد الكتابة فوقه؟"
+msgstr "الملفّ بالاسم <filename>%1</filename> موجود فعلًا. أتريد الكتابة فوقه؟"
 
 #: pimcommon/widgets/renamefiledialog.cpp:113
 #, kde-format
@@ -406,12 +406,12 @@ msgstr "&طبّق على الكلّ"
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "This filename \"%1\" already exists."
-msgstr "اسم الملفّ ”%1“ موجود بالفعل."
+msgstr "اسم الملفّ ”%1“ موجود فعلًا."
 
 #: pimcommon/widgets/renamefiledialog.cpp:180
 #, kde-format
 msgid "File already exists"
-msgstr "الملفّ موجود بالفعل"
+msgstr "الملفّ موجود فعلًا"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:55
 #: pimcommon/widgets/simplestringlisteditor.cpp:58
@@ -1265,7 +1265,7 @@ msgstr "نوع الموارد ’%1‘ غير متوفّر."
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "ضُبط المورد ’%1‘ بالفعل."
+msgstr "ضُبط المورد ’%1‘ فعلًا."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
