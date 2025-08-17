@@ -5,7 +5,6 @@
 */
 
 #include "networkmanager.h"
-#include "pimcommon_debug.h"
 #include <QNetworkInformation>
 using namespace PimCommon;
 

@@ -28,7 +28,7 @@ using namespace PimCommon;
 class AclEntryDialog::AclEntryDialogPrivate
 {
 public:
-    AclEntryDialogPrivate(AclEntryDialog *qq)
+    explicit AclEntryDialogPrivate(AclEntryDialog *qq)
         : q(qq)
     {
     }

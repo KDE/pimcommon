@@ -21,7 +21,7 @@ namespace
 class CheckboxDelegate : public QItemDelegate
 {
 public:
-    CheckboxDelegate(QObject *parent)
+    explicit CheckboxDelegate(QObject *parent)
         : QItemDelegate(parent)
     {
     }

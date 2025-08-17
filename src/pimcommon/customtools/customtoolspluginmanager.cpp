@@ -41,7 +41,7 @@ QString pluginVersion()
 class PimCommon::CustomToolsPluginManagerPrivate
 {
 public:
-    CustomToolsPluginManagerPrivate(CustomToolsPluginManager *qq)
+    explicit CustomToolsPluginManagerPrivate(CustomToolsPluginManager *qq)
         : q(qq)
     {
     }
