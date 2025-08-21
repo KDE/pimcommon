@@ -477,9 +477,9 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
-"معرّف المستخدم هو طريقة ولوج المستخدم إلى خادوم IMAP. يمكن أن يكون هذا اسم "
+"معرّف المستخدم هو طريقة ولوج المستخدم إلى خادم IMAP. يمكن أن يكون هذا اسم "
 "مستخدم بسيط أو عنوان البريد الإلكترونيّ كاملًا، سيُخبرك الولوج إلى حسابك على "
-"الخادوم أيّهما هو."
+"الخادم أيّهما هو."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
