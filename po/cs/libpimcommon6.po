@@ -279,10 +279,9 @@ msgid "What's new in %2. %1"
 msgstr "Co je nového v %2. %1"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "All Version"
+#, kde-format
 msgid "All Versions"
-msgstr "Všechny verze"
+msgstr ""
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:47
 #, kde-format
