@@ -623,7 +623,7 @@ msgstr "<qt>No s'ha pogut accedir a <b>%1</b>.</qt>"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
 #, kde-format
 msgid "Select email from contact"
-msgstr "Selecciona l'adreça de correu del contacte"
+msgstr "Tria l'adreça de correu del contacte"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
 #, kde-format
@@ -674,7 +674,7 @@ msgstr "Busca"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Select"
-msgstr "&Selecciona"
+msgstr "&Tria"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, kde-format
@@ -739,7 +739,7 @@ msgstr "Separa les expressions regulars amb «%1»"
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
 #, kde-format
 msgid "Select"
-msgstr "Selecciona"
+msgstr "Tria"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
 #, kde-format
@@ -1002,7 +1002,7 @@ msgstr "Busca…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
-msgstr "Seleccioneu múltiples carpetes"
+msgstr "Trieu múltiples carpetes"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
