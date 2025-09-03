@@ -56,8 +56,16 @@ void PimCommon::PluginUtil::savePluginSettings(const QString &groupName,
 {
     KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
     KConfigGroup grp = config->group(groupName);
-    grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
-    grp.writeEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), disabledPluginsList);
+    if (enabledPluginsList.isEmpty()) {
+        grp.deleteEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey));
+    } else {
+        grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
+    }
+    if (disabledPluginsList.isEmpty()) {
+        grp.deleteEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey));
+    } else {
+        grp.writeEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), disabledPluginsList);
+    }
 }
 
 PimCommon::PluginUtilData PimCommon::PluginUtil::createPluginMetaData(const KPluginMetaData &metaData)
