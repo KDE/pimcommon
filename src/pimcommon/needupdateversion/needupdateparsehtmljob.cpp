@@ -6,7 +6,6 @@
 
 #include "needupdateparsehtmljob.h"
 #include "pimcommon_debug.h"
-#include <QUrl>
 #include <kio/transferjob.h>
 
 using namespace PimCommon;

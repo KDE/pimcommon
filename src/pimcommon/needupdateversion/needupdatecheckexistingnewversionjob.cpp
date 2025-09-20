@@ -8,7 +8,6 @@
 #include "needupdateparsehtmljob.h"
 #include "needupdateparsehtmlutil.h"
 #include "pimcommon_debug.h"
-#include <QDate>
 using namespace PimCommon;
 NeedUpdateCheckExistingNewVersionJob::NeedUpdateCheckExistingNewVersionJob(QObject *parent)
     : QObject{parent}
