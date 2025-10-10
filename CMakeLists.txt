@@ -205,6 +205,10 @@ if(OPTION_USE_PLASMA_ACTIVITIES)
     endif()
 endif()
 
+if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.45)
+    set(HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT TRUE)
+endif()
+
 add_subdirectory(src)
 ecm_qt_install_logging_categories(
         EXPORT PIMCOMMON
