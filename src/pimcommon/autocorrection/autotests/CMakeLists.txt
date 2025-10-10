@@ -15,11 +15,7 @@ macro(add_pimcommon_autocorrect_unittest _source)
         Qt::Test
         KPim6::PimCommon
     )
-    if(TARGET KF6::TextAutoCorrectionWidgets)
-        target_link_libraries(${_name} KF6::TextAutoCorrectionWidgets)
-    else()
-        target_link_libraries(${_name} KF6::TextAutoCorrection)
-    endif()
+    target_link_libraries(${_name} KF6::TextAutoCorrectionWidgets)
 endmacro()
 
 add_pimcommon_autocorrect_unittest(lineeditwithautocorrectiontest.cpp)
