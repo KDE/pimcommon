@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-21 00:43+0000\n"
-"PO-Revision-Date: 2025-07-22 21:28+0300\n"
+"PO-Revision-Date: 2025-10-11 21:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -306,7 +306,7 @@ msgstr "Önceki sürümden bu yana olan önemli değişiklikler:"
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr "Bu sürümündeki yeni özelliklerden bazıları:"
+msgstr "Bu sürümdeki yeni özelliklerden bazıları:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
