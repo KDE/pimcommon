@@ -411,7 +411,7 @@ void AddresseeLineEditPrivate::akonadiPerformSearch()
     auto groupJob = new Akonadi::ContactGroupSearchJob(AddresseeLineEditManager::self()->akonadiSession());
     groupJob->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
     groupJob->setQuery(Akonadi::ContactGroupSearchJob::Name, mSearchString, Akonadi::ContactGroupSearchJob::ContainsMatch);
-    connect(contactJob, &Akonadi::ItemSearchJob::itemsReceived, this, &AddresseeLineEditPrivate::slotAkonadiHandleItems);
+    connect(groupJob, &Akonadi::ItemSearchJob::itemsReceived, this, &AddresseeLineEditPrivate::slotAkonadiHandleItems);
     connect(groupJob, &KJob::result, this, &AddresseeLineEditPrivate::slotAkonadiSearchResult);
 
     AddresseeLineEditManager::self()->akonadiJobsInFlight.append(contactJob);
