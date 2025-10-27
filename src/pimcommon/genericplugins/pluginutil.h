@@ -34,6 +34,11 @@ public:
 
 namespace PluginUtil
 {
+struct PIMCOMMON_EXPORT PluginsStateList {
+    QStringList enabledPluginList;
+    QStringList disabledPluginList;
+};
+
 [[nodiscard]] PIMCOMMON_EXPORT bool
 isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
 [[nodiscard]] PIMCOMMON_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
