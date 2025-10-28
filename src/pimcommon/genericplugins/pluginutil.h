@@ -9,7 +9,6 @@
 #include "pimcommon_export.h"
 
 #include <KPluginMetaData>
-#include <QPair>
 #include <QString>
 #include <QStringList>
 
@@ -41,7 +40,7 @@ struct PIMCOMMON_EXPORT PluginsStateList {
 
 [[nodiscard]] PIMCOMMON_EXPORT bool
 isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
-[[nodiscard]] PIMCOMMON_EXPORT QPair<QStringList, QStringList> loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
+[[nodiscard]] PIMCOMMON_EXPORT PluginsStateList loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
 PIMCOMMON_EXPORT void
 savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList);
 [[nodiscard]] PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);

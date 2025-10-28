@@ -32,9 +32,9 @@ bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsL
     return false;
 }
 
-QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const QString &groupName, const QString &prefixSettingKey)
+PimCommon::PluginUtil::PluginsStateList PimCommon::PluginUtil::loadPluginSetting(const QString &groupName, const QString &prefixSettingKey)
 {
-    QPair<QStringList, QStringList> pair;
+    PluginUtil::PluginsStateList pair;
     KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
     QStringList enabledPlugins;
     QStringList disabledPlugins;
@@ -44,8 +44,8 @@ QPair<QStringList, QStringList> PimCommon::PluginUtil::loadPluginSetting(const Q
         disabledPlugins = grp.readEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), QStringList());
     }
 
-    pair.first = enabledPlugins;
-    pair.second = disabledPlugins;
+    pair.enabledPluginList = enabledPlugins;
+    pair.disabledPluginList = disabledPlugins;
     return pair;
 }
 

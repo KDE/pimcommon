@@ -121,7 +121,7 @@ void ConfigurePluginsListWidget::fillTopItems(const QList<PimCommon::PluginUtilD
     if (!lst.isEmpty()) {
         auto topLevel = new QTreeWidgetItem(mListWidget, {topLevelItemName});
         topLevel->setFlags(topLevel->flags() & ~Qt::ItemIsSelectable);
-        const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
+        const PimCommon::PluginUtil::PluginsStateList pair = PimCommon::PluginUtil::loadPluginSetting(groupName, prefixKey);
         for (const PimCommon::PluginUtilData &data : lst) {
             auto subItem = new PluginItem(topLevel);
             subItem->setData(0, ConfigurePluginsListWidget::PluginItemData::Description, data.mDescription);
@@ -130,7 +130,8 @@ void ConfigurePluginsListWidget::fillTopItems(const QList<PimCommon::PluginUtilD
             subItem->mEnableByDefault = data.mEnableByDefault;
             subItem->mHasConfigureSupport = data.mHasConfigureDialog;
             if (checkable) {
-                const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, data.mEnableByDefault, data.mIdentifier);
+                const bool isPluginActivated =
+                    PimCommon::PluginUtil::isPluginActivated(pair.enabledPluginList, pair.disabledPluginList, data.mEnableByDefault, data.mIdentifier);
                 subItem->mEnableFromUserSettings = isPluginActivated;
                 subItem->setCheckState(0, isPluginActivated ? Qt::Checked : Qt::Unchecked);
             }
