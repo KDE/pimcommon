@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-21 00:43+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2025-10-09 01:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -35,12 +35,12 @@ msgstr ""
 "시합니다. 해당 계정이 활성화되어 있지 않은 활동으로 전환하면 계정을 자동으로 "
 "숨깁니다."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"

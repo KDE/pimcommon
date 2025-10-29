@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-21 00:43+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2025-07-24 09:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -35,12 +35,12 @@ msgstr ""
 "הגבלת החשבון הזה לפעילות, תגרום לכך שהוא יופיע רק בפעילויות האלה. יתרה מכך, "
 "במעבר לפעילות שבה הכספת לא אמורה להיות זמינה, היא תוסתר אוטומטית."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
 msgid "..."
 msgstr "…"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"

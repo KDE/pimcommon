@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-21 00:43+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2024-08-12 15:05+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -40,12 +40,12 @@ msgstr ""
 "tik tose veiklose. Be to, kai perjungsite į veiklą, kurioje paskyra neturi "
 "būti prieinama, ji bus automatiškai paslėpta."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"

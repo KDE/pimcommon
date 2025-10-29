@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-21 00:43+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2025-08-08 01:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -36,12 +36,12 @@ msgstr ""
 "若限制此帳號於特定活動，則僅當使用者處於該活動中時，帳號才會顯示。此外，當您"
 "切換到其他非指定活動時，帳號會自動隱藏。"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
 msgid "..."
 msgstr "..."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-21 00:43+0000\n"
+"POT-Creation-Date: 2025-10-29 00:44+0000\n"
 "PO-Revision-Date: 2025-04-21 22:17+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -37,12 +37,12 @@ msgstr ""
 "meg, ha azt az aktivitást használja. Továbbá ha olyan aktivitásra vált, ahol "
 "az nem szabad, hogy elérhető legyen, a fiók automatikusan rejtésre kerül."
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:144
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
 #, kde-format
 msgid "..."
 msgstr "…"
 
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:146
+#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Configure"
