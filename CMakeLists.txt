@@ -59,7 +59,7 @@ add_feature_info(
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "6.5.40")
-set(KTEXTADDONS_MIN_VERSION "1.8.0")
+set(KTEXTADDONS_MIN_VERSION "1.8.44")
 set(KIMAP_LIB_VERSION "6.5.40")
 set(KLDAP_LIB_VERSION "6.5.40")
 
@@ -203,10 +203,6 @@ if(OPTION_USE_PLASMA_ACTIVITIES)
                     OPTIONAL
         )
     endif()
-endif()
-
-if(${KF6TextAddonsWidgets_VERSION} VERSION_GREATER_EQUAL 1.8.44)
-    set(HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT TRUE)
 endif()
 
 add_subdirectory(src)

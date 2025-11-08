@@ -100,49 +100,6 @@ target_sources(
         widgets/purposemenuwidget.cpp
 )
 
-if(NOT HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT)
-    target_sources(
-        KPim6PimCommon
-        PRIVATE
-            whatsnew/whatsnewdialog.h
-            whatsnew/whatsnewdialog.cpp
-            whatsnew/whatsnewwidget.h
-            whatsnew/whatsnewwidget.cpp
-            whatsnew/whatsnewmessagewidget.h
-            whatsnew/whatsnewmessagewidget.cpp
-            whatsnew/whatsnewcomboboxwidget.h
-            whatsnew/whatsnewcomboboxwidget.cpp
-            whatsnew/whatsnewtranslationsbase.h
-            whatsnew/whatsnewtranslationsbase.cpp
-            whatsnew/whatsnewinfo.h
-            whatsnew/whatsnewinfo.cpp
-            verifynewversion/verifynewversionutils.cpp
-            verifynewversion/verifynewversionutils.h
-            verifynewversion/verifynewversionwidget.cpp
-            verifynewversion/verifynewversionwidget.h
-            verifynewversion/checknewversiondialog.cpp
-            verifynewversion/checknewversiondialog.h
-            verifynewversion/checknewversionwidget.cpp
-            verifynewversion/checknewversionwidget.h
-            needupdateversion/needupdateversionwidget.h
-            needupdateversion/needupdateversionwidget.cpp
-            needupdateversion/needupdateversionutils.h
-            needupdateversion/needupdateversionutils.cpp
-            needupdateversion/needupdatecheckexistingnewversionjob.cpp
-            needupdateversion/needupdatecheckexistingnewversionjob.h
-            needupdateversion/needupdateparsehtmljob.cpp
-            needupdateversion/needupdateparsehtmljob.h
-            needupdateversion/needupdateparsehtmlutil.cpp
-            needupdateversion/needupdateparsehtmlutil.h
-    )
-
-    if(ENABLE_WARN_OUTDATED)
-        target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=1)
-    else()
-        target_compile_definitions(KPim6PimCommon PRIVATE ENABLE_WARN_OUTDATED=0)
-    endif()
-endif()
-
 if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(
         KPim6PimCommon
@@ -213,11 +170,6 @@ if(BUILD_TESTING)
     add_subdirectory(genericplugins/autotests)
     add_subdirectory(autocorrection/autotests)
     add_subdirectory(autocorrection/tests)
-    if(NOT HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT)
-        add_subdirectory(needupdateversion/tests)
-        add_subdirectory(needupdateversion/autotests)
-        add_subdirectory(whatsnew/autotests)
-    endif()
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
@@ -239,38 +191,6 @@ ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
     PREFIX PimCommon
     RELATIVE autocorrection/widgets/
 )
-if(NOT HAVE_TEXTUTILS_HAS_WHATSNEW_SUPPORT)
-    ecm_generate_headers(PimCommon_Camelcaseneedupdateversionwidgets_HEADERS
-        HEADER_NAMES
-        NeedUpdateVersionUtils
-        NeedUpdateVersionWidget
-        NeedUpdateParseHtmlJob
-        NeedUpdateCheckExistingNewVersionJob
-        NeedUpdateParseHtmlUtil
-        REQUIRED_HEADERS PimCommon_needupdateversionwidgets_HEADERS
-        PREFIX PimCommon
-        RELATIVE needupdateversion
-    )
-
-    ecm_generate_headers(PimCommon_Camelverifynewversion_HEADERS
-        HEADER_NAMES
-        VerifyNewVersionWidget
-        REQUIRED_HEADERS PimCommon_verifynewversion_HEADERS
-        PREFIX PimCommon
-        RELATIVE verifynewversion
-    )
-    ecm_generate_headers(PimCommon_Camelcasewhatsnew_HEADERS
-        HEADER_NAMES
-        WhatsNewComboBoxWidget
-        WhatsNewDialog
-        WhatsNewInfo
-        WhatsNewTranslationsBase
-        WhatsNewMessageWidget
-        REQUIRED_HEADERS PimCommon_whatsnew_HEADERS
-        PREFIX PimCommon
-        RELATIVE whatsnew
-    )
-endif()
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     HEADER_NAMES
     NetworkManager
