@@ -162,12 +162,6 @@ endif()
 set(DISABLE_AKONADI_SEARCH ${FORCE_DISABLE_AKONADI_SEARCH})
 configure_file(config-akonadi-search.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-akonadi-search.h)
 
-option(
-    ENABLE_WARN_OUTDATED
-    "Warn users if using an old version; if you long term supported distribution, you might want to set this to off"
-    ON
-)
-
 if(BUILD_TESTING)
     add_definitions(-DBUILD_TESTING)
     find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
