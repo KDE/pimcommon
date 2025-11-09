@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -50,25 +50,6 @@ msgstr "कॉन्फ़िगर"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "परिवर्तन लागू करने के लिए पुनः आरंभ करना आवश्यक है।"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "संस्करण जाँच अक्षम करें"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "आपका संस्करण 6 महीने से पुराना है, हम आपको अपग्रेड करने के लिए प्रोत्साहित करते हैं।"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"आपका संस्करण 1 वर्ष से अधिक पुराना है, हम आपको अपग्रेड करने के लिए दृढ़तापूर्वक प्रोत्साहित "
-"करते हैं।"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -239,77 +220,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "फ़ाइल लोड करने में त्रुटि"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Check New Version"
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "नया संस्करण देखें"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, fuzzy, kde-format
-#| msgid "No email found."
-msgid "No new version found."
-msgstr "कोई ईमेल नहीं मिला."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "नया संस्करण देखें"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "संस्करण:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "%1 में नया क्या है"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(समाचार दिखाएं)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "%2. %1 में नया क्या है?"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "All Version"
-msgid "All Versions"
-msgstr "सभी संस्करण"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "संस्करण %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "पिछले संस्करण से अब तक महत्वपूर्ण परिवर्तन:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "इस रिलीज़ में कुछ नई विशेषताएं शामिल हैं:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "कुछ बग फिक्सिंग:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1301,6 +1211,65 @@ msgstr "संसाधन सेटअप पूर्ण हुआ."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "संसाधन इंस्टैंस बनाने में विफल: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "संस्करण जाँच अक्षम करें"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "आपका संस्करण 6 महीने से पुराना है, हम आपको अपग्रेड करने के लिए प्रोत्साहित करते हैं।"
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "आपका संस्करण 1 वर्ष से अधिक पुराना है, हम आपको अपग्रेड करने के लिए दृढ़तापूर्वक "
+#~ "प्रोत्साहित करते हैं।"
+
+#, fuzzy
+#~| msgid "Check New Version"
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "नया संस्करण देखें"
+
+#, fuzzy
+#~| msgid "No email found."
+#~ msgid "No new version found."
+#~ msgstr "कोई ईमेल नहीं मिला."
+
+#~ msgid "Check New Version"
+#~ msgstr "नया संस्करण देखें"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "संस्करण:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "%1 में नया क्या है"
+
+#~ msgid "(Show News)"
+#~ msgstr "(समाचार दिखाएं)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "%2. %1 में नया क्या है?"
+
+#, fuzzy
+#~| msgid "All Version"
+#~ msgid "All Versions"
+#~ msgstr "सभी संस्करण"
+
+#~ msgid "Version %1"
+#~ msgstr "संस्करण %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "पिछले संस्करण से अब तक महत्वपूर्ण परिवर्तन:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "इस रिलीज़ में कुछ नई विशेषताएं शामिल हैं:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "कुछ बग फिक्सिंग:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

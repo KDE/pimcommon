@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-21 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -51,23 +51,6 @@ msgstr "მორგება"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "ცვლილებების გადასატარებლად გადატვირთვა აუცილებელია."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "ვერსიის შემოწმების გათიშვა"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "თქვენი ვერსია 6 თვეზე ძველია. გირჩევთ, განახლდეთ."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr "თქვენი ვერსია 1 წელზე ძველია. გირჩევთ, ასწიოთ ვერსია."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -238,75 +221,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "ფაილის ჩატვირთვის შეცდომა"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "ახალი ვერსიის შემოწმება"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"აღმოჩენილია ახალი ვერსია. მის გადმოსაწერად დააწკაპუნეთ <a href=\"%1\">აქ</a>."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "ახალი ვერსია აღმოჩენილი არაა."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "ახალი ვერსიის შემოწმება"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "ვერსია:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "რა არის ახალი %1-ში"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(სიახლეების ჩვენება)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "რა არის ახალი %2-ში. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "ყველა ვერსია"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "ვერსია %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "მნიშვნელოვანი ცვლილებები ბოლო ვერსიის შემდეგ:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "ამ ვერსიის ახალ ფუნქციებში შედის:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "გამოსწორდა ზოგიერთი შეცდომა:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1305,6 +1219,62 @@ msgstr "რესურსის მორგება დასრულდა.
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "რესურსის გაშვებული ასლის შექმნის შეცდომა: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "ვერსიის შემოწმების გათიშვა"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr "თქვენი ვერსია 6 თვეზე ძველია. გირჩევთ, განახლდეთ."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr "თქვენი ვერსია 1 წელზე ძველია. გირჩევთ, ასწიოთ ვერსია."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "ახალი ვერსიის შემოწმება"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "აღმოჩენილია ახალი ვერსია. მის გადმოსაწერად დააწკაპუნეთ <a href=\"%1\">აქ</"
+#~ "a>."
+
+#~ msgid "No new version found."
+#~ msgstr "ახალი ვერსია აღმოჩენილი არაა."
+
+#~ msgid "Check New Version"
+#~ msgstr "ახალი ვერსიის შემოწმება"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "ვერსია:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "რა არის ახალი %1-ში"
+
+#~ msgid "(Show News)"
+#~ msgstr "(სიახლეების ჩვენება)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "რა არის ახალი %2-ში. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "ყველა ვერსია"
+
+#~ msgid "Version %1"
+#~ msgstr "ვერსია %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "მნიშვნელოვანი ცვლილებები ბოლო ვერსიის შემდეგ:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "ამ ვერსიის ახალ ფუნქციებში შედის:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "გამოსწორდა ზოგიერთი შეცდომა:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

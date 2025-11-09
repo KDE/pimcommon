@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-02-28 15:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -51,25 +51,6 @@ msgstr "Konfigurēt"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Lai pielietotu izmaiņas, nepieciešamas sistēmu pārstartēt."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Izslēgt versijas pārbaudi"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
-"Jūsu versija ir vecāka par sešiem mēnešiem, tāpēc iesakām to atjaunināt."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"Jūsu versija ir vecāka par vienu gadu, tāpēc stingri iesakām to atjaunināt."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -240,77 +221,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Datnes ielādes kļūda"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Pārbaudīt jaunu versiju"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"Atrasta jauna versija. Klikšķiniet <a href=\"%1\">te</a>, lai to "
-"lejupielādētu."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Jaunas versijas nav atrastas."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Pārbaudīt jaunu versiju"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Versija:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Kas jauns %1?"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Rādīt ziņas)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Kas jauns %2? %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "All Version"
-msgid "All Versions"
-msgstr "Visas versijas"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Versija %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Svarīgas izmaiņas kopš iepriekšējās versijas:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Daži no jaunumiem šajā versijā:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Atsevišķi kļūdu labojumi:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1311,6 +1221,67 @@ msgstr "Resursa iestatīšana ir pabeigta."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Neizdevās izveidot resursa instanci: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Izslēgt versijas pārbaudi"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "Jūsu versija ir vecāka par sešiem mēnešiem, tāpēc iesakām to atjaunināt."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "Jūsu versija ir vecāka par vienu gadu, tāpēc stingri iesakām to "
+#~ "atjaunināt."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Pārbaudīt jaunu versiju"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Atrasta jauna versija. Klikšķiniet <a href=\"%1\">te</a>, lai to "
+#~ "lejupielādētu."
+
+#~ msgid "No new version found."
+#~ msgstr "Jaunas versijas nav atrastas."
+
+#~ msgid "Check New Version"
+#~ msgstr "Pārbaudīt jaunu versiju"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Versija:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Kas jauns %1?"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Rādīt ziņas)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Kas jauns %2? %1"
+
+#, fuzzy
+#~| msgid "All Version"
+#~ msgid "All Versions"
+#~ msgstr "Visas versijas"
+
+#~ msgid "Version %1"
+#~ msgstr "Versija %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Svarīgas izmaiņas kopš iepriekšējās versijas:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Daži no jaunumiem šajā versijā:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Atsevišķi kļūdu labojumi:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

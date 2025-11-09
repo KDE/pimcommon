@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-24 09:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -50,23 +50,6 @@ msgstr "הגדרה"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "יש להפעיל מחדש כדי להחיל את השינויים."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "השבתת בדיקת גרסה"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "הגרסה שלך בת יותר מחצי שנה, מומלץ בחום לשדרג."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr "הגרסה שלך בת יותר משנה, מומלץ בחום לשדרג."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -237,74 +220,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "שגיאת טעינת קובץ"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "בדיקה לאיתור גרסה חדשה"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr "נמצאה גרסה חדשה. לחיצה <a href=\"%1\">כאן</a> תוריד אותה."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "לא נמצאו גרסאות חדשות."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "בדיקה לאיתור גרסה חדשה"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "גרסה:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "מה חדש ב־%1"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(הצגת חדשות)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "מה חדש ב־%2. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "כל הגרסאות"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "גרסה %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "שינויים חשובים מאז הגרסה האחרונה:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "חלק מהיכולות החדשות שהגרסה הזאת כוללת:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "תיקוני תקלות:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1299,6 +1214,60 @@ msgstr "הקמת המשאב הושלמה."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "יצירת מופע משאב נכשלה: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "השבתת בדיקת גרסה"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr "הגרסה שלך בת יותר מחצי שנה, מומלץ בחום לשדרג."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr "הגרסה שלך בת יותר משנה, מומלץ בחום לשדרג."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "בדיקה לאיתור גרסה חדשה"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr "נמצאה גרסה חדשה. לחיצה <a href=\"%1\">כאן</a> תוריד אותה."
+
+#~ msgid "No new version found."
+#~ msgstr "לא נמצאו גרסאות חדשות."
+
+#~ msgid "Check New Version"
+#~ msgstr "בדיקה לאיתור גרסה חדשה"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "גרסה:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "מה חדש ב־%1"
+
+#~ msgid "(Show News)"
+#~ msgstr "(הצגת חדשות)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "מה חדש ב־%2. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "כל הגרסאות"
+
+#~ msgid "Version %1"
+#~ msgstr "גרסה %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "שינויים חשובים מאז הגרסה האחרונה:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "חלק מהיכולות החדשות שהגרסה הזאת כוללת:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "תיקוני תקלות:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

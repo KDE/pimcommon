@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-08-03 21:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -49,27 +49,6 @@ msgstr "அமை"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "மாற்றங்களை சேயல்படுத்த மீள்துவக்க வேண்டும்."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "பதிப்பு சரிபார்ப்பை முடக்கு"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
-"இப்பதிப்பு வெளியிடப்பட்டு ஆறு மாதங்களுக்கு மேல் ஆகிவிட்டது. புதுப்பிக்குமாறு "
-"பரிந்துரைக்கிறோம்."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"இப்பதிப்பு வெளியிடப்பட்டு ஒரு ஆண்டுக்கு மேல் ஆகிவிட்டது. புதுப்பிக்குமாறு "
-"பரிந்துரைக்கிறோம்."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -240,75 +219,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "கோப்பை ஏற்றுவதில் சிக்கல்"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "புதிய பதிப்பு"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"புதிய பதிப்பு உள்ளது. அதைப் பதிவிறக்க <a href=\"%1\">இங்கு</a> கிளிக் செய்யவும்."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "எந்த புதிய பதிப்பும் இல்லை."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "புதிய பதிப்புள்ளதா என பார்"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "பதிப்பு:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "%1 தனில் புதியவை"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(செய்திகளை காட்டு)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "%2 தனில் புதியவை. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "அனைத்து பதிப்புகளும்"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "பதிப்பு %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "சென்ற பதிப்புக்கு பிந்தைய முக்கிய மாற்றங்கள்:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "இப்பதிப்பின் சில புதிய அம்சங்கள் பின்வருவன:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "திருத்தப்பட்ட சில பிழைகள்:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1285,6 +1195,65 @@ msgstr ""
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr ""
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "பதிப்பு சரிபார்ப்பை முடக்கு"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "இப்பதிப்பு வெளியிடப்பட்டு ஆறு மாதங்களுக்கு மேல் ஆகிவிட்டது. புதுப்பிக்குமாறு "
+#~ "பரிந்துரைக்கிறோம்."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "இப்பதிப்பு வெளியிடப்பட்டு ஒரு ஆண்டுக்கு மேல் ஆகிவிட்டது. புதுப்பிக்குமாறு "
+#~ "பரிந்துரைக்கிறோம்."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "புதிய பதிப்பு"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "புதிய பதிப்பு உள்ளது. அதைப் பதிவிறக்க <a href=\"%1\">இங்கு</a> கிளிக் செய்யவும்."
+
+#~ msgid "No new version found."
+#~ msgstr "எந்த புதிய பதிப்பும் இல்லை."
+
+#~ msgid "Check New Version"
+#~ msgstr "புதிய பதிப்புள்ளதா என பார்"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "பதிப்பு:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "%1 தனில் புதியவை"
+
+#~ msgid "(Show News)"
+#~ msgstr "(செய்திகளை காட்டு)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "%2 தனில் புதியவை. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "அனைத்து பதிப்புகளும்"
+
+#~ msgid "Version %1"
+#~ msgstr "பதிப்பு %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "சென்ற பதிப்புக்கு பிந்தைய முக்கிய மாற்றங்கள்:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "இப்பதிப்பின் சில புதிய அம்சங்கள் பின்வருவன:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "திருத்தப்பட்ட சில பிழைகள்:"
 
 #~ msgctxt "@title:window"
 #~ msgid "Edit Completion Order"

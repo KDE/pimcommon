@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-02-12 22:59+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -51,27 +51,6 @@ msgstr "Agordi"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Rekomenco estas necesa por apliki la ŝanĝojn."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Malebligi versiokontrolon"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
-"Via versio estas estas pli ol 6 monatojn malnova, ni kuraĝigas vin ĝisdatigi "
-"al nova eldono."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"Via versio estas estas pli ol 1 jaron malnova, ni kuraĝigas vin ĝisdatigi al "
-"nova eldono."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -242,75 +221,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Eraro Ŝargante Dosieron"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Kontroli Novan Version"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr "Nova versio trovita. Klaku <a href=\"%1\">tien ĉi</a> por elŝuti ĝin."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Neniu nova versio trovita."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Kontroli Novan Version"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Versio:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Kio nova en %1"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Montri Novaĵojn)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Kio nova en %2. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "All Version"
-msgid "All Versions"
-msgstr "Ĉiu Versio"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Versio %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Gravaj ŝanĝoj ekde lasta version:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Iuj el la novaj kapabloj en ĉi eldono inkluzivas:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Iu cimkorektado:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1308,6 +1218,67 @@ msgstr "Rimeda agordo finiĝis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Malsukcesis krei rimedan ekzemplon: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Malebligi versiokontrolon"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "Via versio estas estas pli ol 6 monatojn malnova, ni kuraĝigas vin "
+#~ "ĝisdatigi al nova eldono."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "Via versio estas estas pli ol 1 jaron malnova, ni kuraĝigas vin ĝisdatigi "
+#~ "al nova eldono."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Kontroli Novan Version"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Nova versio trovita. Klaku <a href=\"%1\">tien ĉi</a> por elŝuti ĝin."
+
+#~ msgid "No new version found."
+#~ msgstr "Neniu nova versio trovita."
+
+#~ msgid "Check New Version"
+#~ msgstr "Kontroli Novan Version"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Versio:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Kio nova en %1"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Montri Novaĵojn)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Kio nova en %2. %1"
+
+#, fuzzy
+#~| msgid "All Version"
+#~ msgid "All Versions"
+#~ msgstr "Ĉiu Versio"
+
+#~ msgid "Version %1"
+#~ msgstr "Versio %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Gravaj ŝanĝoj ekde lasta version:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Iuj el la novaj kapabloj en ĉi eldono inkluzivas:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Iu cimkorektado:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

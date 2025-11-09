@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-28 18:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -50,25 +50,6 @@ msgstr "Anpassa"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Omstart krävs för att ändringarna ska verkställas."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Inaktivera versionskontroll"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
-"Din version är äldre än 6 månader, vi rekommenderar att du uppgraderar."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"Din version är äldre än 1 år, vi rekommenderar starkt att du uppgraderar."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -239,75 +220,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Fil vid inläsning av fil"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Kontrollera ny version"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"En ny version hittades. Klicka <a href=\"%1\">här</a> för att ladda ner den."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Ingen ny version hittades."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Kontrollera ny version"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Version:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Vad är nytt i %1"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Visa nyheter)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Vad är nytt i %2. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "Alla versioner"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Version %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Viktiga ändringar sedan föregående version:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Vissa av de nya funktionerna i den här utgåvan omfattar:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "En del felrättning:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1302,6 +1214,64 @@ msgstr "Resursinställning klar."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Misslyckades skapa resursinstans: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Inaktivera versionskontroll"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "Din version är äldre än 6 månader, vi rekommenderar att du uppgraderar."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "Din version är äldre än 1 år, vi rekommenderar starkt att du uppgraderar."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Kontrollera ny version"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "En ny version hittades. Klicka <a href=\"%1\">här</a> för att ladda ner "
+#~ "den."
+
+#~ msgid "No new version found."
+#~ msgstr "Ingen ny version hittades."
+
+#~ msgid "Check New Version"
+#~ msgstr "Kontrollera ny version"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Version:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Vad är nytt i %1"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Visa nyheter)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Vad är nytt i %2. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "Alla versioner"
+
+#~ msgid "Version %1"
+#~ msgstr "Version %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Viktiga ändringar sedan föregående version:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Vissa av de nya funktionerna i den här utgåvan omfattar:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "En del felrättning:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

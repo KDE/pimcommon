@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-21 08:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -54,24 +54,6 @@ msgstr "Налаштувати"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Для застосування змін слід перезапустити програму."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Вимкнути перевірку версій"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "Ваша версія застаріла на понад 6 місяців. Ми рекомендуємо її оновити."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"Ваша версія застаріла на понад 1 рік. Ми наполегливо рекомендуємо її оновити."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -242,75 +224,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Помилка під час завантаження файла"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Виконати пошук нової версії"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"Виявлено нову версію. Натисніть <a href=\"%1\">тут</a>, щоб її отримати."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Нової версії не знайдено."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Виконати пошук нової версії"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Версія:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Що нового у %1"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Показати новини)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Що нового у %2. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "Усі версії"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Версія %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Важливі зміни з часу випуску попередньої версії:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Серед нових можливостей у цьому випуску:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Виправлення деяких вад:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1314,6 +1227,64 @@ msgstr "Налаштовування ресурсу завершено."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не вдалося створити екземпляр ресурсу: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Вимкнути перевірку версій"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "Ваша версія застаріла на понад 6 місяців. Ми рекомендуємо її оновити."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "Ваша версія застаріла на понад 1 рік. Ми наполегливо рекомендуємо її "
+#~ "оновити."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Виконати пошук нової версії"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Виявлено нову версію. Натисніть <a href=\"%1\">тут</a>, щоб її отримати."
+
+#~ msgid "No new version found."
+#~ msgstr "Нової версії не знайдено."
+
+#~ msgid "Check New Version"
+#~ msgstr "Виконати пошук нової версії"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Версія:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Що нового у %1"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Показати новини)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Що нового у %2. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "Усі версії"
+
+#~ msgid "Version %1"
+#~ msgstr "Версія %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Важливі зміни з часу випуску попередньої версії:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Серед нових можливостей у цьому випуску:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Виправлення деяких вад:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

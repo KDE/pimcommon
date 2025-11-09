@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
-"PO-Revision-Date: 2025-01-18 12:05+0100\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"PO-Revision-Date: 2025-11-08 09:36+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -52,23 +53,6 @@ msgstr "Ustawienia"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Wymagane jest ponowne uruchomienie do zastosowania zmian."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Wyłącz sprawdzanie wersji"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "Twoja wersja jest starsza niż 6 miesięcy. Zalecamy uaktualnienie."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr "Twoja wersja jest starsza niż 1 rok. Zalecamy uaktualnienie."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -239,76 +223,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Błąd wczytywania pliku"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Sprawdź, czy jest nowa wersja"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"Dostępna jest nowa wersja. Naciśnij <a href=\"%1\">tutaj</a>, aby ją pobrać."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Żadna nowa wersja nie jest jeszcze dostępna."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Sprawdź, czy jest nowa wersja"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Wersja:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Co nowego w %1"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Pokaż wieści)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Co nowego w %2. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, fuzzy, kde-format
-#| msgid "All Version"
-msgid "All Versions"
-msgstr "Wszystkie wersje"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Wersja %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Ważne zmiany od ostatniego wydania:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Nowości w tym wydaniu:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Naprawa błędów:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1304,6 +1218,62 @@ msgstr "Ukończono ustawianie zasobu."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Nie udało się utworzyć zasobu: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Wyłącz sprawdzanie wersji"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr "Twoja wersja jest starsza niż 6 miesięcy. Zalecamy uaktualnienie."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr "Twoja wersja jest starsza niż 1 rok. Zalecamy uaktualnienie."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Sprawdź, czy jest nowa wersja"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Dostępna jest nowa wersja. Naciśnij <a href=\"%1\">tutaj</a>, aby ją "
+#~ "pobrać."
+
+#~ msgid "No new version found."
+#~ msgstr "Żadna nowa wersja nie jest jeszcze dostępna."
+
+#~ msgid "Check New Version"
+#~ msgstr "Sprawdź, czy jest nowa wersja"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Wersja:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Co nowego w %1"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Pokaż wieści)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Co nowego w %2. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "Wszystkie wersje"
+
+#~ msgid "Version %1"
+#~ msgstr "Wersja %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Ważne zmiany od ostatniego wydania:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Nowości w tym wydaniu:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Naprawa błędów:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

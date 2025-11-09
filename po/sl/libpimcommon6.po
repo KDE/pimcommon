@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-21 06:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -57,25 +57,6 @@ msgstr "Konfiguriraj"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Za uveljavitev sprememb je zahtevan ponovni zagon."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Onemogoči preverjanje različic"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
-"Vaša različica je starejša od 6 mesecev, priporočamo, da jo nadgradite."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"Vaša različica je starejša od 1 leta, toplo priporočamo, da jo nadgradite."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -246,74 +227,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Napaka ob nalaganju datoteke"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Preveri novo različico"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr "Najdena nova različica. Za prenos kliknite <a href=\"%1\">tukaj</a>."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Ni najdene nove različice."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Preveri novo različico"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Različica:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Kaj je novega v %1"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Prikaži novice)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Kaj je novega v %2.%1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "Vse različice"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Različica %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Pomembne spremembe od zadnje različice:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Nekatere nove zmožnosti v tej izdaji vključujejo:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Nekateri popravki napak:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1317,6 +1230,63 @@ msgstr "Nastavitev vira je zaključena."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ustvaritev primerka vira ni uspela: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Onemogoči preverjanje različic"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "Vaša različica je starejša od 6 mesecev, priporočamo, da jo nadgradite."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "Vaša različica je starejša od 1 leta, toplo priporočamo, da jo nadgradite."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Preveri novo različico"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Najdena nova različica. Za prenos kliknite <a href=\"%1\">tukaj</a>."
+
+#~ msgid "No new version found."
+#~ msgstr "Ni najdene nove različice."
+
+#~ msgid "Check New Version"
+#~ msgstr "Preveri novo različico"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Različica:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Kaj je novega v %1"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Prikaži novice)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Kaj je novega v %2.%1"
+
+#~ msgid "All Versions"
+#~ msgstr "Vse različice"
+
+#~ msgid "Version %1"
+#~ msgstr "Različica %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Pomembne spremembe od zadnje različice:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Nekatere nove zmožnosti v tej izdaji vključujejo:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Nekateri popravki napak:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-08-14 18:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -52,23 +52,6 @@ msgstr "Asetukset"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Muutosten käyttöönotto vaatii uudelleenkäynnistyksen."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Poista versiontarkistus käytöstä"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "Versiosi on kuutta kuukautta vanhempi: kehotamme päivittämään."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr "Versiosi on vuotta vanhempi: kehotamme vakavasti päivittämään."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -239,74 +222,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Tiedoston latausvirhe"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Etsi uutta versiota"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr "Löytyi uusi versio. Lataa se napsauttamalla <a href=\"%1\">tästä</a>."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Uutta versiota ei löytynyt."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Etsi uutta versiota"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Versio:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "%1 – mitä uutta"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Näytä uutiset)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "%2 – mitä uutta. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "Kaikki versiot"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "Versio %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Tärkeitä muutoksia sitten viime julkaisun:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Joitakin tämän julkaisun uusia ominaisuuksia ovat:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Joitakin vikoja on korjattu:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1304,6 +1219,61 @@ msgstr "Resurssin asetus valmis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Poista versiontarkistus käytöstä"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr "Versiosi on kuutta kuukautta vanhempi: kehotamme päivittämään."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr "Versiosi on vuotta vanhempi: kehotamme vakavasti päivittämään."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Etsi uutta versiota"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Löytyi uusi versio. Lataa se napsauttamalla <a href=\"%1\">tästä</a>."
+
+#~ msgid "No new version found."
+#~ msgstr "Uutta versiota ei löytynyt."
+
+#~ msgid "Check New Version"
+#~ msgstr "Etsi uutta versiota"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Versio:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "%1 – mitä uutta"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Näytä uutiset)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "%2 – mitä uutta. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "Kaikki versiot"
+
+#~ msgid "Version %1"
+#~ msgstr "Versio %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Tärkeitä muutoksia sitten viime julkaisun:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Joitakin tämän julkaisun uusia ominaisuuksia ovat:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Joitakin vikoja on korjattu:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-08-08 01:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -51,23 +51,6 @@ msgstr "設定"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "需要重新啟動變更才會生效。"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "停用版本檢查"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "您的版本已釋出超過 6 個月，我們鼓勵您更新。"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr "您的版本已釋出超過 1 年，我們強烈建議您更新。"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -238,74 +221,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "載入檔案錯誤"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "檢查新版本"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr "找到了新版本。請點擊<a href=\"%1\">此處</a>來下載它。"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "沒有找到新版本。"
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "檢查新版本"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "版本："
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "%1 的新功能"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "（顯示最新消息）"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "%2 的新功能。%1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "所有版本"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "版本 %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "上一個版本以來的重要變更："
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "這一個版本包含一些新功能："
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "一些錯誤修正："
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1287,6 +1202,60 @@ msgstr "資源設定完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "建立資源實體失敗：%1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "停用版本檢查"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr "您的版本已釋出超過 6 個月，我們鼓勵您更新。"
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr "您的版本已釋出超過 1 年，我們強烈建議您更新。"
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "檢查新版本"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr "找到了新版本。請點擊<a href=\"%1\">此處</a>來下載它。"
+
+#~ msgid "No new version found."
+#~ msgstr "沒有找到新版本。"
+
+#~ msgid "Check New Version"
+#~ msgstr "檢查新版本"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "版本："
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "%1 的新功能"
+
+#~ msgid "(Show News)"
+#~ msgstr "（顯示最新消息）"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "%2 的新功能。%1"
+
+#~ msgid "All Versions"
+#~ msgstr "所有版本"
+
+#~ msgid "Version %1"
+#~ msgstr "版本 %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "上一個版本以來的重要變更："
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "這一個版本包含一些新功能："
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "一些錯誤修正："
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

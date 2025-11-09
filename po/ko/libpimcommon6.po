@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-10-09 01:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -50,24 +50,6 @@ msgstr "설정"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "변경 사항을 적용하려면 다시 시작해야 합니다."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "버전 검사 비활성화"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr "현재 사용 중인 버전이 6개월 이상 지났습니다. 업그레이드를 권장합니다."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"현재 사용 중인 버전이 1년 이상 지났습니다. 업그레이드를 강력히 권장합니다."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -238,76 +220,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "파일 불러오기 오류"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "새 버전 확인"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"새 버전을 사용할 수 있습니다. 다운로드하려면 <a href=\"%1\">여기</a>를 클릭하"
-"십시오."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "새 버전을 찾을 수 없습니다."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "새 버전 확인"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "버전:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "%1의 새로운 기능"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(뉴스 표시)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "%2의 새로운 기능. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "모든 버전"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "버전 %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "마지막 버전 이후 중요 변경 사항:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "이 릴리스에 추가된 주요 기능:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "일부 버그 수정:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1293,6 +1205,64 @@ msgstr "리소스 설정이 완료되었습니다."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "리소스 인스턴스를 만들 수 없음: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "버전 검사 비활성화"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "현재 사용 중인 버전이 6개월 이상 지났습니다. 업그레이드를 권장합니다."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "현재 사용 중인 버전이 1년 이상 지났습니다. 업그레이드를 강력히 권장합니다."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "새 버전 확인"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "새 버전을 사용할 수 있습니다. 다운로드하려면 <a href=\"%1\">여기</a>를 클"
+#~ "릭하십시오."
+
+#~ msgid "No new version found."
+#~ msgstr "새 버전을 찾을 수 없습니다."
+
+#~ msgid "Check New Version"
+#~ msgstr "새 버전 확인"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "버전:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "%1의 새로운 기능"
+
+#~ msgid "(Show News)"
+#~ msgstr "(뉴스 표시)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "%2의 새로운 기능. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "모든 버전"
+
+#~ msgid "Version %1"
+#~ msgstr "버전 %1"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "마지막 버전 이후 중요 변경 사항:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "이 릴리스에 추가된 주요 기능:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "일부 버그 수정:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "

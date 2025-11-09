@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:44+0000\n"
+"POT-Creation-Date: 2025-11-09 00:43+0000\n"
 "PO-Revision-Date: 2025-07-22 21:11+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -53,27 +53,6 @@ msgstr "Konfiguratu"
 #, kde-format
 msgid "Restart is necessary for applying the changes."
 msgstr "Aldaketak ezartzeko berrabiatu beharra dago."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:19
-#, kde-format
-msgctxt "@action"
-msgid "Disable version check"
-msgstr "Ezgaitu bertsio-egiaztapena"
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:35
-#, kde-format
-msgid "Your version is older than 6 months, we encourage you to upgrade."
-msgstr ""
-"Zure bertsioa 6 hilabete baino zaharragoa da, biziki gomendatzen dizugu "
-"bertsio-berritzea."
-
-#: pimcommon/needupdateversion/needupdateversionwidget.cpp:40
-#, kde-format
-msgid ""
-"Your version is older than 1 year, we strongly encourage you to upgrade."
-msgstr ""
-"Zure bertsioa urte 1 baino zaharragoa da, biziki gomendatzen dizugu bertsio-"
-"berritzea."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -244,76 +223,6 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Load File Error"
 msgstr "Fitxategia zamatzeko errorea"
-
-#: pimcommon/verifynewversion/checknewversiondialog.cpp:17
-#, kde-format
-msgctxt "@title:window"
-msgid "Check New Version"
-msgstr "Egiaztatu bertsio berririk dagoen"
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:51
-#, kde-format
-msgid "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-msgstr ""
-"Bertsio berri bat aurkitu da. Egin klik <a href=\"%1\">hemen</a> hura zama-"
-"jaisteko."
-
-#: pimcommon/verifynewversion/checknewversionwidget.cpp:58
-#, kde-format
-msgid "No new version found."
-msgstr "Ez da bertsio berririk aurkitu."
-
-#: pimcommon/verifynewversion/verifynewversionwidget.cpp:33
-#, kde-format
-msgid "Check New Version"
-msgstr "Egiaztatu bertsio berririk dagoen"
-
-#: pimcommon/whatsnew/whatsnewcomboboxwidget.cpp:27
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Version:"
-msgstr "Bertsioa:"
-
-#: pimcommon/whatsnew/whatsnewdialog.cpp:26
-#, kde-format
-msgctxt "@title:window"
-msgid "What's new in %1"
-msgstr "Zer berri %1(e)(a)n"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "(Show News)"
-msgstr "(Berriak erakutsi)"
-
-#: pimcommon/whatsnew/whatsnewmessagewidget.cpp:22
-#, kde-format
-msgid "What's new in %2. %1"
-msgstr "Zer berri %2(a)n. %1"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:44
-#, kde-format
-msgid "All Versions"
-msgstr "Bertsio guztiak"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:47
-#, kde-format
-msgid "Version %1"
-msgstr "%1 bertsioa"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:85
-#, kde-format
-msgid "Important changes since last version:"
-msgstr "Azken bertsiotik dauden aldaketa garrantzitsuak:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:90
-#, kde-format
-msgid "Some of the new features in this release include:"
-msgstr "Argitalpen berri honetako ezaugarri berrien artean daude:"
-
-#: pimcommon/whatsnew/whatsnewwidget.cpp:95
-#, kde-format
-msgid "Some bug fixing:"
-msgstr "Akatsak konponketa batzuk:"
 
 #: pimcommon/widgets/configureimmutablewidgetutils.cpp:31
 #, kde-format
@@ -1311,6 +1220,66 @@ msgstr "Baliabidearen ezarpena osatu da."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Baliabidearen instantzia sortzea huts egin du: %1"
+
+#~ msgctxt "@action"
+#~ msgid "Disable version check"
+#~ msgstr "Ezgaitu bertsio-egiaztapena"
+
+#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
+#~ msgstr ""
+#~ "Zure bertsioa 6 hilabete baino zaharragoa da, biziki gomendatzen dizugu "
+#~ "bertsio-berritzea."
+
+#~ msgid ""
+#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
+#~ msgstr ""
+#~ "Zure bertsioa urte 1 baino zaharragoa da, biziki gomendatzen dizugu "
+#~ "bertsio-berritzea."
+
+#~ msgctxt "@title:window"
+#~ msgid "Check New Version"
+#~ msgstr "Egiaztatu bertsio berririk dagoen"
+
+#~ msgid ""
+#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
+#~ msgstr ""
+#~ "Bertsio berri bat aurkitu da. Egin klik <a href=\"%1\">hemen</a> hura "
+#~ "zama-jaisteko."
+
+#~ msgid "No new version found."
+#~ msgstr "Ez da bertsio berririk aurkitu."
+
+#~ msgid "Check New Version"
+#~ msgstr "Egiaztatu bertsio berririk dagoen"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Version:"
+#~ msgstr "Bertsioa:"
+
+#~ msgctxt "@title:window"
+#~ msgid "What's new in %1"
+#~ msgstr "Zer berri %1(e)(a)n"
+
+#~ msgid "(Show News)"
+#~ msgstr "(Berriak erakutsi)"
+
+#~ msgid "What's new in %2. %1"
+#~ msgstr "Zer berri %2(a)n. %1"
+
+#~ msgid "All Versions"
+#~ msgstr "Bertsio guztiak"
+
+#~ msgid "Version %1"
+#~ msgstr "%1 bertsioa"
+
+#~ msgid "Important changes since last version:"
+#~ msgstr "Azken bertsiotik dauden aldaketa garrantzitsuak:"
+
+#~ msgid "Some of the new features in this release include:"
+#~ msgstr "Argitalpen berri honetako ezaugarri berrien artean daude:"
+
+#~ msgid "Some bug fixing:"
+#~ msgstr "Akatsak konponketa batzuk:"
 
 #~ msgid ""
 #~ "IMAP server not configured yet. Please configure the server in the IMAP "
