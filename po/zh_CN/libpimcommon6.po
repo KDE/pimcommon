@@ -1197,21 +1197,3 @@ msgstr "资源设置完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "创建资源实例失败：%1"
-
-#~ msgctxt "@action"
-#~ msgid "Disable version check"
-#~ msgstr "禁用版本检查"
-
-#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
-#~ msgstr "您的软件已经是 6 个月前的版本了，我们建议您升级为最新版本。"
-
-#~ msgid ""
-#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
-#~ msgstr "您的软件已经是 1 年前的版本了，我们强烈建议您升级为最新版本。"
-
-#~ msgctxt "@title:window"
-#~ msgid "Check New Version"
-#~ msgstr "检查新版本"
-
-#~ msgid "Check New Version"
-#~ msgstr "检查新版本"

@@ -1214,12 +1214,3 @@ msgstr "Ressursoppsett fullført."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Klarte ikke å opprette ressursinstans: %1"
-
-#, fuzzy
-#~ msgctxt "@label:textbox"
-#~ msgid "Version:"
-#~ msgstr "Rettigheter"
-
-#, fuzzy
-#~ msgid "All Versions"
-#~ msgstr "Rettigheter"
