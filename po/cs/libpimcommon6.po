@@ -1212,36 +1212,3 @@ msgstr "Nastavení zdroje bylo dokončeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Selhalo vytvoření instance zdroje: %1"
-
-#~ msgctxt "@action"
-#~ msgid "Disable version check"
-#~ msgstr "Vypnout kontrolu verze"
-
-#~ msgid "Check New Version"
-#~ msgstr "Zkontrolovat novou verzi"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Version:"
-#~ msgstr "Verze:"
-
-#~ msgctxt "@title:window"
-#~ msgid "What's new in %1"
-#~ msgstr "Co je nového v %1"
-
-#~ msgid "(Show News)"
-#~ msgstr "(Zobrazit novinky)"
-
-#~ msgid "What's new in %2. %1"
-#~ msgstr "Co je nového v %2. %1"
-
-#~ msgid "Version %1"
-#~ msgstr "Verze %1"
-
-#~ msgid "Important changes since last version:"
-#~ msgstr "Důležité změny od poslední verze:"
-
-#~ msgid "Some of the new features in this release include:"
-#~ msgstr "Některé nové vlastnosti tohoto vydání zahrnují:"
-
-#~ msgid "Some bug fixing:"
-#~ msgstr "Nějaké opravy chyb:"
