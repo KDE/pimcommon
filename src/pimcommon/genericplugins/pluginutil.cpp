@@ -5,75 +5,13 @@
 */
 
 #include "pluginutil.h"
-#include <KConfigGroup>
-#include <KSharedConfig>
 
-namespace
-{
-inline QString pluginConfigFile()
+QString PimCommon::PluginUtil::pluginConfigFile()
 {
     return QStringLiteral("pimpluginsrc");
 }
-}
 
-bool PimCommon::PluginUtil::isPluginActivated(const QStringList &enabledPluginsList,
-                                              const QStringList &disabledPluginsList,
-                                              bool isEnabledByDefault,
-                                              const QString &pluginId)
+TextAddonsWidgets::PluginUtil::PluginsStateList PimCommon::PluginUtil::loadPluginSetting(const QString &groupName, const QString &prefixSettingKey)
 {
-    if (pluginId.isEmpty()) {
-        return false;
-    }
-    const bool pluginEnabledByUser = enabledPluginsList.contains(pluginId);
-    const bool pluginDisabledByUser = disabledPluginsList.contains(pluginId);
-    if ((isEnabledByDefault && !pluginDisabledByUser) || (!isEnabledByDefault && pluginEnabledByUser)) {
-        return true;
-    }
-    return false;
-}
-
-PimCommon::PluginUtil::PluginsStateList PimCommon::PluginUtil::loadPluginSetting(const QString &groupName, const QString &prefixSettingKey)
-{
-    PluginUtil::PluginsStateList pair;
-    KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
-    QStringList enabledPlugins;
-    QStringList disabledPlugins;
-    if (config->hasGroup(groupName)) {
-        KConfigGroup grp = config->group(groupName);
-        enabledPlugins = grp.readEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), QStringList());
-        disabledPlugins = grp.readEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), QStringList());
-    }
-
-    pair.enabledPluginList = enabledPlugins;
-    pair.disabledPluginList = disabledPlugins;
-    return pair;
-}
-
-void PimCommon::PluginUtil::savePluginSettings(const QString &groupName,
-                                               const QString &prefixSettingKey,
-                                               const QStringList &enabledPluginsList,
-                                               const QStringList &disabledPluginsList)
-{
-    KSharedConfigPtr config = KSharedConfig::openConfig(pluginConfigFile());
-    KConfigGroup grp = config->group(groupName);
-    if (enabledPluginsList.isEmpty()) {
-        grp.deleteEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey));
-    } else {
-        grp.writeEntry(QStringLiteral("%1Enabled").arg(prefixSettingKey), enabledPluginsList);
-    }
-    if (disabledPluginsList.isEmpty()) {
-        grp.deleteEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey));
-    } else {
-        grp.writeEntry(QStringLiteral("%1Disabled").arg(prefixSettingKey), disabledPluginsList);
-    }
-}
-
-PimCommon::PluginUtilData PimCommon::PluginUtil::createPluginMetaData(const KPluginMetaData &metaData)
-{
-    PluginUtilData pluginData;
-    pluginData.mDescription = metaData.description();
-    pluginData.mName = metaData.name();
-    pluginData.mIdentifier = metaData.pluginId();
-    pluginData.mEnableByDefault = metaData.isEnabledByDefault();
-    return pluginData;
+    return TextAddonsWidgets::PluginUtil::loadPluginSetting(pluginConfigFile(), groupName, prefixSettingKey);
 }

@@ -7,42 +7,13 @@
 #pragma once
 
 #include "pimcommon_export.h"
-
-#include <KPluginMetaData>
 #include <QString>
-#include <QStringList>
-
+#include <TextAddonsWidgets/PluginUtil>
 namespace PimCommon
 {
-/**
- * @brief The PluginUtilData class
- * @author Laurent Montel <montel@kde.org>
- */
-class PIMCOMMON_EXPORT PluginUtilData
-{
-public:
-    PluginUtilData() = default;
-
-    QStringList mExtraInfo;
-    QString mDescription;
-    QString mIdentifier;
-    QString mName;
-    bool mEnableByDefault = false;
-    bool mHasConfigureDialog = false;
-};
-
 namespace PluginUtil
 {
-struct PIMCOMMON_EXPORT PluginsStateList {
-    QStringList enabledPluginList;
-    QStringList disabledPluginList;
-};
-
-[[nodiscard]] PIMCOMMON_EXPORT bool
-isPluginActivated(const QStringList &enabledPluginsList, const QStringList &disabledPluginsList, bool isEnabledByDefault, const QString &pluginId);
-[[nodiscard]] PIMCOMMON_EXPORT PluginsStateList loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
-PIMCOMMON_EXPORT void
-savePluginSettings(const QString &groupName, const QString &prefixSettingKey, const QStringList &enabledPluginsList, const QStringList &disabledPluginsList);
-[[nodiscard]] PIMCOMMON_EXPORT PimCommon::PluginUtilData createPluginMetaData(const KPluginMetaData &metaData);
+PIMCOMMON_EXPORT QString pluginConfigFile();
+PIMCOMMON_EXPORT TextAddonsWidgets::PluginUtil::PluginsStateList loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
 }
 }

@@ -24,7 +24,7 @@ ConfigurePluginsWidget::ConfigurePluginsWidget(QWidget *parent)
     initLayout();
 }
 
-ConfigurePluginsWidget::ConfigurePluginsWidget(ConfigurePluginsListWidget *configurePluginListWidget, QWidget *parent)
+ConfigurePluginsWidget::ConfigurePluginsWidget(TextAddonsWidgets::ConfigurePluginsWidget *configurePluginListWidget, QWidget *parent)
     : QWidget(parent)
 {
     initLayout(configurePluginListWidget);
@@ -32,34 +32,26 @@ ConfigurePluginsWidget::ConfigurePluginsWidget(ConfigurePluginsListWidget *confi
 
 ConfigurePluginsWidget::~ConfigurePluginsWidget() = default;
 
-void ConfigurePluginsWidget::initLayout(ConfigurePluginsListWidget *configurePluginListWidget)
+void ConfigurePluginsWidget::initLayout(TextAddonsWidgets::ConfigurePluginsWidget *configurePluginListWidget)
 {
     auto layout = new QVBoxLayout(this);
     layout->setContentsMargins({});
 
-    mMessageWidget = new KMessageWidget(i18n("Restart is necessary for applying the changes."), this);
-    mMessageWidget->setObjectName("mMessageWidget"_L1);
-    mMessageWidget->setCloseButtonVisible(false);
-    mMessageWidget->setVisible(false);
-    mMessageWidget->setPosition(KMessageWidget::Header);
-    layout->addWidget(mMessageWidget);
-
     if (!configurePluginListWidget) {
-        mConfigureListWidget = new ConfigurePluginsListWidget(this);
+        mConfigureListWidget = new TextAddonsWidgets::ConfigurePluginsWidget(this);
     } else {
         mConfigureListWidget = configurePluginListWidget;
     }
     mConfigureListWidget->setObjectName("configureListWidget"_L1);
     layout->addWidget(mConfigureListWidget);
 
-    connect(mConfigureListWidget, &ConfigurePluginsListWidget::changed, this, &ConfigurePluginsWidget::slotConfigChanged);
+    connect(mConfigureListWidget, &TextAddonsWidgets::ConfigurePluginsWidget::changed, this, &ConfigurePluginsWidget::slotConfigChanged);
 
     initialize();
 }
 
 void ConfigurePluginsWidget::slotConfigChanged()
 {
-    mMessageWidget->animatedShow();
     Q_EMIT wasChanged(true);
 }
 
@@ -77,7 +69,6 @@ void ConfigurePluginsWidget::defaults()
 void ConfigurePluginsWidget::doLoadFromGlobalSettings()
 {
     mConfigureListWidget->doLoadFromGlobalSettings();
-    mMessageWidget->animatedHide();
     Q_EMIT wasChanged(false);
 }
 

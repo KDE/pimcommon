@@ -22,7 +22,7 @@ public:
     KPluginMetaData data;
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
-    PimCommon::PluginUtilData pluginData;
+    TextAddonsWidgets::PluginUtilData pluginData;
     PimCommon::GenericPlugin *plugin = nullptr;
     bool isEnabled = true;
 };
@@ -50,13 +50,13 @@ public:
     QString pluginName;
     QList<GenericPluginInfo> mPluginList;
 
-    [[nodiscard]] QList<PluginUtilData> pluginsDataList() const;
+    [[nodiscard]] QList<TextAddonsWidgets::PluginUtilData> pluginsDataList() const;
     [[nodiscard]] QString configGroupName() const;
     [[nodiscard]] QString configPrefixSettingKey() const;
     GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:
-    QList<PluginUtilData> mPluginDataList;
+    QList<TextAddonsWidgets::PluginUtilData> mPluginDataList;
     GenericPluginManager *const q;
 };
 
@@ -81,7 +81,8 @@ bool GenericPluginManagerPrivate::initializePlugins()
     }
     const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(pluginDirectory);
 
-    const PimCommon::PluginUtil::PluginsStateList pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
+    const TextAddonsWidgets::PluginUtil::PluginsStateList pair =
+        TextAddonsWidgets::PluginUtil::loadPluginSetting(PimCommon::PluginUtil::pluginConfigFile(), configGroupName(), configPrefixSettingKey());
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
     while (i.hasPrevious()) {
@@ -89,12 +90,12 @@ bool GenericPluginManagerPrivate::initializePlugins()
         const KPluginMetaData data = i.previous();
 
         // 1) get plugin data => name/description etc.
-        info.pluginData = PimCommon::PluginUtil::createPluginMetaData(data);
+        info.pluginData = TextAddonsWidgets::PluginUtil::createPluginMetaData(data);
         // 2) look at if plugin is activated
-        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.enabledPluginList,
-                                                                                pair.disabledPluginList,
-                                                                                info.pluginData.mEnableByDefault,
-                                                                                info.pluginData.mIdentifier);
+        const bool isPluginActivated = TextAddonsWidgets::PluginUtil::isPluginActivated(pair.enabledPluginList,
+                                                                                        pair.disabledPluginList,
+                                                                                        info.pluginData.mEnableByDefault,
+                                                                                        info.pluginData.mIdentifier);
         info.isEnabled = isPluginActivated;
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
@@ -114,7 +115,7 @@ bool GenericPluginManagerPrivate::initializePlugins()
     return true;
 }
 
-QList<PluginUtilData> GenericPluginManagerPrivate::pluginsDataList() const
+QList<TextAddonsWidgets::PluginUtilData> GenericPluginManagerPrivate::pluginsDataList() const
 {
     return mPluginDataList;
 }
@@ -190,7 +191,7 @@ QList<GenericPlugin *> GenericPluginManager::pluginsList() const
     return d->pluginsList();
 }
 
-QList<PluginUtilData> GenericPluginManager::pluginsDataList() const
+QList<TextAddonsWidgets::PluginUtilData> GenericPluginManager::pluginsDataList() const
 {
     return d->pluginsDataList();
 }

@@ -7,6 +7,7 @@
 #include "pluginutiltest.h"
 #include <PimCommon/PluginUtil>
 #include <QTest>
+#include <TextAddonsWidgets/PluginUtil>
 
 PluginUtilTest::PluginUtilTest(QObject *parent)
     : QObject(parent)
@@ -49,7 +50,7 @@ void PluginUtilTest::shouldTestIsEnabled()
     QFETCH(QString, pluginId);
     QFETCH(bool, result);
 
-    QCOMPARE(PimCommon::PluginUtil::isPluginActivated(enabledPluginsList, disabledPluginsList, isEnabledByDefault, pluginId), result);
+    QCOMPARE(TextAddonsWidgets::PluginUtil::isPluginActivated(enabledPluginsList, disabledPluginsList, isEnabledByDefault, pluginId), result);
 }
 
 QTEST_MAIN(PluginUtilTest)

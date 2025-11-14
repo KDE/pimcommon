@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.6.40")
+set(PIM_VERSION "6.6.41")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -59,7 +59,7 @@ add_feature_info(
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "6.6.40")
-set(KTEXTADDONS_MIN_VERSION "1.8.44")
+set(KTEXTADDONS_MIN_VERSION "1.8.64")
 set(KIMAP_LIB_VERSION "6.6.40")
 set(KLDAP_LIB_VERSION "6.6.40")
 

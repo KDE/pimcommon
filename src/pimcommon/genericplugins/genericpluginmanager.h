@@ -10,6 +10,7 @@
 #include <PimCommon/PluginUtil>
 #include <QList>
 #include <QObject>
+#include <TextAddonsWidgets/PluginUtil>
 
 namespace PimCommon
 {
@@ -46,7 +47,7 @@ public:
     [[nodiscard]] QString pluginName() const;
 
     [[nodiscard]] QList<PimCommon::GenericPlugin *> pluginsList() const;
-    [[nodiscard]] QList<PimCommon::PluginUtilData> pluginsDataList() const;
+    [[nodiscard]] QList<TextAddonsWidgets::PluginUtilData> pluginsDataList() const;
 
     [[nodiscard]] QString configGroupName() const;
     [[nodiscard]] QString configPrefixSettingKey() const;

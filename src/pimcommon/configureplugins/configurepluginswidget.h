@@ -8,10 +8,10 @@
 
 #include "pimcommon_export.h"
 #include <QWidget>
+#include <TextAddonsWidgets/ConfigurePluginsWidget>
 class KMessageWidget;
 namespace PimCommon
 {
-class ConfigurePluginsListWidget;
 /**
  * @brief The ConfigurePluginsWidget class
  * @author Laurent Montel <montel@kde.org>
@@ -21,7 +21,7 @@ class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
     Q_OBJECT
 public:
     explicit ConfigurePluginsWidget(QWidget *parent = nullptr);
-    explicit ConfigurePluginsWidget(ConfigurePluginsListWidget *configurePluginListWidget, QWidget *parent = nullptr);
+    explicit ConfigurePluginsWidget(TextAddonsWidgets::ConfigurePluginsWidget *configurePluginListWidget, QWidget *parent = nullptr);
     ~ConfigurePluginsWidget() override;
 
     void save();
@@ -35,9 +35,8 @@ Q_SIGNALS:
 private:
     PIMCOMMON_NO_EXPORT void initialize();
     PIMCOMMON_NO_EXPORT void slotConfigChanged();
-    PIMCOMMON_NO_EXPORT void initLayout(ConfigurePluginsListWidget *configurePluginListWidget = nullptr);
+    PIMCOMMON_NO_EXPORT void initLayout(TextAddonsWidgets::ConfigurePluginsWidget *configurePluginListWidget = nullptr);
 
-    ConfigurePluginsListWidget *mConfigureListWidget = nullptr;
-    KMessageWidget *mMessageWidget = nullptr;
+    TextAddonsWidgets::ConfigurePluginsWidget *mConfigureListWidget = nullptr;
 };
 }

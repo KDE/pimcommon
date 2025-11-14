@@ -40,7 +40,6 @@ target_sources(
         genericplugins/genericplugin.cpp
         genericplugins/abstractgenericplugin.cpp
         genericplugins/abstractgenericplugininterface.cpp
-        configureplugins/configurepluginslistwidget.cpp
         configureplugins/configurepluginswidget.cpp
         configureplugins/configureplugindialog.cpp
         templatewidgets/templatelistwidget.cpp
@@ -68,9 +67,6 @@ target_sources(
         customtools/customtoolsviewinterface.h
         configureplugins/configureplugindialog.h
         configureplugins/configurepluginswidget.h
-        configureplugins/configurepluginslistwidget.h
-        configureplugins/configurepluginstreewidgetdelegate.h
-        configureplugins/configurepluginstreewidgetdelegate.cpp
         shareserviceurl/shareserviceurlmanager.h
         pimcommon_private_export.h
         network/networkmanager.h
@@ -124,6 +120,7 @@ target_link_libraries(
         KF6::KIOCore
         KF6::WidgetsAddons
         KF6::TextCustomEditor
+        KF6::TextAddonsWidgets
     PRIVATE
         Qt::Network
         KF6::I18n
@@ -255,10 +252,8 @@ ecm_generate_headers(PimCommon_Camelcasewidgets_HEADERS
 
 ecm_generate_headers(PimCommon_Camelcaseconfigureplugins_HEADERS
     HEADER_NAMES
-    ConfigurePluginsListWidget
     ConfigurePluginsWidget
     ConfigurePluginDialog
-    ConfigurePluginsTreeWidgetDelegate
     REQUIRED_HEADERS PimCommon_configureplugins_HEADERS
     PREFIX PimCommon
     RELATIVE configureplugins

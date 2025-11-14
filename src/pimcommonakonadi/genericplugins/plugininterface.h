@@ -10,6 +10,7 @@
 #include <PimCommon/PluginUtil>
 #include <PimCommonAkonadi/GenericPluginInterface>
 #include <QObject>
+#include <TextAddonsWidgets/PluginUtil>
 class KActionCollection;
 class QAction;
 class KXMLGUIClient;
@@ -42,7 +43,7 @@ public:
 
     void setActionCollection(KActionCollection *ac);
 
-    [[nodiscard]] QList<PimCommon::PluginUtilData> pluginsDataList() const;
+    [[nodiscard]] QList<TextAddonsWidgets::PluginUtilData> pluginsDataList() const;
     [[nodiscard]] QString configGroupName() const;
     [[nodiscard]] QString configPrefixSettingKey() const;
 

@@ -210,7 +210,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
     return listType;
 }
 
-QList<PimCommon::PluginUtilData> PluginInterface::pluginsDataList() const
+QList<TextAddonsWidgets::PluginUtilData> PluginInterface::pluginsDataList() const
 {
     return d->mGenericPluginManager->pluginsDataList();
 }
