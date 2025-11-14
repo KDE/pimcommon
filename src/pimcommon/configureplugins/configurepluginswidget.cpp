@@ -7,8 +7,6 @@
 #include "configurepluginswidget.h"
 using namespace Qt::Literals::StringLiterals;
 
-#include "configurepluginslistwidget.h"
-
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageWidget>
