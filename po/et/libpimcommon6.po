@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -31,23 +31,6 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Seadistused"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Muudatuste rakendamine nõuab taaskäivitust."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1273,6 +1256,18 @@ msgstr "Ressurss on seadistatud."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ressursiisendi loomine nurjus: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Seadistused"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Muudatuste rakendamine nõuab taaskäivitust."
 
 #, fuzzy
 #~| msgid "Persian"

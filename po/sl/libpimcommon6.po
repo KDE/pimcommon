@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-07-21 06:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -41,22 +41,6 @@ msgstr ""
 "Če ta račun omejite na dejavnost, bo prikazan v Ruqoli samo, ko ste v teh "
 "dejavnostih. Poleg tega, ko preklopite na dejavnost, ki naj ne bi smela biti "
 "na voljo, bo samodejno skrita."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Konfiguriraj"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Za uveljavitev sprememb je zahtevan ponovni zagon."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1230,6 +1214,16 @@ msgstr "Nastavitev vira je zaključena."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ustvaritev primerka vira ni uspela: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Konfiguriraj"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Za uveljavitev sprememb je zahtevan ponovni zagon."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

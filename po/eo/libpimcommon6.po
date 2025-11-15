@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-02-12 22:59+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -35,22 +35,6 @@ msgstr ""
 "Se vi limigas ĉi konton al aktiveco, ĝi montriĝos nur se vi enestas tiujn "
 "aktivecojn. Plue, se vi ŝanĝas al aktiveco kiu ne devus esti disponebla, la "
 "konto aŭtomate estos kaŝita."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Agordi"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Rekomenco estas necesa por apliki la ŝanĝojn."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1218,6 +1202,16 @@ msgstr "Rimeda agordo finiĝis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Malsukcesis krei rimedan ekzemplon: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Agordi"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Rekomenco estas necesa por apliki la ŝanĝojn."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

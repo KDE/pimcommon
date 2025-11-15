@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-08-14 18:24+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -36,22 +36,6 @@ msgstr ""
 "Jos rajaat tilin aktiviteettiin, se näkyy vain kyseisissä aktiviteeteissa. "
 "Lisäksi vaihtaessasi aktiviteettiin, jossa tilin ei tulisi olla "
 "käytettävissä, se automaattisesti piilotetaan."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "…"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Asetukset"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Muutosten käyttöönotto vaatii uudelleenkäynnistyksen."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1219,6 +1203,16 @@ msgstr "Resurssin asetus valmis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Asetukset"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Muutosten käyttöönotto vaatii uudelleenkäynnistyksen."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

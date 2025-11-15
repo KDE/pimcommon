@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2024-08-12 15:05+0300\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -39,22 +39,6 @@ msgstr ""
 "Jeigu apribosite šią paskyrą tam tikromis veiklomis, tuomet ji bus rodoma "
 "tik tose veiklose. Be to, kai perjungsite į veiklą, kurioje paskyra neturi "
 "būti prieinama, ji bus automatiškai paslėpta."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Konfigūruoti"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Pakeitimų pritaikymui reikia paleidimo iš naujo."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1228,6 +1212,16 @@ msgstr "Ištekliaus sąranka baigta."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Nepavyko sukurti ištekliaus egzemplioriaus : %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Konfigūruoti"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Pakeitimų pritaikymui reikia paleidimo iš naujo."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

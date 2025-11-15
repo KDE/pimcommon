@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -33,23 +33,6 @@ msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
-msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, fuzzy, kde-format
-#| msgid "Add..."
-msgid "..."
-msgstr "Dodaj..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Prevedi"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
 msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
@@ -1259,6 +1242,16 @@ msgstr "Postavljanje resursa završeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ne mogu da napravim primjerak resurs: %1"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgid "..."
+#~ msgstr "Dodaj..."
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Prevedi"
 
 #, fuzzy
 #~| msgid "Persian"

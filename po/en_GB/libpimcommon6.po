@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2024-11-16 12:57+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -34,22 +34,6 @@ msgstr ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Configure"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Restart is necessary for applying the changes."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1213,6 +1197,16 @@ msgstr "Resource setup completed."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Failed to create resource instance: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Configure"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Restart is necessary for applying the changes."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

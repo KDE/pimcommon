@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-08-08 01:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -35,22 +35,6 @@ msgid ""
 msgstr ""
 "若限制此帳號於特定活動，則僅當使用者處於該活動中時，帳號才會顯示。此外，當您"
 "切換到其他非指定活動時，帳號會自動隱藏。"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "設定"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "需要重新啟動變更才會生效。"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1202,6 +1186,16 @@ msgstr "資源設定完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "建立資源實體失敗：%1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "設定"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "需要重新啟動變更才會生效。"
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

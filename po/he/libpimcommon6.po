@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-07-24 09:39+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -34,22 +34,6 @@ msgid ""
 msgstr ""
 "הגבלת החשבון הזה לפעילות, תגרום לכך שהוא יופיע רק בפעילויות האלה. יתרה מכך, "
 "במעבר לפעילות שבה הכספת לא אמורה להיות זמינה, היא תוסתר אוטומטית."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "…"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "הגדרה"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "יש להפעיל מחדש כדי להחיל את השינויים."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1214,6 +1198,16 @@ msgstr "הקמת המשאב הושלמה."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "יצירת מופע משאב נכשלה: %1"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "הגדרה"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "יש להפעיל מחדש כדי להחיל את השינויים."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

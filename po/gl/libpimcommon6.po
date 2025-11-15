@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-01-17 07:27+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -37,22 +37,6 @@ msgstr ""
 "Se limita a conta á actividade, amosarase só cando estea nesas actividades. "
 "Ademais, cando cambie a unha actividade na que non debería estar dispoñíbel, "
 "agocharase automaticamente."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "…"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Configurar."
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Necesítase reiniciar para aplicar os cambios."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1222,6 +1206,16 @@ msgstr "Completouse a preparación do recurso."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Non foi posíbel crear a instancia do recurso: %1"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Configurar."
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Necesítase reiniciar para aplicar os cambios."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

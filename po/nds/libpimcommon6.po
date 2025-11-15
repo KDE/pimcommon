@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2014-04-03 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -30,24 +30,6 @@ msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
-msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, fuzzy, kde-format
-#| msgid "Add..."
-msgid "..."
-msgstr "Tofögen..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Instellen"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
 msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
@@ -1276,6 +1258,17 @@ msgstr "Ressourceinstellen afslaten"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ressource-Utgaav lett sik nich opstellen: %1"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgid "..."
+#~ msgstr "Tofögen..."
+
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Instellen"
 
 #, fuzzy
 #~| msgid "Persian"

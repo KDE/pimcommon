@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-07-21 08:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -38,22 +38,6 @@ msgstr ""
 "його буде показано лише тоді, коли ви користуєтеся цими просторами дій. Крім "
 "того, якщо ви перемкнетеся на простір дій, з якого обліковий запис є "
 "недоступним, його автоматично буде приховано."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "…"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Налаштувати"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Для застосування змін слід перезапустити програму."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1227,6 +1211,16 @@ msgstr "Налаштовування ресурсу завершено."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не вдалося створити екземпляр ресурсу: %1"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Налаштувати"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Для застосування змін слід перезапустити програму."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

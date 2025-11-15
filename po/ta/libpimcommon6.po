@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-08-03 21:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -33,22 +33,6 @@ msgid ""
 msgstr ""
 "இந்த கணக்கை குறிப்பிட்ட செயல்பாட்டுடன் இணைத்தால், நீங்கள் அச்செயல்பாட்டிலுள்ளபோது மட்டும் "
 "காட்டப்படும். மேலும், வேறு செயல்பாட்டிற்கு தாவும்போது, இக்கணக்கு தானாக மறைக்கப்படும்."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "அமை"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "மாற்றங்களை சேயல்படுத்த மீள்துவக்க வேண்டும்."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1195,6 +1179,16 @@ msgstr ""
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr ""
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "அமை"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "மாற்றங்களை சேயல்படுத்த மீள்துவக்க வேண்டும்."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

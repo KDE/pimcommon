@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-03-12 11:50+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -30,23 +30,6 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Nastaviť"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Na použitie zmien je potrebný reštart."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1275,6 +1258,18 @@ msgstr "Nastavenie zdroja dokončené."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Zlyhalo vytvorenie inštancie zdroja: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Nastaviť"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Na použitie zmien je potrebný reštart."
 
 #, fuzzy
 #~| msgid "No Gravatar found."

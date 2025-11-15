@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-07-28 18:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -34,22 +34,6 @@ msgstr ""
 "Om du begränsar kontot till aktiviteter, visas det bara när du är i de "
 "aktiviteterna. Dessutom, när du byter till en aktivitet som det inte ska "
 "vara tillgänglig i, döljs det automatiskt."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Anpassa"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Omstart krävs för att ändringarna ska verkställas."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1214,6 +1198,16 @@ msgstr "Resursinställning klar."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Misslyckades skapa resursinstans: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Anpassa"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Omstart krävs för att ändringarna ska verkställas."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

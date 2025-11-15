@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -30,24 +30,6 @@ msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
-msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, fuzzy, kde-format
-#| msgid "Add..."
-msgid "..."
-msgstr "قوش…"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-#| msgid "Translate"
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "تەرجىمە"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
 msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
@@ -1238,6 +1220,17 @@ msgstr "مەنبە تەڭشەش تاماملاندى."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "مەنبە ئۈلگىسىنى قۇرۇش مەغلۇپ بولدى: %1"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgid "..."
+#~ msgstr "قوش…"
+
+#, fuzzy
+#~| msgid "Translate"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "تەرجىمە"
 
 #, fuzzy
 #~| msgid "Persian"

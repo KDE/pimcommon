@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-01-17 12:22+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -34,22 +34,6 @@ msgstr ""
 "Si tu limita iste conto a activitate, ilessera monstrate solmente quando tu "
 "es in ille activitates.In ultra, quando tu passa a un activitate il deberea "
 "non esser disponibile, il essera celate automaticamente."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Configura"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Reinitiar si necessari per applicar le modificationes."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1219,6 +1203,16 @@ msgstr "Configuration de ressource completate."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Il falleva a crear un instantia de ressource: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Configura"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Reinitiar si necessari per applicar le modificationes."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

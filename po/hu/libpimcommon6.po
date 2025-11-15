@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2025-11-07 21:27+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -36,22 +36,6 @@ msgstr ""
 "Ha bizonyos aktivitásokra korlátozza ezt a fiókot, az csak akkor jelenik "
 "meg, ha azt az aktivitást használja. Továbbá ha olyan aktivitásra vált, ahol "
 "az nem szabad, hogy elérhető legyen, a fiók automatikusan rejtésre kerül."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "…"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Beállítás"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "A változtatások alkalmazáshoz újraindítás szükséges."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1217,6 +1201,16 @@ msgstr "Az erőforrás beállítás befejeződött."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Az erőforráspéldány létrehozása nem sikerült: %1"
+
+#~ msgid "..."
+#~ msgstr "…"
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Beállítás"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "A változtatások alkalmazáshoz újraindítás szükséges."
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

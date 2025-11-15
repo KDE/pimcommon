@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2022-05-29 19:41+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -33,22 +33,6 @@ msgid ""
 "If you limit this account to activity, it will be shown only when you are in "
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
-msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Sett opp"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
 msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
@@ -1214,3 +1198,8 @@ msgstr "Ressursoppsett fullført."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Klarte ikke å opprette ressursinstans: %1"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Sett opp"

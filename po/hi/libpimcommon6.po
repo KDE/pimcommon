@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -34,22 +34,6 @@ msgstr ""
 "अगर आप इस अकाउंट को सिर्फ़ गतिविधि तक सीमित रखते हैं, तो यह सिर्फ़ तभी दिखाई देगा जब "
 "आप उन गतिविधियों में शामिल होंगे। इसके अलावा, जब आप किसी ऐसी गतिविधि पर स्विच करेंगे "
 "जिसमें यह उपलब्ध नहीं होना चाहिए, तो यह अपने आप छिप जाएगा।"
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, kde-format
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "कॉन्फ़िगर"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "परिवर्तन लागू करने के लिए पुनः आरंभ करना आवश्यक है।"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1211,6 +1195,16 @@ msgstr "संसाधन सेटअप पूर्ण हुआ."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "संसाधन इंस्टैंस बनाने में विफल: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "कॉन्फ़िगर"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "परिवर्तन लागू करने के लिए पुनः आरंभ करना आवश्यक है।"
 
 #~ msgctxt "@action"
 #~ msgid "Disable version check"

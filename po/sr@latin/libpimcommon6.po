@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -32,24 +32,6 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-# >> @title:window
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Podešavanje"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "Neophodno je ponovno pokretanje da bi izmene stupile u dejstvo."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1301,6 +1283,19 @@ msgstr "Postavljanje resursa završeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ne mogu da napravim primerak resursa: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+# >> @title:window
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Podešavanje"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "Neophodno je ponovno pokretanje da bi izmene stupile u dejstvo."
 
 #, fuzzy
 #~| msgid "Persian"

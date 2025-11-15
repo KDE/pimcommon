@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-09 00:43+0000\n"
+"POT-Creation-Date: 2025-11-15 00:42+0000\n"
 "PO-Revision-Date: 2023-03-27 23:29+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -51,23 +51,6 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:145
-#, kde-format
-msgid "..."
-msgstr "..."
-
-#: pimcommon/configureplugins/configurepluginslistwidget.cpp:147
-#, fuzzy, kde-format
-#| msgid "Configure"
-msgctxt "@info:tooltip"
-msgid "Configure"
-msgstr "Configurar"
-
-#: pimcommon/configureplugins/configurepluginswidget.cpp:40
-#, kde-format
-msgid "Restart is necessary for applying the changes."
-msgstr "É necessário reiniciar para aplicar as alterações."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -1285,6 +1268,18 @@ msgstr "A configuração do recurso terminou."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Não foi possível criar a instância do recurso: %1"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#, fuzzy
+#~| msgid "Configure"
+#~ msgctxt "@info:tooltip"
+#~ msgid "Configure"
+#~ msgstr "Configurar"
+
+#~ msgid "Restart is necessary for applying the changes."
+#~ msgstr "É necessário reiniciar para aplicar as alterações."
 
 #, fuzzy
 #~| msgid "No email found."
