@@ -1198,8 +1198,3 @@ msgstr "Ressursoppsett fullført."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Klarte ikke å opprette ressursinstans: %1"
-
-#, fuzzy
-#~ msgctxt "@info:tooltip"
-#~ msgid "Configure"
-#~ msgstr "Sett opp"

@@ -1181,13 +1181,3 @@ msgstr "资源设置完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "创建资源实例失败：%1"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Configure"
-#~ msgstr "配置"
-
-#~ msgid "Restart is necessary for applying the changes."
-#~ msgstr "要应用更改必须重启启动。"
