@@ -12,6 +12,13 @@ set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
+# setup use of ECMAddTest copy with newer features
+if(ECM_VERSION VERSION_LESS 7.21) # change to 6.21 once ECM MR is merged
+    list(PREPEND CMAKE_MODULE_PATH "${pimcommon_SOURCE_DIR}/cmake/ecmcopy")
+elseif(NOT KF_MIN_VERSION VERSION_LESS 6.21)
+    message(WARNING "Remove copy of ECMAddTest, min. required ECM now provides it.")
+endif()
+
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
@@ -163,6 +170,7 @@ set(DISABLE_AKONADI_SEARCH ${FORCE_DISABLE_AKONADI_SEARCH})
 configure_file(config-akonadi-search.h.in ${CMAKE_CURRENT_BINARY_DIR}/src/config-akonadi-search.h)
 
 if(BUILD_TESTING)
+    set(ECM_TEST_NAME_PREFIX_STRATEGY "PATH")
     add_definitions(-DBUILD_TESTING)
     find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Test)
 endif()
