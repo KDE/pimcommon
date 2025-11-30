@@ -154,7 +154,7 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAPCore::Ld
 
     // name
     if (!attrs.value(QStringLiteral("cn")).isEmpty()) {
-        addr.setNameFromString(asUtf8(attrs[QStringLiteral("cn")].first()));
+        addr.setNameFromString(asUtf8(attrs[QStringLiteral("cn")].constFirst()));
     }
 
     // email
@@ -170,17 +170,17 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAPCore::Ld
     }
 
     if (!attrs.value(QStringLiteral("o")).isEmpty()) {
-        addr.setOrganization(asUtf8(attrs[QStringLiteral("o")].first()));
+        addr.setOrganization(asUtf8(attrs[QStringLiteral("o")].constFirst()));
     }
     if (addr.organization().isEmpty() && !attrs.value(QStringLiteral("Company")).isEmpty()) {
-        addr.setOrganization(asUtf8(attrs[QStringLiteral("Company")].first()));
+        addr.setOrganization(asUtf8(attrs[QStringLiteral("Company")].constFirst()));
     }
 
     // Address
     KContacts::Address workAddr(KContacts::Address::Work);
 
     if (!attrs.value(QStringLiteral("department")).isEmpty()) {
-        addr.setDepartment(asUtf8(attrs[QStringLiteral("department")].first()));
+        addr.setDepartment(asUtf8(attrs[QStringLiteral("department")].constFirst()));
     }
 
     if (!workAddr.isEmpty()) {
@@ -189,31 +189,31 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAPCore::Ld
 
     // phone
     if (!attrs.value(QStringLiteral("homePhone")).isEmpty()) {
-        KContacts::PhoneNumber homeNr = asUtf8(attrs[QStringLiteral("homePhone")].first());
+        KContacts::PhoneNumber homeNr = asUtf8(attrs[QStringLiteral("homePhone")].constFirst());
         homeNr.setType(KContacts::PhoneNumber::Home);
         addr.insertPhoneNumber(homeNr);
     }
 
     if (!attrs.value(QStringLiteral("telephoneNumber")).isEmpty()) {
-        KContacts::PhoneNumber workNr = asUtf8(attrs[QStringLiteral("telephoneNumber")].first());
+        KContacts::PhoneNumber workNr = asUtf8(attrs[QStringLiteral("telephoneNumber")].constFirst());
         workNr.setType(KContacts::PhoneNumber::Work);
         addr.insertPhoneNumber(workNr);
     }
 
     if (!attrs.value(QStringLiteral("facsimileTelephoneNumber")).isEmpty()) {
-        KContacts::PhoneNumber faxNr = asUtf8(attrs[QStringLiteral("facsimileTelephoneNumber")].first());
+        KContacts::PhoneNumber faxNr = asUtf8(attrs[QStringLiteral("facsimileTelephoneNumber")].constFirst());
         faxNr.setType(KContacts::PhoneNumber::Fax);
         addr.insertPhoneNumber(faxNr);
     }
 
     if (!attrs.value(QStringLiteral("mobile")).isEmpty()) {
-        KContacts::PhoneNumber cellNr = asUtf8(attrs[QStringLiteral("mobile")].first());
+        KContacts::PhoneNumber cellNr = asUtf8(attrs[QStringLiteral("mobile")].constFirst());
         cellNr.setType(KContacts::PhoneNumber::Cell);
         addr.insertPhoneNumber(cellNr);
     }
 
     if (!attrs.value(QStringLiteral("pager")).isEmpty()) {
-        KContacts::PhoneNumber pagerNr = asUtf8(attrs[QStringLiteral("pager")].first());
+        KContacts::PhoneNumber pagerNr = asUtf8(attrs[QStringLiteral("pager")].constFirst());
         pagerNr.setType(KContacts::PhoneNumber::Pager);
         addr.insertPhoneNumber(pagerNr);
     }
