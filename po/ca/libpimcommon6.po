@@ -1311,18 +1311,3 @@ msgstr "S'ha completat l'arranjament del recurs."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallat en crear la instància del recurs: %1"
-
-#~ msgid ""
-#~ "IMAP server not configured yet. Please configure the server in the IMAP "
-#~ "account before setting up server-side subscription."
-#~ msgstr ""
-#~ "El servidor IMAP encara no està configurat. Si us plau, configureu el "
-#~ "servidor en el compte IMAP abans de definir la subscripció de la banda "
-#~ "del servidor."
-
-#~ msgid ""
-#~ "Log in failed, please configure the IMAP account before setting up server-"
-#~ "side subscription."
-#~ msgstr ""
-#~ "L'inici de sessió ha fallat. Si us plau, configureu el servidor en el "
-#~ "compte IMAP abans de definir la subscripció de la banda del servidor."
