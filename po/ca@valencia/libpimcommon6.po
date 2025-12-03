@@ -228,7 +228,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
-msgstr "S'ha produït un error en guardar el fitxer"
+msgstr "S'ha produït un error mentre es guardava el fitxer"
 
 #: pimcommon/util/pimutil.cpp:86
 #, kde-format
@@ -243,7 +243,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
-msgstr "S'ha produït un error en carregar el fitxer"
+msgstr "S'ha produït un error mentre es carregava el fitxer"
 
 #: pimcommon/verifynewversion/checknewversiondialog.cpp:17
 #, kde-format
@@ -360,7 +360,7 @@ msgstr "Neteja l'historial"
 #: pimcommon/widgets/purposemenuwidget.cpp:58
 #, kde-format
 msgid "There was a problem sharing the document: %1"
-msgstr "S'ha produït un problema en compartir el document: %1"
+msgstr "S'ha produït un problema mentre es compartia el document: %1"
 
 #: pimcommon/widgets/purposemenuwidget.cpp:62
 #, kde-format
@@ -1309,4 +1309,4 @@ msgstr "S'ha completat la configuració del recurs."
 #: pimcommonakonadi/util/createresource.cpp:130
 #, kde-format
 msgid "Failed to create resource instance: %1"
-msgstr "No s'ha pogut crear la instància del recurs: %1"
+msgstr "Ha fallat mentre es creava la instància del recurs: %1"
