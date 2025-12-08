@@ -14,6 +14,17 @@ ecm_qt_declare_logging_category(KPim6PimCommonAkonadi HEADER pimcommonakonadi_de
         EXPORT PIMCOMMON
 )
 
+# precompiled headers support
+if(ENABLE_PCH)
+    target_precompile_headers(
+        KPim6PimCommonAkonadi
+        PRIVATE
+            <QObject>
+            <QString>
+            <QStringList>
+    )
+endif()
+
 target_sources(
     KPim6PimCommonAkonadi
     PRIVATE

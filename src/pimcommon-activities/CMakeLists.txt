@@ -11,6 +11,17 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMONACTIVITIES
 add_library(KPim6PimCommonActivities)
 add_library(KPim6::PimCommonActivities ALIAS KPim6PimCommonActivities)
 
+# precompiled headers support
+if(ENABLE_PCH)
+    target_precompile_headers(
+        KPim6PimCommonActivities
+        PRIVATE
+            <QObject>
+            <QString>
+            <QStringList>
+    )
+endif()
+
 ecm_qt_declare_logging_category(KPim6PimCommonActivities HEADER pimcommonactivities_debug.h IDENTIFIER PIMCOMMONACTIVITIES_LOG
     CATEGORY_NAME org.kde.pim.pimcommonactivities
     DESCRIPTION "kdepim (pimcommonactivities)"

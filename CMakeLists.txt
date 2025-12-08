@@ -56,6 +56,8 @@ add_feature_info(
     "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
 )
 
+option(ENABLE_PCH "Enable Precompiled Headers support" ON)
+
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "6.6.40")
 set(KTEXTADDONS_MIN_VERSION "1.8.82")

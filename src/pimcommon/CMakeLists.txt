@@ -31,6 +31,20 @@ ecm_qt_declare_logging_category(KPim6PimCommon HEADER pimcommon_debug.h IDENTIFI
         EXPORT PIMCOMMON
 )
 
+# precompiled headers support
+if(ENABLE_PCH)
+    target_precompile_headers(
+        KPim6PimCommon
+        PRIVATE
+            <QObject>
+            <QDebug>
+            <QString>
+            <QStringList>
+            <QJsonObject>
+            <QByteArray>
+    )
+endif()
+
 target_sources(
     KPim6PimCommon
     PRIVATE
