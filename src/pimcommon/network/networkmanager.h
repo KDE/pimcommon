@@ -28,7 +28,7 @@ Q_SIGNALS:
     void networkStatusChanged(bool isOnline);
 
 private:
-    void refreshStatus();
+    PIMCOMMON_NO_EXPORT void refreshStatus();
 
     bool m_isOnline = false;
 };
