@@ -1196,13 +1196,3 @@ msgstr "Nastavení zdroje bylo dokončeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Selhalo vytvoření instance zdroje: %1"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Configure"
-#~ msgstr "Nastavit"
-
-#~ msgid "Restart is necessary for applying the changes."
-#~ msgstr "Pro provedení změn je potřeba restartovat."
