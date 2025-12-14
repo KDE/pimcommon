@@ -15,8 +15,10 @@
 #include <KContacts/ContactGroup>
 
 class KConfig;
+class QMenu;
 class QToolButton;
 class QTimer;
+
 namespace Akonadi
 {
 class ContactGroupSearchJob;
@@ -110,6 +112,10 @@ public:
 
     void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
     [[nodiscard]] KLDAPCore::LdapActivitiesAbstract *ldapActivitiesAbstract() const;
+
+    static const QString s_completionItemIndentString;
+
+    QMenu *mCompletionBoxContextMenu = nullptr;
 
 public Q_SLOTS:
     void slotToggleExpandGroups(bool);

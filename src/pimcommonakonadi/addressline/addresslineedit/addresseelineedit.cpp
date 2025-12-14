@@ -56,6 +56,8 @@
 #include <QMouseEvent>
 #include <QObject>
 
+#include <config-akonadi-search.h>
+
 using namespace PimCommon;
 using namespace Qt::Literals::StringLiterals;
 
@@ -666,6 +668,11 @@ int AddresseeLineEdit::addCompletionSource(const QString &source, int weight)
 
 bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
 {
+    if (object == d->mCompletionBoxContextMenu && event->type() == QEvent::MouseButtonPress) {
+        // We need this filtering otherwise the KCompletionBox::eventFilter will eat the click as "closing the popup because you clicked outside of it"
+        return static_cast<QObject *>(d->mCompletionBoxContextMenu)->event(event);
+    }
+
     if (d->completionInitialized() && (object == completionBox() || completionBox()->findChild<QWidget *>(object->objectName()) == object)) {
         if (event->type() == QEvent::MouseButtonPress || event->type() == QEvent::MouseMove || event->type() == QEvent::MouseButtonRelease
             || event->type() == QEvent::MouseButtonDblClick) {
@@ -694,6 +701,30 @@ bool AddresseeLineEdit::eventFilter(QObject *object, QEvent *event)
                     if (event->type() == QEvent::MouseMove) {
                         return true; // avoid fuzzy selection behavior
                     }
+#if !DISABLE_AKONADI_SEARCH
+                    if (buttons == Qt::RightButton) {
+                        d->mCompletionBoxContextMenu = new QMenu();
+                        QAction *addToBlacklistAction = d->mCompletionBoxContextMenu->addAction(i18n("Add to Blacklist"));
+                        QAction *selectedAction = d->mCompletionBoxContextMenu->exec(QCursor::pos());
+                        if (selectedAction == addToBlacklistAction) {
+                            Q_ASSERT(item->text().startsWith(AddresseeLineEditPrivate::s_completionItemIndentString));
+                            const QString newEmailToBlacklist = item->text().mid(AddresseeLineEditPrivate::s_completionItemIndentString.length());
+                            KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
+                            KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
+                            QStringList blackList = group.readEntry("BalooBackList", QStringList());
+                            blackList << newEmailToBlacklist;
+                            group.writeEntry("BalooBackList", blackList);
+                            group.sync();
+
+                            // reload the blacklist
+                            updateBalooBlackList();
+
+                            completionBox()->hide();
+                        }
+                        delete d->mCompletionBoxContextMenu;
+                        d->mCompletionBoxContextMenu = nullptr;
+                    }
+#endif
                 }
             }
         }

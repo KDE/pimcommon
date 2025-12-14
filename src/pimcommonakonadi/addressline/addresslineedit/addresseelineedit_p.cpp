@@ -58,7 +58,7 @@ void AddresseeLineEditPrivate::restartTime(const QString &searchString)
     }
 }
 
-static const QString s_completionItemIndentString = QStringLiteral("     ");
+const QString AddresseeLineEditPrivate::s_completionItemIndentString = QStringLiteral("     ");
 
 class SourceWithWeight
 {
