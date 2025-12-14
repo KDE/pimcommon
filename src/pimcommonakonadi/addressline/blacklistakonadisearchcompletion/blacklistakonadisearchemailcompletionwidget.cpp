@@ -203,6 +203,7 @@ void BlackListAkonadiSearchEmailCompletionWidget::save()
         util.setNewBlackList(result);
         blackList = util.createNewBlackList();
         group.writeEntry("BalooBackList", blackList);
+        mEmailList->setEmailBlackList(blackList);
     }
     if (needToSave) {
         group.writeEntry("ExcludeEmailsRegexp", newExcludeEmailsRegExp);
