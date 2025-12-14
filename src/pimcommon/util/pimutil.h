@@ -34,7 +34,5 @@ PIMCOMMON_EXPORT void invokeHelp(const QString &docfile, const QString &anchor =
 [[nodiscard]] PIMCOMMON_EXPORT QStringList generateEmailList(const QStringList &list);
 // Only for testing
 [[nodiscard]] PIMCOMMON_EXPORT QUrl generateHelpUrl(const QString &docfile, const QString &anchor = QString());
-
-[[nodiscard]] PIMCOMMON_EXPORT QString findExecutable(const QString &exec);
 }
 }
