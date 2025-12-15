@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-12-15 02:30+0000\n"
 "PO-Revision-Date: 2025-07-21 06:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -748,12 +748,12 @@ msgstr "Izberi"
 msgid "Unselect"
 msgstr "Prekliči izbor"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:286
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
 #, kde-format
 msgid "No email found."
 msgstr "Ni najdenih e-pošt."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:288
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"

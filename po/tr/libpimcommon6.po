@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-12-15 02:30+0000\n"
 "PO-Revision-Date: 2025-10-11 21:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -748,12 +748,12 @@ msgstr "Seç"
 msgid "Unselect"
 msgstr "Seçimi Kaldır"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:286
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
 #, kde-format
 msgid "No email found."
 msgstr "E-posta bulunamadı."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:288
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"

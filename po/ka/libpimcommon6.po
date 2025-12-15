@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:41+0000\n"
+"POT-Creation-Date: 2025-12-15 02:30+0000\n"
 "PO-Revision-Date: 2025-07-21 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -743,12 +743,12 @@ msgstr "აირჩიეთ"
 msgid "Unselect"
 msgstr "მონიშვნის მოხსნა"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:286
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
 #, kde-format
 msgid "No email found."
 msgstr "ელფოსტა ვერ მოიძებნა."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:288
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
