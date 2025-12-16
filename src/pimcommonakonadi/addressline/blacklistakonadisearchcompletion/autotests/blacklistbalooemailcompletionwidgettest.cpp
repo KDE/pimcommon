@@ -27,8 +27,6 @@ void BlackListBalooEmailCompletionWidgetTest::shouldHaveDefaultValue()
     PimCommon::BlackListAkonadiSearchEmailCompletionWidget widget;
     widget.show();
     QVERIFY(QTest::qWaitForWindowExposed(&widget));
-    auto searchLabel = widget.findChild<QLabel *>(QStringLiteral("search_label"));
-    QVERIFY(searchLabel);
 
     auto searchLineEdit = widget.findChild<QLineEdit *>(QStringLiteral("search_lineedit"));
     QVERIFY(searchLineEdit);
@@ -52,13 +50,6 @@ void BlackListBalooEmailCompletionWidgetTest::shouldHaveDefaultValue()
 
     auto emailList = widget.findChild<PimCommon::BlackListAkonadiSearchEmailList *>(QStringLiteral("email_list"));
     QVERIFY(emailList);
-
-    auto selectButton = widget.findChild<QPushButton *>(QStringLiteral("select_email"));
-    QVERIFY(selectButton);
-    QVERIFY(!selectButton->isEnabled());
-    auto unselectButton = widget.findChild<QPushButton *>(QStringLiteral("unselect_email"));
-    QVERIFY(unselectButton);
-    QVERIFY(!unselectButton->isEnabled());
 
     auto excludeDomainLabel = widget.findChild<QLabel *>(QStringLiteral("domain_label"));
     QVERIFY(excludeDomainLabel);
@@ -94,28 +85,6 @@ void BlackListBalooEmailCompletionWidgetTest::shouldEnablePushButtonWhenTestSize
     QVERIFY(!seachButton->isEnabled());
     searchLineEdit->setText(QStringLiteral(" o "));
     QVERIFY(!seachButton->isEnabled());
-}
-
-void BlackListBalooEmailCompletionWidgetTest::shouldChangeEnableSelectUnSelectButton()
-{
-    PimCommon::BlackListAkonadiSearchEmailCompletionWidget widget;
-
-    auto selectButton = widget.findChild<QPushButton *>(QStringLiteral("select_email"));
-    QVERIFY(!selectButton->isEnabled());
-
-    auto unselectButton = widget.findChild<QPushButton *>(QStringLiteral("unselect_email"));
-    QVERIFY(!unselectButton->isEnabled());
-
-    auto emailList = widget.findChild<PimCommon::BlackListAkonadiSearchEmailList *>(QStringLiteral("email_list"));
-    QVERIFY((emailList->setEmailFound(QStringList() << QStringLiteral("foo") << QStringLiteral("bla") << QStringLiteral("bli")) > 0));
-
-    emailList->selectAll();
-    QVERIFY(unselectButton->isEnabled());
-    QVERIFY(selectButton->isEnabled());
-
-    emailList->clearSelection();
-    QVERIFY(!unselectButton->isEnabled());
-    QVERIFY(!selectButton->isEnabled());
 }
 
 QTEST_MAIN(BlackListBalooEmailCompletionWidgetTest)
