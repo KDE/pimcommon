@@ -27,7 +27,6 @@
 #include <KConfigGroup>
 #include <QUrl>
 
-#include <Akonadi/ContactGroupExpandJob>
 #include <Akonadi/ContactGroupSearchJob>
 #include <KColorScheme>
 #include <KContacts/ContactGroupTool>

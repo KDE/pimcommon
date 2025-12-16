@@ -12,7 +12,6 @@
 
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/ContactGroupSearchJob>
-#include <Akonadi/ContactSearchJob>
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Job>
 #include <Akonadi/Session>

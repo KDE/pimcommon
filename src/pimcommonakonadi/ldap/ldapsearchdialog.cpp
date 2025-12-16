@@ -35,11 +35,9 @@
 
 #include <KCMultiDialog>
 #include <KConfig>
-#include <KConfigGroup>
 #include <KMessageBox>
 #include <KPluginMetaData>
 #include <QComboBox>
-#include <QDialogButtonBox>
 #include <QLineEdit>
 #include <kldapcore/ldapobject.h>
 #include <kldapcore/ldapserver.h>
