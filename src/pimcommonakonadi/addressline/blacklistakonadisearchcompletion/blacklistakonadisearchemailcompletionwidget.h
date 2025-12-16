@@ -29,7 +29,6 @@ public:
     void setEmailBlackList(const QStringList &list);
 
 private:
-    PIMCOMMONAKONADI_NO_EXPORT void slotSelectionChanged();
     PIMCOMMONAKONADI_NO_EXPORT void slotUnselectEmails();
     PIMCOMMONAKONADI_NO_EXPORT void slotSelectEmails();
     PIMCOMMONAKONADI_NO_EXPORT void slotSearchLineEditChanged(const QString &text);
@@ -48,8 +47,6 @@ private:
     QLineEdit *const mExcludeDomainLineEdit;
     BlackListAkonadiSearchEmailList *const mEmailList;
     QPushButton *const mSearchButton;
-    QPushButton *const mSelectButton;
-    QPushButton *const mUnselectButton;
     QPushButton *const mShowAllBlackListedEmails;
     QLabel *const mMoreResult;
     KListWidgetSearchLine *mSearchInResultLineEdit = nullptr;

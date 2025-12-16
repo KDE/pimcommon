@@ -34,8 +34,6 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
     , mExcludeDomainLineEdit(new QLineEdit(this))
     , mEmailList(new BlackListAkonadiSearchEmailList(this))
     , mSearchButton(new QPushButton(QIcon::fromTheme(QStringLiteral("edit-find")), i18n("Search"), this))
-    , mSelectButton(new QPushButton(i18nc("@action:button", "&Select"), this))
-    , mUnselectButton(new QPushButton(i18nc("@action:button", "&Unselect"), this))
     , mShowAllBlackListedEmails(new QPushButton(i18nc("@action:button", "Show Blacklisted Emails"), this))
     , mMoreResult(new QLabel(i18nc("@label:textbox", "<qt><a href=\"more_result\">More result...</a></qt>"), this))
     , mBlackListWarning(new BlackListAkonadiSearchEmailWarning(this))
@@ -46,14 +44,11 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
     auto searchLayout = new QHBoxLayout;
     mainLayout->addLayout(searchLayout);
 
-    auto lab = new QLabel(i18nc("@label:textbox", "Search email:"), this);
-    lab->setObjectName("search_label"_L1);
-    searchLayout->addWidget(lab);
-
     mSearchLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Research is done from 3 characters"));
     mSearchLineEdit->setFocus();
     mSearchLineEdit->setClearButtonEnabled(true);
     KLineEditEventHandler::catchReturnKey(mSearchLineEdit);
+    mSearchLineEdit->addAction(QIcon::fromTheme(u"edit-find"_s), QLineEdit::LeadingPosition);
     mSearchLineEdit->setObjectName("search_lineedit"_L1);
     connect(mSearchLineEdit, &QLineEdit::returnPressed, this, &BlackListAkonadiSearchEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded);
     searchLayout->addWidget(mSearchLineEdit);
@@ -80,14 +75,6 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
 
     auto selectElementLayout = new QHBoxLayout;
     searchLineLayout->addLayout(selectElementLayout);
-
-    mSelectButton->setObjectName("select_email"_L1);
-    connect(mSelectButton, &QAbstractButton::clicked, this, &BlackListAkonadiSearchEmailCompletionWidget::slotSelectEmails);
-    selectElementLayout->addWidget(mSelectButton);
-
-    mUnselectButton->setObjectName("unselect_email"_L1);
-    connect(mUnselectButton, &QAbstractButton::clicked, this, &BlackListAkonadiSearchEmailCompletionWidget::slotUnselectEmails);
-    selectElementLayout->addWidget(mUnselectButton);
 
     mMoreResult->setObjectName("moreresultlabel"_L1);
     selectElementLayout->addWidget(mMoreResult);
@@ -139,19 +126,10 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
     KLineEditEventHandler::catchReturnKey(mExcludeEmailFromRegularExpressionLineEdit);
     mExcludeEmailFromRegularExpressionLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Separate regular expression with \'%1\'", QLatin1Char(',')));
 
-    connect(mEmailList, &QListWidget::itemSelectionChanged, this, &BlackListAkonadiSearchEmailCompletionWidget::slotSelectionChanged);
-    slotSelectionChanged();
     connect(mEmailList, &QListWidget::customContextMenuRequested, this, &BlackListAkonadiSearchEmailCompletionWidget::slotCustomContextMenuRequested);
 }
 
 BlackListAkonadiSearchEmailCompletionWidget::~BlackListAkonadiSearchEmailCompletionWidget() = default;
-
-void BlackListAkonadiSearchEmailCompletionWidget::slotSelectionChanged()
-{
-    const bool selectionIsNotEmpty = !mEmailList->selectedItems().isEmpty();
-    mSelectButton->setEnabled(selectionIsNotEmpty);
-    mUnselectButton->setEnabled(selectionIsNotEmpty);
-}
 
 void BlackListAkonadiSearchEmailCompletionWidget::slotCustomContextMenuRequested(const QPoint &pos)
 {
@@ -179,7 +157,6 @@ void BlackListAkonadiSearchEmailCompletionWidget::load()
     mEmailList->setExcludeDomains(lstExcludeDomains);
     mExcludeDomainLineEdit->setText(lstExcludeDomains.join(QLatin1Char(',')));
     mOriginalExcludeDomain = lstExcludeDomains;
-    slotSelectionChanged();
 }
 
 void BlackListAkonadiSearchEmailCompletionWidget::save()
