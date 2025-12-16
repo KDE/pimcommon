@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-15 00:43+0000\n"
+"POT-Creation-Date: 2025-12-16 13:26+0000\n"
 "PO-Revision-Date: 2025-11-07 21:27+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -503,51 +503,51 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Jogosultságok alkalmazása az összes alma&ppára."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "A vCard importálása meghiúsult"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Nem lehet hozzáférni ehhez: <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:451
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:450
 #, kde-format
 msgid "Select email from contact"
 msgstr "E-mail kiválasztása a névjegyekből"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:571
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Szervezeti egység megjelenítése az LDAP találatokhoz"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:579
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Kiegészítés beállítása…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:583
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Csoportok automatikus kibontása"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:589
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Csoportok kibontása…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:623
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Legutóbbi címek"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:117
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:750
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -897,256 +897,256 @@ msgctxt "@title:window"
 msgid "Select Multiple Folders"
 msgstr "Több mappa kijelölése"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:90
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Title"
 msgstr "Cím"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:91
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
 #, kde-format
 msgid "Full Name"
 msgstr "Teljes név"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:92
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "Email"
 msgstr "E-mail"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
 #, kde-format
 msgid "Home Number"
 msgstr "Otthoni szám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
 #, kde-format
 msgid "Work Number"
 msgstr "Munkahelyi szám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
 #, kde-format
 msgid "Mobile Number"
 msgstr "Mobiltelefon-szám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
 #, kde-format
 msgid "Fax Number"
 msgstr "Faxszám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:97
 #, kde-format
 msgid "Pager"
 msgstr "Személyhívó"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
 #, kde-format
 msgid "Street"
 msgstr "Utca"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:99
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
 msgstr "Állam"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
 #, kde-format
 msgid "Country"
 msgstr "Ország"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
 #, kde-format
 msgid "City"
 msgstr "Város"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
 #, kde-format
 msgid "Organization"
 msgstr "Szervezet"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
 #, kde-format
 msgid "Company"
 msgstr "Munkahely"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
 #, kde-format
 msgid "Department"
 msgstr "Osztály"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
 msgstr "Irányítószám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
 #, kde-format
 msgid "Postal Address"
 msgstr "Postai cím"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:109
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
 #, kde-format
 msgid "Description"
 msgstr "Leírás"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:110
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
 #, kde-format
 msgid "User ID"
 msgstr "Felhasználóazonosító"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
 msgstr "E-mail"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
 msgstr "Állam"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:339
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
 msgstr "Cím"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:474
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
 msgstr "Névjegyek importálása LDAP-ból"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:497
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
 #, kde-format
 msgid "Search for Addresses in Directory"
 msgstr "Címek keresése a mappában"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:502
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Keresendő:"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:510
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
 msgstr "itt:"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
 #, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
 msgstr "Név"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
 msgstr "E-mail"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:516
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
 msgstr "Otthoni szám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
 msgstr "Munkahelyi szám"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:519
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
 #, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
 msgstr "&Keresés…"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "Rekurzív keresés"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:540
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
 #, kde-format
 msgid "Contains"
 msgstr "Tartalmazza"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:541
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
 #, kde-format
 msgid "Starts With"
 msgstr "Ezzel kezdődik:"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Keresés a találatok közt"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:582
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, kde-format
 msgid "Searching..."
 msgstr "Keresés…"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:586
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Összes kijelölése"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:590
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Kijelölés megszüntetése"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:597
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
 #, kde-format
 msgid "Add Selected"
 msgstr "Kijelölt hozzáadása"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:598
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
 msgstr "LDAP-kiszolgálók beállítása…"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:633
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
 msgid "Copy"
 msgstr "Másolás"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:757
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr "Válasszon ki egy LDAP kiszolgálót a keresés előtt."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:845
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "Importálva a(z) %1 LDAP mappából ekkor: %2"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:864
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
