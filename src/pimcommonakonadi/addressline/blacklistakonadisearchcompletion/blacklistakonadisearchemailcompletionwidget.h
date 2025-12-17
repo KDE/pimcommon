@@ -12,7 +12,6 @@
 class QPushButton;
 class QLineEdit;
 class QLabel;
-class KListWidgetSearchLine;
 class QTimer;
 namespace PimCommon
 {
@@ -50,7 +49,6 @@ private:
     BlackListAkonadiSearchEmailList *const mEmailList;
     QPushButton *const mShowAllBlackListedEmails;
     QLabel *const mMoreResult;
-    KListWidgetSearchLine *mSearchInResultLineEdit = nullptr;
     BlackListAkonadiSearchEmailWarning *const mBlackListWarning;
     QLineEdit *const mExcludeEmailFromRegularExpressionLineEdit;
     QTimer *mSearchTimer = nullptr;

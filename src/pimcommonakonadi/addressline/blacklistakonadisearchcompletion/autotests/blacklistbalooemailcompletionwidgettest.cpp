@@ -9,7 +9,6 @@
 #include "../blacklistakonadisearchemailcompletionwidget.h"
 #include "../blacklistakonadisearchemaillist.h"
 #include "addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.h"
-#include <KListWidgetSearchLine>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
@@ -55,12 +54,6 @@ void BlackListBalooEmailCompletionWidgetTest::shouldHaveDefaultValue()
     QVERIFY(excludeDomainLineEdit->text().isEmpty());
     QVERIFY(excludeDomainLineEdit->isClearButtonEnabled());
     QVERIFY(!excludeDomainLineEdit->placeholderText().isEmpty());
-
-    auto searchInResult = widget.findChild<KListWidgetSearchLine *>(QStringLiteral("searchinresultlineedit"));
-    QVERIFY(searchInResult);
-    QVERIFY(!searchInResult->placeholderText().isEmpty());
-    QVERIFY(searchInResult->text().isEmpty());
-    QVERIFY(searchInResult->isClearButtonEnabled());
 
     auto blackListWarning = widget.findChild<PimCommon::BlackListAkonadiSearchEmailWarning *>(QStringLiteral("backlistwarning"));
     QVERIFY(blackListWarning);

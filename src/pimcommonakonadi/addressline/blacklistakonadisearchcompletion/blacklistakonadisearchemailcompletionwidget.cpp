@@ -82,18 +82,10 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
     selectElementLayout->addStretch(1);
 
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &BlackListAkonadiSearchEmailCompletionWidget::slotSearchLineEditChanged);
-
-    mSearchInResultLineEdit = new KListWidgetSearchLine(this, mEmailList);
-    mSearchInResultLineEdit->setObjectName("searchinresultlineedit"_L1);
-    mSearchInResultLineEdit->setClearButtonEnabled(true);
-    mSearchInResultLineEdit->setPlaceholderText(i18nc("@info:placeholder", "Search in result..."));
-    KLineEditEventHandler::catchReturnKey(mSearchInResultLineEdit);
-
     searchLineLayout->addStretch(0);
     mNumberOfEmailsFound->setObjectName("numberofemailsfound"_L1);
 
     searchLineLayout->addWidget(mNumberOfEmailsFound, 1);
-    searchLineLayout->addWidget(mSearchInResultLineEdit);
 
     auto excludeDomainLayout = new QHBoxLayout;
     excludeDomainLayout->setContentsMargins({});
@@ -261,7 +253,6 @@ void BlackListAkonadiSearchEmailCompletionWidget::slotSearch()
 {
     const QString searchEmail = mSearchLineEdit->text().trimmed();
     if (searchEmail.length() > 2) {
-        mSearchInResultLineEdit->clear();
         auto job = new PimCommon::BlackListAkonadiSearchEmailSearchJob(this);
         job->setSearchEmail(searchEmail);
         job->setLimit(mLimit);
