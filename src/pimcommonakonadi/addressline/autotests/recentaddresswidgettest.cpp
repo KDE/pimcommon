@@ -30,6 +30,7 @@ void RecentAddressWidgetTest::shouldHaveDefaultValue()
 
     auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
     QVERIFY(newButton);
+    QVERIFY(!newButton->isEnabled());
 
     auto removeButton = w.findChild<QToolButton *>(QStringLiteral("remove_button"));
     QVERIFY(removeButton);
@@ -62,14 +63,18 @@ void RecentAddressWidgetTest::shouldInformThatItWasChanged()
     PimCommon::RecentAddressWidget w;
     QVERIFY(!w.wasChanged());
     auto lineedit = w.findChild<QLineEdit *>(QStringLiteral("line_edit"));
-    lineedit->setText(QStringLiteral("foo"));
     auto newButton = w.findChild<QToolButton *>(QStringLiteral("new_button"));
     QVERIFY(newButton);
+    QVERIFY(!newButton->isEnabled());
+    lineedit->setText(QStringLiteral("foo"));
     QVERIFY(newButton->isEnabled());
     QTest::mouseClick(newButton, Qt::LeftButton);
     QVERIFY(w.wasChanged());
     auto listview = w.findChild<QListWidget *>(QStringLiteral("list_view"));
     QCOMPARE(listview->count(), 1);
+    QVERIFY(!newButton->isEnabled());
+    // Verify that lineedit is cleared
+    QVERIFY(lineedit->text().isEmpty());
 }
 
 void RecentAddressWidgetTest::shouldNotAddMultiSameLine()
