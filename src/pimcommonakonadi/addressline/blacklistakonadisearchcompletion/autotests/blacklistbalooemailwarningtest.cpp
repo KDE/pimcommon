@@ -20,7 +20,7 @@ BlackListBalooEmailWarningTest::~BlackListBalooEmailWarningTest() = default;
 
 void BlackListBalooEmailWarningTest::shouldHaveDefaultValue()
 {
-    PimCommon::BlackListAkonadiSearchEmailWarning warning;
+    const PimCommon::BlackListAkonadiSearchEmailWarning warning;
     QVERIFY(!warning.isVisible());
     QVERIFY(!warning.isCloseButtonVisible());
     QVERIFY(warning.wordWrap());

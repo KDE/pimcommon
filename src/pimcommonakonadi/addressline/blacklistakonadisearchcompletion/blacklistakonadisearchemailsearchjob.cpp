@@ -25,7 +25,7 @@ bool BlackListAkonadiSearchEmailSearchJob::start()
         return false;
     }
 
-    Akonadi::Search::PIM::ContactCompleter com(trimmedString, mLimit);
+    const Akonadi::Search::PIM::ContactCompleter com(trimmedString, mLimit);
     Q_EMIT emailsFound(com.complete());
     deleteLater();
     return true;
