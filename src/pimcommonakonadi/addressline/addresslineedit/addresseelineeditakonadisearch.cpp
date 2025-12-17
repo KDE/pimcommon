@@ -9,6 +9,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+using namespace Qt::Literals;
 using namespace PimCommon;
 
 AddresseeLineEditAkonadiSearch::AddresseeLineEditAkonadiSearch()
@@ -50,7 +51,7 @@ void AddresseeLineEditAkonadiSearch::loadAkonadiSearchBlackList()
     PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info;
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     const QStringList domainExcludeList = group.readEntry("ExcludeDomain", QStringList());
-    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
+    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList({u"no.?reply.*@"_s, u"@noreply"_s}));
 
     info.mExcludeEmailsRegularExpressions = lstExcludeEmailsRegularExpressions;
     info.mBlackList = balooBlackList;

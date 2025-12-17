@@ -137,7 +137,7 @@ void BlackListAkonadiSearchEmailCompletionWidget::load()
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
 
-    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList());
+    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList({u"no.?reply.*@"_s, u"@noreply"_s}));
     mEmailList->setExcludeEmailsRegularExpressions(lstExcludeEmailsRegularExpressions);
     mExcludeEmailFromRegularExpressionLineEdit->setText(lstExcludeEmailsRegularExpressions.join(QLatin1Char(',')));
     mOriginalExcludeEmailRegexp = lstExcludeEmailsRegularExpressions;
