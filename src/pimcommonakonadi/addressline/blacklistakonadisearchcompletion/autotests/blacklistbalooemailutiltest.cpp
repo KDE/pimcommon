@@ -8,6 +8,7 @@
 #include "blacklistbalooemailutiltest.h"
 #include "../blacklistakonadisearchemailutil.h"
 #include <QTest>
+QTEST_GUILESS_MAIN(BlackListBalooEmailUtilTest)
 BlackListBalooEmailUtilTest::BlackListBalooEmailUtilTest(QObject *parent)
     : QObject(parent)
 {
@@ -57,7 +58,5 @@ void BlackListBalooEmailUtilTest::shouldAddNewElements()
     util.setNewBlackList(newList);
     QCOMPARE(util.createNewBlackList().count(), 3);
 }
-
-QTEST_MAIN(BlackListBalooEmailUtilTest)
 
 #include "moc_blacklistbalooemailutiltest.cpp"

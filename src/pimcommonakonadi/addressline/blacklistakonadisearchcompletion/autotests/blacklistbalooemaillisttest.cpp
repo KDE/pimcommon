@@ -9,6 +9,8 @@
 #include "../blacklistakonadisearchemaillist.h"
 #include <QTest>
 
+QTEST_MAIN(BlackListBalooEmailListTest)
+
 BlackListBalooEmailListTest::BlackListBalooEmailListTest(QObject *parent)
     : QObject(parent)
 {
@@ -114,7 +116,5 @@ void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDisplayNameOrNot()
 
     QCOMPARE(blackList.count(), 1);
 }
-
-QTEST_MAIN(BlackListBalooEmailListTest)
 
 #include "moc_blacklistbalooemaillisttest.cpp"

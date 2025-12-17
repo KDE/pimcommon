@@ -11,6 +11,8 @@
 #include <QSignalSpy>
 #include <QTest>
 
+QTEST_MAIN(BlackListBalooEmailWarningTest)
+
 BlackListBalooEmailWarningTest::BlackListBalooEmailWarningTest(QObject *parent)
     : QObject(parent)
 {
@@ -54,7 +56,5 @@ void BlackListBalooEmailWarningTest::shouldEmitNewSearch()
     search->trigger();
     QCOMPARE(spy1.count(), 1);
 }
-
-QTEST_MAIN(BlackListBalooEmailWarningTest)
 
 #include "moc_blacklistbalooemailwarningtest.cpp"
