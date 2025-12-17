@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:26+0000\n"
+"POT-Creation-Date: 2025-12-17 00:44+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -588,93 +588,72 @@ msgid "Search"
 msgstr "Otsing..."
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
-#, fuzzy, kde-format
-#| msgid "Replace All"
-msgctxt "@action:button"
-msgid "&Select"
-msgstr "Asenda kõik"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
-#, fuzzy, kde-format
-#| msgid "Replace All"
-msgctxt "@action:button"
-msgid "&Unselect"
-msgstr "Asenda kõik"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
-#, fuzzy, kde-format
-#| msgid "Search..."
-msgctxt "@label:textbox"
-msgid "Search email:"
-msgstr "Otsing..."
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
 #, fuzzy, kde-format
 #| msgid "Search..."
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "Otsing..."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "Select"
 msgstr "Asenda kõik"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgid "Unselect"
 msgstr "Asenda kõik"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
 #, kde-format
 msgid "No email found."
 msgstr ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1256,6 +1235,24 @@ msgstr "Ressurss on seadistatud."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ressursiisendi loomine nurjus: %1"
+
+#, fuzzy
+#~| msgid "Replace All"
+#~ msgctxt "@action:button"
+#~ msgid "&Select"
+#~ msgstr "Asenda kõik"
+
+#, fuzzy
+#~| msgid "Replace All"
+#~ msgctxt "@action:button"
+#~ msgid "&Unselect"
+#~ msgstr "Asenda kõik"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgctxt "@label:textbox"
+#~ msgid "Search email:"
+#~ msgstr "Otsing..."
 
 #~ msgid "..."
 #~ msgstr "..."

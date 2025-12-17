@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:26+0000\n"
+"POT-Creation-Date: 2025-12-17 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 21:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -559,85 +559,67 @@ msgstr "தேடு"
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
 #, kde-format
 msgctxt "@action:button"
-msgid "&Select"
-msgstr "&தேர்ந்தெடு"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
-#, kde-format
-msgctxt "@action:button"
-msgid "&Unselect"
-msgstr "தேர்வுகளை &நிராகரி"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
-#, kde-format
-msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "தடுத்த மின்னஞ்சல்களை காட்டு"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">கூடுதல் முடிவுகள்...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Search email:"
-msgstr "மின்னஞ்சலைத் தேடு:"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "தேடுவதற்கு மூன்று எழுத்துகளாவது இருக்க வேண்டும்"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "முடிவுகளில் தேடு..."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "இந்த ஆள்களங்களைத் தவிர்:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "'%1'-ஆல் அள்களங்களைப் பிரிக்கவும்"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "இச்சுருங்குறித் தொடருடன் பொருந்தும் மின்னஞ்சலை உட்படுத்தாதே:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "'%1' தனைக் கொண்டு சுருங்குறித் தொடர்களைப் பிரிக்குவும்"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
 #, kde-format
 msgid "Select"
 msgstr "தேர்ந்தெடு"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
 #, kde-format
 msgid "Unselect"
 msgstr "தேர்வுகளை நிராகரி"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
 #, kde-format
 msgid "No email found."
 msgstr "எந்த மின்னஞ்சலும் கண்டுபிடிக்கப்படவில்லை."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1179,6 +1161,18 @@ msgstr ""
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr ""
+
+#~ msgctxt "@action:button"
+#~ msgid "&Select"
+#~ msgstr "&தேர்ந்தெடு"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Unselect"
+#~ msgstr "தேர்வுகளை &நிராகரி"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Search email:"
+#~ msgstr "மின்னஞ்சலைத் தேடு:"
 
 #~ msgid "..."
 #~ msgstr "..."

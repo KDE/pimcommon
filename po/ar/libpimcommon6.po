@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:26+0000\n"
+"POT-Creation-Date: 2025-12-17 00:44+0000\n"
 "PO-Revision-Date: 2025-08-05 11:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -561,85 +561,67 @@ msgstr "ابحث"
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
 #, kde-format
 msgctxt "@action:button"
-msgid "&Select"
-msgstr "&حدد"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
-#, kde-format
-msgctxt "@action:button"
-msgid "&Unselect"
-msgstr "أزِل تحديد ال&كلّ"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
-#, kde-format
-msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "أظهر عناوين البريد الإلكتروني المحظورة"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">المزيد...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Search email:"
-msgstr "ابحث البريد الإلكتروني:"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "يبدأ البحث من 3 أحرف"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "ابحث في النتيجة..."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "استثنِ أسماء النطاقات:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "افصل النطاق بـ '%1'"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "استثني البريد الإلكترونيّ بالتعبير النمطي:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "افصل التعبيرات النمطية بـ '%1'"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
 #, kde-format
 msgid "Select"
 msgstr "حدد"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
 #, kde-format
 msgid "Unselect"
 msgstr "أزِل تحديد"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
 #, kde-format
 msgid "No email found."
 msgstr "لم يُعثر على بريد إلكترونيّ."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1205,6 +1187,18 @@ msgstr "اكتمل ضبط المورد."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "فشل إنشاء نسخة الموارد: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Select"
+#~ msgstr "&حدد"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Unselect"
+#~ msgstr "أزِل تحديد ال&كلّ"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Search email:"
+#~ msgstr "ابحث البريد الإلكتروني:"
 
 #~ msgid "..."
 #~ msgstr "..."

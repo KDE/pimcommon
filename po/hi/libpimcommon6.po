@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-16 13:26+0000\n"
+"POT-Creation-Date: 2025-12-17 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -563,85 +563,67 @@ msgstr "खोज"
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
 #, kde-format
 msgctxt "@action:button"
-msgid "&Select"
-msgstr "&चुनना"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
-#, kde-format
-msgctxt "@action:button"
-msgid "&Unselect"
-msgstr "&अचयनित करें"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
-#, kde-format
-msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "ब्लैकलिस्टेड ईमेल दिखाएं"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">अधिक परिणाम...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
-#, kde-format
-msgctxt "@label:textbox"
-msgid "Search email:"
-msgstr "ईमेल खोजें:"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:53
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "शोध 3 वर्णों से किया गया है"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result..."
 msgstr "परिणाम में खोजें..."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:118
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "डोमेन नाम छोड़ें:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:126
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "'%1' से डोमेन अलग करें"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:132
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "रेगुलर एक्सप्रेशन वाले ईमेल को बाहर रखें:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:140
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "नियमित अभिव्यक्ति को '%1' से अलग करें"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:161
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
 #, kde-format
 msgid "Select"
 msgstr "चुनना"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:163
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
 #, kde-format
 msgid "Unselect"
 msgstr "सभी का चयन रद्द"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:287
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
 #, kde-format
 msgid "No email found."
 msgstr "कोई ईमेल नहीं मिला."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:289
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1195,6 +1177,18 @@ msgstr "संसाधन सेटअप पूर्ण हुआ."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "संसाधन इंस्टैंस बनाने में विफल: %1"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Select"
+#~ msgstr "&चुनना"
+
+#~ msgctxt "@action:button"
+#~ msgid "&Unselect"
+#~ msgstr "&अचयनित करें"
+
+#~ msgctxt "@label:textbox"
+#~ msgid "Search email:"
+#~ msgstr "ईमेल खोजें:"
 
 #~ msgid "..."
 #~ msgstr "..."
