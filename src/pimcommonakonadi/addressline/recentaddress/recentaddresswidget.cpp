@@ -146,11 +146,11 @@ void RecentAddressWidget::slotRemoveItem()
 
 void RecentAddressWidget::updateButtonState()
 {
-    QList<QListWidgetItem *> selectedItems = mListView->selectedItems();
+    const QList<QListWidgetItem *> selectedItems = mListView->selectedItems();
     const int numberOfElementSelected(selectedItems.count());
     mRemoveButton->setEnabled(numberOfElementSelected);
-    bool enableElement = (numberOfElementSelected <= 1);
-    mNewButton->setEnabled(enableElement);
+    const bool enableElement = (numberOfElementSelected <= 1);
+    mNewButton->setEnabled(enableElement && !mLineEdit->text().trimmed().isEmpty());
     mLineEdit->setEnabled(enableElement);
 }
 
