@@ -23,7 +23,10 @@
 #include <QLineEdit>
 #include <QMenu>
 #include <QPushButton>
+#include <QTimer>
 #include <QVBoxLayout>
+#include <chrono>
+using namespace std::chrono_literals;
 
 using namespace PimCommon;
 using namespace Qt::Literals::StringLiterals;
@@ -33,7 +36,6 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
     , mSearchLineEdit(new QLineEdit(this))
     , mExcludeDomainLineEdit(new QLineEdit(this))
     , mEmailList(new BlackListAkonadiSearchEmailList(this))
-    , mSearchButton(new QPushButton(QIcon::fromTheme(QStringLiteral("edit-find")), i18n("Search"), this))
     , mShowAllBlackListedEmails(new QPushButton(i18nc("@action:button", "Show Blacklisted Emails"), this))
     , mMoreResult(new QLabel(i18nc("@label:textbox", "<qt><a href=\"more_result\">More result...</a></qt>"), this))
     , mBlackListWarning(new BlackListAkonadiSearchEmailWarning(this))
@@ -52,11 +54,6 @@ BlackListAkonadiSearchEmailCompletionWidget::BlackListAkonadiSearchEmailCompleti
     mSearchLineEdit->setObjectName("search_lineedit"_L1);
     connect(mSearchLineEdit, &QLineEdit::returnPressed, this, &BlackListAkonadiSearchEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded);
     searchLayout->addWidget(mSearchLineEdit);
-
-    mSearchButton->setObjectName("search_button"_L1);
-    connect(mSearchButton, &QAbstractButton::clicked, this, &BlackListAkonadiSearchEmailCompletionWidget::slotCheckIfUpdateBlackListIsNeeded);
-    mSearchButton->setEnabled(false);
-    searchLayout->addWidget(mSearchButton);
 
     mShowAllBlackListedEmails->setObjectName("show_blacklisted_email_button"_L1);
     connect(mShowAllBlackListedEmails, &QAbstractButton::clicked, this, &BlackListAkonadiSearchEmailCompletionWidget::slotShowAllBlacklistedEmail);
@@ -230,8 +227,28 @@ void BlackListAkonadiSearchEmailCompletionWidget::slotSelectEmails()
 
 void BlackListAkonadiSearchEmailCompletionWidget::slotSearchLineEditChanged(const QString &text)
 {
-    mSearchButton->setEnabled(text.trimmed().length() > 2);
+    const bool enabled = text.trimmed().length() > 2;
     hideMoreResultAndChangeLimit();
+    if (enabled) {
+        if (!mSearchTimer) {
+            mSearchTimer = new QTimer(this);
+            connect(mSearchTimer, &QTimer::timeout, this, &BlackListAkonadiSearchEmailCompletionWidget::slotSearchTimerFired);
+        } else {
+            mSearchTimer->stop(); // eventually
+        }
+
+        mSearchTimer->setSingleShot(true);
+        mSearchTimer->start(1s);
+    }
+}
+
+void BlackListAkonadiSearchEmailCompletionWidget::slotSearchTimerFired()
+{
+    // A search is pending.
+    if (mSearchTimer) {
+        mSearchTimer->stop();
+    }
+    slotCheckIfUpdateBlackListIsNeeded();
 }
 
 void BlackListAkonadiSearchEmailCompletionWidget::hideMoreResultAndChangeLimit()

@@ -13,6 +13,7 @@ class QPushButton;
 class QLineEdit;
 class QLabel;
 class KListWidgetSearchLine;
+class QTimer;
 namespace PimCommon
 {
 class BlackListAkonadiSearchEmailList;
@@ -40,18 +41,19 @@ private:
     PIMCOMMONAKONADI_NO_EXPORT void slotShowAllBlacklistedEmail();
     PIMCOMMONAKONADI_NO_EXPORT void hideMoreResultAndChangeLimit();
     PIMCOMMONAKONADI_NO_EXPORT void slotCustomContextMenuRequested(const QPoint &pos);
+    PIMCOMMONAKONADI_NO_EXPORT void slotSearchTimerFired();
     QStringList mOriginalExcludeDomain;
     QStringList mOriginalExcludeEmailRegexp;
     QLabel *const mNumberOfEmailsFound;
     QLineEdit *const mSearchLineEdit;
     QLineEdit *const mExcludeDomainLineEdit;
     BlackListAkonadiSearchEmailList *const mEmailList;
-    QPushButton *const mSearchButton;
     QPushButton *const mShowAllBlackListedEmails;
     QLabel *const mMoreResult;
     KListWidgetSearchLine *mSearchInResultLineEdit = nullptr;
     BlackListAkonadiSearchEmailWarning *const mBlackListWarning;
     QLineEdit *const mExcludeEmailFromRegularExpressionLineEdit;
+    QTimer *mSearchTimer = nullptr;
     int mLimit = 500;
 };
 }

@@ -14,7 +14,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QTest>
-
+QTEST_MAIN(BlackListBalooEmailCompletionWidgetTest)
 BlackListBalooEmailCompletionWidgetTest::BlackListBalooEmailCompletionWidgetTest(QObject *parent)
     : QObject(parent)
 {
@@ -32,10 +32,6 @@ void BlackListBalooEmailCompletionWidgetTest::shouldHaveDefaultValue()
     QVERIFY(searchLineEdit);
     QVERIFY(searchLineEdit->isClearButtonEnabled());
     QVERIFY(searchLineEdit->text().isEmpty());
-
-    auto seachButton = widget.findChild<QPushButton *>(QStringLiteral("search_button"));
-    QVERIFY(seachButton);
-    QVERIFY(!seachButton->isEnabled());
 
     auto moreResult = widget.findChild<QLabel *>(QStringLiteral("moreresultlabel"));
     QVERIFY(moreResult);
@@ -69,24 +65,5 @@ void BlackListBalooEmailCompletionWidgetTest::shouldHaveDefaultValue()
     auto blackListWarning = widget.findChild<PimCommon::BlackListAkonadiSearchEmailWarning *>(QStringLiteral("backlistwarning"));
     QVERIFY(blackListWarning);
 }
-
-void BlackListBalooEmailCompletionWidgetTest::shouldEnablePushButtonWhenTestSizeSupperiorToTwo()
-{
-    PimCommon::BlackListAkonadiSearchEmailCompletionWidget widget;
-    auto searchLineEdit = widget.findChild<QLineEdit *>(QStringLiteral("search_lineedit"));
-    auto seachButton = widget.findChild<QPushButton *>(QStringLiteral("search_button"));
-    QVERIFY(!seachButton->isEnabled());
-    searchLineEdit->setText(QStringLiteral("fo"));
-    QVERIFY(!seachButton->isEnabled());
-    searchLineEdit->setText(QStringLiteral("foo"));
-    QVERIFY(seachButton->isEnabled());
-
-    searchLineEdit->setText(QStringLiteral("o  "));
-    QVERIFY(!seachButton->isEnabled());
-    searchLineEdit->setText(QStringLiteral(" o "));
-    QVERIFY(!seachButton->isEnabled());
-}
-
-QTEST_MAIN(BlackListBalooEmailCompletionWidgetTest)
 
 #include "moc_blacklistbalooemailcompletionwidgettest.cpp"
