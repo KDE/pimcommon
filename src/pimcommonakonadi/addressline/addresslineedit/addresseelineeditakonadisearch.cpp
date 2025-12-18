@@ -5,6 +5,7 @@
 */
 
 #include "addresseelineeditakonadisearch.h"
+#include "../addresseelineutil.h"
 #include "akonadisearchcompletionemail.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -51,7 +52,8 @@ void AddresseeLineEditAkonadiSearch::loadAkonadiSearchBlackList()
     PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info;
     const QStringList balooBlackList = group.readEntry("BalooBackList", QStringList());
     const QStringList domainExcludeList = group.readEntry("ExcludeDomain", QStringList());
-    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList({u"no.?reply.*@"_s, u"@noreply"_s}));
+    const QStringList lstExcludeEmailsRegularExpressions =
+        group.readEntry("ExcludeEmailsRegexp", PimCommon::AddresseeLineUtil::excludeEmailsRegularExpression());
 
     info.mExcludeEmailsRegularExpressions = lstExcludeEmailsRegularExpressions;
     info.mBlackList = balooBlackList;

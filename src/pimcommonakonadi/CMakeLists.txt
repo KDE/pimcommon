@@ -65,6 +65,8 @@ target_sources(
         addressline/recentaddress/recentaddresses.cpp
         addressline/plugins/addressesslineeditabstractplugin.cpp
         addressline/plugins/addressesslineeditpluginmanager.cpp
+        addressline/addresseelineutil.h
+        addressline/addresseelineutil.cpp
         progresswidget/agentprogressmonitor.h
         progresswidget/progressmanagerakonadi.h
         acl/collectionaclpage.h

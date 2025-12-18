@@ -7,6 +7,7 @@
 
 #include "blacklistakonadisearchemailcompletionwidget.h"
 
+#include "../addresseelineutil.h"
 #include "blacklistakonadisearchemaillist.h"
 #include "blacklistakonadisearchemailsearchjob.h"
 #include "blacklistakonadisearchemailutil.h"
@@ -137,7 +138,8 @@ void BlackListAkonadiSearchEmailCompletionWidget::load()
     KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("kpimbalooblacklist"));
     KConfigGroup group(config, QStringLiteral("AddressLineEdit"));
 
-    const QStringList lstExcludeEmailsRegularExpressions = group.readEntry("ExcludeEmailsRegexp", QStringList({u"no.?reply.*@"_s, u"@noreply"_s}));
+    const QStringList lstExcludeEmailsRegularExpressions =
+        group.readEntry("ExcludeEmailsRegexp", PimCommon::AddresseeLineUtil::excludeEmailsRegularExpression());
     mEmailList->setExcludeEmailsRegularExpressions(lstExcludeEmailsRegularExpressions);
     mExcludeEmailFromRegularExpressionLineEdit->setText(lstExcludeEmailsRegularExpressions.join(QLatin1Char(',')));
     mOriginalExcludeEmailRegexp = lstExcludeEmailsRegularExpressions;
