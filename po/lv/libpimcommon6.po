@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-17 00:44+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2025-02-28 15:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -503,47 +503,52 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Pielietot atļaujas visām &apakšmapēm."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "„vCard“ importēšana neizdevās"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:332
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Neizdodas piekļūt <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:450
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
 #, kde-format
 msgid "Select email from contact"
 msgstr "Atlasiet e-pastu no kontakta"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Rādīt organizācijas vienību LDAP rezultātiem"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Konfigurēt pabeigšanu..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Automātiski izvērst grupas"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Izvērst grupas..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Nesenās adreses"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#, kde-format
+msgid "Add to Blacklist"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
@@ -558,75 +563,64 @@ msgstr "Jūsu datos atrastās kontaktpersonas"
 msgid "LDAP server: %1"
 msgstr "LDAP serveris: %1"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:36
-#, kde-format
-msgid "Search"
-msgstr "Meklēt"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Rādīt melnā saraksta e-pastus"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Vairāk rezultātu...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Atkārtota meklēšana notiek no trim rakstzīmēm"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Search in result..."
-msgstr "Meklēt rezultātos..."
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:94
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Izlaist domēnu nosaukumus:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:102
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Atdalīt domēnu ar „%1“"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:108
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Ignorēt e-pastu ar regulāro izteiksmi:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:116
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Atdalīt regulārās izteiksmes ar „%1“"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:128
 #, kde-format
 msgid "Select"
 msgstr "Atlasīt"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Unselect"
 msgstr "Noņemt atlasi"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:272
 #, kde-format
 msgid "No email found."
 msgstr "Neviens e-pasts nav atrasts."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:274
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1187,6 +1181,13 @@ msgstr "Resursa iestatīšana ir pabeigta."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Neizdevās izveidot resursa instanci: %1"
+
+#~ msgid "Search"
+#~ msgstr "Meklēt"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Search in result..."
+#~ msgstr "Meklēt rezultātos..."
 
 #~ msgctxt "@action:button"
 #~ msgid "&Select"

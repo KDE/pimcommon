@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-17 00:44+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2025-12-07 23:32+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -506,47 +506,52 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplikatu baimenak a&zpikarpeta guztietan."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "vCard inportatzea huts egin du"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:332
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Ezin da <b>%1</b> atzitu.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:450
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
 #, kde-format
 msgid "Select email from contact"
 msgstr "Hautatu e-posta kontaktutik"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Erakutsi LDAP emaitzen Antolaketa Unitatea"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Konfiguratu osatzea..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Taldeak automatikoki zabaltzea"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Taldeak zabaltzea..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Oraintsuko helbideak"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#, kde-format
+msgid "Add to Blacklist"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
@@ -561,75 +566,64 @@ msgstr "Zure datuetan aurkitutako kontaktuak"
 msgid "LDAP server: %1"
 msgstr "LDAP zerbitzaria: %1"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:36
-#, kde-format
-msgid "Search"
-msgstr "Bilatu"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Erakutsi zerrenda-beltzeko e-postak"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Emaitza gehiago...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "Bilaketa 3 karakteretik abiatuta egiten da"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Search in result..."
-msgstr "Bilatu emaitzan..."
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:94
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Baztertu domeinu-izenak:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:102
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Banatu domeinuak '%1' erabiliz"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:108
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Baztertu e-posta adierazpen erregularrarekin:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:116
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Bereizi adierazpen erregularra '%1' erabiliz"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:128
 #, kde-format
 msgid "Select"
 msgstr "Hautatu"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Unselect"
 msgstr "Desautatu"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:272
 #, kde-format
 msgid "No email found."
 msgstr "Ez da e-postarik aurkitu."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:274
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1186,6 +1180,13 @@ msgstr "Baliabidearen ezarpena osatu da."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Baliabidearen instantzia sortzea huts egin du: %1"
+
+#~ msgid "Search"
+#~ msgstr "Bilatu"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Search in result..."
+#~ msgstr "Bilatu emaitzan..."
 
 #~ msgctxt "@action:button"
 #~ msgid "&Select"

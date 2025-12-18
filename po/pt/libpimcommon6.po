@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-17 00:44+0000\n"
+"POT-Creation-Date: 2025-12-18 00:44+0000\n"
 "PO-Revision-Date: 2023-03-27 23:29+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -543,48 +543,53 @@ msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
 msgstr "Aplicar as permissões a todas as &sub-pastas."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:329
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
 msgid "vCard Import Failed"
 msgstr "Importação do vCard sem Sucesso"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:330
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:332
 #, kde-format
 msgid "<qt>Unable to access <b>%1</b>.</qt>"
 msgstr "<qt>Não é possível aceder a <b>%1</b>.</qt>"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:450
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:452
 #, kde-format
 msgid "Select email from contact"
 msgstr "Seleccionar o e-mail do contacto"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
 #, fuzzy, kde-format
 #| msgid "Show Organization Unit for LDAP results"
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Mostrar a Unidade Organizacional dos Resultados LDAP"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Configurar a Completação..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Expandir automaticamente os grupos"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Expandir os Grupos..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Endereços Recentes"
+
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#, kde-format
+msgid "Add to Blacklist"
+msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
@@ -599,83 +604,71 @@ msgstr "Contactos encontrados nos seus dados"
 msgid "LDAP server: %1"
 msgstr "Servidor de LDAP: %1"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:36
-#, kde-format
-msgid "Search"
-msgstr "Procurar"
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:37
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
 #, fuzzy, kde-format
 #| msgid "Show Blacklisted Emails"
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Mostrar os E-Mails Proibidos"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:38
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
 #, fuzzy, kde-format
 #| msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Mais resultados...</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:47
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
 #, fuzzy, kde-format
 #| msgid "Research is done from 3 characters"
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "A pesquisa é efectuada a partir dos 3 caracteres"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "Search in result..."
-msgctxt "@info:placeholder"
-msgid "Search in result..."
-msgstr "Procurar no resultado..."
-
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:105
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:94
 #, fuzzy, kde-format
 #| msgid "Exclude domain names:"
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Excluir os nomes dos domínios:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:113
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:102
 #, fuzzy, kde-format
 #| msgid "Separate domain with '%1'"
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Separar o domínio com o '%1'"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:119
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:108
 #, fuzzy, kde-format
 #| msgid "Exclude email with Regular Expression:"
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Excluir o e-mail com a Expressão Regular:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:127
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:116
 #, fuzzy, kde-format
 #| msgid "Separate regular expression with '%1'"
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Separar a expressão regular com o '%1'"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:139
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:128
 #, kde-format
 msgid "Select"
 msgstr "Seleccionar"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:141
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:130
 #, kde-format
 msgid "Unselect"
 msgstr "Deseleccionar"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:264
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:272
 #, kde-format
 msgid "No email found."
 msgstr "Não foi encontrado nenhum e-mail."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:266
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:274
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1247,6 +1240,15 @@ msgstr "A configuração do recurso terminou."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Não foi possível criar a instância do recurso: %1"
+
+#~ msgid "Search"
+#~ msgstr "Procurar"
+
+#, fuzzy
+#~| msgid "Search in result..."
+#~ msgctxt "@info:placeholder"
+#~ msgid "Search in result..."
+#~ msgstr "Procurar no resultado..."
 
 #, fuzzy
 #~| msgid "&Select"
