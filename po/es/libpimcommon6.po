@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:44+0000\n"
-"PO-Revision-Date: 2025-07-21 11:36+0100\n"
+"POT-Creation-Date: 2025-12-19 00:44+0000\n"
+"PO-Revision-Date: 2025-12-18 12:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -551,7 +551,7 @@ msgstr "Direcciones recientes"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
 #, kde-format
 msgid "Add to Blacklist"
-msgstr ""
+msgstr "Añadir a la lista negra"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
@@ -566,64 +566,64 @@ msgstr "Contactos encontrados en los datos"
 msgid "LDAP server: %1"
 msgstr "Servidor LDAP: %1"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:39
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Show Blacklisted Emails"
 msgstr "Mostrar direcciones de correo de la lista negra"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:40
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:41
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<qt><a href=\"more_result\">More result...</a></qt>"
 msgstr "<qt><a href=\"more_result\">Más resultados…</a></qt>"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:49
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:50
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Research is done from 3 characters"
 msgstr "La búsqueda empieza a partir de 3 caracteres"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:94
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:95
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude domain names:"
 msgstr "Excluir nombres de dominio:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:102
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:103
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate domain with '%1'"
 msgstr "Separar dominios con «%1»"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:108
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:109
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
 msgstr "Excluir direcciones de correo con la expresión regular:"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:116
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:117
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Separate regular expression with '%1'"
 msgstr "Separar expresiones regulares con «%1»"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:128
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:129
 #, kde-format
 msgid "Select"
 msgstr "Seleccionar"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:130
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:131
 #, kde-format
 msgid "Unselect"
 msgstr "Deseleccionar"
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:272
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:274
 #, kde-format
 msgid "No email found."
 msgstr "No se ha encontrado ninguna dirección de correo."
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:274
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:276
 #, kde-format
 msgid "1 email found"
 msgid_plural "%1 emails found"
@@ -1182,92 +1182,3 @@ msgstr "Configuración de recurso completada."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallado la creación de instancia del recurso: %1"
-
-#~ msgid "Search"
-#~ msgstr "Buscar"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Search in result..."
-#~ msgstr "Buscar en los resultados…"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Select"
-#~ msgstr "&Seleccionar"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Unselect"
-#~ msgstr "&Deseleccionar"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Search email:"
-#~ msgstr "Buscar dirección de correo:"
-
-#~ msgid "..."
-#~ msgstr "…"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Configure"
-#~ msgstr "Configurar"
-
-#~ msgid "Restart is necessary for applying the changes."
-#~ msgstr "Es necesario reiniciar para aplicar los cambios."
-
-#~ msgctxt "@action"
-#~ msgid "Disable version check"
-#~ msgstr "Desactivar comprobación de la versión"
-
-#~ msgid "Your version is older than 6 months, we encourage you to upgrade."
-#~ msgstr ""
-#~ "Su versión tiene más de 6 meses de antigüedad. Le recomendamos que la "
-#~ "actualice."
-
-#~ msgid ""
-#~ "Your version is older than 1 year, we strongly encourage you to upgrade."
-#~ msgstr ""
-#~ "Su versión tiene más de 1 año de antigüedad. Le recomendamos "
-#~ "encarecidamente que la actualice."
-
-#~ msgctxt "@title:window"
-#~ msgid "Check New Version"
-#~ msgstr "Comprobar nueva versión"
-
-#~ msgid ""
-#~ "A new version found. Click <a href=\"%1\">here</a> for downloading it."
-#~ msgstr ""
-#~ "Se ha encontrado una nueva versión. Pulse <a href=\"%1\">aquí</a> para "
-#~ "descargarla."
-
-#~ msgid "No new version found."
-#~ msgstr "No se ha encontrado ninguna nueva versión."
-
-#~ msgid "Check New Version"
-#~ msgstr "Comprobar nueva versión"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Version:"
-#~ msgstr "Versión:"
-
-#~ msgctxt "@title:window"
-#~ msgid "What's new in %1"
-#~ msgstr "Novedades de %1"
-
-#~ msgid "(Show News)"
-#~ msgstr "(Mostrar novedades)"
-
-#~ msgid "What's new in %2. %1"
-#~ msgstr "Novedades de %2. %1"
-
-#~ msgid "All Versions"
-#~ msgstr "Todas las versiones"
-
-#~ msgid "Version %1"
-#~ msgstr "Versión %1"
-
-#~ msgid "Important changes since last version:"
-#~ msgstr "Cambios importantes desde la última versión:"
-
-#~ msgid "Some of the new features in this release include:"
-#~ msgstr "Algunas de las nuevas funcionalidades de esta versión incluyen:"
-
-#~ msgid "Some bug fixing:"
-#~ msgstr "Varias correcciones de errores:"
