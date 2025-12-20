@@ -1172,22 +1172,3 @@ msgstr "Nastavení zdroje bylo dokončeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Selhalo vytvoření instance zdroje: %1"
-
-#~ msgid "Search"
-#~ msgstr "Hledat"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Search in result..."
-#~ msgstr "Vyhledávám ve výsledcích..."
-
-#~ msgctxt "@action:button"
-#~ msgid "&Select"
-#~ msgstr "Vy&brat"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Unselect"
-#~ msgstr "Zr&ušit výběr"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Search email:"
-#~ msgstr "Hledat e-mail:"
