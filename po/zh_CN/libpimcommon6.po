@@ -1161,10 +1161,6 @@ msgstr "创建资源实例失败：%1"
 #~ msgid "Search"
 #~ msgstr "搜索"
 
-#~ msgctxt "@info:placeholder"
-#~ msgid "Search in result..."
-#~ msgstr "在结果中搜索..."
-
 #~ msgctxt "@action:button"
 #~ msgid "&Select"
 #~ msgstr "选择(&S)"
@@ -1176,3 +1172,7 @@ msgstr "创建资源实例失败：%1"
 #~ msgctxt "@label:textbox"
 #~ msgid "Search email:"
 #~ msgstr "搜索电子邮件："
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Search in result..."
+#~ msgstr "在结果中搜索..."
