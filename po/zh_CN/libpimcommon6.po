@@ -1157,22 +1157,3 @@ msgstr "资源设置完成。"
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "创建资源实例失败：%1"
-
-#~ msgid "Search"
-#~ msgstr "搜索"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Select"
-#~ msgstr "选择(&S)"
-
-#~ msgctxt "@action:button"
-#~ msgid "&Unselect"
-#~ msgstr "取消选择(&U)"
-
-#~ msgctxt "@label:textbox"
-#~ msgid "Search email:"
-#~ msgstr "搜索电子邮件："
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Search in result..."
-#~ msgstr "在结果中搜索..."
