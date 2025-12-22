@@ -26,6 +26,7 @@ public:
 
     void save();
     void load();
+    void restoreToDefaults();
     void setEmailBlackList(const QStringList &list);
 
 private:

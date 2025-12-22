@@ -43,6 +43,7 @@ private:
     PIMCOMMONAKONADI_NO_EXPORT void slotSaveAndClose();
     PIMCOMMONAKONADI_NO_EXPORT void slotSave();
     PIMCOMMONAKONADI_NO_EXPORT void readConfig();
+    PIMCOMMONAKONADI_NO_EXPORT void slotRestoreToDefaults();
     PIMCOMMONAKONADI_NO_EXPORT void writeConfig();
     std::unique_ptr<CompletionConfigureDialogPrivate> const d;
 };

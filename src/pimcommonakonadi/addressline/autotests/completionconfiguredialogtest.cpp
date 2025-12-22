@@ -14,6 +14,7 @@
 
 using namespace Qt::Literals::StringLiterals;
 
+QTEST_MAIN(CompletionConfigureDialogTest)
 CompletionConfigureDialogTest::CompletionConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
@@ -32,7 +33,8 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
 
     auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
-    QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::StandardButtons{QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel});
+    QCOMPARE(buttonBox->standardButtons(),
+             QDialogButtonBox::StandardButtons{QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults});
 
     auto tabWidget = dlg.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(tabWidget);
@@ -43,7 +45,5 @@ void CompletionConfigureDialogTest::shouldHaveDefaultValue()
         QVERIFY(hasName);
     }
 }
-
-QTEST_MAIN(CompletionConfigureDialogTest)
 
 #include "moc_completionconfiguredialogtest.cpp"

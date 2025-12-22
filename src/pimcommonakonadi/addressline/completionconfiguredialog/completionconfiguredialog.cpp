@@ -69,10 +69,11 @@ CompletionConfigureDialog::CompletionConfigureDialog(QWidget *parent)
     d->mTabWidget->addTab(d->mBlackListBalooWidget, i18n("Blacklist Email Address"));
 #endif
 
-    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Apply | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
     buttonBox->setObjectName("buttonbox"_L1);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CompletionConfigureDialog::slotSaveAndClose);
     connect(buttonBox->button(QDialogButtonBox::Apply), &QPushButton::clicked, this, &CompletionConfigureDialog::slotSave);
+    connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &CompletionConfigureDialog::slotRestoreToDefaults);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
@@ -135,6 +136,13 @@ void CompletionConfigureDialog::slotSaveAndClose()
 {
     slotSave();
     accept();
+}
+
+void CompletionConfigureDialog::slotRestoreToDefaults()
+{
+#if !DISABLE_AKONADI_SEARCH
+    d->mBlackListBalooWidget->restoreToDefaults();
+#endif
 }
 
 void CompletionConfigureDialog::slotSave()

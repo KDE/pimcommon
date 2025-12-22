@@ -150,6 +150,12 @@ void BlackListAkonadiSearchEmailCompletionWidget::load()
     mOriginalExcludeDomain = lstExcludeDomains;
 }
 
+void BlackListAkonadiSearchEmailCompletionWidget::restoreToDefaults()
+{
+    mExcludeDomainLineEdit->clear();
+    mExcludeEmailFromRegularExpressionLineEdit->setText(PimCommon::AddresseeLineUtil::excludeEmailsRegularExpression().join(QLatin1Char(',')));
+}
+
 void BlackListAkonadiSearchEmailCompletionWidget::save()
 {
     const QString excludeEmailsRegexp = mExcludeEmailFromRegularExpressionLineEdit->text().remove(QLatin1Char(' '));
