@@ -13,9 +13,11 @@ Q_GLOBAL_STATIC(NetworkManager, s_pNetworkManagerSelf)
 NetworkManager::NetworkManager(QObject *parent)
     : QObject(parent)
 {
-    QNetworkInformation::instance()->loadBackendByFeatures(QNetworkInformation::Feature::Reachability);
-    connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &NetworkManager::refreshStatus);
-    connect(QNetworkInformation::instance(), &QNetworkInformation::isBehindCaptivePortalChanged, this, &NetworkManager::refreshStatus);
+    bool isBackendLoaded = QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability);
+    if (isBackendLoaded) {
+        connect(QNetworkInformation::instance(), &QNetworkInformation::reachabilityChanged, this, &NetworkManager::refreshStatus);
+        connect(QNetworkInformation::instance(), &QNetworkInformation::isBehindCaptivePortalChanged, this, &NetworkManager::refreshStatus);
+    }
     refreshStatus();
 }
 

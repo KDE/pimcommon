@@ -118,7 +118,8 @@ void AddresseeLineEditManager::setAddressLineEdit(AddresseeLineEdit *addressLine
 
 bool AddresseeLineEditManager::isOnline() const
 {
-    if (QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability)) {
+    bool isBackendLoaded = QNetworkInformation::loadBackendByFeatures(QNetworkInformation::Feature::Reachability);
+    if (isBackendLoaded) {
         return QNetworkInformation::instance()->reachability() == QNetworkInformation::Reachability::Online
             && !QNetworkInformation::instance()->isBehindCaptivePortal();
     } else {
