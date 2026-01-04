@@ -23,10 +23,16 @@ class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QComboBox
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit IncidencesForWidget(QWidget *parent = nullptr);
+    /*!
+     */
     ~IncidencesForWidget() override;
 
     /// Label name of the combobox.
+    /*!
+     */
     static QString labelName();
 };
 }

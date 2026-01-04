@@ -22,15 +22,27 @@ class PIMCOMMONAKONADI_EXPORT CollectionAclPage : public Akonadi::CollectionProp
     Q_OBJECT
 
 public:
+    /*!
+     */
     explicit CollectionAclPage(QWidget *parent = nullptr);
+    /*!
+     */
     ~CollectionAclPage() override;
 
+    /*!
+     */
     void load(const Akonadi::Collection &collection) override;
+    /*!
+     */
     void save(Akonadi::Collection &collection) override;
 
+    /*!
+     */
     [[nodiscard]] bool canHandle(const Akonadi::Collection &collection) const override;
 
 protected:
+    /*!
+     */
     void init();
 
 private:

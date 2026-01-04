@@ -30,19 +30,35 @@ class PIMCOMMONAKONADI_EXPORT CheckedCollectionWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit CheckedCollectionWidget(const QString &mimetype, QWidget *parent = nullptr);
+    /*!
+     */
     ~CheckedCollectionWidget() override;
 
+    /*!
+     */
     [[nodiscard]] Akonadi::EntityTreeModel *entityTreeModel() const;
 
+    /*!
+     */
     [[nodiscard]] QTreeView *folderTreeView() const;
 
+    /*!
+     */
     [[nodiscard]] QItemSelectionModel *selectionModel() const;
 
+    /*!
+     */
     [[nodiscard]] KCheckableProxyModel *checkableProxy() const;
 
 Q_SIGNALS:
+    /*!
+     */
     void collectionAdded(const Akonadi::Collection &, const Akonadi::Collection &);
+    /*!
+     */
     void collectionRemoved(const Akonadi::Collection &);
 
 private:

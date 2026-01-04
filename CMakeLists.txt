@@ -70,15 +70,8 @@ include(ECMFeatureSummary)
 include(ECMAddTests)
 include(ECMInstallIcons)
 include(ECMAddQtDesignerPlugin)
-include(ECMAddQch)
+include(ECMGenerateQDoc)
 include(ECMCheckOutboundLicense)
-
-option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
-add_feature_info(
-    QCH
-    ${BUILD_QCH}
-    "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
-)
 
 option(ENABLE_PCH "Enable Precompiled Headers support" ON)
 

@@ -20,16 +20,32 @@ class PIMCOMMON_EXPORT CustomToolsViewInterface : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit CustomToolsViewInterface(QWidget *parent = nullptr);
+    /*!
+     */
     ~CustomToolsViewInterface() override;
 
+    /*!
+     */
     virtual void setText(const QString &text);
+    /*!
+     */
     [[nodiscard]] virtual KToggleAction *action() const;
 
 Q_SIGNALS:
+    /*!
+     */
     void insertText(const QString &text);
+    /*!
+     */
     void toolsWasClosed();
+    /*!
+     */
     void activateView(QWidget *);
+    /*!
+     */
     void configure(QWidget *parent);
 };
 }

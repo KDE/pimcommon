@@ -19,11 +19,21 @@ namespace PimCommon
 class PIMCOMMONAKONADI_EXPORT CollectionTypeUtil
 {
 public:
+    /*!
+     */
     CollectionTypeUtil();
+    /*!
+     */
     ~CollectionTypeUtil();
 
+    /*!
+     */
     static QByteArray kolabFolderType();
+    /*!
+     */
     static QByteArray kolabIncidencesFor();
+    /*!
+     */
     static QByteArray kolabSharedSeen();
 
     enum FolderContentsType {
@@ -45,13 +55,29 @@ public:
         IncForReaders,
     };
 
+    /*!
+     */
     [[nodiscard]] CollectionTypeUtil::IncidencesFor incidencesForFromString(const QString &string);
+    /*!
+     */
     [[nodiscard]] CollectionTypeUtil::FolderContentsType typeFromKolabName(const QByteArray &name);
+    /*!
+     */
     [[nodiscard]] QString folderContentDescription(CollectionTypeUtil::FolderContentsType type);
+    /*!
+     */
     [[nodiscard]] QByteArray kolabNameFromType(CollectionTypeUtil::FolderContentsType type);
+    /*!
+     */
     [[nodiscard]] QString incidencesForToString(CollectionTypeUtil::IncidencesFor type);
+    /*!
+     */
     [[nodiscard]] CollectionTypeUtil::FolderContentsType contentsTypeFromString(const QString &type);
+    /*!
+     */
     [[nodiscard]] QString typeNameFromKolabType(const QByteArray &type);
+    /*!
+     */
     [[nodiscard]] QString iconNameFromContentsType(CollectionTypeUtil::FolderContentsType type);
 };
 }

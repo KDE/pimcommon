@@ -20,16 +20,32 @@ class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ConfigurePluginsWidget(QWidget *parent = nullptr);
+    /*!
+     */
     explicit ConfigurePluginsWidget(TextAddonsWidgets::ConfigurePluginsWidget *configurePluginListWidget, QWidget *parent = nullptr);
+    /*!
+     */
     ~ConfigurePluginsWidget() override;
 
+    /*!
+     */
     void save();
+    /*!
+     */
     void defaults();
+    /*!
+     */
     void doLoadFromGlobalSettings();
+    /*!
+     */
     void doResetToDefaultsOther();
 
 Q_SIGNALS:
+    /*!
+     */
     void wasChanged(bool changed);
 
 private:

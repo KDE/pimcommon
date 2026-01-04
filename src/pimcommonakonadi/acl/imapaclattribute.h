@@ -30,19 +30,45 @@ class ImapAclAttributePrivate;
 class PIMCOMMONAKONADI_EXPORT ImapAclAttribute : public Akonadi::Attribute
 {
 public:
+    /*!
+     */
     ImapAclAttribute();
+    /*!
+     */
     ImapAclAttribute(const QMap<QByteArray, KIMAP::Acl::Rights> &rights, const QMap<QByteArray, KIMAP::Acl::Rights> &oldRights);
+    /*!
+     */
     ~ImapAclAttribute() override;
+    /*!
+     */
     void setRights(const QMap<QByteArray, KIMAP::Acl::Rights> &rights);
+    /*!
+     */
     [[nodiscard]] QMap<QByteArray, KIMAP::Acl::Rights> rights() const;
+    /*!
+     */
     [[nodiscard]] QMap<QByteArray, KIMAP::Acl::Rights> oldRights() const;
+    /*!
+     */
     void setMyRights(KIMAP::Acl::Rights rights);
+    /*!
+     */
     [[nodiscard]] KIMAP::Acl::Rights myRights() const;
+    /*!
+     */
     [[nodiscard]] QByteArray type() const override;
+    /*!
+     */
     ImapAclAttribute *clone() const override;
+    /*!
+     */
     [[nodiscard]] QByteArray serialized() const override;
+    /*!
+     */
     void deserialize(const QByteArray &data) override;
 
+    /*!
+     */
     bool operator==(const ImapAclAttribute &other) const;
 
 private:

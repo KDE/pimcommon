@@ -23,12 +23,20 @@ class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QComboBox
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ContentTypeWidget(QWidget *parent = nullptr);
+    /*!
+     */
     ~ContentTypeWidget() override;
 
+    /*!
+     */
     void setCurrentItem(const QString &name);
 
-    /// Label name that should be used in a QFormLayout with a ContentTypeWidget
+    // Label name that should be used in a QFormLayout with a ContentTypeWidget
+    /*!
+     */
     static QString labelName();
 };
 }

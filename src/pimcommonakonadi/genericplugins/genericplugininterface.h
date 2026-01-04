@@ -21,7 +21,11 @@ class PIMCOMMONAKONADI_EXPORT GenericPluginInterface : public AbstractGenericPlu
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit GenericPluginInterface(QObject *parent = nullptr);
+    /*!
+     */
     ~GenericPluginInterface() override;
 
     enum RequireType {
@@ -34,17 +38,35 @@ public:
     Q_ENUM(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
 
+    /*!
+     */
     void setActionTypes(const QList<ActionType> &type);
+    /*!
+     */
     void addActionType(ActionType type);
+    /*!
+     */
     [[nodiscard]] QList<ActionType> actionTypes() const;
 
+    /*!
+     */
     virtual void setCurrentItems(const Akonadi::Item::List &items);
+    /*!
+     */
     virtual void setItems(const Akonadi::Item::List &items);
+    /*!
+     */
     virtual void setCurrentCollection(const Akonadi::Collection &col);
+    /*!
+     */
     virtual void setCollections(const Akonadi::Collection::List &cols);
 
+    /*!
+     */
     virtual GenericPluginInterface::RequireTypes requiresFeatures() const;
 
+    /*!
+     */
     virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
 private:

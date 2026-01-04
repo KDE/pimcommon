@@ -16,6 +16,8 @@ namespace PimCommon
 {
 namespace ProgressManagerAkonadi
 {
+/*!
+ */
 PIMCOMMONAKONADI_EXPORT KPIM::ProgressItem *createProgressItem(KPIM::ProgressItem *parent,
                                                                const Akonadi::AgentInstance &agent,
                                                                const QString &id,

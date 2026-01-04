@@ -327,62 +327,7 @@ if(BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
 endif()
 
-if(BUILD_QCH)
-    ecm_add_qch(
-        KPim6PimCommon_QCH
-        NAME KPim6PimCommon
-        BASE_NAME KPim6PimCommon
-        VERSION ${PIM_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-        ${PimCommon_HEADERS}
-        ${PimCommon_genericplugins_HEADERS}
-        ${PimCommon_configureplugins_HEADERS}
-        ${PimCommon_networkmanager_HEADERS}
-        ${PimCommon_needupdateversionwidgets_HEADERS}
-        ${PimCommon_customtools_HEADERS}
-        ${PimCommon_job_HEADERS}
-        ${PimCommon_managerserversidesubscription_HEADERS}
-        ${PimCommon_plaintexteditor_HEADERS}
-        ${PimCommon_richtexteditor_HEADERS}
-        ${PimCommon_settings_HEADERS}
-        ${PimCommon_shareserviceurl_HEADERS}
-        ${PimCommon_storageservice_HEADERS}
-        ${PimCommon_storageservicedialog_HEADERS}
-        ${PimCommon_storageserviceinterface_HEADERS}
-        ${PimCommon_storageservicesettings_HEADERS}
-        ${PimCommon_storageservicewidgets_HEADERS}
-        ${PimCommon_templatelist_HEADERS}
-        ${PimCommon_texteditor_commonwidget_HEADERS}
-        ${PimCommon_translator_HEADERS}
-        ${PimCommon_widgets_HEADERS}
-        ${PimCommon_whatsnew_HEADERS}
-        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-        LINK_QCHS
-            Qt6Core_QCH
-            Qt6Gui_QCH
-            Qt6Widgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            PIMCOMMON_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommon")
-if(BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6PimCommon_QCH
-        FILE KPim6PimCommonQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonQchTargets.cmake\")")
-endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonConfig.cmake"

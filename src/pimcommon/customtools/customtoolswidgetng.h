@@ -23,22 +23,42 @@ class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit CustomToolsWidgetNg(QWidget *parent = nullptr);
+    /*!
+     */
     ~CustomToolsWidgetNg() override;
 
+    /*!
+     */
     [[nodiscard]] QList<KToggleAction *> actionList() const;
+    /*!
+     */
     void initializeView(KActionCollection *ac, const QList<CustomToolsPlugin *> &localPluginsList);
 
+    /*!
+     */
     void setText(const QString &text);
 
+    /*!
+     */
     void addCustomToolViewInterface(PimCommon::CustomToolsViewInterface *plugin);
 
 public Q_SLOTS:
+    /*!
+     */
     void slotToolsWasClosed();
+    /*!
+     */
     void slotActivateView(QWidget *w);
 
 Q_SIGNALS:
+    /*!
+     */
     void insertText(const QString &url);
+    /*!
+     */
     void toolActivated();
 
 private:

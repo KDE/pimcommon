@@ -19,18 +19,38 @@ class PIMCOMMON_EXPORT AbstractGenericPlugin : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit AbstractGenericPlugin(QObject *parent = nullptr);
+    /*!
+     */
     ~AbstractGenericPlugin() override;
 
+    /*!
+     */
     virtual PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent = nullptr) = 0;
+    /*!
+     */
     [[nodiscard]] virtual bool hasPopupMenuSupport() const;
+    /*!
+     */
     [[nodiscard]] virtual bool hasToolBarSupport() const;
+    /*!
+     */
     [[nodiscard]] virtual bool hasConfigureDialog() const;
+    /*!
+     */
     [[nodiscard]] virtual bool hasStatusBarSupport() const;
 
+    /*!
+     */
     virtual void showConfigureDialog(QWidget *parent = nullptr);
 
+    /*!
+     */
     void setIsEnabled(bool enabled);
+    /*!
+     */
     [[nodiscard]] bool isEnabled() const;
 
 Q_SIGNALS:

@@ -109,39 +109,7 @@ install(
     COMPONENT Devel
 )
 
-if(BUILD_QCH)
-    ecm_add_qch(
-        KPim6PimCommonActivities_QCH
-        NAME KPim6PimCommonActivities
-        BASE_NAME KPim6PimCommonActivities
-        VERSION ${PIM_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-        ${PimCommonActivities_base_HEADERS}
-        LINK_QCHS
-            Qt6Core_QCH
-            Qt6Gui_QCH
-            Qt6Widgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            PIMCOMMONACTIVITIES_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6PimCommonActivities")
-if(BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6PimCommonActivities_QCH
-        FILE KPim6PimCommonActivitiesQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6PimCommonActivitiesQchTargets.cmake\")")
-endif()
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimCommonActivitiesConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonActivitiesConfig.cmake"

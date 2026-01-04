@@ -26,31 +26,59 @@ class PIMCOMMON_EXPORT TemplateListWidget : public QListWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit TemplateListWidget(const QString &configName, QWidget *parent = nullptr);
+    /*!
+     */
     ~TemplateListWidget() override;
 
     // Need to load template in specific class to allow to use correct defaultTemplates function
+    /*!
+     */
     void loadTemplates();
 
+    /*!
+     */
     [[nodiscard]] virtual QList<PimCommon::defaultTemplate> defaultTemplates();
+    /*!
+     */
     [[nodiscard]] virtual bool addNewTemplate(QString &templateName, QString &templateScript);
+    /*!
+     */
     [[nodiscard]] virtual bool modifyTemplate(QString &templateName, QString &templateScript, bool defaultTemplate);
 
+    /*!
+     */
     void setKNewStuffConfigFile(const QString &configName);
 
+    /*!
+     */
     void addDefaultTemplate(const QString &templateName, const QString &templateScript);
 
 protected:
+    /*!
+     */
     [[nodiscard]] QStringList mimeTypes() const override;
+    /*!
+     */
     [[nodiscard]] QMimeData *mimeData(const QList<QListWidgetItem *> &items) const override;
+    /*!
+     */
     void dropEvent(QDropEvent *event) override;
+    /*!
+     */
     enum TemplateData {
         Text = Qt::UserRole + 1,
         DefaultTemplate = Qt::UserRole + 2,
     };
 
 Q_SIGNALS:
+    /*!
+     */
     void insertTemplate(const QString &);
+    /*!
+     */
     void insertNewTemplate(const QString &);
 
 private:

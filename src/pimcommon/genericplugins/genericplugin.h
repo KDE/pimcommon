@@ -18,7 +18,11 @@ class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit GenericPlugin(QObject *parent = nullptr);
+    /*!
+     */
     ~GenericPlugin() override;
 };
 }

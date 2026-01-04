@@ -22,12 +22,22 @@ class PIMCOMMONAKONADI_EXPORT AddressessLineEditPluginManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit AddressessLineEditPluginManager(QObject *parent = nullptr);
+    /*!
+     */
     ~AddressessLineEditPluginManager() override;
 
+    /*!
+     */
     static AddressessLineEditPluginManager *self();
 
+    /*!
+     */
     [[nodiscard]] PimCommon::AddressessLineEditAbstractPlugin *plugin(const QString &identifier);
+    /*!
+     */
     [[nodiscard]] QList<PimCommon::AddressessLineEditAbstractPlugin *> pluginsList() const;
 
 private:

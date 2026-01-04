@@ -24,6 +24,8 @@ class PIMCOMMON_EXPORT GenericPluginManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     class GenericPluginData
     {
     public:
@@ -35,23 +37,47 @@ public:
         bool mEnableByDefault = false;
     };
 
+    /*!
+     */
     explicit GenericPluginManager(QObject *parent = nullptr);
+    /*!
+     */
     ~GenericPluginManager() override;
 
+    /*!
+     */
     [[nodiscard]] bool initializePlugins();
 
+    /*!
+     */
     void setPluginDirectory(const QString &directory);
+    /*!
+     */
     [[nodiscard]] QString pluginDirectory() const;
 
+    /*!
+     */
     void setPluginName(const QString &pluginName);
+    /*!
+     */
     [[nodiscard]] QString pluginName() const;
 
+    /*!
+     */
     [[nodiscard]] QList<PimCommon::GenericPlugin *> pluginsList() const;
+    /*!
+     */
     [[nodiscard]] QList<TextAddonsWidgets::PluginUtilData> pluginsDataList() const;
 
+    /*!
+     */
     [[nodiscard]] QString configGroupName() const;
+    /*!
+     */
     [[nodiscard]] QString configPrefixSettingKey() const;
 
+    /*!
+     */
     [[nodiscard]] GenericPlugin *pluginFromIdentifier(const QString &id);
 
 private:

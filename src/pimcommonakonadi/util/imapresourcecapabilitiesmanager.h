@@ -25,9 +25,15 @@ class PIMCOMMONAKONADI_EXPORT ImapResourceCapabilitiesManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ImapResourceCapabilitiesManager(QObject *parent = nullptr);
+    /*!
+     */
     ~ImapResourceCapabilitiesManager() override;
 
+    /*!
+     */
     [[nodiscard]] bool hasAnnotationSupport(const QString &identifier) const;
 
 private:

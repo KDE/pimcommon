@@ -31,12 +31,22 @@ public:
         Message = 6,
         Folder = 7,
     };
+    /*!
+     */
     ActionType() = default;
 
+    /*!
+     */
     ActionType(QAction *action, Type type);
+    /*!
+     */
     [[nodiscard]] QAction *action() const;
+    /*!
+     */
     [[nodiscard]] Type type() const;
 
+    /*!
+     */
     [[nodiscard]] bool operator==(ActionType other) const;
 
 private:

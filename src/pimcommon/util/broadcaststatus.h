@@ -28,6 +28,8 @@ class PIMCOMMON_EXPORT BroadcastStatus : public QObject
     Q_OBJECT
 
 public:
+    /*!
+     */
     ~BroadcastStatus() override;
 
     /** Return the instance of the singleton object for this class */

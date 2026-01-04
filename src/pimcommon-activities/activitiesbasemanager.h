@@ -14,6 +14,9 @@ class Consumer;
 }
 namespace PimCommonActivities
 {
+/*!
+ * \brief The ActivitiesBaseManager class
+ */
 class PIMCOMMONACTIVITIES_EXPORT ActivitiesBaseManager : public QObject
 {
     Q_OBJECT
@@ -25,18 +28,31 @@ public:
 
         void changeActivities(bool added, const QString &currentActivity);
     };
-
+    /*!
+     */
     explicit ActivitiesBaseManager(QObject *parent = nullptr);
+    /*!
+     */
     ~ActivitiesBaseManager() override;
 
+    /*!
+     */
     [[nodiscard]] bool isInCurrentActivity(const QStringList &lst) const;
 
+    /*!
+     */
     [[nodiscard]] QString currentActivity() const;
 
+    /*!
+     */
     [[nodiscard]] bool enabled() const;
+    /*!
+     */
     void setEnabled(bool newEnabled);
 
 Q_SIGNALS:
+    /*!
+     */
     void activitiesChanged();
 
 private:

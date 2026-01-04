@@ -18,13 +18,23 @@ class PIMCOMMON_EXPORT NetworkManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit NetworkManager(QObject *parent = nullptr);
+    /*!
+     */
     ~NetworkManager() override;
+    /*!
+     */
     static NetworkManager *self();
 
+    /*!
+     */
     [[nodiscard]] bool isOnline() const;
 
 Q_SIGNALS:
+    /*!
+     */
     void networkStatusChanged(bool isOnline);
 
 private:

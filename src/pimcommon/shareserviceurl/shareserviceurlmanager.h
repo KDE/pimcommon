@@ -24,7 +24,11 @@ class PIMCOMMON_EXPORT ShareServiceUrlManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ShareServiceUrlManager(QObject *parent = nullptr);
+    /*!
+     */
     ~ShareServiceUrlManager() override;
     enum ServiceType {
         Fbook = 0,
@@ -37,16 +41,26 @@ public:
         ServiceEndType,
     };
 
+    /*!
+     */
     [[nodiscard]] KActionMenu *menu() const;
 
+    /*!
+     */
     [[nodiscard]] QUrl generateServiceUrl(const QString &link, const QString &title, ServiceType type);
 
+    /*!
+     */
     void openUrl(const QUrl &url);
 
 public Q_SLOTS:
+    /*!
+     */
     void slotSelectServiceUrl(QAction *act);
 
 Q_SIGNALS:
+    /*!
+     */
     void serviceUrlSelected(PimCommon::ShareServiceUrlManager::ServiceType type);
 
 private:

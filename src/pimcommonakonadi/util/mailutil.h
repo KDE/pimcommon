@@ -18,7 +18,11 @@ namespace PimCommon
  */
 namespace MailUtil
 {
+/*!
+ */
 [[nodiscard]] PIMCOMMONAKONADI_EXPORT QString indexerServiceName();
+/*!
+ */
 [[nodiscard]] PIMCOMMONAKONADI_EXPORT bool isImapFolder(const Akonadi::Collection &col, bool &isOnline);
 }
 }

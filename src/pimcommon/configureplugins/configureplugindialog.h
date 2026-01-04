@@ -19,20 +19,40 @@ class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ConfigurePluginDialog(QWidget *parent = nullptr);
+    /*!
+     */
     ~ConfigurePluginDialog() override;
 
+    /*!
+     */
     void initLayout(bool addSpacer = false);
 
 protected:
+    /*!
+     */
     void showHelp(const QString &name, const QString &anchor);
+    /*!
+     */
     virtual QWidget *createLayout() = 0;
+    /*!
+     */
     virtual void save() = 0;
+    /*!
+     */
     virtual void load() = 0;
+    /*!
+     */
     virtual void reset();
 
+    /*!
+     */
     virtual void help();
 
+    /*!
+     */
     [[nodiscard]] QDialogButtonBox *buttonBox() const;
 
 private:

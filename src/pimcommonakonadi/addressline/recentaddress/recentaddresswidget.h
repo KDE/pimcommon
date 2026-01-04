@@ -25,15 +25,29 @@ class PIMCOMMONAKONADI_EXPORT RecentAddressWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit RecentAddressWidget(QWidget *parent = nullptr);
+    /*!
+     */
     ~RecentAddressWidget() override;
 
+    /*!
+     */
     void setAddresses(const QStringList &addrs);
+    /*!
+     */
     void storeAddresses(KConfig *config);
+    /*!
+     */
     [[nodiscard]] bool wasChanged() const;
 
 protected:
+    /*!
+     */
     void updateButtonState();
+    /*!
+     */
     bool eventFilter(QObject *o, QEvent *e) override;
 
 private:

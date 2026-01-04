@@ -12,14 +12,25 @@ class QListView;
 class QCheckBox;
 namespace PimCommonActivities
 {
+/*!
+ * \brief The ConfigureActivitiesWidget class
+ */
 class PIMCOMMONACTIVITIES_EXPORT ConfigureActivitiesWidget : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit ConfigureActivitiesWidget(QWidget *parent = nullptr);
+    /*!
+     */
     ~ConfigureActivitiesWidget() override;
 
+    /*!
+     */
     [[nodiscard]] ActivitiesBaseManager::ActivitySettings activitiesSettings() const;
+    /*!
+     */
     void setActivitiesSettings(const ActivitiesBaseManager::ActivitySettings &activitySettings);
 
 private:

@@ -27,16 +27,34 @@ class PIMCOMMONAKONADI_EXPORT CompletionConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit CompletionConfigureDialog(QWidget *parent = nullptr);
+    /*!
+     */
     ~CompletionConfigureDialog() override;
 
+    /*!
+     */
     void load();
+    /*!
+     */
     void setEmailBlackList(const QStringList &lst);
+    /*!
+     */
     void setLdapClientSearch(KLDAPCore::LdapClientSearch *ldapSearch);
+    /*!
+     */
     void setRecentAddresses(const QStringList &lst);
+    /*!
+     */
     [[nodiscard]] bool recentAddressWasChanged() const;
+    /*!
+     */
     void storeAddresses(KConfig *config);
 
+    /*!
+     */
     void setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities);
 
 private:
