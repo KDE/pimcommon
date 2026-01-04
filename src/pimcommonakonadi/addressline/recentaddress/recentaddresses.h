@@ -14,9 +14,9 @@ class KConfig;
 
 namespace PimCommon
 {
-/**
+/*!
  * Handles a list of "recent email-addresses". Simply set a max-count and
- * call @ref add() to add entries.
+ * call \ add() to add entries.
  *
  * @author Carsten Pfeiffer <pfeiffer@kde.org>
  */
@@ -25,54 +25,54 @@ class PIMCOMMONAKONADI_EXPORT RecentAddresses
 {
 public:
     ~RecentAddresses();
-    /**
-     * @returns the only possible instance of this class.
+    /*!
+     * Returns the only possible instance of this class.
      */
     static RecentAddresses *self(KConfig *config = nullptr);
 
     /*
-     * @return true if self() was called, i.e. a RecentAddresses instance exists
+     * Returns true if self() was called, i.e. a RecentAddresses instance exists
      */
     static bool exists();
 
-    /**
-     * @returns the list of recent addresses.
-     * Note: an entry doesn't have to be one email address, it can be multiple,
+    /*!
+     * Returns the list of recent addresses.
+     * \note an entry doesn't have to be one email address, it can be multiple,
      * like "Foo <foo@bar.org>, Bar Baz <bar@baz.org>".
      */
     [[nodiscard]] QStringList addresses() const;
 
-    /**
+    /*!
      * Adds an entry to the list.
-     * Note: an entry doesn't have to be one email address, it can be multiple,
+     * \note an entry doesn't have to be one email address, it can be multiple,
      * like "Foo <foo@bar.org>, Bar Baz <bar@baz.org>".
      */
     void add(const QString &entry);
 
-    /**
+    /*!
      * Sets the maximum number, the list can hold. The list adjusts to this
      * size if necessary. Default maximum is 40.
      */
     void setMaxCount(int count);
 
-    /**
-     * @returns the current maximum number of entries.
+    /*!
+     * Returns the current maximum number of entries.
      */
     [[nodiscard]] int maxCount() const;
 
-    /**
+    /*!
      * Loads the list of recently used addresses from the configfile.
      * Automatically done on startup.
      */
     void load(KConfig *);
 
-    /**
+    /*!
      * Saves the list of recently used addresses to the configfile.
      * Make sure to call KSharedConfig::openConfig()->sync() afterwards, to really save.
      */
     void save(KConfig *);
 
-    /**
+    /*!
      * Removes all entries from the history.
      */
     void clear();

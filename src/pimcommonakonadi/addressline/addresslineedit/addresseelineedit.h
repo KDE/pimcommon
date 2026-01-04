@@ -49,26 +49,26 @@ class PIMCOMMONAKONADI_EXPORT AddresseeLineEdit : public KLineEdit
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Creates a new addressee line edit.
      *
-     * @param parent The parent object.
-     * @param enableCompletion Whether autocompletion shall be enabled.
+     * \a parent The parent object.
+     * \a enableCompletion Whether autocompletion shall be enabled.
      */
     explicit AddresseeLineEdit(QWidget *parent = nullptr, bool enableCompletion = true);
 
-    /**
+    /*!
      * Destroys the addressee line edit.
      */
     ~AddresseeLineEdit() override;
 
-    /**
+    /*!
      * Sets whether semicolons are allowed as separators.
      */
     void allowSemicolonAsSeparator(bool allow);
 
-    /**
-     * Reimplemented for setting the @p font for line edit and completion box.
+    /*!
+     * Reimplemented for setting the \a font for line edit and completion box.
      */
     void setFont(const QFont &font);
 
@@ -83,23 +83,23 @@ public:
 
     [[nodiscard]] bool isCompletionEnabled() const;
 
-    /**
-     * Adds a new @p contact to the completion with a given
-     * @p weight
-     * @p source index
-     * @p append  is added to completion string, but removed, when mail is selected.
+    /*!
+     * Adds a new \a contact to the completion with a given
+     * \a weight
+     * \a source index
+     * \a append  is added to completion string, but removed, when mail is selected.
      */
     void addContact(const KContacts::Addressee &contact, int weight, int source = -1, const QString &append = QString());
 
-    /**
+    /*!
      * Same as the above, but this time with contact groups.
      */
     void addContactGroup(const KContacts::ContactGroup &group, int weight, int source = -1);
 
     void addItem(const Akonadi::Item &item, int weight, int source = -1);
 
-    /**
-     * Adds the @p name of a completion source and its @p weight
+    /*!
+     * Adds the \a name of a completion source and its \a weight
      * to the internal list of completion sources and returns its index,
      * which can be used for insertion of items associated with that source.
      *
@@ -137,17 +137,17 @@ Q_SIGNALS:
     void iconClicked();
 
 public Q_SLOTS:
-    /**
+    /*!
      * Moves the cursor at the end of the line edit.
      */
     void cursorAtEnd();
 
-    /**
+    /*!
      * Sets whether autocompletion shall be enabled.
      */
     void enableCompletion(bool enable);
 
-    /**
+    /*!
      * Reimplemented for stripping whitespace after completion
      * Danger: This is _not_ virtual in the base class!
      */
@@ -158,7 +158,7 @@ public Q_SLOTS:
     void slotGroupSearchResult(KJob *job);
 
 protected:
-    /**
+    /*!
      * Reimplemented for smart insertion of email addresses.
      * Features:
      * - Automatically adds ',' if necessary to separate email addresses
@@ -168,32 +168,32 @@ protected:
      */
     virtual void insert(const QString &);
 
-    /**
+    /*!
      * Reimplemented for smart insertion of pasted email addresses.
      */
     virtual void paste();
 
-    /**
+    /*!
      * Reimplemented for smart insertion with middle mouse button.
      */
     void mouseReleaseEvent(QMouseEvent *) override;
 
-    /**
+    /*!
      * Reimplemented for smart insertion of dragged email addresses.
      */
     void dropEvent(QDropEvent *) override;
 
-    /**
+    /*!
      * Reimplemented for internal reasons.
      */
     void keyPressEvent(QKeyEvent *) override;
 
-    /**
+    /*!
      * Reimplemented for subclass access to menu
      */
     virtual QMenu *createStandardContextMenu();
 
-    /**
+    /*!
      * Reimplemented for internal reasons.  API not affected.
      *
      * See QLineEdit::contextMenuEvent().

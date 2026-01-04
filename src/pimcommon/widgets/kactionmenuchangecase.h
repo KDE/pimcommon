@@ -13,8 +13,8 @@ class KActionCollection;
 namespace PimCommon
 {
 class KActionMenuChangeCasePrivate;
-/**
- * @brief The KActionMenuChangeCase class
+/*!
+ * \brief The KActionMenuChangeCase class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT KActionMenuChangeCase : public KActionMenu

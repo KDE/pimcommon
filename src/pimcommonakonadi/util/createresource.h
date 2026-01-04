@@ -13,8 +13,8 @@
 
 namespace PimCommon
 {
-/**
- * @brief The CreateResource class
+/*!
+ * \brief The CreateResource class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT CreateResource : public QObject

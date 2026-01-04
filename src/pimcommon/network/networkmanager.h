@@ -10,8 +10,8 @@
 #include <QObject>
 namespace PimCommon
 {
-/**
- * @brief The NetworkManager class
+/*!
+ * \brief The NetworkManager class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT NetworkManager : public QObject

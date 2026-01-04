@@ -13,8 +13,8 @@
 namespace PimCommon
 {
 class GenericPluginInterfacePrivate;
-/**
- * @brief The GenericPluginInterface class
+/*!
+ * \brief The GenericPluginInterface class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT GenericPluginInterface : public AbstractGenericPluginInterface

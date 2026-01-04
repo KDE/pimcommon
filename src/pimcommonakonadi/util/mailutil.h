@@ -1,4 +1,4 @@
-/*******************************************************************************
+/*!*****************************************************************************
 **
 ** SPDX-FileCopyrightText: 2005 Till Adam <adam@kde.org>
 **
@@ -12,7 +12,7 @@
 
 namespace PimCommon
 {
-/**
+/*!
  * The Util namespace contains a collection of helper functions use in
  * various places.
  */

@@ -11,8 +11,8 @@
 
 namespace PimCommon
 {
-/**
- * @brief The PurposeMenuMessageWidget class
+/*!
+ * \brief The PurposeMenuMessageWidget class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT PurposeMenuMessageWidget : public KMessageWidget

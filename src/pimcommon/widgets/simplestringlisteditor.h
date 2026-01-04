@@ -24,8 +24,8 @@
 namespace PimCommon
 {
 class SimpleStringListEditorPrivate;
-/**
- * @brief The SimpleStringListEditor class
+/*!
+ * \brief The SimpleStringListEditor class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
@@ -45,7 +45,7 @@ public:
         Unsorted = Add | Remove | Modify
     };
 
-    /** Constructor. Populates the list with @p strings. */
+    /*! Constructor. Populates the list with \a strings. */
     explicit SimpleStringListEditor(QWidget *parent = nullptr,
                                     ButtonCode buttons = Unsorted,
                                     const QString &addLabel = QString(),
@@ -54,16 +54,16 @@ public:
                                     const QString &addDialogLabel = QString());
 
     ~SimpleStringListEditor() override;
-    /** Sets the list of strings displayed to @p strings */
+    /*! Sets the list of strings displayed to \a strings */
     void setStringList(const QStringList &strings);
 
-    /** Adds @p strings to the list of displayed strings */
+    /*! Adds \a strings to the list of displayed strings */
     void appendStringList(const QStringList &strings);
 
-    /** Retrieves the current list of strings */
+    /*! Retrieves the current list of strings */
     [[nodiscard]] QStringList stringList() const;
 
-    /** Sets the text of button @p button to @p text */
+    /*! Sets the text of button \a button to \a text */
     void setButtonText(ButtonCode button, const QString &text);
 
     void setUpDownAutoRepeat(bool b);
@@ -82,7 +82,7 @@ public:
     void setRemoveDialogLabel(const QString &removeDialogLabel);
 
 Q_SIGNALS:
-    /** Connected slots can alter the argument to be added or set the
+    /*! Connected slots can alter the argument to be added or set the
       argument to QString() to suppress adding.
     */
     void aboutToAdd(QString &);

@@ -22,14 +22,14 @@ class LdapObject;
 }
 namespace PimCommon
 {
-/**
- * @short A dialog to search contacts in a LDAP directory.
+/*!
+ * \brief A dialog to search contacts in a LDAP directory.
  *
  * This dialog allows the user to search for contacts inside
  * a LDAP directory.
  *
  * @author Steffen Hansen <hansen@kde.org>
- * @since 4.5
+ * \since 4.5
  */
 class PIMCOMMONAKONADI_EXPORT LdapSearchDialog : public QDialog
 {
@@ -43,31 +43,31 @@ public:
         WorkNumber,
     };
 
-    /**
+    /*!
      * Creates a new ldap search dialog.
      *
-     * @param parent The parent widget.
+     * \a parent The parent widget.
      */
     explicit LdapSearchDialog(QWidget *parent = nullptr);
 
-    /**
+    /*!
      * Destroys the ldap search dialog.
      */
     ~LdapSearchDialog() override;
 
-    /**
-     * Sets the @p text in the search line edit.
+    /*!
+     * Sets the \a text in the search line edit.
      */
     void setSearchText(const QString &text);
 
-    /**
+    /*!
      * Returns a list of contacts that have been selected
      * in the LDAP search.
      */
     KContacts::Addressee::List selectedContacts() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * This signal is emitted whenever the user clicked the
      * 'Add Selected' button.
      */
@@ -83,7 +83,7 @@ protected:
     void closeEvent(QCloseEvent *) override;
 
 private:
-    //@cond PRIVATE
+    //\\ond PRIVATE
     class LdapSearchDialogPrivate;
     std::unique_ptr<LdapSearchDialogPrivate> const d;
 

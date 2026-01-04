@@ -1,4 +1,4 @@
-/*******************************************************************************
+/*!*****************************************************************************
 **
 ** SPDX-FileCopyrightText: 2005 Till Adam <adam@kde.org>
 **
@@ -19,7 +19,7 @@ class QWidget;
 #define GMAIL_RESOURCE_IDENTIFIER QStringLiteral("akonadi_gmail_resource")
 namespace PimCommon
 {
-/**
+/*!
  * The Util namespace contains a collection of helper functions use in
  * various places.
  */

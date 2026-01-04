@@ -12,8 +12,8 @@
 
 namespace PimCommon
 {
-/**
- * @brief The CollectionTypeUtil class
+/*!
+ * \brief The CollectionTypeUtil class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT CollectionTypeUtil

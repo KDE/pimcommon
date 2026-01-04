@@ -15,8 +15,8 @@ namespace PimCommon
 class CustomToolsWidgetNg;
 class CustomToolsViewInterface;
 class CustomToolsPluginPrivate;
-/**
- * @brief The CustomToolsPlugin class
+/*!
+ * \brief The CustomToolsPlugin class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomToolsPlugin : public QObject

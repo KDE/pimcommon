@@ -13,8 +13,8 @@
 
 namespace PimCommon
 {
-/**
- * @brief The ContentTypeWidget class is a combobox allowing the
+/*!
+ * \brief The ContentTypeWidget class is a combobox allowing the
  * user to select one of the multiple collection types.
  *
  * @author Laurent Montel <montel@kde.org>

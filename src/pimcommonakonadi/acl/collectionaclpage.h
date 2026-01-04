@@ -1,4 +1,4 @@
-/**
+/*!
  * folderdialogacltab.h
  *
  *  SPDX-FileCopyrightText: 2004 David Faure <faure@kde.org>
@@ -14,7 +14,7 @@
 namespace PimCommon
 {
 class CollectionAclPagePrivate;
-/**
+/*!
  * "Access Control" tab in the folder dialog
  */
 class PIMCOMMONAKONADI_EXPORT CollectionAclPage : public Akonadi::CollectionPropertiesPage

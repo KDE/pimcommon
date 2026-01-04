@@ -19,8 +19,8 @@ class LdapActivitiesAbstract;
 namespace PimCommon
 {
 class CompletionConfigureDialogPrivate;
-/**
- * @brief The CompletionConfigureDialog class
+/*!
+ * \brief The CompletionConfigureDialog class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT CompletionConfigureDialog : public QDialog

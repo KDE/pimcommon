@@ -14,8 +14,8 @@
 namespace PimCommon
 {
 class RenameFileDialogPrivate;
-/**
- * @brief The RenameFileDialog class
+/*!
+ * \brief The RenameFileDialog class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT RenameFileDialog : public QDialog
@@ -41,7 +41,7 @@ private:
     PIMCOMMON_NO_EXPORT void slotRenamePressed();
     PIMCOMMON_NO_EXPORT void slotApplyAllPressed();
     PIMCOMMON_NO_EXPORT void slotSuggestNewNamePressed();
-    //@cond PRIVATE
+    //\\ond PRIVATE
     class RenameFileDialogPrivate;
     std::unique_ptr<RenameFileDialogPrivate> const d;
 };

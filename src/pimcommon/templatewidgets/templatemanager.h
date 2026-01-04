@@ -24,8 +24,8 @@ struct TemplateInfo {
     void debug() const;
 };
 class TemplateManagerPrivate;
-/**
- * @brief The TemplateManager class
+/*!
+ * \brief The TemplateManager class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT TemplateManager : public QObject

@@ -12,8 +12,8 @@
 namespace PimCommon
 {
 class AddresseeLineEdit;
-/**
- * @brief The AddressessLineEditAbstractPluginInfo struct
+/*!
+ * \brief The AddressessLineEditAbstractPluginInfo struct
  * @author Laurent Montel <montel@kde.org>
  */
 struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo {
@@ -22,8 +22,8 @@ struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo {
     QString description;
 };
 
-/**
- * @brief The AddressessLineEditAbstractPlugin class
+/*!
+ * \brief The AddressessLineEditAbstractPlugin class
  * @author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPlugin : public QObject
