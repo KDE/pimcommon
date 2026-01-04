@@ -17,7 +17,7 @@ namespace PimCommon
  * \brief The ContentTypeWidget class is a combobox allowing the
  * user to select one of the multiple collection types.
  *
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QComboBox
 {

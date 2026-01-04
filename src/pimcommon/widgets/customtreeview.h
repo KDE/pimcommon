@@ -14,7 +14,7 @@ namespace PimCommon
 {
 /*!
  * \brief The CustomTreeView class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomTreeView : public QTreeWidget
 {

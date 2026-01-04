@@ -19,7 +19,7 @@ namespace PimCommon
 {
 /*!
  * \brief The ImapResourceCapabilitiesManager class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT ImapResourceCapabilitiesManager : public QObject
 {

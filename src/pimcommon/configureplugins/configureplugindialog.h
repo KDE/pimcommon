@@ -13,7 +13,7 @@ namespace PimCommon
 {
 /*!
  * \brief The ConfigurePluginDialog class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
 {

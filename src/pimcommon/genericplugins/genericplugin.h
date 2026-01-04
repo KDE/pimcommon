@@ -12,7 +12,7 @@ namespace PimCommon
 {
 /*!
  * \brief The GenericPlugin class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
 {

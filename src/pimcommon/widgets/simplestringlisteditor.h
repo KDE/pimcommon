@@ -26,7 +26,7 @@ namespace PimCommon
 class SimpleStringListEditorPrivate;
 /*!
  * \brief The SimpleStringListEditor class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT SimpleStringListEditor : public QWidget
 {

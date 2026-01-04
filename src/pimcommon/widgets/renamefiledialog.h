@@ -16,7 +16,7 @@ namespace PimCommon
 class RenameFileDialogPrivate;
 /*!
  * \brief The RenameFileDialog class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT RenameFileDialog : public QDialog
 {

@@ -14,7 +14,7 @@ namespace PimCommon
 {
 /*!
  * \brief The CustomToolsViewInterface class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomToolsViewInterface : public QWidget
 {

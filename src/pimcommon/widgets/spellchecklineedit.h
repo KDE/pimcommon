@@ -13,7 +13,7 @@ namespace PimCommon
 {
 /*!
  * \brief The SpellCheckLineEdit class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT SpellCheckLineEdit : public TextCustomEditor::RichTextEditor
 {

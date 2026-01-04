@@ -18,7 +18,7 @@ namespace PimCommon
 class ShareServiceUrlManagerPrivate;
 /*!
  * \brief The ShareServiceUrlManager class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT ShareServiceUrlManager : public QObject
 {

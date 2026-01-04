@@ -15,7 +15,7 @@ namespace PimCommon
 {
 /**
  * @brief The AddresseeLineEditAkonadi class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class AddresseeLineEditAkonadi
 {

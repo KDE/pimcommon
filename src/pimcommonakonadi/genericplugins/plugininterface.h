@@ -19,7 +19,7 @@ namespace PimCommon
 class PluginInterfacePrivate;
 /*!
  * \brief The PluginInterface class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT PluginInterface : public QObject
 {

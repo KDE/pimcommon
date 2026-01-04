@@ -24,7 +24,7 @@ namespace PimCommon
 class CheckedCollectionWidgetPrivate;
 /*!
  * \brief The CheckedCollectionWidget class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT CheckedCollectionWidget : public QWidget
 {

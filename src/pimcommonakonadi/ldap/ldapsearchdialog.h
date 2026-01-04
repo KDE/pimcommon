@@ -28,7 +28,7 @@ namespace PimCommon
  * This dialog allows the user to search for contacts inside
  * a LDAP directory.
  *
- * @author Steffen Hansen <hansen@kde.org>
+ * \author Steffen Hansen <hansen@kde.org>
  * \since 4.5
  */
 class PIMCOMMONAKONADI_EXPORT LdapSearchDialog : public QDialog

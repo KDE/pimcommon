@@ -13,7 +13,7 @@ namespace PimCommon
 {
 /*!
  * \brief The AddresseeLineEditUtil class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT AddresseeLineEditUtil
 {

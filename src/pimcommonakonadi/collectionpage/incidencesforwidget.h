@@ -17,7 +17,7 @@ class IncidencesForWidgetPrivate;
  * \brief The IncidencesForWidget class is used for configuring which
  * users sharing this folder should get "busy" periods in their freebusy
  * lists.
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QComboBox
 {

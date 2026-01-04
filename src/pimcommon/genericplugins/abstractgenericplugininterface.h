@@ -16,7 +16,7 @@ class AbstractGenericPlugin;
 class GenericPlugin;
 /*!
  * \brief The ActionType class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT ActionType
 {

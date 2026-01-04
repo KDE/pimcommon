@@ -18,7 +18,7 @@ namespace PimCommon
  * Handles a list of "recent email-addresses". Simply set a max-count and
  * call \ add() to add entries.
  *
- * @author Carsten Pfeiffer <pfeiffer@kde.org>
+ * \author Carsten Pfeiffer <pfeiffer@kde.org>
  */
 
 class PIMCOMMONAKONADI_EXPORT RecentAddresses

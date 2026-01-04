@@ -17,7 +17,7 @@ class CustomToolsPlugin;
 class CustomToolsViewInterface;
 /*!
  * \brief The CustomToolsWidgetNg class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomToolsWidgetNg : public QWidget
 {

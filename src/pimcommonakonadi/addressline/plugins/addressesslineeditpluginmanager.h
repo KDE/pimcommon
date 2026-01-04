@@ -16,7 +16,7 @@ class AddressessLineEditAbstractPlugin;
 class AddressessLineEditPluginManagerPrivate;
 /*!
  * \brief The AddressessLineEditPluginManager class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT AddressessLineEditPluginManager : public QObject
 {

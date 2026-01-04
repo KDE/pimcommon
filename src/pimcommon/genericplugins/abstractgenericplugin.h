@@ -13,7 +13,7 @@ namespace PimCommon
 class AbstractGenericPluginInterface;
 /*!
  * \brief The AbstractGenericPlugin class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT AbstractGenericPlugin : public QObject
 {

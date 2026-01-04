@@ -17,7 +17,7 @@ class CustomToolsViewInterface;
 class CustomToolsPluginPrivate;
 /*!
  * \brief The CustomToolsPlugin class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomToolsPlugin : public QObject
 {
