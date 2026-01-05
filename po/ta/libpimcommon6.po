@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the pimcommon package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-23 00:42+0000\n"
-"PO-Revision-Date: 2025-08-03 21:06+0530\n"
+"PO-Revision-Date: 2026-01-04 16:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -541,7 +541,7 @@ msgstr "சமீப முகவரிகள்"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
 #, kde-format
 msgid "Add to Blacklist"
-msgstr ""
+msgstr "தடுப்புப்பட்டியலில் சேர்"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
@@ -944,7 +944,7 @@ msgstr "பிரிவு"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
 #, kde-format
 msgid "Zip Code"
-msgstr ""
+msgstr "அஞ்சல் குறியீட்டு எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
@@ -1139,12 +1139,12 @@ msgstr ""
 #: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr ""
+msgstr "'%1' எனும் அமைப்பை சேமிக்க முடியவில்லை: %2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
 msgid "Could not save settings: %1"
-msgstr ""
+msgstr "அமைப்புகளை சேமிக்க முடியவில்லை: %1"
 
 #: pimcommonakonadi/util/createresource.cpp:126
 #, kde-format
