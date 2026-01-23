@@ -66,11 +66,6 @@ void ShareServiceUrlManagerTest::shouldGenerateServiceUrl_data()
                                                      << PimCommon::ShareServiceUrlManager::Evernote
                                                      << QUrl(QStringLiteral("https://www.evernote.com/clip.action?url=http://www.kde.org&title=kde")) << true;
 
-    QTest::newRow("no title but valid link (pocket)") << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::Pocket
-                                                      << QUrl(QStringLiteral("https://getpocket.com/save?url=http://www.kde.org&title")) << true;
-    QTest::newRow("title and valid link (pocket)") << QStringLiteral("kde") << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::Pocket
-                                                   << QUrl(QStringLiteral("https://getpocket.com/save?url=http://www.kde.org&title=kde")) << true;
-
     QTest::newRow("no title but valid link (livejournal)")
         << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::LiveJournal
         << QUrl(QStringLiteral("http://www.livejournal.com/update.bml?event=http://www.kde.org&subject")) << true;

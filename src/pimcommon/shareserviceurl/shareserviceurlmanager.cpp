@@ -63,8 +63,6 @@ QIcon ShareServiceUrlManagerPrivate::typeToIcon(ShareServiceUrlManager::ServiceT
         break;
     case ShareServiceUrlManager::Evernote:
         break;
-    case ShareServiceUrlManager::Pocket:
-        break;
     case ShareServiceUrlManager::LiveJournal:
         break;
     case ShareServiceUrlManager::ServiceEndType:
@@ -93,9 +91,6 @@ QString ShareServiceUrlManagerPrivate::typeToI18n(ShareServiceUrlManager::Servic
         break;
     case ShareServiceUrlManager::Evernote:
         str = i18n("Evernote");
-        break;
-    case ShareServiceUrlManager::Pocket:
-        str = i18n("Pocket");
         break;
     case ShareServiceUrlManager::LiveJournal:
         str = i18n("LiveJournal");
@@ -171,14 +166,6 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
     }
     case Evernote: {
         url.setUrl(QStringLiteral("https://www.evernote.com/clip.action"));
-        QUrlQuery urlQuery;
-        urlQuery.addQueryItem(QStringLiteral("url"), link);
-        urlQuery.addQueryItem(QStringLiteral("title"), title);
-        url.setQuery(urlQuery);
-        break;
-    }
-    case Pocket: {
-        url.setUrl(QStringLiteral("https://getpocket.com/save"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("url"), link);
         urlQuery.addQueryItem(QStringLiteral("title"), title);
