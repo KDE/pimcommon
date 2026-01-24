@@ -44,3 +44,4 @@ Options:
  require-passing-tests-on: ['Linux', 'FreeBSD']
  cppcheck-arguments: '--enable=warning,style,performance'
  cmake-options: '-DWARNINGS_AS_ERRORS=ON'
+ enable-lsan: True
