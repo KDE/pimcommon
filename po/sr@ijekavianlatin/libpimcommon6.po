@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:42+0000\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,37 +44,32 @@ msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "%1|/|$[gen %1]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
 #, kde-format
 msgid "Facebook"
 msgstr "Facebook"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
 #, kde-format
 msgid "Twitter"
 msgstr "Twitter"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
 #, kde-format
 msgid "Mail"
 msgstr "pošta|/|$[svojstva gen pošte aku poštu dat,lok pošti]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
 #, kde-format
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
-#, kde-format
-msgid "Pocket"
-msgstr "Pocket"
-
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
 #, kde-format
 msgid "LiveJournal"
 msgstr "LiveJournal"
@@ -1252,6 +1247,9 @@ msgstr "Postavljanje resursa završeno."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ne mogu da napravim primerak resursa: %1"
+
+#~ msgid "Pocket"
+#~ msgstr "Pocket"
 
 #, fuzzy
 #~| msgid "Search..."

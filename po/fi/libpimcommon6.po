@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:42+0000\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
 "PO-Revision-Date: 2026-01-05 17:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -48,37 +48,32 @@ msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "palvelussa %1|/|$[jakomuoto %1]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
 #, kde-format
 msgid "Facebook"
 msgstr "Facebook|/|$[aseta jakomuoto Facebookissa]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
 #, kde-format
 msgid "Twitter"
 msgstr "Twitter|/|$[aseta jakomuoto Twitterissä]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
 #, kde-format
 msgid "Mail"
 msgstr "Sähköposti|/|$[aseta jakomuoto Sähköpostissa]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
 #, kde-format
 msgid "LinkedIn"
 msgstr "LinkedIn|/|$[aseta jakomuoto LinkedInissä]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote|/|$[aseta jakomuoto Evernotessa]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
-#, kde-format
-msgid "Pocket"
-msgstr "Pocket|/|$[aseta jakomuoto Pocketissa]"
-
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
 #, kde-format
 msgid "LiveJournal"
 msgstr "LiveJournal|/|$[aseta jakomuoto LiveJournalissa]"
@@ -1179,6 +1174,9 @@ msgstr "Resurssin asetus valmis."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Resurssi-instanssin luominen epäonnistui: %1"
+
+#~ msgid "Pocket"
+#~ msgstr "Pocket|/|$[aseta jakomuoto Pocketissa]"
 
 #~ msgid "Search"
 #~ msgstr "Etsi"

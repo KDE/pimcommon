@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-23 00:42+0000\n"
+"POT-Creation-Date: 2026-01-26 00:44+0000\n"
 "PO-Revision-Date: 2025-12-23 18:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -56,43 +56,37 @@ msgid "%1"
 msgstr "%1"
 
 # Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:83
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
 #, kde-format
 msgid "Facebook"
 msgstr "Facebook"
 
 # Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:86
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
 #, kde-format
 msgid "Twitter"
 msgstr "Твиттере"
 
 # Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:89
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
 #, kde-format
 msgid "Mail"
 msgstr "Электронном письме"
 
 # Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:92
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
 #, kde-format
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
 # Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:95
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote"
 
 # Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:98
-#, kde-format
-msgid "Pocket"
-msgstr "Pocket"
-
-# Продолжение "Поделиться в..." --aspotashev
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:101
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
 #, kde-format
 msgid "LiveJournal"
 msgstr "Живом Журнале"
@@ -1201,6 +1195,10 @@ msgstr "Создание источника данных завершено."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Не удалось создать экземпляр источника данных: %1"
+
+# Продолжение "Поделиться в..." --aspotashev
+#~ msgid "Pocket"
+#~ msgstr "Pocket"
 
 #~ msgid "Search"
 #~ msgstr "Поиск"
