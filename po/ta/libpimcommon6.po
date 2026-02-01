@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-15 02:30+0000\n"
-"PO-Revision-Date: 2026-01-04 16:36+0530\n"
+"PO-Revision-Date: 2026-01-31 17:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:56
 #, kde-format
@@ -481,6 +481,9 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
+"IMAP சேவையகத்தில் நுழைய பயன்படுத்த வேண்டிய அடையாளங்காட்டி இது. பொதுவாக இது பயனர் "
+"பெயராகவோ பயனரின் முழு மின்னஞ்சல் முகவரியாகவோ இருக்கும். உங்கள் கணக்கில் நீங்கள் நுழையும் "
+"முறையைக் கொண்டு இதை யூகிக்கலாம்."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:95
 #, kde-format
