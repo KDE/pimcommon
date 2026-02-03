@@ -14,9 +14,10 @@ namespace PimCommon
 {
 class IncidencesForWidgetPrivate;
 /*!
- * \brief The IncidencesForWidget class is used for configuring which
- * users sharing this folder should get "busy" periods in their freebusy
- * lists.
+ * \class IncidencesForWidget
+ * \brief The IncidencesForWidget class is used for configuring which users sharing this folder should get "busy" periods in their freebusy lists
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/IncidencesForWidget
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QComboBox
@@ -24,14 +25,18 @@ class PIMCOMMONAKONADI_EXPORT IncidencesForWidget : public QComboBox
     Q_OBJECT
 public:
     /*!
+     * Constructs an IncidencesForWidget.
+     * @param parent The parent widget
      */
     explicit IncidencesForWidget(QWidget *parent = nullptr);
     /*!
+     * Destructs the IncidencesForWidget.
      */
     ~IncidencesForWidget() override;
 
-    /// Label name of the combobox.
     /*!
+     * Returns the label name for this widget.
+     * @return The label text
      */
     static QString labelName();
 };

@@ -14,7 +14,10 @@ namespace PimCommon
 class CustomToolsPlugin;
 class CustomToolsPluginManagerPrivate;
 /*!
- * \brief The CustomToolsPluginManager class
+ * \class CustomToolsPluginManager
+ * \brief The CustomToolsPluginManager class manages custom tools plugins
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/CustomToolsPluginManager
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomToolsPluginManager : public QObject
@@ -22,17 +25,24 @@ class PIMCOMMON_EXPORT CustomToolsPluginManager : public QObject
     Q_OBJECT
 public:
     /*!
+     * Returns the singleton instance of CustomToolsPluginManager.
+     * @return The singleton instance
      */
     static CustomToolsPluginManager *self();
 
     /*!
+     * Constructs a CustomToolsPluginManager.
+     * @param parent The parent QObject
      */
     explicit CustomToolsPluginManager(QObject *parent = nullptr);
     /*!
+     * Destructs the CustomToolsPluginManager.
      */
     ~CustomToolsPluginManager() override;
 
     /*!
+     * Returns the list of loaded custom tools plugins.
+     * @return A list of CustomToolsPlugin instances
      */
     [[nodiscard]] QList<PimCommon::CustomToolsPlugin *> pluginsList() const;
 

@@ -23,13 +23,11 @@ class LdapObject;
 namespace PimCommon
 {
 /*!
- * \brief A dialog to search contacts in a LDAP directory.
- *
- * This dialog allows the user to search for contacts inside
- * a LDAP directory.
- *
+ * \class LdapSearchDialog
+ * \brief The LdapSearchDialog class provides a dialog for searching contacts in LDAP directories
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/LdapSearchDialog
  * \author Steffen Hansen <hansen@kde.org>
- * \since 4.5
  */
 class PIMCOMMONAKONADI_EXPORT LdapSearchDialog : public QDialog
 {
@@ -44,32 +42,31 @@ public:
     };
 
     /*!
-     * Creates a new ldap search dialog.
-     *
-     * \a parent The parent widget.
+     * Constructs a new LDAP search dialog.
+     * @param parent The parent widget
      */
     explicit LdapSearchDialog(QWidget *parent = nullptr);
 
     /*!
-     * Destroys the ldap search dialog.
+     * Destructs the LDAP search dialog.
      */
     ~LdapSearchDialog() override;
 
     /*!
-     * Sets the \a text in the search line edit.
+     * Sets the search text in the search line edit.
+     * @param text The text to search for
      */
     void setSearchText(const QString &text);
 
     /*!
-     * Returns a list of contacts that have been selected
-     * in the LDAP search.
+     * Returns the list of contacts selected in the LDAP search.
+     * @return A list of selected KContacts::Addressee objects
      */
     KContacts::Addressee::List selectedContacts() const;
 
 Q_SIGNALS:
     /*!
-     * This signal is emitted whenever the user clicked the
-     * 'Add Selected' button.
+     * Emitted when the user clicks the 'Add Selected' button.
      */
     void contactsAdded();
 
@@ -83,7 +80,6 @@ protected:
     void closeEvent(QCloseEvent *) override;
 
 private:
-    //\\ond PRIVATE
     class LdapSearchDialogPrivate;
     std::unique_ptr<LdapSearchDialogPrivate> const d;
 
@@ -91,7 +87,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotStartSearch())
     Q_PRIVATE_SLOT(d, void slotStopSearch())
     Q_PRIVATE_SLOT(d, void slotSearchDone())
-    //@endcond
 };
 }
 Q_DECLARE_METATYPE(PimCommon::LdapSearchDialog::FilterType)

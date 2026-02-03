@@ -14,9 +14,10 @@
 namespace PimCommon
 {
 /*!
- * \brief The ContentTypeWidget class is a combobox allowing the
- * user to select one of the multiple collection types.
- *
+ * \class ContentTypeWidget
+ * \brief The ContentTypeWidget class provides a combobox for selecting collection types
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/ContentTypeWidget
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QComboBox
@@ -24,18 +25,24 @@ class PIMCOMMONAKONADI_EXPORT ContentTypeWidget : public QComboBox
     Q_OBJECT
 public:
     /*!
+     * Constructs a ContentTypeWidget.
+     * @param parent The parent widget
      */
     explicit ContentTypeWidget(QWidget *parent = nullptr);
     /*!
+     * Destructs the ContentTypeWidget.
      */
     ~ContentTypeWidget() override;
 
     /*!
+     * Sets the current item by name.
+     * @param name The name of the content type to select
      */
     void setCurrentItem(const QString &name);
 
-    // Label name that should be used in a QFormLayout with a ContentTypeWidget
     /*!
+     * Returns the label name for use in a QFormLayout.
+     * @return The label text
      */
     static QString labelName();
 };

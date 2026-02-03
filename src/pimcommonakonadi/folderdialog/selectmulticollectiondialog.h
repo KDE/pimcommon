@@ -13,7 +13,10 @@ namespace PimCommon
 {
 class SelectMultiCollectionDialogPrivate;
 /*!
- * \brief The SelectMultiCollectionDialog class
+ * \class SelectMultiCollectionDialog
+ * \brief The SelectMultiCollectionDialog class provides a dialog for selecting multiple Akonadi collections
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/SelectMultiCollectionDialog
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT SelectMultiCollectionDialog : public QDialog
@@ -21,16 +24,26 @@ class PIMCOMMONAKONADI_EXPORT SelectMultiCollectionDialog : public QDialog
     Q_OBJECT
 public:
     /*!
+     * Constructs a SelectMultiCollectionDialog with pre-selected collections.
+     * @param mimetype The MIME type to filter collections
+     * @param selectedCollection The list of pre-selected collection IDs
+     * @param parent The parent widget
      */
     explicit SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent = nullptr);
     /*!
+     * Constructs a SelectMultiCollectionDialog.
+     * @param mimetype The MIME type to filter collections
+     * @param parent The parent widget
      */
     explicit SelectMultiCollectionDialog(const QString &mimetype, QWidget *parent = nullptr);
     /*!
+     * Destructs the SelectMultiCollectionDialog.
      */
     ~SelectMultiCollectionDialog() override;
 
     /*!
+     * Returns the list of selected collections.
+     * @return A list of selected Akonadi collections
      */
     [[nodiscard]] QList<Akonadi::Collection> selectedCollection() const;
 

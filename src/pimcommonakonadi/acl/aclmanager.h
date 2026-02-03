@@ -96,9 +96,7 @@ Q_SIGNALS:
     void collectionCanBeAdministrated(bool canAdmin);
 
 private:
-    //@cond PRIVATE
     class AclManagerPrivate;
     std::unique_ptr<AclManagerPrivate> const d;
-    //@endcond
 };
 }

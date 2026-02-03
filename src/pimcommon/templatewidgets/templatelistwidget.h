@@ -19,7 +19,10 @@ struct defaultTemplate {
 };
 
 /*!
- * \brief The TemplateListWidget class
+ * \class TemplateListWidget
+ * \brief The TemplateListWidget class provides a list widget for templates
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/TemplateListWidget
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT TemplateListWidget : public QListWidget

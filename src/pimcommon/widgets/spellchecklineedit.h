@@ -12,7 +12,10 @@ class QMimeData;
 namespace PimCommon
 {
 /*!
- * \brief The SpellCheckLineEdit class
+ * \class SpellCheckLineEdit
+ * \brief The SpellCheckLineEdit class provides a line editor with spell checking capabilities
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/SpellCheckLineEdit
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT SpellCheckLineEdit : public TextCustomEditor::RichTextEditor
@@ -44,6 +47,10 @@ Q_SIGNALS:
      */
     void focusUp();
 
+    /*!
+     * Emitted when the user uses the down arrow in the last line. The application
+     * should then put the focus on the widget below the text edit.
+     */
     void focusDown();
 };
 }

@@ -13,7 +13,10 @@ class KMessageWidget;
 namespace PimCommon
 {
 /*!
- * \brief The ConfigurePluginsWidget class
+ * \class ConfigurePluginsWidget
+ * \brief The ConfigurePluginsWidget class provides a widget for configuring plugins
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/ConfigurePluginsWidget
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT ConfigurePluginsWidget : public QWidget

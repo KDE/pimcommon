@@ -16,7 +16,10 @@ class CustomToolsWidgetNg;
 class CustomToolsViewInterface;
 class CustomToolsPluginPrivate;
 /*!
- * \brief The CustomToolsPlugin class
+ * \class CustomToolsPlugin
+ * \brief The CustomToolsPlugin class provides the base class for custom tools plugins
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/CustomToolsPlugin
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomToolsPlugin : public QObject

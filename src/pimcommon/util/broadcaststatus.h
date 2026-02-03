@@ -29,36 +29,45 @@ class PIMCOMMON_EXPORT BroadcastStatus : public QObject
 
 public:
     /*!
+     * Destructs the BroadcastStatus.
      */
     ~BroadcastStatus() override;
 
-    /*! Return the instance of the singleton object for this class */
+    /*!
+     * Returns the singleton instance of BroadcastStatus.
+     * @return The singleton instance
+     */
     static BroadcastStatus *instance();
 
 public Q_SLOTS:
     /*!
-      Emit an update status bar signal. It's a slot so it can be hooked up
-      to other signals.
-    */
+     * Sets a status message to be broadcast.
+     * @param message The status message to display
+     */
     void setStatusMsg(const QString &message);
 
     /*!
-      Set a status message that will go away again with the next call of
-      reset().
-    */
+     * Sets a transient status message that will be reset on the next reset() call.
+     * @param msg The transient status message
+     */
     void setTransientStatusMsg(const QString &msg);
 
     /*!
-      Reset the status message to what ever non-transient message was last
-      active or has since been set.
+     * Resets the status message to the last non-transient message.
      */
     void reset();
 
 Q_SIGNALS:
-    /*! Emitted when setStatusMsg is called. */
+    /*!
+     * Emitted when a status message is set.
+     * @param message The status message
+     */
     void statusMsg(const QString &);
 
 protected:
+    /*!
+     * Protected constructor for the singleton pattern.
+     */
     BroadcastStatus();
     std::unique_ptr<BroadcastStatusPrivate> const d;
 };

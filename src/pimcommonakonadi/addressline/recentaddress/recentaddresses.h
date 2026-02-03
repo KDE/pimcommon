@@ -15,65 +15,71 @@ class KConfig;
 namespace PimCommon
 {
 /*!
- * Handles a list of "recent email-addresses". Simply set a max-count and
- * call \ add() to add entries.
- *
+ * \class RecentAddresses
+ * \brief The RecentAddresses class handles a list of recent email addresses
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/RecentAddresses
  * \author Carsten Pfeiffer <pfeiffer@kde.org>
  */
 
 class PIMCOMMONAKONADI_EXPORT RecentAddresses
 {
 public:
+    /*!
+     * Destructs the RecentAddresses.
+     */
     ~RecentAddresses();
     /*!
-     * Returns the only possible instance of this class.
+     * Returns the singleton instance of RecentAddresses.
+     * @param config The KConfig to load from
+     * @return The singleton instance
      */
     static RecentAddresses *self(KConfig *config = nullptr);
 
-    /*
-     * Returns true if self() was called, i.e. a RecentAddresses instance exists
+    /*!
+     * Checks if the RecentAddresses singleton has been created.
+     * @return true if an instance exists, false otherwise
      */
     static bool exists();
 
     /*!
      * Returns the list of recent addresses.
-     * \note an entry doesn't have to be one email address, it can be multiple,
-     * like "Foo <foo@bar.org>, Bar Baz <bar@baz.org>".
+     * @return A list of email addresses or address groups
      */
     [[nodiscard]] QStringList addresses() const;
 
     /*!
-     * Adds an entry to the list.
-     * \note an entry doesn't have to be one email address, it can be multiple,
-     * like "Foo <foo@bar.org>, Bar Baz <bar@baz.org>".
+     * Adds an entry to the list of recent addresses.
+     * @param entry The address entry to add
      */
     void add(const QString &entry);
 
     /*!
-     * Sets the maximum number, the list can hold. The list adjusts to this
-     * size if necessary. Default maximum is 40.
+     * Sets the maximum number of entries the list can hold.
+     * @param count The maximum number of entries (default is 40)
      */
     void setMaxCount(int count);
 
     /*!
      * Returns the current maximum number of entries.
+     * @return The maximum count
      */
     [[nodiscard]] int maxCount() const;
 
     /*!
-     * Loads the list of recently used addresses from the configfile.
-     * Automatically done on startup.
+     * Loads recent addresses from the configuration file.
+     * @param config The KConfig object to load from
      */
     void load(KConfig *);
 
     /*!
-     * Saves the list of recently used addresses to the configfile.
-     * Make sure to call KSharedConfig::openConfig()->sync() afterwards, to really save.
+     * Saves recent addresses to the configuration file.
+     * @param config The KConfig object to save to
      */
     void save(KConfig *);
 
     /*!
-     * Removes all entries from the history.
+     * Clears all recent addresses.
      */
     void clear();
 

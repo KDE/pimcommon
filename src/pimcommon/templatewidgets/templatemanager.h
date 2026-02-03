@@ -25,7 +25,10 @@ struct TemplateInfo {
 };
 class TemplateManagerPrivate;
 /*!
- * \brief The TemplateManager class
+ * \class TemplateManager
+ * \brief The TemplateManager class manages templates for text composition
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/TemplateManager
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT TemplateManager : public QObject
@@ -33,9 +36,13 @@ class PIMCOMMON_EXPORT TemplateManager : public QObject
     Q_OBJECT
 public:
     /*!
+     * Constructs a TemplateManager.
+     * @param relativeTemplateDir The relative path to the template directory
+     * @param sieveTemplateWidget The template list widget to manage
      */
     explicit TemplateManager(const QString &relativeTemplateDir, PimCommon::TemplateListWidget *sieveTemplateWidget);
     /*!
+     * Destructs the TemplateManager.
      */
     ~TemplateManager() override;
 

@@ -11,7 +11,10 @@
 namespace PimCommon
 {
 /*!
- * \brief The GenericPlugin class
+ * \class GenericPlugin
+ * \brief The GenericPlugin class provides a generic plugin base class
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/GenericPlugin
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
@@ -19,9 +22,12 @@ class PIMCOMMON_EXPORT GenericPlugin : public AbstractGenericPlugin
     Q_OBJECT
 public:
     /*!
+     * Constructs a GenericPlugin.
+     * @param parent The parent QObject
      */
     explicit GenericPlugin(QObject *parent = nullptr);
     /*!
+     * Destructs the GenericPlugin.
      */
     ~GenericPlugin() override;
 };

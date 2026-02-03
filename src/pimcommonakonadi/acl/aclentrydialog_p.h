@@ -54,10 +54,7 @@ public:
     [[nodiscard]] KIMAP::Acl::Rights permissions() const;
 
 private:
-    //@cond PRIVATE
     class AclEntryDialogPrivate;
     std::unique_ptr<AclEntryDialogPrivate> const d;
-
-    //@endcond
 };
 }

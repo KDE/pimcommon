@@ -12,13 +12,19 @@
 namespace PimCommon
 {
 /*!
- * \brief The AddresseeLineEditUtil class
+ * \class AddresseeLineEditUtil
+ * \brief The AddresseeLineEditUtil class provides utility functions for addressee line editing
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/AddresseeLineEditUtil
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT AddresseeLineEditUtil
 {
 public:
     /*!
+     * Adapts pasted email addresses for use in the addressee line editor.
+     * @param str The pasted text
+     * @return The adapted email address text
      */
     [[nodiscard]] static QString adaptPasteMails(const QString &str);
 };
