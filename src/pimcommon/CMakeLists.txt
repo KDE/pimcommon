@@ -348,3 +348,4 @@ install(
     FILE KPim6PimCommonTargets.cmake
     NAMESPACE KPim6::
 )
+ecm_generate_qdoc(KPim6PimCommon pimcommon.qdocconf)

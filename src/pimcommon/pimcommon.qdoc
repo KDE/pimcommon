@@ -1,0 +1,9 @@
+/*!
+    \module PimCommon
+    \title PimCommon C++ Classes
+    \ingroup modules
+    \cmakepackage KPim6
+    \cmakecomponent PimCommon
+
+    \brief PimCommon provides common lib.
+*/

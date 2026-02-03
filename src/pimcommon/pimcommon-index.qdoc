@@ -1,0 +1,20 @@
+/*!
+    \page pimcommon-index.html
+    \title PimCommon
+
+    PimCommon provides common pim lib
+
+    \section1 Using the Module
+
+    \include {module-use.qdocinc} {using the c++ api}
+
+    \section2 Building with CMake
+
+    \include {module-use.qdocinc} {building with cmake} {KPim6} {PimCommon} {KPim6::PimCommon}
+
+    \section1 API Reference
+
+    \list
+        \li \l{PimCommon C++ Classes}
+    \endlist
+*/
