@@ -44,6 +44,12 @@ class LdapActivitiesAbstract;
 namespace PimCommon
 {
 class AddresseeLineEditPrivate;
+/*!
+ * \class AddresseeLineEdit
+ * \brief The AddresseeLineEdit class provides a line editor for entering email addresses with completion support
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/AddresseeLineEdit
+ */
 class PIMCOMMONAKONADI_EXPORT AddresseeLineEdit : public KLineEdit
 {
     Q_OBJECT

@@ -11,7 +11,10 @@
 namespace PimCommon
 {
 /*!
- * \brief The NetworkManager class
+ * \class NetworkManager
+ * \brief The NetworkManager class manages network status
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/NetworkManager
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT NetworkManager : public QObject
@@ -19,12 +22,17 @@ class PIMCOMMON_EXPORT NetworkManager : public QObject
     Q_OBJECT
 public:
     /*!
+     * Constructs a NetworkManager.
+     * @param parent The parent QObject
      */
     explicit NetworkManager(QObject *parent = nullptr);
     /*!
+     * Destructs the NetworkManager.
      */
     ~NetworkManager() override;
     /*!
+     * Returns the singleton instance of NetworkManager.
+     * @return The singleton instance
      */
     static NetworkManager *self();
 

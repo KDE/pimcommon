@@ -18,7 +18,10 @@ namespace PimCommon
 {
 class LineEditWithAutoCorrectionPrivate;
 /*!
- * \brief The LineEditWithAutoCorrection class
+ * \class LineEditWithAutoCorrection
+ * \brief The LineEditWithAutoCorrection class provides a line editor with auto-correction support
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/LineEditWithAutoCorrection
  * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheckLineEdit
@@ -26,6 +29,9 @@ class PIMCOMMON_EXPORT LineEditWithAutoCorrection : public PimCommon::SpellCheck
     Q_OBJECT
 public:
     /*!
+     * Constructs a LineEditWithAutoCorrection.
+     * @param parent The parent widget
+     * @param configFile The configuration file for auto-correction
      */
     explicit LineEditWithAutoCorrection(QWidget *parent, const QString &configFile);
     /*!

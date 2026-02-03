@@ -18,10 +18,11 @@
 namespace PimCommon
 {
 /*!
-   Provides a singleton which broadcasts status messages by emitting
-   signals. Interested mainwindows can connect to the statusMsg()
-   signal and update statusBars or whatever they use for showing status.
-*/
+ * \class BroadcastStatus
+ * \brief The BroadcastStatus class provides a singleton which broadcasts status messages
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/BroadcastStatus
+ */
 class BroadcastStatusPrivate;
 class PIMCOMMON_EXPORT BroadcastStatus : public QObject
 {
