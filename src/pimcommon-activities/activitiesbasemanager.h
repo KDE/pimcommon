@@ -15,7 +15,10 @@ class Consumer;
 namespace PimCommonActivities
 {
 /*!
+ * \class ActivitiesBaseManager
  * \brief The ActivitiesBaseManager class
+ * \inmodule PimCommonActivities
+ * \inheaders PimCommonActivities/ActivitiesBaseManager
  */
 class PIMCOMMONACTIVITIES_EXPORT ActivitiesBaseManager : public QObject
 {

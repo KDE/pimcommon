@@ -13,7 +13,10 @@ class QCheckBox;
 namespace PimCommonActivities
 {
 /*!
+ * \class ConfigureActivitiesWidget
  * \brief The ConfigureActivitiesWidget class
+ * \inmodule PimCommonActivities
+ * \inheaders PimCommonActivities/ConfigureActivitiesWidget
  */
 class PIMCOMMONACTIVITIES_EXPORT ConfigureActivitiesWidget : public QWidget
 {
