@@ -15,7 +15,7 @@ class Consumer;
 namespace PimCommonActivities
 {
 /*!
- * \class ActivitiesBaseManager
+ * \class PimCommonActivities::ActivitiesBaseManager
  * \brief The ActivitiesBaseManager class
  * \inmodule PimCommonActivities
  * \inheaderfile PimCommonActivities/ActivitiesBaseManager

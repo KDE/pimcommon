@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = PimCommonActivities
+description = PimCommon Activities provides common lib.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "PimCommonActivities"
+
+qhp.projects            = pimcommonactivities
+
+qhp.pimcommonactivities.file                = pimcommonactivities.qhp
+qhp.pimcommonactivities.namespace           = org.kde.pimcommonactivities.$QT_VERSION_TAG
+qhp.pimcommonactivities.virtualFolder       = pimcommonactivities
+qhp.pimcommonactivities.indexTitle          = pimcommonactivities
+qhp.pimcommonactivities.indexRoot           =
+
+qhp.pimcommonactivities.subprojects         = classes
+qhp.pimcommonactivities.subprojects.classes.title = C++ Classes
+qhp.pimcommonactivities.subprojects.classes.indexTitle = PimCommon Activities C++ Classes
+qhp.pimcommonactivities.subprojects.classes.selectors = class fake:headerfile
+qhp.pimcommonactivities.subprojects.classes.sortPages = true
+
+tagfile = pimcommonactivities.tags
