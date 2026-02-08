@@ -16,7 +16,7 @@ namespace PimCommonActivities
  * \class ConfigureActivitiesWidget
  * \brief The ConfigureActivitiesWidget class
  * \inmodule PimCommonActivities
- * \inheaders PimCommonActivities/ConfigureActivitiesWidget
+ * \inheaderfile PimCommonActivities/ConfigureActivitiesWidget
  */
 class PIMCOMMONACTIVITIES_EXPORT ConfigureActivitiesWidget : public QWidget
 {
