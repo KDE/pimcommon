@@ -18,7 +18,7 @@ namespace PimCommon
 {
 class LineEditWithAutoCorrectionPrivate;
 /*!
- * \class LineEditWithAutoCorrection
+ * \class PimCommon::LineEditWithAutoCorrection
  * \brief The LineEditWithAutoCorrection class provides a line editor with auto-correction support
  * \inmodule PimCommon
  * \inheaderfile PimCommon/LineEditWithAutoCorrection

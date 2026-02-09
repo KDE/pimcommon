@@ -18,7 +18,7 @@ class QToolButton;
 namespace PimCommon
 {
 /*!
- * \class RecentAddressWidget
+ * \class PimCommon::RecentAddressWidget
  * \brief The RecentAddressWidget class provides a widget for managing recent addresses
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/RecentAddressWidget

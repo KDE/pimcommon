@@ -24,7 +24,7 @@ struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo {
 };
 
 /*!
- * \class AddressessLineEditAbstractPlugin
+ * \class PimCommon::AddressessLineEditAbstractPlugin
  * \brief The AddressessLineEditAbstractPlugin class is the base class for addressee line edit plugins
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/AddressessLineEditAbstractPlugin

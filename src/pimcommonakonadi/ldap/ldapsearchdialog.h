@@ -23,7 +23,7 @@ class LdapObject;
 namespace PimCommon
 {
 /*!
- * \class LdapSearchDialog
+ * \class PimCommon::LdapSearchDialog
  * \brief The LdapSearchDialog class provides a dialog for searching contacts in LDAP directories
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/LdapSearchDialog

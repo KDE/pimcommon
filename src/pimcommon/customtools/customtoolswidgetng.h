@@ -16,7 +16,7 @@ class CustomToolsWidgetNgPrivate;
 class CustomToolsPlugin;
 class CustomToolsViewInterface;
 /*!
- * \class CustomToolsWidgetNg
+ * \class PimCommon::CustomToolsWidgetNg
  * \brief The CustomToolsWidgetNg class provides a widget for custom tools
  * \inmodule PimCommon
  * \inheaderfile PimCommon/CustomToolsWidgetNg

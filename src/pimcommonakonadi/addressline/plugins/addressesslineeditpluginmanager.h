@@ -15,7 +15,7 @@ namespace PimCommon
 class AddressessLineEditAbstractPlugin;
 class AddressessLineEditPluginManagerPrivate;
 /*!
- * \class AddressessLineEditPluginManager
+ * \class PimCommon::AddressessLineEditPluginManager
  * \brief The AddressessLineEditPluginManager class manages addressee line edit plugins
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/AddressessLineEditPluginManager

@@ -12,7 +12,7 @@ class QMimeData;
 namespace PimCommon
 {
 /*!
- * \class SpellCheckLineEdit
+ * \class PimCommon::SpellCheckLineEdit
  * \brief The SpellCheckLineEdit class provides a line editor with spell checking capabilities
  * \inmodule PimCommon
  * \inheaderfile PimCommon/SpellCheckLineEdit

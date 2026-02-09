@@ -14,7 +14,7 @@ namespace PimCommon
 {
 class IncidencesForWidgetPrivate;
 /*!
- * \class IncidencesForWidget
+ * \class PimCommon::IncidencesForWidget
  * \brief The IncidencesForWidget class is used for configuring which users sharing this folder should get "busy" periods in their freebusy lists
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/IncidencesForWidget

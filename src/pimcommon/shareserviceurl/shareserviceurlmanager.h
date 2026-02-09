@@ -17,7 +17,7 @@ namespace PimCommon
 {
 class ShareServiceUrlManagerPrivate;
 /*!
- * \class ShareServiceUrlManager
+ * \class PimCommon::ShareServiceUrlManager
  * \brief The ShareServiceUrlManager class manages service URLs for sharing
  * \inmodule PimCommon
  * \inheaderfile PimCommon/ShareServiceUrlManager

@@ -15,7 +15,7 @@ namespace PimCommon
 class AbstractGenericPlugin;
 class GenericPlugin;
 /*!
- * \class ActionType
+ * \class PimCommon::ActionType
  * \brief The ActionType class provides type information for generic plugin actions
  * \inmodule PimCommon
  * \inheaderfile PimCommon/AbstractGenericPluginInterface
@@ -70,7 +70,7 @@ private:
 
 class AbstractGenericPluginInterfacePrivate;
 /*!
- * \class AbstractGenericPluginInterface
+ * \class PimCommon::AbstractGenericPluginInterface
  * \brief The AbstractGenericPluginInterface class provides an interface for generic plugin implementations
  * \inmodule PimCommon
  * \inheaderfile PimCommon/AbstractGenericPluginInterface

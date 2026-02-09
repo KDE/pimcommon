@@ -18,7 +18,7 @@
 namespace PimCommon
 {
 /*!
- * \class BroadcastStatus
+ * \class PimCommon::BroadcastStatus
  * \brief The BroadcastStatus class provides a singleton which broadcasts status messages
  * \inmodule PimCommon
  * \inheaderfile PimCommon/BroadcastStatus

@@ -13,7 +13,7 @@
 namespace PimCommon
 {
 /*!
- * \class CollectionTypeUtil
+ * \class PimCommon::CollectionTypeUtil
  * \brief The CollectionTypeUtil class provides utilities for collection type handling
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/CollectionTypeUtil

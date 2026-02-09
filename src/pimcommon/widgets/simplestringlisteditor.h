@@ -25,7 +25,7 @@ namespace PimCommon
 {
 class SimpleStringListEditorPrivate;
 /*!
- * \class SimpleStringListEditor
+ * \class PimCommon::SimpleStringListEditor
  * \brief The SimpleStringListEditor class provides a widget for editing a list of strings with add and remove buttons
  * \inmodule PimCommon
  * \inheaderfile PimCommon/SimpleStringListEditor

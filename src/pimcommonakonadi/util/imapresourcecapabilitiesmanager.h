@@ -18,7 +18,7 @@ class AgentInstance;
 namespace PimCommon
 {
 /*!
- * \class ImapResourceCapabilitiesManager
+ * \class PimCommon::ImapResourceCapabilitiesManager
  * \brief The ImapResourceCapabilitiesManager class manages IMAP resource capabilities
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/ImapResourceCapabilitiesManager

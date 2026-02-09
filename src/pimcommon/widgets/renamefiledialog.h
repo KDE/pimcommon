@@ -15,7 +15,7 @@ namespace PimCommon
 {
 class RenameFileDialogPrivate;
 /*!
- * \class RenameFileDialog
+ * \class PimCommon::RenameFileDialog
  * \brief The RenameFileDialog class provides a dialog for renaming files
  * \inmodule PimCommon
  * \inheaderfile PimCommon/RenameFileDialog

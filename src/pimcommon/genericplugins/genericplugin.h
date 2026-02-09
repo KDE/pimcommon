@@ -11,7 +11,7 @@
 namespace PimCommon
 {
 /*!
- * \class GenericPlugin
+ * \class PimCommon::GenericPlugin
  * \brief The GenericPlugin class provides a generic plugin base class
  * \inmodule PimCommon
  * \inheaderfile PimCommon/GenericPlugin

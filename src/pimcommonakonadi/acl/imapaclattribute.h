@@ -25,7 +25,7 @@ namespace PimCommon
 {
 class ImapAclAttributePrivate;
 /*!
- * \class ImapAclAttribute
+ * \class PimCommon::ImapAclAttribute
  * \brief The ImapAclAttribute class stores IMAP ACL information as an Akonadi attribute
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/ImapAclAttribute

@@ -11,7 +11,7 @@
 namespace PimCommon
 {
 /*!
- * \class NetworkManager
+ * \class PimCommon::NetworkManager
  * \brief The NetworkManager class manages network status
  * \inmodule PimCommon
  * \inheaderfile PimCommon/NetworkManager

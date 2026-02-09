@@ -12,7 +12,7 @@ class QStringListModel;
 namespace PimCommon
 {
 /*!
- * \class LineEditWithCompleterNg
+ * \class PimCommon::LineEditWithCompleterNg
  * \brief The LineEditWithCompleterNg class provides a line editor with completion support
  * \inmodule PimCommon
  * \inheaderfile PimCommon/LineEditWithCompleterNg

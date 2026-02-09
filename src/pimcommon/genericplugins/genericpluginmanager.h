@@ -17,7 +17,7 @@ namespace PimCommon
 class GenericPluginManagerPrivate;
 class GenericPlugin;
 /*!
- * \class GenericPluginManager
+ * \class PimCommon::GenericPluginManager
  * \brief The GenericPluginManager class manages generic plugins
  * \inmodule PimCommon
  * \inheaderfile PimCommon/GenericPluginManager

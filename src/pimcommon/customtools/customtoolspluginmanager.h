@@ -14,7 +14,7 @@ namespace PimCommon
 class CustomToolsPlugin;
 class CustomToolsPluginManagerPrivate;
 /*!
- * \class CustomToolsPluginManager
+ * \class PimCommon::CustomToolsPluginManager
  * \brief The CustomToolsPluginManager class manages custom tools plugins
  * \inmodule PimCommon
  * \inheaderfile PimCommon/CustomToolsPluginManager

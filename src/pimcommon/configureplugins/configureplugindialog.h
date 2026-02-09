@@ -12,7 +12,7 @@ class QDialogButtonBox;
 namespace PimCommon
 {
 /*!
- * \class ConfigurePluginDialog
+ * \class PimCommon::ConfigurePluginDialog
  * \brief The ConfigurePluginDialog class provides a dialog for configuring plugins
  * \inmodule PimCommon
  * \inheaderfile PimCommon/ConfigurePluginDialog

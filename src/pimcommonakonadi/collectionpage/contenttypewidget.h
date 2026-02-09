@@ -14,7 +14,7 @@
 namespace PimCommon
 {
 /*!
- * \class ContentTypeWidget
+ * \class PimCommon::ContentTypeWidget
  * \brief The ContentTypeWidget class provides a combobox for selecting collection types
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/ContentTypeWidget

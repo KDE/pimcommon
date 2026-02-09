@@ -17,7 +17,7 @@ class QTemporaryFile;
 namespace PimCommon
 {
 /*!
- * \class PurposeMenuWidget
+ * \class PimCommon::PurposeMenuWidget
  * \brief The PurposeMenuWidget class provides a menu widget for sharing content using Purpose framework
  * \inmodule PimCommon
  * \inheaderfile PimCommon/PurposeMenuWidget

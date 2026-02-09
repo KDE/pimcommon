@@ -12,7 +12,7 @@
 namespace PimCommon
 {
 /*!
- * \class AddresseeLineEditUtil
+ * \class PimCommon::AddresseeLineEditUtil
  * \brief The AddresseeLineEditUtil class provides utility functions for addressee line editing
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/AddresseeLineEditUtil

@@ -13,7 +13,7 @@ class KToggleAction;
 namespace PimCommon
 {
 /*!
- * \class CustomToolsViewInterface
+ * \class PimCommon::CustomToolsViewInterface
  * \brief The CustomToolsViewInterface class provides the interface for custom tools views
  * \inmodule PimCommon
  * \inheaderfile PimCommon/CustomToolsViewInterface

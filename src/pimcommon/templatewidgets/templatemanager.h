@@ -25,7 +25,7 @@ struct TemplateInfo {
 };
 class TemplateManagerPrivate;
 /*!
- * \class TemplateManager
+ * \class PimCommon::TemplateManager
  * \brief The TemplateManager class manages templates for text composition
  * \inmodule PimCommon
  * \inheaderfile PimCommon/TemplateManager

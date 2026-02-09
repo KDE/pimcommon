@@ -52,7 +52,7 @@ private:
 };
 
 /*!
- * \class CustomLogWidget
+ * \class PimCommon::CustomLogWidget
  * \brief The CustomLogWidget class provides a widget for displaying custom log messages
  * \inmodule PimCommon
  * \inheaderfile PimCommon/CustomLogWidget

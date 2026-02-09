@@ -14,7 +14,7 @@
 namespace PimCommon
 {
 /*!
- * \class CreateResource
+ * \class PimCommon::CreateResource
  * \brief The CreateResource class creates Akonadi resources
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/CreateResource

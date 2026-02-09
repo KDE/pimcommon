@@ -15,7 +15,7 @@ namespace PimCommon
 {
 class CollectionAclPagePrivate;
 /*!
- * \class CollectionAclPage
+ * \class PimCommon::CollectionAclPage
  * \brief The CollectionAclPage class provides an "Access Control" tab for collection properties
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/CollectionAclPage

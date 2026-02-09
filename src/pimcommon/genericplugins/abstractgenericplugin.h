@@ -12,7 +12,7 @@ namespace PimCommon
 {
 class AbstractGenericPluginInterface;
 /*!
- * \class AbstractGenericPlugin
+ * \class PimCommon::AbstractGenericPlugin
  * \brief The AbstractGenericPlugin class provides the base class for generic plugins
  * \inmodule PimCommon
  * \inheaderfile PimCommon/AbstractGenericPlugin

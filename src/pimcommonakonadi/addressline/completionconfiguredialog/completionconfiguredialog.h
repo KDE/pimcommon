@@ -20,7 +20,7 @@ namespace PimCommon
 {
 class CompletionConfigureDialogPrivate;
 /*!
- * \class CompletionConfigureDialog
+ * \class PimCommon::PimCommon::CompletionConfigureDialog
  * \brief The CompletionConfigureDialog class provides configuration for address completion
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/CompletionConfigureDialog

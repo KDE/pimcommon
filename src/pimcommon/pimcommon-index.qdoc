@@ -17,5 +17,6 @@
     \list
         \li \l{PimCommon C++ Classes}
         \li \l{PimCommon Activities C++ Classes}
+        \li \l{PimCommon Akonadi C++ Classes}
     \endlist
 */

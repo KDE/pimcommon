@@ -13,7 +13,7 @@ namespace PimCommon
 {
 class SelectMultiCollectionDialogPrivate;
 /*!
- * \class SelectMultiCollectionDialog
+ * \class PimCommon::SelectMultiCollectionDialog
  * \brief The SelectMultiCollectionDialog class provides a dialog for selecting multiple Akonadi collections
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/SelectMultiCollectionDialog

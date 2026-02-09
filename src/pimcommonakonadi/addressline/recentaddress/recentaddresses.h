@@ -15,7 +15,7 @@ class KConfig;
 namespace PimCommon
 {
 /*!
- * \class RecentAddresses
+ * \class PimCommon::RecentAddresses
  * \brief The RecentAddresses class handles a list of recent email addresses
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/RecentAddresses

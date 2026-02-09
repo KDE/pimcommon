@@ -12,7 +12,7 @@
 namespace PimCommon
 {
 /*!
- * \class PurposeMenuMessageWidget
+ * \class PimCommon::PurposeMenuMessageWidget
  * \brief The PurposeMenuMessageWidget class provides a message widget for displaying Purpose framework results
  * \inmodule PimCommon
  * \inheaderfile PimCommon/PurposeMenuMessageWidget

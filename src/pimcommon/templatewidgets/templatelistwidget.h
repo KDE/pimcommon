@@ -19,7 +19,7 @@ struct defaultTemplate {
 };
 
 /*!
- * \class TemplateListWidget
+ * \class PimCommon::TemplateListWidget
  * \brief The TemplateListWidget class provides a list widget for templates
  * \inmodule PimCommon
  * \inheaderfile PimCommon/TemplateListWidget

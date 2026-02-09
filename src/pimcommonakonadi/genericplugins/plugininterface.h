@@ -18,7 +18,7 @@ namespace PimCommon
 {
 class PluginInterfacePrivate;
 /*!
- * \class PluginInterface
+ * \class PimCommon::PluginInterface
  * \brief The PluginInterface class manages Akonadi-aware generic plugins
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/PluginInterface

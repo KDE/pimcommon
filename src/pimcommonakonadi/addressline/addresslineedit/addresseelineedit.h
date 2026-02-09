@@ -45,7 +45,7 @@ namespace PimCommon
 {
 class AddresseeLineEditPrivate;
 /*!
- * \class AddresseeLineEdit
+ * \class PimCommon::AddresseeLineEdit
  * \brief The AddresseeLineEdit class provides a line editor for entering email addresses with completion support
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/AddresseeLineEdit

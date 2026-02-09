@@ -23,7 +23,7 @@ namespace PimCommon
 {
 class CheckedCollectionWidgetPrivate;
 /*!
- * \class CheckedCollectionWidget
+ * \class PimCommon::CheckedCollectionWidget
  * \brief The CheckedCollectionWidget class provides a widget for selecting and checking Akonadi collections
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/CheckedCollectionWidget

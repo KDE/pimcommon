@@ -14,7 +14,7 @@ namespace PimCommon
 {
 class KActionMenuChangeCasePrivate;
 /*!
- * \class KActionMenuChangeCase
+ * \class PimCommon::KActionMenuChangeCase
  * \brief The KActionMenuChangeCase class provides an action menu for changing text case
  * \inmodule PimCommon
  * \inheaderfile PimCommon/KActionMenuChangeCase

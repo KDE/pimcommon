@@ -13,7 +13,7 @@ class QEvent;
 namespace PimCommon
 {
 /*!
- * \class CustomTreeView
+ * \class PimCommon::CustomTreeView
  * \brief The CustomTreeView class provides a tree widget with default text support
  * \inmodule PimCommon
  * \inheaderfile PimCommon/CustomTreeView
