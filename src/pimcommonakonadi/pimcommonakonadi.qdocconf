@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = PimCommonAkonadi
+description = PimCommon Akonadi provides common lib.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "PimCommonAkonadi"
+
+qhp.projects            = pimcommonakonadi
+
+qhp.pimcommonakonadi.file                = pimcommonakonadi.qhp
+qhp.pimcommonakonadi.namespace           = org.kde.pimcommonakonadi.$QT_VERSION_TAG
+qhp.pimcommonakonadi.virtualFolder       = pimcommonakonadi
+qhp.pimcommonakonadi.indexTitle          = pimcommonakonadi
+qhp.pimcommonakonadi.indexRoot           =
+
+qhp.pimcommonakonadi.subprojects         = classes
+qhp.pimcommonakonadi.subprojects.classes.title = C++ Classes
+qhp.pimcommonakonadi.subprojects.classes.indexTitle = PimCommon Akonadi C++ Classes
+qhp.pimcommonakonadi.subprojects.classes.selectors = class fake:headerfile
+qhp.pimcommonakonadi.subprojects.classes.sortPages = true
+
+tagfile = pimcommonakonadi.tags
