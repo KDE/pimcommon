@@ -123,12 +123,12 @@ void AddresseeLineEdit::setExpandIntern(bool expand)
 
 void AddresseeLineEdit::setEnableBalooSearch(bool enable)
 {
-    d->setEnableAkonadiSearch(enable);
+    d->setEnableBalooSearch(enable);
 }
 
 bool AddresseeLineEdit::enableBalooSearch() const
 {
-    return d->enableAkonadiSearch();
+    return d->enableBalooSearch();
 }
 
 void AddresseeLineEdit::setEnableAkonadiSearch(bool enable)
