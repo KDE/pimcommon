@@ -56,6 +56,7 @@ private:
  * \brief The CustomLogWidget class provides a widget for displaying custom log messages
  * \inmodule PimCommon
  * \inheaderfile PimCommon/CustomLogWidget
+ * \author Laurent Montel <montel@kde.org>
  */
 class PIMCOMMON_EXPORT CustomLogWidget : public QListWidget
 {

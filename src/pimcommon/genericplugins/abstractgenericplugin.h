@@ -60,8 +60,6 @@ public:
     [[nodiscard]] virtual bool hasStatusBarSupport() const;
 
     /*!
-     */
-    /*!
      * Shows the configuration dialog for this plugin.
      * @param parent The parent widget
      */

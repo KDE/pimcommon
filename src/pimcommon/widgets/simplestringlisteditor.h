@@ -161,16 +161,41 @@ Q_SIGNALS:
     void changed();
 
 protected:
+    /*!
+     * Inserts a new entry into the list.
+     * @param newEntry The entry to insert
+     */
     void insertNewEntry(const QString &newEntry);
 
 protected Q_SLOTS:
+    /*!
+     * Adds a new entry to the list.
+     */
     void slotAdd();
+    /*!
+     * Removes the selected entry from the list.
+     */
     void slotRemove();
+    /*!
+     * Modifies the selected entry.
+     */
     void slotModify();
+    /*!
+     * Moves the selected entry up in the list.
+     */
     void slotUp();
+    /*!
+     * Moves the selected entry down in the list.
+     */
     void slotDown();
+    /*!
+     * Customizes the selected entry.
+     */
     void slotCustomize();
 
+    /*!
+     * Handles selection changes.
+     */
     void slotSelectionChanged();
 
 private:

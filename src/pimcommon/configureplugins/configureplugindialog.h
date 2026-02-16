@@ -23,38 +23,54 @@ class PIMCOMMON_EXPORT ConfigurePluginDialog : public QDialog
     Q_OBJECT
 public:
     /*!
+     * Constructs a ConfigurePluginDialog.
+     * @param parent The parent widget
      */
     explicit ConfigurePluginDialog(QWidget *parent = nullptr);
     /*!
+     * Destructs the ConfigurePluginDialog.
      */
     ~ConfigurePluginDialog() override;
 
     /*!
+     * Initializes the dialog layout.
+     * @param addSpacer Whether to add a spacer to the layout
      */
     void initLayout(bool addSpacer = false);
 
 protected:
     /*!
+     * Shows help for the dialog.
+     * @param name The help document name
+     * @param anchor The anchor within the help document
      */
     void showHelp(const QString &name, const QString &anchor);
     /*!
+     * Creates the main layout widget for the dialog.
+     * @return A QWidget containing the dialog layout
      */
     virtual QWidget *createLayout() = 0;
     /*!
+     * Saves the configuration from the dialog.
      */
     virtual void save() = 0;
     /*!
+     * Loads the configuration into the dialog.
      */
     virtual void load() = 0;
     /*!
+     * Resets the configuration to default values.
      */
     virtual void reset();
 
     /*!
+     * Shows the help dialog.
      */
     virtual void help();
 
     /*!
+     * Returns the dialog button box.
+     * @return The QDialogButtonBox for this dialog
      */
     [[nodiscard]] QDialogButtonBox *buttonBox() const;
 

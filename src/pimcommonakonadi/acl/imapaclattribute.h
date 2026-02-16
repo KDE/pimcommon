@@ -29,6 +29,7 @@ class ImapAclAttributePrivate;
  * \brief The ImapAclAttribute class stores IMAP ACL information as an Akonadi attribute
  * \inmodule PimCommonAkonadi
  * \inheaderfile PimCommonAkonadi/ImapAclAttribute
+ * \author Kevin Ottens <ervin@kde.org>
  */
 class PIMCOMMONAKONADI_EXPORT ImapAclAttribute : public Akonadi::Attribute
 {

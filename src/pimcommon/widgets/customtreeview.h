@@ -51,7 +51,15 @@ public:
     void setShowDefaultText(bool b);
 
 protected:
+    /*!
+     * Paints the widget.
+     * @param event The paint event
+     */
     void paintEvent(QPaintEvent *event) override;
+    /*!
+     * Handles change events.
+     * @param event The change event
+     */
     void changeEvent(QEvent *event) override;
 
     bool mShowDefaultText = true;

@@ -71,12 +71,29 @@ Q_SIGNALS:
     void contactsAdded();
 
 protected Q_SLOTS:
+    /*!
+     * Handles the user1 button click.
+     */
     void slotUser1();
+    /*!
+     * Handles the user2 button click.
+     */
     void slotUser2();
+    /*!
+     * Handles custom context menu requests.
+     * @param pos The position where the context menu was requested
+     */
     void slotCustomContextMenuRequested(const QPoint &);
+    /*!
+     * Handles the cancel button click.
+     */
     void slotCancelClicked();
 
 protected:
+    /*!
+     * Handles close events.
+     * @param event The close event
+     */
     void closeEvent(QCloseEvent *) override;
 
 private:

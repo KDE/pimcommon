@@ -35,9 +35,25 @@ public:
     ~SpellCheckLineEdit() override;
 
 protected:
+    /*!
+     * Returns the size hint for this widget.
+     * @return The recommended size
+     */
     QSize sizeHint() const override;
+    /*!
+     * Returns the minimum size hint for this widget.
+     * @return The minimum recommended size
+     */
     QSize minimumSizeHint() const override;
+    /*!
+     * Handles key press events.
+     * @param event The key event
+     */
     void keyPressEvent(QKeyEvent *) override;
+    /*!
+     * Inserts content from MIME data.
+     * @param source The MIME data source
+     */
     void insertFromMimeData(const QMimeData *source) override;
 
 Q_SIGNALS:

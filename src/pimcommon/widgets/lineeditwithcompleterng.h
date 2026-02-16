@@ -43,6 +43,10 @@ public:
     void slotClearHistory();
 
 protected:
+    /*!
+     * Handles context menu events.
+     * @param e The context menu event
+     */
     void contextMenuEvent(QContextMenuEvent *e) override;
 
 private:

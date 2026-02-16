@@ -37,11 +37,15 @@ public:
     static NetworkManager *self();
 
     /*!
+     * Returns whether the network is online.
+     * @return true if the network is online, false otherwise
      */
     [[nodiscard]] bool isOnline() const;
 
 Q_SIGNALS:
     /*!
+     * Emitted when the network status changes.
+     * @param isOnline true if the network is online, false otherwise
      */
     void networkStatusChanged(bool isOnline);
 

@@ -22,6 +22,7 @@ namespace PimCommon
  * \brief The BroadcastStatus class provides a singleton which broadcasts status messages
  * \inmodule PimCommon
  * \inheaderfile PimCommon/BroadcastStatus
+ * \author Don Sanders <sanders@kde.org>
  */
 class BroadcastStatusPrivate;
 class PIMCOMMON_EXPORT BroadcastStatus : public QObject
