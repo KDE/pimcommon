@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-15 02:30+0000\n"
-"PO-Revision-Date: 2026-02-05 16:18+0100\n"
+"PO-Revision-Date: 2026-02-17 16:53+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -302,7 +302,7 @@ msgstr "Modificationes importante depost ultime version:"
 #: pimcommon/whatsnew/whatsnewwidget.cpp:90
 #, kde-format
 msgid "Some of the new features in this release include:"
-msgstr "Alcun delnove characteristicas in iste version include:"
+msgstr "Alcun del nove characteristicas in iste version include:"
 
 #: pimcommon/whatsnew/whatsnewwidget.cpp:95
 #, kde-format
