@@ -27,9 +27,8 @@ bool CustomToolsPlugin::hasConfigureDialog() const
     return false;
 }
 
-void CustomToolsPlugin::showConfigureDialog(QWidget *parent)
+void CustomToolsPlugin::showConfigureDialog([[maybe_unused]] QWidget *parent)
 {
-    Q_UNUSED(parent)
 }
 
 QString CustomToolsPlugin::description() const

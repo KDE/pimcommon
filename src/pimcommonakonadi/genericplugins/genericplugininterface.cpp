@@ -41,30 +41,24 @@ QList<ActionType> GenericPluginInterface::actionTypes() const
     return d->actionTypes;
 }
 
-void GenericPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+void GenericPluginInterface::updateActions([[maybe_unused]] int numberOfSelectedItems, [[maybe_unused]] int numberOfSelectedCollections)
 {
-    Q_UNUSED(numberOfSelectedItems)
-    Q_UNUSED(numberOfSelectedCollections)
 }
 
-void GenericPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
+void GenericPluginInterface::setCurrentItems([[maybe_unused]] const Akonadi::Item::List &items)
 {
-    Q_UNUSED(items)
 }
 
-void GenericPluginInterface::setItems(const Akonadi::Item::List &items)
+void GenericPluginInterface::setItems([[maybe_unused]] const Akonadi::Item::List &items)
 {
-    Q_UNUSED(items)
 }
 
-void GenericPluginInterface::setCurrentCollection(const Akonadi::Collection &col)
+void GenericPluginInterface::setCurrentCollection([[maybe_unused]] const Akonadi::Collection &col)
 {
-    Q_UNUSED(col)
 }
 
-void GenericPluginInterface::setCollections(const Akonadi::Collection::List &cols)
+void GenericPluginInterface::setCollections([[maybe_unused]] const Akonadi::Collection::List &cols)
 {
-    Q_UNUSED(cols)
 }
 
 PimCommon::GenericPluginInterface::RequireTypes GenericPluginInterface::requiresFeatures() const

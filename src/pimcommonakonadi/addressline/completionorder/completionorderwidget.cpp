@@ -83,9 +83,8 @@ public:
         return true;
     }
 
-    void setIsEnabled(bool b) override
+    void setIsEnabled([[maybe_unused]] bool b) override
     {
-        Q_UNUSED(b)
     }
 
 protected:

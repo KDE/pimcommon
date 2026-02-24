@@ -45,9 +45,8 @@ AbstractGenericPlugin *AbstractGenericPluginInterface::plugin() const
     return d->plugin;
 }
 
-void AbstractGenericPluginInterface::showConfigureDialog(QWidget *parentWidget)
+void AbstractGenericPluginInterface::showConfigureDialog([[maybe_unused]] QWidget *parentWidget)
 {
-    Q_UNUSED(parentWidget)
 }
 
 ActionType::ActionType(QAction *action, ActionType::Type type)

@@ -293,9 +293,8 @@ void SimpleStringListEditor::slotCustomize()
     }
 }
 
-QString SimpleStringListEditor::customEntry(const QString &text)
+QString SimpleStringListEditor::customEntry([[maybe_unused]] const QString &text)
 {
-    Q_UNUSED(text)
     return {};
 }
 

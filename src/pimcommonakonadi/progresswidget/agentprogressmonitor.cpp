@@ -35,10 +35,8 @@ void AgentProgressMonitor::abort()
     mAgent.abortCurrentTask();
 }
 
-void AgentProgressMonitor::instanceRemoved(const Akonadi::AgentInstance &instance)
+void AgentProgressMonitor::instanceRemoved([[maybe_unused]] const Akonadi::AgentInstance &instance)
 {
-    Q_UNUSED(instance)
-
     if (!mItem.data()) {
         return;
     }

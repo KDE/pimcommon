@@ -83,9 +83,8 @@ void PluginInterface::createPluginInterface()
     }
 }
 
-bool PluginInterface::initializeInterfaceRequires(PimCommon::AbstractGenericPluginInterface *interface)
+bool PluginInterface::initializeInterfaceRequires([[maybe_unused]] PimCommon::AbstractGenericPluginInterface *interface)
 {
-    Q_UNUSED(interface)
     return true;
 }
 
