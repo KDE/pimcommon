@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-26 00:44+0000\n"
+"POT-Creation-Date: 2026-02-25 00:48+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: pimcommon-activities/configureactivitieswidget.cpp:56
+#: pimcommon-activities/configureactivitieswidget.cpp:54
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
 msgstr ""
 
-#: pimcommon-activities/configureactivitieswidget.cpp:62
+#: pimcommon-activities/configureactivitieswidget.cpp:60
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""
@@ -364,7 +364,7 @@ msgctxt "@action:button"
 msgid "&Customize..."
 msgstr ""
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
@@ -571,7 +571,7 @@ msgid "Expand Groups..."
 msgstr ""
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr ""
@@ -717,13 +717,13 @@ msgstr ""
 msgid "LDAP server %1"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr ""
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"

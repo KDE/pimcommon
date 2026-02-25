@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-26 00:44+0000\n"
+"POT-Creation-Date: 2026-02-25 00:48+0000\n"
 "PO-Revision-Date: 2025-12-18 07:37+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -24,13 +24,13 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.8\n"
 
-#: pimcommon-activities/configureactivitieswidget.cpp:56
+#: pimcommon-activities/configureactivitieswidget.cpp:54
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
 msgstr "Omeji na izbrane dejavnosti:"
 
-#: pimcommon-activities/configureactivitieswidget.cpp:62
+#: pimcommon-activities/configureactivitieswidget.cpp:60
 #, kde-format
 msgctxt "@label:textbox"
 msgid ""
@@ -355,7 +355,7 @@ msgctxt "@action:button"
 msgid "&Customize..."
 msgstr "Prilagodi..."
 
-#: pimcommon/widgets/simplestringlisteditor.cpp:309
+#: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
@@ -541,7 +541,7 @@ msgid "Expand Groups..."
 msgstr "Razširi skupine..."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:313
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Zadnje uporabljeni naslovi"
@@ -687,13 +687,13 @@ msgstr "Daj poštni naslov na črni seznam"
 msgid "LDAP server %1"
 msgstr "Strežnik LDAP %1"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:261
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:260
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Up"
 msgstr "Pomakni gor"
 
-#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:270
+#: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:269
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Down"
