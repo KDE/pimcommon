@@ -7,7 +7,25 @@ SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
 SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/pimcommon"
 
 [[annotations]]
-path = ["src/pimcommonautocorrection/autocorrection/autotests/data/acor_fr.dat", "src/pimcommonautocorrection/autocorrection/autotests/data/**.xml", "src/pimcommontexttranslator/translator/DEBUG", "src/pimcommon/widgets/icons/hint.svg", "src/pimcommon/widgets/icons/visibility.svg", "src/pimcommontextgrammarcheck/grammalecte/autotests/data/**.json", "src/pimcommontextgrammarcheck/languagetool/autotests/data/**.json", "src/pimcommon/needupdateversion/autotests/data/*.html", ".gersemirc", "src/pimcommon/pimcommon-index.qdoc", "src/pimcommon/pimcommon.qdoc", "src/pimcommon/pimcommon.qdocconf", "src/pimcommon-activities/pimcommon-activities.qdoc", "src/pimcommon-activities/pimcommon-activities.qdocconf", "src/pimcommonakonadi/pimcommonakonadi.qdoc", "src/pimcommonakonadi/pimcommonakonadi.qdocconf"]
+path = ["src/pimcommonautocorrection/autocorrection/autotests/data/acor_fr.dat", "src/pimcommonautocorrection/autocorrection/autotests/data/**.xml", "src/pimcommontexttranslator/translator/DEBUG", "src/pimcommon/widgets/icons/hint.svg", "src/pimcommon/widgets/icons/visibility.svg", "src/pimcommontextgrammarcheck/grammalecte/autotests/data/**.json", "src/pimcommontextgrammarcheck/languagetool/autotests/data/**.json", "src/pimcommon/needupdateversion/autotests/data/*.html", ".gersemirc", "src/pimcommon/pimcommon-index.qdoc", "src/pimcommon/pimcommon.qdoc", "src/pimcommon/pimcommon.qdocconf", "src/pimcommon-activities/pimcommon-activities.qdoc", "src/pimcommon-activities/pimcommon-activities.qdocconf", "src/pimcommonakonadi/pimcommonakonadi.qdoc", "src/pimcommonakonadi/pimcommonakonadi.qdocconf",  "metainfo.yaml", "readme-build-ftime.txt"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "none"
 SPDX-License-Identifier = "CC0-1.0"
+
+[[annotations]]
+path = ["README-pre-commit.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023-2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = ["CMakePresets.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2021-2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "BSD-3-Clause"
+
+[[annotations]]
+path = ["README-qdoc.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2023-2026 Laurent Montel <montel@kde.org>"
+SPDX-License-Identifier = "BSD-3-Clause"
