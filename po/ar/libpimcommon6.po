@@ -390,7 +390,7 @@ msgstr "الأذونات"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>لاحظ:</b> يتطلّب تغيير الاسم أذونات الكتابة في المجلّد الأبّ."
+msgstr "<b>لاحظ:</b> يتطلّب تغيير الاسم أذونات الكتابة في المجلّد الأب."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
