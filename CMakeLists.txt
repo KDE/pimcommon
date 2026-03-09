@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.27)
-set(PIM_VERSION "6.6.41")
+set(PIM_VERSION "6.6.80")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -85,14 +85,14 @@ include(ECMCheckOutboundLicense)
 option(ENABLE_PCH "Enable Precompiled Headers support" ON)
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
-set(LIBKDEPIM_LIB_VERSION "6.6.40")
+set(LIBKDEPIM_LIB_VERSION "6.6.80")
 set(KTEXTADDONS_MIN_VERSION "2.0.0")
-set(KIMAP_LIB_VERSION "6.6.40")
-set(KLDAP_LIB_VERSION "6.6.40")
+set(KIMAP_LIB_VERSION "6.6.80")
+set(KLDAP_LIB_VERSION "6.6.80")
 
-set(AKONADICONTACT_LIB_VERSION "6.6.40")
-set(AKONADI_VERSION "6.6.40")
-set(AKONADI_SEARCH_VERSION "6.6.40")
+set(AKONADICONTACT_LIB_VERSION "6.6.80")
+set(AKONADI_VERSION "6.6.80")
+set(AKONADI_SEARCH_VERSION "6.6.80")
 
 find_package(
     Qt6
