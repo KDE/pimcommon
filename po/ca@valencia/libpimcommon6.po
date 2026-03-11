@@ -1176,6 +1176,3 @@ msgstr "S'ha completat la configuració del recurs."
 #, kde-format
 msgid "Failed to create resource instance: %1"
 msgstr "Ha fallat mentre es creava la instància del recurs: %1"
-
-#~ msgid "Pocket"
-#~ msgstr "Pocket"
