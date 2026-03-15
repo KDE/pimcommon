@@ -16,7 +16,6 @@
 
 #include "pimcommonakonadi_debug.h"
 #include <KConfigGroup>
-#include <KListWidgetSearchLine>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QHBoxLayout>

@@ -140,7 +140,6 @@ target_link_libraries(
         KF6::I18n
         KF6::XmlGui
         KF6::KIOWidgets
-        KF6::ItemViews
         KF6::NewStuffCore
         KF6::NewStuffWidgets
         KF6::Purpose
