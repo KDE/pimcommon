@@ -300,8 +300,6 @@ install(
         ${PimCommonAkonadi_Camelcaseldap_HEADERS}
         ${PimCommonAkonadi_Camelcasefolderdialog_HEADERS}
         ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
-        ${PimCommonAkonadi_Camelcasemanagerserversidesubscription_HEADERS}
-        ${PimCommonAkonadi_Camelcasewidgets_HEADERS}
         ${PimCommonAkonadi_CamelCaseUtil_HEADERS}
         ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
         ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
@@ -319,9 +317,6 @@ install(
         ${PimCommonAkonadi_collectionpage_HEADERS}
         ${PimCommonAkonadi_folderdialog_HEADERS}
         ${PimCommonAkonadi_genericplugins_HEADERS}
-        ${PimCommonAkonadi_casewidgets_HEADERS}
-        ${PimCommonAkonadi_widgets_HEADERS}
-        ${PimCommonAkonadi_managerserversidesubscription_HEADERS}
         ${PimCommonAkonadi_Util_HEADERS}
         ${PimCommonAkonadi_progresswidget_HEADERS}
         ${PimCommonAkonadi_completionconfiguredialog_HEADERS}

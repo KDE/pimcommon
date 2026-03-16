@@ -17,7 +17,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMON
 macro(add_resource_iface _kcfgFile _ifaceName _className)
     kcfg_generate_dbus_interface(${CMAKE_CURRENT_SOURCE_DIR}/${_kcfgFile} ${_ifaceName})
     qt_add_dbus_interface(libpimcommon_SRCS
-        ${CMAKE_CURRENT_BINARY_DIR}/${_ifaceName}.xml ${_fileName} ${_className}
+        ${CMAKE_CURRENT_BINARY_DIR}/${_ifaceName}.xml ${_className}
     )
 endmacro()
 
@@ -278,21 +278,11 @@ install(
         ${PimCommon_CamelCasegenericplugins_HEADERS}
         ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
         ${PimCommon_CamelCasenetworkmanager_HEADERS}
-        ${PimCommon_Camelcaseneedupdateversionwidgets_HEADERS}
-        ${PimCommon_Camelverifynewversion_HEADERS}
         ${PimCommon_CamelCase_HEADERS}
-        ${PimCommon_CamelCasejob_HEADERS}
         ${PimCommon_Camelcasecustomtools_HEADERS}
-        ${PimCommon_Camelcasemanagerserversidesubscription_HEADERS}
-        ${PimCommon_Camelcasemigrate_HEADERS}
-        ${PimCommon_Camelcaseplaintexteditor_HEADERS}
-        ${PimCommon_Camelcaserichtexteditor_HEADERS}
-        ${PimCommon_Camelcasescript_HEADERS}
         ${PimCommon_Camelcaseshareserviceurl_HEADERS}
         ${PimCommon_Camelcasetemplatelist_HEADERS}
-        ${PimCommon_Camelcasetexteditor_commonwidget_HEADERS}
         ${PimCommon_Camelcasewidgets_HEADERS}
-        ${PimCommon_Camelcasewhatsnew_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/PimCommon
     COMPONENT Devel
 )
@@ -306,18 +296,10 @@ install(
         ${PimCommon_genericplugins_HEADERS}
         ${PimCommon_configureplugins_HEADERS}
         ${PimCommon_networkmanager_HEADERS}
-        ${PimCommon_needupdateversionwidgets_HEADERS}
         ${PimCommon_customtools_HEADERS}
-        ${PimCommon_job_HEADERS}
-        ${PimCommon_managerserversidesubscription_HEADERS}
-        ${PimCommon_plaintexteditor_HEADERS}
-        ${PimCommon_richtexteditor_HEADERS}
         ${PimCommon_shareserviceurl_HEADERS}
         ${PimCommon_templatelist_HEADERS}
-        ${PimCommon_texteditor_commonwidget_HEADERS}
         ${PimCommon_widgets_HEADERS}
-        ${PimCommon_whatsnew_HEADERS}
-        ${PimCommon_verifynewversion_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
 )
