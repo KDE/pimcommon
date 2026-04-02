@@ -58,7 +58,9 @@ void CustomToolsWidgetNg::initializeView(KActionCollection *ac, const QList<Cust
 void CustomToolsWidgetNg::slotToolsWasClosed()
 {
     for (const PimCommon::CustomToolsViewInterface *interface : std::as_const(d->mListInterfaceView)) {
-        interface->action()->setChecked(false);
+        if (auto *a = interface->action()) {
+            a->setChecked(false);
+        }
     }
     hide();
 }
@@ -85,7 +87,9 @@ QList<KToggleAction *> CustomToolsWidgetNg::actionList() const
     QList<KToggleAction *> lstActions;
     lstActions.reserve(d->mListInterfaceView.count());
     for (const PimCommon::CustomToolsViewInterface *interface : std::as_const(d->mListInterfaceView)) {
-        lstActions << interface->action();
+        if (auto *a = interface->action()) {
+            lstActions << a;
+        }
     }
     return lstActions;
 }
