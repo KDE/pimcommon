@@ -32,9 +32,9 @@ QString CustomToolsPluginInfo::saveName() const
 
 namespace
 {
-QString pluginVersion()
+constexpr QLatin1StringView pluginVersion()
 {
-    return QStringLiteral("1.0");
+    return QLatin1StringView("1.0");
 }
 }
 
