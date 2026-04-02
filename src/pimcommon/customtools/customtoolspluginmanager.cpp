@@ -71,7 +71,7 @@ void CustomToolsPluginManagerPrivate::initializePluginList()
             mPluginList.push_back(info);
             unique.insert(info.saveName());
         } else {
-            qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correction plugin version. It will not be loaded.";
+            qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correct plugin version. It will not be loaded.";
         }
     }
     QList<CustomToolsPluginInfo>::iterator end(mPluginList.end());
