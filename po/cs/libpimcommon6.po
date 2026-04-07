@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2026 Libor Filípek <filipek.libor@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-16 00:46+0000\n"
-"PO-Revision-Date: 2026-02-27 21:19+0100\n"
-"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-04-06 21:48+0200\n"
+"Last-Translator: Libor Filípek <filipek.libor@protonmail.com>\n"
+"Language-Team: \n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:54
 #, kde-format
@@ -31,6 +32,9 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"Pokud tento účet omezíte na konkrétní aktivity, bude se zobrazovat pouze "
+"tehdy, když se v těchto aktivitách nacházíte. Navíc, pokud přepnete na "
+"aktivitu, ve které by neměl být k dispozici, automaticky se skryje."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
 #, kde-format
@@ -392,7 +396,7 @@ msgstr ""
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
 msgid "Folder cannot be administrated."
-msgstr ""
+msgstr "Složku nelze spravovat."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:161
 #, kde-format
@@ -586,7 +590,7 @@ msgstr "Oddělená doména s '%1'"
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Exclude email with Regular Expression:"
-msgstr ""
+msgstr "Vyloučit e-maily pomocí regulárního výrazu:"
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailcompletionwidget.cpp:116
 #, kde-format
@@ -781,7 +785,7 @@ msgstr "Nastavení"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Freebusy"
-msgstr ""
+msgstr "Zaneprázdněnost"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:53
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:166
