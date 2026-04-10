@@ -99,8 +99,7 @@ QString PimCommon::Util::loadToFile(const QString &filter, QWidget *parent, cons
 
 bool PimCommon::Util::isImapResource(const QString &identifier)
 {
-    return identifier.startsWith(KOLAB_RESOURCE_IDENTIFIER) || identifier.startsWith(IMAP_RESOURCE_IDENTIFIER)
-        || identifier.startsWith(GMAIL_RESOURCE_IDENTIFIER);
+    return identifier.startsWith(IMAP_RESOURCE_IDENTIFIER) || identifier.startsWith(GMAIL_RESOURCE_IDENTIFIER);
 }
 
 QUrl PimCommon::Util::generateHelpUrl(const QString &docfile, const QString &anchor)
