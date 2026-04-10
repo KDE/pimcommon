@@ -13,7 +13,6 @@ class OrgKdeAkonadiImapSettingsInterface;
 class QWidget;
 
 #define IMAP_RESOURCE_IDENTIFIER QStringLiteral("akonadi_imap_resource")
-#define KOLAB_RESOURCE_IDENTIFIER QStringLiteral("akonadi_kolab_resource")
 #define POP3_RESOURCE_IDENTIFIER QStringLiteral("akonadi_pop3_resource")
 #define MBOX_RESOURCE_IDENTIFIER QStringLiteral("akonadi_mbox_resource")
 #define GMAIL_RESOURCE_IDENTIFIER QStringLiteral("akonadi_gmail_resource")
