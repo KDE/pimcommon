@@ -12,7 +12,7 @@
 #include <KCompletion>
 
 #include <QMap>
-#include <QString>
+
 #include <QStringList>
 
 namespace PimCommon
