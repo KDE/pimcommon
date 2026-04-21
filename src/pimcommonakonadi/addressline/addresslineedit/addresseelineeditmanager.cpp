@@ -14,6 +14,7 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 #include <KLDAPCore/LdapClient>
+#include <KLDAPCore/LdapClientSearch>
 #include <KSharedConfig>
 #include <QCoreApplication>
 #include <QNetworkInformation>

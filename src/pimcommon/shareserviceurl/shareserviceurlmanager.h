@@ -8,9 +8,8 @@
 
 #include "pimcommon_export.h"
 #include <QObject>
-#include <QUrl>
 #include <memory>
-
+class QUrl;
 class KActionMenu;
 class QAction;
 namespace PimCommon

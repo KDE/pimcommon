@@ -7,10 +7,9 @@
 #pragma once
 
 #include <QDialog>
-#include <QUrl>
 
 #include "pimcommon_export.h"
-
+class QUrl;
 namespace PimCommon
 {
 class RenameFileDialogPrivate;

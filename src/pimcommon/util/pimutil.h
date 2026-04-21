@@ -9,6 +9,7 @@
 
 #include "pimcommon_export.h"
 #include <QUrl>
+
 class OrgKdeAkonadiImapSettingsInterface;
 class QWidget;
 

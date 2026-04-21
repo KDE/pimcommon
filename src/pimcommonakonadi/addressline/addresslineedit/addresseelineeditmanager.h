@@ -11,7 +11,6 @@
 
 #include <Akonadi/Item>
 #include <Akonadi/Session>
-#include <KLDAPCore/LdapClientSearch>
 #include <QList>
 #include <QPointer>
 
@@ -21,6 +20,7 @@ class QTimer;
 namespace KLDAPCore
 {
 class LdapActivitiesAbstract;
+class LdapClientSearch;
 }
 
 namespace PimCommon

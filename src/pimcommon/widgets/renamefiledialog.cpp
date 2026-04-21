@@ -17,6 +17,7 @@
 #include <QFileInfo>
 #include <QHBoxLayout>
 #include <QLabel>
+#include <QUrl>
 #include <QVBoxLayout>
 
 using namespace PimCommon;
