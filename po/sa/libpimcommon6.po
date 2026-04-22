@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-22 00:46+0000\n"
 "PO-Revision-Date: 2024-12-20 21:53+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -37,43 +37,43 @@ msgstr ""
 "यदा भवान् तेषु कार्येषु भवति । अपि च, यदा भवन्तः कस्मिंश्चित् क्रियाकलापे परिवर्तयन्ति "
 "यस्मिन् तत् उपलब्धं न भवेत् तदा तत् स्वयमेव गोपनीयं भविष्यति ।"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
 msgid "Share On..."
 msgstr "Share On..."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:39
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "%1"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:82
 #, kde-format
 msgid "Facebook"
 msgstr "फेसबुक"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:85
 #, kde-format
 msgid "Twitter"
 msgstr "ट्विटर"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:88
 #, kde-format
 msgid "Mail"
 msgstr "मेल"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:91
 #, kde-format
 msgid "LinkedIn"
 msgstr "लिङ्क्डइन"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:94
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote इति"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:97
 #, kde-format
 msgid "LiveJournal"
 msgstr "लाइवजर्नल"
@@ -260,13 +260,13 @@ msgstr "सञ्चिका साझा कृता आसीत् ।"
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>नूतनं अनुरोधं भवन्तः अत्र प्राप्तुं शक्नुवन्ति:<br /> <a href='%1'>%1</a></qt>"
 
-#: pimcommon/widgets/renamefiledialog.cpp:100
+#: pimcommon/widgets/renamefiledialog.cpp:101
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "सञ्चिका पूर्वमेव विद्यते"
 
-#: pimcommon/widgets/renamefiledialog.cpp:103
+#: pimcommon/widgets/renamefiledialog.cpp:104
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
@@ -275,36 +275,36 @@ msgstr ""
 "<filename>%1</filename> इति सञ्चिका पूर्वमेव अस्ति । किं भवन्तः तस्य अधिलेखनं कर्तुम् "
 "इच्छन्ति ?"
 
-#: pimcommon/widgets/renamefiledialog.cpp:113
+#: pimcommon/widgets/renamefiledialog.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "New &Name सुझाव दें"
 
-#: pimcommon/widgets/renamefiledialog.cpp:121
+#: pimcommon/widgets/renamefiledialog.cpp:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&उपेक्षा"
 
-#: pimcommon/widgets/renamefiledialog.cpp:124
+#: pimcommon/widgets/renamefiledialog.cpp:125
 #, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "&नाम पुनर्नाम"
 
-#: pimcommon/widgets/renamefiledialog.cpp:134
+#: pimcommon/widgets/renamefiledialog.cpp:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Appl&y to All इति"
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "This filename \"%1\" already exists."
 msgstr "एतत् सञ्चिकानाम \"%1\" पूर्वमेव अस्ति ।"
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "File already exists"
 msgstr "सञ्चिका पूर्वमेव अस्ति"

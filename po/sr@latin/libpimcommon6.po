@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-22 00:46+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -33,43 +33,43 @@ msgid ""
 "be available in, it will automatically be hidden."
 msgstr ""
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
 msgid "Share On..."
 msgstr "Podeli preko..."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:39
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "%1|/|$[gen %1]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:82
 #, kde-format
 msgid "Facebook"
 msgstr "Facebook"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:85
 #, kde-format
 msgid "Twitter"
 msgstr "Twitter"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:88
 #, kde-format
 msgid "Mail"
 msgstr "pošta|/|$[svojstva gen pošte aku poštu dat,lok pošti]"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:91
 #, kde-format
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:94
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:97
 #, kde-format
 msgid "LiveJournal"
 msgstr "LiveJournal"
@@ -277,14 +277,14 @@ msgstr ""
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr ""
 
-#: pimcommon/widgets/renamefiledialog.cpp:100
+#: pimcommon/widgets/renamefiledialog.cpp:101
 #, fuzzy, kde-format
 #| msgid "File Already Exists"
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "Fajl već postoji"
 
-#: pimcommon/widgets/renamefiledialog.cpp:103
+#: pimcommon/widgets/renamefiledialog.cpp:104
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
@@ -293,40 +293,40 @@ msgstr ""
 "Fajl po imenu <filename>%1</filename> već postoji. Želite li da ga "
 "prebrišete?"
 
-#: pimcommon/widgets/renamefiledialog.cpp:113
+#: pimcommon/widgets/renamefiledialog.cpp:114
 #, fuzzy, kde-format
 #| msgid "Suggest New &Name"
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "Predloži &novo ime"
 
-#: pimcommon/widgets/renamefiledialog.cpp:121
+#: pimcommon/widgets/renamefiledialog.cpp:122
 #, fuzzy, kde-format
 #| msgid "&Ignore"
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "I&gnoriši"
 
-#: pimcommon/widgets/renamefiledialog.cpp:124
+#: pimcommon/widgets/renamefiledialog.cpp:125
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "Pre&imenuj"
 
-#: pimcommon/widgets/renamefiledialog.cpp:134
+#: pimcommon/widgets/renamefiledialog.cpp:135
 #, fuzzy, kde-format
 #| msgid "Appl&y to All"
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "Primeni na &sve"
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "This filename \"%1\" already exists."
 msgstr "Ime fajla „%1“ već postoji."
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "File already exists"
 msgstr "Fajl već postoji"

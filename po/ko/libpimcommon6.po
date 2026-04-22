@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-22 00:46+0000\n"
 "PO-Revision-Date: 2026-02-03 22:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -35,43 +35,43 @@ msgstr ""
 "시합니다. 해당 계정이 활성화되어 있지 않은 활동으로 전환하면 계정을 자동으로 "
 "숨깁니다."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
 msgid "Share On..."
 msgstr "다음으로 공유..."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:39
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "%1"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:82
 #, kde-format
 msgid "Facebook"
 msgstr "Facebook"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:85
 #, kde-format
 msgid "Twitter"
 msgstr "트위터"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:88
 #, kde-format
 msgid "Mail"
 msgstr "메일"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:91
 #, kde-format
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:94
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:97
 #, kde-format
 msgid "LiveJournal"
 msgstr "LiveJournal"
@@ -258,49 +258,49 @@ msgstr "파일을 공유했습니다."
 msgid "<qt>You can find the new request at:<br /><a href='%1'>%1</a> </qt>"
 msgstr "<qt>다음에서 새 요청을 찾을 수 있습니다:<br /><a href='%1'>%1</a></qt>"
 
-#: pimcommon/widgets/renamefiledialog.cpp:100
+#: pimcommon/widgets/renamefiledialog.cpp:101
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "파일이 이미 존재함"
 
-#: pimcommon/widgets/renamefiledialog.cpp:103
+#: pimcommon/widgets/renamefiledialog.cpp:104
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
 msgstr "파일 <filename>%1</filename>이(가) 이미 있습니다. 덮어쓰시겠습니까?"
 
-#: pimcommon/widgets/renamefiledialog.cpp:113
+#: pimcommon/widgets/renamefiledialog.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "새 이름 제안(&N)"
 
-#: pimcommon/widgets/renamefiledialog.cpp:121
+#: pimcommon/widgets/renamefiledialog.cpp:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "무시(&I)"
 
-#: pimcommon/widgets/renamefiledialog.cpp:124
+#: pimcommon/widgets/renamefiledialog.cpp:125
 #, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "이름 바꾸기(&R)"
 
-#: pimcommon/widgets/renamefiledialog.cpp:134
+#: pimcommon/widgets/renamefiledialog.cpp:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "모두 적용(&Y)"
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "This filename \"%1\" already exists."
 msgstr "파일 \"%1\"이(가) 이미 존재합니다."
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "File already exists"
 msgstr "파일이 이미 존재함"

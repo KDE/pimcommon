@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-16 00:46+0000\n"
+"POT-Creation-Date: 2026-04-22 00:46+0000\n"
 "PO-Revision-Date: 2025-12-18 04:24+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -36,43 +36,43 @@ msgstr ""
 "აქტივობებში ბრძანდებით. უფრო მეტიც კი, როცა გადაერთვებით აქტივობაზე, სადაც "
 "ის ხელმისაწვდომი არ უნდა იყოს, ის ავტომატურად დაიმალება."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:35
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
 msgid "Share On..."
 msgstr "გაზიარება..."
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:38
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:39
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
 msgstr "%1"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:81
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:82
 #, kde-format
 msgid "Facebook"
 msgstr "Facebook"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:84
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:85
 #, kde-format
 msgid "Twitter"
 msgstr "Twitter"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:87
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:88
 #, kde-format
 msgid "Mail"
 msgstr "წერილი"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:90
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:91
 #, kde-format
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:93
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:94
 #, kde-format
 msgid "Evernote"
 msgstr "Evernote"
 
-#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:96
+#: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:97
 #, kde-format
 msgid "LiveJournal"
 msgstr "LiveJournal"
@@ -261,13 +261,13 @@ msgstr ""
 "<qt>ახალი მოთხოვნის პოვნა შეგიძლიათ მისამართზე:<br /><a href='%1'>%1</a> </"
 "qt>"
 
-#: pimcommon/widgets/renamefiledialog.cpp:100
+#: pimcommon/widgets/renamefiledialog.cpp:101
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
 msgstr "ფაილი უკვე არსებობს"
 
-#: pimcommon/widgets/renamefiledialog.cpp:103
+#: pimcommon/widgets/renamefiledialog.cpp:104
 #, kde-kuit-format
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
@@ -276,36 +276,36 @@ msgstr ""
 "ფაილი სახელით <filename>%1</filename> უკვე არსებობს. გნებავთ, თავზე "
 "გადავაწერო?"
 
-#: pimcommon/widgets/renamefiledialog.cpp:113
+#: pimcommon/widgets/renamefiledialog.cpp:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Suggest New &Name"
 msgstr "ა&ხალი სახელის შეთავაზება"
 
-#: pimcommon/widgets/renamefiledialog.cpp:121
+#: pimcommon/widgets/renamefiledialog.cpp:122
 #, kde-format
 msgctxt "@action:button"
 msgid "&Ignore"
 msgstr "&გამოტოვება"
 
-#: pimcommon/widgets/renamefiledialog.cpp:124
+#: pimcommon/widgets/renamefiledialog.cpp:125
 #, kde-format
 msgctxt "@action:button"
 msgid "&Rename"
 msgstr "&სახელის გადარქმევა"
 
-#: pimcommon/widgets/renamefiledialog.cpp:134
+#: pimcommon/widgets/renamefiledialog.cpp:135
 #, kde-format
 msgctxt "@option:check"
 msgid "Appl&y to All"
 msgstr "ყველაზე &გადატარება"
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "This filename \"%1\" already exists."
 msgstr "ეს ფაილის სახელი (%1) უკვე არსებობს."
 
-#: pimcommon/widgets/renamefiledialog.cpp:180
+#: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "File already exists"
 msgstr "ფაილი უკვე არსებობს"
