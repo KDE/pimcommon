@@ -11,7 +11,7 @@
 #include <KLocalizedString>
 #include <QDesktopServices>
 #include <QMenu>
-#include <QUrl>
+
 #include <QUrlQuery>
 
 using namespace PimCommon;
