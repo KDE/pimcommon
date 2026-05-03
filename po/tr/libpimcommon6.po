@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Emir SARI <emir_sari@icloud.com>
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014, 2015, 2017.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
 # Emir SARI <emir_sari@icloud.com>, 2023.
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-22 00:46+0000\n"
-"PO-Revision-Date: 2025-12-18 15:47+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-05-02 18:56+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:54
 #, kde-format
@@ -267,7 +267,7 @@ msgstr "<qt>Yeni isteği şurada bulabilirsiniz:<br /><a href='%1'>%1</a> </qt>"
 #, kde-format
 msgctxt "@title:window"
 msgid "File Already Exists"
-msgstr "Dosya Halihazırda Var"
+msgstr "Dosya Hâlihazırda Var"
 
 #: pimcommon/widgets/renamefiledialog.cpp:104
 #, kde-kuit-format
@@ -275,7 +275,7 @@ msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
 msgstr ""
-"<filename>%1</filename> adlı bir dosya halihazırda var. Üzerine yazmak "
+"<filename>%1</filename> adlı bir dosya hâlihazırda var. Üzerine yazmak "
 "istiyor musunuz?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:114
@@ -305,12 +305,12 @@ msgstr "&Tümüne uygula"
 #: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "This filename \"%1\" already exists."
-msgstr "Bu dosya adı “%1” halihazırda var."
+msgstr "Bu dosya adı “%1” hâlihazırda var."
 
 #: pimcommon/widgets/renamefiledialog.cpp:181
 #, kde-format
 msgid "File already exists"
-msgstr "Dosya halihazırda var"
+msgstr "Dosya hâlihazırda var"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:55
 #: pimcommon/widgets/simplestringlisteditor.cpp:58
@@ -1136,7 +1136,7 @@ msgstr "Özaynak türü “%1” kullanılabilir değil."
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "Özaynak türü “%1” halihazırda ayarlı."
+msgstr "Özaynak türü “%1” hâlihazırda ayarlı."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
