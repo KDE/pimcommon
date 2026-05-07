@@ -106,10 +106,8 @@ void AddresseeLineEditPrivate::init()
     mToolButton->setStyleSheet(QStringLiteral("QToolButton { border: none; }"));
     connect(mToolButton, &QToolButton::clicked, q, &AddresseeLineEdit::iconClicked);
 
-    if (!AddresseeLineEditManager::self()) {
-        AddresseeLineEditManager::self()->completion()->setOrder(KCompletion::Weighted);
-        AddresseeLineEditManager::self()->completion()->setIgnoreCase(true);
-    }
+    AddresseeLineEditManager::self()->completion()->setOrder(KCompletion::Weighted);
+    AddresseeLineEditManager::self()->completion()->setIgnoreCase(true);
 
     if (mUseCompletion) {
         AddresseeLineEditManager::self()->initializeLdap();
