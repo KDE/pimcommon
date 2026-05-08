@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-19 21:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -548,9 +548,9 @@ msgstr "Oraintsuko helbideak"
 msgid "Add to Blacklist"
 msgstr "Gehitu zerrenda-beltzera"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"

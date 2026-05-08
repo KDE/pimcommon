@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2026-01-31 17:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -541,9 +541,9 @@ msgstr "சமீப முகவரிகள்"
 msgid "Add to Blacklist"
 msgstr "தடுப்புப்பட்டியலில் சேர்"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"

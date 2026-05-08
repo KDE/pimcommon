@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-23 18:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -557,9 +557,9 @@ msgstr "Последние адреса"
 msgid "Add to Blacklist"
 msgstr "Добавить в список заблокированных"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"

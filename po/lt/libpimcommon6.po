@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-22 00:46+0000\n"
+"POT-Creation-Date: 2026-05-08 00:45+0000\n"
 "PO-Revision-Date: 2025-12-20 20:26+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -549,9 +549,9 @@ msgstr "Paskiausiai naudoti adresai"
 msgid "Add to Blacklist"
 msgstr "Įtraukti į juodąjį sąrašą"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:116
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:748
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:749
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
