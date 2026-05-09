@@ -24,9 +24,9 @@ class PIMCOMMONAKONADI_EXPORT SelectMultiCollectionDialog : public QDialog
     Q_OBJECT
 public:
     /*!
-     * Constructs a SelectMultiCollectionDialog with pre-selected collections.
+     * Constructs a SelectMultiCollectionDialog with preselected collections.
      * @param mimetype The MIME type to filter collections
-     * @param selectedCollection The list of pre-selected collection IDs
+     * @param selectedCollection The list of preselected collection IDs
      * @param parent The parent widget
      */
     explicit SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent = nullptr);
