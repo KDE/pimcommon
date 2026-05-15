@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2020, 2021.
-# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023-2026 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:45+0000\n"
-"PO-Revision-Date: 2025-11-07 21:27+0100\n"
+"PO-Revision-Date: 2026-05-14 21:57+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:54
 #, kde-format
@@ -543,7 +543,7 @@ msgstr "Legutóbbi címek"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
 #, kde-format
 msgid "Add to Blacklist"
-msgstr ""
+msgstr "Hozzáadás a feketelistához"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
