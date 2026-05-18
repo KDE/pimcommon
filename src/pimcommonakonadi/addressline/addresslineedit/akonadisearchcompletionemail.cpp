@@ -32,7 +32,7 @@ QStringList AkonadiSearchCompletionEmail::cleanupEmailList()
                 if (!excludeDomain.isEmpty()) {
                     if (address.endsWith(excludeDomain)) {
                         excludeMail = true;
-                        continue;
+                        break;
                     }
                 }
             }
@@ -40,7 +40,7 @@ QStringList AkonadiSearchCompletionEmail::cleanupEmailList()
                 for (const QRegularExpression &excludeEmailRegularExpression : std::as_const(mExcludeEmailsRegularExpressions)) {
                     if (address.contains(excludeEmailRegularExpression)) {
                         excludeMail = true;
-                        continue;
+                        break;
                     }
                 }
             }
