@@ -30,6 +30,6 @@ public:
 private:
     [[nodiscard]] QString stripEmail(const QString &email, QString &address);
     AkonadiSearchCompletionEmailInfo mAkonadiSearchCompletionEmailInfo;
-    static QList<QRegularExpression> mExcludeEmailsRegularExpressions;
+    QList<QRegularExpression> mExcludeEmailsRegularExpressions;
 };
 }

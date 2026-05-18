@@ -13,7 +13,6 @@
 using namespace PimCommon;
 
 AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmail() = default;
-QList<QRegularExpression> AkonadiSearchCompletionEmail::mExcludeEmailsRegularExpressions = {};
 QStringList AkonadiSearchCompletionEmail::cleanupEmailList()
 {
     if (mAkonadiSearchCompletionEmailInfo.mListEmail.isEmpty()) {
