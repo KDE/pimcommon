@@ -40,7 +40,7 @@ QString KMailCompletion::makeCompletion(const QString &string)
              * Distribution list do not have last+first <match> entry, they will be
              * in mailAddr
              */
-            const QStringList &mailAddr = m_keyMap[match]; // get all mailAddr for this keyword
+            const QStringList mailAddr = m_keyMap.value(match); // get all mailAddr for this keyword
             bool isEmail = false;
             for (QStringList::ConstIterator sit(mailAddr.begin()), sEnd(mailAddr.end()); sit != sEnd; ++sit) {
                 if ((*sit).indexOf(QLatin1Char('<') + match + QLatin1Char('>')) != -1 || (*sit) == match) {
