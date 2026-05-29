@@ -150,6 +150,7 @@ target_link_libraries(
         KF6::KIOCore
         KPim6::IMAP
         KPim6::Libkdepim
+        KF6::Completion
     PRIVATE
         KPim6::AkonadiContactCore
         KF6::I18n
