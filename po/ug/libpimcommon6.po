@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-08 00:45+0000\n"
-"PO-Revision-Date: 2026-04-25 18:33-0400\n"
+"PO-Revision-Date: 2026-06-01 17:39-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -461,7 +461,7 @@ msgstr "يوق"
 #: pimcommonakonadi/acl/aclutils.cpp:21
 msgctxt "Permissions"
 msgid "Read"
-msgstr "ئوقۇ"
+msgstr "ئوقۇلغان"
 
 #: pimcommonakonadi/acl/aclutils.cpp:23
 msgctxt "Permissions"
@@ -761,7 +761,7 @@ msgstr "ۋەزىپە"
 #, kde-format
 msgctxt "type of folder content"
 msgid "Journal"
-msgstr "كۈندىلىك خاتىرە"
+msgstr "ژۇرنال"
 
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:49
 #: pimcommonakonadi/collectionpage/collectiontypeutil.cpp:160
@@ -904,7 +904,7 @@ msgstr "كوچا"
 #, kde-format
 msgctxt "@item LDAP search key"
 msgid "State"
-msgstr "ئىشتات"
+msgstr "ھالەت"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
@@ -970,13 +970,13 @@ msgstr "ئېلخەت"
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
-msgstr "ئىشتات"
+msgstr "ھالەت"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
-msgstr "ئاتاق"
+msgstr "ماۋزۇ"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
 #, kde-format
@@ -1110,12 +1110,12 @@ msgstr "مەنبە تۈرى «%1» يوق."
 #: pimcommonakonadi/util/createresource.cpp:75
 #, kde-format
 msgid "Resource '%1' is already set up."
-msgstr "مەنبە ‹%1› ئاللىقاچان تەڭشەلگەن."
+msgstr "مەنبە «%1» ئاللىقاچان تەڭشەلگەن."
 
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "‹%1› نىڭ مەنبە ئۈلگىسىنى قۇرۇۋاتىدۇ…"
+msgstr "«%1» نىڭ مەنبە ئۈلگىسىنى قۇرۇۋاتىدۇ…"
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
@@ -1131,12 +1131,12 @@ msgstr "مەنبە ئۈلگىسىنى سەپلىگىلى بولمىدى."
 #, kde-format
 msgid "Could not convert value of setting '%1' to required type %2."
 msgstr ""
-"تەڭشەك ‹%1› نىڭ قىممىتىنى تەلەپ قىلىنغان تىپ %2 غا ئايلاندۇرغىلى بولمىدى."
+"تەڭشەك «%1» نىڭ قىممىتىنى تەلەپ قىلىنغان تىپ %2 غا ئايلاندۇرغىلى بولمىدى."
 
 #: pimcommonakonadi/util/createresource.cpp:111
 #, kde-format
 msgid "Could not set setting '%1': %2"
-msgstr "تەڭشەك ‹%1› نى بەلگىلىگىلى بولمىدى: %2"
+msgstr "تەڭشەك «%1» نى بەلگىلىگىلى بولمىدى: %2"
 
 #: pimcommonakonadi/util/createresource.cpp:117
 #, kde-format
