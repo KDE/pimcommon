@@ -138,3 +138,21 @@ install(
     COMPONENT Devel
 )
 ecm_generate_qdoc(KPim6PimCommonActivities pimcommon-activities.qdocconf)
+
+ecm_add_installed_library_check(KPim6PimCommonActivities
+    PACKAGE_NAME "KPim6PimCommonActivities"
+    PACKAGE_VERSION ${PIMCOMMONACTIVITIES_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6PimCommonActivities
+    HEADERS
+    ${PimCommonActivities_base_HEADERS}
+    PREFIX pimcommonactivities
+)
+
+ecm_installed_library_check_include_strings(KPim6PimCommonActivities
+    HEADERS
+    ${PimCommonActivities_CamelCasebase_HEADERS}
+    PREFIX PimCommonActivities
+)

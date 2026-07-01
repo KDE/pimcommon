@@ -356,3 +356,39 @@ install(
     COMPONENT Devel
 )
 ecm_generate_qdoc(KPim6PimCommonAkonadi pimcommonakonadi.qdocconf)
+
+ecm_add_installed_library_check(KPim6PimCommonAkonadi
+    PACKAGE_NAME "KPim6PimCommonAkonadi"
+    PACKAGE_VERSION ${PIMCOMMONAKONADI_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6PimCommonAkonadi
+    HEADERS         ${PimCommonAkonadi_acl_HEADERS}
+    ${PimCommonAkonadi_ldap_HEADERS}
+    ${PimCommonAkonadi_collectionpage_HEADERS}
+    ${PimCommonAkonadi_folderdialog_HEADERS}
+    ${PimCommonAkonadi_genericplugins_HEADERS}
+    ${PimCommonAkonadi_Util_HEADERS}
+    ${PimCommonAkonadi_progresswidget_HEADERS}
+    ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
+    ${PimCommonAkonadi_addressline_HEADERS}
+    ${PimCommonAkonadi_recentaddress_HEADERS}
+
+    PREFIX pimcommonakonadi
+)
+
+ecm_installed_library_check_include_strings(KPim6PimCommonAkonadi
+    HEADERS
+    ${PimCommonAkonadi_Camelcasecollectionpage_HEADERS}
+    ${PimCommonAkonadi_Camelcaseacl_HEADERS}
+    ${PimCommonAkonadi_Camelcaseldap_HEADERS}
+    ${PimCommonAkonadi_Camelcasefolderdialog_HEADERS}
+    ${PimCommonAkonadi_CamelCasegenericplugins_HEADERS}
+    ${PimCommonAkonadi_CamelCaseUtil_HEADERS}
+    ${PimCommonAkonadi_Camelcaseprogresswidget_HEADERS}
+    ${PimCommonAkonadi_Camelcasecompletionconfiguredialog_HEADERS}
+    ${PimCommonAkonadi_Camelcaseaddressline_HEADERS}
+    ${PimCommonAkonadi_Camelcaserecentaddress_HEADERS}
+    PREFIX PimCommonAkonadi
+)

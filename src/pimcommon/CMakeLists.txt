@@ -330,3 +330,37 @@ install(
     NAMESPACE KPim6::
 )
 ecm_generate_qdoc(KPim6PimCommon pimcommon.qdocconf)
+
+ecm_add_installed_library_check(KPim6PimCommon
+    PACKAGE_NAME "KPim6PimCommon"
+    PACKAGE_VERSION ${PIMCOMMON_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6PimCommon
+    HEADERS         ${PimCommon_HEADERS}
+    ${PimCommon_autocorrectionwidgets_HEADERS}
+    ${PimCommon_genericplugins_HEADERS}
+    ${PimCommon_configureplugins_HEADERS}
+    ${PimCommon_networkmanager_HEADERS}
+    ${PimCommon_customtools_HEADERS}
+    ${PimCommon_shareserviceurl_HEADERS}
+    ${PimCommon_templatelist_HEADERS}
+    ${PimCommon_widgets_HEADERS}
+
+    PREFIX pimcommon
+)
+
+ecm_installed_library_check_include_strings(KPim6PimCommon
+    HEADERS
+    ${PimCommon_Camelcaseconfigureplugins_HEADERS}
+    ${PimCommon_CamelCasegenericplugins_HEADERS}
+    ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
+    ${PimCommon_CamelCasenetworkmanager_HEADERS}
+    ${PimCommon_CamelCase_HEADERS}
+    ${PimCommon_Camelcasecustomtools_HEADERS}
+    ${PimCommon_Camelcaseshareserviceurl_HEADERS}
+    ${PimCommon_Camelcasetemplatelist_HEADERS}
+    ${PimCommon_Camelcasewidgets_HEADERS}
+    PREFIX PimCommon
+)
