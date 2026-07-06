@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: CC0-1.0
 # SPDX-FileCopyrightText: none
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.7.40")
+set(PIM_VERSION "6.8.40")
 
 project(pimcommon VERSION ${PIM_VERSION})
 
@@ -94,7 +94,7 @@ option(ENABLE_PCH "Enable Precompiled Headers support" ON)
 
 set(PIMCOMMON_LIB_VERSION ${PIM_VERSION})
 set(LIBKDEPIM_LIB_VERSION "6.7.40")
-set(KTEXTADDONS_MIN_VERSION "2.0.2")
+set(KTEXTADDONS_MIN_VERSION "2.1.0")
 set(KIMAP_LIB_VERSION "6.7.40")
 set(KLDAP_LIB_VERSION "6.7.40")
 
