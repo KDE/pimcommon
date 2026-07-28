@@ -70,7 +70,7 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
             info.plugin = nullptr;
             mPluginList.push_back(info);
         } else {
-            qCWarning(PIMCOMMONAKONADI_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
+            qCWarning(PIMCOMMONAKONADI_LOG) << "Plugin " << data.name() << " doesn't have correct plugin version. It will not be loaded.";
         }
     }
     const QList<AddressessLineEditPluginInfo>::iterator end(mPluginList.end());
