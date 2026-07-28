@@ -81,7 +81,7 @@ QList<Akonadi::Collection> SelectMultiCollectionWidget::selectedCollection(const
 
         const auto col = mCheckedCollectionWidget->checkableProxy()->data(child, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
 
-        if (mCheckedCollectionWidget->checkableProxy()->data(child, Qt::CheckStateRole).toInt()) {
+        if (mCheckedCollectionWidget->checkableProxy()->data(child, Qt::CheckStateRole).toInt() == Qt::Checked) {
             lst << col;
         }
         lst << selectedCollection(child);
