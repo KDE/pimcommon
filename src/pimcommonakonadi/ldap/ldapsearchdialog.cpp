@@ -177,6 +177,25 @@ static KContacts::Addressee convertLdapAttributesToAddressee(const KLDAPCore::Ld
     // Address
     KContacts::Address workAddr(KContacts::Address::Work);
 
+    if (!attrs.value(QStringLiteral("street")).isEmpty()) {
+        workAddr.setStreet(asUtf8(attrs[QStringLiteral("street")].constFirst()));
+    }
+    if (!attrs.value(QStringLiteral("st")).isEmpty()) {
+        workAddr.setRegion(asUtf8(attrs[QStringLiteral("st")].constFirst()));
+    }
+    if (!attrs.value(QStringLiteral("co")).isEmpty()) {
+        workAddr.setCountry(asUtf8(attrs[QStringLiteral("co")].constFirst()));
+    }
+    if (!attrs.value(QStringLiteral("postalCode")).isEmpty()) {
+        workAddr.setPostalCode(asUtf8(attrs[QStringLiteral("postalCode")].constFirst()));
+    }
+    if (!attrs.value(QStringLiteral("postalAddress")).isEmpty()) {
+        workAddr.setExtended(asUtf8(attrs[QStringLiteral("postalAddress")].constFirst()));
+    }
+    if (!attrs.value(QStringLiteral("l")).isEmpty()) {
+        workAddr.setLocality(asUtf8(attrs[QStringLiteral("l")].constFirst()));
+    }
+
     if (!attrs.value(QStringLiteral("department")).isEmpty()) {
         addr.setDepartment(asUtf8(attrs[QStringLiteral("department")].constFirst()));
     }
