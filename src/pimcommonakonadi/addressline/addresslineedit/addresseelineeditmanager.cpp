@@ -218,12 +218,12 @@ bool AddresseeLineEditManager::showOU() const
     return mShowOU;
 }
 
-void AddresseeLineEditManager::setShowOU(bool checked)
+void AddresseeLineEditManager::setShowOU(bool showOU)
 {
-    if (checked != mShowOU) {
+    if (showOU != mShowOU) {
         KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("AddressLineEdit"));
-        group.writeEntry("ShowOU", checked);
-        mShowOU = checked;
+        group.writeEntry("ShowOU", showOU);
+        mShowOU = showOU;
     }
 }
 
