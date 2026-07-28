@@ -28,7 +28,7 @@ QString KMailCompletion::makeCompletion(const QString &string)
 {
     QString match = KCompletion::makeCompletion(string);
 
-    static const QRegularExpression emailRegularExpression{QRegularExpression(QStringLiteral("(@)|(<.*>)"))};
+    static const QRegularExpression emailRegularExpression{QStringLiteral("(@)|(<.*>)")};
     // this should be in postProcessMatch, but postProcessMatch is const and will not allow nextMatch
     if (!match.isEmpty()) {
         const QString firstMatch(match);
