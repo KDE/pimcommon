@@ -29,7 +29,7 @@ QStringList AkonadiSearchCompletionEmail::cleanupEmailList()
             bool excludeMail = false;
             for (const QString &excludeDomain : std::as_const(mAkonadiSearchCompletionEmailInfo.mExcludeDomains)) {
                 if (!excludeDomain.isEmpty()) {
-                    if (address.endsWith(excludeDomain)) {
+                    if (address.endsWith(QLatin1Char('@') + excludeDomain)) {
                         excludeMail = true;
                         break;
                     }
