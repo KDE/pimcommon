@@ -273,7 +273,8 @@ public:
             return {};
         }
 
-        return asUtf8(mContactList.at(index.row()).value(QStringLiteral("mail")).first()).trimmed();
+        const auto mailList = mContactList.at(index.row()).value(QStringLiteral("mail"));
+        return mailList.isEmpty() ? QString{} : asUtf8(mailList.constFirst()).trimmed();
     }
 
     [[nodiscard]] QString fullName(const QModelIndex &index) const
@@ -282,7 +283,8 @@ public:
             return {};
         }
 
-        return asUtf8(mContactList.at(index.row()).value(QStringLiteral("cn")).first()).trimmed();
+        const auto cnList = mContactList.at(index.row()).value(QStringLiteral("cn"));
+        return cnList.isEmpty() ? QString{} : asUtf8(cnList.constFirst()).trimmed();
     }
 
     void clear()
