@@ -28,9 +28,14 @@ AddresseeLineEditLdap::~AddresseeLineEditLdap() = default;
 void AddresseeLineEditLdap::setLdapActivitiesAbstract(KLDAPCore::LdapActivitiesAbstract *ldapActivities)
 {
     if (mLdapActivities != ldapActivities) {
+        if (mLdapActivities) {
+            disconnect(mLdapActivities, &KLDAPCore::LdapActivitiesAbstract::activitiesChanged, this, &AddresseeLineEditLdap::updateLDAPWeights);
+        }
         mLdapActivities = ldapActivities;
-        connect(mLdapActivities, &KLDAPCore::LdapActivitiesAbstract::activitiesChanged, this, &AddresseeLineEditLdap::updateLDAPWeights);
-        updateLDAPWeights();
+        if (mLdapActivities) {
+            connect(mLdapActivities, &KLDAPCore::LdapActivitiesAbstract::activitiesChanged, this, &AddresseeLineEditLdap::updateLDAPWeights);
+            updateLDAPWeights();
+        }
     }
 }
 
