@@ -543,9 +543,11 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     KGuiItem::assign(d->mSearchButton, d->startSearchGuiItem);
 
     buttonSize = d->mSearchButton->sizeHint();
+    KGuiItem::assign(d->mSearchButton, d->stopSearchGuiItem);
     if (buttonSize.width() < d->mSearchButton->sizeHint().width()) {
         buttonSize = d->mSearchButton->sizeHint();
     }
+    KGuiItem::assign(d->mSearchButton, d->startSearchGuiItem);
     d->mSearchButton->setFixedWidth(buttonSize.width());
 
     d->mSearchButton->setDefault(true);
