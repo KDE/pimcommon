@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-08 00:45+0000\n"
+"POT-Creation-Date: 2026-07-29 00:47+0000\n"
 "PO-Revision-Date: 2026-01-31 17:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -549,7 +549,7 @@ msgctxt "@title:group"
 msgid "Contacts found in your data"
 msgstr "உங்கள் தரவில் கண்டுபிடித்த தொடர்புகள்"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:52
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineeditldap.cpp:57
 #, kde-format
 msgid "LDAP server: %1"
 msgstr "LDAP சேவையகம்: %1"
@@ -856,7 +856,7 @@ msgid "Title"
 msgstr "தலைப்பு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:91
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:303
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:324
 #, kde-format
 msgid "Full Name"
 msgstr "முழுப்பெயர்"
@@ -868,25 +868,25 @@ msgid "Email"
 msgstr "மின்னஞ்சல்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:307
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:328
 #, kde-format
 msgid "Home Number"
 msgstr "இல்ல தொலைபேசி எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:309
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:330
 #, kde-format
 msgid "Work Number"
 msgstr "வேலையிட தொலைபேசி எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:311
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:332
 #, kde-format
 msgid "Mobile Number"
 msgstr "கைபேசி எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:313
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:334
 #, kde-format
 msgid "Fax Number"
 msgstr "தொலைநகலி எண்"
@@ -897,7 +897,7 @@ msgid "Pager"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:319
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:340
 #, kde-format
 msgid "Street"
 msgstr "தெரு"
@@ -909,196 +909,196 @@ msgid "State"
 msgstr "மாநிலம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:323
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:344
 #, kde-format
 msgid "Country"
 msgstr "நாடு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:329
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:350
 #, kde-format
 msgid "City"
 msgstr "ஊர்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:317
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:338
 #, kde-format
 msgid "Organization"
 msgstr "அமைப்பு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:315
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:336
 #, kde-format
 msgid "Company"
 msgstr "நிறுவனம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:331
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:352
 #, kde-format
 msgid "Department"
 msgstr "பிரிவு"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:325
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:346
 #, kde-format
 msgid "Zip Code"
 msgstr "அஞ்சல் குறியீட்டு எண்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:327
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:348
 #, kde-format
 msgid "Postal Address"
 msgstr "அஞ்சல் முகவரி"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:333
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:354
 #, kde-format
 msgid "Description"
 msgstr "விவரணம்"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:335
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:356
 #, kde-format
 msgid "User ID"
 msgstr "பயனர் அடையாளம்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:305
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:326
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
 msgstr "மின்னஞ்சல்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:321
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:342
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
 msgstr "மாநிலம்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:337
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:358
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
 msgstr "பொறுப்பு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:472
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:493
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
 msgstr "LDAP-யிலிருந்து தொடர்புகளை இறக்குமதி செய்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:495
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:516
 #, kde-format
 msgid "Search for Addresses in Directory"
 msgstr "அடைவில் முகவரிகளைத் தேடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:500
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:521
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "இதைக் கண்டுபிடி:"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:508
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:529
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
 msgstr "இதில்:"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:512
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
 #, kde-format
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
 msgstr "பெயர்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:513
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:534
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
 msgstr "மின்னஞ்சல்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:514
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
 msgstr "இல்ல தொலைபேசி எண்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:515
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:536
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
 msgstr "வேலையிட தொலைபேசி எண்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:517
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
 #, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
 msgstr "&தேடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:556
 #, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr "சார்ந்தவற்றிலும் தேடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:561
 #, kde-format
 msgid "Contains"
 msgstr "இதைக் கொண்டது"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:539
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:562
 #, kde-format
 msgid "Starts With"
 msgstr "இத்துடன் தொடங்குகிறது"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:572
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "முடிவுகளில் தேடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:603
 #, kde-format
 msgid "Searching..."
 msgstr "தேடுகிறது..."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:607
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "அனைத்தையும் தேர்ந்தெடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:588
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:611
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "அனைத்து தேர்வுகளை நிராகரி"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:595
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:618
 #, kde-format
 msgid "Add Selected"
 msgstr "தேர்ந்தெடுத்துள்ளவற்றை சேர்"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:619
 #, kde-format
 msgid "Configure LDAP Servers..."
 msgstr "LDAP சேவையகங்களை அமை..."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:654
 #, kde-format
 msgid "Copy"
 msgstr "நகலெடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:755
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:778
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr "தேடுமுன் LDAP சேவையகத்தைத் தேர்ந்தெடுக்க வேண்டும்."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:843
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:866
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "%2 தனிலுள்ள %1 LDAP அடைவிலிருந்து இறக்குமதி செய்யப்பட்டுள்ளது"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:862
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:885
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
