@@ -11,6 +11,7 @@
 
 #include <KLocalizedString>
 #include <QLineEdit>
+#include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -88,10 +89,7 @@ TemplateEditDialog::~TemplateEditDialog()
 void TemplateEditDialog::readConfig()
 {
     create(); // ensure a window is created
-    windowHandle()->resize(QSize(300, 200));
-    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1StringView(myTemplateEditDialogConfigGroupName));
-    KWindowConfig::restoreWindowSize(windowHandle(), group);
-    resize(windowHandle()->size()); // workaround for QTBUG-40584
+    TextAddonsWidgets::LoadDialogSizeUtils::loadDialogSizeScaled(this, QLatin1StringView(myTemplateEditDialogConfigGroupName), 300, 200);
 }
 
 void TemplateEditDialog::writeConfig()
