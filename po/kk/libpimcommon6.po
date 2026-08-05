@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:47+0000\n"
 "PO-Revision-Date: 2013-11-07 03:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -74,21 +74,21 @@ msgstr ""
 msgid "LiveJournal"
 msgstr ""
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, fuzzy, kde-format
 #| msgid "Default template"
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Әдетті үлгі"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Үлгісі"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#: pimcommon/templatewidgets/templateeditdialog.cpp:59
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@label:textbox"
@@ -886,7 +886,7 @@ msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Іздейтін мәтін"
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:56
 #, fuzzy, kde-format
 #| msgid "Delete template"
 msgctxt "@title:window"

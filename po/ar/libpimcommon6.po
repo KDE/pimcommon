@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:47+0000\n"
 "PO-Revision-Date: 2025-12-20 11:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -78,19 +78,19 @@ msgstr "إفِرنُوت"
 msgid "LiveJournal"
 msgstr "لايف‌جورنِل"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "القالب المبدئيّ"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "القالب"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#: pimcommon/templatewidgets/templateeditdialog.cpp:59
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -866,7 +866,7 @@ msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "ابحث..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:56
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"

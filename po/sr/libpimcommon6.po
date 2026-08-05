@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:47+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -75,7 +75,7 @@ msgid "LiveJournal"
 msgstr "Лајвџорнал"
 
 # >> @title:window
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, fuzzy, kde-format
 #| msgid "Default template"
 msgctxt "@title:window"
@@ -83,14 +83,14 @@ msgid "Default template"
 msgstr "Подразумевани шаблон"
 
 # >> @title:window
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, fuzzy, kde-format
 #| msgid "Template"
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Шаблон"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#: pimcommon/templatewidgets/templateeditdialog.cpp:59
 #, fuzzy, kde-format
 #| msgid "Name:"
 msgctxt "@label:textbox"
@@ -923,7 +923,7 @@ msgid "Search..."
 msgstr "Тражи..."
 
 # >> @title:window
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:56
 #, fuzzy, kde-format
 #| msgid "Select Multiple Folders"
 msgctxt "@title:window"

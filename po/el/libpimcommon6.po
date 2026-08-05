@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:47+0000\n"
 "PO-Revision-Date: 2014-03-26 20:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -77,19 +77,19 @@ msgstr ""
 msgid "LiveJournal"
 msgstr ""
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Προκαθορισμένο πρότυπο"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Πρότυπο"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#: pimcommon/templatewidgets/templateeditdialog.cpp:59
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -875,7 +875,7 @@ msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Αναζήτηση..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:56
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-29 00:47+0000\n"
+"POT-Creation-Date: 2026-08-05 00:47+0000\n"
 "PO-Revision-Date: 2025-12-19 21:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -79,19 +79,19 @@ msgstr "Evernote"
 msgid "LiveJournal"
 msgstr "LiveJournal"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Default template"
 msgstr "Txantiloi lehenetsia"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:35
+#: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
 msgctxt "@title:window"
 msgid "Template"
 msgstr "Txantiloia"
 
-#: pimcommon/templatewidgets/templateeditdialog.cpp:58
+#: pimcommon/templatewidgets/templateeditdialog.cpp:59
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -865,7 +865,7 @@ msgctxt "@info:placeholder"
 msgid "Search..."
 msgstr "Bilatu..."
 
-#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
+#: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:56
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Multiple Folders"
