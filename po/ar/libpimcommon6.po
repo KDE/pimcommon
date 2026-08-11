@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2018.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-08-05 00:47+0000\n"
-"PO-Revision-Date: 2025-12-20 11:19+0400\n"
+"PO-Revision-Date: 2026-08-10 18:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: pimcommon-activities/configureactivitieswidget.cpp:54
 #, kde-format
@@ -384,13 +384,13 @@ msgstr "ا&ختر..."
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
 msgid "Permissions"
-msgstr "الأذونات"
+msgstr "الأذون"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:114
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
-msgstr "<b>لاحظ:</b> يتطلّب تغيير الاسم أذونات الكتابة في المجلّد الأب."
+msgstr "<b>لاحظ:</b> يتطلّب تغيير الاسم أذون الكتابة في المجلّد الأب."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -432,24 +432,24 @@ msgstr "حرّر ACL"
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
-msgstr "أمتأكّد من إزالة أذوناتك عن هذا المجلّد؟ لن يمكنك النّفاذ إليه بعد الآن."
+msgstr "أمتأكّد من إزالة أذونك عن هذا المجلّد؟ لن يمكنك النّفاذ إليه بعد الآن."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
-msgstr "أمتأكّد من إزالة هذه الأذونات عن هذا المجلّد؟"
+msgstr "أمتأكّد من إزالة هذه الأذون عن هذا المجلّد؟"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:243
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
-msgstr "أمتأكّد من تطبيق أذونات المجلّد على المجلّدات الفرعيّة هذه؟"
+msgstr "أمتأكّد من تطبيق أذون المجلّد على المجلّدات الفرعيّة هذه؟"
 
 #: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
-msgstr "طبّق الأذونات"
+msgstr "طبّق الأذون"
 
 #: pimcommonakonadi/acl/aclutils.cpp:19
 msgctxt "Permissions"
@@ -479,7 +479,7 @@ msgstr "الكلّ"
 #: pimcommonakonadi/acl/aclutils.cpp:66
 #, kde-format
 msgid "Custom Permissions (%1)"
-msgstr "أذونات مخصّصة (%1)"
+msgstr "أذون مخصّصة (%1)"
 
 #: pimcommonakonadi/acl/collectionaclpage.cpp:34
 #, kde-format
@@ -491,7 +491,7 @@ msgstr "التّحكّم بالنّفاذ"
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
-msgstr "طبّق الأذونات على المجلّدات ال&فرعيّة."
+msgstr "طبّق الأذون على المجلّدات ال&فرعيّة."
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:331
 #, kde-format
@@ -848,8 +848,8 @@ msgstr ""
 "للمنبّهات فقط).\n"
 "\n"
 "أمثلة عن الاستخدام: إن كان ربّ العمل يشارك مجلّدًا مع السّكرتاريّة، فيجب أن يُعلَّم "
-"الرّبّ بِ‍ ”مشغول“ لاجتماعاته، لذلك عليه اختيار ”المدراء“، إذ أنّه لا أذونات "
-"إداريّة للسّكرتاريّة على هذا المجلّد.\n"
+"الرّبّ بِ‍ ”مشغول“ لاجتماعاته، لذلك عليه اختيار ”المدراء“، إذ أنّه لا أذون إداريّة "
+"للسّكرتاريّة على هذا المجلّد.\n"
 "من جهة أخرى، إن كانت مجموعة عمل تشارك تقويمًا ما لاجتماعات المجموعة، فيجب "
 "تعليم كلّ قارئي المجلّد بِ‍ ”مشغول“ للاجتماعات.\n"
 "المجلّدات على مستوى الشّركة التي فيها أحداث اختياريّة ستحدّد ”لا أحد“ إذ أنّه ليس "
