@@ -686,9 +686,8 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
         mIsConfigured = false;
     } else {
         mIsConfigured = true;
-        auto clientSearchConfig = new KLDAPCore::LdapClientSearchConfig;
         for (int j = 0; j < mNumHosts; ++j) {
-            auto ldapClient = new KLDAPCore::LdapClient(0, q);
+            auto ldapClient = new KLDAPCore::LdapClient(j, q);
             auto job = new KLDAPCore::LdapSearchClientReadConfigServerJob(q);
             job->setCurrentIndex(j);
             job->setActive(true);
@@ -714,7 +713,6 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 
             mLdapClientList.append(ldapClient);
         }
-        delete clientSearchConfig;
 
         mModel->clear();
     }
