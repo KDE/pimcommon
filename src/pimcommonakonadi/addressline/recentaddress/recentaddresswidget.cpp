@@ -75,7 +75,6 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     connect(mListView, &QListWidget::itemSelectionChanged, this, &RecentAddressWidget::updateButtonState);
     connect(mListView, &QListWidget::customContextMenuRequested, this, &RecentAddressWidget::slotCustomContextMenuRequested);
     layout->addWidget(mListView);
-    mDirty = false;
 }
 
 RecentAddressWidget::~RecentAddressWidget() = default;
