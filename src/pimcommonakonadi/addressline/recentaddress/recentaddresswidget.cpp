@@ -157,6 +157,7 @@ void RecentAddressWidget::setAddresses(const QStringList &addrs)
 {
     mListView->clear();
     mListView->addItems(addrs);
+    mDirty = false;
 }
 
 bool RecentAddressWidget::eventFilter(QObject *o, QEvent *e)
