@@ -482,6 +482,7 @@ public:
     int mNumHosts = 0;
     QList<KLDAPCore::LdapClient *> mLdapClientList;
     bool mIsConfigured = false;
+    bool mSearchRunning = false;
     KContacts::Addressee::List mSelectedContacts;
 
     QComboBox *mFilterCombo = nullptr;
@@ -600,7 +601,7 @@ LdapSearchDialog::LdapSearchDialog(QWidget *parent)
     d->mResultView->verticalHeader()->hide();
     d->mResultView->setSortingEnabled(true);
     d->mResultView->horizontalHeader()->setSortIndicatorShown(true);
-    connect(d->mResultView, &QTableView::clicked, this, [this]() {
+    connect(d->mResultView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]() {
         d->slotSelectionChanged();
     });
     topLayout->addWidget(d->mResultView);
@@ -680,6 +681,10 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
 {
     // Create one KLDAP::LdapClient per selected server and configure it.
 
+    // A running query must be stopped before its clients are deleted, otherwise done() never
+    // arrives and the dialog stays stuck with a wait cursor and a "Stop" button.
+    slotStopSearch();
+
     // First clean the list to make sure it is empty at
     // the beginning of the process
     qDeleteAll(mLdapClientList);
@@ -726,8 +731,13 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
             mLdapClientList.append(ldapClient);
         }
 
-        mModel->clear();
+        // The clients are new, they don't know about the current state of the checkbox yet.
+        slotSetScope(mRecursiveCheckbox->isChecked());
     }
+
+    mModel->clear();
+    slotSelectionChanged();
+
     KConfigGroup groupHeader(config, QStringLiteral("Headers"));
     mResultView->horizontalHeader()->restoreState(groupHeader.readEntry("HeaderState", QByteArray()));
 
@@ -790,6 +800,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
         return;
     }
 
+    mSearchRunning = true;
     QApplication::setOverrideCursor(Qt::WaitCursor);
     KGuiItem::assign(mSearchButton, stopSearchGuiItem);
     progressIndication->start();
@@ -803,6 +814,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
 
     // loop in the list and run the KLDAP::LdapClients
     mModel->clear();
+    slotSelectionChanged();
     for (KLDAPCore::LdapClient *client : std::as_const(mLdapClientList)) {
         client->startQuery(filter);
     }
@@ -812,12 +824,19 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotStartSearch()
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotStopSearch()
 {
+    if (!mSearchRunning) {
+        return;
+    }
     cancelQuery();
     slotSearchDone();
 }
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
 {
+    if (!mSearchRunning) {
+        return;
+    }
+
     // If there are no more active clients, we are done.
     for (KLDAPCore::LdapClient *client : std::as_const(mLdapClientList)) {
         if (client->isActive()) {
@@ -825,6 +844,7 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
         }
     }
 
+    mSearchRunning = false;
     q->disconnect(mSearchButton, SIGNAL(clicked()), q, SLOT(slotStopSearch()));
     q->connect(mSearchButton, SIGNAL(clicked()), q, SLOT(slotStartSearch()));
 
@@ -835,8 +855,16 @@ void LdapSearchDialog::LdapSearchDialogPrivate::slotSearchDone()
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotError(const QString &error)
 {
-    QApplication::restoreOverrideCursor();
+    // LdapClient emits done() right after error(), so slotSearchDone() takes care of restoring
+    // the cursor. Only make sure the message box is not shown below a wait cursor.
+    const bool searchCursorActive = mSearchRunning;
+    if (searchCursorActive) {
+        QApplication::restoreOverrideCursor();
+    }
     KMessageBox::error(q, error);
+    if (searchCursorActive) {
+        QApplication::setOverrideCursor(Qt::WaitCursor);
+    }
 }
 
 void LdapSearchDialog::closeEvent(QCloseEvent *e)
@@ -848,13 +876,11 @@ void LdapSearchDialog::closeEvent(QCloseEvent *e)
 void LdapSearchDialog::LdapSearchDialogPrivate::slotUnselectAll()
 {
     mResultView->clearSelection();
-    slotSelectionChanged();
 }
 
 void LdapSearchDialog::LdapSearchDialogPrivate::slotSelectAll()
 {
     mResultView->selectAll();
-    slotSelectionChanged();
 }
 
 void LdapSearchDialog::slotUser1()
