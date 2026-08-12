@@ -299,26 +299,6 @@ public:
         return qMakePair(mContactList.at(index.row()), mServerList.at(index.row()));
     }
 
-    [[nodiscard]] QString email(const QModelIndex &index) const
-    {
-        if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
-            return {};
-        }
-
-        const auto mailList = mContactList.at(index.row()).value(QStringLiteral("mail"));
-        return mailList.isEmpty() ? QString{} : asUtf8(mailList.constFirst()).trimmed();
-    }
-
-    [[nodiscard]] QString fullName(const QModelIndex &index) const
-    {
-        if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
-            return {};
-        }
-
-        const auto cnList = mContactList.at(index.row()).value(QStringLiteral("cn"));
-        return cnList.isEmpty() ? QString{} : asUtf8(cnList.constFirst()).trimmed();
-    }
-
     void clear()
     {
         beginResetModel();
