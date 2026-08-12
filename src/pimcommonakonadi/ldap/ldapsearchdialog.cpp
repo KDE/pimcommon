@@ -111,6 +111,34 @@ static QMap<QString, QString> &adrbookattr2ldap()
     return keys;
 }
 
+// Escape the characters that would otherwise break the filter syntax (RFC 4515).
+// '*' is deliberately left alone, so that users can still type their own wildcards.
+static QString escapeFilterValue(const QString &value)
+{
+    QString result;
+    result.reserve(value.size());
+    for (const QChar c : value) {
+        switch (c.unicode()) {
+        case u'\\':
+            result += QLatin1StringView("\\5c");
+            break;
+        case u'(':
+            result += QLatin1StringView("\\28");
+            break;
+        case u')':
+            result += QLatin1StringView("\\29");
+            break;
+        case u'\0':
+            result += QLatin1StringView("\\00");
+            break;
+        default:
+            result += c;
+            break;
+        }
+    }
+    return result;
+}
+
 static QString makeFilter(const QString &query, LdapSearchDialog::FilterType attr, bool startsWith)
 {
     /* The reasoning behind this filter is:
@@ -125,17 +153,18 @@ static QString makeFilter(const QString &query, LdapSearchDialog::FilterType att
         return result + QStringLiteral("|(cn=*)(sn=*)") + QLatin1Char(')');
     }
 
+    const QString escapedQuery = escapeFilterValue(query);
     if (attr == LdapSearchDialog::FilterType::Name) {
         result += startsWith ? QStringLiteral("|(cn=%1*)(sn=%2*)") : QStringLiteral("|(cn=*%1*)(sn=*%2*)");
-        result = result.arg(query, query);
+        result = result.arg(escapedQuery, escapedQuery);
     } else {
         result += startsWith ? QStringLiteral("%1=%2*") : QStringLiteral("%1=*%2*");
         if (attr == LdapSearchDialog::FilterType::Email) {
-            result = result.arg(QStringLiteral("mail"), query);
+            result = result.arg(QStringLiteral("mail"), escapedQuery);
         } else if (attr == LdapSearchDialog::FilterType::HomeNumber) {
-            result = result.arg(QStringLiteral("homePhone"), query);
+            result = result.arg(QStringLiteral("homePhone"), escapedQuery);
         } else if (attr == LdapSearchDialog::FilterType::WorkNumber) {
-            result = result.arg(QStringLiteral("telephoneNumber"), query);
+            result = result.arg(QStringLiteral("telephoneNumber"), escapedQuery);
         } else {
             // Error?
             result.clear();
