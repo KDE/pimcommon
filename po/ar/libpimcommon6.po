@@ -522,7 +522,7 @@ msgstr "اضبط الإكمال..."
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
 msgid "Automatically expand groups"
-msgstr "وسع المجموعات آليّاً"
+msgstr "وسع المجموعات آليًّا"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
 #, kde-format
