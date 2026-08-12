@@ -108,17 +108,21 @@ void RecentAddressWidget::slotAddItem()
         return;
     }
     const int numberOfItem(mListView->count());
+    bool found = false;
     for (int i = 0; i < numberOfItem; ++i) {
-        if (mListView->item(i)->text() == newEmail) {
-            return;
+        if (mListView->item(i)->text().contains(newEmail, Qt::CaseInsensitive)) {
+            found = true;
+            break;
         }
     }
 
-    mListView->insertItem(0, mLineEdit->text());
-    mListView->setCurrentRow(0, QItemSelectionModel::ClearAndSelect);
+    if (!found) {
+        mListView->insertItem(0, newEmail);
+        mListView->setCurrentRow(0, QItemSelectionModel::ClearAndSelect);
+        mDirty = true;
+    }
     mLineEdit->clear();
     mLineEdit->setFocus();
-    mDirty = true;
     updateButtonState();
 }
 
