@@ -281,10 +281,13 @@ public:
 
     void addContact(const KLDAPCore::LdapAttrMap &contact, const QString &server)
     {
-        beginResetModel();
+        // Don't reset the model here: results arrive one by one while the query runs and a
+        // reset would clear the selection the user made in the meantime.
+        const int row = mContactList.count();
+        beginInsertRows(QModelIndex(), row, row);
         mContactList.append(contact);
         mServerList.append(server);
-        endResetModel();
+        endInsertRows();
     }
 
     [[nodiscard]] QPair<KLDAPCore::LdapAttrMap, QString> contact(const QModelIndex &index) const
