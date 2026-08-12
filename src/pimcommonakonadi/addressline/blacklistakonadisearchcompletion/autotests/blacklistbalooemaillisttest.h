@@ -22,6 +22,7 @@ private Q_SLOTS:
     void shouldReturnChangedItems();
     void shouldNotAddDuplicateEmails();
     void shouldExcludeDomain();
+    void shouldExcludeDomainWithDifferentCase();
     void shouldAvoidSameEmailWithDifferentCase();
     void shouldAvoidSameEmailWithDisplayNameOrNot();
 };

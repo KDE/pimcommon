@@ -71,7 +71,8 @@ int BlackListAkonadiSearchEmailList::setEmailFound(const QStringList &list)
         const QString mailToLower = mail.toLower();
         const QString emailToLower = email.toLower();
         for (const QString &domain : std::as_const(mExcludeDomains)) {
-            if (email.endsWith(domain)) {
+            // Domain names are case insensitive
+            if (email.endsWith(domain, Qt::CaseInsensitive)) {
                 excludeEmail = true;
                 break;
             }

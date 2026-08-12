@@ -99,6 +99,16 @@ void BlackListBalooEmailListTest::shouldExcludeDomain()
     QCOMPARE(blackList.count(), 1);
 }
 
+void BlackListBalooEmailListTest::shouldExcludeDomainWithDifferentCase()
+{
+    PimCommon::BlackListAkonadiSearchEmailList blackList;
+    blackList.setExcludeDomains(QStringList() << QStringLiteral("KDE.org") << QStringLiteral("toto.FR"));
+    const QStringList emails = QStringList() << QStringLiteral("foo@kde.ORG") << QStringLiteral("bla@Kde.Org") << QStringLiteral("bli@TOTO.fr")
+                                             << QStringLiteral("bli@fr.fr");
+    QCOMPARE(blackList.setEmailFound(emails), 1);
+    QCOMPARE(blackList.count(), 1);
+}
+
 void BlackListBalooEmailListTest::shouldAvoidSameEmailWithDifferentCase()
 {
     PimCommon::BlackListAkonadiSearchEmailList blackList;
