@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-05 00:47+0000\n"
+"POT-Creation-Date: 2026-08-13 00:51+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -367,7 +367,7 @@ msgstr ""
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
 #: pimcommonakonadi/acl/aclmanager.cpp:283
 #: pimcommonakonadi/acl/aclmanager.cpp:290
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:135
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@title:window"
@@ -661,7 +661,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp:137
+#: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemaillist.cpp:138
 #, kde-format
 msgid "No result found"
 msgstr ""
@@ -748,7 +748,7 @@ msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:98
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:97
 #, fuzzy, kde-format
 #| msgid "Remove Entry"
 msgid "Remove Email"
@@ -757,7 +757,7 @@ msgstr[0] "Ukloni stavku"
 msgstr[1] "Ukloni stavku"
 msgstr[2] "Ukloni stavku"
 
-#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:134
+#: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:137
 #, fuzzy, kde-format
 #| msgid "Do you want to delete selected template?"
 msgid "Do you want to remove this email address?"
@@ -906,7 +906,7 @@ msgid "Title"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:91
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:324
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:336
 #, fuzzy, kde-format
 msgid "Full Name"
 msgstr "Obriši predložak"
@@ -918,25 +918,25 @@ msgid "Email"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:93
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:328
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:340
 #, kde-format
 msgid "Home Number"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:94
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:330
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:342
 #, kde-format
 msgid "Work Number"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:95
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:332
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:344
 #, kde-format
 msgid "Mobile Number"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:96
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:334
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:346
 #, kde-format
 msgid "Fax Number"
 msgstr ""
@@ -947,7 +947,7 @@ msgid "Pager"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:98
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:340
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:352
 #, kde-format
 msgid "Street"
 msgstr ""
@@ -959,201 +959,201 @@ msgid "State"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:100
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:344
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:356
 #, kde-format
 msgid "Country"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:101
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:350
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:362
 #, kde-format
 msgid "City"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:102
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:338
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:350
 #, kde-format
 msgid "Organization"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:103
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:336
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:348
 #, kde-format
 msgid "Company"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:104
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:352
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:364
 #, kde-format
 msgid "Department"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:105
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:346
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:358
 #, kde-format
 msgid "Zip Code"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:106
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:348
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:360
 #, kde-format
 msgid "Postal Address"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:107
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:354
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:366
 #, kde-format
 msgid "Description"
 msgstr ""
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:108
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:356
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:368
 #, kde-format
 msgid "User ID"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:326
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:338
 #, kde-format
 msgctxt "@title:column Column containing email addresses"
 msgid "Email"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:342
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:354
 #, kde-format
 msgctxt "@title:column Column containing the residential state of the address"
 msgid "State"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:358
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:370
 #, kde-format
 msgctxt "@title:column Column containing title of the person"
 msgid "Title"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:493
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:506
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Contacts from LDAP"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:516
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:529
 #, kde-format
 msgid "Search for Addresses in Directory"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:521
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:534
 #, fuzzy, kde-format
 #| msgid "Text to search for"
 msgctxt "@label:textbox"
 msgid "Search for:"
 msgstr "Tekst koji treba potražiti"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:529
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:542
 #, kde-format
 msgctxt "In LDAP attribute"
 msgid "in"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:533
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:546
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@item:inlistbox Name of the contact"
 msgid "Name"
 msgstr "Ime"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:534
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:547
 #, kde-format
 msgctxt "@item:inlistbox email address of the contact"
 msgid "Email"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:535
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:548
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Home Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:536
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:549
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Work Number"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:538
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:551
 #, kde-format
 msgctxt "@action:button Start searching"
 msgid "&Search"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:556
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:569
 #, kde-format
 msgctxt "@option:check"
 msgid "Recursive search"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:561
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:574
 #, kde-format
 msgid "Contains"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:562
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:575
 #, kde-format
 msgid "Starts With"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:572
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:585
 #, fuzzy, kde-format
 #| msgid "Text to search for"
 msgctxt "@info:placeholder"
 msgid "Search in result"
 msgstr "Tekst koji treba potražiti"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:603
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:616
 #, kde-format
 msgid "Searching..."
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:607
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:620
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgctxt "@action:button"
 msgid "Select All"
 msgstr "Zamijeni sve"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:611
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:624
 #, fuzzy, kde-format
 #| msgid "Replace All"
 msgctxt "@action:button"
 msgid "Unselect All"
 msgstr "Zamijeni sve"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:618
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
 msgid "Add Selected"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:619
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:632
 #, kde-format
 msgid "Configure LDAP Servers..."
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:654
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:667
 #, kde-format
 msgid "Copy"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:778
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:798
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:866
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:902
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:885
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:921
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
