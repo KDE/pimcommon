@@ -53,11 +53,11 @@ void ShareServiceUrlManagerTest::shouldGenerateServiceUrl_data()
                                                    << QUrl(QStringLiteral("mailto:?subject=kde&body=http://www.kde.org")) << true;
 
     QTest::newRow("no title but valid link (linkedin)")
-        << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::LinkedIn
-        << QUrl(QStringLiteral("http://www.linkedin.com/shareArticle?mini=true&url=http://www.kde.org&title")) << true;
+        << QString() << QStringLiteral("https://www.kde.org") << PimCommon::ShareServiceUrlManager::LinkedIn
+        << QUrl(QStringLiteral("https://www.linkedin.com/shareArticle?mini=true&url=https://www.kde.org&title")) << true;
     QTest::newRow("title and valid link (linkedin)") << QStringLiteral("kde") << QStringLiteral("http://www.kde.org")
                                                      << PimCommon::ShareServiceUrlManager::LinkedIn
-                                                     << QUrl(QStringLiteral("http://www.linkedin.com/shareArticle?mini=true&url=http://www.kde.org&title=kde"))
+                                                     << QUrl(QStringLiteral("https://www.linkedin.com/shareArticle?mini=true&url=http://www.kde.org&title=kde"))
                                                      << true;
 
     QTest::newRow("no title but valid link (evernote)") << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::Evernote
@@ -68,10 +68,10 @@ void ShareServiceUrlManagerTest::shouldGenerateServiceUrl_data()
 
     QTest::newRow("no title but valid link (livejournal)")
         << QString() << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::LiveJournal
-        << QUrl(QStringLiteral("http://www.livejournal.com/update.bml?event=http://www.kde.org&subject")) << true;
+        << QUrl(QStringLiteral("https://www.livejournal.com/update.bml?event=http://www.kde.org&subject")) << true;
     QTest::newRow("title and valid link (livejournal)")
         << QStringLiteral("kde") << QStringLiteral("http://www.kde.org") << PimCommon::ShareServiceUrlManager::LiveJournal
-        << QUrl(QStringLiteral("http://www.livejournal.com/update.bml?event=http://www.kde.org&subject=kde")) << true;
+        << QUrl(QStringLiteral("https://www.livejournal.com/update.bml?event=http://www.kde.org&subject=kde")) << true;
 }
 
 void ShareServiceUrlManagerTest::shouldGenerateServiceUrl()
