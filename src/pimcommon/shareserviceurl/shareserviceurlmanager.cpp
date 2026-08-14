@@ -120,8 +120,11 @@ KActionMenu *ShareServiceUrlManager::menu() const
 void ShareServiceUrlManager::slotSelectServiceUrl(QAction *act)
 {
     if (act) {
-        const auto type = act->data().value<PimCommon::ShareServiceUrlManager::ServiceType>();
-        Q_EMIT serviceUrlSelected(type);
+        const QVariant data = act->data();
+        if (data.canConvert<ServiceType>()) {
+            const auto type = data.value<PimCommon::ShareServiceUrlManager::ServiceType>();
+            Q_EMIT serviceUrlSelected(type);
+        }
     }
 }
 
