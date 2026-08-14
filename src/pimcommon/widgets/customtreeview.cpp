@@ -77,7 +77,7 @@ void CustomTreeView::paintEvent(QPaintEvent *event)
         }
         p.setPen(mTextColor);
 
-        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, mDefaultText);
+        p.drawText(viewport()->rect(), Qt::AlignCenter, mDefaultText);
     } else {
         QTreeWidget::paintEvent(event);
     }
