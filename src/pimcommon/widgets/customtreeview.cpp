@@ -22,7 +22,10 @@ CustomTreeView::~CustomTreeView() = default;
 void CustomTreeView::changeEvent(QEvent *event)
 {
     if (event->type() == QEvent::PaletteChange) {
-        generalPaletteChanged();
+        // The viewport still holds the old palette here: propagatePaletteChange() notifies
+        // us before updating our children. Invalidate and recompute lazily in paintEvent().
+        mTextColor = QColor();
+        update();
     } else if (event->type() == QEvent::FontChange) {
         generalFontChanged();
     }
