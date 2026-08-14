@@ -160,7 +160,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         break;
     }
     case LinkedIn: {
-        url.setUrl(QStringLiteral("http://www.linkedin.com/shareArticle"));
+        url.setUrl(QStringLiteral("https://www.linkedin.com/shareArticle"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("mini"), QStringLiteral("true"));
         urlQuery.addQueryItem(QStringLiteral("url"), link);
@@ -177,7 +177,7 @@ QUrl ShareServiceUrlManager::generateServiceUrl(const QString &link, const QStri
         break;
     }
     case LiveJournal: {
-        url.setUrl(QStringLiteral("http://www.livejournal.com/update.bml"));
+        url.setUrl(QStringLiteral("https://www.livejournal.com/update.bml"));
         QUrlQuery urlQuery;
         urlQuery.addQueryItem(QStringLiteral("event"), link);
         urlQuery.addQueryItem(QStringLiteral("subject"), title);
