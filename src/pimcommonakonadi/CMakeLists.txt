@@ -158,7 +158,7 @@ target_link_libraries(
         KF6::XmlGui
         KF6::KIOWidgets
         KF6::KCMUtils
-        KPim6::LdapWidgets
+        KPim6::LdapCore
         KF6::ColorScheme
 )
 
