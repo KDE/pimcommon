@@ -6,12 +6,14 @@
 
 #include "lineeditwithautocorrectiontest.h"
 #include <PimCommon/LineEditWithAutoCorrection>
+#include <QStandardPaths>
 #include <QTest>
 #include <TextAutoCorrectionCore/AutoCorrection>
 #include <qtestkeyboard.h>
 
 LineEditWithAutocorrectionTest::LineEditWithAutocorrectionTest()
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void LineEditWithAutocorrectionTest::shouldNotAutocorrectWhenDisabled()

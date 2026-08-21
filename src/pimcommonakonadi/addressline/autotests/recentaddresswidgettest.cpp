@@ -9,6 +9,7 @@
 #include "addressline/recentaddress/recentaddresswidget.h"
 #include <QLineEdit>
 #include <QListWidget>
+#include <QStandardPaths>
 #include <QTest>
 #include <QToolButton>
 #include <qtestmouse.h>
@@ -16,6 +17,7 @@
 RecentAddressWidgetTest::RecentAddressWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 RecentAddressWidgetTest::~RecentAddressWidgetTest() = default;

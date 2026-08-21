@@ -8,12 +8,14 @@
 #include "completionorderwidgettest.h"
 #include "addressline/completionorder/completionorderwidget.h"
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 #include <QTreeWidget>
 
 CompletionOrderWidgetTest::CompletionOrderWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 CompletionOrderWidgetTest::~CompletionOrderWidgetTest() = default;

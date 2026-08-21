@@ -12,11 +12,13 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(BlackListBalooEmailCompletionWidgetTest)
 BlackListBalooEmailCompletionWidgetTest::BlackListBalooEmailCompletionWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 BlackListBalooEmailCompletionWidgetTest::~BlackListBalooEmailCompletionWidgetTest() = default;
