@@ -165,5 +165,5 @@ void ImapAclAttribute::deserialize(const QByteArray &data)
 
 bool ImapAclAttribute::operator==(const ImapAclAttribute &other) const
 {
-    return (oldRights() == other.oldRights()) && (rights() == other.rights()) && (myRights() == other.myRights());
+    return (d->mOldRights == other.d->mOldRights) && (d->mRights == other.d->mRights) && (d->mMyRights == other.d->mMyRights);
 }
