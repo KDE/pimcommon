@@ -13,4 +13,4 @@ namespace PimCommon::AddresseeLineUtil
 /*!
  */
 [[nodiscard]] PIMCOMMONAKONADI_EXPORT QStringList excludeEmailsRegularExpression();
-};
+}
