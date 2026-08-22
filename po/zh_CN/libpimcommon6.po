@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "Limit to the selected activities:"
-msgstr ""
+msgstr "限制为选定的活动："
 
 #: pimcommon-activities/configureactivitieswidget.cpp:60
 #, kde-format
@@ -31,6 +31,8 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
+"如果您限制只在某些活动中使用此账户，它将只在您进行那些活动时才会显示。此外，"
+"当您切换到不允许使用此保险库的活动时，它会自动隐藏。"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
@@ -532,7 +534,7 @@ msgstr "最近使用的地址"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
 #, kde-format
 msgid "Add to Blacklist"
-msgstr ""
+msgstr "添加到黑名单"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
