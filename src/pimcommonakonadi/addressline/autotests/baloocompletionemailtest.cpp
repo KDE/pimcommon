@@ -20,7 +20,7 @@ void BalooCompletionEmailTest::returnEmptyListWhenEmailListIsEmpty()
     PimCommon::AkonadiSearchCompletionEmail completion;
 
     QVERIFY(completion.cleanupEmailList().isEmpty());
-    PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info;
+    const PimCommon::AkonadiSearchCompletionEmail::AkonadiSearchCompletionEmailInfo info;
     QVERIFY(info.mListEmail.isEmpty());
     QVERIFY(info.mBlackList.isEmpty());
     QVERIFY(info.mExcludeEmailsRegularExpressions.isEmpty());

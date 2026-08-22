@@ -18,7 +18,7 @@ ActionTypeTest::~ActionTypeTest() = default;
 
 void ActionTypeTest::shouldHaveDefaultValue()
 {
-    PimCommon::ActionType actionType;
+    const PimCommon::ActionType actionType;
     QVERIFY(!actionType.action());
     QCOMPARE(actionType.type(), PimCommon::ActionType::Tools);
 }
@@ -26,8 +26,8 @@ void ActionTypeTest::shouldHaveDefaultValue()
 void ActionTypeTest::shouldAssignValue()
 {
     auto act = new QAction(nullptr);
-    PimCommon::ActionType::Type type = PimCommon::ActionType::File;
-    PimCommon::ActionType actionType(act, type);
+    const PimCommon::ActionType::Type type = PimCommon::ActionType::File;
+    const PimCommon::ActionType actionType(act, type);
     QCOMPARE(actionType.action(), act);
     QCOMPARE(actionType.type(), type);
     delete act;

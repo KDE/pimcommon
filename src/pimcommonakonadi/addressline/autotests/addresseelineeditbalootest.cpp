@@ -18,7 +18,7 @@ AddresseeLineEditBalooTest::AddresseeLineEditBalooTest(QObject *parent)
 
 void AddresseeLineEditBalooTest::shouldHaveDefaultValues()
 {
-    PimCommon::AddresseeLineEditAkonadiSearch b;
+    const PimCommon::AddresseeLineEditAkonadiSearch b;
     QVERIFY(b.akonadiSearchBlackList().isEmpty());
     QVERIFY(b.domainExcludeList().isEmpty());
     QCOMPARE(b.akonadiSearchCompletionSource(), 0);

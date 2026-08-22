@@ -23,7 +23,7 @@ ImapAclAttributeTest::~ImapAclAttributeTest() = default;
 
 void ImapAclAttributeTest::shouldHaveDefaultValue()
 {
-    PimCommon::ImapAclAttribute attr;
+    const PimCommon::ImapAclAttribute attr;
     QVERIFY(attr.oldRights().isEmpty());
     QVERIFY(attr.rights().isEmpty());
     QVERIFY(!attr.myRights());
@@ -35,10 +35,10 @@ void ImapAclAttributeTest::shouldBuildAttribute()
     right.insert("test", KIMAP::Acl::Admin);
     right.insert("foo", KIMAP::Acl::Admin);
 
-    QMap<QByteArray, KIMAP::Acl::Rights> oldright;
+    const QMap<QByteArray, KIMAP::Acl::Rights> oldright;
     right.insert("test", KIMAP::Acl::Delete);
     right.insert("foo", KIMAP::Acl::Delete);
-    PimCommon::ImapAclAttribute attr(right, oldright);
+    const PimCommon::ImapAclAttribute attr(right, oldright);
     QCOMPARE(attr.oldRights(), oldright);
     QCOMPARE(attr.rights(), right);
 }
@@ -71,10 +71,10 @@ void ImapAclAttributeTest::shouldSerializedAttribute()
     right.insert("test", KIMAP::Acl::Admin);
     right.insert("foo", KIMAP::Acl::Admin);
 
-    QMap<QByteArray, KIMAP::Acl::Rights> oldright;
+    const QMap<QByteArray, KIMAP::Acl::Rights> oldright;
     right.insert("test", KIMAP::Acl::Delete);
     right.insert("foo", KIMAP::Acl::Delete);
-    PimCommon::ImapAclAttribute attr(right, oldright);
+    const PimCommon::ImapAclAttribute attr(right, oldright);
     const QByteArray ba = attr.serialized();
     PimCommon::ImapAclAttribute result;
     result.deserialize(ba);
@@ -83,14 +83,14 @@ void ImapAclAttributeTest::shouldSerializedAttribute()
 
 void ImapAclAttributeTest::shouldHaveType()
 {
-    PimCommon::ImapAclAttribute attr;
+    const PimCommon::ImapAclAttribute attr;
     QCOMPARE(attr.type(), QByteArray("imapacl"));
 }
 
 void ImapAclAttributeTest::testMyRights()
 {
     ImapAclAttribute attr;
-    KIMAP::Acl::Rights myRight = KIMAP::Acl::Admin;
+    const KIMAP::Acl::Rights myRight = KIMAP::Acl::Admin;
 
     attr.setMyRights(myRight);
     QCOMPARE(attr.myRights(), myRight);
@@ -111,10 +111,10 @@ void ImapAclAttributeTest::testDeserialize_data()
     QTest::addColumn<KIMAP::Acl::Rights>("myRights");
     QTest::addColumn<QByteArray>("serialized");
 
-    KIMAP::Acl::Rights rights = KIMAP::Acl::None;
+    const KIMAP::Acl::Rights rights = KIMAP::Acl::None;
 
     {
-        ImapAcl acl;
+        const ImapAcl acl;
         QTest::newRow("empty") << acl << KIMAP::Acl::Rights(KIMAP::Acl::None) << QByteArray(" %% ");
     }
 
@@ -224,7 +224,7 @@ void ImapAclAttributeTest::testOldRights()
     auto attr = new ImapAclAttribute();
     attr->setRights(acls);
 
-    ImapAcl oldAcls = acls;
+    const ImapAcl oldAcls = acls;
     acls.remove("first_user@host");
     acls.remove("third_user@host");
 

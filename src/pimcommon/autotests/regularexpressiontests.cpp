@@ -423,9 +423,9 @@ void RegularExpressionTests::shouldCaptureValue()
     QFETCH(QStringList, matchedElements);
     QFETCH(bool, insensitiveCase);
 
-    QRegularExpression expression(regexp, insensitiveCase ? QRegularExpression::CaseInsensitiveOption : QRegularExpression::NoPatternOption);
-    QRegularExpressionMatch matchExpression = expression.match(input);
-    bool hasMatch = matchExpression.hasMatch();
+    const QRegularExpression expression(regexp, insensitiveCase ? QRegularExpression::CaseInsensitiveOption : QRegularExpression::NoPatternOption);
+    const QRegularExpressionMatch matchExpression = expression.match(input);
+    const bool hasMatch = matchExpression.hasMatch();
     QCOMPARE(hasMatch, match);
     if (match) {
         const int major = matchExpression.captured(1).toInt();
