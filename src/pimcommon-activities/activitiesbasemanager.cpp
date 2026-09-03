@@ -30,23 +30,17 @@ ActivitiesBaseManager::~ActivitiesBaseManager() = default;
 
 bool ActivitiesBaseManager::isInCurrentActivity(const QStringList &lst) const
 {
-    if (mActivitiesConsumer->serviceStatus() == KActivities::Consumer::ServiceStatus::Running) {
-        if (lst.contains(mActivitiesConsumer->currentActivity())) {
-            return true;
-        } else {
-            const QStringList activities = mActivitiesConsumer->activities();
-            const auto index = std::find_if(activities.constBegin(), activities.constEnd(), [lst](const QString &str) {
-                return lst.contains(str);
-            });
-            // Account doesn't contains valid activities => show it.
-            if (index == activities.constEnd()) {
-                return true;
-            }
-            return false;
-        }
-    } else {
+    if (mActivitiesConsumer->serviceStatus() != KActivities::Consumer::ServiceStatus::Running) {
         return true;
     }
+    if (lst.contains(mActivitiesConsumer->currentActivity())) {
+        return true;
+    }
+    const QStringList activities = mActivitiesConsumer->activities();
+    // Account doesn't contain valid activities => show it.
+    return !std::any_of(activities.cbegin(), activities.cend(), [&lst](const QString &str) {
+        return lst.contains(str);
+    });
 }
 
 QString ActivitiesBaseManager::currentActivity() const
