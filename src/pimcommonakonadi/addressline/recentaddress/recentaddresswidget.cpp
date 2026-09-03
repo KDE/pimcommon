@@ -110,7 +110,7 @@ void RecentAddressWidget::slotAddItem()
     const int numberOfItem(mListView->count());
     bool found = false;
     for (int i = 0; i < numberOfItem; ++i) {
-        if (mListView->item(i)->text().contains(newEmail, Qt::CaseInsensitive)) {
+        if (mListView->item(i)->text().compare(newEmail, Qt::CaseInsensitive) == 0) {
             found = true;
             break;
         }
