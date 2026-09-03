@@ -334,10 +334,10 @@ void CompletionOrderWidget::loadCompletionItems()
         const QList<KLDAPCore::LdapClient *> listClients = mLdapSearch->clients();
         for (KLDAPCore::LdapClient *client : listClients) {
             if (mLdapActivities) {
-                if (mLdapActivities->hasActivitySupport())
-                    if (client->server().enablePlasmaActivities() && !client->server().activities().contains(mLdapActivities->currentActivity())) {
-                        continue;
-                    }
+                if (mLdapActivities->hasActivitySupport() && client->server().enablePlasmaActivities()
+                    && !client->server().activities().contains(mLdapActivities->currentActivity())) {
+                    continue;
+                }
             }
             new CompletionViewItem(mListView, new LDAPCompletionItem(client));
         }
