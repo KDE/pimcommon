@@ -76,7 +76,7 @@ QString PimCommon::Util::loadToFile(const QString &filter, QWidget *parent, cons
     if (!caption.isEmpty()) {
         fdlg->setWindowTitle(caption);
     }
-    fdlg->setAcceptDrops(QFileDialog::AcceptOpen);
+    fdlg->setAcceptDrops(false);
     QString result;
     if (fdlg->exec() == QDialog::Accepted) {
         const QString fileName = fdlg->selectedFiles().at(0);
