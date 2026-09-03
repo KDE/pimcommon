@@ -181,6 +181,8 @@ void AclModifyJob::changeAcl(const Akonadi::Collection &collection)
             attribute->setRights(mNewRight);
             auto modifyJob = new Akonadi::CollectionModifyJob(mutableCollection);
             connect(modifyJob, &KJob::result, this, &AclModifyJob::slotModifyDone);
+        } else {
+            deleteLater();
         }
     } else {
         checkNewCollection();
