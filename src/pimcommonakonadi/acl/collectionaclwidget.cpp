@@ -55,7 +55,6 @@ protected:
                 setDefaultAction(mDefaultAction);
             }
             return;
-            break;
         default:
             break;
         }
