@@ -391,7 +391,7 @@ public:
             return {};
         }
 
-        const KLDAPCore::LdapAttrMap map = mContactList.at(index.row());
+        const KLDAPCore::LdapAttrMap &map = mContactList.at(index.row());
 
         switch (index.column()) {
         case 0:
