@@ -204,7 +204,7 @@ public:
         if (KAuthorized::authorize(QStringLiteral("ghns"))) {
             if (!knewstuffConfigName.isEmpty()) {
                 menu->addSeparator();
-                auto fileGHNS = new KNSWidgets::Action(i18n("Download new Templates..."), knewstuffConfigName, q);
+                auto fileGHNS = new KNSWidgets::Action(i18n("Download new Templates..."), knewstuffConfigName, menu);
                 menu->addAction(fileGHNS);
             }
         }
