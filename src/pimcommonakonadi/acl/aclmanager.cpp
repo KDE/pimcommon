@@ -187,13 +187,14 @@ public:
 
     void selectionChanged()
     {
-        const bool itemSelected = !mSelectionModel->selectedIndexes().isEmpty();
+        const auto selectedIndexes = mSelectionModel->selectedIndexes();
+        const bool itemSelected = !selectedIndexes.isEmpty();
 
         bool canAdmin = (mUserRights & KIMAP::Acl::Admin);
 
         bool canAdminThisItem = canAdmin;
         if (canAdmin && itemSelected) {
-            const QModelIndex index = mSelectionModel->selectedIndexes().first();
+            const QModelIndex index = selectedIndexes.first();
             const QString userId = index.data(AclModel::UserIdRole).toString();
             const KIMAP::Acl::Rights rights = static_cast<KIMAP::Acl::Rights>(index.data(AclModel::PermissionsRole).toInt());
 

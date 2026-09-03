@@ -64,12 +64,13 @@ void CustomToolsPluginManagerPrivate::initializePluginList()
         info.metaData = i.previous();
         if (info.metaData.version() == pluginVersion()) {
             // only load plugins once, even if found multiple times!
-            if (unique.contains(info.saveName())) {
+            const QString saveName = info.saveName();
+            if (unique.contains(saveName)) {
                 continue;
             }
             info.plugin = nullptr;
             mPluginList.push_back(info);
-            unique.insert(info.saveName());
+            unique.insert(saveName);
         } else {
             qCWarning(PIMCOMMON_LOG) << "Plugin " << info.metaData.name() << " doesn't have correct plugin version. It will not be loaded.";
         }

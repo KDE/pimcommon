@@ -494,11 +494,11 @@ void AddresseeLineEdit::addContactGroup(const KContacts::ContactGroup &group, in
 void AddresseeLineEdit::addContact(const QStringList &emails, const KContacts::Addressee &addr, int weight, int source, QString append)
 {
     int isPrefEmail = 1; // first in list is preferredEmail
+    const QString givenName = addr.givenName();
+    const QString familyName = addr.familyName();
+    const QString nickName = addr.nickName();
     for (const QString &email : emails) {
         // TODO: highlight preferredEmail
-        const QString givenName = addr.givenName();
-        const QString familyName = addr.familyName();
-        const QString nickName = addr.nickName();
         const QString fullEmail = addr.fullEmail(email);
 
         QString appendix;

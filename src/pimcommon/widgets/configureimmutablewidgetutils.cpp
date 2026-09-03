@@ -41,9 +41,10 @@ void ConfigureImmutableWidgetUtils::populateButtonGroup(QGroupBox *box, QButtonG
     } else {
         box->setLayout(new QVBoxLayout());
     }
-    const int numberChoices(e->choices().size());
+    const auto list = e->choices();
+    const int numberChoices(list.size());
     for (int i = 0; i < numberChoices; ++i) {
-        auto button = new QRadioButton(e->choices().at(i).label, box);
+        auto button = new QRadioButton(list.at(i).label, box);
         group->addButton(button, i);
         box->layout()->addWidget(button);
     }

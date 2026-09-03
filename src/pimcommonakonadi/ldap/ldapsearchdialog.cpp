@@ -894,14 +894,17 @@ void LdapSearchDialog::slotUser1()
     if (!items.isEmpty()) {
         const QDateTime now = QDateTime::currentDateTime();
 
-        for (int i = 0; i < items.count(); ++i) {
+        const int itemsCount = items.count();
+        d->mSelectedContacts.reserve(itemsCount);
+        const QLocale locale;
+        for (int i = 0; i < itemsCount; ++i) {
             KContacts::Addressee contact = convertLdapAttributesToAddressee(items.at(i).first);
 
             // set a comment where the contact came from
             contact.setNote(i18nc("arguments are host name, datetime",
                                   "Imported from LDAP directory %1 on %2",
                                   items.at(i).second,
-                                  QLocale().toString(now, QLocale::ShortFormat)));
+                                  locale.toString(now, QLocale::ShortFormat)));
 
             d->mSelectedContacts.append(contact);
         }
