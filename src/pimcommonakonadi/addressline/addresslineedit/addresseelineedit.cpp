@@ -900,7 +900,7 @@ void AddresseeLineEdit::slotEditingFinished()
 {
     const QList<KJob *> listJob = d->mightBeGroupJobs();
     for (KJob *job : listJob) {
-        disconnect(job);
+        job->disconnect(this);
         job->deleteLater();
     }
 
