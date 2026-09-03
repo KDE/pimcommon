@@ -75,7 +75,9 @@ void ConfigureImmutableWidgetUtils::loadWidget(PimCommon::SimpleStringListEditor
 
 void ConfigureImmutableWidgetUtils::loadWidget(QGroupBox *box, QButtonGroup *group, const KCoreConfigSkeleton::ItemEnum *e)
 {
-    Q_ASSERT(group->buttons().size() == e->choices().size());
+    if (group->button(e->value())) {
+        return;
+    }
     checkLockDown(box, e);
     group->buttons().at(e->value())->setChecked(true);
 }
