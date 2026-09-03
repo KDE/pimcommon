@@ -175,7 +175,6 @@ void AddresseeLineEditPrivate::setCompletedItems(const QStringList &items, bool 
                 item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
                 item->setBackground(AddresseeLineEditManager::self()->alternateColor());
             }
-            completionBox->addItem(item);
         }
         if (!completionBox->isVisible()) {
             if (!mSearchString.isEmpty()) {
