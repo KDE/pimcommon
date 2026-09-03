@@ -300,13 +300,11 @@ const QStringList PimCommon::AddresseeLineEditPrivate::adjustedCompletionItems(b
         // Add the sections and their items to the final sortedItems result list
         const int numberOfSources(sourcesAndWeights.size());
         for (int i = 0; i < numberOfSources; ++i) {
-            const SourceWithWeight source = sourcesAndWeights.at(i);
+            const SourceWithWeight &source = sourcesAndWeights.at(i);
             const QStringList sectionItems = sections[source.index];
             if (!sectionItems.isEmpty()) {
                 sortedItems.append(source.sourceName);
-                for (const QString &itemInSection : sectionItems) {
-                    sortedItems.append(itemInSection);
-                }
+                sortedItems += sectionItems;
             }
         }
     } else {
