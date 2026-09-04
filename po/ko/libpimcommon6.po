@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-09-04 00:46+0000\n"
 "PO-Revision-Date: 2026-02-03 22:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -347,8 +347,8 @@ msgid "&Customize..."
 msgstr "사용자 정의(&C)..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:283
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:284
+#: pimcommonakonadi/acl/aclmanager.cpp:291
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -412,19 +412,19 @@ msgctxt "@action"
 msgid "Remove Entry"
 msgstr "항목 삭제"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:214
+#: pimcommonakonadi/acl/aclmanager.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "ACL 추가"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:241
+#: pimcommonakonadi/acl/aclmanager.cpp:242
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "ACL 편집"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:282
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -433,18 +433,18 @@ msgstr ""
 "이 폴더에 있는 내 접근 권한을 삭제하시겠습니까? 다음에 더 이상 폴더에 접근할 "
 "수 없습니다."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:289
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "이 폴더의 권한을 삭제하시겠습니까?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "폴더 권한을 다음 하위 폴더에도 적용하시겠습니까?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
@@ -486,7 +486,7 @@ msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "접근 제어"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
@@ -540,8 +540,8 @@ msgid "Add to Blacklist"
 msgstr "차단 목록에 추가"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:743
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:744
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -1099,13 +1099,13 @@ msgstr "복사"
 msgid "You must select an LDAP server before searching."
 msgstr "검색하기 전 LDAP 서버를 선택해야 합니다."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:902
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "%2에 LDAP 디렉터리 %1에서 가져옴"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:921
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

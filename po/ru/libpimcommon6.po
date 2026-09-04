@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-09-04 00:46+0000\n"
 "PO-Revision-Date: 2025-12-23 18:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -362,8 +362,8 @@ msgid "&Customize..."
 msgstr "&Настроить…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:283
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:284
+#: pimcommonakonadi/acl/aclmanager.cpp:291
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -430,19 +430,19 @@ msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Удалить запись"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:214
+#: pimcommonakonadi/acl/aclmanager.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Добавление прав"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:241
+#: pimcommonakonadi/acl/aclmanager.cpp:242
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Редактирование прав"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:282
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -451,18 +451,18 @@ msgstr ""
 "Удалить ваше собственное право доступа к этой папке? После этого вы не "
 "сможете к ней обратиться."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:289
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Удалить эти права доступа к этой папке?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "Применить права доступа папки к этим вложенным папкам?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
@@ -504,7 +504,7 @@ msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Управление доступом"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
@@ -558,8 +558,8 @@ msgid "Add to Blacklist"
 msgstr "Добавить в список заблокированных"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:743
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:744
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -1134,13 +1134,13 @@ msgstr "Копировать"
 msgid "You must select an LDAP server before searching."
 msgstr "Для поиска необходимо выбрать сервер LDAP."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:902
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "Импортировано из каталога LDAP %1 в %2"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:921
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

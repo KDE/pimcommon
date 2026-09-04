@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-09-04 00:46+0000\n"
 "PO-Revision-Date: 2025-12-21 06:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -348,8 +348,8 @@ msgid "&Customize..."
 msgstr "自訂(&C)…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:283
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:284
+#: pimcommonakonadi/acl/aclmanager.cpp:291
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -413,37 +413,37 @@ msgctxt "@action"
 msgid "Remove Entry"
 msgstr "移除項目"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:214
+#: pimcommonakonadi/acl/aclmanager.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "新增存取控制清單"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:241
+#: pimcommonakonadi/acl/aclmanager.cpp:242
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "編輯存取控制清單"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:282
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
 msgstr "您確定要移除您對這個資料夾的權限嗎？此後您就無法再存取這個資料夾了。"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:289
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "您確定要移除這個資料夾的這些權限嗎？"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "您確定要套用這個資料夾的權限到這些子資料夾上嗎？"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
@@ -485,7 +485,7 @@ msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "權限控制"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
@@ -539,8 +539,8 @@ msgid "Add to Blacklist"
 msgstr "加入黑名單"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:743
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:744
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -1096,13 +1096,13 @@ msgstr "複製"
 msgid "You must select an LDAP server before searching."
 msgstr "您必須先選取一個 LDAP 伺服器才能進行搜尋。"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:902
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "從 LDAP 目錄 %1 於 %2 匯入"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:921
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

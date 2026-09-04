@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-08-13 00:51+0000\n"
+"POT-Creation-Date: 2026-09-04 00:46+0000\n"
 "PO-Revision-Date: 2025-12-20 20:26+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -353,8 +353,8 @@ msgid "&Customize..."
 msgstr "&Tinkinti..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:283
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:284
+#: pimcommonakonadi/acl/aclmanager.cpp:291
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -422,19 +422,19 @@ msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Šalinti įrašą"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:214
+#: pimcommonakonadi/acl/aclmanager.cpp:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Pridėti ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:241
+#: pimcommonakonadi/acl/aclmanager.cpp:242
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Taisyti ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:281
+#: pimcommonakonadi/acl/aclmanager.cpp:282
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -443,18 +443,18 @@ msgstr ""
 "Ar tikrai norite pašalinti savo asmeninius leidimus šiame aplanke? Po to, "
 "nebegalėsite gauti prieigą prie jo."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:289
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Ar tikrai norite pašalinti nurodytus šio aplanko leidimus?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:243
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "Ar tikrai norite taikyti aplanko leidimus šiems poaplankiams?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
@@ -496,7 +496,7 @@ msgctxt "@title:tab Access Control settings page."
 msgid "Access Control"
 msgstr "Prieigos valdymas"
 
-#: pimcommonakonadi/acl/collectionaclwidget.cpp:73
+#: pimcommonakonadi/acl/collectionaclwidget.cpp:72
 #, kde-format
 msgctxt "@option:check"
 msgid "Apply permissions on all &subfolders."
@@ -550,8 +550,8 @@ msgid "Add to Blacklist"
 msgstr "Įtraukti į juodąjį sąrašą"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:114
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:746
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:747
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:743
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit_p.cpp:744
 #, kde-format
 msgctxt "@title:group"
 msgid "Contacts found in your data"
@@ -1122,13 +1122,13 @@ msgstr "Kopijuoti"
 msgid "You must select an LDAP server before searching."
 msgstr "Prieš atlikdami paiešką privalote pasirinkti LDAP serverį."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:902
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "Importuota iš LDAP katalogo %1 ties %2"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:921
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
