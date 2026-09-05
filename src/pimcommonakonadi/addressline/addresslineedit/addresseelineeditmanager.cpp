@@ -22,8 +22,6 @@
 
 using namespace PimCommon;
 
-Q_GLOBAL_STATIC(AddresseeLineEditManager, sInstance)
-
 AddresseeLineEditManager::AddresseeLineEditManager()
     : mCompletion(new KMailCompletion)
     , mAddresseeLineEditAkonadi(new AddresseeLineEditAkonadi)
@@ -46,7 +44,19 @@ AddresseeLineEditManager::~AddresseeLineEditManager()
 
 AddresseeLineEditManager *AddresseeLineEditManager::self()
 {
-    return sInstance;
+    static std::unique_ptr<AddresseeLineEditManager> s_instance;
+    if (!s_instance) {
+        s_instance = std::make_unique<AddresseeLineEditManager>();
+    }
+    // destructing the LDAP code interacts with KDirWatch, which crashes when
+    // done too late during process teardown
+    QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, QCoreApplication::instance(), [&]() {
+        s_instance.reset();
+    });
+    QObject::connect(QCoreApplication::instance(), &QObject::destroyed, QCoreApplication::instance(), [&]() {
+        s_instance.reset();
+    });
+    return s_instance.get();
 }
 
 void AddresseeLineEditManager::updateCompletionOrder()
