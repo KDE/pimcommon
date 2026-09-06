@@ -220,7 +220,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 ecm_set_disabled_deprecation_versions(QT 6.11.0 KF 6.30.0)
 
-find_package(KF6TextAutoCorrectionWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
 

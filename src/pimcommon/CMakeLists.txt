@@ -102,8 +102,6 @@ target_sources(
         genericplugins/pluginutil.h
         genericplugins/abstractgenericplugininterface.h
         genericplugins/abstractgenericplugin.h
-        autocorrection/widgets/lineeditwithautocorrection.h
-        autocorrection/widgets/lineeditwithautocorrection.cpp
         widgets/purposemenumessagewidget.h
         widgets/purposemenumessagewidget.cpp
         widgets/purposemenuwidget.h
@@ -147,7 +145,6 @@ target_link_libraries(
         KF6::Codecs
         KF6::ColorScheme
 )
-target_link_libraries(KPim6PimCommon PUBLIC KF6::TextAutoCorrectionWidgets)
 
 target_include_directories(KPim6PimCommon INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/>")
 
@@ -178,8 +175,6 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
     add_subdirectory(configureplugins/autotests)
     add_subdirectory(genericplugins/autotests)
-    add_subdirectory(autocorrection/autotests)
-    add_subdirectory(autocorrection/tests)
 endif()
 
 ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
@@ -194,13 +189,6 @@ ecm_generate_headers(PimCommon_CamelCasegenericplugins_HEADERS
     RELATIVE genericplugins
 )
 
-ecm_generate_headers(PimCommon_Camelcaseautocorrectionwidgets_HEADERS
-    HEADER_NAMES
-    LineEditWithAutoCorrection
-    REQUIRED_HEADERS PimCommon_autocorrectionwidgets_HEADERS
-    PREFIX PimCommon
-    RELATIVE autocorrection/widgets/
-)
 ecm_generate_headers(PimCommon_CamelCasenetworkmanager_HEADERS
     HEADER_NAMES
     NetworkManager
@@ -276,7 +264,6 @@ install(
     FILES
         ${PimCommon_Camelcaseconfigureplugins_HEADERS}
         ${PimCommon_CamelCasegenericplugins_HEADERS}
-        ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
         ${PimCommon_CamelCasenetworkmanager_HEADERS}
         ${PimCommon_CamelCase_HEADERS}
         ${PimCommon_Camelcasecustomtools_HEADERS}
@@ -292,7 +279,6 @@ install(
         ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
         ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
         ${PimCommon_HEADERS}
-        ${PimCommon_autocorrectionwidgets_HEADERS}
         ${PimCommon_genericplugins_HEADERS}
         ${PimCommon_configureplugins_HEADERS}
         ${PimCommon_networkmanager_HEADERS}
@@ -339,7 +325,6 @@ ecm_add_installed_library_check(KPim6PimCommon
 
 ecm_installed_library_check_include_strings(KPim6PimCommon
     HEADERS         ${PimCommon_HEADERS}
-    ${PimCommon_autocorrectionwidgets_HEADERS}
     ${PimCommon_genericplugins_HEADERS}
     ${PimCommon_configureplugins_HEADERS}
     ${PimCommon_networkmanager_HEADERS}
@@ -355,7 +340,6 @@ ecm_installed_library_check_include_strings(KPim6PimCommon
     HEADERS
     ${PimCommon_Camelcaseconfigureplugins_HEADERS}
     ${PimCommon_CamelCasegenericplugins_HEADERS}
-    ${PimCommon_Camelcaseautocorrectionwidgets_HEADERS}
     ${PimCommon_CamelCasenetworkmanager_HEADERS}
     ${PimCommon_CamelCase_HEADERS}
     ${PimCommon_Camelcasecustomtools_HEADERS}
