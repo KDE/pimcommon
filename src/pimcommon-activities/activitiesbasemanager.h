@@ -86,5 +86,59 @@ private:
     KActivities::Consumer *const mActivitiesConsumer;
     bool mEnabled = false;
 };
+
+/*!
+ * \brief The ActivitiesFilter class
+ */
+template<typename Base>
+class ActivitiesFilter : public Base
+{
+public:
+    /*!
+     * \brief ActivitiesFilter
+     * \param manager
+     */
+    explicit ActivitiesFilter(ActivitiesBaseManager *manager)
+        : Base(manager)
+        , mActivitiesManager(manager)
+    {
+    }
+    /*!
+     * \brief ~ActivitiesFilter
+     */
+    ~ActivitiesFilter() override = default;
+
+    /*!
+     * \brief filterAcceptsRow
+     * \param activities
+     * \return
+     */
+    [[nodiscard]] bool filterAcceptsRow(const QStringList &activities) const override
+    {
+        if (!hasActivitySupport()) {
+            return true;
+        }
+        return !activities.isEmpty() && mActivitiesManager->isInCurrentActivity(activities);
+    }
+    /*!
+     * \brief hasActivitySupport
+     * \return
+     */
+    [[nodiscard]] bool hasActivitySupport() const override
+    {
+        return mActivitiesManager && mActivitiesManager->enabled();
+    }
+    /*!
+     * \brief currentActivity
+     * \return
+     */
+    [[nodiscard]] QString currentActivity() const override
+    {
+        return mActivitiesManager ? mActivitiesManager->currentActivity() : QString();
+    }
+
+private:
+    PimCommonActivities::ActivitiesBaseManager *const mActivitiesManager;
+};
 }
 PIMCOMMONACTIVITIES_EXPORT QDebug operator<<(QDebug d, const PimCommonActivities::ActivitiesBaseManager::ActivitySettings &t);
