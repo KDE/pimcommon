@@ -142,7 +142,7 @@ bool AclModifyJob::canAdministrate(const PimCommon::ImapAclAttribute *attribute,
 
     QString loginName;
     QString serverName;
-    if (imapSettingsInterface->isValid()) {
+    if (imapSettingsInterface && imapSettingsInterface->isValid()) {
         QDBusReply<QString> reply = imapSettingsInterface->userName();
         if (reply.isValid()) {
             loginName = reply;
