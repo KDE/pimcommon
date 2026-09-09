@@ -57,7 +57,8 @@ void AclEntryDialog::AclEntryDialogPrivate::slotSelectAddresses()
         return;
     }
 
-    const QString text = !dlg.selectedAddresses().isEmpty() ? dlg.selectedAddresses().at(0).quotedEmail() : QString();
+    const auto selectedAddresses = dlg.selectedAddresses();
+    const QString text = !selectedAddresses.isEmpty() ? selectedAddresses.at(0).quotedEmail() : QString();
 
     mUserIdLineEdit->setText(text);
 }

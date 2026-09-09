@@ -703,6 +703,8 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
         mIsConfigured = false;
     } else {
         mIsConfigured = true;
+
+        const QStringList attrs = adrbookattr2ldap().values();
         for (int j = 0; j < mNumHosts; ++j) {
             auto ldapClient = new KLDAPCore::LdapClient(j, q);
             auto job = new KLDAPCore::LdapSearchClientReadConfigServerJob(q);
@@ -711,12 +713,6 @@ void LdapSearchDialog::LdapSearchDialogPrivate::restoreSettings()
             job->setConfig(group);
             job->setLdapClient(ldapClient);
             job->start();
-            QStringList attrs;
-
-            QMap<QString, QString>::ConstIterator end(adrbookattr2ldap().constEnd());
-            for (QMap<QString, QString>::ConstIterator it = adrbookattr2ldap().constBegin(); it != end; ++it) {
-                attrs << *it;
-            }
 
             ldapClient->setAttributes(attrs);
 
