@@ -497,18 +497,16 @@ void AddresseeLineEdit::addContact(const QStringList &emails, const KContacts::A
     const QString givenName = addr.givenName();
     const QString familyName = addr.familyName();
     const QString nickName = addr.nickName();
+    QString appendix;
+
+    if (!append.isEmpty()) {
+        append.replace(QLatin1Char('('), QStringLiteral("["));
+        append.replace(QLatin1Char(')'), QStringLiteral("]"));
+        appendix = QStringLiteral(" (%1)").arg(append);
+    }
     for (const QString &email : emails) {
         // TODO: highlight preferredEmail
         const QString fullEmail = addr.fullEmail(email);
-
-        QString appendix;
-
-        if (!append.isEmpty()) {
-            appendix = QStringLiteral(" (%1)");
-            append.replace(QLatin1Char('('), QStringLiteral("["));
-            append.replace(QLatin1Char(')'), QStringLiteral("]"));
-            appendix = appendix.arg(append);
-        }
 
         // Prepare "givenName" + ' ' + "familyName"
         QString fullName = givenName;
