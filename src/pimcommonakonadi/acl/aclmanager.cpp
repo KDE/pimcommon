@@ -177,7 +177,7 @@ public:
 
         mModel = new AclModel(q);
 
-        mSelectionModel = new QItemSelectionModel(mModel);
+        mSelectionModel = new QItemSelectionModel(mModel, q);
         q->connect(mSelectionModel, &QItemSelectionModel::selectionChanged, q, [this]() {
             selectionChanged();
         });

@@ -61,7 +61,7 @@ CheckedCollectionWidget::CheckedCollectionWidget(const QString &mimetype, QWidge
     mimeTypeProxy->setSourceModel(d->mEntityTreeModel);
 
     // Create the Check proxy model.
-    d->mSelectionModel = new QItemSelectionModel(mimeTypeProxy);
+    d->mSelectionModel = new QItemSelectionModel(mimeTypeProxy, this);
     d->mCheckProxy = new KCheckableProxyModel(this);
     d->mCheckProxy->setSelectionModel(d->mSelectionModel);
     d->mCheckProxy->setSourceModel(mimeTypeProxy);
