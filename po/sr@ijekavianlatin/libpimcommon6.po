@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:48+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -385,14 +385,14 @@ msgctxt "@title:window"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#: pimcommonakonadi/acl/aclentrydialog.cpp:85
 #, fuzzy, kde-format
 #| msgid "&User identifier:"
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&Identifikator korisnika:"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#: pimcommonakonadi/acl/aclentrydialog.cpp:92
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -404,18 +404,18 @@ msgstr ""
 "biti jednostavno korisničko ime ili puna adresa e‑pošte, što ćete zaključiti "
 "na osnovu prijavne niske za sopstveni nalog."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#: pimcommonakonadi/acl/aclentrydialog.cpp:96
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
 msgstr "&Izaberi..."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#: pimcommonakonadi/acl/aclentrydialog.cpp:99
 #, kde-format
 msgid "Permissions"
 msgstr "Dozvole"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#: pimcommonakonadi/acl/aclentrydialog.cpp:115
 #, fuzzy, kde-format
 #| msgid ""
 #| "<b>Note: </b>Renaming requires write permissions on the parent folder."
@@ -552,36 +552,36 @@ msgstr ""
 msgid "Select email from contact"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, fuzzy, kde-format
 #| msgctxt "type of folder content"
 #| msgid "Configuration"
 msgid "Configure Completion..."
 msgstr "postava"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
 #, kde-format
 msgid "Automatically expand groups"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
 #, kde-format
 msgid "Expand Groups..."
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:705
 #, kde-format
 msgid "Add to Blacklist"
 msgstr ""
@@ -1180,18 +1180,18 @@ msgstr ""
 msgid "Copy"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:798
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:794
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:901
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr ""
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:920
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

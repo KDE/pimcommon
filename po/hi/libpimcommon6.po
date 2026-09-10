@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:48+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -357,13 +357,13 @@ msgctxt "@title:window"
 msgid "Remove"
 msgstr "निकालना"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#: pimcommonakonadi/acl/aclentrydialog.cpp:85
 #, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&उपयोगकर्ता पहचानकर्ता:"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#: pimcommonakonadi/acl/aclentrydialog.cpp:92
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -375,18 +375,18 @@ msgstr ""
 "उपयोगकर्ता नाम या उपयोगकर्ता का पूरा ईमेल पता हो सकता है; सर्वर पर आपके अपने खाते का "
 "लॉगिन आपको बताएगा कि यह कौन सा है।"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#: pimcommonakonadi/acl/aclentrydialog.cpp:96
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
 msgstr "चुनना..."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#: pimcommonakonadi/acl/aclentrydialog.cpp:99
 #, kde-format
 msgid "Permissions"
 msgstr "अनुमतियां"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#: pimcommonakonadi/acl/aclentrydialog.cpp:115
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
@@ -510,34 +510,34 @@ msgstr "<qt><b>%1</b> तक पहुंचने में असमर्थ.
 msgid "Select email from contact"
 msgstr "संपर्क से ईमेल चुनें"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "LDAP परिणामों के लिए संगठन इकाई दिखाएँ"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Configure Completion..."
 msgstr "पूर्णता कॉन्फ़िगर करें..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "समूहों को स्वचालित रूप से विस्तृत करें"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
 #, kde-format
 msgid "Expand Groups..."
 msgstr "समूह विस्तृत करें..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr "हाल के पते"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:705
 #, kde-format
 msgid "Add to Blacklist"
 msgstr ""
@@ -1100,18 +1100,18 @@ msgstr "LDAP सर्वर कॉन्फ़िगर करें..."
 msgid "Copy"
 msgstr "प्रतिलिपि"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:798
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:794
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr "खोज करने से पहले आपको LDAP सर्वर का चयन करना होगा।"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:901
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "%2 पर LDAP निर्देशिका %1 से आयातित"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:920
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

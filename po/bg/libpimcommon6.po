@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:48+0000\n"
 "PO-Revision-Date: 2026-08-17 14:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -356,13 +356,13 @@ msgctxt "@title:window"
 msgid "Remove"
 msgstr "Премахване"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#: pimcommonakonadi/acl/aclentrydialog.cpp:85
 #, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&Идентификатор на потребителя:"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#: pimcommonakonadi/acl/aclentrydialog.cpp:92
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -375,18 +375,18 @@ msgstr ""
 "потребителя; входът за вашия собствен акаунт на сървъра ще ви каже кое от "
 "двете е."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#: pimcommonakonadi/acl/aclentrydialog.cpp:96
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
 msgstr "&Избиране..."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#: pimcommonakonadi/acl/aclentrydialog.cpp:99
 #, kde-format
 msgid "Permissions"
 msgstr "Права"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#: pimcommonakonadi/acl/aclentrydialog.cpp:115
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
@@ -512,34 +512,34 @@ msgstr "<qt>Невъзможен достъп<b>%1</b>.</qt>"
 msgid "Select email from contact"
 msgstr "Изберете имейл от контакта"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr "Показване на организацията за LDAP резултати"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Configure Completion..."
 msgstr "Конфигуриране на завършването…"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "Автоматично разширяване на групи"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
 #, kde-format
 msgid "Expand Groups..."
 msgstr "Разгъване на групите..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr "Последни адреси"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:705
 #, kde-format
 msgid "Add to Blacklist"
 msgstr "Добавяне в списък забранени"
@@ -1104,18 +1104,18 @@ msgstr "Конфигуриране на LDAP сървъри..."
 msgid "Copy"
 msgstr "Копиране"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:798
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:794
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr "Трябва да изберете LDAP сървър преди търсенето."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:901
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "Импортирано от LDAP директория %1 на %2"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:920
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"

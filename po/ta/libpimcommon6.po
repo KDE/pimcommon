@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-04 00:46+0000\n"
+"POT-Creation-Date: 2026-09-10 00:48+0000\n"
 "PO-Revision-Date: 2026-01-31 17:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -356,13 +356,13 @@ msgctxt "@title:window"
 msgid "Remove"
 msgstr "நீக்கு"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:84
+#: pimcommonakonadi/acl/aclentrydialog.cpp:85
 #, kde-format
 msgctxt "@label:textbox"
 msgid "&User identifier:"
 msgstr "&பயனர் அடையாளங்காட்டி:"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:91
+#: pimcommonakonadi/acl/aclentrydialog.cpp:92
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid ""
@@ -374,18 +374,18 @@ msgstr ""
 "பெயராகவோ பயனரின் முழு மின்னஞ்சல் முகவரியாகவோ இருக்கும். உங்கள் கணக்கில் நீங்கள் நுழையும் "
 "முறையைக் கொண்டு இதை யூகிக்கலாம்."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:95
+#: pimcommonakonadi/acl/aclentrydialog.cpp:96
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
 msgstr "&தேர்ந்தெடு..."
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:98
+#: pimcommonakonadi/acl/aclentrydialog.cpp:99
 #, kde-format
 msgid "Permissions"
 msgstr "அனுமதிகள்"
 
-#: pimcommonakonadi/acl/aclentrydialog.cpp:114
+#: pimcommonakonadi/acl/aclentrydialog.cpp:115
 #, kde-format
 msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
@@ -509,34 +509,34 @@ msgstr "<qt><b>%1</b> தனை அணுக முடியவில்லை.<
 msgid "Select email from contact"
 msgstr "தொடர்பிலிருந்து மின்னஞ்சலை தேர்ந்தெடு"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:572
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:570
 #, kde-format
 msgctxt "@action"
 msgid "Show Organization Unit for LDAP results"
 msgstr ""
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:578
 #, kde-format
 msgid "Configure Completion..."
 msgstr "நிரப்பலை அமை..."
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:582
 #, kde-format
 msgid "Automatically expand groups"
 msgstr "குழுக்களை தானாக விரிவுபடுத்து"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:588
 #, kde-format
 msgid "Expand Groups..."
 msgstr "குழுக்களை விரிவுபடுத்து"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:622
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
 #, kde-format
 msgid "Recent Addresses"
 msgstr "சமீப முகவரிகள்"
 
-#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:707
+#: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:705
 #, kde-format
 msgid "Add to Blacklist"
 msgstr "தடுப்புப்பட்டியலில் சேர்"
@@ -1087,18 +1087,18 @@ msgstr "LDAP சேவையகங்களை அமை..."
 msgid "Copy"
 msgstr "நகலெடு"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:798
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:794
 #, kde-format
 msgid "You must select an LDAP server before searching."
 msgstr "தேடுமுன் LDAP சேவையகத்தைத் தேர்ந்தெடுக்க வேண்டும்."
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:905
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:901
 #, kde-format
 msgctxt "arguments are host name, datetime"
 msgid "Imported from LDAP directory %1 on %2"
 msgstr "%2 தனிலுள்ள %1 LDAP அடைவிலிருந்து இறக்குமதி செய்யப்பட்டுள்ளது"
 
-#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:924
+#: pimcommonakonadi/ldap/ldapsearchdialog.cpp:920
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure the Address Book LDAP Settings"
