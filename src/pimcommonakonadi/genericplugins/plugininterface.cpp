@@ -69,6 +69,8 @@ void PluginInterface::createPluginInterface()
         qCWarning(PIMCOMMONAKONADI_LOG) << "Missing action collection";
         return;
     }
+    qDeleteAll(d->mListGenericInterface);
+    d->mListGenericInterface.clear();
     const auto pluginsList = d->mGenericPluginManager->pluginsList();
     for (PimCommon::GenericPlugin *plugin : pluginsList) {
         if (plugin->isEnabled()) {
