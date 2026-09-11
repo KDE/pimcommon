@@ -9,6 +9,7 @@
 #include "pimcommonakonadi_export.h"
 #include <Akonadi/Item>
 #include <PimCommon/AbstractGenericPluginInterface>
+class QAction;
 
 namespace PimCommon
 {
@@ -95,6 +96,7 @@ public:
     virtual void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections);
 
 private:
+    void watchActionDestroyed(QAction *action);
     std::unique_ptr<GenericPluginInterfacePrivate> const d;
 };
 }

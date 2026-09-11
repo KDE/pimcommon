@@ -28,7 +28,29 @@ public:
     KActionCollection *mActionCollection = nullptr;
     QList<PimCommon::GenericPluginInterface *> mListGenericInterface;
     GenericPluginManager *mGenericPluginManager = nullptr;
+
+    [[nodiscard]] QAction *separator(QObject *parent);
+    void resetSeparators();
+
+private:
+    QList<QAction *> mSeparatorActions;
+    int mSeparatorIndex = 0;
 };
+
+QAction *PluginInterfacePrivate::separator(QObject *parent)
+{
+    if (mSeparatorIndex == mSeparatorActions.count()) {
+        auto act = new QAction(parent);
+        act->setSeparator(true);
+        mSeparatorActions.append(act);
+    }
+    return mSeparatorActions.at(mSeparatorIndex++);
+}
+
+void PluginInterfacePrivate::resetSeparators()
+{
+    mSeparatorIndex = 0;
+}
 
 PluginInterface::PluginInterface(QObject *parent)
     : QObject(parent)
@@ -168,14 +190,14 @@ void PluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelec
 QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsType()
 {
     QHash<PimCommon::ActionType::Type, QList<QAction *>> listType;
+    d->resetSeparators();
     for (PimCommon::GenericPluginInterface *interface : std::as_const(d->mListGenericInterface)) {
         const auto actionTypes = interface->actionTypes();
         for (const PimCommon::ActionType &actionType : actionTypes) {
             PimCommon::ActionType::Type type = actionType.type();
             QList<QAction *> lst = listType.value(type);
             if (!lst.isEmpty()) {
-                auto act = new QAction(this);
-                act->setSeparator(true);
+                QAction *act = d->separator(this);
                 lst << act << actionType.action();
                 listType.insert(type, lst);
             } else {
@@ -185,8 +207,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
                 type = PimCommon::ActionType::PopupMenu;
                 lst = listType.value(type);
                 if (!lst.isEmpty()) {
-                    auto act = new QAction(this);
-                    act->setSeparator(true);
+                    QAction *act = d->separator(this);
                     lst << act << actionType.action();
                     listType.insert(type, lst);
                 } else {
@@ -197,8 +218,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
                 type = PimCommon::ActionType::ToolBar;
                 lst = listType.value(type);
                 if (!lst.isEmpty()) {
-                    auto act = new QAction(this);
-                    act->setSeparator(true);
+                    QAction *act = d->separator(this);
                     lst << act << actionType.action();
                     listType.insert(type, lst);
                 } else {
