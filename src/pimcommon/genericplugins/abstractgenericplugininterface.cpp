@@ -6,6 +6,9 @@
 
 #include "abstractgenericplugininterface.h"
 
+#include <QPointer>
+#include <QWidget>
+
 using namespace PimCommon;
 
 class PimCommon::AbstractGenericPluginInterfacePrivate
@@ -14,7 +17,7 @@ public:
     AbstractGenericPluginInterfacePrivate() = default;
 
     AbstractGenericPlugin *plugin = nullptr;
-    QWidget *parentWidget = nullptr;
+    QPointer<QWidget> parentWidget;
 };
 
 AbstractGenericPluginInterface::AbstractGenericPluginInterface(QObject *parent)
