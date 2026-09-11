@@ -95,7 +95,7 @@ QList<PimCommon::CustomToolsPlugin *> CustomToolsPluginManagerPrivate::pluginsLi
 
 void CustomToolsPluginManagerPrivate::loadPlugin(CustomToolsPluginInfo *item)
 {
-    if (auto plugin = KPluginFactory::instantiatePlugin<PimCommon::CustomToolsPlugin>(item->metaData, q, QVariantList() << item->saveName()).plugin) {
+    if (auto plugin = KPluginFactory::instantiatePlugin<PimCommon::CustomToolsPlugin>(item->metaData, q, QVariantList{item->saveName()}).plugin) {
         item->plugin = plugin;
     }
 }

@@ -25,7 +25,7 @@ void BlackListBalooEmailUtilTest::shouldReturnEmptyResult()
 void BlackListBalooEmailUtilTest::shouldDontChangeWhenNotChanged()
 {
     PimCommon::BlackListAkonadiSearchEmailUtil util;
-    const QStringList lst = QStringList() << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo2");
+    const QStringList lst = QStringList{QStringLiteral("foo"), QStringLiteral("foo1"), QStringLiteral("foo2")};
     util.initialBlackList(lst);
     QCOMPARE(util.createNewBlackList(), lst);
 }
@@ -33,12 +33,12 @@ void BlackListBalooEmailUtilTest::shouldDontChangeWhenNotChanged()
 void BlackListBalooEmailUtilTest::shouldCreateNewList()
 {
     PimCommon::BlackListAkonadiSearchEmailUtil util;
-    const QStringList lst = QStringList() << QStringLiteral("foo") << QStringLiteral("foo1") << QStringLiteral("foo2");
+    const QStringList lst = QStringList{QStringLiteral("foo"), QStringLiteral("foo1"), QStringLiteral("foo2")};
     util.initialBlackList(lst);
     QHash<QString, bool> newList;
     newList.insert(QStringLiteral("foo"), false);
     util.setNewBlackList(newList);
-    QCOMPARE(util.createNewBlackList(), QStringList() << QStringLiteral("foo1") << QStringLiteral("foo2"));
+    QCOMPARE(util.createNewBlackList(), (QStringList{QStringLiteral("foo1"), QStringLiteral("foo2")}));
 }
 
 void BlackListBalooEmailUtilTest::shouldAddNewElements()

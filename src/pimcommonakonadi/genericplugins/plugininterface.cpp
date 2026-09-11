@@ -201,7 +201,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
                 lst << act << actionType.action();
                 listType.insert(type, lst);
             } else {
-                listType.insert(type, QList<QAction *>() << actionType.action());
+                listType.insert(type, QList<QAction *>{actionType.action()});
             }
             if (interface->plugin()->hasPopupMenuSupport()) {
                 type = PimCommon::ActionType::PopupMenu;
@@ -211,7 +211,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
                     lst << act << actionType.action();
                     listType.insert(type, lst);
                 } else {
-                    listType.insert(type, QList<QAction *>() << actionType.action());
+                    listType.insert(type, QList<QAction *>{actionType.action()});
                 }
             }
             if (interface->plugin()->hasToolBarSupport()) {
@@ -222,7 +222,7 @@ QHash<PimCommon::ActionType::Type, QList<QAction *>> PluginInterface::actionsTyp
                     lst << act << actionType.action();
                     listType.insert(type, lst);
                 } else {
-                    listType.insert(type, QList<QAction *>() << actionType.action());
+                    listType.insert(type, QList<QAction *>{actionType.action()});
                 }
             }
         }

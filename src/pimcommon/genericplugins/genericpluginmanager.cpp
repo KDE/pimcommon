@@ -134,7 +134,7 @@ QList<GenericPlugin *> GenericPluginManagerPrivate::pluginsList() const
 
 void GenericPluginManagerPrivate::loadPlugin(GenericPluginInfo *item)
 {
-    if (auto plugin = KPluginFactory::instantiatePlugin<PimCommon::GenericPlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName).plugin) {
+    if (auto plugin = KPluginFactory::instantiatePlugin<PimCommon::GenericPlugin>(item->data, q, QVariantList{item->metaDataFileNameBaseName}).plugin) {
         item->plugin = plugin;
         item->plugin->setIsEnabled(item->isEnabled);
         item->pluginData.mHasConfigureDialog = item->plugin->hasConfigureDialog();

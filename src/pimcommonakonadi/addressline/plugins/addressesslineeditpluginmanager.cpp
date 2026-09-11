@@ -83,7 +83,7 @@ bool AddressessLineEditPluginManagerPrivate::initializePlugins()
 void AddressessLineEditPluginManagerPrivate::loadPlugin(AddressessLineEditPluginInfo *item)
 {
     if (auto plugin =
-            KPluginFactory::instantiatePlugin<PimCommon::AddressessLineEditAbstractPlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName)
+            KPluginFactory::instantiatePlugin<PimCommon::AddressessLineEditAbstractPlugin>(item->data, q, QVariantList{item->metaDataFileNameBaseName})
                 .plugin) {
         item->plugin = plugin;
     }
