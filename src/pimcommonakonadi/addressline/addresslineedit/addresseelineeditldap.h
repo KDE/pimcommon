@@ -22,6 +22,7 @@ class AddresseeLineEditManager;
 class AddresseeLineEdit;
 class AddresseeLineEditLdap : public QObject
 {
+    Q_OBJECT
 public:
     explicit AddresseeLineEditLdap(AddresseeLineEditManager *addressLineStatic, QObject *parent = nullptr);
     ~AddresseeLineEditLdap() override;
