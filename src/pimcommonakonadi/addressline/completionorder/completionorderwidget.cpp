@@ -288,7 +288,7 @@ void CompletionOrderWidget::save()
         int w = 100;
         // Clean up order
         KConfigGroup group(configFile(), QStringLiteral("CompletionWeights"));
-        group.deleteGroup(QLatin1StringView());
+        group.deleteGroup();
 
         for (int itemIndex = 0; itemIndex < mListView->topLevelItemCount(); ++itemIndex) {
             auto item = static_cast<CompletionViewItem *>(mListView->topLevelItem(itemIndex));
