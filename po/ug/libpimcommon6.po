@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-09-10 00:48+0000\n"
-"PO-Revision-Date: 2026-06-01 17:39-0400\n"
+"PO-Revision-Date: 2026-09-22 18:03+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -32,9 +32,6 @@ msgid ""
 "those activities. Furthermore, when you switch to an activity it should not "
 "be available in, it will automatically be hidden."
 msgstr ""
-"ئەگەر بۇ ھېسابات مۇئەييەن پائالىيەت  بىلەن چەكلەنسە، ئىشلەتكۈچى شۇ "
-"پائالىيەتتە تۇرغاندا ھېساب ئاندىن كۆرۈنىدۇ. ئۇنىڭدىن باشقا، بەلگىلەنمىگەن "
-"باشقا پائالىيەتكە ئالماشقاندا، ھېساب ئۆزلۈكىدىن يوشۇرۇلىدۇ."
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
@@ -45,17 +42,17 @@ msgstr "ھەمبەھىر…"
 #, kde-format
 msgctxt "@action:inmenu Share On..."
 msgid "%1"
-msgstr "%1"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:82
 #, kde-format
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:85
 #, kde-format
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:88
 #, kde-format
@@ -65,17 +62,17 @@ msgstr "خەت"
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:91
 #, kde-format
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:94
 #, kde-format
 msgid "Evernote"
-msgstr "Evernote"
+msgstr ""
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:97
 #, kde-format
 msgid "LiveJournal"
-msgstr "LiveJournal"
+msgstr ""
 
 #: pimcommon/templatewidgets/templateeditdialog.cpp:36
 #, kde-format
@@ -270,7 +267,8 @@ msgstr "ھۆججەت مەۋجۇت"
 msgid ""
 "A file named <filename>%1</filename> already exists. Do you want to "
 "overwrite it?"
-msgstr "<filename>%1</filename> ئاتلىق ھۆججەت مەۋجۇت. قاپلىۋېتەمسىز؟"
+msgstr ""
+"<filename>%1</filename> ئاتلىق ھۆججەت مەۋجۇت. Do you want to overwrite it?"
 
 #: pimcommon/widgets/renamefiledialog.cpp:114
 #, kde-format
@@ -370,9 +368,6 @@ msgid ""
 "a simple user name or the full email address of the user; the login for your "
 "own account on the server will tell you which one it is."
 msgstr ""
-"ئىشلەتكۈچى پەرقلەندۈرگۈچىسى ئىشلەتكۈچىنىڭ IMAP مۇلازىمېتىردىكى تىزىمغا كىرىش "
-"ئاتى. ئۇ ئىشلەتكۈچىنىڭ ئاددىي ئىشلەتكۈچى ئاتى ياكى تولۇق ئېلخەت ئادرېسى "
-"بولسا بولىدۇ؛ ھېسابىڭىزنىڭ تىزىمغا كىرىش ئاتى قايسىسى ئىكەنلىكىنى بىلدۈرىدۇ."
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:96
 #, kde-format
@@ -433,8 +428,6 @@ msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
 "not be able to access it afterwards."
 msgstr ""
-"سىز راستتىنلا بۇ قىسقۇچتىكى ئىجازىتىڭىزنى چىقىرىۋېتەمسىز؟ شۇنىڭدىن كېيىن بۇ "
-"ئۇنى زىيارەت قىلالمايسىز."
 
 #: pimcommonakonadi/acl/aclmanager.cpp:290
 #, kde-format
@@ -627,7 +620,7 @@ msgstr "ھېچقانداق نەتىجە تېپىلمىدى"
 #, kde-format
 msgid ""
 "The list was changed. Do you want to save before to make another search ?"
-msgstr "تىزىم ئۆزگەرگەن. باشقا ئىزدەشتىن ئىلگىرى ساقلامسىز؟"
+msgstr ""
 
 #: pimcommonakonadi/addressline/blacklistakonadisearchcompletion/blacklistakonadisearchemailwarning.cpp:25
 #, kde-format
