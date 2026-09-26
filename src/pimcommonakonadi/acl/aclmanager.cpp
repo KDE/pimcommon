@@ -306,17 +306,6 @@ public:
         const QMap<QByteArray, KIMAP::Acl::Rights> rights = attribute->rights();
 
         QString resource = collection.resource();
-        if (resource.contains("akonadi_kolabproxy_resource"_L1)) {
-            const QString basename = Akonadi::ServerManager::agentServiceName(Akonadi::ServerManager::Agent, QStringLiteral("akonadi_kolabproxy_resource"));
-
-            QDBusInterface interface(basename, QStringLiteral("/KolabProxy"));
-            if (interface.isValid()) {
-                QDBusReply<QString> reply = interface.call(QStringLiteral("imapResourceForCollection"), collection.remoteId().toLongLong());
-                if (reply.isValid()) {
-                    resource = reply;
-                }
-            }
-        }
         OrgKdeAkonadiImapSettingsInterface *imapSettingsInterface = PimCommon::Util::createImapSettingsInterface(resource);
 
         QString loginName;
