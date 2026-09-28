@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:48+0000\n"
+"POT-Creation-Date: 2026-09-28 00:46+0000\n"
 "PO-Revision-Date: 2026-02-03 22:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -438,13 +438,13 @@ msgstr ""
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "이 폴더의 권한을 삭제하시겠습니까?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:235
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "폴더 권한을 다음 하위 폴더에도 적용하시겠습니까?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:237
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"

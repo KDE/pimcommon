@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:48+0000\n"
+"POT-Creation-Date: 2026-09-28 00:46+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -462,13 +462,13 @@ msgstr ""
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Kas tõesti eemaldada need õigused sellele kaustale?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:235
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr "Kas tõesti rakendada selle kausta õigusi alamkaustadele?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:237
 #, fuzzy, kde-format
 #| msgid "Apply Permissions"
 msgctxt "@title:window"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:48+0000\n"
+"POT-Creation-Date: 2026-09-28 00:46+0000\n"
 "PO-Revision-Date: 2026-08-17 14:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -442,14 +442,14 @@ msgstr ""
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Наистина ли искате да премахнете тези разрешения за тази папка?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:235
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr ""
 "Наистина ли искате да приложите разрешенията на папката към тези подпапки?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:237
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"

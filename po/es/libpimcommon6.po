@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-10 00:48+0000\n"
+"POT-Creation-Date: 2026-09-28 00:46+0000\n"
 "PO-Revision-Date: 2025-12-18 12:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -446,14 +446,14 @@ msgstr ""
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "¿Realmente quiere eliminar esos permisos de esta carpeta?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:245
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:235
 #, kde-format
 msgid ""
 "Do you really want to apply the folder's permissions to these subfolders?"
 msgstr ""
 "¿Realmente quiere aplicar los permisos de la carpeta en esas subcarpetas?"
 
-#: pimcommonakonadi/acl/aclmodifyjob.cpp:247
+#: pimcommonakonadi/acl/aclmodifyjob.cpp:237
 #, kde-format
 msgctxt "@title:window"
 msgid "Apply Permissions"
