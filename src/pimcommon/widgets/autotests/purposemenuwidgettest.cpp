@@ -18,7 +18,8 @@ PurposeMenuWidgetTest::PurposeMenuWidgetTest(QObject *parent)
 
 void PurposeMenuWidgetTest::shouldHaveDefaultValues()
 {
-    TestMenu w(nullptr);
+    QWidget parentWidget;
+    TestMenu w(&parentWidget);
     QVERIFY(w.menu());
     QCOMPARE(w.menu()->objectName(), QStringLiteral("purposesharemenu"));
 }
