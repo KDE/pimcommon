@@ -5,7 +5,6 @@
 */
 
 #include "templatelistwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "templateeditdialog.h"
 
@@ -23,6 +22,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QListWidgetItem>
 #include <QMimeData>
 #include <QPointer>
+
+using namespace Qt::Literals::StringLiterals;
 
 namespace PimCommon
 {

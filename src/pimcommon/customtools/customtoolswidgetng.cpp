@@ -5,7 +5,6 @@
 */
 
 #include "customtoolswidgetng.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "customtoolsplugin.h"
 #include "customtoolsviewinterface.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QHBoxLayout>
 #include <QStackedWidget>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 
 class PimCommon::CustomToolsWidgetNgPrivate

@@ -5,7 +5,6 @@
 */
 
 #include "configurepluginswidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -14,6 +13,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 
 ConfigurePluginsWidget::ConfigurePluginsWidget(QWidget *parent)

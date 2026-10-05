@@ -5,7 +5,6 @@
 */
 
 #include "imapresourcecapabilitiesmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
@@ -18,6 +17,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDBusPendingCall>
 #include <QDBusPendingReply>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 ImapResourceCapabilitiesManager::ImapResourceCapabilitiesManager(QObject *parent)
     : QObject(parent)

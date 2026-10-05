@@ -6,7 +6,6 @@
  */
 
 #include "collectionaclpage.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "aclmanager.h"
 #include "collectionaclwidget.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KLocalizedString>
 #include <QHBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 
 class PimCommon::CollectionAclPagePrivate

@@ -5,7 +5,6 @@
 */
 
 #include "collectionaclwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "acllistview.h"
 #include "aclmanager.h"
@@ -19,6 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 /**
  * Unfortunately QPushButton doesn't support to plug in

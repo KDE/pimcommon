@@ -5,7 +5,6 @@
 */
 
 #include "checkedcollectionwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <Akonadi/CollectionFilterProxyModel>
 
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTreeView>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 
 class PimCommon::CheckedCollectionWidgetPrivate

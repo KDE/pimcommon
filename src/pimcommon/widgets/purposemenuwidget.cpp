@@ -6,7 +6,6 @@
 
 #include "purposemenuwidget.h"
 #include "pimcommon_debug.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KLocalizedString>
 #include <Purpose/AlternativesModel>
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QTemporaryFile>
 #include <QUrl>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 PurposeMenuWidget::PurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     : QObject(parent)

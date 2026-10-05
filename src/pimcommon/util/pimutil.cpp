@@ -7,7 +7,6 @@
 *******************************************************************************/
 
 #include "pimutil.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "imapresourcesettings.h"
 
@@ -25,6 +24,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QWidget>
 
 #include <cerrno>
+
+using namespace Qt::Literals::StringLiterals;
 
 OrgKdeAkonadiImapSettingsInterface *PimCommon::Util::createImapSettingsInterface(const QString &ident)
 {

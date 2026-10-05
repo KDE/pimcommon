@@ -5,7 +5,6 @@
 */
 
 #include "configureplugindialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 namespace
 {

@@ -6,7 +6,6 @@
 */
 
 #include "aclmodifyjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "aclutils_p.h"
 #include "imapresourcesettings.h"
@@ -28,6 +27,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDBusInterface>
 #include <QDBusReply>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 // #define SEARCHCONTACT_AKONADI 1
 

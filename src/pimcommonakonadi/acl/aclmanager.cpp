@@ -6,7 +6,6 @@
  */
 
 #include "aclmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "aclentrydialog_p.h"
 #include "aclmodifyjob.h"
@@ -29,6 +28,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QDBusReply>
 #include <QItemSelectionModel>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 
 class AclModel : public QAbstractListModel
