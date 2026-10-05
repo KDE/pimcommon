@@ -47,7 +47,7 @@ msgstr ""
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:36
 #, kde-format
 msgid "Share On..."
-msgstr "Поделиться в..."
+msgstr "Поделиться в…"
 
 #: pimcommon/shareserviceurl/shareserviceurlmanager.cpp:39
 #, kde-format
@@ -112,7 +112,7 @@ msgstr "Название:"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:77
 #, kde-format
 msgid "Do you want to delete selected template?"
-msgstr "Вы хотите удалить выбранный шаблон?"
+msgstr "Удалить выбранный шаблон?"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, kde-format
@@ -138,17 +138,17 @@ msgstr "Вставить шаблон"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:174
 #, kde-format
 msgid "Add..."
-msgstr "Добавить..."
+msgstr "Добавить…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Show..."
-msgstr "Показать..."
+msgstr "Показать…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:180
 #, kde-format
 msgid "Modify..."
-msgstr "Изменить..."
+msgstr "Изменить…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:183
 #, kde-format
@@ -163,17 +163,17 @@ msgstr "Удалить"
 #: pimcommon/templatewidgets/templatelistwidget.cpp:196
 #, kde-format
 msgid "Export..."
-msgstr "Экспорт..."
+msgstr "Экспорт…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:200
 #, kde-format
 msgid "Import..."
-msgstr "Импорт..."
+msgstr "Импорт…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:207
 #, kde-format
 msgid "Download new Templates..."
-msgstr "Получить новые шаблоны..."
+msgstr "Получить новые шаблоны…"
 
 #: pimcommon/templatewidgets/templatelistwidget.cpp:242
 #, kde-format
@@ -222,7 +222,7 @@ msgid ""
 "this is an error, please contact him.</p></qt>"
 msgstr ""
 "<qt><p>Этот параметр зафиксирован вашим системным администратором.</"
-"p><p>Обратитесь к нему, если считаете что это ошибка.</p></qt>"
+"p><p>Обратитесь к нему, если считаете, что это ошибка.</p></qt>"
 
 #: pimcommon/widgets/kactionmenuchangecase.cpp:27
 #, kde-format
@@ -392,7 +392,7 @@ msgstr ""
 #, kde-format
 msgctxt "select an email address"
 msgid "Se&lect..."
-msgstr "Вы&брать..."
+msgstr "Вы&брать…"
 
 #: pimcommonakonadi/acl/aclentrydialog.cpp:98
 #, kde-format
@@ -405,7 +405,7 @@ msgctxt "@label:textbox"
 msgid "<b>Note: </b>Renaming requires write permissions on the parent folder."
 msgstr ""
 "<b>Примечание: </b>для переименования требуется иметь право на запись в "
-"родительский каталог."
+"родительскую папку."
 
 #: pimcommonakonadi/acl/acllistview.cpp:50
 #, kde-format
@@ -534,7 +534,7 @@ msgstr "Показывать подразделение для адресов и
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:580
 #, kde-format
 msgid "Configure Completion..."
-msgstr "Настроить автодополнение..."
+msgstr "Настроить автодополнение…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:584
 #, kde-format
@@ -544,7 +544,7 @@ msgstr "Автоматически разворачивать группы"
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:590
 #, kde-format
 msgid "Expand Groups..."
-msgstr "Развернуть группы..."
+msgstr "Развернуть группы…"
 
 #: pimcommonakonadi/addressline/addresslineedit/addresseelineedit.cpp:624
 #: pimcommonakonadi/addressline/completionorder/completionorderwidget.cpp:312
@@ -875,13 +875,13 @@ msgstr ""
 #: pimcommonakonadi/collectionpage/incidencesforwidget.cpp:43
 #, kde-format
 msgid "Generate free/&busy and activate alarms for:"
-msgstr "Создавать сведения о занятости и активировать уведомления:"
+msgstr "Создавать сведения о &занятости и включать напоминания для:"
 
 #: pimcommonakonadi/folderdialog/checkedcollectionwidget.cpp:74
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 # BUGME: are you sure you are talking about "folders" (like mail folders in KMail) or this should be called "collections" (any Akonadi collection: mail folder, birthdays, Korganizer events + todos + etc, other stuff)? --aspotashev
 #: pimcommonakonadi/folderdialog/selectmulticollectiondialog.cpp:55
@@ -1100,7 +1100,7 @@ msgstr "Поиск в результатах"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:580
 #, kde-format
 msgid "Searching..."
-msgstr "Поиск..."
+msgstr "Поиск…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:584
 #, kde-format
@@ -1122,7 +1122,7 @@ msgstr "Добавить выбранные"
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:596
 #, kde-format
 msgid "Configure LDAP Servers..."
-msgstr "Настроить серверы LDAP..."
+msgstr "Настроить серверы LDAP…"
 
 #: pimcommonakonadi/ldap/ldapsearchdialog.cpp:631
 #, kde-format
@@ -1159,17 +1159,17 @@ msgstr "Источник данных «%1» уже создан."
 #: pimcommonakonadi/util/createresource.cpp:81
 #, kde-format
 msgid "Creating resource instance for '%1'..."
-msgstr "Создание экземпляра источника данных для «%1»..."
+msgstr "Создание экземпляра источника данных для «%1»…"
 
 #: pimcommonakonadi/util/createresource.cpp:87
 #, kde-format
 msgid "Configuring resource instance..."
-msgstr "Настройка экземпляра источника данных..."
+msgstr "Настройка экземпляра источника данных…"
 
 #: pimcommonakonadi/util/createresource.cpp:90
 #, kde-format
 msgid "Unable to configure resource instance."
-msgstr "Не удалось создать экземпляр источника данных."
+msgstr "Не удалось настроить экземпляр источника данных."
 
 #: pimcommonakonadi/util/createresource.cpp:106
 #, kde-format
