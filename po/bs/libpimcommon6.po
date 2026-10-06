@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2014-02-09 16:28+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian\n"
@@ -97,87 +97,87 @@ msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Ime:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:77
+#: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Želite li obrisati izabrani predložak?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:78
+#: pimcommon/templatewidgets/templatelistwidget.cpp:79
 #, fuzzy, kde-format
 #| msgid "Delete template"
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Obriši predložak"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:145
+#: pimcommon/templatewidgets/templatelistwidget.cpp:146
 #, fuzzy, kde-format
 #| msgid "Insert template"
 msgid "Import Template"
 msgstr "Ubaci predložak"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:154
+#: pimcommon/templatewidgets/templatelistwidget.cpp:155
 #, fuzzy, kde-format
 #| msgid "Template"
 msgid "Export Template"
 msgstr "Predložak"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:168
+#: pimcommon/templatewidgets/templatelistwidget.cpp:169
 #, kde-format
 msgid "Insert template"
 msgstr "Ubaci predložak"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:174
+#: pimcommon/templatewidgets/templatelistwidget.cpp:175
 #, kde-format
 msgid "Add..."
 msgstr "Dodaj..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Show..."
 msgstr "Prikaži..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Modify..."
 msgstr "Mijenjaj..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:183
+#: pimcommon/templatewidgets/templatelistwidget.cpp:184
 #, kde-format
 msgid "Duplicate"
 msgstr "Dupliciraj"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:189
+#: pimcommon/templatewidgets/templatelistwidget.cpp:190
 #, kde-format
 msgid "Remove"
 msgstr "Ukloni"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/templatewidgets/templatelistwidget.cpp:197
 #, kde-format
 msgid "Export..."
 msgstr "Izvezi..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:200
+#: pimcommon/templatewidgets/templatelistwidget.cpp:201
 #, kde-format
 msgid "Import..."
 msgstr "Uvezi..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:207
+#: pimcommon/templatewidgets/templatelistwidget.cpp:208
 #, kde-format
 msgid "Download new Templates..."
 msgstr ""
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#: pimcommon/templatewidgets/templatelistwidget.cpp:243
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr ""
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#: pimcommon/templatewidgets/templatelistwidget.cpp:243
 #, fuzzy, kde-format
 #| msgid "Template"
 msgid "Load Template"
 msgstr "Predložak"
 
-#: pimcommon/util/pimutil.cpp:51
+#: pimcommon/util/pimutil.cpp:52
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -186,14 +186,14 @@ msgstr ""
 "Ne mogu pisati u datoteku %1:\n"
 "\"%2\" je detaljan opis greške."
 
-#: pimcommon/util/pimutil.cpp:55
+#: pimcommon/util/pimutil.cpp:56
 #, fuzzy, kde-format
 #| msgid "Save File Error"
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Greška prilikom spremanja datoteke"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -202,7 +202,7 @@ msgstr ""
 "Ne mogu čitati datoteku %1:\n"
 "\"%2\" je detaljan opis greške."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:91
 #, fuzzy, kde-format
 #| msgid "Load File Error"
 msgctxt "@title:window"

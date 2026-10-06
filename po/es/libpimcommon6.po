@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2025-12-18 12:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -96,83 +96,83 @@ msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nombre:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:77
+#: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "¿Quiere borrar la plantilla seleccionada?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:78
+#: pimcommon/templatewidgets/templatelistwidget.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Borrar plantilla"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:145
+#: pimcommon/templatewidgets/templatelistwidget.cpp:146
 #, kde-format
 msgid "Import Template"
 msgstr "Importar plantilla"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:154
+#: pimcommon/templatewidgets/templatelistwidget.cpp:155
 #, kde-format
 msgid "Export Template"
 msgstr "Exportar plantilla"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:168
+#: pimcommon/templatewidgets/templatelistwidget.cpp:169
 #, kde-format
 msgid "Insert template"
 msgstr "Insertar plantilla"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:174
+#: pimcommon/templatewidgets/templatelistwidget.cpp:175
 #, kde-format
 msgid "Add..."
 msgstr "Añadir…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Show..."
 msgstr "Mostrar…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Modify..."
 msgstr "Modificar…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:183
+#: pimcommon/templatewidgets/templatelistwidget.cpp:184
 #, kde-format
 msgid "Duplicate"
 msgstr "Duplicar"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:189
+#: pimcommon/templatewidgets/templatelistwidget.cpp:190
 #, kde-format
 msgid "Remove"
 msgstr "Eliminar"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/templatewidgets/templatelistwidget.cpp:197
 #, kde-format
 msgid "Export..."
 msgstr "Exportar…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:200
+#: pimcommon/templatewidgets/templatelistwidget.cpp:201
 #, kde-format
 msgid "Import..."
 msgstr "Importar…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:207
+#: pimcommon/templatewidgets/templatelistwidget.cpp:208
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Descargar nuevas plantillas…"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#: pimcommon/templatewidgets/templatelistwidget.cpp:243
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "«%1» no es un archivo de plantilla"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#: pimcommon/templatewidgets/templatelistwidget.cpp:243
 #, kde-format
 msgid "Load Template"
 msgstr "Cargar plantilla"
 
-#: pimcommon/util/pimutil.cpp:51
+#: pimcommon/util/pimutil.cpp:52
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -181,13 +181,13 @@ msgstr ""
 "No se ha podido escribir el archivo %1:\n"
 "«%2» es la descripción detallada del error."
 
-#: pimcommon/util/pimutil.cpp:55
+#: pimcommon/util/pimutil.cpp:56
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Error al guardar archivo"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -196,7 +196,7 @@ msgstr ""
 "No se ha podido leer el archivo %1:\n"
 "«%2» es la descripción detallada del error."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-28 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:49+0000\n"
 "PO-Revision-Date: 2025-02-28 15:06+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -95,83 +95,83 @@ msgctxt "@label:textbox"
 msgid "Name:"
 msgstr "Nosaukums:"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:77
+#: pimcommon/templatewidgets/templatelistwidget.cpp:78
 #, kde-format
 msgid "Do you want to delete selected template?"
 msgstr "Vai vēlaties dzēst atlasīto veidni?"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:78
+#: pimcommon/templatewidgets/templatelistwidget.cpp:79
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete template"
 msgstr "Dzēst veidni"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:145
+#: pimcommon/templatewidgets/templatelistwidget.cpp:146
 #, kde-format
 msgid "Import Template"
 msgstr "Importēt veidni"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:154
+#: pimcommon/templatewidgets/templatelistwidget.cpp:155
 #, kde-format
 msgid "Export Template"
 msgstr "Eksportēt veidni"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:168
+#: pimcommon/templatewidgets/templatelistwidget.cpp:169
 #, kde-format
 msgid "Insert template"
 msgstr "Ievietot veidni"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:174
+#: pimcommon/templatewidgets/templatelistwidget.cpp:175
 #, kde-format
 msgid "Add..."
 msgstr "Pievienot..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Show..."
 msgstr "Rādīt..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:180
+#: pimcommon/templatewidgets/templatelistwidget.cpp:181
 #, kde-format
 msgid "Modify..."
 msgstr "Izmainīt..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:183
+#: pimcommon/templatewidgets/templatelistwidget.cpp:184
 #, kde-format
 msgid "Duplicate"
 msgstr "Dublēt"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:189
+#: pimcommon/templatewidgets/templatelistwidget.cpp:190
 #, kde-format
 msgid "Remove"
 msgstr "Noņemt"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:196
+#: pimcommon/templatewidgets/templatelistwidget.cpp:197
 #, kde-format
 msgid "Export..."
 msgstr "Eksportēt..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:200
+#: pimcommon/templatewidgets/templatelistwidget.cpp:201
 #, kde-format
 msgid "Import..."
 msgstr "Importēt..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:207
+#: pimcommon/templatewidgets/templatelistwidget.cpp:208
 #, kde-format
 msgid "Download new Templates..."
 msgstr "Lejupielādēt jaunas veidnes..."
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#: pimcommon/templatewidgets/templatelistwidget.cpp:243
 #, kde-format
 msgid "'%1' is not a template file"
 msgstr "„%1“ nav veidnes datne"
 
-#: pimcommon/templatewidgets/templatelistwidget.cpp:242
+#: pimcommon/templatewidgets/templatelistwidget.cpp:243
 #, kde-format
 msgid "Load Template"
 msgstr "Ielādēt veidni"
 
-#: pimcommon/util/pimutil.cpp:51
+#: pimcommon/util/pimutil.cpp:52
 #, kde-format
 msgid ""
 "Could not write the file %1:\n"
@@ -180,13 +180,13 @@ msgstr ""
 "Neizdevās rakstīt datni „%1“:\n"
 "„%2“ ir sīkāks kļūda apraksts."
 
-#: pimcommon/util/pimutil.cpp:55
+#: pimcommon/util/pimutil.cpp:56
 #, kde-format
 msgctxt "@title:window"
 msgid "Save File Error"
 msgstr "Datnes saglabāšanas kļūda"
 
-#: pimcommon/util/pimutil.cpp:86
+#: pimcommon/util/pimutil.cpp:87
 #, kde-format
 msgid ""
 "Could not read the file %1:\n"
@@ -195,7 +195,7 @@ msgstr ""
 "Neizdevās nolasīt datni „%1“:\n"
 "„%2“ ir sīkāks kļūdas apraksts."
 
-#: pimcommon/util/pimutil.cpp:90
+#: pimcommon/util/pimutil.cpp:91
 #, kde-format
 msgctxt "@title:window"
 msgid "Load File Error"
