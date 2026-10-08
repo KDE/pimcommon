@@ -28,7 +28,6 @@
 #include <QDBusReply>
 #include <QItemSelectionModel>
 
-using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 
 class AclModel : public QAbstractListModel
