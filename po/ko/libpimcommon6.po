@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2026-02-03 22:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -347,8 +347,8 @@ msgid "&Customize..."
 msgstr "사용자 정의(&C)..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -394,37 +394,37 @@ msgstr "<b>메모:</b> 이름을 변경하려면 부모 폴더에 권한이 필�
 msgid "Folder cannot be administrated."
 msgstr "폴더를 관리할 수 없습니다."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "항목 추가..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "항목 편집..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "항목 삭제"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "ACL 추가"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "ACL 편집"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -433,7 +433,7 @@ msgstr ""
 "이 폴더에 있는 내 접근 권한을 삭제하시겠습니까? 다음에 더 이상 폴더에 접근할 "
 "수 없습니다."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "이 폴더의 권한을 삭제하시겠습니까?"

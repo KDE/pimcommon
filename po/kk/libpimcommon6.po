@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2013-11-07 03:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -364,8 +364,8 @@ msgid "&Customize..."
 msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -417,42 +417,42 @@ msgstr ""
 msgid "Folder cannot be administrated."
 msgstr ""
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, fuzzy, kde-format
 #| msgid "Add Entry..."
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Жазуды қосу..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, fuzzy, kde-format
 #| msgid "Edit Entry..."
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Жазуын өзгерту..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, fuzzy, kde-format
 #| msgid "Remove Entry"
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Жазуды өшіру"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, fuzzy, kde-format
 #| msgid "Add ACL"
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "ACL-ді қосу"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, fuzzy, kde-format
 #| msgid "Edit ACL"
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "ACL-ді өзгерту"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -461,7 +461,7 @@ msgstr ""
 "Шынымен осы қапшыққа қатынау рұқсаттарыңызды өшірмексіз бе? Кейін өзіңіз "
 "оған қатынай алмайсыз."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, fuzzy, kde-format
 #| msgid ""
 #| "Do you really want to remove your own permissions for this folder? You "

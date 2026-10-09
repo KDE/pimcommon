@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpimcommon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2025-12-18 06:33-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -354,8 +354,8 @@ msgid "&Customize..."
 msgstr "&Personalizar..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -405,37 +405,37 @@ msgstr ""
 msgid "Folder cannot be administrated."
 msgstr "A pasta não pode ser administrada."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Adicionar entrada..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Editar entrada..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Remover entrada"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Adicionar ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Editar ACL"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -444,7 +444,7 @@ msgstr ""
 "Deseja realmente remover suas próprias permissões desta pasta? Você não será "
 "mais capaz de acessá-la posteriormente."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Deseja realmente remover essas permissões desta pasta?"

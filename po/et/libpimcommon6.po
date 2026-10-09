@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2019-12-18 20:00+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -363,8 +363,8 @@ msgid "&Customize..."
 msgstr "&Kohanda ..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -415,40 +415,40 @@ msgstr "<b>Märkus: </b>nime muutmine nõuab kirjutamisõigust ülemkaustas."
 msgid "Folder cannot be administrated."
 msgstr "Kausta ei saa hallata."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, fuzzy, kde-format
 #| msgid "Add Entry..."
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Lisa kirje..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, fuzzy, kde-format
 #| msgid "Edit Entry..."
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Muuda kirjet..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, fuzzy, kde-format
 #| msgid "Remove Entry"
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Eemalda kirje"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "ACL-i lisamine"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "ACL-i muutmine"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -457,7 +457,7 @@ msgstr ""
 "Kas tõesti eemaldada sinu õigused sellele kaustale? Sellisel juhul ei saa sa "
 "hiljem seda kausta kasutada."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Kas tõesti eemaldada need õigused sellele kaustale?"

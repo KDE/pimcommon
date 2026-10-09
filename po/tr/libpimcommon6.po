@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepim-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2026-07-21 21:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -354,8 +354,8 @@ msgid "&Customize..."
 msgstr "Öz&elleştir…"
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -403,37 +403,37 @@ msgstr ""
 msgid "Folder cannot be administrated."
 msgstr "Klasör yönetilemiyor."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Girdi Ekle…"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Girdiyi Düzenle…"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Girdiyi Kaldır"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "ACL Ekle"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "ACL’yi Düzenle"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -442,7 +442,7 @@ msgstr ""
 "Bu klasörden kendi izinlerinizi gerçekten kaldırmak istiyor musunuz? "
 "Sonrasında buraya erişemeyeceksiniz."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Bu klasörden bu izinleri kaldırmayı gerçekten istiyor musunuz?"

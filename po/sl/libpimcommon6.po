@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2025-12-18 07:37+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -356,8 +356,8 @@ msgid "&Customize..."
 msgstr "Prilagodi..."
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, kde-format
 msgctxt "@title:window"
@@ -406,37 +406,37 @@ msgstr ""
 msgid "Folder cannot be administrated."
 msgstr "Mape ni mogoče upravljati."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Dodaj vnos..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, kde-format
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Uredi vnos..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, kde-format
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Odstrani vnos"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, kde-format
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "Dodaj dovoljenje (ACL)"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, kde-format
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "Uredi dovoljenje (ACL)"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -445,7 +445,7 @@ msgstr ""
 "Ali res želite odstraniti svoja lastna dovoljenja za to mapo? Po odstranitvi "
 "do nje ne boste mogli več dostopati."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, kde-format
 msgid "Do you really want to remove these permissions for this folder?"
 msgstr "Ali res želite odstraniti ta dovoljenja za to mapo?"

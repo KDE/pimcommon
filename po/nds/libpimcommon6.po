@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:49+0000\n"
+"POT-Creation-Date: 2026-10-09 00:48+0000\n"
 "PO-Revision-Date: 2014-04-03 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -366,8 +366,8 @@ msgid "&Customize..."
 msgstr ""
 
 #: pimcommon/widgets/simplestringlisteditor.cpp:308
-#: pimcommonakonadi/acl/aclmanager.cpp:284
-#: pimcommonakonadi/acl/aclmanager.cpp:291
+#: pimcommonakonadi/acl/aclmanager.cpp:283
+#: pimcommonakonadi/acl/aclmanager.cpp:290
 #: pimcommonakonadi/addressline/recentaddress/recentaddresswidget.cpp:138
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -420,42 +420,42 @@ msgstr ""
 msgid "Folder cannot be administrated."
 msgstr ""
 
-#: pimcommonakonadi/acl/aclmanager.cpp:161
+#: pimcommonakonadi/acl/aclmanager.cpp:160
 #, fuzzy, kde-format
 #| msgid "Add Entry..."
 msgctxt "@action"
 msgid "Add Entry..."
 msgstr "Indrag tofögen..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:166
+#: pimcommonakonadi/acl/aclmanager.cpp:165
 #, fuzzy, kde-format
 #| msgid "Edit Entry..."
 msgctxt "@action"
 msgid "Edit Entry..."
 msgstr "Indrag bewerken..."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:172
+#: pimcommonakonadi/acl/aclmanager.cpp:171
 #, fuzzy, kde-format
 #| msgid "Remove Entry"
 msgctxt "@action"
 msgid "Remove Entry"
 msgstr "Indrag wegmaken"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:215
+#: pimcommonakonadi/acl/aclmanager.cpp:214
 #, fuzzy, kde-format
 #| msgid "Add ACL"
 msgctxt "@title:window"
 msgid "Add ACL"
 msgstr "TKL tofögen"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:242
+#: pimcommonakonadi/acl/aclmanager.cpp:241
 #, fuzzy, kde-format
 #| msgid "Edit ACL"
 msgctxt "@title:window"
 msgid "Edit ACL"
 msgstr "TKL bewerken"
 
-#: pimcommonakonadi/acl/aclmanager.cpp:282
+#: pimcommonakonadi/acl/aclmanager.cpp:281
 #, kde-format
 msgid ""
 "Do you really want to remove your own permissions for this folder? You will "
@@ -464,7 +464,7 @@ msgstr ""
 "Wullt Du redig Dien egen Verlöven för den Orner wegmaken? Du kannst dor "
 "achteran nich mehr op togriepen."
 
-#: pimcommonakonadi/acl/aclmanager.cpp:290
+#: pimcommonakonadi/acl/aclmanager.cpp:289
 #, fuzzy, kde-format
 #| msgid ""
 #| "Do you really want to remove your own permissions for this folder? You "
