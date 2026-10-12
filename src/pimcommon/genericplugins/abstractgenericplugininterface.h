@@ -61,7 +61,7 @@ public:
      * @param other The ActionType to compare with
      * @return true if both ActionTypes are equal, false otherwise
      */
-    [[nodiscard]] bool operator==(ActionType other) const;
+    [[nodiscard]] bool operator==(const ActionType &other) const = default;
 
 private:
     QAction *mAction = nullptr;
