@@ -31,6 +31,8 @@ ecm_qt_declare_logging_category(KPim6PimCommon HEADER pimcommon_debug.h IDENTIFI
         EXPORT PIMCOMMON
 )
 
+target_compile_features(KPim6PimCommon INTERFACE cxx_std_20)
+
 # precompiled headers support
 if(ENABLE_PCH)
     target_precompile_headers(
