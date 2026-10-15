@@ -29,7 +29,7 @@ public:
 
 namespace
 {
-static const char myConfigSelectMultiCollectionDialog[] = "SelectMultiCollectionDialog";
+const char myConfigSelectMultiCollectionDialog[] = "SelectMultiCollectionDialog";
 }
 
 SelectMultiCollectionDialog::SelectMultiCollectionDialog(const QString &mimetype, const QList<Akonadi::Collection::Id> &selectedCollection, QWidget *parent)

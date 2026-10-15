@@ -28,7 +28,7 @@ using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 namespace
 {
-static const char myCompletionConfigureDialogGroupName[] = "CompletionConfigureDialog";
+const char myCompletionConfigureDialogGroupName[] = "CompletionConfigureDialog";
 }
 class PimCommon::CompletionConfigureDialogPrivate
 {

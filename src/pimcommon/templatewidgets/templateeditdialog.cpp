@@ -26,7 +26,7 @@
 using namespace PimCommon;
 namespace
 {
-static const char myTemplateEditDialogConfigGroupName[] = "TemplateEditDialog";
+const char myTemplateEditDialogConfigGroupName[] = "TemplateEditDialog";
 }
 TemplateEditDialog::TemplateEditDialog(QWidget *parent, bool defaultTemplate)
     : QDialog(parent)

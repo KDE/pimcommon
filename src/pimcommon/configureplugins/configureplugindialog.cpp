@@ -18,7 +18,7 @@ using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;
 namespace
 {
-static const char myConfigurePluginDialogGroupName[] = "ConfigurePluginDialog";
+const char myConfigurePluginDialogGroupName[] = "ConfigurePluginDialog";
 }
 
 ConfigurePluginDialog::ConfigurePluginDialog(QWidget *parent)
