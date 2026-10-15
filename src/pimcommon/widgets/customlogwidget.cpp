@@ -37,7 +37,7 @@ QTextDocument *LogItemDelegate::document(const QStyleOptionViewItem &option, con
                                 "<html style=\"color:%1\">"
                                 "<body> %2")
                                 .arg(textColor.name().toUpper(), text)
-        + "</table></body></html>"_L1;
+        + "</body></html>"_L1;
 
     document->setHtml(content);
 
