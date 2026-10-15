@@ -10,6 +10,7 @@
 #include "pimcommonakonadi_export.h"
 
 #include <QDialog>
+#include <memory>
 class KConfig;
 namespace KLDAPCore
 {

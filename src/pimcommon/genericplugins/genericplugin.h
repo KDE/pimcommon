@@ -7,7 +7,6 @@
 #pragma once
 
 #include "abstractgenericplugin.h"
-#include "pimcommon_export.h"
 namespace PimCommon
 {
 /*!

@@ -12,7 +12,6 @@
 class QUrl;
 namespace PimCommon
 {
-class RenameFileDialogPrivate;
 /*!
  * \class PimCommon::RenameFileDialog
  * \brief The RenameFileDialog class provides a dialog for renaming files

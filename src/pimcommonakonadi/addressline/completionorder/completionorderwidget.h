@@ -12,6 +12,7 @@
 #include <QDBusAbstractAdaptor>
 #include <QWidget>
 
+class QIcon;
 class QPushButton;
 class QAbstractItemModel;
 class QModelIndex;

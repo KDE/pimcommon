@@ -8,6 +8,7 @@
 #pragma once
 
 #include <KIMAP/Acl>
+#include <QString>
 
 namespace PimCommon
 {

@@ -9,12 +9,12 @@
 
 #include "recentaddresses.h"
 
-#include <KConfig>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QLineEdit>
-#include <QPushButton>
 
+#include <QCursor>
+#include <QIcon>
 #include <QKeyEvent>
 #include <QListWidget>
 #include <QMenu>
@@ -53,7 +53,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     mNewButton->setObjectName("new_button"_L1);
     mNewButton->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     mNewButton->setEnabled(false);
-    connect(mNewButton, &QPushButton::clicked, this, &RecentAddressWidget::slotAddItem);
+    connect(mNewButton, &QToolButton::clicked, this, &RecentAddressWidget::slotAddItem);
     connect(mLineEdit, &QLineEdit::textChanged, this, &RecentAddressWidget::slotUpdateAddButton);
     lineLayout->addWidget(mNewButton);
 
@@ -62,7 +62,7 @@ RecentAddressWidget::RecentAddressWidget(QWidget *parent)
     mRemoveButton->setObjectName("remove_button"_L1);
     mRemoveButton->setEnabled(false);
     lineLayout->addWidget(mRemoveButton);
-    connect(mRemoveButton, &QPushButton::clicked, this, &RecentAddressWidget::slotRemoveItem);
+    connect(mRemoveButton, &QToolButton::clicked, this, &RecentAddressWidget::slotRemoveItem);
 
     auto shortcut = new QShortcut(this);
     shortcut->setKey(QKeySequence(Qt::Key_Delete));

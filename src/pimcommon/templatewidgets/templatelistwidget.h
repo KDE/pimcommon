@@ -8,6 +8,7 @@
 
 #include "pimcommon_export.h"
 #include <QListWidget>
+#include <memory>
 
 namespace PimCommon
 {

@@ -9,6 +9,7 @@
 #include <QDialog>
 
 class QLineEdit;
+class QPushButton;
 namespace TextCustomEditor
 {
 class PlainTextEditorWidget;

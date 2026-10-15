@@ -7,6 +7,7 @@
 #include "spellchecklineedit.h"
 #include <QKeyEvent>
 #include <QMimeData>
+#include <QRegularExpression>
 #include <QStyle>
 #include <QStyleOptionFrame>
 

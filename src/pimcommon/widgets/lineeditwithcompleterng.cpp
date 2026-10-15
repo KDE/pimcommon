@@ -8,6 +8,7 @@
 #include <KLocalizedString>
 #include <QCompleter>
 #include <QContextMenuEvent>
+#include <QIcon>
 #include <QMenu>
 #include <QStringListModel>
 

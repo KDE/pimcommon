@@ -14,14 +14,12 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QDesktopServices>
+#include <QFile>
 #include <QFileDialog>
 
-#include <QCoreApplication>
 #include <QPointer>
-#include <QStandardPaths>
 #include <QTextStream>
 #include <QUrlQuery>
-#include <QWidget>
 
 #include <cerrno>
 

@@ -8,6 +8,7 @@
 #include "pimcommon_export.h"
 #include <TextCustomEditor/RichTextEditor>
 
+class QKeyEvent;
 class QMimeData;
 namespace PimCommon
 {

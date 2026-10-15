@@ -8,6 +8,7 @@
 
 #include "pimcommonactivities_export.h"
 #include <QObject>
+class QDebug;
 namespace KActivities
 {
 class Consumer;

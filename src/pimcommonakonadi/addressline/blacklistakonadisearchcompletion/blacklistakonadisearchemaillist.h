@@ -8,9 +8,9 @@
 #pragma once
 
 #include "pimcommonakonadi_private_export.h"
+#include <QColor>
 #include <QHash>
 #include <QListWidget>
-#include <QListWidgetItem>
 
 namespace PimCommon
 {

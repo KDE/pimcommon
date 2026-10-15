@@ -8,12 +8,10 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <KWindowConfig>
 #include <PimCommon/PimUtil>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QWindow>
 #include <TextAddonsWidgets/LoadDialogSizeUtils>
 
 using namespace Qt::Literals::StringLiterals;

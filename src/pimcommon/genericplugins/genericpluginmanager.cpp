@@ -9,6 +9,8 @@
 #include "pimcommon_debug.h"
 
 #include <KPluginFactory>
+#include <KPluginMetaData>
+#include <PimCommon/PluginUtil>
 
 #include <QFileInfo>
 

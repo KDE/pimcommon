@@ -8,6 +8,7 @@
 
 #include "pimcommonakonadi_export.h"
 #include <QWidget>
+#include <memory>
 
 class QItemSelectionModel;
 class QTreeView;

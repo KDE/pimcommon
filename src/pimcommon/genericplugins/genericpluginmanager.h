@@ -7,10 +7,10 @@
 #pragma once
 
 #include "pimcommon_export.h"
-#include <PimCommon/PluginUtil>
 #include <QList>
 #include <QObject>
 #include <TextAddonsWidgets/PluginUtil>
+#include <memory>
 
 namespace PimCommon
 {

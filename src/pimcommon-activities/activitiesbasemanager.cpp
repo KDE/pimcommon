@@ -7,6 +7,7 @@
 #include "activitiesbasemanager.h"
 #include "pimcommonactivities_debug.h"
 #include <PlasmaActivities/Consumer>
+#include <algorithm>
 using namespace PimCommonActivities;
 ActivitiesBaseManager::ActivitiesBaseManager(QObject *parent)
     : QObject{parent}

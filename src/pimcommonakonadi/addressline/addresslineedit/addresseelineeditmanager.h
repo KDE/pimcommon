@@ -10,13 +10,17 @@
 #include <QMap>
 
 #include <Akonadi/Item>
-#include <Akonadi/Session>
 #include <QList>
 #include <QPointer>
 
 #include <QColor>
 
 class QTimer;
+namespace Akonadi
+{
+class Job;
+class Session;
+}
 namespace KLDAPCore
 {
 class LdapActivitiesAbstract;

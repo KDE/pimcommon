@@ -7,7 +7,6 @@
 
 #include "completionconfiguredialog.h"
 #include <KConfigGroup>
-#include <KLDAPCore/LdapClientSearch>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowConfig>

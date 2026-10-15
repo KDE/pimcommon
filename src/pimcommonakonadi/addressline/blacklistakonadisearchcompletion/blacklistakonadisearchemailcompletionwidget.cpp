@@ -19,6 +19,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QHBoxLayout>
+#include <QIcon>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenu>

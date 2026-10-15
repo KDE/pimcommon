@@ -7,7 +7,6 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
-#include <PimCommon/PluginUtil>
 #include <PimCommonAkonadi/GenericPluginInterface>
 #include <QObject>
 #include <TextAddonsWidgets/PluginUtil>

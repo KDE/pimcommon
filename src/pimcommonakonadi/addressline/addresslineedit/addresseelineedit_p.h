@@ -15,6 +15,8 @@
 #include <KContacts/ContactGroup>
 
 class KConfig;
+class KJob;
+class QIcon;
 class QMenu;
 class QToolButton;
 class QTimer;

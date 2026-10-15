@@ -20,9 +20,12 @@
 #include <QCheckBox>
 #include <QClipboard>
 #include <QCloseEvent>
+#include <QCursor>
+#include <QDateTime>
 #include <QFrame>
 #include <QGridLayout>
 #include <QGroupBox>
+#include <QHBoxLayout>
 #include <QHeaderView>
 #include <QLabel>
 #include <QMenu>
@@ -35,12 +38,13 @@
 
 #include <KCMultiDialog>
 #include <KConfig>
+#include <KLDAPCore/LdapObject>
+#include <KLDAPCore/LdapServer>
 #include <KMessageBox>
 #include <KPluginMetaData>
+#include <KStandardGuiItem>
 #include <QComboBox>
 #include <QLineEdit>
-#include <kldapcore/ldapobject.h>
-#include <kldapcore/ldapserver.h>
 
 #include <KConfigGroup>
 #include <KGuiItem>

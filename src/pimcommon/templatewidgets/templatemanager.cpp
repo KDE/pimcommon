@@ -14,6 +14,7 @@
 #include <KConfigGroup>
 
 #include <QDirIterator>
+#include <QFile>
 #include <QStandardPaths>
 
 using namespace PimCommon;

@@ -9,7 +9,6 @@
 #include "pimcommon_export.h"
 #include <QWidget>
 #include <TextAddonsWidgets/ConfigurePluginsWidget>
-class KMessageWidget;
 namespace PimCommon
 {
 /*!

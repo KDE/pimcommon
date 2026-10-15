@@ -19,7 +19,6 @@
 #include <Akonadi/ChangeRecorder>
 #include <Akonadi/CollectionFilterProxyModel>
 #include <Akonadi/EntityTreeModel>
-#include <Akonadi/Monitor>
 
 #include <kldapcore/ldapserver.h>
 
@@ -27,9 +26,9 @@
 #include <KLocalizedString>
 #include <QDBusConnection>
 #include <QHBoxLayout>
+#include <QIcon>
 #include <QPushButton>
 #include <QTreeWidget>
-#include <QTreeWidgetItem>
 #include <QVBoxLayout>
 
 using namespace PimCommon;

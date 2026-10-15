@@ -7,6 +7,7 @@
 #pragma once
 
 #include "pimcommonakonadi_export.h"
+#include <Akonadi/Collection>
 #include <Akonadi/Item>
 #include <PimCommon/AbstractGenericPluginInterface>
 class QAction;

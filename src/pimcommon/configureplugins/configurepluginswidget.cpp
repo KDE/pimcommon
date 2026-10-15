@@ -6,11 +6,6 @@
 
 #include "configurepluginswidget.h"
 
-#include <KConfigGroup>
-#include <KLocalizedString>
-#include <KMessageWidget>
-#include <KSharedConfig>
-
 #include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;

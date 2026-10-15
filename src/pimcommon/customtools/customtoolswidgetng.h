@@ -8,6 +8,7 @@
 
 #include "pimcommon_export.h"
 #include <QWidget>
+#include <memory>
 class KToggleAction;
 class KActionCollection;
 namespace PimCommon

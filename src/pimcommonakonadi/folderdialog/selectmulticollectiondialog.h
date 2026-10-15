@@ -8,6 +8,7 @@
 #include "pimcommonakonadi_export.h"
 #include <Akonadi/Collection>
 #include <QDialog>
+#include <memory>
 
 namespace PimCommon
 {

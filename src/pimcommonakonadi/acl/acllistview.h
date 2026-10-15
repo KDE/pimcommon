@@ -7,6 +7,7 @@
 #pragma once
 
 #include "pimcommonakonadi_private_export.h"
+#include <QColor>
 #include <QListView>
 namespace PimCommon
 {

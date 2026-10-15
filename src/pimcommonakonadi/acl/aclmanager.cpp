@@ -16,7 +16,6 @@
 #include "util/pimutil.h"
 
 #include <Akonadi/CollectionFetchJob>
-#include <Akonadi/ServerManager>
 
 #include <KEmailAddress>
 #include <KLocalizedString>
@@ -24,7 +23,6 @@
 
 #include <QAbstractListModel>
 #include <QAction>
-#include <QDBusInterface>
 #include <QDBusReply>
 #include <QItemSelectionModel>
 

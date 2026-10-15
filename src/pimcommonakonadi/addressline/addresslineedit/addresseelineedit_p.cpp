@@ -15,12 +15,13 @@
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Job>
 #include <Akonadi/Session>
-#include <KColorScheme>
 #include <KCompletionBox>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QApplication>
 #include <QMap>
+#include <QStyle>
 #include <QTimer>
 #include <QToolButton>
 #include <config-akonadi-search.h>

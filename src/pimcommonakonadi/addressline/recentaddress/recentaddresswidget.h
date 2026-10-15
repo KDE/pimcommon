@@ -13,6 +13,7 @@
 class KConfig;
 class QListWidget;
 class QLineEdit;
+class QPoint;
 class QToolButton;
 
 namespace PimCommon

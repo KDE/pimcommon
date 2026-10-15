@@ -13,6 +13,7 @@
 
 #include <QHBoxLayout>
 #include <QStackedWidget>
+#include <algorithm>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace PimCommon;

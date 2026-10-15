@@ -18,17 +18,13 @@
 #include "addresseelineeditmanager.h"
 #include "addresseelineeditutil.h"
 #include "addressline/recentaddress/recentaddresses.h"
-#include <KLDAPCore/LdapActivitiesAbstract>
-#include <KLDAPCore/LdapClientSearch>
 
 #include <KContacts/VCardConverter>
 
-#include <Akonadi/Job>
 #include <KConfigGroup>
 #include <QUrl>
 
 #include <Akonadi/ContactGroupSearchJob>
-#include <KColorScheme>
 #include <KContacts/ContactGroupTool>
 #include <KEmailAddress>
 #include <KIO/StoredTransferJob>
@@ -48,13 +44,13 @@
 #include <QApplication>
 #include <QBuffer>
 #include <QClipboard>
+#include <QCursor>
 #include <QDropEvent>
 #include <QEvent>
 #include <QKeyEvent>
 #include <QMenu>
 #include <QMimeData>
 #include <QMouseEvent>
-#include <QObject>
 
 #include <config-akonadi-search.h>
 

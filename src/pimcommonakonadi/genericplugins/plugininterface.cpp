@@ -9,7 +9,6 @@
 #include "pimcommonakonadi_debug.h"
 #include <PimCommon/GenericPluginManager>
 
-#include <KActionCollection>
 #include <KXMLGUIClient>
 #include <QAction>
 

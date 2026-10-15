@@ -12,6 +12,7 @@ namespace Purpose
 {
 class Menu;
 }
+class QJsonObject;
 class QMenu;
 class QTemporaryFile;
 namespace PimCommon

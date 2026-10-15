@@ -11,7 +11,6 @@
 #include "imapresourcesettings.h"
 #include "pimcommonakonadi_debug.h"
 #include "util/pimutil.h"
-#include <Akonadi/ServerManager>
 #include <KEmailAddress>
 
 #include "imapaclattribute.h"
@@ -24,7 +23,6 @@
 #include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <QDBusInterface>
 #include <QDBusReply>
 
 using namespace Qt::Literals::StringLiterals;

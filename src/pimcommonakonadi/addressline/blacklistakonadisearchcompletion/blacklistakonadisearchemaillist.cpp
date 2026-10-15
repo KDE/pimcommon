@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <QEvent>
 #include <QPainter>
+#include <QRegularExpression>
 using namespace PimCommon;
 
 BlackListAkonadiSearchEmailList::BlackListAkonadiSearchEmailList(QWidget *parent)
