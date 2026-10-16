@@ -37,6 +37,9 @@ void AgentProgressMonitor::abort()
 
 void AgentProgressMonitor::instanceRemoved([[maybe_unused]] const Akonadi::AgentInstance &instance)
 {
+    if (mAgent != instance) {
+        return;
+    }
     if (!mItem.data()) {
         return;
     }
@@ -95,6 +98,9 @@ void AgentProgressMonitor::instanceStatusChanged(const AgentInstance &instance)
 
 void AgentProgressMonitor::instanceNameChanged(const Akonadi::AgentInstance &instance)
 {
+    if (mAgent != instance) {
+        return;
+    }
     if (!mItem.data()) {
         return;
     }
