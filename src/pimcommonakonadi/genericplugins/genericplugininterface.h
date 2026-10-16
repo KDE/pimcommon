@@ -40,8 +40,8 @@ public:
         None = 0,
         CurrentItems = 1,
         Items = 2,
-        CurrentCollection = 3,
-        Collections = 4,
+        CurrentCollection = 4,
+        Collections = 8,
     };
     Q_ENUM(RequireType)
     Q_DECLARE_FLAGS(RequireTypes, RequireType)
