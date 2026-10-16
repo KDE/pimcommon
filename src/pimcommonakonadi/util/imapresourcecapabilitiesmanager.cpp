@@ -29,7 +29,11 @@ ImapResourceCapabilitiesManager::~ImapResourceCapabilitiesManager() = default;
 
 void ImapResourceCapabilitiesManager::slotInstanceAdded(const Akonadi::AgentInstance &instance)
 {
-    searchCapabilities(instance.identifier());
+    const QString identifier = instance.identifier();
+    if (!PimCommon::Util::isImapResource(identifier)) {
+        return;
+    }
+    searchCapabilities(identifier);
 }
 
 void ImapResourceCapabilitiesManager::slotInstanceRemoved(const Akonadi::AgentInstance &instance)
