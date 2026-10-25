@@ -64,7 +64,6 @@ target_sources(
         addressline/recentaddress/recentaddresswidget.cpp
         addressline/recentaddress/recentaddresses.cpp
         addressline/plugins/addressesslineeditabstractplugin.cpp
-        addressline/plugins/addressesslineeditpluginmanager.cpp
         addressline/addresseelineutil.h
         addressline/addresseelineutil.cpp
         progresswidget/agentprogressmonitor.h
@@ -83,7 +82,6 @@ target_sources(
         addressline/recentaddress/recentaddresswidget.h
         addressline/completionconfiguredialog/completionconfiguredialog.h
         addressline/plugins/addressesslineeditabstractplugin.h
-        addressline/plugins/addressesslineeditpluginmanager.h
         addressline/addresslineedit/addresseelineedit_p.h
         addressline/addresslineedit/addresseelineeditldap.h
         addressline/addresslineedit/addresseelineeditakonadisearch.h
