@@ -5,12 +5,12 @@
 */
 
 #pragma once
-#include "pimcommonakonadi_export.h"
+#include "pimcommonakonadi_private_export.h"
 #include <QStringList>
 
 namespace PimCommon::AddresseeLineUtil
 {
 /*!
  */
-[[nodiscard]] PIMCOMMONAKONADI_EXPORT QStringList excludeEmailsRegularExpression();
+[[nodiscard]] PIMCOMMONAKONADI_TESTS_EXPORT QStringList excludeEmailsRegularExpression();
 }

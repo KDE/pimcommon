@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "pimcommonakonadi_export.h"
+#include "pimcommonakonadi_private_export.h"
 #include <QString>
 
 namespace PimCommon
@@ -18,7 +18,7 @@ namespace PimCommon
  * \inheaderfile PimCommonAkonadi/AddresseeLineEditUtil
  * \author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMONAKONADI_EXPORT AddresseeLineEditUtil
+class PIMCOMMONAKONADI_TESTS_EXPORT AddresseeLineEditUtil
 {
 public:
     /*!

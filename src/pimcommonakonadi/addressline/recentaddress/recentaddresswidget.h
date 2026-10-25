@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "pimcommonakonadi_export.h"
+#include "pimcommonakonadi_private_export.h"
 #include <QStringList>
 #include <QWidget>
 class KConfig;
@@ -25,7 +25,7 @@ namespace PimCommon
  * \inheaderfile PimCommonAkonadi/RecentAddressWidget
  * \author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMONAKONADI_EXPORT RecentAddressWidget : public QWidget
+class PIMCOMMONAKONADI_TESTS_EXPORT RecentAddressWidget : public QWidget
 {
     Q_OBJECT
 public:
