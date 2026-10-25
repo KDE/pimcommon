@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include "pimcommonakonadi_export.h"
 #include <QObject>
 
 namespace PimCommon
@@ -17,7 +16,7 @@ class AddresseeLineEdit;
  * \inmodule PimCommonAkonadi
  * \author Laurent Montel <montel@kde.org>
  */
-struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo {
+struct AddressessLineEditAbstractPluginInfo {
     QString name;
     QString identifier;
     QString description;
@@ -30,7 +29,7 @@ struct PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPluginInfo {
  * \inheaderfile PimCommonAkonadi/AddressessLineEditAbstractPlugin
  * \author Laurent Montel <montel@kde.org>
  */
-class PIMCOMMONAKONADI_EXPORT AddressessLineEditAbstractPlugin : public QObject
+class AddressessLineEditAbstractPlugin : public QObject
 {
     Q_OBJECT
 public:
