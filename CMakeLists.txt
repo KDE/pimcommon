@@ -220,18 +220,16 @@ if(OPTION_USE_PLASMA_ACTIVITIES)
     endif()
 endif()
 if(OPTION_USE_PLASMA_ACTIVITIES)
-    if(NOT WIN32 AND NOT APPLE)
-        set(PLASMAACTIVITIES_MIN_VERSION "6.4.0")
-        find_package(PlasmaActivities ${PLASMAACTIVITIES_MIN_VERSION})
-        set_package_properties(
-            PlasmaActivities
-            PROPERTIES
-                DESCRIPTION
-                    "Allow to compile with plasma activities"
-                TYPE
-                    OPTIONAL
-        )
-    endif()
+    set(PLASMAACTIVITIES_MIN_VERSION "6.4.0")
+    find_package(PlasmaActivities ${PLASMAACTIVITIES_MIN_VERSION})
+    set_package_properties(
+        PlasmaActivities
+        PROPERTIES
+            DESCRIPTION
+                "Allow to compile with plasma activities"
+            TYPE
+                OPTIONAL
+    )
 endif()
 
 option(WARNINGS_AS_ERRORS "Warnings are errors -Werror" OFF)
