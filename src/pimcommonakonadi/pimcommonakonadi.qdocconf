@@ -21,7 +21,7 @@ qhp.projects            = pimcommonakonadi
 qhp.pimcommonakonadi.file                = pimcommonakonadi.qhp
 qhp.pimcommonakonadi.namespace           = org.kde.pimcommonakonadi.$QT_VERSION_TAG
 qhp.pimcommonakonadi.virtualFolder       = pimcommonakonadi
-qhp.pimcommonakonadi.indexTitle          = pimcommonakonadi
+qhp.pimcommonakonadi.indexTitle          = PimCommonAkonadi
 qhp.pimcommonakonadi.indexRoot           =
 
 qhp.pimcommonakonadi.subprojects         = classes

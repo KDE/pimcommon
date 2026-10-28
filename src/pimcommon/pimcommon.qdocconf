@@ -21,7 +21,7 @@ qhp.projects            = pimcommon
 qhp.pimcommon.file                = pimcommon.qhp
 qhp.pimcommon.namespace           = org.kde.pimcommon.$QT_VERSION_TAG
 qhp.pimcommon.virtualFolder       = pimcommon
-qhp.pimcommon.indexTitle          = pimcommon
+qhp.pimcommon.indexTitle          = PimCommon
 qhp.pimcommon.indexRoot           =
 
 qhp.pimcommon.subprojects         = classes

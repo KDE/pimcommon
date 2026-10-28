@@ -21,7 +21,7 @@ qhp.projects            = pimcommonactivities
 qhp.pimcommonactivities.file                = pimcommonactivities.qhp
 qhp.pimcommonactivities.namespace           = org.kde.pimcommonactivities.$QT_VERSION_TAG
 qhp.pimcommonactivities.virtualFolder       = pimcommonactivities
-qhp.pimcommonactivities.indexTitle          = pimcommonactivities
+qhp.pimcommonactivities.indexTitle          = PimCommonActivities
 qhp.pimcommonactivities.indexRoot           =
 
 qhp.pimcommonactivities.subprojects         = classes

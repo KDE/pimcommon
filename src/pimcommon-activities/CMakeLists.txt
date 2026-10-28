@@ -137,7 +137,7 @@ install(
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonActivities/
     COMPONENT Devel
 )
-ecm_generate_qdoc(KPim6PimCommonActivities pimcommon-activities.qdocconf)
+ecm_generate_qdoc(KPim6PimCommonActivities pimcommonactivities.qdocconf)
 
 ecm_add_installed_library_check(KPim6PimCommonActivities
     PACKAGE_NAME "KPim6PimCommonActivities"
