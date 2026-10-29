@@ -61,11 +61,6 @@ public:
     virtual void showConfigureDialog(QWidget *parent);
 
     /*!
-     * Emits the configuration changed signal.
-     */
-    void emitConfigChanged();
-
-    /*!
      * Returns the description of this custom tool.
      * @return The tool description
      */
