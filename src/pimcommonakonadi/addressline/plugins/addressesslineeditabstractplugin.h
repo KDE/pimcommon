@@ -10,7 +10,6 @@
 
 namespace PimCommon
 {
-class AddresseeLineEdit;
 /*!
  * \brief The AddressessLineEditAbstractPluginInfo struct contains plugin information
  * \inmodule PimCommonAkonadi
@@ -44,12 +43,6 @@ public:
     ~AddressessLineEditAbstractPlugin() override;
 
     /*!
-     * Sets the line edit widget for this plugin.
-     * @param linedit The AddresseeLineEdit widget
-     */
-    void setLineEdit(PimCommon::AddresseeLineEdit *linedit);
-
-    /*!
      * Returns the list of plugin names and information.
      * @return A list of AddressessLineEditAbstractPluginInfo structures
      */
@@ -72,8 +65,5 @@ Q_SIGNALS:
      * Emitted when the plugin has been updated.
      */
     void wasUpdated();
-
-private:
-    PimCommon::AddresseeLineEdit *mLinedit = nullptr;
 };
 }
