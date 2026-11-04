@@ -6,7 +6,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 ecm_setup_version(PROJECT VARIABLE_PREFIX PIMCOMMONACTIVITIES
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/pimcommonactivities_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6PimCommonActivitiesConfigVersion.cmake"
-    SOVERSION 6
+    SOVERSION ${PROJECT_SOVERSION}
 )
 add_library(KPim6PimCommonActivities)
 add_library(KPim6::PimCommonActivities ALIAS KPim6PimCommonActivities)
