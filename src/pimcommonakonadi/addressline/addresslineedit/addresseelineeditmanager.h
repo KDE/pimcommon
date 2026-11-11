@@ -37,7 +37,7 @@ class AddresseeLineEditAkonadiSearch;
 class AddresseeLineEditManager
 {
 public:
-    using CompletionItemsMap = QMap<QString, QPair<int, int>>;
+    using CompletionItemsMap = QMap<QString, std::pair<int, int>>;
 
     AddresseeLineEditManager();
 

@@ -223,7 +223,7 @@ void AddresseeLineEditPrivate::addCompletionItem(const QString &string, int weig
         (*it).first = weight;
         (*it).second = completionItemSource;
     } else {
-        AddresseeLineEditManager::self()->completionItemMap.insert(string, qMakePair(weight, completionItemSource));
+        AddresseeLineEditManager::self()->completionItemMap.insert(string, std::make_pair(weight, completionItemSource));
     }
 
     AddresseeLineEditManager::self()->completion()->addItem(string, weight);

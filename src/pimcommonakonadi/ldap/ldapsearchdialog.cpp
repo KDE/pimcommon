@@ -29,12 +29,12 @@
 #include <QHeaderView>
 #include <QLabel>
 #include <QMenu>
-#include <QPair>
 #include <QPointer>
 #include <QPushButton>
 #include <QSortFilterProxyModel>
 #include <QTableView>
 #include <QVBoxLayout>
+#include <utility>
 
 #include <KCMultiDialog>
 #include <KConfig>
@@ -294,13 +294,13 @@ public:
         endInsertRows();
     }
 
-    [[nodiscard]] QPair<KLDAPCore::LdapAttrMap, QString> contact(const QModelIndex &index) const
+    [[nodiscard]] std::pair<KLDAPCore::LdapAttrMap, QString> contact(const QModelIndex &index) const
     {
         if (!index.isValid() || index.row() < 0 || index.row() >= mContactList.count()) {
-            return qMakePair(KLDAPCore::LdapAttrMap(), QString());
+            return std::make_pair(KLDAPCore::LdapAttrMap(), QString());
         }
 
-        return qMakePair(mContactList.at(index.row()), mServerList.at(index.row()));
+        return std::make_pair(mContactList.at(index.row()), mServerList.at(index.row()));
     }
 
     void clear()
@@ -452,9 +452,9 @@ public:
     {
     }
 
-    QList<QPair<KLDAPCore::LdapAttrMap, QString>> selectedItems()
+    QList<std::pair<KLDAPCore::LdapAttrMap, QString>> selectedItems()
     {
-        QList<QPair<KLDAPCore::LdapAttrMap, QString>> contacts;
+        QList<std::pair<KLDAPCore::LdapAttrMap, QString>> contacts;
 
         const QModelIndexList selected = mResultView->selectionModel()->selectedRows();
         const int numberOfSelectedElement(selected.count());
@@ -889,7 +889,7 @@ void LdapSearchDialog::slotUser1()
 
     d->mSelectedContacts.clear();
 
-    const QList<QPair<KLDAPCore::LdapAttrMap, QString>> &items = d->selectedItems();
+    const QList<std::pair<KLDAPCore::LdapAttrMap, QString>> &items = d->selectedItems();
 
     if (!items.isEmpty()) {
         const QDateTime now = QDateTime::currentDateTime();

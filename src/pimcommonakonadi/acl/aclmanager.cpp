@@ -48,7 +48,7 @@ public:
             return {};
         }
 
-        const QPair<QByteArray, KIMAP::Acl::Rights> right = mRights.at(index.row());
+        const std::pair<QByteArray, KIMAP::Acl::Rights> right = mRights.at(index.row());
         switch (role) {
         case Qt::DisplayRole:
             return QStringLiteral("%1: %2").arg(QString::fromLatin1(right.first), AclUtils::permissionsToUserString(right.second));
@@ -69,7 +69,7 @@ public:
             return false;
         }
 
-        QPair<QByteArray, KIMAP::Acl::Rights> &right = mRights[index.row()];
+        std::pair<QByteArray, KIMAP::Acl::Rights> &right = mRights[index.row()];
         switch (role) {
         case UserIdRole:
             right.first = value.toByteArray();
@@ -104,7 +104,7 @@ public:
         QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator it = rights.cbegin();
         const QMap<QByteArray, KIMAP::Acl::Rights>::const_iterator itEnd = rights.cend();
         for (; it != itEnd; ++it) {
-            mRights.append(qMakePair(it.key(), it.value()));
+            mRights.append(std::make_pair(it.key(), it.value()));
         }
 
         endResetModel();
@@ -114,7 +114,7 @@ public:
     {
         QMap<QByteArray, KIMAP::Acl::Rights> result;
 
-        using RightPair = QPair<QByteArray, KIMAP::Acl::Rights>;
+        using RightPair = std::pair<QByteArray, KIMAP::Acl::Rights>;
         for (const RightPair &right : std::as_const(mRights)) {
             result.insert(right.first, right.second);
         }
@@ -127,7 +127,7 @@ protected:
     {
         beginInsertRows(parent, row, row + count - 1);
         for (int i = 0; i < count; ++i) {
-            mRights.insert(row, qMakePair(QByteArray(), KIMAP::Acl::Rights()));
+            mRights.insert(row, std::make_pair(QByteArray(), KIMAP::Acl::Rights()));
         }
         endInsertRows();
 
@@ -146,7 +146,7 @@ protected:
     }
 
 private:
-    QList<QPair<QByteArray, KIMAP::Acl::Rights>> mRights;
+    QList<std::pair<QByteArray, KIMAP::Acl::Rights>> mRights;
 };
 
 class Q_DECL_HIDDEN PimCommon::AclManager::AclManagerPrivate
