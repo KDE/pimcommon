@@ -9,6 +9,15 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += \
+    acl/autotests \
+    addressline/autotests \
+    addressline/blacklistakonadisearchcompletion/autotests \
+    addressline/tests \
+    collectionpage/autotests \
+    folderdialog/tests \
+    ldap/tests
+
 outputformats = HTML
 
 depends += \

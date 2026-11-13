@@ -9,10 +9,21 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += \
+    autotests \
+    configureplugins/autotests \
+    customtools/autotests \
+    genericplugins/autotests \
+    shareserviceurl/autotests \
+    widgets/autotests \
+    widgets/tests
+
 outputformats = HTML
 
 depends += \
-    qtcore
+    qtcore \
+    pimcommonactivities \
+    pimcommonakonadi
 
 navigation.landingpage = "PimCommon"
 
