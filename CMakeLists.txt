@@ -228,7 +228,7 @@ if(OPTION_USE_PLASMA_ACTIVITIES)
     endif()
 endif()
 if(OPTION_USE_PLASMA_ACTIVITIES)
-    set(PLASMAACTIVITIES_MIN_VERSION "6.4.0")
+    set(PLASMAACTIVITIES_MIN_VERSION "6.5.0")
     find_package(PlasmaActivities ${PLASMAACTIVITIES_MIN_VERSION})
     set_package_properties(
         PlasmaActivities
