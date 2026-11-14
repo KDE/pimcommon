@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = PimCommonAkonadi
+moduleheader = pimcommonakonadi_qdocmoduleheader.h
 description = PimCommon Akonadi provides common lib.
 
 

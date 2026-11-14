@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = PimCommonActivities
+moduleheader = pimcommonactivities_qdocmoduleheader.h
 description = PimCommon Activities provides common lib.
 
 
