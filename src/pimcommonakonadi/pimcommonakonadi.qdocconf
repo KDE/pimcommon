@@ -7,7 +7,25 @@ description = PimCommon Akonadi provides common lib.
 
 documentationinheaders = true
 
-headerdirs += .
+headers += \
+    acl/collectionaclpage.h \
+    acl/imapaclattribute.h \
+    addressline/addresslineedit/addresseelineedit.h \
+    addressline/completionconfiguredialog/completionconfiguredialog.h \
+    addressline/recentaddress/recentaddresses.h \
+    collectionpage/collectiontypeutil.h \
+    collectionpage/contenttypewidget.h \
+    collectionpage/incidencesforwidget.h \
+    folderdialog/checkedcollectionwidget.h \
+    folderdialog/selectmulticollectiondialog.h \
+    genericplugins/genericplugininterface.h \
+    genericplugins/plugininterface.h \
+    ldap/ldapsearchdialog.h \
+    pimcommonakonadi_qdocmoduleheader.h \
+    progresswidget/progressmanagerakonadi.h \
+    util/createresource.h \
+    util/imapresourcecapabilitiesmanager.h \
+    util/mailutil.h
 sourcedirs += .
 
 excludedirs += \
