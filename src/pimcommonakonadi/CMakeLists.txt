@@ -308,19 +308,23 @@ install(
     COMPONENT Devel
 )
 
+set(PIMCOMMONAKONADI_FILES
+    ${PimCommonAkonadi_acl_HEADERS}
+    ${PimCommonAkonadi_ldap_HEADERS}
+    ${PimCommonAkonadi_collectionpage_HEADERS}
+    ${PimCommonAkonadi_folderdialog_HEADERS}
+    ${PimCommonAkonadi_genericplugins_HEADERS}
+    ${PimCommonAkonadi_Util_HEADERS}
+    ${PimCommonAkonadi_progresswidget_HEADERS}
+    ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
+    ${PimCommonAkonadi_addressline_HEADERS}
+    ${PimCommonAkonadi_recentaddress_HEADERS}
+)
+
 install(
     FILES
         ${CMAKE_CURRENT_BINARY_DIR}/pimcommonakonadi_export.h
-        ${PimCommonAkonadi_acl_HEADERS}
-        ${PimCommonAkonadi_ldap_HEADERS}
-        ${PimCommonAkonadi_collectionpage_HEADERS}
-        ${PimCommonAkonadi_folderdialog_HEADERS}
-        ${PimCommonAkonadi_genericplugins_HEADERS}
-        ${PimCommonAkonadi_Util_HEADERS}
-        ${PimCommonAkonadi_progresswidget_HEADERS}
-        ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
-        ${PimCommonAkonadi_addressline_HEADERS}
-        ${PimCommonAkonadi_recentaddress_HEADERS}
+        ${PIMCOMMONAKONADI_FILES}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommonAkonadi/pimcommonakonadi
     COMPONENT Devel
 )
@@ -362,16 +366,8 @@ ecm_add_installed_library_check(KPim6PimCommonAkonadi
 )
 
 ecm_installed_library_check_include_strings(KPim6PimCommonAkonadi
-    HEADERS         ${PimCommonAkonadi_acl_HEADERS}
-    ${PimCommonAkonadi_ldap_HEADERS}
-    ${PimCommonAkonadi_collectionpage_HEADERS}
-    ${PimCommonAkonadi_folderdialog_HEADERS}
-    ${PimCommonAkonadi_genericplugins_HEADERS}
-    ${PimCommonAkonadi_Util_HEADERS}
-    ${PimCommonAkonadi_progresswidget_HEADERS}
-    ${PimCommonAkonadi_completionconfiguredialog_HEADERS}
-    ${PimCommonAkonadi_addressline_HEADERS}
-    ${PimCommonAkonadi_recentaddress_HEADERS}
+    HEADERS
+    ${PIMCOMMONAKONADI_FILES}
 
     PREFIX pimcommonakonadi
 )

@@ -277,18 +277,22 @@ install(
     COMPONENT Devel
 )
 
+set(PIMCOMMON_FILES
+    ${PimCommon_HEADERS}
+    ${PimCommon_genericplugins_HEADERS}
+    ${PimCommon_configureplugins_HEADERS}
+    ${PimCommon_networkmanager_HEADERS}
+    ${PimCommon_customtools_HEADERS}
+    ${PimCommon_shareserviceurl_HEADERS}
+    ${PimCommon_templatelist_HEADERS}
+    ${PimCommon_widgets_HEADERS}
+)
+
 install(
     FILES
         ${CMAKE_CURRENT_BINARY_DIR}/imapresourcesettings.h
         ${CMAKE_CURRENT_BINARY_DIR}/pimcommon_export.h
-        ${PimCommon_HEADERS}
-        ${PimCommon_genericplugins_HEADERS}
-        ${PimCommon_configureplugins_HEADERS}
-        ${PimCommon_networkmanager_HEADERS}
-        ${PimCommon_customtools_HEADERS}
-        ${PimCommon_shareserviceurl_HEADERS}
-        ${PimCommon_templatelist_HEADERS}
-        ${PimCommon_widgets_HEADERS}
+        ${PIMCOMMON_FILES}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/PimCommon/pimcommon
     COMPONENT Devel
 )
@@ -327,14 +331,8 @@ ecm_add_installed_library_check(KPim6PimCommon
 )
 
 ecm_installed_library_check_include_strings(KPim6PimCommon
-    HEADERS         ${PimCommon_HEADERS}
-    ${PimCommon_genericplugins_HEADERS}
-    ${PimCommon_configureplugins_HEADERS}
-    ${PimCommon_networkmanager_HEADERS}
-    ${PimCommon_customtools_HEADERS}
-    ${PimCommon_shareserviceurl_HEADERS}
-    ${PimCommon_templatelist_HEADERS}
-    ${PimCommon_widgets_HEADERS}
+    HEADERS
+    ${PIMCOMMON_FILES}
 
     PREFIX pimcommon
 )
