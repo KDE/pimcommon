@@ -10,7 +10,7 @@
 
     \section2 Building with CMake
 
-    \include {module-use.qdocinc} {building with cmake} {KPim6} {PimCommon} {KPim6::PimCommon}
+    \include {module-use.qdocinc} {building with cmake nomodule} {KPim6PimCommon} {KPim6::PimCommon}
 
     \section1 API Reference
 

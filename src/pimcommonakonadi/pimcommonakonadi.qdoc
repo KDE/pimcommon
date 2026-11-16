@@ -2,8 +2,8 @@
     \module PimCommonAkonadi
     \title PimCommon Akonadi C++ Classes
     \ingroup modules
-    \cmakepackage KPim6
-    \cmakecomponent PimCommonAkonadi
+    \cmakepackage KPim6PimCommonAkonadi
+    \cmaketargetitem KPim6::PimCommonAkonadi
 
     \brief PimCommon Akonadi provides common lib.
 */

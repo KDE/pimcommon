@@ -2,8 +2,8 @@
     \module PimCommon
     \title PimCommon C++ Classes
     \ingroup modules
-    \cmakepackage KPim6
-    \cmakecomponent PimCommon
+    \cmakepackage KPim6PimCommon
+    \cmaketargetitem KPim6::PimCommon
 
     \brief PimCommon provides common lib.
 */
