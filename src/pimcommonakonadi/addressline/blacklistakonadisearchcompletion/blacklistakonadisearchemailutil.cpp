@@ -28,9 +28,7 @@ QStringList BlackListAkonadiSearchEmailUtil::createNewBlackList()
         return mInitialList;
     }
 
-    QHashIterator<QString, bool> i(mNewBlackList);
-    while (i.hasNext()) {
-        i.next();
+    for (auto i = mNewBlackList.cbegin(), end = mNewBlackList.cend(); i != end; ++i) {
         const QString newEmail(i.key());
         if (i.value()) {
             if (!mInitialList.contains(newEmail)) {

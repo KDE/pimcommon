@@ -151,12 +151,11 @@ void PluginInterface::setParentWidget(QWidget *widget)
 void PluginInterface::clearPluginActions(const QString &prefix, KXMLGUIClient *guiClient)
 {
     if (guiClient->factory()) {
-        QHashIterator<PimCommon::ActionType::Type, QList<QAction *>> localActionsType(actionsType());
-        while (localActionsType.hasNext()) {
-            localActionsType.next();
-            QList<QAction *> lst = localActionsType.value();
+        const QHash<PimCommon::ActionType::Type, QList<QAction *>> localActionsType = actionsType();
+        for (auto it = localActionsType.cbegin(), end = localActionsType.cend(); it != end; ++it) {
+            const QList<QAction *> lst = it.value();
             if (!lst.isEmpty()) {
-                const QString actionlistname = prefix + PimCommon::PluginInterface::actionXmlExtension(localActionsType.key());
+                const QString actionlistname = prefix + PimCommon::PluginInterface::actionXmlExtension(it.key());
                 guiClient->unplugActionList(actionlistname);
             }
         }
@@ -166,12 +165,11 @@ void PluginInterface::clearPluginActions(const QString &prefix, KXMLGUIClient *g
 void PluginInterface::initializePluginActions(const QString &prefix, KXMLGUIClient *guiClient)
 {
     if (guiClient->factory()) {
-        QHashIterator<PimCommon::ActionType::Type, QList<QAction *>> localActionsType(actionsType());
-        while (localActionsType.hasNext()) {
-            localActionsType.next();
-            QList<QAction *> lst = localActionsType.value();
+        const QHash<PimCommon::ActionType::Type, QList<QAction *>> localActionsType = actionsType();
+        for (auto it = localActionsType.cbegin(), end = localActionsType.cend(); it != end; ++it) {
+            const QList<QAction *> lst = it.value();
             if (!lst.isEmpty()) {
-                const QString actionlistname = prefix + PimCommon::PluginInterface::actionXmlExtension(localActionsType.key());
+                const QString actionlistname = prefix + PimCommon::PluginInterface::actionXmlExtension(it.key());
                 guiClient->unplugActionList(actionlistname);
                 guiClient->plugActionList(actionlistname, lst);
             }

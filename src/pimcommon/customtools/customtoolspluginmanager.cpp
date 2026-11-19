@@ -56,12 +56,10 @@ public:
 void CustomToolsPluginManagerPrivate::initializePluginList()
 {
     const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/pimcommon/customtools"));
-    QListIterator<KPluginMetaData> i(plugins);
-    i.toBack();
     QSet<QString> unique;
-    while (i.hasPrevious()) {
+    for (auto it = plugins.crbegin(), end = plugins.crend(); it != end; ++it) {
         CustomToolsPluginInfo info;
-        info.metaData = i.previous();
+        info.metaData = *it;
         if (info.metaData.version() == pluginVersion()) {
             // only load plugins once, even if found multiple times!
             const QString saveName = info.saveName();
