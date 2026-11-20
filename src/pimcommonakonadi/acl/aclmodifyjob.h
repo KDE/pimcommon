@@ -8,6 +8,7 @@
 
 #include <Akonadi/Collection>
 #include <KIMAP/Acl>
+#include <QMap>
 #include <QObject>
 class KJob;
 namespace PimCommon
