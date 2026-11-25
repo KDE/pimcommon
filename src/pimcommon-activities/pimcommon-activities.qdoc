@@ -7,3 +7,9 @@
 
     \brief PimCommon Activities provides common lib.
 */
+
+/*!
+    \namespace PimCommonActivities
+    \inmodule PimCommonActivities
+    \brief The PimCommonActivities namespace contains the classes of the PimCommonActivities module.
+*/

@@ -13,6 +13,9 @@
 namespace PimCommon
 {
 /*!
+ * \namespace PimCommon::MailUtil
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/MailUtil
  * The Util namespace contains a collection of helper functions use in
  * various places.
  */

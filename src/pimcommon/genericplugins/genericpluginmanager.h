@@ -28,16 +28,29 @@ class PIMCOMMON_EXPORT GenericPluginManager : public QObject
     Q_OBJECT
 public:
     /*!
+     * \class PimCommon::GenericPluginManager::GenericPluginData
+     * \inmodule PimCommon
+     * \inheaderfile PimCommon/GenericPluginManager
      * Contains data about a generic plugin.
      */
     class GenericPluginData
     {
     public:
+        /*!
+         */
         GenericPluginData() = default;
 
+        /*!
+         */
         QString mDescription;
+        /*!
+         */
         QString mName;
+        /*!
+         */
         QString mIdentifier;
+        /*!
+         */
         bool mEnableByDefault = false;
     };
 

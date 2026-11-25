@@ -36,6 +36,8 @@ public:
      */
     ~GenericPluginInterface() override;
 
+    /*!
+     */
     enum RequireType {
         None = 0,
         CurrentItems = 1,

@@ -26,8 +26,17 @@ class PIMCOMMONACTIVITIES_EXPORT ActivitiesBaseManager : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * \class PimCommonActivities::ActivitiesBaseManager::ActivitySettings
+     * \inmodule PimCommonActivities
+     * \inheaderfile PimCommonActivities/ActivitiesBaseManager
+     */
     struct ActivitySettings {
+        /*!
+         */
         QStringList activities;
+        /*!
+         */
         bool enabled = false;
         /*!
          * Checks if the given string is contained in the activities list.
@@ -89,6 +98,9 @@ private:
 };
 
 /*!
+ * \class PimCommonActivities::ActivitiesFilter
+ * \inmodule PimCommonActivities
+ * \inheaderfile PimCommonActivities/ActivitiesBaseManager
  * \brief The ActivitiesFilter class
  */
 template<typename Base>

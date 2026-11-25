@@ -13,14 +13,27 @@
 namespace PimCommon
 {
 class TemplateListWidget;
+/*!
+ * \class PimCommon::TemplateInfo
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/TemplateManager
+ */
 struct TemplateInfo {
+    /*!
+     */
     QString name;
+    /*!
+     */
     QString script;
+    /*!
+     */
     [[nodiscard]] bool isValid() const
     {
         return !name.isEmpty() && !script.isEmpty();
     }
 
+    /*!
+     */
     void debug() const;
 };
 class TemplateManagerPrivate;

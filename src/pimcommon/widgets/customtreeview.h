@@ -62,6 +62,8 @@ protected:
      */
     void changeEvent(QEvent *event) override;
 
+    /*!
+     */
     bool mShowDefaultText = true;
 
 private:

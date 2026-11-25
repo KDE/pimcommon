@@ -79,15 +79,29 @@ public:
      */
     void setFont(const QFont &font);
 
+    /*!
+     */
     void setEnableBalooSearch(bool enable);
+    /*!
+     */
     [[nodiscard]] bool enableBalooSearch() const;
 
+    /*!
+     */
     void setEnableAkonadiSearch(bool enable);
+    /*!
+     */
     [[nodiscard]] bool enableAkonadiSearch() const;
 
+    /*!
+     */
     void setExpandIntern(bool);
+    /*!
+     */
     [[nodiscard]] bool expandIntern() const;
 
+    /*!
+     */
     [[nodiscard]] bool isCompletionEnabled() const;
 
     /*!

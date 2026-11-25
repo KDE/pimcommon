@@ -25,6 +25,11 @@ namespace PimCommon
  * \author Don Sanders <sanders@kde.org>
  */
 class BroadcastStatusPrivate;
+/*!
+ * \class PimCommon::BroadcastStatus
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/BroadcastStatus
+ */
 class PIMCOMMON_EXPORT BroadcastStatus : public QObject
 {
     Q_OBJECT
@@ -71,6 +76,8 @@ protected:
      * Protected constructor for the singleton pattern.
      */
     BroadcastStatus();
+    /*!
+     */
     std::unique_ptr<BroadcastStatusPrivate> const d;
 };
 }

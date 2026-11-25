@@ -14,8 +14,17 @@ namespace PimCommon
 {
 class TemplateListWidgetPrivate;
 
+/*!
+ * \class PimCommon::defaultTemplate
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/TemplateListWidget
+ */
 struct defaultTemplate {
+    /*!
+     */
     QString name;
+    /*!
+     */
     QString text;
 };
 

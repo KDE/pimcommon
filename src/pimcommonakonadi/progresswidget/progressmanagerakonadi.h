@@ -14,6 +14,11 @@
 
 namespace PimCommon
 {
+/*!
+ * \namespace PimCommon::ProgressManagerAkonadi
+ * \inmodule PimCommonAkonadi
+ * \inheaderfile PimCommonAkonadi/ProgressManagerAkonadi
+ */
 namespace ProgressManagerAkonadi
 {
 /*!

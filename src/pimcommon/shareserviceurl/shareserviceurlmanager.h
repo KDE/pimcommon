@@ -35,6 +35,8 @@ public:
      * Destructs the ShareServiceUrlManager.
      */
     ~ShareServiceUrlManager() override;
+    /*!
+     */
     enum ServiceType {
         Fbook = 0,
         Twitter,

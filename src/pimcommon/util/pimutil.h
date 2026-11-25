@@ -20,19 +20,38 @@ class QWidget;
 namespace PimCommon
 {
 /*!
+ * \namespace PimCommon::Util
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/PimUtil
  * The Util namespace contains a collection of helper functions use in
  * various places.
  */
 namespace Util
 {
+/*!
+ */
 [[nodiscard]] PIMCOMMON_EXPORT OrgKdeAkonadiImapSettingsInterface *createImapSettingsInterface(const QString &ident);
+/*!
+ */
 PIMCOMMON_EXPORT void saveTextAs(const QString &text, const QString &filter, QWidget *parent, const QUrl &url = QUrl(), const QString &caption = QString());
+/*!
+ */
 [[nodiscard]] PIMCOMMON_EXPORT bool saveToFile(const QString &filename, const QString &text);
+/*!
+ */
 [[nodiscard]] PIMCOMMON_EXPORT QString loadToFile(const QString &filter, QWidget *parent, const QUrl &url = QUrl(), const QString &caption = QString());
+/*!
+ */
 PIMCOMMON_EXPORT void invokeHelp(const QString &docfile, const QString &anchor = QString());
+/*!
+ */
 [[nodiscard]] PIMCOMMON_EXPORT bool isImapResource(const QString &identifier);
+/*!
+ */
 [[nodiscard]] PIMCOMMON_EXPORT QStringList generateEmailList(const QStringList &list);
 // Only for testing
+/*!
+ */
 [[nodiscard]] PIMCOMMON_EXPORT QUrl generateHelpUrl(const QString &docfile, const QString &anchor = QString());
 }
 }

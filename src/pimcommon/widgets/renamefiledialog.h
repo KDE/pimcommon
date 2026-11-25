@@ -35,6 +35,8 @@ public:
      */
     ~RenameFileDialog() override;
 
+    /*!
+     */
     enum RenameFileDialogResult {
         RENAMEFILE_IGNORE = 0,
         RENAMEFILE_IGNOREALL = 1,

@@ -34,6 +34,8 @@ class PIMCOMMONAKONADI_EXPORT LdapSearchDialog : public QDialog
     Q_OBJECT
 
 public:
+    /*!
+     */
     enum class FilterType : uint8_t {
         Name = 0,
         Email,

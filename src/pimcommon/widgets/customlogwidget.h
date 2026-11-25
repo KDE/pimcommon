@@ -13,6 +13,11 @@ class QTextDocument;
 
 namespace PimCommon
 {
+/*!
+ * \class PimCommon::LogItemDelegate
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/CustomLogWidget
+ */
 class LogItemDelegate : public QStyledItemDelegate
 {
     Q_OBJECT

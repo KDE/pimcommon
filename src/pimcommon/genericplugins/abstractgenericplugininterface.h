@@ -24,6 +24,8 @@ class GenericPlugin;
 class PIMCOMMON_EXPORT ActionType
 {
 public:
+    /*!
+     */
     enum Type {
         Tools = 0,
         Edit = 1,

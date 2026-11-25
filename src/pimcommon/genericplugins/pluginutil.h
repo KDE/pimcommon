@@ -11,9 +11,18 @@
 #include <TextAddonsWidgets/PluginUtil>
 namespace PimCommon
 {
+/*!
+ * \namespace PimCommon::PluginUtil
+ * \inmodule PimCommon
+ * \inheaderfile PimCommon/PluginUtil
+ */
 namespace PluginUtil
 {
+/*!
+ */
 PIMCOMMON_EXPORT QString pluginConfigFile();
+/*!
+ */
 PIMCOMMON_EXPORT TextAddonsWidgets::PluginUtil::PluginsStateList loadPluginSetting(const QString &groupName, const QString &prefixSettingKey);
 }
 }

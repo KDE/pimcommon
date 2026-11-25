@@ -7,3 +7,9 @@
 
     \brief PimCommon provides common lib.
 */
+
+/*!
+    \namespace PimCommon
+    \inmodule PimCommon
+    \brief The PimCommon namespace contains the classes of the PimCommon module.
+*/

@@ -47,6 +47,8 @@ public:
      */
     static QByteArray kolabSharedSeen();
 
+    /*!
+     */
     enum FolderContentsType {
         ContentsTypeMail = 0,
         ContentsTypeCalendar,
@@ -60,6 +62,8 @@ public:
         ContentsTypeLast = ContentsTypeFile
     };
 
+    /*!
+     */
     enum IncidencesFor {
         IncForNobody,
         IncForAdmins,
